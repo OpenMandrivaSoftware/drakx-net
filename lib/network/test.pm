@@ -95,7 +95,7 @@ sub update_status {
     my ($o) = @_;
     if ($o->{kid}) {
         my $fd = $o->{kid}{fd};
-        fcntl($fd, c::F_SETFL(), c::O_NONBLOCK()) or die "can not fcntl F_SETFL: $!";
+        common::nonblock($fd);
         local $| = 1;
         if (defined(my $output = <$fd>)) {
             ($o->{address}, $o->{ping}) = $output =~ /^([\d\.]+)\|([\d\.,]+)*$/;
@@ -111,48 +111,51 @@ sub update_status {
 
 =head2 Test synchronously
 
-#- resolve and get ping to hostname from command line if given, else to www.mandriva.com
-use lib qw(/usr/lib/libDrakX);
-use network::test;
+resolve and get ping to hostname from command line if given, else to www.mandriva.com
 
-my $net_test = network::test->new($ARGV[0]);
-$net_test->test_synchronous;
+ use lib qw(/usr/lib/libDrakX);
+ use network::test;
 
-my $is_connected = $net_test->is_connected;
-my $hostname = $net_test->get_hostname;
-my $address = $net_test->get_address;
-my $ping = $net_test->get_ping;
+ my $net_test = network::test->new($ARGV[0]);
+ $net_test->test_synchronous;
 
-print "connected: $is_connected
-host: $hostname
-resolved host: $address
-ping to host: $ping
-";
+ my $is_connected = $net_test->is_connected;
+ my $hostname = $net_test->get_hostname;
+ my $address = $net_test->get_address;
+ my $ping = $net_test->get_ping;
+
+ print "connected: $is_connected
+ host: $hostname
+ resolved host: $address
+ ping to host: $ping
+ ";
 
 =head2 Test asynchronously
 
-#- resolve and get ping to hostname from command line if given, else to Mandriva
-#- prints a "." every 10 miliseconds during connection test
-use lib qw(/usr/lib/libDrakX);
-use network::test;
+resolve and get ping to hostname from command line if given, else to Mandriva
 
-my $net_test = network::test->new($ARGV[0]);
-$net_test->start;
+prints a "." every 10 miliseconds during connection test
 
-do {
-  print ".\n";
-  select(undef, undef, undef, 0.01);
-} while !$net_test->is_done;
+ use lib qw(/usr/lib/libDrakX);
+ use network::test;
 
-my $is_connected = $net_test->is_connected;
-my $hostname = $net_test->get_hostname;
-my $address = $net_test->get_address;
-my $ping = $net_test->get_ping;
+ my $net_test = network::test->new($ARGV[0]);
+ $net_test->start;
 
-print "connected: $is_connected
-host: $hostname
-resolved host: $address
-ping to host: $ping
-";
+ do {
+   print ".\n";
+   select(undef, undef, undef, 0.01);
+ } while !$net_test->is_done;
+
+ my $is_connected = $net_test->is_connected;
+ my $hostname = $net_test->get_hostname;
+ my $address = $net_test->get_address;
+ my $ping = $net_test->get_ping;
+
+ print "connected: $is_connected
+ host: $hostname
+ resolved host: $address
+ ping to host: $ping
+ ";
 
 =cut

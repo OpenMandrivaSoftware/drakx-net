@@ -1,0 +1,153 @@
+#!/usr/bin/perl
+
+# Copyright (C) 2006 Mandriva
+#                    Olivier Blin <blino@mandriva.com>
+#                    Thierry Vignaud <tvignaud@mandriva.com>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2, or (at your option)
+# any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+use strict;
+
+use lib qw(/usr/lib/libDrakX);
+
+# i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
+BEGIN { unshift @::textdomains, 'drakx-net' }
+use standalone;
+
+use common;
+use network::network;
+use mygtk2;
+use Gtk2::SimpleList;
+use ugtk2 qw(:create :helpers :wrappers :dialogs);
+
+$ugtk2::wm_icon = 'draknetprofile-16';
+my $title = N("Network profiles");
+my $w = ugtk2->new($title);
+$::main_window = $w->{real_window}; #- so that transient_for is defined for wait messages and dialogs
+
+my $net = {};
+my @profiles;
+my $default_profile = "default";
+my %buttons;
+
+package Gtk2::CellRendererRadio;
+
+sub new {
+    my $renderer = Gtk2::CellRendererToggle->new;
+    $renderer->set_radio(1);
+    $renderer->set_property('mode', 'inert');
+    $renderer;
+}
+
+1;
+
+package main;
+
+Gtk2::SimpleList->add_column_type(
+    'radio',
+    type     => 'Glib::Boolean',
+    renderer => 'Gtk2::CellRendererRadio',
+    attr     => 'active',
+);
+
+my $profiles_list = Gtk2::SimpleList->new(
+    "" => 'radio',
+    N("Profile") => 'text',
+);
+$profiles_list->get_selection->signal_connect('changed' => sub {
+                                                  my ($index) = $profiles_list->get_selected_indices;
+                                                  $_->set_sensitive(defined $index) foreach values %buttons;
+                                              });
+
+sub get_selected_profile() {
+    my ($index) = $profiles_list->get_selected_indices;
+    defined $index && $profiles_list->{data}[$index][1];
+}
+
+sub update_profiles() {
+    my $previous_profile = get_selected_profile();
+    network::network::netprofile_read($net);
+    @profiles = network::network::netprofile_list();
+    @{$profiles_list->{data}} = map { [ $_ eq $net->{PROFILE}, $_  ] } @profiles;
+    my $index = eval { find_index { $_ eq $previous_profile } @profiles };
+    $profiles_list->select($index) if defined $index;
+}
+
+sub set_selected_profile() {
+    my $profile = get_selected_profile();
+    gtkset_mousecursor_wait($w->{window}->window);
+    gtkflush();
+    network::network::netprofile_set($net, $profile);
+    gtkset_mousecursor_normal($w->{window}->window);
+    update_profiles();
+}
+
+sub clone_profile() {
+    my $source_profile = get_selected_profile();
+    my $dialog = _create_dialog(N("New profile..."));
+    my $entry_dialog = Gtk2::Entry->new;
+    gtkpack($dialog->vbox,
+            Gtk2::WrappedLabel->new(N("Name of the profile to create (the new profile is created as a copy of the current one):")),
+            $entry_dialog,
+        );
+    gtkpack($dialog->action_area,
+            gtksignal_connect(Gtk2::Button->new(N("Cancel")),
+                              clicked => sub { $dialog->destroy }),
+            gtksignal_connect(my $bok = Gtk2::Button->new(N("Ok")), clicked => sub {
+                                  my $dest_profile = $entry_dialog->get_text;
+                                  # netprofile does not like spaces in profile names...
+                                  $dest_profile =~ s/ /_/g;
+                                  if (member($dest_profile, @profiles)) {
+                                      err_dialog(N("Error"), N("The \"%s\" profile already exists!", $dest_profile), { transient => $dialog });
+                                      return 1;
+                                  }
+                                  $dialog->destroy;
+                                  network::network::netprofile_clone($source_profile, $dest_profile);
+                                  update_profiles();
+                              }),
+        );
+    $bok->can_default(1);
+    $bok->grab_default;
+    $dialog->show_all;
+}
+
+sub delete_selected_profile() {
+    my $profile = get_selected_profile();
+    if ($profile eq $default_profile) {
+        warn_dialog(N("Warning"), N("You can not delete the default profile"));
+    } elsif ($profile eq $net->{PROFILE}) {
+        warn_dialog(N("Warning"), N("You can not delete the current profile"));
+    } else {
+        network::network::netprofile_delete($profile);
+        update_profiles();
+    }
+}
+
+gtkadd($w->{window},
+       gtknew('VBox', spacing => 5, children => [
+           $::isEmbedded ? () : (0, Gtk2::Banner->new('draknetprofile', $title)),
+           0, gtknew('WrappedLabel', text => N("This tool allows to activate an existing network profile, and to manage (clone, delete) profiles.") . "\n\n" . N("To modify a profile, you have to activate it first.")),
+           1, gtknew('ScrolledWindow', width => 300, height => 150, child => $profiles_list),
+           0, gtknew('HButtonBox', children_loose => [
+               $buttons{activate} = gtknew('Button', text => N("Activate"), clicked => \&set_selected_profile),
+               $buttons{clone} = gtknew('Button', text => N("Clone"), clicked => \&clone_profile),
+               $buttons{delete} = gtknew('Button', text => N("Delete"), clicked => \&delete_selected_profile),
+               gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit }),
+           ]),
+       ]),
+   );
+
+update_profiles();
+$w->main;

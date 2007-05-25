@@ -18,7 +18,7 @@ sub write_squid_conf {
 
     renamef($squid_conf_file, "$squid_conf_file.old");
     output($squid_conf_file, qq(
-http_port $squid_conf->{http_port}[0]
+http_port $squid_conf->{http_port}[0] transparent
 hierarchy_stoplist cgi-bin ?
 acl QUERY urlpath_regex cgi-bin \\?
 no_cache deny QUERY
@@ -58,9 +58,6 @@ http_access allow localhost
 http_reply_access allow all
 icp_access allow all
 visible_hostname $squid_conf->{visible_hostname}[0]
-httpd_accel_host virtual
-httpd_accel_with_proxy on
-httpd_accel_uses_host_header on
 append_domain .$internal_domain_name
 err_html_text $squid_conf->{admin_mail}[0]
 deny_info ERR_CUSTOM_ACCESS_DENIED all

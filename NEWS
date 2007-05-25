@@ -1,0 +1,86 @@
+0.12:
+- fix check of nfs-utils-clients installation (Tv)
+
+0.11:
+- enhance selection of multiple thirdparty packages 
+- make thirdparty packages code easier to re-use
+  (for example in automatic install, useful for live systems)
+
+0.10:
+- drakroam: do not show "More networks" menu if empty (#28626)
+- don't translate program names in old interface (Emmanuel Blindauer, #29196)
+- drakconnect: make net_applet reload its configuration after an
+  interface is deleted(#28680)
+- draknfs: fix missing use of gtkset (aginies)
+
+0.9:
+- allow drakroam to be run as user (#23771)
+- do not allow drakconnect to be run as user anymore
+- fix gateway detection for new ppp daemon (#27886)
+
+0.8:
+- prefer DNS variables over MS_DNS one in ifcfg files
+  (should fix ppp ifcfg files and static net install)
+- drakroam: rt73-firmware support (#29691)
+- drakroam: do not detect network with empty ssid as configured
+- drakroam: fix rf_kill detection for ipw3945 by checking it before
+  interface presence
+- drakroam: remove ipw3945d service support
+- drakroam: reload ipw3945 module if no interface is present when the
+  device is not rf-killed (fix missing interface is booting with rf-kill)
+- drakroam: try to find wireless driver if unknown (fix rt61 detection)
+- drakroam: rt61 firmware support
+
+0.7:
+- add missing tools: drakhosts, draknfs, draksambashare
+  (thanks Titi for the hint)
+- drakconnect: match PCI domain when looking up devices by MAC address
+  (Titi)
+- drakconnect: use a link detection delay for r8169
+- drakconnect: default to NEEDHOSTNAME=no
+- drakroam: merge flags from configured wpa_supplicant networks in all
+  matching scanned networks
+- drakroam: detect ad-hoc networks when wpa_supplicant is used
+- drakroam: pre-select detected wireless mode of the configured network
+- drakroam: allow to configure ad-hoc networks with wpa_supplicant
+- drakroam: write more settings in ifcfg files when wpa_supplicant is
+  used
+- drakroam: do not write Roaming WIRELESS_MODE anymore, ifup scripts
+  will rely on WIRELESS_WPA_DRIVER
+- drakroam: do not override AP address with "any" when parsing
+  wpa_supplicant network list
+- net_applet: start it using GNOME own autostart infrastructure
+  (Frederic Crozat)
+- net_applet: fix detection of running net_applet processes
+
+0.6:
+- use link detection delay for forcedeth and sky2 drivers (#28023)
+- use ifplugd for forcedeth driver, it works fine (even if mii-tool does not handle it)
+- override pcitable driver with detected network driver (useful to detect ndiswrapper)
+- do not ask ndiswrapper firmware if already configured for selected device (#25968, #27850)
+- drakroam: show window before wait message (fix window icon)
+- drakroam: install required per-connection-type packages (useful for 3G connections)
+- drakroam: write module alias in modprobe.conf
+- drakroam: fix WEP keys quoting in wpa_supplicant.conf
+- net_applet: sort wireless networks in menus
+
+0.5:
+- add rt73 in the old rt2x00 list
+- drakhosts, draknfs, draksambashare: initial import
+
+0.4:
+- net_monitor: fix choosing color
+
+0.3:
+- do not run tools in restricted mode (#27458)
+- fix crash in restricted mode
+- use /media instead of /mnt for cdrom/floppy
+- get translations from "drakx-net" domain
+- update tarball so that perl_checker is not required
+
+0.2:
+- net_applet: show simplified menu on left click (instead of running net_monitor)
+- drakfirewall: really disable services if asked to (#27295)
+
+0.1:
+- initial drakx-net release

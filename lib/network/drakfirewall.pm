@@ -137,7 +137,7 @@ sub get_ports() {
 }
 
 sub set_ports {
-    my ($do_pkgs, $disabled, $ports, $o_in) = @_;
+    my ($do_pkgs, $disabled, $ports, $log_net_drop, $o_in) = @_;
 
     my $shorewall = network::shorewall::read($o_in) or return;
 
@@ -146,8 +146,9 @@ sub set_ports {
     
 	$shorewall->{disabled} = $disabled;
 	$shorewall->{ports} = $ports;
+        $shorewall->{log_net_drop} = $log_net_drop;
 	log::l($disabled ? "disabling shorewall" : "configuring shorewall to allow ports: $ports");
-	network::shorewall::write($shorewall);
+	network::shorewall::write($shorewall, $o_in);
     }
 }
 
@@ -160,15 +161,15 @@ sub get_conf {
     if ($o_ports) {
 	$disabled, from_ports($o_ports);
     } elsif (my $shorewall = network::shorewall::read()) {
-	$shorewall->{disabled}, from_ports($shorewall->{ports});
+	$shorewall->{disabled}, from_ports($shorewall->{ports}), $shorewall->{log_net_drop};
     } else {
-	$in->ask_okcancel('', N("drakfirewall configurator
+	$in->ask_okcancel(N("Firewall configuration"), N("drakfirewall configurator
 
 This configures a personal firewall for this Mandriva Linux machine.
 For a powerful and dedicated firewall solution, please look to the
 specialized Mandriva Security Firewall distribution."), 1) or return;
 
-	$in->ask_okcancel('', N("drakfirewall configurator
+	$in->ask_okcancel(N("Firewall configuration"), N("drakfirewall configurator
 
 Make sure you have configured your Network/Internet access with
 drakconnect before going any further."), 1) or return;
@@ -178,7 +179,7 @@ drakconnect before going any further."), 1) or return;
 }
 
 sub choose_allowed_services {
-    my ($in, $disabled, $servers, $unlisted) = @_;
+    my ($in, $disabled, $servers, $unlisted, $log_net_drop) = @_;
 
     $_->{on} = 0 foreach @all_servers;
     $_->{on} = 1 foreach @$servers;
@@ -206,10 +207,11 @@ You can also give a range of ports (eg: 24300:24350/udp)", $invalid_port));
 		  [ 
 		   { text => N("Everything (no firewall)"), val => \$disabled, type => 'bool' },
 		   (map { { text => translate($_->{name}), val => \$_->{on}, type => 'bool', disabled => sub { $disabled } } } @l),
-		   { label => N("Other ports"), val => \$unlisted, advanced => 1, disabled => sub { $disabled } }
+		   { label => N("Other ports"), val => \$unlisted, advanced => 1, disabled => sub { $disabled } },
+		   { text => N("Log firewall messages in system logs"), val => \$log_net_drop, type => 'bool', advanced => 1, disabled => sub { $disabled } },
 		  ]) or return;
 
-    $disabled, [ grep { $_->{on} } @l ], $unlisted;
+    $disabled, [ grep { $_->{on} } @l ], $unlisted, $log_net_drop;
 }
 
 sub set_ifw {
@@ -218,16 +220,16 @@ sub set_ifw {
         $do_pkgs->ensure_is_installed('mandi-ifw', '/etc/ifw/start', $::isInstall) or return;
 
         my $ports_by_proto = network::shorewall::ports_by_proto($ports);
-        output_with_perm("$::prefix/etc/ifw/rules", 0644, map { "$_\n" } (
-            (map { "source /etc/ifw/rules.d/$_" } @$rules),
+        output_with_perm("$::prefix/etc/ifw/rules", 0644,
+            (map { "source /etc/ifw/rules.d/$_\n" } @$rules),
             map {
                 my $proto = $_;
                 map {
                     my $multiport = /:/ && " -m multiport";
                     "iptables -A Ifw -m state --state NEW -p $proto$multiport --dport $_ -j IFWLOG --log-prefix NEW\n";
                 } @{$ports_by_proto->{$proto}};
-            } keys %$ports_by_proto,
-        ));
+            } intersection([ qw(tcp udp) ], [ keys %$ports_by_proto ]),
+        );
     }
 
     my $set_in_file = sub {
@@ -252,7 +254,7 @@ sub choose_watched_services {
         messages =>
           N("Interactive Firewall") . "\n\n" .
           N("You can be warned when someone accesses to a service or tries to intrude into your computer.
-Please select which network activity should be watched."),
+Please select which network activities should be watched."),
         title => N("Interactive Firewall"),
     },
                    [
@@ -270,14 +272,14 @@ Please select which network activity should be watched."),
 sub main {
     my ($in, $disabled) = @_;
 
-    ($disabled, my $servers, my $unlisted) = get_conf($in, $disabled) or return;
+    ($disabled, my $servers, my $unlisted, my $log_net_drop) = get_conf($in, $disabled) or return;
 
-    ($disabled, $servers, $unlisted) = choose_allowed_services($in, $disabled, $servers, $unlisted) or return;
+    ($disabled, $servers, $unlisted, $log_net_drop) = choose_allowed_services($in, $disabled, $servers, $unlisted, $log_net_drop) or return;
 
     choose_watched_services($in, $servers, $unlisted) unless $disabled;
 
     my $ports = to_ports($servers, $unlisted);
-    set_ports($in->do_pkgs, $disabled, $ports, $in) or return;
+    set_ports($in->do_pkgs, $disabled, $ports, $log_net_drop, $in) or return;
 
     ($disabled, $ports);
 }

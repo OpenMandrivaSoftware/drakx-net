@@ -1,0 +1,6077 @@
+# translation of drakx-net to Hungarian
+# Copyright (C) 2000-2001,2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
+#
+# Emese Kovacs <emese@gnome.hu>, 2000-2001.
+# Arpad Biro <biro_arpad@yahoo.com>, 2000, 2003, 2004, 2005, 2006, 2007.
+# Tamas Szanto <tszanto@mol.hu>, 2001.
+msgid ""
+msgstr ""
+"Project-Id-Version: hu\n"
+"POT-Creation-Date: 2007-01-10 15:18+0100\n"
+"PO-Revision-Date: 2007-03-10 13:03+0100\n"
+"Last-Translator: Arpad Biro <biro_arpad@yahoo.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../lib/network/connection.pm:16
+#, c-format
+msgid "Unknown connection type"
+msgstr "Ismeretlen típusú kapcsolat"
+
+#: ../lib/network/connection.pm:115
+#, c-format
+msgid "Network access settings"
+msgstr "Hálózati hozzáférési beállítások"
+
+#: ../lib/network/connection.pm:116
+#, c-format
+msgid "Access settings"
+msgstr "Hozzáférési beállítások"
+
+#: ../lib/network/connection.pm:117
+#, c-format
+msgid "Address settings"
+msgstr "Címbeállítások"
+
+#: ../lib/network/connection.pm:149 ../lib/network/drakvpn.pm:62
+#: ../lib/network/vpn/openvpn.pm:365 ../lib/network/vpn/openvpn.pm:379
+#: ../lib/network/vpn/openvpn.pm:390 ../tools/net_applet:129
+#, c-format
+msgid "VPN connection"
+msgstr "VPN-kapcsolat"
+
+#: ../lib/network/connection.pm:151 ../lib/network/connection/cable.pm:44
+#: ../lib/network/connection/wireless.pm:37 ../lib/network/vpn/openvpn.pm:127
+#: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
+#, c-format
+msgid "None"
+msgstr "Egyik sem"
+
+#: ../lib/network/connection.pm:163
+#, c-format
+msgid "Allow users to manage the connection"
+msgstr "A kapcsolat kezelésének engedélyezése a felhasználók számára"
+
+#: ../lib/network/connection.pm:164
+#, c-format
+msgid "Start the connection at boot"
+msgstr "A kapcsolat elindítása rendszerindításkor"
+
+#: ../lib/network/connection.pm:165 ../tools/drakconnect:462
+#, c-format
+msgid "Metric"
+msgstr "Mérték (metric)"
+
+#: ../lib/network/connection.pm:230
+#, c-format
+msgid "Link detected on interface %s"
+msgstr "Kapcsolat észlelve ezen a csatolón: %s"
+
+# Link-Beat is a feature of network cards
+# to monitor the actual physical link. It will
+# report if the link is lost due to some
+# hardware defect or the cable being
+# unplugged.
+#: ../lib/network/connection.pm:231 ../lib/network/connection/ethernet.pm:278
+#, c-format
+msgid "Link beat lost on interface %s"
+msgstr "A kapcsolat megszakadt ezen a csatolón: %s"
+
+#: ../lib/network/connection/cable.pm:13
+#, c-format
+msgid "Cable"
+msgstr "Kábel"
+
+#: ../lib/network/connection/cable.pm:14
+#, c-format
+msgid "Cable modem"
+msgstr "Kábelmodem"
+
+#: ../lib/network/connection/cable.pm:45
+#, c-format
+msgid "Use BPALogin (needed for Telstra)"
+msgstr "BPALogin használata (Telstra esetén szükséges)"
+
+#: ../lib/network/connection/cable.pm:48 ../lib/network/netconnect.pm:587
+#: ../tools/drakconnect:482
+#, c-format
+msgid "Authentication"
+msgstr "Felhasználóazonosítás"
+
+#: ../lib/network/connection/cable.pm:50 ../lib/network/connection/ppp.pm:22
+#: ../lib/network/netconnect.pm:326 ../lib/network/vpn/openvpn.pm:393
+#: ../tools/drakconnect:492
+#, c-format
+msgid "Account Login (user name)"
+msgstr "Felhasználónév"
+
+#: ../lib/network/connection/cable.pm:52 ../lib/network/connection/ppp.pm:23
+#: ../lib/network/netconnect.pm:327 ../lib/network/vpn/openvpn.pm:394
+#: ../tools/drakconnect:493
+#, c-format
+msgid "Account Password"
+msgstr "Jelszó"
+
+#: ../lib/network/connection/cellular.pm:47
+#, c-format
+msgid "Access Point Name"
+msgstr "A hozzáférési pont neve"
+
+#: ../lib/network/connection/cellular_bluetooth.pm:10
+#, c-format
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ../lib/network/connection/cellular_bluetooth.pm:11
+#, c-format
+msgid "Bluetooth Dial Up Networking"
+msgstr "Bluetooth betárcsázós hálózat"
+
+# EDGE: Enhanced Data rates for Global Evolution
+#: ../lib/network/connection/cellular_card.pm:8
+#, c-format
+msgid "GPRS/Edge/3G"
+msgstr "GPRS/EDGE/3G"
+
+#: ../lib/network/connection/cellular_card.pm:67
+#: ../lib/network/vpn/openvpn.pm:391
+#, c-format
+msgid "PIN number"
+msgstr "PIN-szám"
+
+#: ../lib/network/connection/cellular_card.pm:130
+#, c-format
+msgid "Unable to open device %s"
+msgstr "Nem sikerült megnyitni ezt az eszközt: %s"
+
+#: ../lib/network/connection/cellular_card.pm:155
+#, c-format
+msgid "Please check that your SIM card is inserted."
+msgstr "Ellenőrizze, hogy be van-e helyezve a SIM-kártya."
+
+#: ../lib/network/connection/cellular_card.pm:161
+#, c-format
+msgid ""
+"You entered a wrong PIN code.\n"
+"Entering the wrong PIN code multiple times may lock your SIM card!"
+msgstr ""
+"Helytelen PIN-kódot adott meg.\n"
+"Ha egymás után többször helytelen PIN-kódot ad meg, akkor a SIM-kártya "
+"zárolódhat."
+
+#: ../lib/network/connection/dvb.pm:12
+#, c-format
+msgid "DVB"
+msgstr "DVB"
+
+#: ../lib/network/connection/dvb.pm:13
+#, c-format
+msgid "Satellite (DVB)"
+msgstr "Műhold (DVB)"
+
+#: ../lib/network/connection/dvb.pm:56
+#, c-format
+msgid "Adapter card"
+msgstr "Adapterkártya"
+
+#: ../lib/network/connection/dvb.pm:57
+#, c-format
+msgid "Net demux"
+msgstr "Hálózati demux"
+
+#: ../lib/network/connection/dvb.pm:58
+#, c-format
+msgid "PID"
+msgstr "PID"
+
+#: ../lib/network/connection/ethernet.pm:10
+#, c-format
+msgid "Ethernet"
+msgstr "Ethernet"
+
+#: ../lib/network/connection/ethernet.pm:53
+#, c-format
+msgid "Unable to find network interface for selected device (using %s driver)."
+msgstr ""
+"A kijelölt eszközhöz nem található hálózati csatoló (\"%s\" "
+"meghajtóprogrammal)."
+
+#: ../lib/network/connection/ethernet.pm:61 ../lib/network/vpn/openvpn.pm:207
+#, c-format
+msgid "Manual configuration"
+msgstr "Kézi beállítás"
+
+#: ../lib/network/connection/ethernet.pm:62
+#, c-format
+msgid "Automatic IP (BOOTP/DHCP)"
+msgstr "Automatikus IP-cím (BOOTP/DHCP)"
+
+#: ../lib/network/connection/ethernet.pm:116
+#, c-format
+msgid "IP settings"
+msgstr "IP-beállítások"
+
+#: ../lib/network/connection/ethernet.pm:125 ../lib/network/netconnect.pm:604
+#: ../lib/network/vpn/openvpn.pm:221 ../tools/drakconnect:113
+#: ../tools/drakconnect:321 ../tools/drakconnect:887 ../tools/drakhosts:196
+#, c-format
+msgid "IP address"
+msgstr "IP-cím"
+
+#: ../lib/network/connection/ethernet.pm:129
+#, c-format
+msgid ""
+"Please enter the IP configuration for this machine.\n"
+"Each item should be entered as an IP address in dotted-decimal\n"
+"notation (for example, 1.2.3.4)."
+msgstr ""
+"Adja meg a gép IP-beállításait.\n"
+"Minden mezőbe IP-címet írjon pontozott decimális formátumban\n"
+"(például: 192.169.10.11)."
+
+#: ../lib/network/connection/ethernet.pm:132 ../tools/drakconnect:326
+#: ../tools/drakconnect:888 ../tools/drakgw:177
+#, c-format
+msgid "Netmask"
+msgstr "Hálózati maszk"
+
+#: ../lib/network/connection/ethernet.pm:133 ../lib/network/netconnect.pm:636
+#: ../lib/network/vpn/openvpn.pm:212 ../lib/network/vpn/vpnc.pm:39
+#: ../tools/drakconnect:332
+#, c-format
+msgid "Gateway"
+msgstr "Átjáró (gateway)"
+
+#: ../lib/network/connection/ethernet.pm:136 ../tools/drakconnect:382
+#, c-format
+msgid "Get DNS servers from DHCP"
+msgstr "DNS-kiszolgálók lekérése DHCP-vel"
+
+#: ../lib/network/connection/ethernet.pm:138
+#, c-format
+msgid "DNS server 1"
+msgstr "DNS-kiszolgáló 1"
+
+#: ../lib/network/connection/ethernet.pm:139
+#, c-format
+msgid "DNS server 2"
+msgstr "DNS-kiszolgáló 2"
+
+#: ../lib/network/connection/ethernet.pm:140
+#, c-format
+msgid "Search domain"
+msgstr "Keresési tartomány"
+
+#: ../lib/network/connection/ethernet.pm:141
+#, c-format
+msgid "By default search domain will be set from the fully-qualified host name"
+msgstr "Alapértelmezésben a keresési tartomány a teljes gépnévből lesz meghatározva"
+
+#: ../lib/network/connection/ethernet.pm:143 ../tools/drakconnect:369
+#: ../tools/drakconnect:891
+#, c-format
+msgid "DHCP client"
+msgstr "DHCP-kliens"
+
+#: ../lib/network/connection/ethernet.pm:144 ../tools/drakconnect:379
+#, c-format
+msgid "DHCP timeout (in seconds)"
+msgstr "A DHCP várakozási ideje (másodpercben)"
+
+#: ../lib/network/connection/ethernet.pm:145 ../tools/drakconnect:383
+#, c-format
+msgid "Get YP servers from DHCP"
+msgstr "YP-kiszolgálók lekérése DHCP-vel"
+
+#: ../lib/network/connection/ethernet.pm:146 ../tools/drakconnect:384
+#, c-format
+msgid "Get NTPD servers from DHCP"
+msgstr "NTPD-kiszolgálók lekérése DHCP-vel"
+
+#: ../lib/network/connection/ethernet.pm:147 ../tools/drakconnect:375
+#, c-format
+msgid "DHCP host name"
+msgstr "DHCP-gépnév"
+
+#: ../lib/network/connection/ethernet.pm:149
+#, c-format
+msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
+msgstr "Zeroconf (169.254.0.0 hálózat) ne legyen használva"
+
+#: ../lib/network/connection/ethernet.pm:160 ../tools/drakconnect:676
+#, c-format
+msgid "IP address should be in format 1.2.3.4"
+msgstr "Az IP-cím formátuma 1.2.3.4 legyen"
+
+#: ../lib/network/connection/ethernet.pm:165 ../tools/drakconnect:680
+#, c-format
+msgid "Netmask should be in format 255.255.224.0"
+msgstr "A hálózati maszk formátuma 255.255.224.0 legyen"
+
+#: ../lib/network/connection/ethernet.pm:170
+#, c-format
+msgid "Warning: IP address %s is usually reserved!"
+msgstr "Figyelem: a(z) %s IP-cím általában fenntartott."
+
+#: ../lib/network/connection/ethernet.pm:176
+#, c-format
+msgid "%s already in use\n"
+msgstr "%s már használatban van\n"
+
+#: ../lib/network/connection/ethernet.pm:200 ../tools/drakconnect:373
+#, c-format
+msgid "Assign host name from DHCP address"
+msgstr "Gépnév a DHCP-címből"
+
+#: ../lib/network/connection/ethernet.pm:202 ../tools/drakhosts:196
+#, c-format
+msgid "Host name"
+msgstr "Gépnév"
+
+#: ../lib/network/connection/ethernet.pm:220 ../tools/drakconnect:440
+#, c-format
+msgid "Network Hotplugging"
+msgstr "Hálózati hotplugging"
+
+#: ../lib/network/connection/ethernet.pm:224
+#, c-format
+msgid "Enable IPv6 to IPv4 tunnel"
+msgstr "\"IPv6-ból IPv4-be\" alagút bekapcsolása"
+
+#: ../lib/network/connection/ethernet.pm:277
+#, c-format
+msgid "Link beat detected on interface %s"
+msgstr "Kapcsolat észlelve ezen a csatolón: %s"
+
+#: ../lib/network/connection/ethernet.pm:280
+#, c-format
+msgid "Requesting a network address on interface %s (%s protocol)..."
+msgstr "Hálózati cím kérése a(z) %s csatolón (protokoll: %s)..."
+
+#: ../lib/network/connection/ethernet.pm:281
+#, c-format
+msgid "Got a network address on interface %s (%s protocol)"
+msgstr "Hálózati cím megkapva a(z) %s csatolón (protokoll: %s)"
+
+#: ../lib/network/connection/ethernet.pm:282
+#, c-format
+msgid "Failed to get a network address on interface %s (%s protocol)"
+msgstr "Nem sikerült hálózati címet szerezni a(z) %s csatolón (protokoll: %s)"
+
+#: ../lib/network/connection/isdn.pm:8
+#, c-format
+msgid "ISDN"
+msgstr "ISDN"
+
+#: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:197
+#: ../lib/network/netconnect.pm:200 ../lib/network/netconnect.pm:218
+#: ../lib/network/netconnect.pm:463 ../lib/network/netconnect.pm:559
+#: ../lib/network/netconnect.pm:562
+#, c-format
+msgid "Unlisted - edit manually"
+msgstr "A listában nem szereplő - kézi szerkesztés"
+
+#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:395
+#, c-format
+msgid "ISA / PCMCIA"
+msgstr "ISA / PCMCIA"
+
+#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:395
+#, c-format
+msgid "I do not know"
+msgstr "Nem tudom"
+
+#: ../lib/network/connection/isdn.pm:197 ../lib/network/netconnect.pm:395
+#, c-format
+msgid "PCI"
+msgstr "PCI"
+
+#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:395
+#, c-format
+msgid "USB"
+msgstr "USB"
+
+#. -PO: POTS means "Plain old telephone service"
+#: ../lib/network/connection/pots.pm:10
+#, c-format
+msgid "POTS"
+msgstr "Telefon (POTS)"
+
+#. -PO: POTS means "Plain old telephone service"
+#. -PO: remove it if it doesn't have an equivalent in your language
+#. -PO: for example, in French, it can be translated as "RTC"
+#: ../lib/network/connection/pots.pm:16
+#, c-format
+msgid "Analog telephone modem (POTS)"
+msgstr "Analóg telefonos modem (POTS)"
+
+#: ../lib/network/connection/ppp.pm:9 ../lib/network/netconnect.pm:74
+#: ../tools/drakconnect:499
+#, c-format
+msgid "Script-based"
+msgstr "Szkript-alapú"
+
+#: ../lib/network/connection/ppp.pm:10 ../lib/network/netconnect.pm:75
+#: ../tools/drakconnect:499
+#, c-format
+msgid "PAP"
+msgstr "PAP"
+
+#: ../lib/network/connection/ppp.pm:11 ../lib/network/netconnect.pm:76
+#: ../tools/drakconnect:499
+#, c-format
+msgid "Terminal-based"
+msgstr "Terminál-alapú"
+
+#: ../lib/network/connection/ppp.pm:12 ../lib/network/netconnect.pm:77
+#: ../tools/drakconnect:499
+#, c-format
+msgid "CHAP"
+msgstr "CHAP"
+
+#: ../lib/network/connection/ppp.pm:13 ../lib/network/netconnect.pm:78
+#: ../tools/drakconnect:499
+#, c-format
+msgid "PAP/CHAP"
+msgstr "PAP/CHAP"
+
+#: ../lib/network/connection/providers/cellular.pm:13
+#: ../lib/network/connection/providers/cellular.pm:18
+#: ../lib/network/connection/providers/cellular.pm:23
+#: ../lib/network/connection/providers/xdsl.pm:492
+#: ../lib/network/connection/providers/xdsl.pm:504
+#: ../lib/network/connection/providers/xdsl.pm:516
+#: ../lib/network/connection/providers/xdsl.pm:528
+#: ../lib/network/connection/providers/xdsl.pm:539
+#: ../lib/network/connection/providers/xdsl.pm:551
+#: ../lib/network/connection/providers/xdsl.pm:563
+#: ../lib/network/connection/providers/xdsl.pm:575
+#: ../lib/network/connection/providers/xdsl.pm:588
+#: ../lib/network/connection/providers/xdsl.pm:599
+#: ../lib/network/connection/providers/xdsl.pm:610
+#: ../lib/network/netconnect.pm:33
+#, c-format
+msgid "France"
+msgstr "Franciaország"
+
+#: ../lib/network/connection/providers/xdsl.pm:47
+#: ../lib/network/connection/providers/xdsl.pm:57
+#, c-format
+msgid "Algeria"
+msgstr "Algéria"
+
+#: ../lib/network/connection/providers/xdsl.pm:67
+#: ../lib/network/connection/providers/xdsl.pm:77
+#, c-format
+msgid "Argentina"
+msgstr "Argentína"
+
+#: ../lib/network/connection/providers/xdsl.pm:87
+#: ../lib/network/connection/providers/xdsl.pm:96
+#: ../lib/network/connection/providers/xdsl.pm:105
+#, c-format
+msgid "Austria"
+msgstr "Ausztria"
+
+#: ../lib/network/connection/providers/xdsl.pm:114
+#: ../lib/network/connection/providers/xdsl.pm:124
+#: ../lib/network/connection/providers/xdsl.pm:134
+#, c-format
+msgid "Australia"
+msgstr "Ausztrália"
+
+#: ../lib/network/connection/providers/xdsl.pm:144
+#: ../lib/network/connection/providers/xdsl.pm:153
+#: ../lib/network/connection/providers/xdsl.pm:164
+#: ../lib/network/connection/providers/xdsl.pm:173
+#: ../lib/network/connection/providers/xdsl.pm:182
+#: ../lib/network/netconnect.pm:36
+#, c-format
+msgid "Belgium"
+msgstr "Belgium"
+
+#: ../lib/network/connection/providers/xdsl.pm:191
+#: ../lib/network/connection/providers/xdsl.pm:201
+#: ../lib/network/connection/providers/xdsl.pm:210
+#: ../lib/network/connection/providers/xdsl.pm:219
+#, c-format
+msgid "Brazil"
+msgstr "Brazília"
+
+#: ../lib/network/connection/providers/xdsl.pm:228
+#: ../lib/network/connection/providers/xdsl.pm:237
+#, c-format
+msgid "Bulgaria"
+msgstr "Bulgária"
+
+#: ../lib/network/connection/providers/xdsl.pm:246
+#: ../lib/network/connection/providers/xdsl.pm:255
+#: ../lib/network/connection/providers/xdsl.pm:264
+#: ../lib/network/connection/providers/xdsl.pm:273
+#: ../lib/network/connection/providers/xdsl.pm:282
+#: ../lib/network/connection/providers/xdsl.pm:291
+#: ../lib/network/connection/providers/xdsl.pm:300
+#: ../lib/network/connection/providers/xdsl.pm:309
+#: ../lib/network/connection/providers/xdsl.pm:318
+#: ../lib/network/connection/providers/xdsl.pm:327
+#: ../lib/network/connection/providers/xdsl.pm:336
+#: ../lib/network/connection/providers/xdsl.pm:345
+#: ../lib/network/connection/providers/xdsl.pm:354
+#: ../lib/network/connection/providers/xdsl.pm:363
+#: ../lib/network/connection/providers/xdsl.pm:372
+#: ../lib/network/connection/providers/xdsl.pm:381
+#: ../lib/network/connection/providers/xdsl.pm:390
+#: ../lib/network/connection/providers/xdsl.pm:399
+#: ../lib/network/connection/providers/xdsl.pm:408
+#: ../lib/network/connection/providers/xdsl.pm:417
+#, c-format
+msgid "China"
+msgstr "Kína"
+
+#: ../lib/network/connection/providers/xdsl.pm:426
+#: ../lib/network/connection/providers/xdsl.pm:436
+#, c-format
+msgid "Czech Republic"
+msgstr "Cseh Köztársaság"
+
+#: ../lib/network/connection/providers/xdsl.pm:446
+#: ../lib/network/connection/providers/xdsl.pm:455
+#: ../lib/network/connection/providers/xdsl.pm:464
+#, c-format
+msgid "Denmark"
+msgstr "Dánia"
+
+#: ../lib/network/connection/providers/xdsl.pm:473
+#, c-format
+msgid "Egypt"
+msgstr "Egyiptom"
+
+#: ../lib/network/connection/providers/xdsl.pm:483
+#, c-format
+msgid "Finland"
+msgstr "Finnország"
+
+#: ../lib/network/connection/providers/xdsl.pm:621
+#: ../lib/network/connection/providers/xdsl.pm:630
+#: ../lib/network/connection/providers/xdsl.pm:640
+#, c-format
+msgid "Germany"
+msgstr "Németország"
+
+#: ../lib/network/connection/providers/xdsl.pm:650
+#, c-format
+msgid "Greece"
+msgstr "Görögország"
+
+#: ../lib/network/connection/providers/xdsl.pm:659
+#, c-format
+msgid "Hungary"
+msgstr "Magyarország"
+
+#: ../lib/network/connection/providers/xdsl.pm:668
+#, c-format
+msgid "Ireland"
+msgstr "Írország"
+
+#: ../lib/network/connection/providers/xdsl.pm:677
+#, c-format
+msgid "Israel"
+msgstr "Izrael"
+
+#: ../lib/network/connection/providers/xdsl.pm:687
+#, c-format
+msgid "India"
+msgstr "India"
+
+#: ../lib/network/connection/providers/xdsl.pm:696
+#: ../lib/network/connection/providers/xdsl.pm:705
+#, c-format
+msgid "Iceland"
+msgstr "Izland"
+
+#: ../lib/network/connection/providers/xdsl.pm:714
+#: ../lib/network/connection/providers/xdsl.pm:725
+#: ../lib/network/connection/providers/xdsl.pm:735
+#: ../lib/network/connection/providers/xdsl.pm:746
+#: ../lib/network/netconnect.pm:35
+#, c-format
+msgid "Italy"
+msgstr "Olaszország"
+
+#: ../lib/network/connection/providers/xdsl.pm:758
+#, c-format
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+#: ../lib/network/connection/providers/xdsl.pm:770
+#, c-format
+msgid "Lithuania"
+msgstr "Litvánia"
+
+#: ../lib/network/connection/providers/xdsl.pm:779
+#: ../lib/network/connection/providers/xdsl.pm:789
+#, c-format
+msgid "Mauritius"
+msgstr "Mauritius"
+
+#: ../lib/network/connection/providers/xdsl.pm:800
+#, c-format
+msgid "Morocco"
+msgstr "Marokkó"
+
+#: ../lib/network/connection/providers/xdsl.pm:810
+#: ../lib/network/connection/providers/xdsl.pm:819
+#: ../lib/network/connection/providers/xdsl.pm:828
+#: ../lib/network/connection/providers/xdsl.pm:837
+#: ../lib/network/netconnect.pm:34
+#, c-format
+msgid "Netherlands"
+msgstr "Hollandia"
+
+#: ../lib/network/connection/providers/xdsl.pm:846
+#: ../lib/network/connection/providers/xdsl.pm:852
+#: ../lib/network/connection/providers/xdsl.pm:858
+#: ../lib/network/connection/providers/xdsl.pm:864
+#: ../lib/network/connection/providers/xdsl.pm:870
+#: ../lib/network/connection/providers/xdsl.pm:876
+#: ../lib/network/connection/providers/xdsl.pm:882
+#, c-format
+msgid "Norway"
+msgstr "Norvégia"
+
+#: ../lib/network/connection/providers/xdsl.pm:890
+#, c-format
+msgid "Pakistan"
+msgstr "Pakisztán"
+
+#: ../lib/network/connection/providers/xdsl.pm:901
+#: ../lib/network/connection/providers/xdsl.pm:911
+#, c-format
+msgid "Poland"
+msgstr "Lengyelország"
+
+#: ../lib/network/connection/providers/xdsl.pm:922
+#, c-format
+msgid "Portugal"
+msgstr "Portugália"
+
+#: ../lib/network/connection/providers/xdsl.pm:931
+#, c-format
+msgid "Russia"
+msgstr "Oroszország"
+
+#: ../lib/network/connection/providers/xdsl.pm:942
+#, c-format
+msgid "Singapore"
+msgstr "Szingapúr"
+
+#: ../lib/network/connection/providers/xdsl.pm:951
+#, c-format
+msgid "Senegal"
+msgstr "Szenegál"
+
+#: ../lib/network/connection/providers/xdsl.pm:961
+#, c-format
+msgid "Slovenia"
+msgstr "Szlovénia"
+
+#: ../lib/network/connection/providers/xdsl.pm:972
+#: ../lib/network/connection/providers/xdsl.pm:984
+#: ../lib/network/connection/providers/xdsl.pm:996
+#: ../lib/network/connection/providers/xdsl.pm:1009
+#: ../lib/network/connection/providers/xdsl.pm:1019
+#: ../lib/network/connection/providers/xdsl.pm:1029
+#: ../lib/network/connection/providers/xdsl.pm:1040
+#: ../lib/network/connection/providers/xdsl.pm:1050
+#: ../lib/network/connection/providers/xdsl.pm:1060
+#: ../lib/network/connection/providers/xdsl.pm:1070
+#: ../lib/network/connection/providers/xdsl.pm:1080
+#: ../lib/network/connection/providers/xdsl.pm:1090
+#: ../lib/network/connection/providers/xdsl.pm:1101
+#: ../lib/network/connection/providers/xdsl.pm:1112
+#: ../lib/network/connection/providers/xdsl.pm:1124
+#: ../lib/network/connection/providers/xdsl.pm:1136
+#, c-format
+msgid "Spain"
+msgstr "Spanyolország"
+
+#: ../lib/network/connection/providers/xdsl.pm:1149
+#, c-format
+msgid "Sweden"
+msgstr "Svédország"
+
+#: ../lib/network/connection/providers/xdsl.pm:1158
+#: ../lib/network/connection/providers/xdsl.pm:1167
+#: ../lib/network/connection/providers/xdsl.pm:1177
+#, c-format
+msgid "Switzerland"
+msgstr "Svájc"
+
+#: ../lib/network/connection/providers/xdsl.pm:1186
+#, c-format
+msgid "Thailand"
+msgstr "Thaiföld"
+
+#: ../lib/network/connection/providers/xdsl.pm:1196
+#, c-format
+msgid "Tunisia"
+msgstr "Tunézia"
+
+#: ../lib/network/connection/providers/xdsl.pm:1207
+#, c-format
+msgid "Turkey"
+msgstr "Törökország"
+
+#: ../lib/network/connection/providers/xdsl.pm:1220
+#, c-format
+msgid "United Arab Emirates"
+msgstr "Egyesült Arab Emirátusok"
+
+#: ../lib/network/connection/providers/xdsl.pm:1230
+#: ../lib/network/connection/providers/xdsl.pm:1240
+#: ../lib/network/netconnect.pm:38
+#, c-format
+msgid "United Kingdom"
+msgstr "Egyesült Királyság"
+
+#: ../lib/network/connection/wireless.pm:11
+#, c-format
+msgid "Wireless"
+msgstr "Vezeték nélküli"
+
+#: ../lib/network/connection/wireless.pm:21
+#, c-format
+msgid "Use a Windows driver (with ndiswrapper)"
+msgstr "Windowsos meghajtóprogram használata (Ndiswrapper használatával)"
+
+#: ../lib/network/connection/wireless.pm:38
+#, c-format
+msgid "Open WEP"
+msgstr "Nyílt WEP"
+
+#: ../lib/network/connection/wireless.pm:39
+#, c-format
+msgid "Restricted WEP"
+msgstr "Korlátozott WEP"
+
+#: ../lib/network/connection/wireless.pm:40
+#, c-format
+msgid "WPA Pre-Shared Key"
+msgstr "WPA előzetesen megosztott kulcs"
+
+#: ../lib/network/connection/wireless.pm:181 ../lib/network/thirdparty.pm:174
+#, c-format
+msgid "Firmware files are required for this device."
+msgstr "Ehhez az eszközhöz firmware-fájlok szükségesek."
+
+# Most laptops provide the ability for the
+# user to physically disable the radio.
+# Some vendors have implemented this as
+# a physical switch that requires no
+# software to turn the radio off and on.  On
+# other laptops, however, the switch
+# is controlled through a button being
+# pressed and a software driver then
+# making calls to turn the radio off and on.
+# This is referred to as a "software based
+# RF kill switch"
+#: ../lib/network/connection/wireless.pm:209
+#, c-format
+msgid ""
+"Your wireless card is disabled, please enable the wireless switch (RF kill "
+"switch) first."
+msgstr "A vezeték nélküli kártya le van tiltva. Előbb engedélyezze azt (RF-kapcsoló)."
+
+#: ../lib/network/connection/wireless.pm:270
+#, c-format
+msgid "Wireless settings"
+msgstr "Vezeték nélküli kapcsolat beállításai"
+
+#: ../lib/network/connection/wireless.pm:275 ../tools/drakconnect:406
+#: ../tools/drakroam:119
+#, c-format
+msgid "Operating Mode"
+msgstr "Működési mód"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Ad-hoc"
+msgstr "Alkalmi"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Managed"
+msgstr "Menedzselt"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Master"
+msgstr "Fő"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Repeater"
+msgstr "Ismétlő"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Secondary"
+msgstr "Másodlagos"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Auto"
+msgstr "Automatikus"
+
+#: ../lib/network/connection/wireless.pm:279 ../tools/drakconnect:407
+#, c-format
+msgid "Network name (ESSID)"
+msgstr "Hálózati név (ESSID)"
+
+#: ../lib/network/connection/wireless.pm:281
+#, c-format
+msgid "Encryption mode"
+msgstr "Titkosítási mód"
+
+#: ../lib/network/connection/wireless.pm:283 ../tools/drakconnect:421
+#, c-format
+msgid "Encryption key"
+msgstr "Titkosítási kulcs"
+
+#: ../lib/network/connection/wireless.pm:285 ../tools/drakconnect:408
+#, c-format
+msgid "Network ID"
+msgstr "Hálózati azonosító"
+
+#: ../lib/network/connection/wireless.pm:286 ../tools/drakconnect:409
+#, c-format
+msgid "Operating frequency"
+msgstr "Üzemi frekvencia"
+
+#: ../lib/network/connection/wireless.pm:287 ../tools/drakconnect:410
+#, c-format
+msgid "Sensitivity threshold"
+msgstr "Érzékenységi küszöb"
+
+#: ../lib/network/connection/wireless.pm:288 ../tools/drakconnect:411
+#, c-format
+msgid "Bitrate (in b/s)"
+msgstr "Bitráta (b/s)"
+
+#: ../lib/network/connection/wireless.pm:289 ../tools/drakconnect:422
+#, c-format
+msgid "RTS/CTS"
+msgstr "RTS/CTS"
+
+#: ../lib/network/connection/wireless.pm:290
+#, c-format
+msgid ""
+"RTS/CTS adds a handshake before each packet transmission to make sure that "
+"the\n"
+"channel is clear. This adds overhead, but increase performance in case of "
+"hidden\n"
+"nodes or large number of active nodes. This parameter sets the size of the\n"
+"smallest packet for which the node sends RTS, a value equal to the maximum\n"
+"packet size disable the scheme. You may also set this parameter to auto, "
+"fixed\n"
+"or off."
+msgstr ""
+"Az RTS/CTS minden csomagátvitel előtt elvégez egy kézfogást, így\n"
+"biztosítva, hogy a csatorna tiszta legyen. Ez többletterhelést okoz,\n"
+"viszont rejtett csomópontok illetve nagyszámú aktív csomópont esetén\n"
+"növeli a teljesítményt. Ez a paraméter beállítja azt a legkisebb\n"
+"csomagméretet, amelynél még küld RTS-t a csomópont. A maximális\n"
+"csomagmérettel megegyező érték kikapcsolja az eljárást. A paraméter\n"
+"beállítható automatikusra (auto), rögzítettre (fixed) és kikapcsoltra\n"
+"(off) is."
+
+#: ../lib/network/connection/wireless.pm:297 ../tools/drakconnect:423
+#, c-format
+msgid "Fragmentation"
+msgstr "Töredezés"
+
+#: ../lib/network/connection/wireless.pm:298 ../tools/drakconnect:424
+#, c-format
+msgid "iwconfig command extra arguments"
+msgstr "Az iwconfig program extra argumentumai"
+
+#: ../lib/network/connection/wireless.pm:299
+#, c-format
+msgid ""
+"Here, one can configure some extra wireless parameters such as:\n"
+"ap, channel, commit, enc, power, retry, sens, txpower (nick is already set "
+"as the hostname).\n"
+"\n"
+"See iwconfig(8) man page for further information."
+msgstr ""
+"Itt beállíthatók a vezeték nélküli elérés extra paraméterei, mint például\n"
+"ap, channel, commit, enc, power, retry, sens, txpower (a \"nick\", vagyis\n"
+"a név már be van állítva a gép nevére).\n"
+"\n"
+"További információ az iwconfig(8) kézikönyvben."
+
+#. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
+#: ../lib/network/connection/wireless.pm:306 ../tools/drakconnect:425
+#, c-format
+msgid "iwspy command extra arguments"
+msgstr "Az iwspy program extra argumentumai"
+
+#: ../lib/network/connection/wireless.pm:307
+#, c-format
+msgid ""
+"iwspy is used to set a list of addresses in a wireless network\n"
+"interface and to read back quality of link information for each of those.\n"
+"\n"
+"This information is the same as the one available in /proc/net/wireless :\n"
+"quality of the link, signal strength and noise level.\n"
+"\n"
+"See iwpspy(8) man page for further information."
+msgstr ""
+"Az iwspy program funkciója vezeték nélküli hálózati csatolók\n"
+"címlistáinak beállítása és kapcsolatminőségi információk lekérdezése\n"
+"azoktól.\n"
+"\n"
+"Ez az információ megegyezik a /proc/net/wireless fájlban levővel:\n"
+"kapcsolatminőség, jelerősség és zajszint.\n"
+"\n"
+"További információ az iwspy(8) kézikönyvben."
+
+#: ../lib/network/connection/wireless.pm:315 ../tools/drakconnect:426
+#, c-format
+msgid "iwpriv command extra arguments"
+msgstr "Az iwpriv program extra argumentumai"
+
+#: ../lib/network/connection/wireless.pm:317
+#, c-format
+msgid ""
+"iwpriv enable to set up optionals (private) parameters of a wireless "
+"network\n"
+"interface.\n"
+"\n"
+"iwpriv deals with parameters and setting specific to each driver (as opposed "
+"to\n"
+"iwconfig which deals with generic ones).\n"
+"\n"
+"In theory, the documentation of each device driver should indicate how to "
+"use\n"
+"those interface specific commands and their effect.\n"
+"\n"
+"See iwpriv(8) man page for further information."
+msgstr ""
+"Az iwpriv lehetővé teszi egy vezeték nélküli hálózati csatoló\n"
+"opcionális paramétereinek beállítását.\n"
+"\n"
+"Az iwpriv meghajtónként elkülönülten kezeli a paramétereket és\n"
+"beállításokat (szemben az iwconfig programmal, amely általános\n"
+"beállításokat kezel).\n"
+"\n"
+"Elméletileg az eszközmeghajtók dokumentációja információt tartalmaz\n"
+"a csatoló parancsainak használatáról és hatásáról.\n"
+"\n"
+"További információ az iwpriv(8) kézikönyvben."
+
+#: ../lib/network/connection/wireless.pm:335
+#, c-format
+msgid "An encryption key is required."
+msgstr "Szükség van titkosítási kulcsra."
+
+#: ../lib/network/connection/wireless.pm:341
+#, c-format
+msgid ""
+"Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
+"frequency), or add enough '0' (zeroes)."
+msgstr ""
+"A frekvencia k, M vagy G utótagot kaphat (például a \"2,46G\" 2,46 GHz-es "
+"frekvenciát jelöl), vagy ehelyett ki lehet írni a nullákat."
+
+#: ../lib/network/connection/wireless.pm:347
+#, c-format
+msgid ""
+"Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
+"enough '0' (zeroes)."
+msgstr ""
+"Az átviteli sebesség k, M vagy G utótagot kaphat (például \"11M\"), vagy "
+"ehelyett ki lehet írni a nullákat."
+
+#: ../lib/network/connection/wireless.pm:359
+#, c-format
+msgid "Allow access point roaming"
+msgstr "Roaming engedélyezése a hozzáférési pontra"
+
+#: ../lib/network/connection/wireless.pm:460
+#, c-format
+msgid "Associated to wireless network \"%s\" on interface %s"
+msgstr "A(z) \"%s\" vezeték nélküli hálózathoz rendelve ezen a csatolón: %s"
+
+#: ../lib/network/connection/wireless.pm:461
+#, c-format
+msgid "Lost association to wireless network on interface %s"
+msgstr "Megszűnt a vezeték nélküli hálózathoz való hozzárendelés ezen a csatolón: %s"
+
+#: ../lib/network/connection/xdsl.pm:8
+#, c-format
+msgid "DSL"
+msgstr "DSL"
+
+#: ../lib/network/connection/xdsl.pm:76 ../lib/network/netconnect.pm:755
+#, c-format
+msgid "Alcatel speedtouch USB modem"
+msgstr "Alcatel Speedtouch USB-modem"
+
+#: ../lib/network/connection/xdsl.pm:104
+#, c-format
+msgid ""
+"The ECI Hi-Focus modem cannot be supported due to binary driver distribution "
+"problem.\n"
+"\n"
+"You can find a driver on http://eciadsl.flashtux.org/"
+msgstr ""
+"Az ECI Hi-Focus modem a bináris meghajtóprogramra vonatkozó terjesztési\n"
+"megszorítások miatt nem támogatott.\n"
+"\n"
+"A meghajtóprogramot innen lehet letölteni: http://eciadsl.flashtux.org/"
+
+#: ../lib/network/connection/xdsl.pm:176
+#, c-format
+msgid "DSL over CAPI"
+msgstr "DSL CAPI felett"
+
+#: ../lib/network/connection/xdsl.pm:179
+#, c-format
+msgid "Dynamic Host Configuration Protocol (DHCP)"
+msgstr "Dinamikus gépbeállítási protokoll (DHCP)"
+
+#: ../lib/network/connection/xdsl.pm:180
+#, c-format
+msgid "Manual TCP/IP configuration"
+msgstr "Kézi TCP/IP-beállítás"
+
+#: ../lib/network/connection/xdsl.pm:181
+#, c-format
+msgid "Point to Point Tunneling Protocol (PPTP)"
+msgstr "Pontból-pontba alagútprotokoll (PPTP)"
+
+#: ../lib/network/connection/xdsl.pm:182
+#, c-format
+msgid "PPP over Ethernet (PPPoE)"
+msgstr "PPP Ethernet felett (PPPOE)"
+
+#: ../lib/network/connection/xdsl.pm:183
+#, c-format
+msgid "PPP over ATM (PPPoA)"
+msgstr "PPP ATM felett (PPPoA)"
+
+#: ../lib/network/connection/xdsl.pm:223
+#, c-format
+msgid "Virtual Path ID (VPI):"
+msgstr "Virtuális útvonal-azonosító (VPI):"
+
+#: ../lib/network/connection/xdsl.pm:224
+#, c-format
+msgid "Virtual Circuit ID (VCI):"
+msgstr "Virtuális összeköttetés (circuit)-azonosító (VCI):"
+
+#: ../lib/network/connection/xdsl.pm:324 ../lib/network/drakvpn.pm:45
+#: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:27
+#: ../lib/network/ndiswrapper.pm:42 ../lib/network/ndiswrapper.pm:86
+#: ../lib/network/ndiswrapper.pm:102 ../lib/network/netconnect.pm:131
+#: ../lib/network/netconnect.pm:179 ../lib/network/netconnect.pm:268
+#: ../lib/network/netconnect.pm:813 ../lib/network/thirdparty.pm:114
+#: ../lib/network/thirdparty.pm:131 ../lib/network/thirdparty.pm:214
+#: ../lib/network/thirdparty.pm:216 ../lib/network/thirdparty.pm:237
+#: ../tools/drakconnect:676 ../tools/drakconnect:680 ../tools/drakconnect:689
+#: ../tools/drakconnect:705 ../tools/drakgw:184 ../tools/drakhosts:100
+#: ../tools/drakhosts:245 ../tools/drakhosts:252 ../tools/drakhosts:259
+#: ../tools/drakinvictus:72 ../tools/draknetprofile:113 ../tools/draknfs:85
+#: ../tools/draknfs:106 ../tools/draknfs:273 ../tools/draknfs:400
+#: ../tools/draknfs:402 ../tools/draknfs:405 ../tools/draknfs:497
+#: ../tools/draknfs:504 ../tools/draknfs:567 ../tools/draknfs:574
+#: ../tools/draknfs:581 ../tools/drakroam:79 ../tools/drakroam:92
+#: ../tools/draksambashare:372 ../tools/draksambashare:379
+#: ../tools/draksambashare:382 ../tools/draksambashare:428
+#: ../tools/draksambashare:452 ../tools/draksambashare:518
+#: ../tools/draksambashare:533 ../tools/draksambashare:611
+#: ../tools/draksambashare:678 ../tools/draksambashare:778
+#: ../tools/draksambashare:785 ../tools/draksambashare:916
+#: ../tools/draksambashare:1109 ../tools/draksambashare:1118
+#: ../tools/draksambashare:1140 ../tools/draksambashare:1149
+#: ../tools/draksambashare:1168 ../tools/draksambashare:1177
+#: ../tools/draksambashare:1189
+#, c-format
+msgid "Error"
+msgstr "Hiba"
+
+#: ../lib/network/connection/xdsl.pm:324 ../lib/network/drakvpn.pm:45
+#: ../lib/network/netconnect.pm:131 ../lib/network/thirdparty.pm:114
+#, c-format
+msgid "Could not install the packages (%s)!"
+msgstr "Nem sikerült telepíteni a csomagokat (%s)."
+
+#: ../lib/network/drakfirewall.pm:12
+#, c-format
+msgid "Web Server"
+msgstr "Webkiszolgáló"
+
+#: ../lib/network/drakfirewall.pm:17
+#, c-format
+msgid "Domain Name Server"
+msgstr "Tartománynév-kiszolgáló"
+
+#: ../lib/network/drakfirewall.pm:22
+#, c-format
+msgid "SSH server"
+msgstr "SSH-kiszolgáló"
+
+#: ../lib/network/drakfirewall.pm:27
+#, c-format
+msgid "FTP server"
+msgstr "FTP-kiszolgáló"
+
+#: ../lib/network/drakfirewall.pm:32
+#, c-format
+msgid "Mail Server"
+msgstr "Email-kiszolgáló"
+
+#: ../lib/network/drakfirewall.pm:37
+#, c-format
+msgid "POP and IMAP Server"
+msgstr "POP- és IMAP-kiszolgáló"
+
+#: ../lib/network/drakfirewall.pm:42
+#, c-format
+msgid "Telnet server"
+msgstr "Telnet-kiszolgáló"
+
+#: ../lib/network/drakfirewall.pm:48
+#, c-format
+msgid "Windows Files Sharing (SMB)"
+msgstr "Windowsos fájlmegosztás (SMB)"
+
+#: ../lib/network/drakfirewall.pm:54
+#, c-format
+msgid "CUPS server"
+msgstr "CUPS-kiszolgáló"
+
+#: ../lib/network/drakfirewall.pm:60
+#, c-format
+msgid "Echo request (ping)"
+msgstr "\"Echo\"-kérés (ping)"
+
+#: ../lib/network/drakfirewall.pm:65
+#, c-format
+msgid "BitTorrent"
+msgstr "BitTorrent"
+
+#: ../lib/network/drakfirewall.pm:74
+#, c-format
+msgid "Port scan detection"
+msgstr "Portszkenelés figyelése"
+
+#: ../lib/network/drakfirewall.pm:166 ../lib/network/drakfirewall.pm:172
+#, c-format
+msgid "Firewall configuration"
+msgstr "Tűzfalbeállítás"
+
+#: ../lib/network/drakfirewall.pm:166
+#, c-format
+msgid ""
+"drakfirewall configurator\n"
+"\n"
+"This configures a personal firewall for this Mandriva Linux machine.\n"
+"For a powerful and dedicated firewall solution, please look to the\n"
+"specialized Mandriva Security Firewall distribution."
+msgstr ""
+"A DrakFirewall beállítása\n"
+"\n"
+"Ezzel egy személyes felhasználásra szánt tűzfalat lehet beállítani ehhez\n"
+"a Mandriva Linuxot használó géphez. Ha egy komolyabb tűzfalmegoldást\n"
+"szeretne, szerezze be a speciális Mandriva Security Firewall disztribúciót."
+
+#: ../lib/network/drakfirewall.pm:172
+#, c-format
+msgid ""
+"drakfirewall configurator\n"
+"\n"
+"Make sure you have configured your Network/Internet access with\n"
+"drakconnect before going any further."
+msgstr ""
+"A DrakFirewall beállítása\n"
+"\n"
+"Mielőtt továbblépne, állítsa be a hálózat- illetve internetelérést\n"
+"a DrakConnect programmal (ha ez még nem történt meg)."
+
+#: ../lib/network/drakfirewall.pm:189
+#, c-format
+msgid "Which services would you like to allow the Internet to connect to?"
+msgstr "A gép mely szolgáltatásai legyenek elérhetők az internet felől?"
+
+#: ../lib/network/drakfirewall.pm:190 ../lib/network/shorewall.pm:145
+#, c-format
+msgid "Firewall"
+msgstr "Tűzfal"
+
+#: ../lib/network/drakfirewall.pm:192
+#, c-format
+msgid ""
+"You can enter miscellaneous ports. \n"
+"Valid examples are: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
+"Have a look at /etc/services for information."
+msgstr ""
+"Többféle portot is megadhat.\n"
+"Példák: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
+"További információ a /etc/services fájlban."
+
+#: ../lib/network/drakfirewall.pm:198
+#, c-format
+msgid ""
+"Invalid port given: %s.\n"
+"The proper format is \"port/tcp\" or \"port/udp\", \n"
+"where port is between 1 and 65535.\n"
+"\n"
+"You can also give a range of ports (eg: 24300:24350/udp)"
+msgstr ""
+"Helytelen port lett megadva: %s.\n"
+"A helyes formátum: \"port/tcp\" vagy \"port/udp\",\n"
+"ahol a \"port\" egy 1 és 65535 közti szám.\n"
+"\n"
+"Port-tartomány is megadható (például 24300:24350/udp)."
+
+#: ../lib/network/drakfirewall.pm:208
+#, c-format
+msgid "Everything (no firewall)"
+msgstr "Minden (nincs tűzfal)"
+
+#: ../lib/network/drakfirewall.pm:210
+#, c-format
+msgid "Other ports"
+msgstr "Egyéb portok"
+
+#: ../lib/network/drakfirewall.pm:211
+#, c-format
+msgid "Log firewall messages in system logs"
+msgstr "A tűzfal üzeneteinek naplózása a rendszernaplókban"
+
+#: ../lib/network/drakfirewall.pm:255 ../lib/network/drakfirewall.pm:258
+#: ../tools/drakids:40 ../tools/drakids:65 ../tools/drakids:181
+#: ../tools/drakids:190 ../tools/drakids:215 ../tools/drakids:224
+#: ../tools/drakids:234 ../tools/drakids:326 ../tools/net_applet:77
+#: ../tools/net_applet:238 ../tools/net_applet:514 ../tools/net_applet:541
+#, c-format
+msgid "Interactive Firewall"
+msgstr "Interaktív tűzfal"
+
+#: ../lib/network/drakfirewall.pm:256
+#, c-format
+msgid ""
+"You can be warned when someone accesses to a service or tries to intrude "
+"into your computer.\n"
+"Please select which network activities should be watched."
+msgstr ""
+"Ön figyelmeztetést kaphat, amikor valaki hozzáférést kezdeményez egy "
+"szolgáltatáshoz vagy megpróbál behatolni a számítógépbe.\n"
+"Válassza ki, mely hálózati tevékenységek legyenek figyelve."
+
+#: ../lib/network/drakfirewall.pm:261
+#, c-format
+msgid "Use Interactive Firewall"
+msgstr "Interaktív tűzfal használata"
+
+#: ../lib/network/drakvpn.pm:30
+#, c-format
+msgid "VPN configuration"
+msgstr "VPN-beállítás"
+
+#: ../lib/network/drakvpn.pm:34
+#, c-format
+msgid "Choose the VPN type"
+msgstr "Adja meg a VPN típusát"
+
+#: ../lib/network/drakvpn.pm:49
+#, c-format
+msgid "Initializing tools and detecting devices for %s..."
+msgstr "Programok inicializálása és az eszközök azonosítása - típus: %s..."
+
+#: ../lib/network/drakvpn.pm:52
+#, c-format
+msgid "Unable to initialize %s connection type!"
+msgstr "Nem sikerült inicializálni a(z) %s kapcsolattípust."
+
+#: ../lib/network/drakvpn.pm:60
+#, c-format
+msgid "Please select an existing VPN connection or enter a new name."
+msgstr "Válasszon egy létező VPN-kapcsolatot, vagy adjon meg új nevet."
+
+#: ../lib/network/drakvpn.pm:64
+#, c-format
+msgid "Configure a new connection..."
+msgstr "Új kapcsolat beállítása..."
+
+#: ../lib/network/drakvpn.pm:66
+#, c-format
+msgid "New name"
+msgstr "Új név"
+
+#: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
+#: ../lib/network/ndiswrapper.pm:92 ../lib/network/netconnect.pm:471
+#: ../tools/drakconnect:978 ../tools/draknetprofile:129
+#: ../tools/draknetprofile:131 ../tools/drakproxy:36
+#, c-format
+msgid "Warning"
+msgstr "Figyelmeztetés"
+
+#: ../lib/network/drakvpn.pm:70
+#, c-format
+msgid "You must select an existing connection or enter a new name."
+msgstr "Válasszon egy létező kapcsolatot, vagy adjon meg új nevet."
+
+#: ../lib/network/drakvpn.pm:81
+#, c-format
+msgid "Please enter the required key(s)"
+msgstr "Adja meg a szükséges kulcso(ka)t"
+
+#: ../lib/network/drakvpn.pm:86
+#, c-format
+msgid "Please enter the settings of your VPN connection"
+msgstr "Adja meg a VPN-kapcsolat beállításait"
+
+#: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:291
+#, c-format
+msgid "Do you want to start the connection now?"
+msgstr "El szeretné indítani most a kapcsolatot?"
+
+#: ../lib/network/drakvpn.pm:100
+#, c-format
+msgid "Connection failed."
+msgstr "Nem sikerült kapcsolódni."
+
+#: ../lib/network/drakvpn.pm:108
+#, c-format
+msgid ""
+"The VPN connection is now configured.\n"
+"\n"
+"This VPN connection can be automatically started together with a network "
+"connection.\n"
+"It can be done by reconfiguring the network connection and selecting this "
+"VPN connection.\n"
+msgstr ""
+"A VPN-kapcsolat beállítása megtörtént.\n"
+"\n"
+"A VPN-kapcsolat automatikusan elindítható egy hálózati kapcsolattal együtt "
+"-\n"
+"ehhez módosítani kell a hálózati kapcsolat beállításait és ki kell jelölni "
+"ezen\n"
+"VPN-kapcsolatot.\n"
+
+#: ../lib/network/ifw.pm:129
+#, c-format
+msgid "Port scanning"
+msgstr "Portszkenelés"
+
+#: ../lib/network/ifw.pm:130
+#, c-format
+msgid "Service attack"
+msgstr "Szolgáltatás támadása"
+
+#: ../lib/network/ifw.pm:131
+#, c-format
+msgid "Password cracking"
+msgstr "Jelszófeltörés"
+
+#: ../lib/network/ifw.pm:132
+#, c-format
+msgid "\"%s\" attack"
+msgstr "\"%s\" támadás"
+
+#: ../lib/network/ifw.pm:134
+#, c-format
+msgid "A port scanning attack has been attempted by %s."
+msgstr "Portszkeneléses támadás megkísérelve \"%s\" által."
+
+#: ../lib/network/ifw.pm:135
+#, c-format
+msgid "The %s service has been attacked by %s."
+msgstr "A(z) \"%s\" szolgáltatás megtámadva \"%s\" által."
+
+#: ../lib/network/ifw.pm:136
+#, c-format
+msgid "A password cracking attack has been attempted by %s."
+msgstr "Jelszófeltörési támadás megkísérelve \"%s\" által."
+
+#: ../lib/network/ifw.pm:137
+#, c-format
+msgid "A \"%s\" attack has been attempted by %s"
+msgstr "\"%s\" támadás megkísérelve \"%s\" által."
+
+#: ../lib/network/ifw.pm:146
+#, c-format
+msgid ""
+"The \"%s\" application is trying to make a service (%s) available to the "
+"network."
+msgstr ""
+"A(z) \"%s\" alkalmazás megpróbál elérhetővé tenni egy szolgáltatást (%s) a "
+"hálózat számára."
+
+#. -PO: this should be kept lowercase since the expression is meant to be used between brackets
+#: ../lib/network/ifw.pm:150
+#, c-format
+msgid "port %d"
+msgstr "port: %d"
+
+#: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
+#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:603
+#: ../lib/network/netconnect.pm:620 ../lib/network/netconnect.pm:636
+#, c-format
+msgid "Manual"
+msgstr "Kézi"
+
+#: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
+#: ../lib/network/modem.pm:44 ../lib/network/modem.pm:63
+#: ../lib/network/modem.pm:76 ../lib/network/modem.pm:81
+#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:598
+#: ../lib/network/netconnect.pm:603 ../lib/network/netconnect.pm:615
+#: ../lib/network/netconnect.pm:620 ../lib/network/netconnect.pm:636
+#: ../lib/network/netconnect.pm:638
+#, c-format
+msgid "Automatic"
+msgstr "Automatikus"
+
+#: ../lib/network/ndiswrapper.pm:27
+#, c-format
+msgid "No device supporting the %s ndiswrapper driver is present!"
+msgstr ""
+"Nem található olyan eszköz, amely támogatná a(z) \"%s\" Ndiswrapper-"
+"meghajtót."
+
+#: ../lib/network/ndiswrapper.pm:33
+#, c-format
+msgid "Please select the Windows driver (.inf file)"
+msgstr "Válassza ki a windowsos meghajtóprogramot (.inf-fájl)"
+
+#: ../lib/network/ndiswrapper.pm:42
+#, c-format
+msgid "Unable to install the %s ndiswrapper driver!"
+msgstr "Nem sikerült telepíteni a(z) \"%s\" Ndiswrapper-meghajtót."
+
+#: ../lib/network/ndiswrapper.pm:86
+#, c-format
+msgid "Unable to load the ndiswrapper module!"
+msgstr "Nem sikerült betölteni az Ndiswrapper modult."
+
+#: ../lib/network/ndiswrapper.pm:92
+#, c-format
+msgid ""
+"The selected device has already been configured with the %s driver.\n"
+"Do you really want to use a ndiswrapper driver?"
+msgstr ""
+"A kijelölt eszköz már be lett állítva a(z) \"%s\" meghajtóprogrammal.\n"
+"Valóban szeretne Ndiswrapper-meghajtóprogramot használni?"
+
+#: ../lib/network/ndiswrapper.pm:102
+#, c-format
+msgid "Unable to find the ndiswrapper interface!"
+msgstr "Az Ndiswrapper-felület nem található."
+
+#: ../lib/network/ndiswrapper.pm:115
+#, c-format
+msgid "Choose an ndiswrapper driver"
+msgstr "Ndiswrapper-meghajtó kiválasztása"
+
+#: ../lib/network/ndiswrapper.pm:118
+#, c-format
+msgid "Use the ndiswrapper driver %s"
+msgstr "A(z) \"%s\" Ndiswrapper-meghajtóprogram használata"
+
+#: ../lib/network/ndiswrapper.pm:118
+#, c-format
+msgid "Install a new driver"
+msgstr "Új meghajtóprogram telepítése"
+
+#: ../lib/network/ndiswrapper.pm:129
+#, c-format
+msgid "Select a device:"
+msgstr "Válasszon egy eszközt:"
+
+#: ../lib/network/netconnect.pm:37
+#, c-format
+msgid "United States"
+msgstr "Amerikai Egyesült Államok"
+
+#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:493
+#: ../lib/network/netconnect.pm:507
+#, c-format
+msgid "Manual choice"
+msgstr "Kézi kiválasztás"
+
+#: ../lib/network/netconnect.pm:60
+#, c-format
+msgid "Internal ISDN card"
+msgstr "Belső ISDN-kártya"
+
+#: ../lib/network/netconnect.pm:65
+#, c-format
+msgid "Protocol for the rest of the world"
+msgstr "Protokoll a világ többi részén"
+
+#: ../lib/network/netconnect.pm:67 ../tools/drakconnect:564
+#, c-format
+msgid "European protocol (EDSS1)"
+msgstr "Európai protokoll (EDSS1)"
+
+#: ../lib/network/netconnect.pm:68 ../tools/drakconnect:565
+#, c-format
+msgid ""
+"Protocol for the rest of the world\n"
+"No D-Channel (leased lines)"
+msgstr ""
+"Protokoll a világ többi részén\n"
+"D csatorna nélkül (bérelt vonal)"
+
+# címfelirat
+#: ../lib/network/netconnect.pm:118 ../tools/drakconnect:61
+#, c-format
+msgid "Network & Internet Configuration"
+msgstr "Hálózat- és internetbeállítás"
+
+#: ../lib/network/netconnect.pm:123
+#, c-format
+msgid "Choose the connection you want to configure"
+msgstr "Válassza ki a beállítani kívánt eszközt"
+
+#: ../lib/network/netconnect.pm:145 ../lib/network/netconnect.pm:348
+#: ../lib/network/netconnect.pm:788
+#, c-format
+msgid "Select the network interface to configure:"
+msgstr "Válassza ki a beállítandó hálózati csatolót:"
+
+#: ../lib/network/netconnect.pm:164
+#, c-format
+msgid "No device can be found for this connection type."
+msgstr "Nem található eszköz ehhez a kapcsolattípushoz."
+
+#: ../lib/network/netconnect.pm:173
+#, c-format
+msgid "Hardware Configuration"
+msgstr "Hardverbeállítás"
+
+#: ../lib/network/netconnect.pm:177 ../tools/drakroam:90
+#, c-format
+msgid "Configuring device..."
+msgstr "Az eszköz beállítása..."
+
+#: ../lib/network/netconnect.pm:194
+#, c-format
+msgid "Please select your provider:"
+msgstr "Adja meg a szolgáltatóját:"
+
+#: ../lib/network/netconnect.pm:209 ../tools/drakroam:170
+#, c-format
+msgid "Scanning for networks..."
+msgstr "Hálózatok keresése..."
+
+#: ../lib/network/netconnect.pm:212
+#, c-format
+msgid "Please select your network:"
+msgstr "Adja meg a hálózatát:"
+
+#: ../lib/network/netconnect.pm:241
+#, c-format
+msgid ""
+"Please select your connection protocol.\n"
+"If you do not know it, keep the preselected protocol."
+msgstr ""
+"Adja meg a kapcsolati protokollt.\n"
+"Ha nincs róla információja, akkor tartsa meg a kijelölt protokollt."
+
+#: ../lib/network/netconnect.pm:285 ../lib/network/netconnect.pm:655
+#, c-format
+msgid "Connection control"
+msgstr "Kapcsolatvezérlés"
+
+#: ../lib/network/netconnect.pm:315
+#, c-format
+msgid "Connection Configuration"
+msgstr "A kapcsolat beállítása"
+
+#: ../lib/network/netconnect.pm:315
+#, c-format
+msgid "Please fill or check the field below"
+msgstr "Töltse ki vagy ellenőrizze az alábbi mezőket"
+
+#: ../lib/network/netconnect.pm:318
+#, c-format
+msgid "Your personal phone number"
+msgstr "Az Ön saját telefonszáma"
+
+#: ../lib/network/netconnect.pm:319
+#, c-format
+msgid "Provider name (ex provider.net)"
+msgstr "A szolgáltató neve (pl.: provider.net)"
+
+#: ../lib/network/netconnect.pm:320 ../tools/drakconnect:494
+#, c-format
+msgid "Provider phone number"
+msgstr "A szolgáltató telefonszáma"
+
+#: ../lib/network/netconnect.pm:321
+#, c-format
+msgid "Provider DNS 1 (optional)"
+msgstr "Szolgáltatói DNS 1 (nem kötelező)"
+
+#: ../lib/network/netconnect.pm:322
+#, c-format
+msgid "Provider DNS 2 (optional)"
+msgstr "Szolgáltatói DNS 2 (nem kötelező)"
+
+#: ../lib/network/netconnect.pm:323 ../tools/drakconnect:446
+#, c-format
+msgid "Dialing mode"
+msgstr "Tárcsázási mód"
+
+#: ../lib/network/netconnect.pm:324 ../tools/drakconnect:451
+#: ../tools/drakconnect:518
+#, c-format
+msgid "Connection speed"
+msgstr "Csatlakozási sebesség"
+
+#: ../lib/network/netconnect.pm:325 ../tools/drakconnect:456
+#, c-format
+msgid "Connection timeout (in sec)"
+msgstr "A csatlakozás várakozási ideje (másodpercben)"
+
+#: ../lib/network/netconnect.pm:328 ../tools/drakconnect:555
+#, c-format
+msgid "Card IRQ"
+msgstr "Kártya IRQ"
+
+#: ../lib/network/netconnect.pm:329 ../tools/drakconnect:556
+#, c-format
+msgid "Card mem (DMA)"
+msgstr "Kártya DMA"
+
+#: ../lib/network/netconnect.pm:330 ../tools/drakconnect:557
+#, c-format
+msgid "Card IO"
+msgstr "Kártya IO"
+
+#: ../lib/network/netconnect.pm:331 ../tools/drakconnect:558
+#, c-format
+msgid "Card IO_0"
+msgstr "Kártya IO_0"
+
+#: ../lib/network/netconnect.pm:332
+#, c-format
+msgid "Card IO_1"
+msgstr "Kártya IO_1"
+
+#: ../lib/network/netconnect.pm:350 ../lib/network/netconnect.pm:385
+#: ../tools/drakconnect:719 ../tools/drakgw:123
+#, c-format
+msgid "Net Device"
+msgstr "Hálózati eszköz"
+
+#: ../lib/network/netconnect.pm:351 ../lib/network/netconnect.pm:356
+#, c-format
+msgid "External ISDN modem"
+msgstr "Külső ISDN-modem"
+
+#: ../lib/network/netconnect.pm:384
+#, c-format
+msgid "Select a device!"
+msgstr "Válasszon egy eszközt"
+
+#: ../lib/network/netconnect.pm:393 ../lib/network/netconnect.pm:403
+#: ../lib/network/netconnect.pm:413 ../lib/network/netconnect.pm:446
+#: ../lib/network/netconnect.pm:460
+#, c-format
+msgid "ISDN Configuration"
+msgstr "ISDN-beállítások"
+
+#: ../lib/network/netconnect.pm:394
+#, c-format
+msgid "What kind of card do you have?"
+msgstr "Milyen típusú kártyával rendelkezik?"
+
+#: ../lib/network/netconnect.pm:404
+#, c-format
+msgid ""
+"\n"
+"If you have an ISA card, the values on the next screen should be right.\n"
+"\n"
+"If you have a PCMCIA card, you have to know the \"irq\" and \"io\" of your "
+"card.\n"
+msgstr ""
+"\n"
+"Amennyiben ISA kártyája van, a következő képernyőn látható értékek\n"
+"beállítása lényeges.\n"
+"\n"
+"Ha PCMCIA kártyája van, tudnia kell a kártya \"IRQ\" és \"IO\" értékeit.\n"
+
+#: ../lib/network/netconnect.pm:408
+#, c-format
+msgid "Continue"
+msgstr "Folytatás"
+
+#: ../lib/network/netconnect.pm:408
+#, c-format
+msgid "Abort"
+msgstr "Megszakítás"
+
+#: ../lib/network/netconnect.pm:414
+#, c-format
+msgid "Which of the following is your ISDN card?"
+msgstr "Milyen ISDN-kártyája van?"
+
+#: ../lib/network/netconnect.pm:432
+#, c-format
+msgid ""
+"A CAPI driver is available for this modem. This CAPI driver can offer more "
+"capabilities than the free driver (like sending faxes). Which driver do you "
+"want to use?"
+msgstr ""
+"Létezik CAPI-meghajtóprogram is ehhez a modemhez. Ez a CAPI-meghajtó több "
+"lehetőséget kínál, mint az ingyenes változat (például faxküldés). Melyik "
+"meghajtót szeretné használni?"
+
+#: ../lib/network/netconnect.pm:434 ../tools/drakconnect:113
+#, c-format
+msgid "Driver"
+msgstr "Meghajtó"
+
+#: ../lib/network/netconnect.pm:446
+#, c-format
+msgid "Which protocol do you want to use?"
+msgstr "Melyik protokollt szeretné használni?"
+
+#: ../lib/network/netconnect.pm:448 ../tools/drakconnect:113
+#: ../tools/drakconnect:305 ../tools/drakconnect:563 ../tools/drakids:252
+#: ../tools/drakvpn-old:839
+#, c-format
+msgid "Protocol"
+msgstr "Protokoll"
+
+#: ../lib/network/netconnect.pm:460
+#, c-format
+msgid ""
+"Select your provider.\n"
+"If it is not listed, choose Unlisted."
+msgstr ""
+"Adja meg a szolgáltatója nevét.\n"
+"Ha az nincs benne a listában, válassza az \"Unlisted\"-et."
+
+#: ../lib/network/netconnect.pm:462 ../lib/network/netconnect.pm:558
+#, c-format
+msgid "Provider:"
+msgstr "Szolgáltató:"
+
+#: ../lib/network/netconnect.pm:471
+#, c-format
+msgid ""
+"Your modem is not supported by the system.\n"
+"Take a look at http://www.linmodems.org"
+msgstr ""
+"Az Ön modeme nem támogatott.\n"
+"Látogasson el a következő helyre: http://www.linmodems.org"
+
+#: ../lib/network/netconnect.pm:490
+#, c-format
+msgid "Select the modem to configure:"
+msgstr "Válassza ki a beállítandó modemet:"
+
+#: ../lib/network/netconnect.pm:492
+#, c-format
+msgid "Modem"
+msgstr "Modem"
+
+#: ../lib/network/netconnect.pm:527
+#, c-format
+msgid "Please choose which serial port your modem is connected to."
+msgstr "Válassza ki, hogy melyik soros portra csatlakozik a modeme."
+
+#: ../lib/network/netconnect.pm:556
+#, c-format
+msgid "Select your provider:"
+msgstr "Válassza ki a szolgáltatót:"
+
+#: ../lib/network/netconnect.pm:580
+#, c-format
+msgid "Dialup: account options"
+msgstr "Telefonos kapcsolat: azonosító-beállítások"
+
+#: ../lib/network/netconnect.pm:583
+#, c-format
+msgid "Connection name"
+msgstr "Csatlakozás neve"
+
+#: ../lib/network/netconnect.pm:584
+#, c-format
+msgid "Phone number"
+msgstr "Telefonszám"
+
+#: ../lib/network/netconnect.pm:585
+#, c-format
+msgid "Login ID"
+msgstr "Felhasználónév"
+
+#: ../lib/network/netconnect.pm:586 ../lib/network/vpn/vpnc.pm:56
+#: ../tools/drakinvictus:110
+#, c-format
+msgid "Password"
+msgstr "Jelszó"
+
+#: ../lib/network/netconnect.pm:600 ../lib/network/netconnect.pm:633
+#, c-format
+msgid "Dialup: IP parameters"
+msgstr "Telefonos kapcsolat: IP-paraméterek"
+
+#: ../lib/network/netconnect.pm:603
+#, c-format
+msgid "IP parameters"
+msgstr "IP-paraméterek"
+
+#: ../lib/network/netconnect.pm:605
+#, c-format
+msgid "Subnet mask"
+msgstr "Alhálózati maszk"
+
+#: ../lib/network/netconnect.pm:617
+#, c-format
+msgid "Dialup: DNS parameters"
+msgstr "Telefonos kapcsolat: DNS-paraméterek"
+
+#: ../lib/network/netconnect.pm:620
+#, c-format
+msgid "DNS"
+msgstr "DNS"
+
+#: ../lib/network/netconnect.pm:621
+#, c-format
+msgid "Domain name"
+msgstr "Tartománynév"
+
+#: ../lib/network/netconnect.pm:622 ../tools/drakconnect:996
+#, c-format
+msgid "First DNS Server (optional)"
+msgstr "Elsődleges DNS-kiszolgáló (nem kötelező)"
+
+#: ../lib/network/netconnect.pm:623 ../tools/drakconnect:997
+#, c-format
+msgid "Second DNS Server (optional)"
+msgstr "Másodlagos DNS-kiszolgáló (nem kötelező)"
+
+#: ../lib/network/netconnect.pm:624
+#, c-format
+msgid "Set hostname from IP"
+msgstr "Gépnév beállítása IP alapján"
+
+#: ../lib/network/netconnect.pm:637
+#, c-format
+msgid "Gateway IP address"
+msgstr "Az átjáró IP-címe"
+
+#: ../lib/network/netconnect.pm:670
+#, c-format
+msgid "Automatically at boot"
+msgstr "Rendszerindításkor automatikusan"
+
+#: ../lib/network/netconnect.pm:672
+#, c-format
+msgid "By using Net Applet in the system tray"
+msgstr "A rendszertálcán levő hálózati alkalmazással"
+
+#: ../lib/network/netconnect.pm:674
+#, c-format
+msgid "Manually (the interface would still be activated at boot)"
+msgstr "Kézzel (a csatoló ebben az esetben is aktiválva lesz rendszerindításkor)"
+
+#: ../lib/network/netconnect.pm:683
+#, c-format
+msgid "How do you want to dial this connection?"
+msgstr "Hogyan szeretné tárcsázni ezt a kapcsolatot?"
+
+#: ../lib/network/netconnect.pm:696
+#, c-format
+msgid "Do you want to try to connect to the Internet now?"
+msgstr "Kipróbáljuk az internetkapcsolatot most?"
+
+#: ../lib/network/netconnect.pm:704 ../tools/drakconnect:1027
+#, c-format
+msgid "Testing your connection..."
+msgstr "A kapcsolat ellenőrzése..."
+
+#: ../lib/network/netconnect.pm:723
+#, c-format
+msgid "The system is now connected to the Internet."
+msgstr "A rendszer internetes kapcsolata létrejött."
+
+#: ../lib/network/netconnect.pm:724
+#, c-format
+msgid "For security reasons, it will be disconnected now."
+msgstr "Biztonsági okokból a kapcsolat most lebontásra kerül."
+
+#: ../lib/network/netconnect.pm:725
+#, c-format
+msgid ""
+"The system does not seem to be connected to the Internet.\n"
+"Try to reconfigure your connection."
+msgstr ""
+"Az internetkapcsolat feltehetően nem aktív.\n"
+"Próbálja meg újból elvégezni a kapcsolat beállítását."
+
+#: ../lib/network/netconnect.pm:740
+#, c-format
+msgid ""
+"Congratulations, the network and Internet configuration is finished.\n"
+"\n"
+msgstr ""
+"Gratulálunk! A hálózat- és internetelérés beállítása befejeződött.\n"
+"\n"
+
+#: ../lib/network/netconnect.pm:743
+#, c-format
+msgid ""
+"After this is done, we recommend that you restart your X environment to "
+"avoid any hostname-related problems."
+msgstr ""
+"Annak elvégzése után érdemes újraindítani az X környezetet,\n"
+"hogy a gépnév módosításából eredő problémák elkerülhetők legyenek."
+
+#: ../lib/network/netconnect.pm:744
+#, c-format
+msgid ""
+"Problems occurred during configuration.\n"
+"Test your connection via net_monitor or mcc. If your connection does not "
+"work, you might want to relaunch the configuration."
+msgstr ""
+"Beállítás közben problémák merültek fel.\n"
+"Tesztelje le a kapcsolatot a net_monitor vagy az mcc használatával. Ha a "
+"kapcsolat nem működik, esetleg indítsa el újra a beállítást."
+
+#: ../lib/network/netconnect.pm:756
+#, c-format
+msgid "Sagem USB modem"
+msgstr "Sagem USB-modem"
+
+#: ../lib/network/netconnect.pm:757 ../lib/network/netconnect.pm:758
+#, c-format
+msgid "Bewan modem"
+msgstr "Bewan modem"
+
+#: ../lib/network/netconnect.pm:759
+#, c-format
+msgid "ECI Hi-Focus modem"
+msgstr "ECI Hi-Focus modem"
+
+#: ../lib/network/netconnect.pm:760
+#, c-format
+msgid "LAN connection"
+msgstr "Helyi hálózatos kapcsolat"
+
+#: ../lib/network/netconnect.pm:761 ../tools/drakroam:29
+#, c-format
+msgid "Wireless connection"
+msgstr "Vezeték nélküli kapcsolat"
+
+#: ../lib/network/netconnect.pm:762
+#, c-format
+msgid "ADSL connection"
+msgstr "ADSL-kapcsolat"
+
+#: ../lib/network/netconnect.pm:763
+#, c-format
+msgid "Cable connection"
+msgstr "Kábeles kapcsolat"
+
+#: ../lib/network/netconnect.pm:764
+#, c-format
+msgid "ISDN connection"
+msgstr "ISDN-kapcsolat"
+
+#: ../lib/network/netconnect.pm:765
+#, c-format
+msgid "Modem connection"
+msgstr "Modemes kapcsolat"
+
+#: ../lib/network/netconnect.pm:766
+#, c-format
+msgid "DVB connection"
+msgstr "DVB-kapcsolat"
+
+#: ../lib/network/netconnect.pm:768
+#, c-format
+msgid "(detected on port %s)"
+msgstr "(felismerve ezen a porton: %s)"
+
+#. -PO: here, "(detected)" string will be appended to eg "ADSL connection"
+#: ../lib/network/netconnect.pm:770
+#, c-format
+msgid "(detected %s)"
+msgstr "(felismerve: %s)"
+
+#: ../lib/network/netconnect.pm:770
+#, c-format
+msgid "(detected)"
+msgstr "(felismerve)"
+
+#: ../lib/network/netconnect.pm:771
+#, c-format
+msgid "Network Configuration"
+msgstr "Hálózatbeállítás"
+
+#: ../lib/network/netconnect.pm:772
+#, c-format
+msgid "Zeroconf hostname resolution"
+msgstr "Zeroconf gépnévfeloldás"
+
+#: ../lib/network/netconnect.pm:773
+#, c-format
+msgid ""
+"If desired, enter a Zeroconf hostname.\n"
+"This is the name your machine will use to advertise any of\n"
+"its shared resources that are not managed by the network.\n"
+"It is not necessary on most networks."
+msgstr ""
+"Ha kívánja, megadhat egy Zeroconf-gépnevet.\n"
+"Ezen a néven fogja nyilvánosságra hozni a gép azon megosztott\n"
+"erőforrásait, amelyeket nem a hálózat kezel.\n"
+"A legtöbb hálózaton ez nem szükséges."
+
+#: ../lib/network/netconnect.pm:777
+#, c-format
+msgid "Zeroconf Host name"
+msgstr "Zeroconf gépnév"
+
+#: ../lib/network/netconnect.pm:778
+#, c-format
+msgid "Zeroconf host name must not contain a ."
+msgstr "A Zeroconf gépnév nem tartalmazhat pontot."
+
+#: ../lib/network/netconnect.pm:779
+#, c-format
+msgid ""
+"Because you are doing a network installation, your network is already "
+"configured.\n"
+"Click on Ok to keep your configuration, or cancel to reconfigure your "
+"Internet & Network connection.\n"
+msgstr ""
+"Mivel a hálózaton keresztül telepít, a hálózat beállítása már megtörtént.\n"
+"Kattintson az OK gombra a beállítások megtartásához, vagy a Mégsem gombra\n"
+"a hálózat és az internetkapcsolat újbóli beállításához.\n"
+
+#: ../lib/network/netconnect.pm:782
+#, c-format
+msgid "The network needs to be restarted. Do you want to restart it?"
+msgstr "A hálózatot újra kell indítani. Szeretné újraindítani?"
+
+#: ../lib/network/netconnect.pm:783
+#, c-format
+msgid ""
+"A problem occurred while restarting the network: \n"
+"\n"
+"%s"
+msgstr ""
+"Hiba történt a hálózatkezelés újraindításakor: \n"
+"\n"
+"%s"
+
+#: ../lib/network/netconnect.pm:784
+#, c-format
+msgid ""
+"We are now going to configure the %s connection.\n"
+"\n"
+"\n"
+"Press \"%s\" to continue."
+msgstr ""
+"A(z) \"%s\" kapcsolat beállítása következik.\n"
+"\n"
+"\n"
+"A továbblépéshez nyomja meg a(z) \"%s\" gombot."
+
+#: ../lib/network/netconnect.pm:785
+#, c-format
+msgid "Configuration is complete, do you want to apply settings?"
+msgstr "A beállítás megtörtént. Szeretné érvényre juttatni a beállításokat?"
+
+#: ../lib/network/netconnect.pm:786
+#, c-format
+msgid ""
+"You have configured multiple ways to connect to the Internet.\n"
+"Choose the one you want to use.\n"
+"\n"
+msgstr ""
+"Egynél több internetkapcsolatot hozott létre.\n"
+"Válassza ki azt, amelyiket használni szeretné.\n"
+"\n"
+
+#: ../lib/network/netconnect.pm:787
+#, c-format
+msgid "Internet connection"
+msgstr "Internetkapcsolat"
+
+#: ../lib/network/netconnect.pm:789
+#, c-format
+msgid "Configuring network device %s (driver %s)"
+msgstr "A(z) %s hálózati eszköz beállítása (meghajtó: %s)"
+
+#: ../lib/network/netconnect.pm:790
+#, c-format
+msgid ""
+"The following protocols can be used to configure a LAN connection. Please "
+"choose the one you want to use."
+msgstr ""
+"A következő protokollok használhatók egy helyi hálózati kapcsolat "
+"beállításához. Válassza ki, melyiket szeretné használni."
+
+#: ../lib/network/netconnect.pm:791
+#, c-format
+msgid ""
+"Please enter your host name.\n"
+"Your host name should be a fully-qualified host name,\n"
+"such as ``mybox.mylab.myco.com''.\n"
+"You may also enter the IP address of the gateway if you have one."
+msgstr ""
+"Adja meg a gépe nevét.\n"
+"A teljes nevet kell beírni, például: \"mybox.mylab.myco.com\".\n"
+"Megadhatja az átjáró (gateway) IP-címét is, ha van olyan."
+
+#: ../lib/network/netconnect.pm:796
+#, c-format
+msgid "Last but not least you can also type in your DNS server IP addresses."
+msgstr "Végül, de nem utolsósorban megadhatja a DNS-kiszolgálók IP-címeit."
+
+#: ../lib/network/netconnect.pm:797
+#, c-format
+msgid "DNS server address should be in format 1.2.3.4"
+msgstr "A DNS-kiszolgáló címének formátuma 1.2.3.4 legyen"
+
+#: ../lib/network/netconnect.pm:798 ../tools/drakconnect:689
+#, c-format
+msgid "Gateway address should be in format 1.2.3.4"
+msgstr "Az átjáró címének formátuma 1.2.3.4 legyen"
+
+#: ../lib/network/netconnect.pm:799
+#, c-format
+msgid "Gateway device"
+msgstr "Átjáró-eszköz"
+
+#: ../lib/network/netconnect.pm:813
+#, c-format
+msgid ""
+"An unexpected error has happened:\n"
+"%s"
+msgstr ""
+"Váratlan hiba történt:\n"
+"%s"
+
+#: ../lib/network/network.pm:429
+#, c-format
+msgid "Proxies configuration"
+msgstr "Proxy-beállítások"
+
+#: ../lib/network/network.pm:430
+#, c-format
+msgid ""
+"Here you can set up your proxies configuration (eg: http://"
+"my_caching_server:8080)"
+msgstr ""
+"Itt módosíthatja a proxy-beállításokat (példa: http://"
+"helyi_gyorstárazó_kiszolgáló:8080)"
+
+#: ../lib/network/network.pm:431
+#, c-format
+msgid "HTTP proxy"
+msgstr "HTTP-proxy"
+
+#: ../lib/network/network.pm:432
+#, c-format
+msgid "Use HTTP proxy for HTTPS connections"
+msgstr "A HTTP-proxy használata a HTTPS-kapcsolatokhoz"
+
+#: ../lib/network/network.pm:433
+#, c-format
+msgid "HTTPS proxy"
+msgstr "HTTPS-proxy"
+
+#: ../lib/network/network.pm:434
+#, c-format
+msgid "FTP proxy"
+msgstr "FTP-proxy"
+
+#: ../lib/network/network.pm:435
+#, c-format
+msgid "No proxy for (comma separated list):"
+msgstr "Ne legyen proxy ezekhez (vesszővel elválasztott lista):"
+
+#: ../lib/network/network.pm:440
+#, c-format
+msgid "Proxy should be http://..."
+msgstr "A proxy ilyen kell, hogy legyen: http://..."
+
+#: ../lib/network/network.pm:441
+#, c-format
+msgid "Proxy should be http://... or https://..."
+msgstr "A proxy ilyen kell, hogy legyen: http://... vagy https://..."
+
+#: ../lib/network/network.pm:442
+#, c-format
+msgid "URL should begin with 'ftp:' or 'http:'"
+msgstr "Az URL-nek ftp: vagy http: kezdetűnek kell lenni"
+
+#: ../lib/network/shorewall.pm:61
+#, c-format
+msgid ""
+"Please select the interfaces that will be protected by the firewall.\n"
+"\n"
+"All interfaces directly connected to Internet should be selected,\n"
+"while interfaces connected to a local network may be unselected.\n"
+"\n"
+"Which interfaces should be protected?\n"
+msgstr ""
+"Adja meg, hogy mely csatolókat kell tűzfallal védeni.\n"
+"\n"
+"Az összes olyan csatolót ki kell jelölni, amely közvetlenül csatlakozik\n"
+"az internethez. A helyi hálózathoz csatlakozó csatolókat nem feltétlenül\n"
+"szükséges kijelölni.\n"
+"\n"
+"Mely csatolók legyenek védve?\n"
+
+#: ../lib/network/shorewall.pm:136
+#, c-format
+msgid "Keep custom rules"
+msgstr "Egyéni szabályok megtartása"
+
+#: ../lib/network/shorewall.pm:137
+#, c-format
+msgid "Drop custom rules"
+msgstr "Egyéni szabályok törlése"
+
+#: ../lib/network/shorewall.pm:142
+#, c-format
+msgid ""
+"Your firewall configuration has been manually edited and contains\n"
+"rules that may conflict with the configuration that has just been set up.\n"
+"What do you want to do?"
+msgstr ""
+"A tűzfalbeállítás kézzel módosítva lett. Tartalmaz olyan szabályokat,\n"
+"amelyek ütközhetnek a most elkészített beállításokkal.\n"
+"Mit szeretne tenni?"
+
+#: ../lib/network/thirdparty.pm:134
+#, c-format
+msgid "Some components (%s) are required but aren't available for %s hardware."
+msgstr "Bizonyos komponensek (%s) szükségesek, de nem elérhetők ehhez a hardverhez: %s."
+
+#: ../lib/network/thirdparty.pm:135
+#, c-format
+msgid "Some packages (%s) are required but aren't available."
+msgstr "Bizonyos csomagokra (%s) szükség van, de nem elérhetők."
+
+#: ../lib/network/thirdparty.pm:137
+#, c-format
+msgid ""
+"These packages can be found in Mandriva Club or in Mandriva commercial "
+"releases."
+msgstr ""
+"Ezek a csomagok a Mandriva Club szolgáltatáson keresztül, továbbá a Mandriva "
+"kereskedelmi kiadásaiból szerezhetők meg."
+
+#: ../lib/network/thirdparty.pm:138
+#, c-format
+msgid "The following component is missing: %s"
+msgstr "A következő komponens hiányzik: %s"
+
+#: ../lib/network/thirdparty.pm:140
+#, c-format
+msgid ""
+"The required files can also be installed from this URL:\n"
+"%s"
+msgstr ""
+"A szükséges fájlok telepíthetők erről a címről is:\n"
+"%s"
+
+#: ../lib/network/thirdparty.pm:177 ../lib/network/thirdparty.pm:182
+#, c-format
+msgid "Use a floppy"
+msgstr "Floppy használata"
+
+#: ../lib/network/thirdparty.pm:178 ../lib/network/thirdparty.pm:185
+#, c-format
+msgid "Use my Windows partition"
+msgstr "Windowsos partíció használata"
+
+#: ../lib/network/thirdparty.pm:179
+#, c-format
+msgid "Select file"
+msgstr "Fájlválasztás"
+
+#: ../lib/network/thirdparty.pm:190
+#, c-format
+msgid "Please select the firmware file (for example: %s)"
+msgstr "Válassza ki a firmware-fájlt (példa: %s)"
+
+#: ../lib/network/thirdparty.pm:214
+#, c-format
+msgid "Unable to find \"%s\" on your Windows system!"
+msgstr "Nem található \"%s\" a Windows-rendszerben."
+
+#: ../lib/network/thirdparty.pm:216
+#, c-format
+msgid "No Windows system has been detected!"
+msgstr "Nem található Windows-rendszer."
+
+#: ../lib/network/thirdparty.pm:226
+#, c-format
+msgid "Insert floppy"
+msgstr "Tegye be a floppyt"
+
+#: ../lib/network/thirdparty.pm:227
+#, c-format
+msgid ""
+"Insert a FAT formatted floppy in drive %s with %s in root directory and "
+"press %s"
+msgstr ""
+"Tegyen egy FAT fájlrendszerre formázott floppyt a(z) \"%s\" meghajtóba - a "
+"gyökerében a(z) \"%s\" fájllal -, majd nyomja le a(z) \"%s\" gombot."
+
+#: ../lib/network/thirdparty.pm:227
+#, c-format
+msgid "Next"
+msgstr "Következő"
+
+#: ../lib/network/thirdparty.pm:237
+#, c-format
+msgid "Floppy access error, unable to mount device %s"
+msgstr "A floppy nem elérhető - a(z) %s eszköz csatolása nem sikerült."
+
+#: ../lib/network/thirdparty.pm:319
+#, c-format
+msgid "Looking for required software and drivers..."
+msgstr "A szükséges szoftver és meghajtóprogramok keresése..."
+
+#: ../lib/network/thirdparty.pm:330
+#, c-format
+msgid "Please wait, running device configuration commands..."
+msgstr "Kis türelmet - az eszközök beállítása..."
+
+#: ../lib/network/vpn/openvpn.pm:107
+#, c-format
+msgid "X509 Public Key Infrastructure"
+msgstr "X509 nyilvános kulcsú infrastruktúra"
+
+#: ../lib/network/vpn/openvpn.pm:108
+#, c-format
+msgid "Static Key"
+msgstr "Statikus kulcs"
+
+#: ../lib/network/vpn/openvpn.pm:115
+#, c-format
+msgid "Type"
+msgstr "Típus"
+
+#. -PO: please don't translate the CA acronym
+#: ../lib/network/vpn/openvpn.pm:142
+#, c-format
+msgid "Certificate Authority (CA)"
+msgstr "Hitelesítésszolgáltató (CA)"
+
+#: ../lib/network/vpn/openvpn.pm:148
+#, c-format
+msgid "Certificate"
+msgstr "Tanúsítvány"
+
+#: ../lib/network/vpn/openvpn.pm:154
+#, c-format
+msgid "Key"
+msgstr "Kulcs"
+
+# ...A TLS session is established between the
+# client and the server on the control channel...
+#: ../lib/network/vpn/openvpn.pm:160
+#, c-format
+msgid "TLS control channel key"
+msgstr "TLS-vezérlőcsatorna kulcsa"
+
+#: ../lib/network/vpn/openvpn.pm:167
+#, c-format
+msgid "Key direction"
+msgstr "Kulcsirány"
+
+#: ../lib/network/vpn/openvpn.pm:175
+#, c-format
+msgid "Authenticate using username and password"
+msgstr "Azonosítás felhasználónév és jelszó használatával"
+
+#: ../lib/network/vpn/openvpn.pm:181
+#, c-format
+msgid "Check server certificate"
+msgstr "A kiszolgáló tanúsítványának ellenőrzése"
+
+#: ../lib/network/vpn/openvpn.pm:187
+#, c-format
+msgid "Cipher algorithm"
+msgstr "Titkosítási módszer"
+
+#: ../lib/network/vpn/openvpn.pm:191
+#, c-format
+msgid "Default"
+msgstr "Alapértelmezés"
+
+#: ../lib/network/vpn/openvpn.pm:195
+#, c-format
+msgid "Size of cipher key"
+msgstr "A titkosítási kulcs mérete"
+
+#: ../lib/network/vpn/openvpn.pm:206
+#, c-format
+msgid "Get from server"
+msgstr "Lekérés a kiszolgálóról"
+
+#: ../lib/network/vpn/openvpn.pm:216
+#, c-format
+msgid "Gateway port"
+msgstr "Átjáró-port"
+
+#: ../lib/network/vpn/openvpn.pm:227 ../tools/drakgw:176
+#, c-format
+msgid "Local IP address"
+msgstr "Helyi IP-cím"
+
+#: ../lib/network/vpn/openvpn.pm:232
+#, c-format
+msgid "Remote IP address"
+msgstr "Távoli IP-cím"
+
+#: ../lib/network/vpn/openvpn.pm:237
+#, c-format
+msgid "Use TCP protocol"
+msgstr "TCP protokoll használata"
+
+#: ../lib/network/vpn/openvpn.pm:243
+#, c-format
+msgid "Virtual network device type"
+msgstr "A virtuális hálózati eszköz típusa"
+
+#: ../lib/network/vpn/openvpn.pm:250
+#, c-format
+msgid "Virtual network device number (optional)"
+msgstr "A virtuális hálózati eszköz száma (nem kötelező)"
+
+#: ../lib/network/vpn/openvpn.pm:365
+#, c-format
+msgid "Starting connection.."
+msgstr "Kapcsolat indítása..."
+
+#: ../lib/network/vpn/openvpn.pm:380
+#, c-format
+msgid "Please insert your token"
+msgstr "Helyezze be a tokent"
+
+#: ../lib/network/vpn/vpnc.pm:9
+#, c-format
+msgid "Cisco VPN Concentrator"
+msgstr "Cisco VPN-koncentrátor"
+
+#: ../lib/network/vpn/vpnc.pm:43
+#, c-format
+msgid "Group name"
+msgstr "Csoportnév"
+
+#: ../lib/network/vpn/vpnc.pm:47
+#, c-format
+msgid "Group secret"
+msgstr "Csoporttitok"
+
+#: ../lib/network/vpn/vpnc.pm:52
+#, c-format
+msgid "Username"
+msgstr "Felhasználónév"
+
+#: ../lib/network/vpn/vpnc.pm:61
+#, c-format
+msgid "Use Cisco-UDP encapsulation"
+msgstr "Cisco-féle UDP-becsomagolás használata"
+
+#: ../lib/network/vpn/vpnc.pm:67
+#, c-format
+msgid "Use specific UDP port"
+msgstr "Megadott UDP-port használata"
+
+#: ../tools/drakconnect:81
+#, c-format
+msgid "Network configuration (%d adapters)"
+msgstr "Hálózatbeállítás (%d csatoló)"
+
+#: ../tools/drakconnect:93 ../tools/drakconnect:812
+#, c-format
+msgid "Gateway:"
+msgstr "Átjáró (gateway):"
+
+#: ../tools/drakconnect:93 ../tools/drakconnect:812
+#, c-format
+msgid "Interface:"
+msgstr "Csatoló:"
+
+#: ../tools/drakconnect:97 ../tools/net_monitor:119
+#, c-format
+msgid "Wait please"
+msgstr "Kis türelmet"
+
+#: ../tools/drakconnect:113 ../tools/drakinvictus:105
+#, c-format
+msgid "Interface"
+msgstr "Csatoló"
+
+#: ../tools/drakconnect:113
+#, c-format
+msgid "State"
+msgstr "Állapot"
+
+#: ../tools/drakconnect:130
+#, c-format
+msgid "Hostname: "
+msgstr "Gépnév: "
+
+#: ../tools/drakconnect:132
+#, c-format
+msgid "Configure hostname..."
+msgstr "Gépnév beállítása..."
+
+#: ../tools/drakconnect:146 ../tools/drakconnect:850
+#, c-format
+msgid "LAN configuration"
+msgstr "A helyi hálózat beállítása"
+
+#: ../tools/drakconnect:151
+#, c-format
+msgid "Configure Local Area Network..."
+msgstr "A helyi hálózat beállítása..."
+
+#: ../tools/drakconnect:157 ../tools/drakconnect:240 ../tools/draknfs:181
+#, c-format
+msgid "Help"
+msgstr "Segítség"
+
+#: ../tools/drakconnect:159 ../tools/drakconnect:241 ../tools/drakconnect:245
+#: ../tools/drakinvictus:140
+#, c-format
+msgid "Apply"
+msgstr "Alkalmazás"
+
+#: ../tools/drakconnect:161 ../tools/drakconnect:942 ../tools/drakconnect:1033
+#: ../tools/draknetprofile:106 ../tools/net_monitor:341
+#, c-format
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: ../tools/drakconnect:162 ../tools/drakconnect:857 ../tools/drakconnect:944
+#: ../tools/drakconnect:1034 ../tools/draknetprofile:108
+#: ../tools/net_monitor:342
+#, c-format
+msgid "Ok"
+msgstr "OK"
+
+#: ../tools/drakconnect:164 ../tools/drakconnect:636 ../tools/drakgw:359
+#: ../tools/drakroam:251 ../tools/drakroam:289 ../tools/draksambashare:208
+#, c-format
+msgid "Please wait"
+msgstr "Kis türelmet..."
+
+#: ../tools/drakconnect:166 ../tools/drakconnect:638
+#, c-format
+msgid "Please Wait... Applying the configuration"
+msgstr "Kis türelmet - a beállítások módosítása"
+
+#: ../tools/drakconnect:192
+#, c-format
+msgid "Manage connections"
+msgstr "Kapcsolatok kezelése"
+
+#: ../tools/drakconnect:219 ../tools/drakroam:302
+#, c-format
+msgid "Device: "
+msgstr "Eszköz: "
+
+#: ../tools/drakconnect:302
+#, c-format
+msgid "IP configuration"
+msgstr "IP-beállítás"
+
+#: ../tools/drakconnect:337
+#, c-format
+msgid "DNS servers"
+msgstr "DNS-kiszolgálók"
+
+#: ../tools/drakconnect:343
+#, c-format
+msgid "Search Domain"
+msgstr "Keresési tartomány"
+
+#: ../tools/drakconnect:351 ../tools/drakvpn-old:837
+#, c-format
+msgid "none"
+msgstr "egyik sem"
+
+#: ../tools/drakconnect:351
+#, c-format
+msgid "static"
+msgstr "statikus"
+
+#: ../tools/drakconnect:351
+#, c-format
+msgid "DHCP"
+msgstr "DHCP"
+
+#: ../tools/drakconnect:434
+#, c-format
+msgid "Start at boot"
+msgstr "Indítás rendszerbetöltésnél"
+
+#: ../tools/drakconnect:516
+#, c-format
+msgid "Flow control"
+msgstr "Áramlásvezérlés"
+
+#: ../tools/drakconnect:517
+#, c-format
+msgid "Line termination"
+msgstr "Sorvége"
+
+#: ../tools/drakconnect:528
+#, c-format
+msgid "Modem timeout"
+msgstr "A modem várakozási ideje"
+
+#: ../tools/drakconnect:532
+#, c-format
+msgid "Use lock file"
+msgstr "Zárolási fájl használata"
+
+#: ../tools/drakconnect:534
+#, c-format
+msgid "Wait for dialup tone before dialing"
+msgstr "Tárcsázás előtt várakozás a vonalhangra"
+
+#: ../tools/drakconnect:537
+#, c-format
+msgid "Busy wait"
+msgstr "Várakozás foglaltság esetén"
+
+#: ../tools/drakconnect:542
+#, c-format
+msgid "Modem sound"
+msgstr "Modemhang"
+
+#: ../tools/drakconnect:543 ../tools/drakgw:101
+#, c-format
+msgid "Enable"
+msgstr "Bekapcsolás"
+
+#: ../tools/drakconnect:543 ../tools/drakgw:101
+#, c-format
+msgid "Disable"
+msgstr "Kikapcsolás"
+
+#: ../tools/drakconnect:592
+#, c-format
+msgid "Vendor"
+msgstr "Gyártó"
+
+#: ../tools/drakconnect:593
+#, c-format
+msgid "Description"
+msgstr "Leírás"
+
+#: ../tools/drakconnect:594
+#, c-format
+msgid "Media class"
+msgstr "Médiaosztály"
+
+#: ../tools/drakconnect:595
+#, c-format
+msgid "Module name"
+msgstr "Modulnév"
+
+#: ../tools/drakconnect:596
+#, c-format
+msgid "Mac Address"
+msgstr "MAC-cím"
+
+#: ../tools/drakconnect:597
+#, c-format
+msgid "Bus"
+msgstr "Busz"
+
+#: ../tools/drakconnect:598
+#, c-format
+msgid "Location on the bus"
+msgstr "A buszon elfoglalt hely"
+
+#: ../tools/drakconnect:685 ../tools/drakconnect:766 ../tools/drakconnect:952
+#, c-format
+msgid "No IP"
+msgstr "Nincs IP-cím"
+
+#: ../tools/drakconnect:686 ../tools/drakconnect:767
+#, c-format
+msgid "No Mask"
+msgstr "Nincs maszk"
+
+#: ../tools/drakconnect:705 ../tools/drakgw:307
+#, c-format
+msgid ""
+"No ethernet network adapter has been detected on your system. Please run the "
+"hardware configuration tool."
+msgstr ""
+"Nem található Ethernet hálózati csatoló a rendszerben. Futtassa a "
+"hardverbeállítási eszközt."
+
+#: ../tools/drakconnect:714
+#, c-format
+msgid "Remove a network interface"
+msgstr "Hálózati csatoló eltávolítása"
+
+#: ../tools/drakconnect:718
+#, c-format
+msgid "Select the network interface to remove:"
+msgstr "Válassza ki az eltávolítandó hálózati csatolót:"
+
+#: ../tools/drakconnect:750
+#, c-format
+msgid ""
+"An error occurred while deleting the \"%s\" network interface:\n"
+"\n"
+"%s"
+msgstr ""
+"Hiba történt a(z) \"%s\" hálózati csatoló eltávolításakor:\n"
+"\n"
+"%s"
+
+#: ../tools/drakconnect:751
+#, c-format
+msgid "Congratulations, the \"%s\" network interface has been successfully deleted"
+msgstr "A(z) \"%s\" hálózati csatoló el lett távolítva."
+
+#: ../tools/drakconnect:768 ../tools/drakconnect:921
+#, c-format
+msgid "up"
+msgstr "aktív"
+
+#: ../tools/drakconnect:768 ../tools/drakconnect:921
+#, c-format
+msgid "down"
+msgstr "inaktív"
+
+#: ../tools/drakconnect:803 ../tools/net_monitor:465
+#, c-format
+msgid "Connected"
+msgstr "Csatlakozva"
+
+#: ../tools/drakconnect:803 ../tools/net_monitor:465
+#, c-format
+msgid "Not connected"
+msgstr "Nincs csatlakozva"
+
+#: ../tools/drakconnect:805
+#, c-format
+msgid "Disconnect..."
+msgstr "A kapcsolat bontása..."
+
+#: ../tools/drakconnect:805
+#, c-format
+msgid "Connect..."
+msgstr "Csatlakozás..."
+
+#: ../tools/drakconnect:846
+#, c-format
+msgid "Deactivate now"
+msgstr "Deaktiválás most"
+
+#: ../tools/drakconnect:846
+#, c-format
+msgid "Activate now"
+msgstr "Aktiválás most"
+
+#: ../tools/drakconnect:854
+#, c-format
+msgid ""
+"You do not have any configured interface.\n"
+"Configure them first by clicking on 'Configure'"
+msgstr ""
+"Egyetlen csatoló sincs beállítva.\n"
+"A beállítás elvégzéséhez kattintson a \"Beállítás\" gombra."
+
+#: ../tools/drakconnect:868
+#, c-format
+msgid "LAN Configuration"
+msgstr "A helyi hálózat beállítása"
+
+#: ../tools/drakconnect:880
+#, c-format
+msgid "Adapter %s: %s"
+msgstr "%s. csatoló: %s"
+
+#: ../tools/drakconnect:889
+#, c-format
+msgid "Boot Protocol"
+msgstr "Beállítási protokoll"
+
+#: ../tools/drakconnect:890
+#, c-format
+msgid "Started on boot"
+msgstr "Automatikus indítás"
+
+#: ../tools/drakconnect:926
+#, c-format
+msgid ""
+"This interface has not been configured yet.\n"
+"Run the \"Add an interface\" assistant from the Mandriva Linux Control Center"
+msgstr ""
+"Ez a csatoló még nem lett beállítva.\n"
+"Használja a \"Csatoló felvétele\" funkciót a Mandriva Linux "
+"Vezérlőközpontban."
+
+#: ../tools/drakconnect:974
+#, c-format
+msgid "Internet connection configuration"
+msgstr "Internetkapcsolat beállítása"
+
+#: ../tools/drakconnect:980 ../tools/net_applet:68
+#, c-format
+msgid ""
+"You do not have any configured Internet connection.\n"
+"Run the \"%s\" assistant from the Mandriva Linux Control Center"
+msgstr ""
+"Internetkapcsolat még nem lett beállítva.\n"
+"Használja a \"%s\" funkciót a Mandriva Linux Vezérlőközpontban."
+
+#. -PO: here "Add Connection" should be translated the same was as in control-center
+#: ../tools/drakconnect:981 ../tools/net_applet:69
+#, c-format
+msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
+msgstr "Új hálózati kapcsolat beállítása (LAN, ISDN, ADSL, ...)"
+
+#: ../tools/drakconnect:995
+#, c-format
+msgid "Host name (optional)"
+msgstr "Gépnév (nem kötelező)"
+
+#: ../tools/drakconnect:998
+#, c-format
+msgid "Third DNS server (optional)"
+msgstr "Harmadlagos DNS-kiszolgáló (nem kötelező)"
+
+#: ../tools/drakconnect:1020
+#, c-format
+msgid "Internet Connection Configuration"
+msgstr "Internetkapcsolat beállítása"
+
+#: ../tools/drakconnect:1021
+#, c-format
+msgid "Internet access"
+msgstr "Internet-hozzáférés"
+
+#: ../tools/drakconnect:1023 ../tools/net_monitor:98
+#, c-format
+msgid "Connection type: "
+msgstr "A csatlakozás típusa: "
+
+#: ../tools/drakconnect:1026
+#, c-format
+msgid "Status:"
+msgstr "Állapot:"
+
+#: ../tools/drakconnect:1031
+#, c-format
+msgid "Parameters"
+msgstr "Paraméterek"
+
+#: ../tools/drakgw:71
+#, c-format
+msgid "Internet Connection Sharing"
+msgstr "Internetkapcsolat megosztása"
+
+#: ../tools/drakgw:75
+#, c-format
+msgid ""
+"You are about to configure your computer to share its Internet connection.\n"
+"With that feature, other computers on your local network will be able to use "
+"this computer's Internet connection.\n"
+"\n"
+"Make sure you have configured your Network/Internet access using drakconnect "
+"before going any further.\n"
+"\n"
+"Note: you need a dedicated Network Adapter to set up a Local Area Network "
+"(LAN)."
+msgstr ""
+"Az internetkapcsolat megosztásának beállítása következik.\n"
+"Ennek segítségével a helyi hálózat más gépei is elérhetik az internetet\n"
+"ezen a kapcsolaton keresztül.\n"
+"\n"
+"Mielőtt továbblépne, állítsa be a hálózat- illetve internetelérést\n"
+"a DrakConnect programmal (ha ez még nem történt meg).\n"
+"\n"
+"Megjegyzés: a helyi hálózat (LAN) használatához legalább egy hálózati\n"
+"csatolókártya szükséges."
+
+#: ../tools/drakgw:91
+#, c-format
+msgid ""
+"The setup of Internet Connection Sharing has already been done.\n"
+"It's currently enabled.\n"
+"\n"
+"What would you like to do?"
+msgstr ""
+"Az internetkapcsolat megosztása már megtörtént.\n"
+"A megosztott kapcsolat használható.\n"
+"\n"
+"Mit szeretne tenni?"
+
+#: ../tools/drakgw:95
+#, c-format
+msgid ""
+"The setup of Internet connection sharing has already been done.\n"
+"It's currently disabled.\n"
+"\n"
+"What would you like to do?"
+msgstr ""
+"Az internetkapcsolat megosztása már korábban megtörtént.\n"
+"A kapcsolatmegosztás jelenleg nincs bekapcsolva.\n"
+"\n"
+"Mit szeretne tenni?"
+
+#: ../tools/drakgw:101
+#, c-format
+msgid "Reconfigure"
+msgstr "Ismételt beállítás"
+
+#: ../tools/drakgw:122
+#, c-format
+msgid "Please select the network interface directly connected to the internet."
+msgstr ""
+"Válassza ki azt a hálózati csatolót, amely közvetlenül csatlakozik az "
+"internethez."
+
+#: ../tools/drakgw:141
+#, c-format
+msgid ""
+"There is only one configured network adapter on your system:\n"
+"\n"
+"%s\n"
+"\n"
+"I am about to setup your Local Area Network with that adapter."
+msgstr ""
+"Egyetlen beállított hálózati csatolókártya található a gépben:\n"
+"\n"
+"%s\n"
+"\n"
+"A helyi hálózat paraméterei ehhez a csatolóhoz lesznek beállítva."
+
+#: ../tools/drakgw:152
+#, c-format
+msgid ""
+"Please choose what network adapter will be connected to your Local Area "
+"Network."
+msgstr "Válassza ki, hogy milyen kártyával csatlakozik a helyi hálózathoz."
+
+#: ../tools/drakgw:173
+#, c-format
+msgid "Local Area Network settings"
+msgstr "A helyi hálózat beállításai"
+
+#: ../tools/drakgw:178
+#, c-format
+msgid "The internal domain name"
+msgstr "A belső tartománynév"
+
+#: ../tools/drakgw:184
+#, c-format
+msgid "Potential LAN address conflict found in current config of %s!\n"
+msgstr "Hálózati címhibát észleltem az aktuális konfigurációban: %s!\n"
+
+#: ../tools/drakgw:200
+#, c-format
+msgid "Domain Name Server (DNS) configuration"
+msgstr "A tartománynév-kiszolgáló (DNS) beállítása"
+
+#: ../tools/drakgw:204
+#, c-format
+msgid "Use this gateway as domain name server"
+msgstr "Ezen átjáró tartománynév-kiszolgálóként való használata"
+
+#: ../tools/drakgw:205
+#, c-format
+msgid "The DNS Server IP"
+msgstr "A DNS-kiszolgáló IP-címe"
+
+#: ../tools/drakgw:232
+#, c-format
+msgid ""
+"DHCP Server Configuration.\n"
+"\n"
+"Here you can select different options for the DHCP server configuration.\n"
+"If you do not know the meaning of an option, simply leave it as it is."
+msgstr ""
+"A DHCP-kiszolgáló beállítása.\n"
+"\n"
+"Itt különböző opciók választhatók ki a DHCP-kiszolgáló beállításához.\n"
+"Ha egy opció jelentését nem ismeri, akkor ne módosítsa azt."
+
+#: ../tools/drakgw:239
+#, c-format
+msgid "Use automatic configuration (DHCP)"
+msgstr "Automatikus beállítás (DHCP) használata"
+
+#: ../tools/drakgw:240
+#, c-format
+msgid "The DHCP start range"
+msgstr "A DHCP-címtartomány kezdete"
+
+#: ../tools/drakgw:241
+#, c-format
+msgid "The DHCP end range"
+msgstr "A DHCP-címtartomány vége"
+
+#: ../tools/drakgw:242
+#, c-format
+msgid "The default lease (in seconds)"
+msgstr "Az alapértelmezett élettartam (másodpercben)"
+
+#: ../tools/drakgw:243
+#, c-format
+msgid "The maximum lease (in seconds)"
+msgstr "A maximális élettartam (másodpercben)"
+
+#: ../tools/drakgw:266
+#, c-format
+msgid "Proxy caching server (SQUID)"
+msgstr "Gyorstárazó proxy-kiszolgáló (Squid)"
+
+#: ../tools/drakgw:270
+#, c-format
+msgid "Use this gateway as proxy caching server"
+msgstr "Az átjáró használata gyorstárazó proxy-kiszolgálóként"
+
+#: ../tools/drakgw:271
+#, c-format
+msgid "Admin mail"
+msgstr "Adminisztrátori levélcím"
+
+#: ../tools/drakgw:272
+#, c-format
+msgid "Visible hostname"
+msgstr "Látható gépnév"
+
+#: ../tools/drakgw:273
+#, c-format
+msgid "Proxy port"
+msgstr "Proxy-port"
+
+#: ../tools/drakgw:274
+#, c-format
+msgid "Cache size (MB)"
+msgstr "Gyorstárméret (MB)"
+
+#: ../tools/drakgw:296
+#, c-format
+msgid "Broadcast printer information"
+msgstr "Nyomtatóinformáció sugárzása (broadcast)"
+
+#: ../tools/drakgw:313
+#, c-format
+msgid "Internet Connection Sharing is now enabled."
+msgstr "Az internetkapcsolat megosztása most már engedélyezett."
+
+#: ../tools/drakgw:319
+#, c-format
+msgid "Internet Connection Sharing is now disabled."
+msgstr "Az internetkapcsolat-megosztás letiltása megtörtént."
+
+#: ../tools/drakgw:325
+#, c-format
+msgid ""
+"Everything has been configured.\n"
+"You may now share Internet connection with other computers on your Local "
+"Area Network, using automatic network configuration (DHCP) and\n"
+" a Transparent Proxy Cache server (SQUID)."
+msgstr ""
+"A beállítás befejeződött.\n"
+"Az internetkapcsolat most már bármelyik, a helyi hálózaton található\n"
+"géppel megosztható az automatikus hálózati címkiosztás (DHCP) és egy\n"
+"proxykiszolgáló (például Squid) segítségével."
+
+#: ../tools/drakgw:359
+#, c-format
+msgid "Disabling servers..."
+msgstr "A kiszolgálók letiltása..."
+
+#: ../tools/drakgw:373
+#, c-format
+msgid "Firewalling configuration detected!"
+msgstr "A tűzfal beállításait sikerült felismerni."
+
+#: ../tools/drakgw:374
+#, c-format
+msgid ""
+"Warning! An existing firewalling configuration has been detected. You may "
+"need some manual fixes after installation."
+msgstr ""
+"Figyelmeztetés: Már létezik egy tűzfalbeállítás. Néhány kézi módosításra "
+"szükség lehet a telepítés után."
+
+#: ../tools/drakgw:379
+#, c-format
+msgid "Configuring..."
+msgstr "Beállítás..."
+
+#: ../tools/drakgw:380
+#, c-format
+msgid "Configuring firewall..."
+msgstr "A tűzfal beállítása..."
+
+#: ../tools/drakhosts:100
+#, c-format
+msgid "Please add an host to be able to modify it."
+msgstr "Ahhoz, hogy módosítást végezhessen, vegyen fel egy gépet."
+
+#: ../tools/drakhosts:110
+#, c-format
+msgid "Please modify information"
+msgstr "Módosítsa az információt"
+
+#: ../tools/drakhosts:111
+#, c-format
+msgid "Please delete information"
+msgstr "Törölje az információt"
+
+#: ../tools/drakhosts:112
+#, c-format
+msgid "Please add information"
+msgstr "Adjon meg információt"
+
+#: ../tools/drakhosts:116
+#, c-format
+msgid "IP address:"
+msgstr "IP-cím:"
+
+#: ../tools/drakhosts:117
+#, c-format
+msgid "Host name:"
+msgstr "Gépnév:"
+
+#: ../tools/drakhosts:118
+#, c-format
+msgid "Host Aliases:"
+msgstr "Gép-álnevek:"
+
+#: ../tools/drakhosts:122 ../tools/drakhosts:128 ../tools/draksambashare:209
+#: ../tools/draksambashare:230 ../tools/draksambashare:376
+#: ../tools/draksambashare:607 ../tools/draksambashare:774
+#, c-format
+msgid "Error!"
+msgstr "Hiba!"
+
+#: ../tools/drakhosts:122
+#, c-format
+msgid "Please enter a valid IP address."
+msgstr "Érvényes IP-címet adjon meg."
+
+#: ../tools/drakhosts:128
+#, c-format
+msgid "Same IP is already in %s file."
+msgstr "Ez az IP-cím már szerepel a(z) \"%s\" fájlban."
+
+#: ../tools/drakhosts:196
+#, c-format
+msgid "Host Aliases"
+msgstr "Gép-álnevek"
+
+#: ../tools/drakhosts:206 ../tools/drakhosts:236
+#, c-format
+msgid "Manage hosts definitions"
+msgstr "Gépdefiníciók kezelése"
+
+#: ../tools/drakhosts:222 ../tools/drakhosts:249
+#, c-format
+msgid "Modify entry"
+msgstr "Bejegyzés módosítása"
+
+#: ../tools/drakhosts:241 ../tools/draknfs:563 ../tools/draksambashare:1102
+#: ../tools/draksambashare:1133 ../tools/draksambashare:1164
+#: ../tools/drakvpn-old:253 ../tools/drakvpn-old:391
+#, c-format
+msgid "Add"
+msgstr "Hozzáadás"
+
+#: ../tools/drakhosts:242
+#, c-format
+msgid "Add entry"
+msgstr "Bejegyzés felvétele"
+
+#: ../tools/drakhosts:245
+#, c-format
+msgid "Failed to add host."
+msgstr "Nem sikerült felvenni a gépet."
+
+#: ../tools/drakhosts:248 ../tools/draknfs:570 ../tools/draksambashare:1059
+#: ../tools/draksambashare:1104 ../tools/draksambashare:1135
+#: ../tools/draksambashare:1172
+#, c-format
+msgid "Modify"
+msgstr "Módosítás"
+
+#: ../tools/drakhosts:252
+#, c-format
+msgid "Failed to Modify host."
+msgstr "Nem sikerült módosítani a gépet."
+
+#: ../tools/drakhosts:255 ../tools/drakids:87 ../tools/drakids:96
+#: ../tools/draknfs:577 ../tools/draksambashare:1060
+#: ../tools/draksambashare:1112 ../tools/draksambashare:1143
+#: ../tools/draksambashare:1180 ../tools/drakvpn-old:253
+#: ../tools/drakvpn-old:391
+#, c-format
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: ../tools/drakhosts:259
+#, c-format
+msgid "Failed to remove host."
+msgstr "Nem sikerült eltávolítani a gépet."
+
+#: ../tools/drakhosts:262 ../tools/drakinvictus:141
+#: ../tools/draknetprofile:147 ../tools/drakroam:309 ../tools/net_applet:138
+#, c-format
+msgid "Quit"
+msgstr "Kilépés"
+
+#: ../tools/drakids:28
+#, c-format
+msgid "Allowed addresses"
+msgstr "Engedélyezett címek"
+
+#: ../tools/drakids:65 ../tools/drakids:181 ../tools/drakids:190
+#: ../tools/drakids:215 ../tools/drakids:224 ../tools/drakids:234
+#: ../tools/drakids:326 ../tools/net_applet:238 ../tools/net_applet:514
+#, c-format
+msgid "Unable to contact daemon"
+msgstr "Nem sikerült kapcsolódni a szolgáltatáshoz"
+
+#: ../tools/drakids:74 ../tools/drakids:102
+#, c-format
+msgid "Log"
+msgstr "Napló"
+
+#: ../tools/drakids:78 ../tools/drakids:97 ../tools/net_applet:659
+#, c-format
+msgid "Allow"
+msgstr "Engedélyezés"
+
+#: ../tools/drakids:79 ../tools/drakids:88 ../tools/net_applet:660
+#, c-format
+msgid "Block"
+msgstr "Tiltás"
+
+#: ../tools/drakids:80 ../tools/drakids:89 ../tools/drakids:98
+#: ../tools/drakids:109 ../tools/drakids:122 ../tools/drakids:130
+#: ../tools/draknfs:186 ../tools/net_monitor:120
+#, c-format
+msgid "Close"
+msgstr "Bezárás"
+
+#: ../tools/drakids:83
+#, c-format
+msgid "Allowed services"
+msgstr "Engedélyezett szolgáltatások"
+
+#: ../tools/drakids:92
+#, c-format
+msgid "Blocked services"
+msgstr "Tiltott szolgáltatások"
+
+#: ../tools/drakids:106
+#, c-format
+msgid "Clear logs"
+msgstr "Naplók törlése"
+
+#: ../tools/drakids:107 ../tools/drakids:112 ../tools/net_applet:602
+#, c-format
+msgid "Blacklist"
+msgstr "Feketelista"
+
+#: ../tools/drakids:108 ../tools/drakids:125 ../tools/net_applet:607
+#, c-format
+msgid "Whitelist"
+msgstr "Fehérlista"
+
+#: ../tools/drakids:116
+#, c-format
+msgid "Remove from blacklist"
+msgstr "Eltávolítás a feketelistáról"
+
+#: ../tools/drakids:117
+#, c-format
+msgid "Move to whitelist"
+msgstr "Áthelyezés a fehérlistára"
+
+#: ../tools/drakids:129
+#, c-format
+msgid "Remove from whitelist"
+msgstr "Eltávolítás a fehérlistáról"
+
+#: ../tools/drakids:247
+#, c-format
+msgid "Date"
+msgstr "Dátum"
+
+#: ../tools/drakids:248
+#, c-format
+msgid "Attacker"
+msgstr "Támadó"
+
+#: ../tools/drakids:249
+#, c-format
+msgid "Attack type"
+msgstr "A támadás típusa"
+
+#: ../tools/drakids:250 ../tools/drakids:283
+#, c-format
+msgid "Service"
+msgstr "Szolgáltatás"
+
+#: ../tools/drakids:251
+#, c-format
+msgid "Network interface"
+msgstr "Hálózati csatolófelület"
+
+#: ../tools/drakids:282
+#, c-format
+msgid "Application"
+msgstr "Alkalmazás"
+
+#: ../tools/drakids:284
+#, c-format
+msgid "Status"
+msgstr "Állapot"
+
+#: ../tools/drakids:286
+#, c-format
+msgid "Allowed"
+msgstr "Engedélyezett"
+
+#: ../tools/drakids:287
+#, c-format
+msgid "Blocked"
+msgstr "Tiltott"
+
+#: ../tools/drakinvictus:36
+#, c-format
+msgid "Invictus Firewall"
+msgstr "Invictus tűzfal"
+
+#: ../tools/drakinvictus:53
+#, c-format
+msgid "Start as master"
+msgstr "Indítás elsődlegesként"
+
+#: ../tools/drakinvictus:72
+#, c-format
+msgid "A password is required."
+msgstr "Jelszó szükséges."
+
+#: ../tools/drakinvictus:100
+#, c-format
+msgid ""
+"This tool allows to set up network interfaces failover and firewall "
+"replication."
+msgstr ""
+"Ezzel az eszközzel beállítható a hálózati csatolók redundanciája (failover) "
+"és a tűzfalreplikáció."
+
+#: ../tools/drakinvictus:102
+#, c-format
+msgid "Network redundancy (leave empty if interface is not used)"
+msgstr "Hálózati redundancia (ha a csatoló nincs használva, akkor hagyja üresen)"
+
+#: ../tools/drakinvictus:105
+#, c-format
+msgid "Real address"
+msgstr "Valódi cím"
+
+#: ../tools/drakinvictus:105
+#, c-format
+msgid "Virtual shared address"
+msgstr "Virtuális megosztott cím"
+
+#: ../tools/drakinvictus:105
+#, c-format
+msgid "Virtual ID"
+msgstr "Virtuális azonosító"
+
+#: ../tools/drakinvictus:114
+#, c-format
+msgid "Firewall replication"
+msgstr "Tűzfalreplikáció"
+
+# Connection tracking refers to the ability
+# to maintain state information about a
+# connection in memory tables, such as
+# source and destination ip address and
+# port number pairs (known as socket
+# pairs), protocol types, connection state
+# and timeouts.
+#: ../tools/drakinvictus:116
+#, c-format
+msgid "Synchronize firewall conntrack tables"
+msgstr "A tűzfal kapcsolatkövetési (conntrack) tábláinak szinkronizálása"
+
+#: ../tools/drakinvictus:123
+#, c-format
+msgid "Synchronization network interface"
+msgstr "Szinkronizálási hálózati csatoló"
+
+# it's to indicate which bit of the mark byte
+# in network packets has to be used for
+# firewall synchronization.
+#: ../tools/drakinvictus:132
+#, c-format
+msgid "Connection mark bit"
+msgstr "Kapcsolati jelzőbit (mark bit)"
+
+#: ../tools/draknetprofile:36
+#, c-format
+msgid "Network profiles"
+msgstr "Hálózati profilok"
+
+#: ../tools/draknetprofile:67
+#, c-format
+msgid "Profile"
+msgstr "Profil"
+
+#: ../tools/draknetprofile:99
+#, c-format
+msgid "New profile..."
+msgstr "Új profil..."
+
+#: ../tools/draknetprofile:102
+#, c-format
+msgid ""
+"Name of the profile to create (the new profile is created as a copy of the "
+"current one):"
+msgstr "A létrehozandó profil neve (az új profil a jelenlegi másolataként jön létre):"
+
+#: ../tools/draknetprofile:113
+#, c-format
+msgid "The \"%s\" profile already exists!"
+msgstr "\"%s\" nevű profil már létezik."
+
+#: ../tools/draknetprofile:129
+#, c-format
+msgid "You can not delete the default profile"
+msgstr "Az alapértelmezett profil nem törölhető"
+
+#: ../tools/draknetprofile:131
+#, c-format
+msgid "You can not delete the current profile"
+msgstr "A jelenlegi profil nem törölhető"
+
+#: ../tools/draknetprofile:141
+#, c-format
+msgid ""
+"This tool allows to activate an existing network profile, and to manage "
+"(clone, delete) profiles."
+msgstr ""
+"Ez az eszköz lehetővé teszi a hálózati profilok aktiválását, klónozását és "
+"törlését."
+
+#: ../tools/draknetprofile:141
+#, c-format
+msgid "To modify a profile, you have to activate it first."
+msgstr "Egy profil módosításához előbb aktiválni kell azt."
+
+#: ../tools/draknetprofile:144
+#, c-format
+msgid "Activate"
+msgstr "Aktiválás"
+
+#: ../tools/draknetprofile:145
+#, c-format
+msgid "Clone"
+msgstr "Klónozás"
+
+#: ../tools/draknetprofile:146
+#, c-format
+msgid "Delete"
+msgstr "Törlés"
+
+#: ../tools/draknfs:41
+#, c-format
+msgid "map root user as anonymous"
+msgstr "rendszergazda (root) anonymous-ként való kezelése"
+
+#: ../tools/draknfs:42
+#, c-format
+msgid "map all users to anonymous user"
+msgstr "összes felhasználó anonymous-ként való kezelése"
+
+#: ../tools/draknfs:43
+#, c-format
+msgid "No user UID mapping"
+msgstr "Nincs felhasználóazonosító-leképezés"
+
+#: ../tools/draknfs:44
+#, c-format
+msgid "allow real remote root access"
+msgstr "valódi távoli rendszergazdai elérés engedélyezése"
+
+#: ../tools/draknfs:58 ../tools/draknfs:59 ../tools/draknfs:60
+#: ../tools/draksambashare:161 ../tools/draksambashare:162
+#: ../tools/draksambashare:163
+#, c-format
+msgid "/_File"
+msgstr "/_Fájl"
+
+# soft/drakx/trunk/perl-install/standalone/draknfs
+#: ../tools/draknfs:59 ../tools/draksambashare:162
+#, c-format
+msgid "/_Write conf"
+msgstr "/_Beállítások mentése"
+
+#: ../tools/draknfs:60 ../tools/draksambashare:163
+#, c-format
+msgid "/_Quit"
+msgstr "/_Kilépés"
+
+#: ../tools/draknfs:60 ../tools/draksambashare:163
+#, c-format
+msgid "<control>Q"
+msgstr "<control>Q"
+
+#: ../tools/draknfs:63 ../tools/draknfs:64 ../tools/draknfs:65
+#, c-format
+msgid "/_NFS Server"
+msgstr "/_NFS-kiszolgáló"
+
+#: ../tools/draknfs:64 ../tools/draksambashare:166
+#, c-format
+msgid "/_Restart"
+msgstr "/Újra_indítás"
+
+#: ../tools/draknfs:65 ../tools/draksambashare:167
+#, c-format
+msgid "/R_eload"
+msgstr "/Újra_töltés"
+
+#: ../tools/draknfs:84
+#, c-format
+msgid "NFS server"
+msgstr "NFS-kiszolgáló"
+
+#: ../tools/draknfs:84
+#, c-format
+msgid "Restarting/Reloading NFS server..."
+msgstr "Az NFS-kiszolgáló újraindítása/újratöltése..."
+
+#: ../tools/draknfs:85
+#, c-format
+msgid "Error Restarting/Reloading NFS server"
+msgstr "Hiba az NFS-kiszolgáló újraindítása/újratöltése közben"
+
+#: ../tools/draknfs:101 ../tools/draksambashare:225
+#, c-format
+msgid "Directory Selection"
+msgstr "Könyvtárválasztás"
+
+#: ../tools/draknfs:106 ../tools/draksambashare:230
+#, c-format
+msgid "Should be a directory."
+msgstr "Könyvtárt kell megadni."
+
+#: ../tools/draknfs:137
+#, c-format
+msgid ""
+"<span weight=\"bold\">NFS clients</span> may be specified in a number of "
+"ways:\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">single host:</span> a host either by an "
+"abbreviated name recognized be the resolver, fully qualified domain name, or "
+"an IP address\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">netgroups:</span> NIS netgroups may be given "
+"as @group.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">wildcards:</span> machine names may contain "
+"the wildcard characters * and ?. For instance: *.cs.foo.edu  matches all  "
+"hosts  in the domain cs.foo.edu.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">IP networks:</span> you can also export "
+"directories to all hosts on an IP (sub-)network simultaneously. for example, "
+"either `/255.255.252.0' or  `/22'  appended to the network base address "
+"result.\n"
+msgstr ""
+"Az <span weight=\"bold\">NFS-kliensek</span> többféle módon adhatók meg:\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">egyetlen gép:</span> egy gép - a feloldó "
+"által felismert rövidített névvel, teljesen megadott tartománynévvel vagy IP-"
+"címmel megadva\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">hálózati csoportok:</span> NIS hálózati "
+"csoportok (netgroups) megadhatók @csoport formában\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">helyettesítő karakterek:</span> a gépnevek "
+"tartalmazhatják a * és a ? helyettesítő karaktereket. Például a *.cs.foo.edu "
+"kifejezés illeszkedik a cs.foo.edu tartomány összes gépére.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">IP-hálózatok:</span> egyszerre is "
+"exportálhatók könyvtárak egy IP-hálózat vagy -alhálózat összes gépére. "
+"Például a következők hozzáfűzhetők a hálózati alapcímhez: \"/255.255.252.0\" "
+"illetve \"/22\".\n"
+
+#: ../tools/draknfs:152
+#, c-format
+msgid ""
+"<span weight=\"bold\">User ID options</span>\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">map root user as anonymous:</span> map "
+"requests from uid/gid 0 to the anonymous uid/gid (root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">allow real remote root access:</span> turn "
+"off root squashing. This option is mainly useful for diskless clients "
+"(no_root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">map all users to anonymous user:</span> map "
+"all uids and gids to the anonymous  user (all_squash). Useful for NFS-"
+"exported public FTP directories, news spool directories, etc. The opposite "
+"option is no user UID mapping (no_all_squash), which is the default "
+"setting.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">anonuid and anongid:</span> explicitly set "
+"the uid and gid of the anonymous account.\n"
+msgstr ""
+"<span weight=\"bold\">Felhasználói azonosítókkal kapcsolatos opciók</span>\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">rendszergazda (root) anonymous-ként való "
+"kezelése:</span> a \"0\" felhasználóazonosítóról illetve csoportazonosítóról "
+"érkező kérések leképezése az \"anonymous\" felhasználóazonosítóra illetve "
+"csoportazonosítóra (root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">valódi távoli rendszergazdai elérés "
+"engedélyezése:</span> a rendszergazda anonymous-ként való kezelésének "
+"(\"root squashing\") kikapcsolása. Ez az opció főleg a lemez nélküli "
+"kliensek esetében hasznos (no_root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">összes felhasználó anonymous-ként való "
+"kezelése:</span> az összes felhasználóazonosító és csoportazonosító "
+"leképezése az anonymous felhasználóra (all_squash). Hasznos lehet például "
+"NFS-sel exportált nyilvános FTP-könyvtárak vagy hírkönyvtárak (news spool) "
+"esetében. Az alapértelmezés ennek az ellentéte: ekkor nincs "
+"felhasználóazonosító-leképezés (no_all_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">anonuid és anongid:</span> az \"anonymous\" "
+"felhasználó felhasználóazonosítójának illetve csoportazonosítójának "
+"közvetlen módon való beállítása.\n"
+
+#: ../tools/draknfs:168
+#, c-format
+msgid "Synchronous access:"
+msgstr "Szinkron elérés:"
+
+#: ../tools/draknfs:169
+#, c-format
+msgid "Secured Connection:"
+msgstr "Biztonságossá tett kapcsolat:"
+
+#: ../tools/draknfs:170
+#, c-format
+msgid "Read-Only share:"
+msgstr "Csak olvasható megosztás:"
+
+#: ../tools/draknfs:172
+#, c-format
+msgid "Advanced Options"
+msgstr "Speciális opciók"
+
+#: ../tools/draknfs:173
+#, c-format
+msgid ""
+"<span foreground=\"royalblue3\">%s</span> this option requires that requests "
+"originate on an internet port less than IPPORT_RESERVED (1024). This option "
+"is on by default."
+msgstr ""
+"<span foreground=\"royalblue3\">%s</span> ez az opció előírja, hogy a "
+"kérések egy olyan internetes porttól származzanak, amelynek száma kisebb az "
+"IPPORT_RESERVED (1024) értéknél. Alapértelmezésben be van kapcsolva az opció."
+
+#: ../tools/draknfs:174
+#, c-format
+msgid ""
+"<span foreground=\"royalblue3\">%s</span> allow either only read or both "
+"read and write requests on this NFS volume. The default is to disallow any "
+"request which changes the filesystem. This can also be made explicit by "
+"using this option."
+msgstr ""
+"<span foreground=\"royalblue3\">%s</span> csak olvasási kérések legyenek "
+"engedélyezve ezen az NFS-köteten, vagy pedig olvasási és írási kérések is. "
+"Alapértelmezésben a fájlrendszer módosítására irányuló kérések tiltva "
+"vannak. Ez közvetlenül is beállítható ezzel az opcióval."
+
+#: ../tools/draknfs:175
+#, c-format
+msgid ""
+"<span foreground=\"royalblue3\">%s</span> disallows the NFS server to "
+"violate the NFS protocol and to reply to requests before any changes made by "
+"these requests have been committed to stable storage (e.g. disc drive)."
+msgstr ""
+"<span foreground=\"royalblue3\">%s</span> megtiltja az NFS-kiszolgáló "
+"számára, hogy az NFS-protokollal ellentétesen cselekedve az előtt "
+"válaszoljon a kérésekre, hogy ezen kérések által végrehajtott módosítások "
+"véglegesítve lettek volna stabil tárolóterületre (például lemezre)."
+
+#: ../tools/draknfs:180 ../tools/draksambashare:605
+#: ../tools/draksambashare:772
+#, c-format
+msgid "Information"
+msgstr "Információ"
+
+#: ../tools/draknfs:260
+#, c-format
+msgid "Directory"
+msgstr "Könyvtár"
+
+#: ../tools/draknfs:264
+#, c-format
+msgid "Draknfs entry"
+msgstr "Draknfs-bejegyzés"
+
+#: ../tools/draknfs:273
+#, c-format
+msgid "Please add an NFS share to be able to modify it."
+msgstr "NFS-megosztás módosításához előbb vegyen fel egyet."
+
+#: ../tools/draknfs:357
+#, c-format
+msgid "NFS directory"
+msgstr "NFS-könyvtár"
+
+#: ../tools/draknfs:358 ../tools/draksambashare:361
+#: ../tools/draksambashare:570 ../tools/draksambashare:749
+#, c-format
+msgid "Directory:"
+msgstr "Könyvtár:"
+
+#: ../tools/draknfs:359
+#, c-format
+msgid "Host access"
+msgstr "Gépelérés"
+
+#: ../tools/draknfs:360
+#, c-format
+msgid "Access:"
+msgstr "Elérés:"
+
+#: ../tools/draknfs:361
+#, c-format
+msgid "User ID Mapping"
+msgstr "Felhasználóazonosító-leképezés"
+
+#: ../tools/draknfs:362
+#, c-format
+msgid "User ID:"
+msgstr "Felhasználóazonosító:"
+
+#: ../tools/draknfs:363
+#, c-format
+msgid "Anonymous user ID:"
+msgstr "Anonymous felhasználóazonosító:"
+
+#: ../tools/draknfs:364
+#, c-format
+msgid "Anonymous Group ID:"
+msgstr "Anonymous csoportazonosító:"
+
+#: ../tools/draknfs:400
+#, c-format
+msgid "Please specify a directory to share."
+msgstr "Adjon meg egy megosztandó könyvtárt."
+
+#: ../tools/draknfs:402
+#, c-format
+msgid "Can't create this directory."
+msgstr "Nem hozható létre ilyen könyvtár."
+
+#: ../tools/draknfs:405
+#, c-format
+msgid "You must specify hosts access."
+msgstr "Meg kell adni gépelérést."
+
+#: ../tools/draknfs:485
+#, c-format
+msgid "Share Directory"
+msgstr "Könyvtár megosztása"
+
+#: ../tools/draknfs:485
+#, c-format
+msgid "Hosts Wildcard"
+msgstr "Helyettesítő karakterek gépnevekhez"
+
+#: ../tools/draknfs:485
+#, c-format
+msgid "General Options"
+msgstr "Általános opciók"
+
+#: ../tools/draknfs:485
+#, c-format
+msgid "Custom Options"
+msgstr "Egyéni opciók"
+
+#: ../tools/draknfs:497 ../tools/draksambashare:376
+#: ../tools/draksambashare:607 ../tools/draksambashare:774
+#, c-format
+msgid "Please enter a directory to share."
+msgstr "Adjon meg egy megosztandó könyvtárt."
+
+#: ../tools/draknfs:504
+#, c-format
+msgid "Please use the modify button to set right access."
+msgstr "A megfelelő elérés beállításához használja a Módosítás gombot."
+
+#: ../tools/draknfs:519
+#, c-format
+msgid "Manage NFS shares"
+msgstr "NFS-megosztások kezelése"
+
+#: ../tools/draknfs:558
+#, c-format
+msgid "DrakNFS manage NFS shares"
+msgstr "DrakNFS - NFS-megosztások kezelése"
+
+#: ../tools/draknfs:567
+#, c-format
+msgid "Failed to add NFS share."
+msgstr "Nem sikerült felvenni NFS-megosztást."
+
+#: ../tools/draknfs:574
+#, c-format
+msgid "Failed to Modify NFS share."
+msgstr "Nem sikerült módosítani az NFS-megosztást."
+
+#: ../tools/draknfs:581
+#, c-format
+msgid "Failed to remove an NFS share."
+msgstr "Nem sikerült törölni egy NFS-megosztást."
+
+#: ../tools/drakproxy:36
+#, c-format
+msgid "You need to log out and back in again for changes to take effect"
+msgstr "A módosítások érvénybe lépéséhez ki kell lépni, majd ismét belépni"
+
+#: ../tools/drakroam:61
+#, c-format
+msgid "No device found"
+msgstr "Eszköz nem található"
+
+#: ../tools/drakroam:86 ../tools/drakroam:217
+#, c-format
+msgid "Please enter settings for network"
+msgstr "Adja meg a hálózat beállításait"
+
+#: ../tools/drakroam:115
+#, c-format
+msgid "SSID"
+msgstr "SSID"
+
+#: ../tools/drakroam:116
+#, c-format
+msgid "Signal strength"
+msgstr "Jelerősség"
+
+#: ../tools/drakroam:118
+#, c-format
+msgid "Encryption"
+msgstr "Titkosítás"
+
+#: ../tools/drakroam:131
+#, c-format
+msgid "Hostname changed to \"%s\""
+msgstr "A gépnév módosítva erre: \"%s\""
+
+#: ../tools/drakroam:251
+#, c-format
+msgid "Connecting..."
+msgstr "Csatlakozás..."
+
+#: ../tools/drakroam:273
+#, c-format
+msgid "Disconnect"
+msgstr "A kapcsolat bontása"
+
+#: ../tools/drakroam:273
+#, c-format
+msgid "Connect"
+msgstr "Csatlakozás"
+
+#: ../tools/drakroam:289
+#, c-format
+msgid "Disconnecting..."
+msgstr "A kapcsolat bontása..."
+
+#: ../tools/drakroam:306
+#, c-format
+msgid "Configure"
+msgstr "Beállítás"
+
+#: ../tools/drakroam:308
+#, c-format
+msgid "Refresh"
+msgstr "Frissítés"
+
+#: ../tools/draksambashare:63
+#, c-format
+msgid "User name"
+msgstr "Felhasználónév"
+
+#: ../tools/draksambashare:70
+#, c-format
+msgid "Share name"
+msgstr "Megosztásnév"
+
+#: ../tools/draksambashare:71
+#, c-format
+msgid "Share directory"
+msgstr "Könyvtár megosztása"
+
+#: ../tools/draksambashare:72 ../tools/draksambashare:105
+#, c-format
+msgid "Comment"
+msgstr "Megjegyzés"
+
+#: ../tools/draksambashare:73 ../tools/draksambashare:106
+#, c-format
+msgid "Browseable"
+msgstr "Böngészhető"
+
+#: ../tools/draksambashare:74
+#, c-format
+msgid "Public"
+msgstr "Nyilvános"
+
+#: ../tools/draksambashare:75 ../tools/draksambashare:111
+#, c-format
+msgid "Writable"
+msgstr "Írható"
+
+#: ../tools/draksambashare:76 ../tools/draksambashare:152
+#, c-format
+msgid "Create mask"
+msgstr "Létrehozási maszk"
+
+#: ../tools/draksambashare:77 ../tools/draksambashare:153
+#, c-format
+msgid "Directory mask"
+msgstr "Könyvtármaszk"
+
+#: ../tools/draksambashare:78
+#, c-format
+msgid "Read list"
+msgstr "Olvasási jogúak listája"
+
+#: ../tools/draksambashare:79 ../tools/draksambashare:112
+#: ../tools/draksambashare:584
+#, c-format
+msgid "Write list"
+msgstr "Írási jogúak listája"
+
+#: ../tools/draksambashare:80 ../tools/draksambashare:144
+#, c-format
+msgid "Admin users"
+msgstr "Rendszergazdai jogú felhasználók"
+
+#: ../tools/draksambashare:81 ../tools/draksambashare:145
+#, c-format
+msgid "Valid users"
+msgstr "Érvényes felhasználók"
+
+#: ../tools/draksambashare:82
+#, c-format
+msgid "Inherit Permissions"
+msgstr "Engedélyek öröklése"
+
+#: ../tools/draksambashare:83 ../tools/draksambashare:146
+#, c-format
+msgid "Hide dot files"
+msgstr "Ponttal kezdődő nevű fájlok elrejtése"
+
+#: ../tools/draksambashare:84 ../tools/draksambashare:147
+#, c-format
+msgid "Hide files"
+msgstr "Fájlok elrejtése"
+
+#: ../tools/draksambashare:85 ../tools/draksambashare:151
+#, c-format
+msgid "Preserve case"
+msgstr "Betűnagyság megőrzése"
+
+#: ../tools/draksambashare:86
+#, c-format
+msgid "Force create mode"
+msgstr "Kikényszerített létrehozási mód"
+
+#: ../tools/draksambashare:87
+#, c-format
+msgid "Force group"
+msgstr "Kikényszerített csoport"
+
+#: ../tools/draksambashare:88 ../tools/draksambashare:150
+#, c-format
+msgid "Default case"
+msgstr "Alapértelmezett betűnagyság"
+
+#: ../tools/draksambashare:103
+#, c-format
+msgid "Printer name"
+msgstr "Nyomtatónév"
+
+#: ../tools/draksambashare:104
+#, c-format
+msgid "Path"
+msgstr "Útvonal"
+
+#: ../tools/draksambashare:107 ../tools/draksambashare:576
+#, c-format
+msgid "Printable"
+msgstr "Nyomtatható"
+
+#: ../tools/draksambashare:108
+#, c-format
+msgid "Print Command"
+msgstr "Nyomtatási parancs"
+
+#: ../tools/draksambashare:109
+#, c-format
+msgid "LPQ command"
+msgstr "LPQ-parancs"
+
+#: ../tools/draksambashare:110
+#, c-format
+msgid "Guest ok"
+msgstr "Vendég OK"
+
+#: ../tools/draksambashare:113 ../tools/draksambashare:154
+#: ../tools/draksambashare:585
+#, c-format
+msgid "Inherit permissions"
+msgstr "Engedélyek öröklése"
+
+#: ../tools/draksambashare:114
+#, c-format
+msgid "Printing"
+msgstr "Nyomtatás"
+
+#: ../tools/draksambashare:115
+#, c-format
+msgid "Create mode"
+msgstr "Létrehozási mód"
+
+#: ../tools/draksambashare:116
+#, c-format
+msgid "Use client driver"
+msgstr "Kliens-meghajtóprogram használata"
+
+#: ../tools/draksambashare:142
+#, c-format
+msgid "Read List"
+msgstr "Olvasási jogúak listája"
+
+#: ../tools/draksambashare:143
+#, c-format
+msgid "Write List"
+msgstr "Írási jogúak listája"
+
+#: ../tools/draksambashare:148
+#, c-format
+msgid "Force Group"
+msgstr "Kikényszerített csoport"
+
+#: ../tools/draksambashare:149
+#, c-format
+msgid "Force create group"
+msgstr "Kikényszerített létrehozási csoport"
+
+#: ../tools/draksambashare:165 ../tools/draksambashare:166
+#: ../tools/draksambashare:167
+#, c-format
+msgid "/_Samba Server"
+msgstr "/_Samba-kiszolgáló"
+
+#: ../tools/draksambashare:169 ../tools/draksambashare:170
+#, c-format
+msgid "/_About"
+msgstr "/_Névjegy"
+
+#: ../tools/draksambashare:169
+#, c-format
+msgid "/_Report Bug"
+msgstr "/_Hibabejelentés"
+
+#: ../tools/draksambashare:170
+#, c-format
+msgid "/About..."
+msgstr "/Névjegy..."
+
+#: ../tools/draksambashare:173
+#, c-format
+msgid "Draksambashare"
+msgstr "Draksambashare"
+
+#: ../tools/draksambashare:175
+#, c-format
+msgid "Copyright (C) %s by Mandriva"
+msgstr "Copyright (C) %s, Mandriva"
+
+#: ../tools/draksambashare:177
+#, c-format
+msgid "This is a simple tool to easily manage Samba configuration."
+msgstr "Egyszerű eszköz a Samba beállításának kezeléséhez."
+
+#: ../tools/draksambashare:179
+#, c-format
+msgid "Mandriva Linux"
+msgstr "Mandriva Linux"
+
+#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
+#: ../tools/draksambashare:184
+#, c-format
+msgid "_: Translator(s) name(s) & email(s)\n"
+msgstr "Arpad Biro <biro_arpad@yahoo.com>\n"
+
+#: ../tools/draksambashare:208
+#, c-format
+msgid "Restarting/Reloading Samba server..."
+msgstr "A Samba-kiszolgáló újraindítása/újratöltése..."
+
+#: ../tools/draksambashare:209
+#, c-format
+msgid "Error Restarting/Reloading Samba server"
+msgstr "Hiba a Samba-kiszolgáló újraindítása/újratöltése közben"
+
+#: ../tools/draksambashare:349 ../tools/draksambashare:549
+#: ../tools/draksambashare:670
+#, c-format
+msgid "Open"
+msgstr "Megnyitás"
+
+# soft/drakx/trunk/perl-install/standalone/draksambashare
+#: ../tools/draksambashare:352
+#, c-format
+msgid "DrakSamba add entry"
+msgstr "DrakSamba-bejegyzés felvétele"
+
+#: ../tools/draksambashare:356
+#, c-format
+msgid "Add a share"
+msgstr "Megosztás felvétele"
+
+#: ../tools/draksambashare:359
+#, c-format
+msgid "Name of the share:"
+msgstr "A megosztás neve:"
+
+#: ../tools/draksambashare:360 ../tools/draksambashare:569
+#: ../tools/draksambashare:750
+#, c-format
+msgid "Comment:"
+msgstr "Megjegyzés:"
+
+#: ../tools/draksambashare:372
+#, c-format
+msgid ""
+"Share with the same name already exist or share name empty, please choose "
+"another name."
+msgstr ""
+"Már létezik ilyen nevű megosztás, vagy üres a megosztás neve. Adjon meg más "
+"nevet."
+
+#: ../tools/draksambashare:379
+#, c-format
+msgid "Can't create the directory, please enter a correct path."
+msgstr "A könyvtár nem hozható létre. Érvényes útvonalat adjon meg."
+
+#: ../tools/draksambashare:382 ../tools/draksambashare:605
+#: ../tools/draksambashare:772
+#, c-format
+msgid "Please enter a Comment for this share."
+msgstr "Adjon meg egy megjegyzést ehhez a megosztáshoz."
+
+#: ../tools/draksambashare:413
+#, c-format
+msgid "pdf-gen - a PDF generator"
+msgstr "pdf-gen - PDF-készítő"
+
+#: ../tools/draksambashare:414
+#, c-format
+msgid "printers - all printers available"
+msgstr "nyomtatók - az összes elérhető nyomtató"
+
+#: ../tools/draksambashare:418
+#, c-format
+msgid "Add Special Printer share"
+msgstr "Speciális nyomtatómegosztás felvétele"
+
+#: ../tools/draksambashare:421
+#, c-format
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
+msgstr ""
+"A varázslóval egyszerű módon felvehető egy új speciális Samba-"
+"nyomtatómegosztás."
+
+#: ../tools/draksambashare:428
+#, c-format
+msgid "A PDF generator already exists."
+msgstr "Már létezik PDF-készítő."
+
+#: ../tools/draksambashare:452
+#, c-format
+msgid "Printers and print$ already exist."
+msgstr "A nyomtatók és print$ már léteznek."
+
+#: ../tools/draksambashare:502
+#, c-format
+msgid "Congratulations"
+msgstr "Gratulálunk"
+
+#: ../tools/draksambashare:503
+#, c-format
+msgid "The wizard successfully added the printer Samba share"
+msgstr "A varázsló felvette a Samba-nyomtatómegosztást."
+
+#: ../tools/draksambashare:518
+#, c-format
+msgid "Failed to add printers."
+msgstr "Nem sikerült felvenni a nyomtatókat."
+
+#: ../tools/draksambashare:533
+#, c-format
+msgid "Please add or select a Samba printer share to be able to modify it."
+msgstr ""
+"Egy Samba-nyomtatómegosztás módosításához először vegyen fel vagy jelöljön "
+"ki egyet."
+
+#: ../tools/draksambashare:552
+#, c-format
+msgid "DrakSamba Printers entry"
+msgstr "DrakSamba-nyomtatóbejegyzés"
+
+#: ../tools/draksambashare:565
+#, c-format
+msgid "Printer share"
+msgstr "Nyomtatómegosztás"
+
+#: ../tools/draksambashare:568
+#, c-format
+msgid "Printer name:"
+msgstr "Nyomtatónév:"
+
+#: ../tools/draksambashare:574 ../tools/draksambashare:755
+#, c-format
+msgid "Writable:"
+msgstr "Írható:"
+
+#: ../tools/draksambashare:575 ../tools/draksambashare:756
+#, c-format
+msgid "Browseable:"
+msgstr "Böngészhető:"
+
+#: ../tools/draksambashare:580
+#, c-format
+msgid "Advanced options"
+msgstr "Speciális opciók"
+
+#: ../tools/draksambashare:582
+#, c-format
+msgid "Printer access"
+msgstr "Nyomtatóelérés"
+
+#: ../tools/draksambashare:586
+#, c-format
+msgid "Guest ok:"
+msgstr "Vendég OK:"
+
+#: ../tools/draksambashare:587
+#, c-format
+msgid "Create mode:"
+msgstr "Létrehozási mód:"
+
+#: ../tools/draksambashare:591
+#, c-format
+msgid "Printer command"
+msgstr "Nyomtatási parancs"
+
+#: ../tools/draksambashare:593
+#, c-format
+msgid "Print command:"
+msgstr "Nyomtatási parancs:"
+
+#: ../tools/draksambashare:594
+#, c-format
+msgid "LPQ command:"
+msgstr "LPQ-parancs:"
+
+#: ../tools/draksambashare:595
+#, c-format
+msgid "Printing:"
+msgstr "Nyomtatás:"
+
+#: ../tools/draksambashare:611
+#, c-format
+msgid "create mode should be numeric. ie: 0755."
+msgstr "A létrehozási módnak számnak kell lennie, például 0755."
+
+#: ../tools/draksambashare:673
+#, c-format
+msgid "DrakSamba entry"
+msgstr "DrakSamba-bejegyzés"
+
+#: ../tools/draksambashare:678
+#, c-format
+msgid "Please add or select a Samba share to be able to modify it."
+msgstr "Egy Samba-megosztás módosításához először vegyen fel vagy jelöljön ki egyet."
+
+#: ../tools/draksambashare:701
+#, c-format
+msgid "Samba user access"
+msgstr "Samba - felhasználói hozzáférés"
+
+#: ../tools/draksambashare:709
+#, c-format
+msgid "Mask options"
+msgstr "Maszk-beállítások"
+
+#: ../tools/draksambashare:723
+#, c-format
+msgid "Display options"
+msgstr "Megjelenítési opciók"
+
+#: ../tools/draksambashare:745
+#, c-format
+msgid "Samba share directory"
+msgstr "Samba - könyvtár megosztása"
+
+#: ../tools/draksambashare:748
+#, c-format
+msgid "Share name:"
+msgstr "Megosztásnév:"
+
+#: ../tools/draksambashare:754
+#, c-format
+msgid "Public:"
+msgstr "Nyilvános:"
+
+#: ../tools/draksambashare:778
+#, c-format
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgstr ""
+"A létrehozási maszknak, a létrehozási módnak és a könyvtármaszknak számnak "
+"kell lennie, például 0755."
+
+#: ../tools/draksambashare:785
+#, c-format
+msgid "Please create this Samba user: %s"
+msgstr "Hozza létre ezt a Samba-felhasználót: %s"
+
+#: ../tools/draksambashare:889
+#, c-format
+msgid "Add Samba user"
+msgstr "Samba-felhasználó felvétele"
+
+#: ../tools/draksambashare:904
+#, c-format
+msgid "User information"
+msgstr "Felhasználói információ"
+
+#: ../tools/draksambashare:906
+#, c-format
+msgid "User name:"
+msgstr "Felhasználónév:"
+
+#: ../tools/draksambashare:907
+#, c-format
+msgid "Password:"
+msgstr "Jelszó:"
+
+#: ../tools/draksambashare:1021
+#, c-format
+msgid "Manage Samba configuration"
+msgstr "Samba-beállítás kezelése"
+
+#: ../tools/draksambashare:1109
+#, c-format
+msgid "Failed to Modify Samba share."
+msgstr "Nem sikerült módosítani a Samba-megosztást."
+
+#: ../tools/draksambashare:1118
+#, c-format
+msgid "Failed to remove a Samba share."
+msgstr "Nem sikerült eltávolítani egy Samba-megosztást."
+
+#: ../tools/draksambashare:1125
+#, c-format
+msgid "File share"
+msgstr "Fájlmegosztás"
+
+#: ../tools/draksambashare:1140
+#, c-format
+msgid "Failed to Modify."
+msgstr "Nem sikerült a módosítás."
+
+#: ../tools/draksambashare:1149
+#, c-format
+msgid "Failed to remove."
+msgstr "Nem sikerült az eltávolítás."
+
+#: ../tools/draksambashare:1156
+#, c-format
+msgid "Printers"
+msgstr "Nyomtatók"
+
+#: ../tools/draksambashare:1168
+#, c-format
+msgid "Failed to add user."
+msgstr "Nem sikerült felvenni a felhasználót."
+
+#: ../tools/draksambashare:1177
+#, c-format
+msgid "Failed to change user password."
+msgstr "Nem sikerült módosítani a felhasználói jelszót."
+
+#: ../tools/draksambashare:1189
+#, c-format
+msgid "Failed to delete user."
+msgstr "Nem sikerült törölni a felhasználót."
+
+#: ../tools/draksambashare:1194
+#, c-format
+msgid "Userdrake"
+msgstr "UserDrake"
+
+#: ../tools/draksambashare:1202
+#, c-format
+msgid "Samba Users"
+msgstr "Samba-felhasználók"
+
+#: ../tools/draksambashare:1211
+#, c-format
+msgid "DrakSamba manage Samba shares"
+msgstr "DrakSamba - Samba-megosztások kezelése"
+
+#: ../tools/drakvpn-old:65
+#, c-format
+msgid "DrakVPN"
+msgstr "DrakVPN"
+
+#: ../tools/drakvpn-old:87
+#, c-format
+msgid "The VPN connection is enabled."
+msgstr "A VPN-kapcsolat engedélyezve van."
+
+#: ../tools/drakvpn-old:88
+#, c-format
+msgid ""
+"The setup of a VPN connection has already been done.\n"
+"\n"
+"It's currently enabled.\n"
+"\n"
+"What would you like to do?"
+msgstr ""
+"Már be lett állítva VPN-kapcsolat.\n"
+"\n"
+"Jelenleg engedélyezve van.\n"
+"\n"
+"Mit szeretne tenni?"
+
+#: ../tools/drakvpn-old:93
+#, c-format
+msgid "disable"
+msgstr "letiltás"
+
+#: ../tools/drakvpn-old:93 ../tools/drakvpn-old:119
+#, c-format
+msgid "reconfigure"
+msgstr "újra beállítás"
+
+#: ../tools/drakvpn-old:93 ../tools/drakvpn-old:119 ../tools/drakvpn-old:432
+#, c-format
+msgid "dismiss"
+msgstr "megszakítás"
+
+#: ../tools/drakvpn-old:97
+#, c-format
+msgid "Disabling VPN..."
+msgstr "VPN letiltása..."
+
+#: ../tools/drakvpn-old:106
+#, c-format
+msgid "The VPN connection is now disabled."
+msgstr "A VPN-kapcsolat letiltásra került."
+
+#: ../tools/drakvpn-old:113
+#, c-format
+msgid "VPN connection currently disabled"
+msgstr "A VPN-kapcsolat le van tiltva"
+
+#: ../tools/drakvpn-old:114
+#, c-format
+msgid ""
+"The setup of a VPN connection has already been done.\n"
+"\n"
+"It's currently disabled.\n"
+"\n"
+"What would you like to do?"
+msgstr ""
+"Már be lett állítva VPN-kapcsolat.\n"
+"\n"
+"Jelenleg le van tiltva.\n"
+"\n"
+"Mit szeretne tenni?"
+
+#: ../tools/drakvpn-old:119
+#, c-format
+msgid "enable"
+msgstr "engedélyezés"
+
+#: ../tools/drakvpn-old:127
+#, c-format
+msgid "Enabling VPN..."
+msgstr "VPN engedélyezése..."
+
+#: ../tools/drakvpn-old:133
+#, c-format
+msgid "The VPN connection is now enabled."
+msgstr "A VPN-kapcsolat engedélyezve lett."
+
+#: ../tools/drakvpn-old:147 ../tools/drakvpn-old:164
+#, c-format
+msgid "Simple VPN setup."
+msgstr "Egyszerű VPN-beállítás."
+
+#: ../tools/drakvpn-old:148
+#, c-format
+msgid ""
+"You are about to configure your computer to use a VPN connection.\n"
+"\n"
+"With this feature, computers on your local private network and computers\n"
+"on some other remote private networks, can share resources, through\n"
+"their respective firewalls, over the Internet, in a secure manner. \n"
+"\n"
+"The communication over the Internet is encrypted. The local and remote\n"
+"computers look as if they were on the same network.\n"
+"\n"
+"Make sure you have configured your Network/Internet access using\n"
+"drakconnect before going any further."
+msgstr ""
+"A számítógépnek egy VPN-kapcsolat használatára való beállítása következik.\n"
+"\n"
+"Ezzel a funkcióval a helyi privát hálózaton levő számítógépek biztonságos\n"
+"módon oszthatnak meg erőforrásokat más, távoli hálózatokon levő\n"
+"számítógépekkel az interneten keresztül, a gépek saját tűzfalai által\n"
+"védetten.\n"
+"\n"
+"Az interneten keresztül végzett kommunikáció titkosított. A helyi és\n"
+"távoli számítógépek azonos hálózaton levőnek látják egymást.\n"
+"\n"
+"Mielőtt továbblépne, állítsa be a hálózatot illetve az internetelérést\n"
+"a Drakconnect eszköz segítségével (ha az még nem történt meg)."
+
+#: ../tools/drakvpn-old:165
+#, c-format
+msgid ""
+"VPN connection.\n"
+"\n"
+"This program is based on the following projects:\n"
+" - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
+" - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
+" - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
+" - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
+" - the docs and man pages coming with the %s package\n"
+"\n"
+"Please read AT LEAST the ipsec-howto docs\n"
+"before going any further."
+msgstr ""
+"VPN-kapcsolat\n"
+"\n"
+"A program a következő projektekre épül:\n"
+" - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
+" - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
+" - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
+" - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
+" - a(z) \"%s\" csomagban levő dokumentációk és kézikönyvek\n"
+"\n"
+"Továbblépés előtt érdemes elolvasni az \"ipsec-howto\" dokumentációt."
+
+#: ../tools/drakvpn-old:208
+#, c-format
+msgid "Problems installing package %s"
+msgstr "Probléma lépett fel a(z) \"%s\" csomag telepítésekor"
+
+#: ../tools/drakvpn-old:222
+#, c-format
+msgid "Security Policies"
+msgstr "Biztonsági szabályzatok"
+
+#: ../tools/drakvpn-old:222
+#, c-format
+msgid "IKE daemon racoon"
+msgstr "IKE-szolgáltatás (Racoon)"
+
+#: ../tools/drakvpn-old:224
+#, c-format
+msgid "Configuration file"
+msgstr "Beállítási fájl"
+
+#: ../tools/drakvpn-old:225
+#, c-format
+msgid ""
+"Configuration step!\n"
+"\n"
+"You need to define the Security Policies and then to \n"
+"configure the automatic key exchange (IKE) daemon. \n"
+"The KAME IKE daemon we're using is called 'racoon'.\n"
+"\n"
+"What would you like to configure?\n"
+msgstr ""
+"Beállítási lépés\n"
+"\n"
+"Meg kell adnia a biztonsági szabályzatokat, majd be kell állítania\n"
+"az automatikus kulcscserélési (IKE) szolgáltatást.\n"
+"A program a Racoon nevű KAME IKE-szolgáltatást használja.\n"
+"\n"
+"Mit szeretne beállítani?\n"
+
+#: ../tools/drakvpn-old:245 ../tools/drakvpn-old:382
+#, c-format
+msgid "%s entries"
+msgstr "%s bejegyzései"
+
+#: ../tools/drakvpn-old:246
+#, c-format
+msgid ""
+"The %s file contents\n"
+"is divided into sections.\n"
+"\n"
+"You can now:\n"
+"\n"
+"  - display, add, edit, or remove sections, then\n"
+"  - commit the changes\n"
+"\n"
+"What would you like to do?\n"
+msgstr ""
+"A(z) %s fájl tartalma\n"
+"szakaszokra van bontva.\n"
+"\n"
+"A következőket teheti:\n"
+"\n"
+"  - szakaszok megjelenítése, felvétele, módosítása illetve eltávolítása, majd\n"
+"  - a módosítások érvényesítése\n"
+"\n"
+"Mit szeretne tenni?\n"
+
+#: ../tools/drakvpn-old:253 ../tools/drakvpn-old:391
+#, c-format
+msgid ""
+"_:display here is a verb\n"
+"Display"
+msgstr "Megjelenítés"
+
+#: ../tools/drakvpn-old:253 ../tools/drakvpn-old:391
+#, c-format
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: ../tools/drakvpn-old:253 ../tools/drakvpn-old:391
+#, c-format
+msgid "Commit"
+msgstr "Érvényesítés"
+
+#: ../tools/drakvpn-old:267 ../tools/drakvpn-old:271 ../tools/drakvpn-old:406
+#: ../tools/drakvpn-old:410
+#, c-format
+msgid ""
+"_:display here is a verb\n"
+"Display configuration"
+msgstr "Beállítások megjelenítése"
+
+#: ../tools/drakvpn-old:272
+#, c-format
+msgid ""
+"The %s file does not exist.\n"
+"\n"
+"This must be a new configuration.\n"
+"\n"
+"You'll have to go back and choose 'add'.\n"
+msgstr ""
+"%s fájl nem létezik.\n"
+"\n"
+"Ez valószínűleg egy új beállítás.\n"
+"\n"
+"Lépjen vissza és válassza a \"hozzáadás\" funkciót.\n"
+
+#: ../tools/drakvpn-old:301
+#, c-format
+msgid ""
+"Add a Security Policy.\n"
+"\n"
+"You can now add a Security Policy.\n"
+"\n"
+"Choose continue when you are done to write the data.\n"
+msgstr ""
+"Biztonsági szabályzat felvétele.\n"
+"\n"
+"Most felvehet egy új biztonsági szabályzatot.\n"
+"\n"
+"Az adatok megadása után válassza a \"folytatás\" lehetőséget.\n"
+
+#: ../tools/drakvpn-old:333 ../tools/drakvpn-old:523
+#, c-format
+msgid "Edit section"
+msgstr "Szakasz szerkesztése"
+
+#: ../tools/drakvpn-old:334
+#, c-format
+msgid ""
+"Your %s file has several sections or connections.\n"
+"\n"
+"You can choose here below the one you want to edit \n"
+"and then click on next.\n"
+msgstr ""
+"A(z) %s fájlban több szakasz illetve kapcsolat van.\n"
+"\n"
+"Lentebb kijelölheti, melyiket szeretné szerkeszteni.\n"
+"Ezt követően kattintson a \"Következő\" gombra.\n"
+
+#: ../tools/drakvpn-old:337 ../tools/drakvpn-old:357 ../tools/drakvpn-old:528
+#: ../tools/drakvpn-old:574
+#, c-format
+msgid "Section names"
+msgstr "Szakasznevek"
+
+#: ../tools/drakvpn-old:344
+#, c-format
+msgid ""
+"Edit a Security Policy.\n"
+"\n"
+"You can now edit a Security Policy.\n"
+"\n"
+"Choose continue when you are done to write the data.\n"
+msgstr ""
+"Biztonsági szabályzat szerkesztése.\n"
+"\n"
+"Most módosíthat egy biztonsági szabályzatot.\n"
+"\n"
+"Az adatok megadása után válassza a \"folytatás\" lehetőséget.\n"
+
+#: ../tools/drakvpn-old:353 ../tools/drakvpn-old:570
+#, c-format
+msgid "Remove section"
+msgstr "Szakasz eltávolítása"
+
+#: ../tools/drakvpn-old:354 ../tools/drakvpn-old:571
+#, c-format
+msgid ""
+"Your %s file has several sections or connections.\n"
+"\n"
+"You can choose here below the one you want to remove\n"
+"and then click on next.\n"
+msgstr ""
+"A(z) %s fájlban több szakasz illetve kapcsolat van.\n"
+"\n"
+"Lentebb kijelölheti, melyiket szeretné eltávolítani.\n"
+"Ezt követően kattintson a \"Következő\" gombra.\n"
+
+#: ../tools/drakvpn-old:383
+#, c-format
+msgid ""
+"The racoon.conf file configuration.\n"
+"\n"
+"The contents of this file is divided into sections.\n"
+"You can now:\n"
+"  - display \t\t (display the file contents)\n"
+"  - add\t\t\t (add one section)\n"
+"  - edit \t\t\t (modify parameters of an existing section)\n"
+"  - remove \t\t (remove an existing section)\n"
+"  - commit \t\t (writes the changes to the real file)"
+msgstr ""
+"A racoon.conf fájl beállítása.\n"
+"\n"
+"A fájl tartalma szakaszokra van bontva.\n"
+"A következőket teheti:\n"
+"  - megjelenítés \t\t (fájltartalom megjelenítése)\n"
+"  - hozzáadás    \t\t (egy szakasz felvétele)\n"
+"  - szerkesztés  \t\t (egy meglevő szakasz paramétereinek módosítása)\n"
+"  - eltávolítás  \t\t (egy meglevő szakasz törlése)\n"
+"  - érvényesítés \t\t (a módosítások írása a tényleges fájlba)"
+
+#: ../tools/drakvpn-old:411
+#, c-format
+msgid ""
+"The %s file does not exist\n"
+"\n"
+"This must be a new configuration.\n"
+"\n"
+"You'll have to go back and choose configure.\n"
+msgstr ""
+"%s fájl nem létezik.\n"
+"\n"
+"Ez valószínűleg egy új beállítás.\n"
+"\n"
+"Lépjen vissza és válassza a \"beállítás\" funkciót.\n"
+
+#: ../tools/drakvpn-old:425
+#, c-format
+msgid "racoon.conf entries"
+msgstr "A racoon.conf bejegyzései"
+
+#: ../tools/drakvpn-old:426
+#, c-format
+msgid ""
+"The 'add' sections step.\n"
+"\n"
+"Here below is the racoon.conf file skeleton:\n"
+"\t'path'\n"
+"\t'remote'\n"
+"\t'sainfo' \n"
+"\n"
+"Choose the section you would like to add.\n"
+msgstr ""
+"A \"szakaszok felvétele\" lépés.\n"
+"\n"
+"A racoon.conf fájl részei:\n"
+"\t\"útvonal\" (path)\n"
+"\t\"távoli\" (remote)\n"
+"\t\"sainfo\"\n"
+"\n"
+"Válassza ki, melyik szakaszt kívánja felvenni.\n"
+
+#: ../tools/drakvpn-old:432
+#, c-format
+msgid "path"
+msgstr "útvonal"
+
+#: ../tools/drakvpn-old:432
+#, c-format
+msgid "remote"
+msgstr "távoli"
+
+#: ../tools/drakvpn-old:432
+#, c-format
+msgid "sainfo"
+msgstr "sainfo"
+
+#: ../tools/drakvpn-old:440
+#, c-format
+msgid ""
+"The 'add path' section step.\n"
+"\n"
+"The path sections have to be on top of your racoon.conf file.\n"
+"\n"
+"Put your mouse over the certificate entry to obtain online help."
+msgstr ""
+"Az \"útvonal-szakasz felvétele\" lépés.\n"
+"\n"
+"Az útvonal-szakaszoknak a racoon.conf fájl elején kell lenniük.\n"
+"\n"
+"Ha információt szeretne, helyezze az egérmutatót a tanúsítványbejegyzésre."
+
+#: ../tools/drakvpn-old:443
+#, c-format
+msgid "path type"
+msgstr "útvonal-típus"
+
+#: ../tools/drakvpn-old:447
+#, c-format
+msgid ""
+"path include path: specifies a path to include\n"
+"a file. See File Inclusion.\n"
+"\tExample: path include '/etc/racoon'\n"
+"\n"
+"path pre_shared_key file: specifies a file containing\n"
+"pre-shared key(s) for various ID(s). See Pre-shared key File.\n"
+"\tExample: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
+"\n"
+"path certificate path: racoon(8) will search this directory\n"
+"if a certificate or certificate request is received.\n"
+"\tExample: path certificate '/etc/cert' ;\n"
+"\n"
+"File Inclusion: include file \n"
+"other configuration files can be included.\n"
+"\tExample: include \"remote.conf\" ;\n"
+"\n"
+"Pre-shared key File: Pre-shared key file defines a pair\n"
+"of the identifier and the shared secret key which are used at\n"
+"Pre-shared key authentication method in phase 1."
+msgstr ""
+"path include útvonal: Megad egy útvonalt egy fájl beszúrásához.\n"
+"További információ a fájlbeszúrásnál található.\n"
+"\tPélda: path include '/etc/racoon'\n"
+"\n"
+"path pre_shared_key fájl: Egy olyan fájlt ad meg, amely egy\n"
+"vagy több, különböző azonosítókhoz tartozó előre megosztott\n"
+"kulcsot tartalmaz. További információ az előre megosztott\n"
+"kulcsok fájljánál található.\n"
+"\tPélda: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
+"\n"
+"path certificate útvonal: A racoon(8) ebben a könyvtárban fog\n"
+"keresést végezni, ha tanúsítványt vagy tanúsítvány-kérést kap.\n"
+"\tPélda: path certificate '/etc/cert' ;\n"
+"\n"
+"Fájlbeszúrás: include fájl\n"
+"Ezzel a módszerrel további beállítási fájlokat lehet beszúrni.\n"
+"\tPélda: include \"remote.conf\" ;\n"
+"\n"
+"Előre megosztott kulcsok fájlja: olyan, azonosítóból és\n"
+"megosztott titkos kulcsból álló párt határoz meg, amely az első\n"
+"fázisban, az előre megosztott kulcs alapján történő azonosításnál\n"
+"lesz felhasználva."
+
+#: ../tools/drakvpn-old:467 ../tools/drakvpn-old:560
+#, c-format
+msgid "real file"
+msgstr "tényleges fájl"
+
+#: ../tools/drakvpn-old:490
+#, c-format
+msgid ""
+"Make sure you already have the path sections\n"
+"on the top of your racoon.conf file.\n"
+"\n"
+"You can now choose the remote settings.\n"
+"Choose continue or previous when you are done.\n"
+msgstr ""
+"Ellenőrizze, hogy szerepelnek-e már a szükséges\n"
+"\"útvonal\" részek a racoon.conf fájl elején.\n"
+"\n"
+"Most megadhatja a távoli beállításokat.\n"
+"Ezt követően válassza a \"folytatás\" vagy az \"előző\" lehetőséget.\n"
+
+#: ../tools/drakvpn-old:507
+#, c-format
+msgid ""
+"Make sure you already have the path sections\n"
+"on the top of your %s file.\n"
+"\n"
+"You can now choose the sainfo settings.\n"
+"Choose continue or previous when you are done.\n"
+msgstr ""
+"Ellenőrizze, hogy szerepelnek-e már a szükséges\n"
+"\"útvonal\" részek a(z) %s fájl elején.\n"
+"\n"
+"Most megadhatja az sainfo-beállításokat.\n"
+"Ezt követően válassza a \"folytatás\" vagy az \"előző\" lehetőséget.\n"
+
+#: ../tools/drakvpn-old:524
+#, c-format
+msgid ""
+"Your %s file has several sections or connections.\n"
+"\n"
+"You can choose here in the list below the one you want\n"
+"to edit and then click on next.\n"
+msgstr ""
+"A(z) %s fájlban több szakasz illetve kapcsolat van.\n"
+"\n"
+"A lentebbi listában kijelölheti, melyiket szeretné szerkeszteni.\n"
+"Ezt követően kattintson a \"Következő\" gombra.\n"
+
+#: ../tools/drakvpn-old:535
+#, c-format
+msgid ""
+"Your %s file has several sections.\n"
+"\n"
+"\n"
+"You can now edit the remote section entries.\n"
+"\n"
+"Choose continue when you are done to write the data.\n"
+msgstr ""
+"A(z) %s fájlban több szakasz van.\n"
+"\n"
+"\n"
+"Most módosíthatja a \"távoli\" (remote) szakasz bejegyzéseit.\n"
+"\n"
+"Ezt követően válassza a \"folytatás\" lehetőséget az adatok "
+"elmentéséhez.\n"
+
+#: ../tools/drakvpn-old:544
+#, c-format
+msgid ""
+"Your %s file has several sections.\n"
+"\n"
+"You can now edit the sainfo section entries.\n"
+"\n"
+"Choose continue when you are done to write the data."
+msgstr ""
+"A(z) %s fájlban több szakasz van.\n"
+"\n"
+"Most módosíthatja az \"sainfo\" szakasz bejegyzéseit.\n"
+"\n"
+"Ezt követően válassza a \"folytatás\" lehetőséget az adatok "
+"elmentéséhez."
+
+#: ../tools/drakvpn-old:552
+#, c-format
+msgid ""
+"This section has to be on top of your\n"
+"%s file.\n"
+"\n"
+"Make sure all other sections follow these path\n"
+"sections.\n"
+"\n"
+"You can now edit the path entries.\n"
+"\n"
+"Choose continue or previous when you are done.\n"
+msgstr ""
+"Ennek a szakasznak a(z) %s fájl elején kell szerepelnie.\n"
+"\n"
+"Az összes többi szakasz ezen \"útvonal\" szakaszok után szerepeljen.\n"
+"\n"
+"Most módosíthatja az \"útvonal\" bejegyzéseket.\n"
+"\n"
+"Ezt követően válassza a \"folytatás\" vagy az \"előző\" lehetőséget.\n"
+
+#: ../tools/drakvpn-old:559
+#, c-format
+msgid "path_type"
+msgstr "útvonal-típus"
+
+#: ../tools/drakvpn-old:599
+#, c-format
+msgid "Congratulations!"
+msgstr "Gratulálunk!"
+
+#: ../tools/drakvpn-old:600
+#, c-format
+msgid ""
+"Everything has been configured.\n"
+"\n"
+"You may now share resources through the Internet,\n"
+"in a secure way, using a VPN connection.\n"
+"\n"
+"You should make sure that the tunnels shorewall\n"
+"section is configured."
+msgstr ""
+"A beállítás megtörtént.\n"
+"\n"
+"A továbbiakban biztonságos módon oszthat meg erőforrásokat\n"
+"egy, az interneten keresztüli VPN-kapcsolat segítségével.\n"
+"\n"
+"Ellenőrizze, hogy a \"tunnels shorewall\" (alagutak - Shorewall)\n"
+"szakasz be van-e állítva."
+
+#: ../tools/drakvpn-old:620
+#, c-format
+msgid "Sainfo source address"
+msgstr "Sainfo-forráscím"
+
+#: ../tools/drakvpn-old:621
+#, c-format
+msgid ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"defines the parameters of the IKE phase 2\n"
+"(IPsec-SA establishment).\n"
+"\n"
+"source_id and destination_id are constructed like:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Examples: \n"
+"\n"
+"sainfo anonymous (accepts connections from anywhere)\n"
+"\tleave blank this entry if you want anonymous\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\t203.178.141.209 is the source address\n"
+"\n"
+"sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
+"\t172.16.1.0/24 is the source address"
+msgstr ""
+"sainfo (forrás-azonosító cél-azonosító | anonymous) { utasítások }\n"
+"A kulcscserélés (IKE) 2. fázisának paramétereit adja meg\n"
+"(IPsec-SA létrehozása).\n"
+"\n"
+"A forrás-azonosító és a cél-azonosító a következőképpen épül fel:\n"
+"\n"
+"\taddress cím [/ előtag] [[port]] ul_proto\n"
+"\n"
+"Példák: \n"
+"\n"
+"sainfo anonymous (bárhonnan elfogad kapcsolatot)\n"
+"\tha névtelent (anonymous) szeretne, hagyja üresen ezt a bejegyzést\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\t203.178.141.209 a forráscím\n"
+"\n"
+"sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
+"\t172.16.1.0/24 a forráscím"
+
+#: ../tools/drakvpn-old:638
+#, c-format
+msgid "Sainfo source protocol"
+msgstr "Sainfo-forrásprotokoll"
+
+#: ../tools/drakvpn-old:639
+#, c-format
+msgid ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"defines the parameters of the IKE phase 2\n"
+"(IPsec-SA establishment).\n"
+"\n"
+"source_id and destination_id are constructed like:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Examples: \n"
+"\n"
+"sainfo anonymous (accepts connections from anywhere)\n"
+"\tleave blank this entry if you want anonymous\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\tthe first 'any' allows any protocol for the source"
+msgstr ""
+"sainfo (forrás-azonosító cél-azonosító | anonymous) { utasítások }\n"
+"A kulcscserélés (IKE) 2. fázisának paramétereit adja meg\n"
+"(IPsec-SA létrehozása).\n"
+"\n"
+"A forrás-azonosító és a cél-azonosító a következőképpen épül fel:\n"
+"\n"
+"\taddress cím [/ előtag] [[port]] ul_proto\n"
+"\n"
+"Példák: \n"
+"\n"
+"sainfo anonymous (bárhonnan elfogad kapcsolatot)\n"
+"\tha névtelent (anonymous) szeretne, hagyja üresen ezt a bejegyzést\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\taz első \"any\" tetszőleges (minden) protokollt engedélyez a forrás számára"
+
+#: ../tools/drakvpn-old:653
+#, c-format
+msgid "Sainfo destination address"
+msgstr "Sainfo-célcím"
+
+#: ../tools/drakvpn-old:654
+#, c-format
+msgid ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"defines the parameters of the IKE phase 2\n"
+"(IPsec-SA establishment).\n"
+"\n"
+"source_id and destination_id are constructed like:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Examples: \n"
+"\n"
+"sainfo anonymous (accepts connections from anywhere)\n"
+"\tleave blank this entry if you want anonymous\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\t203.178.141.218 is the destination address\n"
+"\n"
+"sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
+"\t172.16.2.0/24 is the destination address"
+msgstr ""
+"sainfo (forrás-azonosító cél-azonosító | anonymous) { utasítások }\n"
+"A kulcscserélés (IKE) 2. fázisának paramétereit adja meg\n"
+"(IPsec-SA létrehozása).\n"
+"\n"
+"A forrás-azonosító és a cél-azonosító a következőképpen épül fel:\n"
+"\n"
+"\taddress cím [/ előtag] [[port]] ul_proto\n"
+"\n"
+"Példák: \n"
+"\n"
+"sainfo anonymous (bárhonnan elfogad kapcsolatot)\n"
+"\tha névtelent (anonymous) szeretne, hagyja üresen ezt a bejegyzést\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\t203.178.141.218 a célcím\n"
+"\n"
+"sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
+"\t172.16.2.0/24 a célcím"
+
+#: ../tools/drakvpn-old:671
+#, c-format
+msgid "Sainfo destination protocol"
+msgstr "Sainfo-célprotokoll"
+
+#: ../tools/drakvpn-old:672
+#, c-format
+msgid ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"defines the parameters of the IKE phase 2\n"
+"(IPsec-SA establishment).\n"
+"\n"
+"source_id and destination_id are constructed like:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Examples: \n"
+"\n"
+"sainfo anonymous (accepts connections from anywhere)\n"
+"\tleave blank this entry if you want anonymous\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\tthe last 'any' allows any protocol for the destination"
+msgstr ""
+"sainfo (forrás-azonosító cél-azonosító | anonymous) { utasítások }\n"
+"A kulcscserélés (IKE) 2. fázisának paramétereit adja meg\n"
+"(IPsec-SA létrehozása).\n"
+"\n"
+"A forrás-azonosító és a cél-azonosító a következőképpen épül fel:\n"
+"\n"
+"\taddress cím [/ előtag] [[port]] ul_proto\n"
+"\n"
+"Példák: \n"
+"\n"
+"sainfo anonymous (bárhonnan elfogad kapcsolatot)\n"
+"\tha névtelent (anonymous) szeretne, hagyja üresen ezt a bejegyzést\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\taz utolsó \"any\" tetszőleges (minden) protokollt engedélyez a cél számára"
+
+#: ../tools/drakvpn-old:686
+#, c-format
+msgid "PFS group"
+msgstr "PFS-csoport"
+
+#: ../tools/drakvpn-old:688
+#, c-format
+msgid ""
+"define the group of Diffie-Hellman exponentiations.\n"
+"If you do not require PFS then you can omit this directive.\n"
+"Any proposal will be accepted if you do not specify one.\n"
+"group is one of the following: modp768, modp1024, modp1536.\n"
+"Or you can define 1, 2, or 5 as the DH group number."
+msgstr ""
+"Csoport meghatározása a Diffie-Hellman exponenciálás számára.\n"
+"Ha Ön nem igényel PFS-t, akkor kihagyhatja ezt a direktívát.\n"
+"Ha nem ad meg értéket, akkor minden javaslat el lesz fogadva.\n"
+"A csoport a következők egyike lehet: modp768, modp1024, modp1536.\n"
+"Helyette megadhatja az \"1\", a \"2\" vagy az \"5\" értéket is\n"
+"DH-csoportszámként."
+
+#: ../tools/drakvpn-old:693
+#, c-format
+msgid "Lifetime number"
+msgstr "Élettartam-szám"
+
+#: ../tools/drakvpn-old:694
+#, c-format
+msgid ""
+"define a lifetime of a certain time which will be pro-\n"
+"posed in the phase 1 negotiations.  Any proposal will be\n"
+"accepted, and the attribute(s) will not be proposed to\n"
+"the peer if you do not specify it(them).  They can be\n"
+"individually specified in each proposal.\n"
+"\n"
+"Examples: \n"
+"\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 60 sec;\n"
+"\tlifetime time 12 hour;\n"
+"\n"
+"So, here, the lifetime numbers are 1, 1, 30, 30, 60 and 12.\n"
+msgstr ""
+"Bizonyos időnek megfelelő élettartam meghatározása, amely az\n"
+"1. fázisban történő egyeztetéskor javasolva lesz. Ha nem ad\n"
+"meg értéket, akkor bármilyen (minden) javaslat el lesz fogadva,\n"
+"továbbá az attribútumok nem lesznek javasolva a másik fél felé.\n"
+"Egyenként megadhatók minden javaslatban.\n"
+"\n"
+"Példák: \n"
+"\n"
+"        lifetime time 1 min;        # 1 perc\n"
+"        lifetime time 1 min;\n"
+"        lifetime time 30 sec;       # 30 másodperc\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 60 sec;\n"
+"        lifetime time 12 hour;      # 12 óra\n"
+"\n"
+"A fenti esetben az élettartam-számok: 1, 1, 30, 30, 60 és 12.\n"
+
+#: ../tools/drakvpn-old:710
+#, c-format
+msgid "Lifetime unit"
+msgstr "Élettartam-egység"
+
+#: ../tools/drakvpn-old:712
+#, c-format
+msgid ""
+"define a lifetime of a certain time which will be pro-\n"
+"posed in the phase 1 negotiations.  Any proposal will be\n"
+"accepted, and the attribute(s) will not be proposed to\n"
+"the peer if you do not specify it(them).  They can be\n"
+"individually specified in each proposal.\n"
+"\n"
+"Examples: \n"
+"\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 60 sec;\n"
+"\tlifetime time 12 hour;\n"
+"\n"
+"So, here, the lifetime units are 'min', 'min', 'sec', 'sec', 'sec' and "
+"'hour'.\n"
+msgstr ""
+"Bizonyos időnek megfelelő élettartam meghatározása, amely az\n"
+"1. fázisban történő egyeztetéskor javasolva lesz. Ha nem ad\n"
+"meg értéket, akkor bármilyen (minden) javaslat el lesz fogadva,\n"
+"továbbá az attribútumok nem lesznek javasolva a másik fél felé.\n"
+"Egyenként megadhatók minden javaslatban.\n"
+"\n"
+"Példák: \n"
+"\n"
+"        lifetime time 1 min;        # 1 perc\n"
+"        lifetime time 1 min;\n"
+"        lifetime time 30 sec;       # 30 másodperc\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 60 sec;\n"
+"        lifetime time 12 hour;      # 12 óra\n"
+"\n"
+"A fenti esetben az élettartam-egységek: \"min\", \"min\", \"sec\", "
+"\"sec\", \"sec\" illetve \"hour\".\n"
+
+#: ../tools/drakvpn-old:728 ../tools/drakvpn-old:813
+#, c-format
+msgid "Encryption algorithm"
+msgstr "Titkosítási módszer"
+
+#: ../tools/drakvpn-old:730
+#, c-format
+msgid "Authentication algorithm"
+msgstr "Felhasználóazonosítási algoritmus"
+
+#: ../tools/drakvpn-old:732
+#, c-format
+msgid "Compression algorithm"
+msgstr "Tömörítési algoritmus"
+
+#: ../tools/drakvpn-old:733
+#, c-format
+msgid "deflate"
+msgstr "csökkentés (deflate)"
+
+#: ../tools/drakvpn-old:740
+#, c-format
+msgid "Remote"
+msgstr "Távoli"
+
+#: ../tools/drakvpn-old:741
+#, c-format
+msgid ""
+"remote (address | anonymous) [[port]] { statements }\n"
+"specifies the parameters for IKE phase 1 for each remote node.\n"
+"The default port is 500.  If anonymous is specified, the state-\n"
+"ments apply to all peers which do not match any other remote\n"
+"directive.\n"
+"\n"
+"Examples: \n"
+"\n"
+"remote anonymous\n"
+"remote ::1 [8000]"
+msgstr ""
+"remote (cím | anonymous) [[port]] { utasítások }\n"
+"A kulcscserélés (IKE) 1. fázisának paramétereit adja meg a\n"
+"távoli gépekhez. Az alapértelmezett portszám: 500. Ha \"anonymous\"\n"
+"van megadva, akkor az utasítások az összes olyan partnergépre\n"
+"vonatkoznak, amely gép nem illeszkedik semelyik másik \"remote\"\n"
+"(távoli) direktívára sem.\n"
+"\n"
+"Példák: \n"
+"\n"
+"remote anonymous\n"
+"remote ::1 [8000]"
+
+#: ../tools/drakvpn-old:749
+#, c-format
+msgid "Exchange mode"
+msgstr "Cserélési mód"
+
+#: ../tools/drakvpn-old:751
+#, c-format
+msgid ""
+"defines the exchange mode for phase 1 when racoon is the\n"
+"initiator. Also it means the acceptable exchange mode\n"
+"when racoon is responder. More than one mode can be\n"
+"specified by separating them with a comma. All of the\n"
+"modes are acceptable. The first exchange mode is what\n"
+"racoon uses when it is the initiator.\n"
+msgstr ""
+"Az 1. fázis cserélési módját adja meg arra az esetre, amikor\n"
+"a Racoon a kezdeményező. Megadja továbbá az elfogadható\n"
+"cserélési módot arra az esetre, amikor a Racoon a válaszadó.\n"
+"Több mód is megadható, ekkor vesszővel kell azokat elválasztani.\n"
+"Az összes mód elfogadható. Amikor a Racoon a kezdeményező,\n"
+"akkor az első cserélési módot használja.\n"
+
+#: ../tools/drakvpn-old:757
+#, c-format
+msgid "Generate policy"
+msgstr "Szabályzatkészítés"
+
+#: ../tools/drakvpn-old:758 ../tools/drakvpn-old:774 ../tools/drakvpn-old:787
+#, c-format
+msgid "off"
+msgstr "kikapcsolt"
+
+#: ../tools/drakvpn-old:758 ../tools/drakvpn-old:774 ../tools/drakvpn-old:787
+#, c-format
+msgid "on"
+msgstr "bekapcsolt"
+
+#: ../tools/drakvpn-old:759
+#, c-format
+msgid ""
+"This directive is for the responder.  Therefore you\n"
+"should set passive on in order that racoon(8) only\n"
+"becomes a responder.  If the responder does not have any\n"
+"policy in SPD during phase 2 negotiation, and the direc-\n"
+"tive is set on, then racoon(8) will choose the first pro-\n"
+"posal in the SA payload from the initiator, and generate\n"
+"policy entries from the proposal.  It is useful to nego-\n"
+"tiate with the client which is allocated IP address\n"
+"dynamically.  Note that inappropriate policy might be\n"
+"installed into the responder's SPD by the initiator.  So\n"
+"that other communication might fail if such policies\n"
+"installed due to some policy mismatches between the ini-\n"
+"tiator and the responder.  This directive is ignored in\n"
+"the initiator case.  The default value is off."
+msgstr ""
+"Ezt a direktívát a válaszadó használja. Emiatt be kell\n"
+"kapcsolnia a \"passzív\" lehetőséget, hogy a Racoon(8)\n"
+"csak válaszadó legyen. Ha a válaszadónak nincs SPD-beli\n"
+"szabályzata a 2. fázisban lezajló egyeztetés során,\n"
+"továbbá a direktíva be van kapcsolva, akkor a Racoon(8)\n"
+"az első javaslatot választja a kezdeményezőtől származó\n"
+"SA-adatokból, majd szabályzatbejegyzéseket állít elő a\n"
+"javaslat alapján. Érdemes dinamikusan kiosztott IP-című\n"
+"klienssel végezni az egyeztetést. A kezdeményező helytelen\n"
+"szabályzatot is telepíthet a válaszadó SPD-jébe. Így más\n"
+"kommunikáció esetleg sikertelen lehet, ha valamilyen\n"
+"szabályzat telepítésre kerül a kezdeményező és a válaszadó\n"
+"közti szabályzat-eltérések miatt. A kezdeményező esetében\n"
+"ez a direktíva figyelmen kívül van hagyva. Az\n"
+"alapértelmezett érték: kikapcsolt."
+
+#: ../tools/drakvpn-old:773
+#, c-format
+msgid "Passive"
+msgstr "Passzív"
+
+#: ../tools/drakvpn-old:775
+#, c-format
+msgid ""
+"If you do not want to initiate the negotiation, set this\n"
+"to on.  The default value is off.  It is useful for a\n"
+"server."
+msgstr ""
+"Ha nem szeretné kezdeményezni az egyeztetést, akkor\n"
+"kapcsolja ezt be. Az alapértelmezett érték: kikapcsolt.\n"
+"Kiszolgáló esetében hasznos."
+
+#: ../tools/drakvpn-old:778
+#, c-format
+msgid "Certificate type"
+msgstr "Tanúsítványtípus"
+
+#: ../tools/drakvpn-old:780
+#, c-format
+msgid "My certfile"
+msgstr "Saját tanúsítványfájl"
+
+#: ../tools/drakvpn-old:781
+#, c-format
+msgid "Name of the certificate"
+msgstr "A tanúsítvány neve"
+
+#: ../tools/drakvpn-old:782
+#, c-format
+msgid "My private key"
+msgstr "Saját privát kulcs"
+
+#: ../tools/drakvpn-old:783
+#, c-format
+msgid "Name of the private key"
+msgstr "A privát kulcs neve"
+
+#: ../tools/drakvpn-old:784
+#, c-format
+msgid "Peers certfile"
+msgstr "A partnergép tanúsítványfájlja"
+
+#: ../tools/drakvpn-old:785
+#, c-format
+msgid "Name of the peers certificate"
+msgstr "A partnergép tanúsítványának neve"
+
+#: ../tools/drakvpn-old:786
+#, c-format
+msgid "Verify cert"
+msgstr "Tanúsítvány ellenőrzése"
+
+#: ../tools/drakvpn-old:788
+#, c-format
+msgid ""
+"If you do not want to verify the peer's certificate for\n"
+"some reason, set this to off.  The default is on."
+msgstr ""
+"Ha nem szeretné ellenőrizni a partnergép tanúsítványát,\n"
+"akkor állítsa ezt kikapcsoltra. Az alapértelmezés a\n"
+"bekapcsolt állapot."
+
+#: ../tools/drakvpn-old:790
+#, c-format
+msgid "My identifier"
+msgstr "Saját azonosító"
+
+#: ../tools/drakvpn-old:791
+#, c-format
+msgid ""
+"specifies the identifier sent to the remote host and the\n"
+"type to use in the phase 1 negotiation.  address, FQDN,\n"
+"user_fqdn, keyid and asn1dn can be used as an idtype.\n"
+"they are used like:\n"
+"\tmy_identifier address [address];\n"
+"\t\tthe type is the IP address.  This is the default\n"
+"\t\ttype if you do not specify an identifier to use.\n"
+"\tmy_identifier user_fqdn string;\n"
+"\t\tthe type is a USER_FQDN (user fully-qualified\n"
+"\t\tdomain name).\n"
+"\tmy_identifier FQDN string;\n"
+"\t\tthe type is a FQDN (fully-qualified domain name).\n"
+"\tmy_identifier keyid file;\n"
+"\t\tthe type is a KEY_ID.\n"
+"\tmy_identifier asn1dn [string];\n"
+"\t\tthe type is an ASN.1 distinguished name.  If\n"
+"\t\tstring is omitted, racoon(8) will get DN from\n"
+"\t\tSubject field in the certificate.\n"
+"\n"
+"Examples: \n"
+"\n"
+"my_identifier user_fqdn \"myemail@mydomain.com\""
+msgstr ""
+"A távoli gépnek elküldött azonosítót és az 1. fázisban\n"
+"történő egyeztetéskor használandó típust adja meg.\n"
+"Azonosítótípusként használható a cím (address), a teljes\n"
+"tartománynév (FQDN), a teljes felhasználói tartománynév\n"
+"(user_fqdn), a kulcsazonosító (keyid) és az\n"
+"ASN.1-tartománynév (asn1dn). Ezek a következő módon\n"
+"használhatók:\n"
+"\tmy_identifier address [cím];\n"
+"\t\tA típus az IP-cím. Ez az alapértelmezett típus, ha\n"
+"\t\tnincs megadva felhasználandó azonosító.\n"
+"\tmy_identifier user_fqdn szöveg;\n"
+"\t\tA típus egy teljes felhasználói tartománynév\n"
+"\t\t(USER_FQDN).\n"
+"\tmy_identifier FQDN szöveg;\n"
+"\t\tA típus egy teljes tartománynév (FQDN).\n"
+"\tmy_identifier keyid fájl;\n"
+"\t\tA típus egy kulcsazonosító (KEY_ID).\n"
+"\tmy_identifier asn1dn [szöveg];\n"
+"\t\tA típus egy ASN.1-es megkülönböztetett név. Ha\n"
+"\t\tnincs megadva szöveg, akkor a Racoon(8) a tanúsítvány\n"
+"\t\t\"tárgy\" (\"subject\") mezőjéből veszi a\n"
+"\t\ttartománynevet.\n"
+"\n"
+"Példák: \n"
+"\n"
+"my_identifier user_fqdn \"email@tartomany.com\""
+
+#: ../tools/drakvpn-old:811
+#, c-format
+msgid "Peers identifier"
+msgstr "A partnergép azonosítója"
+
+#: ../tools/drakvpn-old:812
+#, c-format
+msgid "Proposal"
+msgstr "Javaslat"
+
+#: ../tools/drakvpn-old:814
+#, c-format
+msgid ""
+"specify the encryption algorithm used for the\n"
+"phase 1 negotiation. This directive must be defined. \n"
+"algorithm is one of the following: \n"
+"\n"
+"DES, 3DES, blowfish, cast128 for oakley.\n"
+"\n"
+"For other transforms, this statement should not be used."
+msgstr ""
+"Adja meg az 1. fázisban történő egyeztetéshez használt\n"
+"titkosítási módszert. Ez a direktíva kötelezően\n"
+"megadandó. A módszer a következők egyike lehet: \n"
+"\n"
+"DES, 3DES, blowfish, cast128 - oakley\n"
+"\n"
+"Másféle átalakításhoz ne használja ezt az utasítást."
+
+#: ../tools/drakvpn-old:821
+#, c-format
+msgid "Hash algorithm"
+msgstr "Hasítási (hash) módszer"
+
+#: ../tools/drakvpn-old:822
+#, c-format
+msgid "Authentication method"
+msgstr "Azonosítási módszer"
+
+#: ../tools/drakvpn-old:823
+#, c-format
+msgid "DH group"
+msgstr "DH-csoport"
+
+#: ../tools/drakvpn-old:830
+#, c-format
+msgid "Command"
+msgstr "Parancs"
+
+#: ../tools/drakvpn-old:831
+#, c-format
+msgid "Source IP range"
+msgstr "Forrás-IP-tartomány"
+
+#: ../tools/drakvpn-old:832
+#, c-format
+msgid "Destination IP range"
+msgstr "Cél-IP-tartomány"
+
+#: ../tools/drakvpn-old:833
+#, c-format
+msgid "Upper-layer protocol"
+msgstr "Felsőszintű protokoll"
+
+#: ../tools/drakvpn-old:833 ../tools/drakvpn-old:840
+#, c-format
+msgid "any"
+msgstr "bármely"
+
+#: ../tools/drakvpn-old:835
+#, c-format
+msgid "Flag"
+msgstr "Jelző"
+
+#: ../tools/drakvpn-old:836
+#, c-format
+msgid "Direction"
+msgstr "Irány"
+
+#: ../tools/drakvpn-old:837
+#, c-format
+msgid "IPsec policy"
+msgstr "IPsec-szabályzat"
+
+#: ../tools/drakvpn-old:837
+#, c-format
+msgid "ipsec"
+msgstr "IPsec"
+
+#: ../tools/drakvpn-old:837
+#, c-format
+msgid "discard"
+msgstr "eldobás"
+
+#: ../tools/drakvpn-old:840
+#, c-format
+msgid "Mode"
+msgstr "Mód"
+
+#: ../tools/drakvpn-old:840
+#, c-format
+msgid "tunnel"
+msgstr "alagút"
+
+#: ../tools/drakvpn-old:840
+#, c-format
+msgid "transport"
+msgstr "átvitel"
+
+#: ../tools/drakvpn-old:842
+#, c-format
+msgid "Source/destination"
+msgstr "Forrás/cél"
+
+#: ../tools/drakvpn-old:843
+#, c-format
+msgid "Level"
+msgstr "Szint"
+
+#: ../tools/drakvpn-old:843
+#, c-format
+msgid "require"
+msgstr "követelmény"
+
+#: ../tools/drakvpn-old:843
+#, c-format
+msgid "default"
+msgstr "alapértelmezés"
+
+#: ../tools/drakvpn-old:843
+#, c-format
+msgid "use"
+msgstr "használat"
+
+#: ../tools/drakvpn-old:843
+#, c-format
+msgid "unique"
+msgstr "egyedi"
+
+#: ../tools/net_applet:61
+#, c-format
+msgid "Network is up on interface %s."
+msgstr "A(z) \"%s\" csatolón a hálózat aktív."
+
+#: ../tools/net_applet:62
+#, c-format
+msgid "IP address: %s"
+msgstr "IP-cím: %s"
+
+#: ../tools/net_applet:63
+#, c-format
+msgid "Gateway: %s"
+msgstr "Átjáró (gateway): %s"
+
+#: ../tools/net_applet:64
+#, c-format
+msgid "Connected to %s (link level: %d %%)"
+msgstr "Kapcsolódva ehhez: %s (kapcsolati szint: %d %%)"
+
+#: ../tools/net_applet:66
+#, c-format
+msgid "Network is down on interface %s."
+msgstr "A(z) \"%s\" csatolón a hálózat NEM aktív."
+
+#: ../tools/net_applet:74 ../tools/net_monitor:468
+#, c-format
+msgid "Connect %s"
+msgstr "Kapcsolódás: %s"
+
+#: ../tools/net_applet:75 ../tools/net_monitor:468
+#, c-format
+msgid "Disconnect %s"
+msgstr "Lekapcsolódás: %s"
+
+#: ../tools/net_applet:76
+#, c-format
+msgid "Monitor Network"
+msgstr "Hálózatfigyelés"
+
+#: ../tools/net_applet:78
+#, c-format
+msgid "Manage wireless networks"
+msgstr "Vezeték nélküli hálózatok kezelése"
+
+#: ../tools/net_applet:80
+#, c-format
+msgid "Manage VPN connections"
+msgstr "VPN-kapcsolatok kezelése"
+
+#: ../tools/net_applet:84
+#, c-format
+msgid "Configure Network"
+msgstr "Hálózat beállítása"
+
+#: ../tools/net_applet:86
+#, c-format
+msgid "Watched interface"
+msgstr "Figyelt csatoló"
+
+#: ../tools/net_applet:87 ../tools/net_applet:88 ../tools/net_applet:90
+#, c-format
+msgid "Auto-detect"
+msgstr "Automatikus azonosítás"
+
+#: ../tools/net_applet:95
+#, c-format
+msgid "Active interfaces"
+msgstr "Aktív csatolók"
+
+#: ../tools/net_applet:119
+#, c-format
+msgid "Profiles"
+msgstr "Profilok"
+
+#: ../tools/net_applet:137
+#, c-format
+msgid "Get Online Help"
+msgstr "Online segítség"
+
+#: ../tools/net_applet:318
+#, c-format
+msgid "Network connection"
+msgstr "Hálózati kapcsolat"
+
+#: ../tools/net_applet:438
+#, c-format
+msgid "More networks"
+msgstr "További hálózatok"
+
+#: ../tools/net_applet:465
+#, c-format
+msgid "Interactive Firewall automatic mode"
+msgstr "Interaktív tűzfal - automatikus mód"
+
+#: ../tools/net_applet:470
+#, c-format
+msgid "Always launch on startup"
+msgstr "Minden rendszerindításnál induljon el"
+
+#: ../tools/net_applet:475
+#, c-format
+msgid "Wireless networks"
+msgstr "Vezeték nélküli hálózatok"
+
+#: ../tools/net_applet:482 ../tools/net_monitor:96
+#, c-format
+msgid "Settings"
+msgstr "Beállítások"
+
+#: ../tools/net_applet:557
+#, c-format
+msgid "Interactive Firewall: intrusion detected"
+msgstr "Interaktív tűzfal: behatolási kísérlet történt"
+
+#: ../tools/net_applet:574
+#, c-format
+msgid "What do you want to do with this attacker?"
+msgstr "Mit szeretne tenni a támadóval?"
+
+#: ../tools/net_applet:577
+#, c-format
+msgid "Attack details"
+msgstr "A támadás részletei"
+
+#: ../tools/net_applet:581
+#, c-format
+msgid "Attack time: %s"
+msgstr "A támadás ideje: %s"
+
+#: ../tools/net_applet:582
+#, c-format
+msgid "Network interface: %s"
+msgstr "Hálózati csatoló: %s"
+
+#: ../tools/net_applet:583
+#, c-format
+msgid "Attack type: %s"
+msgstr "A támadás típusa: %s"
+
+#: ../tools/net_applet:584
+#, c-format
+msgid "Protocol: %s"
+msgstr "Protokoll: %s"
+
+#: ../tools/net_applet:585
+#, c-format
+msgid "Attacker IP address: %s"
+msgstr "A támadó IP-címe: %s"
+
+#: ../tools/net_applet:586
+#, c-format
+msgid "Attacker hostname: %s"
+msgstr "A támadó gépneve: %s"
+
+#: ../tools/net_applet:589
+#, c-format
+msgid "Service attacked: %s"
+msgstr "A megtámadott szolgáltatás: %s"
+
+#: ../tools/net_applet:590
+#, c-format
+msgid "Port attacked: %s"
+msgstr "A megtámadott port: %s"
+
+#: ../tools/net_applet:592
+#, c-format
+msgid "Type of ICMP attack: %s"
+msgstr "Az ICMP-támadás típusa: %s"
+
+#: ../tools/net_applet:597
+#, c-format
+msgid "Always blacklist (do not ask again)"
+msgstr "Mindig feketelistára tevés (ne legyen rákérdezés)"
+
+#: ../tools/net_applet:612
+#, c-format
+msgid "Ignore"
+msgstr "Ignorálás"
+
+#: ../tools/net_applet:630 ../tools/net_applet:643
+#, c-format
+msgid "Interactive Firewall: new service"
+msgstr "Interaktív tűzfal: új szolgáltatás"
+
+#: ../tools/net_applet:654
+#, c-format
+msgid "Do you want to open this service?"
+msgstr "Szeretné megnyitni ezt a szolgáltatást?"
+
+#: ../tools/net_applet:657
+#, c-format
+msgid "Remember this answer"
+msgstr "Emlékezzen erre a válaszra"
+
+#: ../tools/net_monitor:60 ../tools/net_monitor:65
+#, c-format
+msgid "Network Monitoring"
+msgstr "Hálózatfigyelés"
+
+#: ../tools/net_monitor:101
+#, c-format
+msgid "Global statistics"
+msgstr "Globális statisztika"
+
+#: ../tools/net_monitor:104
+#, c-format
+msgid "Instantaneous"
+msgstr "Pillanatnyi"
+
+#: ../tools/net_monitor:104
+#, c-format
+msgid "Average"
+msgstr "Átlagos"
+
+#: ../tools/net_monitor:105
+#, c-format
+msgid ""
+"Sending\n"
+"speed:"
+msgstr ""
+"Küldési\n"
+"sebesség:"
+
+#: ../tools/net_monitor:105 ../tools/net_monitor:106 ../tools/net_monitor:111
+#, c-format
+msgid "unknown"
+msgstr "ismeretlen"
+
+#: ../tools/net_monitor:106
+#, c-format
+msgid ""
+"Receiving\n"
+"speed:"
+msgstr ""
+"Fogadási\n"
+"sebesség:"
+
+#: ../tools/net_monitor:110
+#, c-format
+msgid ""
+"Connection\n"
+"time: "
+msgstr ""
+"A kapcsolat\n"
+"időtartama: "
+
+#: ../tools/net_monitor:117
+#, c-format
+msgid "Use same scale for received and transmitted"
+msgstr "Azonos skála használata a fogadási és a küldési adatokhoz"
+
+#: ../tools/net_monitor:136
+#, c-format
+msgid "Wait please, testing your connection..."
+msgstr "A kapcsolat tesztelése..."
+
+#: ../tools/net_monitor:185 ../tools/net_monitor:198
+#, c-format
+msgid "Disconnecting from Internet "
+msgstr "Lekapcsolódás az internetről "
+
+#: ../tools/net_monitor:185 ../tools/net_monitor:198
+#, c-format
+msgid "Connecting to Internet "
+msgstr "Kapcsolódás az internetre "
+
+#: ../tools/net_monitor:229
+#, c-format
+msgid "Disconnection from Internet failed."
+msgstr "Az internetről való lekapcsolódás nem sikerült."
+
+#: ../tools/net_monitor:230
+#, c-format
+msgid "Disconnection from Internet complete."
+msgstr "Az internetről való lekapcsolódás megtörtént."
+
+#: ../tools/net_monitor:232
+#, c-format
+msgid "Connection complete."
+msgstr "A kapcsolat létrejött."
+
+#: ../tools/net_monitor:233
+#, c-format
+msgid ""
+"Connection failed.\n"
+"Verify your configuration in the Mandriva Linux Control Center."
+msgstr ""
+"A kapcsolódás nem sikerült.\n"
+"Ellenőrizze a beállításokat a Mandriva Linux Vezérlőközpontban."
+
+#: ../tools/net_monitor:338
+#, c-format
+msgid "Color configuration"
+msgstr "Színbeállítás"
+
+#: ../tools/net_monitor:395 ../tools/net_monitor:407
+#, c-format
+msgid "sent: "
+msgstr "elküldve: "
+
+#: ../tools/net_monitor:398 ../tools/net_monitor:411
+#, c-format
+msgid "received: "
+msgstr "fogadva: "
+
+#: ../tools/net_monitor:401
+#, c-format
+msgid "average"
+msgstr "átlag"
+
+#: ../tools/net_monitor:404
+#, c-format
+msgid "Local measure"
+msgstr "Helyi mérés"
+
+#: ../tools/net_monitor:461
+#, c-format
+msgid ""
+"Warning, another internet connection has been detected, maybe using your "
+"network"
+msgstr ""
+"Figyelmeztetés: Egy másik internetkapcsolat is létezik, esetlegesen a "
+"hálózatot használva."
+
+#: ../tools/net_monitor:472
+#, c-format
+msgid "No internet connection configured"
+msgstr "Nincs beállítva internetkapcsolat"
+

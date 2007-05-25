@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# Copyright (C) 2005 by Mandriva aginies _ateuh_ mandriva.com
+# Copyright (C) 2005-2006 by Mandriva aginies _ateuh_ mandriva.com
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -28,6 +28,8 @@ use strict;
 use common;
 use network::network;
 
+$ugtk2::wm_icon = 'IC-Dhost-48';
+use mygtk2 qw(gtknew);
 use ugtk2 qw(:ask :wrappers :create :dialogs);
 
 use constant FALSE => 0;
@@ -47,7 +49,7 @@ my %size_groups = map { $_ => Gtk2::SizeGroup->new('horizontal') } qw(label widg
 my $label_and_widgets = sub {
   my ($label, $widget) = @_;
   gtkpack_(Gtk2::HBox->new(0,5),
-           0, gtkadd_widget($size_groups{label}, $label),
+           0, gtkadd_widget($size_groups{label}, gtknew('Label_Left', text => $label)),
            1, gtkadd_widget($size_groups{widget}, $widget),
           );
 };
@@ -74,7 +76,7 @@ sub write_conf_hosts() {
 }
 
 sub add_modify_entry {
-  my ($treeview, $wanted) = @_;
+  my ($treeview, $wanted, $title) = @_;
   my $model = $treeview->get_model;
   my $selection = $treeview->get_selection;
   my $iter;
@@ -88,7 +90,7 @@ sub add_modify_entry {
 
   my $dialog = _create_dialog();
   $dialog->set_transient_for($::main_window);
-  $dialog->set_title("Drakhosts $wanted entry");
+  $dialog->set_title($title);
   $dialog->set_modal(1);
   $dialog->set_resizable(1);
   $dialog->set_size_request(300, -1);
@@ -109,15 +111,12 @@ sub add_modify_entry {
   $text = N("Please delete information") if $wanted =~ /delete/;
   $text = N("Please add information") if $wanted =~ /add/;
   
-  gtkpack_($dialog->vbox,
-	   0, gtkadd(Gtk2::Frame->new($text),
-		     gtkpack_(gtkset_border_width(Gtk2::VBox->new, 5),
-			      0, $label_and_widgets->(N("IP address:"), $ip),
-			      0, $label_and_widgets->(N("Host name:"), $hostname),
-			      0, $label_and_widgets->(N("Host Aliases:"), $alias),
-			     ),
-		    ),
-	   0, create_okcancel({
+  gtkpack__($dialog->vbox,
+            gtknew('Title2', label => $text),
+            $label_and_widgets->(N("IP address:"), $ip),
+            $label_and_widgets->(N("Host name:"), $hostname),
+            $label_and_widgets->(N("Host Aliases:"), $alias),
+            create_okcancel({
 			       cancel_clicked => sub { $dialog->destroy },
 			       ok_clicked => sub {
 				 is_ip($ip->get_text) or err_dialog(N("Error!"), N("Please enter a valid IP address.")) and return;
@@ -204,7 +203,7 @@ sub add_columns {
 # create model
 my $model = create_model();
 
-my $window = ugtk2->new("Drakhosts");
+my $window = ugtk2->new(N("Manage hosts definitions"));
 $::main_window = $window->{real_window};
 $window->{rwindow}->set_size_request(500, 400) unless $::isEmbedded;
 my $W = $window->{window};
@@ -220,7 +219,7 @@ $treeview->signal_connect(button_press_event => sub {
 			    my $selection = $treeview->get_selection;
 			    my $iter = $selection->get_selected;
 			    if ($iter) {
-			      add_modify_entry($treeview, "modify") if $event->type eq '2button-press';
+			      add_modify_entry($treeview, 'modify', N("Modify entry")) if $event->type eq '2button-press';
 			    }
 			  });
 
@@ -234,20 +233,20 @@ my $okcancel = create_okcancel({
 
 # main interface
 $W->add(gtkpack_(Gtk2::VBox->new(0,0),
-		 if_(!$::isEmbedded, 0, Gtk2::Banner->new('IC-Dhost-48', N("DrakHOSTS manage hosts definitions"))),
+		 if_(!$::isEmbedded, 0, Gtk2::Banner->new('IC-Dhost-48', N("Manage hosts definitions"))),
 		 #if_($::isEmbedded, 0, Gtk2::Label->new("Here you can add, remove and alter hosts definition.")),
 		 1, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 0),
 			     1, create_scrolled_window($treeview),
 			     0, gtkpack_(gtkset_border_width(create_vbox('start', 3)),
 					 0, gtksignal_connect(Gtk2::Button->new(N("Add")), clicked => sub {
-								eval { add_modify_entry($treeview, "add") };
+								eval { add_modify_entry($treeview, 'add', N("Add entry")) };
 								my $err = $@;
 								if ($err) {
 								  err_dialog(N("Error"), N("Failed to add host.") . "\n\n" . $err);
 								}
 							      }),
 					 0, gtksignal_connect(Gtk2::Button->new(N("Modify")), clicked => sub {
-								eval { add_modify_entry($treeview, "modify") };
+								eval { add_modify_entry($treeview, 'modify', N("Modify entry")) };
 								my $err = $@;
 								if ($err) {
 								  err_dialog(N("Error"), N("Failed to Modify host.") . "\n\n" . $err);

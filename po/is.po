@@ -1,0 +1,5883 @@
+# Icelandic translation of network-tools.po
+# Translation file for Mandriva Linux graphic install, drakx-net
+# Copyright (C) 1999,2003, 2005, 2006, 2007 Free Software Foundation, Inc.
+# Copyright (C) 1999 Mandriva
+#
+# Jóhann Þorvarðarson <johann.torvardarson@lais.is>, 1999-2000.
+# Þórarinn (Tony) R. Einarsson <thori@mindspring.com>, 1999-2000.
+# Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003, 2005, 2006, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: network-tools\n"
+"POT-Creation-Date: 2007-01-10 15:18+0100\n"
+"PO-Revision-Date: 2007-01-18 14:31+0000\n"
+"Last-Translator: Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
+"Language-Team: Icelandic <kde-isl@molar.is>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../lib/network/connection.pm:16
+#, c-format
+msgid "Unknown connection type"
+msgstr "Óþekkt tegund tengingar"
+
+#: ../lib/network/connection.pm:115
+#, c-format
+msgid "Network access settings"
+msgstr "Net-aðgangs-stillingar"
+
+#: ../lib/network/connection.pm:116
+#, c-format
+msgid "Access settings"
+msgstr "Aðgangs-stillingar"
+
+#: ../lib/network/connection.pm:117
+#, c-format
+msgid "Address settings"
+msgstr "Vistfangs-stillingar"
+
+#: ../lib/network/connection.pm:149 ../lib/network/drakvpn.pm:62
+#: ../lib/network/vpn/openvpn.pm:365 ../lib/network/vpn/openvpn.pm:379
+#: ../lib/network/vpn/openvpn.pm:390 ../tools/net_applet:129
+#, c-format
+msgid "VPN connection"
+msgstr "VPN tenging"
+
+#: ../lib/network/connection.pm:151 ../lib/network/connection/cable.pm:44
+#: ../lib/network/connection/wireless.pm:37 ../lib/network/vpn/openvpn.pm:127
+#: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
+#, c-format
+msgid "None"
+msgstr "Enginn"
+
+#: ../lib/network/connection.pm:163
+#, c-format
+msgid "Allow users to manage the connection"
+msgstr "Leyfa notendum að sýsla með tengingar"
+
+#: ../lib/network/connection.pm:164
+#, c-format
+msgid "Start the connection at boot"
+msgstr "Tengjast við ræsingu"
+
+#: ../lib/network/connection.pm:165 ../tools/drakconnect:462
+#, c-format
+msgid "Metric"
+msgstr "Kvarði"
+
+#: ../lib/network/connection.pm:230
+#, c-format
+msgid "Link detected on interface %s"
+msgstr "Samband fundið á tengi %s"
+
+#: ../lib/network/connection.pm:231 ../lib/network/connection/ethernet.pm:278
+#, c-format
+msgid "Link beat lost on interface %s"
+msgstr "Samband hefur rofnað á tengi %s"
+
+#: ../lib/network/connection/cable.pm:13
+#, c-format
+msgid "Cable"
+msgstr "Kapall"
+
+#: ../lib/network/connection/cable.pm:14
+#, c-format
+msgid "Cable modem"
+msgstr "Kapalmótald"
+
+#: ../lib/network/connection/cable.pm:45
+#, c-format
+msgid "Use BPALogin (needed for Telstra)"
+msgstr "Nota BPALogin (þarf fyrir Telstra)"
+
+#: ../lib/network/connection/cable.pm:48 ../lib/network/netconnect.pm:587
+#: ../tools/drakconnect:482
+#, c-format
+msgid "Authentication"
+msgstr "Auðkenning"
+
+#: ../lib/network/connection/cable.pm:50 ../lib/network/connection/ppp.pm:22
+#: ../lib/network/netconnect.pm:326 ../lib/network/vpn/openvpn.pm:393
+#: ../tools/drakconnect:492
+#, c-format
+msgid "Account Login (user name)"
+msgstr "Netþjónustu-notandanafn"
+
+#: ../lib/network/connection/cable.pm:52 ../lib/network/connection/ppp.pm:23
+#: ../lib/network/netconnect.pm:327 ../lib/network/vpn/openvpn.pm:394
+#: ../tools/drakconnect:493
+#, c-format
+msgid "Account Password"
+msgstr "Netþjónustu-lykilorð"
+
+#: ../lib/network/connection/cellular.pm:47
+#, c-format
+msgid "Access Point Name"
+msgstr "Nafn aðgangspunkts"
+
+#: ../lib/network/connection/cellular_bluetooth.pm:10
+#, c-format
+msgid "Bluetooth"
+msgstr "Blátannartæki"
+
+#: ../lib/network/connection/cellular_bluetooth.pm:11
+#, c-format
+msgid "Bluetooth Dial Up Networking"
+msgstr "Blátannarupphringing"
+
+#: ../lib/network/connection/cellular_card.pm:8
+#, c-format
+msgid "GPRS/Edge/3G"
+msgstr "GPRS/Edge/3G"
+
+#: ../lib/network/connection/cellular_card.pm:67
+#: ../lib/network/vpn/openvpn.pm:391
+#, c-format
+msgid "PIN number"
+msgstr "PIN númer"
+
+#: ../lib/network/connection/cellular_card.pm:130
+#, c-format
+msgid "Unable to open device %s"
+msgstr "Get ekki opnað tæki %s"
+
+#: ../lib/network/connection/cellular_card.pm:155
+#, c-format
+msgid "Please check that your SIM card is inserted."
+msgstr "Athugaðu hvort SIM kortið set innsett."
+
+#: ../lib/network/connection/cellular_card.pm:161
+#, c-format
+msgid ""
+"You entered a wrong PIN code.\n"
+"Entering the wrong PIN code multiple times may lock your SIM card!"
+msgstr ""
+"Þú hefur gefið upp rangt PIN númer.\n"
+"Ef þú slærð oft inn rangt PIN númer, getur það læst SIM kortinu!"
+
+#: ../lib/network/connection/dvb.pm:12
+#, c-format
+msgid "DVB"
+msgstr "DVB"
+
+#: ../lib/network/connection/dvb.pm:13
+#, c-format
+msgid "Satellite (DVB)"
+msgstr "Gerfihnatta (DVB)"
+
+#: ../lib/network/connection/dvb.pm:56
+#, c-format
+msgid "Adapter card"
+msgstr "Netkort"
+
+#: ../lib/network/connection/dvb.pm:57
+#, c-format
+msgid "Net demux"
+msgstr ""
+
+#: ../lib/network/connection/dvb.pm:58
+#, c-format
+msgid "PID"
+msgstr "PID"
+
+#: ../lib/network/connection/ethernet.pm:10
+#, c-format
+msgid "Ethernet"
+msgstr "Ethernet"
+
+#: ../lib/network/connection/ethernet.pm:53
+#, c-format
+msgid "Unable to find network interface for selected device (using %s driver)."
+msgstr "Get ekki fundið net-viðmót fyrir valið tæki (nota rekil %s)"
+
+#: ../lib/network/connection/ethernet.pm:61 ../lib/network/vpn/openvpn.pm:207
+#, c-format
+msgid "Manual configuration"
+msgstr "Handvirk uppsetning"
+
+#: ../lib/network/connection/ethernet.pm:62
+#, c-format
+msgid "Automatic IP (BOOTP/DHCP)"
+msgstr "Sjálfvirkt IP (BOOT/DHCP)"
+
+#: ../lib/network/connection/ethernet.pm:116
+#, c-format
+msgid "IP settings"
+msgstr "IP stillingar"
+
+#: ../lib/network/connection/ethernet.pm:125 ../lib/network/netconnect.pm:604
+#: ../lib/network/vpn/openvpn.pm:221 ../tools/drakconnect:113
+#: ../tools/drakconnect:321 ../tools/drakconnect:887 ../tools/drakhosts:196
+#, c-format
+msgid "IP address"
+msgstr "IP vistfang"
+
+#: ../lib/network/connection/ethernet.pm:129
+#, c-format
+msgid ""
+"Please enter the IP configuration for this machine.\n"
+"Each item should be entered as an IP address in dotted-decimal\n"
+"notation (for example, 1.2.3.4)."
+msgstr ""
+"Sláðu inn IP uppsetningu þessarar vélar.\n"
+"Hver færsla á að vera IP tala rituð með punkt á milli.\n"
+"(dæmi 1.2.3.4)."
+
+#: ../lib/network/connection/ethernet.pm:132 ../tools/drakconnect:326
+#: ../tools/drakconnect:888 ../tools/drakgw:177
+#, c-format
+msgid "Netmask"
+msgstr "Netsía"
+
+#: ../lib/network/connection/ethernet.pm:133 ../lib/network/netconnect.pm:636
+#: ../lib/network/vpn/openvpn.pm:212 ../lib/network/vpn/vpnc.pm:39
+#: ../tools/drakconnect:332
+#, c-format
+msgid "Gateway"
+msgstr "Netgátt"
+
+#: ../lib/network/connection/ethernet.pm:136 ../tools/drakconnect:382
+#, c-format
+msgid "Get DNS servers from DHCP"
+msgstr "Sækja vistföng DNS þjóna frá DHCP miðlara"
+
+#: ../lib/network/connection/ethernet.pm:138
+#, c-format
+msgid "DNS server 1"
+msgstr "Nafnamiðlari 1 (DNS)"
+
+#: ../lib/network/connection/ethernet.pm:139
+#, c-format
+msgid "DNS server 2"
+msgstr "Nafnamiðlari 2 (DNS)"
+
+#: ../lib/network/connection/ethernet.pm:140
+#, c-format
+msgid "Search domain"
+msgstr "Leita í léni"
+
+#: ../lib/network/connection/ethernet.pm:141
+#, c-format
+msgid "By default search domain will be set from the fully-qualified host name"
+msgstr "Sjálfgefið verður leitar-lén sett út frá fullformuðu vélarnafni"
+
+#: ../lib/network/connection/ethernet.pm:143 ../tools/drakconnect:369
+#: ../tools/drakconnect:891
+#, c-format
+msgid "DHCP client"
+msgstr "DHCP biðlari"
+
+#: ../lib/network/connection/ethernet.pm:144 ../tools/drakconnect:379
+#, c-format
+msgid "DHCP timeout (in seconds)"
+msgstr "DHCP tenging fellur á tíma eftir (í sek)"
+
+#: ../lib/network/connection/ethernet.pm:145 ../tools/drakconnect:383
+#, c-format
+msgid "Get YP servers from DHCP"
+msgstr "Ná í YP miðlara frá DHCP"
+
+#: ../lib/network/connection/ethernet.pm:146 ../tools/drakconnect:384
+#, c-format
+msgid "Get NTPD servers from DHCP"
+msgstr "Ná í NTPD miðlara frá DHCP"
+
+#: ../lib/network/connection/ethernet.pm:147 ../tools/drakconnect:375
+#, c-format
+msgid "DHCP host name"
+msgstr "DHCP vélarheiti"
+
+#: ../lib/network/connection/ethernet.pm:149
+#, c-format
+msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
+msgstr "Ekki falla til baka í ZeroConf (169.254.0.0 net)"
+
+#: ../lib/network/connection/ethernet.pm:160 ../tools/drakconnect:676
+#, c-format
+msgid "IP address should be in format 1.2.3.4"
+msgstr "IP vistfang á að vera á sniðinu 1.2.3.4"
+
+#: ../lib/network/connection/ethernet.pm:165 ../tools/drakconnect:680
+#, c-format
+msgid "Netmask should be in format 255.255.224.0"
+msgstr "Netsía á að vera á sniðinu 255.255.224.0"
+
+#: ../lib/network/connection/ethernet.pm:170
+#, c-format
+msgid "Warning: IP address %s is usually reserved!"
+msgstr "Aðvörun: IP tala %s er venjulega frátekin!"
+
+#: ../lib/network/connection/ethernet.pm:176
+#, c-format
+msgid "%s already in use\n"
+msgstr "%s er þegar í notkun\n"
+
+#: ../lib/network/connection/ethernet.pm:200 ../tools/drakconnect:373
+#, c-format
+msgid "Assign host name from DHCP address"
+msgstr "Skilgreina nafn vélar frá DHCP vistfangi"
+
+#: ../lib/network/connection/ethernet.pm:202 ../tools/drakhosts:196
+#, c-format
+msgid "Host name"
+msgstr "Heiti vélar"
+
+#: ../lib/network/connection/ethernet.pm:220 ../tools/drakconnect:440
+#, c-format
+msgid "Network Hotplugging"
+msgstr "Netstillingar útskiptanlegra tækja"
+
+#: ../lib/network/connection/ethernet.pm:224
+#, c-format
+msgid "Enable IPv6 to IPv4 tunnel"
+msgstr "Virkja IPv6-um-IPv4 gagnarás"
+
+#: ../lib/network/connection/ethernet.pm:277
+#, c-format
+msgid "Link beat detected on interface %s"
+msgstr "Samskipti skynjuð á nettengi %s"
+
+#: ../lib/network/connection/ethernet.pm:280
+#, c-format
+msgid "Requesting a network address on interface %s (%s protocol)..."
+msgstr "Bið um vistfang á nettengingu %s (samskiptaregla %s)..."
+
+#: ../lib/network/connection/ethernet.pm:281
+#, c-format
+msgid "Got a network address on interface %s (%s protocol)"
+msgstr "Fékk vistfang á nettengi %s (samskiptaregla %s)"
+
+#: ../lib/network/connection/ethernet.pm:282
+#, c-format
+msgid "Failed to get a network address on interface %s (%s protocol)"
+msgstr "Fékk ekki vistfang á nettengi %s (samskiptaregla %s)"
+
+#: ../lib/network/connection/isdn.pm:8
+#, c-format
+msgid "ISDN"
+msgstr "ISDN"
+
+#: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:197
+#: ../lib/network/netconnect.pm:200 ../lib/network/netconnect.pm:218
+#: ../lib/network/netconnect.pm:463 ../lib/network/netconnect.pm:559
+#: ../lib/network/netconnect.pm:562
+#, c-format
+msgid "Unlisted - edit manually"
+msgstr "Óskráð - breyta handvirkt"
+
+#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:395
+#, c-format
+msgid "ISA / PCMCIA"
+msgstr "ISA / PCMCIA"
+
+#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:395
+#, c-format
+msgid "I do not know"
+msgstr "Ég veit ekki"
+
+#: ../lib/network/connection/isdn.pm:197 ../lib/network/netconnect.pm:395
+#, c-format
+msgid "PCI"
+msgstr "PCI"
+
+#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:395
+#, c-format
+msgid "USB"
+msgstr "USB"
+
+#. -PO: POTS means "Plain old telephone service"
+#: ../lib/network/connection/pots.pm:10
+#, c-format
+msgid "POTS"
+msgstr "POTS"
+
+#. -PO: POTS means "Plain old telephone service"
+#. -PO: remove it if it doesn't have an equivalent in your language
+#. -PO: for example, in French, it can be translated as "RTC"
+#: ../lib/network/connection/pots.pm:16
+#, c-format
+msgid "Analog telephone modem (POTS)"
+msgstr "Hliðrænt símamótald"
+
+#: ../lib/network/connection/ppp.pm:9 ../lib/network/netconnect.pm:74
+#: ../tools/drakconnect:499
+#, c-format
+msgid "Script-based"
+msgstr "Með skriftu"
+
+#: ../lib/network/connection/ppp.pm:10 ../lib/network/netconnect.pm:75
+#: ../tools/drakconnect:499
+#, c-format
+msgid "PAP"
+msgstr "PAP"
+
+#: ../lib/network/connection/ppp.pm:11 ../lib/network/netconnect.pm:76
+#: ../tools/drakconnect:499
+#, c-format
+msgid "Terminal-based"
+msgstr "Með skjáhermi"
+
+#: ../lib/network/connection/ppp.pm:12 ../lib/network/netconnect.pm:77
+#: ../tools/drakconnect:499
+#, c-format
+msgid "CHAP"
+msgstr "CHAP"
+
+#: ../lib/network/connection/ppp.pm:13 ../lib/network/netconnect.pm:78
+#: ../tools/drakconnect:499
+#, c-format
+msgid "PAP/CHAP"
+msgstr "PAP/CHAP"
+
+#: ../lib/network/connection/providers/cellular.pm:13
+#: ../lib/network/connection/providers/cellular.pm:18
+#: ../lib/network/connection/providers/cellular.pm:23
+#: ../lib/network/connection/providers/xdsl.pm:492
+#: ../lib/network/connection/providers/xdsl.pm:504
+#: ../lib/network/connection/providers/xdsl.pm:516
+#: ../lib/network/connection/providers/xdsl.pm:528
+#: ../lib/network/connection/providers/xdsl.pm:539
+#: ../lib/network/connection/providers/xdsl.pm:551
+#: ../lib/network/connection/providers/xdsl.pm:563
+#: ../lib/network/connection/providers/xdsl.pm:575
+#: ../lib/network/connection/providers/xdsl.pm:588
+#: ../lib/network/connection/providers/xdsl.pm:599
+#: ../lib/network/connection/providers/xdsl.pm:610
+#: ../lib/network/netconnect.pm:33
+#, c-format
+msgid "France"
+msgstr "Frakkland"
+
+#: ../lib/network/connection/providers/xdsl.pm:47
+#: ../lib/network/connection/providers/xdsl.pm:57
+#, c-format
+msgid "Algeria"
+msgstr "Algería"
+
+#: ../lib/network/connection/providers/xdsl.pm:67
+#: ../lib/network/connection/providers/xdsl.pm:77
+#, c-format
+msgid "Argentina"
+msgstr "Argentína"
+
+#: ../lib/network/connection/providers/xdsl.pm:87
+#: ../lib/network/connection/providers/xdsl.pm:96
+#: ../lib/network/connection/providers/xdsl.pm:105
+#, c-format
+msgid "Austria"
+msgstr "Austurríki"
+
+#: ../lib/network/connection/providers/xdsl.pm:114
+#: ../lib/network/connection/providers/xdsl.pm:124
+#: ../lib/network/connection/providers/xdsl.pm:134
+#, c-format
+msgid "Australia"
+msgstr "Ástralía"
+
+#: ../lib/network/connection/providers/xdsl.pm:144
+#: ../lib/network/connection/providers/xdsl.pm:153
+#: ../lib/network/connection/providers/xdsl.pm:164
+#: ../lib/network/connection/providers/xdsl.pm:173
+#: ../lib/network/connection/providers/xdsl.pm:182
+#: ../lib/network/netconnect.pm:36
+#, c-format
+msgid "Belgium"
+msgstr "Belgía"
+
+#: ../lib/network/connection/providers/xdsl.pm:191
+#: ../lib/network/connection/providers/xdsl.pm:201
+#: ../lib/network/connection/providers/xdsl.pm:210
+#: ../lib/network/connection/providers/xdsl.pm:219
+#, c-format
+msgid "Brazil"
+msgstr "Brasilía"
+
+#: ../lib/network/connection/providers/xdsl.pm:228
+#: ../lib/network/connection/providers/xdsl.pm:237
+#, c-format
+msgid "Bulgaria"
+msgstr "Búlgaría"
+
+#: ../lib/network/connection/providers/xdsl.pm:246
+#: ../lib/network/connection/providers/xdsl.pm:255
+#: ../lib/network/connection/providers/xdsl.pm:264
+#: ../lib/network/connection/providers/xdsl.pm:273
+#: ../lib/network/connection/providers/xdsl.pm:282
+#: ../lib/network/connection/providers/xdsl.pm:291
+#: ../lib/network/connection/providers/xdsl.pm:300
+#: ../lib/network/connection/providers/xdsl.pm:309
+#: ../lib/network/connection/providers/xdsl.pm:318
+#: ../lib/network/connection/providers/xdsl.pm:327
+#: ../lib/network/connection/providers/xdsl.pm:336
+#: ../lib/network/connection/providers/xdsl.pm:345
+#: ../lib/network/connection/providers/xdsl.pm:354
+#: ../lib/network/connection/providers/xdsl.pm:363
+#: ../lib/network/connection/providers/xdsl.pm:372
+#: ../lib/network/connection/providers/xdsl.pm:381
+#: ../lib/network/connection/providers/xdsl.pm:390
+#: ../lib/network/connection/providers/xdsl.pm:399
+#: ../lib/network/connection/providers/xdsl.pm:408
+#: ../lib/network/connection/providers/xdsl.pm:417
+#, c-format
+msgid "China"
+msgstr "Kína"
+
+#: ../lib/network/connection/providers/xdsl.pm:426
+#: ../lib/network/connection/providers/xdsl.pm:436
+#, c-format
+msgid "Czech Republic"
+msgstr "Tékkland"
+
+#: ../lib/network/connection/providers/xdsl.pm:446
+#: ../lib/network/connection/providers/xdsl.pm:455
+#: ../lib/network/connection/providers/xdsl.pm:464
+#, c-format
+msgid "Denmark"
+msgstr "Danmörk"
+
+#: ../lib/network/connection/providers/xdsl.pm:473
+#, c-format
+msgid "Egypt"
+msgstr "Egyptaland"
+
+#: ../lib/network/connection/providers/xdsl.pm:483
+#, c-format
+msgid "Finland"
+msgstr "Finnland"
+
+#: ../lib/network/connection/providers/xdsl.pm:621
+#: ../lib/network/connection/providers/xdsl.pm:630
+#: ../lib/network/connection/providers/xdsl.pm:640
+#, c-format
+msgid "Germany"
+msgstr "Þýskaland"
+
+#: ../lib/network/connection/providers/xdsl.pm:650
+#, c-format
+msgid "Greece"
+msgstr "Grikkland"
+
+#: ../lib/network/connection/providers/xdsl.pm:659
+#, c-format
+msgid "Hungary"
+msgstr "Ungverjaland"
+
+#: ../lib/network/connection/providers/xdsl.pm:668
+#, c-format
+msgid "Ireland"
+msgstr "Írland"
+
+#: ../lib/network/connection/providers/xdsl.pm:677
+#, c-format
+msgid "Israel"
+msgstr "Ísrael"
+
+#: ../lib/network/connection/providers/xdsl.pm:687
+#, c-format
+msgid "India"
+msgstr "Indland"
+
+#: ../lib/network/connection/providers/xdsl.pm:696
+#: ../lib/network/connection/providers/xdsl.pm:705
+#, c-format
+msgid "Iceland"
+msgstr "Ísland"
+
+#: ../lib/network/connection/providers/xdsl.pm:714
+#: ../lib/network/connection/providers/xdsl.pm:725
+#: ../lib/network/connection/providers/xdsl.pm:735
+#: ../lib/network/connection/providers/xdsl.pm:746
+#: ../lib/network/netconnect.pm:35
+#, c-format
+msgid "Italy"
+msgstr "Ítalía"
+
+#: ../lib/network/connection/providers/xdsl.pm:758
+#, c-format
+msgid "Sri Lanka"
+msgstr "Srí Lanka"
+
+#: ../lib/network/connection/providers/xdsl.pm:770
+#, c-format
+msgid "Lithuania"
+msgstr "Litháen"
+
+#: ../lib/network/connection/providers/xdsl.pm:779
+#: ../lib/network/connection/providers/xdsl.pm:789
+#, c-format
+msgid "Mauritius"
+msgstr "Máritus"
+
+#: ../lib/network/connection/providers/xdsl.pm:800
+#, c-format
+msgid "Morocco"
+msgstr "Marokkó"
+
+#: ../lib/network/connection/providers/xdsl.pm:810
+#: ../lib/network/connection/providers/xdsl.pm:819
+#: ../lib/network/connection/providers/xdsl.pm:828
+#: ../lib/network/connection/providers/xdsl.pm:837
+#: ../lib/network/netconnect.pm:34
+#, c-format
+msgid "Netherlands"
+msgstr "Holland"
+
+#: ../lib/network/connection/providers/xdsl.pm:846
+#: ../lib/network/connection/providers/xdsl.pm:852
+#: ../lib/network/connection/providers/xdsl.pm:858
+#: ../lib/network/connection/providers/xdsl.pm:864
+#: ../lib/network/connection/providers/xdsl.pm:870
+#: ../lib/network/connection/providers/xdsl.pm:876
+#: ../lib/network/connection/providers/xdsl.pm:882
+#, c-format
+msgid "Norway"
+msgstr "Noregur"
+
+#: ../lib/network/connection/providers/xdsl.pm:890
+#, c-format
+msgid "Pakistan"
+msgstr "Pakistan"
+
+#: ../lib/network/connection/providers/xdsl.pm:901
+#: ../lib/network/connection/providers/xdsl.pm:911
+#, c-format
+msgid "Poland"
+msgstr "Pólland"
+
+#: ../lib/network/connection/providers/xdsl.pm:922
+#, c-format
+msgid "Portugal"
+msgstr "Portúgal"
+
+#: ../lib/network/connection/providers/xdsl.pm:931
+#, c-format
+msgid "Russia"
+msgstr "Rússland"
+
+#: ../lib/network/connection/providers/xdsl.pm:942
+#, c-format
+msgid "Singapore"
+msgstr "Singapúr"
+
+#: ../lib/network/connection/providers/xdsl.pm:951
+#, c-format
+msgid "Senegal"
+msgstr "Senegal"
+
+#: ../lib/network/connection/providers/xdsl.pm:961
+#, c-format
+msgid "Slovenia"
+msgstr "Slóvenía"
+
+#: ../lib/network/connection/providers/xdsl.pm:972
+#: ../lib/network/connection/providers/xdsl.pm:984
+#: ../lib/network/connection/providers/xdsl.pm:996
+#: ../lib/network/connection/providers/xdsl.pm:1009
+#: ../lib/network/connection/providers/xdsl.pm:1019
+#: ../lib/network/connection/providers/xdsl.pm:1029
+#: ../lib/network/connection/providers/xdsl.pm:1040
+#: ../lib/network/connection/providers/xdsl.pm:1050
+#: ../lib/network/connection/providers/xdsl.pm:1060
+#: ../lib/network/connection/providers/xdsl.pm:1070
+#: ../lib/network/connection/providers/xdsl.pm:1080
+#: ../lib/network/connection/providers/xdsl.pm:1090
+#: ../lib/network/connection/providers/xdsl.pm:1101
+#: ../lib/network/connection/providers/xdsl.pm:1112
+#: ../lib/network/connection/providers/xdsl.pm:1124
+#: ../lib/network/connection/providers/xdsl.pm:1136
+#, c-format
+msgid "Spain"
+msgstr "Spánn"
+
+#: ../lib/network/connection/providers/xdsl.pm:1149
+#, c-format
+msgid "Sweden"
+msgstr "Svíþjóð"
+
+#: ../lib/network/connection/providers/xdsl.pm:1158
+#: ../lib/network/connection/providers/xdsl.pm:1167
+#: ../lib/network/connection/providers/xdsl.pm:1177
+#, c-format
+msgid "Switzerland"
+msgstr "Sviss"
+
+#: ../lib/network/connection/providers/xdsl.pm:1186
+#, c-format
+msgid "Thailand"
+msgstr "Tæland"
+
+#: ../lib/network/connection/providers/xdsl.pm:1196
+#, c-format
+msgid "Tunisia"
+msgstr "Túnis"
+
+#: ../lib/network/connection/providers/xdsl.pm:1207
+#, c-format
+msgid "Turkey"
+msgstr "Tyrkland"
+
+#: ../lib/network/connection/providers/xdsl.pm:1220
+#, c-format
+msgid "United Arab Emirates"
+msgstr "Sameinuðu Arabísku Furstadæmin"
+
+#: ../lib/network/connection/providers/xdsl.pm:1230
+#: ../lib/network/connection/providers/xdsl.pm:1240
+#: ../lib/network/netconnect.pm:38
+#, c-format
+msgid "United Kingdom"
+msgstr "Stóra Bretland"
+
+#: ../lib/network/connection/wireless.pm:11
+#, c-format
+msgid "Wireless"
+msgstr "Þráðlaust"
+
+#: ../lib/network/connection/wireless.pm:21
+#, c-format
+msgid "Use a Windows driver (with ndiswrapper)"
+msgstr "Nota Windows rekil (með ndiswrapper)"
+
+#: ../lib/network/connection/wireless.pm:38
+#, c-format
+msgid "Open WEP"
+msgstr "Opnir WEP lyklar"
+
+#: ../lib/network/connection/wireless.pm:39
+#, c-format
+msgid "Restricted WEP"
+msgstr "Lokaðir WEP lyklar"
+
+#: ../lib/network/connection/wireless.pm:40
+#, c-format
+msgid "WPA Pre-Shared Key"
+msgstr "WPA for-valinn lykill"
+
+#: ../lib/network/connection/wireless.pm:181 ../lib/network/thirdparty.pm:174
+#, c-format
+msgid "Firmware files are required for this device."
+msgstr "Vélbúnaðarrekla er þörf fyrir þetta tæki."
+
+#: ../lib/network/connection/wireless.pm:209
+#, c-format
+msgid ""
+"Your wireless card is disabled, please enable the wireless switch (RF kill "
+"switch) first."
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:270
+#, c-format
+msgid "Wireless settings"
+msgstr "Stillingar Þráðlausrar tengingar"
+
+#: ../lib/network/connection/wireless.pm:275 ../tools/drakconnect:406
+#: ../tools/drakroam:119
+#, c-format
+msgid "Operating Mode"
+msgstr "Vinnsluhamur"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Ad-hoc"
+msgstr "Beintengt"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Managed"
+msgstr "Managed"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Master"
+msgstr "Stjórnandi"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Repeater"
+msgstr "Endurvaki"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Secondary"
+msgstr "Aukalegur"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Auto"
+msgstr "Sjálfvirkt"
+
+#: ../lib/network/connection/wireless.pm:279 ../tools/drakconnect:407
+#, c-format
+msgid "Network name (ESSID)"
+msgstr "Netnafn (ESSID)"
+
+#: ../lib/network/connection/wireless.pm:281
+#, c-format
+msgid "Encryption mode"
+msgstr "Dulritunarmáti"
+
+#: ../lib/network/connection/wireless.pm:283 ../tools/drakconnect:421
+#, c-format
+msgid "Encryption key"
+msgstr "Dulritunarlykill"
+
+#: ../lib/network/connection/wireless.pm:285 ../tools/drakconnect:408
+#, c-format
+msgid "Network ID"
+msgstr "Netauðkenni"
+
+#: ../lib/network/connection/wireless.pm:286 ../tools/drakconnect:409
+#, c-format
+msgid "Operating frequency"
+msgstr "Vinnslutíðni"
+
+#: ../lib/network/connection/wireless.pm:287 ../tools/drakconnect:410
+#, c-format
+msgid "Sensitivity threshold"
+msgstr "Næmniþröskuldur"
+
+#: ../lib/network/connection/wireless.pm:288 ../tools/drakconnect:411
+#, c-format
+msgid "Bitrate (in b/s)"
+msgstr "Bitahraði (í b/s)"
+
+#: ../lib/network/connection/wireless.pm:289 ../tools/drakconnect:422
+#, c-format
+msgid "RTS/CTS"
+msgstr "RTS/CTS"
+
+#: ../lib/network/connection/wireless.pm:290
+#, c-format
+msgid ""
+"RTS/CTS adds a handshake before each packet transmission to make sure that "
+"the\n"
+"channel is clear. This adds overhead, but increase performance in case of "
+"hidden\n"
+"nodes or large number of active nodes. This parameter sets the size of the\n"
+"smallest packet for which the node sends RTS, a value equal to the maximum\n"
+"packet size disable the scheme. You may also set this parameter to auto, "
+"fixed\n"
+"or off."
+msgstr ""
+"RTS/CRS bætir við athugun áður en hver pakki er sendur til að\n"
+"staðfesta að rásin sé auð og tiltæk. Þetta veldur smátöf en gæti aukið\n"
+"hraðann ef margar sýndar-rásir eða tengingar eru í gangi í einu.\n"
+"þetta gildi setur stærð á minnsta pakka sem krefst könnunnar með RTS.\n"
+"Ef gildið er jafn stórt hámarks-pakkastærð er könnunin óvirk.\n"
+"Þú getur einnig valið gildin auto, fixed, eða off."
+
+#: ../lib/network/connection/wireless.pm:297 ../tools/drakconnect:423
+#, c-format
+msgid "Fragmentation"
+msgstr "Slitnir-pakkar"
+
+#: ../lib/network/connection/wireless.pm:298 ../tools/drakconnect:424
+#, c-format
+msgid "iwconfig command extra arguments"
+msgstr "Aukaviðföng fyrir iwconfig"
+
+#: ../lib/network/connection/wireless.pm:299
+#, c-format
+msgid ""
+"Here, one can configure some extra wireless parameters such as:\n"
+"ap, channel, commit, enc, power, retry, sens, txpower (nick is already set "
+"as the hostname).\n"
+"\n"
+"See iwconfig(8) man page for further information."
+msgstr ""
+"Hér er hægt að bæta við aukalegum stillingum fyrir þráðlaus samskipti svo "
+"sem:\n"
+"ap, channel, commit, enc, power, retry, sens, txpower (nick er þegar sett "
+"sem vélarnafn).\n"
+"\n"
+"sjá nánar á man-síðunni iwconfig(8)."
+
+#. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
+#: ../lib/network/connection/wireless.pm:306 ../tools/drakconnect:425
+#, c-format
+msgid "iwspy command extra arguments"
+msgstr "Auka viðföng fyrir iwspy"
+
+#: ../lib/network/connection/wireless.pm:307
+#, c-format
+msgid ""
+"iwspy is used to set a list of addresses in a wireless network\n"
+"interface and to read back quality of link information for each of those.\n"
+"\n"
+"This information is the same as the one available in /proc/net/wireless :\n"
+"quality of the link, signal strength and noise level.\n"
+"\n"
+"See iwpspy(8) man page for further information."
+msgstr ""
+"iwspy er notað til að setja lista af addressum á þráðlausri nettengingu\n"
+"og lesa síðan til baka gæði tengingar við hvern og einn.\n"
+"\n"
+"Þetta eru sömu upplýsingarnar og eru í /proc/net/wireless :\n"
+"Gæði tengingar, styrkur merkis og truflanastyrkur.\n"
+"\n"
+"Sjá nánari upplýsingar á iwpspy(8) man síðu."
+
+#: ../lib/network/connection/wireless.pm:315 ../tools/drakconnect:426
+#, c-format
+msgid "iwpriv command extra arguments"
+msgstr "Auka viðföng fyrir iwpriv"
+
+#: ../lib/network/connection/wireless.pm:317
+#, c-format
+msgid ""
+"iwpriv enable to set up optionals (private) parameters of a wireless "
+"network\n"
+"interface.\n"
+"\n"
+"iwpriv deals with parameters and setting specific to each driver (as opposed "
+"to\n"
+"iwconfig which deals with generic ones).\n"
+"\n"
+"In theory, the documentation of each device driver should indicate how to "
+"use\n"
+"those interface specific commands and their effect.\n"
+"\n"
+"See iwpriv(8) man page for further information."
+msgstr ""
+"iwpriv er notað til að setja aukaleg (prívat) viðföng á þráðlausu neti\n"
+"\n"
+"iwpriv sér um sérhæfð viðföng og stillingar fyrir hvern rekil (andstætt\n"
+"við iwconfig sem sér um þessa almennu).\n"
+"\n"
+"Samkvæmt bókinni ætti hver rekill að segja til um sín mismunandi vistföng,\n"
+"hvaða skipanir á að gefa og hvernig þau virka.\n"
+"\n"
+"sjá nánar á man-síðunni fyrir iwpriv(8)."
+
+#: ../lib/network/connection/wireless.pm:335
+#, c-format
+msgid "An encryption key is required."
+msgstr "Þarf að fá dulritunarlykil."
+
+#: ../lib/network/connection/wireless.pm:341
+#, c-format
+msgid ""
+"Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
+"frequency), or add enough '0' (zeroes)."
+msgstr ""
+"Tíðni ætti að hafa viðskeyti k, M eða G (t.d. \"2.46G\" fyrir 2.46 GHz "
+"tíðni), eða bæta við nógu mörgum núllum."
+
+#: ../lib/network/connection/wireless.pm:347
+#, c-format
+msgid ""
+"Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
+"enough '0' (zeroes)."
+msgstr ""
+"Hraði ætti að hafa viðskeyti k, M eða G (t.d. \"11M\" fyrir 11M) eða bæta "
+"við nógu mörgum núllum."
+
+#: ../lib/network/connection/wireless.pm:359
+#, c-format
+msgid "Allow access point roaming"
+msgstr "Leyfa flakk milli aðgangspunkta"
+
+#: ../lib/network/connection/wireless.pm:460
+#, c-format
+msgid "Associated to wireless network \"%s\" on interface %s"
+msgstr "Tengdur þráðlausu neti \"%s\" á nettengi %s"
+
+#: ../lib/network/connection/wireless.pm:461
+#, c-format
+msgid "Lost association to wireless network on interface %s"
+msgstr "Missti tengingu við þráðlaust net á nettengi %s"
+
+#: ../lib/network/connection/xdsl.pm:8
+#, c-format
+msgid "DSL"
+msgstr "DSL"
+
+#: ../lib/network/connection/xdsl.pm:76 ../lib/network/netconnect.pm:755
+#, c-format
+msgid "Alcatel speedtouch USB modem"
+msgstr "Alcatel speedtouch USB mótald"
+
+#: ../lib/network/connection/xdsl.pm:104
+#, c-format
+msgid ""
+"The ECI Hi-Focus modem cannot be supported due to binary driver distribution "
+"problem.\n"
+"\n"
+"You can find a driver on http://eciadsl.flashtux.org/"
+msgstr ""
+"ECI Hi-Focus mótaldið er ekki stutt vegna dreifingarvandkvæða á "
+"vélamálsrekli.\n"
+"\n"
+"Þú getur fundið rekil á http://eciadsl.flashtux.org/"
+
+#: ../lib/network/connection/xdsl.pm:176
+#, c-format
+msgid "DSL over CAPI"
+msgstr "DSL yfir CAPI"
+
+#: ../lib/network/connection/xdsl.pm:179
+#, c-format
+msgid "Dynamic Host Configuration Protocol (DHCP)"
+msgstr "Dynamic Host Configuration Protocol (DHCP)"
+
+#: ../lib/network/connection/xdsl.pm:180
+#, c-format
+msgid "Manual TCP/IP configuration"
+msgstr "Handvirk TCP/IP uppsetning"
+
+#: ../lib/network/connection/xdsl.pm:181
+#, c-format
+msgid "Point to Point Tunneling Protocol (PPTP)"
+msgstr "Point to Point Tunneling Protocol (PPTP)"
+
+#: ../lib/network/connection/xdsl.pm:182
+#, c-format
+msgid "PPP over Ethernet (PPPoE)"
+msgstr "PPP yfir Ethernet (PPPoE)"
+
+#: ../lib/network/connection/xdsl.pm:183
+#, c-format
+msgid "PPP over ATM (PPPoA)"
+msgstr "PPP yfir ATM (PPPoA)"
+
+#: ../lib/network/connection/xdsl.pm:223
+#, c-format
+msgid "Virtual Path ID (VPI):"
+msgstr "Auðkenni sýndarslóðar (VPI):"
+
+#: ../lib/network/connection/xdsl.pm:224
+#, c-format
+msgid "Virtual Circuit ID (VCI):"
+msgstr "Auðkenni sýndarrásar (VCI):"
+
+#: ../lib/network/connection/xdsl.pm:324 ../lib/network/drakvpn.pm:45
+#: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:27
+#: ../lib/network/ndiswrapper.pm:42 ../lib/network/ndiswrapper.pm:86
+#: ../lib/network/ndiswrapper.pm:102 ../lib/network/netconnect.pm:131
+#: ../lib/network/netconnect.pm:179 ../lib/network/netconnect.pm:268
+#: ../lib/network/netconnect.pm:813 ../lib/network/thirdparty.pm:114
+#: ../lib/network/thirdparty.pm:131 ../lib/network/thirdparty.pm:214
+#: ../lib/network/thirdparty.pm:216 ../lib/network/thirdparty.pm:237
+#: ../tools/drakconnect:676 ../tools/drakconnect:680 ../tools/drakconnect:689
+#: ../tools/drakconnect:705 ../tools/drakgw:184 ../tools/drakhosts:100
+#: ../tools/drakhosts:245 ../tools/drakhosts:252 ../tools/drakhosts:259
+#: ../tools/drakinvictus:72 ../tools/draknetprofile:113 ../tools/draknfs:85
+#: ../tools/draknfs:106 ../tools/draknfs:273 ../tools/draknfs:400
+#: ../tools/draknfs:402 ../tools/draknfs:405 ../tools/draknfs:497
+#: ../tools/draknfs:504 ../tools/draknfs:567 ../tools/draknfs:574
+#: ../tools/draknfs:581 ../tools/drakroam:79 ../tools/drakroam:92
+#: ../tools/draksambashare:372 ../tools/draksambashare:379
+#: ../tools/draksambashare:382 ../tools/draksambashare:428
+#: ../tools/draksambashare:452 ../tools/draksambashare:518
+#: ../tools/draksambashare:533 ../tools/draksambashare:611
+#: ../tools/draksambashare:678 ../tools/draksambashare:778
+#: ../tools/draksambashare:785 ../tools/draksambashare:916
+#: ../tools/draksambashare:1109 ../tools/draksambashare:1118
+#: ../tools/draksambashare:1140 ../tools/draksambashare:1149
+#: ../tools/draksambashare:1168 ../tools/draksambashare:1177
+#: ../tools/draksambashare:1189
+#, c-format
+msgid "Error"
+msgstr "Villa"
+
+#: ../lib/network/connection/xdsl.pm:324 ../lib/network/drakvpn.pm:45
+#: ../lib/network/netconnect.pm:131 ../lib/network/thirdparty.pm:114
+#, c-format
+msgid "Could not install the packages (%s)!"
+msgstr "Gat ekki sett inn pakkana (%s)!"
+
+#: ../lib/network/drakfirewall.pm:12
+#, c-format
+msgid "Web Server"
+msgstr "Vefmiðlari"
+
+#: ../lib/network/drakfirewall.pm:17
+#, c-format
+msgid "Domain Name Server"
+msgstr "Nafnaþjónusta léns (DNS)"
+
+#: ../lib/network/drakfirewall.pm:22
+#, c-format
+msgid "SSH server"
+msgstr "SSH miðlari"
+
+#: ../lib/network/drakfirewall.pm:27
+#, c-format
+msgid "FTP server"
+msgstr "Ftp miðlari"
+
+#: ../lib/network/drakfirewall.pm:32
+#, c-format
+msgid "Mail Server"
+msgstr "Póstmiðlari"
+
+#: ../lib/network/drakfirewall.pm:37
+#, c-format
+msgid "POP and IMAP Server"
+msgstr "POP og IMAP miðlari"
+
+#: ../lib/network/drakfirewall.pm:42
+#, c-format
+msgid "Telnet server"
+msgstr "Telnet miðlari"
+
+#: ../lib/network/drakfirewall.pm:48
+#, c-format
+msgid "Windows Files Sharing (SMB)"
+msgstr "Windows skráamiðlun (SMB)"
+
+#: ../lib/network/drakfirewall.pm:54
+#, c-format
+msgid "CUPS server"
+msgstr "CUPS miðlari"
+
+#: ../lib/network/drakfirewall.pm:60
+#, c-format
+msgid "Echo request (ping)"
+msgstr "Endurvarp-svörun (ping)"
+
+#: ../lib/network/drakfirewall.pm:65
+#, c-format
+msgid "BitTorrent"
+msgstr "BitTorrent"
+
+#: ../lib/network/drakfirewall.pm:74
+#, c-format
+msgid "Port scan detection"
+msgstr "Fylgjast með porta-skönnun"
+
+#: ../lib/network/drakfirewall.pm:166 ../lib/network/drakfirewall.pm:172
+#, c-format
+msgid "Firewall configuration"
+msgstr "Eldveggsuppsetning"
+
+#: ../lib/network/drakfirewall.pm:166
+#, c-format
+msgid ""
+"drakfirewall configurator\n"
+"\n"
+"This configures a personal firewall for this Mandriva Linux machine.\n"
+"For a powerful and dedicated firewall solution, please look to the\n"
+"specialized Mandriva Security Firewall distribution."
+msgstr ""
+"drakfirewall stillingar\n"
+"\n"
+"Þessi eining stillir einka eldvegg fyrir þessa Mandriva Linux vél\n"
+"Fyrir öruggan og aflmikinn eldvegg líttu á hina sértæku\n"
+"Mandriva eldveggs útgáfu."
+
+#: ../lib/network/drakfirewall.pm:172
+#, c-format
+msgid ""
+"drakfirewall configurator\n"
+"\n"
+"Make sure you have configured your Network/Internet access with\n"
+"drakconnect before going any further."
+msgstr ""
+"drakfirewall uppsetning\n"
+"\n"
+"Vertu viss um að hafa sett upp Staðarnet/Internet aðgang með drakconnect "
+"áður en lengra er haldið."
+
+#: ../lib/network/drakfirewall.pm:189
+#, c-format
+msgid "Which services would you like to allow the Internet to connect to?"
+msgstr "Að hvaða þjónustum viltu leyfa Internetaðgang?"
+
+#: ../lib/network/drakfirewall.pm:190 ../lib/network/shorewall.pm:145
+#, c-format
+msgid "Firewall"
+msgstr "Eldveggur"
+
+#: ../lib/network/drakfirewall.pm:192
+#, c-format
+msgid ""
+"You can enter miscellaneous ports. \n"
+"Valid examples are: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
+"Have a look at /etc/services for information."
+msgstr ""
+"Þú getur gefið upp ýmsar gáttir. \n"
+"gild dæmi eru 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
+"Nánari upplýsingar eru t.d. í /etc/services ."
+
+#: ../lib/network/drakfirewall.pm:198
+#, c-format
+msgid ""
+"Invalid port given: %s.\n"
+"The proper format is \"port/tcp\" or \"port/udp\", \n"
+"where port is between 1 and 65535.\n"
+"\n"
+"You can also give a range of ports (eg: 24300:24350/udp)"
+msgstr ""
+"Ógild gátt gefin: %s.\n"
+"Rétt form er \"gátt/tcp\" eða \"gátt/udp\". \n"
+"þar sem gátt er á bilinu 1 til 65535\n"
+"\n"
+"Þú getur einnig gefið upp bil (t.d. 24300:24350/udp)"
+
+#: ../lib/network/drakfirewall.pm:208
+#, c-format
+msgid "Everything (no firewall)"
+msgstr "Allt (enginn eldveggur)"
+
+#: ../lib/network/drakfirewall.pm:210
+#, c-format
+msgid "Other ports"
+msgstr "Aðrar gáttir"
+
+#: ../lib/network/drakfirewall.pm:211
+#, c-format
+msgid "Log firewall messages in system logs"
+msgstr "Skrá skilaboð frá eldvegg í kerfisannála"
+
+#: ../lib/network/drakfirewall.pm:255 ../lib/network/drakfirewall.pm:258
+#: ../tools/drakids:40 ../tools/drakids:65 ../tools/drakids:181
+#: ../tools/drakids:190 ../tools/drakids:215 ../tools/drakids:224
+#: ../tools/drakids:234 ../tools/drakids:326 ../tools/net_applet:77
+#: ../tools/net_applet:238 ../tools/net_applet:514 ../tools/net_applet:541
+#, c-format
+msgid "Interactive Firewall"
+msgstr "Gagnvirkur Eldveggur"
+
+#: ../lib/network/drakfirewall.pm:256
+#, c-format
+msgid ""
+"You can be warned when someone accesses to a service or tries to intrude "
+"into your computer.\n"
+"Please select which network activities should be watched."
+msgstr ""
+"Þú færð aðvörun þegar einhver fær aðgang að þjónustu eða reynir að komast "
+"inn í þína tölvu.\n"
+"Veldu hvaða aðgerðum á að fylgjast með."
+
+#: ../lib/network/drakfirewall.pm:261
+#, c-format
+msgid "Use Interactive Firewall"
+msgstr "Nota virkan eldvegg"
+
+#: ../lib/network/drakvpn.pm:30
+#, c-format
+msgid "VPN configuration"
+msgstr "VPN stillingar"
+
+#: ../lib/network/drakvpn.pm:34
+#, c-format
+msgid "Choose the VPN type"
+msgstr "Veldu VPN tegund"
+
+#: ../lib/network/drakvpn.pm:49
+#, c-format
+msgid "Initializing tools and detecting devices for %s..."
+msgstr "Frumstilli tól og leita að tækjum fyrir %s..."
+
+#: ../lib/network/drakvpn.pm:52
+#, c-format
+msgid "Unable to initialize %s connection type!"
+msgstr "Gat ekki frumstillt tengingu af tegund %s!"
+
+#: ../lib/network/drakvpn.pm:60
+#, c-format
+msgid "Please select an existing VPN connection or enter a new name."
+msgstr "Veldu VPN tengingu eða gefðu upp nýtt nafn."
+
+#: ../lib/network/drakvpn.pm:64
+#, c-format
+msgid "Configure a new connection..."
+msgstr "Setja upp nýja tengingu..."
+
+#: ../lib/network/drakvpn.pm:66
+#, c-format
+msgid "New name"
+msgstr "Nýtt nafn"
+
+#: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
+#: ../lib/network/ndiswrapper.pm:92 ../lib/network/netconnect.pm:471
+#: ../tools/drakconnect:978 ../tools/draknetprofile:129
+#: ../tools/draknetprofile:131 ../tools/drakproxy:36
+#, c-format
+msgid "Warning"
+msgstr "Aðvörun"
+
+#: ../lib/network/drakvpn.pm:70
+#, c-format
+msgid "You must select an existing connection or enter a new name."
+msgstr "Þú verður að velja tengingu sem er þegar til, eða slá inn nýtt nafn."
+
+#: ../lib/network/drakvpn.pm:81
+#, c-format
+msgid "Please enter the required key(s)"
+msgstr "Gefið upp þá lykla sem þörf er á"
+
+#: ../lib/network/drakvpn.pm:86
+#, c-format
+msgid "Please enter the settings of your VPN connection"
+msgstr "Sláðu inn stillingar fyrir VPN tenginguna"
+
+#: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:291
+#, c-format
+msgid "Do you want to start the connection now?"
+msgstr "Vilt þú ræsa tenginguna núna?"
+
+#: ../lib/network/drakvpn.pm:100
+#, c-format
+msgid "Connection failed."
+msgstr "Tenging mistókst."
+
+#: ../lib/network/drakvpn.pm:108
+#, c-format
+msgid ""
+"The VPN connection is now configured.\n"
+"\n"
+"This VPN connection can be automatically started together with a network "
+"connection.\n"
+"It can be done by reconfiguring the network connection and selecting this "
+"VPN connection.\n"
+msgstr ""
+"VPN tengingin er nú uppsett.\n"
+"\n"
+"Þessa VPN tengingu er hægt að ræsa sjálfvirkt þegar nettengingar eru "
+"ræstar.\n"
+"Það má gera með því að endurstilla nettengingar og velja þessa VPN "
+"tengingu.\n"
+
+#: ../lib/network/ifw.pm:129
+#, c-format
+msgid "Port scanning"
+msgstr "Portskönnun"
+
+#: ../lib/network/ifw.pm:130
+#, c-format
+msgid "Service attack"
+msgstr "Ráðist á þjónustu"
+
+#: ../lib/network/ifw.pm:131
+#, c-format
+msgid "Password cracking"
+msgstr "Brjóta lykilorð"
+
+#: ../lib/network/ifw.pm:132
+#, c-format
+msgid "\"%s\" attack"
+msgstr "\"%s\" árás"
+
+#: ../lib/network/ifw.pm:134
+#, c-format
+msgid "A port scanning attack has been attempted by %s."
+msgstr "Port-skönnun hefur verið reynd af %s."
+
+#: ../lib/network/ifw.pm:135
+#, c-format
+msgid "The %s service has been attacked by %s."
+msgstr "Ráðist hefur verið á þjónustuna %s af %s."
+
+#: ../lib/network/ifw.pm:136
+#, c-format
+msgid "A password cracking attack has been attempted by %s."
+msgstr "Reynt hefur verið að brjóta upp lykilorð af %s."
+
+#: ../lib/network/ifw.pm:137
+#, c-format
+msgid "A \"%s\" attack has been attempted by %s"
+msgstr "\"%s\" árás hefur verið reynd af %s"
+
+#: ../lib/network/ifw.pm:146
+#, c-format
+msgid ""
+"The \"%s\" application is trying to make a service (%s) available to the "
+"network."
+msgstr "Forritið \"%s\" er að reyna að bjóða fram þjónustu (%s) á netinu."
+
+#. -PO: this should be kept lowercase since the expression is meant to be used between brackets
+#: ../lib/network/ifw.pm:150
+#, c-format
+msgid "port %d"
+msgstr "Port %d"
+
+#: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
+#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:603
+#: ../lib/network/netconnect.pm:620 ../lib/network/netconnect.pm:636
+#, c-format
+msgid "Manual"
+msgstr "Handvirkt"
+
+#: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
+#: ../lib/network/modem.pm:44 ../lib/network/modem.pm:63
+#: ../lib/network/modem.pm:76 ../lib/network/modem.pm:81
+#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:598
+#: ../lib/network/netconnect.pm:603 ../lib/network/netconnect.pm:615
+#: ../lib/network/netconnect.pm:620 ../lib/network/netconnect.pm:636
+#: ../lib/network/netconnect.pm:638
+#, c-format
+msgid "Automatic"
+msgstr "Sjálfvirk"
+
+#: ../lib/network/ndiswrapper.pm:27
+#, c-format
+msgid "No device supporting the %s ndiswrapper driver is present!"
+msgstr "Ekkert tæki sem styður %s ndiswrapper rekilinn er til staðar!"
+
+#: ../lib/network/ndiswrapper.pm:33
+#, c-format
+msgid "Please select the Windows driver (.inf file)"
+msgstr "Veldu Windows rekilinn (.inf skrá)"
+
+#: ../lib/network/ndiswrapper.pm:42
+#, c-format
+msgid "Unable to install the %s ndiswrapper driver!"
+msgstr "Get ekki sett inn %s ndiswrapper rekilinn!"
+
+#: ../lib/network/ndiswrapper.pm:86
+#, c-format
+msgid "Unable to load the ndiswrapper module!"
+msgstr "Get ekki hlaðið inn ndiswrapper reklinum!"
+
+#: ../lib/network/ndiswrapper.pm:92
+#, c-format
+msgid ""
+"The selected device has already been configured with the %s driver.\n"
+"Do you really want to use a ndiswrapper driver?"
+msgstr ""
+"Valið tæki hefur þegar verið sett upp með reklinum %s.\n"
+"vilt þú í raun nota ndiswrapper rekil?"
+
+#: ../lib/network/ndiswrapper.pm:102
+#, c-format
+msgid "Unable to find the ndiswrapper interface!"
+msgstr "Finn ekki ndiswrapper tengið!"
+
+#: ../lib/network/ndiswrapper.pm:115
+#, c-format
+msgid "Choose an ndiswrapper driver"
+msgstr "Velja ndiswrapper rekil"
+
+#: ../lib/network/ndiswrapper.pm:118
+#, c-format
+msgid "Use the ndiswrapper driver %s"
+msgstr "Nota ndiswrapper rekil %s"
+
+#: ../lib/network/ndiswrapper.pm:118
+#, c-format
+msgid "Install a new driver"
+msgstr "Setja inn nýjan rekil"
+
+#: ../lib/network/ndiswrapper.pm:129
+#, c-format
+msgid "Select a device:"
+msgstr "Velja tæki:"
+
+#: ../lib/network/netconnect.pm:37
+#, c-format
+msgid "United States"
+msgstr "Bandaríkin"
+
+#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:493
+#: ../lib/network/netconnect.pm:507
+#, c-format
+msgid "Manual choice"
+msgstr "Handvirkt val"
+
+#: ../lib/network/netconnect.pm:60
+#, c-format
+msgid "Internal ISDN card"
+msgstr "Innvært ISDN mótald"
+
+#: ../lib/network/netconnect.pm:65
+#, c-format
+msgid "Protocol for the rest of the world"
+msgstr "Samskiptaregla til tengingar við umheiminn"
+
+#: ../lib/network/netconnect.pm:67 ../tools/drakconnect:564
+#, c-format
+msgid "European protocol (EDSS1)"
+msgstr "Evrópskan samskiptastaðal (EDSS1)"
+
+#: ../lib/network/netconnect.pm:68 ../tools/drakconnect:565
+#, c-format
+msgid ""
+"Protocol for the rest of the world\n"
+"No D-Channel (leased lines)"
+msgstr ""
+"Samskiptaregla til tengingar við umheiminn\n"
+"Ekki D-rás (leigðar línur)"
+
+#: ../lib/network/netconnect.pm:118 ../tools/drakconnect:61
+#, c-format
+msgid "Network & Internet Configuration"
+msgstr "Staðarnets og Internet stillingar"
+
+#: ../lib/network/netconnect.pm:123
+#, c-format
+msgid "Choose the connection you want to configure"
+msgstr "Veldu tenginguna sem þú vilt stilla"
+
+#: ../lib/network/netconnect.pm:145 ../lib/network/netconnect.pm:348
+#: ../lib/network/netconnect.pm:788
+#, c-format
+msgid "Select the network interface to configure:"
+msgstr "Veldu netkort sem á að stilla:"
+
+#: ../lib/network/netconnect.pm:164
+#, c-format
+msgid "No device can be found for this connection type."
+msgstr "Ekkert tæki fannst fyrir þessa tegund tengingar."
+
+#: ../lib/network/netconnect.pm:173
+#, c-format
+msgid "Hardware Configuration"
+msgstr "Vélbúnaðarstillingar"
+
+#: ../lib/network/netconnect.pm:177 ../tools/drakroam:90
+#, c-format
+msgid "Configuring device..."
+msgstr "Set upp tæki..."
+
+#: ../lib/network/netconnect.pm:194
+#, c-format
+msgid "Please select your provider:"
+msgstr "Veldu þjónustuaðila:"
+
+#: ../lib/network/netconnect.pm:209 ../tools/drakroam:170
+#, c-format
+msgid "Scanning for networks..."
+msgstr "Leita að netum..."
+
+#: ../lib/network/netconnect.pm:212
+#, c-format
+msgid "Please select your network:"
+msgstr "Veldu net:"
+
+#: ../lib/network/netconnect.pm:241
+#, c-format
+msgid ""
+"Please select your connection protocol.\n"
+"If you do not know it, keep the preselected protocol."
+msgstr ""
+"Veldu samskiptastaðal tengingar.\n"
+"Ef þú veist ekki hver hann er, haltu þá því sem er forvalið."
+
+#: ../lib/network/netconnect.pm:285 ../lib/network/netconnect.pm:655
+#, c-format
+msgid "Connection control"
+msgstr "Sambandsstýring"
+
+#: ../lib/network/netconnect.pm:315
+#, c-format
+msgid "Connection Configuration"
+msgstr "Tengi-stillingar"
+
+#: ../lib/network/netconnect.pm:315
+#, c-format
+msgid "Please fill or check the field below"
+msgstr "Fylltu inn eða krossaðu við svæðin að neðan"
+
+#: ../lib/network/netconnect.pm:318
+#, c-format
+msgid "Your personal phone number"
+msgstr "Þitt símanúmer"
+
+#: ../lib/network/netconnect.pm:319
+#, c-format
+msgid "Provider name (ex provider.net)"
+msgstr "Nafn þjónustuaðila (t.d. simnet.is)"
+
+#: ../lib/network/netconnect.pm:320 ../tools/drakconnect:494
+#, c-format
+msgid "Provider phone number"
+msgstr "Símanúmer netþjónustu"
+
+#: ../lib/network/netconnect.pm:321
+#, c-format
+msgid "Provider DNS 1 (optional)"
+msgstr "Nafnamiðlari DNS 1 (ekki krafist)"
+
+#: ../lib/network/netconnect.pm:322
+#, c-format
+msgid "Provider DNS 2 (optional)"
+msgstr "Nafnamiðlari DNS 2 (ekki krafist)"
+
+#: ../lib/network/netconnect.pm:323 ../tools/drakconnect:446
+#, c-format
+msgid "Dialing mode"
+msgstr "Hringihamur"
+
+#: ../lib/network/netconnect.pm:324 ../tools/drakconnect:451
+#: ../tools/drakconnect:518
+#, c-format
+msgid "Connection speed"
+msgstr "Tengihraði"
+
+#: ../lib/network/netconnect.pm:325 ../tools/drakconnect:456
+#, c-format
+msgid "Connection timeout (in sec)"
+msgstr "Tenging fellur á tíma eftir (í sek)"
+
+#: ../lib/network/netconnect.pm:328 ../tools/drakconnect:555
+#, c-format
+msgid "Card IRQ"
+msgstr "IRQ Korts"
+
+#: ../lib/network/netconnect.pm:329 ../tools/drakconnect:556
+#, c-format
+msgid "Card mem (DMA)"
+msgstr "Kortminni (DMA)"
+
+#: ../lib/network/netconnect.pm:330 ../tools/drakconnect:557
+#, c-format
+msgid "Card IO"
+msgstr "Kort IO"
+
+#: ../lib/network/netconnect.pm:331 ../tools/drakconnect:558
+#, c-format
+msgid "Card IO_0"
+msgstr "Kort IO_0"
+
+#: ../lib/network/netconnect.pm:332
+#, c-format
+msgid "Card IO_1"
+msgstr "Kort IO_1"
+
+#: ../lib/network/netconnect.pm:350 ../lib/network/netconnect.pm:385
+#: ../tools/drakconnect:719 ../tools/drakgw:123
+#, c-format
+msgid "Net Device"
+msgstr "Nettæki"
+
+#: ../lib/network/netconnect.pm:351 ../lib/network/netconnect.pm:356
+#, c-format
+msgid "External ISDN modem"
+msgstr "Útvært ISDN mótald"
+
+#: ../lib/network/netconnect.pm:384
+#, c-format
+msgid "Select a device!"
+msgstr "Veldu tæki !"
+
+#: ../lib/network/netconnect.pm:393 ../lib/network/netconnect.pm:403
+#: ../lib/network/netconnect.pm:413 ../lib/network/netconnect.pm:446
+#: ../lib/network/netconnect.pm:460
+#, c-format
+msgid "ISDN Configuration"
+msgstr "ISDN uppsetning"
+
+#: ../lib/network/netconnect.pm:394
+#, c-format
+msgid "What kind of card do you have?"
+msgstr "Hvernig kort ertu með?"
+
+#: ../lib/network/netconnect.pm:404
+#, c-format
+msgid ""
+"\n"
+"If you have an ISA card, the values on the next screen should be right.\n"
+"\n"
+"If you have a PCMCIA card, you have to know the \"irq\" and \"io\" of your "
+"card.\n"
+msgstr ""
+"\n"
+"Ef þú ert með ISA kort þá ættu gildin á næsta skjá að vera rétt.\n"
+"\n"
+"Ef þú hefur PCMCIA kort, þá þarft þú að vita \"irq\" og \"io\" kortsins.\n"
+
+#: ../lib/network/netconnect.pm:408
+#, c-format
+msgid "Continue"
+msgstr "Áfram"
+
+#: ../lib/network/netconnect.pm:408
+#, c-format
+msgid "Abort"
+msgstr "Hætta við"
+
+#: ../lib/network/netconnect.pm:414
+#, c-format
+msgid "Which of the following is your ISDN card?"
+msgstr "Hvert af eftirfarandi er þitt ISDN kort?"
+
+#: ../lib/network/netconnect.pm:432
+#, c-format
+msgid ""
+"A CAPI driver is available for this modem. This CAPI driver can offer more "
+"capabilities than the free driver (like sending faxes). Which driver do you "
+"want to use?"
+msgstr ""
+"CAPI rekill er til fyrir þetta mótald. Þessi CAPI rekill býður upp á fleiri "
+"möguleika en frjálsi rekillinn (svo sem að senda föx). Hvorn rekilinn viltu "
+"nota?"
+
+#: ../lib/network/netconnect.pm:434 ../tools/drakconnect:113
+#, c-format
+msgid "Driver"
+msgstr "Rekill"
+
+#: ../lib/network/netconnect.pm:446
+#, c-format
+msgid "Which protocol do you want to use?"
+msgstr "Hvaða samskiptareglu viltu nota?"
+
+#: ../lib/network/netconnect.pm:448 ../tools/drakconnect:113
+#: ../tools/drakconnect:305 ../tools/drakconnect:563 ../tools/drakids:252
+#: ../tools/drakvpn-old:839
+#, c-format
+msgid "Protocol"
+msgstr "Samskiptaregla"
+
+#: ../lib/network/netconnect.pm:460
+#, c-format
+msgid ""
+"Select your provider.\n"
+"If it is not listed, choose Unlisted."
+msgstr ""
+"Veldu netþjónustuaðila.\n"
+"Ef hann er ekki á lista, veldu 'Ekki á lista'."
+
+#: ../lib/network/netconnect.pm:462 ../lib/network/netconnect.pm:558
+#, c-format
+msgid "Provider:"
+msgstr "Þjónustuaðili:"
+
+#: ../lib/network/netconnect.pm:471
+#, c-format
+msgid ""
+"Your modem is not supported by the system.\n"
+"Take a look at http://www.linmodems.org"
+msgstr ""
+"Mótaldið þitt er ekki stutt af kerfinu.\n"
+"Líttu á http://www.linmodems.org"
+
+#: ../lib/network/netconnect.pm:490
+#, c-format
+msgid "Select the modem to configure:"
+msgstr "Veldu mótald sem á að stilla:"
+
+#: ../lib/network/netconnect.pm:492
+#, c-format
+msgid "Modem"
+msgstr "Mótald"
+
+#: ../lib/network/netconnect.pm:527
+#, c-format
+msgid "Please choose which serial port your modem is connected to."
+msgstr "Veldu við hvaða raðtengi mótaldið er tengt."
+
+#: ../lib/network/netconnect.pm:556
+#, c-format
+msgid "Select your provider:"
+msgstr "Veldu þjónustuaðila:"
+
+#: ../lib/network/netconnect.pm:580
+#, c-format
+msgid "Dialup: account options"
+msgstr "Upphringi: auðkenni"
+
+#: ../lib/network/netconnect.pm:583
+#, c-format
+msgid "Connection name"
+msgstr "Nafn tengingar"
+
+#: ../lib/network/netconnect.pm:584
+#, c-format
+msgid "Phone number"
+msgstr "Símanúmer"
+
+#: ../lib/network/netconnect.pm:585
+#, c-format
+msgid "Login ID"
+msgstr "Notendanafn"
+
+#: ../lib/network/netconnect.pm:586 ../lib/network/vpn/vpnc.pm:56
+#: ../tools/drakinvictus:110
+#, c-format
+msgid "Password"
+msgstr "Lykilorð"
+
+#: ../lib/network/netconnect.pm:600 ../lib/network/netconnect.pm:633
+#, c-format
+msgid "Dialup: IP parameters"
+msgstr "Upphringi: IP Viðföng"
+
+#: ../lib/network/netconnect.pm:603
+#, c-format
+msgid "IP parameters"
+msgstr "IP viðföng"
+
+#: ../lib/network/netconnect.pm:605
+#, c-format
+msgid "Subnet mask"
+msgstr "Staðarnetsía"
+
+#: ../lib/network/netconnect.pm:617
+#, c-format
+msgid "Dialup: DNS parameters"
+msgstr "Upphringi: DNS viðföng"
+
+#: ../lib/network/netconnect.pm:620
+#, c-format
+msgid "DNS"
+msgstr "DNS"
+
+#: ../lib/network/netconnect.pm:621
+#, c-format
+msgid "Domain name"
+msgstr "Nafn léns"
+
+#: ../lib/network/netconnect.pm:622 ../tools/drakconnect:996
+#, c-format
+msgid "First DNS Server (optional)"
+msgstr "Aðal nafnamiðlari (ekki krafist)"
+
+#: ../lib/network/netconnect.pm:623 ../tools/drakconnect:997
+#, c-format
+msgid "Second DNS Server (optional)"
+msgstr "Vara nafnamiðlari (ekki krafist)"
+
+#: ../lib/network/netconnect.pm:624
+#, c-format
+msgid "Set hostname from IP"
+msgstr "Setja vélarnafn frá IP"
+
+#: ../lib/network/netconnect.pm:637
+#, c-format
+msgid "Gateway IP address"
+msgstr "IP vistfang netgáttar"
+
+#: ../lib/network/netconnect.pm:670
+#, c-format
+msgid "Automatically at boot"
+msgstr "Sjálfvirkt við kerfisræsingu"
+
+#: ../lib/network/netconnect.pm:672
+#, c-format
+msgid "By using Net Applet in the system tray"
+msgstr "Með því að nota Netforritið í kerfisbakkanum"
+
+#: ../lib/network/netconnect.pm:674
+#, c-format
+msgid "Manually (the interface would still be activated at boot)"
+msgstr "Handvirkt (tækið verður samt frumstillt þegar kerfið ræsir)"
+
+#: ../lib/network/netconnect.pm:683
+#, c-format
+msgid "How do you want to dial this connection?"
+msgstr "Hvernig viltu hringja í þessa nettengingu?"
+
+#: ../lib/network/netconnect.pm:696
+#, c-format
+msgid "Do you want to try to connect to the Internet now?"
+msgstr "Viltu reyna að tengjast Internetinu núna?"
+
+#: ../lib/network/netconnect.pm:704 ../tools/drakconnect:1027
+#, c-format
+msgid "Testing your connection..."
+msgstr "Prófa tenginguna þína..."
+
+#: ../lib/network/netconnect.pm:723
+#, c-format
+msgid "The system is now connected to the Internet."
+msgstr "Kerfið er nú tengt Internetinu."
+
+#: ../lib/network/netconnect.pm:724
+#, c-format
+msgid "For security reasons, it will be disconnected now."
+msgstr "Af öryggisástæðum verður aftengt núna."
+
+#: ../lib/network/netconnect.pm:725
+#, c-format
+msgid ""
+"The system does not seem to be connected to the Internet.\n"
+"Try to reconfigure your connection."
+msgstr ""
+"Kerfið virðist ekki vera tengt við Internetið.\n"
+"reyndu að endurstilla tenginguna."
+
+#: ../lib/network/netconnect.pm:740
+#, c-format
+msgid ""
+"Congratulations, the network and Internet configuration is finished.\n"
+"\n"
+msgstr ""
+"Til hamingju, staðarnets og Internets uppsetningu er lokið.\n"
+"\n"
+
+#: ../lib/network/netconnect.pm:743
+#, c-format
+msgid ""
+"After this is done, we recommend that you restart your X environment to "
+"avoid any hostname-related problems."
+msgstr ""
+"Eftir að þessu er lokið mælum við með að þú endurræsir X umhverfið til að "
+"koma í veg fyrir nafna-tengd vandamál."
+
+#: ../lib/network/netconnect.pm:744
+#, c-format
+msgid ""
+"Problems occurred during configuration.\n"
+"Test your connection via net_monitor or mcc. If your connection does not "
+"work, you might want to relaunch the configuration."
+msgstr ""
+"Vandamál við uppsetningu.\n"
+"Prófaðu tenginguna með net_monitor eða mcc. ef tengingin virkar ekki,þá "
+"gætir þú reynt að endurtaka uppsetninguna."
+
+#: ../lib/network/netconnect.pm:756
+#, c-format
+msgid "Sagem USB modem"
+msgstr "Sagem USB mótald"
+
+#: ../lib/network/netconnect.pm:757 ../lib/network/netconnect.pm:758
+#, c-format
+msgid "Bewan modem"
+msgstr "Bewan mótald"
+
+#: ../lib/network/netconnect.pm:759
+#, c-format
+msgid "ECI Hi-Focus modem"
+msgstr "ECI Hi-Focus mótald"
+
+#: ../lib/network/netconnect.pm:760
+#, c-format
+msgid "LAN connection"
+msgstr "Staðarnets-tenging"
+
+#: ../lib/network/netconnect.pm:761 ../tools/drakroam:29
+#, c-format
+msgid "Wireless connection"
+msgstr "Þráðlaus tenging"
+
+#: ../lib/network/netconnect.pm:762
+#, c-format
+msgid "ADSL connection"
+msgstr "ADSL tenging"
+
+#: ../lib/network/netconnect.pm:763
+#, c-format
+msgid "Cable connection"
+msgstr "Breiðbands-tenging"
+
+#: ../lib/network/netconnect.pm:764
+#, c-format
+msgid "ISDN connection"
+msgstr "ISDN tenging"
+
+#: ../lib/network/netconnect.pm:765
+#, c-format
+msgid "Modem connection"
+msgstr "Mótaldstenging"
+
+#: ../lib/network/netconnect.pm:766
+#, c-format
+msgid "DVB connection"
+msgstr "DVB tenging"
+
+#: ../lib/network/netconnect.pm:768
+#, c-format
+msgid "(detected on port %s)"
+msgstr "(fundið á porti %s)"
+
+#. -PO: here, "(detected)" string will be appended to eg "ADSL connection"
+#: ../lib/network/netconnect.pm:770
+#, c-format
+msgid "(detected %s)"
+msgstr "(skynjað %s)"
+
+#: ../lib/network/netconnect.pm:770
+#, c-format
+msgid "(detected)"
+msgstr "(skynjað)"
+
+#: ../lib/network/netconnect.pm:771
+#, c-format
+msgid "Network Configuration"
+msgstr "Netstillingar"
+
+#: ../lib/network/netconnect.pm:772
+#, c-format
+msgid "Zeroconf hostname resolution"
+msgstr "Zeroconf nafnleit vélar"
+
+#: ../lib/network/netconnect.pm:773
+#, c-format
+msgid ""
+"If desired, enter a Zeroconf hostname.\n"
+"This is the name your machine will use to advertise any of\n"
+"its shared resources that are not managed by the network.\n"
+"It is not necessary on most networks."
+msgstr ""
+"Ef þú óskar, sláðu inn ZeroConf vélarnafn.\n"
+"Þetta er nafnið sem vélin þín notar til að auglýsa framboðnar\n"
+"þjónustur sem er ekki stjórnað af netinu.\n"
+"Þessa er ekki þörf á flestum netum."
+
+#: ../lib/network/netconnect.pm:777
+#, c-format
+msgid "Zeroconf Host name"
+msgstr "Zeroconf Heiti vélar"
+
+#: ../lib/network/netconnect.pm:778
+#, c-format
+msgid "Zeroconf host name must not contain a ."
+msgstr "Zerocont vélarheiti má ekki innihalda ."
+
+#: ../lib/network/netconnect.pm:779
+#, c-format
+msgid ""
+"Because you are doing a network installation, your network is already "
+"configured.\n"
+"Click on Ok to keep your configuration, or cancel to reconfigure your "
+"Internet & Network connection.\n"
+msgstr ""
+"Af því að þú ert að setja upp netuppsetningu, þá er netið þitt þegar "
+"stillt.\n"
+"Smelltu á 'Í lagi' til að halda þessari uppsetningu, eða 'Hætta við' til að "
+"endurstilla Internet og nettengingar.\n"
+
+#: ../lib/network/netconnect.pm:782
+#, c-format
+msgid "The network needs to be restarted. Do you want to restart it?"
+msgstr "Það þarf að endurræsa netið, viltu endurræsa það núna?"
+
+#: ../lib/network/netconnect.pm:783
+#, c-format
+msgid ""
+"A problem occurred while restarting the network: \n"
+"\n"
+"%s"
+msgstr ""
+"Vandamál kom upp við enduræsingu nets: \n"
+"\n"
+"%s"
+
+#: ../lib/network/netconnect.pm:784
+#, c-format
+msgid ""
+"We are now going to configure the %s connection.\n"
+"\n"
+"\n"
+"Press \"%s\" to continue."
+msgstr ""
+"Við ætlum nú að fara að stilla tenginguna %s.\n"
+"\n"
+"\n"
+"Ýttu á \"%s\" til að halda áfram."
+
+#: ../lib/network/netconnect.pm:785
+#, c-format
+msgid "Configuration is complete, do you want to apply settings?"
+msgstr "Uppsetningu lokið, viltu virkja stillingar?"
+
+#: ../lib/network/netconnect.pm:786
+#, c-format
+msgid ""
+"You have configured multiple ways to connect to the Internet.\n"
+"Choose the one you want to use.\n"
+"\n"
+msgstr ""
+"Þú hefur skilgreint nokkrar leiðir til að tengjast Internetinu.\n"
+"Veldu þá sem þú vilt nota.\n"
+"\n"
+
+#: ../lib/network/netconnect.pm:787
+#, c-format
+msgid "Internet connection"
+msgstr "Internet-tenging"
+
+#: ../lib/network/netconnect.pm:789
+#, c-format
+msgid "Configuring network device %s (driver %s)"
+msgstr "Stilli nettæki %s (rekill %s)"
+
+#: ../lib/network/netconnect.pm:790
+#, c-format
+msgid ""
+"The following protocols can be used to configure a LAN connection. Please "
+"choose the one you want to use."
+msgstr ""
+"Eftirfarandi samskiptareglur má nota til að stilla staðarnets-tengingu. "
+"Veljið hverja þið viljið nota."
+
+#: ../lib/network/netconnect.pm:791
+#, c-format
+msgid ""
+"Please enter your host name.\n"
+"Your host name should be a fully-qualified host name,\n"
+"such as ``mybox.mylab.myco.com''.\n"
+"You may also enter the IP address of the gateway if you have one."
+msgstr ""
+"Sláðu inn heiti vélarinnar. Vélarheitið þarf að vera fullt\n"
+"heiti, t.d. ``odinn.valholl.is''\n"
+"Þú mátt líka slá inn IP vistfang netgáttarinnar ef þú þekkir það.\n"
+"Netgáttin gefur þér aðgang út úr staðarnetinu (t.d. á Internetið)."
+
+#: ../lib/network/netconnect.pm:796
+#, c-format
+msgid "Last but not least you can also type in your DNS server IP addresses."
+msgstr "Síðast en ekki síst getur þú einnig slegið inn IP-tölu DNS nafnamiðlara."
+
+#: ../lib/network/netconnect.pm:797
+#, c-format
+msgid "DNS server address should be in format 1.2.3.4"
+msgstr "Vistfang DNS-þjóns á að vera á sniðinu 1.2.3.4"
+
+#: ../lib/network/netconnect.pm:798 ../tools/drakconnect:689
+#, c-format
+msgid "Gateway address should be in format 1.2.3.4"
+msgstr "Vistfang netgáttar á að vera á sniðinu 1.2.3.4"
+
+#: ../lib/network/netconnect.pm:799
+#, c-format
+msgid "Gateway device"
+msgstr "Netgátt (tækið)"
+
+#: ../lib/network/netconnect.pm:813
+#, c-format
+msgid ""
+"An unexpected error has happened:\n"
+"%s"
+msgstr ""
+"Óvænt villa hefur komið upp:\n"
+"%s"
+
+#: ../lib/network/network.pm:429
+#, c-format
+msgid "Proxies configuration"
+msgstr "Sel-uppsetning"
+
+#: ../lib/network/network.pm:430
+#, c-format
+msgid ""
+"Here you can set up your proxies configuration (eg: http://"
+"my_caching_server:8080)"
+msgstr "Hér getur þú sett upp vefsel (t.d. http://mitt_vef_sel:8080)"
+
+#: ../lib/network/network.pm:431
+#, c-format
+msgid "HTTP proxy"
+msgstr "HTTP sel"
+
+#: ../lib/network/network.pm:432
+#, c-format
+msgid "Use HTTP proxy for HTTPS connections"
+msgstr "Nota HTTP sel fyrir HTTPS tengingar"
+
+#: ../lib/network/network.pm:433
+#, c-format
+msgid "HTTPS proxy"
+msgstr "HTTPS sel"
+
+#: ../lib/network/network.pm:434
+#, c-format
+msgid "FTP proxy"
+msgstr "FTP Sel"
+
+#: ../lib/network/network.pm:435
+#, c-format
+msgid "No proxy for (comma separated list):"
+msgstr "Ekkert sel fyrir (aðskildir með kommu):"
+
+#: ../lib/network/network.pm:440
+#, c-format
+msgid "Proxy should be http://..."
+msgstr "Sel ætti að vera http://..."
+
+#: ../lib/network/network.pm:441
+#, c-format
+msgid "Proxy should be http://... or https://..."
+msgstr "Sel ætti að vera http://... eða https://..."
+
+#: ../lib/network/network.pm:442
+#, c-format
+msgid "URL should begin with 'ftp:' or 'http:'"
+msgstr "Slóð ætti að byrja á 'ftp:' eða 'http:'"
+
+#: ../lib/network/shorewall.pm:61
+#, c-format
+msgid ""
+"Please select the interfaces that will be protected by the firewall.\n"
+"\n"
+"All interfaces directly connected to Internet should be selected,\n"
+"while interfaces connected to a local network may be unselected.\n"
+"\n"
+"Which interfaces should be protected?\n"
+msgstr ""
+"Veldu nettengi sem verða varin af eldveggnum.\n"
+"\n"
+"Öll nettengi sem tengjast Internetinu beint ættu að vera valin,\n"
+"en þau sem tengjast aðeins staðarneti gætu verið óvarin.\n"
+"\n"
+"Hvaða nettengi ætti að verja?\n"
+
+#: ../lib/network/shorewall.pm:136
+#, c-format
+msgid "Keep custom rules"
+msgstr "Halda sérsniðnum reglum"
+
+#: ../lib/network/shorewall.pm:137
+#, c-format
+msgid "Drop custom rules"
+msgstr "Sleppa sérsniðnum reglum"
+
+#: ../lib/network/shorewall.pm:142
+#, c-format
+msgid ""
+"Your firewall configuration has been manually edited and contains\n"
+"rules that may conflict with the configuration that has just been set up.\n"
+"What do you want to do?"
+msgstr ""
+"Stillingum eldveggsins þíns hefur verið breytt handvirkt, og inniheldur\n"
+"reglur sem gætu stangast á við þær stillingar sem nú hafa verið settar upp.\n"
+"Hvað vilt þú gera?"
+
+#: ../lib/network/thirdparty.pm:134
+#, c-format
+msgid "Some components (%s) are required but aren't available for %s hardware."
+msgstr "Nokkurra eininga (%s) er þörf, en eru ekki til fyrir vélbúnað %s."
+
+#: ../lib/network/thirdparty.pm:135
+#, c-format
+msgid "Some packages (%s) are required but aren't available."
+msgstr "Þarf nokkra pakka (%s) sem eru ekki tiltækir."
+
+#: ../lib/network/thirdparty.pm:137
+#, c-format
+msgid ""
+"These packages can be found in Mandriva Club or in Mandriva commercial "
+"releases."
+msgstr ""
+"Þessa pakka má finna á Mandriva Club síðunum eða í seldum Mandriva "
+"dreifingum."
+
+#: ../lib/network/thirdparty.pm:138
+#, c-format
+msgid "The following component is missing: %s"
+msgstr "Eftirfarandi einingar vantar: %s"
+
+#: ../lib/network/thirdparty.pm:140
+#, c-format
+msgid ""
+"The required files can also be installed from this URL:\n"
+"%s"
+msgstr ""
+"Skrárnar má einnig setja upp frá þessari slóð:\n"
+"%s"
+
+#: ../lib/network/thirdparty.pm:177 ../lib/network/thirdparty.pm:182
+#, c-format
+msgid "Use a floppy"
+msgstr "Nota diskling"
+
+#: ../lib/network/thirdparty.pm:178 ../lib/network/thirdparty.pm:185
+#, c-format
+msgid "Use my Windows partition"
+msgstr "Nota Windows disksneið"
+
+#: ../lib/network/thirdparty.pm:179
+#, c-format
+msgid "Select file"
+msgstr "Veljið skrá"
+
+#: ../lib/network/thirdparty.pm:190
+#, c-format
+msgid "Please select the firmware file (for example: %s)"
+msgstr "Veldu vélbúnaðar-rekilinn (t.d.: %s)"
+
+#: ../lib/network/thirdparty.pm:214
+#, c-format
+msgid "Unable to find \"%s\" on your Windows system!"
+msgstr "Finn ekki \"%s\" á Windows kerfinu þínu!"
+
+#: ../lib/network/thirdparty.pm:216
+#, c-format
+msgid "No Windows system has been detected!"
+msgstr "Ekkert Windows kerfi hefur fundist!"
+
+#: ../lib/network/thirdparty.pm:226
+#, c-format
+msgid "Insert floppy"
+msgstr "Settu diskling í drif"
+
+#: ../lib/network/thirdparty.pm:227
+#, c-format
+msgid ""
+"Insert a FAT formatted floppy in drive %s with %s in root directory and "
+"press %s"
+msgstr "Settu FAT forsniðinn diskling í drif %s með %s í rótarmöppu og ýttu á %s"
+
+#: ../lib/network/thirdparty.pm:227
+#, c-format
+msgid "Next"
+msgstr "Næsta"
+
+#: ../lib/network/thirdparty.pm:237
+#, c-format
+msgid "Floppy access error, unable to mount device %s"
+msgstr "Diskettuvilla, get ekki tengt %s"
+
+#: ../lib/network/thirdparty.pm:319
+#, c-format
+msgid "Looking for required software and drivers..."
+msgstr "Leita að hugbúnaði og reklum..."
+
+#: ../lib/network/thirdparty.pm:330
+#, c-format
+msgid "Please wait, running device configuration commands..."
+msgstr "Augnablik, keyri stilli-skipanir fyrir tæki..."
+
+#: ../lib/network/vpn/openvpn.pm:107
+#, c-format
+msgid "X509 Public Key Infrastructure"
+msgstr "X509 Almenn Lyklaskipan"
+
+#: ../lib/network/vpn/openvpn.pm:108
+#, c-format
+msgid "Static Key"
+msgstr "Fastur lykill"
+
+#: ../lib/network/vpn/openvpn.pm:115
+#, c-format
+msgid "Type"
+msgstr "Tegund"
+
+#. -PO: please don't translate the CA acronym
+#: ../lib/network/vpn/openvpn.pm:142
+#, c-format
+msgid "Certificate Authority (CA)"
+msgstr ""
+
+#: ../lib/network/vpn/openvpn.pm:148
+#, c-format
+msgid "Certificate"
+msgstr "Skírteini"
+
+#: ../lib/network/vpn/openvpn.pm:154
+#, c-format
+msgid "Key"
+msgstr "Lykill"
+
+#: ../lib/network/vpn/openvpn.pm:160
+#, c-format
+msgid "TLS control channel key"
+msgstr ""
+
+#: ../lib/network/vpn/openvpn.pm:167
+#, c-format
+msgid "Key direction"
+msgstr "Lykilstefna"
+
+#: ../lib/network/vpn/openvpn.pm:175
+#, c-format
+msgid "Authenticate using username and password"
+msgstr "Tengjast með því að nota notandanafn og lykilorð"
+
+#: ../lib/network/vpn/openvpn.pm:181
+#, c-format
+msgid "Check server certificate"
+msgstr "Athuga skírteini miðlara"
+
+#: ../lib/network/vpn/openvpn.pm:187
+#, c-format
+msgid "Cipher algorithm"
+msgstr "Dulritunaralgrím"
+
+#: ../lib/network/vpn/openvpn.pm:191
+#, c-format
+msgid "Default"
+msgstr "Sjálfgefið"
+
+#: ../lib/network/vpn/openvpn.pm:195
+#, c-format
+msgid "Size of cipher key"
+msgstr "Stærð dulritunarlykils"
+
+#: ../lib/network/vpn/openvpn.pm:206
+#, c-format
+msgid "Get from server"
+msgstr "Sækja frá miðlara"
+
+#: ../lib/network/vpn/openvpn.pm:216
+#, c-format
+msgid "Gateway port"
+msgstr "Netgátt"
+
+#: ../lib/network/vpn/openvpn.pm:227 ../tools/drakgw:176
+#, c-format
+msgid "Local IP address"
+msgstr "Staðbundin IP-tala"
+
+#: ../lib/network/vpn/openvpn.pm:232
+#, c-format
+msgid "Remote IP address"
+msgstr "IP-tala netgáttar"
+
+#: ../lib/network/vpn/openvpn.pm:237
+#, c-format
+msgid "Use TCP protocol"
+msgstr "Nota TCP samskiptareglu"
+
+#: ../lib/network/vpn/openvpn.pm:243
+#, c-format
+msgid "Virtual network device type"
+msgstr "Tegund sýndarnettækis"
+
+#: ../lib/network/vpn/openvpn.pm:250
+#, c-format
+msgid "Virtual network device number (optional)"
+msgstr "Númer sýndarnettækis (valfrjálst)"
+
+#: ../lib/network/vpn/openvpn.pm:365
+#, c-format
+msgid "Starting connection.."
+msgstr "Ræsi tengingu.."
+
+#: ../lib/network/vpn/openvpn.pm:380
+#, c-format
+msgid "Please insert your token"
+msgstr ""
+
+#: ../lib/network/vpn/vpnc.pm:9
+#, c-format
+msgid "Cisco VPN Concentrator"
+msgstr "Cisco VPN samtengi-eining"
+
+#: ../lib/network/vpn/vpnc.pm:43
+#, c-format
+msgid "Group name"
+msgstr "Hópnafn"
+
+#: ../lib/network/vpn/vpnc.pm:47
+#, c-format
+msgid "Group secret"
+msgstr ""
+
+#: ../lib/network/vpn/vpnc.pm:52
+#, c-format
+msgid "Username"
+msgstr "Notandanafn"
+
+#: ../lib/network/vpn/vpnc.pm:61
+#, c-format
+msgid "Use Cisco-UDP encapsulation"
+msgstr "Nota cisco-UDP til að umlykja samskiptareglu"
+
+#: ../lib/network/vpn/vpnc.pm:67
+#, c-format
+msgid "Use specific UDP port"
+msgstr "Nota tiltekið UDP port"
+
+#: ../tools/drakconnect:81
+#, c-format
+msgid "Network configuration (%d adapters)"
+msgstr "Netstillingar (%d tengi)"
+
+#: ../tools/drakconnect:93 ../tools/drakconnect:812
+#, c-format
+msgid "Gateway:"
+msgstr "Netgátt:"
+
+#: ../tools/drakconnect:93 ../tools/drakconnect:812
+#, c-format
+msgid "Interface:"
+msgstr "Tengi:"
+
+#: ../tools/drakconnect:97 ../tools/net_monitor:119
+#, c-format
+msgid "Wait please"
+msgstr "Augnablik"
+
+#: ../tools/drakconnect:113 ../tools/drakinvictus:105
+#, c-format
+msgid "Interface"
+msgstr "Tengi"
+
+#: ../tools/drakconnect:113
+#, c-format
+msgid "State"
+msgstr "Staða"
+
+#: ../tools/drakconnect:130
+#, c-format
+msgid "Hostname: "
+msgstr "Vélarnafn: "
+
+#: ../tools/drakconnect:132
+#, c-format
+msgid "Configure hostname..."
+msgstr "Stilla vélarnafn..."
+
+#: ../tools/drakconnect:146 ../tools/drakconnect:850
+#, c-format
+msgid "LAN configuration"
+msgstr "Staðarnets-uppsetning"
+
+#: ../tools/drakconnect:151
+#, c-format
+msgid "Configure Local Area Network..."
+msgstr "Stilla staðarnetstengingu..."
+
+#: ../tools/drakconnect:157 ../tools/drakconnect:240 ../tools/draknfs:181
+#, c-format
+msgid "Help"
+msgstr "Hjálp"
+
+#: ../tools/drakconnect:159 ../tools/drakconnect:241 ../tools/drakconnect:245
+#: ../tools/drakinvictus:140
+#, c-format
+msgid "Apply"
+msgstr "Virkja"
+
+#: ../tools/drakconnect:161 ../tools/drakconnect:942 ../tools/drakconnect:1033
+#: ../tools/draknetprofile:106 ../tools/net_monitor:341
+#, c-format
+msgid "Cancel"
+msgstr "Hætta við"
+
+#: ../tools/drakconnect:162 ../tools/drakconnect:857 ../tools/drakconnect:944
+#: ../tools/drakconnect:1034 ../tools/draknetprofile:108
+#: ../tools/net_monitor:342
+#, c-format
+msgid "Ok"
+msgstr "Í lagi"
+
+#: ../tools/drakconnect:164 ../tools/drakconnect:636 ../tools/drakgw:359
+#: ../tools/drakroam:251 ../tools/drakroam:289 ../tools/draksambashare:208
+#, c-format
+msgid "Please wait"
+msgstr "Augnablik"
+
+#: ../tools/drakconnect:166 ../tools/drakconnect:638
+#, c-format
+msgid "Please Wait... Applying the configuration"
+msgstr "Augnablik... Framkvæmi stillingar"
+
+#: ../tools/drakconnect:192
+#, c-format
+msgid "Manage connections"
+msgstr "Sýsla með tengingar"
+
+#: ../tools/drakconnect:219 ../tools/drakroam:302
+#, c-format
+msgid "Device: "
+msgstr "Tæki: "
+
+#: ../tools/drakconnect:302
+#, c-format
+msgid "IP configuration"
+msgstr "IP uppsetning"
+
+#: ../tools/drakconnect:337
+#, c-format
+msgid "DNS servers"
+msgstr "Nafnamiðlarar (DNS)"
+
+#: ../tools/drakconnect:343
+#, c-format
+msgid "Search Domain"
+msgstr "Leita í léni"
+
+#: ../tools/drakconnect:351 ../tools/drakvpn-old:837
+#, c-format
+msgid "none"
+msgstr "ekkert"
+
+#: ../tools/drakconnect:351
+#, c-format
+msgid "static"
+msgstr "föst"
+
+#: ../tools/drakconnect:351
+#, c-format
+msgid "DHCP"
+msgstr "DHCP"
+
+#: ../tools/drakconnect:434
+#, c-format
+msgid "Start at boot"
+msgstr "Ræsa við kerfisræsingu"
+
+#: ../tools/drakconnect:516
+#, c-format
+msgid "Flow control"
+msgstr "Flæðistýring"
+
+#: ../tools/drakconnect:517
+#, c-format
+msgid "Line termination"
+msgstr "Endir á línu"
+
+#: ../tools/drakconnect:528
+#, c-format
+msgid "Modem timeout"
+msgstr "Mótaldstími rennur út"
+
+#: ../tools/drakconnect:532
+#, c-format
+msgid "Use lock file"
+msgstr "Nota læsiskrá"
+
+#: ../tools/drakconnect:534
+#, c-format
+msgid "Wait for dialup tone before dialing"
+msgstr "Bíða eftir sóni áður en hringt er"
+
+#: ../tools/drakconnect:537
+#, c-format
+msgid "Busy wait"
+msgstr "Upptekið-beðið í"
+
+#: ../tools/drakconnect:542
+#, c-format
+msgid "Modem sound"
+msgstr "Módaldshljóð"
+
+#: ../tools/drakconnect:543 ../tools/drakgw:101
+#, c-format
+msgid "Enable"
+msgstr "Virkja"
+
+#: ../tools/drakconnect:543 ../tools/drakgw:101
+#, c-format
+msgid "Disable"
+msgstr "Slökkva"
+
+#: ../tools/drakconnect:592
+#, c-format
+msgid "Vendor"
+msgstr "Framleiðandi"
+
+#: ../tools/drakconnect:593
+#, c-format
+msgid "Description"
+msgstr "Lýsing"
+
+#: ../tools/drakconnect:594
+#, c-format
+msgid "Media class"
+msgstr "Flokkur miðils"
+
+#: ../tools/drakconnect:595
+#, c-format
+msgid "Module name"
+msgstr "Nafn einingar"
+
+#: ../tools/drakconnect:596
+#, c-format
+msgid "Mac Address"
+msgstr "Mac Adressa"
+
+#: ../tools/drakconnect:597
+#, c-format
+msgid "Bus"
+msgstr "Braut"
+
+#: ../tools/drakconnect:598
+#, c-format
+msgid "Location on the bus"
+msgstr "Staðsetning á braut"
+
+#: ../tools/drakconnect:685 ../tools/drakconnect:766 ../tools/drakconnect:952
+#, c-format
+msgid "No IP"
+msgstr "Engin IP"
+
+#: ../tools/drakconnect:686 ../tools/drakconnect:767
+#, c-format
+msgid "No Mask"
+msgstr "Engin netsía"
+
+#: ../tools/drakconnect:705 ../tools/drakgw:307
+#, c-format
+msgid ""
+"No ethernet network adapter has been detected on your system. Please run the "
+"hardware configuration tool."
+msgstr ""
+"Ekkert netkort hefur fundist  á kerfinu þínu. Vinsamlega keyrðu vélbúnaðar-"
+"uppsetningartólið."
+
+#: ../tools/drakconnect:714
+#, c-format
+msgid "Remove a network interface"
+msgstr "Fjarlægja nettengingu"
+
+#: ../tools/drakconnect:718
+#, c-format
+msgid "Select the network interface to remove:"
+msgstr "Veldu nettengi sem á að fjarlægja:"
+
+#: ../tools/drakconnect:750
+#, c-format
+msgid ""
+"An error occurred while deleting the \"%s\" network interface:\n"
+"\n"
+"%s"
+msgstr ""
+"Villa kom upp þegar reynt var að eyða nettenginu \"%s\":\n"
+"\n"
+"%s"
+
+#: ../tools/drakconnect:751
+#, c-format
+msgid "Congratulations, the \"%s\" network interface has been successfully deleted"
+msgstr "Til hamingju, tekist hefur að fjarlægja nettengið \"%s\""
+
+#: ../tools/drakconnect:768 ../tools/drakconnect:921
+#, c-format
+msgid "up"
+msgstr "upp"
+
+#: ../tools/drakconnect:768 ../tools/drakconnect:921
+#, c-format
+msgid "down"
+msgstr "niður"
+
+#: ../tools/drakconnect:803 ../tools/net_monitor:465
+#, c-format
+msgid "Connected"
+msgstr "Tengdur"
+
+#: ../tools/drakconnect:803 ../tools/net_monitor:465
+#, c-format
+msgid "Not connected"
+msgstr "Ótengdur"
+
+#: ../tools/drakconnect:805
+#, c-format
+msgid "Disconnect..."
+msgstr "Aftengja..."
+
+#: ../tools/drakconnect:805
+#, c-format
+msgid "Connect..."
+msgstr "Tengjast..."
+
+#: ../tools/drakconnect:846
+#, c-format
+msgid "Deactivate now"
+msgstr "Aftengja núna"
+
+#: ../tools/drakconnect:846
+#, c-format
+msgid "Activate now"
+msgstr "Virkja núna"
+
+#: ../tools/drakconnect:854
+#, c-format
+msgid ""
+"You do not have any configured interface.\n"
+"Configure them first by clicking on 'Configure'"
+msgstr ""
+"Þú hefur ekki neitt uppsett nettengi.\n"
+"Stilltu þau fyrst með því að smella á 'Stilla'"
+
+#: ../tools/drakconnect:868
+#, c-format
+msgid "LAN Configuration"
+msgstr "Staðarnets-uppsetning"
+
+#: ../tools/drakconnect:880
+#, c-format
+msgid "Adapter %s: %s"
+msgstr "Kort %s: %s"
+
+#: ../tools/drakconnect:889
+#, c-format
+msgid "Boot Protocol"
+msgstr "Ræsisamskiptaregla"
+
+#: ../tools/drakconnect:890
+#, c-format
+msgid "Started on boot"
+msgstr "Virkjað við ræsingu"
+
+#: ../tools/drakconnect:926
+#, c-format
+msgid ""
+"This interface has not been configured yet.\n"
+"Run the \"Add an interface\" assistant from the Mandriva Linux Control Center"
+msgstr ""
+"Þetta nettengi hefur ekki verið stillt enn.\n"
+"Keyrið \"Bæta við tengingu\" aðstoðarálfinn frá Mandriva Linux stjórnborðinu"
+
+#: ../tools/drakconnect:974
+#, c-format
+msgid "Internet connection configuration"
+msgstr "Internet uppsetning"
+
+#: ../tools/drakconnect:980 ../tools/net_applet:68
+#, c-format
+msgid ""
+"You do not have any configured Internet connection.\n"
+"Run the \"%s\" assistant from the Mandriva Linux Control Center"
+msgstr ""
+"Þú hefur ekki skilgreint neina internettengingu.\n"
+"Keyrið \"%s\" aðstoðarálfinn frá Mandriva Linux stjórnborðinu"
+
+#. -PO: here "Add Connection" should be translated the same was as in control-center
+#: ../tools/drakconnect:981 ../tools/net_applet:69
+#, c-format
+msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
+msgstr "Setja upp nýja nettengingu (LAN, ISDN, ADSL, ...)"
+
+#: ../tools/drakconnect:995
+#, c-format
+msgid "Host name (optional)"
+msgstr "Vélarnafn (þarf ekki)"
+
+#: ../tools/drakconnect:998
+#, c-format
+msgid "Third DNS server (optional)"
+msgstr "Þriðji nafnamiðlari (ekki krafist)"
+
+#: ../tools/drakconnect:1020
+#, c-format
+msgid "Internet Connection Configuration"
+msgstr "Internet uppsetning"
+
+#: ../tools/drakconnect:1021
+#, c-format
+msgid "Internet access"
+msgstr "Internetaðgangur"
+
+#: ../tools/drakconnect:1023 ../tools/net_monitor:98
+#, c-format
+msgid "Connection type: "
+msgstr "Tegund tengingar: "
+
+#: ../tools/drakconnect:1026
+#, c-format
+msgid "Status:"
+msgstr "Staða:"
+
+#: ../tools/drakconnect:1031
+#, c-format
+msgid "Parameters"
+msgstr "Viðföng"
+
+#: ../tools/drakgw:71
+#, c-format
+msgid "Internet Connection Sharing"
+msgstr "Samnýting Internets tengingar"
+
+#: ../tools/drakgw:75
+#, c-format
+msgid ""
+"You are about to configure your computer to share its Internet connection.\n"
+"With that feature, other computers on your local network will be able to use "
+"this computer's Internet connection.\n"
+"\n"
+"Make sure you have configured your Network/Internet access using drakconnect "
+"before going any further.\n"
+"\n"
+"Note: you need a dedicated Network Adapter to set up a Local Area Network "
+"(LAN)."
+msgstr ""
+"Þú er um það bil að fara að setja tölvuna þína upp til að deila Internet "
+"tengingunni sinni.\n"
+"Með þessum valkosti , þá geta aðrar tölvur á þínu staðarneti notað Internet "
+"tengingu þinnar tölvu.\n"
+"\n"
+"Vertu viss um að þú hafir sett upp staðarnet/Internet tengingu með "
+"drakconnect áður en þú heldur lengra.\n"
+"\n"
+"Athugið: þú þarft að hafa netkort til að geta sett upp staðarnet (LAN)."
+
+#: ../tools/drakgw:91
+#, c-format
+msgid ""
+"The setup of Internet Connection Sharing has already been done.\n"
+"It's currently enabled.\n"
+"\n"
+"What would you like to do?"
+msgstr ""
+"Uppsetning Internet samnýtingar hefur þegar verið framkvæmd.\n"
+"Hún er nú virk.\n"
+"\n"
+"Hvað vilt þú gera?"
+
+#: ../tools/drakgw:95
+#, c-format
+msgid ""
+"The setup of Internet connection sharing has already been done.\n"
+"It's currently disabled.\n"
+"\n"
+"What would you like to do?"
+msgstr ""
+"Uppsetning internet samnýtingar hefur þegar verið framkvæmd.\n"
+"Hún er nú aftengd.\n"
+"\n"
+"Hvað vilt þú gera?"
+
+#: ../tools/drakgw:101
+#, c-format
+msgid "Reconfigure"
+msgstr "Endurstilla"
+
+#: ../tools/drakgw:122
+#, c-format
+msgid "Please select the network interface directly connected to the internet."
+msgstr "Veldu nettengið sem er beintengt við Internetið."
+
+#: ../tools/drakgw:141
+#, c-format
+msgid ""
+"There is only one configured network adapter on your system:\n"
+"\n"
+"%s\n"
+"\n"
+"I am about to setup your Local Area Network with that adapter."
+msgstr ""
+"Það er aðeins eitt netkort uppsett á vélinni þinni:\n"
+"\n"
+"%s\n"
+"\n"
+"Ég er að fara að setja upp staðarnet um það nettengi."
+
+#: ../tools/drakgw:152
+#, c-format
+msgid ""
+"Please choose what network adapter will be connected to your Local Area "
+"Network."
+msgstr "Veldu hvaða nettengi verður tengt við staðarnetið þitt."
+
+#: ../tools/drakgw:173
+#, c-format
+msgid "Local Area Network settings"
+msgstr "Stillingar staðbundins nets"
+
+#: ../tools/drakgw:178
+#, c-format
+msgid "The internal domain name"
+msgstr "Nafn staðbundins léns"
+
+#: ../tools/drakgw:184
+#, c-format
+msgid "Potential LAN address conflict found in current config of %s!\n"
+msgstr "Líklegur árekstur á IP-tölum staðarnets fundinn í uppsetningu á %s!\n"
+
+#: ../tools/drakgw:200
+#, c-format
+msgid "Domain Name Server (DNS) configuration"
+msgstr "Uppsetning nafnamiðlara léns (DNS)"
+
+#: ../tools/drakgw:204
+#, c-format
+msgid "Use this gateway as domain name server"
+msgstr "Nota þessa netgátt sem nafnamiðlara léns"
+
+#: ../tools/drakgw:205
+#, c-format
+msgid "The DNS Server IP"
+msgstr "Vistfang DNS þjóns"
+
+#: ../tools/drakgw:232
+#, c-format
+msgid ""
+"DHCP Server Configuration.\n"
+"\n"
+"Here you can select different options for the DHCP server configuration.\n"
+"If you do not know the meaning of an option, simply leave it as it is."
+msgstr ""
+"DHCP Miðlarauppsetning.\n"
+"\n"
+"Hér getur þú valið mismunandi valkosti fyrir DHCP miðlara uppsetningu.\n"
+"Ef þú veist ekki hvað þessar breytur þýða, láttu þær þá bara eiga sig."
+
+#: ../tools/drakgw:239
+#, c-format
+msgid "Use automatic configuration (DHCP)"
+msgstr "Nota sjálfvirka uppsetningu (DHCP)"
+
+#: ../tools/drakgw:240
+#, c-format
+msgid "The DHCP start range"
+msgstr "Fyrsta IP-tala DHCP"
+
+#: ../tools/drakgw:241
+#, c-format
+msgid "The DHCP end range"
+msgstr "Loka IP-tala DHCP"
+
+#: ../tools/drakgw:242
+#, c-format
+msgid "The default lease (in seconds)"
+msgstr "Sjálfgefinn leigutími (í sekúndum)"
+
+#: ../tools/drakgw:243
+#, c-format
+msgid "The maximum lease (in seconds)"
+msgstr "Hámarksleigutími (í sekúndum)"
+
+#: ../tools/drakgw:266
+#, c-format
+msgid "Proxy caching server (SQUID)"
+msgstr "Vefsels-þjónusta (SQUID)"
+
+#: ../tools/drakgw:270
+#, c-format
+msgid "Use this gateway as proxy caching server"
+msgstr "Nota þessa netgátt sem vefsels-þjónustu"
+
+#: ../tools/drakgw:271
+#, c-format
+msgid "Admin mail"
+msgstr "Netfang kerfisstjóra"
+
+#: ../tools/drakgw:272
+#, c-format
+msgid "Visible hostname"
+msgstr "Sýnilegt vélarnafn"
+
+#: ../tools/drakgw:273
+#, c-format
+msgid "Proxy port"
+msgstr "Sel-gátt"
+
+#: ../tools/drakgw:274
+#, c-format
+msgid "Cache size (MB)"
+msgstr "Stærð biðminnis (MB)"
+
+#: ../tools/drakgw:296
+#, c-format
+msgid "Broadcast printer information"
+msgstr "Útvarpa upplýsingum um prentara"
+
+#: ../tools/drakgw:313
+#, c-format
+msgid "Internet Connection Sharing is now enabled."
+msgstr "Samnýting Internetstengingar er nú virk."
+
+#: ../tools/drakgw:319
+#, c-format
+msgid "Internet Connection Sharing is now disabled."
+msgstr "Samnýting Internets tengingar er nú aftengd."
+
+#: ../tools/drakgw:325
+#, c-format
+msgid ""
+"Everything has been configured.\n"
+"You may now share Internet connection with other computers on your Local "
+"Area Network, using automatic network configuration (DHCP) and\n"
+" a Transparent Proxy Cache server (SQUID)."
+msgstr ""
+"Allt hefur verið uppsett.\n"
+"Þú getur nú deilt Internet tengingunni með öðrum vélum á staðarnetinu, með "
+"því að nota sjálfvirka netuppsetningu (DHCP) og \n"
+"gagnsæja vefsels-þjónustu (SQUID)."
+
+#: ../tools/drakgw:359
+#, c-format
+msgid "Disabling servers..."
+msgstr "Aftengi miðlara..."
+
+#: ../tools/drakgw:373
+#, c-format
+msgid "Firewalling configuration detected!"
+msgstr "Fann eldveggsuppsetningu!"
+
+#: ../tools/drakgw:374
+#, c-format
+msgid ""
+"Warning! An existing firewalling configuration has been detected. You may "
+"need some manual fixes after installation."
+msgstr ""
+"Aðvörun! Eldveggsuppsetning hefur fundist. Þú þarft kannski að breyta henni "
+"handvirkt eftir uppsetninguna."
+
+#: ../tools/drakgw:379
+#, c-format
+msgid "Configuring..."
+msgstr "Uppsetning..."
+
+#: ../tools/drakgw:380
+#, c-format
+msgid "Configuring firewall..."
+msgstr "Stilli eldvegg..."
+
+#: ../tools/drakhosts:100
+#, c-format
+msgid "Please add an host to be able to modify it."
+msgstr "Bættu við vél svo hægt sé að sýsla með hana."
+
+#: ../tools/drakhosts:110
+#, c-format
+msgid "Please modify information"
+msgstr "Breyttu upplýsingum"
+
+#: ../tools/drakhosts:111
+#, c-format
+msgid "Please delete information"
+msgstr "Eyddu upplýsingum"
+
+#: ../tools/drakhosts:112
+#, c-format
+msgid "Please add information"
+msgstr "Bættu við upplýsingum"
+
+#: ../tools/drakhosts:116
+#, c-format
+msgid "IP address:"
+msgstr "IP-tala:"
+
+#: ../tools/drakhosts:117
+#, c-format
+msgid "Host name:"
+msgstr "Vélarnafn:"
+
+#: ../tools/drakhosts:118
+#, c-format
+msgid "Host Aliases:"
+msgstr "Samheiti vélar:"
+
+#: ../tools/drakhosts:122 ../tools/drakhosts:128 ../tools/draksambashare:209
+#: ../tools/draksambashare:230 ../tools/draksambashare:376
+#: ../tools/draksambashare:607 ../tools/draksambashare:774
+#, c-format
+msgid "Error!"
+msgstr "Villa!"
+
+#: ../tools/drakhosts:122
+#, c-format
+msgid "Please enter a valid IP address."
+msgstr "Gefðu upp gilda IP-tölu."
+
+#: ../tools/drakhosts:128
+#, c-format
+msgid "Same IP is already in %s file."
+msgstr "Sama IP-tala er þegar í skrá %s."
+
+#: ../tools/drakhosts:196
+#, c-format
+msgid "Host Aliases"
+msgstr "Samheiti vélar"
+
+#: ../tools/drakhosts:206 ../tools/drakhosts:236
+#, c-format
+msgid "Manage hosts definitions"
+msgstr "Sýsla með vélaskilgreiningar"
+
+#: ../tools/drakhosts:222 ../tools/drakhosts:249
+#, c-format
+msgid "Modify entry"
+msgstr "Breyta færslu"
+
+#: ../tools/drakhosts:241 ../tools/draknfs:563 ../tools/draksambashare:1102
+#: ../tools/draksambashare:1133 ../tools/draksambashare:1164
+#: ../tools/drakvpn-old:253 ../tools/drakvpn-old:391
+#, c-format
+msgid "Add"
+msgstr "Bæta við"
+
+#: ../tools/drakhosts:242
+#, c-format
+msgid "Add entry"
+msgstr "Bæta við færslu"
+
+#: ../tools/drakhosts:245
+#, c-format
+msgid "Failed to add host."
+msgstr "Tókst ekki að bæta við vél."
+
+#: ../tools/drakhosts:248 ../tools/draknfs:570 ../tools/draksambashare:1059
+#: ../tools/draksambashare:1104 ../tools/draksambashare:1135
+#: ../tools/draksambashare:1172
+#, c-format
+msgid "Modify"
+msgstr "Breyta"
+
+#: ../tools/drakhosts:252
+#, c-format
+msgid "Failed to Modify host."
+msgstr "Tókst ekki að breyta vél."
+
+#: ../tools/drakhosts:255 ../tools/drakids:87 ../tools/drakids:96
+#: ../tools/draknfs:577 ../tools/draksambashare:1060
+#: ../tools/draksambashare:1112 ../tools/draksambashare:1143
+#: ../tools/draksambashare:1180 ../tools/drakvpn-old:253
+#: ../tools/drakvpn-old:391
+#, c-format
+msgid "Remove"
+msgstr "Fjarlægja"
+
+#: ../tools/drakhosts:259
+#, c-format
+msgid "Failed to remove host."
+msgstr "Tókst ekki að fjarlægja vél."
+
+#: ../tools/drakhosts:262 ../tools/drakinvictus:141
+#: ../tools/draknetprofile:147 ../tools/drakroam:309 ../tools/net_applet:138
+#, c-format
+msgid "Quit"
+msgstr "Hætta"
+
+#: ../tools/drakids:28
+#, c-format
+msgid "Allowed addresses"
+msgstr "Leyfð vistföng"
+
+#: ../tools/drakids:65 ../tools/drakids:181 ../tools/drakids:190
+#: ../tools/drakids:215 ../tools/drakids:224 ../tools/drakids:234
+#: ../tools/drakids:326 ../tools/net_applet:238 ../tools/net_applet:514
+#, c-format
+msgid "Unable to contact daemon"
+msgstr "Get ekki tengst þjónustu"
+
+#: ../tools/drakids:74 ../tools/drakids:102
+#, c-format
+msgid "Log"
+msgstr "Annálar"
+
+#: ../tools/drakids:78 ../tools/drakids:97 ../tools/net_applet:659
+#, c-format
+msgid "Allow"
+msgstr "Leyfa"
+
+#: ../tools/drakids:79 ../tools/drakids:88 ../tools/net_applet:660
+#, c-format
+msgid "Block"
+msgstr "Blokk"
+
+#: ../tools/drakids:80 ../tools/drakids:89 ../tools/drakids:98
+#: ../tools/drakids:109 ../tools/drakids:122 ../tools/drakids:130
+#: ../tools/draknfs:186 ../tools/net_monitor:120
+#, c-format
+msgid "Close"
+msgstr "Loka"
+
+#: ../tools/drakids:83
+#, c-format
+msgid "Allowed services"
+msgstr "Leyfðar þjónustur"
+
+#: ../tools/drakids:92
+#, c-format
+msgid "Blocked services"
+msgstr "Lokaðar þjónustur"
+
+#: ../tools/drakids:106
+#, c-format
+msgid "Clear logs"
+msgstr "Hreinsa annála"
+
+#: ../tools/drakids:107 ../tools/drakids:112 ../tools/net_applet:602
+#, c-format
+msgid "Blacklist"
+msgstr "Svartlisti"
+
+#: ../tools/drakids:108 ../tools/drakids:125 ../tools/net_applet:607
+#, c-format
+msgid "Whitelist"
+msgstr "Vinalisti"
+
+#: ../tools/drakids:116
+#, c-format
+msgid "Remove from blacklist"
+msgstr "Fjarlægja úr svartlista"
+
+#: ../tools/drakids:117
+#, c-format
+msgid "Move to whitelist"
+msgstr "Færa á vinalista"
+
+#: ../tools/drakids:129
+#, c-format
+msgid "Remove from whitelist"
+msgstr "Fjarlægja úr vinalista"
+
+#: ../tools/drakids:247
+#, c-format
+msgid "Date"
+msgstr "Dagsetning"
+
+#: ../tools/drakids:248
+#, c-format
+msgid "Attacker"
+msgstr "Árásaraðili"
+
+#: ../tools/drakids:249
+#, c-format
+msgid "Attack type"
+msgstr "Árásartegund"
+
+#: ../tools/drakids:250 ../tools/drakids:283
+#, c-format
+msgid "Service"
+msgstr "Þjónusta"
+
+#: ../tools/drakids:251
+#, c-format
+msgid "Network interface"
+msgstr "Nettengi"
+
+#: ../tools/drakids:282
+#, c-format
+msgid "Application"
+msgstr "Forrit"
+
+#: ../tools/drakids:284
+#, c-format
+msgid "Status"
+msgstr "Staða"
+
+#: ../tools/drakids:286
+#, c-format
+msgid "Allowed"
+msgstr "Leyft"
+
+#: ../tools/drakids:287
+#, c-format
+msgid "Blocked"
+msgstr "Lokað"
+
+#: ../tools/drakinvictus:36
+#, c-format
+msgid "Invictus Firewall"
+msgstr "Ósigrandi eldveggur"
+
+#: ../tools/drakinvictus:53
+#, c-format
+msgid "Start as master"
+msgstr "Byrja sem stjórnandi"
+
+#: ../tools/drakinvictus:72
+#, c-format
+msgid "A password is required."
+msgstr "Lykilorðs er þörf"
+
+#: ../tools/drakinvictus:100
+#, c-format
+msgid ""
+"This tool allows to set up network interfaces failover and firewall "
+"replication."
+msgstr "Þetta tól aðstoðar við uppsetningu á varaleiðum fyrir net og eldvegg."
+
+#: ../tools/drakinvictus:102
+#, c-format
+msgid "Network redundancy (leave empty if interface is not used)"
+msgstr "Tvöföldun nettengis (skilja eftir autt ef ekki notað)"
+
+#: ../tools/drakinvictus:105
+#, c-format
+msgid "Real address"
+msgstr "Raunverulegt vistfang"
+
+#: ../tools/drakinvictus:105
+#, c-format
+msgid "Virtual shared address"
+msgstr "Sameiginlegt sýndarvistfang"
+
+#: ../tools/drakinvictus:105
+#, c-format
+msgid "Virtual ID"
+msgstr "Sýndarauðkenni"
+
+#: ../tools/drakinvictus:114
+#, c-format
+msgid "Firewall replication"
+msgstr "Varaeldveggur"
+
+#: ../tools/drakinvictus:116
+#, c-format
+msgid "Synchronize firewall conntrack tables"
+msgstr "Samhæfa conntrack töflur (virkar tengingar)"
+
+#: ../tools/drakinvictus:123
+#, c-format
+msgid "Synchronization network interface"
+msgstr "Samræming nettengis"
+
+#: ../tools/drakinvictus:132
+#, c-format
+msgid "Connection mark bit"
+msgstr "Tengingarmerking"
+
+#: ../tools/draknetprofile:36
+#, c-format
+msgid "Network profiles"
+msgstr "Netsnið"
+
+#: ../tools/draknetprofile:67
+#, c-format
+msgid "Profile"
+msgstr "Snið"
+
+#: ../tools/draknetprofile:99
+#, c-format
+msgid "New profile..."
+msgstr "Nýtt snið..."
+
+#: ../tools/draknetprofile:102
+#, c-format
+msgid ""
+"Name of the profile to create (the new profile is created as a copy of the "
+"current one):"
+msgstr ""
+"Nafn sniðs sem á að búa til (nýtt snið er búið til sem afrit af núverandi "
+"sniði):"
+
+#: ../tools/draknetprofile:113
+#, c-format
+msgid "The \"%s\" profile already exists!"
+msgstr "Sniðið \"%s\" er þegar til!"
+
+#: ../tools/draknetprofile:129
+#, c-format
+msgid "You can not delete the default profile"
+msgstr "Þú getur ekki eytt sjálfgefnu sniði"
+
+#: ../tools/draknetprofile:131
+#, c-format
+msgid "You can not delete the current profile"
+msgstr "Þú getur ekki eytt núverandi sniði"
+
+#: ../tools/draknetprofile:141
+#, c-format
+msgid ""
+"This tool allows to activate an existing network profile, and to manage "
+"(clone, delete) profiles."
+msgstr ""
+"Þetta tól aðstoðar við ræsingu á skilgreindu netsniði, og sýsl (afrita, "
+"eyða) með snið."
+
+#: ../tools/draknetprofile:141
+#, c-format
+msgid "To modify a profile, you have to activate it first."
+msgstr "Til að breyta sniði verður þú að virkja það fyrst."
+
+#: ../tools/draknetprofile:144
+#, c-format
+msgid "Activate"
+msgstr "Virkja"
+
+#: ../tools/draknetprofile:145
+#, c-format
+msgid "Clone"
+msgstr "Klóna"
+
+#: ../tools/draknetprofile:146
+#, c-format
+msgid "Delete"
+msgstr "Eyða"
+
+#: ../tools/draknfs:41
+#, c-format
+msgid "map root user as anonymous"
+msgstr "varpa root notanda sem gesti"
+
+#: ../tools/draknfs:42
+#, c-format
+msgid "map all users to anonymous user"
+msgstr "varpa öllum notendum sem gestum"
+
+#: ../tools/draknfs:43
+#, c-format
+msgid "No user UID mapping"
+msgstr "Engin vörpun á UID notanda"
+
+#: ../tools/draknfs:44
+#, c-format
+msgid "allow real remote root access"
+msgstr "leyfa raunverulega fjar-aðgang að root"
+
+#: ../tools/draknfs:58 ../tools/draknfs:59 ../tools/draknfs:60
+#: ../tools/draksambashare:161 ../tools/draksambashare:162
+#: ../tools/draksambashare:163
+#, c-format
+msgid "/_File"
+msgstr "/_Skrá"
+
+#: ../tools/draknfs:59 ../tools/draksambashare:162
+#, c-format
+msgid "/_Write conf"
+msgstr "/_Skrifa stillingar"
+
+#: ../tools/draknfs:60 ../tools/draksambashare:163
+#, c-format
+msgid "/_Quit"
+msgstr "/_Hætta"
+
+#: ../tools/draknfs:60 ../tools/draksambashare:163
+#, c-format
+msgid "<control>Q"
+msgstr "<control>Q"
+
+#: ../tools/draknfs:63 ../tools/draknfs:64 ../tools/draknfs:65
+#, c-format
+msgid "/_NFS Server"
+msgstr "/_NFS Miðlari"
+
+#: ../tools/draknfs:64 ../tools/draksambashare:166
+#, c-format
+msgid "/_Restart"
+msgstr "/Endur_ræsa"
+
+#: ../tools/draknfs:65 ../tools/draksambashare:167
+#, c-format
+msgid "/R_eload"
+msgstr "/_Endurhlaða"
+
+#: ../tools/draknfs:84
+#, c-format
+msgid "NFS server"
+msgstr "NFS miðlari"
+
+#: ../tools/draknfs:84
+#, c-format
+msgid "Restarting/Reloading NFS server..."
+msgstr "Endurræsi/Endurstilli NFS miðlara..."
+
+#: ../tools/draknfs:85
+#, c-format
+msgid "Error Restarting/Reloading NFS server"
+msgstr "Villa við Endurræsingu/Endurstillingu NFS miðlara"
+
+#: ../tools/draknfs:101 ../tools/draksambashare:225
+#, c-format
+msgid "Directory Selection"
+msgstr "Möppuval"
+
+#: ../tools/draknfs:106 ../tools/draksambashare:230
+#, c-format
+msgid "Should be a directory."
+msgstr "Ætti að vera mappa."
+
+#: ../tools/draknfs:137
+#, c-format
+msgid ""
+"<span weight=\"bold\">NFS clients</span> may be specified in a number of "
+"ways:\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">single host:</span> a host either by an "
+"abbreviated name recognized be the resolver, fully qualified domain name, or "
+"an IP address\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">netgroups:</span> NIS netgroups may be given "
+"as @group.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">wildcards:</span> machine names may contain "
+"the wildcard characters * and ?. For instance: *.cs.foo.edu  matches all  "
+"hosts  in the domain cs.foo.edu.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">IP networks:</span> you can also export "
+"directories to all hosts on an IP (sub-)network simultaneously. for example, "
+"either `/255.255.252.0' or  `/22'  appended to the network base address "
+"result.\n"
+msgstr ""
+"<span weight=\"bold\">NFS biðlara</span> má skilgreina á ýmsa vegu:\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">einstök vél:</span>þú getur tilgreint vél "
+"annað hvort með styttu nafni sem nafnaþjónusta skilur, fullu lénsnafni eða "
+"IP-tölu\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">nethópar:</span> NIS nethópa má gefa upp sem "
+"@hopur.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">algildistákn:</span> vélanöfn mega innihalda "
+"algildistáknin * and ?. Til dæmis: *.inni.mitt.net  veitir öllum vélum í "
+"léninu 'inni.mitt.net' aðgang.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">IP net:</span> þú getur leyft aðgang að "
+"möppum á öllu staðarnetinu samtímis. til dæmis annað hvort `/255.255.252.0' "
+"eða `/22' bætt við grunn-IP-tölu staðarnetsins.\n"
+
+#: ../tools/draknfs:152
+#, c-format
+msgid ""
+"<span weight=\"bold\">User ID options</span>\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">map root user as anonymous:</span> map "
+"requests from uid/gid 0 to the anonymous uid/gid (root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">allow real remote root access:</span> turn "
+"off root squashing. This option is mainly useful for diskless clients "
+"(no_root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">map all users to anonymous user:</span> map "
+"all uids and gids to the anonymous  user (all_squash). Useful for NFS-"
+"exported public FTP directories, news spool directories, etc. The opposite "
+"option is no user UID mapping (no_all_squash), which is the default "
+"setting.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">anonuid and anongid:</span> explicitly set "
+"the uid and gid of the anonymous account.\n"
+msgstr ""
+"<span weight=\"bold\">Valkostir notanda-auðkennis (UID)</span>\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">varpa root notanda sem gesti:</span> varpar "
+"beiðnum frá uid/gid 0 (venjul. root) yfir á uid/gid gestanotanda "
+"(root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">leyfa raunverulega root aðgang:</span> "
+"slökkva á 'root_squash'. Þessi valkostur er aðallega nytsamur fyrir "
+"disklausa biðlara (no_root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">varpa öllum notendum sem gestanotanda:</"
+"span> varpa öllum auðkennum notanda og hópa yfir á gestanotanda. Handhægt "
+"fyrir opnar NFS-möppur, frétta-safnmöppur, o.s.frv. Andstæðan er "
+"(no_all_squash), sem er sjálfgefin.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">anonuid og anongid:</span> tiltaka "
+"sérstaklega auðkennistölur (uid og gid) á gestanotanda.\n"
+
+#: ../tools/draknfs:168
+#, c-format
+msgid "Synchronous access:"
+msgstr "Samhæfður aðgangur:"
+
+#: ../tools/draknfs:169
+#, c-format
+msgid "Secured Connection:"
+msgstr "Örugg tenging:"
+
+#: ../tools/draknfs:170
+#, c-format
+msgid "Read-Only share:"
+msgstr "Aðeins lestraraðgangur:"
+
+#: ../tools/draknfs:172
+#, c-format
+msgid "Advanced Options"
+msgstr "Ítarlegri valkostir"
+
+#: ../tools/draknfs:173
+#, c-format
+msgid ""
+"<span foreground=\"royalblue3\">%s</span> this option requires that requests "
+"originate on an internet port less than IPPORT_RESERVED (1024). This option "
+"is on by default."
+msgstr ""
+"<span foreground=\"royalblue3\">%s</span> þessi valkostur krefst þess a' "
+"beiðnir séu upprunnar frá internet porti sem hefur lægra tölugildi en "
+"IPPORT_RESERVED (1024). Þessi valkostur er sjálfkrafa virkur."
+
+#: ../tools/draknfs:174
+#, c-format
+msgid ""
+"<span foreground=\"royalblue3\">%s</span> allow either only read or both "
+"read and write requests on this NFS volume. The default is to disallow any "
+"request which changes the filesystem. This can also be made explicit by "
+"using this option."
+msgstr ""
+"<span foreground=\"royalblue3\">%s</span> leyfa annað hvort lestraraðgang "
+"eða bæði lestrar- og skriftar-aðgang á þessari NFS möppu. Sjálfgefið er að "
+"hafna öllum beiðnum sem breyta skráakerfinu. Þetta er einnig hægt að þvinga "
+"fram með því að nota þennan valkost."
+
+#: ../tools/draknfs:175
+#, c-format
+msgid ""
+"<span foreground=\"royalblue3\">%s</span> disallows the NFS server to "
+"violate the NFS protocol and to reply to requests before any changes made by "
+"these requests have been committed to stable storage (e.g. disc drive)."
+msgstr ""
+"<span foreground=\"royalblue3\">%s</span> leyfir NFS miðlaranum ekki að "
+"hunsa NFS samskiptaregluna og svara beiðnum áður en breytingar hafa verið "
+"vistaðar á varanlegum miðli (þ.e. diski)."
+
+#: ../tools/draknfs:180 ../tools/draksambashare:605
+#: ../tools/draksambashare:772
+#, c-format
+msgid "Information"
+msgstr "Upplýsingar"
+
+#: ../tools/draknfs:260
+#, c-format
+msgid "Directory"
+msgstr "Mappa"
+
+#: ../tools/draknfs:264
+#, c-format
+msgid "Draknfs entry"
+msgstr "Draknfs færsla"
+
+#: ../tools/draknfs:273
+#, c-format
+msgid "Please add an NFS share to be able to modify it."
+msgstr "Bættu við NFS miðluðu svæði til að geta stillt það."
+
+#: ../tools/draknfs:357
+#, c-format
+msgid "NFS directory"
+msgstr "NFS mappa"
+
+#: ../tools/draknfs:358 ../tools/draksambashare:361
+#: ../tools/draksambashare:570 ../tools/draksambashare:749
+#, c-format
+msgid "Directory:"
+msgstr "Mappa:"
+
+#: ../tools/draknfs:359
+#, c-format
+msgid "Host access"
+msgstr "Vélaraðgangur"
+
+#: ../tools/draknfs:360
+#, c-format
+msgid "Access:"
+msgstr "Aðgangur:"
+
+#: ../tools/draknfs:361
+#, c-format
+msgid "User ID Mapping"
+msgstr "Vörpun á ID notanda"
+
+#: ../tools/draknfs:362
+#, c-format
+msgid "User ID:"
+msgstr "Notanda auðkenni (ID):"
+
+#: ../tools/draknfs:363
+#, c-format
+msgid "Anonymous user ID:"
+msgstr "Auðkenni (ID) nafnlauss notanda:"
+
+#: ../tools/draknfs:364
+#, c-format
+msgid "Anonymous Group ID:"
+msgstr "Auðkenni (GID) nafnlauss hóps:"
+
+#: ../tools/draknfs:400
+#, c-format
+msgid "Please specify a directory to share."
+msgstr "Gefið upp möppu sem á að miðla."
+
+#: ../tools/draknfs:402
+#, c-format
+msgid "Can't create this directory."
+msgstr "Get ekki búið til þessa möppu."
+
+#: ../tools/draknfs:405
+#, c-format
+msgid "You must specify hosts access."
+msgstr "Þú verður að skilgreina aðgang véla."
+
+#: ../tools/draknfs:485
+#, c-format
+msgid "Share Directory"
+msgstr "Miðla möppu"
+
+#: ../tools/draknfs:485
+#, c-format
+msgid "Hosts Wildcard"
+msgstr "Algildistákn véla"
+
+#: ../tools/draknfs:485
+#, c-format
+msgid "General Options"
+msgstr "Almennir valkostir"
+
+#: ../tools/draknfs:485
+#, c-format
+msgid "Custom Options"
+msgstr "Sértækir valkostir"
+
+#: ../tools/draknfs:497 ../tools/draksambashare:376
+#: ../tools/draksambashare:607 ../tools/draksambashare:774
+#, c-format
+msgid "Please enter a directory to share."
+msgstr "Gefið upp möppu sem á að miðla."
+
+#: ../tools/draknfs:504
+#, c-format
+msgid "Please use the modify button to set right access."
+msgstr "Notið hnappinn til til að setja réttan aðgang."
+
+#: ../tools/draknfs:519
+#, c-format
+msgid "Manage NFS shares"
+msgstr "Sýsla með NFS skráamiðlun"
+
+#: ../tools/draknfs:558
+#, c-format
+msgid "DrakNFS manage NFS shares"
+msgstr "DrakNFS sér um NFS miðlun"
+
+#: ../tools/draknfs:567
+#, c-format
+msgid "Failed to add NFS share."
+msgstr "Tókst ekki að bæta við NFS miðli."
+
+#: ../tools/draknfs:574
+#, c-format
+msgid "Failed to Modify NFS share."
+msgstr "Mistókst að breyta NFS miðli."
+
+#: ../tools/draknfs:581
+#, c-format
+msgid "Failed to remove an NFS share."
+msgstr "Mistókst að fjarlægja NFS miðlun."
+
+#: ../tools/drakproxy:36
+#, c-format
+msgid "You need to log out and back in again for changes to take effect"
+msgstr "Þú þarft að skrá þig út og inn aftur til að breytingar taki gildi"
+
+#: ../tools/drakroam:61
+#, c-format
+msgid "No device found"
+msgstr "Fann enginn tæki"
+
+#: ../tools/drakroam:86 ../tools/drakroam:217
+#, c-format
+msgid "Please enter settings for network"
+msgstr "Gefðu upp stillingar fyrir net"
+
+#: ../tools/drakroam:115
+#, c-format
+msgid "SSID"
+msgstr "SSID"
+
+#: ../tools/drakroam:116
+#, c-format
+msgid "Signal strength"
+msgstr "Styrkur merkis"
+
+#: ../tools/drakroam:118
+#, c-format
+msgid "Encryption"
+msgstr "Dulritun"
+
+#: ../tools/drakroam:131
+#, c-format
+msgid "Hostname changed to \"%s\""
+msgstr "Vélarnafni breytt í \"%s\""
+
+#: ../tools/drakroam:251
+#, c-format
+msgid "Connecting..."
+msgstr "Tengist..."
+
+#: ../tools/drakroam:273
+#, c-format
+msgid "Disconnect"
+msgstr "Aftengjast"
+
+#: ../tools/drakroam:273
+#, c-format
+msgid "Connect"
+msgstr "Tengjast"
+
+#: ../tools/drakroam:289
+#, c-format
+msgid "Disconnecting..."
+msgstr "Aftengist..."
+
+#: ../tools/drakroam:306
+#, c-format
+msgid "Configure"
+msgstr "Stilla"
+
+#: ../tools/drakroam:308
+#, c-format
+msgid "Refresh"
+msgstr "Endurnýja"
+
+#: ../tools/draksambashare:63
+#, c-format
+msgid "User name"
+msgstr "Notandanafn"
+
+#: ../tools/draksambashare:70
+#, c-format
+msgid "Share name"
+msgstr "Sameignarheiti"
+
+#: ../tools/draksambashare:71
+#, c-format
+msgid "Share directory"
+msgstr "Miðla möppu"
+
+#: ../tools/draksambashare:72 ../tools/draksambashare:105
+#, c-format
+msgid "Comment"
+msgstr "Athugasemd"
+
+#: ../tools/draksambashare:73 ../tools/draksambashare:106
+#, c-format
+msgid "Browseable"
+msgstr "Sýnilegt"
+
+#: ../tools/draksambashare:74
+#, c-format
+msgid "Public"
+msgstr "Almenn"
+
+#: ../tools/draksambashare:75 ../tools/draksambashare:111
+#, c-format
+msgid "Writable"
+msgstr "Skrifanlegt"
+
+#: ../tools/draksambashare:76 ../tools/draksambashare:152
+#, c-format
+msgid "Create mask"
+msgstr "Öryggis-maski"
+
+#: ../tools/draksambashare:77 ../tools/draksambashare:153
+#, c-format
+msgid "Directory mask"
+msgstr "Möppu-öryggis-maski"
+
+#: ../tools/draksambashare:78
+#, c-format
+msgid "Read list"
+msgstr "Lestrarlisti"
+
+#: ../tools/draksambashare:79 ../tools/draksambashare:112
+#: ../tools/draksambashare:584
+#, c-format
+msgid "Write list"
+msgstr "Skriflisti"
+
+#: ../tools/draksambashare:80 ../tools/draksambashare:144
+#, c-format
+msgid "Admin users"
+msgstr "Kerfisstjórar"
+
+#: ../tools/draksambashare:81 ../tools/draksambashare:145
+#, c-format
+msgid "Valid users"
+msgstr "Gildir notendur"
+
+#: ../tools/draksambashare:82
+#, c-format
+msgid "Inherit Permissions"
+msgstr "Erfa aðgangsheimildir"
+
+#: ../tools/draksambashare:83 ../tools/draksambashare:146
+#, c-format
+msgid "Hide dot files"
+msgstr "Fela punktaskrár"
+
+#: ../tools/draksambashare:84 ../tools/draksambashare:147
+#, c-format
+msgid "Hide files"
+msgstr "Fela skrár"
+
+#: ../tools/draksambashare:85 ../tools/draksambashare:151
+#, c-format
+msgid "Preserve case"
+msgstr "Varðveita há/lág-stafi"
+
+#: ../tools/draksambashare:86
+#, c-format
+msgid "Force create mode"
+msgstr "Þvinga aðgangs-maska"
+
+#: ../tools/draksambashare:87
+#, c-format
+msgid "Force group"
+msgstr "Þvinga hóp"
+
+#: ../tools/draksambashare:88 ../tools/draksambashare:150
+#, c-format
+msgid "Default case"
+msgstr "Sjálfgefið stafsetur"
+
+#: ../tools/draksambashare:103
+#, c-format
+msgid "Printer name"
+msgstr "Prentaranafn"
+
+#: ../tools/draksambashare:104
+#, c-format
+msgid "Path"
+msgstr "Slóð"
+
+#: ../tools/draksambashare:107 ../tools/draksambashare:576
+#, c-format
+msgid "Printable"
+msgstr "Prentanlegt"
+
+#: ../tools/draksambashare:108
+#, c-format
+msgid "Print Command"
+msgstr "Prentskipun"
+
+#: ../tools/draksambashare:109
+#, c-format
+msgid "LPQ command"
+msgstr "LPQ skipun"
+
+#: ../tools/draksambashare:110
+#, c-format
+msgid "Guest ok"
+msgstr "Gestir OK"
+
+#: ../tools/draksambashare:113 ../tools/draksambashare:154
+#: ../tools/draksambashare:585
+#, c-format
+msgid "Inherit permissions"
+msgstr "Erfa aðgangsheimildir"
+
+#: ../tools/draksambashare:114
+#, c-format
+msgid "Printing"
+msgstr "Prentun"
+
+#: ../tools/draksambashare:115
+#, c-format
+msgid "Create mode"
+msgstr "Aðgangs-maski"
+
+#: ../tools/draksambashare:116
+#, c-format
+msgid "Use client driver"
+msgstr "Nota rekil biðlara"
+
+#: ../tools/draksambashare:142
+#, c-format
+msgid "Read List"
+msgstr "Lestrarlisti"
+
+#: ../tools/draksambashare:143
+#, c-format
+msgid "Write List"
+msgstr "Skriflisti"
+
+#: ../tools/draksambashare:148
+#, c-format
+msgid "Force Group"
+msgstr "Þvinga hóp"
+
+#: ../tools/draksambashare:149
+#, c-format
+msgid "Force create group"
+msgstr "Þvinga nýjar skrár í notandahóp"
+
+#: ../tools/draksambashare:165 ../tools/draksambashare:166
+#: ../tools/draksambashare:167
+#, c-format
+msgid "/_Samba Server"
+msgstr "/_Samba Miðlari"
+
+#: ../tools/draksambashare:169 ../tools/draksambashare:170
+#, c-format
+msgid "/_About"
+msgstr "/_Um"
+
+#: ../tools/draksambashare:169
+#, c-format
+msgid "/_Report Bug"
+msgstr "/_Senda villutilkynningu"
+
+#: ../tools/draksambashare:170
+#, c-format
+msgid "/About..."
+msgstr "/Um..."
+
+#: ../tools/draksambashare:173
+#, c-format
+msgid "Draksambashare"
+msgstr "Draksambashare"
+
+#: ../tools/draksambashare:175
+#, c-format
+msgid "Copyright (C) %s by Mandriva"
+msgstr "Höfundaréttur (C) %s Mandriva"
+
+#: ../tools/draksambashare:177
+#, c-format
+msgid "This is a simple tool to easily manage Samba configuration."
+msgstr "Þetta er einfalt tól til að sýsla með Samba uppsetningu."
+
+#: ../tools/draksambashare:179
+#, c-format
+msgid "Mandriva Linux"
+msgstr "Mandriva Linux"
+
+#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
+#: ../tools/draksambashare:184
+#, c-format
+msgid "_: Translator(s) name(s) & email(s)\n"
+msgstr "Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
+
+#: ../tools/draksambashare:208
+#, c-format
+msgid "Restarting/Reloading Samba server..."
+msgstr "Endurræsi/Endurstilli Samba miðlara..."
+
+#: ../tools/draksambashare:209
+#, c-format
+msgid "Error Restarting/Reloading Samba server"
+msgstr "Villa við Endurræsingu/Endurstillingu Samba miðlara"
+
+#: ../tools/draksambashare:349 ../tools/draksambashare:549
+#: ../tools/draksambashare:670
+#, c-format
+msgid "Open"
+msgstr "Opna"
+
+#: ../tools/draksambashare:352
+#, c-format
+msgid "DrakSamba add entry"
+msgstr "DrakSamba bæta við færslu"
+
+#: ../tools/draksambashare:356
+#, c-format
+msgid "Add a share"
+msgstr "Bæta við svæði"
+
+#: ../tools/draksambashare:359
+#, c-format
+msgid "Name of the share:"
+msgstr "Nafn miðlaðs svæðis:"
+
+#: ../tools/draksambashare:360 ../tools/draksambashare:569
+#: ../tools/draksambashare:750
+#, c-format
+msgid "Comment:"
+msgstr "Athugasemd:"
+
+#: ../tools/draksambashare:372
+#, c-format
+msgid ""
+"Share with the same name already exist or share name empty, please choose "
+"another name."
+msgstr ""
+"Svæði með sama nafni er þegar til eða nafn svæðis er autt, veldu "
+"annað nafn."
+
+#: ../tools/draksambashare:379
+#, c-format
+msgid "Can't create the directory, please enter a correct path."
+msgstr "Get ekki búið til möppu, vinsamlega sláðu inn rétta slóð."
+
+#: ../tools/draksambashare:382 ../tools/draksambashare:605
+#: ../tools/draksambashare:772
+#, c-format
+msgid "Please enter a Comment for this share."
+msgstr "Gefðu upp lýsingu á þessu svæði."
+
+#: ../tools/draksambashare:413
+#, c-format
+msgid "pdf-gen - a PDF generator"
+msgstr "pdf-gen - búa til PDF skjöl"
+
+#: ../tools/draksambashare:414
+#, c-format
+msgid "printers - all printers available"
+msgstr "printers - allir tiltækir prentarar"
+
+#: ../tools/draksambashare:418
+#, c-format
+msgid "Add Special Printer share"
+msgstr "Bæta við sérstökum miðluðum prentara"
+
+#: ../tools/draksambashare:421
+#, c-format
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
+msgstr "þessi ráðgjafi mun aðstoða þig við að búa til nýjan sérstakan Samba prentara."
+
+#: ../tools/draksambashare:428
+#, c-format
+msgid "A PDF generator already exists."
+msgstr "PDF sýndarprentari er þegar til."
+
+#: ../tools/draksambashare:452
+#, c-format
+msgid "Printers and print$ already exist."
+msgstr "Prentarar og print$ er þegar til."
+
+#: ../tools/draksambashare:502
+#, c-format
+msgid "Congratulations"
+msgstr "Til hamingju"
+
+#: ../tools/draksambashare:503
+#, c-format
+msgid "The wizard successfully added the printer Samba share"
+msgstr "Ráðgjafinn hefur bætt við Samba prentaramiðlun"
+
+#: ../tools/draksambashare:518
+#, c-format
+msgid "Failed to add printers."
+msgstr "Gat ekki bætt við prentara."
+
+#: ../tools/draksambashare:533
+#, c-format
+msgid "Please add or select a Samba printer share to be able to modify it."
+msgstr "Bættu við eða veldu miðlaðan Samba prentara til að vinna með."
+
+#: ../tools/draksambashare:552
+#, c-format
+msgid "DrakSamba Printers entry"
+msgstr "DrakSamba Prentarafærsla"
+
+#: ../tools/draksambashare:565
+#, c-format
+msgid "Printer share"
+msgstr "Prentaramiðlun"
+
+#: ../tools/draksambashare:568
+#, c-format
+msgid "Printer name:"
+msgstr "Heiti prentara:"
+
+#: ../tools/draksambashare:574 ../tools/draksambashare:755
+#, c-format
+msgid "Writable:"
+msgstr "Skrifanlegt:"
+
+#: ../tools/draksambashare:575 ../tools/draksambashare:756
+#, c-format
+msgid "Browseable:"
+msgstr "Sýnilegt:"
+
+#: ../tools/draksambashare:580
+#, c-format
+msgid "Advanced options"
+msgstr "Meiri valkostir"
+
+#: ../tools/draksambashare:582
+#, c-format
+msgid "Printer access"
+msgstr "Prentara-aðgangur"
+
+#: ../tools/draksambashare:586
+#, c-format
+msgid "Guest ok:"
+msgstr "Gestir OK:"
+
+#: ../tools/draksambashare:587
+#, c-format
+msgid "Create mode:"
+msgstr "Aðgangs-maski:"
+
+#: ../tools/draksambashare:591
+#, c-format
+msgid "Printer command"
+msgstr "Prntaraskipun"
+
+#: ../tools/draksambashare:593
+#, c-format
+msgid "Print command:"
+msgstr "Prentskipun:"
+
+#: ../tools/draksambashare:594
+#, c-format
+msgid "LPQ command:"
+msgstr "LPQ skipun:"
+
+#: ../tools/draksambashare:595
+#, c-format
+msgid "Printing:"
+msgstr "Prenta:"
+
+#: ../tools/draksambashare:611
+#, c-format
+msgid "create mode should be numeric. ie: 0755."
+msgstr "Aðgangs-maski ætti að vera tala. t.d. 0755."
+
+#: ../tools/draksambashare:673
+#, c-format
+msgid "DrakSamba entry"
+msgstr "DrakSamba færsla"
+
+#: ../tools/draksambashare:678
+#, c-format
+msgid "Please add or select a Samba share to be able to modify it."
+msgstr "Bættu við eða veldu Samba miðlað svæði svo hægt sé að breyta því."
+
+#: ../tools/draksambashare:701
+#, c-format
+msgid "Samba user access"
+msgstr "Samba notendaðagangur"
+
+#: ../tools/draksambashare:709
+#, c-format
+msgid "Mask options"
+msgstr "Valkostir öryggis-maska"
+
+#: ../tools/draksambashare:723
+#, c-format
+msgid "Display options"
+msgstr "Sýna valkosti"
+
+#: ../tools/draksambashare:745
+#, c-format
+msgid "Samba share directory"
+msgstr "Miðluð Samba mappa"
+
+#: ../tools/draksambashare:748
+#, c-format
+msgid "Share name:"
+msgstr "Nafn miðlaðrar möppu:"
+
+#: ../tools/draksambashare:754
+#, c-format
+msgid "Public:"
+msgstr "Almennt:"
+
+#: ../tools/draksambashare:778
+#, c-format
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgstr ""
+"Aðgangs-maski, 'create mode' og 'directory mask' ættu að vera tala. þ.e. "
+"0755."
+
+#: ../tools/draksambashare:785
+#, c-format
+msgid "Please create this Samba user: %s"
+msgstr "Búðu til þennann Samba notanda: %s"
+
+#: ../tools/draksambashare:889
+#, c-format
+msgid "Add Samba user"
+msgstr "Bæta við Samba notanda"
+
+#: ../tools/draksambashare:904
+#, c-format
+msgid "User information"
+msgstr "Notandaupplýsingar"
+
+#: ../tools/draksambashare:906
+#, c-format
+msgid "User name:"
+msgstr "Notendanafn:"
+
+#: ../tools/draksambashare:907
+#, c-format
+msgid "Password:"
+msgstr "Lykilorð:"
+
+#: ../tools/draksambashare:1021
+#, c-format
+msgid "Manage Samba configuration"
+msgstr "Sýsla með Samba stillingar"
+
+#: ../tools/draksambashare:1109
+#, c-format
+msgid "Failed to Modify Samba share."
+msgstr "Mistókst að breyta Samba miðli."
+
+#: ../tools/draksambashare:1118
+#, c-format
+msgid "Failed to remove a Samba share."
+msgstr "Mistókst að fjarlægja Samba miðlun."
+
+#: ../tools/draksambashare:1125
+#, c-format
+msgid "File share"
+msgstr "Miðlað svæði"
+
+#: ../tools/draksambashare:1140
+#, c-format
+msgid "Failed to Modify."
+msgstr "Gat ekki breytt."
+
+#: ../tools/draksambashare:1149
+#, c-format
+msgid "Failed to remove."
+msgstr "Gat ekki fjarlægt."
+
+#: ../tools/draksambashare:1156
+#, c-format
+msgid "Printers"
+msgstr "Prentarar"
+
+#: ../tools/draksambashare:1168
+#, c-format
+msgid "Failed to add user."
+msgstr "Gat ekki bætt við notanda."
+
+#: ../tools/draksambashare:1177
+#, c-format
+msgid "Failed to change user password."
+msgstr "Gat ekki breytt lykilorði notanda."
+
+#: ../tools/draksambashare:1189
+#, c-format
+msgid "Failed to delete user."
+msgstr "Gat ekki eytt notanda."
+
+#: ../tools/draksambashare:1194
+#, c-format
+msgid "Userdrake"
+msgstr "Userdrake"
+
+#: ../tools/draksambashare:1202
+#, c-format
+msgid "Samba Users"
+msgstr "Samba notendur"
+
+#: ../tools/draksambashare:1211
+#, c-format
+msgid "DrakSamba manage Samba shares"
+msgstr "DrakSamba sér um Samba miðlun"
+
+#: ../tools/drakvpn-old:65
+#, c-format
+msgid "DrakVPN"
+msgstr "DrakVPN"
+
+#: ../tools/drakvpn-old:87
+#, c-format
+msgid "The VPN connection is enabled."
+msgstr "VPN tengingin er virk."
+
+#: ../tools/drakvpn-old:88
+#, c-format
+msgid ""
+"The setup of a VPN connection has already been done.\n"
+"\n"
+"It's currently enabled.\n"
+"\n"
+"What would you like to do?"
+msgstr ""
+"VPN tengingin hefur þegar verið sett upp.\n"
+"\n"
+"Hún er þegar virk.\n"
+"\n"
+"Hvað viltu gera?"
+
+#: ../tools/drakvpn-old:93
+#, c-format
+msgid "disable"
+msgstr "aftengja"
+
+#: ../tools/drakvpn-old:93 ../tools/drakvpn-old:119
+#, c-format
+msgid "reconfigure"
+msgstr "endurstilla"
+
+#: ../tools/drakvpn-old:93 ../tools/drakvpn-old:119 ../tools/drakvpn-old:432
+#, c-format
+msgid "dismiss"
+msgstr "hætta við"
+
+#: ../tools/drakvpn-old:97
+#, c-format
+msgid "Disabling VPN..."
+msgstr "Aftengi VPN..."
+
+#: ../tools/drakvpn-old:106
+#, c-format
+msgid "The VPN connection is now disabled."
+msgstr "VPN tenging er nú óvirk."
+
+#: ../tools/drakvpn-old:113
+#, c-format
+msgid "VPN connection currently disabled"
+msgstr "VPN tengingin er nú óvirk"
+
+#: ../tools/drakvpn-old:114
+#, c-format
+msgid ""
+"The setup of a VPN connection has already been done.\n"
+"\n"
+"It's currently disabled.\n"
+"\n"
+"What would you like to do?"
+msgstr ""
+"VPN tengingin hefur þegar verið sett upp.\n"
+"\n"
+"Hún er nú óvirk.\n"
+"\n"
+"Hvað viltu gera?"
+
+#: ../tools/drakvpn-old:119
+#, c-format
+msgid "enable"
+msgstr "virkja"
+
+#: ../tools/drakvpn-old:127
+#, c-format
+msgid "Enabling VPN..."
+msgstr "Virkja VPN..."
+
+#: ../tools/drakvpn-old:133
+#, c-format
+msgid "The VPN connection is now enabled."
+msgstr "VPN tenging er nú virk."
+
+#: ../tools/drakvpn-old:147 ../tools/drakvpn-old:164
+#, c-format
+msgid "Simple VPN setup."
+msgstr "Einföld VPN upsetning."
+
+#: ../tools/drakvpn-old:148
+#, c-format
+msgid ""
+"You are about to configure your computer to use a VPN connection.\n"
+"\n"
+"With this feature, computers on your local private network and computers\n"
+"on some other remote private networks, can share resources, through\n"
+"their respective firewalls, over the Internet, in a secure manner. \n"
+"\n"
+"The communication over the Internet is encrypted. The local and remote\n"
+"computers look as if they were on the same network.\n"
+"\n"
+"Make sure you have configured your Network/Internet access using\n"
+"drakconnect before going any further."
+msgstr ""
+"Þú ert um það bil að fara að setja upp tölvuna þína til að nota VPN "
+"tengingu.\n"
+"\n"
+"Með þessari uppsetningu, þá geta tölvur á staðbundnu neti og tölvur á\n"
+"öðrum fjarlægum lokuðum netum, deilt þjónustu gegn um eldveggi\n"
+"yfir Internetið, á öruggan hátt\n"
+"\n"
+"Samskiptin yfir Internetið eru dulrituð. Staðbundnu og fjarlægu vélarnar\n"
+"líta út fyrir að vera á sama neti.\n"
+"\n"
+"Vertu viss um að þú hafir stillt net/Internet aðgang með drakconnect\n"
+"áður en lengra er haldið."
+
+#: ../tools/drakvpn-old:165
+#, c-format
+msgid ""
+"VPN connection.\n"
+"\n"
+"This program is based on the following projects:\n"
+" - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
+" - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
+" - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
+" - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
+" - the docs and man pages coming with the %s package\n"
+"\n"
+"Please read AT LEAST the ipsec-howto docs\n"
+"before going any further."
+msgstr ""
+"VPN tenging.\n"
+"\n"
+"Þetta forrit er byggt á eftirfarandi verkefnum:\n"
+" - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
+" - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
+" - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
+" - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
+" - Handbækur og man síður koma með %s pakkunum\n"
+"\n"
+"Vinsamlega lestu AÐ MINNSTA KOSTI ipsec \"hvernig-á-að\" leiðbeiningar\n"
+"áður en lengra er haldið."
+
+#: ../tools/drakvpn-old:208
+#, c-format
+msgid "Problems installing package %s"
+msgstr "Vandræði við að setja inn pakka %s"
+
+#: ../tools/drakvpn-old:222
+#, c-format
+msgid "Security Policies"
+msgstr "Öryggisstefnur"
+
+#: ../tools/drakvpn-old:222
+#, c-format
+msgid "IKE daemon racoon"
+msgstr "IKE daemon racoon"
+
+#: ../tools/drakvpn-old:224
+#, c-format
+msgid "Configuration file"
+msgstr "Stillingarskrá"
+
+#: ../tools/drakvpn-old:225
+#, c-format
+msgid ""
+"Configuration step!\n"
+"\n"
+"You need to define the Security Policies and then to \n"
+"configure the automatic key exchange (IKE) daemon. \n"
+"The KAME IKE daemon we're using is called 'racoon'.\n"
+"\n"
+"What would you like to configure?\n"
+msgstr ""
+"Stillingaþrep!\n"
+"\n"
+"Þú þarft að skilgreina öryggisstefnu og síðan \n"
+"stilla sjálfvirka lyklamiðlaran - (IKE) þjóninn.\n"
+"KAME IKE þjónustan sem við notum heitir 'racoon'.\n"
+"\n"
+"Hvað vilt þú stilla?\n"
+
+#: ../tools/drakvpn-old:245 ../tools/drakvpn-old:382
+#, c-format
+msgid "%s entries"
+msgstr "%s færslur"
+
+#: ../tools/drakvpn-old:246
+#, c-format
+msgid ""
+"The %s file contents\n"
+"is divided into sections.\n"
+"\n"
+"You can now:\n"
+"\n"
+"  - display, add, edit, or remove sections, then\n"
+"  - commit the changes\n"
+"\n"
+"What would you like to do?\n"
+msgstr ""
+"Innihald skráarinnar %s\n"
+"er skipt í nokkra hluta.\n"
+"\n"
+"Þú getur nú:\n"
+"\n"
+"   - sýnt, bætt við, sýslað, eða fjarlægt hluta, síðan\n"
+"   - sett inn breytingarnar\n"
+"\n"
+"Hvað vilt þú gera?\n"
+
+#: ../tools/drakvpn-old:253 ../tools/drakvpn-old:391
+#, c-format
+msgid ""
+"_:display here is a verb\n"
+"Display"
+msgstr "Sýna"
+
+#: ../tools/drakvpn-old:253 ../tools/drakvpn-old:391
+#, c-format
+msgid "Edit"
+msgstr "Sýsl"
+
+#: ../tools/drakvpn-old:253 ../tools/drakvpn-old:391
+#, c-format
+msgid "Commit"
+msgstr "Setja inn"
+
+#: ../tools/drakvpn-old:267 ../tools/drakvpn-old:271 ../tools/drakvpn-old:406
+#: ../tools/drakvpn-old:410
+#, c-format
+msgid ""
+"_:display here is a verb\n"
+"Display configuration"
+msgstr "Sýna uppsetningu"
+
+#: ../tools/drakvpn-old:272
+#, c-format
+msgid ""
+"The %s file does not exist.\n"
+"\n"
+"This must be a new configuration.\n"
+"\n"
+"You'll have to go back and choose 'add'.\n"
+msgstr ""
+"Skráin %s er ekki til.\n"
+"\n"
+"Þetta hlýtur að vera ný uppsetning.\n"
+"\n"
+"Þú verður að fara til baka og velja 'Bæta við'.\n"
+
+#: ../tools/drakvpn-old:301
+#, c-format
+msgid ""
+"Add a Security Policy.\n"
+"\n"
+"You can now add a Security Policy.\n"
+"\n"
+"Choose continue when you are done to write the data.\n"
+msgstr ""
+"Bæta við öryggisstefnu.\n"
+"\n"
+"Þú getur nú bætt við öryggisstefnu.\n"
+"\n"
+"Veldu síðan 'Áfram' til að skrifa gögnin.\n"
+
+#: ../tools/drakvpn-old:333 ../tools/drakvpn-old:523
+#, c-format
+msgid "Edit section"
+msgstr "Sýsla með kafla"
+
+#: ../tools/drakvpn-old:334
+#, c-format
+msgid ""
+"Your %s file has several sections or connections.\n"
+"\n"
+"You can choose here below the one you want to edit \n"
+"and then click on next.\n"
+msgstr ""
+"%s skráin þín getur innihaldið nokkra kafla eða tengingar.\n"
+"\n"
+"Þú getur valið þann sem þú vilt sýsla með hér að neðan \n"
+"og smellt á 'Næsta'.\n"
+
+#: ../tools/drakvpn-old:337 ../tools/drakvpn-old:357 ../tools/drakvpn-old:528
+#: ../tools/drakvpn-old:574
+#, c-format
+msgid "Section names"
+msgstr "Nöfn kafla"
+
+#: ../tools/drakvpn-old:344
+#, c-format
+msgid ""
+"Edit a Security Policy.\n"
+"\n"
+"You can now edit a Security Policy.\n"
+"\n"
+"Choose continue when you are done to write the data.\n"
+msgstr ""
+"Sýsla með öryggisstefnur.\n"
+"\n"
+"Þú getur nú sýslað með öryggisstefnur.\n"
+"\n"
+"Veldu síðan 'Áfram' til að skrifa gögnin.\n"
+
+#: ../tools/drakvpn-old:353 ../tools/drakvpn-old:570
+#, c-format
+msgid "Remove section"
+msgstr "Fjarlægja hluta"
+
+#: ../tools/drakvpn-old:354 ../tools/drakvpn-old:571
+#, c-format
+msgid ""
+"Your %s file has several sections or connections.\n"
+"\n"
+"You can choose here below the one you want to remove\n"
+"and then click on next.\n"
+msgstr ""
+"Skráin %s hefur marga kafla eða tengingar.\n"
+"\n"
+"Þú getur valið þann sem þú vilt fjarlægja hér að neðan \n"
+"og smella á 'Næst'.\n"
+
+#: ../tools/drakvpn-old:383
+#, c-format
+msgid ""
+"The racoon.conf file configuration.\n"
+"\n"
+"The contents of this file is divided into sections.\n"
+"You can now:\n"
+"  - display \t\t (display the file contents)\n"
+"  - add\t\t\t (add one section)\n"
+"  - edit \t\t\t (modify parameters of an existing section)\n"
+"  - remove \t\t (remove an existing section)\n"
+"  - commit \t\t (writes the changes to the real file)"
+msgstr ""
+"Stillingar racoon.conf skráarinnar.\n"
+"\n"
+"Þessi skrá er kaflaskipt.\n"
+"Þú getur nú:\n"
+"  - display \t\t (sýna innihald skráar)\n"
+"  - add\t\t\t (Bæta við kafla)\n"
+"  - edit \t\t\t (breyta viðföngum í kafla)\n"
+"  - remove \t\t (fjarlægja kafla)\n"
+"  - commit \t\t (skrifa breytingar í raunverulega skrá)"
+
+#: ../tools/drakvpn-old:411
+#, c-format
+msgid ""
+"The %s file does not exist\n"
+"\n"
+"This must be a new configuration.\n"
+"\n"
+"You'll have to go back and choose configure.\n"
+msgstr ""
+"Skráin %s er ekki til\n"
+"\n"
+"Þetta hlýtur að vera ný uppsetning.\n"
+"\n"
+"Þú verður að fara til baka og velja stillingar.\n"
+
+#: ../tools/drakvpn-old:425
+#, c-format
+msgid "racoon.conf entries"
+msgstr "racoon.conf færslur"
+
+#: ../tools/drakvpn-old:426
+#, c-format
+msgid ""
+"The 'add' sections step.\n"
+"\n"
+"Here below is the racoon.conf file skeleton:\n"
+"\t'path'\n"
+"\t'remote'\n"
+"\t'sainfo' \n"
+"\n"
+"Choose the section you would like to add.\n"
+msgstr ""
+"'Bæta við' kafla skrefið.\n"
+"\n"
+"Hér er beinagrind af racoon.conf skrá:\n"
+"\t'path'\n"
+"\t'remote'\n"
+"\t'sainfo' \n"
+"\n"
+"Veldu kafla sem þú vilt bæta við.\n"
+
+#: ../tools/drakvpn-old:432
+#, c-format
+msgid "path"
+msgstr "slóð"
+
+#: ../tools/drakvpn-old:432
+#, c-format
+msgid "remote"
+msgstr "yfir net"
+
+#: ../tools/drakvpn-old:432
+#, c-format
+msgid "sainfo"
+msgstr "sainfo"
+
+#: ../tools/drakvpn-old:440
+#, c-format
+msgid ""
+"The 'add path' section step.\n"
+"\n"
+"The path sections have to be on top of your racoon.conf file.\n"
+"\n"
+"Put your mouse over the certificate entry to obtain online help."
+msgstr ""
+"'Bæta við slóð' þrepið.\n"
+"\n"
+"Slóðarkaflinn verður að vera efst í racoon.conf skránni.\n"
+"\n"
+"Færðu músabendilinn yfir skírteinis-færsluna til að sækja hjálp."
+
+#: ../tools/drakvpn-old:443
+#, c-format
+msgid "path type"
+msgstr "slóðartegund"
+
+#: ../tools/drakvpn-old:447
+#, c-format
+msgid ""
+"path include path: specifies a path to include\n"
+"a file. See File Inclusion.\n"
+"\tExample: path include '/etc/racoon'\n"
+"\n"
+"path pre_shared_key file: specifies a file containing\n"
+"pre-shared key(s) for various ID(s). See Pre-shared key File.\n"
+"\tExample: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
+"\n"
+"path certificate path: racoon(8) will search this directory\n"
+"if a certificate or certificate request is received.\n"
+"\tExample: path certificate '/etc/cert' ;\n"
+"\n"
+"File Inclusion: include file \n"
+"other configuration files can be included.\n"
+"\tExample: include \"remote.conf\" ;\n"
+"\n"
+"Pre-shared key File: Pre-shared key file defines a pair\n"
+"of the identifier and the shared secret key which are used at\n"
+"Pre-shared key authentication method in phase 1."
+msgstr ""
+"path include path: tilgreinir slóð til að innifela\n"
+"skrá. Sjá Lesa inn skrá.\n"
+"\tDæmi: path include '/etc/racoon'\n"
+"\n"
+"path pre_shared_key file: skilgreinir skrá sem inniheldur\n"
+"for-deili lykil fyrir ákveðin auðkenni. Sjá Pre-shared key File.\n"
+"\tDæmi: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
+"\n"
+"path certificate path: racoon(8) mun leita í þessari möppu\n"
+"ef skírteini eða beiðni um skírteini er móttekin.\n"
+"\tDæmi: path certificate '/etc/cert' ;\n"
+"\n"
+"Innifela skrá: lesa inn skrá \n"
+"aðrar skilgreiningraskrár geta verið innifaldar.\n"
+"\tDæmi: include \"remote.conf\" ;\n"
+"\n"
+"Pre-shared key File: Fyrirfram deild lykil skrá skilgreinir\n"
+"auðkenni og dulritunarlykil sem eru notaðir í fyrsta hluta\n"
+"For-deili-lykils auðkennisaðferðinni."
+
+#: ../tools/drakvpn-old:467 ../tools/drakvpn-old:560
+#, c-format
+msgid "real file"
+msgstr "raunveruleg skrá"
+
+#: ../tools/drakvpn-old:490
+#, c-format
+msgid ""
+"Make sure you already have the path sections\n"
+"on the top of your racoon.conf file.\n"
+"\n"
+"You can now choose the remote settings.\n"
+"Choose continue or previous when you are done.\n"
+msgstr ""
+"Vertu viss um að þú hafir þegar slóðarhlutan\n"
+"efst í racoon.conf skránni.\n"
+"\n"
+"Þú getur nú breytt \"remote\" stillingum.\n"
+"Veldu 'Áfram' eða 'Fyrra' þegar þú ert búinn.\n"
+
+#: ../tools/drakvpn-old:507
+#, c-format
+msgid ""
+"Make sure you already have the path sections\n"
+"on the top of your %s file.\n"
+"\n"
+"You can now choose the sainfo settings.\n"
+"Choose continue or previous when you are done.\n"
+msgstr ""
+"Vertu viss um að þú sért með slóðarkaflann\n"
+"efst í %s skránni.\n"
+"\n"
+"Þú getur nú valið \"sainfo\" stillingarnar.\n"
+"Veldu 'Áfram' eða 'Fyrri' þegar þú ert búinn.\n"
+
+#: ../tools/drakvpn-old:524
+#, c-format
+msgid ""
+"Your %s file has several sections or connections.\n"
+"\n"
+"You can choose here in the list below the one you want\n"
+"to edit and then click on next.\n"
+msgstr ""
+"%s skráin inniheldur nokkra hluta eða tengingar.\n"
+"\n"
+"Þú getur valið hvern af þeim þú vilt sýsla við hér að neðan\n"
+"og smellt á 'Næsta'.\n"
+
+#: ../tools/drakvpn-old:535
+#, c-format
+msgid ""
+"Your %s file has several sections.\n"
+"\n"
+"\n"
+"You can now edit the remote section entries.\n"
+"\n"
+"Choose continue when you are done to write the data.\n"
+msgstr ""
+"Skráin þín %s inniheldur nokkra hluta.\n"
+"\n"
+"\n"
+"Þú getur nú sýslað með færslur í \"remote\" hlutanum.\n"
+"\n"
+"Veldu 'Áfram' þegar þú ert búinn til að skrifa gögnin.\n"
+
+#: ../tools/drakvpn-old:544
+#, c-format
+msgid ""
+"Your %s file has several sections.\n"
+"\n"
+"You can now edit the sainfo section entries.\n"
+"\n"
+"Choose continue when you are done to write the data."
+msgstr ""
+"Skráin þín %s inniheldur nokkra hluta.\n"
+"\n"
+"Þú getur nú sýslað með færslur í \"sainfo\" hlutanum.\n"
+"\n"
+"Veldu 'Áfram' þegar þú ert búinn til að skrifa gögnin."
+
+#: ../tools/drakvpn-old:552
+#, c-format
+msgid ""
+"This section has to be on top of your\n"
+"%s file.\n"
+"\n"
+"Make sure all other sections follow these path\n"
+"sections.\n"
+"\n"
+"You can now edit the path entries.\n"
+"\n"
+"Choose continue or previous when you are done.\n"
+msgstr ""
+"Þessi hluti verður að vera efst í þinni\n"
+"%s skrá.\n"
+"\n"
+"Vertu viss um að allir aðrir hlutar séu á eftir\n"
+"þessum slóðarhluta.\n"
+"\n"
+"Þú getur nú sýslað með slóðarfærslurnar.\n"
+"\n"
+"Veldu 'Áfram' eða 'Fyrri' þegar þú ert búinn.\n"
+
+#: ../tools/drakvpn-old:559
+#, c-format
+msgid "path_type"
+msgstr ""
+
+#: ../tools/drakvpn-old:599
+#, c-format
+msgid "Congratulations!"
+msgstr "Til hamingju!"
+
+#: ../tools/drakvpn-old:600
+#, c-format
+msgid ""
+"Everything has been configured.\n"
+"\n"
+"You may now share resources through the Internet,\n"
+"in a secure way, using a VPN connection.\n"
+"\n"
+"You should make sure that the tunnels shorewall\n"
+"section is configured."
+msgstr ""
+"Allt hefur verið stillt.\n"
+"\n"
+"Þú getur nú miðlað auðlindum þínum um internetið,\n"
+"á öruggan hátt, með VPN tengingu.\n"
+"\n"
+"Þú ættir að staðfesta að shorewall rásir séu opnar\n"
+"og stilltar."
+
+#: ../tools/drakvpn-old:620
+#, c-format
+msgid "Sainfo source address"
+msgstr ""
+
+#: ../tools/drakvpn-old:621
+#, c-format
+msgid ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"defines the parameters of the IKE phase 2\n"
+"(IPsec-SA establishment).\n"
+"\n"
+"source_id and destination_id are constructed like:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Examples: \n"
+"\n"
+"sainfo anonymous (accepts connections from anywhere)\n"
+"\tleave blank this entry if you want anonymous\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\t203.178.141.209 is the source address\n"
+"\n"
+"sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
+"\t172.16.1.0/24 is the source address"
+msgstr ""
+
+#: ../tools/drakvpn-old:638
+#, c-format
+msgid "Sainfo source protocol"
+msgstr ""
+
+#: ../tools/drakvpn-old:639
+#, c-format
+msgid ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"defines the parameters of the IKE phase 2\n"
+"(IPsec-SA establishment).\n"
+"\n"
+"source_id and destination_id are constructed like:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Examples: \n"
+"\n"
+"sainfo anonymous (accepts connections from anywhere)\n"
+"\tleave blank this entry if you want anonymous\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\tthe first 'any' allows any protocol for the source"
+msgstr ""
+
+#: ../tools/drakvpn-old:653
+#, c-format
+msgid "Sainfo destination address"
+msgstr ""
+
+#: ../tools/drakvpn-old:654
+#, c-format
+msgid ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"defines the parameters of the IKE phase 2\n"
+"(IPsec-SA establishment).\n"
+"\n"
+"source_id and destination_id are constructed like:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Examples: \n"
+"\n"
+"sainfo anonymous (accepts connections from anywhere)\n"
+"\tleave blank this entry if you want anonymous\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\t203.178.141.218 is the destination address\n"
+"\n"
+"sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
+"\t172.16.2.0/24 is the destination address"
+msgstr ""
+
+#: ../tools/drakvpn-old:671
+#, c-format
+msgid "Sainfo destination protocol"
+msgstr ""
+
+#: ../tools/drakvpn-old:672
+#, c-format
+msgid ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"defines the parameters of the IKE phase 2\n"
+"(IPsec-SA establishment).\n"
+"\n"
+"source_id and destination_id are constructed like:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Examples: \n"
+"\n"
+"sainfo anonymous (accepts connections from anywhere)\n"
+"\tleave blank this entry if you want anonymous\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\tthe last 'any' allows any protocol for the destination"
+msgstr ""
+
+#: ../tools/drakvpn-old:686
+#, c-format
+msgid "PFS group"
+msgstr "PFS hópur"
+
+#: ../tools/drakvpn-old:688
+#, c-format
+msgid ""
+"define the group of Diffie-Hellman exponentiations.\n"
+"If you do not require PFS then you can omit this directive.\n"
+"Any proposal will be accepted if you do not specify one.\n"
+"group is one of the following: modp768, modp1024, modp1536.\n"
+"Or you can define 1, 2, or 5 as the DH group number."
+msgstr ""
+
+#: ../tools/drakvpn-old:693
+#, c-format
+msgid "Lifetime number"
+msgstr "Líftímatala"
+
+#: ../tools/drakvpn-old:694
+#, c-format
+msgid ""
+"define a lifetime of a certain time which will be pro-\n"
+"posed in the phase 1 negotiations.  Any proposal will be\n"
+"accepted, and the attribute(s) will not be proposed to\n"
+"the peer if you do not specify it(them).  They can be\n"
+"individually specified in each proposal.\n"
+"\n"
+"Examples: \n"
+"\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 60 sec;\n"
+"\tlifetime time 12 hour;\n"
+"\n"
+"So, here, the lifetime numbers are 1, 1, 30, 30, 60 and 12.\n"
+msgstr ""
+
+#: ../tools/drakvpn-old:710
+#, c-format
+msgid "Lifetime unit"
+msgstr "Líftímaeining"
+
+#: ../tools/drakvpn-old:712
+#, c-format
+msgid ""
+"define a lifetime of a certain time which will be pro-\n"
+"posed in the phase 1 negotiations.  Any proposal will be\n"
+"accepted, and the attribute(s) will not be proposed to\n"
+"the peer if you do not specify it(them).  They can be\n"
+"individually specified in each proposal.\n"
+"\n"
+"Examples: \n"
+"\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 60 sec;\n"
+"\tlifetime time 12 hour;\n"
+"\n"
+"So, here, the lifetime units are 'min', 'min', 'sec', 'sec', 'sec' and "
+"'hour'.\n"
+msgstr ""
+
+#: ../tools/drakvpn-old:728 ../tools/drakvpn-old:813
+#, c-format
+msgid "Encryption algorithm"
+msgstr "Dulritunaralgrím"
+
+#: ../tools/drakvpn-old:730
+#, c-format
+msgid "Authentication algorithm"
+msgstr "Auðkennis-algrím"
+
+#: ../tools/drakvpn-old:732
+#, c-format
+msgid "Compression algorithm"
+msgstr "Þjöppunar-algrím"
+
+#: ../tools/drakvpn-old:733
+#, c-format
+msgid "deflate"
+msgstr "Þjappa"
+
+#: ../tools/drakvpn-old:740
+#, c-format
+msgid "Remote"
+msgstr "Fjarlæg vél"
+
+#: ../tools/drakvpn-old:741
+#, c-format
+msgid ""
+"remote (address | anonymous) [[port]] { statements }\n"
+"specifies the parameters for IKE phase 1 for each remote node.\n"
+"The default port is 500.  If anonymous is specified, the state-\n"
+"ments apply to all peers which do not match any other remote\n"
+"directive.\n"
+"\n"
+"Examples: \n"
+"\n"
+"remote anonymous\n"
+"remote ::1 [8000]"
+msgstr ""
+"remote (addressa | anonymous) [[port]] { setningar }\n"
+"tilgreinir gildi fyrsta fasa IKE fyrir hvern fjarpunkt.\n"
+"Sjálfgefið port er 500.  Ef anonymous er tilgreint, þá eiga\n"
+"setningarnar við alla mótaðila sem passa ekki við önnur\n"
+"auðkenni.\n"
+"\n"
+"Dæmi: \n"
+"\n"
+"remote anonymous\n"
+"remote ::1 [8000]"
+
+#: ../tools/drakvpn-old:749
+#, c-format
+msgid "Exchange mode"
+msgstr "Samskiptahamur"
+
+#: ../tools/drakvpn-old:751
+#, c-format
+msgid ""
+"defines the exchange mode for phase 1 when racoon is the\n"
+"initiator. Also it means the acceptable exchange mode\n"
+"when racoon is responder. More than one mode can be\n"
+"specified by separating them with a comma. All of the\n"
+"modes are acceptable. The first exchange mode is what\n"
+"racoon uses when it is the initiator.\n"
+msgstr ""
+"skilgreinir samskiptaham fyrir fyrsta hluta þegar racoon er\n"
+"frumkvöðull. Það þýðir einnig viðsættanleg samskipti þegar\n"
+"racoon er hlustandi. Tilgreina má fleiri en einn ham með\n"
+"því að aðskilja þá með kommum. Allar tegundir eru leyfilegar\n"
+"Fyrsti samskiptahamurinn er það sem racoon notar þegar\n"
+"hann er frumkvöðull.\n"
+
+#: ../tools/drakvpn-old:757
+#, c-format
+msgid "Generate policy"
+msgstr "Búa til stefnu"
+
+#: ../tools/drakvpn-old:758 ../tools/drakvpn-old:774 ../tools/drakvpn-old:787
+#, c-format
+msgid "off"
+msgstr "af"
+
+#: ../tools/drakvpn-old:758 ../tools/drakvpn-old:774 ../tools/drakvpn-old:787
+#, c-format
+msgid "on"
+msgstr "á"
+
+#: ../tools/drakvpn-old:759
+#, c-format
+msgid ""
+"This directive is for the responder.  Therefore you\n"
+"should set passive on in order that racoon(8) only\n"
+"becomes a responder.  If the responder does not have any\n"
+"policy in SPD during phase 2 negotiation, and the direc-\n"
+"tive is set on, then racoon(8) will choose the first pro-\n"
+"posal in the SA payload from the initiator, and generate\n"
+"policy entries from the proposal.  It is useful to nego-\n"
+"tiate with the client which is allocated IP address\n"
+"dynamically.  Note that inappropriate policy might be\n"
+"installed into the responder's SPD by the initiator.  So\n"
+"that other communication might fail if such policies\n"
+"installed due to some policy mismatches between the ini-\n"
+"tiator and the responder.  This directive is ignored in\n"
+"the initiator case.  The default value is off."
+msgstr ""
+
+#: ../tools/drakvpn-old:773
+#, c-format
+msgid "Passive"
+msgstr "Hlutlaus"
+
+#: ../tools/drakvpn-old:775
+#, c-format
+msgid ""
+"If you do not want to initiate the negotiation, set this\n"
+"to on.  The default value is off.  It is useful for a\n"
+"server."
+msgstr ""
+"Ef þú vilt ekki hefja samninga, krossaðu þá við hér\n"
+"sjálfgefið er slökkt.  þetta er handhægt fyrir miðlara."
+
+#: ../tools/drakvpn-old:778
+#, c-format
+msgid "Certificate type"
+msgstr "Tegund skírteinis"
+
+#: ../tools/drakvpn-old:780
+#, c-format
+msgid "My certfile"
+msgstr "Mín skírt.-skrá"
+
+#: ../tools/drakvpn-old:781
+#, c-format
+msgid "Name of the certificate"
+msgstr "Nafn skírteinis"
+
+#: ../tools/drakvpn-old:782
+#, c-format
+msgid "My private key"
+msgstr "Minn einkalykill"
+
+#: ../tools/drakvpn-old:783
+#, c-format
+msgid "Name of the private key"
+msgstr "Nafn einkalykils"
+
+#: ../tools/drakvpn-old:784
+#, c-format
+msgid "Peers certfile"
+msgstr "Tengi skírt.-skrá"
+
+#: ../tools/drakvpn-old:785
+#, c-format
+msgid "Name of the peers certificate"
+msgstr "Nafn skírteinis mótaðila"
+
+#: ../tools/drakvpn-old:786
+#, c-format
+msgid "Verify cert"
+msgstr "Staðfesta skírteini"
+
+#: ../tools/drakvpn-old:788
+#, c-format
+msgid ""
+"If you do not want to verify the peer's certificate for\n"
+"some reason, set this to off.  The default is on."
+msgstr ""
+"Ef þú vilt ekki staðfesta skírteini mótaðila af einhverri\n"
+"ástæðu, slökktu þá á þessu.  Sjálfgefið er kveikt."
+
+#: ../tools/drakvpn-old:790
+#, c-format
+msgid "My identifier"
+msgstr "Auðkenni mitt"
+
+#: ../tools/drakvpn-old:791
+#, c-format
+msgid ""
+"specifies the identifier sent to the remote host and the\n"
+"type to use in the phase 1 negotiation.  address, FQDN,\n"
+"user_fqdn, keyid and asn1dn can be used as an idtype.\n"
+"they are used like:\n"
+"\tmy_identifier address [address];\n"
+"\t\tthe type is the IP address.  This is the default\n"
+"\t\ttype if you do not specify an identifier to use.\n"
+"\tmy_identifier user_fqdn string;\n"
+"\t\tthe type is a USER_FQDN (user fully-qualified\n"
+"\t\tdomain name).\n"
+"\tmy_identifier FQDN string;\n"
+"\t\tthe type is a FQDN (fully-qualified domain name).\n"
+"\tmy_identifier keyid file;\n"
+"\t\tthe type is a KEY_ID.\n"
+"\tmy_identifier asn1dn [string];\n"
+"\t\tthe type is an ASN.1 distinguished name.  If\n"
+"\t\tstring is omitted, racoon(8) will get DN from\n"
+"\t\tSubject field in the certificate.\n"
+"\n"
+"Examples: \n"
+"\n"
+"my_identifier user_fqdn \"myemail@mydomain.com\""
+msgstr ""
+"skilgreinir auðkenni sent til fjarlægrar vélar og tegund\n"
+"sem á að nota í fyrsta hluta samskipta.  address, FQDN,\n"
+"user_fqdn, keyid og asn1dn má nota sem einkenni.\n"
+"þetta er notað líkt og:\n"
+"\tmitt_merki address [addressa];\n"
+"\t\thér er gefin upp IP-addressan.  Þetta er sjálfgefið\n"
+"\t\tauðkenni ef þú gefur ekki upp neitt annað.\n"
+"\tmitt_merki user_fqdn strengur;\n"
+"\t\thér skal gefa upp full-formað lénsnafn notanda\n"
+"\tmitt_merki FQDN strengur;\n"
+"\t\thér skal gefa upp full-formað lénsnafn.\n"
+"\tmitt_merki keyid skrá;\n"
+"\t\thér skal gefa upp lykiltegund (KEY_ID).\n"
+"\tmitt_merki asn1dn [strengur];\n"
+"\t\thér skal gefa upp 'ASN.1 distinguished name'.  Ef\n"
+"\t\tþessu svæði er sleppt, þá leitar racoon(8) að DN\n"
+"\t\tí viðfangs-svæði í skírteini.\n"
+"\n"
+"Dæmi: \n"
+"\n"
+"mitt_merki user_fqdn \"minn_postur@katla.is\""
+
+#: ../tools/drakvpn-old:811
+#, c-format
+msgid "Peers identifier"
+msgstr "Auðkenni tengis"
+
+#: ../tools/drakvpn-old:812
+#, c-format
+msgid "Proposal"
+msgstr "Tillaga"
+
+#: ../tools/drakvpn-old:814
+#, c-format
+msgid ""
+"specify the encryption algorithm used for the\n"
+"phase 1 negotiation. This directive must be defined. \n"
+"algorithm is one of the following: \n"
+"\n"
+"DES, 3DES, blowfish, cast128 for oakley.\n"
+"\n"
+"For other transforms, this statement should not be used."
+msgstr ""
+"gefðu upp dulritunar-algrím sem á að nota fyrir\n"
+"fyrsta stig samskipta. Þetta verður að vera skilgreint.\n"
+"algrímið verður að vera eitt af eftirfarandi: \n"
+"\n"
+"DES, 3DES, blowfish, cast128 fyrir oakley.\n"
+"\n"
+"Fyrir aðrar uppsetningar ætti ekki að nota þessa setningu."
+
+#: ../tools/drakvpn-old:821
+#, c-format
+msgid "Hash algorithm"
+msgstr "Hash algrím"
+
+#: ../tools/drakvpn-old:822
+#, c-format
+msgid "Authentication method"
+msgstr "Auðkenningarregla"
+
+#: ../tools/drakvpn-old:823
+#, c-format
+msgid "DH group"
+msgstr "DH hópur"
+
+#: ../tools/drakvpn-old:830
+#, c-format
+msgid "Command"
+msgstr "Skipun"
+
+#: ../tools/drakvpn-old:831
+#, c-format
+msgid "Source IP range"
+msgstr "Uppruna IP-svæði"
+
+#: ../tools/drakvpn-old:832
+#, c-format
+msgid "Destination IP range"
+msgstr "Áfanga IP-svæði"
+
+#: ../tools/drakvpn-old:833
+#, c-format
+msgid "Upper-layer protocol"
+msgstr "Efri samskiptastaðall"
+
+#: ../tools/drakvpn-old:833 ../tools/drakvpn-old:840
+#, c-format
+msgid "any"
+msgstr "hver sem er"
+
+#: ../tools/drakvpn-old:835
+#, c-format
+msgid "Flag"
+msgstr "Flögg"
+
+#: ../tools/drakvpn-old:836
+#, c-format
+msgid "Direction"
+msgstr "Stefna"
+
+#: ../tools/drakvpn-old:837
+#, c-format
+msgid "IPsec policy"
+msgstr "IPsec stefna"
+
+#: ../tools/drakvpn-old:837
+#, c-format
+msgid "ipsec"
+msgstr "ipsec"
+
+#: ../tools/drakvpn-old:837
+#, c-format
+msgid "discard"
+msgstr "henda"
+
+#: ../tools/drakvpn-old:840
+#, c-format
+msgid "Mode"
+msgstr "Hamur"
+
+#: ../tools/drakvpn-old:840
+#, c-format
+msgid "tunnel"
+msgstr "rás"
+
+#: ../tools/drakvpn-old:840
+#, c-format
+msgid "transport"
+msgstr "flutningsleið"
+
+#: ../tools/drakvpn-old:842
+#, c-format
+msgid "Source/destination"
+msgstr "Upphaf/Áfangi"
+
+#: ../tools/drakvpn-old:843
+#, c-format
+msgid "Level"
+msgstr "Þrep"
+
+#: ../tools/drakvpn-old:843
+#, c-format
+msgid "require"
+msgstr "Þarfnast"
+
+#: ../tools/drakvpn-old:843
+#, c-format
+msgid "default"
+msgstr "sjálfgefið"
+
+#: ../tools/drakvpn-old:843
+#, c-format
+msgid "use"
+msgstr "nota"
+
+#: ../tools/drakvpn-old:843
+#, c-format
+msgid "unique"
+msgstr "einkvæm"
+
+#: ../tools/net_applet:61
+#, c-format
+msgid "Network is up on interface %s."
+msgstr "Net er í gangi á tengi %s."
+
+#: ../tools/net_applet:62
+#, c-format
+msgid "IP address: %s"
+msgstr "IP-tala: %s"
+
+#: ../tools/net_applet:63
+#, c-format
+msgid "Gateway: %s"
+msgstr "Netgátt: %s"
+
+#: ../tools/net_applet:64
+#, c-format
+msgid "Connected to %s (link level: %d %%)"
+msgstr "Tengdur við %s (tengistyrkur: %d%%)"
+
+#: ../tools/net_applet:66
+#, c-format
+msgid "Network is down on interface %s."
+msgstr "Net er ekki í gangi á tengi %s."
+
+#: ../tools/net_applet:74 ../tools/net_monitor:468
+#, c-format
+msgid "Connect %s"
+msgstr "Tengist %s"
+
+#: ../tools/net_applet:75 ../tools/net_monitor:468
+#, c-format
+msgid "Disconnect %s"
+msgstr "Aftengist %s"
+
+#: ../tools/net_applet:76
+#, c-format
+msgid "Monitor Network"
+msgstr "Neteftirlit"
+
+#: ../tools/net_applet:78
+#, c-format
+msgid "Manage wireless networks"
+msgstr "Sýsla með þráðlaus net"
+
+#: ../tools/net_applet:80
+#, c-format
+msgid "Manage VPN connections"
+msgstr "Sýsla með VPN tengingar"
+
+#: ../tools/net_applet:84
+#, c-format
+msgid "Configure Network"
+msgstr "Stilla nettengingu"
+
+#: ../tools/net_applet:86
+#, c-format
+msgid "Watched interface"
+msgstr "Eftirlit með tengi"
+
+#: ../tools/net_applet:87 ../tools/net_applet:88 ../tools/net_applet:90
+#, c-format
+msgid "Auto-detect"
+msgstr "Finna sjálfkrafa"
+
+#: ../tools/net_applet:95
+#, c-format
+msgid "Active interfaces"
+msgstr "Virk nettengi"
+
+#: ../tools/net_applet:119
+#, c-format
+msgid "Profiles"
+msgstr "Snið"
+
+#: ../tools/net_applet:137
+#, c-format
+msgid "Get Online Help"
+msgstr "Sækja nethjálp"
+
+#: ../tools/net_applet:318
+#, c-format
+msgid "Network connection"
+msgstr "Nettenging"
+
+#: ../tools/net_applet:438
+#, c-format
+msgid "More networks"
+msgstr "Fleiri net"
+
+#: ../tools/net_applet:465
+#, c-format
+msgid "Interactive Firewall automatic mode"
+msgstr "Gagnvirkur eldveggur í sjálfvirkum ham"
+
+#: ../tools/net_applet:470
+#, c-format
+msgid "Always launch on startup"
+msgstr "Ræsa alltaf þegar kveikt á vél"
+
+#: ../tools/net_applet:475
+#, c-format
+msgid "Wireless networks"
+msgstr "Þráðlaus net"
+
+#: ../tools/net_applet:482 ../tools/net_monitor:96
+#, c-format
+msgid "Settings"
+msgstr "Stillingar"
+
+#: ../tools/net_applet:557
+#, c-format
+msgid "Interactive Firewall: intrusion detected"
+msgstr "Active Firewall: árás skynjuð"
+
+#: ../tools/net_applet:574
+#, c-format
+msgid "What do you want to do with this attacker?"
+msgstr "Hvað viltu gera við árásaraðilann?"
+
+#: ../tools/net_applet:577
+#, c-format
+msgid "Attack details"
+msgstr "Árásarupplýsingar"
+
+#: ../tools/net_applet:581
+#, c-format
+msgid "Attack time: %s"
+msgstr "Árásartími: %s"
+
+#: ../tools/net_applet:582
+#, c-format
+msgid "Network interface: %s"
+msgstr "Nettengi: %s"
+
+#: ../tools/net_applet:583
+#, c-format
+msgid "Attack type: %s"
+msgstr "Árásartegund: %s"
+
+#: ../tools/net_applet:584
+#, c-format
+msgid "Protocol: %s"
+msgstr "Samskiptaregla: %s"
+
+#: ../tools/net_applet:585
+#, c-format
+msgid "Attacker IP address: %s"
+msgstr "IP-tala árásartölvu: %s"
+
+#: ../tools/net_applet:586
+#, c-format
+msgid "Attacker hostname: %s"
+msgstr "Vélarnafn árásartölvu: %s"
+
+#: ../tools/net_applet:589
+#, c-format
+msgid "Service attacked: %s"
+msgstr "Ráðist á þjónustu: %s"
+
+#: ../tools/net_applet:590
+#, c-format
+msgid "Port attacked: %s"
+msgstr "Ráðist á gátt: %s"
+
+#: ../tools/net_applet:592
+#, c-format
+msgid "Type of ICMP attack: %s"
+msgstr "Tegund af ICMP árás: %s"
+
+#: ../tools/net_applet:597
+#, c-format
+msgid "Always blacklist (do not ask again)"
+msgstr "Alltaf svartlista (ekki spyrja aftur)"
+
+#: ../tools/net_applet:612
+#, c-format
+msgid "Ignore"
+msgstr "Hunsa"
+
+#: ../tools/net_applet:630 ../tools/net_applet:643
+#, c-format
+msgid "Interactive Firewall: new service"
+msgstr "Gagnvirkur eldveggur: ný þjónusta"
+
+#: ../tools/net_applet:654
+#, c-format
+msgid "Do you want to open this service?"
+msgstr "Viltu opna þessa þjónustu?"
+
+#: ../tools/net_applet:657
+#, c-format
+msgid "Remember this answer"
+msgstr "Muna þetta svar"
+
+#: ../tools/net_monitor:60 ../tools/net_monitor:65
+#, c-format
+msgid "Network Monitoring"
+msgstr "Neteftirlit"
+
+#: ../tools/net_monitor:101
+#, c-format
+msgid "Global statistics"
+msgstr "Tölulegar upplýsingar"
+
+#: ../tools/net_monitor:104
+#, c-format
+msgid "Instantaneous"
+msgstr "Augnabliks"
+
+#: ../tools/net_monitor:104
+#, c-format
+msgid "Average"
+msgstr "Meðaltal"
+
+#: ../tools/net_monitor:105
+#, c-format
+msgid ""
+"Sending\n"
+"speed:"
+msgstr ""
+"Sendi\n"
+"hraði:"
+
+#: ../tools/net_monitor:105 ../tools/net_monitor:106 ../tools/net_monitor:111
+#, c-format
+msgid "unknown"
+msgstr "óþekkt"
+
+#: ../tools/net_monitor:106
+#, c-format
+msgid ""
+"Receiving\n"
+"speed:"
+msgstr ""
+"Móttöku\n"
+"hraði:"
+
+#: ../tools/net_monitor:110
+#, c-format
+msgid ""
+"Connection\n"
+"time: "
+msgstr "Tengitími: "
+
+#: ../tools/net_monitor:117
+#, c-format
+msgid "Use same scale for received and transmitted"
+msgstr "Nota sama skala fyrir móttekið og sent"
+
+#: ../tools/net_monitor:136
+#, c-format
+msgid "Wait please, testing your connection..."
+msgstr "Augnablik, prófa tengingu..."
+
+#: ../tools/net_monitor:185 ../tools/net_monitor:198
+#, c-format
+msgid "Disconnecting from Internet "
+msgstr "Aftengist frá Internetinu "
+
+#: ../tools/net_monitor:185 ../tools/net_monitor:198
+#, c-format
+msgid "Connecting to Internet "
+msgstr "Tengist internetinu "
+
+#: ../tools/net_monitor:229
+#, c-format
+msgid "Disconnection from Internet failed."
+msgstr "Aftenging frá Internetinu mistókst."
+
+#: ../tools/net_monitor:230
+#, c-format
+msgid "Disconnection from Internet complete."
+msgstr "Aftengingu frá Internetinu lokið."
+
+#: ../tools/net_monitor:232
+#, c-format
+msgid "Connection complete."
+msgstr "Tenging uppsett."
+
+#: ../tools/net_monitor:233
+#, c-format
+msgid ""
+"Connection failed.\n"
+"Verify your configuration in the Mandriva Linux Control Center."
+msgstr ""
+"Tenging mistókst\n"
+"Athugaðu uppsetninguna í Mandriva Linux stjórnborði."
+
+#: ../tools/net_monitor:338
+#, c-format
+msgid "Color configuration"
+msgstr "Litauppsetning"
+
+#: ../tools/net_monitor:395 ../tools/net_monitor:407
+#, c-format
+msgid "sent: "
+msgstr "sendi: "
+
+#: ../tools/net_monitor:398 ../tools/net_monitor:411
+#, c-format
+msgid "received: "
+msgstr "móttók: "
+
+#: ../tools/net_monitor:401
+#, c-format
+msgid "average"
+msgstr "meðal"
+
+#: ../tools/net_monitor:404
+#, c-format
+msgid "Local measure"
+msgstr "Staðvær mæling"
+
+#: ../tools/net_monitor:461
+#, c-format
+msgid ""
+"Warning, another internet connection has been detected, maybe using your "
+"network"
+msgstr "Viðvörun, skynja aðra Internettengingu, kannski um staðarnetið þitt"
+
+#: ../tools/net_monitor:472
+#, c-format
+msgid "No internet connection configured"
+msgstr "Engin Internet uppsetning skilgreind"
+

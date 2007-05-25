@@ -37,12 +37,7 @@ sub ppp_read_conf() {
         /^METRIC=(.*)/ and $modem->{METRIC} = $1;
     }
     $modem->{login} ||= $l{Username};
-    my $secret = network::tools::read_secret_backend();
-    foreach (@$secret) {
-        $modem->{passwd} ||= $_->{passwd} if $_->{login} eq $modem->{login};
-    }
-    #my $secret = network::tools::read_secret_backend();
-    #my @cnx_list = map { $_->{server} } @$secret;
+    $modem->{passwd} = network::tools::passwd_by_login($modem->{login});
     $modem->{$_} ||= '' foreach qw(connection phone login passwd auth domain dns1 dns2);
     $modem->{auto_gateway} ||= defined $modem->{Gateway} && $modem->{Gateway} ne '0.0.0.0' ? N("Manual") : N("Automatic");
     $modem->{auto_ip} ||=  defined $modem->{IPAddr} && $modem->{IPAddr} ne '0.0.0.0' ? N("Manual") : N("Automatic");
@@ -60,7 +55,7 @@ sub ppp_configure {
     if ($modem->{device} ne "/dev/modem") {
         my $dev = $modem->{device};
         $dev =~ s!^/dev/!!;
-        any::devfssymlinkf({ device => $dev }, 'modem');
+        devices::symlink_now_and_register({ device => $dev }, 'modem');
     }
 
     my %toreplace = map { $_ => $modem->{$_} } qw(Authentication AutoName connection dns1 dns2 domain IPAddr login passwd phone SubnetMask);

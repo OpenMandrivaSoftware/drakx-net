@@ -5,7 +5,7 @@
 # modified by Florin Grad (florin@mandrakesoft.com)
 # wizardified by Olivier Blin (oblin@mandriva.com)
 #
-# Copyright 2000-2005 Mandriva
+# Copyright 2000-2006 Mandriva
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License version 2, as
@@ -24,13 +24,15 @@
 use strict;
 use lib qw(/usr/lib/libDrakX);
 
+# i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
+BEGIN { unshift @::textdomains, 'drakx-net' }
 use standalone;     #- warning, standalone must be loaded very first, for 'explanations'
 
 use common;
 use detect_devices;
 use interactive;
 use network::network;
-use network::ethernet;
+use network::connection::ethernet;
 use run_program;
 use log;
 use c;
@@ -45,21 +47,15 @@ my $cups_conf = "$::prefix/etc/cups/cupsd.conf";
 
 my $in = 'interactive'->vnew('su');
 
-my ($kernel_version) = c::kernel_version() =~ /(...)/;
-unless ($kernel_version >= 2.4) {
-    $in->ask_warn(N("Error"), N("Sorry, we support only 2.4 and above kernels."));
-    $in->exit(-1);
-}
-
 my $net = {};
 network::network::read_net_conf($net);
 my $modules_conf = modules::any_conf->read;
-my %eth_intf = map { $_->[0] => join(': ', $_->[0], $_->[2]) } network::ethernet::get_eth_cards($modules_conf);
+my %eth_intf = map { $_->[0] => join(': ', $_->[0], $_->[2]) } network::connection::ethernet::get_eth_cards($modules_conf);
 
 my $shorewall = network::shorewall::read();
 my $choice;
 my $gw_enabled;
-my ($net_interface_name, $lan_interface_name, $lan_intf, $internal_domain_name);
+my ($lan_interface_name, $lan_intf, $internal_domain_name);
 my $use_dhcpd = 1;
 my $use_caching_dns = 1;
 my $use_caching_proxy = 1;
@@ -121,17 +117,17 @@ What would you like to do?"); #- FIXME : not used for now
 	     choose_net_interface =>
 	     {
 	      pre => sub {
-		  $net_interface_name = $shorewall->{net_interface};
+		  $shorewall->{masq}{net_interface} = network::tools::get_default_gateway_interface($net);
 	      },
-	      name => translate($network::shorewall::ask_shorewall_interface_label),
-	      data => network::shorewall::shorewall_interface_choices(\$net_interface_name),
+	      name => N("Please select the network interface directly connected to the internet."),
+	      data => [ { label => N("Net Device"), val => \$shorewall->{masq}{net_interface}, list => [ sort keys %{$net->{ifcfg}} ], format => sub { network::tools::get_interface_description($net, $_[0]) } } ],
 	      post => sub {
-		  network::shorewall::set_net_interface($shorewall, $net_interface_name);
-		  my $locals = @{$shorewall->{loc_interface}};
+		  network::shorewall::add_interface_to_net_zone($shorewall, $shorewall->{masq}{net_interface});
+		  my $locals = @{$shorewall->{loc_zone}};
 		  if ($locals == 0) {
 		      return "end_no_lan_interface";
 		  } elsif ($locals == 1) {
-		      $lan_interface_name = $shorewall->{loc_interface}[0];
+		      $lan_interface_name = $shorewall->{loc_zone}[0];
 		      return "one_lan_interface";
 		  } else {
 		      return "choose_lan_interface";
@@ -155,7 +151,7 @@ I am about to setup your Local Area Network with that adapter.", format_interfac
 	     {
 	      name => N("Please choose what network adapter will be connected to your Local Area Network."),
 	      data => sub {
-		  [ { type => "list", val => \$lan_interface_name, list => $shorewall->{loc_interface}, format => \&format_interfaces } ];
+		  [ { type => "list", val => \$lan_interface_name, list => $shorewall->{loc_zone}, format => \&format_interfaces } ];
 	      },
 	      post => sub {
 		  log::explanations("Choosing network device: $lan_interface_name");
@@ -212,10 +208,10 @@ I am about to setup your Local Area Network with that adapter.", format_interfac
  	      complete => sub {
 		  !$use_caching_dns || $::testing and return 0;
 		  #- install a caching name server if the specified DNS is the gateway
-		  !$in->do_pkgs->ensure_is_installed('caching-nameserver', '/var/named/named.local');
+		  !$in->do_pkgs->ensure_is_installed('bind', '/usr/sbin/named');
 	      },
 	      post => sub {
-		  services::set_status($_, $use_caching_dns) foreach qw(named caching-nameserver);
+		  services::set_status($_, $use_caching_dns) foreach qw(named);
 		  return "dhcpd";
 	      },
 	     },
@@ -360,7 +356,7 @@ sub set_proxy_port {
 }
 
 sub gw_disable() {
-    my $_wait_disabl = $in->wait_message('', N("Disabling servers..."));
+    my $_wait_disabl = $in->wait_message(N("Please wait"), N("Disabling servers..."));
     return if $::testing;
     services::set_status($_, 0) foreach qw(dhcpd squid named);
     delete_proxy_ports();
@@ -384,7 +380,7 @@ sub gw_configure() {
                                               N("Configuring firewall..."));
 
     $shorewall->{disabled} = 0;
-    $shorewall->{masq_subnet} = "$lan_intf->{NETWORK}/$lan_intf->{NETMASK}";
+    $shorewall->{masq}{subnet} = "$lan_intf->{NETWORK}/$lan_intf->{NETMASK}";
     network::shorewall::write($shorewall);
 
     #- be sure that FORWARD_IPV4 is enabled in /etc/sysconfig/network

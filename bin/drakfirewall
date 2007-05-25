@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# Copyright (C) 1999-2005 Mandriva (pixel@mandrakesoft.com)
+# Copyright (C) 1999-2006 Mandriva (pixel@mandrakesoft.com)
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 use lib qw(/usr/lib/libDrakX);
 
+# i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
+BEGIN { unshift @::textdomains, 'drakx-net' }
 use standalone;     #- warning, standalone must be loaded very first, for 'explanations'
 
 use interactive;

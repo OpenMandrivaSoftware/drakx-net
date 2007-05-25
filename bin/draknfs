@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# Copyright (C) 2005 by Mandriva aginies _ateuh_ mandriva.com
+# Copyright (C) 2005-2006 by Mandriva aginies _ateuh_ mandriva.com
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,18 +17,18 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
 # 02111-1307, USA.
 
-my $version = "0.3";
-
 use strict;
 use lib qw(/usr/lib/libDrakX);
 use standalone;
 use common;
 use network::network;
 use interactive;
+$ugtk2::wm_icon = 'IC-NFS-48';
+use mygtk2 qw(gtknew gtkset);
 use ugtk2 qw(:ask :wrappers :create :dialogs);
 
 my $in = 'interactive'->vnew('su');
-$in->do_pkgs->ensure_is_installed('nfs-utils', '/usr/sbin/rpc.nfsd') or return;
+$in->do_pkgs->ensure_is_installed('nfs-utils', '/sbin/rpc.statd') or return;
 
 use constant COLUMN_DIR => 0;
 use constant COLUMN_ACCESS => 1;
@@ -55,13 +55,14 @@ my @yesno = qw(yes no);
 
 sub get_items() {
     my @items = (
-		 [ "/_File", undef, undef, undef, '<Branch>', ],
-		 [ "/_File/_Write conf", undef, \&write_conf, 1, '<StockItem>', 'gtk-execute' ],
-		 [ "/_File/_Exit", undef, \&quit_all, 1, '<StockItem>', 'gtk-quit' ],
+		 [ N("/_File"), undef, undef, undef, '<Branch>', ],
+		 [ N("/_File") . N("/_Write conf"), undef, \&write_conf, 1, '<Item>', ],
+		 [ N("/_File") . N("/_Quit"), N("<control>Q"), \&quit_all, 1, '<Item>', ],
 
-		 [ "/_NFS Server", undef, undef, undef, '<Branch>', ],
-		 [ "/_NFS Server/_Restart", undef, \&restart_dialog, 1, '<StockItem>', 'gtk-execute' ],
-		 [ "/_NFS Server/R_eload", undef, \&reload_dialog, 1, '<StockItem>', 'gtk-refresh' ],
+
+		 [ N("/_NFS Server"), undef, undef, undef, '<Branch>', ],
+		 [ N("/_NFS Server") . N("/_Restart"), undef, \&restart_dialog, 1, '<Item>', ],
+		 [ N("/_NFS Server") . N("/R_eload"), undef, \&reload_dialog, 1, '<Item>', ],
 		 );
     return @items;
 }
@@ -81,18 +82,18 @@ sub reload_dialog() {
 sub wait_action {
     my ($cmd) = @_;
     my $w = $in->wait_message(N("NFS server"), N("Restarting/Reloading NFS server..."));
-    run_program::get_stdout($cmd) !~ /unknown|error/ or err_dialog(N("Error!"), N("Error Restarting/Reloading NFS server")) and return;
+    run_program::get_stdout($cmd) !~ /unknown|error/ or err_dialog(N("Error"), N("Error Restarting/Reloading NFS server")) and return;
     undef $w;
 }
 
 my %size_groups = map { $_ => Gtk2::SizeGroup->new('horizontal') } qw(label widget button);
 my $label_and_widgets = sub {
   my ($label, $widget, $button) = @_;
-  gtkpack_(Gtk2::HBox->new(0,0),
-           0, gtkadd_widget($size_groups{label}, $label),
+  gtknew('HBox', children => [
+           0, gtkadd_widget($size_groups{label}, gtknew('Label_Left', text => $label)),
 	   0, gtkadd_widget($size_groups{widget}, $widget),
 	   0, gtkadd_widget($size_groups{button}, $button),
-          );
+          ]);
 };
 
 my $fdwidget = sub {
@@ -102,7 +103,7 @@ my $fdwidget = sub {
   $fd->signal_connect("destroy", sub { $fd->hide });
   $fd->ok_button->signal_connect(clicked => sub {
 				   my $file = $fd->get_filename;
-				   -d $file or err_dialog(N("Error!"), N("Should be a directory.")) and return;
+				   -d $file or err_dialog(N("Error"), N("Should be a directory.")) and return;
 				   $data->set_text($file);
 				   $fd->hide;
 				 }, $fd);
@@ -168,46 +169,21 @@ my %adv_options = (
 	secured => N("Secured Connection:"),
 	ro => N("Read-Only share:"),
 );
-my $help_global = join("\n\n\n", N("<span weight=\"bold\">Advanced Options</span>"),
-N("<span foreground=\"royalblue3\">%s:</span> this option requires that requests originate on an internet port less than IPPORT_RESERVED (1024). This option is on by default.", $adv_options{secured}),
-N("<span foreground=\"royalblue3\">%s:</span> allow either only read or both read and write requests on this NFS volume. The default is to disallow any request which changes the filesystem. This can also be made explicit by using this option.", $adv_options{ro}),
-N("<span foreground=\"royalblue3\">%s:</span> disallows the NFS server to violate the NFS protocol and to reply to requests before any changes made by these requests have been committed to stable storage (e.g. disc drive).", $adv_options{sync}),
+my $help_global = join("\n\n\n", '<b><big>' . N("Advanced Options") . '</big></b>',
+N("<span foreground=\"royalblue3\">%s</span> this option requires that requests originate on an internet port less than IPPORT_RESERVED (1024). This option is on by default.", $adv_options{secured}),
+N("<span foreground=\"royalblue3\">%s</span> allow either only read or both read and write requests on this NFS volume. The default is to disallow any request which changes the filesystem. This can also be made explicit by using this option.", $adv_options{ro}),
+N("<span foreground=\"royalblue3\">%s</span> disallows the NFS server to violate the NFS protocol and to reply to requests before any changes made by these requests have been committed to stable storage (e.g. disc drive).", $adv_options{sync}),
 );
 
-sub create_pango_help_box {
-  # perl code from draksec
-  my ($help) = @_;
-  my $text = Gtk2::TextView->new;
-  use Gtk2::Pango;
-  my %common_opts = ('left-margin' => '10', 'right-margin' => '10');
-  gtktext_insert($text, [ map  {
-    if (s!^/span>!!) {
-      [ $_, \%common_opts ];
-    } elsif (s!span !!) {
-      my %tags = %common_opts;
-      while (s!(\w+?)="(\w+?)"!!) {
-	$tags{weight} ||= Gtk2::Pango->PANGO_WEIGHT_BOLD if $1 eq 'foreground';
-	$tags{$1} = $2 eq "bold" ? Gtk2::Pango->PANGO_WEIGHT_BOLD : $2;
-      }
-      s/^>//;
-      [ $_, \%tags ];
-    } else {
-      [ $_, \%common_opts ];
-    }
-  } split("<", formatAlaTeX($help)) ]);
-  gtkset_size_request(create_scrolled_window($text), 350, 300);
-}
-
 sub help_b {
-  my ($tittle, $help_data) = @_;
-  gtksignal_connect(new Gtk2::Button->new(N("Information")), clicked => sub {
-		      my $dialog = _create_dialog();
-		      $dialog->set_transient_for($::main_window);
-		      $dialog->set_title(N("Help"));
-		      $dialog->set_modal(1);
+  my ($help_data) = @_;
+  gtksignal_connect(gtknew('Button', text => N("Information")), clicked => sub {
+		      my $dialog = _create_dialog(N("Help"), { transient_for => $::main_window, modal => 1 });
 		      gtkpack_($dialog->vbox,
-			       1, create_pango_help_box($help_data),
-			       0, gtksignal_connect(Gtk2::Button->new(N("Close")), clicked => sub {
+			       1, gtknew('ScrolledWindow', width => 350, height => 300,
+                                child => gtknew('TextView', text => ugtk2::markup_to_TextView_format(formatAlaTeX($help_data)))
+                            ),
+			       0, gtknew('Button', text => N("Close"), clicked => sub {
 				   $dialog->destroy;
 						    }
 						   ),
@@ -220,7 +196,7 @@ sub help_b {
 sub get_access_list() {
   my $net = {};
   network::network::read_net_conf($net);
-  my $interface ||= $net->{net_interface};
+  my $interface = $net->{net_interface};
   my $ip_address = network::tools::get_interface_ip_address($net, $interface);
   my $domain = chomp_(`dnsdomainname`);
   my @o = split(/\./, $ip_address);
@@ -250,12 +226,8 @@ sub get_data_from_id {
 sub get_user_or_group {
   my ($what) = @_;
   my $conf = "/etc/" . $what;
-  my @data; local $_;
-  foreach (cat_($conf)) {
-    push @data, "$1 [$2]" if m/^([^#:]+):[^:]+:([^:]+):/ and $2 > 499;
-  }
-  push @data, " ";
-  return sort(@data);
+  my @data = map { if_(m/^([^#:]+):[^:]+:([^:]+):/ && $2 > 499, "$1 [$2]") } cat_($conf);
+  return sort(@data, " ");
 }
 
 
@@ -268,11 +240,11 @@ sub add_modify_entry {
   my ($lr, $luserid, $lsecure, $lsync, $lr_data, $lsync_data, $lsecure_data);
   undef $i; undef $iter;
 
-  $_ = Gtk2::Entry->new foreach $dir, $options;
+  $_ = gtknew('Entry') foreach $dir, $options;
   $_ = Gtk2::OptionMenu->new foreach $lr, $luserid, $lsecure, $lsync;
 
   $access = Gtk2::Combo->new;
-#  $access = Gtk2::ComboBox->new_text;
+#  $access = gtknew('ComboBox');
   my @access_list = get_access_list();
 #  foreach (@access_list) {
 #    $_ and $access->append_text($_);
@@ -285,20 +257,15 @@ sub add_modify_entry {
   $lsecure->set_popdown_strings(@yesno);
 
   my $file_dialog = $fdwidget->($dir);
-  my $button = Gtk2::Button->new(N("Directory"));
+  my $button = gtknew('Button', text => N("Directory"));
   $button->signal_connect(clicked => sub { $file_dialog->show });
 
 # test if modify or add a nfs share
-  my $dialog = _create_dialog();
-  $dialog->set_transient_for($::main_window);
+  my $dialog = _create_dialog(N("Draknfs entry"), { transient_for => $::main_window, modal => 1 });
   local $::main_window = $dialog;
-  $dialog->set_title("Draknfs entry");
-  $dialog->set_position('center');
-  $dialog->set_modal(1);
-  $dialog->set_resizable(1);
 
-  my $anonuid = Gtk2::ComboBox->new_with_strings([ get_user_or_group('passwd') ]);
-  my $anongid = Gtk2::ComboBox->new_with_strings([ get_user_or_group('group') ]);
+  my $anonuid = gtknew('ComboBox', list => [ get_user_or_group('passwd') ]);
+  my $anongid = gtknew('ComboBox', list => [ get_user_or_group('group') ]);
   $_->set_wrap_width(3) foreach $anonuid, $anongid;
 
   if ($wanted =~ /modify/) {
@@ -374,41 +341,29 @@ sub add_modify_entry {
   }
 
   my $expender = Gtk2::Expander->new('Advanced options');
-  $expender->add(gtkpack_(Gtk2::VBox->new,
-                          0, $label_and_widgets->($adv_options{sync}, $lsync, help_b(N_("Advanced Options Help"), $help_global)),
-                          0, $label_and_widgets->($adv_options{secured}, $lsecure, ""),
-                          0, $label_and_widgets->($adv_options{ro}, $lr, ""),
-			 ),
+  $expender->add(gtknew('VBox', spacing => 5, children_tight => [
+                          $label_and_widgets->($adv_options{sync}, $lsync, help_b($help_global)),
+                          $label_and_widgets->($adv_options{secured}, $lsecure, ""),
+                          $label_and_widgets->($adv_options{ro}, $lr, ""),
+			 ]),
 		);
   $expender->signal_connect(activate => sub {
-			      gtkset_size_request($dialog, -1, -1);
+			      gtkset($dialog);
 			      gtkflush();
 			    });
 
-  gtkpack_($dialog->vbox,
-	   0, gtkadd(Gtk2::Frame->new(N("NFS directory")),
-		     gtkpack_(gtkset_border_width(Gtk2::VBox->new, 5),
-			      0, $label_and_widgets->(N("Directory:"), $dir, $button),
-			     ),
-		     ),
-	   0, gtkadd(Gtk2::Frame->new(N("Host access")),
-                     gtkpack_(gtkset_border_width(Gtk2::VBox->new, 5),
-			      0, $label_and_widgets->(N("Access:"), $access, help_b(N_("Hosts Access"), $help_access)),
-			     ),
-		    ),
-	   0, gtkadd(Gtk2::Frame->new(N("User ID Mapping")),
-                     gtkpack_(gtkset_border_width(Gtk2::VBox->new, 5),
-			      0, $label_and_widgets->(N("User ID:"), $luserid, help_b(N_("Help User ID"), $help_userid)),
-			      0, $label_and_widgets->(N("Anonymous user ID:"), $anonuid, ""),
-			      0, $label_and_widgets->(N("Anonymous Group ID:"), $anongid, ""),
-			     ),
-		    ),
-	   0, gtkadd(Gtk2::Frame->new(""),
-                     gtkpack_(gtkset_border_width(Gtk2::VBox->new, 5),
-			      0, $expender,
-			     ),
-		    ),
-	   0, create_okcancel({
+  $dialog->vbox->set_spacing(5);
+  gtkpack__($dialog->vbox,
+            gtknew('Title2', label => N("NFS directory")),
+            $label_and_widgets->(N("Directory:"), $dir, $button),
+            gtknew('Title2', label => N("Host access")),
+            $label_and_widgets->(N("Access:"), $access, help_b($help_access)),
+            gtknew('Title2', label => N("User ID Mapping")),
+            $label_and_widgets->(N("User ID:"), $luserid, help_b($help_userid)),
+            $label_and_widgets->(N("Anonymous user ID:"), $anonuid, ""),
+            $label_and_widgets->(N("Anonymous Group ID:"), $anongid, ""),
+            $expender,
+	      create_okcancel({
 			       cancel_clicked => sub { $dialog->destroy },
 			       ok_clicked => sub {
 				 my ($anonu, $anong);
@@ -441,10 +396,13 @@ sub add_modify_entry {
 
 				 my $all_right = join(",", grep { defined $_ } $luserid_toput, $anonu, $anong, $lsync_data, $lsecure_data, $lr_data);
 				 my $test_dir = $dir->get_text;
-				 mkdir_p($test_dir) or err_dialog(N("Error!"), N("Can't create this directory.")) and return;
+				 if (! $test_dir) { 
+				     err_dialog(N("Error"), N("Please specify a directory to share.")) and return;
+				     }
+				 mkdir_p($test_dir) or err_dialog(N("Error"), N("Can't create this directory.")) and return;
 				 #my $test_access = $access->child->get_text;
 				 my $test_access = $access->entry->get_text;
-				 $test_access or err_dialog(N("Error!"), N("You must specify hosts access.")) and return;
+				 $test_access or err_dialog(N("Error"), N("You must specify hosts access.")) and return;
 				 if ($wanted =~ /add/) {
 				   $iter = $model->append;
 				   $i = "-1";
@@ -477,7 +435,7 @@ sub add_modify_entry {
 }
 
 sub remove_entry {
-  my ($widget, $treeview) = @_;
+  my ($treeview) = @_;
   my $model = $treeview->get_model;
   my $selection = $treeview->get_selection;
   my $iter = $selection->get_selected;
@@ -536,14 +494,14 @@ sub cell_edited {
   if ($column == COLUMN_DIR) {
     my $i = ($path->get_indices)[0];
     $listshare[$i]{dir} = $new_text;
-    -d $new_text or err_dialog(N("Error!"), N("Please enter a directory to share.")) and return;
+    -d $new_text or err_dialog(N("Error"), N("Please enter a directory to share.")) and return;
     $model->set($iter, $column, $listshare[$i]{dir});
   } elsif ($column == COLUMN_ACCESS) {
     my $i = ($path->get_indices)[0];
     $listshare[$i]{access} = $new_text;
     $model->set($iter, $column, $listshare[$i]{access});
   } elsif ($column == COLUMN_RIGHT) {
-    err_dialog(N("Error!"), N("Please use the modify button to set right access.")) and return;
+    err_dialog(N("Error"), N("Please use the modify button to set right access.")) and return;
   } elsif ($column == COLUMN_OPTIONS) {
     my $i = ($path->get_indices)[0];
     $listshare[$i]{options} = $new_text;
@@ -558,7 +516,7 @@ sub cell_edited {
 # create model
 my $model = create_model();
 
-my $window = ugtk2->new("DrakNFS");
+my $window = ugtk2->new(N("Manage NFS shares"));
 $::main_window = $window->{real_window};
 $window->{rwindow}->set_size_request(550, 400) unless $::isEmbedded;
 $window->{rwindow}->set_position('center') if !$::isEmbedded;
@@ -595,38 +553,38 @@ my $okcancel = create_okcancel({
 			      );
 
 # main interface
-$W->add(gtkpack_(Gtk2::VBox->new(0,0),
+$W->add(gtknew('VBox', children => [
 		 0, $menu,
-		 if_(!$::isEmbedded, 0, Gtk2::Banner->new('IC-NFS-48', N("DrakNFS manage NFS shares"))),
-		 #if_($::isEmbedded, 0, Gtk2::Label->new("Here you can add, remove and alter NFS shares.")),
-		 1, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 0),
-			     1, create_scrolled_window($treeview),
+		 0, Gtk2::Banner->new('IC-NFS-48', N("DrakNFS manage NFS shares")),
+		 #if_($::isEmbedded, 0, gtknew('Label', text => "Here you can add, remove and alter NFS shares.")),
+		 1, gtknew('HBox', border_width => 0, children => [
+			     1, gtknew('ScrolledWindow', child => $treeview),
 			     0, gtkpack_(create_vbox('start'),
-					 0, gtksignal_connect(Gtk2::Button->new(N("Add")), clicked => sub {
+					 0, gtknew('Button', text => N("Add"), clicked => sub {
 								eval { add_modify_entry($treeview, "add") };
 								my $err = $@;
 								if ($err) {
 								  err_dialog(N("Error"), N("Failed to add NFS share.") . "\n\n" . $err);
 								}
 							      }),
-					 0, gtksignal_connect(Gtk2::Button->new(N("Modify")), clicked => sub {
+					 0, gtknew('Button', text => N("Modify"), clicked => sub {
 								eval { add_modify_entry($treeview, "modify") };
 								my $err = $@;
 								if ($err) {
 								  err_dialog(N("Error"), N("Failed to Modify NFS share.") . "\n\n" . $err);
 								}
 							      }),
-					 0, gtksignal_connect(Gtk2::Button->new(N("Remove")), clicked => sub {
-								eval { remove_entry($model, $treeview) };
+					 0, gtknew('Button', text => N("Remove"), clicked => sub {
+								eval { remove_entry($treeview) };
 								my $err = $@;
 								if ($err) {
 								  err_dialog(N("Error"), N("Failed to remove an NFS share.") . "\n\n" . $err);
 								}
 							      }),
 					),
-			    ),
+			    ]),
 		 0, $okcancel,
-		 ),
+		 ]),
 	);
 
 $W->show_all;
