@@ -1,0 +1,6070 @@
+# translation of drakx-net-sl.po to Slovenian
+# translation of drakx-net-sl.po to
+# Copyright (C) 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
+#
+# Matjaž Kaše <matjaz.kase@g-kabel.si>, 2004.
+# Aljoša Ločičnik <aljosa.locicnik@mandrakeprinas.org>, 2005.
+# Gregor Pirnaver <gregor.pirnaver@sdm-si.org>, 2002,2004,2005.
+# Jure Repinc <jlp@holodeck1.com>, 2005, 2006, 2007.
+# Matjaž Kaše <matjaz.kase@telemach.net>, 2006.
+# Matej Štrovs <matej.strovs@gmail.com>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: drakx-net-sl\n"
+"POT-Creation-Date: 2007-01-10 15:18+0100\n"
+"PO-Revision-Date: 2007-03-09 18:31+0100\n"
+"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3);\n"
+
+#: ../lib/network/connection.pm:16
+#, c-format
+msgid "Unknown connection type"
+msgstr "Neznana vrsta povezave"
+
+#: ../lib/network/connection.pm:115
+#, c-format
+msgid "Network access settings"
+msgstr "Nastavitve internetnega dostopa"
+
+#: ../lib/network/connection.pm:116
+#, c-format
+msgid "Access settings"
+msgstr "Nastavitve dostopa"
+
+#: ../lib/network/connection.pm:117
+#, c-format
+msgid "Address settings"
+msgstr "Nastavitve naslova"
+
+#: ../lib/network/connection.pm:149 ../lib/network/drakvpn.pm:62
+#: ../lib/network/vpn/openvpn.pm:365 ../lib/network/vpn/openvpn.pm:379
+#: ../lib/network/vpn/openvpn.pm:390 ../tools/net_applet:129
+#, c-format
+msgid "VPN connection"
+msgstr "VPN povezava"
+
+#: ../lib/network/connection.pm:151 ../lib/network/connection/cable.pm:44
+#: ../lib/network/connection/wireless.pm:37 ../lib/network/vpn/openvpn.pm:127
+#: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
+#, c-format
+msgid "None"
+msgstr "Ne"
+
+#: ../lib/network/connection.pm:163
+#, c-format
+msgid "Allow users to manage the connection"
+msgstr "Omogoči uporabnikom upravljanje s povezavo"
+
+#: ../lib/network/connection.pm:164
+#, c-format
+msgid "Start the connection at boot"
+msgstr "Omogoči povezavo ob zagonu sistema"
+
+#: ../lib/network/connection.pm:165 ../tools/drakconnect:462
+#, c-format
+msgid "Metric"
+msgstr "Metrika"
+
+#: ../lib/network/connection.pm:230
+#, c-format
+msgid "Link detected on interface %s"
+msgstr "Na vmesniku %s je zaznana povezava"
+
+#: ../lib/network/connection.pm:231 ../lib/network/connection/ethernet.pm:278
+#, c-format
+msgid "Link beat lost on interface %s"
+msgstr "Povezava na vmesniku %s je izgubljena"
+
+#: ../lib/network/connection/cable.pm:13
+#, c-format
+msgid "Cable"
+msgstr "Kabelsko"
+
+#: ../lib/network/connection/cable.pm:14
+#, c-format
+msgid "Cable modem"
+msgstr "Kabelski modem"
+
+#: ../lib/network/connection/cable.pm:45
+#, c-format
+msgid "Use BPALogin (needed for Telstra)"
+msgstr "Uporabi prijavo BPALogin (za Telstra)"
+
+#: ../lib/network/connection/cable.pm:48 ../lib/network/netconnect.pm:587
+#: ../tools/drakconnect:482
+#, c-format
+msgid "Authentication"
+msgstr "Overjanje"
+
+#: ../lib/network/connection/cable.pm:50 ../lib/network/connection/ppp.pm:22
+#: ../lib/network/netconnect.pm:326 ../lib/network/vpn/openvpn.pm:393
+#: ../tools/drakconnect:492
+#, c-format
+msgid "Account Login (user name)"
+msgstr "Uporabniško ime za prijavo"
+
+#: ../lib/network/connection/cable.pm:52 ../lib/network/connection/ppp.pm:23
+#: ../lib/network/netconnect.pm:327 ../lib/network/vpn/openvpn.pm:394
+#: ../tools/drakconnect:493
+#, c-format
+msgid "Account Password"
+msgstr "Geslo"
+
+#: ../lib/network/connection/cellular.pm:47
+#, c-format
+msgid "Access Point Name"
+msgstr "Ime dostopne točke"
+
+#: ../lib/network/connection/cellular_bluetooth.pm:10
+#, c-format
+msgid "Bluetooth"
+msgstr "Naprave Bluetooth"
+
+#: ../lib/network/connection/cellular_bluetooth.pm:11
+#, c-format
+msgid "Bluetooth Dial Up Networking"
+msgstr "Klicna omrežna povezava Bluetooth"
+
+#: ../lib/network/connection/cellular_card.pm:8
+#, c-format
+msgid "GPRS/Edge/3G"
+msgstr "GPRS/Edge/3G"
+
+#: ../lib/network/connection/cellular_card.pm:67
+#: ../lib/network/vpn/openvpn.pm:391
+#, c-format
+msgid "PIN number"
+msgstr "Koda PIN"
+
+#: ../lib/network/connection/cellular_card.pm:130
+#, c-format
+msgid "Unable to open device %s"
+msgstr "Ni moč odpreti naprave %s"
+
+#: ../lib/network/connection/cellular_card.pm:155
+#, c-format
+msgid "Please check that your SIM card is inserted."
+msgstr "Prosim preverite, če je vaša SIM kartica pravilno vstavljena."
+
+#: ../lib/network/connection/cellular_card.pm:161
+#, c-format
+msgid ""
+"You entered a wrong PIN code.\n"
+"Entering the wrong PIN code multiple times may lock your SIM card!"
+msgstr ""
+"Vpisali ste napačno PIN kodo \n"
+"Če večkrat vpišete napačno PIN kodo, zaklenete vašo SIM kartico!"
+
+#: ../lib/network/connection/dvb.pm:12
+#, c-format
+msgid "DVB"
+msgstr "DVB"
+
+#: ../lib/network/connection/dvb.pm:13
+#, c-format
+msgid "Satellite (DVB)"
+msgstr "Satelitska (DVB)"
+
+#: ../lib/network/connection/dvb.pm:56
+#, c-format
+msgid "Adapter card"
+msgstr "Vmesniška kartica"
+
+#: ../lib/network/connection/dvb.pm:57
+#, c-format
+msgid "Net demux"
+msgstr "Omrežno demultipleksiranje"
+
+#: ../lib/network/connection/dvb.pm:58
+#, c-format
+msgid "PID"
+msgstr "PID"
+
+#: ../lib/network/connection/ethernet.pm:10
+#, c-format
+msgid "Ethernet"
+msgstr "Krajevno omrežje (ethernet)"
+
+#: ../lib/network/connection/ethernet.pm:53
+#, c-format
+msgid "Unable to find network interface for selected device (using %s driver)."
+msgstr ""
+"Omrežnega vmesnika za izbrano napravo ni mogoče najti. (Uporabljam gonilnik %"
+"s)"
+
+#: ../lib/network/connection/ethernet.pm:61 ../lib/network/vpn/openvpn.pm:207
+#, c-format
+msgid "Manual configuration"
+msgstr "Ročna nastavitev"
+
+#: ../lib/network/connection/ethernet.pm:62
+#, c-format
+msgid "Automatic IP (BOOTP/DHCP)"
+msgstr "Samodejni IP (BOOTP/DHCP)"
+
+#: ../lib/network/connection/ethernet.pm:116
+#, c-format
+msgid "IP settings"
+msgstr "IP nastavitve"
+
+#: ../lib/network/connection/ethernet.pm:125 ../lib/network/netconnect.pm:604
+#: ../lib/network/vpn/openvpn.pm:221 ../tools/drakconnect:113
+#: ../tools/drakconnect:321 ../tools/drakconnect:887 ../tools/drakhosts:196
+#, c-format
+msgid "IP address"
+msgstr "Naslov IP"
+
+#: ../lib/network/connection/ethernet.pm:129
+#, c-format
+msgid ""
+"Please enter the IP configuration for this machine.\n"
+"Each item should be entered as an IP address in dotted-decimal\n"
+"notation (for example, 1.2.3.4)."
+msgstr ""
+"Vnesite IP nastavitve za ta računalnik.\n"
+"Vsako postavko vnesite kot naslov IP v obliki decimalnih števil, ločenih s "
+"piko (n.pr.: 1.2.3.4)."
+
+#: ../lib/network/connection/ethernet.pm:132 ../tools/drakconnect:326
+#: ../tools/drakconnect:888 ../tools/drakgw:177
+#, c-format
+msgid "Netmask"
+msgstr "Maska omrežja"
+
+#: ../lib/network/connection/ethernet.pm:133 ../lib/network/netconnect.pm:636
+#: ../lib/network/vpn/openvpn.pm:212 ../lib/network/vpn/vpnc.pm:39
+#: ../tools/drakconnect:332
+#, c-format
+msgid "Gateway"
+msgstr "Privzeti prehod"
+
+#: ../lib/network/connection/ethernet.pm:136 ../tools/drakconnect:382
+#, c-format
+msgid "Get DNS servers from DHCP"
+msgstr "Pridobi strežnike DNS prek DHCP"
+
+#: ../lib/network/connection/ethernet.pm:138
+#, c-format
+msgid "DNS server 1"
+msgstr "Prvi DNS strežnik"
+
+#: ../lib/network/connection/ethernet.pm:139
+#, c-format
+msgid "DNS server 2"
+msgstr "Drugi DNS strežnik"
+
+#: ../lib/network/connection/ethernet.pm:140
+#, c-format
+msgid "Search domain"
+msgstr "Domena za iskanje"
+
+#: ../lib/network/connection/ethernet.pm:141
+#, c-format
+msgid "By default search domain will be set from the fully-qualified host name"
+msgstr "Domena za iskanje se privzeto oblikuje iz gostiteljskega imena."
+
+#: ../lib/network/connection/ethernet.pm:143 ../tools/drakconnect:369
+#: ../tools/drakconnect:891
+#, c-format
+msgid "DHCP client"
+msgstr "Odjemalec DHCP"
+
+#: ../lib/network/connection/ethernet.pm:144 ../tools/drakconnect:379
+#, c-format
+msgid "DHCP timeout (in seconds)"
+msgstr "Premor pred povezavo z DHCP (v sekundah)"
+
+#: ../lib/network/connection/ethernet.pm:145 ../tools/drakconnect:383
+#, c-format
+msgid "Get YP servers from DHCP"
+msgstr "Pridobi strežnike YP prek DHCP"
+
+#: ../lib/network/connection/ethernet.pm:146 ../tools/drakconnect:384
+#, c-format
+msgid "Get NTPD servers from DHCP"
+msgstr "Pridobi strežnike NTPD prek DHCP"
+
+#: ../lib/network/connection/ethernet.pm:147 ../tools/drakconnect:375
+#, c-format
+msgid "DHCP host name"
+msgstr "Ime gostitelja (DHCP)"
+
+#: ../lib/network/connection/ethernet.pm:149
+#, c-format
+msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
+msgstr "Ne vzpostavljaj ponovne povezave z Zeroconf (omrežje 169.254.0.0)."
+
+#: ../lib/network/connection/ethernet.pm:160 ../tools/drakconnect:676
+#, c-format
+msgid "IP address should be in format 1.2.3.4"
+msgstr "Naslov IP mora imeti obliko 1.2.3.4"
+
+#: ../lib/network/connection/ethernet.pm:165 ../tools/drakconnect:680
+#, c-format
+msgid "Netmask should be in format 255.255.224.0"
+msgstr "Mrežna maska bi morala biti v obliki 255.255.255.0"
+
+#: ../lib/network/connection/ethernet.pm:170
+#, c-format
+msgid "Warning: IP address %s is usually reserved!"
+msgstr "Opozorilo: naslov IP %s je običajno rezerviran!"
+
+#: ../lib/network/connection/ethernet.pm:176
+#, c-format
+msgid "%s already in use\n"
+msgstr "%s je že uporabljen\n"
+
+#: ../lib/network/connection/ethernet.pm:200 ../tools/drakconnect:373
+#, c-format
+msgid "Assign host name from DHCP address"
+msgstr "Pridobi ime gostitelja prek naslova DHCP"
+
+#: ../lib/network/connection/ethernet.pm:202 ../tools/drakhosts:196
+#, c-format
+msgid "Host name"
+msgstr "Ime gostitelja"
+
+#: ../lib/network/connection/ethernet.pm:220 ../tools/drakconnect:440
+#, c-format
+msgid "Network Hotplugging"
+msgstr "Takojšnja vključitev omrežja (Network Hotplugging)"
+
+#: ../lib/network/connection/ethernet.pm:224
+#, c-format
+msgid "Enable IPv6 to IPv4 tunnel"
+msgstr "Omogoči tunel med IPv6 in IPv4"
+
+#: ../lib/network/connection/ethernet.pm:277
+#, c-format
+msgid "Link beat detected on interface %s"
+msgstr "Povezava na vmesniku %s je izgubljena"
+
+#: ../lib/network/connection/ethernet.pm:280
+#, c-format
+msgid "Requesting a network address on interface %s (%s protocol)..."
+msgstr "Pošiljanje zahteve za omrežni naslov na vmesniku  %s (protokol %s)..."
+
+#: ../lib/network/connection/ethernet.pm:281
+#, c-format
+msgid "Got a network address on interface %s (%s protocol)"
+msgstr "Omrežni naslov na vmesniku  %s (protokol %s) je bil pridobljen."
+
+#: ../lib/network/connection/ethernet.pm:282
+#, c-format
+msgid "Failed to get a network address on interface %s (%s protocol)"
+msgstr ""
+"Pridobivanje omrežnega naslova na vmesniku  %s (protokol %s) je spodletelo."
+
+#: ../lib/network/connection/isdn.pm:8
+#, c-format
+msgid "ISDN"
+msgstr "ISDN"
+
+#: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:197
+#: ../lib/network/netconnect.pm:200 ../lib/network/netconnect.pm:218
+#: ../lib/network/netconnect.pm:463 ../lib/network/netconnect.pm:559
+#: ../lib/network/netconnect.pm:562
+#, c-format
+msgid "Unlisted - edit manually"
+msgstr "Ni na seznamu - uredite ročno"
+
+#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:395
+#, c-format
+msgid "ISA / PCMCIA"
+msgstr "ISA / PCMCIA"
+
+#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:395
+#, c-format
+msgid "I do not know"
+msgstr "Ne poznam"
+
+#: ../lib/network/connection/isdn.pm:197 ../lib/network/netconnect.pm:395
+#, c-format
+msgid "PCI"
+msgstr "PCI"
+
+#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:395
+#, c-format
+msgid "USB"
+msgstr "USB"
+
+#. -PO: POTS means "Plain old telephone service"
+#: ../lib/network/connection/pots.pm:10
+#, c-format
+msgid "POTS"
+msgstr "POTS"
+
+#. -PO: POTS means "Plain old telephone service"
+#. -PO: remove it if it doesn't have an equivalent in your language
+#. -PO: for example, in French, it can be translated as "RTC"
+#: ../lib/network/connection/pots.pm:16
+#, c-format
+msgid "Analog telephone modem (POTS)"
+msgstr "Analogni telefonski modem (POTS)"
+
+#: ../lib/network/connection/ppp.pm:9 ../lib/network/netconnect.pm:74
+#: ../tools/drakconnect:499
+#, c-format
+msgid "Script-based"
+msgstr "Temelječ na skripti"
+
+#: ../lib/network/connection/ppp.pm:10 ../lib/network/netconnect.pm:75
+#: ../tools/drakconnect:499
+#, c-format
+msgid "PAP"
+msgstr "PAP"
+
+#: ../lib/network/connection/ppp.pm:11 ../lib/network/netconnect.pm:76
+#: ../tools/drakconnect:499
+#, c-format
+msgid "Terminal-based"
+msgstr "Temelječ na terminalu"
+
+#: ../lib/network/connection/ppp.pm:12 ../lib/network/netconnect.pm:77
+#: ../tools/drakconnect:499
+#, c-format
+msgid "CHAP"
+msgstr "CHAP"
+
+#: ../lib/network/connection/ppp.pm:13 ../lib/network/netconnect.pm:78
+#: ../tools/drakconnect:499
+#, c-format
+msgid "PAP/CHAP"
+msgstr "PAP/CHAP"
+
+#: ../lib/network/connection/providers/cellular.pm:13
+#: ../lib/network/connection/providers/cellular.pm:18
+#: ../lib/network/connection/providers/cellular.pm:23
+#: ../lib/network/connection/providers/xdsl.pm:492
+#: ../lib/network/connection/providers/xdsl.pm:504
+#: ../lib/network/connection/providers/xdsl.pm:516
+#: ../lib/network/connection/providers/xdsl.pm:528
+#: ../lib/network/connection/providers/xdsl.pm:539
+#: ../lib/network/connection/providers/xdsl.pm:551
+#: ../lib/network/connection/providers/xdsl.pm:563
+#: ../lib/network/connection/providers/xdsl.pm:575
+#: ../lib/network/connection/providers/xdsl.pm:588
+#: ../lib/network/connection/providers/xdsl.pm:599
+#: ../lib/network/connection/providers/xdsl.pm:610
+#: ../lib/network/netconnect.pm:33
+#, c-format
+msgid "France"
+msgstr "Francija"
+
+#: ../lib/network/connection/providers/xdsl.pm:47
+#: ../lib/network/connection/providers/xdsl.pm:57
+#, c-format
+msgid "Algeria"
+msgstr "Alžirija"
+
+#: ../lib/network/connection/providers/xdsl.pm:67
+#: ../lib/network/connection/providers/xdsl.pm:77
+#, c-format
+msgid "Argentina"
+msgstr "Argentina"
+
+#: ../lib/network/connection/providers/xdsl.pm:87
+#: ../lib/network/connection/providers/xdsl.pm:96
+#: ../lib/network/connection/providers/xdsl.pm:105
+#, c-format
+msgid "Austria"
+msgstr "Avstrija"
+
+#: ../lib/network/connection/providers/xdsl.pm:114
+#: ../lib/network/connection/providers/xdsl.pm:124
+#: ../lib/network/connection/providers/xdsl.pm:134
+#, c-format
+msgid "Australia"
+msgstr "Avstralija"
+
+#: ../lib/network/connection/providers/xdsl.pm:144
+#: ../lib/network/connection/providers/xdsl.pm:153
+#: ../lib/network/connection/providers/xdsl.pm:164
+#: ../lib/network/connection/providers/xdsl.pm:173
+#: ../lib/network/connection/providers/xdsl.pm:182
+#: ../lib/network/netconnect.pm:36
+#, c-format
+msgid "Belgium"
+msgstr "Belgija"
+
+#: ../lib/network/connection/providers/xdsl.pm:191
+#: ../lib/network/connection/providers/xdsl.pm:201
+#: ../lib/network/connection/providers/xdsl.pm:210
+#: ../lib/network/connection/providers/xdsl.pm:219
+#, c-format
+msgid "Brazil"
+msgstr "Brazilija"
+
+#: ../lib/network/connection/providers/xdsl.pm:228
+#: ../lib/network/connection/providers/xdsl.pm:237
+#, c-format
+msgid "Bulgaria"
+msgstr "Bolgarija"
+
+#: ../lib/network/connection/providers/xdsl.pm:246
+#: ../lib/network/connection/providers/xdsl.pm:255
+#: ../lib/network/connection/providers/xdsl.pm:264
+#: ../lib/network/connection/providers/xdsl.pm:273
+#: ../lib/network/connection/providers/xdsl.pm:282
+#: ../lib/network/connection/providers/xdsl.pm:291
+#: ../lib/network/connection/providers/xdsl.pm:300
+#: ../lib/network/connection/providers/xdsl.pm:309
+#: ../lib/network/connection/providers/xdsl.pm:318
+#: ../lib/network/connection/providers/xdsl.pm:327
+#: ../lib/network/connection/providers/xdsl.pm:336
+#: ../lib/network/connection/providers/xdsl.pm:345
+#: ../lib/network/connection/providers/xdsl.pm:354
+#: ../lib/network/connection/providers/xdsl.pm:363
+#: ../lib/network/connection/providers/xdsl.pm:372
+#: ../lib/network/connection/providers/xdsl.pm:381
+#: ../lib/network/connection/providers/xdsl.pm:390
+#: ../lib/network/connection/providers/xdsl.pm:399
+#: ../lib/network/connection/providers/xdsl.pm:408
+#: ../lib/network/connection/providers/xdsl.pm:417
+#, c-format
+msgid "China"
+msgstr "Kitajska"
+
+#: ../lib/network/connection/providers/xdsl.pm:426
+#: ../lib/network/connection/providers/xdsl.pm:436
+#, c-format
+msgid "Czech Republic"
+msgstr "Češka"
+
+#: ../lib/network/connection/providers/xdsl.pm:446
+#: ../lib/network/connection/providers/xdsl.pm:455
+#: ../lib/network/connection/providers/xdsl.pm:464
+#, c-format
+msgid "Denmark"
+msgstr "Danska"
+
+#: ../lib/network/connection/providers/xdsl.pm:473
+#, c-format
+msgid "Egypt"
+msgstr "Egipt"
+
+#: ../lib/network/connection/providers/xdsl.pm:483
+#, c-format
+msgid "Finland"
+msgstr "Finska"
+
+#: ../lib/network/connection/providers/xdsl.pm:621
+#: ../lib/network/connection/providers/xdsl.pm:630
+#: ../lib/network/connection/providers/xdsl.pm:640
+#, c-format
+msgid "Germany"
+msgstr "Nemčija"
+
+#: ../lib/network/connection/providers/xdsl.pm:650
+#, c-format
+msgid "Greece"
+msgstr "Grčija"
+
+#: ../lib/network/connection/providers/xdsl.pm:659
+#, c-format
+msgid "Hungary"
+msgstr "Madžarska"
+
+#: ../lib/network/connection/providers/xdsl.pm:668
+#, c-format
+msgid "Ireland"
+msgstr "Irska"
+
+#: ../lib/network/connection/providers/xdsl.pm:677
+#, c-format
+msgid "Israel"
+msgstr "Izrael"
+
+#: ../lib/network/connection/providers/xdsl.pm:687
+#, c-format
+msgid "India"
+msgstr "Indija"
+
+#: ../lib/network/connection/providers/xdsl.pm:696
+#: ../lib/network/connection/providers/xdsl.pm:705
+#, c-format
+msgid "Iceland"
+msgstr "Islandija"
+
+#: ../lib/network/connection/providers/xdsl.pm:714
+#: ../lib/network/connection/providers/xdsl.pm:725
+#: ../lib/network/connection/providers/xdsl.pm:735
+#: ../lib/network/connection/providers/xdsl.pm:746
+#: ../lib/network/netconnect.pm:35
+#, c-format
+msgid "Italy"
+msgstr "Italija"
+
+#: ../lib/network/connection/providers/xdsl.pm:758
+#, c-format
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+#: ../lib/network/connection/providers/xdsl.pm:770
+#, c-format
+msgid "Lithuania"
+msgstr "Litva"
+
+#: ../lib/network/connection/providers/xdsl.pm:779
+#: ../lib/network/connection/providers/xdsl.pm:789
+#, c-format
+msgid "Mauritius"
+msgstr "Mauritius"
+
+#: ../lib/network/connection/providers/xdsl.pm:800
+#, c-format
+msgid "Morocco"
+msgstr "Maroko"
+
+#: ../lib/network/connection/providers/xdsl.pm:810
+#: ../lib/network/connection/providers/xdsl.pm:819
+#: ../lib/network/connection/providers/xdsl.pm:828
+#: ../lib/network/connection/providers/xdsl.pm:837
+#: ../lib/network/netconnect.pm:34
+#, c-format
+msgid "Netherlands"
+msgstr "Nizozemska"
+
+#: ../lib/network/connection/providers/xdsl.pm:846
+#: ../lib/network/connection/providers/xdsl.pm:852
+#: ../lib/network/connection/providers/xdsl.pm:858
+#: ../lib/network/connection/providers/xdsl.pm:864
+#: ../lib/network/connection/providers/xdsl.pm:870
+#: ../lib/network/connection/providers/xdsl.pm:876
+#: ../lib/network/connection/providers/xdsl.pm:882
+#, c-format
+msgid "Norway"
+msgstr "Norveška"
+
+#: ../lib/network/connection/providers/xdsl.pm:890
+#, c-format
+msgid "Pakistan"
+msgstr "Pakistan"
+
+#: ../lib/network/connection/providers/xdsl.pm:901
+#: ../lib/network/connection/providers/xdsl.pm:911
+#, c-format
+msgid "Poland"
+msgstr "Poljska"
+
+#: ../lib/network/connection/providers/xdsl.pm:922
+#, c-format
+msgid "Portugal"
+msgstr "Portugalska"
+
+#: ../lib/network/connection/providers/xdsl.pm:931
+#, c-format
+msgid "Russia"
+msgstr "Rusija"
+
+#: ../lib/network/connection/providers/xdsl.pm:942
+#, c-format
+msgid "Singapore"
+msgstr "Singapur"
+
+#: ../lib/network/connection/providers/xdsl.pm:951
+#, c-format
+msgid "Senegal"
+msgstr "Senegal"
+
+#: ../lib/network/connection/providers/xdsl.pm:961
+#, c-format
+msgid "Slovenia"
+msgstr "Slovenija"
+
+#: ../lib/network/connection/providers/xdsl.pm:972
+#: ../lib/network/connection/providers/xdsl.pm:984
+#: ../lib/network/connection/providers/xdsl.pm:996
+#: ../lib/network/connection/providers/xdsl.pm:1009
+#: ../lib/network/connection/providers/xdsl.pm:1019
+#: ../lib/network/connection/providers/xdsl.pm:1029
+#: ../lib/network/connection/providers/xdsl.pm:1040
+#: ../lib/network/connection/providers/xdsl.pm:1050
+#: ../lib/network/connection/providers/xdsl.pm:1060
+#: ../lib/network/connection/providers/xdsl.pm:1070
+#: ../lib/network/connection/providers/xdsl.pm:1080
+#: ../lib/network/connection/providers/xdsl.pm:1090
+#: ../lib/network/connection/providers/xdsl.pm:1101
+#: ../lib/network/connection/providers/xdsl.pm:1112
+#: ../lib/network/connection/providers/xdsl.pm:1124
+#: ../lib/network/connection/providers/xdsl.pm:1136
+#, c-format
+msgid "Spain"
+msgstr "Španija"
+
+#: ../lib/network/connection/providers/xdsl.pm:1149
+#, c-format
+msgid "Sweden"
+msgstr "Švedska"
+
+#: ../lib/network/connection/providers/xdsl.pm:1158
+#: ../lib/network/connection/providers/xdsl.pm:1167
+#: ../lib/network/connection/providers/xdsl.pm:1177
+#, c-format
+msgid "Switzerland"
+msgstr "Švica"
+
+#: ../lib/network/connection/providers/xdsl.pm:1186
+#, c-format
+msgid "Thailand"
+msgstr "Tajska"
+
+#: ../lib/network/connection/providers/xdsl.pm:1196
+#, c-format
+msgid "Tunisia"
+msgstr "Tunizija"
+
+#: ../lib/network/connection/providers/xdsl.pm:1207
+#, c-format
+msgid "Turkey"
+msgstr "Turčija"
+
+#: ../lib/network/connection/providers/xdsl.pm:1220
+#, c-format
+msgid "United Arab Emirates"
+msgstr "Združeni arabski emirati"
+
+#: ../lib/network/connection/providers/xdsl.pm:1230
+#: ../lib/network/connection/providers/xdsl.pm:1240
+#: ../lib/network/netconnect.pm:38
+#, c-format
+msgid "United Kingdom"
+msgstr "Združeno kraljestvo"
+
+#: ../lib/network/connection/wireless.pm:11
+#, c-format
+msgid "Wireless"
+msgstr "Brezžično"
+
+#: ../lib/network/connection/wireless.pm:21
+#, c-format
+msgid "Use a Windows driver (with ndiswrapper)"
+msgstr "Uporabi gonilnik za Windows (z ndiswrapper)"
+
+#: ../lib/network/connection/wireless.pm:38
+#, c-format
+msgid "Open WEP"
+msgstr "Odprt WEP"
+
+#: ../lib/network/connection/wireless.pm:39
+#, c-format
+msgid "Restricted WEP"
+msgstr "Omejen WEP"
+
+#: ../lib/network/connection/wireless.pm:40
+#, c-format
+msgid "WPA Pre-Shared Key"
+msgstr "WPA, v naprej deljen ključ"
+
+#: ../lib/network/connection/wireless.pm:181 ../lib/network/thirdparty.pm:174
+#, c-format
+msgid "Firmware files are required for this device."
+msgstr "Ta naprava potrebuje strojne gonilnike (firmware)."
+
+#: ../lib/network/connection/wireless.pm:209
+#, c-format
+msgid ""
+"Your wireless card is disabled, please enable the wireless switch (RF kill "
+"switch) first."
+msgstr ""
+"Brezžična omrežna kartica je izključena. Najprej jo vključite (RF kill "
+"switch)."
+
+#: ../lib/network/connection/wireless.pm:270
+#, c-format
+msgid "Wireless settings"
+msgstr "Nastavitve brezžične povezave"
+
+#: ../lib/network/connection/wireless.pm:275 ../tools/drakconnect:406
+#: ../tools/drakroam:119
+#, c-format
+msgid "Operating Mode"
+msgstr "Način delovanja"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Ad-hoc"
+msgstr "Ad-hoc"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Managed"
+msgstr "Upravljano"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Master"
+msgstr "Glavno"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Repeater"
+msgstr "Ponavljalnik"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Secondary"
+msgstr "Sekundarno"
+
+#: ../lib/network/connection/wireless.pm:276
+#, c-format
+msgid "Auto"
+msgstr "Samodejno"
+
+#: ../lib/network/connection/wireless.pm:279 ../tools/drakconnect:407
+#, c-format
+msgid "Network name (ESSID)"
+msgstr "Omrežno ime (ESSID)"
+
+#: ../lib/network/connection/wireless.pm:281
+#, c-format
+msgid "Encryption mode"
+msgstr "Način šifriranja"
+
+#: ../lib/network/connection/wireless.pm:283 ../tools/drakconnect:421
+#, c-format
+msgid "Encryption key"
+msgstr "Šifrirni ključ"
+
+#: ../lib/network/connection/wireless.pm:285 ../tools/drakconnect:408
+#, c-format
+msgid "Network ID"
+msgstr "Omrežna identiteta"
+
+#: ../lib/network/connection/wireless.pm:286 ../tools/drakconnect:409
+#, c-format
+msgid "Operating frequency"
+msgstr "Frekvenca delovanja"
+
+#: ../lib/network/connection/wireless.pm:287 ../tools/drakconnect:410
+#, c-format
+msgid "Sensitivity threshold"
+msgstr "Prag zaznave"
+
+#: ../lib/network/connection/wireless.pm:288 ../tools/drakconnect:411
+#, c-format
+msgid "Bitrate (in b/s)"
+msgstr "Bitna hitrost  (v b/s)"
+
+#: ../lib/network/connection/wireless.pm:289 ../tools/drakconnect:422
+#, c-format
+msgid "RTS/CTS"
+msgstr "RTS/CTS"
+
+#: ../lib/network/connection/wireless.pm:290
+#, c-format
+msgid ""
+"RTS/CTS adds a handshake before each packet transmission to make sure that "
+"the\n"
+"channel is clear. This adds overhead, but increase performance in case of "
+"hidden\n"
+"nodes or large number of active nodes. This parameter sets the size of the\n"
+"smallest packet for which the node sends RTS, a value equal to the maximum\n"
+"packet size disable the scheme. You may also set this parameter to auto, "
+"fixed\n"
+"or off."
+msgstr ""
+"RTS/CTS s pomočjo protokola 'handshake' pred prenosom posameznega paketa "
+"preveri.\n"
+"če je kanal prost. To izboljša prenos v primeru skritih \n"
+"vozlišč ali velikega števila aktivnih vozlišč. Nastavitev določi\n"
+"najmanjšo velikost paketa, za katerega vozlišče pošlje RTS.\n"
+"Če je nastavitev enaka, kot za največji paket, funkcija ne bo delovala. "
+"Lahko izbirate tudi med nastavitvami samodejno, \n"
+" omejeno in izključeno."
+
+#: ../lib/network/connection/wireless.pm:297 ../tools/drakconnect:423
+#, c-format
+msgid "Fragmentation"
+msgstr "Drobitev (fragmentacija)"
+
+#: ../lib/network/connection/wireless.pm:298 ../tools/drakconnect:424
+#, c-format
+msgid "iwconfig command extra arguments"
+msgstr "Posebni argumenti ukaza iwconfig"
+
+#: ../lib/network/connection/wireless.pm:299
+#, c-format
+msgid ""
+"Here, one can configure some extra wireless parameters such as:\n"
+"ap, channel, commit, enc, power, retry, sens, txpower (nick is already set "
+"as the hostname).\n"
+"\n"
+"See iwconfig(8) man page for further information."
+msgstr ""
+"Tu je mogoče nastaviti nekatere posebne vrednosti kot:\n"
+"ap, channel, commit, enc, power, retry, sens, txpower\n"
+"\n"
+"Za nadaljnje informacije si oglejte iwconfig(8) man page."
+
+#. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
+#: ../lib/network/connection/wireless.pm:306 ../tools/drakconnect:425
+#, c-format
+msgid "iwspy command extra arguments"
+msgstr "Posebni argumenti ukaza iwspy"
+
+#: ../lib/network/connection/wireless.pm:307
+#, c-format
+msgid ""
+"iwspy is used to set a list of addresses in a wireless network\n"
+"interface and to read back quality of link information for each of those.\n"
+"\n"
+"This information is the same as the one available in /proc/net/wireless :\n"
+"quality of the link, signal strength and noise level.\n"
+"\n"
+"See iwpspy(8) man page for further information."
+msgstr ""
+"Iwspy uporabljamo za sestavo seznama naslovov v brezžičnem omrežju\n"
+"in za pridobivanje informacij o kakovosti povezave za vsakega izmed njih.\n"
+"\n"
+"Iste informacije lahko dobite tudi v /proc/net/wireless :\n"
+"Kakovost povezave, jakost signala in raven šuma.\n"
+"\n"
+"Za nadaljnje informacije si oglejte »man iwspy«."
+
+#: ../lib/network/connection/wireless.pm:315 ../tools/drakconnect:426
+#, c-format
+msgid "iwpriv command extra arguments"
+msgstr "Posebni argumenti ukaza iwpriv"
+
+#: ../lib/network/connection/wireless.pm:317
+#, c-format
+msgid ""
+"iwpriv enable to set up optionals (private) parameters of a wireless "
+"network\n"
+"interface.\n"
+"\n"
+"iwpriv deals with parameters and setting specific to each driver (as opposed "
+"to\n"
+"iwconfig which deals with generic ones).\n"
+"\n"
+"In theory, the documentation of each device driver should indicate how to "
+"use\n"
+"those interface specific commands and their effect.\n"
+"\n"
+"See iwpriv(8) man page for further information."
+msgstr ""
+"Iwpriv omogoča nastavitev poljubnih (zasebnih) parametrov vmesnika za "
+"brezžično omrežno\n"
+"povezavo.\n"
+"\n"
+"Iwpriv nastavlja posebne parametre za vsak posamični gonilnik (za razliko \n"
+"od iwconfig, ki nastavlja splošne parametre).\n"
+"\n"
+"Teoretično naj bi dokumentacija za vsak gonilnik vsebovala napotke o "
+"uporabi\n"
+"in učinkih posamičnih parametrov.\n"
+"\n"
+"Več o tem v priročniku za iwpriv (man impriv)."
+
+#: ../lib/network/connection/wireless.pm:335
+#, c-format
+msgid "An encryption key is required."
+msgstr "Potrebujete šifrirni ključ."
+
+#: ../lib/network/connection/wireless.pm:341
+#, c-format
+msgid ""
+"Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
+"frequency), or add enough '0' (zeroes)."
+msgstr ""
+"Frekvenca mora imeti predpono k, M ali G oziroma zadostno število ničel."
+
+#: ../lib/network/connection/wireless.pm:347
+#, c-format
+msgid ""
+"Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
+"enough '0' (zeroes)."
+msgstr "Hitrost mora imeti predpono k, M ali G oziroma zadostno število ničel."
+
+#: ../lib/network/connection/wireless.pm:359
+#, c-format
+msgid "Allow access point roaming"
+msgstr "Dovoli menjavanje dostopnih točk"
+
+#: ../lib/network/connection/wireless.pm:460
+#, c-format
+msgid "Associated to wireless network \"%s\" on interface %s"
+msgstr "Povezan z brezžičnim omrežjem  \"%s\" na vmesniku  %s."
+
+#: ../lib/network/connection/wireless.pm:461
+#, c-format
+msgid "Lost association to wireless network on interface %s"
+msgstr "Povezava z brezžičnim omrežjem na vmesniku %s je izgubljena."
+
+#: ../lib/network/connection/xdsl.pm:8
+#, c-format
+msgid "DSL"
+msgstr "DSL"
+
+#: ../lib/network/connection/xdsl.pm:76 ../lib/network/netconnect.pm:755
+#, c-format
+msgid "Alcatel speedtouch USB modem"
+msgstr "Alcatel speedtouch USB modem"
+
+#: ../lib/network/connection/xdsl.pm:104
+#, c-format
+msgid ""
+"The ECI Hi-Focus modem cannot be supported due to binary driver distribution "
+"problem.\n"
+"\n"
+"You can find a driver on http://eciadsl.flashtux.org/"
+msgstr ""
+"ECI Hi-Focus modema ni mogoče podpirati zaradi težav z binarnim gonilnikom.\n"
+"\n"
+"Gonilnik je dosegljiv na http://eciadsl.flashtux.org/"
+
+#: ../lib/network/connection/xdsl.pm:176
+#, c-format
+msgid "DSL over CAPI"
+msgstr "DSL over CAPI"
+
+#: ../lib/network/connection/xdsl.pm:179
+#, c-format
+msgid "Dynamic Host Configuration Protocol (DHCP)"
+msgstr "Dynamic Host Configuration Protocol (DHCP)"
+
+#: ../lib/network/connection/xdsl.pm:180
+#, c-format
+msgid "Manual TCP/IP configuration"
+msgstr "Ročne nastavitve TCP/IP"
+
+#: ../lib/network/connection/xdsl.pm:181
+#, c-format
+msgid "Point to Point Tunneling Protocol (PPTP)"
+msgstr "Point to Point Tunneling Protocol (PPTP)"
+
+#: ../lib/network/connection/xdsl.pm:182
+#, c-format
+msgid "PPP over Ethernet (PPPoE)"
+msgstr "PPP over Ethernet (PPPoE)"
+
+#: ../lib/network/connection/xdsl.pm:183
+#, c-format
+msgid "PPP over ATM (PPPoA)"
+msgstr "PPP over ATM (PPPoA)"
+
+#: ../lib/network/connection/xdsl.pm:223
+#, c-format
+msgid "Virtual Path ID (VPI):"
+msgstr "Navidezna pot do identitete (VPI):"
+
+#: ../lib/network/connection/xdsl.pm:224
+#, c-format
+msgid "Virtual Circuit ID (VCI):"
+msgstr "VCI"
+
+#: ../lib/network/connection/xdsl.pm:324 ../lib/network/drakvpn.pm:45
+#: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:27
+#: ../lib/network/ndiswrapper.pm:42 ../lib/network/ndiswrapper.pm:86
+#: ../lib/network/ndiswrapper.pm:102 ../lib/network/netconnect.pm:131
+#: ../lib/network/netconnect.pm:179 ../lib/network/netconnect.pm:268
+#: ../lib/network/netconnect.pm:813 ../lib/network/thirdparty.pm:114
+#: ../lib/network/thirdparty.pm:131 ../lib/network/thirdparty.pm:214
+#: ../lib/network/thirdparty.pm:216 ../lib/network/thirdparty.pm:237
+#: ../tools/drakconnect:676 ../tools/drakconnect:680 ../tools/drakconnect:689
+#: ../tools/drakconnect:705 ../tools/drakgw:184 ../tools/drakhosts:100
+#: ../tools/drakhosts:245 ../tools/drakhosts:252 ../tools/drakhosts:259
+#: ../tools/drakinvictus:72 ../tools/draknetprofile:113 ../tools/draknfs:85
+#: ../tools/draknfs:106 ../tools/draknfs:273 ../tools/draknfs:400
+#: ../tools/draknfs:402 ../tools/draknfs:405 ../tools/draknfs:497
+#: ../tools/draknfs:504 ../tools/draknfs:567 ../tools/draknfs:574
+#: ../tools/draknfs:581 ../tools/drakroam:79 ../tools/drakroam:92
+#: ../tools/draksambashare:372 ../tools/draksambashare:379
+#: ../tools/draksambashare:382 ../tools/draksambashare:428
+#: ../tools/draksambashare:452 ../tools/draksambashare:518
+#: ../tools/draksambashare:533 ../tools/draksambashare:611
+#: ../tools/draksambashare:678 ../tools/draksambashare:778
+#: ../tools/draksambashare:785 ../tools/draksambashare:916
+#: ../tools/draksambashare:1109 ../tools/draksambashare:1118
+#: ../tools/draksambashare:1140 ../tools/draksambashare:1149
+#: ../tools/draksambashare:1168 ../tools/draksambashare:1177
+#: ../tools/draksambashare:1189
+#, c-format
+msgid "Error"
+msgstr "Napaka"
+
+#: ../lib/network/connection/xdsl.pm:324 ../lib/network/drakvpn.pm:45
+#: ../lib/network/netconnect.pm:131 ../lib/network/thirdparty.pm:114
+#, c-format
+msgid "Could not install the packages (%s)!"
+msgstr "Ni moč namestiti paketov (%s)!"
+
+#: ../lib/network/drakfirewall.pm:12
+#, c-format
+msgid "Web Server"
+msgstr "Internetni strežnik"
+
+#: ../lib/network/drakfirewall.pm:17
+#, c-format
+msgid "Domain Name Server"
+msgstr "DNS strežnik"
+
+#: ../lib/network/drakfirewall.pm:22
+#, c-format
+msgid "SSH server"
+msgstr "SSH strežnik"
+
+#: ../lib/network/drakfirewall.pm:27
+#, c-format
+msgid "FTP server"
+msgstr "FTP strežnik"
+
+#: ../lib/network/drakfirewall.pm:32
+#, c-format
+msgid "Mail Server"
+msgstr "Poštni strežnik"
+
+#: ../lib/network/drakfirewall.pm:37
+#, c-format
+msgid "POP and IMAP Server"
+msgstr "POP in IMAP strežnik"
+
+#: ../lib/network/drakfirewall.pm:42
+#, c-format
+msgid "Telnet server"
+msgstr "Telnet strežnik"
+
+#: ../lib/network/drakfirewall.pm:48
+#, c-format
+msgid "Windows Files Sharing (SMB)"
+msgstr "Deljenje datotek za Windows (SMB)"
+
+#: ../lib/network/drakfirewall.pm:54
+#, c-format
+msgid "CUPS server"
+msgstr "CUPS strežnik"
+
+#: ../lib/network/drakfirewall.pm:60
+#, c-format
+msgid "Echo request (ping)"
+msgstr "Ping"
+
+#: ../lib/network/drakfirewall.pm:65
+#, c-format
+msgid "BitTorrent"
+msgstr "BitTorrent"
+
+#: ../lib/network/drakfirewall.pm:74
+#, c-format
+msgid "Port scan detection"
+msgstr "Zaznavanje pregledovanja vrat"
+
+#: ../lib/network/drakfirewall.pm:166 ../lib/network/drakfirewall.pm:172
+#, c-format
+msgid "Firewall configuration"
+msgstr "Nastavitev požarnega zidu"
+
+#: ../lib/network/drakfirewall.pm:166
+#, c-format
+msgid ""
+"drakfirewall configurator\n"
+"\n"
+"This configures a personal firewall for this Mandriva Linux machine.\n"
+"For a powerful and dedicated firewall solution, please look to the\n"
+"specialized Mandriva Security Firewall distribution."
+msgstr ""
+"Nastavljanje požarnega zidu drakfirewall\n"
+"\n"
+"Urejanje osebnega požarnega zidu.\n"
+"Za močno in učinkovito rešitev lahko uporabite\n"
+"posebno distribucijo Mandriva Security Firewall."
+
+#: ../lib/network/drakfirewall.pm:172
+#, c-format
+msgid ""
+"drakfirewall configurator\n"
+"\n"
+"Make sure you have configured your Network/Internet access with\n"
+"drakconnect before going any further."
+msgstr ""
+"Nastavljanje požarnega zidu drakfirewall\n"
+"\n"
+"Preden nadaljujete, preverite, če ste pravilno nastavili\n"
+"dostop do omrežja oziroma interneta."
+
+#: ../lib/network/drakfirewall.pm:189
+#, c-format
+msgid "Which services would you like to allow the Internet to connect to?"
+msgstr "Katerim storitvam želite omogočiti dostop do interneta?"
+
+#: ../lib/network/drakfirewall.pm:190 ../lib/network/shorewall.pm:145
+#, c-format
+msgid "Firewall"
+msgstr "Požarni zid"
+
+#: ../lib/network/drakfirewall.pm:192
+#, c-format
+msgid ""
+"You can enter miscellaneous ports. \n"
+"Valid examples are: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
+"Have a look at /etc/services for information."
+msgstr ""
+"Vključite lahko različna vrata. \n"
+"Primeri veljavnih vnosov: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
+"Za pojasnila si oglejtedatoteko /etc/services."
+
+#: ../lib/network/drakfirewall.pm:198
+#, c-format
+msgid ""
+"Invalid port given: %s.\n"
+"The proper format is \"port/tcp\" or \"port/udp\", \n"
+"where port is between 1 and 65535.\n"
+"\n"
+"You can also give a range of ports (eg: 24300:24350/udp)"
+msgstr ""
+"Vnesli ste neveljavna vrata: %s.\n"
+"Veljavna oblika je »vrata/tcp« ali »vrata/udp«, \n"
+"pri čemer je številka vrat med 1 in 65535.\n"
+"\n"
+"Vnesete lahko tudi obseg vrat (n.pr.: 24300:24350/udp)"
+
+#: ../lib/network/drakfirewall.pm:208
+#, c-format
+msgid "Everything (no firewall)"
+msgstr "Vse (brez požarnega zidu)"
+
+#: ../lib/network/drakfirewall.pm:210
+#, c-format
+msgid "Other ports"
+msgstr "Ostala vrata"
+
+#: ../lib/network/drakfirewall.pm:211
+#, c-format
+msgid "Log firewall messages in system logs"
+msgstr "Beleži sporočila požarnega zidu v sistemski dnevnik"
+
+#: ../lib/network/drakfirewall.pm:255 ../lib/network/drakfirewall.pm:258
+#: ../tools/drakids:40 ../tools/drakids:65 ../tools/drakids:181
+#: ../tools/drakids:190 ../tools/drakids:215 ../tools/drakids:224
+#: ../tools/drakids:234 ../tools/drakids:326 ../tools/net_applet:77
+#: ../tools/net_applet:238 ../tools/net_applet:514 ../tools/net_applet:541
+#, c-format
+msgid "Interactive Firewall"
+msgstr "Interaktivni požarni zid"
+
+#: ../lib/network/drakfirewall.pm:256
+#, c-format
+msgid ""
+"You can be warned when someone accesses to a service or tries to intrude "
+"into your computer.\n"
+"Please select which network activities should be watched."
+msgstr ""
+"Ko nekdo poskuša dostopati do storitve, ali vdreti v vaš računalnik, lahko "
+"prejmete opozorilo.\n"
+"Prosim izberite, katere omrežne aktivnosti naj se spremljajo."
+
+#: ../lib/network/drakfirewall.pm:261
+#, c-format
+msgid "Use Interactive Firewall"
+msgstr "Omogoči interaktivni požarni zid"
+
+#: ../lib/network/drakvpn.pm:30
+#, c-format
+msgid "VPN configuration"
+msgstr "Nastavitev VPN"
+
+#: ../lib/network/drakvpn.pm:34
+#, c-format
+msgid "Choose the VPN type"
+msgstr "Izberite vrsto VPN povezave"
+
+#: ../lib/network/drakvpn.pm:49
+#, c-format
+msgid "Initializing tools and detecting devices for %s..."
+msgstr "Nastavljanje orodij in zaznavanje naprav za %s ..."
+
+#: ../lib/network/drakvpn.pm:52
+#, c-format
+msgid "Unable to initialize %s connection type!"
+msgstr "Povezave %s ni mogoče vzpostaviti!"
+
+#: ../lib/network/drakvpn.pm:60
+#, c-format
+msgid "Please select an existing VPN connection or enter a new name."
+msgstr "Izberite obstoječo povezavo VPN ali vpišite novo ime."
+
+#: ../lib/network/drakvpn.pm:64
+#, c-format
+msgid "Configure a new connection..."
+msgstr "Nastavite novo omrežje"
+
+#: ../lib/network/drakvpn.pm:66
+#, c-format
+msgid "New name"
+msgstr "Novo ime"
+
+#: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
+#: ../lib/network/ndiswrapper.pm:92 ../lib/network/netconnect.pm:471
+#: ../tools/drakconnect:978 ../tools/draknetprofile:129
+#: ../tools/draknetprofile:131 ../tools/drakproxy:36
+#, c-format
+msgid "Warning"
+msgstr "Opozorilo"
+
+#: ../lib/network/drakvpn.pm:70
+#, c-format
+msgid "You must select an existing connection or enter a new name."
+msgstr "Izbrati morate obstoječo povezavo ali vpisati novo ime."
+
+#: ../lib/network/drakvpn.pm:81
+#, c-format
+msgid "Please enter the required key(s)"
+msgstr "Prosim vstavite zahtevan(e) ključ(e)"
+
+#: ../lib/network/drakvpn.pm:86
+#, c-format
+msgid "Please enter the settings of your VPN connection"
+msgstr "Prosim vnesite nastavitve za VPN povezavo"
+
+#: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:291
+#, c-format
+msgid "Do you want to start the connection now?"
+msgstr "Se želite povezati zdaj?"
+
+#: ../lib/network/drakvpn.pm:100
+#, c-format
+msgid "Connection failed."
+msgstr "Povezava ni uspela."
+
+#: ../lib/network/drakvpn.pm:108
+#, c-format
+msgid ""
+"The VPN connection is now configured.\n"
+"\n"
+"This VPN connection can be automatically started together with a network "
+"connection.\n"
+"It can be done by reconfiguring the network connection and selecting this "
+"VPN connection.\n"
+msgstr ""
+"Povezava VPN je nastavljena.\n"
+"\n"
+"Ta povezava VPN se lahko vzpostavi samodejno obenem z omrežno povezavo.\n"
+"to lahko dosežete s ponovno nastavitvijo omrežne povezave in izbiro te "
+"povezave VPN.\n"
+
+#: ../lib/network/ifw.pm:129
+#, c-format
+msgid "Port scanning"
+msgstr "Pregledovanje vrat"
+
+#: ../lib/network/ifw.pm:130
+#, c-format
+msgid "Service attack"
+msgstr "Napad na storitev"
+
+#: ../lib/network/ifw.pm:131
+#, c-format
+msgid "Password cracking"
+msgstr "Razbijanje gesla"
+
+#: ../lib/network/ifw.pm:132
+#, c-format
+msgid "\"%s\" attack"
+msgstr "Napad »%s«"
+
+#: ../lib/network/ifw.pm:134
+#, c-format
+msgid "A port scanning attack has been attempted by %s."
+msgstr "%s je poskušal napad s pregledovanjem vrat."
+
+#: ../lib/network/ifw.pm:135
+#, c-format
+msgid "The %s service has been attacked by %s."
+msgstr "%2$s je napadel storitev %1$s."
+
+#: ../lib/network/ifw.pm:136
+#, c-format
+msgid "A password cracking attack has been attempted by %s."
+msgstr "%s je poskušal napad z razbijanjem gesla."
+
+#: ../lib/network/ifw.pm:137
+#, c-format
+msgid "A \"%s\" attack has been attempted by %s"
+msgstr "%2$s je poskušal z napadom »%1$s«."
+
+#: ../lib/network/ifw.pm:146
+#, c-format
+msgid ""
+"The \"%s\" application is trying to make a service (%s) available to the "
+"network."
+msgstr "Program \"%s\" poskuša omogočiti dostop do storitve (%s) iz omrežja."
+
+#. -PO: this should be kept lowercase since the expression is meant to be used between brackets
+#: ../lib/network/ifw.pm:150
+#, c-format
+msgid "port %d"
+msgstr "Vrata %d"
+
+#: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
+#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:603
+#: ../lib/network/netconnect.pm:620 ../lib/network/netconnect.pm:636
+#, c-format
+msgid "Manual"
+msgstr "Ročno"
+
+#: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
+#: ../lib/network/modem.pm:44 ../lib/network/modem.pm:63
+#: ../lib/network/modem.pm:76 ../lib/network/modem.pm:81
+#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:598
+#: ../lib/network/netconnect.pm:603 ../lib/network/netconnect.pm:615
+#: ../lib/network/netconnect.pm:620 ../lib/network/netconnect.pm:636
+#: ../lib/network/netconnect.pm:638
+#, c-format
+msgid "Automatic"
+msgstr "Samodejno"
+
+#: ../lib/network/ndiswrapper.pm:27
+#, c-format
+msgid "No device supporting the %s ndiswrapper driver is present!"
+msgstr "Na voljo ni nobene naprave, ki bi podpirala gonilnik %s ndiswrapper!"
+
+#: ../lib/network/ndiswrapper.pm:33
+#, c-format
+msgid "Please select the Windows driver (.inf file)"
+msgstr "Izberite gonilnik za Windows (datoteko .inf)"
+
+#: ../lib/network/ndiswrapper.pm:42
+#, c-format
+msgid "Unable to install the %s ndiswrapper driver!"
+msgstr "Ni moč namestiti gonilnika %s ndiserapper!"
+
+#: ../lib/network/ndiswrapper.pm:86
+#, c-format
+msgid "Unable to load the ndiswrapper module!"
+msgstr "Ni moč naložiti modula ndiswrapper!"
+
+#: ../lib/network/ndiswrapper.pm:92
+#, c-format
+msgid ""
+"The selected device has already been configured with the %s driver.\n"
+"Do you really want to use a ndiswrapper driver?"
+msgstr ""
+"Izbrana naprava je že nastavljena z gonilnikom %s.\n"
+"Ste prepričani, da želite uporabo gonilnika ndiswrapper?"
+
+#: ../lib/network/ndiswrapper.pm:102
+#, c-format
+msgid "Unable to find the ndiswrapper interface!"
+msgstr "Ni moč najti vmesnika ndiswrapper!"
+
+#: ../lib/network/ndiswrapper.pm:115
+#, c-format
+msgid "Choose an ndiswrapper driver"
+msgstr "Izberite ndiswrapper gonilnik"
+
+#: ../lib/network/ndiswrapper.pm:118
+#, c-format
+msgid "Use the ndiswrapper driver %s"
+msgstr "Uporabi gonilnik %s z ndiswrapper"
+
+#: ../lib/network/ndiswrapper.pm:118
+#, c-format
+msgid "Install a new driver"
+msgstr "Namesti nov gonilnik"
+
+#: ../lib/network/ndiswrapper.pm:129
+#, c-format
+msgid "Select a device:"
+msgstr "Izberite napravo:"
+
+#: ../lib/network/netconnect.pm:37
+#, c-format
+msgid "United States"
+msgstr "Združene države Amerike"
+
+#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:493
+#: ../lib/network/netconnect.pm:507
+#, c-format
+msgid "Manual choice"
+msgstr "Ročna izbira"
+
+#: ../lib/network/netconnect.pm:60
+#, c-format
+msgid "Internal ISDN card"
+msgstr "Notranja ISDN kartica"
+
+#: ../lib/network/netconnect.pm:65
+#, c-format
+msgid "Protocol for the rest of the world"
+msgstr "Protokol za preostali svet"
+
+#: ../lib/network/netconnect.pm:67 ../tools/drakconnect:564
+#, c-format
+msgid "European protocol (EDSS1)"
+msgstr "Evropski protokol (EDSS1)"
+
+#: ../lib/network/netconnect.pm:68 ../tools/drakconnect:565
+#, c-format
+msgid ""
+"Protocol for the rest of the world\n"
+"No D-Channel (leased lines)"
+msgstr ""
+"Protokol za preostali svet\n"
+"Brez D-kanala (najetih linij)"
+
+#: ../lib/network/netconnect.pm:118 ../tools/drakconnect:61
+#, c-format
+msgid "Network & Internet Configuration"
+msgstr "Nastavitve za omrežje in internet"
+
+#: ../lib/network/netconnect.pm:123
+#, c-format
+msgid "Choose the connection you want to configure"
+msgstr "Izberite vrsto povezavo, ki jo želite nastaviti"
+
+#: ../lib/network/netconnect.pm:145 ../lib/network/netconnect.pm:348
+#: ../lib/network/netconnect.pm:788
+#, c-format
+msgid "Select the network interface to configure:"
+msgstr "Izberite kartico, ki jo želite nastaviti"
+
+#: ../lib/network/netconnect.pm:164
+#, c-format
+msgid "No device can be found for this connection type."
+msgstr "Za to vrsto povezave ni mogoče najti nobene naprave."
+
+#: ../lib/network/netconnect.pm:173
+#, c-format
+msgid "Hardware Configuration"
+msgstr "Nastavitev strojne opreme"
+
+#: ../lib/network/netconnect.pm:177 ../tools/drakroam:90
+#, c-format
+msgid "Configuring device..."
+msgstr "Nastavljanje......"
+
+#: ../lib/network/netconnect.pm:194
+#, c-format
+msgid "Please select your provider:"
+msgstr "Prosim izberite svojega operaterja:"
+
+#: ../lib/network/netconnect.pm:209 ../tools/drakroam:170
+#, c-format
+msgid "Scanning for networks..."
+msgstr "Iskanje omrežja..."
+
+#: ../lib/network/netconnect.pm:212
+#, c-format
+msgid "Please select your network:"
+msgstr "Prosim izberite vaše omrežje:"
+
+#: ../lib/network/netconnect.pm:241
+#, c-format
+msgid ""
+"Please select your connection protocol.\n"
+"If you do not know it, keep the preselected protocol."
+msgstr ""
+"Izberite protokol svoje povezave.\n"
+"Če je ne poznate, obdržite samodejno izbrani protokol."
+
+#: ../lib/network/netconnect.pm:285 ../lib/network/netconnect.pm:655
+#, c-format
+msgid "Connection control"
+msgstr "Nadzor povezave"
+
+#: ../lib/network/netconnect.pm:315
+#, c-format
+msgid "Connection Configuration"
+msgstr "Nastavitve povezave"
+
+#: ../lib/network/netconnect.pm:315
+#, c-format
+msgid "Please fill or check the field below"
+msgstr "Prosim izpolnite ali preverite spodnje polje"
+
+#: ../lib/network/netconnect.pm:318
+#, c-format
+msgid "Your personal phone number"
+msgstr "Vaša telefonska številka"
+
+#: ../lib/network/netconnect.pm:319
+#, c-format
+msgid "Provider name (ex provider.net)"
+msgstr "Ime ponudnika interneta"
+
+#: ../lib/network/netconnect.pm:320 ../tools/drakconnect:494
+#, c-format
+msgid "Provider phone number"
+msgstr "Telefonska številka ponudnika"
+
+#: ../lib/network/netconnect.pm:321
+#, c-format
+msgid "Provider DNS 1 (optional)"
+msgstr "DNS 1 ponudnika (neobvezno)"
+
+#: ../lib/network/netconnect.pm:322
+#, c-format
+msgid "Provider DNS 2 (optional)"
+msgstr "DNS 2 ponudnika (neobvezno)"
+
+#: ../lib/network/netconnect.pm:323 ../tools/drakconnect:446
+#, c-format
+msgid "Dialing mode"
+msgstr "Klicni način"
+
+#: ../lib/network/netconnect.pm:324 ../tools/drakconnect:451
+#: ../tools/drakconnect:518
+#, c-format
+msgid "Connection speed"
+msgstr "Hitrost povezave"
+
+#: ../lib/network/netconnect.pm:325 ../tools/drakconnect:456
+#, c-format
+msgid "Connection timeout (in sec)"
+msgstr "Premor pred povezavo (v sekundah)"
+
+#: ../lib/network/netconnect.pm:328 ../tools/drakconnect:555
+#, c-format
+msgid "Card IRQ"
+msgstr "IRQ kartice"
+
+#: ../lib/network/netconnect.pm:329 ../tools/drakconnect:556
+#, c-format
+msgid "Card mem (DMA)"
+msgstr "Card mem (DMA)"
+
+#: ../lib/network/netconnect.pm:330 ../tools/drakconnect:557
+#, c-format
+msgid "Card IO"
+msgstr "IO kartice"
+
+#: ../lib/network/netconnect.pm:331 ../tools/drakconnect:558
+#, c-format
+msgid "Card IO_0"
+msgstr "IO_0 kartice"
+
+#: ../lib/network/netconnect.pm:332
+#, c-format
+msgid "Card IO_1"
+msgstr "IO_1 kartice"
+
+#: ../lib/network/netconnect.pm:350 ../lib/network/netconnect.pm:385
+#: ../tools/drakconnect:719 ../tools/drakgw:123
+#, c-format
+msgid "Net Device"
+msgstr "Omrežna naprava"
+
+#: ../lib/network/netconnect.pm:351 ../lib/network/netconnect.pm:356
+#, c-format
+msgid "External ISDN modem"
+msgstr "Zunanji ISDN modem"
+
+#: ../lib/network/netconnect.pm:384
+#, c-format
+msgid "Select a device!"
+msgstr "Izberite napravo"
+
+#: ../lib/network/netconnect.pm:393 ../lib/network/netconnect.pm:403
+#: ../lib/network/netconnect.pm:413 ../lib/network/netconnect.pm:446
+#: ../lib/network/netconnect.pm:460
+#, c-format
+msgid "ISDN Configuration"
+msgstr "Nastavitve ISDN"
+
+#: ../lib/network/netconnect.pm:394
+#, c-format
+msgid "What kind of card do you have?"
+msgstr "Kakšno kartico imate?"
+
+#: ../lib/network/netconnect.pm:404
+#, c-format
+msgid ""
+"\n"
+"If you have an ISA card, the values on the next screen should be right.\n"
+"\n"
+"If you have a PCMCIA card, you have to know the \"irq\" and \"io\" of your "
+"card.\n"
+msgstr ""
+"\n"
+"Če imate ISA kartico, bi morale biti nastavitve na naslednjem zaslonu "
+"pravilne.\n"
+"\n"
+"Če imate PCMCIA kartico, morate poznati njena »IRQ« in »IO«.\n"
+
+#: ../lib/network/netconnect.pm:408
+#, c-format
+msgid "Continue"
+msgstr "Nadaljuj"
+
+#: ../lib/network/netconnect.pm:408
+#, c-format
+msgid "Abort"
+msgstr "Prekini"
+
+#: ../lib/network/netconnect.pm:414
+#, c-format
+msgid "Which of the following is your ISDN card?"
+msgstr "Katera od naštetih je vaša ISDN kartica?"
+
+#: ../lib/network/netconnect.pm:432
+#, c-format
+msgid ""
+"A CAPI driver is available for this modem. This CAPI driver can offer more "
+"capabilities than the free driver (like sending faxes). Which driver do you "
+"want to use?"
+msgstr ""
+"Za ta modem je na voljo gonilnik CAPI. CAPI gonilnik nudi več možnosti, kot "
+"prosti gonilnik (n.pr.: pošiljanje faksov). Kateri gonilnik želite "
+"uporabljati?"
+
+#: ../lib/network/netconnect.pm:434 ../tools/drakconnect:113
+#, c-format
+msgid "Driver"
+msgstr "Gonilnik"
+
+#: ../lib/network/netconnect.pm:446
+#, c-format
+msgid "Which protocol do you want to use?"
+msgstr "Kateri protokol želite uporabljati?"
+
+#: ../lib/network/netconnect.pm:448 ../tools/drakconnect:113
+#: ../tools/drakconnect:305 ../tools/drakconnect:563 ../tools/drakids:252
+#: ../tools/drakvpn-old:839
+#, c-format
+msgid "Protocol"
+msgstr "Protokol"
+
+#: ../lib/network/netconnect.pm:460
+#, c-format
+msgid ""
+"Select your provider.\n"
+"If it is not listed, choose Unlisted."
+msgstr ""
+"Izberite svojega ponudnika.\n"
+"Če ga ni seznamu. izberite »Ni na seznamu«."
+
+#: ../lib/network/netconnect.pm:462 ../lib/network/netconnect.pm:558
+#, c-format
+msgid "Provider:"
+msgstr "Ponudnik:"
+
+#: ../lib/network/netconnect.pm:471
+#, c-format
+msgid ""
+"Your modem is not supported by the system.\n"
+"Take a look at http://www.linmodems.org"
+msgstr ""
+"Vaš modem ni podprt.\n"
+"Preverite na: http://www.linmodems.org"
+
+#: ../lib/network/netconnect.pm:490
+#, c-format
+msgid "Select the modem to configure:"
+msgstr "Izberite modem, ki ga želite nastaviti:"
+
+#: ../lib/network/netconnect.pm:492
+#, c-format
+msgid "Modem"
+msgstr "Modem"
+
+#: ../lib/network/netconnect.pm:527
+#, c-format
+msgid "Please choose which serial port your modem is connected to."
+msgstr "Izberite serijska vrata, na katera je priključen vaš modem."
+
+#: ../lib/network/netconnect.pm:556
+#, c-format
+msgid "Select your provider:"
+msgstr "Izberite ponudnika:"
+
+#: ../lib/network/netconnect.pm:580
+#, c-format
+msgid "Dialup: account options"
+msgstr "Klicne nastavitve: račun"
+
+#: ../lib/network/netconnect.pm:583
+#, c-format
+msgid "Connection name"
+msgstr "Ime povezave"
+
+#: ../lib/network/netconnect.pm:584
+#, c-format
+msgid "Phone number"
+msgstr "Telefonska številka"
+
+#: ../lib/network/netconnect.pm:585
+#, c-format
+msgid "Login ID"
+msgstr "Identiteta za prijavo"
+
+#: ../lib/network/netconnect.pm:586 ../lib/network/vpn/vpnc.pm:56
+#: ../tools/drakinvictus:110
+#, c-format
+msgid "Password"
+msgstr "Geslo"
+
+#: ../lib/network/netconnect.pm:600 ../lib/network/netconnect.pm:633
+#, c-format
+msgid "Dialup: IP parameters"
+msgstr "Klicne nastavitve: IP"
+
+#: ../lib/network/netconnect.pm:603
+#, c-format
+msgid "IP parameters"
+msgstr "Nastavitve IP"
+
+#: ../lib/network/netconnect.pm:605
+#, c-format
+msgid "Subnet mask"
+msgstr "Maska podomrežja"
+
+#: ../lib/network/netconnect.pm:617
+#, c-format
+msgid "Dialup: DNS parameters"
+msgstr "Klicne nastavitve: DNS"
+
+#: ../lib/network/netconnect.pm:620
+#, c-format
+msgid "DNS"
+msgstr "DNS"
+
+#: ../lib/network/netconnect.pm:621
+#, c-format
+msgid "Domain name"
+msgstr "Ime domene"
+
+#: ../lib/network/netconnect.pm:622 ../tools/drakconnect:996
+#, c-format
+msgid "First DNS Server (optional)"
+msgstr "Prvi DNS strežnik (neobvezno)"
+
+#: ../lib/network/netconnect.pm:623 ../tools/drakconnect:997
+#, c-format
+msgid "Second DNS Server (optional)"
+msgstr "Drugi DNS strežnik (neobvezno)"
+
+#: ../lib/network/netconnect.pm:624
+#, c-format
+msgid "Set hostname from IP"
+msgstr "Gostiteljevo ime pridobi iz naslova IP"
+
+#: ../lib/network/netconnect.pm:637
+#, c-format
+msgid "Gateway IP address"
+msgstr "Naslov IP privzetega prehoda (gateway)"
+
+#: ../lib/network/netconnect.pm:670
+#, c-format
+msgid "Automatically at boot"
+msgstr "Samodejno ob zagonu"
+
+#: ../lib/network/netconnect.pm:672
+#, c-format
+msgid "By using Net Applet in the system tray"
+msgstr "Z uporabo ikone »Omrežje« v pultu"
+
+#: ../lib/network/netconnect.pm:674
+#, c-format
+msgid "Manually (the interface would still be activated at boot)"
+msgstr "Ročno (naprava se bo kljub temu vključila ob zagonu)"
+
+#: ../lib/network/netconnect.pm:683
+#, c-format
+msgid "How do you want to dial this connection?"
+msgstr "Klicne nastavitve za to povezavo"
+
+#: ../lib/network/netconnect.pm:696
+#, c-format
+msgid "Do you want to try to connect to the Internet now?"
+msgstr "Se želite sedaj povezati z internetom?"
+
+#: ../lib/network/netconnect.pm:704 ../tools/drakconnect:1027
+#, c-format
+msgid "Testing your connection..."
+msgstr "Preverjanje povezave...."
+
+#: ../lib/network/netconnect.pm:723
+#, c-format
+msgid "The system is now connected to the Internet."
+msgstr "Sistem je povezan z internetom."
+
+#: ../lib/network/netconnect.pm:724
+#, c-format
+msgid "For security reasons, it will be disconnected now."
+msgstr "Povezava bo iz varnostnih razlogov prekinjena."
+
+#: ../lib/network/netconnect.pm:725
+#, c-format
+msgid ""
+"The system does not seem to be connected to the Internet.\n"
+"Try to reconfigure your connection."
+msgstr ""
+"Izgleda, da sistem ni povezan z internetom.\n"
+"Poskusite ponovno nastaviti povezavo."
+
+#: ../lib/network/netconnect.pm:740
+#, c-format
+msgid ""
+"Congratulations, the network and Internet configuration is finished.\n"
+"\n"
+msgstr ""
+"Čestitamo, uspešno ste nastavili omrežje in internet.\n"
+"\n"
+
+#: ../lib/network/netconnect.pm:743
+#, c-format
+msgid ""
+"After this is done, we recommend that you restart your X environment to "
+"avoid any hostname-related problems."
+msgstr ""
+"Priporočam, da po dokončanem nastavljanju ponovno zaženete okolje X, da bi "
+"se izognili težavam v zvezi z imenom gostitelja."
+
+#: ../lib/network/netconnect.pm:744
+#, c-format
+msgid ""
+"Problems occurred during configuration.\n"
+"Test your connection via net_monitor or mcc. If your connection does not "
+"work, you might want to relaunch the configuration."
+msgstr ""
+"Med nastavljanjem se je pojavila napaka.\n"
+"Preizkusite povezavo v Mandriva Linux nadzornem središču. Če povezava ne "
+"deluje, ponovno zaženite nastavitve."
+
+#: ../lib/network/netconnect.pm:756
+#, c-format
+msgid "Sagem USB modem"
+msgstr "Sagem USB modem"
+
+#: ../lib/network/netconnect.pm:757 ../lib/network/netconnect.pm:758
+#, c-format
+msgid "Bewan modem"
+msgstr "Bewan modem"
+
+#: ../lib/network/netconnect.pm:759
+#, c-format
+msgid "ECI Hi-Focus modem"
+msgstr "ECI Hi-Focus modem"
+
+#: ../lib/network/netconnect.pm:760
+#, c-format
+msgid "LAN connection"
+msgstr "Krajevno omrežje (LAN)"
+
+#: ../lib/network/netconnect.pm:761 ../tools/drakroam:29
+#, c-format
+msgid "Wireless connection"
+msgstr "Brezžična povezava"
+
+#: ../lib/network/netconnect.pm:762
+#, c-format
+msgid "ADSL connection"
+msgstr "ADSL"
+
+#: ../lib/network/netconnect.pm:763
+#, c-format
+msgid "Cable connection"
+msgstr "Kabelska"
+
+#: ../lib/network/netconnect.pm:764
+#, c-format
+msgid "ISDN connection"
+msgstr "ISDN"
+
+#: ../lib/network/netconnect.pm:765
+#, c-format
+msgid "Modem connection"
+msgstr "Modemska"
+
+#: ../lib/network/netconnect.pm:766
+#, c-format
+msgid "DVB connection"
+msgstr "DVB"
+
+#: ../lib/network/netconnect.pm:768
+#, c-format
+msgid "(detected on port %s)"
+msgstr "(zaznano na vratih %s)"
+
+#. -PO: here, "(detected)" string will be appended to eg "ADSL connection"
+#: ../lib/network/netconnect.pm:770
+#, c-format
+msgid "(detected %s)"
+msgstr "(zaznano %s)"
+
+#: ../lib/network/netconnect.pm:770
+#, c-format
+msgid "(detected)"
+msgstr "(zaznano)"
+
+#: ../lib/network/netconnect.pm:771
+#, c-format
+msgid "Network Configuration"
+msgstr "Nastavitve omrežja"
+
+#: ../lib/network/netconnect.pm:772
+#, c-format
+msgid "Zeroconf hostname resolution"
+msgstr "Zeroconf hostname resolution"
+
+#: ../lib/network/netconnect.pm:773
+#, c-format
+msgid ""
+"If desired, enter a Zeroconf hostname.\n"
+"This is the name your machine will use to advertise any of\n"
+"its shared resources that are not managed by the network.\n"
+"It is not necessary on most networks."
+msgstr ""
+"Če želite, lahko vnesete ime gostitelja za Zeroconf.\n"
+"S tem imenom bo vaš računalnik predstavljal vse \n"
+"vire v skupni rabi, ki jih ne upravlja omrežje.\n"
+"Za večino omrežij to ime ni potrebno."
+
+#: ../lib/network/netconnect.pm:777
+#, c-format
+msgid "Zeroconf Host name"
+msgstr "Ime gostitelja za Zeroconf"
+
+#: ../lib/network/netconnect.pm:778
+#, c-format
+msgid "Zeroconf host name must not contain a ."
+msgstr "ime gostitelja za Zeroconf ne sme vsebovati"
+
+#: ../lib/network/netconnect.pm:779
+#, c-format
+msgid ""
+"Because you are doing a network installation, your network is already "
+"configured.\n"
+"Click on Ok to keep your configuration, or cancel to reconfigure your "
+"Internet & Network connection.\n"
+msgstr ""
+"Vaše omrežja je že nastavljeno, ker poteka namestitev iz omrežja.\n"
+"Če želite nastavitve obdržati, kliknite 'V redu'. Če želite ponovno "
+"nastaviti povezavo z omrežjem in z internetom, kliknite 'Prekliči'.\n"
+
+#: ../lib/network/netconnect.pm:782
+#, c-format
+msgid "The network needs to be restarted. Do you want to restart it?"
+msgstr "Potreben je ponoven zagon omrežja. Ga želite ponovno zagnati?"
+
+#: ../lib/network/netconnect.pm:783
+#, c-format
+msgid ""
+"A problem occurred while restarting the network: \n"
+"\n"
+"%s"
+msgstr ""
+"Med ponovnim zagonom omrežja se je pojavila težava: \n"
+"\n"
+"%s"
+
+#: ../lib/network/netconnect.pm:784
+#, c-format
+msgid ""
+"We are now going to configure the %s connection.\n"
+"\n"
+"\n"
+"Press \"%s\" to continue."
+msgstr ""
+"Nastavljanje povezave %s \n"
+"\n"
+"\n"
+"Za nadaljevanje pritisnite »%s«."
+
+#: ../lib/network/netconnect.pm:785
+#, c-format
+msgid "Configuration is complete, do you want to apply settings?"
+msgstr "Nastavitev je dokončana. Jo želite uveljaviti?"
+
+#: ../lib/network/netconnect.pm:786
+#, c-format
+msgid ""
+"You have configured multiple ways to connect to the Internet.\n"
+"Choose the one you want to use.\n"
+"\n"
+msgstr ""
+"Nastavili ste več načinov za dostop do interneta.\n"
+"Prosim, izberite dostop, ki ga želite uporabiti.\n"
+"\n"
+
+#: ../lib/network/netconnect.pm:787
+#, c-format
+msgid "Internet connection"
+msgstr "Internetna povezava"
+
+#: ../lib/network/netconnect.pm:789
+#, c-format
+msgid "Configuring network device %s (driver %s)"
+msgstr "Nastavljanje omrežne naprave%s (gonilnik %s)"
+
+#: ../lib/network/netconnect.pm:790
+#, c-format
+msgid ""
+"The following protocols can be used to configure a LAN connection. Please "
+"choose the one you want to use."
+msgstr ""
+"Za nastavitev povezave LAN so na voljo sledeči protokoli. Prosim, izberite "
+"tistega, ki ga želite uporabljati."
+
+#: ../lib/network/netconnect.pm:791
+#, c-format
+msgid ""
+"Please enter your host name.\n"
+"Your host name should be a fully-qualified host name,\n"
+"such as ``mybox.mylab.myco.com''.\n"
+"You may also enter the IP address of the gateway if you have one."
+msgstr ""
+"Prosim, vnesite svoje ime gostitelja.\n"
+"Ime gostitelja mora imeti obliko kot na primer:``mybox.mylab.myco.com''.\n"
+"Lahko vnesete tudi naslov IP privzetega prehoda (gateway)."
+
+#: ../lib/network/netconnect.pm:796
+#, c-format
+msgid "Last but not least you can also type in your DNS server IP addresses."
+msgstr "Vnesete lahko tudi naslov IP strežnika DNS."
+
+#: ../lib/network/netconnect.pm:797
+#, c-format
+msgid "DNS server address should be in format 1.2.3.4"
+msgstr "Naslov DNS strežnika mora imeti obliko 1.2.3.4."
+
+#: ../lib/network/netconnect.pm:798 ../tools/drakconnect:689
+#, c-format
+msgid "Gateway address should be in format 1.2.3.4"
+msgstr "Naslov privzetega prehoda mora imeti obliko 1.2.3.4."
+
+#: ../lib/network/netconnect.pm:799
+#, c-format
+msgid "Gateway device"
+msgstr "Naprava privzetega prehoda"
+
+#: ../lib/network/netconnect.pm:813
+#, c-format
+msgid ""
+"An unexpected error has happened:\n"
+"%s"
+msgstr ""
+"Pojavila se je nepričakovana napaka:\n"
+"%s"
+
+#: ../lib/network/network.pm:429
+#, c-format
+msgid "Proxies configuration"
+msgstr "Nastavitve posrednika (proxyja)"
+
+#: ../lib/network/network.pm:430
+#, c-format
+msgid ""
+"Here you can set up your proxies configuration (eg: http://"
+"my_caching_server:8080)"
+msgstr "Nastavite posrednike proxy (n. pr. http://proxy.prinas.si:8080)"
+
+#: ../lib/network/network.pm:431
+#, c-format
+msgid "HTTP proxy"
+msgstr "Posrednik za HTTP"
+
+#: ../lib/network/network.pm:432
+#, c-format
+msgid "Use HTTP proxy for HTTPS connections"
+msgstr "Uporabi HTTP proxy za HTTPS povezave"
+
+#: ../lib/network/network.pm:433
+#, c-format
+msgid "HTTPS proxy"
+msgstr "HTTPS proxy"
+
+#: ../lib/network/network.pm:434
+#, c-format
+msgid "FTP proxy"
+msgstr "Posrednik za FTP"
+
+#: ../lib/network/network.pm:435
+#, c-format
+msgid "No proxy for (comma separated list):"
+msgstr "Brez proxyja (ločeni z vejicami):"
+
+#: ../lib/network/network.pm:440
+#, c-format
+msgid "Proxy should be http://..."
+msgstr "Posrednik mora imeti obliko http://..."
+
+#: ../lib/network/network.pm:441
+#, c-format
+msgid "Proxy should be http://... or https://..."
+msgstr "Posrednik mora imeti obliko http://... ali https://..."
+
+#: ../lib/network/network.pm:442
+#, c-format
+msgid "URL should begin with 'ftp:' or 'http:'"
+msgstr "URL se mora začeti s 'ftp:' ali s 'http:'"
+
+#: ../lib/network/shorewall.pm:61
+#, c-format
+msgid ""
+"Please select the interfaces that will be protected by the firewall.\n"
+"\n"
+"All interfaces directly connected to Internet should be selected,\n"
+"while interfaces connected to a local network may be unselected.\n"
+"\n"
+"Which interfaces should be protected?\n"
+msgstr ""
+"Izberite vmesnike, ki naj bodo zaščiteni s požarnim zidom.\n"
+"\n"
+"Priporočamo, da izberete vmesnike, povezane z internetom in izločite "
+"vmesnike, povezane s krajevnim omrežjem.\n"
+"\n"
+
+#: ../lib/network/shorewall.pm:136
+#, c-format
+msgid "Keep custom rules"
+msgstr "Obdrži pravila po meri"
+
+#: ../lib/network/shorewall.pm:137
+#, c-format
+msgid "Drop custom rules"
+msgstr "Razveljavi pravila po meri"
+
+#: ../lib/network/shorewall.pm:142
+#, c-format
+msgid ""
+"Your firewall configuration has been manually edited and contains\n"
+"rules that may conflict with the configuration that has just been set up.\n"
+"What do you want to do?"
+msgstr ""
+"Ročno ste spremenili nastavitve požarnega zidu, zato je mogoče,\n"
+"da so ročno nastavljena pravila v nasprotju z novimi nastavitvami.\n"
+" Kaj želite storiti? "
+
+#: ../lib/network/thirdparty.pm:134
+#, c-format
+msgid "Some components (%s) are required but aren't available for %s hardware."
+msgstr ""
+"Potrebne so nekatere komponente (%s), ki pa niso na voljo za strojno opremo %"
+"s."
+
+#: ../lib/network/thirdparty.pm:135
+#, c-format
+msgid "Some packages (%s) are required but aren't available."
+msgstr "Potrebni so nekateri paketi (%s), ki pa niso na voljo."
+
+#: ../lib/network/thirdparty.pm:137
+#, c-format
+msgid ""
+"These packages can be found in Mandriva Club or in Mandriva commercial "
+"releases."
+msgstr ""
+"Te pakete lahko najdete v Klubu Mandriva ali v komercialnih izdajah Mandrive."
+
+#: ../lib/network/thirdparty.pm:138
+#, c-format
+msgid "The following component is missing: %s"
+msgstr "Manjka naslednja komponenta: %s"
+
+#: ../lib/network/thirdparty.pm:140
+#, c-format
+msgid ""
+"The required files can also be installed from this URL:\n"
+"%s"
+msgstr ""
+"Potrebne pakete je moč dobiti tudi na tem naslovu:\n"
+"%s"
+
+#: ../lib/network/thirdparty.pm:177 ../lib/network/thirdparty.pm:182
+#, c-format
+msgid "Use a floppy"
+msgstr "Uporabi disketo"
+
+#: ../lib/network/thirdparty.pm:178 ../lib/network/thirdparty.pm:185
+#, c-format
+msgid "Use my Windows partition"
+msgstr "Uporabi razdelek za Windows"
+
+#: ../lib/network/thirdparty.pm:179
+#, c-format
+msgid "Select file"
+msgstr "Izberite datoteko"
+
+#: ../lib/network/thirdparty.pm:190
+#, c-format
+msgid "Please select the firmware file (for example: %s)"
+msgstr "Prosim izberite firmware datoteko (na primer: %s)"
+
+#: ../lib/network/thirdparty.pm:214
+#, c-format
+msgid "Unable to find \"%s\" on your Windows system!"
+msgstr "Na vašem sistemu Windows ni moč najti »%s«!"
+
+#: ../lib/network/thirdparty.pm:216
+#, c-format
+msgid "No Windows system has been detected!"
+msgstr "Sistema Windows ni bilo moč zaznati!"
+
+#: ../lib/network/thirdparty.pm:226
+#, c-format
+msgid "Insert floppy"
+msgstr "Vstavite disketo"
+
+#: ../lib/network/thirdparty.pm:227
+#, c-format
+msgid ""
+"Insert a FAT formatted floppy in drive %s with %s in root directory and "
+"press %s"
+msgstr ""
+"Vstavite formatirano disketo v pogon%s z %s v korenskem imeniku in pritisnite"
+"%s"
+
+#: ../lib/network/thirdparty.pm:227
+#, c-format
+msgid "Next"
+msgstr "Naprej"
+
+#: ../lib/network/thirdparty.pm:237
+#, c-format
+msgid "Floppy access error, unable to mount device %s"
+msgstr "Napaka pri dostopu do diskete: naprave %s ni mogoče priklopiti."
+
+#: ../lib/network/thirdparty.pm:319
+#, c-format
+msgid "Looking for required software and drivers..."
+msgstr "Iskanje potrebnih programov in gonilnikov ..."
+
+#: ../lib/network/thirdparty.pm:330
+#, c-format
+msgid "Please wait, running device configuration commands..."
+msgstr "Poteka nastavljanje naprav. Prosim počakajte ..."
+
+#: ../lib/network/vpn/openvpn.pm:107
+#, c-format
+msgid "X509 Public Key Infrastructure"
+msgstr "Zbirka javnih ključev X509"
+
+#: ../lib/network/vpn/openvpn.pm:108
+#, c-format
+msgid "Static Key"
+msgstr "Statični ključ"
+
+#: ../lib/network/vpn/openvpn.pm:115
+#, c-format
+msgid "Type"
+msgstr "Vrsta"
+
+#. -PO: please don't translate the CA acronym
+#: ../lib/network/vpn/openvpn.pm:142
+#, c-format
+msgid "Certificate Authority (CA)"
+msgstr "Izdajatelj certifikata (CA)"
+
+#: ../lib/network/vpn/openvpn.pm:148
+#, c-format
+msgid "Certificate"
+msgstr "Certifikat"
+
+#: ../lib/network/vpn/openvpn.pm:154
+#, c-format
+msgid "Key"
+msgstr "Ključ"
+
+#: ../lib/network/vpn/openvpn.pm:160
+#, c-format
+msgid "TLS control channel key"
+msgstr "Kontrolni ključ TLS"
+
+#: ../lib/network/vpn/openvpn.pm:167
+#, c-format
+msgid "Key direction"
+msgstr "Usmeritev ključa"
+
+#: ../lib/network/vpn/openvpn.pm:175
+#, c-format
+msgid "Authenticate using username and password"
+msgstr "Overi z uporabniškim imenom in geslom"
+
+#: ../lib/network/vpn/openvpn.pm:181
+#, c-format
+msgid "Check server certificate"
+msgstr "Preveri strežnikov certifikat"
+
+#: ../lib/network/vpn/openvpn.pm:187
+#, c-format
+msgid "Cipher algorithm"
+msgstr "Algoritem za šifriranje"
+
+#: ../lib/network/vpn/openvpn.pm:191
+#, c-format
+msgid "Default"
+msgstr "Privzeto"
+
+#: ../lib/network/vpn/openvpn.pm:195
+#, c-format
+msgid "Size of cipher key"
+msgstr "Velikost šifrirnega ključa"
+
+#: ../lib/network/vpn/openvpn.pm:206
+#, c-format
+msgid "Get from server"
+msgstr "Pridobi s strežnika"
+
+#: ../lib/network/vpn/openvpn.pm:216
+#, c-format
+msgid "Gateway port"
+msgstr "Privzeti prehod"
+
+#: ../lib/network/vpn/openvpn.pm:227 ../tools/drakgw:176
+#, c-format
+msgid "Local IP address"
+msgstr "Krajevni naslov IP"
+
+#: ../lib/network/vpn/openvpn.pm:232
+#, c-format
+msgid "Remote IP address"
+msgstr "Oddaljeni naslov IP"
+
+#: ../lib/network/vpn/openvpn.pm:237
+#, c-format
+msgid "Use TCP protocol"
+msgstr "Uporabi TCP protokol"
+
+#: ../lib/network/vpn/openvpn.pm:243
+#, c-format
+msgid "Virtual network device type"
+msgstr "Tip naprave za navidezno omrežje"
+
+#: ../lib/network/vpn/openvpn.pm:250
+#, c-format
+msgid "Virtual network device number (optional)"
+msgstr "Številka naprave za navidezno omrežje (neobvezno)"
+
+#: ../lib/network/vpn/openvpn.pm:365
+#, c-format
+msgid "Starting connection.."
+msgstr "Vzpostavljanje povezave ..."
+
+#: ../lib/network/vpn/openvpn.pm:380
+#, c-format
+msgid "Please insert your token"
+msgstr "Vnesite svoj žeton"
+
+#: ../lib/network/vpn/vpnc.pm:9
+#, c-format
+msgid "Cisco VPN Concentrator"
+msgstr "Cisco VPN Concentrator"
+
+#: ../lib/network/vpn/vpnc.pm:43
+#, c-format
+msgid "Group name"
+msgstr "Ime skupine"
+
+#: ../lib/network/vpn/vpnc.pm:47
+#, c-format
+msgid "Group secret"
+msgstr "Skrivnost skupine"
+
+#: ../lib/network/vpn/vpnc.pm:52
+#, c-format
+msgid "Username"
+msgstr "Uporabniško ime"
+
+#: ../lib/network/vpn/vpnc.pm:61
+#, c-format
+msgid "Use Cisco-UDP encapsulation"
+msgstr "Uporabi zaščito podatkov Cisco-UDP"
+
+#: ../lib/network/vpn/vpnc.pm:67
+#, c-format
+msgid "Use specific UDP port"
+msgstr "Uporabi določena vrata UDP"
+
+#: ../tools/drakconnect:81
+#, c-format
+msgid "Network configuration (%d adapters)"
+msgstr "Nastavitve omrežja (vmesniki %d)"
+
+#: ../tools/drakconnect:93 ../tools/drakconnect:812
+#, c-format
+msgid "Gateway:"
+msgstr "Privzeti prehod:"
+
+#: ../tools/drakconnect:93 ../tools/drakconnect:812
+#, c-format
+msgid "Interface:"
+msgstr "Vmesnik:"
+
+#: ../tools/drakconnect:97 ../tools/net_monitor:119
+#, c-format
+msgid "Wait please"
+msgstr "Prosim, počakajte"
+
+#: ../tools/drakconnect:113 ../tools/drakinvictus:105
+#, c-format
+msgid "Interface"
+msgstr "Vmesnik"
+
+#: ../tools/drakconnect:113
+#, c-format
+msgid "State"
+msgstr "Stanje"
+
+#: ../tools/drakconnect:130
+#, c-format
+msgid "Hostname: "
+msgstr "Ime gostitelja: "
+
+#: ../tools/drakconnect:132
+#, c-format
+msgid "Configure hostname..."
+msgstr "Nastavitev imena gostitelja ..."
+
+#: ../tools/drakconnect:146 ../tools/drakconnect:850
+#, c-format
+msgid "LAN configuration"
+msgstr "Nastavitve krajevnega omrežja (LAN)"
+
+#: ../tools/drakconnect:151
+#, c-format
+msgid "Configure Local Area Network..."
+msgstr "Nastavitev krajevnega omrežja..."
+
+#: ../tools/drakconnect:157 ../tools/drakconnect:240 ../tools/draknfs:181
+#, c-format
+msgid "Help"
+msgstr "Pomoč"
+
+#: ../tools/drakconnect:159 ../tools/drakconnect:241 ../tools/drakconnect:245
+#: ../tools/drakinvictus:140
+#, c-format
+msgid "Apply"
+msgstr "Uporabi"
+
+#: ../tools/drakconnect:161 ../tools/drakconnect:942 ../tools/drakconnect:1033
+#: ../tools/draknetprofile:106 ../tools/net_monitor:341
+#, c-format
+msgid "Cancel"
+msgstr "Prekliči"
+
+#: ../tools/drakconnect:162 ../tools/drakconnect:857 ../tools/drakconnect:944
+#: ../tools/drakconnect:1034 ../tools/draknetprofile:108
+#: ../tools/net_monitor:342
+#, c-format
+msgid "Ok"
+msgstr "V redu"
+
+#: ../tools/drakconnect:164 ../tools/drakconnect:636 ../tools/drakgw:359
+#: ../tools/drakroam:251 ../tools/drakroam:289 ../tools/draksambashare:208
+#, c-format
+msgid "Please wait"
+msgstr "Prosim, počakajte!"
+
+#: ../tools/drakconnect:166 ../tools/drakconnect:638
+#, c-format
+msgid "Please Wait... Applying the configuration"
+msgstr "Prosim počakajte... Uveljavljanje nastavitev"
+
+#: ../tools/drakconnect:192
+#, c-format
+msgid "Manage connections"
+msgstr "Upravljanje povezav"
+
+#: ../tools/drakconnect:219 ../tools/drakroam:302
+#, c-format
+msgid "Device: "
+msgstr "Naprava: "
+
+#: ../tools/drakconnect:302
+#, c-format
+msgid "IP configuration"
+msgstr "Nastavitev naslova IP"
+
+#: ../tools/drakconnect:337
+#, c-format
+msgid "DNS servers"
+msgstr "Strežniki DNS"
+
+#: ../tools/drakconnect:343
+#, c-format
+msgid "Search Domain"
+msgstr "Domena za iskanje"
+
+#: ../tools/drakconnect:351 ../tools/drakvpn-old:837
+#, c-format
+msgid "none"
+msgstr "nič"
+
+#: ../tools/drakconnect:351
+#, c-format
+msgid "static"
+msgstr "statični"
+
+#: ../tools/drakconnect:351
+#, c-format
+msgid "DHCP"
+msgstr "DHCP"
+
+#: ../tools/drakconnect:434
+#, c-format
+msgid "Start at boot"
+msgstr "Vključi ob zagonu"
+
+#: ../tools/drakconnect:516
+#, c-format
+msgid "Flow control"
+msgstr "Nadzor pretoka"
+
+#: ../tools/drakconnect:517
+#, c-format
+msgid "Line termination"
+msgstr "Prekinitev linije"
+
+#: ../tools/drakconnect:528
+#, c-format
+msgid "Modem timeout"
+msgstr "Premor pred vzpostavitvijo povezave"
+
+#: ../tools/drakconnect:532
+#, c-format
+msgid "Use lock file"
+msgstr "Uporabi datoteko za zaklepanje"
+
+#: ../tools/drakconnect:534
+#, c-format
+msgid "Wait for dialup tone before dialing"
+msgstr "Počakaj na ton centrale "
+
+#: ../tools/drakconnect:537
+#, c-format
+msgid "Busy wait"
+msgstr "Zasedeno..čakam.."
+
+#: ../tools/drakconnect:542
+#, c-format
+msgid "Modem sound"
+msgstr "Zvok modema"
+
+#: ../tools/drakconnect:543 ../tools/drakgw:101
+#, c-format
+msgid "Enable"
+msgstr "Omogoči"
+
+#: ../tools/drakconnect:543 ../tools/drakgw:101
+#, c-format
+msgid "Disable"
+msgstr "Onemogoči"
+
+#: ../tools/drakconnect:592
+#, c-format
+msgid "Vendor"
+msgstr "Proizvajalec"
+
+#: ../tools/drakconnect:593
+#, c-format
+msgid "Description"
+msgstr "Opis"
+
+#: ../tools/drakconnect:594
+#, c-format
+msgid "Media class"
+msgstr "Razred medija"
+
+#: ../tools/drakconnect:595
+#, c-format
+msgid "Module name"
+msgstr "Ime modula"
+
+#: ../tools/drakconnect:596
+#, c-format
+msgid "Mac Address"
+msgstr "Fizični naslov (Mac adress)"
+
+#: ../tools/drakconnect:597
+#, c-format
+msgid "Bus"
+msgstr "Vodilo"
+
+#: ../tools/drakconnect:598
+#, c-format
+msgid "Location on the bus"
+msgstr "Mesto na vodilu"
+
+#: ../tools/drakconnect:685 ../tools/drakconnect:766 ../tools/drakconnect:952
+#, c-format
+msgid "No IP"
+msgstr "Ni naslova IP"
+
+#: ../tools/drakconnect:686 ../tools/drakconnect:767
+#, c-format
+msgid "No Mask"
+msgstr "Ni maske omrežja"
+
+#: ../tools/drakconnect:705 ../tools/drakgw:307
+#, c-format
+msgid ""
+"No ethernet network adapter has been detected on your system. Please run the "
+"hardware configuration tool."
+msgstr ""
+"Na vašem sistemu ni mogoče zaznati nobene omrežne naprave. Zaženite orodje "
+"za nastavljanje strojne opreme."
+
+#: ../tools/drakconnect:714
+#, c-format
+msgid "Remove a network interface"
+msgstr "Odstrani omrežno napravo"
+
+#: ../tools/drakconnect:718
+#, c-format
+msgid "Select the network interface to remove:"
+msgstr "Izberite omrežno napravo, ki jo želite odstraniti:"
+
+#: ../tools/drakconnect:750
+#, c-format
+msgid ""
+"An error occurred while deleting the \"%s\" network interface:\n"
+"\n"
+"%s"
+msgstr ""
+"Med odstranjevanjem omrežne naprave »%s« je prišlo do napake:\n"
+"\n"
+"%s"
+
+#: ../tools/drakconnect:751
+#, c-format
+msgid ""
+"Congratulations, the \"%s\" network interface has been successfully deleted"
+msgstr "Omrežna naprava »%s« je bila uspešno odstranjena"
+
+#: ../tools/drakconnect:768 ../tools/drakconnect:921
+#, c-format
+msgid "up"
+msgstr "Povezano"
+
+#: ../tools/drakconnect:768 ../tools/drakconnect:921
+#, c-format
+msgid "down"
+msgstr "Prekinjeno"
+
+#: ../tools/drakconnect:803 ../tools/net_monitor:465
+#, c-format
+msgid "Connected"
+msgstr "Povezano"
+
+#: ../tools/drakconnect:803 ../tools/net_monitor:465
+#, c-format
+msgid "Not connected"
+msgstr "Brez povezave"
+
+#: ../tools/drakconnect:805
+#, c-format
+msgid "Disconnect..."
+msgstr "Prekini povezavo..."
+
+#: ../tools/drakconnect:805
+#, c-format
+msgid "Connect..."
+msgstr "Poveži se..."
+
+#: ../tools/drakconnect:846
+#, c-format
+msgid "Deactivate now"
+msgstr "Izključi"
+
+#: ../tools/drakconnect:846
+#, c-format
+msgid "Activate now"
+msgstr "Vključi"
+
+#: ../tools/drakconnect:854
+#, c-format
+msgid ""
+"You do not have any configured interface.\n"
+"Configure them first by clicking on 'Configure'"
+msgstr ""
+"Nobena omrežna naprava ni nastavljena.\n"
+"Kliknite 'Nastavi' za nadaljevanje"
+
+#: ../tools/drakconnect:868
+#, c-format
+msgid "LAN Configuration"
+msgstr "Nastavitve krajevnega omrežja (LAN)"
+
+#: ../tools/drakconnect:880
+#, c-format
+msgid "Adapter %s: %s"
+msgstr "Vmesnik %s: %s"
+
+#: ../tools/drakconnect:889
+#, c-format
+msgid "Boot Protocol"
+msgstr "Zagonski protokol"
+
+#: ../tools/drakconnect:890
+#, c-format
+msgid "Started on boot"
+msgstr "Vključeno ob zagonu"
+
+#: ../tools/drakconnect:926
+#, c-format
+msgid ""
+"This interface has not been configured yet.\n"
+"Run the \"Add an interface\" assistant from the Mandriva Linux Control Center"
+msgstr ""
+"Ta omrežna naprava še ni nastavljena.\n"
+"Zaženite »Dodaj omrežno napravo« v Mandriva Linux nadzornem središču"
+
+#: ../tools/drakconnect:974
+#, c-format
+msgid "Internet connection configuration"
+msgstr "Nastavitve internetne povezave"
+
+#: ../tools/drakconnect:980 ../tools/net_applet:68
+#, c-format
+msgid ""
+"You do not have any configured Internet connection.\n"
+"Run the \"%s\" assistant from the Mandriva Linux Control Center"
+msgstr ""
+"Nobena internetna povezava ni nastavljena.\n"
+"Zaženite »%s« v Mandriva Linux nadzornem središču"
+
+#. -PO: here "Add Connection" should be translated the same was as in control-center
+#: ../tools/drakconnect:981 ../tools/net_applet:69
+#, c-format
+msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
+msgstr "Nastavite nov omrežni vmesnik (LAN, ISDN, ADSL ...)"
+
+#: ../tools/drakconnect:995
+#, c-format
+msgid "Host name (optional)"
+msgstr "Ime gostitelja (neobvezno)"
+
+#: ../tools/drakconnect:998
+#, c-format
+msgid "Third DNS server (optional)"
+msgstr "Tretji DNS strežnik (neobvezno)"
+
+#: ../tools/drakconnect:1020
+#, c-format
+msgid "Internet Connection Configuration"
+msgstr "Nastavitve internetne povezave"
+
+#: ../tools/drakconnect:1021
+#, c-format
+msgid "Internet access"
+msgstr "Dostop do interneta"
+
+#: ../tools/drakconnect:1023 ../tools/net_monitor:98
+#, c-format
+msgid "Connection type: "
+msgstr "Vrsta povezave: "
+
+#: ../tools/drakconnect:1026
+#, c-format
+msgid "Status:"
+msgstr "Stanje:"
+
+#: ../tools/drakconnect:1031
+#, c-format
+msgid "Parameters"
+msgstr "Nastavitve"
+
+#: ../tools/drakgw:71
+#, c-format
+msgid "Internet Connection Sharing"
+msgstr "Deljenje Internetne Povezave"
+
+#: ../tools/drakgw:75
+#, c-format
+msgid ""
+"You are about to configure your computer to share its Internet connection.\n"
+"With that feature, other computers on your local network will be able to use "
+"this computer's Internet connection.\n"
+"\n"
+"Make sure you have configured your Network/Internet access using drakconnect "
+"before going any further.\n"
+"\n"
+"Note: you need a dedicated Network Adapter to set up a Local Area Network "
+"(LAN)."
+msgstr ""
+"Prišli ste do nastavitev za skupno rabo internetne povezave na tem "
+"računalniku.\n"
+"S to zmožnostjo bodo lahko drugi računalniki v vašem krajevnem omrežju "
+"uporabljali internetno povezavo tega računalnika.\n"
+"\n"
+"Preden nadaljujete, se prepričajte, da ste že nastavili mrežni oziroma "
+"internetni dostop z uporabo drakconnect.\n"
+"\n"
+"Opomba: da lahko nastavite krajevno omrežje (LAN), potrebujete za to svoj "
+"mrežni vmesnik."
+
+#: ../tools/drakgw:91
+#, c-format
+msgid ""
+"The setup of Internet Connection Sharing has already been done.\n"
+"It's currently enabled.\n"
+"\n"
+"What would you like to do?"
+msgstr ""
+"Nastavitev skupne uporabe internetne povezave je že opravljena.\n"
+"Trenutno je omogočena.\n"
+"\n"
+"Kaj bi radi naredili?"
+
+#: ../tools/drakgw:95
+#, c-format
+msgid ""
+"The setup of Internet connection sharing has already been done.\n"
+"It's currently disabled.\n"
+"\n"
+"What would you like to do?"
+msgstr ""
+"Nastavitev skupne uporabe internetne povezave je že opravljena.\n"
+"Trenutno je onemogočena.\n"
+"\n"
+"Kaj bi radi naredili?"
+
+#: ../tools/drakgw:101
+#, c-format
+msgid "Reconfigure"
+msgstr "Ponovno nastavi"
+
+#: ../tools/drakgw:122
+#, c-format
+msgid "Please select the network interface directly connected to the internet."
+msgstr ""
+"Prosimo, izberite omrežni vmesnik, ki je neposredno povezan z medmrežjem"
+
+#: ../tools/drakgw:141
+#, c-format
+msgid ""
+"There is only one configured network adapter on your system:\n"
+"\n"
+"%s\n"
+"\n"
+"I am about to setup your Local Area Network with that adapter."
+msgstr ""
+"Na vašem sistemu je nastavljen le en mrežni vmesnik:\n"
+"\n"
+"%s\n"
+"\n"
+"Nameravam nastaviti vaše krajevno omrežje z uporabo tega vmesnika."
+
+#: ../tools/drakgw:152
+#, c-format
+msgid ""
+"Please choose what network adapter will be connected to your Local Area "
+"Network."
+msgstr ""
+"Prosim izberite, kateri mrežni vmesnik bo povezan z vašim krajevnim omrežjem."
+
+#: ../tools/drakgw:173
+#, c-format
+msgid "Local Area Network settings"
+msgstr "Nastavitve krajevnega omrežja"
+
+#: ../tools/drakgw:178
+#, c-format
+msgid "The internal domain name"
+msgstr "Notranje ime domene"
+
+#: ../tools/drakgw:184
+#, c-format
+msgid "Potential LAN address conflict found in current config of %s!\n"
+msgstr ""
+"V trenutnih nastavitvah za %s je zaznan možen spor glede naslovov za "
+"krajevno omrežje!\n"
+
+#: ../tools/drakgw:200
+#, c-format
+msgid "Domain Name Server (DNS) configuration"
+msgstr "Nastavitev strežnika za imena domen (DNS)"
+
+#: ../tools/drakgw:204
+#, c-format
+msgid "Use this gateway as domain name server"
+msgstr "Uporabi ta privzeti prehod kot strežnik za imena domen"
+
+#: ../tools/drakgw:205
+#, c-format
+msgid "The DNS Server IP"
+msgstr " IP DNS Strežnika"
+
+#: ../tools/drakgw:232
+#, c-format
+msgid ""
+"DHCP Server Configuration.\n"
+"\n"
+"Here you can select different options for the DHCP server configuration.\n"
+"If you do not know the meaning of an option, simply leave it as it is."
+msgstr ""
+"DHCP Nastavitev Strežnika.\n"
+"\n"
+"Tukaj lahko izberete različne možnosti za DHCP nastavitve strežnika.\n"
+"Če ne veste pomena teh možnosti, jih preprosto pustite take kot so."
+
+#: ../tools/drakgw:239
+#, c-format
+msgid "Use automatic configuration (DHCP)"
+msgstr "Uporabi samodejno nastavljanje (DHCP)"
+
+#: ../tools/drakgw:240
+#, c-format
+msgid "The DHCP start range"
+msgstr "Začetek obsega DHCP"
+
+#: ../tools/drakgw:241
+#, c-format
+msgid "The DHCP end range"
+msgstr "Konec obsega DHCP"
+
+#: ../tools/drakgw:242
+#, c-format
+msgid "The default lease (in seconds)"
+msgstr "Privzet zakup (v sekundah)"
+
+#: ../tools/drakgw:243
+#, c-format
+msgid "The maximum lease (in seconds)"
+msgstr "Najdaljši zakup (v sekundah)"
+
+#: ../tools/drakgw:266
+#, c-format
+msgid "Proxy caching server (SQUID)"
+msgstr "Posredniški strežnik za predpomnjenje (SQUID)"
+
+#: ../tools/drakgw:270
+#, c-format
+msgid "Use this gateway as proxy caching server"
+msgstr "Uporabi ta privzeti prehod kot posredniški strežnik za predpomnjenje"
+
+#: ../tools/drakgw:271
+#, c-format
+msgid "Admin mail"
+msgstr "Pošta administratorja"
+
+#: ../tools/drakgw:272
+#, c-format
+msgid "Visible hostname"
+msgstr "Vidno ime gostitelja"
+
+#: ../tools/drakgw:273
+#, c-format
+msgid "Proxy port"
+msgstr "Vrata posrednika"
+
+#: ../tools/drakgw:274
+#, c-format
+msgid "Cache size (MB)"
+msgstr "Velikost predpomnilnika (MB)"
+
+#: ../tools/drakgw:296
+#, c-format
+msgid "Broadcast printer information"
+msgstr "Oddajaj podatke o tiskalnikih"
+
+#: ../tools/drakgw:313
+#, c-format
+msgid "Internet Connection Sharing is now enabled."
+msgstr "Deljenje Internetne Povezave je sedaj omogočeno."
+
+#: ../tools/drakgw:319
+#, c-format
+msgid "Internet Connection Sharing is now disabled."
+msgstr "Deljenje Internetne Povezave je sedaj onemogočeno."
+
+#: ../tools/drakgw:325
+#, c-format
+msgid ""
+"Everything has been configured.\n"
+"You may now share Internet connection with other computers on your Local "
+"Area Network, using automatic network configuration (DHCP) and\n"
+" a Transparent Proxy Cache server (SQUID)."
+msgstr ""
+"Vse je bilo prikrojeno.\n"
+"Sedaj lahko delite Internetno povezavo z drugimi računalniki na vaši "
+"Krajevno Področnem Omrežju z uporabo samodejno nastavitevene mreže (DHCP) "
+"in\n"
+"Transparentnega predpomnilniško posredniškega (proxy cache) strežnika "
+"(SQUID)."
+
+#: ../tools/drakgw:359
+#, c-format
+msgid "Disabling servers..."
+msgstr "Onemogočanje strežnikov..."
+
+#: ../tools/drakgw:373
+#, c-format
+msgid "Firewalling configuration detected!"
+msgstr "Zaznana je nastavitev požarnega zidu!"
+
+#: ../tools/drakgw:374
+#, c-format
+msgid ""
+"Warning! An existing firewalling configuration has been detected. You may "
+"need some manual fixes after installation."
+msgstr ""
+"Opozorilo! Nastavitev požarnega zidu že obstaja! Po namestitvi boste "
+"verjetno morali ročno popraviti nekatere nastavitve."
+
+#: ../tools/drakgw:379
+#, c-format
+msgid "Configuring..."
+msgstr "Prikrojevanje..."
+
+#: ../tools/drakgw:380
+#, c-format
+msgid "Configuring firewall..."
+msgstr "Nastavljanje požarnega zidu ..."
+
+#: ../tools/drakhosts:100
+#, c-format
+msgid "Please add an host to be able to modify it."
+msgstr "Prosim dodajte gostitelja, da ga lahko spreminjate."
+
+#: ../tools/drakhosts:110
+#, c-format
+msgid "Please modify information"
+msgstr "Prosim spreminjajte podatke"
+
+#: ../tools/drakhosts:111
+#, c-format
+msgid "Please delete information"
+msgstr "Prosim zbrišite podatke"
+
+#: ../tools/drakhosts:112
+#, c-format
+msgid "Please add information"
+msgstr "Prosim dodajte podatke"
+
+#: ../tools/drakhosts:116
+#, c-format
+msgid "IP address:"
+msgstr "Naslov IP:"
+
+#: ../tools/drakhosts:117
+#, c-format
+msgid "Host name:"
+msgstr "Ime gostitelja:"
+
+#: ../tools/drakhosts:118
+#, c-format
+msgid "Host Aliases:"
+msgstr "Druga imena gostitelja:"
+
+#: ../tools/drakhosts:122 ../tools/drakhosts:128 ../tools/draksambashare:209
+#: ../tools/draksambashare:230 ../tools/draksambashare:376
+#: ../tools/draksambashare:607 ../tools/draksambashare:774
+#, c-format
+msgid "Error!"
+msgstr "Napaka!"
+
+#: ../tools/drakhosts:122
+#, c-format
+msgid "Please enter a valid IP address."
+msgstr "Prosim vnesite veljaven naslov IP."
+
+#: ../tools/drakhosts:128
+#, c-format
+msgid "Same IP is already in %s file."
+msgstr "Isti naslov IP že obstaja v datoteki %s."
+
+#: ../tools/drakhosts:196
+#, c-format
+msgid "Host Aliases"
+msgstr "Druga imena gostitelja"
+
+#: ../tools/drakhosts:206 ../tools/drakhosts:236
+#, c-format
+msgid "Manage hosts definitions"
+msgstr "Upravljajte definicije gostiteljev"
+
+#: ../tools/drakhosts:222 ../tools/drakhosts:249
+#, c-format
+msgid "Modify entry"
+msgstr "Preoblikuj vnos"
+
+#: ../tools/drakhosts:241 ../tools/draknfs:563 ../tools/draksambashare:1102
+#: ../tools/draksambashare:1133 ../tools/draksambashare:1164
+#: ../tools/drakvpn-old:253 ../tools/drakvpn-old:391
+#, c-format
+msgid "Add"
+msgstr "Dodaj"
+
+#: ../tools/drakhosts:242
+#, c-format
+msgid "Add entry"
+msgstr "Dodaj vnos"
+
+#: ../tools/drakhosts:245
+#, c-format
+msgid "Failed to add host."
+msgstr "Dodajanje gostitelja je spodletelo."
+
+#: ../tools/drakhosts:248 ../tools/draknfs:570 ../tools/draksambashare:1059
+#: ../tools/draksambashare:1104 ../tools/draksambashare:1135
+#: ../tools/draksambashare:1172
+#, c-format
+msgid "Modify"
+msgstr "Prilagodi"
+
+#: ../tools/drakhosts:252
+#, c-format
+msgid "Failed to Modify host."
+msgstr "Spreminjanje gostitelja je spodletelo."
+
+#: ../tools/drakhosts:255 ../tools/drakids:87 ../tools/drakids:96
+#: ../tools/draknfs:577 ../tools/draksambashare:1060
+#: ../tools/draksambashare:1112 ../tools/draksambashare:1143
+#: ../tools/draksambashare:1180 ../tools/drakvpn-old:253
+#: ../tools/drakvpn-old:391
+#, c-format
+msgid "Remove"
+msgstr "Odstrani"
+
+#: ../tools/drakhosts:259
+#, c-format
+msgid "Failed to remove host."
+msgstr "Odstranjevanje gostitelja je spodletelo."
+
+#: ../tools/drakhosts:262 ../tools/drakinvictus:141
+#: ../tools/draknetprofile:147 ../tools/drakroam:309 ../tools/net_applet:138
+#, c-format
+msgid "Quit"
+msgstr "Izhod"
+
+#: ../tools/drakids:28
+#, c-format
+msgid "Allowed addresses"
+msgstr "Dovoljeni naslovi"
+
+#: ../tools/drakids:65 ../tools/drakids:181 ../tools/drakids:190
+#: ../tools/drakids:215 ../tools/drakids:224 ../tools/drakids:234
+#: ../tools/drakids:326 ../tools/net_applet:238 ../tools/net_applet:514
+#, c-format
+msgid "Unable to contact daemon"
+msgstr "Ni moč vzpostaviti stika z demonom"
+
+#: ../tools/drakids:74 ../tools/drakids:102
+#, c-format
+msgid "Log"
+msgstr "Dnevnik"
+
+#: ../tools/drakids:78 ../tools/drakids:97 ../tools/net_applet:659
+#, c-format
+msgid "Allow"
+msgstr "Dovoli"
+
+#: ../tools/drakids:79 ../tools/drakids:88 ../tools/net_applet:660
+#, c-format
+msgid "Block"
+msgstr "Blokiraj"
+
+#: ../tools/drakids:80 ../tools/drakids:89 ../tools/drakids:98
+#: ../tools/drakids:109 ../tools/drakids:122 ../tools/drakids:130
+#: ../tools/draknfs:186 ../tools/net_monitor:120
+#, c-format
+msgid "Close"
+msgstr "Zapri"
+
+#: ../tools/drakids:83
+#, c-format
+msgid "Allowed services"
+msgstr "Dovoljene storitve"
+
+#: ../tools/drakids:92
+#, c-format
+msgid "Blocked services"
+msgstr "Blokirane storitve"
+
+#: ../tools/drakids:106
+#, c-format
+msgid "Clear logs"
+msgstr "Počisti dnevnike"
+
+#: ../tools/drakids:107 ../tools/drakids:112 ../tools/net_applet:602
+#, c-format
+msgid "Blacklist"
+msgstr "Črni seznam"
+
+#: ../tools/drakids:108 ../tools/drakids:125 ../tools/net_applet:607
+#, c-format
+msgid "Whitelist"
+msgstr "Beli seznam"
+
+#: ../tools/drakids:116
+#, c-format
+msgid "Remove from blacklist"
+msgstr "Odstrani s črnega seznama"
+
+#: ../tools/drakids:117
+#, c-format
+msgid "Move to whitelist"
+msgstr "Premakni na beli seznam"
+
+#: ../tools/drakids:129
+#, c-format
+msgid "Remove from whitelist"
+msgstr "Odstrani z belega seznama"
+
+#: ../tools/drakids:247
+#, c-format
+msgid "Date"
+msgstr "Datum"
+
+#: ../tools/drakids:248
+#, c-format
+msgid "Attacker"
+msgstr "Napadalec"
+
+#: ../tools/drakids:249
+#, c-format
+msgid "Attack type"
+msgstr "Vrsta napada"
+
+#: ../tools/drakids:250 ../tools/drakids:283
+#, c-format
+msgid "Service"
+msgstr "Storitev"
+
+#: ../tools/drakids:251
+#, c-format
+msgid "Network interface"
+msgstr "Omrežni vmesnik"
+
+#: ../tools/drakids:282
+#, c-format
+msgid "Application"
+msgstr "Program"
+
+#: ../tools/drakids:284
+#, c-format
+msgid "Status"
+msgstr "Stanje"
+
+#: ../tools/drakids:286
+#, c-format
+msgid "Allowed"
+msgstr "Dovoljeno"
+
+#: ../tools/drakids:287
+#, c-format
+msgid "Blocked"
+msgstr "Blokirano"
+
+#: ../tools/drakinvictus:36
+#, c-format
+msgid "Invictus Firewall"
+msgstr "Požarni zid Invictus"
+
+#: ../tools/drakinvictus:53
+#, c-format
+msgid "Start as master"
+msgstr "Zaženi kot glavni"
+
+#: ../tools/drakinvictus:72
+#, c-format
+msgid "A password is required."
+msgstr "Vnesti morate geslo"
+
+#: ../tools/drakinvictus:100
+#, c-format
+msgid ""
+"This tool allows to set up network interfaces failover and firewall "
+"replication."
+msgstr ""
+"S tem orodjem lahko nastavite ponovno vključitev omrežnih vmesnikov in "
+"ponovni zagon požarnega zidu"
+
+#: ../tools/drakinvictus:102
+#, c-format
+msgid "Network redundancy (leave empty if interface is not used)"
+msgstr "Preobremenitev omrežja (če vmesnik ni v uporabi, pustite prazno)"
+
+#: ../tools/drakinvictus:105
+#, c-format
+msgid "Real address"
+msgstr "Pravi naslov"
+
+#: ../tools/drakinvictus:105
+#, c-format
+msgid "Virtual shared address"
+msgstr "Navidezni deljeni naslov"
+
+#: ../tools/drakinvictus:105
+#, c-format
+msgid "Virtual ID"
+msgstr "Navidezni ID"
+
+#: ../tools/drakinvictus:114
+#, c-format
+msgid "Firewall replication"
+msgstr "Ponovna vzpostavitev požarnega zidu"
+
+#: ../tools/drakinvictus:116
+#, c-format
+msgid "Synchronize firewall conntrack tables"
+msgstr "Sinhronizirajte zasledovanje povezav požarnega zidu"
+
+#: ../tools/drakinvictus:123
+#, c-format
+msgid "Synchronization network interface"
+msgstr "Omrežni vmesnik za sinhronizacijo"
+
+#: ../tools/drakinvictus:132
+#, c-format
+msgid "Connection mark bit"
+msgstr "Mark bit povezave"
+
+#: ../tools/draknetprofile:36
+#, c-format
+msgid "Network profiles"
+msgstr "Omrežni profili"
+
+#: ../tools/draknetprofile:67
+#, c-format
+msgid "Profile"
+msgstr "Profil"
+
+#: ../tools/draknetprofile:99
+#, c-format
+msgid "New profile..."
+msgstr "Nov profil ..."
+
+#: ../tools/draknetprofile:102
+#, c-format
+msgid ""
+"Name of the profile to create (the new profile is created as a copy of the "
+"current one):"
+msgstr ""
+"Ime profila, ki naj se ustvari (nov profil je narejen kot kopija trenutnega):"
+
+#: ../tools/draknetprofile:113
+#, c-format
+msgid "The \"%s\" profile already exists!"
+msgstr "Profil \"%s\" že obstaja!"
+
+#: ../tools/draknetprofile:129
+#, c-format
+msgid "You can not delete the default profile"
+msgstr "Privzetega profila ni mogoče odstraniti"
+
+#: ../tools/draknetprofile:131
+#, c-format
+msgid "You can not delete the current profile"
+msgstr "Trenutnega profila ne morete izbrisati"
+
+#: ../tools/draknetprofile:141
+#, c-format
+msgid ""
+"This tool allows to activate an existing network profile, and to manage "
+"(clone, delete) profiles."
+msgstr ""
+"To orodje omgoča aktiviranje obstoječega omrežnega profila in urejanje "
+"(kloniranje, brisanje) profilov."
+
+#: ../tools/draknetprofile:141
+#, c-format
+msgid "To modify a profile, you have to activate it first."
+msgstr "Da bi lahko uredili profil, ga morate najprej aktivirati."
+
+#: ../tools/draknetprofile:144
+#, c-format
+msgid "Activate"
+msgstr "Aktiviraj"
+
+#: ../tools/draknetprofile:145
+#, c-format
+msgid "Clone"
+msgstr "Kloniraj"
+
+#: ../tools/draknetprofile:146
+#, c-format
+msgid "Delete"
+msgstr "Izbriši"
+
+#: ../tools/draknfs:41
+#, c-format
+msgid "map root user as anonymous"
+msgstr "preslikaj uporabnika »root« v »anonymous«"
+
+#: ../tools/draknfs:42
+#, c-format
+msgid "map all users to anonymous user"
+msgstr "preslikaj vse uporabnike v uporabnika »anonymous«"
+
+#: ../tools/draknfs:43
+#, c-format
+msgid "No user UID mapping"
+msgstr "Brez preslikav uporabnikov"
+
+#: ../tools/draknfs:44
+#, c-format
+msgid "allow real remote root access"
+msgstr "omogoči pravi dostop oddaljenega uporabnika »root«"
+
+#: ../tools/draknfs:58 ../tools/draknfs:59 ../tools/draknfs:60
+#: ../tools/draksambashare:161 ../tools/draksambashare:162
+#: ../tools/draksambashare:163
+#, c-format
+msgid "/_File"
+msgstr "/_Datoteka"
+
+#: ../tools/draknfs:59 ../tools/draksambashare:162
+#, c-format
+msgid "/_Write conf"
+msgstr "/_Zapiši conf"
+
+#: ../tools/draknfs:60 ../tools/draksambashare:163
+#, c-format
+msgid "/_Quit"
+msgstr "/_Končaj"
+
+#: ../tools/draknfs:60 ../tools/draksambashare:163
+#, c-format
+msgid "<control>Q"
+msgstr "<control>Q"
+
+#: ../tools/draknfs:63 ../tools/draknfs:64 ../tools/draknfs:65
+#, c-format
+msgid "/_NFS Server"
+msgstr "/_Strežnik NFS "
+
+#: ../tools/draknfs:64 ../tools/draksambashare:166
+#, c-format
+msgid "/_Restart"
+msgstr "/_Ponovni zagon"
+
+#: ../tools/draknfs:65 ../tools/draksambashare:167
+#, c-format
+msgid "/R_eload"
+msgstr "/R_eload"
+
+#: ../tools/draknfs:84
+#, c-format
+msgid "NFS server"
+msgstr "Strežnik NFS"
+
+#: ../tools/draknfs:84
+#, c-format
+msgid "Restarting/Reloading NFS server..."
+msgstr "Ponovno zaganjanje/nalaganje strežnika NFS ..."
+
+#: ../tools/draknfs:85
+#, c-format
+msgid "Error Restarting/Reloading NFS server"
+msgstr "Napaka pri ponovnem zaganjanju/nalaganju strežnika NFS"
+
+#: ../tools/draknfs:101 ../tools/draksambashare:225
+#, c-format
+msgid "Directory Selection"
+msgstr "Izbira map"
+
+#: ../tools/draknfs:106 ../tools/draksambashare:230
+#, c-format
+msgid "Should be a directory."
+msgstr "Mora biti mapa."
+
+#: ../tools/draknfs:137
+#, c-format
+msgid ""
+"<span weight=\"bold\">NFS clients</span> may be specified in a number of "
+"ways:\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">single host:</span> a host either by an "
+"abbreviated name recognized be the resolver, fully qualified domain name, or "
+"an IP address\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">netgroups:</span> NIS netgroups may be given "
+"as @group.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">wildcards:</span> machine names may contain "
+"the wildcard characters * and ?. For instance: *.cs.foo.edu  matches all  "
+"hosts  in the domain cs.foo.edu.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">IP networks:</span> you can also export "
+"directories to all hosts on an IP (sub-)network simultaneously. for example, "
+"either `/255.255.252.0' or  `/22'  appended to the network base address "
+"result.\n"
+msgstr ""
+"<span weight=\"bold\">Odjemalci NFS</span> so lahko določeni na več "
+"načinov:\n"
+"\n"
+"<span foreground=\"royalblue3\">samo en gostitelj:</span> gostitelj z "
+"okrajšanim imenom, s polnim imenom ali z naslovom IP\n"
+"\n"
+"<span foreground=\"royalblue3\">omrežne skupine:</span> omrežne skupine NIS "
+"lahko podate kot »@skupina«\n"
+"\n"
+"<span foreground=\"royalblue3\">nadomestni znaki:</span> imena računalnikov "
+"lahko vsebujejo znaka »*« in »?«. Na primer: *.domena.si pomeni vse "
+"gostitelje pod domeno domena.si.\n"
+"\n"
+"<span foreground=\"royalblue3\">Omrežja IP:</span> Mape lahko izvozite tudi "
+"vsem gostiteljem v (pod)omrežju IP v enem koraku. Na  primer z dodajanjem "
+"»/255.255.252.0« ali »/22« k osnovnem naslovu.\n"
+
+#: ../tools/draknfs:152
+#, c-format
+msgid ""
+"<span weight=\"bold\">User ID options</span>\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">map root user as anonymous:</span> map "
+"requests from uid/gid 0 to the anonymous uid/gid (root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">allow real remote root access:</span> turn "
+"off root squashing. This option is mainly useful for diskless clients "
+"(no_root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">map all users to anonymous user:</span> map "
+"all uids and gids to the anonymous  user (all_squash). Useful for NFS-"
+"exported public FTP directories, news spool directories, etc. The opposite "
+"option is no user UID mapping (no_all_squash), which is the default "
+"setting.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">anonuid and anongid:</span> explicitly set "
+"the uid and gid of the anonymous account.\n"
+msgstr ""
+"<span weight=\"bold\">Uporabniške možnosti</span>\n"
+"\n"
+"<span foreground=\"royalblue3\">preslikaj uporabnika »root« v »anonymous«:</"
+"span>preslika zahtevke od UID/GID 0 v UID/GID anonymous. (root_squash)\n"
+"\n"
+"<span foreground=\"royalblue3\">omogoči pravi dostop oddaljenega uporabnika "
+"»root«:</span> izklopi root_squash. Ta možnost je v glavnem uporabna za "
+"odjemalce brez diskov. (no_root_squash).\n"
+"\n"
+"<span foreground=\"royalblue3\">preslikaj vse uporabnike v uporabnika "
+"»anonymous«:</span> preslika vse UIDe in GIDe v uporabnika "
+"»anonymous« (all_squash). Uporabno za javno izvožene mape na FTP, mape z "
+"novičarskimi skupinami ... V nasprotnem primeru preslikave uporabnikov ni "
+"(no_all_squash) in to je tudi privzeta nastavitev.\n"
+"\n"
+"<span foreground=\"royalblue3\">anonuid in anongid:</span> eksplicitno "
+"nastavi UID in GID za račun »anonymous«.\n"
+
+#: ../tools/draknfs:168
+#, c-format
+msgid "Synchronous access:"
+msgstr "Sinhron dostop:"
+
+#: ../tools/draknfs:169
+#, c-format
+msgid "Secured Connection:"
+msgstr "Zavarovana povezava:"
+
+#: ../tools/draknfs:170
+#, c-format
+msgid "Read-Only share:"
+msgstr "Deljeno za branje:"
+
+#: ../tools/draknfs:172
+#, c-format
+msgid "Advanced Options"
+msgstr "Napredne možnosti"
+
+#: ../tools/draknfs:173
+#, c-format
+msgid ""
+"<span foreground=\"royalblue3\">%s</span> this option requires that requests "
+"originate on an internet port less than IPPORT_RESERVED (1024). This option "
+"is on by default."
+msgstr ""
+"<span foreground=\"royalblue3\">%s</span> za to možnost je potrebno, da "
+"zahtevki izvirajo z vrat manjših kot IPPORT_RESERVED (1024). Ta možnost je "
+"privzeto omogočena."
+
+#: ../tools/draknfs:174
+#, c-format
+msgid ""
+"<span foreground=\"royalblue3\">%s</span> allow either only read or both "
+"read and write requests on this NFS volume. The default is to disallow any "
+"request which changes the filesystem. This can also be made explicit by "
+"using this option."
+msgstr ""
+"<span foreground=\"royalblue3\">%s</span> na tem nosilcu NFS omogočite "
+"bodisi samo zahtevke za branje, bodisi zahtevke za branje in pisanje. "
+"Privzeto so onemogočeni vsi zahtevki, ki spremenijo datotečni sistem. S to "
+"možnostjo to izrecno nastavite."
+
+#: ../tools/draknfs:175
+#, c-format
+msgid ""
+"<span foreground=\"royalblue3\">%s</span> disallows the NFS server to "
+"violate the NFS protocol and to reply to requests before any changes made by "
+"these requests have been committed to stable storage (e.g. disc drive)."
+msgstr ""
+"<span foreground=\"royalblue3\">%s</span> onemogoči strežniku NFS, da "
+"prekrši protokol NFS in da odgovarja na zahtevke preden so vse spremembe "
+"zaradi teh zahtevkov zapisane na stabilno napravo za shranjevanje (na primer "
+"trdi disk)."
+
+#: ../tools/draknfs:180 ../tools/draksambashare:605
+#: ../tools/draksambashare:772
+#, c-format
+msgid "Information"
+msgstr "Podatki"
+
+#: ../tools/draknfs:260
+#, c-format
+msgid "Directory"
+msgstr "Imenik"
+
+#: ../tools/draknfs:264
+#, c-format
+msgid "Draknfs entry"
+msgstr "Vnos Draknfs"
+
+#: ../tools/draknfs:273
+#, c-format
+msgid "Please add an NFS share to be able to modify it."
+msgstr "Prosim dodajte mapo deljeno prek NFS, da jo lahko spreminjate."
+
+#: ../tools/draknfs:357
+#, c-format
+msgid "NFS directory"
+msgstr "Mapa NFS"
+
+#: ../tools/draknfs:358 ../tools/draksambashare:361
+#: ../tools/draksambashare:570 ../tools/draksambashare:749
+#, c-format
+msgid "Directory:"
+msgstr "Mapa:"
+
+#: ../tools/draknfs:359
+#, c-format
+msgid "Host access"
+msgstr "Dostop gostiteljev"
+
+#: ../tools/draknfs:360
+#, c-format
+msgid "Access:"
+msgstr "Dostop:"
+
+#: ../tools/draknfs:361
+#, c-format
+msgid "User ID Mapping"
+msgstr "Preslikava uporabnikov"
+
+#: ../tools/draknfs:362
+#, c-format
+msgid "User ID:"
+msgstr "Uporabnik (UID):"
+
+#: ../tools/draknfs:363
+#, c-format
+msgid "Anonymous user ID:"
+msgstr "Uporabnik anonymous:"
+
+#: ../tools/draknfs:364
+#, c-format
+msgid "Anonymous Group ID:"
+msgstr "Skupina anonymous:"
+
+#: ../tools/draknfs:400
+#, c-format
+msgid "Please specify a directory to share."
+msgstr "Prosim določitr imenik, ki ga želite deliti."
+
+#: ../tools/draknfs:402
+#, c-format
+msgid "Can't create this directory."
+msgstr "Te mape ni moč ustvariti."
+
+#: ../tools/draknfs:405
+#, c-format
+msgid "You must specify hosts access."
+msgstr "Za dostop morate določiti gostitelje."
+
+#: ../tools/draknfs:485
+#, c-format
+msgid "Share Directory"
+msgstr "Deli mapo"
+
+#: ../tools/draknfs:485
+#, c-format
+msgid "Hosts Wildcard"
+msgstr "Nadomestni znaki za gostitelje"
+
+#: ../tools/draknfs:485
+#, c-format
+msgid "General Options"
+msgstr "Splošne možnosti"
+
+#: ../tools/draknfs:485
+#, c-format
+msgid "Custom Options"
+msgstr "Možnosti po meri"
+
+#: ../tools/draknfs:497 ../tools/draksambashare:376
+#: ../tools/draksambashare:607 ../tools/draksambashare:774
+#, c-format
+msgid "Please enter a directory to share."
+msgstr "Prosim vnesite mapo za deljenje."
+
+#: ../tools/draknfs:504
+#, c-format
+msgid "Please use the modify button to set right access."
+msgstr "Prosim uporabite gumb »Spremeni« za nastavljanje dostopnih pravic."
+
+#: ../tools/draknfs:519
+#, c-format
+msgid "Manage NFS shares"
+msgstr "Upravljajte skupno rabo preko NFS"
+
+#: ../tools/draknfs:558
+#, c-format
+msgid "DrakNFS manage NFS shares"
+msgstr "DrakNFS upravlja z mapami deljenimi prek NFS"
+
+#: ../tools/draknfs:567
+#, c-format
+msgid "Failed to add NFS share."
+msgstr "Dodajanje deljene mape je spodletelo."
+
+#: ../tools/draknfs:574
+#, c-format
+msgid "Failed to Modify NFS share."
+msgstr "Spreminjanje deljene mape je spodletelo."
+
+#: ../tools/draknfs:581
+#, c-format
+msgid "Failed to remove an NFS share."
+msgstr "Odstranjevanje deljene mape je spodletelo."
+
+#: ../tools/drakproxy:36
+#, c-format
+msgid "You need to log out and back in again for changes to take effect"
+msgstr "Za uveljavitev sprememb se morate odjaviti in ponovno prijaviti."
+
+#: ../tools/drakroam:61
+#, c-format
+msgid "No device found"
+msgstr "Ne najdem nobene naprave"
+
+#: ../tools/drakroam:86 ../tools/drakroam:217
+#, c-format
+msgid "Please enter settings for network"
+msgstr "Prosim, vnesite nastavitve za omrežje"
+
+#: ../tools/drakroam:115
+#, c-format
+msgid "SSID"
+msgstr "SSID"
+
+#: ../tools/drakroam:116
+#, c-format
+msgid "Signal strength"
+msgstr "Moč signala"
+
+#: ../tools/drakroam:118
+#, c-format
+msgid "Encryption"
+msgstr "Šifriranje"
+
+#: ../tools/drakroam:131
+#, c-format
+msgid "Hostname changed to \"%s\""
+msgstr "Sprememba gostiteljskega imena v:\"%s\""
+
+#: ../tools/drakroam:251
+#, c-format
+msgid "Connecting..."
+msgstr "Povezovanje..."
+
+#: ../tools/drakroam:273
+#, c-format
+msgid "Disconnect"
+msgstr "Odklopi"
+
+#: ../tools/drakroam:273
+#, c-format
+msgid "Connect"
+msgstr "Poveži"
+
+#: ../tools/drakroam:289
+#, c-format
+msgid "Disconnecting..."
+msgstr "Prekinjanje povezave..."
+
+#: ../tools/drakroam:306
+#, c-format
+msgid "Configure"
+msgstr "Nastavite"
+
+#: ../tools/drakroam:308
+#, c-format
+msgid "Refresh"
+msgstr "Osveži"
+
+#: ../tools/draksambashare:63
+#, c-format
+msgid "User name"
+msgstr "Uporabniško ime"
+
+#: ../tools/draksambashare:70
+#, c-format
+msgid "Share name"
+msgstr "Ime za skupno rabo"
+
+#: ../tools/draksambashare:71
+#, c-format
+msgid "Share directory"
+msgstr "Deli mapo"
+
+#: ../tools/draksambashare:72 ../tools/draksambashare:105
+#, c-format
+msgid "Comment"
+msgstr "Komentar"
+
+#: ../tools/draksambashare:73 ../tools/draksambashare:106
+#, c-format
+msgid "Browseable"
+msgstr "Brskanje omogočeno"
+
+#: ../tools/draksambashare:74
+#, c-format
+msgid "Public"
+msgstr "Javno"
+
+#: ../tools/draksambashare:75 ../tools/draksambashare:111
+#, c-format
+msgid "Writable"
+msgstr "Pisanje omogočeno"
+
+#: ../tools/draksambashare:76 ../tools/draksambashare:152
+#, c-format
+msgid "Create mask"
+msgstr "Maska za ustvarjanje"
+
+#: ../tools/draksambashare:77 ../tools/draksambashare:153
+#, c-format
+msgid "Directory mask"
+msgstr "Maska za mape"
+
+#: ../tools/draksambashare:78
+#, c-format
+msgid "Read list"
+msgstr "Seznam za branje"
+
+#: ../tools/draksambashare:79 ../tools/draksambashare:112
+#: ../tools/draksambashare:584
+#, c-format
+msgid "Write list"
+msgstr "Seznam za pisanje"
+
+#: ../tools/draksambashare:80 ../tools/draksambashare:144
+#, c-format
+msgid "Admin users"
+msgstr "Upravljavci"
+
+#: ../tools/draksambashare:81 ../tools/draksambashare:145
+#, c-format
+msgid "Valid users"
+msgstr "Veljavni uporabniki"
+
+#: ../tools/draksambashare:82
+#, c-format
+msgid "Inherit Permissions"
+msgstr "Prevzemi dovoljenja"
+
+#: ../tools/draksambashare:83 ../tools/draksambashare:146
+#, c-format
+msgid "Hide dot files"
+msgstr "Skrij datoteke s piko"
+
+#: ../tools/draksambashare:84 ../tools/draksambashare:147
+#, c-format
+msgid "Hide files"
+msgstr "Skrij datoteke"
+
+#: ../tools/draksambashare:85 ../tools/draksambashare:151
+#, c-format
+msgid "Preserve case"
+msgstr "Ohrani velikost črk"
+
+#: ../tools/draksambashare:86
+#, c-format
+msgid "Force create mode"
+msgstr "Vsili način za ustvarjanje"
+
+#: ../tools/draksambashare:87
+#, c-format
+msgid "Force group"
+msgstr "Vsili skupino"
+
+#: ../tools/draksambashare:88 ../tools/draksambashare:150
+#, c-format
+msgid "Default case"
+msgstr "Privzeta velikost črk"
+
+#: ../tools/draksambashare:103
+#, c-format
+msgid "Printer name"
+msgstr "Ime tiskalnika"
+
+#: ../tools/draksambashare:104
+#, c-format
+msgid "Path"
+msgstr "Pot"
+
+#: ../tools/draksambashare:107 ../tools/draksambashare:576
+#, c-format
+msgid "Printable"
+msgstr "Tiskanje omogočeno"
+
+#: ../tools/draksambashare:108
+#, c-format
+msgid "Print Command"
+msgstr "Ukaz za tiskanje"
+
+#: ../tools/draksambashare:109
+#, c-format
+msgid "LPQ command"
+msgstr "Ukaz LPQ"
+
+#: ../tools/draksambashare:110
+#, c-format
+msgid "Guest ok"
+msgstr "Gosti dovoljeni"
+
+#: ../tools/draksambashare:113 ../tools/draksambashare:154
+#: ../tools/draksambashare:585
+#, c-format
+msgid "Inherit permissions"
+msgstr "Prevzemi dovoljenja"
+
+#: ../tools/draksambashare:114
+#, c-format
+msgid "Printing"
+msgstr "Tiskanje"
+
+#: ../tools/draksambashare:115
+#, c-format
+msgid "Create mode"
+msgstr "Način za ustvarjanje"
+
+#: ../tools/draksambashare:116
+#, c-format
+msgid "Use client driver"
+msgstr "Uporabi gonilnik odjemalca"
+
+#: ../tools/draksambashare:142
+#, c-format
+msgid "Read List"
+msgstr "Seznam za branje"
+
+#: ../tools/draksambashare:143
+#, c-format
+msgid "Write List"
+msgstr "Seznam za pisanje"
+
+#: ../tools/draksambashare:148
+#, c-format
+msgid "Force Group"
+msgstr "Vsili skupino"
+
+#: ../tools/draksambashare:149
+#, c-format
+msgid "Force create group"
+msgstr "Vsili ustvarjanje skupine"
+
+#: ../tools/draksambashare:165 ../tools/draksambashare:166
+#: ../tools/draksambashare:167
+#, c-format
+msgid "/_Samba Server"
+msgstr "/_Strežnik Samba "
+
+#: ../tools/draksambashare:169 ../tools/draksambashare:170
+#, c-format
+msgid "/_About"
+msgstr "/_O programu"
+
+#: ../tools/draksambashare:169
+#, c-format
+msgid "/_Report Bug"
+msgstr "/po_ročaj o hrošču"
+
+#: ../tools/draksambashare:170
+#, c-format
+msgid "/About..."
+msgstr "/O..."
+
+#: ../tools/draksambashare:173
+#, c-format
+msgid "Draksambashare"
+msgstr "DrakSambaShare"
+
+#: ../tools/draksambashare:175
+#, c-format
+msgid "Copyright (C) %s by Mandriva"
+msgstr "Avtorske pravice (C) %s Mandriva"
+
+#: ../tools/draksambashare:177
+#, c-format
+msgid "This is a simple tool to easily manage Samba configuration."
+msgstr "To je enostavno orodje, ki olajšuje nastavljanje Sambe"
+
+#: ../tools/draksambashare:179
+#, c-format
+msgid "Mandriva Linux"
+msgstr "Mandriva Linux "
+
+#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
+#: ../tools/draksambashare:184
+#, c-format
+msgid "_: Translator(s) name(s) & email(s)\n"
+msgstr "_: Imena in e-poštni naslovi prevajalcev\n"
+
+#: ../tools/draksambashare:208
+#, c-format
+msgid "Restarting/Reloading Samba server..."
+msgstr "Ponovno zaganjanje/nalaganje strežnika Samba ..."
+
+#: ../tools/draksambashare:209
+#, c-format
+msgid "Error Restarting/Reloading Samba server"
+msgstr "Napaka pri ponovnem zaganjanju/nalaganju strežnika Samba"
+
+#: ../tools/draksambashare:349 ../tools/draksambashare:549
+#: ../tools/draksambashare:670
+#, c-format
+msgid "Open"
+msgstr "Odpri"
+
+#: ../tools/draksambashare:352
+#, c-format
+msgid "DrakSamba add entry"
+msgstr "Dodajte vnos DrakSamba"
+
+#: ../tools/draksambashare:356
+#, c-format
+msgid "Add a share"
+msgstr "Dodaj mesto v skupno rabo"
+
+#: ../tools/draksambashare:359
+#, c-format
+msgid "Name of the share:"
+msgstr "Ime deljene mape:"
+
+#: ../tools/draksambashare:360 ../tools/draksambashare:569
+#: ../tools/draksambashare:750
+#, c-format
+msgid "Comment:"
+msgstr "Komentar:"
+
+#: ../tools/draksambashare:372
+#, c-format
+msgid ""
+"Share with the same name already exist or share name empty, please choose "
+"another name."
+msgstr ""
+"Deljena mapa z istim imenom že obstaja, ali pa je ime prazno. Prosim "
+"izberite drugo ime."
+
+#: ../tools/draksambashare:379
+#, c-format
+msgid "Can't create the directory, please enter a correct path."
+msgstr "Ni moč nastaviti mape. Prosim vnesite pravilno pot."
+
+#: ../tools/draksambashare:382 ../tools/draksambashare:605
+#: ../tools/draksambashare:772
+#, c-format
+msgid "Please enter a Comment for this share."
+msgstr "Prosim vnesite komentar za to deljeno mapo."
+
+#: ../tools/draksambashare:413
+#, c-format
+msgid "pdf-gen - a PDF generator"
+msgstr "pdf-gen - generator PDFjev"
+
+#: ../tools/draksambashare:414
+#, c-format
+msgid "printers - all printers available"
+msgstr "printers - vsi razpoložljivi tiskalniki"
+
+#: ../tools/draksambashare:418
+#, c-format
+msgid "Add Special Printer share"
+msgstr "Nastavi tiskalnik za deljenje"
+
+#: ../tools/draksambashare:421
+#, c-format
+msgid ""
+"Goal of this wizard is to easily create a new special printer Samba share."
+msgstr ""
+"Cilj tega čarovnika je preprosto nastavljanje tiskalnikov, ki bodo deljeni "
+"prek Sambe."
+
+#: ../tools/draksambashare:428
+#, c-format
+msgid "A PDF generator already exists."
+msgstr "Generator za PDFje že obstaja."
+
+#: ../tools/draksambashare:452
+#, c-format
+msgid "Printers and print$ already exist."
+msgstr "printers in print$ že obstajata."
+
+#: ../tools/draksambashare:502
+#, c-format
+msgid "Congratulations"
+msgstr "Čestitke"
+
+#: ../tools/draksambashare:503
+#, c-format
+msgid "The wizard successfully added the printer Samba share"
+msgstr "Čarovnik je uspešno nastavil tiskalnik za deljenje prek Sambe"
+
+#: ../tools/draksambashare:518
+#, c-format
+msgid "Failed to add printers."
+msgstr "Dodajanje tiskalnika je spodletelo."
+
+#: ../tools/draksambashare:533
+#, c-format
+msgid "Please add or select a Samba printer share to be able to modify it."
+msgstr ""
+"Prosim dodajte ali izberite tiskalnik deljen prek Sambe, da ga lahko "
+"nastavljate."
+
+#: ../tools/draksambashare:552
+#, c-format
+msgid "DrakSamba Printers entry"
+msgstr "Vnos tiskalnikov za DrakSamba"
+
+#: ../tools/draksambashare:565
+#, c-format
+msgid "Printer share"
+msgstr "Deljeni tiskalnik"
+
+#: ../tools/draksambashare:568
+#, c-format
+msgid "Printer name:"
+msgstr "Ime tiskalnika:"
+
+#: ../tools/draksambashare:574 ../tools/draksambashare:755
+#, c-format
+msgid "Writable:"
+msgstr "Za pisanje:"
+
+#: ../tools/draksambashare:575 ../tools/draksambashare:756
+#, c-format
+msgid "Browseable:"
+msgstr "Brskanje omogočeno:"
+
+#: ../tools/draksambashare:580
+#, c-format
+msgid "Advanced options"
+msgstr "Napredne možnosti"
+
+#: ../tools/draksambashare:582
+#, c-format
+msgid "Printer access"
+msgstr "Dostop do tiskalnika"
+
+#: ../tools/draksambashare:586
+#, c-format
+msgid "Guest ok:"
+msgstr "Gosti dovoljeni:"
+
+#: ../tools/draksambashare:587
+#, c-format
+msgid "Create mode:"
+msgstr "Način za ustvarjanje:"
+
+#: ../tools/draksambashare:591
+#, c-format
+msgid "Printer command"
+msgstr "Ukaz za tiskalnik"
+
+#: ../tools/draksambashare:593
+#, c-format
+msgid "Print command:"
+msgstr "Ukaz za tiskanje:"
+
+#: ../tools/draksambashare:594
+#, c-format
+msgid "LPQ command:"
+msgstr "Ukaz LPQ:"
+
+#: ../tools/draksambashare:595
+#, c-format
+msgid "Printing:"
+msgstr "Tiskanje:"
+
+#: ../tools/draksambashare:611
+#, c-format
+msgid "create mode should be numeric. ie: 0755."
+msgstr "Način za ustvarjanje naj bo številski. Na primer: 0755."
+
+#: ../tools/draksambashare:673
+#, c-format
+msgid "DrakSamba entry"
+msgstr "Vnos DrakSamba"
+
+#: ../tools/draksambashare:678
+#, c-format
+msgid "Please add or select a Samba share to be able to modify it."
+msgstr ""
+"Prosim dodajte ali izberite mapo deljeno prek Sambe, da jo lahko nastavljate."
+
+#: ../tools/draksambashare:701
+#, c-format
+msgid "Samba user access"
+msgstr "Uporabniški dostop do Sambe"
+
+#: ../tools/draksambashare:709
+#, c-format
+msgid "Mask options"
+msgstr "Možnosti maske"
+
+#: ../tools/draksambashare:723
+#, c-format
+msgid "Display options"
+msgstr "Možnosti prikaza"
+
+#: ../tools/draksambashare:745
+#, c-format
+msgid "Samba share directory"
+msgstr "Mapa deljena prek Sambe"
+
+#: ../tools/draksambashare:748
+#, c-format
+msgid "Share name:"
+msgstr "Ime deljene mape:"
+
+#: ../tools/draksambashare:754
+#, c-format
+msgid "Public:"
+msgstr "Javno:"
+
+#: ../tools/draksambashare:778
+#, c-format
+msgid ""
+"Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgstr ""
+"Maska za ustvarjanje in za mape ter način za ustvarjanje naj bodo številski. "
+"Na primer: 0755."
+
+#: ../tools/draksambashare:785
+#, c-format
+msgid "Please create this Samba user: %s"
+msgstr "Prosim ustvarite tega uporabnike Sambe: %s"
+
+#: ../tools/draksambashare:889
+#, c-format
+msgid "Add Samba user"
+msgstr "Dodajte uporabnika Sambe"
+
+#: ../tools/draksambashare:904
+#, c-format
+msgid "User information"
+msgstr "Uporabniški podatki"
+
+#: ../tools/draksambashare:906
+#, c-format
+msgid "User name:"
+msgstr "Ime uporabnika:"
+
+#: ../tools/draksambashare:907
+#, c-format
+msgid "Password:"
+msgstr "Geslo:"
+
+#: ../tools/draksambashare:1021
+#, c-format
+msgid "Manage Samba configuration"
+msgstr "Upravljate nastavitve Sambe"
+
+#: ../tools/draksambashare:1109
+#, c-format
+msgid "Failed to Modify Samba share."
+msgstr "Nastavljanje deljene mape je spodletelo."
+
+#: ../tools/draksambashare:1118
+#, c-format
+msgid "Failed to remove a Samba share."
+msgstr "Odstranjevanje deljene mape je spodletelo."
+
+#: ../tools/draksambashare:1125
+#, c-format
+msgid "File share"
+msgstr "Deljenje datotek"
+
+#: ../tools/draksambashare:1140
+#, c-format
+msgid "Failed to Modify."
+msgstr "Nastavljanje je spodletelo."
+
+#: ../tools/draksambashare:1149
+#, c-format
+msgid "Failed to remove."
+msgstr "Odstranjevanje je spodletelo."
+
+#: ../tools/draksambashare:1156
+#, c-format
+msgid "Printers"
+msgstr "Tiskalniki"
+
+#: ../tools/draksambashare:1168
+#, c-format
+msgid "Failed to add user."
+msgstr "Dodajanje uporabnika je spodletelo."
+
+#: ../tools/draksambashare:1177
+#, c-format
+msgid "Failed to change user password."
+msgstr "Spreminjanje gesla je spodletelo."
+
+#: ../tools/draksambashare:1189
+#, c-format
+msgid "Failed to delete user."
+msgstr "Brisanje uporabnika je spodletelo."
+
+#: ../tools/draksambashare:1194
+#, c-format
+msgid "Userdrake"
+msgstr "Userdrake"
+
+#: ../tools/draksambashare:1202
+#, c-format
+msgid "Samba Users"
+msgstr "Uporabniki Sambe"
+
+#: ../tools/draksambashare:1211
+#, c-format
+msgid "DrakSamba manage Samba shares"
+msgstr "DrakSamba upravlja mape in tiskalnike deljene prek Sambe"
+
+#: ../tools/drakvpn-old:65
+#, c-format
+msgid "DrakVPN"
+msgstr "DrakVPN"
+
+#: ../tools/drakvpn-old:87
+#, c-format
+msgid "The VPN connection is enabled."
+msgstr "Povezava VPN je omogočena."
+
+#: ../tools/drakvpn-old:88
+#, c-format
+msgid ""
+"The setup of a VPN connection has already been done.\n"
+"\n"
+"It's currently enabled.\n"
+"\n"
+"What would you like to do?"
+msgstr ""
+"Povezava VPN je že nastavljena.\n"
+"\n"
+"Povezava je omogočena.\n"
+"\n"
+"Kaj želite storiti?"
+
+#: ../tools/drakvpn-old:93
+#, c-format
+msgid "disable"
+msgstr "onemogoči"
+
+#: ../tools/drakvpn-old:93 ../tools/drakvpn-old:119
+#, c-format
+msgid "reconfigure"
+msgstr "ponastavi"
+
+#: ../tools/drakvpn-old:93 ../tools/drakvpn-old:119 ../tools/drakvpn-old:432
+#, c-format
+msgid "dismiss"
+msgstr "opusti"
+
+#: ../tools/drakvpn-old:97
+#, c-format
+msgid "Disabling VPN..."
+msgstr "Onemogočanje VPN..."
+
+#: ../tools/drakvpn-old:106
+#, c-format
+msgid "The VPN connection is now disabled."
+msgstr "Povezava VPN je onemogočena."
+
+#: ../tools/drakvpn-old:113
+#, c-format
+msgid "VPN connection currently disabled"
+msgstr "Povezava VPN je trenutno onemogočena."
+
+#: ../tools/drakvpn-old:114
+#, c-format
+msgid ""
+"The setup of a VPN connection has already been done.\n"
+"\n"
+"It's currently disabled.\n"
+"\n"
+"What would you like to do?"
+msgstr ""
+"Povezava VPN je že nastavljena.\n"
+"\n"
+"Povezava je omogočena.\n"
+"\n"
+"Kaj želite storiti?"
+
+#: ../tools/drakvpn-old:119
+#, c-format
+msgid "enable"
+msgstr "omogoči"
+
+#: ../tools/drakvpn-old:127
+#, c-format
+msgid "Enabling VPN..."
+msgstr "Omogočanje VPN..."
+
+#: ../tools/drakvpn-old:133
+#, c-format
+msgid "The VPN connection is now enabled."
+msgstr "Povezava VPN je omogočena."
+
+#: ../tools/drakvpn-old:147 ../tools/drakvpn-old:164
+#, c-format
+msgid "Simple VPN setup."
+msgstr "Enostavna nastavitev VPN."
+
+#: ../tools/drakvpn-old:148
+#, c-format
+msgid ""
+"You are about to configure your computer to use a VPN connection.\n"
+"\n"
+"With this feature, computers on your local private network and computers\n"
+"on some other remote private networks, can share resources, through\n"
+"their respective firewalls, over the Internet, in a secure manner. \n"
+"\n"
+"The communication over the Internet is encrypted. The local and remote\n"
+"computers look as if they were on the same network.\n"
+"\n"
+"Make sure you have configured your Network/Internet access using\n"
+"drakconnect before going any further."
+msgstr ""
+"Nastavili boste računalnik za uporabo VPN povezave.\n"
+"\n"
+"S to možnostjo bodo računalniki na vašem zasebnem omrežju in\n"
+"na nekaterih drugih oddaljenih zasebnih omrežjih varno delili svoja "
+"sredstva\n"
+"preko požarnih zidov in interneta .\n"
+"\n"
+"Komunikacija preko spleta je zakodirana. Lokalni in oddaljeni računalniki\n"
+"izgledajo, kot da bi bili v istem omrežju.\n"
+"\n"
+"Preden nadaljujete se prepričajte, da ste nastavili dostop do omrežja/"
+"spleta\n"
+" z orodjem drackconnect."
+
+#: ../tools/drakvpn-old:165
+#, c-format
+msgid ""
+"VPN connection.\n"
+"\n"
+"This program is based on the following projects:\n"
+" - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
+" - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
+" - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
+" - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
+" - the docs and man pages coming with the %s package\n"
+"\n"
+"Please read AT LEAST the ipsec-howto docs\n"
+"before going any further."
+msgstr ""
+"VPN povezava.\n"
+"\n"
+"Ta program temelji na sledečih projektih:\n"
+" - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
+" - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
+" - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net\n"
+" - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
+" - dokumenti in man strani, priložene v paketu %s\n"
+"\n"
+"Preden nadaljujete, preberite prosim vsaj dokumentacijo ipsec-howto\n"
+"."
+
+#: ../tools/drakvpn-old:208
+#, c-format
+msgid "Problems installing package %s"
+msgstr "Težave pri nameščanju paketa %s"
+
+#: ../tools/drakvpn-old:222
+#, c-format
+msgid "Security Policies"
+msgstr "Varnostna pravila"
+
+#: ../tools/drakvpn-old:222
+#, c-format
+msgid "IKE daemon racoon"
+msgstr "IKE demon racoon"
+
+#: ../tools/drakvpn-old:224
+#, c-format
+msgid "Configuration file"
+msgstr "Datoteka z nastavitvami"
+
+#: ../tools/drakvpn-old:225
+#, c-format
+msgid ""
+"Configuration step!\n"
+"\n"
+"You need to define the Security Policies and then to \n"
+"configure the automatic key exchange (IKE) daemon. \n"
+"The KAME IKE daemon we're using is called 'racoon'.\n"
+"\n"
+"What would you like to configure?\n"
+msgstr ""
+"Korak nastavitve!\n"
+"Najprej morate določiti varnostna pravila, nato ustvarite demona\n"
+"za samodejno izmenjavo ključev (IKE). Demon KAME IKE,\n"
+"ki ga uporabljamo, se imenuje 'racoon'.\n"
+"Kaj želite nastaviti?\n"
+
+#: ../tools/drakvpn-old:245 ../tools/drakvpn-old:382
+#, c-format
+msgid "%s entries"
+msgstr "Vnosi %s"
+
+#: ../tools/drakvpn-old:246
+#, c-format
+msgid ""
+"The %s file contents\n"
+"is divided into sections.\n"
+"\n"
+"You can now:\n"
+"\n"
+"  - display, add, edit, or remove sections, then\n"
+"  - commit the changes\n"
+"\n"
+"What would you like to do?\n"
+msgstr ""
+"Vsebina datoteke %s \n"
+"je razdeljena na razdelke.\n"
+"\n"
+"Lahko izbirate med naslednjimi dejanji:\n"
+"\n"
+"  - prikaz, dodajnje, urejanje, odstranjevanje oddelkov, in\n"
+"  - uveljavljanje sprememb.\n"
+"\n"
+"Kaj želite storiti?\n"
+
+#: ../tools/drakvpn-old:253 ../tools/drakvpn-old:391
+#, c-format
+msgid ""
+"_:display here is a verb\n"
+"Display"
+msgstr "Prikaži"
+
+#: ../tools/drakvpn-old:253 ../tools/drakvpn-old:391
+#, c-format
+msgid "Edit"
+msgstr "Uredi"
+
+#: ../tools/drakvpn-old:253 ../tools/drakvpn-old:391
+#, c-format
+msgid "Commit"
+msgstr "Uveljavi"
+
+#: ../tools/drakvpn-old:267 ../tools/drakvpn-old:271 ../tools/drakvpn-old:406
+#: ../tools/drakvpn-old:410
+#, c-format
+msgid ""
+"_:display here is a verb\n"
+"Display configuration"
+msgstr "Prikaži nastavitve"
+
+#: ../tools/drakvpn-old:272
+#, c-format
+msgid ""
+"The %s file does not exist.\n"
+"\n"
+"This must be a new configuration.\n"
+"\n"
+"You'll have to go back and choose 'add'.\n"
+msgstr ""
+"Datoteka %s ne obstaja.\n"
+"\n"
+"Potrebna je nova nastavitev.\n"
+"\n"
+"Morali boste nazaj in izbrati 'dodaj'.\n"
+
+#: ../tools/drakvpn-old:301
+#, c-format
+msgid ""
+"Add a Security Policy.\n"
+"\n"
+"You can now add a Security Policy.\n"
+"\n"
+"Choose continue when you are done to write the data.\n"
+msgstr ""
+"Dodajanje varnostnih pravil.\n"
+"\n"
+"Lahko dodate varnostna pravila.\n"
+"\n"
+"Ko končate z vnosom podatkov, izberite 'nadaljuj'.\n"
+
+#: ../tools/drakvpn-old:333 ../tools/drakvpn-old:523
+#, c-format
+msgid "Edit section"
+msgstr "Urejanje razdelka"
+
+#: ../tools/drakvpn-old:334
+#, c-format
+msgid ""
+"Your %s file has several sections or connections.\n"
+"\n"
+"You can choose here below the one you want to edit \n"
+"and then click on next.\n"
+msgstr ""
+"Datoteka %s ima več razdelkov ali povezav.\n"
+"\n"
+"Lahko izberete razdelek, ki ga želite urejati.\n"
+"Ko končate z vnosom podatkov, izberite 'nadaljuj'.\n"
+
+#: ../tools/drakvpn-old:337 ../tools/drakvpn-old:357 ../tools/drakvpn-old:528
+#: ../tools/drakvpn-old:574
+#, c-format
+msgid "Section names"
+msgstr "Imena razdelkov"
+
+#: ../tools/drakvpn-old:344
+#, c-format
+msgid ""
+"Edit a Security Policy.\n"
+"\n"
+"You can now edit a Security Policy.\n"
+"\n"
+"Choose continue when you are done to write the data.\n"
+msgstr ""
+"Urejanje varnostnih pravil.\n"
+"\n"
+"Uredite lahko varnostna pravila.\n"
+"\n"
+"Ko boste končali, kliknite 'nadaljuj' za zapis podatkov.\n"
+
+#: ../tools/drakvpn-old:353 ../tools/drakvpn-old:570
+#, c-format
+msgid "Remove section"
+msgstr "Odstrani razdelek"
+
+#: ../tools/drakvpn-old:354 ../tools/drakvpn-old:571
+#, c-format
+msgid ""
+"Your %s file has several sections or connections.\n"
+"\n"
+"You can choose here below the one you want to remove\n"
+"and then click on next.\n"
+msgstr ""
+"Datoteka  %s ima več razdelokov ali povezav.\n"
+"\n"
+"Lahko izberete razdelek, ki ga želite odstraniti.\n"
+"Ko boste končali, kliknite 'nadaljuj' za zapis podatkov.\n"
+
+#: ../tools/drakvpn-old:383
+#, c-format
+msgid ""
+"The racoon.conf file configuration.\n"
+"\n"
+"The contents of this file is divided into sections.\n"
+"You can now:\n"
+"  - display \t\t (display the file contents)\n"
+"  - add\t\t\t (add one section)\n"
+"  - edit \t\t\t (modify parameters of an existing section)\n"
+"  - remove \t\t (remove an existing section)\n"
+"  - commit \t\t (writes the changes to the real file)"
+msgstr ""
+"Nastavitvena datoteka za racoon.\n"
+"\n"
+"Vsebina te datoteke je razdeljena na razdelke.\n"
+"Izbirate lahko med naslednjimi možnostmi:\n"
+"  - Prikaži \t\t (prikaz vsebine datoteke)\n"
+"  - Dodaj\t\t\t (dodajanje razdelka)\n"
+"  - Uredi \t\t\t (urejanje obstoječega razdelka)\n"
+"  - Odstrani \t\t (odstranitev razdelka)\n"
+"  - Uveljavi \t\t (Uveljavitev sprememb)"
+
+#: ../tools/drakvpn-old:411
+#, c-format
+msgid ""
+"The %s file does not exist\n"
+"\n"
+"This must be a new configuration.\n"
+"\n"
+"You'll have to go back and choose configure.\n"
+msgstr ""
+"Datoteka %s ne obstaja.\n"
+"\n"
+"Potrebna je nova nastavitev.\n"
+"\n"
+"Morali boste nazaj in izbrati 'nastavljanje'.\n"
+
+#: ../tools/drakvpn-old:425
+#, c-format
+msgid "racoon.conf entries"
+msgstr "nastavitve za racoon"
+
+#: ../tools/drakvpn-old:426
+#, c-format
+msgid ""
+"The 'add' sections step.\n"
+"\n"
+"Here below is the racoon.conf file skeleton:\n"
+"\t'path'\n"
+"\t'remote'\n"
+"\t'sainfo' \n"
+"\n"
+"Choose the section you would like to add.\n"
+msgstr ""
+"Korak za dodajanje razdelkov\n"
+"\n"
+"Ogrodje nastavitvene datoteke za racoon:\n"
+"\t'pot'\n"
+"\t'oddaljeno'\n"
+"\t'sainfo' \n"
+"\n"
+"Izberite razdelek, ki ga želite dodati.\n"
+
+#: ../tools/drakvpn-old:432
+#, c-format
+msgid "path"
+msgstr "pot"
+
+#: ../tools/drakvpn-old:432
+#, c-format
+msgid "remote"
+msgstr "oddaljeno"
+
+#: ../tools/drakvpn-old:432
+#, c-format
+msgid "sainfo"
+msgstr "sainfo"
+
+#: ../tools/drakvpn-old:440
+#, c-format
+msgid ""
+"The 'add path' section step.\n"
+"\n"
+"The path sections have to be on top of your racoon.conf file.\n"
+"\n"
+"Put your mouse over the certificate entry to obtain online help."
+msgstr ""
+"Korak za dodajanje poti.\n"
+"\n"
+"Razdelki s potmi morajo biti na vrhu nastavitvene datoteke za racoon.\n"
+"\n"
+"Postavite miškin kazalec na vnos o certifikatu za spletno pomoč."
+
+#: ../tools/drakvpn-old:443
+#, c-format
+msgid "path type"
+msgstr "vrsta poti"
+
+#: ../tools/drakvpn-old:447
+#, c-format
+msgid ""
+"path include path: specifies a path to include\n"
+"a file. See File Inclusion.\n"
+"\tExample: path include '/etc/racoon'\n"
+"\n"
+"path pre_shared_key file: specifies a file containing\n"
+"pre-shared key(s) for various ID(s). See Pre-shared key File.\n"
+"\tExample: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
+"\n"
+"path certificate path: racoon(8) will search this directory\n"
+"if a certificate or certificate request is received.\n"
+"\tExample: path certificate '/etc/cert' ;\n"
+"\n"
+"File Inclusion: include file \n"
+"other configuration files can be included.\n"
+"\tExample: include \"remote.conf\" ;\n"
+"\n"
+"Pre-shared key File: Pre-shared key file defines a pair\n"
+"of the identifier and the shared secret key which are used at\n"
+"Pre-shared key authentication method in phase 1."
+msgstr ""
+"path include pot: določi pot za vključitev\n"
+"datoteke. Glejte Vključevanje datoteke.\n"
+"\tPrimer: path include '/etc/racoon'\n"
+"\n"
+"path pre_shared_key datoteka: določi datoteko, ki vsebuje\n"
+"ključ(e) pre-shared za razne ID(je). Glejte Datoteka ključev pre-shared.\n"
+"\tPrimer: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
+"\n"
+"path certificate pot: racoon(8) bo iskal v tem imeniku,\n"
+"če bo prejet certifikat oz. certifikatno zahtevo.\n"
+"\tPrimer: path certificate '/etc/cert' ;\n"
+"\n"
+"Vključevanje datoteke: include datoteka \n"
+"vključene so lahko druge nastavitvene datoteke.\n"
+"\tPrimer: include \"remote.conf\" ;\n"
+"\n"
+"Datoteka ključev pre-shared: Datoteka ključev pre-shared določi\n"
+"par identitete in skrivnega skupnega ključa, ki se rabi v\n"
+"fazi 1 metode overjanja s ključem pre-shared."
+
+#: ../tools/drakvpn-old:467 ../tools/drakvpn-old:560
+#, c-format
+msgid "real file"
+msgstr "prava datoteka"
+
+#: ../tools/drakvpn-old:490
+#, c-format
+msgid ""
+"Make sure you already have the path sections\n"
+"on the top of your racoon.conf file.\n"
+"\n"
+"You can now choose the remote settings.\n"
+"Choose continue or previous when you are done.\n"
+msgstr ""
+"Prepričajte se, da so razdelki s potmi na\n"
+"vrhu nastavitvene datoteke za racoon.\n"
+"\n"
+"Zdaj lahko izberete nastavljanje za 'oddaljeno'.\n"
+"Ko boste končali, izberite 'naprej' ali 'nazaj'.\n"
+
+#: ../tools/drakvpn-old:507
+#, c-format
+msgid ""
+"Make sure you already have the path sections\n"
+"on the top of your %s file.\n"
+"\n"
+"You can now choose the sainfo settings.\n"
+"Choose continue or previous when you are done.\n"
+msgstr ""
+"Prepričajte se, da je razdelek s potmi\n"
+"na vrhu datoteke %s.\n"
+"\n"
+"Zdaj lahko izberete nastavljanje sainfo.\n"
+"Ko boste končali, izberite 'naprej' ali 'nazaj'.\n"
+
+#: ../tools/drakvpn-old:524
+#, c-format
+msgid ""
+"Your %s file has several sections or connections.\n"
+"\n"
+"You can choose here in the list below the one you want\n"
+"to edit and then click on next.\n"
+msgstr ""
+"Datoteka %s ima več razdelkov ali povezav.\n"
+"\n"
+"S spodnjega seznama lahko izberete, kaj želite urejati,\n"
+"nato pa kliknite 'naprej'.\n"
+
+#: ../tools/drakvpn-old:535
+#, c-format
+msgid ""
+"Your %s file has several sections.\n"
+"\n"
+"\n"
+"You can now edit the remote section entries.\n"
+"\n"
+"Choose continue when you are done to write the data.\n"
+msgstr ""
+"Datoteka %s ima več razdelkov.\n"
+"\n"
+"\n"
+"Urejate lahko vnose za 'oddaljeno'.\n"
+"\n"
+"Za uveljavitev podatkov izberite 'nadaljuj'.\n"
+
+#: ../tools/drakvpn-old:544
+#, c-format
+msgid ""
+"Your %s file has several sections.\n"
+"\n"
+"You can now edit the sainfo section entries.\n"
+"\n"
+"Choose continue when you are done to write the data."
+msgstr ""
+"Datoteka %s ima več razdelkov.\n"
+"\n"
+"\n"
+"Urejate lahko vnose za 'sainfo'.\n"
+"\n"
+"Za uveljavitev podatkov izberite 'nadaljuj'."
+
+#: ../tools/drakvpn-old:552
+#, c-format
+msgid ""
+"This section has to be on top of your\n"
+"%s file.\n"
+"\n"
+"Make sure all other sections follow these path\n"
+"sections.\n"
+"\n"
+"You can now edit the path entries.\n"
+"\n"
+"Choose continue or previous when you are done.\n"
+msgstr ""
+"Ta razdelek mora biti na vrhu datoteke\n"
+"%s.\n"
+"\n"
+"Zagotovite, da bodo vsi ostali razdelki sledili\n"
+"tem razdelkom s potmi.\n"
+"\n"
+"Urejate lahko vnose s potmi.\n"
+"\n"
+"Ko končate, izberite 'naprej' ali 'nazaj'.\n"
+
+#: ../tools/drakvpn-old:559
+#, c-format
+msgid "path_type"
+msgstr "vrsta_poti"
+
+#: ../tools/drakvpn-old:599
+#, c-format
+msgid "Congratulations!"
+msgstr "Čestitke!"
+
+#: ../tools/drakvpn-old:600
+#, c-format
+msgid ""
+"Everything has been configured.\n"
+"\n"
+"You may now share resources through the Internet,\n"
+"in a secure way, using a VPN connection.\n"
+"\n"
+"You should make sure that the tunnels shorewall\n"
+"section is configured."
+msgstr ""
+"Vse je nastavljeno.\n"
+"\n"
+"Zdaj lahko svoje zmogljivosti delite preko spleta\n"
+" s pomočjo varne povezave VPN.\n"
+"\n"
+"Prepričajte se, da je razdelek 'tunnels shorewall'\n"
+"nastavljen."
+
+#: ../tools/drakvpn-old:620
+#, c-format
+msgid "Sainfo source address"
+msgstr "Izvorni naslov sainfo"
+
+#: ../tools/drakvpn-old:621
+#, c-format
+msgid ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"defines the parameters of the IKE phase 2\n"
+"(IPsec-SA establishment).\n"
+"\n"
+"source_id and destination_id are constructed like:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Examples: \n"
+"\n"
+"sainfo anonymous (accepts connections from anywhere)\n"
+"\tleave blank this entry if you want anonymous\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\t203.178.141.209 is the source address\n"
+"\n"
+"sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
+"\t172.16.1.0/24 is the source address"
+msgstr ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"določi paremetre za fazo 2 IKE\n"
+"(vzpostavitev IPsec-SA).\n"
+"\n"
+"source_id in destination_id sta zgrajena takole:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Primeri: \n"
+"\n"
+"sainfo anonymous (sprejme povezavo od kjerkoli)\n"
+"\tpustite prazno, če želite anonymous (anonimno)\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\t203.178.141.209 je izvorni naslov\n"
+"\n"
+"sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
+"\t172.16.1.0/24 je izvorni naslov"
+
+#: ../tools/drakvpn-old:638
+#, c-format
+msgid "Sainfo source protocol"
+msgstr "Protokol sainfo"
+
+#: ../tools/drakvpn-old:639
+#, c-format
+msgid ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"defines the parameters of the IKE phase 2\n"
+"(IPsec-SA establishment).\n"
+"\n"
+"source_id and destination_id are constructed like:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Examples: \n"
+"\n"
+"sainfo anonymous (accepts connections from anywhere)\n"
+"\tleave blank this entry if you want anonymous\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\tthe first 'any' allows any protocol for the source"
+msgstr ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"določi paremetre za fazo 2 IKE\n"
+"(vzpostavitev IPsec-SA).\n"
+"\n"
+"source_id in destination_id sta zgrajena takole:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Primeri: \n"
+"\n"
+"sainfo anonymous (sprejme povezavo od kjerkoli)\n"
+"\tpustite prazno, če želite anonymous (anonimno)\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\tprvi 'any' dovoljuje katerikoli protokol za izvor"
+
+#: ../tools/drakvpn-old:653
+#, c-format
+msgid "Sainfo destination address"
+msgstr "Sainfo ciljni naslov"
+
+#: ../tools/drakvpn-old:654
+#, c-format
+msgid ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"defines the parameters of the IKE phase 2\n"
+"(IPsec-SA establishment).\n"
+"\n"
+"source_id and destination_id are constructed like:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Examples: \n"
+"\n"
+"sainfo anonymous (accepts connections from anywhere)\n"
+"\tleave blank this entry if you want anonymous\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\t203.178.141.218 is the destination address\n"
+"\n"
+"sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
+"\t172.16.2.0/24 is the destination address"
+msgstr ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"določi paremetre za fazo 2 IKE\n"
+"(vzpostavitev IPsec-SA).\n"
+"\n"
+"source_id in destination_id sta zgrajena takole:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Primeri: \n"
+"\n"
+"sainfo anonymous (sprejme povezavo od kjerkoli)\n"
+"\tpustite prazno, če želite anonymous (anonimno)\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\t203.178.141.218 je ciljni naslov\n"
+"\n"
+"sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
+"\t172.16.2.0/24 je ciljni naslov"
+
+#: ../tools/drakvpn-old:671
+#, c-format
+msgid "Sainfo destination protocol"
+msgstr "Sainfo protokol cilja"
+
+#: ../tools/drakvpn-old:672
+#, c-format
+msgid ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"defines the parameters of the IKE phase 2\n"
+"(IPsec-SA establishment).\n"
+"\n"
+"source_id and destination_id are constructed like:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Examples: \n"
+"\n"
+"sainfo anonymous (accepts connections from anywhere)\n"
+"\tleave blank this entry if you want anonymous\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\tthe last 'any' allows any protocol for the destination"
+msgstr ""
+"sainfo (source_id destination_id | anonymous) { statements }\n"
+"določa parametre IKE faze 2\n"
+"(IPsec-SA establishment).\n"
+"\n"
+"source_id in destination_id so sestavljeni kot:\n"
+"\n"
+"\taddress address [/ prefix] [[port]] ul_proto\n"
+"\n"
+"Primeri: \n"
+"\n"
+"sainfo anonymous (sprejema povezave od kjerkoli)\n"
+"\tpusti prazno, če želiš anonymous\n"
+"\n"
+"sainfo naslov 203.178.141.209 vsak naslov 203.178.141.218 \n"
+"\tzadnji 'any' omogoča kakršenkoli protocol za cilj"
+
+#: ../tools/drakvpn-old:686
+#, c-format
+msgid "PFS group"
+msgstr "Skupina PFS"
+
+#: ../tools/drakvpn-old:688
+#, c-format
+msgid ""
+"define the group of Diffie-Hellman exponentiations.\n"
+"If you do not require PFS then you can omit this directive.\n"
+"Any proposal will be accepted if you do not specify one.\n"
+"group is one of the following: modp768, modp1024, modp1536.\n"
+"Or you can define 1, 2, or 5 as the DH group number."
+msgstr ""
+"Določi skupino Diffie-Hellmanovih potenc.\n"
+"To navodilo lahko opustiš, če ne potrebuješ PFS.\n"
+"Če ne navedeš nič, bo sprejet vsak predlog.\n"
+"Skupine so lahko: modp768, modp1024, modp1536.\n"
+"Ali pa določiš 1, 2 ali 5 kot DH številko skupine."
+
+#: ../tools/drakvpn-old:693
+#, c-format
+msgid "Lifetime number"
+msgstr "številka časa trajanja"
+
+#: ../tools/drakvpn-old:694
+#, c-format
+msgid ""
+"define a lifetime of a certain time which will be pro-\n"
+"posed in the phase 1 negotiations.  Any proposal will be\n"
+"accepted, and the attribute(s) will not be proposed to\n"
+"the peer if you do not specify it(them).  They can be\n"
+"individually specified in each proposal.\n"
+"\n"
+"Examples: \n"
+"\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 60 sec;\n"
+"\tlifetime time 12 hour;\n"
+"\n"
+"So, here, the lifetime numbers are 1, 1, 30, 30, 60 and 12.\n"
+msgstr ""
+"določi čas trajanja v , ki bo predlagan v fazi 1\n"
+"povezovanja. Vsak predlog bo sprejet, vendar last-\n"
+"nosti ne bodo predložene enakovrednim napravam,\n"
+"če jih ne boste navedli. Lahko se jih navaja posebej v\n"
+"vsakem predlogu.\n"
+"\n"
+"Primeri: \n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 60 sec;\n"
+"\tlifetime time 12 hour;\n"
+"\n"
+"Torej številke trajanja so:  1, 1, 30, 30, 60 and 12.\n"
+
+#: ../tools/drakvpn-old:710
+#, c-format
+msgid "Lifetime unit"
+msgstr "Enota trajanja"
+
+#: ../tools/drakvpn-old:712
+#, c-format
+msgid ""
+"define a lifetime of a certain time which will be pro-\n"
+"posed in the phase 1 negotiations.  Any proposal will be\n"
+"accepted, and the attribute(s) will not be proposed to\n"
+"the peer if you do not specify it(them).  They can be\n"
+"individually specified in each proposal.\n"
+"\n"
+"Examples: \n"
+"\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 60 sec;\n"
+"\tlifetime time 12 hour;\n"
+"\n"
+"So, here, the lifetime units are 'min', 'min', 'sec', 'sec', 'sec' and "
+"'hour'.\n"
+msgstr ""
+"določi čas trajanja, ki bo predlagan\n"
+"za fazo 1 povezovanja. Vsak predlog bo sprejet,\n"
+"vendar lastnosti ne bodo predložene enakovrednim napravam,\n"
+"če jih ne boš navedel. Lahko se jih nevede posebej\n"
+"v vsakem predlogu.\n"
+"\n"
+"Primeri: \n"
+"\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 60 sec;\n"
+"\tlifetime time 12 hour;\n"
+"\n"
+"Torej enote trajanaja so: 'min', 'min', 'sec', 'sec', 'sec' in 'hour'.\n"
+
+#: ../tools/drakvpn-old:728 ../tools/drakvpn-old:813
+#, c-format
+msgid "Encryption algorithm"
+msgstr "Algoritem za šifriranje"
+
+#: ../tools/drakvpn-old:730
+#, c-format
+msgid "Authentication algorithm"
+msgstr "Algoritem za overjanje"
+
+#: ../tools/drakvpn-old:732
+#, c-format
+msgid "Compression algorithm"
+msgstr "Algoritem za stiskanje"
+
+#: ../tools/drakvpn-old:733
+#, c-format
+msgid "deflate"
+msgstr "skrči"
+
+#: ../tools/drakvpn-old:740
+#, c-format
+msgid "Remote"
+msgstr "Oddaljeno"
+
+#: ../tools/drakvpn-old:741
+#, c-format
+msgid ""
+"remote (address | anonymous) [[port]] { statements }\n"
+"specifies the parameters for IKE phase 1 for each remote node.\n"
+"The default port is 500.  If anonymous is specified, the state-\n"
+"ments apply to all peers which do not match any other remote\n"
+"directive.\n"
+"\n"
+"Examples: \n"
+"\n"
+"remote anonymous\n"
+"remote ::1 [8000]"
+msgstr ""
+"remote  (address | anonymous) [[port]] { statements }\n"
+"določi vrednosti za IKE fazo 1 za vsako oddaljeno vozlišče.\n"
+"Privzeto se uporablja vrata 500. Če se navede anonymous, se le to\n"
+"uporabi za vse enakovredne naprave, ki jim ne ustreza nobeno drugo\n"
+"oddaljeno navodilo.\n"
+"\n"
+"Primeri: \n"
+"\n"
+"remote anonymous\n"
+"remote ::1 [8000]"
+
+#: ../tools/drakvpn-old:749
+#, c-format
+msgid "Exchange mode"
+msgstr "Izmenjevalni način"
+
+#: ../tools/drakvpn-old:751
+#, c-format
+msgid ""
+"defines the exchange mode for phase 1 when racoon is the\n"
+"initiator. Also it means the acceptable exchange mode\n"
+"when racoon is responder. More than one mode can be\n"
+"specified by separating them with a comma. All of the\n"
+"modes are acceptable. The first exchange mode is what\n"
+"racoon uses when it is the initiator.\n"
+msgstr ""
+"določa način izmenjevanja za fazo 1, takrat ko je racoon\n"
+"pobudnik. Poleg tega pomeni sprejemljiv način izmenjave,\n"
+"ko je racoon odzivnik. Obstaja lahko več kot 1 način, ki jih\n"
+"medsebojno ločiš z vejico. Vsi načini so sprejemljivi.\n"
+"Prvi način izmenjave je tisti, ki ga racoon uporablja,\n"
+"kadar je pobudnik.\n"
+
+#: ../tools/drakvpn-old:757
+#, c-format
+msgid "Generate policy"
+msgstr "Ustvari varnostna pravila"
+
+#: ../tools/drakvpn-old:758 ../tools/drakvpn-old:774 ../tools/drakvpn-old:787
+#, c-format
+msgid "off"
+msgstr "izključeno"
+
+#: ../tools/drakvpn-old:758 ../tools/drakvpn-old:774 ../tools/drakvpn-old:787
+#, c-format
+msgid "on"
+msgstr "vključeno"
+
+#: ../tools/drakvpn-old:759
+#, c-format
+msgid ""
+"This directive is for the responder.  Therefore you\n"
+"should set passive on in order that racoon(8) only\n"
+"becomes a responder.  If the responder does not have any\n"
+"policy in SPD during phase 2 negotiation, and the direc-\n"
+"tive is set on, then racoon(8) will choose the first pro-\n"
+"posal in the SA payload from the initiator, and generate\n"
+"policy entries from the proposal.  It is useful to nego-\n"
+"tiate with the client which is allocated IP address\n"
+"dynamically.  Note that inappropriate policy might be\n"
+"installed into the responder's SPD by the initiator.  So\n"
+"that other communication might fail if such policies\n"
+"installed due to some policy mismatches between the ini-\n"
+"tiator and the responder.  This directive is ignored in\n"
+"the initiator case.  The default value is off."
+msgstr ""
+"To navodilo je za odzivnik. Zaradi tega moraš\n"
+"vključiti pasivno, zato da bo samo racoon(8) postal\n"
+"odzivnik. Če odzivnik nima določenih pravil v SPD med\n"
+"drugo fazo povezovanja, navodilo pa je vključeno, potem\n"
+"bo racoon(8) izbral prvo predlogo v SA prometu od pobudnika,\n"
+"nato bo ustvaril pravilnik vnosov od pobudnika. Koristno se je\n"
+"povezovati z odjemalcem, ki ima dinamično določen\n"
+"naslov IP. Pozoren bodi na to, da se v odzivnikov SPD lahko\n"
+"namesti neprimeren pravilnik pobudnika. Zaradi neskladja\n"
+"pravilnikov pobudnika in odzivnika lahko pride do\n"
+"izgube ostale komunikacije, če je tak pravilnik\n"
+"nameščen. To navodilo v primeru pobudnika\n"
+"ni upoštevano. Privzeta vrednost je izključeno."
+
+#: ../tools/drakvpn-old:773
+#, c-format
+msgid "Passive"
+msgstr "Pasivno"
+
+#: ../tools/drakvpn-old:775
+#, c-format
+msgid ""
+"If you do not want to initiate the negotiation, set this\n"
+"to on.  The default value is off.  It is useful for a\n"
+"server."
+msgstr ""
+"Če ne želite začeti povezovanje, nastavite\n"
+"to možnost na vključeno. Privzeto je izključeno.\n"
+"To je koristno za strežnik."
+
+#: ../tools/drakvpn-old:778
+#, c-format
+msgid "Certificate type"
+msgstr "Vrsta certifikata"
+
+#: ../tools/drakvpn-old:780
+#, c-format
+msgid "My certfile"
+msgstr "Moje potrdilo"
+
+#: ../tools/drakvpn-old:781
+#, c-format
+msgid "Name of the certificate"
+msgstr "Ime certifikata"
+
+#: ../tools/drakvpn-old:782
+#, c-format
+msgid "My private key"
+msgstr "Moj zasebni ključ"
+
+#: ../tools/drakvpn-old:783
+#, c-format
+msgid "Name of the private key"
+msgstr "Ime zasebnega ključa"
+
+#: ../tools/drakvpn-old:784
+#, c-format
+msgid "Peers certfile"
+msgstr "Potrdilo za enakovredne naprave"
+
+#: ../tools/drakvpn-old:785
+#, c-format
+msgid "Name of the peers certificate"
+msgstr "Ime potrdila za enakovredne naprave"
+
+#: ../tools/drakvpn-old:786
+#, c-format
+msgid "Verify cert"
+msgstr "Preveri potrdilo"
+
+#: ../tools/drakvpn-old:788
+#, c-format
+msgid ""
+"If you do not want to verify the peer's certificate for\n"
+"some reason, set this to off.  The default is on."
+msgstr ""
+"Izključite to orodje, če zaradi nekega razloge ne želite\n"
+"preverjati certifikatov enakovrednih naprav. Privzeto je orodje\n"
+"vključeno."
+
+#: ../tools/drakvpn-old:790
+#, c-format
+msgid "My identifier"
+msgstr "Moj določevalec, identifikator"
+
+#: ../tools/drakvpn-old:791
+#, c-format
+msgid ""
+"specifies the identifier sent to the remote host and the\n"
+"type to use in the phase 1 negotiation.  address, FQDN,\n"
+"user_fqdn, keyid and asn1dn can be used as an idtype.\n"
+"they are used like:\n"
+"\tmy_identifier address [address];\n"
+"\t\tthe type is the IP address.  This is the default\n"
+"\t\ttype if you do not specify an identifier to use.\n"
+"\tmy_identifier user_fqdn string;\n"
+"\t\tthe type is a USER_FQDN (user fully-qualified\n"
+"\t\tdomain name).\n"
+"\tmy_identifier FQDN string;\n"
+"\t\tthe type is a FQDN (fully-qualified domain name).\n"
+"\tmy_identifier keyid file;\n"
+"\t\tthe type is a KEY_ID.\n"
+"\tmy_identifier asn1dn [string];\n"
+"\t\tthe type is an ASN.1 distinguished name.  If\n"
+"\t\tstring is omitted, racoon(8) will get DN from\n"
+"\t\tSubject field in the certificate.\n"
+"\n"
+"Examples: \n"
+"\n"
+"my_identifier user_fqdn \"myemail@mydomain.com\""
+msgstr ""
+"Določa identifikator, ki se pošlje oddaljenemu dostitelju, in\n"
+"vrsto za uporabo v pogajanjih faze 1 negotiation. Za idtype\n"
+"se lahko uporabi FQDN, user_fqdn, keyid in asn1dn.\n"
+"Vse se uporablja na ta način:\n"
+"\tmy_identifier address [naslov];\n"
+"\t\tvrsta je naslov IP. To je privzeta\n"
+"\t\tvrsta, če ne določite identifikatorja.\n"
+"\tmy_identifier user_fqdn niz;\n"
+"\t\tvrsta je USER_FQDN (uporabniško polno\n"
+"\t\tkvalificirano ime domene).\n"
+"\tmy_identifier FQDN niz;\n"
+"\t\tvrsta je FQDN (polno kvalificirano ime domene).\n"
+"\tmy_identifier keyid datoteka;\n"
+"\t\tvrsta je KEY_ID.\n"
+"\tmy_identifier asn1dn [niz];\n"
+"\t\tvrsta je značilno ime ASN.1. Če\n"
+"\t\tniz izpustite, bo racoon(8) pridobil ime iz\n"
+"\t\tpolja Zadeva iz potrdila.\n"
+"\n"
+"Primeri: \n"
+"\n"
+"my_identifier user_fqdn \"mojapošta@mojadomena.com\""
+
+#: ../tools/drakvpn-old:811
+#, c-format
+msgid "Peers identifier"
+msgstr "Identifikator enakovrednih naprav"
+
+#: ../tools/drakvpn-old:812
+#, c-format
+msgid "Proposal"
+msgstr "Predlog"
+
+#: ../tools/drakvpn-old:814
+#, c-format
+msgid ""
+"specify the encryption algorithm used for the\n"
+"phase 1 negotiation. This directive must be defined. \n"
+"algorithm is one of the following: \n"
+"\n"
+"DES, 3DES, blowfish, cast128 for oakley.\n"
+"\n"
+"For other transforms, this statement should not be used."
+msgstr ""
+"navedi algoritem za šifriranje, ki bo v uporabi\n"
+"za prvo stopnjo pogajanja. To navodilo mora biti določeno.\n"
+"lahko se izbere naslednje algoritne: \n"
+"\n"
+"DES, 3DES, blowfish, cast128 za oakley.\n"
+"\n"
+"Za ostale pretvorbe se ta navedba ne uporablja."
+
+#: ../tools/drakvpn-old:821
+#, c-format
+msgid "Hash algorithm"
+msgstr "Zgostitveni algoritem"
+
+#: ../tools/drakvpn-old:822
+#, c-format
+msgid "Authentication method"
+msgstr "Način overjanja"
+
+#: ../tools/drakvpn-old:823
+#, c-format
+msgid "DH group"
+msgstr "Skupina DH"
+
+#: ../tools/drakvpn-old:830
+#, c-format
+msgid "Command"
+msgstr "Ukaz"
+
+#: ../tools/drakvpn-old:831
+#, c-format
+msgid "Source IP range"
+msgstr "Obseg vrednosti za izvorni IP"
+
+#: ../tools/drakvpn-old:832
+#, c-format
+msgid "Destination IP range"
+msgstr "Obseg vrednosti za ciljni IP"
+
+#: ../tools/drakvpn-old:833
+#, c-format
+msgid "Upper-layer protocol"
+msgstr "Protokol zgornjega sloja"
+
+#: ../tools/drakvpn-old:833 ../tools/drakvpn-old:840
+#, c-format
+msgid "any"
+msgstr "katerikoli"
+
+#: ../tools/drakvpn-old:835
+#, c-format
+msgid "Flag"
+msgstr "Zastavica"
+
+#: ../tools/drakvpn-old:836
+#, c-format
+msgid "Direction"
+msgstr "Usmeritev"
+
+#: ../tools/drakvpn-old:837
+#, c-format
+msgid "IPsec policy"
+msgstr "IPsec pravilnik"
+
+#: ../tools/drakvpn-old:837
+#, c-format
+msgid "ipsec"
+msgstr "ipsec"
+
+#: ../tools/drakvpn-old:837
+#, c-format
+msgid "discard"
+msgstr "Opusti"
+
+#: ../tools/drakvpn-old:840
+#, c-format
+msgid "Mode"
+msgstr "Način"
+
+#: ../tools/drakvpn-old:840
+#, c-format
+msgid "tunnel"
+msgstr "tunel"
+
+#: ../tools/drakvpn-old:840
+#, c-format
+msgid "transport"
+msgstr "prenos"
+
+#: ../tools/drakvpn-old:842
+#, c-format
+msgid "Source/destination"
+msgstr "Izvor/cilj"
+
+#: ../tools/drakvpn-old:843
+#, c-format
+msgid "Level"
+msgstr "Raven"
+
+#: ../tools/drakvpn-old:843
+#, c-format
+msgid "require"
+msgstr "zahteva"
+
+#: ../tools/drakvpn-old:843
+#, c-format
+msgid "default"
+msgstr "privzeto"
+
+#: ../tools/drakvpn-old:843
+#, c-format
+msgid "use"
+msgstr "uporabi"
+
+#: ../tools/drakvpn-old:843
+#, c-format
+msgid "unique"
+msgstr "enkraten"
+
+#: ../tools/net_applet:61
+#, c-format
+msgid "Network is up on interface %s."
+msgstr "Povezava preko vmesnika %s."
+
+#: ../tools/net_applet:62
+#, c-format
+msgid "IP address: %s"
+msgstr "Naslov IP: %s"
+
+#: ../tools/net_applet:63
+#, c-format
+msgid "Gateway: %s"
+msgstr "Prehod: %s"
+
+#: ../tools/net_applet:64
+#, c-format
+msgid "Connected to %s (link level: %d %%)"
+msgstr "Povezava z%s vzpostavljena (stopnja povezave: %d %%)"
+
+#: ../tools/net_applet:66
+#, c-format
+msgid "Network is down on interface %s."
+msgstr "Omrežje preko vmesnika %s je prekinjeno"
+
+#: ../tools/net_applet:74 ../tools/net_monitor:468
+#, c-format
+msgid "Connect %s"
+msgstr "Poveži %s"
+
+#: ../tools/net_applet:75 ../tools/net_monitor:468
+#, c-format
+msgid "Disconnect %s"
+msgstr "Prekini %s"
+
+#: ../tools/net_applet:76
+#, c-format
+msgid "Monitor Network"
+msgstr "Nadzornik omrežja"
+
+#: ../tools/net_applet:78
+#, c-format
+msgid "Manage wireless networks"
+msgstr "Upravljanje brezžičnih omrežij"
+
+#: ../tools/net_applet:80
+#, c-format
+msgid "Manage VPN connections"
+msgstr "Upravljanje povezav VPN"
+
+#: ../tools/net_applet:84
+#, c-format
+msgid "Configure Network"
+msgstr "Nastavi omrežje"
+
+#: ../tools/net_applet:86
+#, c-format
+msgid "Watched interface"
+msgstr "Opazovan vmesnik"
+
+#: ../tools/net_applet:87 ../tools/net_applet:88 ../tools/net_applet:90
+#, c-format
+msgid "Auto-detect"
+msgstr "Samodejna zanava"
+
+#: ../tools/net_applet:95
+#, c-format
+msgid "Active interfaces"
+msgstr "Delujoči vmesniki"
+
+#: ../tools/net_applet:119
+#, c-format
+msgid "Profiles"
+msgstr "Profili"
+
+#: ../tools/net_applet:137
+#, c-format
+msgid "Get Online Help"
+msgstr "Dobi pomoč z interneta"
+
+#: ../tools/net_applet:318
+#, c-format
+msgid "Network connection"
+msgstr "Omrežna povezava"
+
+#: ../tools/net_applet:438
+#, c-format
+msgid "More networks"
+msgstr "Več omrežij"
+
+#: ../tools/net_applet:465
+#, c-format
+msgid "Interactive Firewall automatic mode"
+msgstr "Samodejni način Interaktivnega požarnega zidu"
+
+#: ../tools/net_applet:470
+#, c-format
+msgid "Always launch on startup"
+msgstr "Vedno zaženi ob zagonu"
+
+#: ../tools/net_applet:475
+#, c-format
+msgid "Wireless networks"
+msgstr "Brezžična omrežja"
+
+#: ../tools/net_applet:482 ../tools/net_monitor:96
+#, c-format
+msgid "Settings"
+msgstr "Nastavitve"
+
+#: ../tools/net_applet:557
+#, c-format
+msgid "Interactive Firewall: intrusion detected"
+msgstr "Interaktivni požarni zid: zaznan vdor"
+
+#: ../tools/net_applet:574
+#, c-format
+msgid "What do you want to do with this attacker?"
+msgstr "Kaj želite storiti s tem napadalcem?"
+
+#: ../tools/net_applet:577
+#, c-format
+msgid "Attack details"
+msgstr "Podrobnosti o napadu"
+
+#: ../tools/net_applet:581
+#, c-format
+msgid "Attack time: %s"
+msgstr "Čas napada: %s"
+
+#: ../tools/net_applet:582
+#, c-format
+msgid "Network interface: %s"
+msgstr "Omrežni vmesnik: %s"
+
+#: ../tools/net_applet:583
+#, c-format
+msgid "Attack type: %s"
+msgstr "Vrsta napada: %s"
+
+#: ../tools/net_applet:584
+#, c-format
+msgid "Protocol: %s"
+msgstr "Protokol: %s"
+
+#: ../tools/net_applet:585
+#, c-format
+msgid "Attacker IP address: %s"
+msgstr "Napadalčev naslov IP: %s"
+
+#: ../tools/net_applet:586
+#, c-format
+msgid "Attacker hostname: %s"
+msgstr "Ime gostitelja napadalca: %s"
+
+#: ../tools/net_applet:589
+#, c-format
+msgid "Service attacked: %s"
+msgstr "Napadena storitev: %s"
+
+#: ../tools/net_applet:590
+#, c-format
+msgid "Port attacked: %s"
+msgstr "Napadena vrata: %s"
+
+#: ../tools/net_applet:592
+#, c-format
+msgid "Type of ICMP attack: %s"
+msgstr "Vrsta napada ICMP: %s"
+
+#: ../tools/net_applet:597
+#, c-format
+msgid "Always blacklist (do not ask again)"
+msgstr "Vedno uvrsti na črno listo (ne vprašaj ponovno)"
+
+#: ../tools/net_applet:612
+#, c-format
+msgid "Ignore"
+msgstr "Zanemari"
+
+#: ../tools/net_applet:630 ../tools/net_applet:643
+#, c-format
+msgid "Interactive Firewall: new service"
+msgstr "Interaktivni požarni zid: nova storitev"
+
+#: ../tools/net_applet:654
+#, c-format
+msgid "Do you want to open this service?"
+msgstr "Želite omogočiti storitev?"
+
+#: ../tools/net_applet:657
+#, c-format
+msgid "Remember this answer"
+msgstr "Zapomni si ta odgovor"
+
+#: ../tools/net_monitor:60 ../tools/net_monitor:65
+#, c-format
+msgid "Network Monitoring"
+msgstr "Nadzornik omrežja"
+
+#: ../tools/net_monitor:101
+#, c-format
+msgid "Global statistics"
+msgstr "Globalna statistika"
+
+#: ../tools/net_monitor:104
+#, c-format
+msgid "Instantaneous"
+msgstr "Trenutno"
+
+#: ../tools/net_monitor:104
+#, c-format
+msgid "Average"
+msgstr "Povprečno"
+
+#: ../tools/net_monitor:105
+#, c-format
+msgid ""
+"Sending\n"
+"speed:"
+msgstr ""
+"Hitrost\n"
+"pošiljanja:"
+
+#: ../tools/net_monitor:105 ../tools/net_monitor:106 ../tools/net_monitor:111
+#, c-format
+msgid "unknown"
+msgstr "neznano"
+
+#: ../tools/net_monitor:106
+#, c-format
+msgid ""
+"Receiving\n"
+"speed:"
+msgstr ""
+"Hitrost\n"
+"prejemanja:"
+
+#: ../tools/net_monitor:110
+#, c-format
+msgid ""
+"Connection\n"
+"time: "
+msgstr ""
+"Čas\n"
+"povezave:"
+
+#: ../tools/net_monitor:117
+#, c-format
+msgid "Use same scale for received and transmitted"
+msgstr "Uporabi enako lestvico za sprejemanje in oddajanje"
+
+#: ../tools/net_monitor:136
+#, c-format
+msgid "Wait please, testing your connection..."
+msgstr "Preverjanje povezave, prosim počakajte ..."
+
+#: ../tools/net_monitor:185 ../tools/net_monitor:198
+#, c-format
+msgid "Disconnecting from Internet "
+msgstr "Prekinjanje povezave z internetom"
+
+#: ../tools/net_monitor:185 ../tools/net_monitor:198
+#, c-format
+msgid "Connecting to Internet "
+msgstr "Povezovanje v internet"
+
+#: ../tools/net_monitor:229
+#, c-format
+msgid "Disconnection from Internet failed."
+msgstr "Prekinitev povezave z internetom je spodletela."
+
+#: ../tools/net_monitor:230
+#, c-format
+msgid "Disconnection from Internet complete."
+msgstr "Prekinitev povezave z internetom je opravljena."
+
+#: ../tools/net_monitor:232
+#, c-format
+msgid "Connection complete."
+msgstr "Povezovanje je opravljeno."
+
+#: ../tools/net_monitor:233
+#, c-format
+msgid ""
+"Connection failed.\n"
+"Verify your configuration in the Mandriva Linux Control Center."
+msgstr ""
+"Povezavanje je spodletelo.\n"
+"Preverite nastavitve v Nadzornem središču Mandriva Linux "
+
+#: ../tools/net_monitor:338
+#, c-format
+msgid "Color configuration"
+msgstr "Nastavitev barv"
+
+#: ../tools/net_monitor:395 ../tools/net_monitor:407
+#, c-format
+msgid "sent: "
+msgstr "poslano: "
+
+#: ../tools/net_monitor:398 ../tools/net_monitor:411
+#, c-format
+msgid "received: "
+msgstr "prejeto: "
+
+#: ../tools/net_monitor:401
+#, c-format
+msgid "average"
+msgstr "povprečno"
+
+#: ../tools/net_monitor:404
+#, c-format
+msgid "Local measure"
+msgstr "Krajevno merilo"
+
+#: ../tools/net_monitor:461
+#, c-format
+msgid ""
+"Warning, another internet connection has been detected, maybe using your "
+"network"
+msgstr ""
+"Opozorilo, še ena internetna povezava je bila zaznana, morda uporablja vaše "
+"omrežje"
+
+#: ../tools/net_monitor:472
+#, c-format
+msgid "No internet connection configured"
+msgstr "Nobena internetna povezava ni nastavljena"
+
+#~ msgid "racoonf.conf entries"
+#~ msgstr "nastavitve za racoon"
+
+#~ msgid ""
+#~ "Everything has been configured.\n"
+#~ "\n"
+#~ "You may now share resources through the Internet,\n"
+#~ "in a secure way, using a VPN connection.\n"
+#~ "\n"
+#~ "You should make sure that that the tunnels shorewall\n"
+#~ "section is configured."
+#~ msgstr ""
+#~ "Vse je nastavljeno.\n"
+#~ "\n"
+#~ "Zdaj lahko svoje zmogljivosti delite preko spleta\n"
+#~ " s pomočjo varne povezave VPN.\n"
+#~ "\n"
+#~ "Prepričajte se, da je razdelek 'tunnels shorewall'\n"
+#~ "nastavljen."
+
+#~ msgid ""
+#~ "This directive is for the responder.  Therefore you\n"
+#~ "should set passive on in order that racoon(8) only\n"
+#~ "becomes a responder.  If the responder does not have any\n"
+#~ "policy in SPD during phase 2 negotiation, and the direc-\n"
+#~ "tive is set on, then racoon(8) will choice the first pro-\n"
+#~ "posal in the SA payload from the initiator, and generate\n"
+#~ "policy entries from the proposal.  It is useful to nego-\n"
+#~ "tiate with the client which is allocated IP address\n"
+#~ "dynamically.  Note that inappropriate policy might be\n"
+#~ "installed into the responder's SPD by the initiator.  So\n"
+#~ "that other communication might fail if such policies\n"
+#~ "installed due to some policy mismatches between the ini-\n"
+#~ "tiator and the responder.  This directive is ignored in\n"
+#~ "the initiator case.  The default value is off."
+#~ msgstr ""
+#~ "To navodilo je za odzivnik. Zaradi tega moraš\n"
+#~ "vključiti pasivno, zato da bo samo racoon(8) postal\n"
+#~ "odzivnik. Če odzivnik nima določenih pravil v SPD med\n"
+#~ "drugo fazo povezovanja, navodilo pa je vključeno, potem\n"
+#~ "bo racoon(8) izbral prvo predlogo v SA prometu od pobudnika,\n"
+#~ "nato bo ustvaril pravilnik vnosov od pobudnika. Koristno se je\n"
+#~ "povezovati z odjemalcem, ki ima dinamično določen\n"
+#~ "naslov IP. Pozoren bodi na to, da se v odzivnikov SPD lahko\n"
+#~ "namesti neprimeren pravilnik pobudnika. Zaradi neskladja\n"
+#~ "pravilnikov pobudnika in odzivnika lahko pride do\n"
+#~ "izgube ostale komunikacije, če je tak pravilnik\n"
+#~ "nameščen. To navodilo v primeru pobudnika\n"
+#~ "ni upoštevano. Privzeta vrednost je izključeno."

@@ -18,7 +18,7 @@ sub new {
 			     "com.mandriva.monitoring",
 			     "/com/mandriva/monitoring/ifw",
 			     "com.mandriva.monitoring.ifw");
-    dbus_object::set_gtk2_watch($o);
+    $o->set_gtk2_watch;
     $o;
 }
 
@@ -136,6 +136,20 @@ sub attack_to_hash {
       : $attack->{prefix} eq "PASS" ? N("A password cracking attack has been attempted by %s.", $attack->{hostname})
       : N(qq(A "%s" attack has been attempted by %s), $attack->{prefix}, $attack->{hostname});
     $attack;
+}
+
+sub parse_listen_message {
+    my ($args) = @_;
+    my $listen = { mapn { $_[0] => $_[1] } [ 'program', 'port' ], $args };
+    $listen->{port} = unpack('S', pack('n', $listen->{port}));
+    $listen->{service} = get_service($listen->{port});
+    $listen->{message} = N("The \"%s\" application is trying to make a service (%s) available to the network.",
+                           $listen->{program},
+                           $listen->{service} ne $listen->{port} ? $listen->{service} :
+                             #-PO: this should be kept lowercase since the expression is meant to be used between brackets
+                             N("port %d", $listen->{port}),
+                       );
+    $listen;
 }
 
 1;

@@ -9,23 +9,7 @@ use log;
 
 #- debugg functions ----------
 sub recreate_ipsec_conf {
-	my ($ipsec, $kernel_version) = @_;
-	if ($kernel_version < 2.5) {
-	#- kernel 2.4 part -------------------------------
-		foreach my $key1 (ikeys %$ipsec) {
-			print "$ipsec->{$key1}\n" if ! $ipsec->{$key1}{1};
-			foreach my $key2 (ikeys %{$ipsec->{$key1}}) {
-				if ($ipsec->{$key1}{$key2}[0] =~ m/^#/) {
-					print "\t$ipsec->{$key1}{$key2}[0]\n";
-				} elsif ($ipsec->{$key1}{$key2}[0] =~ m/(conn|config|version)/) {
-					print "$ipsec->{$key1}{$key2}[0] $ipsec->{$key1}{$key2}[1]\n";
-				} else {
-					print "\t$ipsec->{$key1}{$key2}[0]=$ipsec->{$key1}{$key2}[1]\n";
-				}
-			}
-		}
-	} else { 
-	#- kernel 2.6 part -------------------------------
+	my ($ipsec) = @_;
 		foreach my $key1 (ikeys %$ipsec) {
 			if (! $ipsec->{$key1}{command}) {
 				print "$ipsec->{$key1}\n";
@@ -43,7 +27,6 @@ sub recreate_ipsec_conf {
 					$ipsec->{$key1}{level} . ";\n";
 			}
 		}
-	}
 }
 
 sub recreate_racoon_conf {
@@ -479,7 +462,7 @@ sub remove_section_racoon_conf {
 #-------------------------------------------------------------------
 
 sub read_ipsec_conf {
-	my ($ipsec_conf, $kernel_version) = @_;
+	my ($ipsec_conf) = @_;
 	my %conf;
 	my $nb = 0; #total number
 	my $i = 0; #nb within a connexion
@@ -487,48 +470,6 @@ sub read_ipsec_conf {
 	my $line = "";
 	my @line1;
 	local $_;
-	if ($kernel_version < 2.5) {
-	#- kernel 2.4 part -------------------------------
-		open(my $LIST, "< $ipsec_conf"); #or die "Can not open the $ipsec_conf file for reading";
-		while (<$LIST>) {
-        		chomp($_);
-				$line = $_;
-				$line =~ s/^\s+//;
-				if (!$line) {
-					$nb++;
-					put_in_hash(\%conf, { $nb => $line });
-					$in_a_conn = "n";
-				} elsif ($line =~ /^#/) {
-					if ($in_a_conn eq "y") {
-						put_in_hash($conf{$nb} ||= {}, { $i => [$line] });
-						$i++;
-					} else {
-						$nb++;
-						put_in_hash(\%conf, { $nb => $line });
-						$in_a_conn = "n";
-					}
-				} elsif ($line =~ /^conn|^config|^version/ && $in_a_conn eq "n") {
-					@line1 = split /\s+/,$line;
-					$i=1;
-					$nb++;
-					put_in_hash($conf{$nb} ||= {}, { $i => [$line1[0], $line1[1]] });
-					$in_a_conn = "y" if $line !~ /^version/;
-					$i++;
-				} elsif ($line =~ /^conn|^config|^version/ && $in_a_conn eq "y") {
-					@line1 = split /\s+/,$line;
-					$i=1;
-					$nb++;
-					put_in_hash($conf{$nb} ||= {}, { $i => [$line1[0], $line1[1]] });
-					$i++;
-				} else {
-					@line1 = split /=/,$line;
-					put_in_hash($conf{$nb} ||= {}, { $i => [$line1[0], $line1[1]] });
-					$i++;
-				}
-		}
-	
-	} else {
-	#- kernel 2.6 part -------------------------------
 		my @mylist;
 		my $myline = "";
 		open(my $LIST, "< $ipsec_conf"); #or die "Can not open the $ipsec_conf file for reading";
@@ -561,31 +502,12 @@ sub read_ipsec_conf {
 					put_in_hash(\%conf, { $nb => $myline });
 				}
 			}
-	
-		}
 
 	\%conf;
 }
 
 sub write_ipsec_conf {
-    my ($ipsec_conf, $ipsec, $kernel_version) = @_;
-	if ($kernel_version < 2.5) {
-	#- kernel 2.4 part -------------------------------
-		open(my $ADD, "> $ipsec_conf") or die "Can not open the $ipsec_conf file for writing";
-			foreach my $key1 (ikeys %$ipsec) {
-				print $ADD "$ipsec->{$key1}\n" if ! $ipsec->{$key1}{1};
-				foreach my $key2 (ikeys %{$ipsec->{$key1}}) {
-					if ($ipsec->{$key1}{$key2}[0] =~ m/^#/) {
-						print $ADD "\t$ipsec->{$key1}{$key2}[0]\n";
-					} elsif ($ipsec->{$key1}{$key2}[0] =~ m/(^conn|^config|^version)/) {
-						print $ADD "$ipsec->{$key1}{$key2}[0] $ipsec->{$key1}{$key2}[1]\n";
-					} else {
-						print $ADD "\t$ipsec->{$key1}{$key2}[0]=$ipsec->{$key1}{$key2}[1]\n" if $ipsec->{$key1}{$key2}[0] && $ipsec->{$key1}{$key2}[1];
-					}
-				}
-			}
-	} else {
-	#- kernel 2.6 part -------------------------------
+    my ($ipsec_conf, $ipsec) = @_;
 		my $display = "";
 		foreach my $key1 (ikeys %$ipsec) {
 			if (! $ipsec->{$key1}{command}) {
@@ -606,30 +528,12 @@ sub write_ipsec_conf {
 		}
 		open(my $ADD, "> $ipsec_conf") or die "Can not open the $ipsec_conf file for writing";
 			print $ADD $display;
-		}
 }
 
 sub display_ipsec_conf {
-	my ($ipsec, $kernel_version) = @_;
+	my ($ipsec) = @_;
 	my $display = "";
 
-	if ($kernel_version < 2.5) {
-	#- kernel 2.4 part -------------------------------
-		foreach my $key1 (ikeys %$ipsec) {
-			$display .= "$ipsec->{$key1}\n" if ! $ipsec->{$key1}{1};
-			foreach my $key2 (ikeys %{$ipsec->{$key1}}) {
-				if ($ipsec->{$key1}{$key2}[0] =~ m/^#/) {
-					$display .= "\t$ipsec->{$key1}{$key2}[0]\n";
-				} elsif ($ipsec->{$key1}{$key2}[0] =~ m/(^conn|^config|^version)/) {
-					$display .= "$ipsec->{$key1}{$key2}[0] $ipsec->{$key1}{$key2}[1]\n";
-				} else {
-					$display .= "\t$ipsec->{$key1}{$key2}[0]=$ipsec->{$key1}{$key2}[1]\n";
-				}
-			}
-		}
-
-	} else {
-	#- kernel 2.6 part -------------------------------
 		foreach my $key1 (ikeys %$ipsec) {
 			if (! $ipsec->{$key1}{command}) {
 				$display .= "$ipsec->{$key1}\n";
@@ -648,54 +552,26 @@ sub display_ipsec_conf {
 			} 
 		}
 
-	}
-
 	$display;
 
 }
 
 sub get_section_names_ipsec_conf {
-	my ($ipsec, $kernel_version) = @_;
+	my ($ipsec) = @_;
 	my @section_names;
 
-	if ($kernel_version < 2.5) {
-	#- kernel 2.4 part -------------------------------
-		foreach my $key1 (ikeys %$ipsec) {
-			foreach my $key2 (ikeys %{$ipsec->{$key1}}) {
-				if ($ipsec->{$key1}{$key2}[0] =~ m/(^conn|^config|^version)/) {
-					push(@section_names, "$ipsec->{$key1}{$key2}[0] $ipsec->{$key1}{$key2}[1]");
-				}
-			}
-		}
-
-	} else {
-	#- kernel 2.6 part -------------------------------
 		foreach my $key1 (ikeys %$ipsec) {
 				if ($ipsec->{$key1}{command} =~ m/(^spdadd)/) {
 					push(@section_names, "$ipsec->{$key1}{src_range} $ipsec->{$key1}{dst_range}");
 				}
 		}
-	}
 
 	@section_names;
 
 }
 
 sub remove_section_ipsec_conf {
-	my ($section_name, $ipsec, $kernel_version) = @_;
-	if ($kernel_version < 2.5) {
-	#- kernel 2.4 part -------------------------------
-		foreach my $key1 (ikeys %$ipsec) {
-			if (find {
-				my $s = $ipsec->{$key1}{$_}[0];
-				$s !~ /^#/ && $s =~ m/(^conn|^config|^version)/ &&
-				$section_name eq "$s $ipsec->{$key1}{$_}[1]";	
-			} ikeys %{$ipsec->{$key1}}) {
-					delete $ipsec->{$key1};
-			}
-		}
-	} else {
-	#- kernel 2.6 part -------------------------------
+	my ($section_name, $ipsec) = @_;
 		foreach my $key1 (ikeys %$ipsec) {
 			if (find {
 				my $s = "$ipsec->{$key1}{src_range} $ipsec->{$key1}{dst_range}";
@@ -705,7 +581,6 @@ sub remove_section_ipsec_conf {
 				delete $ipsec->{$key1};
 			}
 		}
-	}
 } 
 
 sub add_section_ipsec_conf {
@@ -715,20 +590,7 @@ sub add_section_ipsec_conf {
 }
 
 sub already_existing_section_ipsec_conf {
-	my ($section_name, $ipsec, $kernel_version) = @_;
-	if ($kernel_version < 2.5) {
-	#- kernel 2.4 part -------------------------------
-		foreach my $key1 (ikeys %$ipsec) {
-				if (find {
-					my $s = $ipsec->{$key1}{$_}[0];
-					$s !~ /^#/ && $s =~ m/(^conn|^config|^version)/ &&
-					$section_name eq "$s $ipsec->{$key1}{$_}[1]";	
-				} ikeys %{$ipsec->{$key1}}) {
-					return "already existing";
-				}
-		}
-	} else {
-	#- kernel 2.6 part -------------------------------
+	my ($section_name, $ipsec) = @_;
 		foreach my $key1 (ikeys %$ipsec) {
 			if (find {
 				my $s = "$ipsec->{$key1}{src_range} $ipsec->{$key1}{dst_range}";
@@ -738,35 +600,12 @@ sub already_existing_section_ipsec_conf {
 				return "already existing";
 			}
 		}
-	}
 	return "no";
-}
-
-#- returns the reference to the dynamical list for editing
-sub dynamic_list {
-	my ($number, $ipsec) = @_;
-	my @list = 	map { { 	label   => $ipsec->{$number}{$_}[0] . "=",
-					val     => \$ipsec->{$number}{$_}[1] } } ikeys %{$ipsec->{$number}};
-
-	@list;
 }
 
 #- returns the hash key number of $section_name
 sub matched_section_key_number_ipsec_conf {
-	my ($section_name, $ipsec, $kernel_version) = @_;
-	if ($kernel_version < 2.5) {
-	#- kernel 2.4 part -------------------------------
-		foreach my $key1 (ikeys %$ipsec) {
-				if (find {
-					my $s = $ipsec->{$key1}{$_}[0];
-					$s !~ /^#/ && $s =~ m/(^conn|^config|^version)/ &&
-					$section_name eq "$s $ipsec->{$key1}{$_}[1]";	
-				} ikeys %{$ipsec->{$key1}}) {
-					return $key1;
-				}
-		}
-	} else {
-	#- kernel 2.6 part -------------------------------
+	my ($section_name, $ipsec) = @_;
 		foreach my $key1 (ikeys %$ipsec) {
 			if (find {
 				my $s = "$ipsec->{$key1}{src_range} $ipsec->{$key1}{dst_range}";
@@ -776,6 +615,5 @@ sub matched_section_key_number_ipsec_conf {
 				return $key1;
 			}
 		}
-	}
 }
 1

@@ -7,53 +7,15 @@ use c;
 use Socket;
 
 sub write_secret_backend {
-    my ($a, $b) = @_;
-    foreach my $i ("$::prefix/etc/ppp/pap-secrets", "$::prefix/etc/ppp/chap-secrets") {
-	substInFile { s/^'$a'.*\n//; $_ .= "\n'$a' * '$b' * \n" if eof  } $i;
-	#- restore access right to secrets file, just in case.
-	chmod 0600, $i;
-    }
-}
-
-sub unquotify {
-    my ($word) = @_;
-    $$word =~ s/^(['"]?)(.*)\1$/$2/;
-}
-
-sub read_secret_backend() {
-    my $conf = [];
-    foreach my $i ("pap-secrets", "chap-secrets") {
-	foreach (cat_("$::prefix/etc/ppp/$i")) {
-	    my ($login, $server, $passwd) = split(' ');
-	    if ($login && $passwd) {
-		unquotify \$passwd;
-		unquotify \$login;
-		unquotify \$server;
-		push @$conf, {login => $login,
-			      passwd => $passwd,
-			      server => $server };
-	    }
-	}
-    }
-    $conf;
+    my ($login, $password) = @_;
+    require network::connection::ppp;
+    network::connection::ppp::write_secrets({ access => { login => $login, password => $password } });
 }
 
 sub passwd_by_login {
     my ($login) = @_;
-    
-    unquotify \$login;
-    my $secret = read_secret_backend();
-    foreach (@$secret) {
-	return $_->{passwd} if $_->{login} eq $login;
-    }
-}
-
-sub wrap_command_for_root {
-    my ($name, @args) = @_;
-    #- FIXME: duplicate code from common::require_root_capability
-    check_for_xserver() && fuzzy_pidofs(qr/\bkwin\b/) > 0 ?
-      ("kdesu", "--ignorebutton", "-c", "$name @args") :
-      ([ 'consolehelper', $name ], @args);
+    require network::connection::ppp;
+    network::connection::ppp::get_secret(undef, $login);
 }
 
 sub run_interface_command {
@@ -61,7 +23,7 @@ sub run_interface_command {
     my @command =
       !$> || system("/usr/sbin/usernetctl $intf report") == 0 ?
 	($command, $intf, if_(!$::isInstall, "daemon")) :
-	wrap_command_for_root($command, $intf);
+	common::wrap_command_for_root($command, $intf);
     run_program::raw({ detach => $detach, root => $::prefix }, @command);
 }
 
@@ -93,7 +55,7 @@ sub connected_bg__raw {
     local $| = 1;
     if (ref($kid_pipe) && ref($$kid_pipe)) {
 	my $fd = $$kid_pipe->{fd};
-	fcntl($fd, c::F_SETFL(), c::O_NONBLOCK()) or die "can not fcntl F_SETFL: $!";
+	common::nonblock($fd);
 	my $a  = <$fd>;
      $$status = $a if defined $a;
     } else { $$kid_pipe = check_link_beat() }
@@ -177,7 +139,9 @@ sub find_matching_interface {
 #- returns the current gateway, with lowest metric
 sub get_current_gateway_interface() {
     my $routes = get_routes();
-    first(sort { $routes->{$a}{metric} <=> $routes->{$b}{metric} } grep { exists $routes->{$_}{gateway} } keys %$routes);
+    first(sort { $routes->{$a}{metric} <=> $routes->{$b}{metric} } grep {
+        $routes->{$_}{network} eq '0.0.0.0' && $routes->{$_}{gateway};
+    } keys %$routes);
 }
 
 #- returns gateway interface if found
@@ -197,7 +161,7 @@ sub get_default_gateway_interface {
 sub get_interface_status {
     my ($intf) = @_;
     my $routes = get_routes();
-    return $routes->{$intf}{network}, $routes->{$intf}{gateway};
+    return $routes->{$intf}{network}, $routes->{$intf}{network} eq '0.0.0.0' && $routes->{$intf}{gateway};
 }
 
 #- returns (gateway_interface, interface is up, gateway address, dns server address)
@@ -217,6 +181,18 @@ sub get_interface_type {
     detect_devices::is_lan_interface($interface->{DEVICE}) &&
         ($o_module && member($o_module, list_modules::category2modules('network/gigabit')) ? "ethernet_gigabit" : "ethernet") ||
     "unknown";
+}
+
+sub get_interface_description {
+    my ($net, $interface_name) = @_;
+    my $type = get_interface_type($net->{ifcfg}{$interface_name});
+    #- FIXME: find interface description (from PCI/USB data) and translate
+    $type eq 'adsl' ? "DSL: $interface_name" :
+    $type eq 'isdn' ? "ISDN: $interface_name" :
+    $type eq 'modem' ? "Modem: $interface_name" :
+    $type eq 'wifi' ? "WiFi: $interface_name" :
+    member($type, qw(ethernet_gigabit ethernet)) ? "Ethernet: $interface_name" :
+    $interface_name;
 }
 
 sub get_default_metric {
@@ -243,9 +219,9 @@ sub get_routes() {
     my %routes;
     foreach (cat_("/proc/net/route")) {
 	if (/^(\S+)\s+([0-9A-F]+)\s+([0-9A-F]+)\s+[0-9A-F]+\s+\d+\s+\d+\s+(\d+)\s+([0-9A-F]+)/) {
-	    if (hex($2)) { $routes{$1}{network} = host_hex_to_dotted($2) }
-	    elsif (hex($3)) { $routes{$1}{gateway} = host_hex_to_dotted($3) }
-	    if ($4) { $routes{$1}{metric} = $4 }
+	    if (defined $3) { $routes{$1}{gateway} = hex($3) ? host_hex_to_dotted($3) : $routes{$1}{network} }
+	    if (defined $2) { $routes{$1}{network} = host_hex_to_dotted($2) }
+	    if (defined $4) { $routes{$1}{metric} = $4 }
 	}
     }
     #- TODO: handle IPv6 with /proc/net/ipv6_route

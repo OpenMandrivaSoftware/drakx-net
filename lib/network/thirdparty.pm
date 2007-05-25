@@ -9,6 +9,9 @@ use fs::get;
 use fs;
 use log;
 
+#- using bsd_glob() since glob("/DONT_EXIST") return "/DONT_EXIST" instead of () (and we don't want this)
+use File::Glob ':glob';
+
 #- network_settings is an hash of categories (rtc, dsl, wireless, ...)
 #- each category is an hash of device settings
 
@@ -61,220 +64,10 @@ use log;
 #- o no_club:
 #-     1 if the package isn't available on Mandriva club
 
-my $firmware_directory = "/lib/firmware";
+our $firmware_directory = "/lib/firmware";
+our @thirdparty_types = qw(kernel_module tools firmware);
 
-my %network_settings = (
-  rtc =>
-  [
-   {
-    matching => qr/^Hcf:/,
-    description => 'HCF 56k Modem',
-    url => 'http://www.linuxant.com/drivers/hcf/',
-    name => 'hcfpcimodem',
-    kernel_module => {
-        test_file => 'hcfpciengine',
-    },
-    tools =>
-    {
-     test_file => '/usr/sbin/hcfpciconfig',
-    },
-    device => '/dev/ttySHCF0',
-    post => '/usr/sbin/hcfpciconfig --auto',
-    restart_service => 'hcfpci',
-   },
-
-   {
-    matching => qr/^Hsf:/,
-    description => 'HSF 56k Modem',
-    url => 'http://www.linuxant.com/drivers/hsf/',
-    name => 'hsfmodem',
-    kernel_module => {
-        test_file => 'hsfengine',
-    },
-    tools =>
-    {
-     test_file => '/usr/sbin/hsfconfig',
-    },
-    device => '/dev/ttySHSF0',
-    post => '/usr/sbin/hsfconfig --auto',
-    restart_service => 'hsf',
-   },
-
-   {
-    matching => qr/^LT:/,
-    description => 'LT WinModem',
-    url => 'http://www.heby.de/ltmodem/',
-    name => 'ltmodem',
-    kernel_module => 1,
-    tools =>
-    {
-     test_file => '/etc/devfs/conf.d/ltmodem.conf',
-    },
-    device => '/dev/ttyS14',
-    links =>
-    [
-     'http://linmodems.technion.ac.il/Ltmodem.html',
-     'http://linmodems.technion.ac.il/packages/ltmodem/',
-    ],
-   },
-
-   {
-    matching => [ list_modules::category2modules('network/slmodem') ],
-    description => 'Smartlink WinModem',
-    url => 'http://www.smlink.com/content.aspx?id=135/',
-    name => 'slmodem',
-    kernel_module => 1,
-    tools =>
-    {
-     test_file => '/usr/sbin/slmodemd',
-    },
-    device => '/dev/ttySL0',
-    post => sub {
-	my ($driver) = @_;
-	addVarsInSh("$::prefix/etc/sysconfig/slmodemd", { SLMODEMD_MODULE => $driver });
-    },
-    restart_service => "slmodemd",
-   },
-
-   {
-    matching => 'sm56',
-    description => 'Motorola SM56 WinModem',
-    url => 'http://www.motorola.com/softmodem/driver.htm#linux',
-    name => 'sm56',
-    kernel_module =>
-    {
-        package => 'sm56',
-    },
-    no_club => 1,
-    device => '/dev/sm56',
-   },
-  ],
-
-  wireless =>
-  [
-   {
-    matching => 'zd1201',
-    description => 'ZyDAS ZD1201',
-    url => 'http://linux-lc100020.sourceforge.net/',
-    firmware =>
-    {
-     test_file => 'zd1201*.fw',
-    },
-   },
-
-   (map {
-       {
-           matching => "ipw${_}",
-           description => "Intel(R) PRO/Wireless ${_}",
-           url => "http://ipw${_}.sourceforge.net/",
-	   name => "ipw${_}",
-           firmware =>
-	   {
-               url => "http://ipw${_}.sourceforge.net/firmware.php",
-               test_file => ($_ == 2100 ? "ipw2100-*.fw" :  "ipw-2.3-*.fw"),
-           },
-       };
-   } (2100, 2200)),
-
-   {
-    matching => 'prism54',
-    description => 'Prism GT / Prism Duette / Prism Indigo Chipsets',
-    url => 'http://prism54.org/',
-    name => 'prism54',
-    firmware =>
-    {
-     url => 'http://prism54.org/~mcgrof/firmware/',
-     test_file => "isl38*",
-    },
-   },
-
-   {
-    matching => qr/^at76c50/,
-    description => 'Atmel at76c50x cards',
-    url => 'http://thekelleys.org.uk/atmel/',
-    name => 'atmel',
-    firmware =>
-    {
-     test_file => 'atmel_at76c50*',
-    },
-    links => 'http://at76c503a.berlios.de/',
-   },
-
-   {
-    matching => 'ath_pci',
-    description => 'Multiband Atheros Driver for WiFi',
-    url => 'http://madwifi.sourceforge.net/',
-    name => 'madwifi',
-    kernel_module => 1,
-    tools => {
-	optionnal => 1,
-	test_file => '/usr/bin/athstats',
-    },
-   },
-  ],
-
-  dsl =>
-  [
-   {
-    matching => 'speedtouch',
-    description => N_("Alcatel speedtouch USB modem"),
-    url => "http://www.speedtouch.com/supuser.htm",
-    name => 'speedtouch',
-    tools =>
-    {
-     test_file => '/usr/sbin/modem_run',
-    },
-    firmware =>
-    {
-     package => 'speedtouch_mgmt',
-     prefix => '/usr/share/speedtouch',
-     test_file => 'mgmt*.o',
-     explanations => N_("Copy the Alcatel microcode as mgmt.o in /usr/share/speedtouch/"),
-     user_install => \&install_speedtouch_microcode,
-    },
-    links => 'http://linux-usb.sourceforge.net/SpeedTouch/mandrake/index.html',
-   },
-
-   {
-    matching => 'eciadsl',
-    name => 'eciadsl',
-    explanations => N_("The ECI Hi-Focus modem cannot be supported due to binary driver distribution problem.
-
-You can find a driver on http://eciadsl.flashtux.org/"),
-    no_club => 1,
-    tools => {
-	test_file => '/usr/sbin/pppoeci',
-    },
-   },
-
-   {
-    matching => 'sagem',
-    description => 'Eagle chipset (from Analog Devices), e.g. Sagem F@st 800/840/908',
-    url => 'http://www.eagle-usb.org/',
-    name => 'eagle-usb',
-    tools =>
-    {
-     test_file => '/sbin/eaglectrl',
-    },
-   },
-
-   {
-    matching => 'bewan',
-    description => 'Bewan Adsl (Unicorn)',
-    url => 'http://www.bewan.com/bewan/users/downloads/',
-    name => 'unicorn',
-    kernel_module => {
-        test_file => 'unicorn_.*_atm',
-    },
-    tools => {
-	optionnal => 1,
-	test_file => '/usr/bin/bewan_adsl_status',
-    },
-   },
-  ],
-);
-
-sub device_get_package {
+sub device_get_packages {
     my ($settings, $option, $o_default) = @_;
     $settings->{$option} or return;
     my $package;
@@ -283,25 +76,26 @@ sub device_get_package {
     } else {
 	$package = $settings->{$option};
     }
-    $package == 1 ? $o_default || $settings->{name} : $package;
+    $package == 1 ? $o_default || $settings->{name} : ref $package eq 'ARRAY' ? @$package : $package;
 }
 
 sub device_get_option {
-    my ($settings, $option) = @_;
+    my ($settings, $option, $o_default) = @_;
     $settings->{$option} or return;
     my $value = $settings->{$option};
-    $value == 1 ? $settings->{name} : $value;
+    $value == 1 ? $o_default || $settings->{name} : $value;
 }
 
 sub find_settings {
-    my ($category, $driver) = @_;
+    my ($settings_list, $driver) = @_;
     find {
-	my $type = ref $_->{matching};
-        $type eq 'Regexp' && $driver =~ $_->{matching} ||
-	$type eq 'CODE'   && $_->{matching}->($driver) ||
-        $type eq 'ARRAY'  && member($driver, @{$_->{matching}}) ||
-	$driver eq $_->{matching};
-    } @{$network_settings{$category}};
+        my $match = $_->{matching} || $_->{name};
+        my $type = ref $match;
+        $type eq 'Regexp' && $driver =~ $match ||
+        $type eq 'CODE'   && $match->($driver) ||
+        $type eq 'ARRAY'  && member($driver, @$match) ||
+        $driver eq $match;
+    } @$settings_list;
 }
 
 sub device_run_command {
@@ -318,37 +112,53 @@ sub device_run_command {
 
 sub warn_not_installed {
     my ($in, @packages) = @_;
-    $in->ask_warn(N("Error"), N("Could not install the packages (%s)!", @packages));
+    $in->ask_warn(N("Error"), N("Could not install the packages (%s)!", join(', ', @packages)));
+}
+
+sub get_checked_element {
+    my ($settings, $driver, $option) = @_;
+    $option eq 'firmware' ?
+      get_firmware_path($settings) :
+    $option eq 'kernel_module' ?
+      $driver :
+      ref $settings->{$option} eq 'HASH' && $settings->{$option}{test_file};
 }
 
 sub warn_not_found {
-    my ($in, $settings, $option, @packages) = @_;
+    my ($in, $settings, $driver, $option, @packages) = @_;
     my %opt;
-    $opt{$_} = $settings->{$option}{$_} || $settings->{$_} foreach qw(url explanations no_club);
+    $opt{$_} = ref $settings->{$option} eq 'HASH' && $settings->{$option}{$_} || $settings->{$_} foreach qw(url explanations no_club no_package);
+    my $checked = get_checked_element($settings, $driver, $option);
     $in->ask_warn(N("Error"),
-		  N("Some packages (%s) are required but aren't available.", @packages) .
-		  (!$opt{no_club} && "\n" . N("These packages can be found in Mandriva Club or in Mandriva commercial releases.")) .
-		  ($option eq 'firmware' && "\n\n" . N("Info: ") . "\n" . N("due to missing %s", get_firmware_path($settings))) .
-		  ($opt{url} && "\n\n" . N("The required files can also be installed from this URL:
-%s", $opt{url})) .
-		  ($opt{explanations} && "\n\n" . translate($opt{explanations})));
+                  join('',
+                       ($opt{no_package} ?
+                          N("Some components (%s) are required but aren't available for %s hardware.", $option, $settings->{name}) :
+                          N("Some packages (%s) are required but aren't available.", join(', ', @packages))),
+                       join("\n\n",
+                            if_(!$opt{no_club} && !$opt{no_package}, N("These packages can be found in Mandriva Club or in Mandriva commercial releases.")),
+                            if_($checked, N("The following component is missing: %s", $checked)),
+                            if_($opt{explanations}, translate($opt{explanations})),
+                            if_($opt{url}, N("The required files can also be installed from this URL:
+%s", $opt{url})),
+                        )));
 }
 
 sub is_file_installed {
     my ($settings, $option) = @_;
-    my $file = exists $settings->{$option} && $settings->{$option}{test_file};
+    my $file = ref $settings->{$option} eq 'HASH' && $settings->{$option}{test_file};
     $file && -e "$::prefix$file";
 }
 
 sub is_module_installed {
     my ($settings, $driver) = @_;
+    require modules;
     my $module = ref $settings->{kernel_module} eq 'HASH' && $settings->{kernel_module}{test_file} || $driver;
-    find { m!/$module\.k?o! } cat_("$::prefix/lib/modules/" . c::kernel_version() . '/modules.dep');
+    modules::module_is_available($module);
 }
 
 sub get_firmware_path {
     my ($settings) = @_;
-    my $wildcard = exists $settings->{firmware} && $settings->{firmware}{test_file} or return;
+    my $wildcard = ref $settings->{firmware} eq 'HASH' && $settings->{firmware}{test_file} or return;
     my $path = $settings->{firmware}{prefix} || $firmware_directory;
     "$::prefix$path/$wildcard";
 }
@@ -356,7 +166,40 @@ sub get_firmware_path {
 sub is_firmware_installed {
     my ($settings) = @_;
     my $pattern = get_firmware_path($settings) or return;
-    scalar glob_($pattern);
+    scalar bsd_glob($pattern, undef);
+}
+
+sub extract_firmware {
+    my ($settings, $in) = @_;
+    my $choice;
+    $in->ask_from('', N("Firmware files are required for this device."),
+                  [ { type => "list", val => \$choice, format => \&translate,
+                      list => [
+                          if_(exists $settings->{firmware}{extract}{floppy_source}, N_("Use a floppy")),
+                          if_(exists $settings->{firmware}{extract}{windows_source}, N_("Use my Windows partition")),
+                          N_("Select file")
+                      ] } ]) or return;
+    my ($h, $source);
+    if ($choice eq N_("Use a floppy")) {
+        $source = $settings->{firmware}{extract}{floppy_source};
+        $h = find_file_on_floppy($in, $source);
+    } elsif ($choice eq N_("Use my Windows partition")) {
+        $source = $settings->{firmware}{extract}{windows_source};
+        $h = find_file_on_windows_system($in, $source);
+    } else {
+        $source = $settings->{firmware}{extract}{default_source};
+        $h = { file => $in->ask_file(N("Please select the firmware file (for example: %s)", basename($source)), dirname($source)) };
+    }
+    if (!-e $h->{file}) {
+        log::explanations("Unable to find firmware file (tried to find $source.");
+        return;
+    }
+
+    if ($settings->{firmware}{extract}{name}) {
+        $in->do_pkgs->ensure_is_installed($settings->{firmware}{extract}{name}, $settings->{firmware}{extract}{test_file}) or return;
+    }
+    $settings->{firmware}{extract}{run}->($h->{file});
+    1;
 }
 
 sub find_file_on_windows_system {
@@ -367,7 +210,7 @@ sub find_file_on_windows_system {
     fs::get_info_from_fstab($all_hds);
     if (my $part = find { $_->{device_windobe} eq 'C' } fs::get::fstab($all_hds)) {
 	foreach (qw(windows/system winnt/system windows/system32/drivers winnt/system32/drivers)) {
-	    -d $_ and $source = first(glob_("$part->{mntpoint}/$_/$file")) and last;
+	    -d $_ and $source = first(bsd_glob("$part->{mntpoint}/$_/$file", undef)) and last;
 	}
 	$source or $in->ask_warn(N("Error"), N("Unable to find \"%s\" on your Windows system!", $file));
     } else {
@@ -379,14 +222,14 @@ sub find_file_on_windows_system {
 sub find_file_on_floppy {
     my ($in, $file) = @_;
     my $floppy = detect_devices::floppy();
-    my $mountpoint = '/mnt/floppy';
+    my $mountpoint = '/media/floppy';
     my $h;
     $in->ask_okcancel(N("Insert floppy"),
 		      N("Insert a FAT formatted floppy in drive %s with %s in root directory and press %s", $floppy, $file, N("Next"))) or return;
     if (eval { fs::mount::mount(devices::make($floppy), $mountpoint, 'vfat', 'readonly'); 1 }) {
 	log::explanations("Mounting floppy device $floppy in $mountpoint");
 	$h = before_leaving { fs::mount::umount($mountpoint) };
-	if ($h->{file} = first(glob("$mountpoint/$file"))) {
+	if ($h->{file} = first(bsd_glob("$mountpoint/$file", undef))) {
 	    log::explanations("Found $h->{file} on floppy device");
 	} else {
 	    log::explanations("Unabled to find $file on floppy device");
@@ -398,84 +241,75 @@ sub find_file_on_floppy {
     $h;
 }
 
-sub install_speedtouch_microcode {
-    my ($in) = @_;
-    my $choice;
-    $in->ask_from('',
-		  N("You need the Alcatel microcode.
-You can provide it now via a floppy or your windows partition,
-or skip and do it later."),
-		  [ { type => "list", val => \$choice, format => \&translate,
-		      list => [ N_("Use a floppy"), N_("Use my Windows partition") ] } ]) or return;
-    my ($h, $source);
-    if ($choice eq N_("Use a floppy")) {
-	$source = 'mgmt*.o';
-	$h = find_file_on_floppy($in, $source);
+sub get_required_packages {
+    my ($type, $settings) = @_;
+    device_get_packages($settings, $type, if_($type eq 'firmware', "$settings->{name}-firmware"));
+}
+
+sub check_installed {
+    my ($type, $settings, $driver) = @_;
+    $type eq 'kernel_module' ?
+      is_module_installed($settings, $driver) :
+    $type eq 'firmware' ?
+      is_firmware_installed($settings) :
+      is_file_installed($settings, $type);
+}
+
+sub get_available_packages {
+    my ($type, $in, @names) = @_;
+    if ($type eq 'kernel_module') {
+        return map { my $l = $in->do_pkgs->check_kernel_module_packages($_); $l ? @$l : () } @names;
     } else {
-	$source = 'alcaudsl.sys';
-	$h = find_file_on_windows_system($in, $source);
+        return $in->do_pkgs->is_available(@names);
     }
-    unless (-e $h->{file} && cp_f($h->{file}, "$::prefix/usr/share/speedtouch/mgmt.o")) {
-	$in->ask_warn(N("Error"), N("Firmware copy failed, file %s not found", $source));
-	log::explanations("Firmware copy of $source ($h->{file}) failed");
-	return;
+}
+
+sub user_install {
+    my ($type, $settings, $in) = @_;
+    if ($type eq 'firmware') {
+        ref $settings->{$type} eq 'HASH' or return;
+        if ($settings->{$type}{extract}) {
+            extract_firmware($settings, $in);
+        } else {
+            my $f = $settings->{$type}{user_install};
+            $f && $f->($settings, $in);
+        }
+    } else {
+        my $f = ref $settings->{$type} eq 'HASH' && $settings->{$type}{user_install};
+        $f && $f->($settings, $in);
     }
-    log::explanations("Firmware copy of $h->{file} succeeded");
-    $in->ask_warn(N("Congratulations!"), N("Firmware copy succeeded"));
-    1;
 }
 
 sub install_packages {
     my ($in, $settings, $driver, @options) = @_;
 
     foreach my $option (@options) {
-	my %methods =
-	  (
-	   default =>
-	   {
-	    find_package_name => sub { device_get_package($settings, $option) },
-	    check_installed => sub { is_file_installed($settings, $option) },
-	    get_packages => sub { my ($name) = @_; $in->do_pkgs->is_available($name) },
-	    user_install => sub { my $f = $settings->{$option}{user_install}; $f && $f->($in) },
-	   },
-	   kernel_module =>
-	   {
-	    find_package_name => sub { device_get_package($settings, $option, "$settings->{name}-kernel") },
-	    check_installed => sub { is_module_installed($settings, $driver) },
-	    get_packages => sub { my ($name) = @_; my $l = $in->do_pkgs->check_kernel_module_packages($name); $l ? @$l : () }
-	   },
-	   firmware =>
-	   {
-	    find_package_name => sub { device_get_package($settings, $option, "$settings->{name}-firmware") },
-	    check_installed => sub { is_firmware_installed($settings) },
-	   },
-	  );
-	my $get_method = sub { my ($method) = @_; exists $methods{$option} && $methods{$option}{$method} || $methods{default}{$method} };
-
-	my $name = $get_method->('find_package_name')->();
-	unless ($name) {
+	my @packages = get_required_packages($option, $settings);
+	unless (@packages) {
 	    log::explanations(qq(No $option package for module "$driver" is required, skipping));
 	    next;
 	}
 
-	if ($get_method->('check_installed')->()) {
+	if (check_installed($option, $settings, $driver)) {
+	    $settings->{old_status}{$option} = 1;
 	    log::explanations(qq(Required $option package for module "$driver" is already installed, skipping));
 	    next;
 	}
 
-	if (my @packages = $get_method->('get_packages')->($name)) {
-	    log::explanations("Installing thirdparty packages ($option) " . join(', ', @packages));
-	    if (!$in->do_pkgs->install(@packages)) {
-		 next if ref $settings->{$option} eq 'HASH' && $settings->{$option}{optionnal};
-		 warn_not_installed($in, @packages);
-	    } elsif ($get_method->('check_installed')->()) {
-		next;
+	my $optional = ref $settings->{$option} eq 'HASH' && $settings->{$option}{optional};
+	if (my @avalaible = get_available_packages($option, $in, @packages)) {
+	    log::explanations("Installing thirdparty packages ($option) " . join(', ', @avalaible));
+	    if ($in->do_pkgs->install(@avalaible) && check_installed($option, $settings, $in)) {
+                next;
+	    } elsif (!$optional) {
+                warn_not_installed($in, @avalaible);
 	    }
 	}
-	log::explanations("Thirdparty package $name ($option) is required but not available");
+	next if $optional;
+	log::explanations("Thirdparty package @packages ($option) is required but not available");
 
-	unless ($get_method->('user_install')->($in)) {
-	    warn_not_found($in, $settings, $option, $name);
+	unless (user_install($option, $settings, $in)) {
+	    warn_not_found($in, $settings, $driver, $option, @packages);
 	    return;
 	}
     }
@@ -483,16 +317,22 @@ sub install_packages {
     1;
 }
 
-sub setup_device {
-    my ($in, $category, $driver, $o_config, @o_fields) = @_;
+sub apply_settings {
+    my ($in, $category, $settings_list, $driver) = @_;
 
-    my $settings = find_settings($category, $driver);
+    my $settings = find_settings($settings_list, $driver);
     if ($settings) {
 	log::explanations(qq(Found settings for driver "$driver" in category "$category"));
 
 	my $wait = $in->wait_message('', N("Looking for required software and drivers..."));
 
-	install_packages($in, $settings, $driver, qw(kernel_module firmware tools)) or return;
+	install_packages($in, $settings, $driver, @thirdparty_types) or return;
+
+       if (exists $settings->{firmware} && !$settings->{old_status}{firmware}) {
+           log::explanations("Reloading module $driver");
+           eval { modules::unload($driver) };
+           eval { modules::load($driver) };
+       }
 
         undef $wait;
         $wait = $in->wait_message('', N("Please wait, running device configuration commands..."));
@@ -503,15 +343,14 @@ sub setup_device {
 	    services::restart_or_start($service);
 	}
 
+        $settings->{sleep} and sleep $settings->{sleep};
+
 	log::explanations(qq(Settings for driver "$driver" applied));
     } else {
 	log::explanations(qq(No settings found for driver "$driver" in category "$category"));
     }
 
-    #- assign requested settings, erase with undef if no settings have been found
-    $o_config->{$_} = $settings->{$_} foreach @o_fields;
-
-    1;
+    $settings || {};
 }
 
 1;

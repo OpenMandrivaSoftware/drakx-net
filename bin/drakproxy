@@ -2,7 +2,7 @@
 
 # DrakProxy
 
-# Copyright (C) 1999-2005 Mandriva (damien@mandrakesoft.com)
+# Copyright (C) 1999-2006 Mandriva (damien@mandrakesoft.com)
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,6 +20,8 @@
 
 use lib qw(/usr/lib/libDrakX);
 
+# i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
+BEGIN { unshift @::textdomains, 'drakx-net' }
 use standalone;     #- warning, standalone must be loaded very first, for 'explanations'
 use interactive;
 use network::network;
@@ -29,6 +31,11 @@ use common;
 $ugtk2::wm_icon = "/usr/share/mcc/themes/default/drakproxy-mdk.png";
 my $u = { getVarsFromSh('/etc/profile.d/proxy.sh') };
 my $in = 'interactive'->vnew('su');
-network::network::miscellaneous_choose($in, $u);
-network::network::proxy_configure($u);
+if (network::network::miscellaneous_choose($in, $u)) {
+    network::network::proxy_configure($u);
+    if ($in->ask_okcancel(N("Warning"), N("You need to log out and back in again for changes to take effect"), 1)) {
+        my $wm = any::running_window_manager();
+        $wm and any::ask_window_manager_to_logout($wm);
+    }
+}
 $in->exit(0);

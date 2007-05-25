@@ -15,7 +15,7 @@ sub present_devices {
     my ($driver) = @_;
     my @supported_devices;
     foreach (all($::prefix . "$ndiswrapper_root/$driver")) {
-        my ($ids) = /^([0-9A-Z]{4}:[0-9A-Z]{4})\.[05]\.conf$/;
+        my ($ids) = /^([0-9A-F]{4}:[0-9A-F]{4})\.[0-9A-F]\.conf$/;
         $ids and push @supported_devices, $ids;
     }
     grep { member(uc(sprintf("%04x:%04x", $_->{vendor}, $_->{id})), @supported_devices) } detect_devices::probeall();
@@ -30,7 +30,7 @@ sub get_devices {
 
 sub ask_driver {
     my ($in) = @_;
-    if (my $inf_file = $in->ask_file(N("Please select the Windows driver (.inf file)"), "/mnt/cdrom")) {
+    if (my $inf_file = $in->ask_file(N("Please select the Windows driver (.inf file)"), "/media/cdrom")) {
         my $driver = basename(lc($inf_file));
         $driver =~ s/\.inf$//;
 
@@ -53,13 +53,10 @@ sub find_matching_devices {
     my $net_path = '/sys/class/net';
     my @devices;
 
+    require network::connection::ethernet;
     foreach my $interface (all($net_path)) {
-        my $dev_path = "$net_path/$interface/device";
-        -l $dev_path or next;
-        my $map = detect_devices::get_sysfs_device_id_map($dev_path);
-        if (every { hex(chomp_(cat_("$dev_path/" . $map->{$_}))) eq $device->{$_} } keys %$map) {
-            my $driver = readlink("$dev_path/driver");
-            $driver =~ s!.*/!!;
+        if (network::connection::ethernet::device_matches_interface($device, $interface)) {
+            my $driver = network::connection::ethernet::interface_to_driver($interface);
             push @devices, [ $interface, $driver ] if $driver;
         }
     }
@@ -94,6 +91,10 @@ sub setup_device {
     if (@conflicts) {
         $in->ask_yesorno(N("Warning"), N("The selected device has already been configured with the %s driver.
 Do you really want to use a ndiswrapper driver?", $conflicts[0][1])) or return;
+        #- unload the old module and try immediately to load ndiswrapper
+        eval { modules::unload($conflicts[0][1]) };
+        eval { modules::unload("ndiswrapper") };
+        eval { modules::load("ndiswrapper") };
     }
 
     my $interface = find_interface($device);
@@ -103,6 +104,35 @@ Do you really want to use a ndiswrapper driver?", $conflicts[0][1])) or return;
     }
 
     $interface;
+}
+
+sub select_device {
+    my ($in) = @_;
+    my $driver;
+    my @drivers = installed_drivers();
+    if (@drivers) {
+        $driver ||= first(@drivers);
+        $in->ask_from('', N("Choose an ndiswrapper driver"), [
+            { type => "list", val => \$driver, allow_empty_list => 1,
+              list => [ undef, @drivers ],
+              format => sub { defined $_[0] ? N("Use the ndiswrapper driver %s", $_[0]) : N("Install a new driver") } }
+        ]) or return;
+    }
+    $driver ||= ask_driver($in) or return;
+
+    my @devices = get_devices($in, $driver) or return;
+    my $device;
+    if (@devices == 1) {
+        #- only one device matches installed driver
+        $device = $devices[0];
+    } else {
+        $in->ask_from('', N("Select a device:"), [
+            { type => "list", val => \$device, allow_empty_list => 1,
+              list => [ present_devices($driver) ],
+              format => sub { $_[0]{description} } }
+        ]) or return;
+    }
+    return $device;
 }
 
 1;

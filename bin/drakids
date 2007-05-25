@@ -2,6 +2,8 @@
 
 use strict;
 use lib qw(/usr/lib/libDrakX);
+# i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
+BEGIN { unshift @::textdomains, 'drakx-net' }
 use common;
 use standalone;
 
@@ -30,10 +32,17 @@ $whitelist->set_headers_clickable(1);
 $whitelist->get_column(0)->signal_connect('clicked', \&sort_by_column, $whitelist->get_model);
 $whitelist->get_column(0)->set_sort_column_id(0);
 
+my $i_m_ifw2 = member("--ifw2", @ARGV);
+my $services_log = create_service_list('status');
+my $allowed_services = create_service_list();
+my $blocked_services = create_service_list();
+
 my $w = ugtk2->new(N("Interactive Firewall"),
                    icon => "/usr/lib/libDrakX/icons/drakfirewall.png");
 
-my $ifw = network::ifw->new(dbus_object::system_bus(), sub {
+my $ifw;
+eval {
+  $ifw = network::ifw->new(dbus_object::system_bus(), sub {
     my ($_con, $msg) = @_;
     my $member = $msg->get_member;
     if ($member eq 'Attack') {
@@ -49,11 +58,47 @@ my $ifw = network::ifw->new(dbus_object::system_bus(), sub {
     } elsif ($member eq 'ManageRequest') {
 	$w->{window}->present;
     }
-});
+  });
+};
+
+if ($@) {
+    err_dialog(N("Interactive Firewall"), N("Unable to contact daemon"));
+    ugtk2::exit;
+}
+
 init_lists();
 
 gtkadd($w->{window},
         gtknew('Notebook', children => [
+          if_($i_m_ifw2,
+            gtknew('Label', text => N("Log")),
+            gtknew('VBox', spacing => 5, children => [
+                1, gtknew('ScrolledWindow', width => 600, height => 400, child => $services_log),
+                0, gtknew('HButtonBox', layout => 'edge', children_loose => [
+                    gtknew('Button', text => N("Allow"), clicked => sub {}),
+                    gtknew('Button', text => N("Block"), clicked => sub {}),
+                    gtknew('Button', text => N("Close"), clicked => sub { Gtk2->main_quit })
+                ]),
+            ]),
+            gtknew('Label', text => N("Allowed services")),
+            gtknew('VBox', spacing => 5, children => [
+                1, gtknew('ScrolledWindow', width => 600, height => 400, child => $allowed_services),
+                0, gtknew('HButtonBox', layout => 'edge', children_loose => [
+                    gtknew('Button', text => N("Remove"), clicked => sub {}),
+                    gtknew('Button', text => N("Block"), clicked => sub {}),
+                    gtknew('Button', text => N("Close"), clicked => sub { Gtk2->main_quit })
+                ]),
+            ]),
+            gtknew('Label', text => N("Blocked services")),
+            gtknew('VBox', spacing => 5, children => [
+                1, gtknew('ScrolledWindow', width => 600, height => 400, child => $blocked_services),
+                0, gtknew('HButtonBox', layout => 'edge', children_loose => [
+                    gtknew('Button', text => N("Remove"), clicked => sub {}),
+                    gtknew('Button', text => N("Allow"), clicked => sub {}),
+                    gtknew('Button', text => N("Close"), clicked => sub { Gtk2->main_quit })
+                ]),
+            ]),
+          ),
             gtknew('Label', text => N("Log")),
             gtknew('VBox', spacing => 5, children => [
                 1, gtknew('ScrolledWindow', width => 600, height => 400, child => $loglist),
@@ -231,6 +276,22 @@ sub attack_list_add {
     ];
 }
 
+sub create_service_list {
+    my ($o_status) = @_;
+    my $service_list = Gtk2::SimpleList->new(
+        N("Application") => 'text',
+        N("Service") => 'text',
+        if_($o_status, N("Status") => 'text'),
+    );
+    N_("Allowed");
+    N_("Blocked");
+    $service_list->set_headers_clickable(1);
+    foreach (0, 1, if_($o_status, 2)) {
+        $service_list->get_column($_)->signal_connect('clicked', \&sort_by_column, $service_list->get_model);
+    }
+    $service_list;
+}
+
 #- may throw an exception
 sub init_loglist() {
     my @packets = $ifw->get_reports(1);
@@ -254,7 +315,7 @@ sub get_selected_log() {
     uniq(map { $loglist->{data}[$_][0] } $loglist->get_selected_indices);
 }
 
-sub clear_log {
+sub clear_log() {
     eval {
         $ifw->clear_processed_reports;
         $ifw->send_alert_ack;

@@ -1,0 +1,151 @@
+#!/usr/bin/perl
+
+# Copyright (C) 2006 Mandriva
+#                    Olivier Blin <blino@mandriva.com>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2, or (at your option)
+# any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+use strict;
+
+use lib qw(/usr/lib/libDrakX);
+
+# i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
+BEGIN { unshift @::textdomains, 'drakx-net' }
+use standalone;
+
+use common;
+use network::invictus;
+use network::network;
+use detect_devices;
+use mygtk2 qw(gtknew);
+use ugtk2 qw(:create :helpers :wrappers :dialogs);
+
+$ugtk2::wm_icon = 'invictus-16';
+my $title = N("Invictus Firewall");
+my $w = ugtk2->new($title);
+$::main_window = $w->{real_window}; #- so that transient_for is defined for wait messages and dialogs
+
+my $net = {};
+network::network::read_net_conf($net);
+my @interfaces = detect_devices::get_lan_interfaces;
+
+my $invictus = {};
+network::invictus::read_config($invictus);
+
+my %interface_addresses = map { $_ => {
+    real_address => gtknew('Entry', text => $invictus->{ucarp}{$_}{SRCIP}),
+    virtual_address => gtknew('Entry', text => $invictus->{ucarp}{$_}{VIRTIP}),
+    vid => do { my $w = gtknew('Entry', text => $invictus->{ucarp}{$_}{VHID}); $w->set_width_chars(5); $w },
+} } @interfaces;
+
+my $master_checkbutton = gtknew('CheckButton', text => N("Start as master"), active => do {
+    my $m = find { $_->{TAKEOVER} } values %{$invictus->{ucarp}};
+    $m && text2bool($m->{TAKEOVER});
+});
+my $password_entry = gtknew('Entry', text => do {
+    my $p = find { $_->{PASSWORD} } values %{$invictus->{ucarp}};
+    $p && $p->{PASSWORD};
+});
+$password_entry->set_visibility(0);
+my $ct_sync_interface_list;
+my $cmarkbit_entry;
+
+sub apply_invictus_firewall() {
+    require interactive;
+    my $in = 'interactive'->vnew;
+    $in->do_pkgs->ensure_is_installed('invictus-firewall', '/etc/rc.d/init.d/ct_sync') or return;
+    $in->do_pkgs->ensure_is_installed('ucarp', '/etc/rc.d/init.d/ucarp') or return;
+
+    my $password = $password_entry->get_text;
+    $password or err_dialog(N("Error"), N("A password is required.")), return;
+    foreach (@interfaces) {
+        @{$invictus->{ucarp}{$_}}{qw(INTERFACE SRCIP VIRTIP VHID PASSWORD TAKEOVER)} = (
+            $_,
+            (map { $_->get_text } @{$interface_addresses{$_}}{qw(real_address virtual_address vid)}),
+            $password,
+            bool2yesno($master_checkbutton->get_active),
+        );
+    }
+    network::invictus::write_config($invictus);
+
+    require services;
+    services::enable('ct_sync');
+    services::enable('ucarp');
+}
+
+sub update_ct_sync_state() {
+    my $enable_ct_sync = text2bool($invictus->{ct_sync}{ENABLE});
+    $_->set_sensitive($enable_ct_sync) foreach $ct_sync_interface_list, $cmarkbit_entry;
+    foreach my $interface (@interfaces) {
+        my $enable = !$enable_ct_sync || $interface ne $invictus->{ct_sync}{INTERFACE};
+        $_->set_sensitive($enable) foreach values %{$interface_addresses{$interface}};
+    }
+}
+
+gtkadd($w->{window},
+       gtknew('VBox', spacing => 5, children_tight => [
+           $::isEmbedded ? () : Gtk2::Banner->new('invictus-52', $title),
+           gtknew('WrappedLabel', text => N("This tool allows to set up network interfaces failover and firewall replication.")),
+           gtknew('Frame', border_width => 5,
+                  text => N("Network redundancy (leave empty if interface is not used)"),
+                  child => gtknew('VBox', border_width => 10, children_tight => [
+                      gtknew('Table', children => [
+                          [ N("Interface"), N("Real address"), N("Virtual shared address"), N("Virtual ID") ],
+                          (map {
+                              [ $_, @{$interface_addresses{$_}}{qw(real_address virtual_address vid)} ];
+                          } @interfaces),
+                      ]),
+                      gtknew('HBox', spacing => 5, children_tight => [ N("Password"), $password_entry ]),
+                      $master_checkbutton,
+                  ])),
+           gtknew('Frame', border_width => 5,
+                  text => N("Firewall replication"),
+                  child => gtknew('VBox', border_width => 10, children_tight => [
+                      gtknew('CheckButton', text => N("Synchronize firewall conntrack tables"),
+                             active => text2bool($invictus->{ct_sync}{ENABLE}),
+                             toggled => sub {
+                                 $invictus->{ct_sync}{ENABLE} = bool2yesno($_[0]->get_active);
+                                 update_ct_sync_state();
+                             }),
+                      gtknew('HBox', spacing => 5, children => [
+                          0, N("Synchronization network interface"),
+                          1, $ct_sync_interface_list =
+                            gtknew('ComboBox', list => \@interfaces, text => $invictus->{ct_sync}{INTERFACE},
+                                   changed => sub {
+                                       $invictus->{ct_sync}{INTERFACE} = $_[0]->get_active_text;
+                                       update_ct_sync_state();
+                                   }),
+                      ]),
+                      gtknew('HBox', spacing => 5, children_tight => [
+                          N("Connection mark bit"),
+                          $cmarkbit_entry =
+                            gtknew('ComboBox', list => [ 0 .. 31 ], text => $invictus->{ct_sync}{CMARKBIT}, changed => sub {
+                                       $invictus->{ct_sync}{CMARKBIT} = $_[0]->get_active_text;
+                                   }),
+                      ]),
+                  ])),
+           gtknew('HButtonBox', layout => 'edge', children_tight => [
+               gtknew('Button', text => N("Apply"), clicked => \&apply_invictus_firewall),
+               gtknew('Button', text => N("Quit"), clicked => sub { $w->exit }),
+           ]),
+       ]),
+   );
+
+
+
+
+update_ct_sync_state();
+
+$w->main;

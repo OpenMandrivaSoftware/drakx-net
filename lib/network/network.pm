@@ -14,13 +14,14 @@ use network::tools;
 use vars qw(@ISA @EXPORT);
 use log;
 
-my $network_file = "/etc/sysconfig/network";
+our $network_file = "/etc/sysconfig/network";
 my $resolv_file = "/etc/resolv.conf";
 my $tmdns_file = "/etc/tmdns.conf";
+our $wireless_d = "/etc/sysconfig/network-scripts/wireless.d";
 
 
 @ISA = qw(Exporter);
-@EXPORT = qw(addDefaultRoute dns dnsServers gateway guessHostname is_ip is_ip_forbidden masked_ip netmask resolv sethostname);
+@EXPORT = qw(addDefaultRoute dns dnsServers gateway guessHostname is_ip is_ip_forbidden masked_ip netmask resolv);
 
 #- $net hash structure
 #-   autodetect
@@ -98,8 +99,8 @@ sub read_zeroconf() {
 sub write_network_conf {
     my ($net) = @_;
 
-    if ($net->{network}{HOSTNAME} && $net->{network}{HOSTNAME} =~ /\.(.+)$/) {
-	$net->{resolv}{DOMAINNAME} = $1;
+    if ($net->{network}{HOSTNAME} && $net->{network}{HOSTNAME} =~ /\.(.+\..+)$/) {
+	$net->{resolv}{DOMAINNAME} ||= $1;
     }
     $net->{network}{NETWORKING} = 'yes';
 
@@ -174,18 +175,20 @@ sub update_broadcast_and_network {
     my ($intf) = @_;
     my @ip = split '\.', $intf->{IPADDR};
     my @mask = split '\.', $intf->{NETMASK};
+    #- FIXME: NETWORK and BROADCAST are deprecated, see sysconfig.txt
     $intf->{BROADCAST} = join('.', mapn { int($_[0]) | ((~int($_[1])) & 255) } \@ip, \@mask);
     $intf->{NETWORK} = join('.', mapn { int($_[0]) &        $_[1]          } \@ip, \@mask);
 }
 
 sub write_interface_settings {
     my ($intf, $file) = @_;
-    setVarsInSh($file, $intf, qw(DEVICE BOOTPROTO IPADDR NETMASK NETWORK BROADCAST ONBOOT HWADDR METRIC MII_NOT_SUPPORTED TYPE USERCTL ATM_ADDR ETHTOOL_OPTS VLAN MTU MS_DNS1 MS_DNS2 DOMAIN),
+    setVarsInSh($file, $intf, qw(DEVICE BOOTPROTO IPADDR NETMASK NETWORK BROADCAST GATEWAY ONBOOT HWADDR METRIC MII_NOT_SUPPORTED TYPE USERCTL ATM_ADDR ETHTOOL_OPTS VLAN MTU DNS1 DNS2 DOMAIN RESOLV_MODS LINK_DETECTION_DELAY),
                 qw(WIRELESS_MODE WIRELESS_ESSID WIRELESS_NWID WIRELESS_FREQ WIRELESS_SENS WIRELESS_RATE WIRELESS_ENC_KEY WIRELESS_RTS WIRELESS_FRAG WIRELESS_IWCONFIG WIRELESS_IWSPY WIRELESS_IWPRIV WIRELESS_WPA_DRIVER),
                 qw(DVB_ADAPTER_ID DVB_NETWORK_DEMUX DVB_NETWORK_PID),
                 qw(IPV6INIT IPV6TO4INIT),
-                qw(MRU REMIP PEERDNS PPPOPTIONS HARDFLOWCTL DEFABORT RETRYTIMEOUT PAPNAME LINESPEED MODEMPORT DEBUG ESCAPECHARS INITSTRING),
+                qw(MRU REMIP PPPOPTIONS HARDFLOWCTL DEFABORT RETRYTIMEOUT PAPNAME LINESPEED MODEMPORT DEBUG ESCAPECHARS INITSTRING),
                 qw(DISCONNECTTIMEOUT PERSIST DEFROUTE),
+                qw(VPN_NAME VPN_TYPE),
                 if_($intf->{BOOTPROTO} eq "dhcp", qw(DHCP_CLIENT DHCP_HOSTNAME NEEDHOSTNAME PEERDNS PEERYP PEERNTPD DHCP_TIMEOUT)),
                 if_($intf->{DEVICE} =~ /^ippp\d+$/, qw(DIAL_ON_IFUP))
                );
@@ -194,17 +197,22 @@ sub write_interface_settings {
     log::explanations("written $intf->{DEVICE} interface configuration in $file");
 }
 
+sub get_ifcfg_file {
+    my ($name) = @_;
+    "$::prefix/etc/sysconfig/network-scripts/ifcfg-$name";
+}
+
 sub write_interface_conf {
     my ($net, $name) = @_;
 
-    my $file = "$::prefix/etc/sysconfig/network-scripts/ifcfg-$name";
+    my $file = get_ifcfg_file($name);
     #- prefer ifcfg-XXX files
     unlink("$::prefix/etc/sysconfig/network-scripts/$name");
 
     my $intf = $net->{ifcfg}{$name};
 
-    require network::ethernet;
-    my (undef, $mac_address) = network::ethernet::get_eth_card_mac_address($intf->{DEVICE});
+    require network::connection::ethernet;
+    my (undef, $mac_address) = network::connection::ethernet::get_eth_card_mac_address($intf->{DEVICE});
     $intf->{HWADDR} &&= $mac_address; #- set HWADDR to MAC address if required
 
     update_broadcast_and_network($intf);
@@ -218,7 +226,7 @@ sub write_interface_conf {
 
 sub write_wireless_conf {
     my ($ssid, $ifcfg) = @_;
-    my $wireless_file = "$::prefix/etc/sysconfig/network-scripts/wireless.d/$ssid";
+    my $wireless_file = $::prefix . $wireless_d . '/' . $ssid;
     write_interface_settings($ifcfg, $wireless_file);
     # FIXME: write only DHCP/IP settings here
     substInFile { $_ = '' if /^DEVICE=/ } $wireless_file;
@@ -264,14 +272,19 @@ sub addDefaultRoute {
     c::addDefaultRoute($net->{network}{GATEWAY}) if $net->{network}{GATEWAY};
 }
 
-sub sethostname {
-    my ($net) = @_;
-    my $text;
-    my $hostname = $net->{network}{HOSTNAME};
-    syscall_("sethostname", $hostname, length $hostname) ? ($text="set sethostname to $hostname") : ($text="sethostname failed: $!");
-    log::explanations($text);
+sub write_hostname {
+    my ($hostname) = @_;
 
-    run_program::run("/usr/bin/run-parts", "--arg", $hostname, "/etc/sysconfig/network-scripts/hostname.d") unless $::isInstall;
+    addVarsInSh($::prefix . $network_file, { HOSTNAME => $hostname }, qw(HOSTNAME));
+
+    add2hosts("localhost", "127.0.0.1");
+    add2hosts($hostname, "127.0.0.1") if $hostname;
+
+    unless ($::isInstall) {
+        my $rc = syscall_("sethostname", $hostname, length $hostname);
+        log::explanations($rc ? "set sethostname to $hostname" : "sethostname failed: $!");
+        run_program::run("/usr/bin/run-parts", "--arg", $hostname, "/etc/sysconfig/network-scripts/hostname.d");
+    }
 }
 
 sub resolv($) {
@@ -386,11 +399,16 @@ sub netprofile_delete {
     log::explanations(qq(Deleting "$profile" profile));
 }
 
+sub netprofile_clone {
+    my ($source_profile, $dest_profile) = @_;
+    return if !$dest_profile || $dest_profile eq "default" || member($dest_profile, netprofile_list());
+    system('/sbin/clone-netprofile', $source_profile, $dest_profile);
+    log::explanations(qq("Creating "$dest_profile" profile));
+}
+
 sub netprofile_add {
     my ($net, $profile) = @_;
-    return if !$profile || $profile eq "default" || member($profile, netprofile_list());
-    system('/sbin/clone-netprofile', $net->{PROFILE}, $profile);
-    log::explanations(qq("Creating "$profile" profile));
+    netprofile_clone($net->{PROFILE}, $profile);
 }
 
 sub netprofile_list() {
@@ -414,11 +432,13 @@ sub miscellaneous_choose {
          { text => N("Use HTTP proxy for HTTPS connections"), val => \$use_http_for_https, type => "bool" },
          { label => N("HTTPS proxy"), val => \$u->{https_proxy}, disabled => sub { $use_http_for_https } },
          { label => N("FTP proxy"),  val => \$u->{ftp_proxy} },
+         { label => N("No proxy for (comma separated list):"),  val => \$u->{no_proxy} },
        ],
        complete => sub {
            $use_http_for_https and $u->{https_proxy} = $u->{http_proxy};
+           $u->{no_proxy} =~ s/\s//g;
 	   $u->{http_proxy} =~ m,^($|http://), or $in->ask_warn('', N("Proxy should be http://...")), return 1,0;
-	   $u->{https_proxy} =~ m,^($|http://), or $in->ask_warn('', N("Proxy should be https?://...")), return 1,2;
+	   $u->{https_proxy} =~ m,^($|https?://), or $in->ask_warn('', N("Proxy should be http://... or https://...")), return 1,2;
 	   $u->{ftp_proxy} =~ m,^($|ftp://|http://), or $in->ask_warn('', N("URL should begin with 'ftp:' or 'http:'")), return 1,3;
 	   0;
        }
@@ -426,92 +446,155 @@ sub miscellaneous_choose {
     1;
 }
 
-sub proxy_configure {
-    my ($u) = @_;
+sub proxy_configure_shell {
+    my ($proxy) = @_;
     my $sh_file = "$::prefix/etc/profile.d/proxy.sh";
-    setExportedVarsInSh($sh_file, $u, qw(http_proxy https_proxy ftp_proxy));
+    setExportedVarsInSh($sh_file, $proxy, qw(http_proxy https_proxy ftp_proxy no_proxy));
     chmod 0755, $sh_file;
     my $csh_file = "$::prefix/etc/profile.d/proxy.csh";
-    setExportedVarsInCsh($csh_file, $u, qw(http_proxy https_proxy ftp_proxy));
+    setExportedVarsInCsh($csh_file, $proxy, qw(http_proxy https_proxy ftp_proxy no_proxy));
     chmod 0755, $csh_file;
+}
 
-    #- KDE proxy settings
+sub proxy_configure_kde {
+    my ($proxy) = @_;
+
     my $kde_config_dir = "$::prefix/usr/share/config";
+    -d $kde_config_dir or return;
+
     my $kde_config_file = "$kde_config_dir/kioslaverc";
-    if (-d $kde_config_dir) {
-        update_gnomekderc($kde_config_file,
-                          undef,
-                          PersistentProxyConnection => "false"
-                      );
-        update_gnomekderc($kde_config_file,
-                          "Proxy Settings",
-                          AuthMode => 0,
-                          ProxyType => $u->{http_proxy} || $u->{https_proxy} || $u->{ftp_proxy} ? 4 : 0,
-                          ftpProxy => "ftp_proxy",
-                          httpProxy => "http_proxy",
-                          httpsProxy => "https_proxy"
+    update_gnomekderc($kde_config_file,
+                      undef,
+                      PersistentProxyConnection => "false"
                   );
+    update_gnomekderc($kde_config_file,
+                      "Proxy Settings",
+                      AuthMode => 0,
+                      ProxyType => $proxy->{http_proxy} || $proxy->{https_proxy} || $proxy->{ftp_proxy} ? 4 : 0,
+                      ftpProxy => "ftp_proxy",
+                      httpProxy => "http_proxy",
+                      httpsProxy => "https_proxy",
+                      NoProxyFor => "no_proxy",
+                  );
+}
+
+#- (protocol, user, password, host, port)
+my $http_proxy_match = qr,^(http)://(?:([^:\@]+)(?::([^:\@]+))?\@)?([^\:]+)(?::(\d+))?$,;
+#- (protocol, host, port)
+my $https_proxy_match = qr,^(https?)://(?:[^:\@]+(?::[^:\@]+)?\@)?([^\:]+)(?::(\d+))?$,;
+#- (protocol, protocol, host, port)
+my $ftp_proxy_match = qr,^(http|ftp)://(?:[^:\@]+(?::[^:\@]+)?\@)?([^\:]+)(?::(\d+))?$,;
+my %proxy_default_port = (
+    http => 80,
+    https => 443,
+    ftp => 21,
+);
+
+sub proxy_configure_gnome {
+    my ($proxy) = @_;
+
+    -d "$::prefix/etc/gconf/2/" or return;
+
+    my $defaults_dir = "/etc/gconf/gconf.xml.local-defaults";
+    my $p_defaults_dir = "$::prefix$defaults_dir";
+
+    my $use_alternate_proxy;
+    my $gconf_set = sub {
+        my ($key, $type, $value) = @_;
+        #- gconftool-2 is available since /etc/gconf/2/ exists
+        run_program::rooted($::prefix, 'gconftool-2', '>', '/dev/null', "--config-source=xml::$p_defaults_dir", "--direct", "--set", "--type=$type", if_($type eq "list", '--list-type', 'string'), $key, $value);
+    };
+
+    #- http proxy
+    if (my ($protocol, $user, $password, $host, $port) = $proxy->{http_proxy} =~ $http_proxy_match) {
+        $port ||= $proxy_default_port{$protocol} || $proxy_default_port{http};
+        $gconf_set->("/system/http_proxy/use_http_proxy", "bool", 1);
+        $gconf_set->("/system/http_proxy/host", "string", $host);
+        $gconf_set->("/system/http_proxy/port", "int", $port);
+        $gconf_set->("/system/http_proxy/use_authentication", "bool", to_bool($user));
+        $user and $gconf_set->("/system/http_proxy/authentication_user", "string", $user);
+        $password and $gconf_set->("/system/http_proxy/authentication_password", "string", $password);
+    } else {
+        $gconf_set->("/system/http_proxy/use_http_proxy", "bool", 0);
     }
 
-    #- Gnome proxy settings
-    if (-d "$::prefix/etc/gconf/2/") {
-        my $defaults_dir = "/etc/gconf/gconf.xml.local-defaults";
-        my $p_defaults_dir = "$::prefix$defaults_dir";
-        my $p_defaults_path = "$::prefix/etc/gconf/2/local-defaults.path";
-        -r $p_defaults_path or output_with_perm($p_defaults_path, 0755, qq(
-# System local settings
-xml:readonly:$defaults_dir
-));
-        -d $p_defaults_dir or mkdir $p_defaults_dir, 0755;
-
-        my $use_alternate_proxy;
-        my $gconf_set = sub {
-            my ($key, $type, $value) = @_;
-            #- gconftool-2 is available since /etc/gconf/2/ exists
-            system("gconftool-2", "--config-source=xml::$p_defaults_dir", "--direct", "--set", "--type=$type", $key, $value);
-        };
-
-        #- http proxy
-        if (my ($user, $password, $host, $port) = $u->{http_proxy} =~ m,^http://(?:([^:\@]+)(?::([^:\@]+))?\@)?([^\:]+)(?::(\d+))?$,) {
-            $port ||= 80;
-            $gconf_set->("/system/http_proxy/use_http_proxy", "bool", 1);
-            $gconf_set->("/system/http_proxy/host", "string", $host);
-            $gconf_set->("/system/http_proxy/port", "int", $port);
-            $gconf_set->("/system/http_proxy/use_authentication", "bool", to_bool($user));
-            $user and $gconf_set->("/system/http_proxy/authentication_user", "string", $user);
-            $password and $gconf_set->("/system/http_proxy/authentication_password", "string", $password);
-        } else {
-            $gconf_set->("/system/http_proxy/use_http_proxy", "bool", 0);
-        }
-
-        #- https proxy
-        if (my ($host, $port) = $u->{https_proxy} =~ m,^https?://(?:[^:\@]+(?::[^:\@]+)?\@)?([^\:]+)(?::(\d+))?$,) {
-            $port ||= 443;
-            $gconf_set->("/system/proxy/secure_host", "string", $host);
-            $gconf_set->("/system/proxy/secure_port",  "int", $port);
-            $use_alternate_proxy = 1;
-        } else {
-            #- clear the ssl host so that it isn't used if the manual proxy is activated for ftp
-            $gconf_set->("/system/proxy/secure_host", "string", "");
-        }
-
-        #- ftp proxy
-        if (my ($host, $port) = $u->{ftp_proxy} =~ m,^(?:http|ftp)://(?:[^:\@]+(?::[^:\@]+)?\@)?([^\:]+)(?::(\d+))?$,) {
-            $port ||= 21;
-            $gconf_set->("/system/proxy/ftp_host", "string", $host);
-            $gconf_set->("/system/proxy/ftp_port",  "int", $port);
-            $use_alternate_proxy = 1;
-        } else {
-            #- clear the ftp host so that it isn't used if the manual proxy is activated for ssl
-            $gconf_set->("/system/proxy/ftp_host", "string", "");
-        }
-
-        #- set proxy mode to manual if either https or ftp is used
-        $gconf_set->("/system/proxy/mode", "string", $use_alternate_proxy ? "manual" : "none");
-
-        #- make gconf daemons reload their settings
-        system("killall -s HUP gconfd-2");
+    #- https proxy
+    if (my ($protocol, $host, $port) = $proxy->{https_proxy} =~ $https_proxy_match) {
+        $port ||= $proxy_default_port{$protocol} || $proxy_default_port{https};
+        $gconf_set->("/system/proxy/secure_host", "string", $host);
+        $gconf_set->("/system/proxy/secure_port",  "int", $port);
+        $use_alternate_proxy = 1;
+    } else {
+        #- clear the ssl host so that it isn't used if the manual proxy is activated for ftp
+        $gconf_set->("/system/proxy/secure_host", "string", "");
     }
+
+    #- ftp proxy
+    if (my ($protocol, $host, $port) = $proxy->{ftp_proxy} =~ $ftp_proxy_match) {
+        $port ||= $proxy_default_port{$protocol} || $proxy_default_port{ftp};
+        $gconf_set->("/system/proxy/ftp_host", "string", $host);
+        $gconf_set->("/system/proxy/ftp_port", "int", $port);
+        $use_alternate_proxy = 1;
+    } else {
+        #- clear the ftp host so that it isn't used if the manual proxy is activated for ssl
+        $gconf_set->("/system/proxy/ftp_host", "string", "");
+    }
+
+    my $ignore_hosts = join(',', uniq(qw(localhost 127.0.0.0/8)), split(',', $proxy->{no_proxy}));
+    $gconf_set->("/system/http_proxy/ignore_hosts", "list", "[$ignore_hosts]");
+
+    #- set proxy mode to manual if either https or ftp is used
+    $gconf_set->("/system/proxy/mode", "string", $use_alternate_proxy ? "manual" : "none");
+
+    #- make gconf daemons reload their settings
+    system("killall -s HUP gconfd-2");
+}
+
+sub proxy_configure_mozilla_firefox {
+    my ($proxy) = @_;
+
+    my $firefox_config_file = "$::prefix/etc/firefox.cfg";
+    -f $firefox_config_file or return;
+
+    my %prefs;
+    foreach (qw(http ssl ftp)) {
+        undef $prefs{"network.proxy.${_}"};
+        undef $prefs{"network.proxy.${_}_port"};
+    }
+    if (my ($protocol, undef, undef, $host, $port) = $proxy->{http_proxy} =~ $http_proxy_match) {
+        $prefs{"network.proxy.http"} = qq("$host");
+        $prefs{"network.proxy.http_port"} = $port || $proxy_default_port{$protocol} || $proxy_default_port{http};
+    }
+    if (my ($protocol, $host, $port) = $proxy->{https_proxy} =~ $https_proxy_match) {
+        $prefs{"network.proxy.ssl"} =  qq("$host");
+        $prefs{"network.proxy.ssl_port"} = $port || $proxy_default_port{$protocol} || $proxy_default_port{https};
+    }
+    if (my ($protocol, $host, $port) = $proxy->{ftp_proxy} =~ $ftp_proxy_match) {
+        $prefs{"network.proxy.ftp"} =  qq("$host");
+        $prefs{"network.proxy.ftp_port"} = $port || $proxy_default_port{$protocol} || $proxy_default_port{ftp};
+    }
+    if ($proxy->{no_proxy}) {
+        $prefs{"network.proxy.no_proxies_on"} = qq("$proxy->{no_proxy}");
+    }
+    $prefs{"network.proxy.type"} = any { defined $prefs{"network.proxy.${_}_port"} } qw(http ssl ftp);
+
+    substInFile {
+        while (my ($key, $value) = each(%prefs)) {
+            if (/^defaultPref\("$key",/) {
+                $_ = defined $value && qq(defaultPref("$key", $value);\n);
+                delete $prefs{$key};
+            }
+        }
+        $_ .= join('', map { if_(defined $prefs{$_}, qq(defaultPref("$_", $prefs{$_});\n)) } sort(keys %prefs)) if eof;
+    } $firefox_config_file;
+}
+
+sub proxy_configure {
+    my ($proxy) = @_;
+    proxy_configure_shell($proxy);
+    proxy_configure_kde($proxy);
+    proxy_configure_gnome($proxy);
+    proxy_configure_mozilla_firefox($proxy);
 }
 
 sub read_net_conf {
@@ -530,8 +613,8 @@ sub read_net_conf {
 	}
     }
     $net->{wireless} ||= {};
-    foreach (all("$::prefix/etc/sysconfig/network-scripts/wireless.d")) {
-        $net->{wireless}{$_} = { getVarsFromSh("$::prefix/etc/sysconfig/network-scripts/wireless.d/$_") };
+    foreach (all($::prefix . $wireless_d)) {
+        $net->{wireless}{$_} = { getVarsFromSh($::prefix . $wireless_d . '/' . $_) };
     }
     netprofile_read($net);
     if (my $default_intf = network::tools::get_default_gateway_interface($net)) {
@@ -559,9 +642,9 @@ sub easy_dhcp {
     return if text2bool($net->{network}{NETWORKING});
 
     require modules;
-    require network::ethernet;
+    require network::connection::ethernet;
     modules::load_category($modules_conf, list_modules::ethernet_categories());
-    my @all_dev = sort map { $_->[0] } network::ethernet::get_eth_cards($modules_conf);
+    my @all_dev = sort map { $_->[0] } network::connection::ethernet::get_eth_cards($modules_conf);
 
     #- only for a single ethernet network card
     my @ether_dev = grep { /^eth[0-9]+$/ && `LC_ALL= LANG= $::prefix/sbin/ip -o link show $_ 2>/dev/null` =~ m|\slink/ether\s| } @all_dev;
@@ -589,26 +672,27 @@ sub easy_dhcp {
     1;
 }
 
+sub reload_net_applet() {
+    #- make net_applet reload the configuration
+    my $pid = chomp_(`pidof -x net_applet`);
+    $pid and kill 1, $pid;
+}
+
 sub configure_network {
     my ($net, $in, $modules_conf) = @_;
     if (!$::testing) {
-        require network::ethernet;
-        network::ethernet::configure_eth_aliases($modules_conf);
+        require network::connection::ethernet;
+        network::connection::ethernet::configure_eth_aliases($modules_conf);
 
         write_network_conf($net);
         write_resolv_conf($net);
-        if ($::isInstall && ! -e "/etc/resolv.conf") {
-            #- symlink resolv.conf in install root too so that updates and suppl media can be added
-            symlink "$::prefix/etc/resolv.conf", "/etc/resolv.conf";
-        }
+        write_hostname($net->{network}{HOSTNAME}) if $net->{network}{HOSTNAME};
         foreach (keys %{$net->{ifcfg}}) {
             write_interface_conf($net, $_);
             my $ssid = $net->{ifcfg}{$_}{WIRELESS_ESSID} or next;
             write_wireless_conf($ssid, $net->{ifcfg}{$_});
         }
-        network::ethernet::install_dhcp_client($in, $_->{DHCP_CLIENT}) foreach grep { $_->{BOOTPROTO} eq "dhcp" } values %{$net->{ifcfg}};
-        add2hosts("localhost", "127.0.0.1");
-        add2hosts($net->{network}{HOSTNAME}, "127.0.0.1") if $net->{network}{HOSTNAME};
+        network::connection::ethernet::install_dhcp_client($in, $_->{DHCP_CLIENT}) foreach grep { $_->{BOOTPROTO} eq "dhcp" } values %{$net->{ifcfg}};
         write_zeroconf($net, $in);
 
         any { $_->{BOOTPROTO} =~ /^(pump|bootp)$/ } values %{$net->{ifcfg}} and $in->do_pkgs->install('pump');
@@ -616,12 +700,9 @@ sub configure_network {
         require network::shorewall;
         network::shorewall::update_interfaces_list();
 
-        $net->{network}{HOSTNAME} && !$::isInstall and sethostname($net);
     }
 
-    #- make net_applet reload the configuration
-    my $pid = chomp_(`pidof -x net_applet`);
-    $pid and kill 1, $pid;
+    reload_net_applet();
 }
 
 1;
