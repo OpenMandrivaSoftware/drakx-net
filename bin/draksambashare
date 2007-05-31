@@ -368,7 +368,8 @@ sub add_entry() {
 						    my $comment = $addshare_comment->get_text;
 						    my $test_dir = $addshare_dir->get_text;
 						    foreach my $clef (keys %$samba) {
-							if ($clef =~ /$share/) {
+							if ($clef =~
+								/\b$share\b/) {
 							    err_dialog(N("Error"), N("Share with the same name already exist or share name empty, please choose another name.")) and return;
 							}
 						    }
