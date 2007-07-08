@@ -134,7 +134,7 @@ my %actions = (
                    choice_selected => sub { $_[0]->is_started },
                    launch => sub { require interactive; $_[0]->is_started ? $_[0]->stop : $_[0]->start(interactive->vnew) },
                },
-               'help' => { name => N("Get Online Help"), launch => sub { system("drakhelp --id internet-connection &") } },
+               'help' => { name => N("Help"), launch => sub { system("drakhelp --id internet-connection &") } },
                'quit' => { name => N("Quit"), launch => \&mainQuit },
               );
 
