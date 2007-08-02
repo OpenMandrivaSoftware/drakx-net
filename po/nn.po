@@ -1,12 +1,13 @@
+# translation of network-tools.po to Norwegian Nynorsk
 # Translation of nn to Norwegian Nynorsk
-# Copyright (C) 2004, 2005, 2006 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2005, 2006.
+# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2005, 2006, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: nn\n"
+"Project-Id-Version: network-tools\n"
 "POT-Creation-Date: 2007-01-10 15:18+0100\n"
-"PO-Revision-Date: 2006-09-05 20:43+0200\n"
+"PO-Revision-Date: 2007-08-02 20:36+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -52,12 +53,12 @@ msgstr "Ingen"
 #: ../lib/network/connection.pm:163
 #, c-format
 msgid "Allow users to manage the connection"
-msgstr ""
+msgstr "Tillèt brukarar å handtera sambandet"
 
 #: ../lib/network/connection.pm:164
 #, c-format
 msgid "Start the connection at boot"
-msgstr ""
+msgstr "Start sambandet ved oppstart"
 
 #: ../lib/network/connection.pm:165 ../tools/drakconnect:462
 #, c-format
@@ -136,9 +137,9 @@ msgid "PIN number"
 msgstr "PIN-kode"
 
 #: ../lib/network/connection/cellular_card.pm:130
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to open device %s"
-msgstr "Bluetooth-einingar"
+msgstr "Klarte ikkje opna eininga «%s»"
 
 #: ../lib/network/connection/cellular_card.pm:155
 #, c-format
@@ -151,6 +152,8 @@ msgid ""
 "You entered a wrong PIN code.\n"
 "Entering the wrong PIN code multiple times may lock your SIM card!"
 msgstr ""
+"Du skreiv inn feil PIN-kode.\n"
+"Skriv du inn feil PIN-kode fleire gongar, kan SIM-kortet verta låst."
 
 #: ../lib/network/connection/dvb.pm:12
 #, c-format
@@ -185,7 +188,7 @@ msgstr "Ethernet"
 #: ../lib/network/connection/ethernet.pm:53
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
-msgstr ""
+msgstr "Klarte ikkje finna nettverksgrensesnitt for vald eining (med drivaren «%s»)."
 
 #: ../lib/network/connection/ethernet.pm:61 ../lib/network/vpn/openvpn.pm:207
 #, c-format
@@ -338,17 +341,17 @@ msgstr ""
 #: ../lib/network/connection/ethernet.pm:280
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
-msgstr ""
+msgstr "Spør etter nettverksadresse på grensesnittet «%s» (%s-protokollen) …"
 
 #: ../lib/network/connection/ethernet.pm:281
 #, c-format
 msgid "Got a network address on interface %s (%s protocol)"
-msgstr ""
+msgstr "Fekk nettverksadresse på grensesnittet «%s» (%s-protokollen) …"
 
 #: ../lib/network/connection/ethernet.pm:282
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
-msgstr ""
+msgstr "Fekk ikkje nettverksadresse på grensesnittet «%s» (%s-protokollen) …"
 
 #: ../lib/network/connection/isdn.pm:8
 #, c-format
@@ -754,14 +757,14 @@ msgstr "WPA Førehandsdelt nøkkel"
 #: ../lib/network/connection/wireless.pm:181 ../lib/network/thirdparty.pm:174
 #, c-format
 msgid "Firmware files are required for this device."
-msgstr ""
+msgstr "Du treng fastvarefiler for denne eininga."
 
 #: ../lib/network/connection/wireless.pm:209
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
 "switch) first."
-msgstr ""
+msgstr "Trådlauskortet er sett ut av bruk. Slå på trådlausbrytaren (RF kill switch)."
 
 #: ../lib/network/connection/wireless.pm:270
 #, c-format
@@ -981,12 +984,12 @@ msgstr "Godta nettveksling"
 #: ../lib/network/connection/wireless.pm:460
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
-msgstr ""
+msgstr "Knytt til trådlausnettverket «%s» på grensesnittet «%s»."
 
 #: ../lib/network/connection/wireless.pm:461
 #, c-format
 msgid "Lost association to wireless network on interface %s"
-msgstr ""
+msgstr "Mista tilknyting til trådlausnettverk på grensesnittet «%s»."
 
 #: ../lib/network/connection/xdsl.pm:8
 #, c-format
@@ -1228,7 +1231,7 @@ msgstr "Andre portar"
 #: ../lib/network/drakfirewall.pm:211
 #, c-format
 msgid "Log firewall messages in system logs"
-msgstr ""
+msgstr "Loggfør brannmurmeldingar i systemlogg"
 
 #: ../lib/network/drakfirewall.pm:255 ../lib/network/drakfirewall.pm:258
 #: ../tools/drakids:40 ../tools/drakids:65 ../tools/drakids:181
@@ -1240,15 +1243,15 @@ msgid "Interactive Firewall"
 msgstr "Interaktiv brannmur"
 
 #: ../lib/network/drakfirewall.pm:256
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You can be warned when someone accesses to a service or tries to intrude "
 "into your computer.\n"
 "Please select which network activities should be watched."
 msgstr ""
 "Du kan varslast når nokon prøver å få tilgang til ei teneste på maskina di, "
-"eller å bryta inn i maskina.\n"
-"Vel kva nettverksaktivetet som skal overvakast."
+"eller prøver å bryta seg inn på maskina.\n"
+"Vel kva nettverksaktivetet du vil overvaka."
 
 #: ../lib/network/drakfirewall.pm:261
 #, c-format
@@ -1268,17 +1271,17 @@ msgstr "Vel VPN-type"
 #: ../lib/network/drakvpn.pm:49
 #, c-format
 msgid "Initializing tools and detecting devices for %s..."
-msgstr ""
+msgstr "Gjer klar verktøy og ser etter einingar for «%s» …"
 
 #: ../lib/network/drakvpn.pm:52
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize %s connection type!"
-msgstr "Skrivartilkopling"
+msgstr "Klarte ikkje gjera klar sambandstypen «%s»."
 
 #: ../lib/network/drakvpn.pm:60
 #, c-format
 msgid "Please select an existing VPN connection or enter a new name."
-msgstr ""
+msgstr "Vel eit gammalt VPN-oppsett, eller skriv inn eit nytt namn."
 
 #: ../lib/network/drakvpn.pm:64
 #, c-format
@@ -1301,22 +1304,22 @@ msgstr "Åtvaring"
 #: ../lib/network/drakvpn.pm:70
 #, c-format
 msgid "You must select an existing connection or enter a new name."
-msgstr ""
+msgstr "Du må velja eit gammal samband, eller skriva inn eit nytt namn."
 
 #: ../lib/network/drakvpn.pm:81
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter the required key(s)"
-msgstr "Skriv inn WebDAV-tenaradresse"
+msgstr "Skriv inn nødvendig(e) nøkkel/nøklar"
 
 #: ../lib/network/drakvpn.pm:86
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter the settings of your VPN connection"
-msgstr "Skriv inn trådlausinnstillingane for kortet."
+msgstr "Skriv inn innstillingane for VPN-sambandet"
 
 #: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:291
 #, c-format
 msgid "Do you want to start the connection now?"
-msgstr ""
+msgstr "Ønskjer du å starta sambandet no?"
 
 #: ../lib/network/drakvpn.pm:100
 #, c-format
@@ -1333,6 +1336,9 @@ msgid ""
 "It can be done by reconfiguring the network connection and selecting this "
 "VPN connection.\n"
 msgstr ""
+"VPN-sambandet er no sett opp.\n\n"
+"Dette VPN-sambandet kan startast automatisk saman med eit nettverkssamband.\n"
+"Dette kan du gjera ved å setja opp nettverkssambandet på nytt, og så velja dette VPN-sambandet.\n"
 
 #: ../lib/network/ifw.pm:129
 #, c-format
@@ -1379,7 +1385,7 @@ msgstr "Eit «%s»-åtak vart forsøkt av «%s»."
 msgid ""
 "The \"%s\" application is trying to make a service (%s) available to the "
 "network."
-msgstr ""
+msgstr "Programmet «%s» prøver å gjera ei teneste (%s) tilgjengeleg til nettverket."
 
 #. -PO: this should be kept lowercase since the expression is meant to be used between brackets
 #: ../lib/network/ifw.pm:150
@@ -1513,7 +1519,7 @@ msgstr "Vel nettverksgrensesnittet du vil setja opp:"
 #: ../lib/network/netconnect.pm:164
 #, c-format
 msgid "No device can be found for this connection type."
-msgstr ""
+msgstr "Fann inga eining for denne sambandstypen."
 
 #: ../lib/network/netconnect.pm:173
 #, c-format
@@ -1546,6 +1552,8 @@ msgid ""
 "Please select your connection protocol.\n"
 "If you do not know it, keep the preselected protocol."
 msgstr ""
+"Vel sambandsprotokoll.\n"
+"Bruk den førehandsvalde protokollen om du ikkje veit kva du skal velja."
 
 #: ../lib/network/netconnect.pm:285 ../lib/network/netconnect.pm:655
 #, c-format
@@ -2139,8 +2147,7 @@ msgstr "Mellomtenaroppsett"
 msgid ""
 "Here you can set up your proxies configuration (eg: http://"
 "my_caching_server:8080)"
-msgstr ""
-"Her kan du setja opp mellomtenarar (eksempel: http://min_mellomtenar:8080)"
+msgstr "Her kan du setja opp mellomtenarar (eksempel: http://min_mellomtenar:8080)"
 
 #: ../lib/network/network.pm:431
 #, c-format
@@ -2163,9 +2170,9 @@ msgid "FTP proxy"
 msgstr "FTP-mellomtenar"
 
 #: ../lib/network/network.pm:435
-#, fuzzy, c-format
+#, c-format
 msgid "No proxy for (comma separated list):"
-msgstr "%d kommadelte tekstar"
+msgstr "Ingen mellomtenar for (kommadelt liste):"
 
 #: ../lib/network/network.pm:440
 #, c-format
@@ -2173,9 +2180,9 @@ msgid "Proxy should be http://..."
 msgstr "Mellomtenaren skal vera på forma «http://…»"
 
 #: ../lib/network/network.pm:441
-#, fuzzy, c-format
+#, c-format
 msgid "Proxy should be http://... or https://..."
-msgstr "Mellomtenaren skal vera på forma «https?://…»"
+msgstr "Mellomtenaren skal vera på forma «http://» eller «https://» …"
 
 #: ../lib/network/network.pm:442
 #, c-format
@@ -2192,16 +2199,20 @@ msgid ""
 "\n"
 "Which interfaces should be protected?\n"
 msgstr ""
+"Vel grensesnitta du vil verna med brannmuren.\n\n"
+"Du bør velja alle grensesnitta som er kopla direkte til Internett,\n"
+"men treng ikkje velja grensesnitt kopla til lokalnettverk.\n\n"
+"Kva grensesnitt vil du verna?\n"
 
 #: ../lib/network/shorewall.pm:136
 #, c-format
 msgid "Keep custom rules"
-msgstr ""
+msgstr "Behald sjølvlaga reglar"
 
 #: ../lib/network/shorewall.pm:137
 #, c-format
 msgid "Drop custom rules"
-msgstr ""
+msgstr "Fjern sjølvlaga reglar"
 
 #: ../lib/network/shorewall.pm:142
 #, c-format
@@ -2210,11 +2221,14 @@ msgid ""
 "rules that may conflict with the configuration that has just been set up.\n"
 "What do you want to do?"
 msgstr ""
+"Brannmuroppsettet ditt er manuelt endra, og inneheld reglar som\n"
+"kan vera i konflikt med oppsettet som nettopp vart laga.\n"
+"Kva vil du gjera?"
 
 #: ../lib/network/thirdparty.pm:134
 #, c-format
 msgid "Some components (%s) are required but aren't available for %s hardware."
-msgstr ""
+msgstr "Nokre komponentar («%s») trengst, men er ikkje tilgjengelege for maskinvaren %s."
 
 #: ../lib/network/thirdparty.pm:135
 #, c-format
@@ -2226,13 +2240,12 @@ msgstr "Nokre pakkar («%s») trengst, men er ikkje tilgjengelege."
 msgid ""
 "These packages can be found in Mandriva Club or in Mandriva commercial "
 "releases."
-msgstr ""
-"Desse pakkane finn du i Mandriva Club, og i kommersielle Mandriva-utgåver."
+msgstr "Desse pakkane finn du i Mandriva Club, og i kommersielle Mandriva-utgåver."
 
 #: ../lib/network/thirdparty.pm:138
 #, c-format
 msgid "The following component is missing: %s"
-msgstr ""
+msgstr "Desse komponentane manglar: %s"
 
 #: ../lib/network/thirdparty.pm:140
 #, c-format
@@ -2259,9 +2272,9 @@ msgid "Select file"
 msgstr "Vel fil"
 
 #: ../lib/network/thirdparty.pm:190
-#, fuzzy, c-format
+#, c-format
 msgid "Please select the firmware file (for example: %s)"
-msgstr "Vel Windows-drivarfila (ei .inf-fil)"
+msgstr "Vel fastvarefila (eksempel: %s)"
 
 #: ../lib/network/thirdparty.pm:214
 #, c-format
@@ -2310,12 +2323,12 @@ msgstr "Vent litt. Køyrer maskinvareoppsettkommandoar …"
 #: ../lib/network/vpn/openvpn.pm:107
 #, c-format
 msgid "X509 Public Key Infrastructure"
-msgstr ""
+msgstr "X509 Public Key Infrastructure"
 
 #: ../lib/network/vpn/openvpn.pm:108
 #, c-format
 msgid "Static Key"
-msgstr ""
+msgstr "Statisk nøkkel"
 
 #: ../lib/network/vpn/openvpn.pm:115
 #, c-format
@@ -2326,7 +2339,7 @@ msgstr "Type"
 #: ../lib/network/vpn/openvpn.pm:142
 #, c-format
 msgid "Certificate Authority (CA)"
-msgstr ""
+msgstr "Sertifikatutferdar (CA)"
 
 #: ../lib/network/vpn/openvpn.pm:148
 #, c-format
@@ -2339,9 +2352,9 @@ msgid "Key"
 msgstr "Nøkkel"
 
 #: ../lib/network/vpn/openvpn.pm:160
-#, fuzzy, c-format
+#, c-format
 msgid "TLS control channel key"
-msgstr "Venstre «Ctrl»-tast"
+msgstr "TLS-kontrollkanalnøkkel"
 
 #: ../lib/network/vpn/openvpn.pm:167
 #, c-format
@@ -2349,14 +2362,14 @@ msgid "Key direction"
 msgstr "Nøkkelretning"
 
 #: ../lib/network/vpn/openvpn.pm:175
-#, fuzzy, c-format
+#, c-format
 msgid "Authenticate using username and password"
-msgstr "Klarte ikkje logga på med brukarnamnet «%s» (feil passord?)"
+msgstr "Autentiser med brukarnamn og passord"
 
 #: ../lib/network/vpn/openvpn.pm:181
 #, c-format
 msgid "Check server certificate"
-msgstr ""
+msgstr "Kontroller tenarsertifikat"
 
 #: ../lib/network/vpn/openvpn.pm:187
 #, c-format
@@ -2401,17 +2414,17 @@ msgstr "Bruk TCP-protokollen"
 #: ../lib/network/vpn/openvpn.pm:243
 #, c-format
 msgid "Virtual network device type"
-msgstr ""
+msgstr "Einingstype for virtuelt nettverk"
 
 #: ../lib/network/vpn/openvpn.pm:250
 #, c-format
 msgid "Virtual network device number (optional)"
-msgstr ""
+msgstr "Einingsnummer for virtuelt nettverk (valfritt)"
 
 #: ../lib/network/vpn/openvpn.pm:365
 #, c-format
 msgid "Starting connection.."
-msgstr ""
+msgstr "Startar samband …"
 
 #: ../lib/network/vpn/openvpn.pm:380
 #, c-format
@@ -2421,7 +2434,7 @@ msgstr ""
 #: ../lib/network/vpn/vpnc.pm:9
 #, c-format
 msgid "Cisco VPN Concentrator"
-msgstr ""
+msgstr "Cisco VPN Concentrator"
 
 #: ../lib/network/vpn/vpnc.pm:43
 #, c-format
@@ -2431,7 +2444,7 @@ msgstr "Gruppenamn"
 #: ../lib/network/vpn/vpnc.pm:47
 #, c-format
 msgid "Group secret"
-msgstr ""
+msgstr "Gruppeløyndom"
 
 #: ../lib/network/vpn/vpnc.pm:52
 #, c-format
@@ -2441,17 +2454,17 @@ msgstr "Brukarnamn"
 #: ../lib/network/vpn/vpnc.pm:61
 #, c-format
 msgid "Use Cisco-UDP encapsulation"
-msgstr ""
+msgstr "Bruk Cisco-UDP-innkapsling"
 
 #: ../lib/network/vpn/vpnc.pm:67
 #, c-format
 msgid "Use specific UDP port"
-msgstr ""
+msgstr "Bruk vald UDP-port"
 
 #: ../tools/drakconnect:81
 #, c-format
 msgid "Network configuration (%d adapters)"
-msgstr ""
+msgstr "Nettverksoppsett (%d kort)"
 
 #: ../tools/drakconnect:93 ../tools/drakconnect:812
 #, c-format
@@ -2673,8 +2686,7 @@ msgstr "Inga maske"
 msgid ""
 "No ethernet network adapter has been detected on your system. Please run the "
 "hardware configuration tool."
-msgstr ""
-"Fann ikkje noko nettverkskort. Prøv å køyra maskinvareoppsettverktøyet."
+msgstr "Fann ikkje noko nettverkskort. Prøv å køyra maskinvareoppsettverktøyet."
 
 #: ../tools/drakconnect:714
 #, c-format
@@ -2699,8 +2711,7 @@ msgstr ""
 
 #: ../tools/drakconnect:751
 #, c-format
-msgid ""
-"Congratulations, the \"%s\" network interface has been successfully deleted"
+msgid "Congratulations, the \"%s\" network interface has been successfully deleted"
 msgstr "Nettverksgrensesnittet «%s» er no fjerna."
 
 #: ../tools/drakconnect:768 ../tools/drakconnect:921
@@ -3362,8 +3373,7 @@ msgstr "Ny profil ..."
 msgid ""
 "Name of the profile to create (the new profile is created as a copy of the "
 "current one):"
-msgstr ""
-"Namn på den nye profilen (denne blir laga som ein kopi av gjeldande profil):"
+msgstr "Namn på den nye profilen (denne blir laga som ein kopi av gjeldande profil):"
 
 #: ../tools/draknetprofile:113
 #, c-format
@@ -4076,8 +4086,7 @@ msgstr ""
 
 #: ../tools/draksambashare:421
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
 msgstr ""
 
 #: ../tools/draksambashare:428
@@ -4222,8 +4231,7 @@ msgstr ""
 
 #: ../tools/draksambashare:778
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 
 #: ../tools/draksambashare:785
@@ -5572,3 +5580,4 @@ msgstr ""
 #, c-format
 msgid "No internet connection configured"
 msgstr "Ingen Internett-samband sett opp."
+
