@@ -27,6 +27,8 @@ use network::connection::wireless;
 use network::connection::cellular_card;
 use modules;
 
+my $droam = {};
+
 my $title = N("Wireless connection");
 my $icon = '/usr/share/mcc/themes/default/drakroam-mdk.png';
 
@@ -39,8 +41,6 @@ my $in = 'interactive'->vnew('su');
 my %args = map { if_(/^--(\w+)=(.*)$/ && member($1, qw(ap interface)), $1 => $2) } @ARGV;
 
 my @connection_types = qw(network::connection::wireless network::connection::cellular_card);
-my @connections;
-my $connection;
 
 my %buttons;
 
@@ -59,56 +59,56 @@ my $empty_pixbuf = Gtk2::Gdk::Pixbuf->new('rgb', 1, 8, $pixbuf_size, $pixbuf_siz
 $empty_pixbuf->fill(0);
 
 sub update_connections_list() {
-    $model->set($model->append, 0, $empty_pixbuf , 1, N("No device found")) unless @connections;
+    $model->set($model->append, 0, $empty_pixbuf , 1, N("No device found")) unless @{$droam->{all_connections}};
     $model->set($model->append,
                 0, gtknew('Pixbuf', file => $_->get_type_icon)->scale_simple($pixbuf_size, $pixbuf_size, 'hyper'),
-                1, $_->get_description) foreach @connections;
-    my $index = $connection && eval { find_index { $_ == $connection } @connections };
+                1, $_->get_description) foreach @{$droam->{all_connections}};
+    my $index = $droam->{connection} && eval { find_index { $_ == $droam->{connection} } @{$droam->{all_connections}} };
     $connections_combo->set_active($index) if defined $index;
 }
 
 sub get_connection() {
-    @connections or return;
+    @{$droam->{all_connections}} or return;
     my $index = $connections_combo->get_active;
-    defined $index && $connections[$index];
+    defined $index && $droam->{all_connections}[$index];
 }
 
 sub prepare_connection() {
-    my @packages = $connection->can('get_packages') ? $connection->get_packages : ();
+    my @packages = $droam->{connection}->can('get_packages') ? $droam->{connection}->get_packages : ();
     if (@packages && !$in->do_pkgs->install(@packages)) {
         $in->ask_warn(N("Error"), N("Could not install the packages (%s)!", join(', ', @packages)));
         return;
     }
-    $connection->prepare_device;
-    $connection->setup_thirdparty($in) or return;
-    if ($connection->can("check_device") && !$connection->check_device) {
-        $in->ask_warn(N("Error"), $connection->{device}{error});
+    $droam->{connection}->prepare_device;
+    $droam->{connection}->setup_thirdparty($in) or return;
+    if ($droam->{connection}->can("check_device") && !$droam->{connection}->check_device) {
+        $in->ask_warn(N("Error"), $droam->{connection}{device}{error});
         return;
     }
-    if ($connection->can('get_hardware_settings')) {
-        $connection->guess_hardware_settings if $connection->can('guess_hardware_settings');
+    if ($droam->{connection}->can('get_hardware_settings')) {
+        $droam->{connection}->guess_hardware_settings if $droam->{connection}->can('guess_hardware_settings');
         $in->ask_from_({
             title => "Network settings",
             messages => N("Please enter settings for network")
-        }, $connection->get_hardware_settings) or return;
+        }, $droam->{connection}->get_hardware_settings) or return;
     }
-    if ($connection->can('check_hardware')) {
+    if ($droam->{connection}->can('check_hardware')) {
         my $_w = $in->wait_message('', N("Configuring device..."));
-        if (!$connection->check_hardware) {
-            $in->ask_warn(N("Error"), $connection->{hardware}{error}) if $connection->{hardware}{error};
+        if (!$droam->{connection}->check_hardware) {
+            $in->ask_warn(N("Error"), $droam->{connection}{hardware}{error}) if $droam->{connection}{hardware}{error};
             return;
         }
     }
 }
 
 sub select_connection() {
-    $connection = get_connection();
-    prepare_connection() if $connection;
+    $droam->{connection} = get_connection();
+    prepare_connection() if $droam->{connection};
     update_on_connection_change();
 }
 
 sub update_on_connection_change() {
-    $buttons{refresh}->set_sensitive(to_bool($connection));
+    $buttons{refresh}->set_sensitive(to_bool($droam->{connection}));
     update_networks();
 }
 
@@ -137,7 +137,7 @@ sub get_network_event_message {
         N("Hostname changed to \"%s\"", $hostname);
     } elsif ($member eq 'status') {
         my ($status, $interface) = @args;
-        my $event_connection = find { $_->get_interface eq $interface } @connections;
+        my $event_connection = find { $_->get_interface eq $interface } @{$droam->{all_connections}};
         $event_connection && $event_connection->get_status_message($status);
     }
 }
@@ -172,18 +172,18 @@ my %pixbufs =
 sub update_networks() {
     @{$networks_list->{data}} = ();
 
-    if ($connection) {
-        my $wait = $connection->network_scan_is_slow && $in->wait_message('', N("Scanning for networks..."));
-        $connection->{networks} = $connection->get_networks;
+    if ($droam->{connection}) {
+        my $wait = $droam->{connection}->network_scan_is_slow && $in->wait_message('', N("Scanning for networks..."));
+        $droam->{connection}{networks} = $droam->{connection}->get_networks;
         undef $wait;
 
-        $connection->{network} ||= find { $connection->{networks}{$_}{current} } keys %{$connection->{networks}};
+        $droam->{connection}{network} ||= find { $droam->{connection}{networks}{$_}{current} } keys %{$droam->{connection}{networks}};
 
         my $routes = network::tools::get_routes();
-        my $interface = $connection->get_interface;
+        my $interface = $droam->{connection}->get_interface;
         my $connected = exists $routes->{$interface}{network};
 
-        while (my ($ap, $network) = each(%{$connection->{networks}})) {
+        while (my ($ap, $network) = each(%{$droam->{connection}{networks}})) {
             push @{$networks_list->{data}}, [
                 $ap || $network->{name},
                 $network->{current} ? $connected ? $pixbufs{state}{connected} : $pixbufs{state}{refresh} : undef,
@@ -195,8 +195,8 @@ sub update_networks() {
             ];
         }
 
-        if ($connection->{network}) {
-            my $index = eval { find_index { $_->[0] eq $connection->{network} } @{$networks_list->{data}} };
+        if ($droam->{connection}{network}) {
+            my $index = eval { find_index { $_->[0] eq $droam->{connection}{network} } @{$networks_list->{data}} };
             $networks_list->select($index) if defined $index;
         }
     }
@@ -205,14 +205,14 @@ sub update_networks() {
 }
 
 sub load_settings() {
-    $connection->load_interface_settings;
-    $connection->guess_network_access_settings if $connection->can('guess_network_access_settings');
-    $connection->guess_protocol($net) if $connection->can('guess_protocol');
-    $connection->guess_access_settings if $connection->can('guess_access_settings');
-    $connection->guess_address_settings if $connection->can('guess_address_settings');
-    $connection->guess_hostname_settings if $connection->can('guess_hostname_settings');
-    $connection->guess_network_control_settings if $connection->can('guess_network_control_settings');
-    $connection->guess_control_settings;
+    $droam->{connection}->load_interface_settings;
+    $droam->{connection}->guess_network_access_settings if $droam->{connection}->can('guess_network_access_settings');
+    $droam->{connection}->guess_protocol($net) if $droam->{connection}->can('guess_protocol');
+    $droam->{connection}->guess_access_settings if $droam->{connection}->can('guess_access_settings');
+    $droam->{connection}->guess_address_settings if $droam->{connection}->can('guess_address_settings');
+    $droam->{connection}->guess_hostname_settings if $droam->{connection}->can('guess_hostname_settings');
+    $droam->{connection}->guess_network_control_settings if $droam->{connection}->can('guess_network_control_settings');
+    $droam->{connection}->guess_control_settings;
 }
 
 sub configure_network() {
@@ -223,57 +223,57 @@ sub configure_network() {
         messages => N("Please enter settings for network")
     },
                    [
-                       $connection->can('get_network_access_settings') ? (
-                           { label => $connection->get_network_access_settings_label, title => 1, advanced => 1 },
-                           @{$connection->get_network_access_settings},
+                       $droam->{connection}->can('get_network_access_settings') ? (
+                           { label => $droam->{connection}->get_network_access_settings_label, title => 1, advanced => 1 },
+                           @{$droam->{connection}->get_network_access_settings},
                        ) : (),
-                       $connection->can('get_protocols') ? (
-                         @{$connection->get_protocol_settings},
+                       $droam->{connection}->can('get_protocols') ? (
+                         @{$droam->{connection}->get_protocol_settings},
                        ) : (),
-                       $connection->can('get_access_settings') ? (
-                         { label => $connection->get_access_settings_label, title => 1, advanced => 1 },
-                         @{$connection->get_access_settings}
+                       $droam->{connection}->can('get_access_settings') ? (
+                         { label => $droam->{connection}->get_access_settings_label, title => 1, advanced => 1 },
+                         @{$droam->{connection}->get_access_settings}
                        ) : (),
-                       $connection->can('get_address_settings') ? (
-                         { label => $connection->get_address_settings_label, title => 1, advanced => 1 },
-                         @{$connection->get_address_settings('show_all')}
+                       $droam->{connection}->can('get_address_settings') ? (
+                         { label => $droam->{connection}->get_address_settings_label, title => 1, advanced => 1 },
+                         @{$droam->{connection}->get_address_settings('show_all')}
                        ) : (),
-                       $connection->can('get_network_control_settings') ? (
-                         @{$connection->get_network_control_settings}
+                       $droam->{connection}->can('get_network_control_settings') ? (
+                         @{$droam->{connection}->get_network_control_settings}
                        ) : (),
                    ],
                ) or return;
 
-    $connection->install_packages($in) if $connection->can('install_packages');
-    $connection->unload_connection if $connection->can('unload_connection');
+    $droam->{connection}->install_packages($in) if $droam->{connection}->can('install_packages');
+    $droam->{connection}->unload_connection if $droam->{connection}->can('unload_connection');
 
     my $modules_conf = modules::any_conf->read;
-    $connection->write_settings($net, $modules_conf);
+    $droam->{connection}->write_settings($net, $modules_conf);
     $modules_conf->write;
 
     1;
 }
 
 sub connect_to_network() {
-    if ($connection->selected_network_is_configured || configure_network()) {
+    if ($droam->{connection}->selected_network_is_configured || configure_network()) {
         gtkset_mousecursor_wait($w->{window}->window);
         my $_wait = $in->wait_message(N("Please wait"), N("Connecting..."));
         #- settings have to be rewritten only if they are impacted by choices from the main window
-        if ($connection->can('get_networks')) {
+        if ($droam->{connection}->can('get_networks')) {
             load_settings();
-            $connection->write_settings($net);
+            $droam->{connection}->write_settings($net);
         }
-        $connection->prepare_connection if $connection->can('prepare_connection');
-        $connection->disconnect;
-        $connection->connect($in, $net);
+        $droam->{connection}->prepare_connection if $droam->{connection}->can('prepare_connection');
+        $droam->{connection}->disconnect;
+        $droam->{connection}->connect($in, $net);
         gtkset_mousecursor_normal($w->{window}->window);
     }
 }
 
 sub select_network() {
-    if ($connection) {
+    if ($droam->{connection}) {
         my ($selected) = $networks_list->get_selected_indices;
-        $connection->{network} = defined $selected && $networks_list->{data}[$selected][0];
+        $droam->{connection}{network} = defined $selected && $networks_list->{data}[$selected][0];
     }
     update_on_network_change();
 }
@@ -281,25 +281,25 @@ sub select_network() {
 sub update_on_network_change() {
     $buttons{connect}->set_label(toggle_would_disconnect() ? N("Disconnect") : N("Connect"));
     #- always allow to disconnect if connected
-    $buttons{connect}->set_sensitive($connection && ($connection->get_status || $connection->{network}));
+    $buttons{connect}->set_sensitive($droam->{connection} && ($droam->{connection}->get_status || $droam->{connection}{network}));
     #- allow to configure only if a network is selected
-    $buttons{configure}->set_sensitive($connection && $connection->{network});
+    $buttons{configure}->set_sensitive($droam->{connection} && $droam->{connection}{network});
 }
 
 sub toggle_would_disconnect() {
-    my $network = $connection && $connection->get_selected_network;
-    $connection && $connection->get_status &&
-      (!$network || keys(%{$connection->{networks}}) <= 1 || $network->{current});
+    my $network = $droam->{connection} && $droam->{connection}->get_selected_network;
+    $droam->{connection} && $droam->{connection}->get_status &&
+      (!$network || keys(%{$droam->{connection}{networks}}) <= 1 || $network->{current});
 }
 
 sub toggle_connection() {
     if (toggle_would_disconnect()) {
         gtkset_mousecursor_wait($w->{window}->window);
         my $_wait = $in->wait_message(N("Please wait"), N("Disconnecting..."));
-        $connection->disconnect;
+        $droam->{connection}->disconnect;
         gtkset_mousecursor_normal($w->{window}->window);
-    } elsif ($connection) {
-        $connection->{network} or return;
+    } elsif ($droam->{connection}) {
+        $droam->{connection}{network} or return;
         connect_to_network();
     }
     update_on_network_change();
@@ -324,14 +324,14 @@ $networks_list->get_selection->signal_connect('changed' => \&select_network);
 
 $w->show;
 
-@connections = map { $_->get_connections(automatic_only => 1) } @connection_types;
-$connection = $args{interface} && find { $_->get_interface eq $args{interface} } @connections;
-$connection ||= find { !$_->network_scan_is_slow } @connections;
+@{$droam->{all_connections}} = map { $_->get_connections(automatic_only => 1) } @connection_types;
+$droam->{connection} = $args{interface} && find { $_->get_interface eq $args{interface} } @{$droam->{all_connections}};
+$droam->{connection} ||= find { !$_->network_scan_is_slow } @{$droam->{all_connections}};
 update_connections_list();
 update_on_connection_change();
 
-if ($args{ap} && $connection) {
-    $connection->{network} = $args{ap};
+if ($args{ap} && $droam->{connection}) {
+    $droam->{connection}{network} = $args{ap};
     $w->{window}->show_all;
     connect_to_network();
 }
