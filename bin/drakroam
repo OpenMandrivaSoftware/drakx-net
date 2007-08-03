@@ -46,7 +46,6 @@ my %buttons;
 
 my $model = Gtk2::ListStore->new('Gtk2::Gdk::Pixbuf', 'Glib::String');
 my $connections_combo = Gtk2::ComboBox->new($model);
-$connections_combo = Gtk2::ComboBox->new($model);
 my $pix_r = Gtk2::CellRendererPixbuf->new;
 $connections_combo->pack_start($pix_r, 0,);
 $connections_combo->add_attribute($pix_r, pixbuf => 0);
