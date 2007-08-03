@@ -28,8 +28,7 @@ use network::connection::cellular_card;
 use modules;
 
 my $droam = {};
-
-my $in = 'interactive'->vnew('su');
+$droam->{in} = 'interactive'->vnew('su');
 
 my $net = {};
 network::network::read_net_conf($net);
@@ -57,27 +56,27 @@ sub prepare_connection {
     my ($droam) = @_;
 
     my @packages = $droam->{connection}->can('get_packages') ? $droam->{connection}->get_packages : ();
-    if (@packages && !$in->do_pkgs->install(@packages)) {
-        $in->ask_warn(N("Error"), N("Could not install the packages (%s)!", join(', ', @packages)));
+    if (@packages && !$droam->{in}->do_pkgs->install(@packages)) {
+        $droam->{in}->ask_warn(N("Error"), N("Could not install the packages (%s)!", join(', ', @packages)));
         return;
     }
     $droam->{connection}->prepare_device;
-    $droam->{connection}->setup_thirdparty($in) or return;
+    $droam->{connection}->setup_thirdparty($droam->{in}) or return;
     if ($droam->{connection}->can("check_device") && !$droam->{connection}->check_device) {
-        $in->ask_warn(N("Error"), $droam->{connection}{device}{error});
+        $droam->{in}->ask_warn(N("Error"), $droam->{connection}{device}{error});
         return;
     }
     if ($droam->{connection}->can('get_hardware_settings')) {
         $droam->{connection}->guess_hardware_settings if $droam->{connection}->can('guess_hardware_settings');
-        $in->ask_from_({
+        $droam->{in}->ask_from_({
             title => "Network settings",
             messages => N("Please enter settings for network")
         }, $droam->{connection}->get_hardware_settings) or return;
     }
     if ($droam->{connection}->can('check_hardware')) {
-        my $_w = $in->wait_message('', N("Configuring device..."));
+        my $_w = $droam->{in}->wait_message('', N("Configuring device..."));
         if (!$droam->{connection}->check_hardware) {
-            $in->ask_warn(N("Error"), $droam->{connection}{hardware}{error}) if $droam->{connection}{hardware}{error};
+            $droam->{in}->ask_warn(N("Error"), $droam->{connection}{hardware}{error}) if $droam->{connection}{hardware}{error};
             return;
         }
     }
@@ -115,7 +114,7 @@ sub update_networks {
     @{$droam->{gui}{networks_list}{data}} = ();
 
     if ($droam->{connection}) {
-        my $wait = $droam->{connection}->network_scan_is_slow && $in->wait_message('', N("Scanning for networks..."));
+        my $wait = $droam->{connection}->network_scan_is_slow && $droam->{in}->wait_message('', N("Scanning for networks..."));
         $droam->{connection}{networks} = $droam->{connection}->get_networks;
         undef $wait;
 
@@ -164,7 +163,7 @@ sub configure_network {
 
     load_settings($droam);
 
-    $in->ask_from_({
+    $droam->{in}->ask_from_({
         title => "Network settings",
         messages => N("Please enter settings for network")
     },
@@ -190,7 +189,7 @@ sub configure_network {
                    ],
                ) or return;
 
-    $droam->{connection}->install_packages($in) if $droam->{connection}->can('install_packages');
+    $droam->{connection}->install_packages($droam->{in}) if $droam->{connection}->can('install_packages');
     $droam->{connection}->unload_connection if $droam->{connection}->can('unload_connection');
 
     my $modules_conf = modules::any_conf->read;
@@ -205,7 +204,7 @@ sub connect_to_network {
 
     if ($droam->{connection}->selected_network_is_configured || configure_network($droam)) {
         gtkset_mousecursor_wait($droam->{gui}{w}{window}->window);
-        my $_wait = $in->wait_message(N("Please wait"), N("Connecting..."));
+        my $_wait = $droam->{in}->wait_message(N("Please wait"), N("Connecting..."));
         #- settings have to be rewritten only if they are impacted by choices from the main window
         if ($droam->{connection}->can('get_networks')) {
             load_settings($droam);
@@ -213,7 +212,7 @@ sub connect_to_network {
         }
         $droam->{connection}->prepare_connection if $droam->{connection}->can('prepare_connection');
         $droam->{connection}->disconnect;
-        $droam->{connection}->connect($in, $net);
+        $droam->{connection}->connect($droam->{in}, $net);
         gtkset_mousecursor_normal($droam->{gui}{w}{window}->window);
     }
 }
@@ -251,7 +250,7 @@ sub toggle_connection {
 
     if (toggle_would_disconnect($droam)) {
         gtkset_mousecursor_wait($droam->{gui}{w}{window}->window);
-        my $_wait = $in->wait_message(N("Please wait"), N("Disconnecting..."));
+        my $_wait = $droam->{in}->wait_message(N("Please wait"), N("Disconnecting..."));
         $droam->{connection}->disconnect;
         gtkset_mousecursor_normal($droam->{gui}{w}{window}->window);
     } elsif ($droam->{connection}) {
