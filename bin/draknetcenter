@@ -25,17 +25,6 @@ use network::connection;
 use network::connection::wireless;
 use network::connection::cellular_card;
 
-my $title = N("Network Center");
-my $icon = '/usr/share/mcc/themes/default/drakroam-mdk.png';
-
-$ugtk2::wm_icon = $icon;
-my $w = ugtk2->new($title);
-#- so that transient_for is defined, for wait messages and popups to be centered
-$::main_window = $w->{real_window};
-
-my @connections = map { $_->get_connections(automatic_only => 1) } network::connection::get_types;
-@connections = reverse(uniq_ { $_->{device} } reverse(@connections));
-
 sub build_networks_list {
     my ($connection) = @_;
 
@@ -101,7 +90,19 @@ sub gtkset_image {
     $w;
 }
 
-gtkadd($w->{window},
+sub main() {
+    my $title = N("Network Center");
+    my $icon = '/usr/share/mcc/themes/default/drakroam-mdk.png';
+
+    $ugtk2::wm_icon = $icon;
+    my $w = ugtk2->new($title);
+    #- so that transient_for is defined, for wait messages and popups to be centered
+    $::main_window = $w->{real_window};
+
+    my @connections = map { $_->get_connections(automatic_only => 1) } network::connection::get_types;
+    @connections = reverse(uniq_ { $_->{device} } reverse(@connections));
+
+    gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
            $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
            1, gtknew('ScrolledWindow', width => 500, height => 300, child => gtknew('VBox', spacing => 5, children_tight => [
@@ -127,6 +128,9 @@ gtkadd($w->{window},
                } @connections,
            ])),
        ]),
-   );
+    );
 
-$w->main;
+    $w->main;
+}
+
+main();
