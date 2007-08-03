@@ -263,6 +263,22 @@ sub build_pixbufs {
     };
 }
 
+sub build_network_frame {
+    my ($droam) = @_;
+
+    $droam->{gui}{networks_list} = Gtk2::SimpleList->new(
+        "AP" => "hidden",
+        '' => "pixbuf",
+        N("SSID") => "text",
+        N("Signal strength") => "pixbuf",
+        '' => "pixbuf",
+        N("Encryption") => "text",
+        N("Operating Mode") => "text",
+    );
+    $droam->{gui}{networks_list}->get_selection->set_mode('single');
+    $droam->{gui}{networks_list}->get_selection->signal_connect('changed' => sub { select_network($droam) });
+}
+
 sub build_drakroam_gui {
     my ($droam, $dbus) = @_;
 
@@ -279,16 +295,7 @@ sub build_drakroam_gui {
     $droam->{gui}{empty_pixbuf} = Gtk2::Gdk::Pixbuf->new('rgb', 1, 8, $droam->{gui}{pixbuf_size}, $droam->{gui}{pixbuf_size});
     $droam->{gui}{empty_pixbuf}->fill(0);
 
-    $droam->{gui}{networks_list} = Gtk2::SimpleList->new(
-        "AP" => "hidden",
-        '' => "pixbuf",
-        N("SSID") => "text",
-        N("Signal strength") => "pixbuf",
-        '' => "pixbuf",
-        N("Encryption") => "text",
-        N("Operating Mode") => "text",
-    );
-    $droam->{gui}{networks_list}->get_selection->set_mode('single');
+    build_network_frame($droam);
 
     my $status_bar = Gtk2::Statusbar->new;
     my $status_bar_cid = $status_bar->get_context_id("Network event");
@@ -331,7 +338,6 @@ sub build_drakroam_gui {
                0, $status_bar,
            ]),
        );
-    $droam->{gui}{networks_list}->get_selection->signal_connect('changed' => sub { select_network($droam) });
 }
 
 sub main {
