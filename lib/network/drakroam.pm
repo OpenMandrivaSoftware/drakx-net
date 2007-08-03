@@ -326,7 +326,7 @@ sub build_drakroam_gui {
                0, $status_bar,
            ]),
        );
-    $droam->{gui}{networks_list}->get_selection->signal_connect('changed' => \&select_network);
+    $droam->{gui}{networks_list}->get_selection->signal_connect('changed' => sub { select_network($droam) });
 }
 
 sub main {
