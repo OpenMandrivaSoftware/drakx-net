@@ -33,9 +33,9 @@ my $title = N("Wireless connection");
 my $icon = '/usr/share/mcc/themes/default/drakroam-mdk.png';
 
 $ugtk2::wm_icon = $icon;
-my $w = ugtk2->new($title);
+$droam->{gui}{w} = ugtk2->new($title);
 #- so that transient_for is defined, for wait messages and popups to be centered
-$::main_window = $w->{real_window};
+$::main_window = $droam->{gui}{w}{real_window};
 my $in = 'interactive'->vnew('su');
 
 my $net = {};
@@ -195,7 +195,7 @@ sub configure_network() {
 
 sub connect_to_network() {
     if ($droam->{connection}->selected_network_is_configured || configure_network()) {
-        gtkset_mousecursor_wait($w->{window}->window);
+        gtkset_mousecursor_wait($droam->{gui}{w}{window}->window);
         my $_wait = $in->wait_message(N("Please wait"), N("Connecting..."));
         #- settings have to be rewritten only if they are impacted by choices from the main window
         if ($droam->{connection}->can('get_networks')) {
@@ -205,7 +205,7 @@ sub connect_to_network() {
         $droam->{connection}->prepare_connection if $droam->{connection}->can('prepare_connection');
         $droam->{connection}->disconnect;
         $droam->{connection}->connect($in, $net);
-        gtkset_mousecursor_normal($w->{window}->window);
+        gtkset_mousecursor_normal($droam->{gui}{w}{window}->window);
     }
 }
 
@@ -233,10 +233,10 @@ sub toggle_would_disconnect() {
 
 sub toggle_connection() {
     if (toggle_would_disconnect()) {
-        gtkset_mousecursor_wait($w->{window}->window);
+        gtkset_mousecursor_wait($droam->{gui}{w}{window}->window);
         my $_wait = $in->wait_message(N("Please wait"), N("Disconnecting..."));
         $droam->{connection}->disconnect;
-        gtkset_mousecursor_normal($w->{window}->window);
+        gtkset_mousecursor_normal($droam->{gui}{w}{window}->window);
     } elsif ($droam->{connection}) {
         $droam->{connection}{network} or return;
         connect_to_network();
@@ -301,7 +301,7 @@ $droam->{gui}{pixbufs} = {
       } qw(open weak strong) },
 };
 
-gtkadd($w->{window},
+gtkadd($droam->{gui}{w}{window},
        gtknew('VBox', spacing => 5, children => [
            $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
            0, gtknew('HBox', children_tight => [ gtknew('Label_Left', text => N("Device: "), alignment => [ 0.5, 0.5 ]),
@@ -318,7 +318,7 @@ gtkadd($w->{window},
    );
 $droam->{gui}{networks_list}->get_selection->signal_connect('changed' => \&select_network);
 
-$w->show;
+$droam->{gui}{w}->show;
 
 @{$droam->{all_connections}} = map { $_->get_connections(automatic_only => 1) } @connection_types;
 $droam->{connection} = $args{interface} && find { $_->get_interface eq $args{interface} } @{$droam->{all_connections}};
@@ -328,8 +328,8 @@ update_on_connection_change();
 
 if ($args{ap} && $droam->{connection}) {
     $droam->{connection}{network} = $args{ap};
-    $w->{window}->show_all;
+    $droam->{gui}{w}{window}->show_all;
     connect_to_network();
 }
 
-$w->main;
+$droam->{gui}{w}->main;
