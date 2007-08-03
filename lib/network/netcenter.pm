@@ -78,7 +78,7 @@ sub main() {
                            gtknew('HBox', children_tight => [
                                gtknew('Label', padding => [ 20, 0 ]),
                                gtknew('VBox', children_tight => [
-                                   ($_->can('get_networks') && !$_->network_scan_is_slow ? (build_networks_list($_, $net)) : ()),
+                                   ($_->can('get_networks') && !$_->network_scan_is_slow ? build_networks_list($_, $net) : ()),
                                    gtknew('HBox', children_tight => [
                                        gtknew('VBox', children_tight => [
                                            gtknew('HButtonBox', children_tight => [
