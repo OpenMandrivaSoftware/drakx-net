@@ -115,7 +115,10 @@ sub update_networks {
         my $interface = $droam->{connection}->get_interface;
         my $connected = exists $routes->{$interface}{network};
 
-        while (my ($ap, $network) = each(%{$droam->{connection}{networks}})) {
+        my @networks = values %{$droam->{connection}{networks}};
+        $droam->{filter_networks} and @networks = $droam->{filter_networks}(@networks);
+        foreach my $network (@networks) {
+            my $ap = $network->{ap};
             push @{$droam->{gui}{networks_list}{data}}, [
                 $ap || $network->{name},
                 $network->{current} ? $connected ? $droam->{gui}{pixbufs}{state}{connected} : $droam->{gui}{pixbufs}{state}{refresh} : undef,
