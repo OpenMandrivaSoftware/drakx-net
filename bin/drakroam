@@ -344,8 +344,6 @@ eval { $dbus = dbus_object::system_bus() };
 
 build_drakroam_gui($droam, $dbus);
 
-$droam->{gui}{w}->show;
-
 my @connection_types = qw(network::connection::wireless network::connection::cellular_card);
 @{$droam->{all_connections}} = map { $_->get_connections(automatic_only => 1) } @connection_types;
 $droam->{connection} = $args{interface} && find { $_->get_interface eq $args{interface} } @{$droam->{all_connections}};
@@ -355,7 +353,7 @@ update_on_connection_change($droam);
 
 if ($args{ap} && $droam->{connection}) {
     $droam->{connection}{network} = $args{ap};
-    $droam->{gui}{w}{window}->show_all;
+    $droam->{gui}{w}->show;
     connect_to_network($droam);
 }
 
