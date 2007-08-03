@@ -42,33 +42,31 @@ my %args = map { if_(/^--(\w+)=(.*)$/ && member($1, qw(ap interface)), $1 => $2)
 
 my @connection_types = qw(network::connection::wireless network::connection::cellular_card);
 
-my %buttons;
-
-my $model = Gtk2::ListStore->new('Gtk2::Gdk::Pixbuf', 'Glib::String');
-my $connections_combo = Gtk2::ComboBox->new($model);
+$droam->{gui}{model} = Gtk2::ListStore->new('Gtk2::Gdk::Pixbuf', 'Glib::String');
+$droam->{gui}{connections_combo} = Gtk2::ComboBox->new($droam->{gui}{model});
 my $pix_r = Gtk2::CellRendererPixbuf->new;
-$connections_combo->pack_start($pix_r, 0,);
-$connections_combo->add_attribute($pix_r, pixbuf => 0);
+$droam->{gui}{connections_combo}->pack_start($pix_r, 0,);
+$droam->{gui}{connections_combo}->add_attribute($pix_r, pixbuf => 0);
 my $text_r = Gtk2::CellRendererText->new;
-$connections_combo->pack_start($text_r, 1);
-$connections_combo->add_attribute($text_r, text => 1);
+$droam->{gui}{connections_combo}->pack_start($text_r, 1);
+$droam->{gui}{connections_combo}->add_attribute($text_r, text => 1);
 
-my $pixbuf_size = 32;
-my $empty_pixbuf = Gtk2::Gdk::Pixbuf->new('rgb', 1, 8, $pixbuf_size, $pixbuf_size);
-$empty_pixbuf->fill(0);
+$droam->{gui}{pixbuf_size} = 32;
+$droam->{gui}{empty_pixbuf} = Gtk2::Gdk::Pixbuf->new('rgb', 1, 8, $droam->{gui}{pixbuf_size}, $droam->{gui}{pixbuf_size});
+$droam->{gui}{empty_pixbuf}->fill(0);
 
 sub update_connections_list() {
-    $model->set($model->append, 0, $empty_pixbuf , 1, N("No device found")) unless @{$droam->{all_connections}};
-    $model->set($model->append,
-                0, gtknew('Pixbuf', file => $_->get_type_icon)->scale_simple($pixbuf_size, $pixbuf_size, 'hyper'),
+    $droam->{gui}{model}->set($droam->{gui}{model}->append, 0, $droam->{gui}{empty_pixbuf} , 1, N("No device found")) unless @{$droam->{all_connections}};
+    $droam->{gui}{model}->set($droam->{gui}{model}->append,
+                0, gtknew('Pixbuf', file => $_->get_type_icon)->scale_simple($droam->{gui}{pixbuf_size}, $droam->{gui}{pixbuf_size}, 'hyper'),
                 1, $_->get_description) foreach @{$droam->{all_connections}};
     my $index = $droam->{connection} && eval { find_index { $_ == $droam->{connection} } @{$droam->{all_connections}} };
-    $connections_combo->set_active($index) if defined $index;
+    $droam->{gui}{connections_combo}->set_active($index) if defined $index;
 }
 
 sub get_connection() {
     @{$droam->{all_connections}} or return;
-    my $index = $connections_combo->get_active;
+    my $index = $droam->{gui}{connections_combo}->get_active;
     defined $index && $droam->{all_connections}[$index];
 }
 
@@ -107,14 +105,14 @@ sub select_connection() {
 }
 
 sub update_on_connection_change() {
-    $buttons{refresh}->set_sensitive(to_bool($droam->{connection}));
+    $droam->{gui}{buttons}{refresh}->set_sensitive(to_bool($droam->{connection}));
     update_networks();
 }
 
 my $net = {};
 network::network::read_net_conf($net);
 
-my $networks_list = Gtk2::SimpleList->new(
+$droam->{gui}{networks_list} = Gtk2::SimpleList->new(
     "AP" => "hidden",
     '' => "pixbuf",
     N("SSID") => "text",
@@ -123,7 +121,7 @@ my $networks_list = Gtk2::SimpleList->new(
     N("Encryption") => "text",
     N("Operating Mode") => "text",
 );
-$networks_list->get_selection->set_mode('single');
+$droam->{gui}{networks_list}->get_selection->set_mode('single');
 
 my $status_bar = Gtk2::Statusbar->new;
 my $status_bar_cid = $status_bar->get_context_id("Network event");
@@ -157,8 +155,7 @@ if ($dbus) {
     dbus_object::set_gtk2_watch_helper($dbus);
 }
 
-my %pixbufs =
-  (
+$droam->{gui}{pixbufs} = {
       state => { map { $_ => gtkcreate_pixbuf($_) } qw(connected disconnected refresh) },
       link_level => { map {
           $_ => gtkcreate_pixbuf('wifi-' . sprintf('%03d', $_) . '.png')->scale_simple(24, 24, 'hyper');
@@ -166,10 +163,10 @@ my %pixbufs =
       encryption => { map {
           $_ => gtkcreate_pixbuf("encryption-$_-24.png");
       } qw(open weak strong) },
-  );
+};
 
 sub update_networks() {
-    @{$networks_list->{data}} = ();
+    @{$droam->{gui}{networks_list}{data}} = ();
 
     if ($droam->{connection}) {
         my $wait = $droam->{connection}->network_scan_is_slow && $in->wait_message('', N("Scanning for networks..."));
@@ -183,20 +180,20 @@ sub update_networks() {
         my $connected = exists $routes->{$interface}{network};
 
         while (my ($ap, $network) = each(%{$droam->{connection}{networks}})) {
-            push @{$networks_list->{data}}, [
+            push @{$droam->{gui}{networks_list}{data}}, [
                 $ap || $network->{name},
-                $network->{current} ? $connected ? $pixbufs{state}{connected} : $pixbufs{state}{refresh} : undef,
+                $network->{current} ? $connected ? $droam->{gui}{pixbufs}{state}{connected} : $droam->{gui}{pixbufs}{state}{refresh} : undef,
                 !$network->{essid} && exists $net->{wireless}{$ap} && $net->{wireless}{$ap}{WIRELESS_ESSID} || $network->{name},
                 network::signal_strength::get_strength_icon($network),
-                $pixbufs{encryption}{$network->{flags} =~ /WPA/i ? 'strong' : $network->{flags} =~ /WEP/i ? 'weak' : 'open'},
+                $droam->{gui}{pixbufs}{encryption}{$network->{flags} =~ /WPA/i ? 'strong' : $network->{flags} =~ /WEP/i ? 'weak' : 'open'},
                 $network->{flags},
                 $network->{mode},
             ];
         }
 
         if ($droam->{connection}{network}) {
-            my $index = eval { find_index { $_->[0] eq $droam->{connection}{network} } @{$networks_list->{data}} };
-            $networks_list->select($index) if defined $index;
+            my $index = eval { find_index { $_->[0] eq $droam->{connection}{network} } @{$droam->{gui}{networks_list}{data}} };
+            $droam->{gui}{networks_list}->select($index) if defined $index;
         }
     }
 
@@ -271,18 +268,18 @@ sub connect_to_network() {
 
 sub select_network() {
     if ($droam->{connection}) {
-        my ($selected) = $networks_list->get_selected_indices;
-        $droam->{connection}{network} = defined $selected && $networks_list->{data}[$selected][0];
+        my ($selected) = $droam->{gui}{networks_list}->get_selected_indices;
+        $droam->{connection}{network} = defined $selected && $droam->{gui}{networks_list}{data}[$selected][0];
     }
     update_on_network_change();
 }
 
 sub update_on_network_change() {
-    $buttons{connect}->set_label(toggle_would_disconnect() ? N("Disconnect") : N("Connect"));
+    $droam->{gui}{buttons}{connect}->set_label(toggle_would_disconnect() ? N("Disconnect") : N("Connect"));
     #- always allow to disconnect if connected
-    $buttons{connect}->set_sensitive($droam->{connection} && ($droam->{connection}->get_status || $droam->{connection}{network}));
+    $droam->{gui}{buttons}{connect}->set_sensitive($droam->{connection} && ($droam->{connection}->get_status || $droam->{connection}{network}));
     #- allow to configure only if a network is selected
-    $buttons{configure}->set_sensitive($droam->{connection} && $droam->{connection}{network});
+    $droam->{gui}{buttons}{configure}->set_sensitive($droam->{connection} && $droam->{connection}{network});
 }
 
 sub toggle_would_disconnect() {
@@ -308,18 +305,18 @@ gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
            $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
            0, gtknew('HBox', children_tight => [ gtknew('Label_Left', text => N("Device: "), alignment => [ 0.5, 0.5 ]),
-                                                 gtksignal_connect($connections_combo, changed => \&select_connection) ]),
-           1, gtknew('ScrolledWindow', width => 500, height => 300, child => $networks_list),
+                                                 gtksignal_connect($droam->{gui}{connections_combo}, changed => \&select_connection) ]),
+           1, gtknew('ScrolledWindow', width => 500, height => 300, child => $droam->{gui}{networks_list}),
            0, gtknew('HButtonBox', layout => 'edge', children_loose => [
-                   $buttons{configure} = gtknew('Button', text => N("Configure"), clicked => \&configure_network),
-                   $buttons{connect} = gtknew('Button', relief => 'half', clicked => \&toggle_connection),
-                   $buttons{refresh} = gtknew('Button', text => N("Refresh"), clicked => \&update_networks),
+                   $droam->{gui}{buttons}{configure} = gtknew('Button', text => N("Configure"), clicked => \&configure_network),
+                   $droam->{gui}{buttons}{connect} = gtknew('Button', relief => 'half', clicked => \&toggle_connection),
+                   $droam->{gui}{buttons}{refresh} = gtknew('Button', text => N("Refresh"), clicked => \&update_networks),
                    gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit })
            ]),
            0, $status_bar,
        ]),
    );
-$networks_list->get_selection->signal_connect('changed' => \&select_network);
+$droam->{gui}{networks_list}->get_selection->signal_connect('changed' => \&select_network);
 
 $w->show;
 
