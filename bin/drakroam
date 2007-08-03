@@ -27,12 +27,6 @@ use network::connection::wireless;
 use network::connection::cellular_card;
 use modules;
 
-my $droam = {};
-$droam->{in} = 'interactive'->vnew('su');
-
-$droam->{net} = {};
-network::network::read_net_conf($droam->{net});
-
 sub update_connections_list {
     my ($droam) = @_;
 
@@ -260,90 +254,99 @@ sub toggle_connection {
     update_on_network_change($droam);
 }
 
-my %args = map { if_(/^--(\w+)=(.*)$/ && member($1, qw(ap interface)), $1 => $2) } @ARGV;
+sub build_drakroam_gui {
+    my ($droam, $dbus) = @_;
 
-my @connection_types = qw(network::connection::wireless network::connection::cellular_card);
+    $droam->{gui}{model} = Gtk2::ListStore->new('Gtk2::Gdk::Pixbuf', 'Glib::String');
+    $droam->{gui}{connections_combo} = Gtk2::ComboBox->new($droam->{gui}{model});
+    my $pix_r = Gtk2::CellRendererPixbuf->new;
+    $droam->{gui}{connections_combo}->pack_start($pix_r, 0,);
+    $droam->{gui}{connections_combo}->add_attribute($pix_r, pixbuf => 0);
+    my $text_r = Gtk2::CellRendererText->new;
+    $droam->{gui}{connections_combo}->pack_start($text_r, 1);
+    $droam->{gui}{connections_combo}->add_attribute($text_r, text => 1);
 
-$droam->{gui}{model} = Gtk2::ListStore->new('Gtk2::Gdk::Pixbuf', 'Glib::String');
-$droam->{gui}{connections_combo} = Gtk2::ComboBox->new($droam->{gui}{model});
-my $pix_r = Gtk2::CellRendererPixbuf->new;
-$droam->{gui}{connections_combo}->pack_start($pix_r, 0,);
-$droam->{gui}{connections_combo}->add_attribute($pix_r, pixbuf => 0);
-my $text_r = Gtk2::CellRendererText->new;
-$droam->{gui}{connections_combo}->pack_start($text_r, 1);
-$droam->{gui}{connections_combo}->add_attribute($text_r, text => 1);
+    $droam->{gui}{pixbuf_size} = 32;
+    $droam->{gui}{empty_pixbuf} = Gtk2::Gdk::Pixbuf->new('rgb', 1, 8, $droam->{gui}{pixbuf_size}, $droam->{gui}{pixbuf_size});
+    $droam->{gui}{empty_pixbuf}->fill(0);
 
-$droam->{gui}{pixbuf_size} = 32;
-$droam->{gui}{empty_pixbuf} = Gtk2::Gdk::Pixbuf->new('rgb', 1, 8, $droam->{gui}{pixbuf_size}, $droam->{gui}{pixbuf_size});
-$droam->{gui}{empty_pixbuf}->fill(0);
+    $droam->{gui}{networks_list} = Gtk2::SimpleList->new(
+        "AP" => "hidden",
+        '' => "pixbuf",
+        N("SSID") => "text",
+        N("Signal strength") => "pixbuf",
+        '' => "pixbuf",
+        N("Encryption") => "text",
+        N("Operating Mode") => "text",
+    );
+    $droam->{gui}{networks_list}->get_selection->set_mode('single');
 
-$droam->{gui}{networks_list} = Gtk2::SimpleList->new(
-    "AP" => "hidden",
-    '' => "pixbuf",
-    N("SSID") => "text",
-    N("Signal strength") => "pixbuf",
-    '' => "pixbuf",
-    N("Encryption") => "text",
-    N("Operating Mode") => "text",
-);
-$droam->{gui}{networks_list}->get_selection->set_mode('single');
+    my $status_bar = Gtk2::Statusbar->new;
+    my $status_bar_cid = $status_bar->get_context_id("Network event");
+    if ($dbus) {
+        eval { $droam->{net}{monitor} = network::monitor->new($dbus) };
+        $dbus->{connection}->add_filter(sub {
+                                            my ($_con, $msg) = @_;
+                                            my $member = $msg->get_member;
+                                            my $message = get_network_event_message($droam, $member, $msg->get_args_list) or return;
+                                            my $m_id = $status_bar->push($status_bar_cid, $message);
+                                            Glib::Timeout->add(20000, sub { $status_bar->remove($status_bar_cid, $m_id); 0 });
+                                            update_networks($droam) if $member eq 'status';
+                                        });
+        $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
+        dbus_object::set_gtk2_watch_helper($dbus);
+    }
 
-my $status_bar = Gtk2::Statusbar->new;
-my $status_bar_cid = $status_bar->get_context_id("Network event");
+    $droam->{gui}{pixbufs} = {
+        state => { map { $_ => gtkcreate_pixbuf($_) } qw(connected disconnected refresh) },
+        link_level => { map {
+            $_ => gtkcreate_pixbuf('wifi-' . sprintf('%03d', $_) . '.png')->scale_simple(24, 24, 'hyper');
+        } qw(20 40 60 80 100) },
+        encryption => { map {
+            $_ => gtkcreate_pixbuf("encryption-$_-24.png");
+        } qw(open weak strong) },
+    };
 
-my $dbus;
-eval { $dbus = dbus_object::system_bus() };
-if ($dbus) {
-    eval { $droam->{net}{monitor} = network::monitor->new($dbus) };
-    $dbus->{connection}->add_filter(sub {
-                                        my ($_con, $msg) = @_;
-                                        my $member = $msg->get_member;
-                                        my $message = get_network_event_message($droam, $member, $msg->get_args_list) or return;
-                                        my $m_id = $status_bar->push($status_bar_cid, $message);
-                                        Glib::Timeout->add(20000, sub { $status_bar->remove($status_bar_cid, $m_id); 0 });
-                                        update_networks($droam) if $member eq 'status';
-    });
-    $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
-    dbus_object::set_gtk2_watch_helper($dbus);
-}
+    my $title = N("Wireless connection");
+    my $icon = '/usr/share/mcc/themes/default/drakroam-mdk.png';
 
-$droam->{gui}{pixbufs} = {
-      state => { map { $_ => gtkcreate_pixbuf($_) } qw(connected disconnected refresh) },
-      link_level => { map {
-          $_ => gtkcreate_pixbuf('wifi-' . sprintf('%03d', $_) . '.png')->scale_simple(24, 24, 'hyper');
-      } qw(20 40 60 80 100) },
-      encryption => { map {
-          $_ => gtkcreate_pixbuf("encryption-$_-24.png");
-      } qw(open weak strong) },
-};
+    $ugtk2::wm_icon = $icon;
+    $droam->{gui}{w} = ugtk2->new($title);
+    #- so that transient_for is defined, for wait messages and popups to be centered
+    $::main_window = $droam->{gui}{w}{real_window};
 
-my $title = N("Wireless connection");
-my $icon = '/usr/share/mcc/themes/default/drakroam-mdk.png';
-
-$ugtk2::wm_icon = $icon;
-$droam->{gui}{w} = ugtk2->new($title);
-#- so that transient_for is defined, for wait messages and popups to be centered
-$::main_window = $droam->{gui}{w}{real_window};
-
-gtkadd($droam->{gui}{w}{window},
-       gtknew('VBox', spacing => 5, children => [
-           $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
-           0, gtknew('HBox', children_tight => [ gtknew('Label_Left', text => N("Device: "), alignment => [ 0.5, 0.5 ]),
-                                                 gtksignal_connect($droam->{gui}{connections_combo}, changed => sub { select_connection($droam) }) ]),
-           1, gtknew('ScrolledWindow', width => 500, height => 300, child => $droam->{gui}{networks_list}),
-           0, gtknew('HButtonBox', layout => 'edge', children_loose => [
+    gtkadd($droam->{gui}{w}{window},
+           gtknew('VBox', spacing => 5, children => [
+               $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
+               0, gtknew('HBox', children_tight => [ gtknew('Label_Left', text => N("Device: "), alignment => [ 0.5, 0.5 ]),
+                                                     gtksignal_connect($droam->{gui}{connections_combo}, changed => sub { select_connection($droam) }) ]),
+               1, gtknew('ScrolledWindow', width => 500, height => 300, child => $droam->{gui}{networks_list}),
+               0, gtknew('HButtonBox', layout => 'edge', children_loose => [
                    $droam->{gui}{buttons}{configure} = gtknew('Button', text => N("Configure"), clicked => sub { configure_network($droam) }),
                    $droam->{gui}{buttons}{connect} = gtknew('Button', relief => 'half', clicked => sub { toggle_connection($droam) }),
                    $droam->{gui}{buttons}{refresh} = gtknew('Button', text => N("Refresh"), clicked => sub { update_networks($droam) }),
                    gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit })
+               ]),
+               0, $status_bar,
            ]),
-           0, $status_bar,
-       ]),
-   );
-$droam->{gui}{networks_list}->get_selection->signal_connect('changed' => \&select_network);
+       );
+    $droam->{gui}{networks_list}->get_selection->signal_connect('changed' => \&select_network);
+}
+
+my %args = map { if_(/^--(\w+)=(.*)$/ && member($1, qw(ap interface)), $1 => $2) } @ARGV;
+
+my $droam = {};
+$droam->{in} = 'interactive'->vnew('su');
+$droam->{net} = {};
+network::network::read_net_conf($droam->{net});
+my $dbus;
+eval { $dbus = dbus_object::system_bus() };
+
+build_drakroam_gui($droam, $dbus);
 
 $droam->{gui}{w}->show;
 
+my @connection_types = qw(network::connection::wireless network::connection::cellular_card);
 @{$droam->{all_connections}} = map { $_->get_connections(automatic_only => 1) } @connection_types;
 $droam->{connection} = $args{interface} && find { $_->get_interface eq $args{interface} } @{$droam->{all_connections}};
 $droam->{connection} ||= find { !$_->network_scan_is_slow } @{$droam->{all_connections}};
