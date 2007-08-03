@@ -38,6 +38,9 @@ my $w = ugtk2->new($title);
 $::main_window = $w->{real_window};
 my $in = 'interactive'->vnew('su');
 
+my $net = {};
+network::network::read_net_conf($net);
+
 sub update_connections_list() {
     $droam->{gui}{model}->set($droam->{gui}{model}->append, 0, $droam->{gui}{empty_pixbuf} , 1, N("No device found")) unless @{$droam->{all_connections}};
     $droam->{gui}{model}->set($droam->{gui}{model}->append,
@@ -91,9 +94,6 @@ sub update_on_connection_change() {
     $droam->{gui}{buttons}{refresh}->set_sensitive(to_bool($droam->{connection}));
     update_networks();
 }
-
-my $net = {};
-network::network::read_net_conf($net);
 
 sub get_network_event_message {
     my ($member, @args) = @_;
