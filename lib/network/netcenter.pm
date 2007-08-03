@@ -21,51 +21,25 @@ use network::connection::wireless;
 use network::connection::cellular_card;
 use network::drakroam;
 
-sub build_networks_list {
+sub filter_networks {
     my ($connection) = @_;
-
-    my $droam = {};
-    network::drakroam::build_pixbufs($droam);
-
-    #- from drakroam
-    my $networks_list = Gtk2::SimpleList->new(
-        "AP" => "hidden",
-        '' => "pixbuf",
-        '' => "pixbuf",
-        N("Signal strength") => "pixbuf",
-        N("SSID") => "text",
-    );
-    $networks_list->get_selection->set_mode('single');
-    $networks_list->set_headers_visible(0);
-
-    my $net = {};
-    network::network::read_net_conf($net);
-
-    #- from drakroam::update_networks()
-    $connection->{networks} = $connection->get_networks;
-    $connection->{network} ||= find { $connection->{networks}{$_}{current} } keys %{$connection->{networks}};
-    my $routes = network::tools::get_routes();
-    my $interface = $connection->get_interface;
-    my $connected = exists $routes->{$interface}{network};
-
-
     $_->{configured} = $connection->network_is_configured($_) foreach values %{$connection->{networks}};
     my @networks = sort {
         $b->{configured} <=> $a->{configured} || $b->{signal_strength} <=> $a->{signal_strength} || $a->{name} cmp $b->{name};
     } values %{$connection->{networks}};
     my @valuable_networks = splice @networks, 0, 3;
-    foreach (@valuable_networks) {
-        my $ap = $_->{ap};
-        push @{$networks_list->{data}}, [
-            $ap || $_->{name},
-            $_->{current} ? $connected ? $droam->{gui}{pixbufs}{state}{connected} : $droam->{gui}{pixbufs}{state}{refresh} : undef,
-            $droam->{gui}{pixbufs}{encryption}{$_->{flags} =~ /WPA/i ? 'strong' : $_->{flags} =~ /WEP/i ? 'weak' : 'open'},
-            network::signal_strength::get_strength_icon($_),
-            !$_->{essid} && exists $net->{wireless}{$ap} && $net->{wireless}{$ap}{WIRELESS_ESSID} || $_->{name},
-        ];
-    }
+}
 
-    $networks_list;
+sub build_networks_list {
+    my ($connection, $net) = @_;
+
+    my $droam = { connection => $connection, net => $net };
+    network::drakroam::build_pixbufs($droam);
+    network::drakroam::build_network_frame($droam);
+    $droam->{filter_networks} = sub { filter_networks($connection) };
+    network::drakroam::update_networks($droam);
+
+    $droam->{gui}{networks_list};
 }
 
 sub gtkset_image {
@@ -89,6 +63,9 @@ sub main() {
     my @connections = map { $_->get_connections(automatic_only => 1) } network::connection::get_types;
     @connections = reverse(uniq_ { $_->{device} } reverse(@connections));
 
+    my $net = {};
+    network::network::read_net_conf($net);
+
     gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
            $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
@@ -101,7 +78,7 @@ sub main() {
                            gtknew('HBox', children_tight => [
                                gtknew('Label', padding => [ 20, 0 ]),
                                gtknew('VBox', children_tight => [
-                                   ($_->can('get_networks') && !$_->network_scan_is_slow ? (build_networks_list($_)) : ()),
+                                   ($_->can('get_networks') && !$_->network_scan_is_slow ? (build_networks_list($_, $net)) : ()),
                                    gtknew('HBox', children_tight => [
                                        gtknew('VBox', children_tight => [
                                            gtknew('HButtonBox', children_tight => [
