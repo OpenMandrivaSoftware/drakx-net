@@ -102,22 +102,26 @@ sub main() {
            $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
            1, gtknew('ScrolledWindow', width => 500, height => 300, child => gtknew('VBox', spacing => 5, children_tight => [
                map {
-                   gtknew('VBox', children_tight => [
-                       gtknew('HBox', children_tight => [
-                           gtknew('Image', file => $_->get_type_icon),
+                   gtknew('HBox', children_tight => [
+                       gtknew('Image', file => $_->get_type_icon),
+                       gtknew('VBox', children_tight => [
                            $_->get_description,
-                       ]),
-                       gtknew('HBox', children => [
-                           0, gtknew('Label', padding => [ 20, 0 ]),
-                           0, gtknew('VBox', children_tight => [
-                               gtknew('HBox', children_tight => [
-                                   gtkset_image(gtknew('Button'), 'connected'),
-                                   gtkset_image(gtknew('Button'), 'monitor-24'),
-                                   gtkset_image(gtknew('Button'), 'configure-24'),
-                                   ($_->can('get_networks') ? (0, gtkset_image(gtknew('Button'), 'refresh')) : ()),
+                           gtknew('HBox', children_tight => [
+                               gtknew('Label', padding => [ 20, 0 ]),
+                               gtknew('VBox', children_tight => [
+                                   ($_->can('get_networks') && !$_->network_scan_is_slow ? (build_networks_list($_)) : ()),
+                                   gtknew('HBox', children_tight => [
+                                       gtknew('VBox', children_tight => [
+                                           gtknew('HButtonBox', children_tight => [
+                                               gtkset_image(gtknew('Button'), 'connected'),
+                                               gtkset_image(gtknew('Button'), 'monitor-24'),
+                                               gtkset_image(gtknew('Button'), 'configure-24'),
+                                               ($_->can('get_networks') ? (0, gtkset_image(gtknew('Button'), 'refresh')) : ()),
+                                           ]),
+                                       ]),
+                                   ]),
                                ]),
                            ]),
-                           ($_->can('get_networks') && !$_->network_scan_is_slow ? (1, build_networks_list($_)) : ()),
                        ]),
                    ]);
                } @connections,
