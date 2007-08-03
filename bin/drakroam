@@ -34,7 +34,9 @@ my $in = 'interactive'->vnew('su');
 my $net = {};
 network::network::read_net_conf($net);
 
-sub update_connections_list() {
+sub update_connections_list {
+    my ($droam) = @_;
+
     $droam->{gui}{model}->set($droam->{gui}{model}->append, 0, $droam->{gui}{empty_pixbuf} , 1, N("No device found")) unless @{$droam->{all_connections}};
     $droam->{gui}{model}->set($droam->{gui}{model}->append,
                 0, gtknew('Pixbuf', file => $_->get_type_icon)->scale_simple($droam->{gui}{pixbuf_size}, $droam->{gui}{pixbuf_size}, 'hyper'),
@@ -43,13 +45,17 @@ sub update_connections_list() {
     $droam->{gui}{connections_combo}->set_active($index) if defined $index;
 }
 
-sub get_connection() {
+sub get_connection {
+    my ($droam) = @_;
+
     @{$droam->{all_connections}} or return;
     my $index = $droam->{gui}{connections_combo}->get_active;
     defined $index && $droam->{all_connections}[$index];
 }
 
-sub prepare_connection() {
+sub prepare_connection {
+    my ($droam) = @_;
+
     my @packages = $droam->{connection}->can('get_packages') ? $droam->{connection}->get_packages : ();
     if (@packages && !$in->do_pkgs->install(@packages)) {
         $in->ask_warn(N("Error"), N("Could not install the packages (%s)!", join(', ', @packages)));
@@ -77,19 +83,22 @@ sub prepare_connection() {
     }
 }
 
-sub select_connection() {
-    $droam->{connection} = get_connection();
-    prepare_connection() if $droam->{connection};
-    update_on_connection_change();
+sub select_connection {
+    my ($droam) = @_;
+
+    $droam->{connection} = get_connection($droam);
+    prepare_connection($droam) if $droam->{connection};
+    update_on_connection_change($droam);
 }
 
-sub update_on_connection_change() {
+sub update_on_connection_change {
+    my ($droam) = @_;
     $droam->{gui}{buttons}{refresh}->set_sensitive(to_bool($droam->{connection}));
-    update_networks();
+    update_networks($droam);
 }
 
 sub get_network_event_message {
-    my ($member, @args) = @_;
+    my ($droam, $member, @args) = @_;
     #- FIXME: the hostname.d script and s2u use a different D-Bus interface
     if ($member eq 'hostname') {
         my ($hostname) = @args;
@@ -101,7 +110,8 @@ sub get_network_event_message {
     }
 }
 
-sub update_networks() {
+sub update_networks {
+    my ($droam) = @_;
     @{$droam->{gui}{networks_list}{data}} = ();
 
     if ($droam->{connection}) {
@@ -133,10 +143,12 @@ sub update_networks() {
         }
     }
 
-    update_on_network_change();
+    update_on_network_change($droam);
 }
 
-sub load_settings() {
+sub load_settings {
+    my ($droam) = @_;
+
     $droam->{connection}->load_interface_settings;
     $droam->{connection}->guess_network_access_settings if $droam->{connection}->can('guess_network_access_settings');
     $droam->{connection}->guess_protocol($net) if $droam->{connection}->can('guess_protocol');
@@ -147,8 +159,10 @@ sub load_settings() {
     $droam->{connection}->guess_control_settings;
 }
 
-sub configure_network() {
-    load_settings();
+sub configure_network {
+    my ($droam) = @_;
+
+    load_settings($droam);
 
     $in->ask_from_({
         title => "Network settings",
@@ -186,13 +200,15 @@ sub configure_network() {
     1;
 }
 
-sub connect_to_network() {
-    if ($droam->{connection}->selected_network_is_configured || configure_network()) {
+sub connect_to_network {
+    my ($droam) = @_;
+
+    if ($droam->{connection}->selected_network_is_configured || configure_network($droam)) {
         gtkset_mousecursor_wait($droam->{gui}{w}{window}->window);
         my $_wait = $in->wait_message(N("Please wait"), N("Connecting..."));
         #- settings have to be rewritten only if they are impacted by choices from the main window
         if ($droam->{connection}->can('get_networks')) {
-            load_settings();
+            load_settings($droam);
             $droam->{connection}->write_settings($net);
         }
         $droam->{connection}->prepare_connection if $droam->{connection}->can('prepare_connection');
@@ -202,39 +218,47 @@ sub connect_to_network() {
     }
 }
 
-sub select_network() {
+sub select_network {
+    my ($droam) = @_;
+
     if ($droam->{connection}) {
         my ($selected) = $droam->{gui}{networks_list}->get_selected_indices;
         $droam->{connection}{network} = defined $selected && $droam->{gui}{networks_list}{data}[$selected][0];
     }
-    update_on_network_change();
+    update_on_network_change($droam);
 }
 
-sub update_on_network_change() {
-    $droam->{gui}{buttons}{connect}->set_label(toggle_would_disconnect() ? N("Disconnect") : N("Connect"));
+sub update_on_network_change {
+    my ($droam) = @_;
+
+    $droam->{gui}{buttons}{connect}->set_label(toggle_would_disconnect($droam) ? N("Disconnect") : N("Connect"));
     #- always allow to disconnect if connected
     $droam->{gui}{buttons}{connect}->set_sensitive($droam->{connection} && ($droam->{connection}->get_status || $droam->{connection}{network}));
     #- allow to configure only if a network is selected
     $droam->{gui}{buttons}{configure}->set_sensitive($droam->{connection} && $droam->{connection}{network});
 }
 
-sub toggle_would_disconnect() {
+sub toggle_would_disconnect {
+    my ($droam) = @_;
+
     my $network = $droam->{connection} && $droam->{connection}->get_selected_network;
     $droam->{connection} && $droam->{connection}->get_status &&
       (!$network || keys(%{$droam->{connection}{networks}}) <= 1 || $network->{current});
 }
 
-sub toggle_connection() {
-    if (toggle_would_disconnect()) {
+sub toggle_connection {
+    my ($droam) = @_;
+
+    if (toggle_would_disconnect($droam)) {
         gtkset_mousecursor_wait($droam->{gui}{w}{window}->window);
         my $_wait = $in->wait_message(N("Please wait"), N("Disconnecting..."));
         $droam->{connection}->disconnect;
         gtkset_mousecursor_normal($droam->{gui}{w}{window}->window);
     } elsif ($droam->{connection}) {
         $droam->{connection}{network} or return;
-        connect_to_network();
+        connect_to_network($droam);
     }
-    update_on_network_change();
+    update_on_network_change($droam);
 }
 
 my %args = map { if_(/^--(\w+)=(.*)$/ && member($1, qw(ap interface)), $1 => $2) } @ARGV;
@@ -275,10 +299,10 @@ if ($dbus) {
     $dbus->{connection}->add_filter(sub {
                                         my ($_con, $msg) = @_;
                                         my $member = $msg->get_member;
-                                        my $message = get_network_event_message($member, $msg->get_args_list) or return;
+                                        my $message = get_network_event_message($droam, $member, $msg->get_args_list) or return;
                                         my $m_id = $status_bar->push($status_bar_cid, $message);
                                         Glib::Timeout->add(20000, sub { $status_bar->remove($status_bar_cid, $m_id); 0 });
-                                        update_networks() if $member eq 'status';
+                                        update_networks($droam) if $member eq 'status';
     });
     $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
     dbus_object::set_gtk2_watch_helper($dbus);
@@ -306,12 +330,12 @@ gtkadd($droam->{gui}{w}{window},
        gtknew('VBox', spacing => 5, children => [
            $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
            0, gtknew('HBox', children_tight => [ gtknew('Label_Left', text => N("Device: "), alignment => [ 0.5, 0.5 ]),
-                                                 gtksignal_connect($droam->{gui}{connections_combo}, changed => \&select_connection) ]),
+                                                 gtksignal_connect($droam->{gui}{connections_combo}, changed => sub { select_connection($droam) }) ]),
            1, gtknew('ScrolledWindow', width => 500, height => 300, child => $droam->{gui}{networks_list}),
            0, gtknew('HButtonBox', layout => 'edge', children_loose => [
-                   $droam->{gui}{buttons}{configure} = gtknew('Button', text => N("Configure"), clicked => \&configure_network),
-                   $droam->{gui}{buttons}{connect} = gtknew('Button', relief => 'half', clicked => \&toggle_connection),
-                   $droam->{gui}{buttons}{refresh} = gtknew('Button', text => N("Refresh"), clicked => \&update_networks),
+                   $droam->{gui}{buttons}{configure} = gtknew('Button', text => N("Configure"), clicked => sub { configure_network($droam) }),
+                   $droam->{gui}{buttons}{connect} = gtknew('Button', relief => 'half', clicked => sub { toggle_connection($droam) }),
+                   $droam->{gui}{buttons}{refresh} = gtknew('Button', text => N("Refresh"), clicked => sub { update_networks($droam) }),
                    gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit })
            ]),
            0, $status_bar,
@@ -324,13 +348,13 @@ $droam->{gui}{w}->show;
 @{$droam->{all_connections}} = map { $_->get_connections(automatic_only => 1) } @connection_types;
 $droam->{connection} = $args{interface} && find { $_->get_interface eq $args{interface} } @{$droam->{all_connections}};
 $droam->{connection} ||= find { !$_->network_scan_is_slow } @{$droam->{all_connections}};
-update_connections_list();
-update_on_connection_change();
+update_connections_list($droam);
+update_on_connection_change($droam);
 
 if ($args{ap} && $droam->{connection}) {
     $droam->{connection}{network} = $args{ap};
     $droam->{gui}{w}{window}->show_all;
-    connect_to_network();
+    connect_to_network($droam);
 }
 
 $droam->{gui}{w}->main;
