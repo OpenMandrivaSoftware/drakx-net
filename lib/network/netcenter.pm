@@ -19,21 +19,13 @@ use network::tools;
 use network::connection;
 use network::connection::wireless;
 use network::connection::cellular_card;
+use network::drakroam;
 
 sub build_networks_list {
     my ($connection) = @_;
 
-    #- from drakroam
-    my %pixbufs =
-      (
-          state => { map { $_ => gtkcreate_pixbuf($_) } qw(connected disconnected refresh) },
-          link_level => { map {
-              $_ => gtkcreate_pixbuf('wifi-' . sprintf('%03d', $_) . '.png')->scale_simple(24, 24, 'hyper');
-          } qw(20 40 60 80 100) },
-          encryption => { map {
-              $_ => gtkcreate_pixbuf("encryption-$_-24.png");
-          } qw(open weak strong) },
-      );
+    my $droam = {};
+    network::drakroam::build_pixbufs($droam);
 
     #- from drakroam
     my $networks_list = Gtk2::SimpleList->new(
@@ -66,8 +58,8 @@ sub build_networks_list {
         my $ap = $_->{ap};
         push @{$networks_list->{data}}, [
             $ap || $_->{name},
-            $_->{current} ? $connected ? $pixbufs{state}{connected} : $pixbufs{state}{refresh} : undef,
-            $pixbufs{encryption}{$_->{flags} =~ /WPA/i ? 'strong' : $_->{flags} =~ /WEP/i ? 'weak' : 'open'},
+            $_->{current} ? $connected ? $droam->{gui}{pixbufs}{state}{connected} : $droam->{gui}{pixbufs}{state}{refresh} : undef,
+            $droam->{gui}{pixbufs}{encryption}{$_->{flags} =~ /WPA/i ? 'strong' : $_->{flags} =~ /WEP/i ? 'weak' : 'open'},
             network::signal_strength::get_strength_icon($_),
             !$_->{essid} && exists $net->{wireless}{$ap} && $net->{wireless}{$ap}{WIRELESS_ESSID} || $_->{name},
         ];
