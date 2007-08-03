@@ -82,7 +82,8 @@ sub select_connection {
 
 sub update_on_connection_change {
     my ($droam) = @_;
-    $droam->{gui}{buttons}{refresh}->set_sensitive(to_bool($droam->{connection}));
+    $droam->{gui}{buttons}{refresh}->set_sensitive(to_bool($droam->{connection}))
+      if $droam->{gui}{buttons}{refresh};
     update_networks($droam);
 }
 
@@ -220,11 +221,15 @@ sub select_network {
 sub update_on_network_change {
     my ($droam) = @_;
 
-    $droam->{gui}{buttons}{connect}->set_label(toggle_would_disconnect($droam) ? N("Disconnect") : N("Connect"));
-    #- always allow to disconnect if connected
-    $droam->{gui}{buttons}{connect}->set_sensitive($droam->{connection} && ($droam->{connection}->get_status || $droam->{connection}{network}));
+    if ($droam->{gui}{buttons}{connect}) {
+        $droam->{gui}{buttons}{connect}->set_label(toggle_would_disconnect($droam) ? N("Disconnect") : N("Connect"));
+        #- always allow to disconnect if connected
+        $droam->{gui}{buttons}{connect}->set_sensitive($droam->{connection} && ($droam->{connection}->get_status || $droam->{connection}{network}));
+    }
+
     #- allow to configure only if a network is selected
-    $droam->{gui}{buttons}{configure}->set_sensitive($droam->{connection} && $droam->{connection}{network});
+    $droam->{gui}{buttons}{configure}->set_sensitive($droam->{connection} && $droam->{connection}{network})
+      if $droam->{gui}{buttons}{configure};
 }
 
 sub toggle_would_disconnect {
