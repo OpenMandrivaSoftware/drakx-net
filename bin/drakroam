@@ -30,8 +30,8 @@ use modules;
 my $droam = {};
 $droam->{in} = 'interactive'->vnew('su');
 
-my $net = {};
-network::network::read_net_conf($net);
+$droam->{net} = {};
+network::network::read_net_conf($droam->{net});
 
 sub update_connections_list {
     my ($droam) = @_;
@@ -128,7 +128,7 @@ sub update_networks {
             push @{$droam->{gui}{networks_list}{data}}, [
                 $ap || $network->{name},
                 $network->{current} ? $connected ? $droam->{gui}{pixbufs}{state}{connected} : $droam->{gui}{pixbufs}{state}{refresh} : undef,
-                !$network->{essid} && exists $net->{wireless}{$ap} && $net->{wireless}{$ap}{WIRELESS_ESSID} || $network->{name},
+                !$network->{essid} && exists $droam->{net}{wireless}{$ap} && $droam->{net}{wireless}{$ap}{WIRELESS_ESSID} || $network->{name},
                 network::signal_strength::get_strength_icon($network),
                 $droam->{gui}{pixbufs}{encryption}{$network->{flags} =~ /WPA/i ? 'strong' : $network->{flags} =~ /WEP/i ? 'weak' : 'open'},
                 $network->{flags},
@@ -150,7 +150,7 @@ sub load_settings {
 
     $droam->{connection}->load_interface_settings;
     $droam->{connection}->guess_network_access_settings if $droam->{connection}->can('guess_network_access_settings');
-    $droam->{connection}->guess_protocol($net) if $droam->{connection}->can('guess_protocol');
+    $droam->{connection}->guess_protocol($droam->{net}) if $droam->{connection}->can('guess_protocol');
     $droam->{connection}->guess_access_settings if $droam->{connection}->can('guess_access_settings');
     $droam->{connection}->guess_address_settings if $droam->{connection}->can('guess_address_settings');
     $droam->{connection}->guess_hostname_settings if $droam->{connection}->can('guess_hostname_settings');
@@ -193,7 +193,7 @@ sub configure_network {
     $droam->{connection}->unload_connection if $droam->{connection}->can('unload_connection');
 
     my $modules_conf = modules::any_conf->read;
-    $droam->{connection}->write_settings($net, $modules_conf);
+    $droam->{connection}->write_settings($droam->{net}, $modules_conf);
     $modules_conf->write;
 
     1;
@@ -208,11 +208,11 @@ sub connect_to_network {
         #- settings have to be rewritten only if they are impacted by choices from the main window
         if ($droam->{connection}->can('get_networks')) {
             load_settings($droam);
-            $droam->{connection}->write_settings($net);
+            $droam->{connection}->write_settings($droam->{net});
         }
         $droam->{connection}->prepare_connection if $droam->{connection}->can('prepare_connection');
         $droam->{connection}->disconnect;
-        $droam->{connection}->connect($droam->{in}, $net);
+        $droam->{connection}->connect($droam->{in}, $droam->{net});
         gtkset_mousecursor_normal($droam->{gui}{w}{window}->window);
     }
 }
@@ -294,7 +294,7 @@ my $status_bar_cid = $status_bar->get_context_id("Network event");
 my $dbus;
 eval { $dbus = dbus_object::system_bus() };
 if ($dbus) {
-    eval { $net->{monitor} = network::monitor->new($dbus) };
+    eval { $droam->{net}{monitor} = network::monitor->new($dbus) };
     $dbus->{connection}->add_filter(sub {
                                         my ($_con, $msg) = @_;
                                         my $member = $msg->get_member;
