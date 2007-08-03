@@ -333,28 +333,33 @@ sub build_drakroam_gui {
     $droam->{gui}{networks_list}->get_selection->signal_connect('changed' => \&select_network);
 }
 
-my %args = map { if_(/^--(\w+)=(.*)$/ && member($1, qw(ap interface)), $1 => $2) } @ARGV;
+sub main {
+    my ($in, $net, $dbus, $o_interface, $o_ap) = @_;
 
-my $droam = {};
-$droam->{in} = 'interactive'->vnew('su');
-$droam->{net} = {};
-network::network::read_net_conf($droam->{net});
-my $dbus;
-eval { $dbus = dbus_object::system_bus() };
+    my $droam = { in => $in, net => $net };
+    build_drakroam_gui($droam, $dbus);
 
-build_drakroam_gui($droam, $dbus);
+    my @connection_types = qw(network::connection::wireless network::connection::cellular_card);
+    @{$droam->{all_connections}} = map { $_->get_connections(automatic_only => 1) } @connection_types;
+    $droam->{connection} = $o_interface && find { $_->get_interface eq $o_interface } @{$droam->{all_connections}};
+    $droam->{connection} ||= find { !$_->network_scan_is_slow } @{$droam->{all_connections}};
+    update_connections_list($droam);
+    update_on_connection_change($droam);
 
-my @connection_types = qw(network::connection::wireless network::connection::cellular_card);
-@{$droam->{all_connections}} = map { $_->get_connections(automatic_only => 1) } @connection_types;
-$droam->{connection} = $args{interface} && find { $_->get_interface eq $args{interface} } @{$droam->{all_connections}};
-$droam->{connection} ||= find { !$_->network_scan_is_slow } @{$droam->{all_connections}};
-update_connections_list($droam);
-update_on_connection_change($droam);
+    if ($o_ap && $droam->{connection}) {
+        $droam->{connection}{network} = $o_ap;
+        $droam->{gui}{w}->show;
+        connect_to_network($droam);
+    }
 
-if ($args{ap} && $droam->{connection}) {
-    $droam->{connection}{network} = $args{ap};
-    $droam->{gui}{w}->show;
-    connect_to_network($droam);
+    $droam->{gui}{w}->main;
 }
 
-$droam->{gui}{w}->main;
+my %args = map { if_(/^--(\w+)=(.*)$/ && member($1, qw(ap interface)), $1 => $2) } @ARGV;
+
+my $in = 'interactive'->vnew('su');
+my $net = {};
+network::network::read_net_conf($net);
+my $dbus;
+eval { $dbus = dbus_object::system_bus() };
+main($in, $net, $dbus, $args{interface}, $args{ap});
