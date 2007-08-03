@@ -250,6 +250,19 @@ sub toggle_connection {
     update_on_network_change($droam);
 }
 
+sub build_pixbufs {
+    my ($droam) = @_;
+    $droam->{gui}{pixbufs} = {
+        state => { map { $_ => gtkcreate_pixbuf($_) } qw(connected disconnected refresh) },
+        link_level => { map {
+            $_ => gtkcreate_pixbuf('wifi-' . sprintf('%03d', $_) . '.png')->scale_simple(24, 24, 'hyper');
+        } qw(20 40 60 80 100) },
+        encryption => { map {
+            $_ => gtkcreate_pixbuf("encryption-$_-24.png");
+        } qw(open weak strong) },
+    };
+}
+
 sub build_drakroam_gui {
     my ($droam, $dbus) = @_;
 
@@ -293,15 +306,7 @@ sub build_drakroam_gui {
         dbus_object::set_gtk2_watch_helper($dbus);
     }
 
-    $droam->{gui}{pixbufs} = {
-        state => { map { $_ => gtkcreate_pixbuf($_) } qw(connected disconnected refresh) },
-        link_level => { map {
-            $_ => gtkcreate_pixbuf('wifi-' . sprintf('%03d', $_) . '.png')->scale_simple(24, 24, 'hyper');
-        } qw(20 40 60 80 100) },
-        encryption => { map {
-            $_ => gtkcreate_pixbuf("encryption-$_-24.png");
-        } qw(open weak strong) },
-    };
+    build_pixbufs($droam);
 
     my $title = N("Wireless connection");
     my $icon = '/usr/share/mcc/themes/default/drakroam-mdk.png';
