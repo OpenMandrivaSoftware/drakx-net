@@ -29,13 +29,6 @@ use modules;
 
 my $droam = {};
 
-my $title = N("Wireless connection");
-my $icon = '/usr/share/mcc/themes/default/drakroam-mdk.png';
-
-$ugtk2::wm_icon = $icon;
-$droam->{gui}{w} = ugtk2->new($title);
-#- so that transient_for is defined, for wait messages and popups to be centered
-$::main_window = $droam->{gui}{w}{real_window};
 my $in = 'interactive'->vnew('su');
 
 my $net = {};
@@ -300,6 +293,14 @@ $droam->{gui}{pixbufs} = {
           $_ => gtkcreate_pixbuf("encryption-$_-24.png");
       } qw(open weak strong) },
 };
+
+my $title = N("Wireless connection");
+my $icon = '/usr/share/mcc/themes/default/drakroam-mdk.png';
+
+$ugtk2::wm_icon = $icon;
+$droam->{gui}{w} = ugtk2->new($title);
+#- so that transient_for is defined, for wait messages and popups to be centered
+$::main_window = $droam->{gui}{w}{real_window};
 
 gtkadd($droam->{gui}{w}{window},
        gtknew('VBox', spacing => 5, children => [
