@@ -69,14 +69,14 @@ sub main() {
     gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
            $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
-           1, gtknew('ScrolledWindow', width => 500, height => 300, child => gtknew('VBox', spacing => 5, children_tight => [
+           1, gtknew('ScrolledWindow', width => 500, height => 300, child => gtknew('VBox', spacing => 20, children_tight => [
                map {
                    gtknew('HBox', children_tight => [
                        gtknew('Image', file => $_->get_type_icon),
-                       gtknew('VBox', children_tight => [
+                       gtknew('VBox', spacing => 10, children_tight => [
                            gtknew('Title2', label => $_->get_description),
                            gtknew('HBox', children_tight => [
-                               gtknew('Label', padding => [ 20, 0 ]),
+                               gtknew('Label', padding => [ 5, 0 ]),
                                gtknew('VBox', children_tight => [
                                    ($_->can('get_networks') && !$_->network_scan_is_slow ? build_networks_list($_, $net) : ()),
                                    gtknew('HBox', children_tight => [
