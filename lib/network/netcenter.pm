@@ -105,7 +105,7 @@ sub main() {
                    gtknew('HBox', children_tight => [
                        gtknew('Image', file => $_->get_type_icon),
                        gtknew('VBox', children_tight => [
-                           $_->get_description,
+                           gtknew('Title2', label => $_->get_description),
                            gtknew('HBox', children_tight => [
                                gtknew('Label', padding => [ 20, 0 ]),
                                gtknew('VBox', children_tight => [
