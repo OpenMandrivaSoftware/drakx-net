@@ -285,6 +285,17 @@ sub build_network_frame {
     );
     $droam->{gui}{networks_list}->get_selection->set_mode('single');
     $droam->{gui}{networks_list}->get_selection->signal_connect('changed' => sub { select_network($droam) });
+
+    $droam->{gui}{networks_list}->signal_connect('query-tooltip' => sub {
+        my ($widget, $x, $y, $kbd_tip, $tooltip) = @_;
+        my ($x, $y, $model, $path, $iter) = $widget->get_tooltip_context($x, $y, $kbd_tip) or return;
+        my $ap = $model->get($iter, 0);
+        my $network = $droam->{connection}{networks}{$ap};
+        $tooltip->set_text("$network->{signal_strength}% $network->{flags}");
+        $widget->set_tooltip_row($tooltip, $path);
+        1;
+    });
+    $droam->{gui}{networks_list}->set_has_tooltip(1);
 }
 
 sub build_drakroam_gui {
