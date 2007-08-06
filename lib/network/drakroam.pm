@@ -125,7 +125,6 @@ sub update_networks {
                 !$network->{essid} && exists $droam->{net}{wireless}{$ap} && $droam->{net}{wireless}{$ap}{WIRELESS_ESSID} || $network->{name},
                 network::signal_strength::get_strength_icon($network),
                 $droam->{gui}{pixbufs}{encryption}{$network->{flags} =~ /WPA/i ? 'strong' : $network->{flags} =~ /WEP/i ? 'weak' : 'open'},
-                $network->{flags},
                 $network->{mode},
             ];
         }
@@ -279,8 +278,7 @@ sub build_network_frame {
         '' => "pixbuf",
         N("SSID") => "text",
         N("Signal strength") => "pixbuf",
-        '' => "pixbuf",
-        N("Encryption") => "text",
+        N("Encryption") => "pixbuf",
         N("Operating Mode") => "text",
     );
     $droam->{gui}{networks_list}->get_selection->set_mode('single');
