@@ -26,10 +26,8 @@ use Gtk2::TrayIcon;
 use ugtk2 qw(:create :helpers :wrappers :dialogs);
 
 my $onstartupfile = "$ENV{HOME}/.net_applet";
-if (!shouldStart()) {
-    warn "$onstartupfile should be set to TRUE or use net_applet --force";
-    exit(1);
-}
+shouldStart() or die "$onstartupfile should be set to TRUE or use net_applet --force\n";
+
 #- Allow multiple instances, but only one per user:
 is_running('net_applet') and die "net_applet already running\n";
 
