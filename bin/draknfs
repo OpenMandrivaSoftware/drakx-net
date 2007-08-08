@@ -76,7 +76,7 @@ sub restart_dialog() {
 }
 
 sub reload_dialog() {
-  wait_action("service nfs reload");
+  wait_action("service nfs-server reload");
 }
 
 sub wait_action {
@@ -168,11 +168,13 @@ my %adv_options = (
 	sync => N("Synchronous access:"),
 	secured => N("Secured Connection:"),
 	ro => N("Read-Only share:"),
+	subtree_check => N("Subtree checking:")
 );
 my $help_global = join("\n\n\n", '<b><big>' . N("Advanced Options") . '</big></b>',
 N("<span foreground=\"royalblue3\">%s</span> this option requires that requests originate on an internet port less than IPPORT_RESERVED (1024). This option is on by default.", $adv_options{secured}),
 N("<span foreground=\"royalblue3\">%s</span> allow either only read or both read and write requests on this NFS volume. The default is to disallow any request which changes the filesystem. This can also be made explicit by using this option.", $adv_options{ro}),
 N("<span foreground=\"royalblue3\">%s</span> disallows the NFS server to violate the NFS protocol and to reply to requests before any changes made by these requests have been committed to stable storage (e.g. disc drive).", $adv_options{sync}),
+N("<span foreground=\"royalblue3\">%s</span> enable subtree checking which can help improve security in some cases, but can decrease reliability. See exports(5) man page for more details.", $adv_options{subtree_check}),
 );
 
 sub help_b {
@@ -180,7 +182,7 @@ sub help_b {
   gtksignal_connect(gtknew('Button', text => N("Information")), clicked => sub {
 		      my $dialog = _create_dialog(N("Help"), { transient_for => $::main_window, modal => 1 });
 		      gtkpack_($dialog->vbox,
-			       1, gtknew('ScrolledWindow', width => 350, height => 300,
+			       1, gtknew('ScrolledWindow', width => 390, height => 300,
                                 child => gtknew('TextView', text => ugtk2::markup_to_TextView_format(formatAlaTeX($help_data)))
                             ),
 			       0, gtknew('Button', text => N("Close"), clicked => sub {
@@ -237,11 +239,11 @@ sub add_modify_entry {
   my $selection = $treeview->get_selection;
   my $iter;
   my ($i, $dir, $access, $right, $options);
-  my ($lr, $luserid, $lsecure, $lsync, $lr_data, $lsync_data, $lsecure_data);
+  my ($lr, $luserid, $lsecure, $lsync, $lsubtree_check, $lr_data, $lsync_data, $lsecure_data, $lsubtree_check_data);
   undef $i; undef $iter;
 
   $_ = gtknew('Entry') foreach $dir, $options;
-  $_ = Gtk2::OptionMenu->new foreach $lr, $luserid, $lsecure, $lsync;
+  $_ = Gtk2::OptionMenu->new foreach $lr, $luserid, $lsecure, $lsync, $lsubtree_check;
 
   $access = Gtk2::Combo->new;
 #  $access = gtknew('ComboBox');
@@ -255,6 +257,7 @@ sub add_modify_entry {
   $lr->set_popdown_strings(@yesno);
   $lsync->set_popdown_strings(@yesno);
   $lsecure->set_popdown_strings(@yesno);
+  $lsubtree_check->set_popdown_strings(@yesno);
 
   my $file_dialog = $fdwidget->($dir);
   my $button = gtknew('Button', text => N("Directory"));
@@ -285,13 +288,13 @@ sub add_modify_entry {
     #    $anongid, $anonuid, $lr, $luserid, $lsecure, $lsync;
     $right = $listshare[$i]{right};
     my @opts = split(/,/, $right);
-    $_->set_text("") foreach $lr, $lsync, $anonuid, $anongid, $luserid, $lsecure;
+    $_->set_text("") foreach $lr, $lsync, $anonuid, $anongid, $luserid, $lsecure, $lsubtree_check;
 
     foreach my $opt (@opts) {
       if ($opt =~ m/(\bro\b|\brw\b)/) {
 	if ($opt =~ /ro/) { $lr->set_text("yes") } else { $lr->set_text("no") }
       } elsif ($opt =~ m/\bsync\b|\basync\b/) {
-	if ($opt =~ /sync/) { $lsync->set_text("yes") } else { $lsync->set_text("no") }
+	if ($opt =~ /async/) { $lsync->set_text("no") } else { $lsync->set_text("yes") }
       } elsif ($opt =~ m/anongid=(\d+)/) {
         my $gdata = get_data_from_id($1, 'group') . " [$1]";
         $anongid->set_text($gdata);
@@ -310,10 +313,13 @@ sub add_modify_entry {
 	}
       } elsif ($opt =~ m/(\bsecure\b|\binsecure\b)/) {
 	if ($opt =~ /insecure/) { $lsecure->set_text("no") } else { $lsecure->set_text("yes") }
+      } elsif ($opt =~ m/\bsubtree_check\b|\bno_subtree_check\b/) {
+	if ($opt =~ /no_subtree_check/) { $lsubtree_check->set_text("no") }
+       		else { $lsubtree_check->set_text("yes") }
       } else { next }
     }
-    foreach ($lsecure, $lsync) { if ($_->get_text =~ //) { $_->set_text("yes") } }
-    $lr->get_text =~ // and $lr->set_text("no");
+    foreach ($lsecure, $lsync) { if ($_->get_text =~ //) { $_->set_text("yes") } };
+    foreach ($lr, $lsubtree_check) { if ($_->get_text =~ //) { $_->set_text("no") } };
   }
 
   $luserid->signal_connect(changed => sub {
@@ -334,6 +340,7 @@ sub add_modify_entry {
     $lr->set_text("yes");
     $lsecure->set_text("yes");
     $lsync->set_text("no");
+    $lsubtree_check->set_text("no");
   }
 
   if ($luserid->get_text !~ /$userid_data->{root_squash}/) {
@@ -345,6 +352,7 @@ sub add_modify_entry {
                           $label_and_widgets->($adv_options{sync}, $lsync, help_b($help_global)),
                           $label_and_widgets->($adv_options{secured}, $lsecure, ""),
                           $label_and_widgets->($adv_options{ro}, $lr, ""),
+			  $label_and_widgets->($adv_options{subtree_check}, $lsubtree_check, ""),
 			 ]),
 		);
   $expender->signal_connect(activate => sub {
@@ -378,6 +386,7 @@ sub add_modify_entry {
 				 if ($lsync->get_text =~ /yes/) { $lsync_data = "sync" } elsif ($lsync->get_text =~ /no/) { $lsync_data = "async" } else { undef $lsync_data }
 				 if ($lr->get_text =~ /yes/) { $lr_data = "ro" } elsif ($lr->get_text =~ /no/) { $lr_data = "rw" } else { undef $lr_data }
 				 if ($lsecure->get_text =~ /yes/) { $lsecure_data = "secure" } elsif ($lsecure->get_text =~ /no/) { $lsecure_data = "insecure" } else { undef $lsecure_data }
+				 if ($lsubtree_check->get_text =~ /yes/) { $lsubtree_check_data = "subtree_check" } elsif ($lsubtree_check->get_text =~ /no/) { $lsubtree_check_data = "no_subtree_check" } else { undef $lsubtree_check }
 				 # test $luserid->get_text
 				 my $luserid_toput;
 				 if ($luserid->get_text =~ /$userid_data->{no_root_squash}/) {
@@ -394,7 +403,7 @@ sub add_modify_entry {
 				     $anonu = "anonuid=65534";
 				 }
 
-				 my $all_right = join(",", grep { defined $_ } $luserid_toput, $anonu, $anong, $lsync_data, $lsecure_data, $lr_data);
+				 my $all_right = join(",", grep { defined $_ } $luserid_toput, $anonu, $anong, $lsync_data, $lsecure_data, $lsubtree_check_data, $lr_data);
 				 my $test_dir = $dir->get_text;
 				 if (! $test_dir) { 
 				     err_dialog(N("Error"), N("Please specify a directory to share.")) and return;
@@ -547,7 +556,7 @@ my $menu = $factory->get_widget('<main>');
 my $okcancel = create_okcancel({
 				cancel_clicked => sub { ugtk2->exit },
 				ok_clicked => sub { &write_conf;
-						    run_program::raw({ detach => 1 }, "service nfs reload");
+						    run_program::raw({ detach => 1 }, "service nfs-server reload");
 						    ugtk2->exit },
 			       },
 			      );
