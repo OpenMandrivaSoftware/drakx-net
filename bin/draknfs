@@ -28,7 +28,7 @@ use mygtk2 qw(gtknew gtkset);
 use ugtk2 qw(:ask :wrappers :create :dialogs);
 
 my $in = 'interactive'->vnew('su');
-$in->do_pkgs->ensure_is_installed('nfs-utils', '/sbin/rpc.statd') or return;
+$in->do_pkgs->ensure_is_installed('nfs-utils', '/etc/rc.d/init.d/nfs-server') or return;
 
 use constant COLUMN_DIR => 0;
 use constant COLUMN_ACCESS => 1;
@@ -72,7 +72,7 @@ sub quit_all() {
 }
 
 sub restart_dialog() {
-  wait_action("service nfs restart");
+  wait_action("service nfs-server restart");
 }
 
 sub reload_dialog() {
