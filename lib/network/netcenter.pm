@@ -6,20 +6,10 @@ package network::netcenter;
 
 use strict;
 use common;
-use run_program;
-use detect_devices;
-use interactive;
 use mygtk2;
 use ugtk2 qw(:create :helpers :wrappers);
-use Gtk2::SimpleList;
-use network::monitor;
-use network::signal_strength;
-use network::network;
-use network::tools;
 use network::connection;
-use network::connection::wireless;
-use network::connection::cellular_card;
-use network::drakroam;
+use network::connection_manager;
 
 sub filter_networks {
     my ($connection) = @_;
