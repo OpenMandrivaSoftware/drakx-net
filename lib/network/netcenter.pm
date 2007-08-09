@@ -77,6 +77,7 @@ sub main {
                                        gtknew('VBox', children_tight => [
                                            gtknew('HButtonBox', children_tight => [
                                                gtkset_image(gtknew('Button'), 'connected'),
+                                               gtkset_image(gtknew('Button'), 'disconnected'),
                                                gtkset_image(gtknew('Button'), 'monitor-24'),
                                                gtkset_image(gtknew('Button'), 'configure-24'),
                                                ($cmanager->{gui}{show_networks} ? (0, gtkset_image(gtknew('Button'), 'refresh')) : ()),
