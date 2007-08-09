@@ -285,7 +285,7 @@ sub get_pixbufs() {
 
 sub create_drakroam {
     my ($in, $net, $w, $pixbufs) = @_;
-    { in => $in, net => $net, gui => { w => $w }, pixbufs => $pixbufs };
+    { in => $in, net => $net, gui => { w => $w, pixbufs => $pixbufs } };
 }
 
 sub create_networks_list {
