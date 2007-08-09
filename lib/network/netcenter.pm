@@ -102,7 +102,7 @@ sub main {
                            ]),
                        ]),
                    ]);
-                   network::connection_manager::update_on_network_change($cmanager);
+                   network::connection_manager::update_on_status_change($cmanager);
                    $box;
                } @connections,
            ])),

@@ -135,7 +135,7 @@ sub start_connection {
         gtkset_mousecursor_normal($cmanager->{gui}{w}{window}->window);
     }
 
-    update_on_network_change($cmanager);
+    update_on_status_change($cmanager);
 }
 
 sub stop_connection {
@@ -146,7 +146,7 @@ sub stop_connection {
     $cmanager->{connection}->disconnect;
     gtkset_mousecursor_normal($cmanager->{gui}{w}{window}->window);
 
-    update_on_network_change($cmanager);
+    update_on_status_change($cmanager);
 }
 
 sub toggle_would_disconnect {
@@ -200,7 +200,7 @@ sub select_network {
         my ($selected) = $droam->{gui}{networks_list}->get_selected_indices;
         $droam->{connection}{network} = defined $selected && $droam->{gui}{networks_list}{data}[$selected][0];
     }
-    update_on_network_change($droam);
+    update_on_status_change($droam);
 }
 
 sub update_networks {
@@ -238,10 +238,10 @@ sub update_networks {
         }
     }
 
-    update_on_network_change($cmanager);
+    update_on_status_change($cmanager);
 }
 
-sub update_on_network_change {
+sub update_on_status_change {
     my ($cmanager) = @_;
 
     if ($cmanager->{gui}{buttons}{connect_toggle}) {
