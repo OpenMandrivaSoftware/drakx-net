@@ -193,6 +193,16 @@ sub create_networks_list {
     $cmanager->{gui}{networks_list}->set_has_tooltip(1);
 }
 
+sub select_network {
+    my ($droam) = @_;
+
+    if ($droam->{connection}) {
+        my ($selected) = $droam->{gui}{networks_list}->get_selected_indices;
+        $droam->{connection}{network} = defined $selected && $droam->{gui}{networks_list}{data}[$selected][0];
+    }
+    update_on_network_change($droam);
+}
+
 sub update_networks {
     my ($cmanager) = @_;
     @{$cmanager->{gui}{networks_list}{data}} = ();

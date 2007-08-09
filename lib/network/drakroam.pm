@@ -63,16 +63,6 @@ sub get_network_event_message {
     }
 }
 
-sub select_network {
-    my ($droam) = @_;
-
-    if ($droam->{connection}) {
-        my ($selected) = $droam->{gui}{networks_list}->get_selected_indices;
-        $droam->{connection}{network} = defined $selected && $droam->{gui}{networks_list}{data}[$selected][0];
-    }
-    network::connection_manager::update_on_network_change($droam);
-}
-
 sub create_drakroam_gui {
     my ($droam, $dbus, $title, $icon) = @_;
 
