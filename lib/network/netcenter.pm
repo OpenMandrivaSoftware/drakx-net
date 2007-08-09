@@ -20,16 +20,18 @@ sub filter_networks {
     splice @networks, 0, 3;
 }
 
-sub build_networks_list {
+sub build_cmanager {
     my ($in, $net, $w, $pixbufs, $connection) = @_;
 
     my $cmanager = network::connection_manager::create($in, $net, $w, $pixbufs);
-    network::connection_manager::create_networks_list($cmanager);
     $cmanager->{connection} = $connection;
-    $cmanager->{filter_networks} = sub { filter_networks($connection) };
-    network::connection_manager::update_networks($cmanager);
-
-    $cmanager->{gui}{networks_list};
+    $cmanager->{gui}{show_networks} = $connection->can('get_networks') && !$connection->network_scan_is_slow;
+    if ($cmanager->{gui}{show_networks}) {
+        network::connection_manager::create_networks_list($cmanager);
+        $cmanager->{filter_networks} = sub { filter_networks($connection) };
+        network::connection_manager::update_networks($cmanager);
+    }
+    $cmanager;
 }
 
 sub gtkset_image {
@@ -62,6 +64,7 @@ sub main {
            $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
            1, gtknew('ScrolledWindow', width => 500, height => 300, child => gtknew('VBox', spacing => 20, children_tight => [
                map {
+                   my $cmanager = build_cmanager($in, $net, $w, $pixbufs, $_);
                    gtknew('HBox', children_tight => [
                        gtknew('Image', file => $_->get_type_icon),
                        gtknew('VBox', spacing => 10, children_tight => [
@@ -69,14 +72,14 @@ sub main {
                            gtknew('HBox', children_tight => [
                                gtknew('Label', padding => [ 5, 0 ]),
                                gtknew('VBox', children_tight => [
-                                   ($_->can('get_networks') && !$_->network_scan_is_slow ? build_networks_list($in, $net, $w, $pixbufs, $_) : ()),
+                                   if_($cmanager->{gui}{show_networks}, $cmanager->{gui}{networks_list}),
                                    gtknew('HBox', children_tight => [
                                        gtknew('VBox', children_tight => [
                                            gtknew('HButtonBox', children_tight => [
                                                gtkset_image(gtknew('Button'), 'connected'),
                                                gtkset_image(gtknew('Button'), 'monitor-24'),
                                                gtkset_image(gtknew('Button'), 'configure-24'),
-                                               ($_->can('get_networks') ? (0, gtkset_image(gtknew('Button'), 'refresh')) : ()),
+                                               ($cmanager->{gui}{show_networks} ? (0, gtkset_image(gtknew('Button'), 'refresh')) : ()),
                                            ]),
                                        ]),
                                    ]),
