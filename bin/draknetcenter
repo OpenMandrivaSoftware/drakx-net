@@ -10,5 +10,11 @@ use lib qw(/usr/lib/libDrakX);
 BEGIN { unshift @::textdomains, 'drakx-net' }
 
 use standalone;
+use network::network;
 use network::netcenter;
-network::netcenter::main();
+
+my $in = 'interactive'->vnew;
+my $net = {};
+network::network::read_net_conf($net);
+
+network::netcenter::main($in, $net);

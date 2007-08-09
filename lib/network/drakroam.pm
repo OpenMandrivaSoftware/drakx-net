@@ -257,9 +257,8 @@ sub toggle_connection {
     update_on_network_change($droam);
 }
 
-sub build_pixbufs {
-    my ($droam) = @_;
-    $droam->{gui}{pixbufs} = {
+sub get_pixbufs() {
+    {
         state => { map { $_ => gtkcreate_pixbuf($_) } qw(connected disconnected refresh) },
         link_level => { map {
             $_ => gtkcreate_pixbuf('wifi-' . sprintf('%03d', $_) . '.png')->scale_simple(24, 24, 'hyper');
@@ -270,7 +269,12 @@ sub build_pixbufs {
     };
 }
 
-sub build_network_frame {
+sub create_drakroam {
+    my ($in, $net, $w, $pixbufs) = @_;
+    { in => $in, net => $net, gui => { w => $w }, pixbufs => $pixbufs };
+}
+
+sub create_networks_list {
     my ($droam) = @_;
 
     $droam->{gui}{networks_list} = Gtk2::SimpleList->new(
@@ -296,8 +300,8 @@ sub build_network_frame {
     $droam->{gui}{networks_list}->set_has_tooltip(1);
 }
 
-sub build_drakroam_gui {
-    my ($droam, $dbus) = @_;
+sub create_drakroam_gui {
+    my ($droam, $dbus, $title, $icon) = @_;
 
     $droam->{gui}{model} = Gtk2::ListStore->new('Gtk2::Gdk::Pixbuf', 'Glib::String');
     $droam->{gui}{connections_combo} = Gtk2::ComboBox->new($droam->{gui}{model});
@@ -311,8 +315,6 @@ sub build_drakroam_gui {
     $droam->{gui}{pixbuf_size} = 32;
     $droam->{gui}{empty_pixbuf} = Gtk2::Gdk::Pixbuf->new('rgb', 1, 8, $droam->{gui}{pixbuf_size}, $droam->{gui}{pixbuf_size});
     $droam->{gui}{empty_pixbuf}->fill(0);
-
-    build_network_frame($droam);
 
     my $status_bar = Gtk2::Statusbar->new;
     my $status_bar_cid = $status_bar->get_context_id("Network event");
@@ -329,16 +331,6 @@ sub build_drakroam_gui {
         $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
         dbus_object::set_gtk2_watch_helper($dbus);
     }
-
-    build_pixbufs($droam);
-
-    my $title = N("Wireless connection");
-    my $icon = '/usr/share/mcc/themes/default/drakroam-mdk.png';
-
-    $ugtk2::wm_icon = $icon;
-    $droam->{gui}{w} = ugtk2->new($title);
-    #- so that transient_for is defined, for wait messages and popups to be centered
-    $::main_window = $droam->{gui}{w}{real_window};
 
     gtkadd($droam->{gui}{w}{window},
            gtknew('VBox', spacing => 5, children => [
@@ -360,8 +352,18 @@ sub build_drakroam_gui {
 sub main {
     my ($in, $net, $dbus, $o_interface, $o_ap) = @_;
 
-    my $droam = { in => $in, net => $net };
-    build_drakroam_gui($droam, $dbus);
+    my $title = N("Wireless connection");
+    my $icon = '/usr/share/mcc/themes/default/drakroam-mdk.png';
+
+    $ugtk2::wm_icon = $icon;
+    my $w = ugtk2->new($title);
+    #- so that transient_for is defined, for wait messages and popups to be centered
+    $::main_window = $w->{real_window};
+
+    my $pixbufs = get_pixbufs();
+    my $droam = create_drakroam($in, $net, $w, $pixbufs);
+    create_networks_list($droam);
+    create_drakroam_gui($droam, $dbus, $title, $icon);
 
     my @connection_types = qw(network::connection::wireless network::connection::cellular_card);
     @{$droam->{all_connections}} = map { $_->get_connections(automatic_only => 1) } @connection_types;
