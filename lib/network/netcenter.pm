@@ -65,7 +65,7 @@ sub main {
            1, gtknew('ScrolledWindow', width => 500, height => 300, child => gtknew('VBox', spacing => 20, children_tight => [
                map {
                    my $cmanager = build_cmanager($in, $net, $w, $pixbufs, $_);
-                   gtknew('HBox', children_tight => [
+                   my $box = gtknew('HBox', children_tight => [
                        gtknew('Image', file => $_->get_type_icon),
                        gtknew('VBox', spacing => 10, children_tight => [
                            gtknew('Title2', label => $_->get_description),
@@ -76,11 +76,25 @@ sub main {
                                    gtknew('HBox', children_tight => [
                                        gtknew('VBox', children_tight => [
                                            gtknew('HButtonBox', children_tight => [
-                                               gtkset_image(gtknew('Button'), 'connected'),
-                                               gtkset_image(gtknew('Button'), 'disconnected'),
+                                               $cmanager->{gui}{buttons}{connect_start} =
+                                                 gtkset_image(gtknew('Button', clicked => sub {
+                                                                         network::connection_manager::start_connection($cmanager);
+                                                                     }), 'connected'),
+                                               $cmanager->{gui}{buttons}{connect_stop} =
+                                                 gtkset_image(gtknew('Button', clicked => sub {
+                                                                         network::connection_manager::start_connection($cmanager);
+                                                                     }), 'disconnected'),
                                                gtkset_image(gtknew('Button'), 'monitor-24'),
-                                               gtkset_image(gtknew('Button'), 'configure-24'),
-                                               ($cmanager->{gui}{show_networks} ? gtkset_image(gtknew('Button'), 'refresh') : ()),
+                                               $cmanager->{gui}{buttons}{configure} = 
+                                                 gtkset_image(gtknew('Button', clicked => sub {
+                                                                         network::connection_manager::configure_connection($cmanager);
+                                                                     }), 'configure-24'),
+                                               ($cmanager->{gui}{show_networks} ?
+                                                  $cmanager->{gui}{buttons}{refresh} =
+                                                    gtkset_image(gtknew('Button', clicked => sub {
+                                                                            network::connection_manager::update_networks($cmanager);
+                                                                        }), 'refresh')
+                                                      : ()),
                                            ]),
                                        ]),
                                    ]),
@@ -88,6 +102,8 @@ sub main {
                            ]),
                        ]),
                    ]);
+                   network::connection_manager::update_on_network_change($cmanager);
+                   $box;
                } @connections,
            ])),
        ]),
