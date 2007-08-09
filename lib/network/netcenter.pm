@@ -33,13 +33,13 @@ sub filter_networks {
 sub build_networks_list {
     my ($in, $net, $w, $pixbufs, $connection) = @_;
 
-    my $droam = network::connection_manager::create($in, $net, $w, $pixbufs);
-    network::connection_manager::create_networks_list($droam);
-    $droam->{connection} = $connection;
-    $droam->{filter_networks} = sub { filter_networks($connection) };
-    network::connection_manager::update_networks($droam);
+    my $cmanager = network::connection_manager::create($in, $net, $w, $pixbufs);
+    network::connection_manager::create_networks_list($cmanager);
+    $cmanager->{connection} = $connection;
+    $cmanager->{filter_networks} = sub { filter_networks($connection) };
+    network::connection_manager::update_networks($cmanager);
 
-    $droam->{gui}{networks_list};
+    $cmanager->{gui}{networks_list};
 }
 
 sub gtkset_image {
