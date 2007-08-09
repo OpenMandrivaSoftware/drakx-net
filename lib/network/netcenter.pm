@@ -31,11 +31,11 @@ sub filter_networks {
 }
 
 sub build_networks_list {
-    my ($connection, $net) = @_;
+    my ($in, $net, $w, $pixbufs, $connection) = @_;
 
-    my $droam = { connection => $connection, net => $net };
-    network::drakroam::build_pixbufs($droam);
-    network::drakroam::build_network_frame($droam);
+    my $droam = network::drakroam::create_drakroam($in, $net, $w, $pixbufs);
+    network::drakroam::create_networks_list($droam);
+    $droam->{connection} = $connection;
     $droam->{filter_networks} = sub { filter_networks($connection) };
     network::drakroam::update_networks($droam);
 
@@ -51,7 +51,9 @@ sub gtkset_image {
     $w;
 }
 
-sub main() {
+sub main {
+    my ($in, $net) = @_;
+
     my $title = N("Network Center");
     my $icon = '/usr/share/mcc/themes/default/drakroam-mdk.png';
 
@@ -63,8 +65,7 @@ sub main() {
     my @connections = map { $_->get_connections(automatic_only => 1) } network::connection::get_types;
     @connections = reverse(uniq_ { $_->{device} } reverse(@connections));
 
-    my $net = {};
-    network::network::read_net_conf($net);
+    my $pixbufs = network::drakroam::get_pixbufs();
 
     gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
@@ -78,7 +79,7 @@ sub main() {
                            gtknew('HBox', children_tight => [
                                gtknew('Label', padding => [ 5, 0 ]),
                                gtknew('VBox', children_tight => [
-                                   ($_->can('get_networks') && !$_->network_scan_is_slow ? build_networks_list($_, $net) : ()),
+                                   ($_->can('get_networks') && !$_->network_scan_is_slow ? build_networks_list($in, $net, $w, $pixbufs, $_) : ()),
                                    gtknew('HBox', children_tight => [
                                        gtknew('VBox', children_tight => [
                                            gtknew('HButtonBox', children_tight => [
