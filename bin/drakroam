@@ -17,7 +17,7 @@ use network::drakroam;
 
 my %args = map { if_(/^--(\w+)=(.*)$/ && member($1, qw(ap interface)), $1 => $2) } @ARGV;
 
-my $in = 'interactive'->vnew('su');
+my $in = 'interactive'->vnew;
 my $net = {};
 network::network::read_net_conf($net);
 my $dbus;

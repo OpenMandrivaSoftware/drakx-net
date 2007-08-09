@@ -33,11 +33,11 @@ sub filter_networks {
 sub build_networks_list {
     my ($in, $net, $w, $pixbufs, $connection) = @_;
 
-    my $droam = network::drakroam::create_drakroam($in, $net, $w, $pixbufs);
-    network::drakroam::create_networks_list($droam);
+    my $droam = network::connection_manager::create($in, $net, $w, $pixbufs);
+    network::connection_manager::create_networks_list($droam);
     $droam->{connection} = $connection;
     $droam->{filter_networks} = sub { filter_networks($connection) };
-    network::drakroam::update_networks($droam);
+    network::connection_manager::update_networks($droam);
 
     $droam->{gui}{networks_list};
 }
@@ -65,7 +65,7 @@ sub main {
     my @connections = map { $_->get_connections(automatic_only => 1) } network::connection::get_types;
     @connections = reverse(uniq_ { $_->{device} } reverse(@connections));
 
-    my $pixbufs = network::drakroam::get_pixbufs();
+    my $pixbufs = network::connection_manager::create_pixbufs();
 
     gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
