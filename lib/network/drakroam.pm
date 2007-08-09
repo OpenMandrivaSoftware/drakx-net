@@ -223,10 +223,10 @@ sub select_network {
 sub update_on_network_change {
     my ($droam) = @_;
 
-    if ($droam->{gui}{buttons}{connect}) {
-        $droam->{gui}{buttons}{connect}->set_label(toggle_would_disconnect($droam) ? N("Disconnect") : N("Connect"));
+    if ($droam->{gui}{buttons}{connect_toggle}) {
+        $droam->{gui}{buttons}{connect_toggle}->set_label(toggle_would_disconnect($droam) ? N("Disconnect") : N("Connect"));
         #- always allow to disconnect if connected
-        $droam->{gui}{buttons}{connect}->set_sensitive($droam->{connection} && ($droam->{connection}->get_status || $droam->{connection}{network}));
+        $droam->{gui}{buttons}{connect_toggle}->set_sensitive($droam->{connection} && ($droam->{connection}->get_status || $droam->{connection}{network}));
     }
 
     #- allow to configure only if a network is selected
@@ -340,7 +340,7 @@ sub create_drakroam_gui {
                1, gtknew('ScrolledWindow', width => 500, height => 300, child => $droam->{gui}{networks_list}),
                0, gtknew('HButtonBox', layout => 'edge', children_loose => [
                    $droam->{gui}{buttons}{configure} = gtknew('Button', text => N("Configure"), clicked => sub { configure_network($droam) }),
-                   $droam->{gui}{buttons}{connect} = gtknew('Button', relief => 'half', clicked => sub { toggle_connection($droam) }),
+                   $droam->{gui}{buttons}{connect_toggle} = gtknew('Button', relief => 'half', clicked => sub { toggle_connection($droam) }),
                    $droam->{gui}{buttons}{refresh} = gtknew('Button', text => N("Refresh"), clicked => sub { update_networks($droam) }),
                    gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit })
                ]),
