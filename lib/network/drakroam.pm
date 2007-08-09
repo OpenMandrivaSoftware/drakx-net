@@ -192,9 +192,10 @@ sub configure_network {
     1;
 }
 
-sub connect_to_network {
+sub start_connection {
     my ($droam) = @_;
 
+    $droam->{connection} && $droam->{connection}{network} or return;
     if ($droam->{connection}->selected_network_is_configured || configure_network($droam)) {
         gtkset_mousecursor_wait($droam->{gui}{w}{window}->window);
         my $_wait = $droam->{in}->wait_message(N("Please wait"), N("Connecting..."));
@@ -208,6 +209,19 @@ sub connect_to_network {
         $droam->{connection}->connect($droam->{in}, $droam->{net});
         gtkset_mousecursor_normal($droam->{gui}{w}{window}->window);
     }
+
+    update_on_network_change($droam);
+}
+
+sub stop_connection {
+    my ($droam) = @_;
+
+    gtkset_mousecursor_wait($droam->{gui}{w}{window}->window);
+    my $_wait = $droam->{in}->wait_message(N("Please wait"), N("Disconnecting..."));
+    $droam->{connection}->disconnect;
+    gtkset_mousecursor_normal($droam->{gui}{w}{window}->window);
+
+    update_on_network_change($droam);
 }
 
 sub select_network {
@@ -229,6 +243,11 @@ sub update_on_network_change {
         $droam->{gui}{buttons}{connect_toggle}->set_sensitive($droam->{connection} && ($droam->{connection}->get_status || $droam->{connection}{network}));
     }
 
+    $droam->{gui}{buttons}{connect_start}->set_sensitive($droam->{connection} && (!$droam->{connection}->get_status || $droam->{connection}{network}))
+      if $droam->{gui}{buttons}{connect_start};
+    $droam->{gui}{buttons}{connect_stop}->set_sensitive($droam->{connection} && $droam->{connection}->get_status)
+      if $droam->{gui}{buttons}{connect_stop};
+
     #- allow to configure only if a network is selected
     $droam->{gui}{buttons}{configure}->set_sensitive($droam->{connection} && $droam->{connection}{network})
       if $droam->{gui}{buttons}{configure};
@@ -246,15 +265,10 @@ sub toggle_connection {
     my ($droam) = @_;
 
     if (toggle_would_disconnect($droam)) {
-        gtkset_mousecursor_wait($droam->{gui}{w}{window}->window);
-        my $_wait = $droam->{in}->wait_message(N("Please wait"), N("Disconnecting..."));
-        $droam->{connection}->disconnect;
-        gtkset_mousecursor_normal($droam->{gui}{w}{window}->window);
-    } elsif ($droam->{connection}) {
-        $droam->{connection}{network} or return;
-        connect_to_network($droam);
+        stop_connection($droam);
+    } else {
+        start_connection($droam);
     }
-    update_on_network_change($droam);
 }
 
 sub get_pixbufs() {
@@ -340,6 +354,8 @@ sub create_drakroam_gui {
                1, gtknew('ScrolledWindow', width => 500, height => 300, child => $droam->{gui}{networks_list}),
                0, gtknew('HButtonBox', layout => 'edge', children_loose => [
                    $droam->{gui}{buttons}{configure} = gtknew('Button', text => N("Configure"), clicked => sub { configure_network($droam) }),
+                   $droam->{gui}{buttons}{connect_start} = gtknew('Button', text => N("Connect"), relief => 'half', clicked => sub { start_connection($droam) }),
+                   $droam->{gui}{buttons}{connect_stop} = gtknew('Button', text => N("Disconnect"), relief => 'half', clicked => sub { stop_connection($droam) }),
                    $droam->{gui}{buttons}{connect_toggle} = gtknew('Button', relief => 'half', clicked => sub { toggle_connection($droam) }),
                    $droam->{gui}{buttons}{refresh} = gtknew('Button', text => N("Refresh"), clicked => sub { update_networks($droam) }),
                    gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit })
@@ -375,7 +391,7 @@ sub main {
     if ($o_ap && $droam->{connection}) {
         $droam->{connection}{network} = $o_ap;
         $droam->{gui}{w}->show;
-        connect_to_network($droam);
+        start_connection($droam);
     }
 
     $droam->{gui}{w}->main;
