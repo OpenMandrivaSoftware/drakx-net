@@ -80,7 +80,7 @@ sub main {
                                                gtkset_image(gtknew('Button'), 'disconnected'),
                                                gtkset_image(gtknew('Button'), 'monitor-24'),
                                                gtkset_image(gtknew('Button'), 'configure-24'),
-                                               ($cmanager->{gui}{show_networks} ? (0, gtkset_image(gtknew('Button'), 'refresh')) : ()),
+                                               ($cmanager->{gui}{show_networks} ? gtkset_image(gtknew('Button'), 'refresh') : ()),
                                            ]),
                                        ]),
                                    ]),
