@@ -82,7 +82,7 @@ sub main {
                                                                      }), 'connected'),
                                                $cmanager->{gui}{buttons}{connect_stop} =
                                                  gtkset_image(gtknew('Button', clicked => sub {
-                                                                         network::connection_manager::start_connection($cmanager);
+                                                                         network::connection_manager::stop_connection($cmanager);
                                                                      }), 'disconnected'),
                                                gtkset_image(gtknew('Button'), 'monitor-24'),
                                                $cmanager->{gui}{buttons}{configure} = 
