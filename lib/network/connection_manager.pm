@@ -149,6 +149,12 @@ sub stop_connection {
     update_on_status_change($cmanager);
 }
 
+sub monitor_connection {
+    my ($cmanager) = @_;
+    my $interface  = $cmanager->{connection} && $cmanager->{connection}->get_interface or return;
+    run_program::raw({ detach => 1 }, '/usr/sbin/net_monitor', '--defaultintf', $interface);
+}
+
 sub toggle_would_disconnect {
     my ($cmanager) = @_;
 
