@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-tools\n"
 "POT-Creation-Date: 2007-08-09 11:47+0200\n"
-"PO-Revision-Date: 2007-08-12 12:06+0200\n"
+"PO-Revision-Date: 2007-08-12 14:11+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -733,7 +733,6 @@ msgstr "Deling av Internett-samband"
 
 #: ../bin/drakgw:75
 #, c-format
-#, fuzzy
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -746,7 +745,11 @@ msgid ""
 "(LAN)."
 msgstr ""
 "Du er i ferd med å setja opp maskina til å dela Internett-sambandet.\n"
-"Med denne funksjonen kan andre maskiner på lokal"
+"Med denne funksjonen kan andre maskiner på lokalnettet bruka Internett-sambandet på denne maskina.\n"
+"\n"
+"Ver sikker på at du har sett opp nettverks- og Internett-tilgang med drakconnect før du går vidare.\n"
+"\n"
+"Merk: Du treng eit eige nettverkskort for å kunna setja opp lokalnett (LAN)."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -756,6 +759,8 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
+"Deling av Internett-samband er allereie sett opp og er påslått.\n\n"
+"Kva vil du gjera?"
 
 #: ../bin/drakgw:95
 #, c-format
@@ -765,6 +770,8 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
+"Deling av Internett-samband er allereie sett opp og er avslått.\n\n"
+"Kva vil du gjera?"
 
 #: ../bin/drakgw:101
 #, c-format
@@ -774,7 +781,7 @@ msgstr "Set opp på nytt"
 #: ../bin/drakgw:122
 #, c-format
 msgid "Please select the network interface directly connected to the internet."
-msgstr ""
+msgstr "Vel nettverksgrensesnittet som er kopla direkte til Internett."
 
 #: ../bin/drakgw:141
 #, c-format
@@ -784,14 +791,14 @@ msgid ""
 "%s\n"
 "\n"
 "I am about to setup your Local Area Network with that adapter."
-msgstr ""
+msgstr "Det finst berre eitt oppsett nettverkskort på maskina:\n\n%s\n\nLokalnettverk vert no sett opp med dette kortet."
 
 #: ../bin/drakgw:152
 #, c-format
 msgid ""
 "Please choose what network adapter will be connected to your Local Area "
 "Network."
-msgstr ""
+msgstr "Vel kva nettverkskort som skal vera kopla til lokalnettet."
 
 #: ../bin/drakgw:173
 #, c-format
@@ -806,12 +813,12 @@ msgstr "Lokal IP-adresse"
 #: ../bin/drakgw:178
 #, c-format
 msgid "The internal domain name"
-msgstr ""
+msgstr "Internt domenenamn"
 
 #: ../bin/drakgw:184
 #, c-format
 msgid "Potential LAN address conflict found in current config of %s!\n"
-msgstr ""
+msgstr "Fann potensiell LAN-adressekonflikt i oppsettet til «%s».\n"
 
 #: ../bin/drakgw:200
 #, c-format
@@ -821,7 +828,7 @@ msgstr "Namneoppslagoppsett (DNS)"
 #: ../bin/drakgw:204
 #, c-format
 msgid "Use this gateway as domain name server"
-msgstr ""
+msgstr "Bruk denne portnaren som domenenamntenar"
 
 #: ../bin/drakgw:205
 #, c-format
@@ -836,6 +843,9 @@ msgid ""
 "Here you can select different options for the DHCP server configuration.\n"
 "If you do not know the meaning of an option, simply leave it as it is."
 msgstr ""
+"Oppsett av DHCP-tenar\n\n"
+"Her kan du endra oppsettet av DHCP-tenaren.\n"
+"Viss du ikkje veit kva eit val tyder, kan du berre la det stå uendra."
 
 #: ../bin/drakgw:239
 #, c-format
@@ -845,37 +855,37 @@ msgstr "Bruk automatisk oppsett (DHCP)"
 #: ../bin/drakgw:240
 #, c-format
 msgid "The DHCP start range"
-msgstr ""
+msgstr "Startområde for DHCP"
 
 #: ../bin/drakgw:241
 #, c-format
 msgid "The DHCP end range"
-msgstr ""
+msgstr "Sluttområde for DHCP"
 
 #: ../bin/drakgw:242
 #, c-format
 msgid "The default lease (in seconds)"
-msgstr ""
+msgstr "Standard leigeavtale (i sekund)"
 
 #: ../bin/drakgw:243
 #, c-format
 msgid "The maximum lease (in seconds)"
-msgstr ""
+msgstr "Største leigeavtale (i sekund)"
 
 #: ../bin/drakgw:266
 #, c-format
 msgid "Proxy caching server (SQUID)"
-msgstr ""
+msgstr "Mellomlagringstenar (SQUID)"
 
 #: ../bin/drakgw:270
 #, c-format
 msgid "Use this gateway as proxy caching server"
-msgstr ""
+msgstr "Bruk denne portnaren som mellomlagringstenar"
 
 #: ../bin/drakgw:271
 #, c-format
 msgid "Admin mail"
-msgstr ""
+msgstr "E-post til administrator"
 
 #: ../bin/drakgw:272
 #, c-format
@@ -890,7 +900,7 @@ msgstr "Mellomtenarport"
 #: ../bin/drakgw:274
 #, c-format
 msgid "Cache size (MB)"
-msgstr ""
+msgstr "Storleik på mellomlager (MB)"
 
 #: ../bin/drakgw:296
 #, c-format
@@ -900,12 +910,12 @@ msgstr "Kringkast skrivarinformasjon"
 #: ../bin/drakgw:313
 #, c-format
 msgid "Internet Connection Sharing is now enabled."
-msgstr ""
+msgstr "Deling av Internett-samband er no slått på."
 
 #: ../bin/drakgw:319
 #, c-format
 msgid "Internet Connection Sharing is now disabled."
-msgstr ""
+msgstr "Deling av Internett-samband er no slått av."
 
 #: ../bin/drakgw:325
 #, c-format
@@ -915,11 +925,13 @@ msgid ""
 "Area Network, using automatic network configuration (DHCP) and\n"
 " a Transparent Proxy Cache server (SQUID)."
 msgstr ""
+"Alt er no sett opp.\n"
+"Du kan dela Internett-samband med andre maskiner på lokalnettet, bruk automatisk nettverksoppsett (DHCP) og ein transparent mellomlagringstenar (SQUID)."
 
 #: ../bin/drakgw:359
 #, c-format
 msgid "Disabling servers..."
-msgstr ""
+msgstr "Slår av tenarar …"
 
 #: ../bin/drakgw:373
 #, c-format
@@ -938,37 +950,37 @@ msgstr ""
 #: ../bin/drakgw:379
 #, c-format
 msgid "Configuring..."
-msgstr ""
+msgstr "Set opp …"
 
 #: ../bin/drakgw:380
 #, c-format
 msgid "Configuring firewall..."
-msgstr ""
+msgstr "Set opp brannmur …"
 
 #: ../bin/drakhosts:100
 #, c-format
 msgid "Please add an host to be able to modify it."
-msgstr ""
+msgstr "Du må leggja til ein vert før du kan endra han."
 
 #: ../bin/drakhosts:110
-#, fuzzy, c-format
+#, c-format
 msgid "Please modify information"
-msgstr "Detaljert informasjon"
+msgstr "Endra informasjonen"
 
 #: ../bin/drakhosts:111
-#, fuzzy, c-format
+#, c-format
 msgid "Please delete information"
-msgstr "Detaljert informasjon"
+msgstr "Slett informasjonen"
 
 #: ../bin/drakhosts:112
-#, fuzzy, c-format
+#, c-format
 msgid "Please add information"
-msgstr "Detaljert informasjon"
+msgstr "Legg til informasjon"
 
 #: ../bin/drakhosts:116
-#, fuzzy, c-format
+#, c-format
 msgid "IP address:"
-msgstr "IP-adresse"
+msgstr "IP-adresse:"
 
 #: ../bin/drakhosts:117
 #, c-format
@@ -976,9 +988,9 @@ msgid "Host name:"
 msgstr "Vertsnamn:"
 
 #: ../bin/drakhosts:118
-#, fuzzy, c-format
+#, c-format
 msgid "Host Aliases:"
-msgstr "Vertsnamn"
+msgstr "Vertsalias:"
 
 #: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:209
 #: ../bin/draksambashare:230 ../bin/draksambashare:377
@@ -988,14 +1000,14 @@ msgid "Error!"
 msgstr "Feil"
 
 #: ../bin/drakhosts:122
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter a valid IP address."
-msgstr "IP-adresse for portnar"
+msgstr "Skriv inn ei gyldig IP-adresse."
 
 #: ../bin/drakhosts:128
-#, fuzzy, c-format
+#, c-format
 msgid "Same IP is already in %s file."
-msgstr "%s er allereie i bruk\n"
+msgstr "Den same IP-adressa finst i «%s»-fila."
 
 #: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:202
 #, c-format
@@ -1003,9 +1015,9 @@ msgid "Host name"
 msgstr "Vertsnamn"
 
 #: ../bin/drakhosts:196
-#, fuzzy, c-format
+#, c-format
 msgid "Host Aliases"
-msgstr "Vertsnamn"
+msgstr "Vertalias"
 
 #: ../bin/drakhosts:206 ../bin/drakhosts:236
 #, c-format
@@ -1015,7 +1027,7 @@ msgstr "Set opp vertsdefinisjonar"
 #: ../bin/drakhosts:222 ../bin/drakhosts:249
 #, c-format
 msgid "Modify entry"
-msgstr ""
+msgstr "Endra oppføring"
 
 #: ../bin/drakhosts:241 ../bin/draknfs:572 ../bin/draksambashare:1103
 #: ../bin/draksambashare:1134 ../bin/draksambashare:1165
@@ -1025,14 +1037,14 @@ msgid "Add"
 msgstr "Legg til"
 
 #: ../bin/drakhosts:242
-#, fuzzy, c-format
+#, c-format
 msgid "Add entry"
-msgstr "Legg til cron-oppføring"
+msgstr "Legg til oppføring"
 
 #: ../bin/drakhosts:245
 #, c-format
 msgid "Failed to add host."
-msgstr ""
+msgstr "Klarte ikkje leggja til vert."
 
 #: ../bin/drakhosts:248 ../bin/draknfs:579 ../bin/draksambashare:1060
 #: ../bin/draksambashare:1105 ../bin/draksambashare:1136
@@ -1044,7 +1056,7 @@ msgstr "Endra"
 #: ../bin/drakhosts:252
 #, c-format
 msgid "Failed to Modify host."
-msgstr ""
+msgstr "Klarte ikkje endra vert."
 
 #: ../bin/drakhosts:255 ../bin/drakids:87 ../bin/drakids:96 ../bin/draknfs:586
 #: ../bin/draksambashare:1061 ../bin/draksambashare:1113
@@ -1057,7 +1069,7 @@ msgstr "Fjern"
 #: ../bin/drakhosts:259
 #, c-format
 msgid "Failed to remove host."
-msgstr ""
+msgstr "Klarte ikkje fjerna vert."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:147
 #: ../bin/net_applet:139 ../lib/network/drakroam.pm:353
@@ -1066,9 +1078,9 @@ msgid "Quit"
 msgstr "Avslutt"
 
 #: ../bin/drakids:28
-#, fuzzy, c-format
+#, c-format
 msgid "Allowed addresses"
-msgstr "Tillèt alle brukarar"
+msgstr "Tilletne adresser"
 
 #: ../bin/drakids:40 ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190
 #: ../bin/drakids:215 ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
@@ -1082,24 +1094,24 @@ msgstr "Interaktiv brannmur"
 #: ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190 ../bin/drakids:215
 #: ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
 #: ../bin/net_applet:239 ../bin/net_applet:519
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to contact daemon"
-msgstr "Klarte ikkje kontakta spegelen «%s»"
+msgstr "Klarte ikkje kontakta tenesta"
 
 #: ../bin/drakids:74 ../bin/drakids:102
 #, c-format
 msgid "Log"
-msgstr "Log"
+msgstr "Logg"
 
 #: ../bin/drakids:78 ../bin/drakids:97 ../bin/net_applet:663
-#, fuzzy, c-format
+#, c-format
 msgid "Allow"
-msgstr "Alle"
+msgstr "Tillèt"
 
 #: ../bin/drakids:79 ../bin/drakids:88 ../bin/net_applet:664
 #, c-format
 msgid "Block"
-msgstr ""
+msgstr "Blokker"
 
 #: ../bin/drakids:80 ../bin/drakids:89 ../bin/drakids:98 ../bin/drakids:109
 #: ../bin/drakids:122 ../bin/drakids:130 ../bin/draknfs:188
@@ -1109,44 +1121,44 @@ msgid "Close"
 msgstr "Lukk"
 
 #: ../bin/drakids:83
-#, fuzzy, c-format
+#, c-format
 msgid "Allowed services"
-msgstr "Tillèt alle brukarar"
+msgstr "Tilletne tenester"
 
 #: ../bin/drakids:92
-#, fuzzy, c-format
+#, c-format
 msgid "Blocked services"
-msgstr "Kopierer brukarfiler"
+msgstr "Blokkerte tenester"
 
 #: ../bin/drakids:106
-#, fuzzy, c-format
+#, c-format
 msgid "Clear logs"
-msgstr "Fjern alle"
+msgstr "Tøm loggar"
 
 #: ../bin/drakids:107 ../bin/drakids:112 ../bin/net_applet:607
 #, c-format
 msgid "Blacklist"
-msgstr ""
+msgstr "Svarteliste"
 
 #: ../bin/drakids:108 ../bin/drakids:125 ../bin/net_applet:612
 #, c-format
 msgid "Whitelist"
-msgstr ""
+msgstr "Kviteliste"
 
 #: ../bin/drakids:116
-#, fuzzy, c-format
+#, c-format
 msgid "Remove from blacklist"
-msgstr "Fjern frå LVM"
+msgstr "Fjern frå svarteliste"
 
 #: ../bin/drakids:117
 #, c-format
 msgid "Move to whitelist"
-msgstr ""
+msgstr "Flytt til kviteliste"
 
 #: ../bin/drakids:129
-#, fuzzy, c-format
+#, c-format
 msgid "Remove from whitelist"
-msgstr "Fjern frå LVM"
+msgstr "Fjern frå kviteliste"
 
 #: ../bin/drakids:247
 #, c-format
@@ -1154,19 +1166,19 @@ msgid "Date"
 msgstr "Dato"
 
 #: ../bin/drakids:248
-#, fuzzy, c-format
+#, c-format
 msgid "Attacker"
-msgstr "Åtaksdetaljar"
+msgstr "Åtakar"
 
 #: ../bin/drakids:249
-#, fuzzy, c-format
+#, c-format
 msgid "Attack type"
-msgstr "Angrepstype: %s"
+msgstr "Åtakstype"
 
 #: ../bin/drakids:250 ../bin/drakids:283
-#, fuzzy, c-format
+#, c-format
 msgid "Service"
-msgstr "Tenester"
+msgstr "Teneste"
 
 #: ../bin/drakids:251
 #, c-format
@@ -1174,9 +1186,9 @@ msgid "Network interface"
 msgstr "Nettverksgrensesnitt"
 
 #: ../bin/drakids:282
-#, fuzzy, c-format
+#, c-format
 msgid "Application"
-msgstr "Handling"
+msgstr "Program"
 
 #: ../bin/drakids:284
 #, c-format
@@ -1184,14 +1196,14 @@ msgid "Status"
 msgstr "Status"
 
 #: ../bin/drakids:286
-#, fuzzy, c-format
+#, c-format
 msgid "Allowed"
-msgstr "Alle"
+msgstr "Tilleten"
 
 #: ../bin/drakids:287
 #, c-format
 msgid "Blocked"
-msgstr ""
+msgstr "Blokkert"
 
 #: ../bin/drakinvictus:36
 #, c-format
@@ -1199,41 +1211,41 @@ msgid "Invictus Firewall"
 msgstr "Invictus brannmur"
 
 #: ../bin/drakinvictus:53
-#, fuzzy, c-format
+#, c-format
 msgid "Start as master"
-msgstr "Starta ved oppstart"
+msgstr "Start som master"
 
 #: ../bin/drakinvictus:72
-#, fuzzy, c-format
+#, c-format
 msgid "A password is required."
-msgstr "Krev passord"
+msgstr "Krev passord."
 
 #: ../bin/drakinvictus:100
 #, c-format
 msgid ""
 "This tool allows to set up network interfaces failover and firewall "
 "replication."
-msgstr ""
+msgstr "Dette verktøyet lèt deg setja opp failover for nettverksgrensesnitt, samt brannmursreplikering."
 
 #: ../bin/drakinvictus:102
 #, c-format
 msgid "Network redundancy (leave empty if interface is not used)"
-msgstr ""
+msgstr "Nettverksredundans (la stå tom viss grensesnittet ikkje vert brukt)"
 
 #: ../bin/drakinvictus:105
-#, fuzzy, c-format
+#, c-format
 msgid "Real address"
-msgstr "IP-adresse"
+msgstr "Verkeleg adresse"
 
 #: ../bin/drakinvictus:105
 #, c-format
 msgid "Virtual shared address"
-msgstr ""
+msgstr "Virtuell delt adresse"
 
 #: ../bin/drakinvictus:105
 #, c-format
 msgid "Virtual ID"
-msgstr ""
+msgstr "Virtuell ID"
 
 #: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:586
 #: ../lib/network/vpn/vpnc.pm:56
@@ -1242,19 +1254,19 @@ msgid "Password"
 msgstr "Passord"
 
 #: ../bin/drakinvictus:114
-#, fuzzy, c-format
+#, c-format
 msgid "Firewall replication"
-msgstr "Filval"
+msgstr "Brannmursreplikering"
 
 #: ../bin/drakinvictus:116
 #, c-format
 msgid "Synchronize firewall conntrack tables"
-msgstr ""
+msgstr "Synkroniser brannmur-conntrack-tabellar"
 
 #: ../bin/drakinvictus:123
-#, fuzzy, c-format
+#, c-format
 msgid "Synchronization network interface"
-msgstr "Synkroniseringsverktøy"
+msgstr "Synkroniser nettverksgrensesnitt"
 
 #: ../bin/drakinvictus:132
 #, fuzzy, c-format
@@ -1262,9 +1274,9 @@ msgid "Connection mark bit"
 msgstr "Samband"
 
 #: ../bin/draknetprofile:36
-#, fuzzy, c-format
+#, c-format
 msgid "Network profiles"
-msgstr "Nettverksval"
+msgstr "Nettverksprofilar"
 
 #: ../bin/draknetprofile:67
 #, c-format
@@ -1291,7 +1303,7 @@ msgstr "Profilen «%s» finst allereie."
 #: ../bin/draknetprofile:129
 #, c-format
 msgid "You can not delete the default profile"
-msgstr ""
+msgstr "Du kan ikkje sletta standardprofilen"
 
 #: ../bin/draknetprofile:131
 #, c-format
@@ -1303,22 +1315,22 @@ msgstr "Du kan ikkje sletta gjeldande profil"
 msgid ""
 "This tool allows to activate an existing network profile, and to manage "
 "(clone, delete) profiles."
-msgstr ""
+msgstr "Med dette verktøyet kan du setja eksisterande profilar ut av bruk, og handtera (klona, sletta) profilar."
 
 #: ../bin/draknetprofile:141
 #, c-format
 msgid "To modify a profile, you have to activate it first."
-msgstr ""
+msgstr "For å kunna endra ein profil må du først setja han i bruk."
 
 #: ../bin/draknetprofile:144
-#, fuzzy, c-format
+#, c-format
 msgid "Activate"
-msgstr "Slå på no"
+msgstr "Set i bruk"
 
 #: ../bin/draknetprofile:145
-#, fuzzy, c-format
+#, c-format
 msgid "Clone"
-msgstr "Kopla til"
+msgstr "Klon"
 
 #: ../bin/draknetprofile:146
 #, c-format
@@ -1328,22 +1340,22 @@ msgstr "Slett"
 #: ../bin/draknfs:41
 #, c-format
 msgid "map root user as anonymous"
-msgstr ""
+msgstr "Tilordna «root»-brukar som anonym"
 
 #: ../bin/draknfs:42
 #, c-format
 msgid "map all users to anonymous user"
-msgstr ""
+msgstr "Tilordna alle brukarar som anonym"
 
 #: ../bin/draknfs:43
 #, c-format
 msgid "No user UID mapping"
-msgstr ""
+msgstr "Inga tilordning for brukar-uid"
 
 #: ../bin/draknfs:44
 #, c-format
 msgid "allow real remote root access"
-msgstr ""
+msgstr "Tillèt root-tilgang utanfrå"
 
 #: ../bin/draknfs:58 ../bin/draknfs:59 ../bin/draknfs:60
 #: ../bin/draksambashare:161 ../bin/draksambashare:162
@@ -1355,7 +1367,7 @@ msgstr "/_Fil"
 #: ../bin/draknfs:59 ../bin/draksambashare:162
 #, c-format
 msgid "/_Write conf"
-msgstr ""
+msgstr "/_Lagra oppsett"
 
 #: ../bin/draknfs:60 ../bin/draksambashare:163
 #, c-format
@@ -1365,47 +1377,47 @@ msgstr "/_Avslutt"
 #: ../bin/draknfs:60 ../bin/draksambashare:163
 #, c-format
 msgid "<control>Q"
-msgstr "<control>Q"
+msgstr "<control>A"
 
 #: ../bin/draknfs:63 ../bin/draknfs:64 ../bin/draknfs:65
-#, fuzzy, c-format
+#, c-format
 msgid "/_NFS Server"
-msgstr "DND-tenarar"
+msgstr "/_NFS-tenar"
 
 #: ../bin/draknfs:64 ../bin/draksambashare:166
 #, c-format
 msgid "/_Restart"
-msgstr ""
+msgstr "/_Start på nytt"
 
 #: ../bin/draknfs:65 ../bin/draksambashare:167
 #, c-format
 msgid "/R_eload"
-msgstr ""
+msgstr "/_Oppdater"
 
 #: ../bin/draknfs:84
-#, fuzzy, c-format
+#, c-format
 msgid "NFS server"
-msgstr "DND-tenarar"
+msgstr "NFS-tenar"
 
 #: ../bin/draknfs:84
 #, c-format
 msgid "Restarting/Reloading NFS server..."
-msgstr ""
+msgstr "Startar NFS-tenar på nytt …"
 
 #: ../bin/draknfs:85
 #, c-format
 msgid "Error Restarting/Reloading NFS server"
-msgstr ""
+msgstr "Feil ved omstart av NFS-tenar"
 
 #: ../bin/draknfs:101 ../bin/draksambashare:225
 #, c-format
 msgid "Directory Selection"
-msgstr ""
+msgstr "Mappeval"
 
 #: ../bin/draknfs:106 ../bin/draksambashare:230
 #, c-format
 msgid "Should be a directory."
-msgstr ""
+msgstr "Må vera ei mappe."
 
 #: ../bin/draknfs:137
 #, c-format
@@ -1433,6 +1445,19 @@ msgid ""
 "either `/255.255.252.0' or  `/22'  appended to the network base address "
 "result.\n"
 msgstr ""
+"Du kan spesifiera <span weight=\"bold\">NFS-klientar</span> på mange måtar:\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">Einskildvert:</span> Ein vert, anten som eit forkorta namn attkjend av namneoppslagstenaren, eit fullstendig domenenamn (FQDN) eller ei IP-adresse.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">Nettgrupper:</span> NIS-nettgrupper kan skrivast som @gruppe.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">Jokerteikn:</span> Maskinnamn kan innehelda jokerteikna «*» og «?». For eksempel vil «*.cs.foo.edu» gje treff på alle vertar i domenet «cs.foo.edu».\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">IP-nettverk:</span> Du kan òg eksportera mapper til alle verter på eit IP-nettverk samtidig. Eksempel er «/255.255.252.0» eller «/22» lagt til grunnadressa til nettverket.\n"
 
 #: ../bin/draknfs:152
 #, c-format
@@ -1463,27 +1488,27 @@ msgstr ""
 #: ../bin/draknfs:168
 #, c-format
 msgid "Synchronous access:"
-msgstr ""
+msgstr "Synkrontilgang:"
 
 #: ../bin/draknfs:169
-#, fuzzy, c-format
+#, c-format
 msgid "Secured Connection:"
-msgstr "Internett-samband"
+msgstr "Sikra samband"
 
 #: ../bin/draknfs:170
 #, c-format
 msgid "Read-Only share:"
-msgstr ""
+msgstr "Skriveverna delt resurs:"
 
 #: ../bin/draknfs:171
 #, c-format
 msgid "Subtree checking:"
-msgstr ""
+msgstr "Undertre-kontroll:"
 
 #: ../bin/draknfs:173
 #, c-format
 msgid "Advanced Options"
-msgstr ""
+msgstr "Avanserte val"
 
 #: ../bin/draknfs:174
 #, c-format
@@ -1491,7 +1516,7 @@ msgid ""
 "<span foreground=\"royalblue3\">%s</span> this option requires that requests "
 "originate on an internet port less than IPPORT_RESERVED (1024). This option "
 "is on by default."
-msgstr ""
+msgstr "<span foreground=\"royalblue3\">%s</span> Dette valet krev at førespurnader kjem frå ein Internett-port lågare enn IPPORT_RESERVED (1024). Dette valet er påslått som standard."
 
 #: ../bin/draknfs:175
 #, c-format
@@ -1526,22 +1551,22 @@ msgstr "Informasjon"
 #: ../bin/draknfs:263
 #, c-format
 msgid "Directory"
-msgstr "Katalog"
+msgstr "Mappe"
 
 #: ../bin/draknfs:267
 #, c-format
 msgid "Draknfs entry"
-msgstr ""
+msgstr "Draknfs-oppføring"
 
 #: ../bin/draknfs:276
 #, c-format
 msgid "Please add an NFS share to be able to modify it."
-msgstr ""
+msgstr "Du må leggja til ein delt NFS-resurs for å kunna endra han."
 
 #: ../bin/draknfs:365
-#, fuzzy, c-format
+#, c-format
 msgid "NFS directory"
-msgstr "Nøkkelretning"
+msgstr "NFS-mappe"
 
 #: ../bin/draknfs:366 ../bin/draksambashare:361 ../bin/draksambashare:571
 #: ../bin/draksambashare:750
@@ -1550,80 +1575,80 @@ msgid "Directory:"
 msgstr "Mappe:"
 
 #: ../bin/draknfs:367
-#, fuzzy, c-format
+#, c-format
 msgid "Host access"
-msgstr "Vertsnamn"
+msgstr "Verttilgang"
 
 #: ../bin/draknfs:368
 #, c-format
 msgid "Access:"
-msgstr ""
+msgstr "Tilgang:"
 
 #: ../bin/draknfs:369
 #, c-format
 msgid "User ID Mapping"
-msgstr ""
+msgstr "Tilordning av brukar-ID"
 
 #: ../bin/draknfs:370
 #, c-format
 msgid "User ID:"
-msgstr ""
+msgstr "Brukar-ID:"
 
 #: ../bin/draknfs:371
 #, c-format
 msgid "Anonymous user ID:"
-msgstr ""
+msgstr "Anonym brukar-ID:"
 
 #: ../bin/draknfs:372
 #, c-format
 msgid "Anonymous Group ID:"
-msgstr ""
+msgstr "Anonym gruppe-ID:"
 
 #: ../bin/draknfs:409
-#, fuzzy, c-format
+#, c-format
 msgid "Please specify a directory to share."
-msgstr "Skriv inn trådlausinnstillingane for kortet."
+msgstr "Vel mappa du ønskjer å dela."
 
 #: ../bin/draknfs:411
 #, c-format
 msgid "Can't create this directory."
-msgstr ""
+msgstr "Kan ikkje oppretta denne mappa."
 
 #: ../bin/draknfs:414
 #, c-format
 msgid "You must specify hosts access."
-msgstr ""
+msgstr "Du må vel verttilgang."
 
 #: ../bin/draknfs:494
 #, c-format
 msgid "Share Directory"
-msgstr ""
+msgstr "Del mappe"
 
 #: ../bin/draknfs:494
 #, c-format
 msgid "Hosts Wildcard"
-msgstr ""
+msgstr "Vertsjokerteikn"
 
 #: ../bin/draknfs:494
 #, c-format
 msgid "General Options"
-msgstr ""
+msgstr "Generelt oppsett"
 
 #: ../bin/draknfs:494
 #, c-format
 msgid "Custom Options"
-msgstr ""
+msgstr "Sjøvvald oppsett"
 
 #: ../bin/draknfs:506 ../bin/draksambashare:377 ../bin/draksambashare:608
 #: ../bin/draksambashare:775
 #, c-format
 msgid "Please enter a directory to share."
-msgstr ""
+msgstr "Vel mappe du ønskjer å dela."
 
 #: ../bin/draknfs:513
 #, c-format
 msgid "Please use the modify button to set right access."
-msgstr ""
+msgstr "Bruk «Endra»-knappen for å velja tilgangsløve."
 
 #: ../bin/draknfs:528
 #, c-format
@@ -1633,22 +1658,22 @@ msgstr "Hander delte NFS-resursar"
 #: ../bin/draknfs:567
 #, c-format
 msgid "DrakNFS manage NFS shares"
-msgstr ""
+msgstr "DrakNFS handterer delte NFS-resursar"
 
 #: ../bin/draknfs:576
 #, c-format
 msgid "Failed to add NFS share."
-msgstr ""
+msgstr "Klarte ikkje leggja til delt NFS-resurs."
 
 #: ../bin/draknfs:583
 #, c-format
 msgid "Failed to Modify NFS share."
-msgstr ""
+msgstr "Klarte ikkje endra delt NFS-resurs."
 
 #: ../bin/draknfs:590
 #, c-format
 msgid "Failed to remove an NFS share."
-msgstr ""
+msgstr "Klarte ikkje fjerna delt NFS-resurs."
 
 #: ../bin/drakproxy:36
 #, c-format
@@ -1666,9 +1691,9 @@ msgid "Share name"
 msgstr "Namn på del resurs"
 
 #: ../bin/draksambashare:71
-#, fuzzy, c-format
+#, c-format
 msgid "Share directory"
-msgstr "Mappa finst ikkje"
+msgstr "Del mappe"
 
 #: ../bin/draksambashare:72 ../bin/draksambashare:105
 #, c-format
@@ -1678,7 +1703,7 @@ msgstr "Merknad"
 #: ../bin/draksambashare:73 ../bin/draksambashare:106
 #, c-format
 msgid "Browseable"
-msgstr ""
+msgstr "Lesbar"
 
 #: ../bin/draksambashare:74
 #, c-format
@@ -1686,50 +1711,50 @@ msgid "Public"
 msgstr "Offentleg"
 
 #: ../bin/draksambashare:75 ../bin/draksambashare:111
-#, fuzzy, c-format
+#, c-format
 msgid "Writable"
-msgstr "Skriv"
+msgstr "Skrivbar"
 
 #: ../bin/draksambashare:76 ../bin/draksambashare:152
-#, fuzzy, c-format
+#, c-format
 msgid "Create mask"
-msgstr "Opprett"
+msgstr "Opprettingsmaske"
 
 #: ../bin/draksambashare:77 ../bin/draksambashare:153
-#, fuzzy, c-format
+#, c-format
 msgid "Directory mask"
-msgstr "Katalog"
+msgstr "Mappemaske"
 
 #: ../bin/draksambashare:78
-#, fuzzy, c-format
+#, c-format
 msgid "Read list"
-msgstr "Les"
+msgstr "Leseliste"
 
 #: ../bin/draksambashare:79 ../bin/draksambashare:112
 #: ../bin/draksambashare:585
-#, fuzzy, c-format
+#, c-format
 msgid "Write list"
-msgstr "Skriv"
+msgstr "Skriveliste"
 
 #: ../bin/draksambashare:80 ../bin/draksambashare:144
-#, fuzzy, c-format
+#, c-format
 msgid "Admin users"
-msgstr "Legg til brukarar"
+msgstr "Admin-brukarar"
 
 #: ../bin/draksambashare:81 ../bin/draksambashare:145
-#, fuzzy, c-format
+#, c-format
 msgid "Valid users"
-msgstr "Legg til brukarar"
+msgstr "Gyldige brukarar"
 
 #: ../bin/draksambashare:82
-#, fuzzy, c-format
+#, c-format
 msgid "Inherit Permissions"
-msgstr "Løyve"
+msgstr "Arv løyve"
 
 #: ../bin/draksambashare:83 ../bin/draksambashare:146
-#, fuzzy, c-format
+#, c-format
 msgid "Hide dot files"
-msgstr "Skjul filer"
+msgstr "Skjul punktumfiler"
 
 #: ../bin/draksambashare:84 ../bin/draksambashare:147
 #, c-format
@@ -1737,24 +1762,24 @@ msgid "Hide files"
 msgstr "Skjul filer"
 
 #: ../bin/draksambashare:85 ../bin/draksambashare:151
-#, fuzzy, c-format
+#, c-format
 msgid "Preserve case"
-msgstr "Innstilling: "
+msgstr "Skil store og små bokstavar"
 
 #: ../bin/draksambashare:86
-#, fuzzy, c-format
+#, c-format
 msgid "Force create mode"
-msgstr "Skrivarmodell"
+msgstr "Ting opprettingsmodus"
 
 #: ../bin/draksambashare:87
-#, fuzzy, c-format
+#, c-format
 msgid "Force group"
-msgstr "PFS-gruppe"
+msgstr "Tving gruppe"
 
 #: ../bin/draksambashare:88 ../bin/draksambashare:150
-#, fuzzy, c-format
+#, c-format
 msgid "Default case"
-msgstr "Brukar:"
+msgstr "Standard store/små bokstavar"
 
 #: ../bin/draksambashare:103
 #, c-format
@@ -1767,30 +1792,30 @@ msgid "Path"
 msgstr "Stig"
 
 #: ../bin/draksambashare:107 ../bin/draksambashare:577
-#, fuzzy, c-format
+#, c-format
 msgid "Printable"
-msgstr "Bruk"
+msgstr "Utskrivbar"
 
 #: ../bin/draksambashare:108
-#, fuzzy, c-format
+#, c-format
 msgid "Print Command"
-msgstr "Kommando"
+msgstr "Utskriftskommando"
 
 #: ../bin/draksambashare:109
-#, fuzzy, c-format
+#, c-format
 msgid "LPQ command"
-msgstr "Kommando"
+msgstr "LPQ-kommando"
 
 #: ../bin/draksambashare:110
 #, c-format
 msgid "Guest ok"
-msgstr ""
+msgstr "Gjest OK"
 
 #: ../bin/draksambashare:113 ../bin/draksambashare:154
 #: ../bin/draksambashare:586
-#, fuzzy, c-format
+#, c-format
 msgid "Inherit permissions"
-msgstr "Løyve"
+msgstr "Arv løyve"
 
 #: ../bin/draksambashare:114
 #, c-format
@@ -1798,40 +1823,40 @@ msgid "Printing"
 msgstr "Utskrift"
 
 #: ../bin/draksambashare:115
-#, fuzzy, c-format
+#, c-format
 msgid "Create mode"
-msgstr "Kabelmodem"
+msgstr "Opprettingsmodus"
 
 #: ../bin/draksambashare:116
-#, fuzzy, c-format
+#, c-format
 msgid "Use client driver"
-msgstr "Telnet-tenar"
+msgstr "Bruk klientdrivar"
 
 #: ../bin/draksambashare:142
-#, fuzzy, c-format
+#, c-format
 msgid "Read List"
-msgstr "Fjern liste"
+msgstr "Les liste"
 
 #: ../bin/draksambashare:143
-#, fuzzy, c-format
+#, c-format
 msgid "Write List"
-msgstr "Skriv"
+msgstr "Skriv liste"
 
 #: ../bin/draksambashare:148
-#, fuzzy, c-format
+#, c-format
 msgid "Force Group"
-msgstr "Gruppe"
+msgstr "Tving gruppe"
 
 #: ../bin/draksambashare:149
 #, c-format
 msgid "Force create group"
-msgstr ""
+msgstr "Tving gruppeoppretting"
 
 #: ../bin/draksambashare:165 ../bin/draksambashare:166
 #: ../bin/draksambashare:167
-#, fuzzy, c-format
+#, c-format
 msgid "/_Samba Server"
-msgstr "Vevtenar"
+msgstr "/_Samba-tenar"
 
 #: ../bin/draksambashare:169 ../bin/draksambashare:170
 #, c-format
@@ -1846,12 +1871,12 @@ msgstr "/_Meld frå om feil"
 #: ../bin/draksambashare:170
 #, c-format
 msgid "/About..."
-msgstr ""
+msgstr "/Om …"
 
 #: ../bin/draksambashare:173
 #, c-format
 msgid "Draksambashare"
-msgstr ""
+msgstr "Draksambashare"
 
 #: ../bin/draksambashare:175
 #, c-format
@@ -1861,7 +1886,7 @@ msgstr "Copyright © %s Mandriva"
 #: ../bin/draksambashare:177
 #, c-format
 msgid "This is a simple tool to easily manage Samba configuration."
-msgstr ""
+msgstr "Eit enkelt verktøy for handtering av Samba-oppsett."
 
 #: ../bin/draksambashare:179
 #, c-format
@@ -1877,33 +1902,33 @@ msgstr "Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 #: ../bin/draksambashare:208
 #, c-format
 msgid "Restarting/Reloading Samba server..."
-msgstr ""
+msgstr "Startar Samba-tenar på nytt …"
 
 #: ../bin/draksambashare:209
 #, c-format
 msgid "Error Restarting/Reloading Samba server"
-msgstr ""
+msgstr "Feil ved omstart av Samba-tenar"
 
 #: ../bin/draksambashare:349 ../bin/draksambashare:550
 #: ../bin/draksambashare:671
 #, c-format
 msgid "Open"
-msgstr "Opne"
+msgstr "Opna"
 
 #: ../bin/draksambashare:352
 #, c-format
 msgid "DrakSamba add entry"
-msgstr ""
+msgstr "DrakSamba legg til oppføring"
 
 #: ../bin/draksambashare:356
-#, fuzzy, c-format
+#, c-format
 msgid "Add a share"
-msgstr "Legg til regel"
+msgstr "Legg til delt resurs"
 
 #: ../bin/draksambashare:359
-#, fuzzy, c-format
+#, c-format
 msgid "Name of the share:"
-msgstr "Namn på sertifikat"
+msgstr "Namn på delt resurs:"
 
 #: ../bin/draksambashare:360 ../bin/draksambashare:570
 #: ../bin/draksambashare:751
@@ -1916,48 +1941,48 @@ msgstr "Merknad:"
 msgid ""
 "Share with the same name already exist or share name empty, please choose "
 "another name."
-msgstr ""
+msgstr "Det finst alt ein delt resurs med det same namnet, eller namnet er tomt. Vel eit anna namn."
 
 #: ../bin/draksambashare:380
 #, c-format
 msgid "Can't create the directory, please enter a correct path."
-msgstr ""
+msgstr "Klarte ikkje laga mappa. Skriv inn ei gyldig adresse."
 
 #: ../bin/draksambashare:383 ../bin/draksambashare:606
 #: ../bin/draksambashare:773
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter a Comment for this share."
-msgstr "Skriv inn trådlausinnstillingane for kortet."
+msgstr "Skriv inn merknad for denne delte resursen."
 
 #: ../bin/draksambashare:414
 #, c-format
 msgid "pdf-gen - a PDF generator"
-msgstr ""
+msgstr "pdf-gen – ein PDF-generator"
 
 #: ../bin/draksambashare:415
 #, c-format
 msgid "printers - all printers available"
-msgstr ""
+msgstr "skrivarar – alle tilgjengelege skrivarar"
 
 #: ../bin/draksambashare:419
 #, c-format
 msgid "Add Special Printer share"
-msgstr ""
+msgstr "Legg til spesiell delt skrivarresurs"
 
 #: ../bin/draksambashare:422
 #, c-format
 msgid "Goal of this wizard is to easily create a new special printer Samba share."
-msgstr ""
+msgstr "Denne vegvisaren gjer det lett å laga spesielle delte Samba-skrivarresursar."
 
 #: ../bin/draksambashare:429
-#, fuzzy, c-format
+#, c-format
 msgid "A PDF generator already exists."
-msgstr "Profilen «%s» finst allereie."
+msgstr "Det finst alt ein PDF-generator."
 
 #: ../bin/draksambashare:453
-#, fuzzy, c-format
+#, c-format
 msgid "Printers and print$ already exist."
-msgstr "Profilen «%s» finst allereie."
+msgstr "Skrivarar og print$ finst alt."
 
 #: ../bin/draksambashare:503
 #, c-format
@@ -1967,147 +1992,147 @@ msgstr "Gratulerer"
 #: ../bin/draksambashare:504
 #, c-format
 msgid "The wizard successfully added the printer Samba share"
-msgstr ""
+msgstr "Vegvisaren har no lagt til den delete skrivarresursen"
 
 #: ../bin/draksambashare:519
 #, c-format
 msgid "Failed to add printers."
-msgstr ""
+msgstr "Klarte ikkje leggja til skrivarar."
 
 #: ../bin/draksambashare:534
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
-msgstr ""
+msgstr "Du må leggja til eller velja ein delt Samba-skrivarresurs for å kunna endra han."
 
 #: ../bin/draksambashare:553
 #, c-format
 msgid "DrakSamba Printers entry"
-msgstr ""
+msgstr "DrakSamba skrivaroppføring"
 
 #: ../bin/draksambashare:566
 #, c-format
 msgid "Printer share"
-msgstr ""
+msgstr "Delt skrivarresurs"
 
 #: ../bin/draksambashare:569
-#, fuzzy, c-format
+#, c-format
 msgid "Printer name:"
-msgstr "Grensesnitt:"
+msgstr "Skrivarnamn:"
 
 #: ../bin/draksambashare:575 ../bin/draksambashare:756
-#, fuzzy, c-format
+#, c-format
 msgid "Writable:"
-msgstr "Skriv"
+msgstr "Skrivbar:"
 
 #: ../bin/draksambashare:576 ../bin/draksambashare:757
 #, c-format
 msgid "Browseable:"
-msgstr ""
+msgstr "Lesbar:"
 
 #: ../bin/draksambashare:581
 #, c-format
 msgid "Advanced options"
-msgstr ""
+msgstr "Avanserte val"
 
 #: ../bin/draksambashare:583
-#, fuzzy, c-format
+#, c-format
 msgid "Printer access"
-msgstr "Internett-tilgang"
+msgstr "Skrivartilgang"
 
 #: ../bin/draksambashare:587
 #, c-format
 msgid "Guest ok:"
-msgstr ""
+msgstr "Gjest OK:"
 
 #: ../bin/draksambashare:588
-#, fuzzy, c-format
+#, c-format
 msgid "Create mode:"
-msgstr "Kabelmodem"
+msgstr "Opprettingsmodus:"
 
 #: ../bin/draksambashare:592
 #, c-format
 msgid "Printer command"
-msgstr ""
+msgstr "Skrivarkommando"
 
 #: ../bin/draksambashare:594
 #, c-format
 msgid "Print command:"
-msgstr ""
+msgstr "Skrivarkommando:"
 
 #: ../bin/draksambashare:595
-#, fuzzy, c-format
+#, c-format
 msgid "LPQ command:"
-msgstr "Kommando"
+msgstr "LPQ-kommando:"
 
 #: ../bin/draksambashare:596
-#, fuzzy, c-format
+#, c-format
 msgid "Printing:"
-msgstr "Åtvaring"
+msgstr "Utskrift:"
 
 #: ../bin/draksambashare:612
 #, c-format
 msgid "create mode should be numeric. ie: 0755."
-msgstr ""
+msgstr "Opprettingsmodusen må vera numerisk. Eksempel: 0755."
 
 #: ../bin/draksambashare:674
 #, c-format
 msgid "DrakSamba entry"
-msgstr ""
+msgstr "DrakSamba-oppføring"
 
 #: ../bin/draksambashare:679
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
-msgstr ""
+msgstr "Du må leggja til eller velja ein delt Samba-resurs for å kunna endra han."
 
 #: ../bin/draksambashare:702
-#, fuzzy, c-format
+#, c-format
 msgid "Samba user access"
-msgstr "Samba-tenar"
+msgstr "Samba-brukartilgang"
 
 #: ../bin/draksambashare:710
-#, fuzzy, c-format
+#, c-format
 msgid "Mask options"
-msgstr "Grunnleggjande val"
+msgstr "Maskeval"
 
 #: ../bin/draksambashare:724
-#, fuzzy, c-format
+#, c-format
 msgid "Display options"
-msgstr "Endra oppsett"
+msgstr "Visingsval"
 
 #: ../bin/draksambashare:746
-#, fuzzy, c-format
+#, c-format
 msgid "Samba share directory"
-msgstr "Mappa finst ikkje"
+msgstr "Delt Samba-mappe"
 
 #: ../bin/draksambashare:749
-#, fuzzy, c-format
+#, c-format
 msgid "Share name:"
-msgstr "Namn på del resurs"
+msgstr "Namn på delt resurs:"
 
 #: ../bin/draksambashare:755
 #, c-format
 msgid "Public:"
-msgstr ""
+msgstr "Offentleg:"
 
 #: ../bin/draksambashare:779
 #, c-format
 msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
-msgstr ""
+msgstr "Opprettingsmaske, opprettingsmodus og mappemaska må vera numerisk. Eksempel: 0755."
 
 #: ../bin/draksambashare:786
 #, c-format
 msgid "Please create this Samba user: %s"
-msgstr ""
+msgstr "Legg til denne Samba-brukaren: %s"
 
 #: ../bin/draksambashare:890
 #, c-format
 msgid "Add Samba user"
-msgstr ""
+msgstr "Legg til Samba-brukar"
 
 #: ../bin/draksambashare:905
-#, fuzzy, c-format
+#, c-format
 msgid "User information"
-msgstr "Kringkast skrivarinformasjon"
+msgstr "Brukarinformasjon"
 
 #: ../bin/draksambashare:907
 #, c-format
@@ -2122,32 +2147,32 @@ msgstr "Passord:"
 #: ../bin/draksambashare:1022
 #, c-format
 msgid "Manage Samba configuration"
-msgstr "Set opp Samba"
+msgstr "Handter Samba-oppsett"
 
 #: ../bin/draksambashare:1110
 #, c-format
 msgid "Failed to Modify Samba share."
-msgstr ""
+msgstr "Klarte ikkje endra delt Samba-resurs."
 
 #: ../bin/draksambashare:1119
 #, c-format
 msgid "Failed to remove a Samba share."
-msgstr ""
+msgstr "Klarte ikkje fjerna delt Samba-resurs."
 
 #: ../bin/draksambashare:1126
 #, c-format
 msgid "File share"
-msgstr ""
+msgstr "Delt filresurs"
 
 #: ../bin/draksambashare:1141
 #, c-format
 msgid "Failed to Modify."
-msgstr ""
+msgstr "Klarte ikkje endra."
 
 #: ../bin/draksambashare:1150
 #, c-format
 msgid "Failed to remove."
-msgstr ""
+msgstr "Klarte ikkje fjerna."
 
 #: ../bin/draksambashare:1157
 #, c-format
@@ -2157,17 +2182,17 @@ msgstr "Skrivarar"
 #: ../bin/draksambashare:1169
 #, c-format
 msgid "Failed to add user."
-msgstr ""
+msgstr "Klarte ikkje legga til brukar."
 
 #: ../bin/draksambashare:1178
 #, c-format
 msgid "Failed to change user password."
-msgstr ""
+msgstr "Klarte ikkje endra brukarpassord."
 
 #: ../bin/draksambashare:1190
 #, c-format
 msgid "Failed to delete user."
-msgstr ""
+msgstr "Klarte ikkje sletta brukar."
 
 #: ../bin/draksambashare:1195
 #, c-format
@@ -2177,12 +2202,12 @@ msgstr "Brukaroppsett"
 #: ../bin/draksambashare:1203
 #, c-format
 msgid "Samba Users"
-msgstr ""
+msgstr "Samba-brukarar"
 
 #: ../bin/draksambashare:1212
 #, c-format
 msgid "DrakSamba manage Samba shares"
-msgstr ""
+msgstr "DrakSamba handter delete Samba-resursar"
 
 #: ../bin/drakvpn-old:65
 #, c-format
@@ -2192,7 +2217,7 @@ msgstr "DrakVPN"
 #: ../bin/drakvpn-old:87
 #, c-format
 msgid "The VPN connection is enabled."
-msgstr ""
+msgstr "VPN-sambandet er i bruk."
 
 #: ../bin/drakvpn-old:88
 #, c-format
@@ -2203,36 +2228,38 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
+"VPN-sambandet er allereie sett opp og er påslått.\n\n"
+"Kva vil du gjera?"
 
 #: ../bin/drakvpn-old:93
 #, c-format
 msgid "disable"
-msgstr ""
+msgstr "Slå av"
 
 #: ../bin/drakvpn-old:93 ../bin/drakvpn-old:119
 #, c-format
 msgid "reconfigure"
-msgstr ""
+msgstr "Set opp på nytt"
 
 #: ../bin/drakvpn-old:93 ../bin/drakvpn-old:119 ../bin/drakvpn-old:432
 #, c-format
 msgid "dismiss"
-msgstr ""
+msgstr "Avvis"
 
 #: ../bin/drakvpn-old:97
 #, c-format
 msgid "Disabling VPN..."
-msgstr ""
+msgstr "Slår av VPN …"
 
 #: ../bin/drakvpn-old:106
 #, c-format
 msgid "The VPN connection is now disabled."
-msgstr ""
+msgstr "VPN-sambandet er no slått av."
 
 #: ../bin/drakvpn-old:113
 #, c-format
 msgid "VPN connection currently disabled"
-msgstr ""
+msgstr "VPN-sambandet er slått av."
 
 #: ../bin/drakvpn-old:114
 #, c-format
@@ -2243,26 +2270,28 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
+"VPN-sambandet er allereie sett opp og er avslått.\n\n"
+"Kva vil du gjera?"
 
 #: ../bin/drakvpn-old:119
 #, c-format
 msgid "enable"
-msgstr ""
+msgstr "Slå på"
 
 #: ../bin/drakvpn-old:127
 #, c-format
 msgid "Enabling VPN..."
-msgstr ""
+msgstr "Slår på VPN …"
 
 #: ../bin/drakvpn-old:133
 #, c-format
 msgid "The VPN connection is now enabled."
-msgstr ""
+msgstr "VPN-sambandet er no slått på."
 
 #: ../bin/drakvpn-old:147 ../bin/drakvpn-old:164
 #, c-format
 msgid "Simple VPN setup."
-msgstr ""
+msgstr "Enkelt VPN-oppsett."
 
 #: ../bin/drakvpn-old:148
 #, c-format
@@ -2299,22 +2328,22 @@ msgstr ""
 #: ../bin/drakvpn-old:208
 #, c-format
 msgid "Problems installing package %s"
-msgstr ""
+msgstr "Problem ved installering av pakken «%s»"
 
 #: ../bin/drakvpn-old:222
 #, c-format
 msgid "Security Policies"
-msgstr ""
+msgstr "Tryggleikspraksis"
 
 #: ../bin/drakvpn-old:222
 #, c-format
 msgid "IKE daemon racoon"
-msgstr ""
+msgstr "IKE daemon racoon"
 
 #: ../bin/drakvpn-old:224
 #, c-format
 msgid "Configuration file"
-msgstr ""
+msgstr "Oppsettfil"
 
 #: ../bin/drakvpn-old:225
 #, c-format
@@ -2331,7 +2360,7 @@ msgstr ""
 #: ../bin/drakvpn-old:245 ../bin/drakvpn-old:382
 #, c-format
 msgid "%s entries"
-msgstr ""
+msgstr "%s oppføringar"
 
 #: ../bin/drakvpn-old:246
 #, c-format
@@ -2352,7 +2381,7 @@ msgstr ""
 msgid ""
 "_:display here is a verb\n"
 "Display"
-msgstr ""
+msgstr "Vis"
 
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
@@ -2362,7 +2391,7 @@ msgstr "Rediger"
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Commit"
-msgstr ""
+msgstr "Bruk"
 
 #: ../bin/drakvpn-old:267 ../bin/drakvpn-old:271 ../bin/drakvpn-old:406
 #: ../bin/drakvpn-old:410
@@ -2370,7 +2399,7 @@ msgstr ""
 msgid ""
 "_:display here is a verb\n"
 "Display configuration"
-msgstr ""
+msgstr "Vis oppsett"
 
 #: ../bin/drakvpn-old:272
 #, c-format
@@ -2381,6 +2410,11 @@ msgid ""
 "\n"
 "You'll have to go back and choose 'add'.\n"
 msgstr ""
+"Fila «%s» finst ikkje.\n"
+"\n"
+"Dette må vera eit nytt oppsett.\n"
+"\n"
+"Du må gå tilbake og velja «Legg til».\n"
 
 #: ../bin/drakvpn-old:301
 #, c-format
@@ -2395,7 +2429,7 @@ msgstr ""
 #: ../bin/drakvpn-old:333 ../bin/drakvpn-old:523
 #, c-format
 msgid "Edit section"
-msgstr ""
+msgstr "Rediger blokk"
 
 #: ../bin/drakvpn-old:334
 #, c-format
@@ -2410,7 +2444,7 @@ msgstr ""
 #: ../bin/drakvpn-old:574
 #, c-format
 msgid "Section names"
-msgstr ""
+msgstr "Blokknamn"
 
 #: ../bin/drakvpn-old:344
 #, c-format
@@ -2425,7 +2459,7 @@ msgstr ""
 #: ../bin/drakvpn-old:353 ../bin/drakvpn-old:570
 #, c-format
 msgid "Remove section"
-msgstr ""
+msgstr "Fjern blokk"
 
 #: ../bin/drakvpn-old:354 ../bin/drakvpn-old:571
 #, c-format
@@ -2435,6 +2469,9 @@ msgid ""
 "You can choose here below the one you want to remove\n"
 "and then click on next.\n"
 msgstr ""
+"Fila «%s» har fleire blokker eller samband.\n\n"
+"Du kan velja her den du ønskjer å fjerna, og\n"
+"så trykkja «Neste».\n"
 
 #: ../bin/drakvpn-old:383
 #, c-format
@@ -2459,11 +2496,16 @@ msgid ""
 "\n"
 "You'll have to go back and choose configure.\n"
 msgstr ""
+"Fila «%s» finst ikkje.\n"
+"\n"
+"Dette må vera eit nytt oppsett.\n"
+"\n"
+"Du må gå tilbake og velja «Set opp».\n"
 
 #: ../bin/drakvpn-old:425
 #, c-format
 msgid "racoon.conf entries"
-msgstr ""
+msgstr "«racoon.conf»-oppføringar"
 
 #: ../bin/drakvpn-old:426
 #, c-format
@@ -2481,17 +2523,17 @@ msgstr ""
 #: ../bin/drakvpn-old:432
 #, c-format
 msgid "path"
-msgstr ""
+msgstr "stig"
 
 #: ../bin/drakvpn-old:432
 #, c-format
 msgid "remote"
-msgstr ""
+msgstr "fjern"
 
 #: ../bin/drakvpn-old:432
 #, c-format
 msgid "sainfo"
-msgstr ""
+msgstr "sainfo"
 
 #: ../bin/drakvpn-old:440
 #, c-format
@@ -2506,7 +2548,7 @@ msgstr ""
 #: ../bin/drakvpn-old:443
 #, c-format
 msgid "path type"
-msgstr ""
+msgstr "stigtype"
 
 #: ../bin/drakvpn-old:447
 #, c-format
@@ -2535,7 +2577,7 @@ msgstr ""
 #: ../bin/drakvpn-old:467 ../bin/drakvpn-old:560
 #, c-format
 msgid "real file"
-msgstr ""
+msgstr "verkeleg fil"
 
 #: ../bin/drakvpn-old:490
 #, c-format
@@ -2604,7 +2646,7 @@ msgstr ""
 #: ../bin/drakvpn-old:559
 #, c-format
 msgid "path_type"
-msgstr ""
+msgstr "stig_type"
 
 #: ../bin/drakvpn-old:599
 #, c-format
@@ -2625,8 +2667,9 @@ msgstr ""
 
 #: ../bin/drakvpn-old:620
 #, c-format
+#, fuzzy
 msgid "Sainfo source address"
-msgstr ""
+msgstr "Sainfo-kjeldeadresse"
 
 #: ../bin/drakvpn-old:621
 #, c-format
@@ -2653,8 +2696,9 @@ msgstr ""
 
 #: ../bin/drakvpn-old:638
 #, c-format
+#, fuzzy
 msgid "Sainfo source protocol"
-msgstr ""
+msgstr "Sainfo-kjeldeprotokoll"
 
 #: ../bin/drakvpn-old:639
 #, c-format
@@ -2732,7 +2776,7 @@ msgstr ""
 #: ../bin/drakvpn-old:686
 #, c-format
 msgid "PFS group"
-msgstr ""
+msgstr "PFS-gruppe"
 
 #: ../bin/drakvpn-old:688
 #, c-format
@@ -2805,22 +2849,22 @@ msgstr "Krypteringsalgoritme"
 #: ../bin/drakvpn-old:730
 #, c-format
 msgid "Authentication algorithm"
-msgstr ""
+msgstr "Autentiseringsalgoritme"
 
 #: ../bin/drakvpn-old:732
 #, c-format
 msgid "Compression algorithm"
-msgstr ""
+msgstr "Komprimeringsalgoritme"
 
 #: ../bin/drakvpn-old:733
 #, c-format
 msgid "deflate"
-msgstr ""
+msgstr "deflate"
 
 #: ../bin/drakvpn-old:740
 #, c-format
 msgid "Remote"
-msgstr ""
+msgstr "På nettverket"
 
 #: ../bin/drakvpn-old:741
 #, c-format
@@ -2856,17 +2900,17 @@ msgstr ""
 #: ../bin/drakvpn-old:757
 #, c-format
 msgid "Generate policy"
-msgstr ""
+msgstr "Generer praksis"
 
 #: ../bin/drakvpn-old:758 ../bin/drakvpn-old:774 ../bin/drakvpn-old:787
 #, c-format
 msgid "off"
-msgstr ""
+msgstr "av"
 
 #: ../bin/drakvpn-old:758 ../bin/drakvpn-old:774 ../bin/drakvpn-old:787
 #, c-format
 msgid "on"
-msgstr ""
+msgstr "på"
 
 #: ../bin/drakvpn-old:759
 #, c-format
@@ -2890,7 +2934,7 @@ msgstr ""
 #: ../bin/drakvpn-old:773
 #, c-format
 msgid "Passive"
-msgstr ""
+msgstr "Passiv"
 
 #: ../bin/drakvpn-old:775
 #, c-format
@@ -2903,27 +2947,27 @@ msgstr ""
 #: ../bin/drakvpn-old:778
 #, c-format
 msgid "Certificate type"
-msgstr ""
+msgstr "Sertifikattype"
 
 #: ../bin/drakvpn-old:780
 #, c-format
 msgid "My certfile"
-msgstr ""
+msgstr "Mi sertifikatfil"
 
 #: ../bin/drakvpn-old:781
 #, c-format
 msgid "Name of the certificate"
-msgstr ""
+msgstr "Nam på sertifikatet"
 
 #: ../bin/drakvpn-old:782
 #, c-format
 msgid "My private key"
-msgstr ""
+msgstr "Min privatnøkkel"
 
 #: ../bin/drakvpn-old:783
 #, c-format
 msgid "Name of the private key"
-msgstr ""
+msgstr "Namn på privatnøkkel"
 
 #: ../bin/drakvpn-old:784
 #, c-format
@@ -2938,7 +2982,7 @@ msgstr ""
 #: ../bin/drakvpn-old:786
 #, c-format
 msgid "Verify cert"
-msgstr ""
+msgstr "Stadfest sertifikat"
 
 #: ../bin/drakvpn-old:788
 #, c-format
@@ -2950,7 +2994,7 @@ msgstr ""
 #: ../bin/drakvpn-old:790
 #, c-format
 msgid "My identifier"
-msgstr ""
+msgstr "Min identifikator"
 
 #: ../bin/drakvpn-old:791
 #, c-format
@@ -2987,7 +3031,7 @@ msgstr ""
 #: ../bin/drakvpn-old:812
 #, c-format
 msgid "Proposal"
-msgstr ""
+msgstr "Forslag"
 
 #: ../bin/drakvpn-old:814
 #, c-format
@@ -3004,7 +3048,7 @@ msgstr ""
 #: ../bin/drakvpn-old:821
 #, c-format
 msgid "Hash algorithm"
-msgstr ""
+msgstr "Hash-algoritme"
 
 #: ../bin/drakvpn-old:822
 #, c-format
@@ -3014,7 +3058,7 @@ msgstr "Autentiseringsmetode"
 #: ../bin/drakvpn-old:823
 #, c-format
 msgid "DH group"
-msgstr ""
+msgstr "DH-gruppe"
 
 #: ../bin/drakvpn-old:830
 #, c-format
@@ -3024,12 +3068,12 @@ msgstr "Kommando"
 #: ../bin/drakvpn-old:831
 #, c-format
 msgid "Source IP range"
-msgstr ""
+msgstr "IP-område for kjelde"
 
 #: ../bin/drakvpn-old:832
 #, c-format
 msgid "Destination IP range"
-msgstr ""
+msgstr "IP-område for mål"
 
 #: ../bin/drakvpn-old:833
 #, c-format
@@ -3044,27 +3088,28 @@ msgstr ""
 #: ../bin/drakvpn-old:835
 #, c-format
 msgid "Flag"
-msgstr ""
+msgstr "Flagg"
 
 #: ../bin/drakvpn-old:836
 #, c-format
 msgid "Direction"
-msgstr ""
+msgstr "Retning"
 
 #: ../bin/drakvpn-old:837
 #, c-format
 msgid "IPsec policy"
-msgstr ""
+msgstr "IPsec-praksis"
 
 #: ../bin/drakvpn-old:837
 #, c-format
 msgid "ipsec"
-msgstr ""
+msgstr "ipsec"
 
 #: ../bin/drakvpn-old:837
 #, c-format
+#, fuzzy
 msgid "discard"
-msgstr ""
+msgstr "avvis"
 
 #: ../bin/drakvpn-old:840
 #, c-format
@@ -3074,17 +3119,17 @@ msgstr "Modus"
 #: ../bin/drakvpn-old:840
 #, c-format
 msgid "tunnel"
-msgstr ""
+msgstr "tunell"
 
 #: ../bin/drakvpn-old:840
 #, c-format
 msgid "transport"
-msgstr ""
+msgstr "transport"
 
 #: ../bin/drakvpn-old:842
 #, c-format
 msgid "Source/destination"
-msgstr ""
+msgstr "Kjelde/mål"
 
 #: ../bin/drakvpn-old:843
 #, c-format
@@ -3094,47 +3139,47 @@ msgstr "Nivå"
 #: ../bin/drakvpn-old:843
 #, c-format
 msgid "require"
-msgstr ""
+msgstr "krev"
 
 #: ../bin/drakvpn-old:843
 #, c-format
 msgid "default"
-msgstr ""
+msgstr "standard"
 
 #: ../bin/drakvpn-old:843
 #, c-format
 msgid "use"
-msgstr ""
+msgstr "bruk"
 
 #: ../bin/drakvpn-old:843
 #, c-format
 msgid "unique"
-msgstr ""
+msgstr "unik"
 
 #: ../bin/net_applet:62
-#, fuzzy, c-format
+#, c-format
 msgid "Network is up on interface %s."
-msgstr "Nettverket køyrer på grensesnittet %s"
+msgstr "Nettverket køyrer på grensesnittet %s."
 
 #: ../bin/net_applet:63
-#, fuzzy, c-format
+#, c-format
 msgid "IP address: %s"
-msgstr "IP-adresse til åtakar: %s"
+msgstr "IP-adresse: %s"
 
 #: ../bin/net_applet:64
-#, fuzzy, c-format
+#, c-format
 msgid "Gateway: %s"
-msgstr "Portnar:"
+msgstr "Portnar: %s"
 
 #: ../bin/net_applet:65
 #, c-format
 msgid "Connected to %s (link level: %d %%)"
-msgstr ""
+msgstr "Kopla til %s (lenkjenivå: %d %%)"
 
 #: ../bin/net_applet:67
-#, fuzzy, c-format
+#, c-format
 msgid "Network is down on interface %s."
-msgstr "Nettverket køyrer på grensesnittet %s"
+msgstr "Nettverket er nede på grensesnittet %s."
 
 #: ../bin/net_applet:75 ../bin/net_monitor:468
 #, c-format
@@ -3157,9 +3202,9 @@ msgid "Manage wireless networks"
 msgstr "Handter trådlausnettverk"
 
 #: ../bin/net_applet:81
-#, fuzzy, c-format
+#, c-format
 msgid "Manage VPN connections"
-msgstr "Sambandshandtering"
+msgstr "Handter VPN-samband"
 
 #: ../bin/net_applet:85
 #, c-format
@@ -3179,7 +3224,7 @@ msgstr "Finn automatisk"
 #: ../bin/net_applet:96
 #, c-format
 msgid "Active interfaces"
-msgstr ""
+msgstr "Grensesnitt i bruk"
 
 #: ../bin/net_applet:120
 #, c-format
@@ -3201,7 +3246,7 @@ msgstr "Nettverkssamband"
 #: ../bin/net_applet:443
 #, c-format
 msgid "More networks"
-msgstr ""
+msgstr "Fleire nettverk"
 
 #: ../bin/net_applet:470
 #, c-format
@@ -3294,19 +3339,19 @@ msgid "Ignore"
 msgstr "Ignorer"
 
 #: ../bin/net_applet:635 ../bin/net_applet:648
-#, fuzzy, c-format
+#, c-format
 msgid "Interactive Firewall: new service"
-msgstr "Interaktiv brannmur: Oppdaga åtak"
+msgstr "Interaktiv brannmur: Ny teneste"
 
 #: ../bin/net_applet:658
-#, fuzzy, c-format
+#, c-format
 msgid "Do you want to open this service?"
-msgstr "Vil du setja det opp no?"
+msgstr "Vil du opna denne tenesta?"
 
 #: ../bin/net_applet:661
-#, fuzzy, c-format
+#, c-format
 msgid "Remember this answer"
-msgstr "Hugs dette passordet"
+msgstr "Hugs dette svaret"
 
 #: ../bin/net_monitor:60 ../bin/net_monitor:65
 #, c-format
@@ -3481,14 +3526,14 @@ msgid "Start the connection at boot"
 msgstr "Start sambandet ved oppstart"
 
 #: ../lib/network/connection.pm:230
-#, fuzzy, c-format
+#, c-format
 msgid "Link detected on interface %s"
-msgstr "(funnen på port %s)"
+msgstr "Signal opptaka på grensesnittet %s"
 
 #: ../lib/network/connection.pm:231 ../lib/network/connection/ethernet.pm:273
 #, c-format
 msgid "Link beat lost on interface %s"
-msgstr ""
+msgstr "Signal mista på grensesnittet %s"
 
 #: ../lib/network/connection/cable.pm:13
 #, c-format
@@ -3655,7 +3700,7 @@ msgstr "Bruk IPv6 til IPv4-tunnelering"
 #: ../lib/network/connection/ethernet.pm:272
 #, c-format
 msgid "Link beat detected on interface %s"
-msgstr ""
+msgstr "Signal oppdaga på grensesnittet %s"
 
 #: ../lib/network/connection/ethernet.pm:275
 #, c-format
@@ -4453,9 +4498,9 @@ msgid "No device found"
 msgstr "Fann ingen einingar"
 
 #: ../lib/network/drakroam.pm:63 ../lib/network/drakroam.pm:161
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter settings for network"
-msgstr "Detaljert informasjon"
+msgstr "Skriv inn innstillingane for nettverket"
 
 #: ../lib/network/drakroam.pm:67 ../lib/network/netconnect.pm:177
 #, c-format
@@ -4465,7 +4510,7 @@ msgstr "Set opp eining …"
 #: ../lib/network/drakroam.pm:95
 #, c-format
 msgid "Hostname changed to \"%s\""
-msgstr ""
+msgstr "Vertsnamnet endra til «%s»"
 
 #: ../lib/network/drakroam.pm:108 ../lib/network/netconnect.pm:209
 #, c-format
@@ -4473,7 +4518,7 @@ msgid "Scanning for networks..."
 msgstr "Søkjer etter nettverk …"
 
 #: ../lib/network/drakroam.pm:200
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting..."
 msgstr "Koplar til …"
 
@@ -4488,19 +4533,19 @@ msgid "Connect"
 msgstr "Kopla til"
 
 #: ../lib/network/drakroam.pm:250
-#, fuzzy, c-format
+#, c-format
 msgid "Disconnecting..."
 msgstr "Koplar frå …"
 
 #: ../lib/network/drakroam.pm:279
 #, c-format
 msgid "SSID"
-msgstr ""
+msgstr "SSID"
 
 #: ../lib/network/drakroam.pm:280
 #, c-format
 msgid "Signal strength"
-msgstr ""
+msgstr "Signalstyrke"
 
 #: ../lib/network/drakroam.pm:281
 #, c-format
@@ -4724,9 +4769,9 @@ msgid "Select a device:"
 msgstr "Vel eining:"
 
 #: ../lib/network/netcenter.pm:55
-#, fuzzy, c-format
+#, c-format
 msgid "Network Center"
-msgstr "Nettverksgrensesnitt"
+msgstr "Nettverkssenter"
 
 #: ../lib/network/netconnect.pm:37
 #, c-format
