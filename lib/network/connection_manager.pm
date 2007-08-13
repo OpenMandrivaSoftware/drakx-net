@@ -120,20 +120,25 @@ sub configure_connection {
 sub start_connection {
     my ($cmanager) = @_;
 
-    $cmanager->{connection} && $cmanager->{connection}{network} or return;
-    if ($cmanager->{connection}->selected_network_is_configured || configure_connection($cmanager)) {
-        gtkset_mousecursor_wait($cmanager->{gui}{w}{window}->window);
-        my $_wait = $cmanager->{in}->wait_message(N("Please wait"), N("Connecting..."));
-        #- settings have to be rewritten only if they are impacted by choices from the main window
-        if ($cmanager->{connection}->can('get_networks')) {
-            load_settings($cmanager);
-            $cmanager->{connection}->write_settings($cmanager->{net});
-        }
-        $cmanager->{connection}->prepare_connection if $cmanager->{connection}->can('prepare_connection');
-        $cmanager->{connection}->disconnect;
-        $cmanager->{connection}->connect($cmanager->{in}, $cmanager->{net});
-        gtkset_mousecursor_normal($cmanager->{gui}{w}{window}->window);
+    $cmanager->{connection} or return;
+    if ($cmanager->{connection}->can('get_networks')) {
+        $cmanager->{connection}{network} &&
+        ($cmanager->{connection}->selected_network_is_configured ||
+         configure_connection($cmanager))
+          or return;
     }
+
+    gtkset_mousecursor_wait($cmanager->{gui}{w}{window}->window);
+    my $_wait = $cmanager->{in}->wait_message(N("Please wait"), N("Connecting..."));
+    #- settings have to be rewritten only if they are impacted by choices from the main window
+    if ($cmanager->{connection}->can('get_networks')) {
+        load_settings($cmanager);
+        $cmanager->{connection}->write_settings($cmanager->{net});
+    }
+    $cmanager->{connection}->prepare_connection if $cmanager->{connection}->can('prepare_connection');
+    $cmanager->{connection}->disconnect;
+    $cmanager->{connection}->connect($cmanager->{in}, $cmanager->{net});
+    gtkset_mousecursor_normal($cmanager->{gui}{w}{window}->window);
 
     update_on_status_change($cmanager);
 }
