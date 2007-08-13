@@ -55,7 +55,7 @@ sub main {
     $::main_window = $w->{real_window};
 
     my @connections = map { $_->get_connections(automatic_only => 1) } network::connection::get_types;
-    @connections = reverse(uniq_ { $_->{device} } reverse(@connections));
+    @connections = uniq_ { $_->{device} } @connections;
 
     my $pixbufs = network::connection_manager::create_pixbufs();
 
