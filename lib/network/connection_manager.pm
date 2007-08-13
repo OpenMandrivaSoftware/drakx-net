@@ -33,7 +33,7 @@ sub create {
     { in => $in, net => $net, gui => { w => $w, pixbufs => $pixbufs } };
 }
 
-sub prepare_connection {
+sub setup_connection {
     my ($cmanager) = @_;
 
     my @packages = $cmanager->{connection}->can('get_packages') ? $cmanager->{connection}->get_packages : ();

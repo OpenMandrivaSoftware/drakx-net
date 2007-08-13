@@ -39,7 +39,7 @@ sub select_connection {
     my ($droam) = @_;
 
     $droam->{connection} = get_connection($droam);
-    network::connection_manager::prepare_connection($droam) if $droam->{connection};
+    network::connection_manager::setup_connection($droam) if $droam->{connection};
     update_on_connection_change($droam);
 }
 
