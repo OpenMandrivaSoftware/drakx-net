@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-tools\n"
 "POT-Creation-Date: 2007-08-09 11:47+0200\n"
-"PO-Revision-Date: 2007-08-12 14:11+0200\n"
+"PO-Revision-Date: 2007-08-13 19:11+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -1269,9 +1269,9 @@ msgid "Synchronization network interface"
 msgstr "Synkroniser nettverksgrensesnitt"
 
 #: ../bin/drakinvictus:132
-#, fuzzy, c-format
+#, c-format
 msgid "Connection mark bit"
-msgstr "Samband"
+msgstr "Bit i sambandsmerke"
 
 #: ../bin/draknetprofile:36
 #, c-format
@@ -1484,6 +1484,20 @@ msgid ""
 "<span foreground=\"royalblue3\">anonuid and anongid:</span> explicitly set "
 "the uid and gid of the anonymous account.\n"
 msgstr ""
+"<span weight=\"bold\">Val for brukar-ID</span>\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">Tilordna root-brukar som anonym:</span> Tilorda førespurnader frå uid/gid 0 til den anonyme uid/gid (root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">Tillèt ekte fjerntilgang til root:</span> Slå av «root squashing». Dette valet er hovudsakleg nyttig for disklause klientar "
+"(no_root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">Tilordna alle brukarar til anonym brukar:</span> Tilordna alle uid-ar og gid-ar til den anonyme brukaren (all_squash). Nyttig for NFS-eksporterte offentlege FTP-mapper, njusmeldingsmapper og liknande. Omvendt val er inga brukar-UID-tilordning  (no_all_squash), som er standard.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">anonuid og anongid:</span> Set uid og gid eksplisitt til den anonyme kontoen.\n"
 
 #: ../bin/draknfs:168
 #, c-format
@@ -1493,7 +1507,7 @@ msgstr "Synkrontilgang:"
 #: ../bin/draknfs:169
 #, c-format
 msgid "Secured Connection:"
-msgstr "Sikra samband"
+msgstr "Sikra samband:"
 
 #: ../bin/draknfs:170
 #, c-format
@@ -1525,7 +1539,7 @@ msgid ""
 "read and write requests on this NFS volume. The default is to disallow any "
 "request which changes the filesystem. This can also be made explicit by "
 "using this option."
-msgstr ""
+msgstr "<span foreground=\"royalblue3\">%s</span> tillèt anten berre lesetilgang eller både lese- og skrivetilgang til NFS-volumet. Standard er å nekta førespurnader som endrar filsystemet. Dette kan òg gjerast eksplisitt, ved å bruka dette valet."
 
 #: ../bin/draknfs:176
 #, c-format
@@ -1533,7 +1547,7 @@ msgid ""
 "<span foreground=\"royalblue3\">%s</span> disallows the NFS server to "
 "violate the NFS protocol and to reply to requests before any changes made by "
 "these requests have been committed to stable storage (e.g. disc drive)."
-msgstr ""
+msgstr "<span foreground=\"royalblue3\">%s</span> ikkje tillèt NFS-tenaren å bryta med NFS-protokollen og svara på førespurnader før endringane sett i gang av førespurnadene er utført (eksempelvis lagring på ein harddisk)."
 
 #: ../bin/draknfs:177
 #, c-format
@@ -1541,7 +1555,7 @@ msgid ""
 "<span foreground=\"royalblue3\">%s</span> enable subtree checking which can "
 "help improve security in some cases, but can decrease reliability. See "
 "exports(5) man page for more details."
-msgstr ""
+msgstr "<span foreground=\"royalblue3\">%s</span> slå på undertrekontroll, som kan forbetra tryggleiken i nokre tilfelle, men er ikkje nødvendigvis pålitleg. Sjå manualsida «exports(5)» for meir informasjon."
 
 #: ../bin/draknfs:182 ../bin/draksambashare:606 ../bin/draksambashare:773
 #, c-format
@@ -2308,6 +2322,13 @@ msgid ""
 "Make sure you have configured your Network/Internet access using\n"
 "drakconnect before going any further."
 msgstr ""
+"Du er i ferd med å setja opp maskina til å bruka eit VPN-samband.\n"
+"\n"
+"Med denne funksjonen kan maskiner på private lokalnett og på nokre eksterne privatnett dela resursar gjennom brannmurar, over Internett, på ein trygg måte.. \n"
+"\n"
+"Kommunikasjonen over Internett vert kryptert. Lokalmaskinene og dei eksterne maskinene ser ut som om dei var på same nettverk.\n"
+"\n"
+"Sjå til at du har sett opp nettverks- og Internett-tilgang med drakconnect før du går vidare."
 
 #: ../bin/drakvpn-old:165
 #, c-format
@@ -2324,6 +2345,16 @@ msgid ""
 "Please read AT LEAST the ipsec-howto docs\n"
 "before going any further."
 msgstr ""
+"VPN-samband.\n"
+"\n"
+"Dette programmet er basert på følgjande prosjekt:\n"
+" – FreeSwan: \t\t\thttp://www.freeswan.org/\n"
+" – Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
+" – ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
+" – ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
+" – dokumentasjonen og manualsidene i «%s»-pakken\n"
+"\n"
+"Les I DET MINSTE «ipsec-howto»-dokumentasjonen før du går vidare."
 
 #: ../bin/drakvpn-old:208
 #, c-format
@@ -2356,6 +2387,13 @@ msgid ""
 "\n"
 "What would you like to configure?\n"
 msgstr ""
+"Oppsett\n"
+"\n"
+"Du må definera tryggleikspraksis og så setja opp\n"
+"tenesta for automatisk nøkkelutveksling (IKE). \n"
+"KAME IKE-tenesta me brukar heiter «racoon».\n"
+"\n"
+"Kva ønskjer du å setja opp?\n"
 
 #: ../bin/drakvpn-old:245 ../bin/drakvpn-old:382
 #, c-format
@@ -2375,6 +2413,15 @@ msgid ""
 "\n"
 "What would you like to do?\n"
 msgstr ""
+"Fila «%s» er delt inn i\n"
+"fleire blokker.\n"
+"\n"
+"Du kan no:\n"
+"\n"
+"  – visa, leggja til, redigera og fjerna blokker, og så\n"
+"  – lagra endringane.\n"
+"\n"
+"Kva vil du gjera?\n"
 
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
@@ -2425,6 +2472,11 @@ msgid ""
 "\n"
 "Choose continue when you are done to write the data.\n"
 msgstr ""
+"Legg til tryggleikspraksis.\n"
+"\n"
+"Du kan no leggja til ein tryggleikspraksis.\n"
+"\n"
+"Vel «Hald fram» når du er ferdig med å skriva inn data.\n"
 
 #: ../bin/drakvpn-old:333 ../bin/drakvpn-old:523
 #, c-format
@@ -2439,6 +2491,10 @@ msgid ""
 "You can choose here below the one you want to edit \n"
 "and then click on next.\n"
 msgstr ""
+"Fila «%s» har fleire blokker eller samband.\n"
+"\n"
+"Vel den du ønskjer å redigera, og trykk\n"
+"så «Neste».\n"
 
 #: ../bin/drakvpn-old:337 ../bin/drakvpn-old:357 ../bin/drakvpn-old:528
 #: ../bin/drakvpn-old:574
@@ -2470,8 +2526,8 @@ msgid ""
 "and then click on next.\n"
 msgstr ""
 "Fila «%s» har fleire blokker eller samband.\n\n"
-"Du kan velja her den du ønskjer å fjerna, og\n"
-"så trykkja «Neste».\n"
+"Vel den du ønskjer å fjerna, og trykk\n"
+"så «Neste».\n"
 
 #: ../bin/drakvpn-old:383
 #, c-format
