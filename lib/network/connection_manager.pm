@@ -267,7 +267,8 @@ sub update_on_status_change {
       if $cmanager->{gui}{buttons}{connect_stop};
 
     #- allow to configure only if a network is selected
-    $cmanager->{gui}{buttons}{configure}->set_sensitive($cmanager->{connection} && $cmanager->{connection}{network})
+    my $may_have_network = !$cmanager->{connection}->can('get_networks') || $cmanager->{connection}{network};
+    $cmanager->{gui}{buttons}{configure}->set_sensitive($cmanager->{connection} && $may_have_network)
       if $cmanager->{gui}{buttons}{configure};
 }
 
