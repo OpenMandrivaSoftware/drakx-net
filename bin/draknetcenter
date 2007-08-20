@@ -13,7 +13,7 @@ use standalone;
 use network::network;
 use network::netcenter;
 
-my $in = 'interactive'->vnew;
+my $in = 'interactive'->vnew('su');
 my $net = {};
 network::network::read_net_conf($net);
 
