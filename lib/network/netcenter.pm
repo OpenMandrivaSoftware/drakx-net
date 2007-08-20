@@ -78,6 +78,7 @@ sub main {
                                gtknew('Label', padding => [ 5, 0 ]),
                                gtknew('VBox', spacing => 5, children_tight => [
                                    if_($cmanager->{gui}{show_networks},
+                                       gtknew('Label', text => N("Please select your network:"), alignment => [ 0, 0 ]),
                                        gtknew('Frame', shadow_type => 'in', child => $cmanager->{gui}{networks_list})),
                                    gtknew('HButtonBox', layout => 'end', children_loose => [
                                                ($cmanager->{gui}{show_networks} ?
