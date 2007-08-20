@@ -256,7 +256,10 @@ sub update_on_status_change {
     my ($cmanager) = @_;
 
     if ($cmanager->{gui}{buttons}{connect_toggle}) {
-        $cmanager->{gui}{buttons}{connect_toggle}->set_label(toggle_would_disconnect($cmanager) ? N("Disconnect") : N("Connect"));
+        my $disconnect = toggle_would_disconnect($cmanager);
+        $cmanager->{gui}{buttons}{connect_toggle}->set_label($disconnect ? N("Disconnect") : N("Connect"));
+        gtkset($cmanager->{gui}{buttons}{connect_toggle}, image => gtknew('Image', file => $disconnect ? 'stop-16' : 'activate-16'))
+          if $cmanager->{gui}{buttons}{connect_toggle}->get_image;
         #- always allow to disconnect if connected
         $cmanager->{gui}{buttons}{connect_toggle}->set_sensitive($cmanager->{connection} && ($cmanager->{connection}->get_status || $cmanager->{connection}{network}));
     }
