@@ -255,10 +255,6 @@ sub update_networks {
 sub update_on_status_change {
     my ($cmanager) = @_;
 
-    if ($cmanager->{connection} && !keys %{$cmanager->{connection}{networks}}) {
-        use Data::Dumper; print Dumper($cmanager->{connection}, $cmanager->{connection}->get_status, $cmanager->{connection}->get_interface);
-    }
-
     if ($cmanager->{gui}{buttons}{connect_toggle}) {
         my $disconnect = toggle_would_disconnect($cmanager);
         $cmanager->{gui}{buttons}{connect_toggle}->set_label($disconnect ? N("Disconnect") : N("Connect"));
