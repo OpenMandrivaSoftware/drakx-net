@@ -1,8 +1,25 @@
-- fix #30099: draksambashare bad testing for existing shares (aginies)
-- use "Help" instead of "Get Online Help" since the doc is local (thanks damsweb)
-- fix startup with XFCE (Tv, #31834)
-- disable autostart notifications of net_applet (Tv, #18965)
-- add iwl3945/iwl4965 support to replace ipw3945
+0.13:
+- draknetcenter: initial prototype
+- drakroam:
+  o add iwl3945/iwl4965 support to replace ipw3945
+  o show signal strength and encryption flags as tooltip for networks list
+  o remove encryption flags column in networks list
+  o pre-set Managed mode for access points detected as Master (#30303)
+- net_applet:
+  o fix startup with XFCE (Tv, #31834)
+  o disable autostart notifications of net_applet (Tv, #18965)
+  o prevent firing up drakbug when automatic startup is disabled (Tv, #32292)
+  o use "Help" instead of "Get Online Help" since the doc is local (thanks damsweb)
+- draksambashare:
+  o fix existing shares test (aginies, #30099)
+  o use exit instead of return in main code (nvigier, #32374)
+- draknfs (nvigier):
+   o add subtree_check option
+   o fix bug with sync/async option
+   o nfs service was renamed to nfs-server for 2008.0
+   o fix path for do_pkgs->ensure_is_installed : /sbin/rpc.statd
+     is from nfs-utils-client package, not nfs-utils
+   o use exit instead of return in main code
 
 0.12:
 - fix check of nfs-utils-clients installation (Tv)
