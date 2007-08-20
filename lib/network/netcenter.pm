@@ -70,6 +70,8 @@ sub main {
                                0, gtknew('Image', file => $_->get_type_icon),
                                0, gtknew('Label', padding => [ 5, 0 ]),
                                1, gtknew('Title2', ellipsize => 'end', label => $_->get_description),
+                               0, gtknew('Label', padding => [ 2, 0 ]),
+                               0, $cmanager->{gui}{labels}{interface} = gtknew('Title2', label => sprintf("(%s)", $_->get_interface)),
                            ]),
                            gtknew('HBox', children_loose => [
                                gtknew('Label', padding => [ 5, 0 ]),
