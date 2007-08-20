@@ -15,7 +15,7 @@ pamdir=/etc/pam.d
 consoleappsdir=/etc/security/console.apps
 
 BIN_TOOLS= net_applet
-SBIN_TOOLS=drakconnect drakfirewall drakgw drakhosts drakids drakinvictus draknetprofile draknfs drakproxy drakroam draksambashare drakvpn net_monitor
+SBIN_TOOLS=drakconnect drakfirewall drakgw drakhosts drakids drakinvictus draknetprofile draknfs drakproxy drakroam draksambashare drakvpn net_monitor draknetcenter
 
 all:
 	(find lib -name '*.pm'; find bin -type f) | xargs perl -pi -e 's/\s*use\s+(diagnostics|vars|strict).*//g'
