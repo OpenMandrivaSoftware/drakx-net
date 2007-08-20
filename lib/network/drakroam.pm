@@ -81,14 +81,18 @@ sub create_drakroam_gui {
 
     my $status_bar = Gtk2::Statusbar->new;
     my $status_bar_cid = $status_bar->get_context_id("Network event");
+    $droam->{on_network_event} = sub {
+        my ($message) = @_;
+        my $m_id = $status_bar->push($status_bar_cid, $message);
+        Glib::Timeout->add(20000, sub { $status_bar->remove($status_bar_cid, $m_id); 0 });
+    };
     if ($dbus) {
         eval { $droam->{net}{monitor} = network::monitor->new($dbus) };
         $dbus->{connection}->add_filter(sub {
                                             my ($_con, $msg) = @_;
                                             my $member = $msg->get_member;
                                             my $message = get_network_event_message($droam, $member, $msg->get_args_list) or return;
-                                            my $m_id = $status_bar->push($status_bar_cid, $message);
-                                            Glib::Timeout->add(20000, sub { $status_bar->remove($status_bar_cid, $m_id); 0 });
+                                            $droam->{on_network_event}($message) if $droam->{on_network_event};
                                             network::connection_manager::update_networks($droam) if $member eq 'status';
                                         });
         $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
