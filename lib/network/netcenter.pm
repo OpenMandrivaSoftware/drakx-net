@@ -34,15 +34,6 @@ sub build_cmanager {
     $cmanager;
 }
 
-sub gtkset_image {
-    my ($w, $file, $o_size) = @_;
-    my $image = $o_size
-    ?  Gtk2::Image->new_from_pixbuf(gtkcreate_pixbuf($file)->scale_simple($o_size, $o_size, 'hyper'))
-    :  gtknew('Image', file => $file);
-    $w->set_image($image);
-    $w;
-}
-
 sub main {
     my ($in, $net) = @_;
 
@@ -83,24 +74,24 @@ sub main {
                                    gtknew('HButtonBox', spacing => 6, layout => 'end', children_loose => [
                                                ($cmanager->{gui}{show_networks} ?
                                                   $cmanager->{gui}{buttons}{refresh} =
-                                                    gtkset_image(gtknew('Button', text => N("Refresh"), clicked => sub {
-                                                                            network::connection_manager::update_networks($cmanager);
-                                                                        }), 'refresh', 16)
+                                                    gtknew('Button', text => N("Refresh"),
+                                                           image => gtknew('Image', file => 'refresh', size => 16),
+                                                           clicked => sub { network::connection_manager::update_networks($cmanager) })
                                                       : ()),
                                                $cmanager->{gui}{buttons}{monitor} =
-                                                 gtkset_image(gtknew('Button', text => N("Monitor"), clicked => sub {
-                                                                         network::connection_manager::monitor_connection($cmanager);
-                                                                     }), 'monitor-16'),
+                                                 gtknew('Button', text => N("Monitor"),
+                                                        image => gtknew('Image', file => 'monitor-16'),
+                                                        clicked => sub { network::connection_manager::monitor_connection($cmanager) }),
                                                $cmanager->{gui}{buttons}{configure} = 
-                                                 gtkset_image(gtknew('Button', text => N("Configure"), clicked => sub {
-                                                                         network::connection_manager::configure_connection($cmanager);
-                                                                     }), 'configure-16'),
+                                                 gtknew('Button', text => N("Configure"),
+                                                        image => gtknew('Image', file => 'configure-16'),
+                                                        clicked => sub { network::connection_manager::configure_connection($cmanager) }),
                                            ]),
                                    gtknew('HButtonBox', spacing => 6, layout => 'end', children_loose => [
                                                $cmanager->{gui}{buttons}{connect_toggle} =
-                                                 gtkset_image(gtknew('Button', clicked => sub {
-                                                                         network::connection_manager::start_connection($cmanager);
-                                                                     }), 'activate-16'),
+                                                 gtknew('Button',
+                                                        image => gtknew('Image', file => 'activate-16'),
+                                                        clicked => sub { network::connection_manager::start_connection($cmanager) }),
                                            ]),
                                ]),
                            ]),
