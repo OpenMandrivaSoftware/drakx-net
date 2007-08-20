@@ -76,6 +76,12 @@ sub main {
                                gtknew('VBox', spacing => 5, children_tight => [
                                    if_($cmanager->{gui}{show_networks}, $cmanager->{gui}{networks_list}),
                                    gtknew('HButtonBox', layout => 'end', children_loose => [
+                                               ($cmanager->{gui}{show_networks} ?
+                                                  $cmanager->{gui}{buttons}{refresh} =
+                                                    gtkset_image(gtknew('Button', text => N("Refresh"), clicked => sub {
+                                                                            network::connection_manager::update_networks($cmanager);
+                                                                        }), 'refresh', 16)
+                                                      : ()),
                                                $cmanager->{gui}{buttons}{monitor} =
                                                  gtkset_image(gtknew('Button', text => N("Monitor"), clicked => sub {
                                                                          network::connection_manager::monitor_connection($cmanager);
@@ -84,12 +90,6 @@ sub main {
                                                  gtkset_image(gtknew('Button', text => N("Configure"), clicked => sub {
                                                                          network::connection_manager::configure_connection($cmanager);
                                                                      }), 'configure-16'),
-                                               ($cmanager->{gui}{show_networks} ?
-                                                  $cmanager->{gui}{buttons}{refresh} =
-                                                    gtkset_image(gtknew('Button', text => N("Refresh"), clicked => sub {
-                                                                            network::connection_manager::update_networks($cmanager);
-                                                                        }), 'refresh', 16)
-                                                      : ()),
                                            ]),
                                    gtknew('HButtonBox', layout => 'end', children_loose => [
                                                $cmanager->{gui}{buttons}{connect_toggle} =
