@@ -80,7 +80,7 @@ sub main {
                                    if_($cmanager->{gui}{show_networks},
                                        gtknew('Label', text => N("Please select your network:"), alignment => [ 0, 0 ]),
                                        gtknew('Frame', shadow_type => 'in', child => $cmanager->{gui}{networks_list})),
-                                   gtknew('HButtonBox', layout => 'end', children_loose => [
+                                   gtknew('HButtonBox', spacing => 6, layout => 'end', children_loose => [
                                                ($cmanager->{gui}{show_networks} ?
                                                   $cmanager->{gui}{buttons}{refresh} =
                                                     gtkset_image(gtknew('Button', text => N("Refresh"), clicked => sub {
@@ -96,7 +96,7 @@ sub main {
                                                                          network::connection_manager::configure_connection($cmanager);
                                                                      }), 'configure-16'),
                                            ]),
-                                   gtknew('HButtonBox', layout => 'end', children_loose => [
+                                   gtknew('HButtonBox', spacing => 6, layout => 'end', children_loose => [
                                                $cmanager->{gui}{buttons}{connect_toggle} =
                                                  gtkset_image(gtknew('Button', clicked => sub {
                                                                          network::connection_manager::start_connection($cmanager);
