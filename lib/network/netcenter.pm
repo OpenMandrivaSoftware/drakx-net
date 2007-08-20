@@ -76,7 +76,8 @@ sub main {
                            gtknew('HBox', children_loose => [
                                gtknew('Label', padding => [ 5, 0 ]),
                                gtknew('VBox', spacing => 5, children_tight => [
-                                   if_($cmanager->{gui}{show_networks}, $cmanager->{gui}{networks_list}),
+                                   if_($cmanager->{gui}{show_networks},
+                                       gtknew('Frame', shadow_type => 'in', child => $cmanager->{gui}{networks_list})),
                                    gtknew('HButtonBox', layout => 'end', children_loose => [
                                                ($cmanager->{gui}{show_networks} ?
                                                   $cmanager->{gui}{buttons}{refresh} =
