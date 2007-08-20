@@ -66,10 +66,10 @@ sub main {
                map_index {
                    my $cmanager = build_cmanager($in, $net, $w, $pixbufs, $_);
                    my $box = gtknew('VBox', spacing => 5, children_tight => [
-                           gtknew('HBox', children_tight => [
-                               gtknew('Image', file => $_->get_type_icon),
-                               gtknew('Label', padding => [ 5, 0 ]),
-                               gtknew('Title2', label => $_->get_description),
+                           gtknew('HBox', children => [
+                               0, gtknew('Image', file => $_->get_type_icon),
+                               0, gtknew('Label', padding => [ 5, 0 ]),
+                               1, gtknew('Title2', ellipsize => 'end', label => $_->get_description),
                            ]),
                            gtknew('HBox', children_loose => [
                                gtknew('Label', padding => [ 5, 0 ]),
