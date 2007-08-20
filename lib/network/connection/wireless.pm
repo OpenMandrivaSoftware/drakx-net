@@ -155,7 +155,7 @@ my @thirdparty_settings = (
 
     {
         name => 'acx100',
-        matching => [ qw(acx-pci acx-usb) ],
+        matching => [ qw(acx_pci acx_usb) ],
         description => 'ACX100/ACX111/TNETW1450',
         firmware => {
             url => 'http://acx100.sourceforge.net/wiki/Firmware',
