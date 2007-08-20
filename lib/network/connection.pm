@@ -66,7 +66,9 @@ sub new {
 
 sub get_description {
     my ($self) = @_;
-    $self->{device}{description};
+    my $description = $self->{device}{description};
+    $description =~ s/\|/ /g;
+    $description;
 }
 
 sub get_driver {
