@@ -75,6 +75,7 @@ sub list_wireless {
             /Address: (.*)/ and $net->{ap} = lc($1);
             /ESSID:"(.*?)"/ and $net->{essid} = $1;
             /Mode:(\S*)/ and $net->{mode} = $1;
+            $net->{mode} = 'Managed' if $net->{mode} eq 'Master';
             $_ =~ $quality_match and $net->{signal_strength} = $eval_quality->($1);
             m|Signal level:([0-9]+/[0-9]+)| && !$net->{signal_strength} and $net->{signal_strength} = eval($1)*100;
             /Extra:wpa_ie=|IE:.*WPA/ and $net->{flags} = '[WPA]';
