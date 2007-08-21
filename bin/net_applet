@@ -407,12 +407,14 @@ sub create_action_item {
     my ($action) = @_;
     my $name = ref($actions{$action}{name}) eq 'CODE' ? $actions{$action}{name}->($current_interface) : $actions{$action}{name};
     if (exists $actions{$action}{choices}) {
+        my @menu = create_menu_choices($action);
+        @menu || $actions{$action}{header} or return ();
         gtkshow(create_menu($name,
                             if_($actions{$action}{header},
                                 create_action_item($actions{$action}{header}),
                                 gtkshow(Gtk2::SeparatorMenuItem->new),
                             ),
-                            create_menu_choices($action),
+                            @menu,
                         ));
     } else {
         gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label($name)), activate => sub { $actions{$action}{launch}->($current_interface) });
