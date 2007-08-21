@@ -65,13 +65,14 @@ sub main {
                                0, gtknew('Label', padding => [ 2, 0 ]),
                                0, $cmanager->{gui}{labels}{interface} = gtknew('Label', alignment => [ 0, 0 ], text_markup => '<b>' . $_->get_interface . '</b>'),
                            ]),
-                           gtknew('HBox', children_loose => [
-                               gtknew('Label', padding => [ 5, 0 ]),
-                               gtknew('VBox', spacing => 5, children_tight => [
+                           gtknew('HBox', children => [
+                               0, gtknew('Label', padding => [ 5, 0 ]),
+                               1, gtknew('VBox', spacing => 5, children_tight => [
                                    if_($cmanager->{gui}{show_networks},
                                        gtknew('Label', text => N("Please select your network:"), alignment => [ 0, 0 ]),
                                        gtknew('Frame', shadow_type => 'in', child => $cmanager->{gui}{networks_list})),
-                                   gtknew('HButtonBox', spacing => 6, layout => 'end', children_loose => [
+                                   gtknew('HBox', children => [
+                                       1, gtknew('HButtonBox', spacing => 6, layout => 'start', children_loose => [
                                                ($cmanager->{gui}{show_networks} ?
                                                   $cmanager->{gui}{buttons}{refresh} =
                                                     gtknew('Button', text => N("Refresh"),
@@ -87,8 +88,7 @@ sub main {
                                                         image => gtknew('Image', file => 'configure-16'),
                                                         clicked => sub { network::connection_manager::configure_connection($cmanager) }),
                                            ]),
-                                   gtknew('HButtonBox', spacing => 6, layout => 'end', children_loose => [
-                                               $cmanager->{gui}{buttons}{connect_toggle} =
+                                       0, $cmanager->{gui}{buttons}{connect_toggle} =
                                                  gtknew('Button',
                                                         image => gtknew('Image', file => 'activate-16'),
                                                         clicked => sub { network::connection_manager::start_connection($cmanager) }),
