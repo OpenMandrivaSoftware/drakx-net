@@ -379,10 +379,11 @@ sub update_applet() {
 }
 
 sub create_menu_choices {
-    my ($action) = @_;
+    my ($action, $o_allow_single_choice) = @_;
     my @choices =  $actions{$action}{choices}->();
     #- don't add submenu if only zero or one choice exists
-    @choices > ($actions{$action}{allow_single_choice} ? 0 : 1) or return ();
+    my $allow_single_choice = $actions{$action}{allow_single_choice} || $o_allow_single_choice;
+    @choices > ($allow_single_choice ? 0 : 1) or return ();
     my $selected = $actions{$action}{choice_selected};
     my $format = $actions{$action}{format_choice};
     my $get_icon = $actions{$action}{get_icon};
@@ -446,7 +447,7 @@ sub generate_simple_menu() {
                   Gtk2::SeparatorMenuItem->new,
               );
     }
-    gtkappend($simple_menu, create_menu_choices('setInterface'));
+    gtkappend($simple_menu, create_menu_choices('setInterface', 'allow_single_choice'));
 }
 
 sub generate_menu() {
