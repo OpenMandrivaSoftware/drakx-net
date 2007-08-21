@@ -72,12 +72,6 @@ sub main {
                                        gtknew('Frame', shadow_type => 'in', child => $cmanager->{gui}{networks_list})),
                                    gtknew('HBox', children => [
                                        1, gtknew('HButtonBox', spacing => 6, layout => 'start', children_loose => [
-                                               ($cmanager->{gui}{show_networks} ?
-                                                  $cmanager->{gui}{buttons}{refresh} =
-                                                    gtknew('Button', text => N("Refresh"),
-                                                           image => gtknew('Image', file => 'refresh', size => 16),
-                                                           clicked => sub { network::connection_manager::update_networks($cmanager) })
-                                                      : ()),
                                                $cmanager->{gui}{buttons}{monitor} =
                                                  gtknew('Button', text => N("Monitor"),
                                                         image => gtknew('Image', file => 'monitor-16'),
@@ -86,6 +80,12 @@ sub main {
                                                  gtknew('Button', text => N("Configure"),
                                                         image => gtknew('Image', file => 'configure-16'),
                                                         clicked => sub { network::connection_manager::configure_connection($cmanager) }),
+                                               ($cmanager->{gui}{show_networks} ?
+                                                  $cmanager->{gui}{buttons}{refresh} =
+                                                    gtknew('Button', text => N("Refresh"),
+                                                           image => gtknew('Image', file => 'refresh', size => 16),
+                                                           clicked => sub { network::connection_manager::update_networks($cmanager) })
+                                                      : ()),
                                            ]),
                                        0, $cmanager->{gui}{buttons}{connect_toggle} =
                                                  gtknew('Button',
