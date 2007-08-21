@@ -57,15 +57,14 @@ sub main {
                      child => gtknew('VBox', spacing => 5, children_tight => [
                map_index {
                    my $cmanager = build_cmanager($in, $net, $w, $pixbufs, $_);
-                   my $box = gtknew('VBox', spacing => 5, children_tight => [
-                           gtknew('HBox', children => [
+                   my $head = gtknew('HBox', children => [
                                0, gtknew('Image', file => $_->get_type_icon),
                                0, gtknew('Label', padding => [ 5, 0 ]),
                                1, gtknew('Label', ellipsize => 'end', alignment => [ 0, 0 ], text_markup => '<b>' . $_->get_description . '</b>'),
                                0, gtknew('Label', padding => [ 2, 0 ]),
                                0, $cmanager->{gui}{labels}{interface} = gtknew('Label', alignment => [ 0, 0 ], text_markup => '<b>' . $_->get_interface . '</b>'),
-                           ]),
-                           gtknew('HBox', children => [
+                   ]);
+                   my $content = gtknew('HBox', children => [
                                0, gtknew('Label', padding => [ 5, 0 ]),
                                1, gtknew('VBox', spacing => 5, children_tight => [
                                    if_($cmanager->{gui}{show_networks},
@@ -94,9 +93,27 @@ sub main {
                                                         clicked => sub { network::connection_manager::start_connection($cmanager) }),
                                            ]),
                                ]),
-                           ]),
                    ]);
+
+                   my $expander = gtknew('Expander');
+                   my $toggle_expand = sub { $expander->get_expanded ? $content->hide : $content->show_all };
+                   $expander->signal_connect(activate => $toggle_expand);
+                   my $eventbox = gtksignal_connect(Gtk2::EventBox->new, button_press_event => sub {
+                       $_[1]->button == 1 or return;
+                       $toggle_expand->();
+                       $expander->set_expanded(!$expander->get_expanded);
+                   });
+                   my $box = gtknew('VBox', spacing => 5, children_tight => [
+                       gtknew('HBox', children => [
+                           0, $expander,
+                           1, gtkadd($eventbox, $head),
+                       ]),
+                       $content,
+                   ]);
+                   $content->hide;
+
                    network::connection_manager::update_on_status_change($cmanager);
+
                    ($::i > 0 ? Gtk2::HSeparator->new : ()), $box;
                } @connections,
            ])),
