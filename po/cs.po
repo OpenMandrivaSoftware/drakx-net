@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
-"POT-Creation-Date: 2007-08-09 11:47+0200\n"
+"POT-Creation-Date: 2007-08-28 11:27+0200\n"
 "PO-Revision-Date: 2007-03-15 23:33+0100\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -4709,6 +4709,57 @@ msgstr "ID virtuálního okruhu (VCI):"
 msgid "Could not install the packages (%s)!"
 msgstr "Nelze nainstalovat balíčky (%s)!"
 
+#: ../lib/network/connection_manager.pm:54
+#: ../lib/network/connection_manager.pm:86
+#, c-format
+msgid "Please enter settings for network"
+msgstr "Zadejte prosím nastavení pro síť"
+
+#: ../lib/network/connection_manager.pm:58 ../lib/network/netconnect.pm:177
+#, c-format
+msgid "Configuring device..."
+msgstr "Nastavuji zařízení..."
+
+#: ../lib/network/connection_manager.pm:132
+#, c-format
+msgid "Connecting..."
+msgstr "Připojuji se..."
+
+#: ../lib/network/connection_manager.pm:150
+#, c-format
+msgid "Disconnecting..."
+msgstr "Odpojuji se..."
+
+#: ../lib/network/connection_manager.pm:187
+#, c-format
+msgid "SSID"
+msgstr "SSID"
+
+#: ../lib/network/connection_manager.pm:188
+#, c-format
+msgid "Signal strength"
+msgstr "Síla signálu"
+
+#: ../lib/network/connection_manager.pm:189
+#, c-format
+msgid "Encryption"
+msgstr "Šifrování"
+
+#: ../lib/network/connection_manager.pm:222 ../lib/network/netconnect.pm:209
+#, c-format
+msgid "Scanning for networks..."
+msgstr "Vyhledávám sítě..."
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:111
+#, c-format
+msgid "Disconnect"
+msgstr "Odpojit se"
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:110
+#, c-format
+msgid "Connect"
+msgstr "Připojit"
+
 #: ../lib/network/drakfirewall.pm:12
 #, c-format
 msgid "Web Server"
@@ -4874,75 +4925,25 @@ msgstr "Použít interaktivní firewall"
 msgid "No device found"
 msgstr "Žádné zařízení nenalezeno"
 
-#: ../lib/network/drakroam.pm:63 ../lib/network/drakroam.pm:161
-#, c-format
-msgid "Please enter settings for network"
-msgstr "Zadejte prosím nastavení pro síť"
-
-#: ../lib/network/drakroam.pm:67 ../lib/network/netconnect.pm:177
-#, c-format
-msgid "Configuring device..."
-msgstr "Nastavuji zařízení..."
-
-#: ../lib/network/drakroam.pm:95
+#: ../lib/network/drakroam.pm:58
 #, c-format
 msgid "Hostname changed to \"%s\""
 msgstr "Název počítače změněn na \"%s\""
 
-#: ../lib/network/drakroam.pm:108 ../lib/network/netconnect.pm:209
-#, c-format
-msgid "Scanning for networks..."
-msgstr "Vyhledávám sítě..."
-
-#: ../lib/network/drakroam.pm:200
-#, c-format
-msgid "Connecting..."
-msgstr "Připojuji se..."
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Disconnect"
-msgstr "Odpojit se"
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Connect"
-msgstr "Připojit"
-
-#: ../lib/network/drakroam.pm:250
-#, c-format
-msgid "Disconnecting..."
-msgstr "Odpojuji se..."
-
-#: ../lib/network/drakroam.pm:279
-#, c-format
-msgid "SSID"
-msgstr "SSID"
-
-#: ../lib/network/drakroam.pm:280
-#, c-format
-msgid "Signal strength"
-msgstr "Síla signálu"
-
-#: ../lib/network/drakroam.pm:281
-#, c-format
-msgid "Encryption"
-msgstr "Šifrování"
-
-#: ../lib/network/drakroam.pm:335 ../lib/network/netconnect.pm:761
-#, c-format
-msgid "Wireless connection"
-msgstr "Bezdrátové připojení"
-
-#: ../lib/network/drakroam.pm:350
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:80
 #, c-format
 msgid "Configure"
 msgstr "Nastavit"
 
-#: ../lib/network/drakroam.pm:352
+#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:85
 #, c-format
 msgid "Refresh"
 msgstr "Obnovit"
+
+#: ../lib/network/drakroam.pm:124 ../lib/network/netconnect.pm:761
+#, c-format
+msgid "Wireless connection"
+msgstr "Bezdrátové připojení"
 
 #: ../lib/network/drakvpn.pm:30
 #, c-format
@@ -5150,6 +5151,16 @@ msgstr "Vyberte zařízení:"
 msgid "Network Center"
 msgstr "Síťové rozhraní"
 
+#: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
+#, c-format
+msgid "Please select your network:"
+msgstr "Vyberte prosím vaši síť:"
+
+#: ../lib/network/netcenter.pm:76
+#, fuzzy, c-format
+msgid "Monitor"
+msgstr "Sledovat síť"
+
 #: ../lib/network/netconnect.pm:37
 #, c-format
 msgid "United States"
@@ -5196,11 +5207,6 @@ msgstr "Nastavení hardware"
 #, c-format
 msgid "Please select your provider:"
 msgstr "Vyberte prosím vašeho poskytovatele:"
-
-#: ../lib/network/netconnect.pm:212
-#, c-format
-msgid "Please select your network:"
-msgstr "Vyberte prosím vaši síť:"
 
 #: ../lib/network/netconnect.pm:241
 #, c-format

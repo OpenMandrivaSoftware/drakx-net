@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2007-08-09 11:47+0200\n"
+"POT-Creation-Date: 2007-08-28 11:27+0200\n"
 "PO-Revision-Date: 2006-02-19 14:09+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
@@ -4224,6 +4224,57 @@ msgstr ""
 msgid "Could not install the packages (%s)!"
 msgstr "Tidak dapat buang pakej"
 
+#: ../lib/network/connection_manager.pm:54
+#: ../lib/network/connection_manager.pm:86
+#, fuzzy, c-format
+msgid "Please enter settings for network"
+msgstr "Sila masukkan tetapan rangkaian tempatan anda:"
+
+#: ../lib/network/connection_manager.pm:58 ../lib/network/netconnect.pm:177
+#, fuzzy, c-format
+msgid "Configuring device..."
+msgstr "Peranti RAID"
+
+#: ../lib/network/connection_manager.pm:132
+#, fuzzy, c-format
+msgid "Connecting..."
+msgstr "Sambung"
+
+#: ../lib/network/connection_manager.pm:150
+#, fuzzy, c-format
+msgid "Disconnecting..."
+msgstr "Putus"
+
+#: ../lib/network/connection_manager.pm:187
+#, c-format
+msgid "SSID"
+msgstr "SSID"
+
+#: ../lib/network/connection_manager.pm:188
+#, fuzzy, c-format
+msgid "Signal strength"
+msgstr "Penggunaan: killproc {program} [isyarat]"
+
+#: ../lib/network/connection_manager.pm:189
+#, c-format
+msgid "Encryption"
+msgstr "Enkripsi:"
+
+#: ../lib/network/connection_manager.pm:222 ../lib/network/netconnect.pm:209
+#, fuzzy, c-format
+msgid "Scanning for networks..."
+msgstr "Konfigurasi Rangkaian"
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:111
+#, fuzzy, c-format
+msgid "Disconnect"
+msgstr "Putus"
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:110
+#, c-format
+msgid "Connect"
+msgstr "Sambung"
+
 #: ../lib/network/drakfirewall.pm:12
 #, c-format
 msgid "Web Server"
@@ -4369,75 +4420,25 @@ msgstr "Amaran - Tiada Firewall"
 msgid "No device found"
 msgstr "Tiada peranti dijumpai"
 
-#: ../lib/network/drakroam.pm:63 ../lib/network/drakroam.pm:161
-#, fuzzy, c-format
-msgid "Please enter settings for network"
-msgstr "Sila masukkan tetapan rangkaian tempatan anda:"
-
-#: ../lib/network/drakroam.pm:67 ../lib/network/netconnect.pm:177
-#, fuzzy, c-format
-msgid "Configuring device..."
-msgstr "Peranti RAID"
-
-#: ../lib/network/drakroam.pm:95
+#: ../lib/network/drakroam.pm:58
 #, c-format
 msgid "Hostname changed to \"%s\""
 msgstr ""
 
-#: ../lib/network/drakroam.pm:108 ../lib/network/netconnect.pm:209
-#, fuzzy, c-format
-msgid "Scanning for networks..."
-msgstr "Konfigurasi Rangkaian"
-
-#: ../lib/network/drakroam.pm:200
-#, fuzzy, c-format
-msgid "Connecting..."
-msgstr "Sambung"
-
-#: ../lib/network/drakroam.pm:227
-#, fuzzy, c-format
-msgid "Disconnect"
-msgstr "Putus"
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Connect"
-msgstr "Sambung"
-
-#: ../lib/network/drakroam.pm:250
-#, fuzzy, c-format
-msgid "Disconnecting..."
-msgstr "Putus"
-
-#: ../lib/network/drakroam.pm:279
-#, c-format
-msgid "SSID"
-msgstr "SSID"
-
-#: ../lib/network/drakroam.pm:280
-#, fuzzy, c-format
-msgid "Signal strength"
-msgstr "Penggunaan: killproc {program} [isyarat]"
-
-#: ../lib/network/drakroam.pm:281
-#, c-format
-msgid "Encryption"
-msgstr "Enkripsi:"
-
-#: ../lib/network/drakroam.pm:335 ../lib/network/netconnect.pm:761
-#, fuzzy, c-format
-msgid "Wireless connection"
-msgstr "Sambungan tanpawayar"
-
-#: ../lib/network/drakroam.pm:350
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:80
 #, c-format
 msgid "Configure"
 msgstr "Buat konfigurasi"
 
-#: ../lib/network/drakroam.pm:352
+#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:85
 #, c-format
 msgid "Refresh"
 msgstr "Segarkan"
+
+#: ../lib/network/drakroam.pm:124 ../lib/network/netconnect.pm:761
+#, fuzzy, c-format
+msgid "Wireless connection"
+msgstr "Sambungan tanpawayar"
 
 #: ../lib/network/drakvpn.pm:30
 #, fuzzy, c-format
@@ -4638,6 +4639,16 @@ msgstr "Pilih Peranti"
 msgid "Network Center"
 msgstr "Antaramuka rangkaian"
 
+#: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
+#, c-format
+msgid "Please select your network:"
+msgstr ""
+
+#: ../lib/network/netcenter.pm:76
+#, fuzzy, c-format
+msgid "Monitor"
+msgstr "Perhati Rangkaian"
+
 #: ../lib/network/netconnect.pm:37
 #, c-format
 msgid "United States"
@@ -4683,11 +4694,6 @@ msgstr "Konfigurasi Rangkaian"
 #: ../lib/network/netconnect.pm:194
 #, c-format
 msgid "Please select your provider:"
-msgstr ""
-
-#: ../lib/network/netconnect.pm:212
-#, c-format
-msgid "Please select your network:"
 msgstr ""
 
 #: ../lib/network/netconnect.pm:241

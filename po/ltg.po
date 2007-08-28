@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2007-08-09 11:47+0200\n"
+"POT-Creation-Date: 2007-08-28 11:27+0200\n"
 "PO-Revision-Date: 2004-02-24 13:01+0200\n"
 "Last-Translator: Māris Laureckis <linux@latgola.lv>\n"
 "Language-Team: Latgalian <linux@latgola.lv>\n"
@@ -4275,6 +4275,57 @@ msgstr ""
 msgid "Could not install the packages (%s)!"
 msgstr "Navaru instalēt Xorg pakūtni: %s"
 
+#: ../lib/network/connection_manager.pm:54
+#: ../lib/network/connection_manager.pm:86
+#, fuzzy, c-format
+msgid "Please enter settings for network"
+msgstr "Detalizeita informaceja"
+
+#: ../lib/network/connection_manager.pm:58 ../lib/network/netconnect.pm:177
+#, fuzzy, c-format
+msgid "Configuring device..."
+msgstr "Konfigureju..."
+
+#: ../lib/network/connection_manager.pm:132
+#, fuzzy, c-format
+msgid "Connecting..."
+msgstr "Savīnoju..."
+
+#: ../lib/network/connection_manager.pm:150
+#, fuzzy, c-format
+msgid "Disconnecting..."
+msgstr "Atvīnoju..."
+
+#: ../lib/network/connection_manager.pm:187
+#, c-format
+msgid "SSID"
+msgstr ""
+
+#: ../lib/network/connection_manager.pm:188
+#, c-format
+msgid "Signal strength"
+msgstr ""
+
+#: ../lib/network/connection_manager.pm:189
+#, fuzzy, c-format
+msgid "Encryption"
+msgstr "Šifreišonys atslāga"
+
+#: ../lib/network/connection_manager.pm:222 ../lib/network/netconnect.pm:209
+#, fuzzy, c-format
+msgid "Scanning for networks..."
+msgstr "Mekleju teiklā..."
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:111
+#, fuzzy, c-format
+msgid "Disconnect"
+msgstr "Atvīnoju..."
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:110
+#, c-format
+msgid "Connect"
+msgstr "Savīnoju"
+
 #: ../lib/network/drakfirewall.pm:12
 #, c-format
 msgid "Web Server"
@@ -4436,75 +4487,25 @@ msgstr ""
 msgid "No device found"
 msgstr "Īkuortys nav atrostys"
 
-#: ../lib/network/drakroam.pm:63 ../lib/network/drakroam.pm:161
-#, fuzzy, c-format
-msgid "Please enter settings for network"
-msgstr "Detalizeita informaceja"
-
-#: ../lib/network/drakroam.pm:67 ../lib/network/netconnect.pm:177
-#, fuzzy, c-format
-msgid "Configuring device..."
-msgstr "Konfigureju..."
-
-#: ../lib/network/drakroam.pm:95
+#: ../lib/network/drakroam.pm:58
 #, c-format
 msgid "Hostname changed to \"%s\""
 msgstr ""
 
-#: ../lib/network/drakroam.pm:108 ../lib/network/netconnect.pm:209
-#, fuzzy, c-format
-msgid "Scanning for networks..."
-msgstr "Mekleju teiklā..."
-
-#: ../lib/network/drakroam.pm:200
-#, fuzzy, c-format
-msgid "Connecting..."
-msgstr "Savīnoju..."
-
-#: ../lib/network/drakroam.pm:227
-#, fuzzy, c-format
-msgid "Disconnect"
-msgstr "Atvīnoju..."
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Connect"
-msgstr "Savīnoju"
-
-#: ../lib/network/drakroam.pm:250
-#, fuzzy, c-format
-msgid "Disconnecting..."
-msgstr "Atvīnoju..."
-
-#: ../lib/network/drakroam.pm:279
-#, c-format
-msgid "SSID"
-msgstr ""
-
-#: ../lib/network/drakroam.pm:280
-#, c-format
-msgid "Signal strength"
-msgstr ""
-
-#: ../lib/network/drakroam.pm:281
-#, fuzzy, c-format
-msgid "Encryption"
-msgstr "Šifreišonys atslāga"
-
-#: ../lib/network/drakroam.pm:335 ../lib/network/netconnect.pm:761
-#, c-format
-msgid "Wireless connection"
-msgstr "Bezvodu savīnuojums"
-
-#: ../lib/network/drakroam.pm:350
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:80
 #, c-format
 msgid "Configure"
 msgstr "Konfigurēt"
 
-#: ../lib/network/drakroam.pm:352
+#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:85
 #, c-format
 msgid "Refresh"
 msgstr "Atjaunuot"
+
+#: ../lib/network/drakroam.pm:124 ../lib/network/netconnect.pm:761
+#, c-format
+msgid "Wireless connection"
+msgstr "Bezvodu savīnuojums"
 
 #: ../lib/network/drakvpn.pm:30
 #, fuzzy, c-format
@@ -4705,6 +4706,16 @@ msgstr ""
 msgid "Network Center"
 msgstr "Teikla saskarne"
 
+#: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
+#, c-format
+msgid "Please select your network:"
+msgstr ""
+
+#: ../lib/network/netcenter.pm:76
+#, fuzzy, c-format
+msgid "Monitor"
+msgstr "Atjaunuot caur teiklu"
+
 #: ../lib/network/netconnect.pm:37
 #, c-format
 msgid "United States"
@@ -4750,11 +4761,6 @@ msgstr "Teikla konfiguraceja"
 #: ../lib/network/netconnect.pm:194
 #, c-format
 msgid "Please select your provider:"
-msgstr ""
-
-#: ../lib/network/netconnect.pm:212
-#, c-format
-msgid "Please select your network:"
 msgstr ""
 
 #: ../lib/network/netconnect.pm:241

@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-nl\n"
-"POT-Creation-Date: 2007-08-09 11:47+0200\n"
+"POT-Creation-Date: 2007-08-28 11:27+0200\n"
 "PO-Revision-Date: 2007-08-28 00:59+0200\n"
 "Last-Translator: Reinout van Schouwen <reinout@gmail.com>\n"
 "Language-Team:  Dutch <vertaling@nl.linux.org>\n"
@@ -1622,9 +1622,10 @@ msgid ""
 "help improve security in some cases, but can decrease reliability. See "
 "exports(5) man page for more details."
 msgstr ""
-"<span foreground=\"royalblue3\">%s</span> subboom-controle inschakelen waarmee "
-"in sommige gevallen de beveiliging verbeterd wordt, maar de betrouwbaarheid "
-"kan verminderen. Zie de exports(5) manual-pagina voor meer details."
+"<span foreground=\"royalblue3\">%s</span> subboom-controle inschakelen "
+"waarmee in sommige gevallen de beveiliging verbeterd wordt, maar de "
+"betrouwbaarheid kan verminderen. Zie de exports(5) manual-pagina voor meer "
+"details."
 
 #: ../bin/draknfs:182 ../bin/draksambashare:606 ../bin/draksambashare:773
 #, c-format
@@ -4744,6 +4745,57 @@ msgstr "Virtueel circuit-ID (VCI):"
 msgid "Could not install the packages (%s)!"
 msgstr "Kan de pakketten (%s) niet installeren!"
 
+#: ../lib/network/connection_manager.pm:54
+#: ../lib/network/connection_manager.pm:86
+#, c-format
+msgid "Please enter settings for network"
+msgstr "Geef de instellingen voor het netwerk"
+
+#: ../lib/network/connection_manager.pm:58 ../lib/network/netconnect.pm:177
+#, c-format
+msgid "Configuring device..."
+msgstr "Apparaat configureren..."
+
+#: ../lib/network/connection_manager.pm:132
+#, c-format
+msgid "Connecting..."
+msgstr "Verbinden..."
+
+#: ../lib/network/connection_manager.pm:150
+#, c-format
+msgid "Disconnecting..."
+msgstr "Verbinding verbreken..."
+
+#: ../lib/network/connection_manager.pm:187
+#, c-format
+msgid "SSID"
+msgstr "SSID"
+
+#: ../lib/network/connection_manager.pm:188
+#, c-format
+msgid "Signal strength"
+msgstr "Signaalsterkte"
+
+#: ../lib/network/connection_manager.pm:189
+#, c-format
+msgid "Encryption"
+msgstr "Vercijfering"
+
+#: ../lib/network/connection_manager.pm:222 ../lib/network/netconnect.pm:209
+#, c-format
+msgid "Scanning for networks..."
+msgstr "Scannen op netwerken..."
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:111
+#, c-format
+msgid "Disconnect"
+msgstr "Verbinding verbreken"
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:110
+#, c-format
+msgid "Connect"
+msgstr "Verbinden"
+
 #: ../lib/network/drakfirewall.pm:12
 #, c-format
 msgid "Web Server"
@@ -4910,75 +4962,25 @@ msgstr "Interactieve firewall gebruiken"
 msgid "No device found"
 msgstr "Geen apparaten gevonden"
 
-#: ../lib/network/drakroam.pm:63 ../lib/network/drakroam.pm:161
-#, c-format
-msgid "Please enter settings for network"
-msgstr "Geef de instellingen voor het netwerk"
-
-#: ../lib/network/drakroam.pm:67 ../lib/network/netconnect.pm:177
-#, c-format
-msgid "Configuring device..."
-msgstr "Apparaat configureren..."
-
-#: ../lib/network/drakroam.pm:95
+#: ../lib/network/drakroam.pm:58
 #, c-format
 msgid "Hostname changed to \"%s\""
 msgstr "Hostnaam is gewijzigd in ‘%s’"
 
-#: ../lib/network/drakroam.pm:108 ../lib/network/netconnect.pm:209
-#, c-format
-msgid "Scanning for networks..."
-msgstr "Scannen op netwerken..."
-
-#: ../lib/network/drakroam.pm:200
-#, c-format
-msgid "Connecting..."
-msgstr "Verbinden..."
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Disconnect"
-msgstr "Verbinding verbreken"
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Connect"
-msgstr "Verbinden"
-
-#: ../lib/network/drakroam.pm:250
-#, c-format
-msgid "Disconnecting..."
-msgstr "Verbinding verbreken..."
-
-#: ../lib/network/drakroam.pm:279
-#, c-format
-msgid "SSID"
-msgstr "SSID"
-
-#: ../lib/network/drakroam.pm:280
-#, c-format
-msgid "Signal strength"
-msgstr "Signaalsterkte"
-
-#: ../lib/network/drakroam.pm:281
-#, c-format
-msgid "Encryption"
-msgstr "Vercijfering"
-
-#: ../lib/network/drakroam.pm:335 ../lib/network/netconnect.pm:761
-#, c-format
-msgid "Wireless connection"
-msgstr "Draadloze verbinding"
-
-#: ../lib/network/drakroam.pm:350
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:80
 #, c-format
 msgid "Configure"
 msgstr "Configureren"
 
-#: ../lib/network/drakroam.pm:352
+#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:85
 #, c-format
 msgid "Refresh"
 msgstr "Verversen"
+
+#: ../lib/network/drakroam.pm:124 ../lib/network/netconnect.pm:761
+#, c-format
+msgid "Wireless connection"
+msgstr "Draadloze verbinding"
 
 #: ../lib/network/drakvpn.pm:30
 #, c-format
@@ -5189,6 +5191,16 @@ msgstr "Selecteer een apparaat:"
 msgid "Network Center"
 msgstr "Netwerkcentrum"
 
+#: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
+#, c-format
+msgid "Please select your network:"
+msgstr "Selecteer uw netwerk:"
+
+#: ../lib/network/netcenter.pm:76
+#, fuzzy, c-format
+msgid "Monitor"
+msgstr "Netwerk observeren"
+
 #: ../lib/network/netconnect.pm:37
 #, c-format
 msgid "United States"
@@ -5235,11 +5247,6 @@ msgstr "Apparaatinstellingen"
 #, c-format
 msgid "Please select your provider:"
 msgstr "Selecteer uw aanbieder:"
-
-#: ../lib/network/netconnect.pm:212
-#, c-format
-msgid "Please select your network:"
-msgstr "Selecteer uw netwerk:"
 
 #: ../lib/network/netconnect.pm:241
 #, c-format
