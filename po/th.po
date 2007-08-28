@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2007-08-09 11:47+0200\n"
+"POT-Creation-Date: 2007-08-28 11:27+0200\n"
 "PO-Revision-Date: 2001-09-10 14:24GMT+7\n"
 "Last-Translator: Wachara Chinsettawong <wachara@yahoo.com>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -4235,6 +4235,57 @@ msgstr ""
 msgid "Could not install the packages (%s)!"
 msgstr "กำลังติดตั้งแพ็คเก็จ %s"
 
+#: ../lib/network/connection_manager.pm:54
+#: ../lib/network/connection_manager.pm:86
+#, fuzzy, c-format
+msgid "Please enter settings for network"
+msgstr "แสดงข้อมูล"
+
+#: ../lib/network/connection_manager.pm:58 ../lib/network/netconnect.pm:177
+#, fuzzy, c-format
+msgid "Configuring device..."
+msgstr "กำลังทำการคอนฟิก"
+
+#: ../lib/network/connection_manager.pm:132
+#, fuzzy, c-format
+msgid "Connecting..."
+msgstr "ติดต่อ"
+
+#: ../lib/network/connection_manager.pm:150
+#, fuzzy, c-format
+msgid "Disconnecting..."
+msgstr "ยกเลิกติดต่อ..."
+
+#: ../lib/network/connection_manager.pm:187
+#, c-format
+msgid "SSID"
+msgstr ""
+
+#: ../lib/network/connection_manager.pm:188
+#, c-format
+msgid "Signal strength"
+msgstr ""
+
+#: ../lib/network/connection_manager.pm:189
+#, c-format
+msgid "Encryption"
+msgstr "การเช้ารหัส"
+
+#: ../lib/network/connection_manager.pm:222 ../lib/network/netconnect.pm:209
+#, fuzzy, c-format
+msgid "Scanning for networks..."
+msgstr "ทดสอบ connection..."
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:111
+#, c-format
+msgid "Disconnect"
+msgstr "เลิกการเชื่อมต่อ"
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:110
+#, c-format
+msgid "Connect"
+msgstr "เชื่อมต่อ"
+
 #: ../lib/network/drakfirewall.pm:12
 #, fuzzy, c-format
 msgid "Web Server"
@@ -4380,75 +4431,25 @@ msgstr ""
 msgid "No device found"
 msgstr "เครื่องพิมพ์โลคอล (ต่อติดกับตัวเครื่อง)"
 
-#: ../lib/network/drakroam.pm:63 ../lib/network/drakroam.pm:161
-#, fuzzy, c-format
-msgid "Please enter settings for network"
-msgstr "แสดงข้อมูล"
-
-#: ../lib/network/drakroam.pm:67 ../lib/network/netconnect.pm:177
-#, fuzzy, c-format
-msgid "Configuring device..."
-msgstr "กำลังทำการคอนฟิก"
-
-#: ../lib/network/drakroam.pm:95
+#: ../lib/network/drakroam.pm:58
 #, c-format
 msgid "Hostname changed to \"%s\""
 msgstr ""
 
-#: ../lib/network/drakroam.pm:108 ../lib/network/netconnect.pm:209
-#, fuzzy, c-format
-msgid "Scanning for networks..."
-msgstr "ทดสอบ connection..."
-
-#: ../lib/network/drakroam.pm:200
-#, fuzzy, c-format
-msgid "Connecting..."
-msgstr "ติดต่อ"
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Disconnect"
-msgstr "เลิกการเชื่อมต่อ"
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Connect"
-msgstr "เชื่อมต่อ"
-
-#: ../lib/network/drakroam.pm:250
-#, fuzzy, c-format
-msgid "Disconnecting..."
-msgstr "ยกเลิกติดต่อ..."
-
-#: ../lib/network/drakroam.pm:279
-#, c-format
-msgid "SSID"
-msgstr ""
-
-#: ../lib/network/drakroam.pm:280
-#, c-format
-msgid "Signal strength"
-msgstr ""
-
-#: ../lib/network/drakroam.pm:281
-#, c-format
-msgid "Encryption"
-msgstr "การเช้ารหัส"
-
-#: ../lib/network/drakroam.pm:335 ../lib/network/netconnect.pm:761
-#, c-format
-msgid "Wireless connection"
-msgstr "ไร้สาย"
-
-#: ../lib/network/drakroam.pm:350
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:80
 #, c-format
 msgid "Configure"
 msgstr "การปรับแต่ง"
 
-#: ../lib/network/drakroam.pm:352
+#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:85
 #, c-format
 msgid "Refresh"
 msgstr "อ่านค่าใหม่"
+
+#: ../lib/network/drakroam.pm:124 ../lib/network/netconnect.pm:761
+#, c-format
+msgid "Wireless connection"
+msgstr "ไร้สาย"
 
 #: ../lib/network/drakvpn.pm:30
 #, fuzzy, c-format
@@ -4649,6 +4650,16 @@ msgstr ""
 msgid "Network Center"
 msgstr "Network interface"
 
+#: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
+#, c-format
+msgid "Please select your network:"
+msgstr ""
+
+#: ../lib/network/netcenter.pm:76
+#, fuzzy, c-format
+msgid "Monitor"
+msgstr "เรียกคืนจากไฟล์"
+
 #: ../lib/network/netconnect.pm:37
 #, c-format
 msgid "United States"
@@ -4694,11 +4705,6 @@ msgstr "การคอนฟิกระบบเน็ตเวิร์ก"
 #: ../lib/network/netconnect.pm:194
 #, c-format
 msgid "Please select your provider:"
-msgstr ""
-
-#: ../lib/network/netconnect.pm:212
-#, c-format
-msgid "Please select your network:"
 msgstr ""
 
 #: ../lib/network/netconnect.pm:241

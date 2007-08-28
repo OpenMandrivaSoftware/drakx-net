@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-sl\n"
-"POT-Creation-Date: 2007-08-09 11:47+0200\n"
+"POT-Creation-Date: 2007-08-28 11:27+0200\n"
 "PO-Revision-Date: 2007-03-09 18:31+0100\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -4716,6 +4716,57 @@ msgstr "VCI"
 msgid "Could not install the packages (%s)!"
 msgstr "Ni moč namestiti paketov (%s)!"
 
+#: ../lib/network/connection_manager.pm:54
+#: ../lib/network/connection_manager.pm:86
+#, c-format
+msgid "Please enter settings for network"
+msgstr "Prosim, vnesite nastavitve za omrežje"
+
+#: ../lib/network/connection_manager.pm:58 ../lib/network/netconnect.pm:177
+#, c-format
+msgid "Configuring device..."
+msgstr "Nastavljanje......"
+
+#: ../lib/network/connection_manager.pm:132
+#, c-format
+msgid "Connecting..."
+msgstr "Povezovanje..."
+
+#: ../lib/network/connection_manager.pm:150
+#, c-format
+msgid "Disconnecting..."
+msgstr "Prekinjanje povezave..."
+
+#: ../lib/network/connection_manager.pm:187
+#, c-format
+msgid "SSID"
+msgstr "SSID"
+
+#: ../lib/network/connection_manager.pm:188
+#, c-format
+msgid "Signal strength"
+msgstr "Moč signala"
+
+#: ../lib/network/connection_manager.pm:189
+#, c-format
+msgid "Encryption"
+msgstr "Šifriranje"
+
+#: ../lib/network/connection_manager.pm:222 ../lib/network/netconnect.pm:209
+#, c-format
+msgid "Scanning for networks..."
+msgstr "Iskanje omrežja..."
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:111
+#, c-format
+msgid "Disconnect"
+msgstr "Odklopi"
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:110
+#, c-format
+msgid "Connect"
+msgstr "Poveži"
+
 #: ../lib/network/drakfirewall.pm:12
 #, c-format
 msgid "Web Server"
@@ -4881,75 +4932,25 @@ msgstr "Omogoči interaktivni požarni zid"
 msgid "No device found"
 msgstr "Ne najdem nobene naprave"
 
-#: ../lib/network/drakroam.pm:63 ../lib/network/drakroam.pm:161
-#, c-format
-msgid "Please enter settings for network"
-msgstr "Prosim, vnesite nastavitve za omrežje"
-
-#: ../lib/network/drakroam.pm:67 ../lib/network/netconnect.pm:177
-#, c-format
-msgid "Configuring device..."
-msgstr "Nastavljanje......"
-
-#: ../lib/network/drakroam.pm:95
+#: ../lib/network/drakroam.pm:58
 #, c-format
 msgid "Hostname changed to \"%s\""
 msgstr "Sprememba gostiteljskega imena v:\"%s\""
 
-#: ../lib/network/drakroam.pm:108 ../lib/network/netconnect.pm:209
-#, c-format
-msgid "Scanning for networks..."
-msgstr "Iskanje omrežja..."
-
-#: ../lib/network/drakroam.pm:200
-#, c-format
-msgid "Connecting..."
-msgstr "Povezovanje..."
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Disconnect"
-msgstr "Odklopi"
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Connect"
-msgstr "Poveži"
-
-#: ../lib/network/drakroam.pm:250
-#, c-format
-msgid "Disconnecting..."
-msgstr "Prekinjanje povezave..."
-
-#: ../lib/network/drakroam.pm:279
-#, c-format
-msgid "SSID"
-msgstr "SSID"
-
-#: ../lib/network/drakroam.pm:280
-#, c-format
-msgid "Signal strength"
-msgstr "Moč signala"
-
-#: ../lib/network/drakroam.pm:281
-#, c-format
-msgid "Encryption"
-msgstr "Šifriranje"
-
-#: ../lib/network/drakroam.pm:335 ../lib/network/netconnect.pm:761
-#, c-format
-msgid "Wireless connection"
-msgstr "Brezžična povezava"
-
-#: ../lib/network/drakroam.pm:350
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:80
 #, c-format
 msgid "Configure"
 msgstr "Nastavite"
 
-#: ../lib/network/drakroam.pm:352
+#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:85
 #, c-format
 msgid "Refresh"
 msgstr "Osveži"
+
+#: ../lib/network/drakroam.pm:124 ../lib/network/netconnect.pm:761
+#, c-format
+msgid "Wireless connection"
+msgstr "Brezžična povezava"
 
 #: ../lib/network/drakvpn.pm:30
 #, c-format
@@ -5157,6 +5158,16 @@ msgstr "Izberite napravo:"
 msgid "Network Center"
 msgstr "Omrežni vmesnik"
 
+#: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
+#, c-format
+msgid "Please select your network:"
+msgstr "Prosim izberite vaše omrežje:"
+
+#: ../lib/network/netcenter.pm:76
+#, fuzzy, c-format
+msgid "Monitor"
+msgstr "Nadzornik omrežja"
+
 #: ../lib/network/netconnect.pm:37
 #, c-format
 msgid "United States"
@@ -5203,11 +5214,6 @@ msgstr "Nastavitev strojne opreme"
 #, c-format
 msgid "Please select your provider:"
 msgstr "Prosim izberite svojega operaterja:"
-
-#: ../lib/network/netconnect.pm:212
-#, c-format
-msgid "Please select your network:"
-msgstr "Prosim izberite vaše omrežje:"
 
 #: ../lib/network/netconnect.pm:241
 #, c-format

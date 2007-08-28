@@ -18,7 +18,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2007-08-09 11:47+0200\n"
+"POT-Creation-Date: 2007-08-28 11:27+0200\n"
 "PO-Revision-Date: 2006-09-23 12:29+0800\n"
 "Last-Translator: Shiva Huang <shivahuang@gmail.com>\n"
 "Language-Team: Traditional Chinese <zh@li.org>\n"
@@ -4293,6 +4293,57 @@ msgstr "虛擬通道識別碼 (Virtual Circuit ID，VCI)："
 msgid "Could not install the packages (%s)!"
 msgstr "無法安裝套件 (%s)！"
 
+#: ../lib/network/connection_manager.pm:54
+#: ../lib/network/connection_manager.pm:86
+#, c-format
+msgid "Please enter settings for network"
+msgstr "請輸入網路設定"
+
+#: ../lib/network/connection_manager.pm:58 ../lib/network/netconnect.pm:177
+#, c-format
+msgid "Configuring device..."
+msgstr "設定裝置中..."
+
+#: ../lib/network/connection_manager.pm:132
+#, c-format
+msgid "Connecting..."
+msgstr "連線中..."
+
+#: ../lib/network/connection_manager.pm:150
+#, c-format
+msgid "Disconnecting..."
+msgstr "正在中斷連線..."
+
+#: ../lib/network/connection_manager.pm:187
+#, c-format
+msgid "SSID"
+msgstr "SSID"
+
+#: ../lib/network/connection_manager.pm:188
+#, c-format
+msgid "Signal strength"
+msgstr "訊號強度"
+
+#: ../lib/network/connection_manager.pm:189
+#, c-format
+msgid "Encryption"
+msgstr "加密"
+
+#: ../lib/network/connection_manager.pm:222 ../lib/network/netconnect.pm:209
+#, c-format
+msgid "Scanning for networks..."
+msgstr "掃描網路中..."
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:111
+#, c-format
+msgid "Disconnect"
+msgstr "斷線"
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:110
+#, c-format
+msgid "Connect"
+msgstr "連線"
+
 #: ../lib/network/drakfirewall.pm:12
 #, c-format
 msgid "Web Server"
@@ -4456,75 +4507,25 @@ msgstr "使用互動式防火牆"
 msgid "No device found"
 msgstr "沒有找到任何裝置"
 
-#: ../lib/network/drakroam.pm:63 ../lib/network/drakroam.pm:161
-#, c-format
-msgid "Please enter settings for network"
-msgstr "請輸入網路設定"
-
-#: ../lib/network/drakroam.pm:67 ../lib/network/netconnect.pm:177
-#, c-format
-msgid "Configuring device..."
-msgstr "設定裝置中..."
-
-#: ../lib/network/drakroam.pm:95
+#: ../lib/network/drakroam.pm:58
 #, c-format
 msgid "Hostname changed to \"%s\""
 msgstr "主機名稱改變為 \"%s\""
 
-#: ../lib/network/drakroam.pm:108 ../lib/network/netconnect.pm:209
-#, c-format
-msgid "Scanning for networks..."
-msgstr "掃描網路中..."
-
-#: ../lib/network/drakroam.pm:200
-#, c-format
-msgid "Connecting..."
-msgstr "連線中..."
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Disconnect"
-msgstr "斷線"
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Connect"
-msgstr "連線"
-
-#: ../lib/network/drakroam.pm:250
-#, c-format
-msgid "Disconnecting..."
-msgstr "正在中斷連線..."
-
-#: ../lib/network/drakroam.pm:279
-#, c-format
-msgid "SSID"
-msgstr "SSID"
-
-#: ../lib/network/drakroam.pm:280
-#, c-format
-msgid "Signal strength"
-msgstr "訊號強度"
-
-#: ../lib/network/drakroam.pm:281
-#, c-format
-msgid "Encryption"
-msgstr "加密"
-
-#: ../lib/network/drakroam.pm:335 ../lib/network/netconnect.pm:761
-#, c-format
-msgid "Wireless connection"
-msgstr "無線網路連線"
-
-#: ../lib/network/drakroam.pm:350
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:80
 #, c-format
 msgid "Configure"
 msgstr "設定"
 
-#: ../lib/network/drakroam.pm:352
+#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:85
 #, c-format
 msgid "Refresh"
 msgstr "重新載入"
+
+#: ../lib/network/drakroam.pm:124 ../lib/network/netconnect.pm:761
+#, c-format
+msgid "Wireless connection"
+msgstr "無線網路連線"
 
 #: ../lib/network/drakvpn.pm:30
 #, c-format
@@ -4731,6 +4732,16 @@ msgstr "選擇一個裝置："
 msgid "Network Center"
 msgstr "網路介面"
 
+#: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
+#, c-format
+msgid "Please select your network:"
+msgstr "請選擇您的網路："
+
+#: ../lib/network/netcenter.pm:76
+#, fuzzy, c-format
+msgid "Monitor"
+msgstr "監控網路"
+
 #: ../lib/network/netconnect.pm:37
 #, c-format
 msgid "United States"
@@ -4777,11 +4788,6 @@ msgstr "硬體組態設定"
 #, c-format
 msgid "Please select your provider:"
 msgstr "請選擇您的提供者："
-
-#: ../lib/network/netconnect.pm:212
-#, c-format
-msgid "Please select your network:"
-msgstr "請選擇您的網路："
 
 #: ../lib/network/netconnect.pm:241
 #, c-format

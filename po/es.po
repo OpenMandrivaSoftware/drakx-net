@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-es\n"
-"POT-Creation-Date: 2007-08-09 11:47+0200\n"
+"POT-Creation-Date: 2007-08-28 11:27+0200\n"
 "PO-Revision-Date: 2006-09-06 21:07-0400\n"
 "Last-Translator: Fabian Mandelbaum <fabman@mandriva.com>\n"
 "Language-Team: Español <es@li.org>\n"
@@ -4416,6 +4416,57 @@ msgstr "ID de circuito virtual (VCI):"
 msgid "Could not install the packages (%s)!"
 msgstr "¡No se pudieron instalar los paquetes (%s)!"
 
+#: ../lib/network/connection_manager.pm:54
+#: ../lib/network/connection_manager.pm:86
+#, c-format
+msgid "Please enter settings for network"
+msgstr "Por favor, ingrese la configuración para la red"
+
+#: ../lib/network/connection_manager.pm:58 ../lib/network/netconnect.pm:177
+#, c-format
+msgid "Configuring device..."
+msgstr "Configurando dispositivo..."
+
+#: ../lib/network/connection_manager.pm:132
+#, c-format
+msgid "Connecting..."
+msgstr "Conectando..."
+
+#: ../lib/network/connection_manager.pm:150
+#, c-format
+msgid "Disconnecting..."
+msgstr "Desconectando..."
+
+#: ../lib/network/connection_manager.pm:187
+#, c-format
+msgid "SSID"
+msgstr "SSID"
+
+#: ../lib/network/connection_manager.pm:188
+#, c-format
+msgid "Signal strength"
+msgstr "Fuerza de la señal"
+
+#: ../lib/network/connection_manager.pm:189
+#, c-format
+msgid "Encryption"
+msgstr "Cifrado"
+
+#: ../lib/network/connection_manager.pm:222 ../lib/network/netconnect.pm:209
+#, c-format
+msgid "Scanning for networks..."
+msgstr "Buscando redes..."
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:111
+#, c-format
+msgid "Disconnect"
+msgstr "Desconectar"
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:110
+#, c-format
+msgid "Connect"
+msgstr "Conectar"
+
 #: ../lib/network/drakfirewall.pm:12
 #, c-format
 msgid "Web Server"
@@ -4583,75 +4634,25 @@ msgstr "Usar cortafuegos interactivo"
 msgid "No device found"
 msgstr "No se encontraron dispositivos"
 
-#: ../lib/network/drakroam.pm:63 ../lib/network/drakroam.pm:161
-#, c-format
-msgid "Please enter settings for network"
-msgstr "Por favor, ingrese la configuración para la red"
-
-#: ../lib/network/drakroam.pm:67 ../lib/network/netconnect.pm:177
-#, c-format
-msgid "Configuring device..."
-msgstr "Configurando dispositivo..."
-
-#: ../lib/network/drakroam.pm:95
+#: ../lib/network/drakroam.pm:58
 #, c-format
 msgid "Hostname changed to \"%s\""
 msgstr "El nombre del host cambió a «%s»"
 
-#: ../lib/network/drakroam.pm:108 ../lib/network/netconnect.pm:209
-#, c-format
-msgid "Scanning for networks..."
-msgstr "Buscando redes..."
-
-#: ../lib/network/drakroam.pm:200
-#, c-format
-msgid "Connecting..."
-msgstr "Conectando..."
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Disconnect"
-msgstr "Desconectar"
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Connect"
-msgstr "Conectar"
-
-#: ../lib/network/drakroam.pm:250
-#, c-format
-msgid "Disconnecting..."
-msgstr "Desconectando..."
-
-#: ../lib/network/drakroam.pm:279
-#, c-format
-msgid "SSID"
-msgstr "SSID"
-
-#: ../lib/network/drakroam.pm:280
-#, c-format
-msgid "Signal strength"
-msgstr "Fuerza de la señal"
-
-#: ../lib/network/drakroam.pm:281
-#, c-format
-msgid "Encryption"
-msgstr "Cifrado"
-
-#: ../lib/network/drakroam.pm:335 ../lib/network/netconnect.pm:761
-#, c-format
-msgid "Wireless connection"
-msgstr "Conexión inalámbrica"
-
-#: ../lib/network/drakroam.pm:350
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:80
 #, c-format
 msgid "Configure"
 msgstr "Configurar"
 
-#: ../lib/network/drakroam.pm:352
+#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:85
 #, c-format
 msgid "Refresh"
 msgstr "Refrescar"
+
+#: ../lib/network/drakroam.pm:124 ../lib/network/netconnect.pm:761
+#, c-format
+msgid "Wireless connection"
+msgstr "Conexión inalámbrica"
 
 #: ../lib/network/drakvpn.pm:30
 #, c-format
@@ -4863,6 +4864,16 @@ msgstr "Elija una unidad:"
 msgid "Network Center"
 msgstr "Interfaz de red"
 
+#: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
+#, c-format
+msgid "Please select your network:"
+msgstr "Seleccione su red:"
+
+#: ../lib/network/netcenter.pm:76
+#, fuzzy, c-format
+msgid "Monitor"
+msgstr "Monitorear la red"
+
 #: ../lib/network/netconnect.pm:37
 #, c-format
 msgid "United States"
@@ -4909,11 +4920,6 @@ msgstr "Configuración del material"
 #, c-format
 msgid "Please select your provider:"
 msgstr "Por favor, seleccione su proveedor:"
-
-#: ../lib/network/netconnect.pm:212
-#, c-format
-msgid "Please select your network:"
-msgstr "Seleccione su red:"
 
 #: ../lib/network/netconnect.pm:241
 #, c-format

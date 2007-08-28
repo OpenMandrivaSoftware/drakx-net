@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-fa\n"
-"POT-Creation-Date: 2007-08-09 11:47+0200\n"
+"POT-Creation-Date: 2007-08-28 11:27+0200\n"
 "PO-Revision-Date: 2005-02-26 06:31+0100\n"
 "Last-Translator: Abbas Izad <abbasizad@hotmail.com>\n"
 "Language-Team: Persian\n"
@@ -4640,6 +4640,57 @@ msgstr "شناسه‌ی مدار مجازی (VCI):"
 msgid "Could not install the packages (%s)!"
 msgstr "بسته‌های %s نتوانستند نصب شوند!"
 
+#: ../lib/network/connection_manager.pm:54
+#: ../lib/network/connection_manager.pm:86
+#, fuzzy, c-format
+msgid "Please enter settings for network"
+msgstr "اطلاعات مفصل"
+
+#: ../lib/network/connection_manager.pm:58 ../lib/network/netconnect.pm:177
+#, c-format
+msgid "Configuring device..."
+msgstr "پیکربندی دستگاه..."
+
+#: ../lib/network/connection_manager.pm:132
+#, fuzzy, c-format
+msgid "Connecting..."
+msgstr "اتصال..."
+
+#: ../lib/network/connection_manager.pm:150
+#, fuzzy, c-format
+msgid "Disconnecting..."
+msgstr "قطع اتصال..."
+
+#: ../lib/network/connection_manager.pm:187
+#, c-format
+msgid "SSID"
+msgstr ""
+
+#: ../lib/network/connection_manager.pm:188
+#, c-format
+msgid "Signal strength"
+msgstr ""
+
+#: ../lib/network/connection_manager.pm:189
+#, c-format
+msgid "Encryption"
+msgstr "رمزگذاری"
+
+#: ../lib/network/connection_manager.pm:222 ../lib/network/netconnect.pm:209
+#, fuzzy, c-format
+msgid "Scanning for networks..."
+msgstr "پویش شبکه..."
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:111
+#, c-format
+msgid "Disconnect"
+msgstr "قطع ارتباط"
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:110
+#, c-format
+msgid "Connect"
+msgstr "اتصال"
+
 #: ../lib/network/drakfirewall.pm:12
 #, c-format
 msgid "Web Server"
@@ -4802,75 +4853,25 @@ msgstr ""
 msgid "No device found"
 msgstr "هیچ دستگاهی یافت نشد"
 
-#: ../lib/network/drakroam.pm:63 ../lib/network/drakroam.pm:161
-#, fuzzy, c-format
-msgid "Please enter settings for network"
-msgstr "اطلاعات مفصل"
-
-#: ../lib/network/drakroam.pm:67 ../lib/network/netconnect.pm:177
-#, c-format
-msgid "Configuring device..."
-msgstr "پیکربندی دستگاه..."
-
-#: ../lib/network/drakroam.pm:95
+#: ../lib/network/drakroam.pm:58
 #, c-format
 msgid "Hostname changed to \"%s\""
 msgstr ""
 
-#: ../lib/network/drakroam.pm:108 ../lib/network/netconnect.pm:209
-#, fuzzy, c-format
-msgid "Scanning for networks..."
-msgstr "پویش شبکه..."
-
-#: ../lib/network/drakroam.pm:200
-#, fuzzy, c-format
-msgid "Connecting..."
-msgstr "اتصال..."
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Disconnect"
-msgstr "قطع ارتباط"
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Connect"
-msgstr "اتصال"
-
-#: ../lib/network/drakroam.pm:250
-#, fuzzy, c-format
-msgid "Disconnecting..."
-msgstr "قطع اتصال..."
-
-#: ../lib/network/drakroam.pm:279
-#, c-format
-msgid "SSID"
-msgstr ""
-
-#: ../lib/network/drakroam.pm:280
-#, c-format
-msgid "Signal strength"
-msgstr ""
-
-#: ../lib/network/drakroam.pm:281
-#, c-format
-msgid "Encryption"
-msgstr "رمزگذاری"
-
-#: ../lib/network/drakroam.pm:335 ../lib/network/netconnect.pm:761
-#, c-format
-msgid "Wireless connection"
-msgstr "اتصال بی‌سیم"
-
-#: ../lib/network/drakroam.pm:350
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:80
 #, c-format
 msgid "Configure"
 msgstr "پیکربندی"
 
-#: ../lib/network/drakroam.pm:352
+#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:85
 #, c-format
 msgid "Refresh"
 msgstr "نوسازی"
+
+#: ../lib/network/drakroam.pm:124 ../lib/network/netconnect.pm:761
+#, c-format
+msgid "Wireless connection"
+msgstr "اتصال بی‌سیم"
 
 #: ../lib/network/drakvpn.pm:30
 #, fuzzy, c-format
@@ -5071,6 +5072,16 @@ msgstr ""
 msgid "Network Center"
 msgstr "واسط شبکه"
 
+#: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
+#, c-format
+msgid "Please select your network:"
+msgstr ""
+
+#: ../lib/network/netcenter.pm:76
+#, fuzzy, c-format
+msgid "Monitor"
+msgstr "پایشگری شبکه"
+
 #: ../lib/network/netconnect.pm:37
 #, c-format
 msgid "United States"
@@ -5116,11 +5127,6 @@ msgstr "پیکربندی شبکه"
 #: ../lib/network/netconnect.pm:194
 #, c-format
 msgid "Please select your provider:"
-msgstr ""
-
-#: ../lib/network/netconnect.pm:212
-#, c-format
-msgid "Please select your network:"
 msgstr ""
 
 #: ../lib/network/netconnect.pm:241

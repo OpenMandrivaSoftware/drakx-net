@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2007-08-09 11:47+0200\n"
+"POT-Creation-Date: 2007-08-28 11:27+0200\n"
 "PO-Revision-Date: 2006-09-05 23:14+0200\n"
 "Last-Translator: Pablo Saratxaga <pablo@walon.org>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -4367,6 +4367,57 @@ msgstr "Idintifiant do forveyou circût (VCI):"
 msgid "Could not install the packages (%s)!"
 msgstr "Les pacaedjes %s èn polèt nén esse astalés!"
 
+#: ../lib/network/connection_manager.pm:54
+#: ../lib/network/connection_manager.pm:86
+#, c-format
+msgid "Please enter settings for network"
+msgstr "Intrez les apontiaedjes pol rantoele s' i vs plait"
+
+#: ../lib/network/connection_manager.pm:58 ../lib/network/netconnect.pm:177
+#, c-format
+msgid "Configuring device..."
+msgstr "Apontiant l' éndjin..."
+
+#: ../lib/network/connection_manager.pm:132
+#, c-format
+msgid "Connecting..."
+msgstr "Raloyaedje..."
+
+#: ../lib/network/connection_manager.pm:150
+#, c-format
+msgid "Disconnecting..."
+msgstr "Disraloyaedje..."
+
+#: ../lib/network/connection_manager.pm:187
+#, c-format
+msgid "SSID"
+msgstr "SSID"
+
+#: ../lib/network/connection_manager.pm:188
+#, c-format
+msgid "Signal strength"
+msgstr "Foice do signå"
+
+#: ../lib/network/connection_manager.pm:189
+#, c-format
+msgid "Encryption"
+msgstr "Ecriptaedje"
+
+#: ../lib/network/connection_manager.pm:222 ../lib/network/netconnect.pm:209
+#, c-format
+msgid "Scanning for networks..."
+msgstr "Dji louke après des rantoeles..."
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:111
+#, c-format
+msgid "Disconnect"
+msgstr "Si disraloyî"
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:110
+#, c-format
+msgid "Connect"
+msgstr "Si raloyî"
+
 #: ../lib/network/drakfirewall.pm:12
 #, c-format
 msgid "Web Server"
@@ -4533,75 +4584,25 @@ msgstr "Eployî l' côpe feu eteractif"
 msgid "No device found"
 msgstr "Nol éndjin di trové"
 
-#: ../lib/network/drakroam.pm:63 ../lib/network/drakroam.pm:161
-#, c-format
-msgid "Please enter settings for network"
-msgstr "Intrez les apontiaedjes pol rantoele s' i vs plait"
-
-#: ../lib/network/drakroam.pm:67 ../lib/network/netconnect.pm:177
-#, c-format
-msgid "Configuring device..."
-msgstr "Apontiant l' éndjin..."
-
-#: ../lib/network/drakroam.pm:95
+#: ../lib/network/drakroam.pm:58
 #, c-format
 msgid "Hostname changed to \"%s\""
 msgstr "Li no do lodjoe a stî candjî a «%s»"
 
-#: ../lib/network/drakroam.pm:108 ../lib/network/netconnect.pm:209
-#, c-format
-msgid "Scanning for networks..."
-msgstr "Dji louke après des rantoeles..."
-
-#: ../lib/network/drakroam.pm:200
-#, c-format
-msgid "Connecting..."
-msgstr "Raloyaedje..."
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Disconnect"
-msgstr "Si disraloyî"
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Connect"
-msgstr "Si raloyî"
-
-#: ../lib/network/drakroam.pm:250
-#, c-format
-msgid "Disconnecting..."
-msgstr "Disraloyaedje..."
-
-#: ../lib/network/drakroam.pm:279
-#, c-format
-msgid "SSID"
-msgstr "SSID"
-
-#: ../lib/network/drakroam.pm:280
-#, c-format
-msgid "Signal strength"
-msgstr "Foice do signå"
-
-#: ../lib/network/drakroam.pm:281
-#, c-format
-msgid "Encryption"
-msgstr "Ecriptaedje"
-
-#: ../lib/network/drakroam.pm:335 ../lib/network/netconnect.pm:761
-#, c-format
-msgid "Wireless connection"
-msgstr "Raloyaedje sins fyis"
-
-#: ../lib/network/drakroam.pm:350
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:80
 #, c-format
 msgid "Configure"
 msgstr "Apontyî"
 
-#: ../lib/network/drakroam.pm:352
+#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:85
 #, c-format
 msgid "Refresh"
 msgstr "Rafrister"
+
+#: ../lib/network/drakroam.pm:124 ../lib/network/netconnect.pm:761
+#, c-format
+msgid "Wireless connection"
+msgstr "Raloyaedje sins fyis"
 
 #: ../lib/network/drakvpn.pm:30
 #, c-format
@@ -4813,6 +4814,16 @@ msgstr "Tchoezixhoz èn éndjin:"
 msgid "Network Center"
 msgstr "Eterface rantoele"
 
+#: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
+#, c-format
+msgid "Please select your network:"
+msgstr "Tchoezixhoz vosse rantoele s' i vs plait:"
+
+#: ../lib/network/netcenter.pm:76
+#, fuzzy, c-format
+msgid "Monitor"
+msgstr "Corwaitî li rantoele"
+
 #: ../lib/network/netconnect.pm:37
 #, c-format
 msgid "United States"
@@ -4859,11 +4870,6 @@ msgstr "Apontiaedje di l' éndjolreye"
 #, c-format
 msgid "Please select your provider:"
 msgstr "Tchoezixhoz vost ahesseu al daegntoele s' i vs plait:"
-
-#: ../lib/network/netconnect.pm:212
-#, c-format
-msgid "Please select your network:"
-msgstr "Tchoezixhoz vosse rantoele s' i vs plait:"
 
 #: ../lib/network/netconnect.pm:241
 #, c-format

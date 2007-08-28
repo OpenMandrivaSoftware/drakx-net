@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-el\n"
-"POT-Creation-Date: 2007-08-09 11:47+0200\n"
+"POT-Creation-Date: 2007-08-28 11:27+0200\n"
 "PO-Revision-Date: 2004-09-15 13:28+0200\n"
 "Last-Translator:  Νίκος Νύκταρης (Nick Niktaris) <niktarin@yahoo.com>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -4278,6 +4278,57 @@ msgstr ""
 msgid "Could not install the packages (%s)!"
 msgstr "Εγκατάσταση πακέτου %s"
 
+#: ../lib/network/connection_manager.pm:54
+#: ../lib/network/connection_manager.pm:86
+#, fuzzy, c-format
+msgid "Please enter settings for network"
+msgstr "Λεπτομερείς πληροφορίες"
+
+#: ../lib/network/connection_manager.pm:58 ../lib/network/netconnect.pm:177
+#, fuzzy, c-format
+msgid "Configuring device..."
+msgstr "Ρύθμιση..."
+
+#: ../lib/network/connection_manager.pm:132
+#, fuzzy, c-format
+msgid "Connecting..."
+msgstr "Σύνδεση..."
+
+#: ../lib/network/connection_manager.pm:150
+#, fuzzy, c-format
+msgid "Disconnecting..."
+msgstr "Αποσύνδεση..."
+
+#: ../lib/network/connection_manager.pm:187
+#, c-format
+msgid "SSID"
+msgstr ""
+
+#: ../lib/network/connection_manager.pm:188
+#, c-format
+msgid "Signal strength"
+msgstr ""
+
+#: ../lib/network/connection_manager.pm:189
+#, c-format
+msgid "Encryption"
+msgstr "Κρυπτογράφηση"
+
+#: ../lib/network/connection_manager.pm:222 ../lib/network/netconnect.pm:209
+#, fuzzy, c-format
+msgid "Scanning for networks..."
+msgstr "Αναζήτηση στο δίκτυο..."
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:111
+#, c-format
+msgid "Disconnect"
+msgstr "Αποσύνδεση"
+
+#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:110
+#, c-format
+msgid "Connect"
+msgstr "Σύνδεση"
+
 #: ../lib/network/drakfirewall.pm:12
 #, c-format
 msgid "Web Server"
@@ -4439,75 +4490,25 @@ msgstr ""
 msgid "No device found"
 msgstr "Δε βρέθηκε συσκευή"
 
-#: ../lib/network/drakroam.pm:63 ../lib/network/drakroam.pm:161
-#, fuzzy, c-format
-msgid "Please enter settings for network"
-msgstr "Λεπτομερείς πληροφορίες"
-
-#: ../lib/network/drakroam.pm:67 ../lib/network/netconnect.pm:177
-#, fuzzy, c-format
-msgid "Configuring device..."
-msgstr "Ρύθμιση..."
-
-#: ../lib/network/drakroam.pm:95
+#: ../lib/network/drakroam.pm:58
 #, c-format
 msgid "Hostname changed to \"%s\""
 msgstr ""
 
-#: ../lib/network/drakroam.pm:108 ../lib/network/netconnect.pm:209
-#, fuzzy, c-format
-msgid "Scanning for networks..."
-msgstr "Αναζήτηση στο δίκτυο..."
-
-#: ../lib/network/drakroam.pm:200
-#, fuzzy, c-format
-msgid "Connecting..."
-msgstr "Σύνδεση..."
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Disconnect"
-msgstr "Αποσύνδεση"
-
-#: ../lib/network/drakroam.pm:227
-#, c-format
-msgid "Connect"
-msgstr "Σύνδεση"
-
-#: ../lib/network/drakroam.pm:250
-#, fuzzy, c-format
-msgid "Disconnecting..."
-msgstr "Αποσύνδεση..."
-
-#: ../lib/network/drakroam.pm:279
-#, c-format
-msgid "SSID"
-msgstr ""
-
-#: ../lib/network/drakroam.pm:280
-#, c-format
-msgid "Signal strength"
-msgstr ""
-
-#: ../lib/network/drakroam.pm:281
-#, c-format
-msgid "Encryption"
-msgstr "Κρυπτογράφηση"
-
-#: ../lib/network/drakroam.pm:335 ../lib/network/netconnect.pm:761
-#, c-format
-msgid "Wireless connection"
-msgstr "Ασύρματη σύνδεση"
-
-#: ../lib/network/drakroam.pm:350
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:80
 #, c-format
 msgid "Configure"
 msgstr "Ρύθμιση"
 
-#: ../lib/network/drakroam.pm:352
+#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:85
 #, c-format
 msgid "Refresh"
 msgstr "Ανανέωση"
+
+#: ../lib/network/drakroam.pm:124 ../lib/network/netconnect.pm:761
+#, c-format
+msgid "Wireless connection"
+msgstr "Ασύρματη σύνδεση"
 
 #: ../lib/network/drakvpn.pm:30
 #, fuzzy, c-format
@@ -4708,6 +4709,16 @@ msgstr ""
 msgid "Network Center"
 msgstr "Συσκευή δικτύου"
 
+#: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
+#, c-format
+msgid "Please select your network:"
+msgstr ""
+
+#: ../lib/network/netcenter.pm:76
+#, fuzzy, c-format
+msgid "Monitor"
+msgstr "Επαναφορά μέσω δικτύου"
+
 #: ../lib/network/netconnect.pm:37
 #, c-format
 msgid "United States"
@@ -4753,11 +4764,6 @@ msgstr "Ρυθμίσεις δικτύου"
 #: ../lib/network/netconnect.pm:194
 #, c-format
 msgid "Please select your provider:"
-msgstr ""
-
-#: ../lib/network/netconnect.pm:212
-#, c-format
-msgid "Please select your network:"
 msgstr ""
 
 #: ../lib/network/netconnect.pm:241
