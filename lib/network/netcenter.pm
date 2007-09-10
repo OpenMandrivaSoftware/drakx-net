@@ -64,7 +64,7 @@ sub main {
                                0, gtknew('Label', padding => [ 5, 0 ]),
                                1, gtknew('Label', ellipsize => 'end', alignment => [ 0, 0 ], text_markup => '<b>' . $_->get_description . '</b>'),
                                0, gtknew('Label', padding => [ 2, 0 ]),
-                               0, $cmanager->{gui}{labels}{interface} = gtknew('Label', alignment => [ 0, 0 ], text_markup => '<b>' . $_->get_interface . '</b>'),
+                               0, $cmanager->{gui}{labels}{interface} = gtknew('Label', alignment => [ 0, 0 ], text_markup => $_->get_interface ? '<b>' . $_->get_interface . '</b>' : ""),
                    ]);
                    my $content = gtknew('HBox', children => [
                                0, gtknew('Label', padding => [ 5, 0 ]),
