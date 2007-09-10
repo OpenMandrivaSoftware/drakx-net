@@ -192,6 +192,7 @@ sub guess_hostname_settings {
     }
 }
 
+# FIXME: add in drakroam/netcenter
 sub get_hostname_settings {
     my ($self) = @_;
     my $auto_hostname = sub { $self->{protocol} eq 'dhcp' && $self->{address}{needhostname} };
