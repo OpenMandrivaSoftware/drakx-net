@@ -19,6 +19,9 @@
 
 use strict;
 use lib qw(/usr/lib/libDrakX);
+
+# i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
+BEGIN { unshift @::textdomains, 'drakx-net' }
 use standalone;
 use common;
 use network::network;
