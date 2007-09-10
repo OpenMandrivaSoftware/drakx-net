@@ -12,7 +12,7 @@ use detect_devices;
 
 sub get_type_name() { N("Cable") }
 sub get_type_description() { N("Cable modem") }
-sub get_type_icon() { 'cablemodem-24.png' }
+sub get_type_icon() { 'cablemodem-24' }
 sub get_metric { 20 }
 
 sub handles_ifcfg {

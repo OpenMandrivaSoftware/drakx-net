@@ -25,7 +25,7 @@ Get the connection type icon path
 
 =cut
 
-sub get_type_icon() { '/usr/share/mcc/themes/default/drakconnect-mdk.png' }
+sub get_type_icon() { '/usr/share/mcc/themes/default/drakconnect-mdk' }
 
 =item get_devices()
 

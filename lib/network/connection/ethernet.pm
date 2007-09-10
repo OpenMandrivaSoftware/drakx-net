@@ -8,7 +8,7 @@ use common;
 our @dhcp_clients = qw(dhclient dhcpcd pump dhcpxd);
 
 sub get_type_name() { N("Ethernet") }
-sub get_type_icon() { 'ethernet-24.png' }
+sub get_type_icon() { 'ethernet-24' }
 
 sub get_devices() {
     #require list_modules;

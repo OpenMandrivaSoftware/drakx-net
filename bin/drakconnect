@@ -59,7 +59,7 @@ network::network::read_net_conf($net);
 my $modules_conf = modules::any_conf->read;
 
 $::Wizard_title = N("Network & Internet Configuration");
-$::Wizard_pix_up = "drakconnect.png";
+$::Wizard_pix_up = "drakconnect";
 
 local $_ = join '', @ARGV;
 /--skip-wizard/ and manage();
@@ -710,7 +710,7 @@ sub del_intf() {
     require wizards;
     my $wiz = wizards->new(
       {
-       defaultimage => "drakconnect.png",
+       defaultimage => "drakconnect",
        name => N("Remove a network interface"),
        pages => {
                  welcome => {
@@ -786,7 +786,7 @@ sub update_list {
     }
     foreach my $interface (@new_intf) {
         my ($ip, $state) = get_intf_ip($interface);
-        $tree_model->set($intf{$interface}, map_index { $::i => $_ } (gtkcreate_pixbuf("eth_card_mini2.png"), $interface, $ip , $net->{ifcfg}{$interface}{BOOTPROTO}, $new_intf{$interface}, $state));
+        $tree_model->set($intf{$interface}, map_index { $::i => $_ } (gtkcreate_pixbuf("eth_card_mini2"), $interface, $ip , $net->{ifcfg}{$interface}{BOOTPROTO}, $new_intf{$interface}, $state));
     }
     foreach my $i (difference2([ keys %intf ], \@new_intf)) {
         $tree_model->remove($intf{$i});

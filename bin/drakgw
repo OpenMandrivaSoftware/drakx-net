@@ -67,7 +67,7 @@ my $dhcpd_conf = network::dhcpd::read_dhcpd_conf();
 require wizards;
 my $wiz = wizards->new(
   {
-   defaultimage => "drakgw.png",
+   defaultimage => "drakgw",
    name => N("Internet Connection Sharing"),
    pages => {
 	     welcome =>

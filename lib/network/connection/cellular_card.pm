@@ -6,7 +6,7 @@ use strict;
 use common;
 
 sub get_type_name() { N("GPRS/Edge/3G") }
-sub get_type_icon() { 'cellular-24.png' }
+sub get_type_icon() { 'cellular-24' }
 sub get_devices() {
        require detect_devices;
        my @maybe_usbserial_modules = ('usbserial_generic', 'unknown');

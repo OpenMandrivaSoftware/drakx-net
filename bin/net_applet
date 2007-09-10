@@ -41,14 +41,14 @@ my $watched_interface;
 
 my %pixbufs =
   (
-      firewall => gtknew('Pixbuf', file => 'drakfirewall.png'),
-      firewall_icon => gtknew('Pixbuf', file => 'drakfirewall.png')->scale_simple(24, 24, 'hyper'),
+      firewall => gtknew('Pixbuf', file => 'drakfirewall'),
+      firewall_icon => gtknew('Pixbuf', file => 'drakfirewall')->scale_simple(24, 24, 'hyper'),
       state => { map { $_ => gtknew('Pixbuf', file => $_) } qw(connected disconnected) },
       link_level => { map {
-          $_ => gtknew('Pixbuf', file => 'wifi-' . sprintf('%03d', $_) . '.png')->scale_simple(24, 24, 'hyper');
+          $_ => gtknew('Pixbuf', file => 'wifi-' . sprintf('%03d', $_))->scale_simple(24, 24, 'hyper');
       } qw(20 40 60 80 100) },
       encryption => { map {
-          $_ => gtknew('Pixbuf', file => "encryption-$_-24.png");
+          $_ => gtknew('Pixbuf', file => "encryption-$_-24");
       } qw(open weak strong) },
   );
 my %wireless_networks;
@@ -563,7 +563,7 @@ sub ask_attack_verdict {
     my ($attack) = @_;
 
     my $w = ugtk2->new(N("Interactive Firewall: intrusion detected"),
-                       icon => "drakfirewall.png");
+                       icon => "drakfirewall");
     my ($blacklist, $whitelist, $ignore, $auto);
 
     my $update_automatic_mode = sub { $auto->get_active and $interactive_cb->set_active(1) };
@@ -648,7 +648,7 @@ sub handle_ifw_listen {
 sub ask_listen_verdict {
     my ($listen) = @_;
 
-    my $w = ugtk2->new(N("Interactive Firewall: new service"), icon => "drakfirewall.png");
+    my $w = ugtk2->new(N("Interactive Firewall: new service"), icon => "drakfirewall");
     my $set_verdict = sub {
         $bubble_queue->process_next;
     };
