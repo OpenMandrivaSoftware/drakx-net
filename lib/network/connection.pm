@@ -93,6 +93,7 @@ sub get_status {
 =item get_status_icon()
 
 Get status icon path (connected/disconnected/unconfigured)
+The file may not exist
 
 =cut
 
