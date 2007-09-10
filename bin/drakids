@@ -37,8 +37,8 @@ my $services_log = create_service_list('status');
 my $allowed_services = create_service_list();
 my $blocked_services = create_service_list();
 
-my $w = ugtk2->new(N("Interactive Firewall"),
-                   icon => "/usr/lib/libDrakX/icons/drakfirewall.png");
+$ugtk2::wm_icon = "/usr/lib/libDrakX/icons/drakfirewall.png";
+my $w = ugtk2->new(N("Interactive Firewall"));
 
 my $ifw;
 eval {
