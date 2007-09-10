@@ -117,6 +117,9 @@ sub main {
                    ($::i > 0 ? Gtk2::HSeparator->new : ()), $box;
                } @connections,
            ])),
+           0, gtknew('HButtonBox', spacing => 6, layout => 'end', children_loose => [
+               gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit }),
+           ]),
        ]),
     );
 
