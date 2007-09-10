@@ -90,6 +90,19 @@ sub get_status {
     $self->{status} = to_bool($gw_address);
 }
 
+=item get_status_icon()
+
+Get status icon path (connected/disconnected/unconfigured)
+
+=cut
+
+sub get_status_icon {
+    my ($self) = @_;
+    my $icon = $self->get_type_icon;
+    my $status = $self->get_interface ? $self->get_status ? "on" : "off" : "w";
+    $icon . "-" . $status;
+}
+
 sub get_ifcfg_bool {
     my ($self, $field) = @_;
     defined $self->{ifcfg}{$field} ? text2bool($self->{ifcfg}{$field}) : undef;
