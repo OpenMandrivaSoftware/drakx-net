@@ -9,7 +9,7 @@ my $rfcomm_dev_prefix = "/dev/rfcomm";
 
 sub get_type_name { N("Bluetooth") }
 sub get_type_description { N("Bluetooth Dial Up Networking") }
-sub get_type_icon { 'bluetooth-24.png' }
+sub get_type_icon { 'bluetooth-24' }
 sub get_devices { search_services('DUN') }
 sub get_metric { 45 }
 sub get_interface { "ppp0" }
