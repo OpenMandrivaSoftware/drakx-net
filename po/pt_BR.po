@@ -1574,7 +1574,7 @@ msgstr "Compartilhamento Somente-Leitura:"
 #: ../bin/draknfs:171
 #, c-format
 msgid "Subtree checking:"
-msgstr ""
+msgstr "Verificando subárvore:"
 
 #: ../bin/draknfs:173
 #, c-format
@@ -1624,6 +1624,9 @@ msgid ""
 "help improve security in some cases, but can decrease reliability. See "
 "exports(5) man page for more details."
 msgstr ""
+"<span foreground=\"royalblue3\">%s</span> habilita verificação de subárvore que "
+"ajuda a melhorar a segurança em alguns casos, mas pode diminuir a confiabilidade. Veja "
+"a página de manual exports(5) para mais detalhes."
 
 #: ../bin/draknfs:182 ../bin/draksambashare:606 ../bin/draksambashare:773
 #, c-format
@@ -2320,7 +2323,7 @@ msgstr "DrakVPN"
 #: ../bin/drakvpn-old:87
 #, c-format
 msgid "The VPN connection is enabled."
-msgstr ""
+msgstr "A conexão VPN está habilitada."
 
 #: ../bin/drakvpn-old:88
 #, c-format
@@ -2331,36 +2334,41 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
+"A configuração de uma conexão VPN já foi feita.\n"
+"\n"
+"E está atualmente habilitada.\n"
+"\n"
+"O que gostaria de fazer?"
 
 #: ../bin/drakvpn-old:93
 #, c-format
 msgid "disable"
-msgstr ""
+msgstr "desabilitar"
 
 #: ../bin/drakvpn-old:93 ../bin/drakvpn-old:119
 #, c-format
 msgid "reconfigure"
-msgstr ""
+msgstr "reconfigurar"
 
 #: ../bin/drakvpn-old:93 ../bin/drakvpn-old:119 ../bin/drakvpn-old:432
 #, c-format
 msgid "dismiss"
-msgstr ""
+msgstr "cancelar"
 
 #: ../bin/drakvpn-old:97
 #, c-format
 msgid "Disabling VPN..."
-msgstr ""
+msgstr "Desabilitando VPN..."
 
 #: ../bin/drakvpn-old:106
 #, c-format
 msgid "The VPN connection is now disabled."
-msgstr ""
+msgstr "A conexão VPN está desabilitada agora."
 
 #: ../bin/drakvpn-old:113
 #, c-format
 msgid "VPN connection currently disabled"
-msgstr ""
+msgstr "Conexão VPN desabilitada atualmente"
 
 #: ../bin/drakvpn-old:114
 #, c-format
@@ -2371,26 +2379,31 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
+"A configuração de uma conexão VPN já foi feita.\n"
+"\n"
+"E está atualmente desbilitada.\n"
+"\n"
+"O que gostaria de fazer?"
 
 #: ../bin/drakvpn-old:119
 #, c-format
 msgid "enable"
-msgstr ""
+msgstr "habilitar"
 
 #: ../bin/drakvpn-old:127
 #, c-format
 msgid "Enabling VPN..."
-msgstr ""
+msgstr "Habilitando VPN..."
 
 #: ../bin/drakvpn-old:133
 #, c-format
 msgid "The VPN connection is now enabled."
-msgstr ""
+msgstr "A conexão VPN está habilitada agora."
 
 #: ../bin/drakvpn-old:147 ../bin/drakvpn-old:164
 #, c-format
 msgid "Simple VPN setup."
-msgstr ""
+msgstr "Configuração de VPN simples."
 
 #: ../bin/drakvpn-old:148
 #, c-format
@@ -2407,6 +2420,17 @@ msgid ""
 "Make sure you have configured your Network/Internet access using\n"
 "drakconnect before going any further."
 msgstr ""
+"Você está prestes a configurar seu computador para usar uma conexão VPN.\n"
+"\n"
+"Com este recurso, computadores em sua rede local privada e computadores em\n"
+"alguma outra rede remota privada, poderão compartilhar recursos, passando\n"
+"seus respectivos firewalls, através da internet, de uma forma segura.\n"
+"\n"
+"A comunicação através da internet é criptografada. Os computadores locais e remotos\n"
+"parecerão estar em uma mesma rede local.\n"
+"\n"
+"Esteja certo de ter configurado o seu acesso a Rede/Internet usando\n"
+"o drakconnect antes de seguir adiante."
 
 #: ../bin/drakvpn-old:165
 #, c-format
@@ -2423,26 +2447,37 @@ msgid ""
 "Please read AT LEAST the ipsec-howto docs\n"
 "before going any further."
 msgstr ""
+"Conexão VPN.\n"
+"\n"
+"Este programa é baseado nos seguintes projetos:\n"
+" - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
+" - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
+" - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
+" - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
+" - documentação e manuais disponíveis no pacote %s\n"
+"\n"
+"Por favor leia PELO MENOS os documentos do ipsec-howto\n"
+"antes de seguir adiante."
 
 #: ../bin/drakvpn-old:208
 #, c-format
 msgid "Problems installing package %s"
-msgstr ""
+msgstr "Problemas instalando pacote %s"
 
 #: ../bin/drakvpn-old:222
 #, c-format
 msgid "Security Policies"
-msgstr ""
+msgstr "Políticas de Segurança"
 
 #: ../bin/drakvpn-old:222
 #, c-format
 msgid "IKE daemon racoon"
-msgstr ""
+msgstr "Servidor IKE racoon"
 
 #: ../bin/drakvpn-old:224
 #, c-format
 msgid "Configuration file"
-msgstr ""
+msgstr "Arquivo de configuração"
 
 #: ../bin/drakvpn-old:225
 #, c-format
@@ -2455,11 +2490,18 @@ msgid ""
 "\n"
 "What would you like to configure?\n"
 msgstr ""
+"Passo de configuração!\n"
+"\n"
+"Você precisa definir Políticas de Segurança e então\n"
+"configurar o serviço de troca automática de chaves (IKE).\n"
+"O servidor KAME IKE que estamos usando é chamado de 'racoon'.\n"
+"\n"
+"O que você gostaria de configurar?\n"
 
 #: ../bin/drakvpn-old:245 ../bin/drakvpn-old:382
 #, c-format
 msgid "%s entries"
-msgstr ""
+msgstr "%s entradas"
 
 #: ../bin/drakvpn-old:246
 #, c-format
@@ -2474,13 +2516,22 @@ msgid ""
 "\n"
 "What would you like to do?\n"
 msgstr ""
+"O conteúdo do arquivo %s\n"
+"é dividido em seções.\n"
+"\n"
+"Você pode agora:\n"
+"\n"
+"  - mostrar, adicionar, editar, ou remover seções, então\n"
+"  - aplicar as alterações\n"
+"\n"
+"O que você gostaria de fazer?\n"
 
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid ""
 "_:display here is a verb\n"
 "Display"
-msgstr ""
+msgstr "Mostrar"
 
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
@@ -2490,7 +2541,7 @@ msgstr "Editar"
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Commit"
-msgstr ""
+msgstr "Aplicar"
 
 #: ../bin/drakvpn-old:267 ../bin/drakvpn-old:271 ../bin/drakvpn-old:406
 #: ../bin/drakvpn-old:410
@@ -2498,7 +2549,7 @@ msgstr ""
 msgid ""
 "_:display here is a verb\n"
 "Display configuration"
-msgstr ""
+msgstr "Mostrar configuração"
 
 #: ../bin/drakvpn-old:272
 #, c-format
@@ -2509,6 +2560,11 @@ msgid ""
 "\n"
 "You'll have to go back and choose 'add'.\n"
 msgstr ""
+"O arquivo %s não existe.\n"
+"\n"
+"Isto deve ser uma configuração nova.\n"
+"\n"
+"Você deve retornar e escolher 'adicionar'.\n"
 
 #: ../bin/drakvpn-old:301
 #, c-format
@@ -2519,11 +2575,16 @@ msgid ""
 "\n"
 "Choose continue when you are done to write the data.\n"
 msgstr ""
+"Adicionar uma Política de Segurança.\n"
+"\n"
+"Você pode agora adicionar uma Política de Segurança.\n"
+"\n"
+"Escolha continuar quando estiver pronto para gravar os dados.\n"
 
 #: ../bin/drakvpn-old:333 ../bin/drakvpn-old:523
 #, c-format
 msgid "Edit section"
-msgstr ""
+msgstr "Editar seção"
 
 #: ../bin/drakvpn-old:334
 #, c-format
@@ -2533,12 +2594,16 @@ msgid ""
 "You can choose here below the one you want to edit \n"
 "and then click on next.\n"
 msgstr ""
+"Seu arquivo %s tem diversas seções ou conexões.\n"
+"\n"
+"Você pode escolher abaixo qual deseja editar \n"
+"e então clicar em próximo.\n"
 
 #: ../bin/drakvpn-old:337 ../bin/drakvpn-old:357 ../bin/drakvpn-old:528
 #: ../bin/drakvpn-old:574
 #, c-format
 msgid "Section names"
-msgstr ""
+msgstr "Nomes de seção"
 
 #: ../bin/drakvpn-old:344
 #, c-format
@@ -2549,11 +2614,16 @@ msgid ""
 "\n"
 "Choose continue when you are done to write the data.\n"
 msgstr ""
+"Editar uma Política de Segurança.\n"
+"\n"
+"Você pode agora editar uma Política de Segurança.\n"
+"\n"
+"Escolha continuar quando estiver pronto para gravar os dados.\n"
 
 #: ../bin/drakvpn-old:353 ../bin/drakvpn-old:570
 #, c-format
 msgid "Remove section"
-msgstr ""
+msgstr "Remover seção"
 
 #: ../bin/drakvpn-old:354 ../bin/drakvpn-old:571
 #, c-format
@@ -2563,6 +2633,10 @@ msgid ""
 "You can choose here below the one you want to remove\n"
 "and then click on next.\n"
 msgstr ""
+"Seu arquivo %s tem diversas seções ou conexões.\n"
+"\n"
+"Você pode escolher abaixo qual deseja remover \n"
+"e então clicar em próximo.\n"
 
 #: ../bin/drakvpn-old:383
 #, c-format
@@ -2591,7 +2665,7 @@ msgstr ""
 #: ../bin/drakvpn-old:425
 #, c-format
 msgid "racoon.conf entries"
-msgstr ""
+msgstr "entradas racoon.conf"
 
 #: ../bin/drakvpn-old:426
 #, c-format
@@ -2933,22 +3007,22 @@ msgstr "Algoritmo de criptografia"
 #: ../bin/drakvpn-old:730
 #, c-format
 msgid "Authentication algorithm"
-msgstr ""
+msgstr "Algoritmo de autenticação"
 
 #: ../bin/drakvpn-old:732
 #, c-format
 msgid "Compression algorithm"
-msgstr ""
+msgstr "Algoritmo de compressão"
 
 #: ../bin/drakvpn-old:733
 #, c-format
 msgid "deflate"
-msgstr ""
+msgstr "deflate"
 
 #: ../bin/drakvpn-old:740
 #, c-format
 msgid "Remote"
-msgstr "Remoto:"
+msgstr "Remoto"
 
 #: ../bin/drakvpn-old:741
 #, c-format
@@ -2984,7 +3058,7 @@ msgstr ""
 #: ../bin/drakvpn-old:757
 #, c-format
 msgid "Generate policy"
-msgstr ""
+msgstr "Gerar política"
 
 #: ../bin/drakvpn-old:758 ../bin/drakvpn-old:774 ../bin/drakvpn-old:787
 #, c-format
@@ -3018,7 +3092,7 @@ msgstr ""
 #: ../bin/drakvpn-old:773
 #, c-format
 msgid "Passive"
-msgstr ""
+msgstr "Passivo"
 
 #: ../bin/drakvpn-old:775
 #, c-format
@@ -3031,27 +3105,27 @@ msgstr ""
 #: ../bin/drakvpn-old:778
 #, c-format
 msgid "Certificate type"
-msgstr ""
+msgstr "Tipo de certificado"
 
 #: ../bin/drakvpn-old:780
 #, c-format
 msgid "My certfile"
-msgstr ""
+msgstr "Meu arquivo de certificado"
 
 #: ../bin/drakvpn-old:781
 #, c-format
 msgid "Name of the certificate"
-msgstr ""
+msgstr "Nome do certificado"
 
 #: ../bin/drakvpn-old:782
 #, c-format
 msgid "My private key"
-msgstr ""
+msgstr "Minha chave privada"
 
 #: ../bin/drakvpn-old:783
 #, c-format
 msgid "Name of the private key"
-msgstr ""
+msgstr "Nome da chave privada"
 
 #: ../bin/drakvpn-old:784
 #, c-format
@@ -3078,7 +3152,7 @@ msgstr ""
 #: ../bin/drakvpn-old:790
 #, c-format
 msgid "My identifier"
-msgstr ""
+msgstr "Meu identificador"
 
 #: ../bin/drakvpn-old:791
 #, c-format
@@ -3132,7 +3206,7 @@ msgstr ""
 #: ../bin/drakvpn-old:821
 #, c-format
 msgid "Hash algorithm"
-msgstr ""
+msgstr "Algoritmo hash"
 
 #: ../bin/drakvpn-old:822
 #, c-format
@@ -3292,7 +3366,7 @@ msgstr "Gerenciar conexões VPN"
 #: ../bin/net_applet:85
 #, c-format
 msgid "Configure Network"
-msgstr "Configurar rede"
+msgstr "Configurar Rede"
 
 #: ../bin/net_applet:87
 #, c-format
@@ -3329,7 +3403,7 @@ msgstr "Conexão de Rede"
 #: ../bin/net_applet:443
 #, c-format
 msgid "More networks"
-msgstr ""
+msgstr "Mais redes"
 
 #: ../bin/net_applet:470
 #, c-format
@@ -4672,7 +4746,7 @@ msgstr "Escolha o tipo da VPN"
 #: ../lib/network/drakvpn.pm:49
 #, c-format
 msgid "Initializing tools and detecting devices for %s..."
-msgstr ""
+msgstr "Iniciando ferramentas e detectando dispositivos para %s..."
 
 #: ../lib/network/drakvpn.pm:52
 #, c-format
@@ -4864,9 +4938,9 @@ msgid "Select a device:"
 msgstr "Selecione um dispositivo:"
 
 #: ../lib/network/netcenter.pm:55
-#, fuzzy, c-format
+#, c-format
 msgid "Network Center"
-msgstr "Interface de rede"
+msgstr "Centro de Rede"
 
 #: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
 #, c-format
@@ -4874,9 +4948,9 @@ msgid "Please select your network:"
 msgstr "Por favor selecione sua rede:"
 
 #: ../lib/network/netcenter.pm:76
-#, fuzzy, c-format
+#, c-format
 msgid "Monitor"
-msgstr "Monitorar Rede"
+msgstr "Monitor"
 
 #: ../lib/network/netconnect.pm:37
 #, c-format
@@ -5524,7 +5598,7 @@ msgstr ""
 #: ../lib/network/thirdparty.pm:135
 #, c-format
 msgid "Some components (%s) are required but aren't available for %s hardware."
-msgstr ""
+msgstr "Alguns componentes (%s) são requeridos mas não estão disponíveis para o hardware %s."
 
 #: ../lib/network/thirdparty.pm:136
 #, c-format
@@ -5543,7 +5617,7 @@ msgstr ""
 #: ../lib/network/thirdparty.pm:139
 #, c-format
 msgid "The following component is missing: %s"
-msgstr ""
+msgstr "O seguinte componente está faltando: %s"
 
 #: ../lib/network/thirdparty.pm:141
 #, c-format
@@ -5718,12 +5792,12 @@ msgstr "Numero do Dispositivo de rede virtual (opcional)"
 #: ../lib/network/vpn/openvpn.pm:365
 #, c-format
 msgid "Starting connection.."
-msgstr ""
+msgstr "Iniciando conexão..."
 
 #: ../lib/network/vpn/openvpn.pm:380
 #, c-format
 msgid "Please insert your token"
-msgstr ""
+msgstr "Por favor insira seu token"
 
 #: ../lib/network/vpn/vpnc.pm:9
 #, c-format
