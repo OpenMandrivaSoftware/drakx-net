@@ -1,4 +1,3 @@
-# translation of pt_BR.po to
 # translation of pt_BR.po to Brazilian Portuguese
 # translation of drakx-net-pt_BR.po to Brazilian Portuguese
 # tradução de drakx-net-pt_BR.po para Português do Brasil
@@ -2651,6 +2650,15 @@ msgid ""
 "  - remove \t\t (remove an existing section)\n"
 "  - commit \t\t (writes the changes to the real file)"
 msgstr ""
+"Arquivo de configuração racoon.conf.\n"
+"\n"
+"O conteúdo deste arquivo está dividido em seções.\n"
+"Pode-se agora:\n"
+"  - mostrar \t\t (mostrar o conteúdo do arquivo)\n"
+"  - adicionar\t\t\t (adicionar uma seção)\n"
+"  - editar \t\t\t (modificar os parâmetros de uma seção existente)\n"
+"  - remover \t\t (remover uma seção existente)\n"
+"  - aplicar \t\t (escrever alterações no arquivo real)"
 
 #: ../bin/drakvpn-old:411
 #, c-format
@@ -2661,6 +2669,11 @@ msgid ""
 "\n"
 "You'll have to go back and choose configure.\n"
 msgstr ""
+"O arquivo %s não existe\n"
+"\n"
+"Deve ser uma nova configuração.\n"
+"\n"
+"Você deve voltar e escolher configurar.\n"
 
 #: ../bin/drakvpn-old:425
 #, c-format
@@ -2679,21 +2692,29 @@ msgid ""
 "\n"
 "Choose the section you would like to add.\n"
 msgstr ""
+"Passo 'adicionar' seções.\n"
+"\n"
+"Abaixo está o esqueleto do arquivo racoon.conf:\n"
+"\t'caminho'\n"
+"\t'remoto'\n"
+"\t'sainfo' \n"
+"\n"
+"Escolha a seção que deseja adicionar.\n"
 
 #: ../bin/drakvpn-old:432
 #, c-format
 msgid "path"
-msgstr ""
+msgstr "caminho"
 
 #: ../bin/drakvpn-old:432
 #, c-format
 msgid "remote"
-msgstr "remoto:"
+msgstr "remoto"
 
 #: ../bin/drakvpn-old:432
 #, c-format
 msgid "sainfo"
-msgstr ""
+msgstr "sainfo"
 
 #: ../bin/drakvpn-old:440
 #, c-format
@@ -2704,11 +2725,16 @@ msgid ""
 "\n"
 "Put your mouse over the certificate entry to obtain online help."
 msgstr ""
+"Passo de seção 'adicionar caminho'.\n"
+"\n"
+"As seções de caminho devem estar no topo do seu arquivo racoon.conf.\n"
+"\n"
+"Coloque o mouse sobre a entrada do certificado para obter ajuda."
 
 #: ../bin/drakvpn-old:443
 #, c-format
 msgid "path type"
-msgstr ""
+msgstr "tipo de caminho"
 
 #: ../bin/drakvpn-old:447
 #, c-format
@@ -2733,11 +2759,32 @@ msgid ""
 "of the identifier and the shared secret key which are used at\n"
 "Pre-shared key authentication method in phase 1."
 msgstr ""
+"path include caminho: indica um caminho para\n"
+"incluir um arquivo. Ver \"Inclusão de Arquivo\".\n"
+"\tExemplo: path include '/etc/racoon'\n"
+"\n"
+"path pre_shared_key arquivo: indica um arquivo que contém\n"
+"uma(s) chave(s) pré-compartilhada(s) para vários ID(s).\n"
+"Ver \"Arquivo de chave Pré-compartilhada\".\n"
+"\tExemplo: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
+"\n"
+"path certificate caminho: o racoon(8) irá procurar este diretório\n"
+"se um certificado ou um pedido de certificado é recebido.\n"
+"\tExemplo: path certificate '/etc/cert' ;\n"
+"\n"
+"Inclusão de Arquivo: inclui um arquivo \n"
+"aqui podem ser incluídos outros arquivos de configuração.\n"
+"\tExemplo include \"remote.conf\" ;\n"
+"\n"
+"Arquivo de chave pré-compartilhada: este tipo de arquivo\n"
+"define um par do identificador e da chave secreta compartilhada,\n"
+"que são usados no método de autenticação por chave pré-compartilhada\n"
+"na fase 1."
 
 #: ../bin/drakvpn-old:467 ../bin/drakvpn-old:560
 #, c-format
 msgid "real file"
-msgstr ""
+msgstr "arquivo real"
 
 #: ../bin/drakvpn-old:490
 #, c-format
@@ -2748,6 +2795,11 @@ msgid ""
 "You can now choose the remote settings.\n"
 "Choose continue or previous when you are done.\n"
 msgstr ""
+"Certifique-se que você já tem seções de caminho\n"
+"no topo do seu arquivo racoon.conf.\n"
+"\n"
+"Pode-se agora escolher as definições remotas.\n"
+"Escolha continuar ou anterior quando estiver pronto.\n"
 
 #: ../bin/drakvpn-old:507
 #, c-format
@@ -2758,6 +2810,11 @@ msgid ""
 "You can now choose the sainfo settings.\n"
 "Choose continue or previous when you are done.\n"
 msgstr ""
+"Certifique-se que você já tem seções de caminho\n"
+"no topo do seu arquivo %s.\n"
+"\n"
+"Pode-se agora escolher as definições sainfo.\n"
+"Escolha continuar ou anterior quando estiver pronto.\n"
 
 #: ../bin/drakvpn-old:524
 #, c-format
@@ -2767,6 +2824,10 @@ msgid ""
 "You can choose here in the list below the one you want\n"
 "to edit and then click on next.\n"
 msgstr ""
+"O seu arquivo %s tem várias seções ou conexões.\n"
+"\n"
+"Pode-se escolher aqui o que deseja\n"
+"editar e depois clicar em próximo.\n"
 
 #: ../bin/drakvpn-old:535
 #, c-format
@@ -2778,6 +2839,12 @@ msgid ""
 "\n"
 "Choose continue when you are done to write the data.\n"
 msgstr ""
+"O seu arquivo %s tem várias seções.\n"
+"\n"
+"\n"
+"Pode-se agora editar as entradas da seção remota.\n"
+"\n"
+"Escolha continuar quando estiver pronto para salvar os dados.\n"
 
 #: ../bin/drakvpn-old:544
 #, c-format
@@ -2788,6 +2855,11 @@ msgid ""
 "\n"
 "Choose continue when you are done to write the data."
 msgstr ""
+"O seu arquivo %s tem várias seções.\n"
+"\n"
+"Pode-se agora editar as entradas da seção sainfo.\n"
+"\n"
+"Escolha continuar quando estiver pronto para salvar os dados."
 
 #: ../bin/drakvpn-old:552
 #, c-format
@@ -2802,11 +2874,20 @@ msgid ""
 "\n"
 "Choose continue or previous when you are done.\n"
 msgstr ""
+"Esta seção tem que estar no topo\n"
+"do seu arquivo %s.\n"
+"\n"
+"Certifique-se que todas as outras seções seguem estas seções de "
+"caminho.\n"
+"\n"
+"Pode-se agora editar as entradas de caminho (path).\n"
+"\n"
+"Escolha continuar ou anterior quando estiver pronto.\n"
 
 #: ../bin/drakvpn-old:559
 #, c-format
 msgid "path_type"
-msgstr ""
+msgstr "tipo_de_caminho"
 
 #: ../bin/drakvpn-old:599
 #, c-format
@@ -2824,11 +2905,18 @@ msgid ""
 "You should make sure that the tunnels shorewall\n"
 "section is configured."
 msgstr ""
+"Tudo está configurado.\n"
+"\n"
+"Pode-se agora compartilhar os recursos através da Internet,\n"
+"de uma maneira segura, usando uma conexão VPN.\n"
+"\n"
+"Você deve certificar-se que a seção 'tunnels' do\n"
+"shorewall está configurada."
 
 #: ../bin/drakvpn-old:620
 #, c-format
 msgid "Sainfo source address"
-msgstr ""
+msgstr "Endereço de origem sainfo"
 
 #: ../bin/drakvpn-old:621
 #, c-format
@@ -2852,11 +2940,29 @@ msgid ""
 "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
 "\t172.16.1.0/24 is the source address"
 msgstr ""
+"sainfo (id_origem id_destino | anonymous) { indicações }\n"
+"define os parâmetros da fase 2 do IKE\n"
+"(estabelecer IPsec-SA).\n"
+"\n"
+"o id_origem e o id_destino source_id são construídos como:\n"
+"\n"
+"\taddress endereço [/ prefixo] [[porta]] ul_proto\n"
+"\n"
+"Exemplos: \n"
+"\n"
+"sainfo anonymous (aceita conexões de qualquer site)\n"
+"\tdeixar em branco esta entrada se quiser anônimo\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\t203.178.141.209 é o endereço de origem\n"
+"\n"
+"sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
+"\t172.16.1.0/24 é o endereço de origem"
 
 #: ../bin/drakvpn-old:638
 #, c-format
 msgid "Sainfo source protocol"
-msgstr ""
+msgstr "Protocolo de origem sainfo"
 
 #: ../bin/drakvpn-old:639
 #, c-format
@@ -2877,11 +2983,26 @@ msgid ""
 "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
 "\tthe first 'any' allows any protocol for the source"
 msgstr ""
+"sainfo (id_origem id_destino | anonymous) { indicações }\n"
+"define os parâmetros da fase 2 do IKE\n"
+"(estabelecimento IPsec-SA).\n"
+"\n"
+"o id_origem e o id_destino são construídos como:\n"
+"\n"
+"\taddress endereço [/ prefixo] [[porta]] ul_proto\n"
+"\n"
+"Exemplos: \n"
+"\n"
+"sainfo anonymous (aceita conexões de qualquer site)\n"
+"\tdeixar em branco esta entrada de quiser anônimo\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\to primeiro 'any' permite qualquer protocolo para a origem"
 
 #: ../bin/drakvpn-old:653
 #, c-format
 msgid "Sainfo destination address"
-msgstr ""
+msgstr "Endereço de destino sainfo"
 
 #: ../bin/drakvpn-old:654
 #, c-format
@@ -2905,11 +3026,29 @@ msgid ""
 "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
 "\t172.16.2.0/24 is the destination address"
 msgstr ""
+"sainfo (id_origem id_destino | anonymous) { indicações }\n"
+"define os parâmetros da fase 2 do IKE\n"
+"(estabelecimento IPsec-SA).\n"
+"\n"
+"o id_origem e o id_destino são construídos como\n"
+"\n"
+"\taddress endereço [/ prefixo] [[porta]] ul_proto\n"
+"\n"
+"Exemplos: \n"
+"\n"
+"sainfo anonymous (aceita conexões de qualquer site)\n"
+"\tdeixar em branco esta entrada se quiser anônimo\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\t203.178.141.218 é o endereço de destino\n"
+"\n"
+"sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
+"\t172.16.2.0/24 é o endereço de destino"
 
 #: ../bin/drakvpn-old:671
 #, c-format
 msgid "Sainfo destination protocol"
-msgstr ""
+msgstr "Protocolo de destino sainfo"
 
 #: ../bin/drakvpn-old:672
 #, c-format
@@ -2930,11 +3069,26 @@ msgid ""
 "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
 "\tthe last 'any' allows any protocol for the destination"
 msgstr ""
+"sainfo (id_origem id_destino | anonymous) { indicações }\n"
+"define os parâmetros da fase 2 do IKE\n"
+"(estabelecimento IPsec-SA).\n"
+"\n"
+"o id_origem e o id_destino são construídos como\n"
+"\n"
+"\taddress endereço [/ prefixo] [[porta]] ul_proto\n"
+"\n"
+"Exemplos: \n"
+"\n"
+"sainfo anonymous (aceita conexões de qualquer site)\n"
+"\tdeixar em branco esta entrada se quiser anônimo\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\to último 'any' permite qualquer protocolo para o destino"
 
 #: ../bin/drakvpn-old:686
 #, c-format
 msgid "PFS group"
-msgstr ""
+msgstr "Grupo PFS"
 
 #: ../bin/drakvpn-old:688
 #, c-format
@@ -2945,11 +3099,16 @@ msgid ""
 "group is one of the following: modp768, modp1024, modp1536.\n"
 "Or you can define 1, 2, or 5 as the DH group number."
 msgstr ""
+"define o grupo de exponenciações Diffie-Hellman.\n"
+"Se você não requer o PFS então esta diretiva pode ser omitida.\n"
+"Qualquer proposta será aceita se você não indicar nenhuma.\n"
+"Grupo é um dos seguintes: modp768, modp1024, modp1536.\n"
+"Ou você pode definir 1, 2, ou 5 como o número de grupo DHr."
 
 #: ../bin/drakvpn-old:693
 #, c-format
 msgid "Lifetime number"
-msgstr ""
+msgstr "Número do tempo de vida"
 
 #: ../bin/drakvpn-old:694
 #, c-format
@@ -2971,11 +3130,28 @@ msgid ""
 "\n"
 "So, here, the lifetime numbers are 1, 1, 30, 30, 60 and 12.\n"
 msgstr ""
+"define a duração do tempo de vida que será proposto\n"
+"nas negociações da fase 1. Qualquer proposta será\n"
+"aceita, e os atributos não serão propostos ao par\n"
+"(peer) se não os indicar.  Os pares (peers) podem\n"
+"ser indicados individualmente em cada proposta\n"
+"\n"
+"Exemplos: \n"
+"\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 60 sec;\n"
+"\tlifetime time 12 hour;\n"
+"\n"
+"Então, aqui, os números de tempo de vida são 1, 1, 30, 30, 60 e 12.\n"
+
 
 #: ../bin/drakvpn-old:710
 #, c-format
 msgid "Lifetime unit"
-msgstr ""
+msgstr "Unidade de tempo de vida"
 
 #: ../bin/drakvpn-old:712
 #, c-format
@@ -2998,6 +3174,23 @@ msgid ""
 "So, here, the lifetime units are 'min', 'min', 'sec', 'sec', 'sec' and "
 "'hour'.\n"
 msgstr ""
+"define a duração do tempo de vida que será proposto\n"
+"nas negociações da fase 1.  Qualquer proposta será\n"
+"aceita, e os atributos não serão propostos ao par\n"
+"(peer) se não os indicar.  Os pares (peers) podem\n"
+"ser indicados individualmente em cada proposta\n"
+"\n"
+"Exemplos: \n"
+"\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 1 min;    # sec,min,hour\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 60 sec;\n"
+"\tlifetime time 12 hour;\n"
+"\n"
+"Então, aqui, as unidades de tempo de vida são 'min', 'min', 'sec', 'sec', "
+"'sec' e 'hour'.\n"
 
 #: ../bin/drakvpn-old:728 ../bin/drakvpn-old:813
 #, c-format
@@ -3038,11 +3231,21 @@ msgid ""
 "remote anonymous\n"
 "remote ::1 [8000]"
 msgstr ""
+"remote (endereço | anonymous) [[porta]] { indicações }\n"
+"indica os parâmetros para a fase 1 do IKE para cada nó remoto.\n"
+"A porta predefinida é 500. Se for informado \"anonymous\", as indicações\n"
+"aplicam-se a todos os pares (peers) que não correspondem\n"
+"a qualquer outra diretiva remota.\n"
+"\n"
+"Exemplos: \n"
+"\n"
+"remote anonymous\n"
+"remote ::1 [8000]"
 
 #: ../bin/drakvpn-old:749
 #, c-format
 msgid "Exchange mode"
-msgstr ""
+msgstr "Modo de troca"
 
 #: ../bin/drakvpn-old:751
 #, c-format
@@ -3054,6 +3257,12 @@ msgid ""
 "modes are acceptable. The first exchange mode is what\n"
 "racoon uses when it is the initiator.\n"
 msgstr ""
+"define o modo de troca para a fase 1 quando o racoon é o\n"
+"iniciador. Também quer dizer o modo de troca aceitável\n"
+"quando é o racoon que responde. Podem ser indicados mais\n"
+"do que um modo se separados por vírgula. Todos os\n"
+"modos são aceitáveis. O primeiro modo de troca é o que o\n"
+"racoon usa quando é o iniciador.\n"
 
 #: ../bin/drakvpn-old:757
 #, c-format
@@ -3063,12 +3272,12 @@ msgstr "Gerar política"
 #: ../bin/drakvpn-old:758 ../bin/drakvpn-old:774 ../bin/drakvpn-old:787
 #, c-format
 msgid "off"
-msgstr ""
+msgstr "desligado"
 
 #: ../bin/drakvpn-old:758 ../bin/drakvpn-old:774 ../bin/drakvpn-old:787
 #, c-format
 msgid "on"
-msgstr ""
+msgstr "ligado"
 
 #: ../bin/drakvpn-old:759
 #, c-format
@@ -3088,6 +3297,20 @@ msgid ""
 "tiator and the responder.  This directive is ignored in\n"
 "the initiator case.  The default value is off."
 msgstr ""
+"Esta diretiva é para o que responde. Portanto deve\n"
+"definir como passivo para que o racoon(8) apenas se torne\n"
+"no que responde. Se o que responde não tiver qualquer\n"
+"política no SPD durante a negociação da fase 2, e a diretiva\n"
+"estiver definida como ativa, então o racoon(8) irá escolher\n"
+"a primeira proposta no 'payload' do SA desde o iniciador, e\n"
+"gerar entradas de políticas da proposta. É útil negociar com\n"
+"o cliente que alocou o endereço IP dinamicamente. Note\n"
+"que políticas inapropriadas podem estar instaladas no SPD\n"
+"do que responde pelo iniciador. Para que outra comunicação\n"
+"possa falhar se tais políticas instaladas devido a algumas\n"
+"divergências de políticas entre o iniciador e o que responde\n"
+"Esta diretiva é ignorada no caso do iniciador.\n"
+"O valor predefinido é desligado."
 
 #: ../bin/drakvpn-old:773
 #, c-format
@@ -3101,6 +3324,8 @@ msgid ""
 "to on.  The default value is off.  It is useful for a\n"
 "server."
 msgstr ""
+"Se não desejar iniciar a negociação, defina isto para ligado.\n"
+"O valor predefinido é desligado.  É útil para um servidor."
 
 #: ../bin/drakvpn-old:778
 #, c-format
@@ -3130,17 +3355,17 @@ msgstr "Nome da chave privada"
 #: ../bin/drakvpn-old:784
 #, c-format
 msgid "Peers certfile"
-msgstr ""
+msgstr "Certificado ponto-a-ponto"
 
 #: ../bin/drakvpn-old:785
 #, c-format
 msgid "Name of the peers certificate"
-msgstr ""
+msgstr "Nome do certificado ponto-a-ponto"
 
 #: ../bin/drakvpn-old:786
 #, c-format
 msgid "Verify cert"
-msgstr ""
+msgstr "Verificar certificado"
 
 #: ../bin/drakvpn-old:788
 #, c-format
@@ -3148,6 +3373,8 @@ msgid ""
 "If you do not want to verify the peer's certificate for\n"
 "some reason, set this to off.  The default is on."
 msgstr ""
+"Se não quer verificar o certificado do par (peer) por\n"
+"alguma razão, marque para desligado. Por default está ligado."
 
 #: ../bin/drakvpn-old:790
 #, c-format
@@ -3180,16 +3407,39 @@ msgid ""
 "\n"
 "my_identifier user_fqdn \"myemail@mydomain.com\""
 msgstr ""
+"indica o identificador enviado ao endereço remoto e o tipo\n"
+"a usar nas negociações da fase 1.  endereço, FQDN,\n"
+"user_fqdn, keyid e asn1dn pode ser usado como um idtype.\n"
+"são usados da seguinte maneira:\n"
+"\tmy_identifier endereço [endereço];\n"
+"\t\to tipo é o endereço IP.  Este é o tipo predefinido\n"
+"\t\tse não indicar um identificador para usar.\n"
+"\tmy_identifier user_fqdn string;\n"
+"\t\tp tipo é um USER_FQDN (user fully-qualified\n"
+"\t\tdomain name).\n"
+"\tmy_identifier FQDN string;\n"
+"\t\to tipo é um FQDN (fully-qualified domain name).\n"
+"\tmy_identifier keyid file;\n"
+"\t\tthe type é um KEY_ID.\n"
+"\tmy_identifier asn1dn [string];\n"
+"\t\to tipo é um ASN.1 distinguished name.  Se\n"
+"\t\ta string for omitida, o racoon(8) irá obter o DN do\n"
+"\t\tcampo Assunto no certificado.\n"
+"\n"
+"Exemplos: \n"
+"\n"
+"my_identifier user_fqdn \"meu_endereço@meu_domínio.com\""
+
 
 #: ../bin/drakvpn-old:811
 #, c-format
 msgid "Peers identifier"
-msgstr ""
+msgstr "Identificador ponto-a-ponto"
 
 #: ../bin/drakvpn-old:812
 #, c-format
 msgid "Proposal"
-msgstr ""
+msgstr "Proposta"
 
 #: ../bin/drakvpn-old:814
 #, c-format
@@ -3202,6 +3452,14 @@ msgid ""
 "\n"
 "For other transforms, this statement should not be used."
 msgstr ""
+"indica o algoritmo de criptografia usado para a\n"
+"negociação da fase 1. Esta diretiva deve estar definida.\n"
+"O algoritmo é um dos seguintes: \n"
+"\n"
+"DES, 3DES, blowfish, cast128 para oakley.\n"
+"\n"
+"Para outras transformações, esta indicação não deve ser usada."
+
 
 #: ../bin/drakvpn-old:821
 #, c-format
@@ -3216,7 +3474,7 @@ msgstr "Método de autenticação"
 #: ../bin/drakvpn-old:823
 #, c-format
 msgid "DH group"
-msgstr ""
+msgstr "Grupo DH"
 
 #: ../bin/drakvpn-old:830
 #, c-format
@@ -3226,47 +3484,47 @@ msgstr "Comando"
 #: ../bin/drakvpn-old:831
 #, c-format
 msgid "Source IP range"
-msgstr ""
+msgstr "Intervalo IP de origem"
 
 #: ../bin/drakvpn-old:832
 #, c-format
 msgid "Destination IP range"
-msgstr ""
+msgstr "Intervalo IP de destino"
 
 #: ../bin/drakvpn-old:833
 #, c-format
 msgid "Upper-layer protocol"
-msgstr ""
+msgstr "Protocolo de nível superior"
 
 #: ../bin/drakvpn-old:833 ../bin/drakvpn-old:840
 #, c-format
 msgid "any"
-msgstr ""
+msgstr "qualquer"
 
 #: ../bin/drakvpn-old:835
 #, c-format
 msgid "Flag"
-msgstr "Bandeira"
+msgstr "Opção"
 
 #: ../bin/drakvpn-old:836
 #, c-format
 msgid "Direction"
-msgstr ""
+msgstr "Direção"
 
 #: ../bin/drakvpn-old:837
 #, c-format
 msgid "IPsec policy"
-msgstr ""
+msgstr "Política IPsec"
 
 #: ../bin/drakvpn-old:837
 #, c-format
 msgid "ipsec"
-msgstr ""
+msgstr "ipsec"
 
 #: ../bin/drakvpn-old:837
 #, c-format
 msgid "discard"
-msgstr ""
+msgstr "descartar"
 
 #: ../bin/drakvpn-old:840
 #, c-format
@@ -3276,17 +3534,17 @@ msgstr "Modo"
 #: ../bin/drakvpn-old:840
 #, c-format
 msgid "tunnel"
-msgstr ""
+msgstr "túnel"
 
 #: ../bin/drakvpn-old:840
 #, c-format
 msgid "transport"
-msgstr ""
+msgstr "transporte"
 
 #: ../bin/drakvpn-old:842
 #, c-format
 msgid "Source/destination"
-msgstr ""
+msgstr "Origem/destino"
 
 #: ../bin/drakvpn-old:843
 #, c-format
@@ -3296,22 +3554,22 @@ msgstr "Nível"
 #: ../bin/drakvpn-old:843
 #, c-format
 msgid "require"
-msgstr ""
+msgstr "requer"
 
 #: ../bin/drakvpn-old:843
 #, c-format
 msgid "default"
-msgstr ""
+msgstr "padrão"
 
 #: ../bin/drakvpn-old:843
 #, c-format
 msgid "use"
-msgstr ""
+msgstr "usar"
 
 #: ../bin/drakvpn-old:843
 #, c-format
 msgid "unique"
-msgstr ""
+msgstr "único"
 
 #: ../bin/net_applet:62
 #, c-format
