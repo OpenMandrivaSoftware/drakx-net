@@ -280,7 +280,7 @@ sub checkNetwork() {
     my ($gw_intf, $_is_up, $gw_address) = $watched_interface ?
       ($watched_interface, network::tools::get_interface_status($watched_interface)) :
       network::tools::get_internet_connection($net);
-    go2State($gw_address ? 'connected' : $gw_intf ? 'disconnected' : 'notconfigured', $gw_intf);
+    go2State($gw_address ? 'connected' : $gw_intf ? 'disconnected' : 'unconfigured', $gw_intf);
 }
 sub checkNetworkForce() {
     $net = {};
@@ -462,11 +462,11 @@ sub generate_menu() {
     } elsif ($current_state eq 'disconnected') {
         $menu->append(create_action_item('upNetwork'));
     }
-    $menu->append(create_action_item('monitorIFW')) if $current_state ne 'notconfigured' && defined $interactive;
+    $menu->append(create_action_item('monitorIFW')) if $current_state ne 'unconfigured' && defined $interactive;
 
     $menu->append(create_action_item('confNetwork'));
 
-    push @settings, create_action_item('chooseInterface') if $current_state ne 'notconfigured';
+    push @settings, create_action_item('chooseInterface') if $current_state ne 'unconfigured';
 
     push @settings, create_action_item('chooseProfile');
     if (defined $interactive) {
@@ -479,14 +479,14 @@ sub generate_menu() {
                                               toggled => sub { setAutoStart(uc(bool2text($_[0]->get_active))) }));
 
     $menu->append(gtkshow(Gtk2::SeparatorMenuItem->new));
-    if ($current_state ne 'notconfigured' && $wireless_device) {
+    if ($current_state ne 'unconfigured' && $wireless_device) {
         $menu->append(gtkshow(create_menu(N("Wireless networks"),
                                           create_action_item('wireless'),
                                           gtkshow(Gtk2::SeparatorMenuItem->new),
                                           map { generate_wireless_menuitem($_) } get_wireless_networks_sorted())));
     }
     if (my $vpn = create_action_item('chooseVPN')) { $menu->append($vpn) }
-    if (my $set = $current_state ne 'notconfigured' && create_action_item('setInterface')) { $menu->append($set) }
+    if (my $set = $current_state ne 'unconfigured' && create_action_item('setInterface')) { $menu->append($set) }
     $menu->append(gtkshow(create_menu(N("Settings"), @settings)));
     $menu->append(gtkshow(Gtk2::SeparatorMenuItem->new));
     $menu->append(create_action_item('help'));
