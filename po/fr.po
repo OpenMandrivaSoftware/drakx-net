@@ -74,7 +74,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
-"POT-Creation-Date: 2007-08-28 11:27+0200\n"
+"POT-Creation-Date: 2007-09-15 08:58+0800\n"
 "PO-Revision-Date: 2007-09-01 18:22+0200\n"
 "Last-Translator: Christophe Berthelé <cpjc@free.fr>\n"
 "Language-Team: Français <cooker-i18n@mandrivalinux.org>\n"
@@ -157,7 +157,7 @@ msgstr "Configuration LAN (réseau local)"
 msgid "Configure Local Area Network..."
 msgstr "Configurer le réseau local..."
 
-#: ../bin/drakconnect:157 ../bin/drakconnect:240 ../bin/draknfs:183
+#: ../bin/drakconnect:157 ../bin/drakconnect:240 ../bin/draknfs:186
 #: ../bin/net_applet:138
 #, c-format
 msgid "Help"
@@ -182,8 +182,8 @@ msgid "Ok"
 msgstr "Ok"
 
 #: ../bin/drakconnect:164 ../bin/drakconnect:636 ../bin/drakgw:359
-#: ../bin/draksambashare:208 ../lib/network/drakroam.pm:200
-#: ../lib/network/drakroam.pm:250
+#: ../bin/draksambashare:211 ../lib/network/connection_manager.pm:132
+#: ../lib/network/connection_manager.pm:150
 #, c-format
 msgid "Please wait"
 msgstr "Veuillez patienter"
@@ -198,7 +198,7 @@ msgstr "Veuillez patienter... Mise en place de la configuration"
 msgid "Manage connections"
 msgstr "Gérer les connexions"
 
-#: ../bin/drakconnect:219 ../lib/network/drakroam.pm:346
+#: ../bin/drakconnect:219 ../lib/network/drakroam.pm:105
 #, c-format
 msgid "Device: "
 msgstr "Périphérique : "
@@ -252,7 +252,7 @@ msgstr "DHCP"
 msgid "DHCP client"
 msgstr "Client DHCP"
 
-#: ../bin/drakconnect:373 ../lib/network/connection/ethernet.pm:200
+#: ../bin/drakconnect:373 ../lib/network/connection/ethernet.pm:201
 #, c-format
 msgid "Assign host name from DHCP address"
 msgstr "Affecter le nom d'hôte à partir de l'adresse DHCP"
@@ -283,7 +283,7 @@ msgid "Get NTPD servers from DHCP"
 msgstr "Récupérer les serveurs NTPD depuis le serveur DHCP"
 
 #: ../bin/drakconnect:406 ../lib/network/connection/wireless.pm:312
-#: ../lib/network/drakroam.pm:282
+#: ../lib/network/connection_manager.pm:190
 #, c-format
 msgid "Operating Mode"
 msgstr "Mode de fonctionnement"
@@ -355,7 +355,7 @@ msgstr ""
 msgid "Start at boot"
 msgstr "Lancer au démarrage"
 
-#: ../bin/drakconnect:440 ../lib/network/connection/ethernet.pm:220
+#: ../bin/drakconnect:440 ../lib/network/connection/ethernet.pm:221
 #, c-format
 msgid "Network Hotplugging"
 msgstr "Branchement à chaud du réseau"
@@ -376,7 +376,7 @@ msgstr "Vitesse de connexion"
 msgid "Connection timeout (in sec)"
 msgstr "Temps maxi pour établir la connexion (en sec.)"
 
-#: ../bin/drakconnect:462 ../lib/network/connection.pm:165
+#: ../bin/drakconnect:462 ../lib/network/connection.pm:181
 #, c-format
 msgid "Metric"
 msgstr "Métrique"
@@ -553,29 +553,30 @@ msgstr "Position sur le bus"
 #: ../bin/drakconnect:676 ../bin/drakconnect:680 ../bin/drakconnect:689
 #: ../bin/drakconnect:705 ../bin/drakgw:184 ../bin/drakhosts:100
 #: ../bin/drakhosts:245 ../bin/drakhosts:252 ../bin/drakhosts:259
-#: ../bin/drakinvictus:72 ../bin/draknetprofile:113 ../bin/draknfs:85
-#: ../bin/draknfs:106 ../bin/draknfs:276 ../bin/draknfs:409 ../bin/draknfs:411
-#: ../bin/draknfs:414 ../bin/draknfs:506 ../bin/draknfs:513 ../bin/draknfs:576
-#: ../bin/draknfs:583 ../bin/draknfs:590 ../bin/draksambashare:373
-#: ../bin/draksambashare:380 ../bin/draksambashare:383
-#: ../bin/draksambashare:429 ../bin/draksambashare:453
-#: ../bin/draksambashare:519 ../bin/draksambashare:534
-#: ../bin/draksambashare:612 ../bin/draksambashare:679
-#: ../bin/draksambashare:779 ../bin/draksambashare:786
-#: ../bin/draksambashare:917 ../bin/draksambashare:1110
-#: ../bin/draksambashare:1119 ../bin/draksambashare:1141
-#: ../bin/draksambashare:1150 ../bin/draksambashare:1169
-#: ../bin/draksambashare:1178 ../bin/draksambashare:1190
-#: ../lib/network/connection/xdsl.pm:324 ../lib/network/drakroam.pm:50
-#: ../lib/network/drakroam.pm:56 ../lib/network/drakroam.pm:69
-#: ../lib/network/drakvpn.pm:45 ../lib/network/drakvpn.pm:52
-#: ../lib/network/ndiswrapper.pm:27 ../lib/network/ndiswrapper.pm:42
-#: ../lib/network/ndiswrapper.pm:86 ../lib/network/ndiswrapper.pm:102
-#: ../lib/network/netconnect.pm:131 ../lib/network/netconnect.pm:179
-#: ../lib/network/netconnect.pm:268 ../lib/network/netconnect.pm:813
-#: ../lib/network/thirdparty.pm:115 ../lib/network/thirdparty.pm:132
-#: ../lib/network/thirdparty.pm:215 ../lib/network/thirdparty.pm:217
-#: ../lib/network/thirdparty.pm:238
+#: ../bin/drakinvictus:72 ../bin/draknetprofile:113 ../bin/draknfs:88
+#: ../bin/draknfs:109 ../bin/draknfs:279 ../bin/draknfs:412 ../bin/draknfs:414
+#: ../bin/draknfs:417 ../bin/draknfs:509 ../bin/draknfs:516 ../bin/draknfs:579
+#: ../bin/draknfs:586 ../bin/draknfs:593 ../bin/draksambashare:376
+#: ../bin/draksambashare:383 ../bin/draksambashare:386
+#: ../bin/draksambashare:432 ../bin/draksambashare:456
+#: ../bin/draksambashare:522 ../bin/draksambashare:537
+#: ../bin/draksambashare:615 ../bin/draksambashare:682
+#: ../bin/draksambashare:782 ../bin/draksambashare:789
+#: ../bin/draksambashare:920 ../bin/draksambashare:1113
+#: ../bin/draksambashare:1122 ../bin/draksambashare:1144
+#: ../bin/draksambashare:1153 ../bin/draksambashare:1172
+#: ../bin/draksambashare:1181 ../bin/draksambashare:1193
+#: ../lib/network/connection/xdsl.pm:324
+#: ../lib/network/connection_manager.pm:41
+#: ../lib/network/connection_manager.pm:47
+#: ../lib/network/connection_manager.pm:60 ../lib/network/drakvpn.pm:45
+#: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:27
+#: ../lib/network/ndiswrapper.pm:42 ../lib/network/ndiswrapper.pm:86
+#: ../lib/network/ndiswrapper.pm:102 ../lib/network/netconnect.pm:131
+#: ../lib/network/netconnect.pm:179 ../lib/network/netconnect.pm:268
+#: ../lib/network/netconnect.pm:813 ../lib/network/thirdparty.pm:115
+#: ../lib/network/thirdparty.pm:132 ../lib/network/thirdparty.pm:215
+#: ../lib/network/thirdparty.pm:217 ../lib/network/thirdparty.pm:238
 #, c-format
 msgid "Error"
 msgstr "Erreur"
@@ -1093,9 +1094,9 @@ msgstr "Nom d'hôte :"
 msgid "Host Aliases:"
 msgstr "Alias de l'hôte :"
 
-#: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:209
-#: ../bin/draksambashare:230 ../bin/draksambashare:377
-#: ../bin/draksambashare:608 ../bin/draksambashare:775
+#: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:212
+#: ../bin/draksambashare:233 ../bin/draksambashare:380
+#: ../bin/draksambashare:611 ../bin/draksambashare:778
 #, c-format
 msgid "Error!"
 msgstr "Erreur !"
@@ -1110,7 +1111,7 @@ msgstr "Veuillez entrer une adresse IP valide."
 msgid "Same IP is already in %s file."
 msgstr "La même IP est déjà dans le fichier %s."
 
-#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:202
+#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:203
 #, c-format
 msgid "Host name"
 msgstr "Nom d'hôte"
@@ -1130,8 +1131,8 @@ msgstr "Gérer les déclarations de machines"
 msgid "Modify entry"
 msgstr "Modifier l'entrée"
 
-#: ../bin/drakhosts:241 ../bin/draknfs:572 ../bin/draksambashare:1103
-#: ../bin/draksambashare:1134 ../bin/draksambashare:1165
+#: ../bin/drakhosts:241 ../bin/draknfs:575 ../bin/draksambashare:1106
+#: ../bin/draksambashare:1137 ../bin/draksambashare:1168
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Add"
@@ -1147,9 +1148,9 @@ msgstr "Ajouter une entrée"
 msgid "Failed to add host."
 msgstr "Impossible d'ajouter un hôte."
 
-#: ../bin/drakhosts:248 ../bin/draknfs:579 ../bin/draksambashare:1060
-#: ../bin/draksambashare:1105 ../bin/draksambashare:1136
-#: ../bin/draksambashare:1173
+#: ../bin/drakhosts:248 ../bin/draknfs:582 ../bin/draksambashare:1063
+#: ../bin/draksambashare:1108 ../bin/draksambashare:1139
+#: ../bin/draksambashare:1176
 #, c-format
 msgid "Modify"
 msgstr "Modifier"
@@ -1159,9 +1160,9 @@ msgstr "Modifier"
 msgid "Failed to Modify host."
 msgstr "Impossible de modifier un hôte."
 
-#: ../bin/drakhosts:255 ../bin/drakids:87 ../bin/drakids:96 ../bin/draknfs:586
-#: ../bin/draksambashare:1061 ../bin/draksambashare:1113
-#: ../bin/draksambashare:1144 ../bin/draksambashare:1181
+#: ../bin/drakhosts:255 ../bin/drakids:87 ../bin/drakids:96 ../bin/draknfs:589
+#: ../bin/draksambashare:1064 ../bin/draksambashare:1116
+#: ../bin/draksambashare:1147 ../bin/draksambashare:1184
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Remove"
@@ -1173,7 +1174,8 @@ msgid "Failed to remove host."
 msgstr "Impossible d'enlever un hôte."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:147
-#: ../bin/net_applet:139 ../lib/network/drakroam.pm:353
+#: ../bin/net_applet:139 ../lib/network/drakroam.pm:114
+#: ../lib/network/netcenter.pm:123
 #, c-format
 msgid "Quit"
 msgstr "Quitter"
@@ -1183,10 +1185,10 @@ msgstr "Quitter"
 msgid "Allowed addresses"
 msgstr "Adresses autorisées"
 
-#: ../bin/drakids:40 ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190
+#: ../bin/drakids:41 ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190
 #: ../bin/drakids:215 ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
-#: ../bin/net_applet:78 ../bin/net_applet:239 ../bin/net_applet:519
-#: ../bin/net_applet:546 ../lib/network/drakfirewall.pm:255
+#: ../bin/net_applet:78 ../bin/net_applet:239 ../bin/net_applet:522
+#: ../bin/net_applet:549 ../lib/network/drakfirewall.pm:255
 #: ../lib/network/drakfirewall.pm:258
 #, c-format
 msgid "Interactive Firewall"
@@ -1194,7 +1196,7 @@ msgstr "Pare-Feu interactif"
 
 #: ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190 ../bin/drakids:215
 #: ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
-#: ../bin/net_applet:239 ../bin/net_applet:519
+#: ../bin/net_applet:239 ../bin/net_applet:522
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "Impossible de contacter le démon"
@@ -1204,18 +1206,18 @@ msgstr "Impossible de contacter le démon"
 msgid "Log"
 msgstr "Journal"
 
-#: ../bin/drakids:78 ../bin/drakids:97 ../bin/net_applet:663
+#: ../bin/drakids:78 ../bin/drakids:97 ../bin/net_applet:666
 #, c-format
 msgid "Allow"
 msgstr "Autoriser"
 
-#: ../bin/drakids:79 ../bin/drakids:88 ../bin/net_applet:664
+#: ../bin/drakids:79 ../bin/drakids:88 ../bin/net_applet:667
 #, c-format
 msgid "Block"
 msgstr "Bloquer"
 
 #: ../bin/drakids:80 ../bin/drakids:89 ../bin/drakids:98 ../bin/drakids:109
-#: ../bin/drakids:122 ../bin/drakids:130 ../bin/draknfs:188
+#: ../bin/drakids:122 ../bin/drakids:130 ../bin/draknfs:191
 #: ../bin/net_monitor:120
 #, c-format
 msgid "Close"
@@ -1236,12 +1238,12 @@ msgstr "Services bloqués"
 msgid "Clear logs"
 msgstr "Nettoyer les journaux"
 
-#: ../bin/drakids:107 ../bin/drakids:112 ../bin/net_applet:607
+#: ../bin/drakids:107 ../bin/drakids:112 ../bin/net_applet:610
 #, c-format
 msgid "Blacklist"
 msgstr "Liste noire"
 
-#: ../bin/drakids:108 ../bin/drakids:125 ../bin/net_applet:612
+#: ../bin/drakids:108 ../bin/drakids:125 ../bin/net_applet:615
 #, c-format
 msgid "Whitelist"
 msgstr "Liste blanche"
@@ -1444,89 +1446,89 @@ msgstr "Dupliquer"
 msgid "Delete"
 msgstr "Supprimer"
 
-#: ../bin/draknfs:41
+#: ../bin/draknfs:44
 #, c-format
 msgid "map root user as anonymous"
 msgstr "Associer l'utilisateur root à l'utilisateur anonymous"
 
-#: ../bin/draknfs:42
+#: ../bin/draknfs:45
 #, c-format
 msgid "map all users to anonymous user"
 msgstr "Associer tous les utilisateurs à l'utilisateur anonymous"
 
-#: ../bin/draknfs:43
+#: ../bin/draknfs:46
 #, c-format
 msgid "No user UID mapping"
 msgstr "Pas de transformation de l'identifiant utilisateur"
 
-#: ../bin/draknfs:44
+#: ../bin/draknfs:47
 #, c-format
 msgid "allow real remote root access"
 msgstr "Autoriser les accès distants de root"
 
-#: ../bin/draknfs:58 ../bin/draknfs:59 ../bin/draknfs:60
-#: ../bin/draksambashare:161 ../bin/draksambashare:162
-#: ../bin/draksambashare:163
+#: ../bin/draknfs:61 ../bin/draknfs:62 ../bin/draknfs:63
+#: ../bin/draksambashare:164 ../bin/draksambashare:165
+#: ../bin/draksambashare:166
 #, c-format
 msgid "/_File"
 msgstr "/_Fichier"
 
-#: ../bin/draknfs:59 ../bin/draksambashare:162
+#: ../bin/draknfs:62 ../bin/draksambashare:165
 #, c-format
 msgid "/_Write conf"
 msgstr "/É_crire la configuration"
 
-#: ../bin/draknfs:60 ../bin/draksambashare:163
+#: ../bin/draknfs:63 ../bin/draksambashare:166
 #, c-format
 msgid "/_Quit"
 msgstr "/_Quitter"
 
-#: ../bin/draknfs:60 ../bin/draksambashare:163
+#: ../bin/draknfs:63 ../bin/draksambashare:166
 #, c-format
 msgid "<control>Q"
 msgstr "<control>Q"
 
-#: ../bin/draknfs:63 ../bin/draknfs:64 ../bin/draknfs:65
+#: ../bin/draknfs:66 ../bin/draknfs:67 ../bin/draknfs:68
 #, c-format
 msgid "/_NFS Server"
 msgstr "/Serveur _NFS"
 
-#: ../bin/draknfs:64 ../bin/draksambashare:166
+#: ../bin/draknfs:67 ../bin/draksambashare:169
 #, c-format
 msgid "/_Restart"
 msgstr "/_Redémarrer"
 
-#: ../bin/draknfs:65 ../bin/draksambashare:167
+#: ../bin/draknfs:68 ../bin/draksambashare:170
 #, c-format
 msgid "/R_eload"
 msgstr "/R_echarger"
 
-#: ../bin/draknfs:84
+#: ../bin/draknfs:87
 #, c-format
 msgid "NFS server"
 msgstr "Serveur NFS"
 
-#: ../bin/draknfs:84
+#: ../bin/draknfs:87
 #, c-format
 msgid "Restarting/Reloading NFS server..."
 msgstr "Relancer/Recharger le serveur NFS..."
 
-#: ../bin/draknfs:85
+#: ../bin/draknfs:88
 #, c-format
 msgid "Error Restarting/Reloading NFS server"
 msgstr "Erreur de relance/rechargement du serveur NFS"
 
-#: ../bin/draknfs:101 ../bin/draksambashare:225
+#: ../bin/draknfs:104 ../bin/draksambashare:228
 #, c-format
 msgid "Directory Selection"
 msgstr "Sélection du répertoire"
 
-#: ../bin/draknfs:106 ../bin/draksambashare:230
+#: ../bin/draknfs:109 ../bin/draksambashare:233
 #, c-format
 msgid "Should be a directory."
 msgstr "Cela devrait être un répertoire."
 
-#: ../bin/draknfs:137
+#: ../bin/draknfs:140
 #, c-format
 msgid ""
 "<span weight=\"bold\">NFS clients</span> may be specified in a number of "
@@ -1575,7 +1577,7 @@ msgstr ""
 "simultanément en ajoutant un masque à la fin de l'adresse du (sous) réseau. "
 "Exemple : 192.168.1.0/255.255.255.0' ou 192.168.1.0/24\n"
 
-#: ../bin/draknfs:152
+#: ../bin/draknfs:155
 #, c-format
 msgid ""
 "<span weight=\"bold\">User ID options</span>\n"
@@ -1624,32 +1626,32 @@ msgstr ""
 "anongid) :</span> ces options donnent explicitement l'UID et le GID du "
 "compte anonymous.\n"
 
-#: ../bin/draknfs:168
+#: ../bin/draknfs:171
 #, c-format
 msgid "Synchronous access:"
 msgstr "Accès synchrone :"
 
-#: ../bin/draknfs:169
+#: ../bin/draknfs:172
 #, c-format
 msgid "Secured Connection:"
 msgstr "Connexion sécurisée :"
 
-#: ../bin/draknfs:170
+#: ../bin/draknfs:173
 #, c-format
 msgid "Read-Only share:"
 msgstr "Partage lecture seule :"
 
-#: ../bin/draknfs:171
+#: ../bin/draknfs:174
 #, c-format
 msgid "Subtree checking:"
 msgstr "Vérification des sous-répertoires :"
 
-#: ../bin/draknfs:173
+#: ../bin/draknfs:176
 #, c-format
 msgid "Advanced Options"
 msgstr "Options avancées"
 
-#: ../bin/draknfs:174
+#: ../bin/draknfs:177
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> this option requires that requests "
@@ -1660,7 +1662,7 @@ msgstr ""
 "requête soit initiée à partir d'un port IP inférieur à IPPORT_RESERVED "
 "(1024). Cette option est activée par défaut."
 
-#: ../bin/draknfs:175
+#: ../bin/draknfs:178
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> allow either only read or both "
@@ -1673,7 +1675,7 @@ msgstr ""
 "modification sont refusées. Cette option permet de rendre ce comportement "
 "explicite."
 
-#: ../bin/draknfs:176
+#: ../bin/draknfs:179
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> disallows the NFS server to "
@@ -1685,7 +1687,7 @@ msgstr ""
 "associés ne soient réellement effectués sur le support de stockage (disque "
 "par exemple)."
 
-#: ../bin/draknfs:177
+#: ../bin/draknfs:180
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> enable subtree checking which can "
@@ -1697,134 +1699,134 @@ msgstr ""
 "peut dégrader la fiabilité. Voir la page du manuel export (5) pour plus de "
 "détails."
 
-#: ../bin/draknfs:182 ../bin/draksambashare:606 ../bin/draksambashare:773
+#: ../bin/draknfs:185 ../bin/draksambashare:609 ../bin/draksambashare:776
 #, c-format
 msgid "Information"
 msgstr "Informations"
 
-#: ../bin/draknfs:263
+#: ../bin/draknfs:266
 #, c-format
 msgid "Directory"
 msgstr "Répertoire"
 
-#: ../bin/draknfs:267
+#: ../bin/draknfs:270
 #, c-format
 msgid "Draknfs entry"
 msgstr "Entrée DrakNFS"
 
-#: ../bin/draknfs:276
+#: ../bin/draknfs:279
 #, c-format
 msgid "Please add an NFS share to be able to modify it."
 msgstr "Veuillez ajouter un partage NFS pour pouvoir le modifier."
 
-#: ../bin/draknfs:365
+#: ../bin/draknfs:368
 #, c-format
 msgid "NFS directory"
 msgstr "Répertoire NFS"
 
-#: ../bin/draknfs:366 ../bin/draksambashare:361 ../bin/draksambashare:571
-#: ../bin/draksambashare:750
+#: ../bin/draknfs:369 ../bin/draksambashare:364 ../bin/draksambashare:574
+#: ../bin/draksambashare:753
 #, c-format
 msgid "Directory:"
 msgstr "Répertoire :"
 
-#: ../bin/draknfs:367
+#: ../bin/draknfs:370
 #, c-format
 msgid "Host access"
 msgstr "Accès client"
 
-#: ../bin/draknfs:368
+#: ../bin/draknfs:371
 #, c-format
 msgid "Access:"
 msgstr "Accès :"
 
-#: ../bin/draknfs:369
+#: ../bin/draknfs:372
 #, c-format
 msgid "User ID Mapping"
 msgstr "Correspondance des utilisateurs"
 
-#: ../bin/draknfs:370
+#: ../bin/draknfs:373
 #, c-format
 msgid "User ID:"
 msgstr "Utilisateur :"
 
-#: ../bin/draknfs:371
+#: ../bin/draknfs:374
 #, c-format
 msgid "Anonymous user ID:"
 msgstr "Utilisateur anonymous :"
 
-#: ../bin/draknfs:372
+#: ../bin/draknfs:375
 #, c-format
 msgid "Anonymous Group ID:"
 msgstr "Groupe anonymous :"
 
-#: ../bin/draknfs:409
+#: ../bin/draknfs:412
 #, c-format
 msgid "Please specify a directory to share."
 msgstr "Veuillez spécifier un répertoire à partager."
 
-#: ../bin/draknfs:411
+#: ../bin/draknfs:414
 #, c-format
 msgid "Can't create this directory."
 msgstr "Impossible de créer ce dossier."
 
-#: ../bin/draknfs:414
+#: ../bin/draknfs:417
 #, c-format
 msgid "You must specify hosts access."
 msgstr "Vous devez préciser les accès clients."
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, c-format
 msgid "Share Directory"
 msgstr "Partager le répertoire"
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, c-format
 msgid "Hosts Wildcard"
 msgstr "Clients autorisés"
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, c-format
 msgid "General Options"
 msgstr "Options génériques"
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, c-format
 msgid "Custom Options"
 msgstr "Options personnalisées"
 
-#: ../bin/draknfs:506 ../bin/draksambashare:377 ../bin/draksambashare:608
-#: ../bin/draksambashare:775
+#: ../bin/draknfs:509 ../bin/draksambashare:380 ../bin/draksambashare:611
+#: ../bin/draksambashare:778
 #, c-format
 msgid "Please enter a directory to share."
 msgstr "Veuillez entrer un répertoire à partager."
 
-#: ../bin/draknfs:513
+#: ../bin/draknfs:516
 #, c-format
 msgid "Please use the modify button to set right access."
 msgstr "Utilisez le bouton de modification pour définir les droits d'accès."
 
-#: ../bin/draknfs:528
+#: ../bin/draknfs:531
 #, c-format
 msgid "Manage NFS shares"
 msgstr "Gérer les partages NFS"
 
-#: ../bin/draknfs:567
+#: ../bin/draknfs:570
 #, c-format
 msgid "DrakNFS manage NFS shares"
 msgstr "DrakNFS gère les partages NFS"
 
-#: ../bin/draknfs:576
+#: ../bin/draknfs:579
 #, c-format
 msgid "Failed to add NFS share."
 msgstr "Impossible d'ajouter un partage NFS."
 
-#: ../bin/draknfs:583
+#: ../bin/draknfs:586
 #, c-format
 msgid "Failed to Modify NFS share."
 msgstr "Impossible de modifier un partage NFS."
 
-#: ../bin/draknfs:590
+#: ../bin/draknfs:593
 #, c-format
 msgid "Failed to remove an NFS share."
 msgstr "Impossible d'enlever un partage NFS."
@@ -1836,222 +1838,222 @@ msgstr ""
 "Vous devez vous déconnecter puis vous connecter à nouveau afin de prendre "
 "les changements en considération"
 
-#: ../bin/draksambashare:63
+#: ../bin/draksambashare:66
 #, c-format
 msgid "User name"
 msgstr "Nom d'utilisateur"
 
-#: ../bin/draksambashare:70
+#: ../bin/draksambashare:73
 #, c-format
 msgid "Share name"
 msgstr "Nom de partage"
 
-#: ../bin/draksambashare:71
+#: ../bin/draksambashare:74
 #, c-format
 msgid "Share directory"
 msgstr "Dossier partagé"
 
-#: ../bin/draksambashare:72 ../bin/draksambashare:105
+#: ../bin/draksambashare:75 ../bin/draksambashare:108
 #, c-format
 msgid "Comment"
 msgstr "Commentaire"
 
-#: ../bin/draksambashare:73 ../bin/draksambashare:106
+#: ../bin/draksambashare:76 ../bin/draksambashare:109
 #, c-format
 msgid "Browseable"
 msgstr "Visible sur le réseau"
 
-#: ../bin/draksambashare:74
+#: ../bin/draksambashare:77
 #, c-format
 msgid "Public"
 msgstr "Publique"
 
-#: ../bin/draksambashare:75 ../bin/draksambashare:111
+#: ../bin/draksambashare:78 ../bin/draksambashare:114
 #, c-format
 msgid "Writable"
 msgstr "Droit d'écriture"
 
-#: ../bin/draksambashare:76 ../bin/draksambashare:152
+#: ../bin/draksambashare:79 ../bin/draksambashare:155
 #, c-format
 msgid "Create mask"
 msgstr "Masque de création fichier"
 
-#: ../bin/draksambashare:77 ../bin/draksambashare:153
+#: ../bin/draksambashare:80 ../bin/draksambashare:156
 #, c-format
 msgid "Directory mask"
 msgstr "Masque de répertoire"
 
-#: ../bin/draksambashare:78
+#: ../bin/draksambashare:81
 #, c-format
 msgid "Read list"
 msgstr "Utilisateurs en lecture uniquement"
 
-#: ../bin/draksambashare:79 ../bin/draksambashare:112
-#: ../bin/draksambashare:585
+#: ../bin/draksambashare:82 ../bin/draksambashare:115
+#: ../bin/draksambashare:588
 #, c-format
 msgid "Write list"
 msgstr "Utilisateur avec droit d'écriture"
 
-#: ../bin/draksambashare:80 ../bin/draksambashare:144
+#: ../bin/draksambashare:83 ../bin/draksambashare:147
 #, c-format
 msgid "Admin users"
 msgstr "Administrateurs"
 
-#: ../bin/draksambashare:81 ../bin/draksambashare:145
+#: ../bin/draksambashare:84 ../bin/draksambashare:148
 #, c-format
 msgid "Valid users"
 msgstr "Utilisateurs autorisés"
 
-#: ../bin/draksambashare:82
+#: ../bin/draksambashare:85
 #, c-format
 msgid "Inherit Permissions"
 msgstr "Hériter des permissions"
 
-#: ../bin/draksambashare:83 ../bin/draksambashare:146
+#: ../bin/draksambashare:86 ../bin/draksambashare:149
 #, c-format
 msgid "Hide dot files"
 msgstr "Cacher les fichiers cachés"
 
-#: ../bin/draksambashare:84 ../bin/draksambashare:147
+#: ../bin/draksambashare:87 ../bin/draksambashare:150
 #, c-format
 msgid "Hide files"
 msgstr "Cacher les fichiers"
 
-#: ../bin/draksambashare:85 ../bin/draksambashare:151
+#: ../bin/draksambashare:88 ../bin/draksambashare:154
 #, c-format
 msgid "Preserve case"
 msgstr "Conserver la casse"
 
-#: ../bin/draksambashare:86
+#: ../bin/draksambashare:89
 #, c-format
 msgid "Force create mode"
 msgstr "Forcer les droits à la création"
 
-#: ../bin/draksambashare:87
+#: ../bin/draksambashare:90
 #, c-format
 msgid "Force group"
 msgstr "Forcer le groupe"
 
-#: ../bin/draksambashare:88 ../bin/draksambashare:150
+#: ../bin/draksambashare:91 ../bin/draksambashare:153
 #, c-format
 msgid "Default case"
 msgstr "Casse par défaut"
 
-#: ../bin/draksambashare:103
+#: ../bin/draksambashare:106
 #, c-format
 msgid "Printer name"
 msgstr "Nom de l'imprimante"
 
-#: ../bin/draksambashare:104
+#: ../bin/draksambashare:107
 #, c-format
 msgid "Path"
 msgstr "Chemin"
 
-#: ../bin/draksambashare:107 ../bin/draksambashare:577
+#: ../bin/draksambashare:110 ../bin/draksambashare:580
 #, c-format
 msgid "Printable"
 msgstr "Imprimable"
 
-#: ../bin/draksambashare:108
+#: ../bin/draksambashare:111
 #, c-format
 msgid "Print Command"
 msgstr "Commande d'impression"
 
-#: ../bin/draksambashare:109
+#: ../bin/draksambashare:112
 #, c-format
 msgid "LPQ command"
 msgstr "Commande LPQ"
 
-#: ../bin/draksambashare:110
+#: ../bin/draksambashare:113
 #, c-format
 msgid "Guest ok"
 msgstr "Accès sans mot de passe"
 
-#: ../bin/draksambashare:113 ../bin/draksambashare:154
-#: ../bin/draksambashare:586
+#: ../bin/draksambashare:116 ../bin/draksambashare:157
+#: ../bin/draksambashare:589
 #, c-format
 msgid "Inherit permissions"
 msgstr "Hériter des permissions"
 
-#: ../bin/draksambashare:114
+#: ../bin/draksambashare:117
 #, c-format
 msgid "Printing"
 msgstr "Impression"
 
-#: ../bin/draksambashare:115
+#: ../bin/draksambashare:118
 #, c-format
 msgid "Create mode"
 msgstr "Droits à la création"
 
-#: ../bin/draksambashare:116
+#: ../bin/draksambashare:119
 #, c-format
 msgid "Use client driver"
 msgstr "Utiliser le pilote du client"
 
-#: ../bin/draksambashare:142
+#: ../bin/draksambashare:145
 #, c-format
 msgid "Read List"
 msgstr "Utilisateurs en lecture uniquement"
 
-#: ../bin/draksambashare:143
+#: ../bin/draksambashare:146
 #, c-format
 msgid "Write List"
 msgstr "Utilisateur avec droit d'écriture"
 
-#: ../bin/draksambashare:148
+#: ../bin/draksambashare:151
 #, c-format
 msgid "Force Group"
 msgstr "Groupé forcé"
 
-#: ../bin/draksambashare:149
+#: ../bin/draksambashare:152
 #, c-format
 msgid "Force create group"
 msgstr "Droits forcés à la création"
 
-#: ../bin/draksambashare:165 ../bin/draksambashare:166
-#: ../bin/draksambashare:167
+#: ../bin/draksambashare:168 ../bin/draksambashare:169
+#: ../bin/draksambashare:170
 #, c-format
 msgid "/_Samba Server"
 msgstr "/Serveur _Samba"
 
-#: ../bin/draksambashare:169 ../bin/draksambashare:170
+#: ../bin/draksambashare:172 ../bin/draksambashare:173
 #, c-format
 msgid "/_About"
 msgstr "/A _propos"
 
-#: ../bin/draksambashare:169
+#: ../bin/draksambashare:172
 #, c-format
 msgid "/_Report Bug"
 msgstr "/_Signaler une anomalie"
 
-#: ../bin/draksambashare:170
+#: ../bin/draksambashare:173
 #, c-format
 msgid "/About..."
 msgstr "/A propos..."
 
-#: ../bin/draksambashare:173
+#: ../bin/draksambashare:176
 #, c-format
 msgid "Draksambashare"
 msgstr "Draksambashare"
 
-#: ../bin/draksambashare:175
+#: ../bin/draksambashare:178
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C) %s par Mandriva"
 
-#: ../bin/draksambashare:177
+#: ../bin/draksambashare:180
 #, c-format
 msgid "This is a simple tool to easily manage Samba configuration."
 msgstr ""
 "Ceci est un outil simple pour gérer facilement la configuration de Samba."
 
-#: ../bin/draksambashare:179
+#: ../bin/draksambashare:182
 #, c-format
 msgid "Mandriva Linux"
 msgstr "Mandriva Linux"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../bin/draksambashare:184
+#: ../bin/draksambashare:187
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
@@ -2071,44 +2073,44 @@ msgstr ""
 "Nicolas Lécureuil <neoclust@mandriva.org>\n"
 "Olivier Faurax <olivier.faurax@laposte.net>\n"
 
-#: ../bin/draksambashare:208
+#: ../bin/draksambashare:211
 #, c-format
 msgid "Restarting/Reloading Samba server..."
 msgstr "Redémarrage/Rechargement du serveur Samba..."
 
-#: ../bin/draksambashare:209
+#: ../bin/draksambashare:212
 #, c-format
 msgid "Error Restarting/Reloading Samba server"
 msgstr "Erreur de redémarrage/rechargement du serveur Samba"
 
-#: ../bin/draksambashare:349 ../bin/draksambashare:550
-#: ../bin/draksambashare:671
+#: ../bin/draksambashare:352 ../bin/draksambashare:553
+#: ../bin/draksambashare:674
 #, c-format
 msgid "Open"
 msgstr "Ouvrir"
 
-#: ../bin/draksambashare:352
+#: ../bin/draksambashare:355
 #, c-format
 msgid "DrakSamba add entry"
 msgstr "DrakSamba ajout d'un partage"
 
-#: ../bin/draksambashare:356
+#: ../bin/draksambashare:359
 #, c-format
 msgid "Add a share"
 msgstr "Ajouter un partage"
 
-#: ../bin/draksambashare:359
+#: ../bin/draksambashare:362
 #, c-format
 msgid "Name of the share:"
 msgstr "Nom du partage :"
 
-#: ../bin/draksambashare:360 ../bin/draksambashare:570
-#: ../bin/draksambashare:751
+#: ../bin/draksambashare:363 ../bin/draksambashare:573
+#: ../bin/draksambashare:754
 #, c-format
 msgid "Comment:"
 msgstr "Commentaire :"
 
-#: ../bin/draksambashare:373
+#: ../bin/draksambashare:376
 #, c-format
 msgid ""
 "Share with the same name already exist or share name empty, please choose "
@@ -2117,33 +2119,33 @@ msgstr ""
 "Un partage de même nom existe déjà ou alors le nom de partage est vide, "
 "veuillez choisir un autre nom."
 
-#: ../bin/draksambashare:380
+#: ../bin/draksambashare:383
 #, c-format
 msgid "Can't create the directory, please enter a correct path."
 msgstr "Impossible de créer le dossier, veuillez entrer un chemin correct."
 
-#: ../bin/draksambashare:383 ../bin/draksambashare:606
-#: ../bin/draksambashare:773
+#: ../bin/draksambashare:386 ../bin/draksambashare:609
+#: ../bin/draksambashare:776
 #, c-format
 msgid "Please enter a Comment for this share."
 msgstr "Veuillez entrer un commentaire pour ce partage."
 
-#: ../bin/draksambashare:414
+#: ../bin/draksambashare:417
 #, c-format
 msgid "pdf-gen - a PDF generator"
 msgstr "pdf-gen - un générateur de PDF"
 
-#: ../bin/draksambashare:415
+#: ../bin/draksambashare:418
 #, c-format
 msgid "printers - all printers available"
 msgstr "imprimantes - toutes les imprimantes disponibles"
 
-#: ../bin/draksambashare:419
+#: ../bin/draksambashare:422
 #, c-format
 msgid "Add Special Printer share"
 msgstr "Ajouter un partage imprimante particulier"
 
-#: ../bin/draksambashare:422
+#: ../bin/draksambashare:425
 #, c-format
 msgid ""
 "Goal of this wizard is to easily create a new special printer Samba share."
@@ -2151,151 +2153,151 @@ msgstr ""
 "Le rôle de cet assistant est de faciliter la création d'un partage "
 "imprimante particulier."
 
-#: ../bin/draksambashare:429
+#: ../bin/draksambashare:432
 #, c-format
 msgid "A PDF generator already exists."
 msgstr "Un générateur de PDF existe déjà."
 
-#: ../bin/draksambashare:453
+#: ../bin/draksambashare:456
 #, c-format
 msgid "Printers and print$ already exist."
 msgstr "Les imprimantes et print$ existent déjà."
 
-#: ../bin/draksambashare:503
+#: ../bin/draksambashare:506
 #, c-format
 msgid "Congratulations"
 msgstr "Félicitations"
 
-#: ../bin/draksambashare:504
+#: ../bin/draksambashare:507
 #, c-format
 msgid "The wizard successfully added the printer Samba share"
 msgstr "L'assistant a ajouté une imprimante partagé Samba avec succès"
 
-#: ../bin/draksambashare:519
+#: ../bin/draksambashare:522
 #, c-format
 msgid "Failed to add printers."
 msgstr "Échec lors de l'ajout d'imprimantes."
 
-#: ../bin/draksambashare:534
+#: ../bin/draksambashare:537
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
 msgstr ""
 "Veuillez ajouter ou sélectionner une imprimante partagée Samba afin de "
 "pouvoir la modifier."
 
-#: ../bin/draksambashare:553
+#: ../bin/draksambashare:556
 #, c-format
 msgid "DrakSamba Printers entry"
 msgstr "DrakSamba Imprimante"
 
-#: ../bin/draksambashare:566
+#: ../bin/draksambashare:569
 #, c-format
 msgid "Printer share"
 msgstr "partage d'imprimante"
 
-#: ../bin/draksambashare:569
+#: ../bin/draksambashare:572
 #, c-format
 msgid "Printer name:"
 msgstr "Nom de l'imprimante :"
 
-#: ../bin/draksambashare:575 ../bin/draksambashare:756
+#: ../bin/draksambashare:578 ../bin/draksambashare:759
 #, c-format
 msgid "Writable:"
 msgstr "Droit d'écriture :"
 
-#: ../bin/draksambashare:576 ../bin/draksambashare:757
+#: ../bin/draksambashare:579 ../bin/draksambashare:760
 #, c-format
 msgid "Browseable:"
 msgstr "Visible sur le réseau :"
 
-#: ../bin/draksambashare:581
+#: ../bin/draksambashare:584
 #, c-format
 msgid "Advanced options"
 msgstr "Options avancées"
 
-#: ../bin/draksambashare:583
+#: ../bin/draksambashare:586
 #, c-format
 msgid "Printer access"
 msgstr "Accès à l'imprimante"
 
-#: ../bin/draksambashare:587
+#: ../bin/draksambashare:590
 #, c-format
 msgid "Guest ok:"
 msgstr "Accès sans mot de passe :"
 
-#: ../bin/draksambashare:588
+#: ../bin/draksambashare:591
 #, c-format
 msgid "Create mode:"
 msgstr "Droits à la création :"
 
-#: ../bin/draksambashare:592
+#: ../bin/draksambashare:595
 #, c-format
 msgid "Printer command"
 msgstr "Commande d'impression"
 
-#: ../bin/draksambashare:594
+#: ../bin/draksambashare:597
 #, c-format
 msgid "Print command:"
 msgstr "Commande d'impression :"
 
-#: ../bin/draksambashare:595
+#: ../bin/draksambashare:598
 #, c-format
 msgid "LPQ command:"
 msgstr "Commande LPQ :"
 
-#: ../bin/draksambashare:596
+#: ../bin/draksambashare:599
 #, c-format
 msgid "Printing:"
 msgstr "Impression :"
 
-#: ../bin/draksambashare:612
+#: ../bin/draksambashare:615
 #, c-format
 msgid "create mode should be numeric. ie: 0755."
 msgstr "Le droit à la création doit être un nombre. Ex : 0755."
 
-#: ../bin/draksambashare:674
+#: ../bin/draksambashare:677
 #, c-format
 msgid "DrakSamba entry"
 msgstr "Entrée DrakSamba"
 
-#: ../bin/draksambashare:679
+#: ../bin/draksambashare:682
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
 msgstr ""
 "Veuillez ajouter ou sélectionner un partage Samba afin de pouvoir le "
 "modifier."
 
-#: ../bin/draksambashare:702
+#: ../bin/draksambashare:705
 #, c-format
 msgid "Samba user access"
 msgstr "Accès utilisateur Samba"
 
-#: ../bin/draksambashare:710
+#: ../bin/draksambashare:713
 #, c-format
 msgid "Mask options"
 msgstr "Options de masque"
 
-#: ../bin/draksambashare:724
+#: ../bin/draksambashare:727
 #, c-format
 msgid "Display options"
 msgstr "Options d'affichage"
 
-#: ../bin/draksambashare:746
+#: ../bin/draksambashare:749
 #, c-format
 msgid "Samba share directory"
 msgstr "Dossier partagé Samba"
 
-#: ../bin/draksambashare:749
+#: ../bin/draksambashare:752
 #, c-format
 msgid "Share name:"
 msgstr "Nom de partage :"
 
-#: ../bin/draksambashare:755
+#: ../bin/draksambashare:758
 #, c-format
 msgid "Public:"
 msgstr "Publique :"
 
-#: ../bin/draksambashare:779
+#: ../bin/draksambashare:782
 #, c-format
 msgid ""
 "Create mask, create mode and directory mask should be numeric. ie: 0755."
@@ -2303,92 +2305,92 @@ msgstr ""
 "Le masque de création, les droits sur les répertoires et fichiers doivent "
 "être des valeurs numériques. Ex : 0755."
 
-#: ../bin/draksambashare:786
+#: ../bin/draksambashare:789
 #, c-format
 msgid "Please create this Samba user: %s"
 msgstr "Veuillez créer cet utilisateur Samba : %s"
 
-#: ../bin/draksambashare:890
+#: ../bin/draksambashare:893
 #, c-format
 msgid "Add Samba user"
 msgstr "Ajouter un utilisateur Samba"
 
-#: ../bin/draksambashare:905
+#: ../bin/draksambashare:908
 #, c-format
 msgid "User information"
 msgstr "Information de l'utilisateur"
 
-#: ../bin/draksambashare:907
+#: ../bin/draksambashare:910
 #, c-format
 msgid "User name:"
 msgstr "Nom d'utilisateur :"
 
-#: ../bin/draksambashare:908
+#: ../bin/draksambashare:911
 #, c-format
 msgid "Password:"
 msgstr "Mot de passe :"
 
-#: ../bin/draksambashare:1022
+#: ../bin/draksambashare:1025
 #, c-format
 msgid "Manage Samba configuration"
 msgstr "Gérer la configuration Samba"
 
-#: ../bin/draksambashare:1110
+#: ../bin/draksambashare:1113
 #, c-format
 msgid "Failed to Modify Samba share."
 msgstr "Impossible de modifier un partage Samba."
 
-#: ../bin/draksambashare:1119
+#: ../bin/draksambashare:1122
 #, c-format
 msgid "Failed to remove a Samba share."
 msgstr "Impossible d'enlever un partage Samba."
 
-#: ../bin/draksambashare:1126
+#: ../bin/draksambashare:1129
 #, c-format
 msgid "File share"
 msgstr "Partage de fichiers"
 
-#: ../bin/draksambashare:1141
+#: ../bin/draksambashare:1144
 #, c-format
 msgid "Failed to Modify."
 msgstr "Échec lors de la modification."
 
-#: ../bin/draksambashare:1150
+#: ../bin/draksambashare:1153
 #, c-format
 msgid "Failed to remove."
 msgstr "Échec lors de la suppression."
 
-#: ../bin/draksambashare:1157
+#: ../bin/draksambashare:1160
 #, c-format
 msgid "Printers"
 msgstr "Imprimantes"
 
-#: ../bin/draksambashare:1169
+#: ../bin/draksambashare:1172
 #, c-format
 msgid "Failed to add user."
 msgstr "Échec lors de l'ajout de l'utilisateur."
 
-#: ../bin/draksambashare:1178
+#: ../bin/draksambashare:1181
 #, c-format
 msgid "Failed to change user password."
 msgstr "Impossible de changer le mot de passe de l'utilisateur."
 
-#: ../bin/draksambashare:1190
+#: ../bin/draksambashare:1193
 #, c-format
 msgid "Failed to delete user."
 msgstr "Échec lors de la suppression de l'utilisateur."
 
-#: ../bin/draksambashare:1195
+#: ../bin/draksambashare:1198
 #, c-format
 msgid "Userdrake"
 msgstr "Userdrake"
 
-#: ../bin/draksambashare:1203
+#: ../bin/draksambashare:1206
 #, c-format
 msgid "Samba Users"
 msgstr "Utilisateurs Samba"
 
-#: ../bin/draksambashare:1212
+#: ../bin/draksambashare:1215
 #, c-format
 msgid "DrakSamba manage Samba shares"
 msgstr "DrakSamba gère les partages Samba"
@@ -3727,7 +3729,7 @@ msgstr "Interfaces actives"
 msgid "Profiles"
 msgstr "Profils"
 
-#: ../bin/net_applet:130 ../lib/network/connection.pm:149
+#: ../bin/net_applet:130 ../lib/network/connection.pm:165
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
@@ -3739,112 +3741,112 @@ msgstr "Connexion VPN"
 msgid "Network connection"
 msgstr "Connexion réseau"
 
-#: ../bin/net_applet:443
+#: ../bin/net_applet:446
 #, c-format
 msgid "More networks"
 msgstr "Plus de réseaux"
 
-#: ../bin/net_applet:470
+#: ../bin/net_applet:473
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "Mode automatique du Pare Feu Interactif"
 
-#: ../bin/net_applet:475
+#: ../bin/net_applet:478
 #, c-format
 msgid "Always launch on startup"
 msgstr "Toujours lancer au démarrage"
 
-#: ../bin/net_applet:480
+#: ../bin/net_applet:483
 #, c-format
 msgid "Wireless networks"
 msgstr "Réseaux sans fil"
 
-#: ../bin/net_applet:487 ../bin/net_monitor:96
+#: ../bin/net_applet:490 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Paramètres"
 
-#: ../bin/net_applet:562
+#: ../bin/net_applet:565
 #, c-format
 msgid "Interactive Firewall: intrusion detected"
 msgstr "Pare Feu interactif : intrusion détectée"
 
-#: ../bin/net_applet:579
+#: ../bin/net_applet:582
 #, c-format
 msgid "What do you want to do with this attacker?"
 msgstr "Que voulez-vous faire avec cet attaquant ?"
 
-#: ../bin/net_applet:582
+#: ../bin/net_applet:585
 #, c-format
 msgid "Attack details"
 msgstr "Détails de l'attaque"
 
-#: ../bin/net_applet:586
+#: ../bin/net_applet:589
 #, c-format
 msgid "Attack time: %s"
 msgstr "Heure de l'attaque : %s"
 
-#: ../bin/net_applet:587
+#: ../bin/net_applet:590
 #, c-format
 msgid "Network interface: %s"
 msgstr "Interface réseau : %s"
 
-#: ../bin/net_applet:588
+#: ../bin/net_applet:591
 #, c-format
 msgid "Attack type: %s"
 msgstr "Type d'attaque : %s"
 
-#: ../bin/net_applet:589
+#: ../bin/net_applet:592
 #, c-format
 msgid "Protocol: %s"
 msgstr "Protocole : %s"
 
-#: ../bin/net_applet:590
+#: ../bin/net_applet:593
 #, c-format
 msgid "Attacker IP address: %s"
 msgstr "Adresse IP de l'attaquant : %s"
 
-#: ../bin/net_applet:591
+#: ../bin/net_applet:594
 #, c-format
 msgid "Attacker hostname: %s"
 msgstr "Nom de la machine de l'attaquant : %s"
 
-#: ../bin/net_applet:594
+#: ../bin/net_applet:597
 #, c-format
 msgid "Service attacked: %s"
 msgstr "Service attaqué : %s"
 
-#: ../bin/net_applet:595
+#: ../bin/net_applet:598
 #, c-format
 msgid "Port attacked: %s"
 msgstr "Port attaqué : %s"
 
-#: ../bin/net_applet:597
+#: ../bin/net_applet:600
 #, c-format
 msgid "Type of ICMP attack: %s"
 msgstr "Type d'attaque ICMP : %s"
 
-#: ../bin/net_applet:602
+#: ../bin/net_applet:605
 #, c-format
 msgid "Always blacklist (do not ask again)"
 msgstr "Toujours mettre sur la liste noire (ne plus poser la question)"
 
-#: ../bin/net_applet:617
+#: ../bin/net_applet:620
 #, c-format
 msgid "Ignore"
 msgstr "Ignorer"
 
-#: ../bin/net_applet:635 ../bin/net_applet:648
+#: ../bin/net_applet:638 ../bin/net_applet:651
 #, c-format
 msgid "Interactive Firewall: new service"
 msgstr "Pare Feu interactif : nouveau service"
 
-#: ../bin/net_applet:658
+#: ../bin/net_applet:661
 #, c-format
 msgid "Do you want to open this service?"
 msgstr "Désirez-vous activer ce service ?"
 
-#: ../bin/net_applet:661
+#: ../bin/net_applet:664
 #, c-format
 msgid "Remember this answer"
 msgstr "Mémoriser la réponse"
@@ -3989,44 +3991,44 @@ msgstr "Aucune connexion Internet n'a été configurée"
 msgid "Unknown connection type"
 msgstr "Type de connexion inconnu"
 
-#: ../lib/network/connection.pm:115
+#: ../lib/network/connection.pm:131
 #, c-format
 msgid "Network access settings"
 msgstr "Paramètres de l'accès réseau"
 
-#: ../lib/network/connection.pm:116
+#: ../lib/network/connection.pm:132
 #, c-format
 msgid "Access settings"
 msgstr "Paramètres d'accès"
 
-#: ../lib/network/connection.pm:117
+#: ../lib/network/connection.pm:133
 #, c-format
 msgid "Address settings"
 msgstr "Paramètres de l'adresse"
 
-#: ../lib/network/connection.pm:151 ../lib/network/connection/cable.pm:44
+#: ../lib/network/connection.pm:167 ../lib/network/connection/cable.pm:44
 #: ../lib/network/connection/wireless.pm:43 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "Aucun"
 
-#: ../lib/network/connection.pm:163
+#: ../lib/network/connection.pm:179
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr "Autoriser les utilisateurs à gérer la connexion"
 
-#: ../lib/network/connection.pm:164
+#: ../lib/network/connection.pm:180
 #, c-format
 msgid "Start the connection at boot"
 msgstr "Lancer la connexion au démarrage"
 
-#: ../lib/network/connection.pm:230
+#: ../lib/network/connection.pm:246
 #, c-format
 msgid "Link detected on interface %s"
 msgstr "Liaison détectée sur l'interface %s"
 
-#: ../lib/network/connection.pm:231 ../lib/network/connection/ethernet.pm:273
+#: ../lib/network/connection.pm:247 ../lib/network/connection/ethernet.pm:274
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "Liaison perdue sur l'interface %s"
@@ -4191,27 +4193,27 @@ msgstr "Attention : l'adresse IP %s est déjà réservée !"
 msgid "%s already in use\n"
 msgstr "%s est déjà utilisé\n"
 
-#: ../lib/network/connection/ethernet.pm:224
+#: ../lib/network/connection/ethernet.pm:225
 #, c-format
 msgid "Enable IPv6 to IPv4 tunnel"
 msgstr "Activer le tunnel IPv6 sur IPv4"
 
-#: ../lib/network/connection/ethernet.pm:272
+#: ../lib/network/connection/ethernet.pm:273
 #, c-format
 msgid "Link beat detected on interface %s"
 msgstr "Liaison détectée sur l'interface %s"
 
-#: ../lib/network/connection/ethernet.pm:275
+#: ../lib/network/connection/ethernet.pm:276
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
 msgstr "Demande d'adresse réseau pour l'interface %s (protocole %s)..."
 
-#: ../lib/network/connection/ethernet.pm:276
+#: ../lib/network/connection/ethernet.pm:277
 #, c-format
 msgid "Got a network address on interface %s (%s protocol)"
 msgstr "Adresse réseau attribuée pour l'interface %s (protocole %s)"
 
-#: ../lib/network/connection/ethernet.pm:277
+#: ../lib/network/connection/ethernet.pm:278
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
 msgstr ""
@@ -4831,12 +4833,18 @@ msgstr "Identifiant de Circuit Virtuel (VPI) :"
 msgid "Virtual Circuit ID (VCI):"
 msgstr "Identifiant de Chemin Virtuel (VCI) :"
 
-#: ../lib/network/connection/xdsl.pm:324 ../lib/network/drakroam.pm:50
-#: ../lib/network/drakvpn.pm:45 ../lib/network/netconnect.pm:131
-#: ../lib/network/thirdparty.pm:115
+#: ../lib/network/connection/xdsl.pm:324
+#: ../lib/network/connection_manager.pm:41 ../lib/network/drakvpn.pm:45
+#: ../lib/network/netconnect.pm:131 ../lib/network/thirdparty.pm:115
 #, c-format
 msgid "Could not install the packages (%s)!"
 msgstr "Impossible d'installer les paquetages (%s) !"
+
+#: ../lib/network/connection_manager.pm:53
+#: ../lib/network/connection_manager.pm:85
+#, fuzzy, c-format
+msgid "Network settings"
+msgstr "Paramètres de l'accès réseau"
 
 #: ../lib/network/connection_manager.pm:54
 #: ../lib/network/connection_manager.pm:86
@@ -5051,7 +5059,7 @@ msgstr ""
 msgid "Use Interactive Firewall"
 msgstr "Utiliser le Pare Feu Interactif"
 
-#: ../lib/network/drakroam.pm:29
+#: ../lib/network/drakroam.pm:22
 #, c-format
 msgid "No device found"
 msgstr "Aucun périphérique trouvé"
@@ -5061,12 +5069,12 @@ msgstr "Aucun périphérique trouvé"
 msgid "Hostname changed to \"%s\""
 msgstr "Le nom d'hôte (hostname) a été changé en « %s »"
 
-#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:80
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:82
 #, c-format
 msgid "Configure"
 msgstr "Configurer"
 
-#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:85
+#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:87
 #, c-format
 msgid "Refresh"
 msgstr "Rafraîchir"
@@ -5282,17 +5290,17 @@ msgstr "Installer un nouveau pilote"
 msgid "Select a device:"
 msgstr "Sélectionnez un périphérique :"
 
-#: ../lib/network/netcenter.pm:55
+#: ../lib/network/netcenter.pm:40
 #, c-format
 msgid "Network Center"
 msgstr "Centre réseau"
 
-#: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
+#: ../lib/network/netcenter.pm:73 ../lib/network/netconnect.pm:212
 #, c-format
 msgid "Please select your network:"
 msgstr "Veuillez choisir votre réseau :"
 
-#: ../lib/network/netcenter.pm:76
+#: ../lib/network/netcenter.pm:78
 #, c-format
 msgid "Monitor"
 msgstr "Surveiller"

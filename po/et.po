@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-et\n"
-"POT-Creation-Date: 2007-08-28 11:27+0200\n"
+"POT-Creation-Date: 2007-09-15 08:58+0800\n"
 "PO-Revision-Date: 2007-09-01 16:11+0200\n"
 "Last-Translator: Marek Laane <bald@starman.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -88,7 +88,7 @@ msgstr "LAN-i seadistamine"
 msgid "Configure Local Area Network..."
 msgstr "Kohtvõrgu (LAN) seadistamine..."
 
-#: ../bin/drakconnect:157 ../bin/drakconnect:240 ../bin/draknfs:183
+#: ../bin/drakconnect:157 ../bin/drakconnect:240 ../bin/draknfs:186
 #: ../bin/net_applet:138
 #, c-format
 msgid "Help"
@@ -113,8 +113,8 @@ msgid "Ok"
 msgstr "Olgu"
 
 #: ../bin/drakconnect:164 ../bin/drakconnect:636 ../bin/drakgw:359
-#: ../bin/draksambashare:208 ../lib/network/drakroam.pm:200
-#: ../lib/network/drakroam.pm:250
+#: ../bin/draksambashare:211 ../lib/network/connection_manager.pm:132
+#: ../lib/network/connection_manager.pm:150
 #, c-format
 msgid "Please wait"
 msgstr "Palun oodake"
@@ -129,7 +129,7 @@ msgstr "Palun oodake... Rakendan seadistusi"
 msgid "Manage connections"
 msgstr "Ühenduste haldamine"
 
-#: ../bin/drakconnect:219 ../lib/network/drakroam.pm:346
+#: ../bin/drakconnect:219 ../lib/network/drakroam.pm:105
 #, c-format
 msgid "Device: "
 msgstr "Seade: "
@@ -183,7 +183,7 @@ msgstr "DHCP"
 msgid "DHCP client"
 msgstr "DHCP klient"
 
-#: ../bin/drakconnect:373 ../lib/network/connection/ethernet.pm:200
+#: ../bin/drakconnect:373 ../lib/network/connection/ethernet.pm:201
 #, c-format
 msgid "Assign host name from DHCP address"
 msgstr "Masinanimi omistatakse DHCP aadressist"
@@ -214,7 +214,7 @@ msgid "Get NTPD servers from DHCP"
 msgstr "NTPD-serverite hankimine DHCP-t"
 
 #: ../bin/drakconnect:406 ../lib/network/connection/wireless.pm:312
-#: ../lib/network/drakroam.pm:282
+#: ../lib/network/connection_manager.pm:190
 #, c-format
 msgid "Operating Mode"
 msgstr "Töörežiim"
@@ -280,7 +280,7 @@ msgstr "Käsu iwpriv lisaargumendid"
 msgid "Start at boot"
 msgstr "Käivitatakse alglaadimisel"
 
-#: ../bin/drakconnect:440 ../lib/network/connection/ethernet.pm:220
+#: ../bin/drakconnect:440 ../lib/network/connection/ethernet.pm:221
 #, c-format
 msgid "Network Hotplugging"
 msgstr "Võrgu kohene valmidus (hotplugging)"
@@ -301,7 +301,7 @@ msgstr "Ühenduse kiirus"
 msgid "Connection timeout (in sec)"
 msgstr "Ühenduse aegumine (sekundites)"
 
-#: ../bin/drakconnect:462 ../lib/network/connection.pm:165
+#: ../bin/drakconnect:462 ../lib/network/connection.pm:181
 #, c-format
 msgid "Metric"
 msgstr "Meetrika"
@@ -478,29 +478,30 @@ msgstr "Asukoht siinil"
 #: ../bin/drakconnect:676 ../bin/drakconnect:680 ../bin/drakconnect:689
 #: ../bin/drakconnect:705 ../bin/drakgw:184 ../bin/drakhosts:100
 #: ../bin/drakhosts:245 ../bin/drakhosts:252 ../bin/drakhosts:259
-#: ../bin/drakinvictus:72 ../bin/draknetprofile:113 ../bin/draknfs:85
-#: ../bin/draknfs:106 ../bin/draknfs:276 ../bin/draknfs:409 ../bin/draknfs:411
-#: ../bin/draknfs:414 ../bin/draknfs:506 ../bin/draknfs:513 ../bin/draknfs:576
-#: ../bin/draknfs:583 ../bin/draknfs:590 ../bin/draksambashare:373
-#: ../bin/draksambashare:380 ../bin/draksambashare:383
-#: ../bin/draksambashare:429 ../bin/draksambashare:453
-#: ../bin/draksambashare:519 ../bin/draksambashare:534
-#: ../bin/draksambashare:612 ../bin/draksambashare:679
-#: ../bin/draksambashare:779 ../bin/draksambashare:786
-#: ../bin/draksambashare:917 ../bin/draksambashare:1110
-#: ../bin/draksambashare:1119 ../bin/draksambashare:1141
-#: ../bin/draksambashare:1150 ../bin/draksambashare:1169
-#: ../bin/draksambashare:1178 ../bin/draksambashare:1190
-#: ../lib/network/connection/xdsl.pm:324 ../lib/network/drakroam.pm:50
-#: ../lib/network/drakroam.pm:56 ../lib/network/drakroam.pm:69
-#: ../lib/network/drakvpn.pm:45 ../lib/network/drakvpn.pm:52
-#: ../lib/network/ndiswrapper.pm:27 ../lib/network/ndiswrapper.pm:42
-#: ../lib/network/ndiswrapper.pm:86 ../lib/network/ndiswrapper.pm:102
-#: ../lib/network/netconnect.pm:131 ../lib/network/netconnect.pm:179
-#: ../lib/network/netconnect.pm:268 ../lib/network/netconnect.pm:813
-#: ../lib/network/thirdparty.pm:115 ../lib/network/thirdparty.pm:132
-#: ../lib/network/thirdparty.pm:215 ../lib/network/thirdparty.pm:217
-#: ../lib/network/thirdparty.pm:238
+#: ../bin/drakinvictus:72 ../bin/draknetprofile:113 ../bin/draknfs:88
+#: ../bin/draknfs:109 ../bin/draknfs:279 ../bin/draknfs:412 ../bin/draknfs:414
+#: ../bin/draknfs:417 ../bin/draknfs:509 ../bin/draknfs:516 ../bin/draknfs:579
+#: ../bin/draknfs:586 ../bin/draknfs:593 ../bin/draksambashare:376
+#: ../bin/draksambashare:383 ../bin/draksambashare:386
+#: ../bin/draksambashare:432 ../bin/draksambashare:456
+#: ../bin/draksambashare:522 ../bin/draksambashare:537
+#: ../bin/draksambashare:615 ../bin/draksambashare:682
+#: ../bin/draksambashare:782 ../bin/draksambashare:789
+#: ../bin/draksambashare:920 ../bin/draksambashare:1113
+#: ../bin/draksambashare:1122 ../bin/draksambashare:1144
+#: ../bin/draksambashare:1153 ../bin/draksambashare:1172
+#: ../bin/draksambashare:1181 ../bin/draksambashare:1193
+#: ../lib/network/connection/xdsl.pm:324
+#: ../lib/network/connection_manager.pm:41
+#: ../lib/network/connection_manager.pm:47
+#: ../lib/network/connection_manager.pm:60 ../lib/network/drakvpn.pm:45
+#: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:27
+#: ../lib/network/ndiswrapper.pm:42 ../lib/network/ndiswrapper.pm:86
+#: ../lib/network/ndiswrapper.pm:102 ../lib/network/netconnect.pm:131
+#: ../lib/network/netconnect.pm:179 ../lib/network/netconnect.pm:268
+#: ../lib/network/netconnect.pm:813 ../lib/network/thirdparty.pm:115
+#: ../lib/network/thirdparty.pm:132 ../lib/network/thirdparty.pm:215
+#: ../lib/network/thirdparty.pm:217 ../lib/network/thirdparty.pm:238
 #, c-format
 msgid "Error"
 msgstr "Viga"
@@ -1007,9 +1008,9 @@ msgstr "Masinanimi:"
 msgid "Host Aliases:"
 msgstr "Masina aliased:"
 
-#: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:209
-#: ../bin/draksambashare:230 ../bin/draksambashare:377
-#: ../bin/draksambashare:608 ../bin/draksambashare:775
+#: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:212
+#: ../bin/draksambashare:233 ../bin/draksambashare:380
+#: ../bin/draksambashare:611 ../bin/draksambashare:778
 #, c-format
 msgid "Error!"
 msgstr "Viga!"
@@ -1024,7 +1025,7 @@ msgstr "Palun andke sobiv IP-aadress."
 msgid "Same IP is already in %s file."
 msgstr "See IP esineb juba %s-failis."
 
-#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:202
+#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:203
 #, c-format
 msgid "Host name"
 msgstr "Masinanimi"
@@ -1044,8 +1045,8 @@ msgstr "Masina definitsioonide haldamine"
 msgid "Modify entry"
 msgstr "Kirje muutmine"
 
-#: ../bin/drakhosts:241 ../bin/draknfs:572 ../bin/draksambashare:1103
-#: ../bin/draksambashare:1134 ../bin/draksambashare:1165
+#: ../bin/drakhosts:241 ../bin/draknfs:575 ../bin/draksambashare:1106
+#: ../bin/draksambashare:1137 ../bin/draksambashare:1168
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Add"
@@ -1061,9 +1062,9 @@ msgstr "Kirje lisamine"
 msgid "Failed to add host."
 msgstr "Masina lisamine ebaõnnestus."
 
-#: ../bin/drakhosts:248 ../bin/draknfs:579 ../bin/draksambashare:1060
-#: ../bin/draksambashare:1105 ../bin/draksambashare:1136
-#: ../bin/draksambashare:1173
+#: ../bin/drakhosts:248 ../bin/draknfs:582 ../bin/draksambashare:1063
+#: ../bin/draksambashare:1108 ../bin/draksambashare:1139
+#: ../bin/draksambashare:1176
 #, c-format
 msgid "Modify"
 msgstr "Muuda"
@@ -1073,9 +1074,9 @@ msgstr "Muuda"
 msgid "Failed to Modify host."
 msgstr "Masina muutmine ebaõnnestus."
 
-#: ../bin/drakhosts:255 ../bin/drakids:87 ../bin/drakids:96 ../bin/draknfs:586
-#: ../bin/draksambashare:1061 ../bin/draksambashare:1113
-#: ../bin/draksambashare:1144 ../bin/draksambashare:1181
+#: ../bin/drakhosts:255 ../bin/drakids:87 ../bin/drakids:96 ../bin/draknfs:589
+#: ../bin/draksambashare:1064 ../bin/draksambashare:1116
+#: ../bin/draksambashare:1147 ../bin/draksambashare:1184
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Remove"
@@ -1087,7 +1088,8 @@ msgid "Failed to remove host."
 msgstr "Masina eemaldamine ebaõnnestus."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:147
-#: ../bin/net_applet:139 ../lib/network/drakroam.pm:353
+#: ../bin/net_applet:139 ../lib/network/drakroam.pm:114
+#: ../lib/network/netcenter.pm:123
 #, c-format
 msgid "Quit"
 msgstr "Välju"
@@ -1097,10 +1099,10 @@ msgstr "Välju"
 msgid "Allowed addresses"
 msgstr "Lubatud aadressid"
 
-#: ../bin/drakids:40 ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190
+#: ../bin/drakids:41 ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190
 #: ../bin/drakids:215 ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
-#: ../bin/net_applet:78 ../bin/net_applet:239 ../bin/net_applet:519
-#: ../bin/net_applet:546 ../lib/network/drakfirewall.pm:255
+#: ../bin/net_applet:78 ../bin/net_applet:239 ../bin/net_applet:522
+#: ../bin/net_applet:549 ../lib/network/drakfirewall.pm:255
 #: ../lib/network/drakfirewall.pm:258
 #, c-format
 msgid "Interactive Firewall"
@@ -1108,7 +1110,7 @@ msgstr "Interaktiivne tulemüür"
 
 #: ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190 ../bin/drakids:215
 #: ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
-#: ../bin/net_applet:239 ../bin/net_applet:519
+#: ../bin/net_applet:239 ../bin/net_applet:522
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "Ühendust deemoniga ei saadud"
@@ -1118,18 +1120,18 @@ msgstr "Ühendust deemoniga ei saadud"
 msgid "Log"
 msgstr "Logi"
 
-#: ../bin/drakids:78 ../bin/drakids:97 ../bin/net_applet:663
+#: ../bin/drakids:78 ../bin/drakids:97 ../bin/net_applet:666
 #, c-format
 msgid "Allow"
 msgstr "Lubatud"
 
-#: ../bin/drakids:79 ../bin/drakids:88 ../bin/net_applet:664
+#: ../bin/drakids:79 ../bin/drakids:88 ../bin/net_applet:667
 #, c-format
 msgid "Block"
 msgstr "Blokeeritud"
 
 #: ../bin/drakids:80 ../bin/drakids:89 ../bin/drakids:98 ../bin/drakids:109
-#: ../bin/drakids:122 ../bin/drakids:130 ../bin/draknfs:188
+#: ../bin/drakids:122 ../bin/drakids:130 ../bin/draknfs:191
 #: ../bin/net_monitor:120
 #, c-format
 msgid "Close"
@@ -1150,12 +1152,12 @@ msgstr "Blokeeritud teenused"
 msgid "Clear logs"
 msgstr "Kustuta logid"
 
-#: ../bin/drakids:107 ../bin/drakids:112 ../bin/net_applet:607
+#: ../bin/drakids:107 ../bin/drakids:112 ../bin/net_applet:610
 #, c-format
 msgid "Blacklist"
 msgstr "Must nimekiri"
 
-#: ../bin/drakids:108 ../bin/drakids:125 ../bin/net_applet:612
+#: ../bin/drakids:108 ../bin/drakids:125 ../bin/net_applet:615
 #, c-format
 msgid "Whitelist"
 msgstr "Valge nimekiri"
@@ -1356,89 +1358,89 @@ msgstr "Klooni"
 msgid "Delete"
 msgstr "Kustuta"
 
-#: ../bin/draknfs:41
+#: ../bin/draknfs:44
 #, c-format
 msgid "map root user as anonymous"
 msgstr "Administraatori sidumine anonüümsena"
 
-#: ../bin/draknfs:42
+#: ../bin/draknfs:45
 #, c-format
 msgid "map all users to anonymous user"
 msgstr "Kõigi kasutajate sidumine anonüümsena"
 
-#: ../bin/draknfs:43
+#: ../bin/draknfs:46
 #, c-format
 msgid "No user UID mapping"
 msgstr "Kasutaja UID-d ei seota"
 
-#: ../bin/draknfs:44
+#: ../bin/draknfs:47
 #, c-format
 msgid "allow real remote root access"
 msgstr "Administraatori kaugligipääsu lubamine"
 
-#: ../bin/draknfs:58 ../bin/draknfs:59 ../bin/draknfs:60
-#: ../bin/draksambashare:161 ../bin/draksambashare:162
-#: ../bin/draksambashare:163
+#: ../bin/draknfs:61 ../bin/draknfs:62 ../bin/draknfs:63
+#: ../bin/draksambashare:164 ../bin/draksambashare:165
+#: ../bin/draksambashare:166
 #, c-format
 msgid "/_File"
 msgstr "/_Fail"
 
-#: ../bin/draknfs:59 ../bin/draksambashare:162
+#: ../bin/draknfs:62 ../bin/draksambashare:165
 #, c-format
 msgid "/_Write conf"
 msgstr "/S_alvesta konfiguratsioon"
 
-#: ../bin/draknfs:60 ../bin/draksambashare:163
+#: ../bin/draknfs:63 ../bin/draksambashare:166
 #, c-format
 msgid "/_Quit"
 msgstr "/_Välju"
 
-#: ../bin/draknfs:60 ../bin/draksambashare:163
+#: ../bin/draknfs:63 ../bin/draksambashare:166
 #, c-format
 msgid "<control>Q"
 msgstr "<control>Q"
 
-#: ../bin/draknfs:63 ../bin/draknfs:64 ../bin/draknfs:65
+#: ../bin/draknfs:66 ../bin/draknfs:67 ../bin/draknfs:68
 #, c-format
 msgid "/_NFS Server"
 msgstr "/_NFS-server"
 
-#: ../bin/draknfs:64 ../bin/draksambashare:166
+#: ../bin/draknfs:67 ../bin/draksambashare:169
 #, c-format
 msgid "/_Restart"
 msgstr "/_Käivita uuesti"
 
-#: ../bin/draknfs:65 ../bin/draksambashare:167
+#: ../bin/draknfs:68 ../bin/draksambashare:170
 #, c-format
 msgid "/R_eload"
 msgstr "/_Laadi uuesti"
 
-#: ../bin/draknfs:84
+#: ../bin/draknfs:87
 #, c-format
 msgid "NFS server"
 msgstr "NFS-server"
 
-#: ../bin/draknfs:84
+#: ../bin/draknfs:87
 #, c-format
 msgid "Restarting/Reloading NFS server..."
 msgstr "NFS-serveri taaskäivitamine..."
 
-#: ../bin/draknfs:85
+#: ../bin/draknfs:88
 #, c-format
 msgid "Error Restarting/Reloading NFS server"
 msgstr "Viga NFS-serveri taaskäivitamisel"
 
-#: ../bin/draknfs:101 ../bin/draksambashare:225
+#: ../bin/draknfs:104 ../bin/draksambashare:228
 #, c-format
 msgid "Directory Selection"
 msgstr "Kataloogi valimine"
 
-#: ../bin/draknfs:106 ../bin/draksambashare:230
+#: ../bin/draknfs:109 ../bin/draksambashare:233
 #, c-format
 msgid "Should be a directory."
 msgstr "Peab olema kataloog."
 
-#: ../bin/draknfs:137
+#: ../bin/draknfs:140
 #, c-format
 msgid ""
 "<span weight=\"bold\">NFS clients</span> may be specified in a number of "
@@ -1484,7 +1486,7 @@ msgstr ""
 "eksportida kõigile masinatele IP-(alam-)võrgus korraga, lisades näiteks "
 "`/255.255.252.0' või `/22' võrgu baasaadressile.\n"
 
-#: ../bin/draknfs:152
+#: ../bin/draknfs:155
 #, c-format
 msgid ""
 "<span weight=\"bold\">User ID options</span>\n"
@@ -1530,32 +1532,32 @@ msgstr ""
 "<span foreground=\"royalblue3\">anonuid ja anongid:</span> anonüümse konto "
 "uid ja gid vahetu määramine.\n"
 
-#: ../bin/draknfs:168
+#: ../bin/draknfs:171
 #, c-format
 msgid "Synchronous access:"
 msgstr "Sünkroonne ligipääs:"
 
-#: ../bin/draknfs:169
+#: ../bin/draknfs:172
 #, c-format
 msgid "Secured Connection:"
 msgstr "Turvaline ühendus:"
 
-#: ../bin/draknfs:170
+#: ../bin/draknfs:173
 #, c-format
 msgid "Read-Only share:"
 msgstr "Kirjutuskaitstud ressurss:"
 
-#: ../bin/draknfs:171
+#: ../bin/draknfs:174
 #, c-format
 msgid "Subtree checking:"
 msgstr "Alampuu kontroll:"
 
-#: ../bin/draknfs:173
+#: ../bin/draknfs:176
 #, c-format
 msgid "Advanced Options"
 msgstr "Muud valikud"
 
-#: ../bin/draknfs:174
+#: ../bin/draknfs:177
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> this option requires that requests "
@@ -1566,7 +1568,7 @@ msgstr ""
 "Internetipordist, mis on väiksem kui IPPORT_RESERVED (1024). Vaikimisi on "
 "sisse lülitatud."
 
-#: ../bin/draknfs:175
+#: ../bin/draknfs:178
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> allow either only read or both "
@@ -1579,7 +1581,7 @@ msgstr ""
 "on keelatud kõik päringud, mis failisüsteemi muudavad. Seda saab antud "
 "valikuga ka vahetult määrata."
 
-#: ../bin/draknfs:176
+#: ../bin/draknfs:179
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> disallows the NFS server to "
@@ -1591,7 +1593,7 @@ msgstr ""
 "muudatused on salvestatud stabiilsele andmekandjale (nt. füüsilisele "
 "kettale)."
 
-#: ../bin/draknfs:177
+#: ../bin/draknfs:180
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> enable subtree checking which can "
@@ -1602,134 +1604,134 @@ msgstr ""
 "mõnel juhul suurendada turvalisust, aga samas vähendada töökindlust. "
 "Täpsemalt kõneleb sellest manuaalilehekülg exports(5)."
 
-#: ../bin/draknfs:182 ../bin/draksambashare:606 ../bin/draksambashare:773
+#: ../bin/draknfs:185 ../bin/draksambashare:609 ../bin/draksambashare:776
 #, c-format
 msgid "Information"
 msgstr "Info"
 
-#: ../bin/draknfs:263
+#: ../bin/draknfs:266
 #, c-format
 msgid "Directory"
 msgstr "Kataloog"
 
-#: ../bin/draknfs:267
+#: ../bin/draknfs:270
 #, c-format
 msgid "Draknfs entry"
 msgstr "Draknfs kirje"
 
-#: ../bin/draknfs:276
+#: ../bin/draknfs:279
 #, c-format
 msgid "Please add an NFS share to be able to modify it."
 msgstr "Palun lisage NFS-i ressurss, muidu ei saa seda muuta."
 
-#: ../bin/draknfs:365
+#: ../bin/draknfs:368
 #, c-format
 msgid "NFS directory"
 msgstr "NFS-kataloog"
 
-#: ../bin/draknfs:366 ../bin/draksambashare:361 ../bin/draksambashare:571
-#: ../bin/draksambashare:750
+#: ../bin/draknfs:369 ../bin/draksambashare:364 ../bin/draksambashare:574
+#: ../bin/draksambashare:753
 #, c-format
 msgid "Directory:"
 msgstr "Kataloog:"
 
-#: ../bin/draknfs:367
+#: ../bin/draknfs:370
 #, c-format
 msgid "Host access"
 msgstr "Masina ligipääs"
 
-#: ../bin/draknfs:368
+#: ../bin/draknfs:371
 #, c-format
 msgid "Access:"
 msgstr "Ligipääs:"
 
-#: ../bin/draknfs:369
+#: ../bin/draknfs:372
 #, c-format
 msgid "User ID Mapping"
 msgstr "Kasutaja ID sidumine"
 
-#: ../bin/draknfs:370
+#: ../bin/draknfs:373
 #, c-format
 msgid "User ID:"
 msgstr "Kasutaja ID:"
 
-#: ../bin/draknfs:371
+#: ../bin/draknfs:374
 #, c-format
 msgid "Anonymous user ID:"
 msgstr "Anonüümse kasutaja ID:"
 
-#: ../bin/draknfs:372
+#: ../bin/draknfs:375
 #, c-format
 msgid "Anonymous Group ID:"
 msgstr "Anonüümse grupi ID:"
 
-#: ../bin/draknfs:409
+#: ../bin/draknfs:412
 #, c-format
 msgid "Please specify a directory to share."
 msgstr "Palun määrake jagatav kataloog."
 
-#: ../bin/draknfs:411
+#: ../bin/draknfs:414
 #, c-format
 msgid "Can't create this directory."
 msgstr "Seda kataloogi ei saa luua."
 
-#: ../bin/draknfs:414
+#: ../bin/draknfs:417
 #, c-format
 msgid "You must specify hosts access."
 msgstr "Masina ligipääs tuleb määrata."
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, c-format
 msgid "Share Directory"
 msgstr "Jagatud kataloog"
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, c-format
 msgid "Hosts Wildcard"
 msgstr "Masinate metamärgid"
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, c-format
 msgid "General Options"
 msgstr "Üldised valikud"
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, c-format
 msgid "Custom Options"
 msgstr "Kohandatud valikud"
 
-#: ../bin/draknfs:506 ../bin/draksambashare:377 ../bin/draksambashare:608
-#: ../bin/draksambashare:775
+#: ../bin/draknfs:509 ../bin/draksambashare:380 ../bin/draksambashare:611
+#: ../bin/draksambashare:778
 #, c-format
 msgid "Please enter a directory to share."
 msgstr "Palun määrake jagatav kataloog."
 
-#: ../bin/draknfs:513
+#: ../bin/draknfs:516
 #, c-format
 msgid "Please use the modify button to set right access."
 msgstr "Palun kasutage ligipääsu määramiseks muutmisnuppu."
 
-#: ../bin/draknfs:528
+#: ../bin/draknfs:531
 #, c-format
 msgid "Manage NFS shares"
 msgstr "NFS-ressursside haldamine"
 
-#: ../bin/draknfs:567
+#: ../bin/draknfs:570
 #, c-format
 msgid "DrakNFS manage NFS shares"
 msgstr "DrakNFS - NFS-ressursside haldamine"
 
-#: ../bin/draknfs:576
+#: ../bin/draknfs:579
 #, c-format
 msgid "Failed to add NFS share."
 msgstr "NFS-ressursi lisamine ebaõnnestus."
 
-#: ../bin/draknfs:583
+#: ../bin/draknfs:586
 #, c-format
 msgid "Failed to Modify NFS share."
 msgstr "NFS-ressursi muutmine ebaõnnestus."
 
-#: ../bin/draknfs:590
+#: ../bin/draknfs:593
 #, c-format
 msgid "Failed to remove an NFS share."
 msgstr "NFS-ressursi eemaldamine ebaõnnestus."
@@ -1739,263 +1741,263 @@ msgstr "NFS-ressursi eemaldamine ebaõnnestus."
 msgid "You need to log out and back in again for changes to take effect"
 msgstr "Muudatuste rakendamiseks tuleb end uuesti sisse logida"
 
-#: ../bin/draksambashare:63
+#: ../bin/draksambashare:66
 #, c-format
 msgid "User name"
 msgstr "Kasutajanimi"
 
-#: ../bin/draksambashare:70
+#: ../bin/draksambashare:73
 #, c-format
 msgid "Share name"
 msgstr "Jagatav printer"
 
-#: ../bin/draksambashare:71
+#: ../bin/draksambashare:74
 #, c-format
 msgid "Share directory"
 msgstr "Jagatud kataloog"
 
-#: ../bin/draksambashare:72 ../bin/draksambashare:105
+#: ../bin/draksambashare:75 ../bin/draksambashare:108
 #, c-format
 msgid "Comment"
 msgstr "Kommentaar"
 
-#: ../bin/draksambashare:73 ../bin/draksambashare:106
+#: ../bin/draksambashare:76 ../bin/draksambashare:109
 #, c-format
 msgid "Browseable"
 msgstr "Lehitsemisõigus"
 
-#: ../bin/draksambashare:74
+#: ../bin/draksambashare:77
 #, c-format
 msgid "Public"
 msgstr "Avalik"
 
-#: ../bin/draksambashare:75 ../bin/draksambashare:111
+#: ../bin/draksambashare:78 ../bin/draksambashare:114
 #, c-format
 msgid "Writable"
 msgstr "Kirjutamisõigus"
 
-#: ../bin/draksambashare:76 ../bin/draksambashare:152
+#: ../bin/draksambashare:79 ../bin/draksambashare:155
 #, c-format
 msgid "Create mask"
 msgstr "Loomise mask"
 
-#: ../bin/draksambashare:77 ../bin/draksambashare:153
+#: ../bin/draksambashare:80 ../bin/draksambashare:156
 #, c-format
 msgid "Directory mask"
 msgstr "Kataloogi mask"
 
-#: ../bin/draksambashare:78
+#: ../bin/draksambashare:81
 #, c-format
 msgid "Read list"
 msgstr "Lugemisõigus"
 
-#: ../bin/draksambashare:79 ../bin/draksambashare:112
-#: ../bin/draksambashare:585
+#: ../bin/draksambashare:82 ../bin/draksambashare:115
+#: ../bin/draksambashare:588
 #, c-format
 msgid "Write list"
 msgstr "Kirjutamisõigus"
 
-#: ../bin/draksambashare:80 ../bin/draksambashare:144
+#: ../bin/draksambashare:83 ../bin/draksambashare:147
 #, c-format
 msgid "Admin users"
 msgstr "Adnimistraatorid"
 
-#: ../bin/draksambashare:81 ../bin/draksambashare:145
+#: ../bin/draksambashare:84 ../bin/draksambashare:148
 #, c-format
 msgid "Valid users"
 msgstr "Lubatud kasutajad"
 
-#: ../bin/draksambashare:82
+#: ../bin/draksambashare:85
 #, c-format
 msgid "Inherit Permissions"
 msgstr "Õiguste pärimine"
 
-#: ../bin/draksambashare:83 ../bin/draksambashare:146
+#: ../bin/draksambashare:86 ../bin/draksambashare:149
 #, c-format
 msgid "Hide dot files"
 msgstr "Punktiga failide peitmine"
 
-#: ../bin/draksambashare:84 ../bin/draksambashare:147
+#: ../bin/draksambashare:87 ../bin/draksambashare:150
 #, c-format
 msgid "Hide files"
 msgstr "Failide peitmine"
 
-#: ../bin/draksambashare:85 ../bin/draksambashare:151
+#: ../bin/draksambashare:88 ../bin/draksambashare:154
 #, c-format
 msgid "Preserve case"
 msgstr "Tõstu säilitamine"
 
-#: ../bin/draksambashare:86
+#: ../bin/draksambashare:89
 #, c-format
 msgid "Force create mode"
 msgstr "Kohustuslik loomise režiim"
 
-#: ../bin/draksambashare:87
+#: ../bin/draksambashare:90
 #, c-format
 msgid "Force group"
 msgstr "Kohustuslik grupp"
 
-#: ../bin/draksambashare:88 ../bin/draksambashare:150
+#: ../bin/draksambashare:91 ../bin/draksambashare:153
 #, c-format
 msgid "Default case"
 msgstr "Vaikimisi tõst"
 
-#: ../bin/draksambashare:103
+#: ../bin/draksambashare:106
 #, c-format
 msgid "Printer name"
 msgstr "Printeri nimi"
 
-#: ../bin/draksambashare:104
+#: ../bin/draksambashare:107
 #, c-format
 msgid "Path"
 msgstr "Asukoht"
 
-#: ../bin/draksambashare:107 ../bin/draksambashare:577
+#: ../bin/draksambashare:110 ../bin/draksambashare:580
 #, c-format
 msgid "Printable"
 msgstr "Trükkimisteenusega"
 
-#: ../bin/draksambashare:108
+#: ../bin/draksambashare:111
 #, c-format
 msgid "Print Command"
 msgstr "Trükkimiskäsk"
 
-#: ../bin/draksambashare:109
+#: ../bin/draksambashare:112
 #, c-format
 msgid "LPQ command"
 msgstr "LPQ käsk"
 
-#: ../bin/draksambashare:110
+#: ../bin/draksambashare:113
 #, c-format
 msgid "Guest ok"
 msgstr "Külalised lubatud"
 
-#: ../bin/draksambashare:113 ../bin/draksambashare:154
-#: ../bin/draksambashare:586
+#: ../bin/draksambashare:116 ../bin/draksambashare:157
+#: ../bin/draksambashare:589
 #, c-format
 msgid "Inherit permissions"
 msgstr "Õiguste pärimine"
 
-#: ../bin/draksambashare:114
+#: ../bin/draksambashare:117
 #, c-format
 msgid "Printing"
 msgstr "Trükkimine"
 
-#: ../bin/draksambashare:115
+#: ../bin/draksambashare:118
 #, c-format
 msgid "Create mode"
 msgstr "Loomise režiim"
 
-#: ../bin/draksambashare:116
+#: ../bin/draksambashare:119
 #, c-format
 msgid "Use client driver"
 msgstr "Kliendi draiveri kasutamine"
 
-#: ../bin/draksambashare:142
+#: ../bin/draksambashare:145
 #, c-format
 msgid "Read List"
 msgstr "Lugemisõigus"
 
-#: ../bin/draksambashare:143
+#: ../bin/draksambashare:146
 #, c-format
 msgid "Write List"
 msgstr "Kirjutamisõigus"
 
-#: ../bin/draksambashare:148
+#: ../bin/draksambashare:151
 #, c-format
 msgid "Force Group"
 msgstr "Kohustuslik grupp"
 
-#: ../bin/draksambashare:149
+#: ../bin/draksambashare:152
 #, c-format
 msgid "Force create group"
 msgstr "Kohustuslik loomise grupp"
 
-#: ../bin/draksambashare:165 ../bin/draksambashare:166
-#: ../bin/draksambashare:167
+#: ../bin/draksambashare:168 ../bin/draksambashare:169
+#: ../bin/draksambashare:170
 #, c-format
 msgid "/_Samba Server"
 msgstr "/_Samba server"
 
-#: ../bin/draksambashare:169 ../bin/draksambashare:170
+#: ../bin/draksambashare:172 ../bin/draksambashare:173
 #, c-format
 msgid "/_About"
 msgstr "/_Info"
 
-#: ../bin/draksambashare:169
+#: ../bin/draksambashare:172
 #, c-format
 msgid "/_Report Bug"
 msgstr "/_Vearaport"
 
-#: ../bin/draksambashare:170
+#: ../bin/draksambashare:173
 #, c-format
 msgid "/About..."
 msgstr "/Info..."
 
-#: ../bin/draksambashare:173
+#: ../bin/draksambashare:176
 #, c-format
 msgid "Draksambashare"
 msgstr "Draksambashare"
 
-#: ../bin/draksambashare:175
+#: ../bin/draksambashare:178
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Autoriõigus (C) %s: Mandriva"
 
-#: ../bin/draksambashare:177
+#: ../bin/draksambashare:180
 #, c-format
 msgid "This is a simple tool to easily manage Samba configuration."
 msgstr "See on lihtne tööriist Samba seadistuste hõlpsaks haldamiseks."
 
-#: ../bin/draksambashare:179
+#: ../bin/draksambashare:182
 #, c-format
 msgid "Mandriva Linux"
 msgstr "Mandriva Linux"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../bin/draksambashare:184
+#: ../bin/draksambashare:187
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Marek Laane <bald@starman.ee>\n"
 
-#: ../bin/draksambashare:208
+#: ../bin/draksambashare:211
 #, c-format
 msgid "Restarting/Reloading Samba server..."
 msgstr "Samba serveri taaskäivitamine..."
 
-#: ../bin/draksambashare:209
+#: ../bin/draksambashare:212
 #, c-format
 msgid "Error Restarting/Reloading Samba server"
 msgstr "Viga Samba serveri taaskäivitamisel"
 
-#: ../bin/draksambashare:349 ../bin/draksambashare:550
-#: ../bin/draksambashare:671
+#: ../bin/draksambashare:352 ../bin/draksambashare:553
+#: ../bin/draksambashare:674
 #, c-format
 msgid "Open"
 msgstr "Ava"
 
-#: ../bin/draksambashare:352
+#: ../bin/draksambashare:355
 #, c-format
 msgid "DrakSamba add entry"
 msgstr "DrakSamba kirje lisamine"
 
-#: ../bin/draksambashare:356
+#: ../bin/draksambashare:359
 #, c-format
 msgid "Add a share"
 msgstr "Ressursi lisamine"
 
-#: ../bin/draksambashare:359
+#: ../bin/draksambashare:362
 #, c-format
 msgid "Name of the share:"
 msgstr "Ressursi nimi:"
 
-#: ../bin/draksambashare:360 ../bin/draksambashare:570
-#: ../bin/draksambashare:751
+#: ../bin/draksambashare:363 ../bin/draksambashare:573
+#: ../bin/draksambashare:754
 #, c-format
 msgid "Comment:"
 msgstr "Kommentaar:"
 
-#: ../bin/draksambashare:373
+#: ../bin/draksambashare:376
 #, c-format
 msgid ""
 "Share with the same name already exist or share name empty, please choose "
@@ -2004,33 +2006,33 @@ msgstr ""
 "Sellise nimega jagatud ressurss on juba olemas või jätsite nime andmata. "
 "Palun valige uus nimi."
 
-#: ../bin/draksambashare:380
+#: ../bin/draksambashare:383
 #, c-format
 msgid "Can't create the directory, please enter a correct path."
 msgstr "Kataloogi ei õnnestunud luua, palun andke korrektne asukoht."
 
-#: ../bin/draksambashare:383 ../bin/draksambashare:606
-#: ../bin/draksambashare:773
+#: ../bin/draksambashare:386 ../bin/draksambashare:609
+#: ../bin/draksambashare:776
 #, c-format
 msgid "Please enter a Comment for this share."
 msgstr "Palun kirjutage jagatud ressursi kommentaar."
 
-#: ../bin/draksambashare:414
+#: ../bin/draksambashare:417
 #, c-format
 msgid "pdf-gen - a PDF generator"
 msgstr "pdf-gen - PDF-failide looja"
 
-#: ../bin/draksambashare:415
+#: ../bin/draksambashare:418
 #, c-format
 msgid "printers - all printers available"
 msgstr "prnterid - kõik saadaolevad printerid"
 
-#: ../bin/draksambashare:419
+#: ../bin/draksambashare:422
 #, c-format
 msgid "Add Special Printer share"
 msgstr "Spetsiaalse printeri ressursi lisamine"
 
-#: ../bin/draksambashare:422
+#: ../bin/draksambashare:425
 #, c-format
 msgid ""
 "Goal of this wizard is to easily create a new special printer Samba share."
@@ -2038,239 +2040,239 @@ msgstr ""
 "Selle nõustaja eesmärk on Samba spetsiaalse printeri ressurssi lihtne "
 "loomine."
 
-#: ../bin/draksambashare:429
+#: ../bin/draksambashare:432
 #, c-format
 msgid "A PDF generator already exists."
 msgstr "PDF-failide looja on juba olemas."
 
-#: ../bin/draksambashare:453
+#: ../bin/draksambashare:456
 #, c-format
 msgid "Printers and print$ already exist."
 msgstr "Printerid ja print$ on juba olemas."
 
-#: ../bin/draksambashare:503
+#: ../bin/draksambashare:506
 #, c-format
 msgid "Congratulations"
 msgstr "Õnnitleme!"
 
-#: ../bin/draksambashare:504
+#: ../bin/draksambashare:507
 #, c-format
 msgid "The wizard successfully added the printer Samba share"
 msgstr "Nõustaja lisas edukalt Samba printeriressursi"
 
-#: ../bin/draksambashare:519
+#: ../bin/draksambashare:522
 #, c-format
 msgid "Failed to add printers."
 msgstr "Printerite lisamine ebaõnnestus."
 
-#: ../bin/draksambashare:534
+#: ../bin/draksambashare:537
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
 msgstr "Palun lisage või valige Samba printeriressurss, et seda muuta."
 
-#: ../bin/draksambashare:553
+#: ../bin/draksambashare:556
 #, c-format
 msgid "DrakSamba Printers entry"
 msgstr "DrakSamba printerite kirje"
 
-#: ../bin/draksambashare:566
+#: ../bin/draksambashare:569
 #, c-format
 msgid "Printer share"
 msgstr "Printeriressurss"
 
-#: ../bin/draksambashare:569
+#: ../bin/draksambashare:572
 #, c-format
 msgid "Printer name:"
 msgstr "Printeri nimi:"
 
-#: ../bin/draksambashare:575 ../bin/draksambashare:756
+#: ../bin/draksambashare:578 ../bin/draksambashare:759
 #, c-format
 msgid "Writable:"
 msgstr "Kirjutamisõigus:"
 
-#: ../bin/draksambashare:576 ../bin/draksambashare:757
+#: ../bin/draksambashare:579 ../bin/draksambashare:760
 #, c-format
 msgid "Browseable:"
 msgstr "Lehitsemisõigus:"
 
-#: ../bin/draksambashare:581
+#: ../bin/draksambashare:584
 #, c-format
 msgid "Advanced options"
 msgstr "Muud valikud"
 
-#: ../bin/draksambashare:583
+#: ../bin/draksambashare:586
 #, c-format
 msgid "Printer access"
 msgstr "Printeri ligipääs"
 
-#: ../bin/draksambashare:587
+#: ../bin/draksambashare:590
 #, c-format
 msgid "Guest ok:"
 msgstr "Külalised lubatud:"
 
-#: ../bin/draksambashare:588
+#: ../bin/draksambashare:591
 #, c-format
 msgid "Create mode:"
 msgstr "Loomise režiim:"
 
-#: ../bin/draksambashare:592
+#: ../bin/draksambashare:595
 #, c-format
 msgid "Printer command"
 msgstr "Printeri käsk"
 
-#: ../bin/draksambashare:594
+#: ../bin/draksambashare:597
 #, c-format
 msgid "Print command:"
 msgstr "Trükkimiskäsk:"
 
-#: ../bin/draksambashare:595
+#: ../bin/draksambashare:598
 #, c-format
 msgid "LPQ command:"
 msgstr "LPQ käsk:"
 
-#: ../bin/draksambashare:596
+#: ../bin/draksambashare:599
 #, c-format
 msgid "Printing:"
 msgstr "Trükkimine"
 
-#: ../bin/draksambashare:612
+#: ../bin/draksambashare:615
 #, c-format
 msgid "create mode should be numeric. ie: 0755."
 msgstr "loomise režiim peab olema arv, nt. 9655."
 
-#: ../bin/draksambashare:674
+#: ../bin/draksambashare:677
 #, c-format
 msgid "DrakSamba entry"
 msgstr "DrakSamba kirje"
 
-#: ../bin/draksambashare:679
+#: ../bin/draksambashare:682
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
 msgstr "Palun lisage või valige Samba ressurss, et seda muuta."
 
-#: ../bin/draksambashare:702
+#: ../bin/draksambashare:705
 #, c-format
 msgid "Samba user access"
 msgstr "Samba kasutaja ligipääs"
 
-#: ../bin/draksambashare:710
+#: ../bin/draksambashare:713
 #, c-format
 msgid "Mask options"
 msgstr "Maski valikud"
 
-#: ../bin/draksambashare:724
+#: ../bin/draksambashare:727
 #, c-format
 msgid "Display options"
 msgstr "Kuvamise valikud"
 
-#: ../bin/draksambashare:746
+#: ../bin/draksambashare:749
 #, c-format
 msgid "Samba share directory"
 msgstr "Samba ressursi kataloog"
 
-#: ../bin/draksambashare:749
+#: ../bin/draksambashare:752
 #, c-format
 msgid "Share name:"
 msgstr "Ressursi nimi:"
 
-#: ../bin/draksambashare:755
+#: ../bin/draksambashare:758
 #, c-format
 msgid "Public:"
 msgstr "Avalik:"
 
-#: ../bin/draksambashare:779
+#: ../bin/draksambashare:782
 #, c-format
 msgid ""
 "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 "Loomise mask, loomise režiim ja kataloogi mask peavad olema arvud, nt. 0755."
 
-#: ../bin/draksambashare:786
+#: ../bin/draksambashare:789
 #, c-format
 msgid "Please create this Samba user: %s"
 msgstr "Palun looge Samba kasutaja: %s"
 
-#: ../bin/draksambashare:890
+#: ../bin/draksambashare:893
 #, c-format
 msgid "Add Samba user"
 msgstr "Lisa Samba kasutaja"
 
-#: ../bin/draksambashare:905
+#: ../bin/draksambashare:908
 #, c-format
 msgid "User information"
 msgstr "Kasutaja info"
 
-#: ../bin/draksambashare:907
+#: ../bin/draksambashare:910
 #, c-format
 msgid "User name:"
 msgstr "Kasutajanimi:"
 
-#: ../bin/draksambashare:908
+#: ../bin/draksambashare:911
 #, c-format
 msgid "Password:"
 msgstr "Parool:"
 
-#: ../bin/draksambashare:1022
+#: ../bin/draksambashare:1025
 #, c-format
 msgid "Manage Samba configuration"
 msgstr "Samba seadistuste haldamine"
 
-#: ../bin/draksambashare:1110
+#: ../bin/draksambashare:1113
 #, c-format
 msgid "Failed to Modify Samba share."
 msgstr "Samba ressursi muutmine ebaõnnestus."
 
-#: ../bin/draksambashare:1119
+#: ../bin/draksambashare:1122
 #, c-format
 msgid "Failed to remove a Samba share."
 msgstr "Samba ressursi eemaldamine ebaõnnestus."
 
-#: ../bin/draksambashare:1126
+#: ../bin/draksambashare:1129
 #, c-format
 msgid "File share"
 msgstr "Failiressurss"
 
-#: ../bin/draksambashare:1141
+#: ../bin/draksambashare:1144
 #, c-format
 msgid "Failed to Modify."
 msgstr "Muutmine ebaõnnestus."
 
-#: ../bin/draksambashare:1150
+#: ../bin/draksambashare:1153
 #, c-format
 msgid "Failed to remove."
 msgstr "Eemaldamine ebaõnnestus."
 
-#: ../bin/draksambashare:1157
+#: ../bin/draksambashare:1160
 #, c-format
 msgid "Printers"
 msgstr "Printerid"
 
-#: ../bin/draksambashare:1169
+#: ../bin/draksambashare:1172
 #, c-format
 msgid "Failed to add user."
 msgstr "Kasutaja lisamine ebaõnnestus."
 
-#: ../bin/draksambashare:1178
+#: ../bin/draksambashare:1181
 #, c-format
 msgid "Failed to change user password."
 msgstr "Kasutaja parooli muutmine ebaõnnestus."
 
-#: ../bin/draksambashare:1190
+#: ../bin/draksambashare:1193
 #, c-format
 msgid "Failed to delete user."
 msgstr "Kasutaja kustutamine ebaõnnestus."
 
-#: ../bin/draksambashare:1195
+#: ../bin/draksambashare:1198
 #, c-format
 msgid "Userdrake"
 msgstr "Userdrake"
 
-#: ../bin/draksambashare:1203
+#: ../bin/draksambashare:1206
 #, c-format
 msgid "Samba Users"
 msgstr "Samba kasutajad"
 
-#: ../bin/draksambashare:1212
+#: ../bin/draksambashare:1215
 #, c-format
 msgid "DrakSamba manage Samba shares"
 msgstr "DrakSamba - Samba ressursside haldamine"
@@ -3599,7 +3601,7 @@ msgstr "Aktiivsed liidesed"
 msgid "Profiles"
 msgstr "Profiilid"
 
-#: ../bin/net_applet:130 ../lib/network/connection.pm:149
+#: ../bin/net_applet:130 ../lib/network/connection.pm:165
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
@@ -3611,112 +3613,112 @@ msgstr "VPN-ühendus"
 msgid "Network connection"
 msgstr "Võrguühendus"
 
-#: ../bin/net_applet:443
+#: ../bin/net_applet:446
 #, c-format
 msgid "More networks"
 msgstr "Teised võrgud"
 
-#: ../bin/net_applet:470
+#: ../bin/net_applet:473
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "Interaktiivse tulemüüri automaatne režiim"
 
-#: ../bin/net_applet:475
+#: ../bin/net_applet:478
 #, c-format
 msgid "Always launch on startup"
 msgstr "Alati käivitatakse käivitumisel"
 
-#: ../bin/net_applet:480
+#: ../bin/net_applet:483
 #, c-format
 msgid "Wireless networks"
 msgstr "Traadita võrgud"
 
-#: ../bin/net_applet:487 ../bin/net_monitor:96
+#: ../bin/net_applet:490 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Seadistused"
 
-#: ../bin/net_applet:562
+#: ../bin/net_applet:565
 #, c-format
 msgid "Interactive Firewall: intrusion detected"
 msgstr "Interaktiivne tulemüür: tuvastati sissetung"
 
-#: ../bin/net_applet:579
+#: ../bin/net_applet:582
 #, c-format
 msgid "What do you want to do with this attacker?"
 msgstr "Mida selle ründajaga ette võtta?"
 
-#: ../bin/net_applet:582
+#: ../bin/net_applet:585
 #, c-format
 msgid "Attack details"
 msgstr "Rünnaku üksikasjad"
 
-#: ../bin/net_applet:586
+#: ../bin/net_applet:589
 #, c-format
 msgid "Attack time: %s"
 msgstr "Rünnaku aeg: %s"
 
-#: ../bin/net_applet:587
+#: ../bin/net_applet:590
 #, c-format
 msgid "Network interface: %s"
 msgstr "Võrguliides: %s"
 
-#: ../bin/net_applet:588
+#: ../bin/net_applet:591
 #, c-format
 msgid "Attack type: %s"
 msgstr "Rünnaku tüüp: %s"
 
-#: ../bin/net_applet:589
+#: ../bin/net_applet:592
 #, c-format
 msgid "Protocol: %s"
 msgstr "Protokoll: %s"
 
-#: ../bin/net_applet:590
+#: ../bin/net_applet:593
 #, c-format
 msgid "Attacker IP address: %s"
 msgstr "Ründaja IP-aadress: %s"
 
-#: ../bin/net_applet:591
+#: ../bin/net_applet:594
 #, c-format
 msgid "Attacker hostname: %s"
 msgstr "Ründaja masinanimi: %s"
 
-#: ../bin/net_applet:594
+#: ../bin/net_applet:597
 #, c-format
 msgid "Service attacked: %s"
 msgstr "Rünnatu teenus: %s"
 
-#: ../bin/net_applet:595
+#: ../bin/net_applet:598
 #, c-format
 msgid "Port attacked: %s"
 msgstr "Rünnatud port: %s"
 
-#: ../bin/net_applet:597
+#: ../bin/net_applet:600
 #, c-format
 msgid "Type of ICMP attack: %s"
 msgstr "ICMP rünnaku tüüp: %s"
 
-#: ../bin/net_applet:602
+#: ../bin/net_applet:605
 #, c-format
 msgid "Always blacklist (do not ask again)"
 msgstr "Lisatakse alati musta nimekirja (rohkem ei küsita)"
 
-#: ../bin/net_applet:617
+#: ../bin/net_applet:620
 #, c-format
 msgid "Ignore"
 msgstr "Ignoreeritakse"
 
-#: ../bin/net_applet:635 ../bin/net_applet:648
+#: ../bin/net_applet:638 ../bin/net_applet:651
 #, c-format
 msgid "Interactive Firewall: new service"
 msgstr "Interaktiivne tulemüür: uus teenus"
 
-#: ../bin/net_applet:658
+#: ../bin/net_applet:661
 #, c-format
 msgid "Do you want to open this service?"
 msgstr "Kas soovite selle teenuse avada?"
 
-#: ../bin/net_applet:661
+#: ../bin/net_applet:664
 #, c-format
 msgid "Remember this answer"
 msgstr "Vastus jäetakse meelde"
@@ -3860,44 +3862,44 @@ msgstr "Internetiühendus pole seadistatud"
 msgid "Unknown connection type"
 msgstr "Tundmatu ühenduse tüüp"
 
-#: ../lib/network/connection.pm:115
+#: ../lib/network/connection.pm:131
 #, c-format
 msgid "Network access settings"
 msgstr "Võrguligipääsu seadistused"
 
-#: ../lib/network/connection.pm:116
+#: ../lib/network/connection.pm:132
 #, c-format
 msgid "Access settings"
 msgstr "Ligipääsu seadistused"
 
-#: ../lib/network/connection.pm:117
+#: ../lib/network/connection.pm:133
 #, c-format
 msgid "Address settings"
 msgstr "Aadressi seadistused"
 
-#: ../lib/network/connection.pm:151 ../lib/network/connection/cable.pm:44
+#: ../lib/network/connection.pm:167 ../lib/network/connection/cable.pm:44
 #: ../lib/network/connection/wireless.pm:43 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "Puudub"
 
-#: ../lib/network/connection.pm:163
+#: ../lib/network/connection.pm:179
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr "Kasutajatel lubatakse ühendust hallata"
 
-#: ../lib/network/connection.pm:164
+#: ../lib/network/connection.pm:180
 #, c-format
 msgid "Start the connection at boot"
 msgstr "Ühendus käivitatakse arvuti käivitamisel"
 
-#: ../lib/network/connection.pm:230
+#: ../lib/network/connection.pm:246
 #, c-format
 msgid "Link detected on interface %s"
 msgstr "Link tuvastati liideses %s"
 
-#: ../lib/network/connection.pm:231 ../lib/network/connection/ethernet.pm:273
+#: ../lib/network/connection.pm:247 ../lib/network/connection/ethernet.pm:274
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "Link kaotati liideses %s"
@@ -4060,27 +4062,27 @@ msgstr "Hoiatus : IP-aadress %s on tavaliselt reserveeritud!"
 msgid "%s already in use\n"
 msgstr "%s on juba kasutusel\n"
 
-#: ../lib/network/connection/ethernet.pm:224
+#: ../lib/network/connection/ethernet.pm:225
 #, c-format
 msgid "Enable IPv6 to IPv4 tunnel"
 msgstr "IPv6->IPv4 tunneli lubamine"
 
-#: ../lib/network/connection/ethernet.pm:272
+#: ../lib/network/connection/ethernet.pm:273
 #, c-format
 msgid "Link beat detected on interface %s"
 msgstr "Link tuvastati liideses %s"
 
-#: ../lib/network/connection/ethernet.pm:275
+#: ../lib/network/connection/ethernet.pm:276
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
 msgstr "Võrguaadressi päring liideses %s (%s protokoll)..."
 
-#: ../lib/network/connection/ethernet.pm:276
+#: ../lib/network/connection/ethernet.pm:277
 #, c-format
 msgid "Got a network address on interface %s (%s protocol)"
 msgstr "Võrguaadress hangitud liideses %s (%s protokoll)"
 
-#: ../lib/network/connection/ethernet.pm:277
+#: ../lib/network/connection/ethernet.pm:278
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
 msgstr "Võrguaadressi hankimine liideses %s (%s protokoll) ebaõnnestus"
@@ -4692,12 +4694,18 @@ msgstr "Virtual Path ID (VPI):"
 msgid "Virtual Circuit ID (VCI):"
 msgstr "Virtual Circuit ID (VCI):"
 
-#: ../lib/network/connection/xdsl.pm:324 ../lib/network/drakroam.pm:50
-#: ../lib/network/drakvpn.pm:45 ../lib/network/netconnect.pm:131
-#: ../lib/network/thirdparty.pm:115
+#: ../lib/network/connection/xdsl.pm:324
+#: ../lib/network/connection_manager.pm:41 ../lib/network/drakvpn.pm:45
+#: ../lib/network/netconnect.pm:131 ../lib/network/thirdparty.pm:115
 #, c-format
 msgid "Could not install the packages (%s)!"
 msgstr "Pakette (%s) ei õnnestunud paigaldada!"
+
+#: ../lib/network/connection_manager.pm:53
+#: ../lib/network/connection_manager.pm:85
+#, fuzzy, c-format
+msgid "Network settings"
+msgstr "Võrguligipääsu seadistused"
 
 #: ../lib/network/connection_manager.pm:54
 #: ../lib/network/connection_manager.pm:86
@@ -4910,7 +4918,7 @@ msgstr ""
 msgid "Use Interactive Firewall"
 msgstr "Interaktiivse tulemüüri kasutamine"
 
-#: ../lib/network/drakroam.pm:29
+#: ../lib/network/drakroam.pm:22
 #, c-format
 msgid "No device found"
 msgstr "Seadet ei leitud"
@@ -4920,12 +4928,12 @@ msgstr "Seadet ei leitud"
 msgid "Hostname changed to \"%s\""
 msgstr "Masinanimeks sai \"%s\""
 
-#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:80
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:82
 #, c-format
 msgid "Configure"
 msgstr "Seadista"
 
-#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:85
+#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:87
 #, c-format
 msgid "Refresh"
 msgstr "Värskenda"
@@ -5135,17 +5143,17 @@ msgstr "Uue draiveri paigaldamine"
 msgid "Select a device:"
 msgstr "Seade:"
 
-#: ../lib/network/netcenter.pm:55
+#: ../lib/network/netcenter.pm:40
 #, c-format
 msgid "Network Center"
 msgstr "Võrgukeskus"
 
-#: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
+#: ../lib/network/netcenter.pm:73 ../lib/network/netconnect.pm:212
 #, c-format
 msgid "Please select your network:"
 msgstr "Palun valige võrk:"
 
-#: ../lib/network/netcenter.pm:76
+#: ../lib/network/netcenter.pm:78
 #, c-format
 msgid "Monitor"
 msgstr "Jälgi"

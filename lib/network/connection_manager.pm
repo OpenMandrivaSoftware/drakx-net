@@ -50,7 +50,7 @@ sub setup_connection {
     if ($cmanager->{connection}->can('get_hardware_settings')) {
         $cmanager->{connection}->guess_hardware_settings if $cmanager->{connection}->can('guess_hardware_settings');
         $cmanager->{in}->ask_from_({
-            title => "Network settings",
+            title => N("Network settings"),
             messages => N("Please enter settings for network")
         }, $cmanager->{connection}->get_hardware_settings) or return;
     }
@@ -82,7 +82,7 @@ sub configure_connection {
     load_settings($cmanager);
 
     $cmanager->{in}->ask_from_({
-        title => "Network settings",
+        title => N("Network settings"),
         messages => N("Please enter settings for network")
     },
                    [

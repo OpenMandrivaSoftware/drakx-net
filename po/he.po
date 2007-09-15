@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-tools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-28 11:27+0200\n"
+"POT-Creation-Date: 2007-09-15 08:58+0800\n"
 "PO-Revision-Date: 2007-09-10 00:43+0300\n"
 "Last-Translator: Dotan Kamber <kamberd@yahoo.com>\n"
 "Language-Team: Hebrew\n"
@@ -96,7 +96,7 @@ msgstr "הגדרת רשת מקומית"
 msgid "Configure Local Area Network..."
 msgstr "הגדרת רשת מקומית..."
 
-#: ../bin/drakconnect:157 ../bin/drakconnect:240 ../bin/draknfs:183
+#: ../bin/drakconnect:157 ../bin/drakconnect:240 ../bin/draknfs:186
 #: ../bin/net_applet:138
 #, c-format
 msgid "Help"
@@ -121,8 +121,8 @@ msgid "Ok"
 msgstr "אישור"
 
 #: ../bin/drakconnect:164 ../bin/drakconnect:636 ../bin/drakgw:359
-#: ../bin/draksambashare:208 ../lib/network/drakroam.pm:200
-#: ../lib/network/drakroam.pm:250
+#: ../bin/draksambashare:211 ../lib/network/connection_manager.pm:132
+#: ../lib/network/connection_manager.pm:150
 #, c-format
 msgid "Please wait"
 msgstr "נא להמתין"
@@ -137,7 +137,7 @@ msgstr "נא להמתין... מיישם את ההגדרות"
 msgid "Manage connections"
 msgstr "ניהול חיבורים"
 
-#: ../bin/drakconnect:219 ../lib/network/drakroam.pm:346
+#: ../bin/drakconnect:219 ../lib/network/drakroam.pm:105
 #, c-format
 msgid "Device: "
 msgstr "התקן: "
@@ -191,7 +191,7 @@ msgstr "DHCP"
 msgid "DHCP client"
 msgstr "לקוח DHCP"
 
-#: ../bin/drakconnect:373 ../lib/network/connection/ethernet.pm:200
+#: ../bin/drakconnect:373 ../lib/network/connection/ethernet.pm:201
 #, c-format
 msgid "Assign host name from DHCP address"
 msgstr "הקצאת שם מחשב לפי כתובת DHCP"
@@ -222,7 +222,7 @@ msgid "Get NTPD servers from DHCP"
 msgstr "השג רשימת שרתי NTPD דרך DHCP"
 
 #: ../bin/drakconnect:406 ../lib/network/connection/wireless.pm:312
-#: ../lib/network/drakroam.pm:282
+#: ../lib/network/connection_manager.pm:190
 #, c-format
 msgid "Operating Mode"
 msgstr "אופן פעולה"
@@ -288,7 +288,7 @@ msgstr "משתנים נוספים עבור פקודת lwpriv"
 msgid "Start at boot"
 msgstr "חיבור באתחול המערכת"
 
-#: ../bin/drakconnect:440 ../lib/network/connection/ethernet.pm:220
+#: ../bin/drakconnect:440 ../lib/network/connection/ethernet.pm:221
 #, c-format
 msgid "Network Hotplugging"
 msgstr "חיבור \"חם\" לרשת"
@@ -309,7 +309,7 @@ msgstr "מהירות חיבור"
 msgid "Connection timeout (in sec)"
 msgstr "תפוגת חיבור (בשניות)"
 
-#: ../bin/drakconnect:462 ../lib/network/connection.pm:165
+#: ../bin/drakconnect:462 ../lib/network/connection.pm:181
 #, c-format
 msgid "Metric"
 msgstr "מטרי"
@@ -486,29 +486,30 @@ msgstr "מיקום על הערוץ"
 #: ../bin/drakconnect:676 ../bin/drakconnect:680 ../bin/drakconnect:689
 #: ../bin/drakconnect:705 ../bin/drakgw:184 ../bin/drakhosts:100
 #: ../bin/drakhosts:245 ../bin/drakhosts:252 ../bin/drakhosts:259
-#: ../bin/drakinvictus:72 ../bin/draknetprofile:113 ../bin/draknfs:85
-#: ../bin/draknfs:106 ../bin/draknfs:276 ../bin/draknfs:409 ../bin/draknfs:411
-#: ../bin/draknfs:414 ../bin/draknfs:506 ../bin/draknfs:513 ../bin/draknfs:576
-#: ../bin/draknfs:583 ../bin/draknfs:590 ../bin/draksambashare:373
-#: ../bin/draksambashare:380 ../bin/draksambashare:383
-#: ../bin/draksambashare:429 ../bin/draksambashare:453
-#: ../bin/draksambashare:519 ../bin/draksambashare:534
-#: ../bin/draksambashare:612 ../bin/draksambashare:679
-#: ../bin/draksambashare:779 ../bin/draksambashare:786
-#: ../bin/draksambashare:917 ../bin/draksambashare:1110
-#: ../bin/draksambashare:1119 ../bin/draksambashare:1141
-#: ../bin/draksambashare:1150 ../bin/draksambashare:1169
-#: ../bin/draksambashare:1178 ../bin/draksambashare:1190
-#: ../lib/network/connection/xdsl.pm:324 ../lib/network/drakroam.pm:50
-#: ../lib/network/drakroam.pm:56 ../lib/network/drakroam.pm:69
-#: ../lib/network/drakvpn.pm:45 ../lib/network/drakvpn.pm:52
-#: ../lib/network/ndiswrapper.pm:27 ../lib/network/ndiswrapper.pm:42
-#: ../lib/network/ndiswrapper.pm:86 ../lib/network/ndiswrapper.pm:102
-#: ../lib/network/netconnect.pm:131 ../lib/network/netconnect.pm:179
-#: ../lib/network/netconnect.pm:268 ../lib/network/netconnect.pm:813
-#: ../lib/network/thirdparty.pm:115 ../lib/network/thirdparty.pm:132
-#: ../lib/network/thirdparty.pm:215 ../lib/network/thirdparty.pm:217
-#: ../lib/network/thirdparty.pm:238
+#: ../bin/drakinvictus:72 ../bin/draknetprofile:113 ../bin/draknfs:88
+#: ../bin/draknfs:109 ../bin/draknfs:279 ../bin/draknfs:412 ../bin/draknfs:414
+#: ../bin/draknfs:417 ../bin/draknfs:509 ../bin/draknfs:516 ../bin/draknfs:579
+#: ../bin/draknfs:586 ../bin/draknfs:593 ../bin/draksambashare:376
+#: ../bin/draksambashare:383 ../bin/draksambashare:386
+#: ../bin/draksambashare:432 ../bin/draksambashare:456
+#: ../bin/draksambashare:522 ../bin/draksambashare:537
+#: ../bin/draksambashare:615 ../bin/draksambashare:682
+#: ../bin/draksambashare:782 ../bin/draksambashare:789
+#: ../bin/draksambashare:920 ../bin/draksambashare:1113
+#: ../bin/draksambashare:1122 ../bin/draksambashare:1144
+#: ../bin/draksambashare:1153 ../bin/draksambashare:1172
+#: ../bin/draksambashare:1181 ../bin/draksambashare:1193
+#: ../lib/network/connection/xdsl.pm:324
+#: ../lib/network/connection_manager.pm:41
+#: ../lib/network/connection_manager.pm:47
+#: ../lib/network/connection_manager.pm:60 ../lib/network/drakvpn.pm:45
+#: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:27
+#: ../lib/network/ndiswrapper.pm:42 ../lib/network/ndiswrapper.pm:86
+#: ../lib/network/ndiswrapper.pm:102 ../lib/network/netconnect.pm:131
+#: ../lib/network/netconnect.pm:179 ../lib/network/netconnect.pm:268
+#: ../lib/network/netconnect.pm:813 ../lib/network/thirdparty.pm:115
+#: ../lib/network/thirdparty.pm:132 ../lib/network/thirdparty.pm:215
+#: ../lib/network/thirdparty.pm:217 ../lib/network/thirdparty.pm:238
 #, c-format
 msgid "Error"
 msgstr "שגיאה"
@@ -577,7 +578,8 @@ msgstr ""
 
 #: ../bin/drakconnect:752
 #, c-format
-msgid "Congratulations, the \"%s\" network interface has been successfully deleted"
+msgid ""
+"Congratulations, the \"%s\" network interface has been successfully deleted"
 msgstr "איחולינו! ממשק הרשת \"%s\" נמחק בהצלחה"
 
 #: ../bin/drakconnect:769
@@ -1015,9 +1017,9 @@ msgstr "שם מחשב מארח:"
 msgid "Host Aliases:"
 msgstr "כינויי מארח:"
 
-#: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:209
-#: ../bin/draksambashare:230 ../bin/draksambashare:377
-#: ../bin/draksambashare:608 ../bin/draksambashare:775
+#: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:212
+#: ../bin/draksambashare:233 ../bin/draksambashare:380
+#: ../bin/draksambashare:611 ../bin/draksambashare:778
 #, c-format
 msgid "Error!"
 msgstr "שגיאה!"
@@ -1032,7 +1034,7 @@ msgstr "עליך להגדיר כתובת IP תקנית."
 msgid "Same IP is already in %s file."
 msgstr "כתובת IP זו כבר מופיעה בקובץ %s."
 
-#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:202
+#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:203
 #, c-format
 msgid "Host name"
 msgstr "שם מארח"
@@ -1052,8 +1054,8 @@ msgstr "ניהול הגדרות מארחים"
 msgid "Modify entry"
 msgstr "שינוי מובאה"
 
-#: ../bin/drakhosts:241 ../bin/draknfs:572 ../bin/draksambashare:1103
-#: ../bin/draksambashare:1134 ../bin/draksambashare:1165
+#: ../bin/drakhosts:241 ../bin/draknfs:575 ../bin/draksambashare:1106
+#: ../bin/draksambashare:1137 ../bin/draksambashare:1168
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Add"
@@ -1069,9 +1071,9 @@ msgstr "הוספת מובאה"
 msgid "Failed to add host."
 msgstr "כשל בהוספת המארח."
 
-#: ../bin/drakhosts:248 ../bin/draknfs:579 ../bin/draksambashare:1060
-#: ../bin/draksambashare:1105 ../bin/draksambashare:1136
-#: ../bin/draksambashare:1173
+#: ../bin/drakhosts:248 ../bin/draknfs:582 ../bin/draksambashare:1063
+#: ../bin/draksambashare:1108 ../bin/draksambashare:1139
+#: ../bin/draksambashare:1176
 #, c-format
 msgid "Modify"
 msgstr "שינוי"
@@ -1081,9 +1083,9 @@ msgstr "שינוי"
 msgid "Failed to Modify host."
 msgstr "כשל בשינוי המארח."
 
-#: ../bin/drakhosts:255 ../bin/drakids:87 ../bin/drakids:96 ../bin/draknfs:586
-#: ../bin/draksambashare:1061 ../bin/draksambashare:1113
-#: ../bin/draksambashare:1144 ../bin/draksambashare:1181
+#: ../bin/drakhosts:255 ../bin/drakids:87 ../bin/drakids:96 ../bin/draknfs:589
+#: ../bin/draksambashare:1064 ../bin/draksambashare:1116
+#: ../bin/draksambashare:1147 ../bin/draksambashare:1184
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Remove"
@@ -1095,7 +1097,8 @@ msgid "Failed to remove host."
 msgstr "כשל בהסרת המארח."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:147
-#: ../bin/net_applet:139 ../lib/network/drakroam.pm:353
+#: ../bin/net_applet:139 ../lib/network/drakroam.pm:114
+#: ../lib/network/netcenter.pm:123
 #, c-format
 msgid "Quit"
 msgstr "יציאה"
@@ -1105,10 +1108,10 @@ msgstr "יציאה"
 msgid "Allowed addresses"
 msgstr "כתובות מותרות"
 
-#: ../bin/drakids:40 ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190
+#: ../bin/drakids:41 ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190
 #: ../bin/drakids:215 ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
-#: ../bin/net_applet:78 ../bin/net_applet:239 ../bin/net_applet:519
-#: ../bin/net_applet:546 ../lib/network/drakfirewall.pm:255
+#: ../bin/net_applet:78 ../bin/net_applet:239 ../bin/net_applet:522
+#: ../bin/net_applet:549 ../lib/network/drakfirewall.pm:255
 #: ../lib/network/drakfirewall.pm:258
 #, c-format
 msgid "Interactive Firewall"
@@ -1116,7 +1119,7 @@ msgstr "חומת אש אינטראקטיבית"
 
 #: ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190 ../bin/drakids:215
 #: ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
-#: ../bin/net_applet:239 ../bin/net_applet:519
+#: ../bin/net_applet:239 ../bin/net_applet:522
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "לא יכול להתחבר לתכנת הרקע"
@@ -1126,18 +1129,18 @@ msgstr "לא יכול להתחבר לתכנת הרקע"
 msgid "Log"
 msgstr "רישום"
 
-#: ../bin/drakids:78 ../bin/drakids:97 ../bin/net_applet:663
+#: ../bin/drakids:78 ../bin/drakids:97 ../bin/net_applet:666
 #, c-format
 msgid "Allow"
 msgstr "התר"
 
-#: ../bin/drakids:79 ../bin/drakids:88 ../bin/net_applet:664
+#: ../bin/drakids:79 ../bin/drakids:88 ../bin/net_applet:667
 #, c-format
 msgid "Block"
 msgstr "חסום"
 
 #: ../bin/drakids:80 ../bin/drakids:89 ../bin/drakids:98 ../bin/drakids:109
-#: ../bin/drakids:122 ../bin/drakids:130 ../bin/draknfs:188
+#: ../bin/drakids:122 ../bin/drakids:130 ../bin/draknfs:191
 #: ../bin/net_monitor:120
 #, c-format
 msgid "Close"
@@ -1158,12 +1161,12 @@ msgstr "שירותים חסומים"
 msgid "Clear logs"
 msgstr "נקה דו\"חות"
 
-#: ../bin/drakids:107 ../bin/drakids:112 ../bin/net_applet:607
+#: ../bin/drakids:107 ../bin/drakids:112 ../bin/net_applet:610
 #, c-format
 msgid "Blacklist"
 msgstr "רשימה שחורה"
 
-#: ../bin/drakids:108 ../bin/drakids:125 ../bin/net_applet:612
+#: ../bin/drakids:108 ../bin/drakids:125 ../bin/net_applet:615
 #, c-format
 msgid "Whitelist"
 msgstr "רשימה לבנה"
@@ -1360,89 +1363,89 @@ msgstr "שכפל"
 msgid "Delete"
 msgstr "מחיקה"
 
-#: ../bin/draknfs:41
+#: ../bin/draknfs:44
 #, c-format
 msgid "map root user as anonymous"
 msgstr "מפה את משתמש העל כאנונימי"
 
-#: ../bin/draknfs:42
+#: ../bin/draknfs:45
 #, c-format
 msgid "map all users to anonymous user"
 msgstr "מפה את כל המשתמשים למשתמש אנונימי"
 
-#: ../bin/draknfs:43
+#: ../bin/draknfs:46
 #, c-format
 msgid "No user UID mapping"
 msgstr "אין מיפוי ל-UID של משתמש"
 
-#: ../bin/draknfs:44
+#: ../bin/draknfs:47
 #, c-format
 msgid "allow real remote root access"
 msgstr "התר גישת משתמש-על מרוחקת אמיתית"
 
-#: ../bin/draknfs:58 ../bin/draknfs:59 ../bin/draknfs:60
-#: ../bin/draksambashare:161 ../bin/draksambashare:162
-#: ../bin/draksambashare:163
+#: ../bin/draknfs:61 ../bin/draknfs:62 ../bin/draknfs:63
+#: ../bin/draksambashare:164 ../bin/draksambashare:165
+#: ../bin/draksambashare:166
 #, c-format
 msgid "/_File"
 msgstr "/_קובץ"
 
-#: ../bin/draknfs:59 ../bin/draksambashare:162
+#: ../bin/draknfs:62 ../bin/draksambashare:165
 #, c-format
 msgid "/_Write conf"
 msgstr "/_כתוב הגדרה"
 
-#: ../bin/draknfs:60 ../bin/draksambashare:163
+#: ../bin/draknfs:63 ../bin/draksambashare:166
 #, c-format
 msgid "/_Quit"
 msgstr "/_יציאה"
 
-#: ../bin/draknfs:60 ../bin/draksambashare:163
+#: ../bin/draknfs:63 ../bin/draksambashare:166
 #, c-format
 msgid "<control>Q"
 msgstr "<control>Q"
 
-#: ../bin/draknfs:63 ../bin/draknfs:64 ../bin/draknfs:65
+#: ../bin/draknfs:66 ../bin/draknfs:67 ../bin/draknfs:68
 #, c-format
 msgid "/_NFS Server"
 msgstr "/שרתי _NFS"
 
-#: ../bin/draknfs:64 ../bin/draksambashare:166
+#: ../bin/draknfs:67 ../bin/draksambashare:169
 #, c-format
 msgid "/_Restart"
 msgstr "/_אתחל"
 
-#: ../bin/draknfs:65 ../bin/draksambashare:167
+#: ../bin/draknfs:68 ../bin/draksambashare:170
 #, c-format
 msgid "/R_eload"
 msgstr "/טען _מחדש"
 
-#: ../bin/draknfs:84
+#: ../bin/draknfs:87
 #, c-format
 msgid "NFS server"
 msgstr "שרת NFS"
 
-#: ../bin/draknfs:84
+#: ../bin/draknfs:87
 #, c-format
 msgid "Restarting/Reloading NFS server..."
 msgstr "מאתחל/טוען מחדש את שרת ה-NFS..."
 
-#: ../bin/draknfs:85
+#: ../bin/draknfs:88
 #, c-format
 msgid "Error Restarting/Reloading NFS server"
 msgstr "חלה שגיאה בעת אתחול/טעינה מחדש של שרת ה-NFS"
 
-#: ../bin/draknfs:101 ../bin/draksambashare:225
+#: ../bin/draknfs:104 ../bin/draksambashare:228
 #, c-format
 msgid "Directory Selection"
 msgstr "בחירת ספריה"
 
-#: ../bin/draknfs:106 ../bin/draksambashare:230
+#: ../bin/draknfs:109 ../bin/draksambashare:233
 #, c-format
 msgid "Should be a directory."
 msgstr "צריך להיות ספריה."
 
-#: ../bin/draknfs:137
+#: ../bin/draknfs:140
 #, c-format
 msgid ""
 "<span weight=\"bold\">NFS clients</span> may be specified in a number of "
@@ -1488,7 +1491,7 @@ msgstr ""
 "המארחים ב(תת-)רשת IP באופן סימולטני. לדוגמה, גם `/255.255.252.0' וגם `/22'  "
 "מתוספים לבסיס כתובת הרת.\n"
 
-#: ../bin/draknfs:152
+#: ../bin/draknfs:155
 #, c-format
 msgid ""
 "<span weight=\"bold\">User ID options</span>\n"
@@ -1534,32 +1537,32 @@ msgstr ""
 "<span foreground=\"royalblue3\">anonuid ו-anongid:</span> הגדרה מפורשת של ה-"
 "uid וה-gid של החשבון האנונימי.\n"
 
-#: ../bin/draknfs:168
+#: ../bin/draknfs:171
 #, c-format
 msgid "Synchronous access:"
 msgstr "גישה סינכרונית:"
 
-#: ../bin/draknfs:169
+#: ../bin/draknfs:172
 #, c-format
 msgid "Secured Connection:"
 msgstr "חיבור מאובטח:"
 
-#: ../bin/draknfs:170
+#: ../bin/draknfs:173
 #, c-format
 msgid "Read-Only share:"
 msgstr "שיתוף לקריאה בלבד:"
 
-#: ../bin/draknfs:171
+#: ../bin/draknfs:174
 #, c-format
 msgid "Subtree checking:"
 msgstr "בדיקת תתי-עצים:"
 
-#: ../bin/draknfs:173
+#: ../bin/draknfs:176
 #, c-format
 msgid "Advanced Options"
 msgstr "אפשרויות מתקדמות"
 
-#: ../bin/draknfs:174
+#: ../bin/draknfs:177
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> this option requires that requests "
@@ -1569,7 +1572,7 @@ msgstr ""
 "<span foreground=\"royalblue3\">%s</span> אפשרות זו מחייבת שבקשות יצאו בשער "
 "אינטרנט קטן מ- IPPORT_RESERVED (1024). אפשרות זו מופעלת כברירת מחדל."
 
-#: ../bin/draknfs:175
+#: ../bin/draknfs:178
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> allow either only read or both "
@@ -1581,7 +1584,7 @@ msgstr ""
 "בלבד בחלק זה של NFS. ברירת המחדל היא לא לאפשר אף בקשה המשנה את מערכת הקבצים. "
 "דבר זה יכול להתבצע גם באופן מפורש בעזרת אפשרות זו."
 
-#: ../bin/draknfs:176
+#: ../bin/draknfs:179
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> disallows the NFS server to "
@@ -1592,142 +1595,145 @@ msgstr ""
 "פרוטוקול ה-NFS ומשיב לבקשות לפני שהועבר שינוי כלשהו על ידי בקשות אלו לאיכסון "
 "יציב (לדוגמה כונן קשיח)."
 
-#: ../bin/draknfs:177
+#: ../bin/draknfs:180
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> enable subtree checking which can "
 "help improve security in some cases, but can decrease reliability. See "
 "exports(5) man page for more details."
-msgstr "<span foreground=\"royalblue3\">%s</span> מאפשר בדיקת תתי-עצים שיכולה לשפר את האבטחה בחלק מהמקרים אך יכולה גם לפגוע באמינותץ מידע נוסף ניתן למצוא בדף המידע exports(5)."
+msgstr ""
+"<span foreground=\"royalblue3\">%s</span> מאפשר בדיקת תתי-עצים שיכולה לשפר "
+"את האבטחה בחלק מהמקרים אך יכולה גם לפגוע באמינותץ מידע נוסף ניתן למצוא בדף "
+"המידע exports(5)."
 
-#: ../bin/draknfs:182 ../bin/draksambashare:606 ../bin/draksambashare:773
+#: ../bin/draknfs:185 ../bin/draksambashare:609 ../bin/draksambashare:776
 #, c-format
 msgid "Information"
 msgstr "מידע"
 
-#: ../bin/draknfs:263
+#: ../bin/draknfs:266
 #, c-format
 msgid "Directory"
 msgstr "ספרייה"
 
-#: ../bin/draknfs:267
+#: ../bin/draknfs:270
 #, c-format
 msgid "Draknfs entry"
 msgstr "מובאת Draknfs"
 
-#: ../bin/draknfs:276
+#: ../bin/draknfs:279
 #, c-format
 msgid "Please add an NFS share to be able to modify it."
 msgstr "נא להוסיף שיתוף NFS כדי שניתן יהיה לשנותו."
 
-#: ../bin/draknfs:365
+#: ../bin/draknfs:368
 #, c-format
 msgid "NFS directory"
 msgstr "ספריית NFS"
 
-#: ../bin/draknfs:366 ../bin/draksambashare:361 ../bin/draksambashare:571
-#: ../bin/draksambashare:750
+#: ../bin/draknfs:369 ../bin/draksambashare:364 ../bin/draksambashare:574
+#: ../bin/draksambashare:753
 #, c-format
 msgid "Directory:"
 msgstr "ספריה:"
 
-#: ../bin/draknfs:367
+#: ../bin/draknfs:370
 #, c-format
 msgid "Host access"
 msgstr "גישת מארח"
 
-#: ../bin/draknfs:368
+#: ../bin/draknfs:371
 #, c-format
 msgid "Access:"
 msgstr "גישה:"
 
-#: ../bin/draknfs:369
+#: ../bin/draknfs:372
 #, c-format
 msgid "User ID Mapping"
 msgstr "מיפוי זהוי משתמש"
 
-#: ../bin/draknfs:370
+#: ../bin/draknfs:373
 #, c-format
 msgid "User ID:"
 msgstr "זיהוי משתמש:"
 
-#: ../bin/draknfs:371
+#: ../bin/draknfs:374
 #, c-format
 msgid "Anonymous user ID:"
 msgstr "זהוי משתמש אנונימי:"
 
-#: ../bin/draknfs:372
+#: ../bin/draknfs:375
 #, c-format
 msgid "Anonymous Group ID:"
 msgstr "זיהוי קבוצה אנונימית:"
 
-#: ../bin/draknfs:409
+#: ../bin/draknfs:412
 #, c-format
 msgid "Please specify a directory to share."
 msgstr "נא לציין ספריה לשיתוף."
 
-#: ../bin/draknfs:411
+#: ../bin/draknfs:414
 #, c-format
 msgid "Can't create this directory."
 msgstr "לא יכול ליצור ספריה זו."
 
-#: ../bin/draknfs:414
+#: ../bin/draknfs:417
 #, c-format
 msgid "You must specify hosts access."
 msgstr "עליך לציין גישת מארחים."
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, c-format
 msgid "Share Directory"
 msgstr "ספריית שיתוף"
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, c-format
 msgid "Hosts Wildcard"
 msgstr "תוים חופשיים למארחים"
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, c-format
 msgid "General Options"
 msgstr "אפשרויות כלליות"
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, c-format
 msgid "Custom Options"
 msgstr "אפשרויות מותאמות אישית"
 
-#: ../bin/draknfs:506 ../bin/draksambashare:377 ../bin/draksambashare:608
-#: ../bin/draksambashare:775
+#: ../bin/draknfs:509 ../bin/draksambashare:380 ../bin/draksambashare:611
+#: ../bin/draksambashare:778
 #, c-format
 msgid "Please enter a directory to share."
 msgstr "נא להכניס ספריה לשיתוף."
 
-#: ../bin/draknfs:513
+#: ../bin/draknfs:516
 #, c-format
 msgid "Please use the modify button to set right access."
 msgstr "נא להשתמש בכפתור השינוי להגדרת גישה."
 
-#: ../bin/draknfs:528
+#: ../bin/draknfs:531
 #, c-format
 msgid "Manage NFS shares"
 msgstr "ניהול שיתופי NFS"
 
-#: ../bin/draknfs:567
+#: ../bin/draknfs:570
 #, c-format
 msgid "DrakNFS manage NFS shares"
 msgstr "DrakNFS מנהל שיתופי NFS"
 
-#: ../bin/draknfs:576
+#: ../bin/draknfs:579
 #, c-format
 msgid "Failed to add NFS share."
 msgstr "כשל בהוספת שיתוף NFS."
 
-#: ../bin/draknfs:583
+#: ../bin/draknfs:586
 #, c-format
 msgid "Failed to Modify NFS share."
 msgstr "כשל בשינוי שיתוף ה-NFS."
 
-#: ../bin/draknfs:590
+#: ../bin/draknfs:593
 #, c-format
 msgid "Failed to remove an NFS share."
 msgstr "כשל בהסרת שיתוף NFS."
@@ -1737,531 +1743,533 @@ msgstr "כשל בהסרת שיתוף NFS."
 msgid "You need to log out and back in again for changes to take effect"
 msgstr "עליך לצאת ולהכנס חזרה כדי שהשינויים יכנסו לתוקפם"
 
-#: ../bin/draksambashare:63
+#: ../bin/draksambashare:66
 #, c-format
 msgid "User name"
 msgstr "שם משתמש"
 
-#: ../bin/draksambashare:70
+#: ../bin/draksambashare:73
 #, c-format
 msgid "Share name"
 msgstr "שם השיתוף"
 
-#: ../bin/draksambashare:71
+#: ../bin/draksambashare:74
 #, fuzzy, c-format
 msgid "Share directory"
 msgstr "ספריית שיתוף"
 
-#: ../bin/draksambashare:72 ../bin/draksambashare:105
+#: ../bin/draksambashare:75 ../bin/draksambashare:108
 #, c-format
 msgid "Comment"
 msgstr "הערה"
 
-#: ../bin/draksambashare:73 ../bin/draksambashare:106
+#: ../bin/draksambashare:76 ../bin/draksambashare:109
 #, c-format
 msgid "Browseable"
 msgstr "בר עיון"
 
-#: ../bin/draksambashare:74
+#: ../bin/draksambashare:77
 #, c-format
 msgid "Public"
 msgstr "ציבורי"
 
-#: ../bin/draksambashare:75 ../bin/draksambashare:111
+#: ../bin/draksambashare:78 ../bin/draksambashare:114
 #, c-format
 msgid "Writable"
 msgstr "ניתן לכתיבה"
 
-#: ../bin/draksambashare:76 ../bin/draksambashare:152
+#: ../bin/draksambashare:79 ../bin/draksambashare:155
 #, c-format
 msgid "Create mask"
 msgstr "יצירת מסיכה"
 
-#: ../bin/draksambashare:77 ../bin/draksambashare:153
+#: ../bin/draksambashare:80 ../bin/draksambashare:156
 #, c-format
 msgid "Directory mask"
 msgstr "מיסוך ספרייה"
 
-#: ../bin/draksambashare:78
+#: ../bin/draksambashare:81
 #, c-format
 msgid "Read list"
 msgstr "קרא רשימה"
 
-#: ../bin/draksambashare:79 ../bin/draksambashare:112
-#: ../bin/draksambashare:585
+#: ../bin/draksambashare:82 ../bin/draksambashare:115
+#: ../bin/draksambashare:588
 #, c-format
 msgid "Write list"
 msgstr "כתוב רשימה"
 
-#: ../bin/draksambashare:80 ../bin/draksambashare:144
+#: ../bin/draksambashare:83 ../bin/draksambashare:147
 #, c-format
 msgid "Admin users"
 msgstr "משתמשים מנהלים"
 
-#: ../bin/draksambashare:81 ../bin/draksambashare:145
+#: ../bin/draksambashare:84 ../bin/draksambashare:148
 #, c-format
 msgid "Valid users"
 msgstr "משתמשים תקפים"
 
-#: ../bin/draksambashare:82
+#: ../bin/draksambashare:85
 #, c-format
 msgid "Inherit Permissions"
 msgstr "קבל הרשאות בירושה"
 
-#: ../bin/draksambashare:83 ../bin/draksambashare:146
+#: ../bin/draksambashare:86 ../bin/draksambashare:149
 #, c-format
 msgid "Hide dot files"
 msgstr "הסתר קבצים המתחילים בנקודה"
 
-#: ../bin/draksambashare:84 ../bin/draksambashare:147
+#: ../bin/draksambashare:87 ../bin/draksambashare:150
 #, c-format
 msgid "Hide files"
 msgstr "הסתר קבצים"
 
-#: ../bin/draksambashare:85 ../bin/draksambashare:151
+#: ../bin/draksambashare:88 ../bin/draksambashare:154
 #, c-format
 msgid "Preserve case"
 msgstr "שמר גודל אותיות"
 
-#: ../bin/draksambashare:86
+#: ../bin/draksambashare:89
 #, c-format
 msgid "Force create mode"
 msgstr "הכרח מצב יצירה"
 
-#: ../bin/draksambashare:87
+#: ../bin/draksambashare:90
 #, c-format
 msgid "Force group"
 msgstr "הכרח קבוצה"
 
-#: ../bin/draksambashare:88 ../bin/draksambashare:150
+#: ../bin/draksambashare:91 ../bin/draksambashare:153
 #, c-format
 msgid "Default case"
 msgstr "גודל ברירת המחדל"
 
-#: ../bin/draksambashare:103
+#: ../bin/draksambashare:106
 #, c-format
 msgid "Printer name"
 msgstr "שם מדפסת"
 
-#: ../bin/draksambashare:104
+#: ../bin/draksambashare:107
 #, c-format
 msgid "Path"
 msgstr "נתיב"
 
-#: ../bin/draksambashare:107 ../bin/draksambashare:577
+#: ../bin/draksambashare:110 ../bin/draksambashare:580
 #, c-format
 msgid "Printable"
 msgstr "ניתן להדפסה"
 
-#: ../bin/draksambashare:108
+#: ../bin/draksambashare:111
 #, c-format
 msgid "Print Command"
 msgstr "פקודת הדפסה"
 
-#: ../bin/draksambashare:109
+#: ../bin/draksambashare:112
 #, c-format
 msgid "LPQ command"
 msgstr "פקודת LPQ"
 
-#: ../bin/draksambashare:110
+#: ../bin/draksambashare:113
 #, c-format
 msgid "Guest ok"
 msgstr "אפשר כניסת אורחים"
 
-#: ../bin/draksambashare:113 ../bin/draksambashare:154
-#: ../bin/draksambashare:586
+#: ../bin/draksambashare:116 ../bin/draksambashare:157
+#: ../bin/draksambashare:589
 #, c-format
 msgid "Inherit permissions"
 msgstr "קבל הרשאות בירושה"
 
-#: ../bin/draksambashare:114
+#: ../bin/draksambashare:117
 #, c-format
 msgid "Printing"
 msgstr "הדפסה"
 
-#: ../bin/draksambashare:115
+#: ../bin/draksambashare:118
 #, c-format
 msgid "Create mode"
 msgstr "אופן יצירה"
 
-#: ../bin/draksambashare:116
+#: ../bin/draksambashare:119
 #, c-format
 msgid "Use client driver"
 msgstr "השתמש בהתקן ההינע של הלקוח"
 
-#: ../bin/draksambashare:142
+#: ../bin/draksambashare:145
 #, c-format
 msgid "Read List"
 msgstr "קרא רשימה"
 
-#: ../bin/draksambashare:143
+#: ../bin/draksambashare:146
 #, c-format
 msgid "Write List"
 msgstr "כתוב רשימה"
 
-#: ../bin/draksambashare:148
+#: ../bin/draksambashare:151
 #, c-format
 msgid "Force Group"
 msgstr "הכרח קבוצה"
 
-#: ../bin/draksambashare:149
+#: ../bin/draksambashare:152
 #, fuzzy, c-format
 msgid "Force create group"
 msgstr "הכרח קבוצת יצירה"
 
-#: ../bin/draksambashare:165 ../bin/draksambashare:166
-#: ../bin/draksambashare:167
+#: ../bin/draksambashare:168 ../bin/draksambashare:169
+#: ../bin/draksambashare:170
 #, c-format
 msgid "/_Samba Server"
 msgstr "/_שרת סמבה"
 
-#: ../bin/draksambashare:169 ../bin/draksambashare:170
+#: ../bin/draksambashare:172 ../bin/draksambashare:173
 #, c-format
 msgid "/_About"
 msgstr "/_אודות"
 
-#: ../bin/draksambashare:169
+#: ../bin/draksambashare:172
 #, c-format
 msgid "/_Report Bug"
 msgstr "/_דיווח באג"
 
-#: ../bin/draksambashare:170
+#: ../bin/draksambashare:173
 #, c-format
 msgid "/About..."
 msgstr "/אודות"
 
-#: ../bin/draksambashare:173
+#: ../bin/draksambashare:176
 #, c-format
 msgid "Draksambashare"
 msgstr "Draksambashare"
 
-#: ../bin/draksambashare:175
+#: ../bin/draksambashare:178
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "זכויות היוצרים (C) %s שייכות למנדריבה"
 
-#: ../bin/draksambashare:177
+#: ../bin/draksambashare:180
 #, c-format
 msgid "This is a simple tool to easily manage Samba configuration."
 msgstr "זהו כלי פשוט לניהול קל של תצורת סמבה."
 
-#: ../bin/draksambashare:179
+#: ../bin/draksambashare:182
 #, c-format
 msgid "Mandriva Linux"
 msgstr "מנדריבה לינוקס"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../bin/draksambashare:184
+#: ../bin/draksambashare:187
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "דותן קמבר <kamberd@yahoo.com>\n"
 
-#: ../bin/draksambashare:208
+#: ../bin/draksambashare:211
 #, c-format
 msgid "Restarting/Reloading Samba server..."
 msgstr "מאתחל/טוען מחדש את שרת הסמבה..."
 
-#: ../bin/draksambashare:209
+#: ../bin/draksambashare:212
 #, c-format
 msgid "Error Restarting/Reloading Samba server"
 msgstr "חלה שגיאה בעת אתחול/טעינה מחדש של שרת הסמבה"
 
-#: ../bin/draksambashare:349 ../bin/draksambashare:550
-#: ../bin/draksambashare:671
+#: ../bin/draksambashare:352 ../bin/draksambashare:553
+#: ../bin/draksambashare:674
 #, c-format
 msgid "Open"
 msgstr "פתיחה"
 
-#: ../bin/draksambashare:352
+#: ../bin/draksambashare:355
 #, c-format
 msgid "DrakSamba add entry"
 msgstr "DrakSamba הוספת מובאה"
 
-#: ../bin/draksambashare:356
+#: ../bin/draksambashare:359
 #, c-format
 msgid "Add a share"
 msgstr "הוספת שיתוף"
 
-#: ../bin/draksambashare:359
+#: ../bin/draksambashare:362
 #, c-format
 msgid "Name of the share:"
 msgstr "שם השיתוף:"
 
-#: ../bin/draksambashare:360 ../bin/draksambashare:570
-#: ../bin/draksambashare:751
+#: ../bin/draksambashare:363 ../bin/draksambashare:573
+#: ../bin/draksambashare:754
 #, c-format
 msgid "Comment:"
 msgstr "הערה:"
 
-#: ../bin/draksambashare:373
+#: ../bin/draksambashare:376
 #, c-format
 msgid ""
 "Share with the same name already exist or share name empty, please choose "
 "another name."
 msgstr "שיתוף עם שם דומה כבר קיים או ששם השיתוף ריק, נא לבחור אחד אחר."
 
-#: ../bin/draksambashare:380
+#: ../bin/draksambashare:383
 #, c-format
 msgid "Can't create the directory, please enter a correct path."
 msgstr "לא ניתן ליצור את הספרייה, נא להכניס כתובת תקינה."
 
-#: ../bin/draksambashare:383 ../bin/draksambashare:606
-#: ../bin/draksambashare:773
+#: ../bin/draksambashare:386 ../bin/draksambashare:609
+#: ../bin/draksambashare:776
 #, c-format
 msgid "Please enter a Comment for this share."
 msgstr "נא להכניס הערה עבור שיתוף זה."
 
-#: ../bin/draksambashare:414
+#: ../bin/draksambashare:417
 #, c-format
 msgid "pdf-gen - a PDF generator"
 msgstr "pdf-gen - יוצר PDF"
 
-#: ../bin/draksambashare:415
+#: ../bin/draksambashare:418
 #, c-format
 msgid "printers - all printers available"
 msgstr "מדפסות - כל המדפסות זמינות"
 
-#: ../bin/draksambashare:419
+#: ../bin/draksambashare:422
 #, c-format
 msgid "Add Special Printer share"
 msgstr "הוספת שיתוף מדפסת מיוחד"
 
-#: ../bin/draksambashare:422
+#: ../bin/draksambashare:425
 #, c-format
-msgid "Goal of this wizard is to easily create a new special printer Samba share."
+msgid ""
+"Goal of this wizard is to easily create a new special printer Samba share."
 msgstr "מטרת אשף זה ליצור בקלות שיתוף מדפסת מיוחד בסמבה"
 
-#: ../bin/draksambashare:429
+#: ../bin/draksambashare:432
 #, c-format
 msgid "A PDF generator already exists."
 msgstr "יוצר PDF כבר קיים."
 
-#: ../bin/draksambashare:453
+#: ../bin/draksambashare:456
 #, c-format
 msgid "Printers and print$ already exist."
 msgstr "Printers ו-print$ כבר קיימים."
 
-#: ../bin/draksambashare:503
+#: ../bin/draksambashare:506
 #, c-format
 msgid "Congratulations"
 msgstr "ברכותינו!"
 
-#: ../bin/draksambashare:504
+#: ../bin/draksambashare:507
 #, c-format
 msgid "The wizard successfully added the printer Samba share"
 msgstr "האשף הוסיף בהצלחה את שיתוף המדפסת בסמבה"
 
-#: ../bin/draksambashare:519
+#: ../bin/draksambashare:522
 #, c-format
 msgid "Failed to add printers."
 msgstr "כשל בהוספת מדפסות."
 
-#: ../bin/draksambashare:534
+#: ../bin/draksambashare:537
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
 msgstr "נא להוסיף או לבחור שיתוף מדפסת סמבה כדי שניתן יהיה לשנותו."
 
-#: ../bin/draksambashare:553
+#: ../bin/draksambashare:556
 #, c-format
 msgid "DrakSamba Printers entry"
 msgstr "DrakSamba מובאת מדפסות"
 
-#: ../bin/draksambashare:566
+#: ../bin/draksambashare:569
 #, c-format
 msgid "Printer share"
 msgstr "שיתוף מדפסת"
 
-#: ../bin/draksambashare:569
+#: ../bin/draksambashare:572
 #, c-format
 msgid "Printer name:"
 msgstr "שם מדפסת:"
 
-#: ../bin/draksambashare:575 ../bin/draksambashare:756
+#: ../bin/draksambashare:578 ../bin/draksambashare:759
 #, c-format
 msgid "Writable:"
 msgstr "בעל הרשאות כתיבה:"
 
-#: ../bin/draksambashare:576 ../bin/draksambashare:757
+#: ../bin/draksambashare:579 ../bin/draksambashare:760
 #, c-format
 msgid "Browseable:"
 msgstr "בר לעיון:"
 
-#: ../bin/draksambashare:581
+#: ../bin/draksambashare:584
 #, c-format
 msgid "Advanced options"
 msgstr "הגדרות מתקדמות"
 
-#: ../bin/draksambashare:583
+#: ../bin/draksambashare:586
 #, c-format
 msgid "Printer access"
 msgstr "גישה למדפסת"
 
-#: ../bin/draksambashare:587
+#: ../bin/draksambashare:590
 #, c-format
 msgid "Guest ok:"
 msgstr "אפשר כניסת אורחים:"
 
-#: ../bin/draksambashare:588
+#: ../bin/draksambashare:591
 #, c-format
 msgid "Create mode:"
 msgstr "אופן יצירה:"
 
-#: ../bin/draksambashare:592
+#: ../bin/draksambashare:595
 #, c-format
 msgid "Printer command"
 msgstr "פקודת מדפסת"
 
-#: ../bin/draksambashare:594
+#: ../bin/draksambashare:597
 #, c-format
 msgid "Print command:"
 msgstr "פקודת הדפסה:"
 
-#: ../bin/draksambashare:595
+#: ../bin/draksambashare:598
 #, c-format
 msgid "LPQ command:"
 msgstr "פקודת LPQ:"
 
-#: ../bin/draksambashare:596
+#: ../bin/draksambashare:599
 #, c-format
 msgid "Printing:"
 msgstr "מדפיס:"
 
-#: ../bin/draksambashare:612
+#: ../bin/draksambashare:615
 #, c-format
 msgid "create mode should be numeric. ie: 0755."
 msgstr "מצב היצירה צריך להיות מספרי. לדוגמה: 0755."
 
-#: ../bin/draksambashare:674
+#: ../bin/draksambashare:677
 #, c-format
 msgid "DrakSamba entry"
 msgstr "מובאת DrakSamba"
 
-#: ../bin/draksambashare:679
+#: ../bin/draksambashare:682
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
 msgstr "נא להוסיף או לבחור שיתוף סמבה כדי שניתן יהיה לשנותו."
 
-#: ../bin/draksambashare:702
+#: ../bin/draksambashare:705
 #, c-format
 msgid "Samba user access"
 msgstr "גישת משתמש סמבה"
 
-#: ../bin/draksambashare:710
+#: ../bin/draksambashare:713
 #, c-format
 msgid "Mask options"
 msgstr "אפשרויות מיסוך"
 
-#: ../bin/draksambashare:724
+#: ../bin/draksambashare:727
 #, c-format
 msgid "Display options"
 msgstr "אפשרויות תצוגה"
 
-#: ../bin/draksambashare:746
+#: ../bin/draksambashare:749
 #, c-format
 msgid "Samba share directory"
 msgstr "ספריית שיתוף סמבה"
 
-#: ../bin/draksambashare:749
+#: ../bin/draksambashare:752
 #, c-format
 msgid "Share name:"
 msgstr "שם השיתוף:"
 
-#: ../bin/draksambashare:755
+#: ../bin/draksambashare:758
 #, c-format
 msgid "Public:"
 msgstr "ציבורי:"
 
-#: ../bin/draksambashare:779
+#: ../bin/draksambashare:782
 #, c-format
-msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid ""
+"Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr "על מיסוך יצירה, מצב יצירה ומיסוך ספריה להיות מספריים כמו לדוגמה: 0755"
 
-#: ../bin/draksambashare:786
+#: ../bin/draksambashare:789
 #, c-format
 msgid "Please create this Samba user: %s"
 msgstr "צור בבקשה את משתמש סמבה זה: %s"
 
-#: ../bin/draksambashare:890
+#: ../bin/draksambashare:893
 #, c-format
 msgid "Add Samba user"
 msgstr "הוסף משתמש סמבה"
 
-#: ../bin/draksambashare:905
+#: ../bin/draksambashare:908
 #, c-format
 msgid "User information"
 msgstr "מידע משתמש"
 
-#: ../bin/draksambashare:907
+#: ../bin/draksambashare:910
 #, c-format
 msgid "User name:"
 msgstr "שם משתמש:"
 
-#: ../bin/draksambashare:908
+#: ../bin/draksambashare:911
 #, c-format
 msgid "Password:"
 msgstr "ססמה:"
 
-#: ../bin/draksambashare:1022
+#: ../bin/draksambashare:1025
 #, c-format
 msgid "Manage Samba configuration"
 msgstr "ניהול תצורת סמבה"
 
-#: ../bin/draksambashare:1110
+#: ../bin/draksambashare:1113
 #, c-format
 msgid "Failed to Modify Samba share."
 msgstr "כשל בשינוי שיתוף הסמבה."
 
-#: ../bin/draksambashare:1119
+#: ../bin/draksambashare:1122
 #, c-format
 msgid "Failed to remove a Samba share."
 msgstr "כשל בהסרת שיתוף הסמבה."
 
-#: ../bin/draksambashare:1126
+#: ../bin/draksambashare:1129
 #, c-format
 msgid "File share"
 msgstr "שיתוף קבצים"
 
-#: ../bin/draksambashare:1141
+#: ../bin/draksambashare:1144
 #, c-format
 msgid "Failed to Modify."
 msgstr "כשל בשינוי."
 
-#: ../bin/draksambashare:1150
+#: ../bin/draksambashare:1153
 #, c-format
 msgid "Failed to remove."
 msgstr "כשל בהסרה."
 
-#: ../bin/draksambashare:1157
+#: ../bin/draksambashare:1160
 #, c-format
 msgid "Printers"
 msgstr "מדפסות"
 
-#: ../bin/draksambashare:1169
+#: ../bin/draksambashare:1172
 #, c-format
 msgid "Failed to add user."
 msgstr "כשל בהוספת משתמש."
 
-#: ../bin/draksambashare:1178
+#: ../bin/draksambashare:1181
 #, c-format
 msgid "Failed to change user password."
 msgstr "כשל בשינוי סיסמת משתמש."
 
-#: ../bin/draksambashare:1190
+#: ../bin/draksambashare:1193
 #, c-format
 msgid "Failed to delete user."
 msgstr "כשל בהסרת משתמש."
 
-#: ../bin/draksambashare:1195
+#: ../bin/draksambashare:1198
 #, c-format
 msgid "Userdrake"
 msgstr "Userdrake"
 
-#: ../bin/draksambashare:1203
+#: ../bin/draksambashare:1206
 #, c-format
 msgid "Samba Users"
 msgstr "משתמשי סמבה"
 
-#: ../bin/draksambashare:1212
+#: ../bin/draksambashare:1215
 #, c-format
 msgid "DrakSamba manage Samba shares"
 msgstr "DrakSamba ניהול שיתופי סמבה"
@@ -3370,8 +3378,7 @@ msgstr ""
 "my_identifier user_fqdn \"myemail@mydomain.com\""
 
 #: ../bin/drakvpn-old:811
-#, c-format
-#, fuzzy
+#, fuzzy, c-format
 msgid "Peers identifier"
 msgstr "מזהה יעדי החיבור"
 
@@ -3584,7 +3591,7 @@ msgstr "מנשקים פעילים"
 msgid "Profiles"
 msgstr "פרופילים"
 
-#: ../bin/net_applet:130 ../lib/network/connection.pm:149
+#: ../bin/net_applet:130 ../lib/network/connection.pm:165
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
@@ -3596,112 +3603,112 @@ msgstr "חיבור VPN"
 msgid "Network connection"
 msgstr "חיבורי רשת"
 
-#: ../bin/net_applet:443
+#: ../bin/net_applet:446
 #, c-format
 msgid "More networks"
 msgstr "רשתות נוספות"
 
-#: ../bin/net_applet:470
+#: ../bin/net_applet:473
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "מצב אוטומטי של חומת האש האינטראקטיבית"
 
-#: ../bin/net_applet:475
+#: ../bin/net_applet:478
 #, c-format
 msgid "Always launch on startup"
 msgstr "הפעל תמיד באתחול המערכת"
 
-#: ../bin/net_applet:480
+#: ../bin/net_applet:483
 #, c-format
 msgid "Wireless networks"
 msgstr "רשתות אלחוטיות"
 
-#: ../bin/net_applet:487 ../bin/net_monitor:96
+#: ../bin/net_applet:490 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "הגדרות"
 
-#: ../bin/net_applet:562
+#: ../bin/net_applet:565
 #, c-format
 msgid "Interactive Firewall: intrusion detected"
 msgstr "חומת אש אינטראקטיבית: זוהתה חדירה"
 
-#: ../bin/net_applet:579
+#: ../bin/net_applet:582
 #, c-format
 msgid "What do you want to do with this attacker?"
 msgstr "מה ברצונך לעשות עם מתקיף זה?"
 
-#: ../bin/net_applet:582
+#: ../bin/net_applet:585
 #, c-format
 msgid "Attack details"
 msgstr "מידע אודות ההתקפה"
 
-#: ../bin/net_applet:586
+#: ../bin/net_applet:589
 #, c-format
 msgid "Attack time: %s"
 msgstr "משך ההתקפה: %s"
 
-#: ../bin/net_applet:587
+#: ../bin/net_applet:590
 #, c-format
 msgid "Network interface: %s"
 msgstr "ממשקי רשת: %s"
 
-#: ../bin/net_applet:588
+#: ../bin/net_applet:591
 #, c-format
 msgid "Attack type: %s"
 msgstr "סוג ההתקפה: %s"
 
-#: ../bin/net_applet:589
+#: ../bin/net_applet:592
 #, c-format
 msgid "Protocol: %s"
 msgstr "פרוטוקול: %s"
 
-#: ../bin/net_applet:590
+#: ../bin/net_applet:593
 #, c-format
 msgid "Attacker IP address: %s"
 msgstr "כתובת ה-IP של התוקף: %s"
 
-#: ../bin/net_applet:591
+#: ../bin/net_applet:594
 #, c-format
 msgid "Attacker hostname: %s"
 msgstr "שם המחשב של התוקף %s: "
 
-#: ../bin/net_applet:594
+#: ../bin/net_applet:597
 #, c-format
 msgid "Service attacked: %s"
 msgstr "סוג שירות המותקף: %s"
 
-#: ../bin/net_applet:595
+#: ../bin/net_applet:598
 #, c-format
 msgid "Port attacked: %s"
 msgstr "הערוץ המותקף: %s"
 
-#: ../bin/net_applet:597
+#: ../bin/net_applet:600
 #, c-format
 msgid "Type of ICMP attack: %s"
 msgstr "סוג התקפת ICMP: %s"
 
-#: ../bin/net_applet:602
+#: ../bin/net_applet:605
 #, c-format
 msgid "Always blacklist (do not ask again)"
 msgstr "חסום באופן תמידי (אל תשאל שנית)"
 
-#: ../bin/net_applet:617
+#: ../bin/net_applet:620
 #, c-format
 msgid "Ignore"
 msgstr "התעלם"
 
-#: ../bin/net_applet:635 ../bin/net_applet:648
+#: ../bin/net_applet:638 ../bin/net_applet:651
 #, c-format
 msgid "Interactive Firewall: new service"
 msgstr "חומת אש אינטראקטיבית: שירות חדש"
 
-#: ../bin/net_applet:658
+#: ../bin/net_applet:661
 #, c-format
 msgid "Do you want to open this service?"
 msgstr "האם ברצונך לפתוח שירות זה?"
 
-#: ../bin/net_applet:661
+#: ../bin/net_applet:664
 #, c-format
 msgid "Remember this answer"
 msgstr "זכור תשובה זאת"
@@ -3844,44 +3851,44 @@ msgstr "לא הוגדר חיבור לאינטרנט"
 msgid "Unknown connection type"
 msgstr "סוג חיבור לא מוכר"
 
-#: ../lib/network/connection.pm:115
+#: ../lib/network/connection.pm:131
 #, c-format
 msgid "Network access settings"
 msgstr "הגדרות גישה לרשת"
 
-#: ../lib/network/connection.pm:116
+#: ../lib/network/connection.pm:132
 #, c-format
 msgid "Access settings"
 msgstr "הגדרות גישה"
 
-#: ../lib/network/connection.pm:117
+#: ../lib/network/connection.pm:133
 #, c-format
 msgid "Address settings"
 msgstr "הגדרות כתובת"
 
-#: ../lib/network/connection.pm:151 ../lib/network/connection/cable.pm:44
+#: ../lib/network/connection.pm:167 ../lib/network/connection/cable.pm:44
 #: ../lib/network/connection/wireless.pm:43 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "כלום"
 
-#: ../lib/network/connection.pm:163
+#: ../lib/network/connection.pm:179
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr "אפשר למשתמשים לנהל את ההתחברות"
 
-#: ../lib/network/connection.pm:164
+#: ../lib/network/connection.pm:180
 #, c-format
 msgid "Start the connection at boot"
 msgstr "הפעלת את החיבור באתחול המחשב"
 
-#: ../lib/network/connection.pm:230
+#: ../lib/network/connection.pm:246
 #, c-format
 msgid "Link detected on interface %s"
 msgstr "קישור זוהה בהתקן %s"
 
-#: ../lib/network/connection.pm:231 ../lib/network/connection/ethernet.pm:273
+#: ../lib/network/connection.pm:247 ../lib/network/connection/ethernet.pm:274
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "אבד הקישור בהתקן %s"
@@ -4042,27 +4049,27 @@ msgstr "אזהרה: כתובת IP זו (%s) היא כתובת שמורה!"
 msgid "%s already in use\n"
 msgstr "%s כבר בשימוש \n"
 
-#: ../lib/network/connection/ethernet.pm:224
+#: ../lib/network/connection/ethernet.pm:225
 #, c-format
 msgid "Enable IPv6 to IPv4 tunnel"
 msgstr "אפשור tunnel מ-IPv6 ל-IPv4"
 
-#: ../lib/network/connection/ethernet.pm:272
+#: ../lib/network/connection/ethernet.pm:273
 #, c-format
 msgid "Link beat detected on interface %s"
 msgstr "אותר קישור בהתקן %s"
 
-#: ../lib/network/connection/ethernet.pm:275
+#: ../lib/network/connection/ethernet.pm:276
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
 msgstr "מבקש כתובת רשת בהתקן %s (פרוטוקול %s)..."
 
-#: ../lib/network/connection/ethernet.pm:276
+#: ../lib/network/connection/ethernet.pm:277
 #, c-format
 msgid "Got a network address on interface %s (%s protocol)"
 msgstr "התקבלה כתובת רשת בהתקן %s (פרוטוקול %s)"
 
-#: ../lib/network/connection/ethernet.pm:277
+#: ../lib/network/connection/ethernet.pm:278
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
 msgstr "כשל בקבלת כתובת רשת בהתקן %s (פרוטוקול %s)"
@@ -4448,7 +4455,8 @@ msgstr "קבצי קושחה נחוצים להתקן זה."
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
 "switch) first."
-msgstr "פעולת כרטיס האלחוט שלך מבוטלת, נא להפעיל את מתג האלחוט (מתג ה-RF kill) תחילה."
+msgstr ""
+"פעולת כרטיס האלחוט שלך מבוטלת, נא להפעיל את מתג האלחוט (מתג ה-RF kill) תחילה."
 
 #: ../lib/network/connection/wireless.pm:307
 #, c-format
@@ -4671,12 +4679,18 @@ msgstr "זיהוי נתיב וירטואלי (VPI):"
 msgid "Virtual Circuit ID (VCI):"
 msgstr "זיהוי מעגל וירטואלי (VCI):"
 
-#: ../lib/network/connection/xdsl.pm:324 ../lib/network/drakroam.pm:50
-#: ../lib/network/drakvpn.pm:45 ../lib/network/netconnect.pm:131
-#: ../lib/network/thirdparty.pm:115
+#: ../lib/network/connection/xdsl.pm:324
+#: ../lib/network/connection_manager.pm:41 ../lib/network/drakvpn.pm:45
+#: ../lib/network/netconnect.pm:131 ../lib/network/thirdparty.pm:115
 #, c-format
 msgid "Could not install the packages (%s)!"
 msgstr "נכשלה התקנת החבילות (%s)!"
+
+#: ../lib/network/connection_manager.pm:53
+#: ../lib/network/connection_manager.pm:85
+#, fuzzy, c-format
+msgid "Network settings"
+msgstr "הגדרות גישה לרשת"
 
 #: ../lib/network/connection_manager.pm:54
 #: ../lib/network/connection_manager.pm:86
@@ -4888,7 +4902,7 @@ msgstr ""
 msgid "Use Interactive Firewall"
 msgstr "השתמש בחומת אש אינטראקטיבית"
 
-#: ../lib/network/drakroam.pm:29
+#: ../lib/network/drakroam.pm:22
 #, c-format
 msgid "No device found"
 msgstr "לא נמצאו התקנים"
@@ -4898,12 +4912,12 @@ msgstr "לא נמצאו התקנים"
 msgid "Hostname changed to \"%s\""
 msgstr "שם המארח שונה ל-\"%s\""
 
-#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:80
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:82
 #, c-format
 msgid "Configure"
 msgstr "הגדרות"
 
-#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:85
+#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:87
 #, c-format
 msgid "Refresh"
 msgstr "רענן"
@@ -5113,17 +5127,17 @@ msgstr "התקנת מנהל התקן חדש"
 msgid "Select a device:"
 msgstr "עליך לבחור התקן:"
 
-#: ../lib/network/netcenter.pm:55
+#: ../lib/network/netcenter.pm:40
 #, c-format
 msgid "Network Center"
 msgstr "מרכז הרשת"
 
-#: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
+#: ../lib/network/netcenter.pm:73 ../lib/network/netconnect.pm:212
 #, c-format
 msgid "Please select your network:"
 msgstr "עליך לבחור את הרשת שלך:"
 
-#: ../lib/network/netcenter.pm:76
+#: ../lib/network/netcenter.pm:78
 #, c-format
 msgid "Monitor"
 msgstr "ניטור"
@@ -5833,7 +5847,8 @@ msgstr "נא להכניס תקליטון"
 msgid ""
 "Insert a FAT formatted floppy in drive %s with %s in root directory and "
 "press %s"
-msgstr "עליך להכניס תקליטון מפורמט כ FAT לכונן %s, עם %s בספריית השורש, וללחוץ על %s"
+msgstr ""
+"עליך להכניס תקליטון מפורמט כ FAT לכונן %s, עם %s בספריית השורש, וללחוץ על %s"
 
 #: ../lib/network/thirdparty.pm:228
 #, c-format
@@ -5990,4 +6005,3 @@ msgstr ""
 #, c-format
 msgid "Use specific UDP port"
 msgstr "השתמש בשער UDP מסוים"
-
