@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2007-08-28 11:27+0200\n"
+"POT-Creation-Date: 2007-09-15 08:58+0800\n"
 "PO-Revision-Date: 2005-03-27 17:55+0530\n"
 "Last-Translator: Jaswinder Singh Phulewala <jaswinderphulewala@yahoo.com>\n"
 "Language-Team: Punjabi <punlinux-i18n@lists.soruceforge.net>\n"
@@ -89,7 +89,7 @@ msgstr "LAN ਸੰਰਚਨਾ"
 msgid "Configure Local Area Network..."
 msgstr "ਲੋਕਲ ਖੇਤਰ ਨੈੱਟਵਰਕ ਸੰਰਚਨਾ..."
 
-#: ../bin/drakconnect:157 ../bin/drakconnect:240 ../bin/draknfs:183
+#: ../bin/drakconnect:157 ../bin/drakconnect:240 ../bin/draknfs:186
 #: ../bin/net_applet:138
 #, c-format
 msgid "Help"
@@ -114,8 +114,8 @@ msgid "Ok"
 msgstr "ਠੀਕ ਹੈ"
 
 #: ../bin/drakconnect:164 ../bin/drakconnect:636 ../bin/drakgw:359
-#: ../bin/draksambashare:208 ../lib/network/drakroam.pm:200
-#: ../lib/network/drakroam.pm:250
+#: ../bin/draksambashare:211 ../lib/network/connection_manager.pm:132
+#: ../lib/network/connection_manager.pm:150
 #, c-format
 msgid "Please wait"
 msgstr "ਕਿਰਪਾ ਕਰਕੇ ਉਡੀਕੋ"
@@ -130,7 +130,7 @@ msgstr "ਕਿਰਪਾ ਕਰਕੇ ਉਡੀਕੋ... ਸੰਰਚਨਾ ਲ�
 msgid "Manage connections"
 msgstr "ਕੁਨੈਕਸ਼ਨ ਪ੍ਰਬੰਧਨ ਕਰੋ"
 
-#: ../bin/drakconnect:219 ../lib/network/drakroam.pm:346
+#: ../bin/drakconnect:219 ../lib/network/drakroam.pm:105
 #, c-format
 msgid "Device: "
 msgstr "ਜੰਤਰ:"
@@ -184,7 +184,7 @@ msgstr "DHCP"
 msgid "DHCP client"
 msgstr "DHCP ਕਲਾਂਈਟ"
 
-#: ../bin/drakconnect:373 ../lib/network/connection/ethernet.pm:200
+#: ../bin/drakconnect:373 ../lib/network/connection/ethernet.pm:201
 #, c-format
 msgid "Assign host name from DHCP address"
 msgstr "DHCP ਸਿਰਨਾਵੇਂ ਤੋਂ ਮੇਜ਼ਬਾਨ ਨਾਂ ਨਿਰਧਾਰਿਤ ਕਰੋ"
@@ -215,7 +215,7 @@ msgid "Get NTPD servers from DHCP"
 msgstr ""
 
 #: ../bin/drakconnect:406 ../lib/network/connection/wireless.pm:312
-#: ../lib/network/drakroam.pm:282
+#: ../lib/network/connection_manager.pm:190
 #, c-format
 msgid "Operating Mode"
 msgstr "ਆਪਰੇਟਿੰਗ ਵਿਧੀ"
@@ -281,7 +281,7 @@ msgstr "iwpriv ਕਮਾਂਡ ਵਾਧੂ ਆਰਗੂਮੈਂਟ"
 msgid "Start at boot"
 msgstr "ਬੂਟ ਦੌਰਾਨ ਚਲਾਓ"
 
-#: ../bin/drakconnect:440 ../lib/network/connection/ethernet.pm:220
+#: ../bin/drakconnect:440 ../lib/network/connection/ethernet.pm:221
 #, c-format
 msgid "Network Hotplugging"
 msgstr "ਨੈੱਟਵਰਕ ਹਾਟਪਲੱਗਿੰਗ"
@@ -302,7 +302,7 @@ msgstr "ਕੁਨੈਕਸ਼ਨ ਗਤੀ"
 msgid "Connection timeout (in sec)"
 msgstr "ਕੁਨੈਕਸ਼ਨ ਮਿਆਦ (ਸਕਿੰਟਾਂ ਵਿੱਚ)"
 
-#: ../bin/drakconnect:462 ../lib/network/connection.pm:165
+#: ../bin/drakconnect:462 ../lib/network/connection.pm:181
 #, c-format
 msgid "Metric"
 msgstr "ਮੈਟ੍ਰਿਕ"
@@ -479,29 +479,30 @@ msgstr "ਬਸ ਤੇ ਸਥਿਤੀ"
 #: ../bin/drakconnect:676 ../bin/drakconnect:680 ../bin/drakconnect:689
 #: ../bin/drakconnect:705 ../bin/drakgw:184 ../bin/drakhosts:100
 #: ../bin/drakhosts:245 ../bin/drakhosts:252 ../bin/drakhosts:259
-#: ../bin/drakinvictus:72 ../bin/draknetprofile:113 ../bin/draknfs:85
-#: ../bin/draknfs:106 ../bin/draknfs:276 ../bin/draknfs:409 ../bin/draknfs:411
-#: ../bin/draknfs:414 ../bin/draknfs:506 ../bin/draknfs:513 ../bin/draknfs:576
-#: ../bin/draknfs:583 ../bin/draknfs:590 ../bin/draksambashare:373
-#: ../bin/draksambashare:380 ../bin/draksambashare:383
-#: ../bin/draksambashare:429 ../bin/draksambashare:453
-#: ../bin/draksambashare:519 ../bin/draksambashare:534
-#: ../bin/draksambashare:612 ../bin/draksambashare:679
-#: ../bin/draksambashare:779 ../bin/draksambashare:786
-#: ../bin/draksambashare:917 ../bin/draksambashare:1110
-#: ../bin/draksambashare:1119 ../bin/draksambashare:1141
-#: ../bin/draksambashare:1150 ../bin/draksambashare:1169
-#: ../bin/draksambashare:1178 ../bin/draksambashare:1190
-#: ../lib/network/connection/xdsl.pm:324 ../lib/network/drakroam.pm:50
-#: ../lib/network/drakroam.pm:56 ../lib/network/drakroam.pm:69
-#: ../lib/network/drakvpn.pm:45 ../lib/network/drakvpn.pm:52
-#: ../lib/network/ndiswrapper.pm:27 ../lib/network/ndiswrapper.pm:42
-#: ../lib/network/ndiswrapper.pm:86 ../lib/network/ndiswrapper.pm:102
-#: ../lib/network/netconnect.pm:131 ../lib/network/netconnect.pm:179
-#: ../lib/network/netconnect.pm:268 ../lib/network/netconnect.pm:813
-#: ../lib/network/thirdparty.pm:115 ../lib/network/thirdparty.pm:132
-#: ../lib/network/thirdparty.pm:215 ../lib/network/thirdparty.pm:217
-#: ../lib/network/thirdparty.pm:238
+#: ../bin/drakinvictus:72 ../bin/draknetprofile:113 ../bin/draknfs:88
+#: ../bin/draknfs:109 ../bin/draknfs:279 ../bin/draknfs:412 ../bin/draknfs:414
+#: ../bin/draknfs:417 ../bin/draknfs:509 ../bin/draknfs:516 ../bin/draknfs:579
+#: ../bin/draknfs:586 ../bin/draknfs:593 ../bin/draksambashare:376
+#: ../bin/draksambashare:383 ../bin/draksambashare:386
+#: ../bin/draksambashare:432 ../bin/draksambashare:456
+#: ../bin/draksambashare:522 ../bin/draksambashare:537
+#: ../bin/draksambashare:615 ../bin/draksambashare:682
+#: ../bin/draksambashare:782 ../bin/draksambashare:789
+#: ../bin/draksambashare:920 ../bin/draksambashare:1113
+#: ../bin/draksambashare:1122 ../bin/draksambashare:1144
+#: ../bin/draksambashare:1153 ../bin/draksambashare:1172
+#: ../bin/draksambashare:1181 ../bin/draksambashare:1193
+#: ../lib/network/connection/xdsl.pm:324
+#: ../lib/network/connection_manager.pm:41
+#: ../lib/network/connection_manager.pm:47
+#: ../lib/network/connection_manager.pm:60 ../lib/network/drakvpn.pm:45
+#: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:27
+#: ../lib/network/ndiswrapper.pm:42 ../lib/network/ndiswrapper.pm:86
+#: ../lib/network/ndiswrapper.pm:102 ../lib/network/netconnect.pm:131
+#: ../lib/network/netconnect.pm:179 ../lib/network/netconnect.pm:268
+#: ../lib/network/netconnect.pm:813 ../lib/network/thirdparty.pm:115
+#: ../lib/network/thirdparty.pm:132 ../lib/network/thirdparty.pm:215
+#: ../lib/network/thirdparty.pm:217 ../lib/network/thirdparty.pm:238
 #, c-format
 msgid "Error"
 msgstr "ਗਲਤੀ"
@@ -1002,9 +1003,9 @@ msgstr "ਮੇਜ਼ਬਾਨ ਨਾਉ :"
 msgid "Host Aliases:"
 msgstr "ਮੇਜ਼ਬਾਨ-ਨਾਂ"
 
-#: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:209
-#: ../bin/draksambashare:230 ../bin/draksambashare:377
-#: ../bin/draksambashare:608 ../bin/draksambashare:775
+#: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:212
+#: ../bin/draksambashare:233 ../bin/draksambashare:380
+#: ../bin/draksambashare:611 ../bin/draksambashare:778
 #, c-format
 msgid "Error!"
 msgstr "ਗਲਤੀ!"
@@ -1019,7 +1020,7 @@ msgstr "ਕਿਰਪਾ ਕਰਕੇ ਸਹੀ IP ਪਤਾ ਦਿਓ।"
 msgid "Same IP is already in %s file."
 msgstr "%s ਪਹਿਲਾਂ ਵਰਤਿਆ ਹੈ\n"
 
-#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:202
+#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:203
 #, c-format
 msgid "Host name"
 msgstr "ਮੇਜ਼ਬਾਨ-ਨਾਂ"
@@ -1039,8 +1040,8 @@ msgstr "ਕੁਨੈਕਸ਼ਨ ਪ੍ਰਬੰਧਨ ਕਰੋ"
 msgid "Modify entry"
 msgstr ""
 
-#: ../bin/drakhosts:241 ../bin/draknfs:572 ../bin/draksambashare:1103
-#: ../bin/draksambashare:1134 ../bin/draksambashare:1165
+#: ../bin/drakhosts:241 ../bin/draknfs:575 ../bin/draksambashare:1106
+#: ../bin/draksambashare:1137 ../bin/draksambashare:1168
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Add"
@@ -1056,9 +1057,9 @@ msgstr "ਪ੍ਰਿੰਟਰ ਸ਼ਾਮਿਲ"
 msgid "Failed to add host."
 msgstr ""
 
-#: ../bin/drakhosts:248 ../bin/draknfs:579 ../bin/draksambashare:1060
-#: ../bin/draksambashare:1105 ../bin/draksambashare:1136
-#: ../bin/draksambashare:1173
+#: ../bin/drakhosts:248 ../bin/draknfs:582 ../bin/draksambashare:1063
+#: ../bin/draksambashare:1108 ../bin/draksambashare:1139
+#: ../bin/draksambashare:1176
 #, c-format
 msgid "Modify"
 msgstr "ਸੋਧਿਆ"
@@ -1068,9 +1069,9 @@ msgstr "ਸੋਧਿਆ"
 msgid "Failed to Modify host."
 msgstr ""
 
-#: ../bin/drakhosts:255 ../bin/drakids:87 ../bin/drakids:96 ../bin/draknfs:586
-#: ../bin/draksambashare:1061 ../bin/draksambashare:1113
-#: ../bin/draksambashare:1144 ../bin/draksambashare:1181
+#: ../bin/drakhosts:255 ../bin/drakids:87 ../bin/drakids:96 ../bin/draknfs:589
+#: ../bin/draksambashare:1064 ../bin/draksambashare:1116
+#: ../bin/draksambashare:1147 ../bin/draksambashare:1184
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Remove"
@@ -1082,7 +1083,8 @@ msgid "Failed to remove host."
 msgstr ""
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:147
-#: ../bin/net_applet:139 ../lib/network/drakroam.pm:353
+#: ../bin/net_applet:139 ../lib/network/drakroam.pm:114
+#: ../lib/network/netcenter.pm:123
 #, c-format
 msgid "Quit"
 msgstr "ਬਾਹਰ"
@@ -1092,10 +1094,10 @@ msgstr "ਬਾਹਰ"
 msgid "Allowed addresses"
 msgstr "ਸਭ ਉਪਭੋਗੀਆਂ ਨੂੰ ਇਜਾਜ਼ਤ ਦਿਓ"
 
-#: ../bin/drakids:40 ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190
+#: ../bin/drakids:41 ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190
 #: ../bin/drakids:215 ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
-#: ../bin/net_applet:78 ../bin/net_applet:239 ../bin/net_applet:519
-#: ../bin/net_applet:546 ../lib/network/drakfirewall.pm:255
+#: ../bin/net_applet:78 ../bin/net_applet:239 ../bin/net_applet:522
+#: ../bin/net_applet:549 ../lib/network/drakfirewall.pm:255
 #: ../lib/network/drakfirewall.pm:258
 #, fuzzy, c-format
 msgid "Interactive Firewall"
@@ -1103,7 +1105,7 @@ msgstr "ਫਾਇਰਵਾਲ"
 
 #: ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190 ../bin/drakids:215
 #: ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
-#: ../bin/net_applet:239 ../bin/net_applet:519
+#: ../bin/net_applet:239 ../bin/net_applet:522
 #, fuzzy, c-format
 msgid "Unable to contact daemon"
 msgstr "ਪ੍ਰਤੀਬਿੰਬ %s ਨਾਲ ਸੰਪਰਕ ਲਈ ਅਸਮਰਥ"
@@ -1113,18 +1115,18 @@ msgstr "ਪ੍ਰਤੀਬਿੰਬ %s ਨਾਲ ਸੰਪਰਕ ਲਈ ਅਸ�
 msgid "Log"
 msgstr "Log"
 
-#: ../bin/drakids:78 ../bin/drakids:97 ../bin/net_applet:663
+#: ../bin/drakids:78 ../bin/drakids:97 ../bin/net_applet:666
 #, fuzzy, c-format
 msgid "Allow"
 msgstr "ਸਭ"
 
-#: ../bin/drakids:79 ../bin/drakids:88 ../bin/net_applet:664
+#: ../bin/drakids:79 ../bin/drakids:88 ../bin/net_applet:667
 #, c-format
 msgid "Block"
 msgstr ""
 
 #: ../bin/drakids:80 ../bin/drakids:89 ../bin/drakids:98 ../bin/drakids:109
-#: ../bin/drakids:122 ../bin/drakids:130 ../bin/draknfs:188
+#: ../bin/drakids:122 ../bin/drakids:130 ../bin/draknfs:191
 #: ../bin/net_monitor:120
 #, c-format
 msgid "Close"
@@ -1145,12 +1147,12 @@ msgstr "ਉਪਭੋਗੀ ਫਾਇਲਾਂ ਬੈਕਅੱਪ"
 msgid "Clear logs"
 msgstr "ਸਭ ਸਾਫ"
 
-#: ../bin/drakids:107 ../bin/drakids:112 ../bin/net_applet:607
+#: ../bin/drakids:107 ../bin/drakids:112 ../bin/net_applet:610
 #, c-format
 msgid "Blacklist"
 msgstr ""
 
-#: ../bin/drakids:108 ../bin/drakids:125 ../bin/net_applet:612
+#: ../bin/drakids:108 ../bin/drakids:125 ../bin/net_applet:615
 #, c-format
 msgid "Whitelist"
 msgstr ""
@@ -1347,89 +1349,89 @@ msgstr "ਜੁੜਿਆ"
 msgid "Delete"
 msgstr "ਹਟਾਓ"
 
-#: ../bin/draknfs:41
+#: ../bin/draknfs:44
 #, c-format
 msgid "map root user as anonymous"
 msgstr ""
 
-#: ../bin/draknfs:42
+#: ../bin/draknfs:45
 #, c-format
 msgid "map all users to anonymous user"
 msgstr ""
 
-#: ../bin/draknfs:43
+#: ../bin/draknfs:46
 #, c-format
 msgid "No user UID mapping"
 msgstr ""
 
-#: ../bin/draknfs:44
+#: ../bin/draknfs:47
 #, c-format
 msgid "allow real remote root access"
 msgstr ""
 
-#: ../bin/draknfs:58 ../bin/draknfs:59 ../bin/draknfs:60
-#: ../bin/draksambashare:161 ../bin/draksambashare:162
-#: ../bin/draksambashare:163
+#: ../bin/draknfs:61 ../bin/draknfs:62 ../bin/draknfs:63
+#: ../bin/draksambashare:164 ../bin/draksambashare:165
+#: ../bin/draksambashare:166
 #, c-format
 msgid "/_File"
 msgstr "/ਫਾਇਲ(_F)"
 
-#: ../bin/draknfs:59 ../bin/draksambashare:162
+#: ../bin/draknfs:62 ../bin/draksambashare:165
 #, c-format
 msgid "/_Write conf"
 msgstr ""
 
-#: ../bin/draknfs:60 ../bin/draksambashare:163
+#: ../bin/draknfs:63 ../bin/draksambashare:166
 #, c-format
 msgid "/_Quit"
 msgstr "/ਬਾਹਰ(_Q)"
 
-#: ../bin/draknfs:60 ../bin/draksambashare:163
+#: ../bin/draknfs:63 ../bin/draksambashare:166
 #, c-format
 msgid "<control>Q"
 msgstr "<control>Q"
 
-#: ../bin/draknfs:63 ../bin/draknfs:64 ../bin/draknfs:65
+#: ../bin/draknfs:66 ../bin/draknfs:67 ../bin/draknfs:68
 #, fuzzy, c-format
 msgid "/_NFS Server"
 msgstr "DNS ਸਰਵਰ"
 
-#: ../bin/draknfs:64 ../bin/draksambashare:166
+#: ../bin/draknfs:67 ../bin/draksambashare:169
 #, c-format
 msgid "/_Restart"
 msgstr ""
 
-#: ../bin/draknfs:65 ../bin/draksambashare:167
+#: ../bin/draknfs:68 ../bin/draksambashare:170
 #, c-format
 msgid "/R_eload"
 msgstr ""
 
-#: ../bin/draknfs:84
+#: ../bin/draknfs:87
 #, c-format
 msgid "NFS server"
 msgstr "NFS ਸਰਵਰ"
 
-#: ../bin/draknfs:84
+#: ../bin/draknfs:87
 #, c-format
 msgid "Restarting/Reloading NFS server..."
 msgstr ""
 
-#: ../bin/draknfs:85
+#: ../bin/draknfs:88
 #, c-format
 msgid "Error Restarting/Reloading NFS server"
 msgstr ""
 
-#: ../bin/draknfs:101 ../bin/draksambashare:225
+#: ../bin/draknfs:104 ../bin/draksambashare:228
 #, fuzzy, c-format
 msgid "Directory Selection"
 msgstr "ਦਿਸ਼ਾ"
 
-#: ../bin/draknfs:106 ../bin/draksambashare:230
+#: ../bin/draknfs:109 ../bin/draksambashare:233
 #, c-format
 msgid "Should be a directory."
 msgstr "ਡਾਇਰੈਕਟਰੀ ਹੋਣੀ ਜਰੂਰੀ ਹੈ।"
 
-#: ../bin/draknfs:137
+#: ../bin/draknfs:140
 #, c-format
 msgid ""
 "<span weight=\"bold\">NFS clients</span> may be specified in a number of "
@@ -1456,7 +1458,7 @@ msgid ""
 "result.\n"
 msgstr ""
 
-#: ../bin/draknfs:152
+#: ../bin/draknfs:155
 #, c-format
 msgid ""
 "<span weight=\"bold\">User ID options</span>\n"
@@ -1482,32 +1484,32 @@ msgid ""
 "the uid and gid of the anonymous account.\n"
 msgstr ""
 
-#: ../bin/draknfs:168
+#: ../bin/draknfs:171
 #, c-format
 msgid "Synchronous access:"
 msgstr ""
 
-#: ../bin/draknfs:169
+#: ../bin/draknfs:172
 #, fuzzy, c-format
 msgid "Secured Connection:"
 msgstr "ਇੰਟਰਨੈੱਟ ਕੁਨੈਕਸ਼ਨ"
 
-#: ../bin/draknfs:170
+#: ../bin/draknfs:173
 #, c-format
 msgid "Read-Only share:"
 msgstr ""
 
-#: ../bin/draknfs:171
+#: ../bin/draknfs:174
 #, c-format
 msgid "Subtree checking:"
 msgstr ""
 
-#: ../bin/draknfs:173
+#: ../bin/draknfs:176
 #, c-format
 msgid "Advanced Options"
 msgstr ""
 
-#: ../bin/draknfs:174
+#: ../bin/draknfs:177
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> this option requires that requests "
@@ -1515,7 +1517,7 @@ msgid ""
 "is on by default."
 msgstr ""
 
-#: ../bin/draknfs:175
+#: ../bin/draknfs:178
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> allow either only read or both "
@@ -1524,7 +1526,7 @@ msgid ""
 "using this option."
 msgstr ""
 
-#: ../bin/draknfs:176
+#: ../bin/draknfs:179
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> disallows the NFS server to "
@@ -1532,7 +1534,7 @@ msgid ""
 "these requests have been committed to stable storage (e.g. disc drive)."
 msgstr ""
 
-#: ../bin/draknfs:177
+#: ../bin/draknfs:180
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> enable subtree checking which can "
@@ -1540,134 +1542,134 @@ msgid ""
 "exports(5) man page for more details."
 msgstr ""
 
-#: ../bin/draknfs:182 ../bin/draksambashare:606 ../bin/draksambashare:773
+#: ../bin/draknfs:185 ../bin/draksambashare:609 ../bin/draksambashare:776
 #, c-format
 msgid "Information"
 msgstr "ਜਾਣਕਾਰੀ"
 
-#: ../bin/draknfs:263
+#: ../bin/draknfs:266
 #, c-format
 msgid "Directory"
 msgstr "ਡਾਇਰੈਕਟਰੀ"
 
-#: ../bin/draknfs:267
+#: ../bin/draknfs:270
 #, c-format
 msgid "Draknfs entry"
 msgstr ""
 
-#: ../bin/draknfs:276
+#: ../bin/draknfs:279
 #, c-format
 msgid "Please add an NFS share to be able to modify it."
 msgstr ""
 
-#: ../bin/draknfs:365
+#: ../bin/draknfs:368
 #, c-format
 msgid "NFS directory"
 msgstr ""
 
-#: ../bin/draknfs:366 ../bin/draksambashare:361 ../bin/draksambashare:571
-#: ../bin/draksambashare:750
+#: ../bin/draknfs:369 ../bin/draksambashare:364 ../bin/draksambashare:574
+#: ../bin/draksambashare:753
 #, c-format
 msgid "Directory:"
 msgstr "ਡਾਇਰੈਕਟਰੀ:"
 
-#: ../bin/draknfs:367
+#: ../bin/draknfs:370
 #, fuzzy, c-format
 msgid "Host access"
 msgstr "ਮੇਜ਼ਬਾਨ-ਨਾਂ"
 
-#: ../bin/draknfs:368
+#: ../bin/draknfs:371
 #, c-format
 msgid "Access:"
 msgstr "ਪਹੁੰਚ:"
 
-#: ../bin/draknfs:369
+#: ../bin/draknfs:372
 #, c-format
 msgid "User ID Mapping"
 msgstr ""
 
-#: ../bin/draknfs:370
+#: ../bin/draknfs:373
 #, c-format
 msgid "User ID:"
 msgstr ""
 
-#: ../bin/draknfs:371
+#: ../bin/draknfs:374
 #, c-format
 msgid "Anonymous user ID:"
 msgstr ""
 
-#: ../bin/draknfs:372
+#: ../bin/draknfs:375
 #, c-format
 msgid "Anonymous Group ID:"
 msgstr ""
 
-#: ../bin/draknfs:409
+#: ../bin/draknfs:412
 #, fuzzy, c-format
 msgid "Please specify a directory to share."
 msgstr "ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਕਾਰਡ ਲਈ ਵਾਇਰਲੈੱਸ ਪੈਰਾਮੀਟਰ ਦਿਓ:"
 
-#: ../bin/draknfs:411
+#: ../bin/draknfs:414
 #, c-format
 msgid "Can't create this directory."
 msgstr ""
 
-#: ../bin/draknfs:414
+#: ../bin/draknfs:417
 #, c-format
 msgid "You must specify hosts access."
 msgstr ""
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, c-format
 msgid "Share Directory"
 msgstr ""
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, c-format
 msgid "Hosts Wildcard"
 msgstr ""
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, fuzzy, c-format
 msgid "General Options"
 msgstr "ਨੀਤੀ ਬਣਾਓ"
 
-#: ../bin/draknfs:494
+#: ../bin/draknfs:497
 #, c-format
 msgid "Custom Options"
 msgstr ""
 
-#: ../bin/draknfs:506 ../bin/draksambashare:377 ../bin/draksambashare:608
-#: ../bin/draksambashare:775
+#: ../bin/draknfs:509 ../bin/draksambashare:380 ../bin/draksambashare:611
+#: ../bin/draksambashare:778
 #, c-format
 msgid "Please enter a directory to share."
 msgstr ""
 
-#: ../bin/draknfs:513
+#: ../bin/draknfs:516
 #, c-format
 msgid "Please use the modify button to set right access."
 msgstr ""
 
-#: ../bin/draknfs:528
+#: ../bin/draknfs:531
 #, c-format
 msgid "Manage NFS shares"
 msgstr ""
 
-#: ../bin/draknfs:567
+#: ../bin/draknfs:570
 #, c-format
 msgid "DrakNFS manage NFS shares"
 msgstr ""
 
-#: ../bin/draknfs:576
+#: ../bin/draknfs:579
 #, c-format
 msgid "Failed to add NFS share."
 msgstr ""
 
-#: ../bin/draknfs:583
+#: ../bin/draknfs:586
 #, c-format
 msgid "Failed to Modify NFS share."
 msgstr ""
 
-#: ../bin/draknfs:590
+#: ../bin/draknfs:593
 #, c-format
 msgid "Failed to remove an NFS share."
 msgstr ""
@@ -1677,533 +1679,533 @@ msgstr ""
 msgid "You need to log out and back in again for changes to take effect"
 msgstr "ਤੁਹਾਨੂੰ ਤਬਦੀਲੀਆਂ ਲਾਗੂ ਹੋਣ ਲਈ ਫਿਰ ਬਾਹਰ (ਲਾਗ-ਆਊਟ) ਜਾਣ ਦੀ ਲੋੜ ਹੈ"
 
-#: ../bin/draksambashare:63
+#: ../bin/draksambashare:66
 #, c-format
 msgid "User name"
 msgstr "ਉਪਭੋਗੀ ਨਾਂ"
 
-#: ../bin/draksambashare:70
+#: ../bin/draksambashare:73
 #, c-format
 msgid "Share name"
 msgstr "ਸ਼ੇਅਰ ਨਾਂ"
 
-#: ../bin/draksambashare:71
+#: ../bin/draksambashare:74
 #, fuzzy, c-format
 msgid "Share directory"
 msgstr "ਸੈਕਟਰ ਸ਼ੁਰੂ ਕਰੋ:"
 
-#: ../bin/draksambashare:72 ../bin/draksambashare:105
+#: ../bin/draksambashare:75 ../bin/draksambashare:108
 #, fuzzy, c-format
 msgid "Comment"
 msgstr "ਕਮਿਟ(Commit)"
 
-#: ../bin/draksambashare:73 ../bin/draksambashare:106
+#: ../bin/draksambashare:76 ../bin/draksambashare:109
 #, fuzzy, c-format
 msgid "Browseable"
 msgstr "ਝਲਕ"
 
-#: ../bin/draksambashare:74
+#: ../bin/draksambashare:77
 #, c-format
 msgid "Public"
 msgstr "ਸਰਵਜਨਕ"
 
-#: ../bin/draksambashare:75 ../bin/draksambashare:111
+#: ../bin/draksambashare:78 ../bin/draksambashare:114
 #, fuzzy, c-format
 msgid "Writable"
 msgstr "ਲਿਖੋ"
 
-#: ../bin/draksambashare:76 ../bin/draksambashare:152
+#: ../bin/draksambashare:79 ../bin/draksambashare:155
 #, fuzzy, c-format
 msgid "Create mask"
 msgstr "ਬਣਾਓ"
 
-#: ../bin/draksambashare:77 ../bin/draksambashare:153
+#: ../bin/draksambashare:80 ../bin/draksambashare:156
 #, fuzzy, c-format
 msgid "Directory mask"
 msgstr "ਬੈਕਅੱਪ ਵਾਲੀ ਡਾਇਰੈਕਟਰੀ"
 
-#: ../bin/draksambashare:78
+#: ../bin/draksambashare:81
 #, fuzzy, c-format
 msgid "Read list"
 msgstr "ਪੜੋ"
 
-#: ../bin/draksambashare:79 ../bin/draksambashare:112
-#: ../bin/draksambashare:585
+#: ../bin/draksambashare:82 ../bin/draksambashare:115
+#: ../bin/draksambashare:588
 #, fuzzy, c-format
 msgid "Write list"
 msgstr "ਲਿਖੋ"
 
-#: ../bin/draksambashare:80 ../bin/draksambashare:144
+#: ../bin/draksambashare:83 ../bin/draksambashare:147
 #, fuzzy, c-format
 msgid "Admin users"
 msgstr "ਉਪਭੋਗੀ ਸ਼ਾਮਿਲ"
 
-#: ../bin/draksambashare:81 ../bin/draksambashare:145
+#: ../bin/draksambashare:84 ../bin/draksambashare:148
 #, fuzzy, c-format
 msgid "Valid users"
 msgstr "ਉਪਭੋਗੀ ਸ਼ਾਮਿਲ"
 
-#: ../bin/draksambashare:82
+#: ../bin/draksambashare:85
 #, fuzzy, c-format
 msgid "Inherit Permissions"
 msgstr "ਅਧਿਕਾਰ"
 
-#: ../bin/draksambashare:83 ../bin/draksambashare:146
+#: ../bin/draksambashare:86 ../bin/draksambashare:149
 #, fuzzy, c-format
 msgid "Hide dot files"
 msgstr "ਫਾਇਲਾਂ ਓਹਲੇ"
 
-#: ../bin/draksambashare:84 ../bin/draksambashare:147
+#: ../bin/draksambashare:87 ../bin/draksambashare:150
 #, c-format
 msgid "Hide files"
 msgstr "ਫਾਇਲਾਂ ਓਹਲੇ"
 
-#: ../bin/draksambashare:85 ../bin/draksambashare:151
+#: ../bin/draksambashare:88 ../bin/draksambashare:154
 #, fuzzy, c-format
 msgid "Preserve case"
 msgstr "ਮੇਰੀ ਪਸੰਦ"
 
-#: ../bin/draksambashare:86
+#: ../bin/draksambashare:89
 #, fuzzy, c-format
 msgid "Force create mode"
 msgstr "ਤੁਹਾਡਾ ਪ੍ਰਿੰਟਰ ਮਾਡਲ"
 
-#: ../bin/draksambashare:87
+#: ../bin/draksambashare:90
 #, fuzzy, c-format
 msgid "Force group"
 msgstr "PFS ਸਮੂਹ"
 
-#: ../bin/draksambashare:88 ../bin/draksambashare:150
+#: ../bin/draksambashare:91 ../bin/draksambashare:153
 #, fuzzy, c-format
 msgid "Default case"
 msgstr "ਮੂਲ ਉਪਭੋਗੀ"
 
-#: ../bin/draksambashare:103
+#: ../bin/draksambashare:106
 #, c-format
 msgid "Printer name"
 msgstr "ਪ੍ਰਿੰਟਰ ਨਾਂ"
 
-#: ../bin/draksambashare:104
+#: ../bin/draksambashare:107
 #, c-format
 msgid "Path"
 msgstr "ਰਸਤਾ"
 
-#: ../bin/draksambashare:107 ../bin/draksambashare:577
+#: ../bin/draksambashare:110 ../bin/draksambashare:580
 #, fuzzy, c-format
 msgid "Printable"
 msgstr "ਯੋਗ"
 
-#: ../bin/draksambashare:108
+#: ../bin/draksambashare:111
 #, fuzzy, c-format
 msgid "Print Command"
 msgstr "ਕਮਾਂਡ"
 
-#: ../bin/draksambashare:109
+#: ../bin/draksambashare:112
 #, fuzzy, c-format
 msgid "LPQ command"
 msgstr "ਕਮਾਂਡ"
 
-#: ../bin/draksambashare:110
+#: ../bin/draksambashare:113
 #, c-format
 msgid "Guest ok"
 msgstr ""
 
-#: ../bin/draksambashare:113 ../bin/draksambashare:154
-#: ../bin/draksambashare:586
+#: ../bin/draksambashare:116 ../bin/draksambashare:157
+#: ../bin/draksambashare:589
 #, fuzzy, c-format
 msgid "Inherit permissions"
 msgstr "ਅਧਿਕਾਰ"
 
-#: ../bin/draksambashare:114
+#: ../bin/draksambashare:117
 #, c-format
 msgid "Printing"
 msgstr "ਛਪਾਈ"
 
-#: ../bin/draksambashare:115
+#: ../bin/draksambashare:118
 #, fuzzy, c-format
 msgid "Create mode"
 msgstr "ਕਾਰਡ ਮਾਡਲ:"
 
-#: ../bin/draksambashare:116
+#: ../bin/draksambashare:119
 #, fuzzy, c-format
 msgid "Use client driver"
 msgstr "Telnet ਸਰਵਰ"
 
-#: ../bin/draksambashare:142
+#: ../bin/draksambashare:145
 #, fuzzy, c-format
 msgid "Read List"
 msgstr "ਸੂਚੀ ਹਟਾਓ"
 
-#: ../bin/draksambashare:143
+#: ../bin/draksambashare:146
 #, fuzzy, c-format
 msgid "Write List"
 msgstr "ਲਿਖੋ"
 
-#: ../bin/draksambashare:148
+#: ../bin/draksambashare:151
 #, fuzzy, c-format
 msgid "Force Group"
 msgstr "ਸਮੂਹ"
 
-#: ../bin/draksambashare:149
+#: ../bin/draksambashare:152
 #, c-format
 msgid "Force create group"
 msgstr ""
 
-#: ../bin/draksambashare:165 ../bin/draksambashare:166
-#: ../bin/draksambashare:167
+#: ../bin/draksambashare:168 ../bin/draksambashare:169
+#: ../bin/draksambashare:170
 #, fuzzy, c-format
 msgid "/_Samba Server"
 msgstr "ਵੈਬ ਸਰਵਰ"
 
-#: ../bin/draksambashare:169 ../bin/draksambashare:170
+#: ../bin/draksambashare:172 ../bin/draksambashare:173
 #, c-format
 msgid "/_About"
 msgstr "/ਇਸ ਬਾਰੇ(_A)"
 
-#: ../bin/draksambashare:169
+#: ../bin/draksambashare:172
 #, c-format
 msgid "/_Report Bug"
 msgstr "/ਬੱਗ ਰਿਪੋਰਟ(_R)"
 
-#: ../bin/draksambashare:170
+#: ../bin/draksambashare:173
 #, c-format
 msgid "/About..."
 msgstr ""
 
-#: ../bin/draksambashare:173
+#: ../bin/draksambashare:176
 #, c-format
 msgid "Draksambashare"
 msgstr ""
 
-#: ../bin/draksambashare:175
+#: ../bin/draksambashare:178
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr ""
 
-#: ../bin/draksambashare:177
+#: ../bin/draksambashare:180
 #, c-format
 msgid "This is a simple tool to easily manage Samba configuration."
 msgstr ""
 
-#: ../bin/draksambashare:179
+#: ../bin/draksambashare:182
 #, fuzzy, c-format
 msgid "Mandriva Linux"
 msgstr "ਮੈਂਡਰਿਵ-ਆਨਲਾਈਨ"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../bin/draksambashare:184
+#: ../bin/draksambashare:187
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 
-#: ../bin/draksambashare:208
+#: ../bin/draksambashare:211
 #, c-format
 msgid "Restarting/Reloading Samba server..."
 msgstr ""
 
-#: ../bin/draksambashare:209
+#: ../bin/draksambashare:212
 #, c-format
 msgid "Error Restarting/Reloading Samba server"
 msgstr ""
 
-#: ../bin/draksambashare:349 ../bin/draksambashare:550
-#: ../bin/draksambashare:671
+#: ../bin/draksambashare:352 ../bin/draksambashare:553
+#: ../bin/draksambashare:674
 #, c-format
 msgid "Open"
 msgstr "ਖੋਲੋ"
 
-#: ../bin/draksambashare:352
+#: ../bin/draksambashare:355
 #, c-format
 msgid "DrakSamba add entry"
 msgstr ""
 
-#: ../bin/draksambashare:356
+#: ../bin/draksambashare:359
 #, fuzzy, c-format
 msgid "Add a share"
 msgstr "ਨਿਯਮ ਸ਼ਾਮਿਲ"
 
-#: ../bin/draksambashare:359
+#: ../bin/draksambashare:362
 #, fuzzy, c-format
 msgid "Name of the share:"
 msgstr "ਸਾਰਟੀਫਿਕੇਟ ਦਾ ਨਾਂ"
 
-#: ../bin/draksambashare:360 ../bin/draksambashare:570
-#: ../bin/draksambashare:751
+#: ../bin/draksambashare:363 ../bin/draksambashare:573
+#: ../bin/draksambashare:754
 #, fuzzy, c-format
 msgid "Comment:"
 msgstr "ਕਮਿਟ(Commit)"
 
-#: ../bin/draksambashare:373
+#: ../bin/draksambashare:376
 #, c-format
 msgid ""
 "Share with the same name already exist or share name empty, please choose "
 "another name."
 msgstr ""
 
-#: ../bin/draksambashare:380
+#: ../bin/draksambashare:383
 #, c-format
 msgid "Can't create the directory, please enter a correct path."
 msgstr ""
 
-#: ../bin/draksambashare:383 ../bin/draksambashare:606
-#: ../bin/draksambashare:773
+#: ../bin/draksambashare:386 ../bin/draksambashare:609
+#: ../bin/draksambashare:776
 #, fuzzy, c-format
 msgid "Please enter a Comment for this share."
 msgstr "ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਕਾਰਡ ਲਈ ਵਾਇਰਲੈੱਸ ਪੈਰਾਮੀਟਰ ਦਿਓ:"
 
-#: ../bin/draksambashare:414
+#: ../bin/draksambashare:417
 #, c-format
 msgid "pdf-gen - a PDF generator"
 msgstr ""
 
-#: ../bin/draksambashare:415
+#: ../bin/draksambashare:418
 #, c-format
 msgid "printers - all printers available"
 msgstr ""
 
-#: ../bin/draksambashare:419
+#: ../bin/draksambashare:422
 #, c-format
 msgid "Add Special Printer share"
 msgstr ""
 
-#: ../bin/draksambashare:422
+#: ../bin/draksambashare:425
 #, c-format
 msgid ""
 "Goal of this wizard is to easily create a new special printer Samba share."
 msgstr ""
 
-#: ../bin/draksambashare:429
+#: ../bin/draksambashare:432
 #, fuzzy, c-format
 msgid "A PDF generator already exists."
 msgstr "\"%s\" ਪਰੋਫਾਇਲ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ!"
 
-#: ../bin/draksambashare:453
+#: ../bin/draksambashare:456
 #, fuzzy, c-format
 msgid "Printers and print$ already exist."
 msgstr "\"%s\" ਪਰੋਫਾਇਲ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ!"
 
-#: ../bin/draksambashare:503
+#: ../bin/draksambashare:506
 #, c-format
 msgid "Congratulations"
 msgstr "ਮੁਬਾਰਕਾਂ"
 
-#: ../bin/draksambashare:504
+#: ../bin/draksambashare:507
 #, c-format
 msgid "The wizard successfully added the printer Samba share"
 msgstr ""
 
-#: ../bin/draksambashare:519
+#: ../bin/draksambashare:522
 #, c-format
 msgid "Failed to add printers."
 msgstr ""
 
-#: ../bin/draksambashare:534
+#: ../bin/draksambashare:537
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
 msgstr ""
 
-#: ../bin/draksambashare:553
+#: ../bin/draksambashare:556
 #, c-format
 msgid "DrakSamba Printers entry"
 msgstr ""
 
-#: ../bin/draksambashare:566
+#: ../bin/draksambashare:569
 #, c-format
 msgid "Printer share"
 msgstr ""
 
-#: ../bin/draksambashare:569
+#: ../bin/draksambashare:572
 #, fuzzy, c-format
 msgid "Printer name:"
 msgstr "ਇੰਟਰਫੇਸ:"
 
-#: ../bin/draksambashare:575 ../bin/draksambashare:756
+#: ../bin/draksambashare:578 ../bin/draksambashare:759
 #, fuzzy, c-format
 msgid "Writable:"
 msgstr "ਲਿਖੋ"
 
-#: ../bin/draksambashare:576 ../bin/draksambashare:757
+#: ../bin/draksambashare:579 ../bin/draksambashare:760
 #, fuzzy, c-format
 msgid "Browseable:"
 msgstr "ਝਲਕ"
 
-#: ../bin/draksambashare:581
+#: ../bin/draksambashare:584
 #, c-format
 msgid "Advanced options"
 msgstr ""
 
-#: ../bin/draksambashare:583
+#: ../bin/draksambashare:586
 #, fuzzy, c-format
 msgid "Printer access"
 msgstr "ਇੰਟਰਨੈੱਟ ਪਹੁੰਚ"
 
-#: ../bin/draksambashare:587
+#: ../bin/draksambashare:590
 #, c-format
 msgid "Guest ok:"
 msgstr ""
 
-#: ../bin/draksambashare:588
+#: ../bin/draksambashare:591
 #, fuzzy, c-format
 msgid "Create mode:"
 msgstr "ਕਾਰਡ ਮਾਡਲ:"
 
-#: ../bin/draksambashare:592
+#: ../bin/draksambashare:595
 #, c-format
 msgid "Printer command"
 msgstr ""
 
-#: ../bin/draksambashare:594
+#: ../bin/draksambashare:597
 #, c-format
 msgid "Print command:"
 msgstr ""
 
-#: ../bin/draksambashare:595
+#: ../bin/draksambashare:598
 #, fuzzy, c-format
 msgid "LPQ command:"
 msgstr "ਕਮਾਂਡ"
 
-#: ../bin/draksambashare:596
+#: ../bin/draksambashare:599
 #, fuzzy, c-format
 msgid "Printing:"
 msgstr "ਚੇਤਾਵਨੀ"
 
-#: ../bin/draksambashare:612
+#: ../bin/draksambashare:615
 #, c-format
 msgid "create mode should be numeric. ie: 0755."
 msgstr ""
 
-#: ../bin/draksambashare:674
+#: ../bin/draksambashare:677
 #, c-format
 msgid "DrakSamba entry"
 msgstr ""
 
-#: ../bin/draksambashare:679
+#: ../bin/draksambashare:682
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
 msgstr ""
 
-#: ../bin/draksambashare:702
+#: ../bin/draksambashare:705
 #, fuzzy, c-format
 msgid "Samba user access"
 msgstr "ਸਾਂਬਾ ਸੇਵਾ"
 
-#: ../bin/draksambashare:710
+#: ../bin/draksambashare:713
 #, fuzzy, c-format
 msgid "Mask options"
 msgstr "ਮੁੱਢਲੀ ਚੋਣ"
 
-#: ../bin/draksambashare:724
+#: ../bin/draksambashare:727
 #, fuzzy, c-format
 msgid "Display options"
 msgstr "ਚੋਣ ਨਿਰਧਾਰਿਤ ਕਰੋ"
 
-#: ../bin/draksambashare:746
+#: ../bin/draksambashare:749
 #, fuzzy, c-format
 msgid "Samba share directory"
 msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਪ੍ਰਤੀਬਿੰਬ ਡਾਇਰੈਕਟਰੀ"
 
-#: ../bin/draksambashare:749
+#: ../bin/draksambashare:752
 #, fuzzy, c-format
 msgid "Share name:"
 msgstr "ਸ਼ੇਅਰ ਨਾਂ"
 
-#: ../bin/draksambashare:755
+#: ../bin/draksambashare:758
 #, c-format
 msgid "Public:"
 msgstr "ਸਰਵਜਨਕ:"
 
-#: ../bin/draksambashare:779
+#: ../bin/draksambashare:782
 #, c-format
 msgid ""
 "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 
-#: ../bin/draksambashare:786
+#: ../bin/draksambashare:789
 #, c-format
 msgid "Please create this Samba user: %s"
 msgstr ""
 
-#: ../bin/draksambashare:890
+#: ../bin/draksambashare:893
 #, c-format
 msgid "Add Samba user"
 msgstr ""
 
-#: ../bin/draksambashare:905
+#: ../bin/draksambashare:908
 #, c-format
 msgid "User information"
 msgstr "ਉਪਭੋਗਤਾ ਜਾਣਕਾਰੀ"
 
-#: ../bin/draksambashare:907
+#: ../bin/draksambashare:910
 #, c-format
 msgid "User name:"
 msgstr "ਉਪਭੋਗਤਾ ਨਾਂ:"
 
-#: ../bin/draksambashare:908
+#: ../bin/draksambashare:911
 #, c-format
 msgid "Password:"
 msgstr "ਗੁਪਤ-ਕੋਡ:"
 
-#: ../bin/draksambashare:1022
+#: ../bin/draksambashare:1025
 #, fuzzy, c-format
 msgid "Manage Samba configuration"
 msgstr "ਪੱਤਰ ਚੇਤਾਵਨੀ ਸੰਰਚਨਾ"
 
-#: ../bin/draksambashare:1110
+#: ../bin/draksambashare:1113
 #, c-format
 msgid "Failed to Modify Samba share."
 msgstr ""
 
-#: ../bin/draksambashare:1119
+#: ../bin/draksambashare:1122
 #, c-format
 msgid "Failed to remove a Samba share."
 msgstr ""
 
-#: ../bin/draksambashare:1126
+#: ../bin/draksambashare:1129
 #, c-format
 msgid "File share"
 msgstr ""
 
-#: ../bin/draksambashare:1141
+#: ../bin/draksambashare:1144
 #, c-format
 msgid "Failed to Modify."
 msgstr ""
 
-#: ../bin/draksambashare:1150
+#: ../bin/draksambashare:1153
 #, c-format
 msgid "Failed to remove."
 msgstr ""
 
-#: ../bin/draksambashare:1157
+#: ../bin/draksambashare:1160
 #, c-format
 msgid "Printers"
 msgstr "ਪ੍ਰਿੰਟਰ"
 
-#: ../bin/draksambashare:1169
+#: ../bin/draksambashare:1172
 #, c-format
 msgid "Failed to add user."
 msgstr ""
 
-#: ../bin/draksambashare:1178
+#: ../bin/draksambashare:1181
 #, c-format
 msgid "Failed to change user password."
 msgstr ""
 
-#: ../bin/draksambashare:1190
+#: ../bin/draksambashare:1193
 #, c-format
 msgid "Failed to delete user."
 msgstr ""
 
-#: ../bin/draksambashare:1195
+#: ../bin/draksambashare:1198
 #, c-format
 msgid "Userdrake"
 msgstr "Userdrake"
 
-#: ../bin/draksambashare:1203
+#: ../bin/draksambashare:1206
 #, c-format
 msgid "Samba Users"
 msgstr ""
 
-#: ../bin/draksambashare:1212
+#: ../bin/draksambashare:1215
 #, c-format
 msgid "DrakSamba manage Samba shares"
 msgstr ""
@@ -3372,7 +3374,7 @@ msgstr ""
 msgid "Profiles"
 msgstr "ਪਰਾਕਸੀ"
 
-#: ../bin/net_applet:130 ../lib/network/connection.pm:149
+#: ../bin/net_applet:130 ../lib/network/connection.pm:165
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, fuzzy, c-format
@@ -3384,112 +3386,112 @@ msgstr "LAN ਕੁਨੈਕਸ਼ਨ"
 msgid "Network connection"
 msgstr "ਨੈੱਟਵਰਕ ਚੋਣ"
 
-#: ../bin/net_applet:443
+#: ../bin/net_applet:446
 #, c-format
 msgid "More networks"
 msgstr ""
 
-#: ../bin/net_applet:470
+#: ../bin/net_applet:473
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr ""
 
-#: ../bin/net_applet:475
+#: ../bin/net_applet:478
 #, c-format
 msgid "Always launch on startup"
 msgstr "ਹਮੇਸ਼ਾ ਸ਼ੁਰੂਆਤੀ ਤੇ ਚਲਾਓ"
 
-#: ../bin/net_applet:480
+#: ../bin/net_applet:483
 #, fuzzy, c-format
 msgid "Wireless networks"
 msgstr "ਵਾਇਰਲੈੱਸ ਕੁਨੈਕਸ਼ਨ"
 
-#: ../bin/net_applet:487 ../bin/net_monitor:96
+#: ../bin/net_applet:490 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "ਵਿਵਸਥਾ"
 
-#: ../bin/net_applet:562
+#: ../bin/net_applet:565
 #, fuzzy, c-format
 msgid "Interactive Firewall: intrusion detected"
 msgstr "ਫਾਇਰਵਾਲ ਸੰਰਚਨਾ ਲੱਭੀ ਹੈ!"
 
-#: ../bin/net_applet:579
+#: ../bin/net_applet:582
 #, fuzzy, c-format
 msgid "What do you want to do with this attacker?"
 msgstr "ਕੀ ਤੁਸੀਂ ਇਹ ਵਿਸ਼ੇਸ਼ਤਾ ਵਰਤਣੀ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: ../bin/net_applet:582
+#: ../bin/net_applet:585
 #, fuzzy, c-format
 msgid "Attack details"
 msgstr "ਕੋਈ ਵੇਰਵਾ ਨਹੀਂ"
 
-#: ../bin/net_applet:586
+#: ../bin/net_applet:589
 #, c-format
 msgid "Attack time: %s"
 msgstr ""
 
-#: ../bin/net_applet:587
+#: ../bin/net_applet:590
 #, fuzzy, c-format
 msgid "Network interface: %s"
 msgstr "ਨੈੱਟਵਰਕ ਇੰਟਰਫੇਸ"
 
-#: ../bin/net_applet:588
+#: ../bin/net_applet:591
 #, fuzzy, c-format
 msgid "Attack type: %s"
 msgstr "ਕਿਸਮ: %s"
 
-#: ../bin/net_applet:589
+#: ../bin/net_applet:592
 #, fuzzy, c-format
 msgid "Protocol: %s"
 msgstr "ਪ੍ਰੋਟੋਕਾਲ"
 
-#: ../bin/net_applet:590
+#: ../bin/net_applet:593
 #, fuzzy, c-format
 msgid "Attacker IP address: %s"
 msgstr "ਗੇਟਵੇ IP ਸਿਰਨਾਵਾਂ"
 
-#: ../bin/net_applet:591
+#: ../bin/net_applet:594
 #, fuzzy, c-format
 msgid "Attacker hostname: %s"
 msgstr "ਲੂਪਬੈਕ ਫਾਇਲ ਨਾਂ: %s"
 
-#: ../bin/net_applet:594
+#: ../bin/net_applet:597
 #, fuzzy, c-format
 msgid "Service attacked: %s"
 msgstr "ਸੇਵਾਵਾਂ ਅਤੇ ਡੈਮਨ"
 
-#: ../bin/net_applet:595
+#: ../bin/net_applet:598
 #, fuzzy, c-format
 msgid "Port attacked: %s"
 msgstr "ਪੋਰਟ: %s"
 
-#: ../bin/net_applet:597
+#: ../bin/net_applet:600
 #, c-format
 msgid "Type of ICMP attack: %s"
 msgstr ""
 
-#: ../bin/net_applet:602
+#: ../bin/net_applet:605
 #, c-format
 msgid "Always blacklist (do not ask again)"
 msgstr ""
 
-#: ../bin/net_applet:617
+#: ../bin/net_applet:620
 #, c-format
 msgid "Ignore"
 msgstr "ਅਣਡਿੱਠਾ"
 
-#: ../bin/net_applet:635 ../bin/net_applet:648
+#: ../bin/net_applet:638 ../bin/net_applet:651
 #, fuzzy, c-format
 msgid "Interactive Firewall: new service"
 msgstr "ਫਾਇਰਵਾਲ ਸੰਰਚਨਾ ਲੱਭੀ ਹੈ!"
 
-#: ../bin/net_applet:658
+#: ../bin/net_applet:661
 #, fuzzy, c-format
 msgid "Do you want to open this service?"
 msgstr "ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਸੰਰਚਿਤ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: ../bin/net_applet:661
+#: ../bin/net_applet:664
 #, fuzzy, c-format
 msgid "Remember this answer"
 msgstr "ਇਹ ਗੁਪਤ-ਕੋਡ ਯਾਦ ਰੱਖੋ"
@@ -3632,44 +3634,44 @@ msgstr "ਕੋਈ ਇੰਟਰਨੈੱਟ ਕੁਨੈਕਸ਼ਨ ਸੰਰਚਿ
 msgid "Unknown connection type"
 msgstr "ਅਣਪਛਾਤੀ ਕੁਨੈਕਸ਼ਨ ਕਿਸਮ"
 
-#: ../lib/network/connection.pm:115
+#: ../lib/network/connection.pm:131
 #, c-format
 msgid "Network access settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:116
+#: ../lib/network/connection.pm:132
 #, c-format
 msgid "Access settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:117
+#: ../lib/network/connection.pm:133
 #, c-format
 msgid "Address settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:151 ../lib/network/connection/cable.pm:44
+#: ../lib/network/connection.pm:167 ../lib/network/connection/cable.pm:44
 #: ../lib/network/connection/wireless.pm:43 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "ਕੋਈ ਨਹੀਂ"
 
-#: ../lib/network/connection.pm:163
+#: ../lib/network/connection.pm:179
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr ""
 
-#: ../lib/network/connection.pm:164
+#: ../lib/network/connection.pm:180
 #, c-format
 msgid "Start the connection at boot"
 msgstr ""
 
-#: ../lib/network/connection.pm:230
+#: ../lib/network/connection.pm:246
 #, fuzzy, c-format
 msgid "Link detected on interface %s"
 msgstr "(%s ਪੋਰਟ ਤੇ ਲੱਭਿਆ)"
 
-#: ../lib/network/connection.pm:231 ../lib/network/connection/ethernet.pm:273
+#: ../lib/network/connection.pm:247 ../lib/network/connection/ethernet.pm:274
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr ""
@@ -3830,27 +3832,27 @@ msgstr "ਚੇਤਾਵਨੀ: IP ਸਿਰਨਾਵਾਂ %s ਰਾਖਵਾਂ
 msgid "%s already in use\n"
 msgstr "%s ਪਹਿਲਾਂ ਵਰਤਿਆ ਹੈ\n"
 
-#: ../lib/network/connection/ethernet.pm:224
+#: ../lib/network/connection/ethernet.pm:225
 #, c-format
 msgid "Enable IPv6 to IPv4 tunnel"
 msgstr ""
 
-#: ../lib/network/connection/ethernet.pm:272
+#: ../lib/network/connection/ethernet.pm:273
 #, c-format
 msgid "Link beat detected on interface %s"
 msgstr ""
 
-#: ../lib/network/connection/ethernet.pm:275
+#: ../lib/network/connection/ethernet.pm:276
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
 msgstr ""
 
-#: ../lib/network/connection/ethernet.pm:276
+#: ../lib/network/connection/ethernet.pm:277
 #, c-format
 msgid "Got a network address on interface %s (%s protocol)"
 msgstr ""
 
-#: ../lib/network/connection/ethernet.pm:277
+#: ../lib/network/connection/ethernet.pm:278
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
 msgstr ""
@@ -4444,12 +4446,18 @@ msgstr "ਫਰਜ਼ੀ ਮਾਰਗ ID (VPI):"
 msgid "Virtual Circuit ID (VCI):"
 msgstr "ਫਰਜ਼ੀ ਸਰਕਟ ID (VCI):"
 
-#: ../lib/network/connection/xdsl.pm:324 ../lib/network/drakroam.pm:50
-#: ../lib/network/drakvpn.pm:45 ../lib/network/netconnect.pm:131
-#: ../lib/network/thirdparty.pm:115
+#: ../lib/network/connection/xdsl.pm:324
+#: ../lib/network/connection_manager.pm:41 ../lib/network/drakvpn.pm:45
+#: ../lib/network/netconnect.pm:131 ../lib/network/thirdparty.pm:115
 #, fuzzy, c-format
 msgid "Could not install the packages (%s)!"
 msgstr "%s ਪੈਕੇਜ ਇੰਸਟਾਲ ਨਹੀਂ ਕਰ ਸਕਦਾ!"
+
+#: ../lib/network/connection_manager.pm:53
+#: ../lib/network/connection_manager.pm:85
+#, fuzzy, c-format
+msgid "Network settings"
+msgstr "ਲੋਕਲ ਨੈੱਟਵਰਕ ਸਿਰਨਾਵਾਂ"
 
 #: ../lib/network/connection_manager.pm:54
 #: ../lib/network/connection_manager.pm:86
@@ -4659,7 +4667,7 @@ msgstr ""
 msgid "Use Interactive Firewall"
 msgstr ""
 
-#: ../lib/network/drakroam.pm:29
+#: ../lib/network/drakroam.pm:22
 #, c-format
 msgid "No device found"
 msgstr "ਕੋਈ ਜੰਤਰ ਨਹੀਂ ਲੱਭਿਆ"
@@ -4669,12 +4677,12 @@ msgstr "ਕੋਈ ਜੰਤਰ ਨਹੀਂ ਲੱਭਿਆ"
 msgid "Hostname changed to \"%s\""
 msgstr ""
 
-#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:80
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:82
 #, c-format
 msgid "Configure"
 msgstr "ਸੰਰਚਨਾ"
 
-#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:85
+#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:87
 #, c-format
 msgid "Refresh"
 msgstr "ਤਾਜ਼ਾ"
@@ -4878,17 +4886,17 @@ msgstr "ਨਵਾਂ ਡਰਾਈਵਰ ਇੰਸਟਾਲ ਕਰੋ"
 msgid "Select a device:"
 msgstr ""
 
-#: ../lib/network/netcenter.pm:55
+#: ../lib/network/netcenter.pm:40
 #, fuzzy, c-format
 msgid "Network Center"
 msgstr "ਨੈੱਟਵਰਕ ਇੰਟਰਫੇਸ"
 
-#: ../lib/network/netcenter.pm:71 ../lib/network/netconnect.pm:212
+#: ../lib/network/netcenter.pm:73 ../lib/network/netconnect.pm:212
 #, c-format
 msgid "Please select your network:"
 msgstr ""
 
-#: ../lib/network/netcenter.pm:76
+#: ../lib/network/netcenter.pm:78
 #, fuzzy, c-format
 msgid "Monitor"
 msgstr "ਨੈੱਟਵਰਕ ਨਿਗਰਾਨੀ ਕਰੋ"
