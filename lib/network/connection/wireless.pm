@@ -77,6 +77,7 @@ my @thirdparty_settings = (
                 package => "iwlwifi-${_}-ucode",
                 test_file => "iwlwifi-${_}.ucode",
             },
+            sleep => 1,
         };
     } (3945, 4965)),
 
