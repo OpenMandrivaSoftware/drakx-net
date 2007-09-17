@@ -331,8 +331,10 @@ sub apply_settings {
         if (exists $settings->{firmware} && !$settings->{old_status}{firmware}) {
             log::explanations("Reloading module $driver");
             eval { modules::unload($driver) };
-            eval { modules::load($driver) };
+        } else {
+            log::explanations("Loading module $driver");
         }
+        eval { modules::load($driver) };
 
         undef $wait;
         $wait = $in->wait_message('', N("Please wait, running device configuration commands..."));
