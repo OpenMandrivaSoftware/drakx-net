@@ -11,7 +11,7 @@ use modules;
 
 sub get_type_name() { N("DVB") }
 sub get_type_description() { N("Satellite (DVB)") }
-sub get_type_icon() { 'dvb-24' }
+sub _get_type_icon() { 'dvb' }
 
 sub get_devices() {
     require detect_devices;

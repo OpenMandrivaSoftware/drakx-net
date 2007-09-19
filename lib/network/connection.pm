@@ -25,7 +25,12 @@ Get the connection type icon path
 
 =cut
 
-sub get_type_icon() { '/usr/share/mcc/themes/default/drakconnect-mdk' }
+sub get_type_icon {
+    my ($self, $o_size) = @_;
+    my $size = $o_size || 24;
+    my $icon = eval { $self->_get_type_icon . '-' . $size };
+    $icon || '/usr/share/mcc/themes/default/drakconnect-mdk';
+}
 
 =item get_devices()
 
@@ -247,5 +252,17 @@ sub get_status_message {
         link_down => N("Link beat lost on interface %s", $interface),
     }->{$status};
 }
+
+=head2 Pure virtual private instance methods
+
+=over
+
+=item _get_type_icon
+
+Get the icon prefix for the connection type
+
+=back
+
+=cut
 
 1;

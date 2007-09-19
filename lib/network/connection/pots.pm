@@ -15,7 +15,7 @@ sub get_type_description {
     #-PO: for example, in French, it can be translated as "RTC"
     N("Analog telephone modem (POTS)");
 }
-sub get_type_icon { 'potsmodem-24' }
+sub _get_type_icon { 'potsmodem' }
 sub get_metric { 50 }
 
 sub handles_ifcfg {
