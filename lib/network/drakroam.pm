@@ -109,7 +109,6 @@ sub create_drakroam_gui {
                    $droam->{gui}{buttons}{configure} = gtknew('Button', text => N("Configure"), clicked => sub { network::connection_manager::configure_connection($droam) }),
                    $droam->{gui}{buttons}{connect_start} = gtknew('Button', text => N("Connect"), relief => 'half', clicked => sub { network::connection_manager::start_connection($droam) }),
                    $droam->{gui}{buttons}{connect_stop} = gtknew('Button', text => N("Disconnect"), relief => 'half', clicked => sub { network::connection_manager::stop_connection($droam) }),
-                   $droam->{gui}{buttons}{connect_toggle} = gtknew('Button', relief => 'half', clicked => sub { network::connection_manager::toggle_connection($droam) }),
                    $droam->{gui}{buttons}{refresh} = gtknew('Button', text => N("Refresh"), clicked => sub { network::connection_manager::update_networks($droam) }),
                    gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit })
                ]),
