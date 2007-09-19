@@ -16,5 +16,7 @@ use network::netcenter;
 my $in = 'interactive'->vnew('su');
 my $net = {};
 network::network::read_net_conf($net);
+my $dbus;
+eval { $dbus = dbus_object::system_bus() };
 
-network::netcenter::main($in, $net);
+network::netcenter::main($in, $net, $dbus);
