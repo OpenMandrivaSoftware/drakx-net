@@ -1,3 +1,21 @@
+0.16:
+- connection manager (netcenter/drakroam):
+  o add banner in configure dialog (#33622)
+- netcenter:
+  o update connection status on dbus event
+  o update status icon on connection change
+  o always allow to connect if no network has to be selected
+  o fix connection stop
+- drakroam:
+  o remove extra toggle button
+  o do not die when no wireless interface is configured (#33123)
+- net_applet:
+  o use new connected/disconnected/unconfigured icons
+- connection backend:
+  o wait a bit for iwl3945/iwl4965 interfaces to appear
+  o fix matching of ueagle_atm module (#33029)
+  o show notification about cxacru firmware
+
 0.15:
 - draknetcenter:
   o use new status icons
