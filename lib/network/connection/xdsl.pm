@@ -157,6 +157,16 @@ You can find a driver on http://eciadsl.flashtux.org/"),
             ],
         },
     },
+
+    {
+        name => 'cxacru',
+        firmware => {
+            test_file => 'cxacru-fw.bin',
+            no_club => 1,
+            explanations => N_("Modems using Conexant AccessRunner chipsets cannot be supported due to binary firmware distribution problem."),
+            url => 'http://accessrunner.sourceforge.net/firmware.shtml',
+        },
+    }
 );
 
 sub get_thirdparty_settings() {
