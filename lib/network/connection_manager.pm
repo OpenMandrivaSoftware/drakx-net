@@ -277,6 +277,12 @@ sub update_on_status_change {
       (!$cmanager->{connection}->can('get_networks') || $cmanager->{connection}{network});
     $cmanager->{gui}{buttons}{configure}->set_sensitive($may_have_network)
       if $cmanager->{gui}{buttons}{configure};
+
+    if ($cmanager->{gui}{status_image} && $cmanager->{connection}) {
+        my $icon = $cmanager->{connection}->get_status_icon;
+        ugtk2::_find_imgfile($icon) or $icon = $cmanager->{connection}->get_type_icon;
+        gtkset($cmanager->{gui}{status_image}, file => $icon);
+    }
 }
 
 1;
