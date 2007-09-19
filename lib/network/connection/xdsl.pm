@@ -126,7 +126,7 @@ You can find a driver on http://eciadsl.flashtux.org/"),
     },
 
     {
-        matching => [ 'ueagle-atm' ],
+        matching => [ 'ueagle_atm' ],
         description => 'Eagle chipset (from Analog Devices), e.g. Sagem F@st 800/840/908',
         url => 'http://www.eagle-usb.org/',
         name => 'ueagle',
