@@ -83,7 +83,9 @@ sub configure_connection {
 
     $cmanager->{in}->ask_from_({
         title => N("Network settings"),
-        messages => N("Please enter settings for network")
+        messages => N("Please enter settings for network"),
+        icon => $cmanager->{connection}->get_type_icon(48),
+        banner_title => $cmanager->{connection}->get_description,
     },
                    [
                        $cmanager->{connection}->can('get_network_access_settings') ? (
