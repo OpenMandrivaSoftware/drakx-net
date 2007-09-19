@@ -35,7 +35,7 @@ sub build_cmanager {
 }
 
 sub main {
-    my ($in, $net) = @_;
+    my ($in, $net, $dbus) = @_;
 
     my $title = N("Network Center");
     my $icon = '/usr/share/mcc/themes/default/drakroam-mdk.png';
@@ -125,6 +125,22 @@ sub main {
            ]),
        ]),
     );
+
+    if ($dbus) {
+        my $monitor;
+        eval { $monitor = network::monitor->new($dbus) };
+        $dbus->{connection}->add_filter(sub {
+            my ($_con, $msg) = @_;
+            if ($msg->get_member eq 'status') {
+                my ($status, $interface) = $msg->get_args_list;
+                my $cmanager = find { $_->{connection}->get_interface eq $interface } @cmanagers
+                  or return;
+                network::connection_manager::update_on_status_change($cmanager);
+            }
+        });
+        $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
+        dbus_object::set_gtk2_watch_helper($dbus);
+    }
 
     my $base_color = $w->{window}->get_style->base('normal')->to_string;
     Gtk2::Rc->parse_string(<<END);
