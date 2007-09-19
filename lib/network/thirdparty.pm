@@ -130,7 +130,7 @@ sub warn_not_found {
     $opt{$_} = ref $settings->{$option} eq 'HASH' && $settings->{$option}{$_} || $settings->{$_} foreach qw(url explanations no_club no_package);
     my $checked = get_checked_element($settings, $driver, $option);
     $in->ask_warn(N("Error"),
-                  join('',
+                  join(" ",
                        ($opt{no_package} ?
                           N("Some components (%s) are required but aren't available for %s hardware.", $option, $settings->{name}) :
                           N("Some packages (%s) are required but aren't available.", join(', ', @packages))),
