@@ -269,8 +269,9 @@ sub update_on_status_change {
     $cmanager->{gui}{buttons}{connect_stop}->set_sensitive($cmanager->{connection} && $cmanager->{connection}->get_status)
       if $cmanager->{gui}{buttons}{connect_stop};
 
-    my $may_have_network = !$cmanager->{connection}->can('get_networks') || $cmanager->{connection}{network};
-    $cmanager->{gui}{buttons}{configure}->set_sensitive($cmanager->{connection} && $may_have_network)
+    my $may_have_network = $cmanager->{connection} &&
+      (!$cmanager->{connection}->can('get_networks') || $cmanager->{connection}{network});
+    $cmanager->{gui}{buttons}{configure}->set_sensitive($may_have_network)
       if $cmanager->{gui}{buttons}{configure};
 }
 
