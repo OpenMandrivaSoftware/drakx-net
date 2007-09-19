@@ -9,7 +9,7 @@ use strict;
 use common;
 
 sub get_type_name() { N("Wireless") }
-sub get_type_icon() { 'wireless-24' }
+sub _get_type_icon() { 'wireless' }
 sub get_devices {
     my ($_class, %options) = @_;
     require detect_devices;

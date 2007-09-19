@@ -6,7 +6,7 @@ use strict;
 use common;
 
 sub get_type_name { N("ISDN") }
-sub get_type_icon { 'isdn-24' }
+sub _get_type_icon { 'isdn' }
 
 sub get_devices {
     require modules;

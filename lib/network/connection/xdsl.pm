@@ -6,7 +6,7 @@ use strict;
 use common;
 
 sub get_type_name() { N("DSL") }
-sub get_type_icon() { 'xdsl-24' }
+sub _get_type_icon() { 'xdsl' }
 
 sub get_devices() {
     require detect_devices;
