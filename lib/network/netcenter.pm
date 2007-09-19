@@ -58,10 +58,8 @@ sub main {
                      child => gtknew('VBox', spacing => 5, children_tight => [
                map_index {
                    my $cmanager = $cmanagers[$::i];
-                   my $icon = $_->get_status_icon;
-                   ugtk2::_find_imgfile($icon) or $icon = $_->get_type_icon;
                    my $head = gtknew('HBox', children => [
-                               0, gtknew('Image', file => $icon),
+                               0, $cmanager->{gui}{status_image} = gtknew('Image'),
                                0, gtknew('Label', padding => [ 5, 0 ]),
                                1, gtknew('Label', ellipsize => 'end', alignment => [ 0, 0 ], text_markup => '<b>' . $_->get_description . '</b>'),
                                0, gtknew('Label', padding => [ 2, 0 ]),
