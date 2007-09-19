@@ -260,8 +260,12 @@ sub update_on_status_change {
         $cmanager->{gui}{buttons}{connect_toggle}->set_label($disconnect ? N("Disconnect") : N("Connect"));
         gtkset($cmanager->{gui}{buttons}{connect_toggle}, image => gtknew('Image', file => $disconnect ? 'stop-16' : 'activate-16'))
           if $cmanager->{gui}{buttons}{connect_toggle}->get_image;
-        #- always allow to disconnect if connected
-        $cmanager->{gui}{buttons}{connect_toggle}->set_sensitive($cmanager->{connection} && ($cmanager->{connection}->get_status || $cmanager->{connection}{network}));
+        $cmanager->{gui}{buttons}{connect_toggle}->set_sensitive(
+            $cmanager->{connection} && (
+                !$cmanager->{connection}->can('get_networks') ||
+                $cmanager->{connection}->get_status || #- always allow to disconnect if connected
+                $cmanager->{connection}{network}
+            ));
     }
 
     $cmanager->{gui}{buttons}{connect_start}->set_sensitive($cmanager->{connection} && (!$cmanager->{connection}->get_status || $cmanager->{connection}{network}))
