@@ -49,6 +49,7 @@ sub main {
     @connections = uniq_ { $_->{device} } @connections;
 
     my $pixbufs = network::connection_manager::create_pixbufs();
+    my @cmanagers = map { build_cmanager($in, $net, $w, $pixbufs, $_) } @connections;
 
     gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
@@ -56,7 +57,7 @@ sub main {
            1, gtknew('ScrolledWindow', width => 500, height => 300, shadow_type => 'none',
                      child => gtknew('VBox', spacing => 5, children_tight => [
                map_index {
-                   my $cmanager = build_cmanager($in, $net, $w, $pixbufs, $_);
+                   my $cmanager = $cmanagers[$::i];
                    my $icon = $_->get_status_icon;
                    ugtk2::_find_imgfile($icon) or $icon = $_->get_type_icon;
                    my $head = gtknew('HBox', children => [
