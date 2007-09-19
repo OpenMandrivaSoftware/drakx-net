@@ -43,7 +43,7 @@ my %pixbufs =
   (
       firewall => gtknew('Pixbuf', file => 'drakfirewall'),
       firewall_icon => gtknew('Pixbuf', file => 'drakfirewall')->scale_simple(24, 24, 'hyper'),
-      state => { map { $_ => gtknew('Pixbuf', file => $_) } qw(connected disconnected) },
+      state => { map { $_ => gtknew('Pixbuf', file => $_) } qw(connected disconnected unconfigured) },
       link_level => { map {
           $_ => gtknew('Pixbuf', file => 'wifi-' . sprintf('%03d', $_))->scale_simple(24, 24, 'hyper');
       } qw(20 40 60 80 100) },
@@ -332,15 +332,10 @@ sub get_current_network() {
 
 sub get_state_pixbuf() {
     my $pixbuf;
-    if ($current_state eq 'connected') {
-        my $wnet = get_current_network();
-        $pixbuf = $wnet ?
-          network::signal_strength::get_strength_icon($wnet) :
-          $pixbufs{state}{connected};
-    } else {
-        $pixbuf = $pixbufs{state}{disconnected};
-    }
-    $pixbuf;
+    my $wnet = $current_state eq 'connected' && get_current_network();
+    $wnet ?
+      network::signal_strength::get_strength_icon($wnet) :
+      $pixbufs{state}{$current_state};
 }
 
 sub update_tray_icon() {
