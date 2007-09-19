@@ -92,7 +92,7 @@ sub main {
                                        0, $cmanager->{gui}{buttons}{connect_toggle} =
                                                  gtknew('Button',
                                                         image => gtknew('Image', file => 'activate-16'),
-                                                        clicked => sub { network::connection_manager::start_connection($cmanager) }),
+                                                        clicked => sub { network::connection_manager::toggle_connection($cmanager) }),
                                            ]),
                                ]),
                    ]);
