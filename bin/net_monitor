@@ -486,6 +486,9 @@ sub draw_monitor {
     defined $darea->{$intf} or return;
     my $gcl = $gc_lines->{$intf};
     my $pixmap = $pixmap->{$intf};
+    my $gc = $darea->{$intf}->style->white_gc;
+    # fix race on ugtk2->exit that causes a crash (#33023)
+    return 0 if !$gc;
     $pixmap->draw_rectangle($darea->{$intf}->style->black_gc, 1, 0, 0, $width, $height);
     my $maxr = 0;
     foreach (@{$o->{stack_r}}) { $maxr = $_ if $_ > $maxr }
