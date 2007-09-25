@@ -175,7 +175,9 @@ $eventbox->signal_connect(button_press_event => sub {
             run_drakids();
         } elsif ($simple_menu) {
            $simple_menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
-       }
+       } else {
+            run_netcenter();
+        }
     } elsif ($_[1]->button == 3 && $menu) {
         $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
     }
@@ -210,6 +212,10 @@ sub shouldStart() {
 }
 sub run_net_monitor() {
     run_program::raw({ detach => 1 }, '/usr/sbin/net_monitor', '--defaultintf', $current_interface) unless is_running('net_monitor');
+}
+sub run_netcenter {
+    my ($o_ap) = @_;
+    run_program::raw({ detach => 1 }, '/usr/bin/draknetcenter') unless is_running('netcenter');
 }
 sub run_drakroam {
     my ($o_ap) = @_;
@@ -366,7 +372,6 @@ sub disable_ifw_alert() {
 sub update_applet() {
     $wireless_device = detect_devices::get_wireless_interface();
 
-    generate_simple_menu();
     generate_menu();
 
     update_tray_icon();
