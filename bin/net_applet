@@ -213,8 +213,7 @@ sub shouldStart() {
 sub run_net_monitor() {
     run_program::raw({ detach => 1 }, '/usr/sbin/net_monitor', '--defaultintf', $current_interface) unless is_running('net_monitor');
 }
-sub run_netcenter {
-    my ($o_ap) = @_;
+sub run_netcenter() {
     run_program::raw({ detach => 1 }, '/usr/bin/draknetcenter') unless is_running('netcenter');
 }
 sub run_drakroam {
