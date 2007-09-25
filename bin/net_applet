@@ -336,7 +336,6 @@ sub get_current_network() {
 }
 
 sub get_state_pixbuf() {
-    my $pixbuf;
     my $wnet = $current_state eq 'connected' && get_current_network();
     $wnet ?
       network::signal_strength::get_strength_icon($wnet) :
