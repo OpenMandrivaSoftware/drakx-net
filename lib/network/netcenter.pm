@@ -74,7 +74,7 @@ sub main {
                                    gtknew('HBox', children => [
                                        1, gtknew('HButtonBox', spacing => 6, layout => 'start', children_loose => [
                                                $cmanager->{gui}{buttons}{monitor} =
-                                                 gtknew('Button', text => N("Monitor"),
+                                                 gtknew('Button', text => N("_: This is a verb\nMonitor"),
                                                         image => gtknew('Image', file => 'monitor-16'),
                                                         clicked => sub { network::connection_manager::monitor_connection($cmanager) }),
                                                $cmanager->{gui}{buttons}{configure} = 
