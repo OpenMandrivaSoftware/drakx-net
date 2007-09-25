@@ -44,5 +44,13 @@ install:
 	perl -pe 's/.*X-KDE.*\n//;s/\s+--force//g' $(DESTDIR)$(desktopdir)/net_applet.desktop > $(DESTDIR)$(autostartgnomedir)/net_applet.desktop
 	make -C po install
 
+dis:
+	rm -rf $(NAME)-$(VERSION) ../$(NAME)-$(VERSION).tar*
+	svn export -q -rBASE . $(NAME)-$(VERSION)
+	find $(NAME)-$(VERSION) -name .cvsignore |xargs rm -rf
+	tar cf ../$(NAME)-$(VERSION).tar $(NAME)-$(VERSION)
+	bzip2 -9f ../$(NAME)-$(VERSION).tar
+	rm -rf $(NAME)-$(VERSION)
+
 clean:
 	make -C po clean
