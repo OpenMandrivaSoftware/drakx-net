@@ -10,7 +10,7 @@ sub _get_type_icon() { 'cellular' }
 sub get_devices() {
        require detect_devices;
        my @maybe_usbserial_modules = ('usbserial_generic', 'unknown');
-       my @serial = grep { $_->{description} =~ /GPRS|EDGE|3G|UMTS|H.DPA/i } detect_devices::matching_driver('serial_cs', 'usbserial', @maybe_usbserial_modules);
+       my @serial = grep { $_->{description} =~ /GPRS|EDGE|3G|UMTS|H.DPA|CDMA/i } detect_devices::matching_driver('serial_cs', 'usbserial', @maybe_usbserial_modules);
        member($_->{driver}, @maybe_usbserial_modules) and $_->{driver} = 'usbserial' foreach @serial;
        @serial, detect_devices::probe_category('network/cellular');
 }
