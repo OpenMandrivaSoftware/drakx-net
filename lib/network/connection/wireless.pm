@@ -68,6 +68,20 @@ my @thirdparty_settings = (
         };
     } (2100, 2200)),
 
+    {
+        name => "ipw3945",
+        description => "Intel(R) PRO/Wireless 3945",
+        url => "http://ipw3945.sourceforge.net/",
+        firmware => {
+            package => "ipw3945-ucode",
+            test_file => "ipw3945.ucode",
+        },
+        tools => {
+            package => "ipw3945d",
+            test_file => '/usr/sbin/ipw3945d',
+        },
+    },
+
     (map {
         {
             name => "iwl${_}",
