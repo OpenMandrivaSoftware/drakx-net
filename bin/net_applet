@@ -197,11 +197,12 @@ Gtk2->main;
 ugtk2::exit(0);
 
 sub is_running {
-    my ($name) = @_;
+    my ($name, $o_user) = @_;
+    my $user = $o_user || $ENV{USER};
     any {
 	my ($ppid, $pid, $n) = /^\s*(\d+)\s+(\d+)\s+(.*)/;
 	$ppid != 1 && $pid != $$ && $n eq $name;
-    } `ps -o '%P %p %c' -u $ENV{USER}`;
+    } `ps -o '%P %p %c' -u $o_user`;
 }
 sub shouldStart() {
     my ($opt) = @ARGV;
@@ -214,11 +215,11 @@ sub run_net_monitor() {
     run_program::raw({ detach => 1 }, '/usr/sbin/net_monitor', '--defaultintf', $current_interface) unless is_running('net_monitor');
 }
 sub run_netcenter() {
-    run_program::raw({ detach => 1 }, '/usr/bin/draknetcenter') unless is_running('draknetcenter');
+    run_program::raw({ detach => 1 }, '/usr/bin/draknetcenter') unless is_running('draknetcenter', 'root');
 }
 sub run_drakroam {
     my ($o_ap) = @_;
-    run_program::raw({ detach => 1 }, '/usr/sbin/drakroam', if_($o_ap, "--ap=$o_ap")) unless is_running('drakroam');
+    run_program::raw({ detach => 1 }, '/usr/sbin/drakroam', if_($o_ap, "--ap=$o_ap")) unless is_running('drakroam', 'root');
 }
 sub run_drakids() {
     $ifw_alert = 0;
