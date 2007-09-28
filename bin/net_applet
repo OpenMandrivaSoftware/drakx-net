@@ -202,7 +202,7 @@ sub is_running {
     any {
 	my ($ppid, $pid, $n) = /^\s*(\d+)\s+(\d+)\s+(.*)/;
 	$ppid != 1 && $pid != $$ && $n eq $name;
-    } `ps -o '%P %p %c' -u $o_user`;
+    } `ps -o '%P %p %c' -u $user`;
 }
 sub shouldStart() {
     my ($opt) = @ARGV;
