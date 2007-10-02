@@ -674,6 +674,26 @@ our %data = (
                    method => 'pppoe',
                   },
 
+                  N("Israel") . "|Barak 013" =>
+                  {
+                   provider_id => 'IL03',
+                   vpi => 8,
+                   vci => 48,
+                   Encapsulation => 6,
+                   dnsServers => [ qw(212.150.49.10 206.49.94.234 212.150.48.169) ],
+                   method => 'pppoa'
+                  },
+
+                  N("Israel") . "|Bezeq 014" =>
+                  {
+                   provider_id => 'IL04',
+                   vpi => 8,
+                   vci => 48,
+                   Encapsulation => 6,
+                   dnsServers => [ qw(192.115.106.10 192.115.106.11 192.115.106.35) ],
+                   method => 'pppoa'
+                  },
+
                   N("Israel") . "|Bezeq" =>
                   {
                    provider_id => 'IL01',
@@ -682,6 +702,86 @@ our %data = (
                    Encapsulation => 6,
                    dnsServers => [ qw(192.115.106.10 192.115.106.11 192.115.106.35) ],
                    method => 'pppoa',
+                  },
+
+                  N("Israel") . "|BGU" =>
+                  {
+                   provider_id => 'IL06',
+                   vpi => 8,
+                   vci => 48,
+                   Encapsulation => 6,
+                   dnsServers => [ qw(132.72.140.46 132.72.140.45) ],
+                   method => 'pppoa'
+                  },
+
+                  N("Israel") . "|HaifaU" =>
+                  {
+                   provider_id => 'IL07',
+                   vpi => 8,
+                   vci => 48,
+                   Encapsulation => 6,
+                   dnsServers => [ qw(132.74.1.3 132.74.1.5) ],
+                   method => 'pppoa'
+                  },
+
+                  N("Israel") . "|HUJI" =>
+                  {
+                   provider_id => 'IL08',
+                   vpi => 8,
+                   vci => 48,
+                   Encapsulation => 6,
+                   dnsServers => [ qw(128.139.6.1 128.139.4.3) ],
+                   method => 'pppoa'
+                  },
+
+                  N("Israel") . "|Kavey Zahave 012" =>
+                  {
+                   provider_id => 'IL02',
+                   vpi => 8,
+                   vci => 48,
+                   Encapsulation => 6,
+                   dnsServers => [ qw(212.117.129.3 212.117.128.6) ],
+                   method => 'pppoa'
+                  },
+
+                  N("Israel") . "|Netvision 017" =>
+                  {
+                   provider_id => 'IL01',
+                   vpi => 8,
+                   vci => 48,
+                   Encapsulation => 6,
+                   dnsServers => [ qw(212.143.212.143 194.90.1.5) ],
+                   method => 'pppoa'
+                  },
+
+                  N("Israel") . "|Smile 015" =>
+                  {
+                   provider_id => 'IL05',
+                   vpi => 8,
+                   vci => 48,
+                   Encapsulation => 6,
+                   dnsServers => [ qw(192.116.202.222 213.8.172.83) ],
+                   method => 'pppoa'
+                  },
+
+                  N("Israel") . "|TAU" =>
+                  {
+                   provider_id => 'IL09',
+                   vpi => 8,
+                   vci => 48,
+                   Encapsulation => 6,
+                   dnsServers => [ qw(132.66.32.10 132.66.16.2) ],
+                   method => 'pppoa'
+                  },
+
+                  N("Israel") . "|Technion" =>
+                  {
+                   provider_id => 'IL10',
+                   vpi => 8,
+                   vci => 48,
+                   Encapsulation => 6,
+                   dnsServers => [ qw(132.68.1.2 132.68.1.9) ],
+                   method => 'pppoa'
                   },
 
                   N("India") . "|Any" =>
