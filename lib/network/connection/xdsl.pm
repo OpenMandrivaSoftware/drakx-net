@@ -141,9 +141,7 @@ You can find a driver on http://eciadsl.flashtux.org/"),
         description => 'Bewan Adsl (Unicorn)',
         url => 'http://www.bewan.com/bewan/users/downloads/',
         name => 'unicorn',
-        kernel_module => {
-            test_file => 'unicorn_.*_atm',
-        },
+        kernel_module => 1,
         tools => {
             optional => 1,
             test_file => '/usr/bin/bewan_adsl_status',
