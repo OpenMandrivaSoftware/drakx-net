@@ -83,7 +83,7 @@ my @thirdparty_settings = (
     {
         matching => [ list_modules::category2modules('network/slmodem') ],
         description => 'Smartlink WinModem',
-        url => 'http://www.smlink.com/content.aspx?id=135/',
+        url => 'http://linmodems.technion.ac.il/resources.html#smartlink',
         name => 'slmodem',
         kernel_module => 1,
         tools => {
