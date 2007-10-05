@@ -44,7 +44,7 @@ sub main {
     gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
            $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
-           1, gtknew('ScrolledWindow', width => 500, height => 300, shadow_type => 'none',
+           1, gtknew('ScrolledWindow', width => 600, height => 400, shadow_type => 'none',
                      child => gtknew('VBox', spacing => 5, children_tight => [
                map_index {
                    my $cmanager = $cmanagers[$::i];
