@@ -11,14 +11,6 @@ use ugtk2 qw(:create :helpers :wrappers);
 use network::connection;
 use network::connection_manager;
 
-sub filter_networks {
-    my ($connection) = @_;
-    $_->{configured} = $connection->network_is_configured($_) foreach values %{$connection->{networks}};
-    my @networks = sort {
-        $b->{configured} <=> $a->{configured} || $b->{signal_strength} <=> $a->{signal_strength} || $a->{name} cmp $b->{name};
-    } values %{$connection->{networks}};
-}
-
 sub build_cmanager {
     my ($in, $net, $w, $pixbufs, $connection) = @_;
 
@@ -27,7 +19,6 @@ sub build_cmanager {
     $cmanager->{gui}{show_networks} = $connection->can('get_networks') && !$connection->network_scan_is_slow;
     if ($cmanager->{gui}{show_networks}) {
         network::connection_manager::create_networks_list($cmanager);
-        $cmanager->{filter_networks} = sub { filter_networks($connection) };
         network::connection_manager::update_networks($cmanager);
     }
     $cmanager;

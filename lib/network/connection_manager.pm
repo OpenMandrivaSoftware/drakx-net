@@ -216,6 +216,14 @@ sub select_network {
     update_on_status_change($droam);
 }
 
+sub filter_networks {
+    my ($connection) = @_;
+    $_->{configured} = $connection->network_is_configured($_) foreach values %{$connection->{networks}};
+    sort {
+        $b->{configured} <=> $a->{configured} || $b->{signal_strength} <=> $a->{signal_strength} || $a->{name} cmp $b->{name};
+    } values %{$connection->{networks}};
+}
+
 sub update_networks {
     my ($cmanager) = @_;
     @{$cmanager->{gui}{networks_list}{data}} = ();
@@ -231,8 +239,7 @@ sub update_networks {
         my $interface = $cmanager->{connection}->get_interface;
         my $connected = exists $routes->{$interface}{network};
 
-        my @networks = values %{$cmanager->{connection}{networks}};
-        $cmanager->{filter_networks} and @networks = $cmanager->{filter_networks}(@networks);
+        my @networks = filter_networks($cmanager->{connection});
         foreach my $network (@networks) {
             my $ap = $network->{ap};
             push @{$cmanager->{gui}{networks_list}{data}}, [
