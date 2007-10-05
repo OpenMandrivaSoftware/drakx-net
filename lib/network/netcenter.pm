@@ -17,7 +17,6 @@ sub filter_networks {
     my @networks = sort {
         $b->{configured} <=> $a->{configured} || $b->{signal_strength} <=> $a->{signal_strength} || $a->{name} cmp $b->{name};
     } values %{$connection->{networks}};
-    splice @networks, 0, 3;
 }
 
 sub build_cmanager {
