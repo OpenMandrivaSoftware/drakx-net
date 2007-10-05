@@ -140,15 +140,6 @@ sub main {
         dbus_object::set_gtk2_watch_helper($dbus);
     }
 
-    my $base_color = $w->{window}->get_style->base('normal')->to_string;
-    Gtk2::Rc->parse_string(<<END);
-style "netcenter_bg" {
-  bg[NORMAL] = "$base_color"
-}
-class "*Container*" style "netcenter_bg"
-
-END
-
     $w->main;
 }
 
