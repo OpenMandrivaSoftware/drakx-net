@@ -58,9 +58,10 @@ sub main {
                    my $content = gtknew('HBox', children => [
                                0, gtknew('Label', padding => [ 5, 0 ]),
                                1, gtknew('VBox', spacing => 5, children_tight => [
-                                   if_($cmanager->{gui}{show_networks},
+                                   ($cmanager->{gui}{show_networks} ? (
                                        gtknew('Label', text => N("Please select your network:"), alignment => [ 0, 0 ]),
-                                       gtknew('Frame', shadow_type => 'in', child => $cmanager->{gui}{networks_list})),
+                                       gtknew('Frame', shadow_type => 'in', child => $cmanager->{gui}{networks_list})
+                                   ) : ()),
                                    gtknew('HBox', children => [
                                        1, gtknew('HButtonBox', spacing => 6, layout => 'start', children_loose => [
                                                $cmanager->{gui}{buttons}{monitor} =
