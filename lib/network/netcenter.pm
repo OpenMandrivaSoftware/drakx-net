@@ -124,7 +124,12 @@ sub main {
                 my ($status, $interface) = $msg->get_args_list;
                 my $cmanager = find { $_->{connection}->get_interface eq $interface } @cmanagers
                   or return;
-                network::connection_manager::update_on_status_change($cmanager);
+                #- FIXME: factorize in update_on_status_change() and check why update_networks() calls update_on_status_change()
+                if ($cmanager->{connection}->can('get_networks') && !$cmanager->{connection}->network_scan_is_slow) {
+                    network::connection_manager::update_networks($cmanager);
+                } else {
+                    network::connection_manager::update_on_status_change($cmanager);
+                }
             }
         });
         $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
