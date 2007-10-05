@@ -68,7 +68,7 @@ sub list_wireless {
         };
 	foreach (@list) {
             if ((/^\s*$/ || /Cell/) && exists $net->{ap}) {
-                $net->{current} = to_bool($net->{essid} && $net->{essid} eq $current_essid || $net->{ap} eq $current_ap);
+                $net->{current} = to_bool($net->{ap} ? $net->{ap} eq $current_ap : $net->{essid} && $net->{essid} eq $current_essid);
                 $networks{$net->{ap}} = $net;
                 $net = {};
             }
