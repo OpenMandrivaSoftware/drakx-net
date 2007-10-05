@@ -81,12 +81,15 @@ sub configure_connection {
 
     load_settings($cmanager);
 
-    $cmanager->{in}->ask_from_({
-        title => N("Network settings"),
-        messages => N("Please enter settings for network"),
-        icon => $cmanager->{connection}->get_type_icon(48),
-        banner_title => $cmanager->{connection}->get_description,
-    },
+    my $error;
+    do {
+        undef $error;
+        $cmanager->{in}->ask_from_({
+            title => N("Network settings"),
+            messages => N("Please enter settings for network"),
+            icon => $cmanager->{connection}->get_type_icon(48),
+            banner_title => $cmanager->{connection}->get_description,
+        },
                    [
                        $cmanager->{connection}->can('get_network_access_settings') ? (
                            { label => $cmanager->{connection}->get_network_access_settings_label, title => 1, advanced => 1 },
@@ -108,6 +111,15 @@ sub configure_connection {
                        ) : (),
                    ],
                ) or return;
+        if ($cmanager->{connection}->can('check_network_access_settings') && !$cmanager->{connection}->check_network_access_settings) {
+            $cmanager->{in}->ask_warn(N("Error"), $cmanager->{connection}->{network_access}{error}{message});
+            $error = 1;
+        }
+        if ($cmanager->{connection}->can('check_address_settings') && !$cmanager->{connection}->check_address_settings($cmanager->{net})) {
+            $cmanager->{in}->ask_warn(N("Error"), $cmanager->{connection}->{address}{error}{message});
+            $error = 1;
+        }
+    } while $error;
 
     $cmanager->{connection}->install_packages($cmanager->{in}) if $cmanager->{connection}->can('install_packages');
     $cmanager->{connection}->unload_connection if $cmanager->{connection}->can('unload_connection');
