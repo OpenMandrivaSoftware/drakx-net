@@ -60,7 +60,7 @@ sub main {
                                1, gtknew('VBox', spacing => 5, children_tight => [
                                    ($cmanager->{gui}{show_networks} ? (
                                        gtknew('Label', text => N("Please select your network:"), alignment => [ 0, 0 ]),
-                                       gtknew('Frame', shadow_type => 'in', child => $cmanager->{gui}{networks_list})
+                                       gtknew('ScrolledWindow', height => 160, child => $cmanager->{gui}{networks_list}),
                                    ) : ()),
                                    gtknew('HBox', children => [
                                        1, gtknew('HButtonBox', spacing => 6, layout => 'start', children_loose => [
