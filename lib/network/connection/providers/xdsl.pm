@@ -572,7 +572,7 @@ our %data = (
                    DOMAINNAME2 => 'club-internet.fr',
                   },
 
-                  N("France") . "|Wanadoo" =>
+                  N("France") . "|Orange" =>
                   {
                    provider_id => 'FR09',
                    vpi => 8,
@@ -582,7 +582,7 @@ our %data = (
                    dnsServers => [ qw(80.10.246.2 80.10.246.129) ],
                    method => 'pppoa',
                    login_format => 'fti/login',
-                   DOMAINNAME2 => 'wanadoo.fr',
+                   DOMAINNAME2 => 'orange.fr',
                   },
 
                   N("France") . "|Télé2" =>
