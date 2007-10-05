@@ -1,3 +1,23 @@
+0.24:
+- draknetcenter: 
+  o update networks list on connection status change
+  o use a scrolled window for wireless networks
+  o show all wireless networks
+  o do not modify GTK style, it is not consistent in MCC and standalone, and breaks widgets
+  o check network address settings
+- drakconnect/draknetcenter/drakroam:
+  o check that network access settings are valid (i.e. check wireless key)
+- drakroam: use same sort function than draknetcenter
+- net_applet/drakroam/draknetcenter:
+  o list current network on top of network list
+  o do not show as selected the APs with same ESSID as current AP
+- connection backend:
+  o fix URL for Smartlink modems (#34479)
+  o fix typo in german translation (#34479)
+  o fix test of unicorn kernel modules
+  o use Orange instead of Wanadoo France in xDSL provides list
+    (Emmanuel Andry, #23172)
+
 0.23:
 - updated translations
 
