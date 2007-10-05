@@ -230,6 +230,14 @@ sub real_main {
                        },
                        name => sub { $net->{type}->get_type_name . "\n\n" . $connection->get_network_access_settings_label },
                        data => sub { $network_access_settings },
+                       complete => sub {
+                           if ($connection->can('check_network_access_settings') && !$connection->check_network_access_settings) {
+                               $in->ask_warn(N("Error"), $connection->{network_access}{error}{message});
+                               my $index = eval { find_index { $_->{val} eq $connection->{network_access}{error}{field} } @$network_access_settings };
+                               return 1, $index;
+                           }
+                           return 0;
+                       },
                        post => sub { $get_next->("configure_network_access") },
                    },
 
