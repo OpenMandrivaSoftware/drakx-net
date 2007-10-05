@@ -430,7 +430,7 @@ sub empty_menu {
 
 sub get_wireless_networks_sorted() {
     sort {
-        $b->{signal_strength} <=> $a->{signal_strength} || $a->{name} cmp $b->{name};
+        $b->{current} <=> $a->{current} || $b->{signal_strength} <=> $a->{signal_strength} || $a->{name} cmp $b->{name};
     } values %wireless_networks;
 }
 

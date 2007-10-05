@@ -220,7 +220,7 @@ sub filter_networks {
     my ($connection) = @_;
     $_->{configured} = $connection->network_is_configured($_) foreach values %{$connection->{networks}};
     sort {
-        $b->{configured} <=> $a->{configured} || $b->{signal_strength} <=> $a->{signal_strength} || $a->{name} cmp $b->{name};
+        $b->{current} <=> $a->{current} || $b->{configured} <=> $a->{configured} || $b->{signal_strength} <=> $a->{signal_strength} || $a->{name} cmp $b->{name};
     } values %{$connection->{networks}};
 }
 
