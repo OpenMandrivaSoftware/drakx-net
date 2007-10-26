@@ -1,6 +1,5 @@
 #!/usr/bin/perl
 # -*- coding: utf-8 -*-
-#
 # Copyright (C) 2006 by Mandriva aginies _ateuh_ mandriva.com
 #
 # This program is free software; you can redistribute it and/or modify
@@ -18,13 +17,12 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
 # 02111-1307, USA.
 
-my $version = "0.2";
-
 use utf8;
-use strict;
+
 use lib qw(/usr/lib/libDrakX);
 
 # i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
+# note to Translator: most of the new strings are already translated in drakwizard/samba server
 BEGIN { unshift @::textdomains, 'drakx-net' }
 use standalone;
 use common;
@@ -166,6 +164,7 @@ sub get_items() {
 		 [ N("/_File") . N("/_Quit"), N("<control>Q"), \&quit_all, 1, '<Item>', ],
 
 		 [ N("/_Samba Server"), undef, undef, undef, '<Branch>', ],
+		 [ N("/_Samba Server") . N("/_Configure"), undef, \&launch_samba_wizard, 1, '<Item>', ],
 		 [ N("/_Samba Server") . N("/_Restart"), undef, \&restart_dialog, 1, '<Item>', ],
 		 [ N("/_Samba Server") . N("/R_eload"), undef, \&reload_dialog, 1, '<Item>', ],
 
@@ -1009,6 +1008,209 @@ sub add_data_printer_list {
 				    $data->{create_mode},
 				    $data->{use_client_driver},
 				   ];
+  }
+}
+
+
+sub configure_samba {
+    local $::isEmbedded = 0;
+    my $in = 'interactive'->vnew('su');
+    undef $::WizardTable;
+    undef $::WizardWindow;
+    $::isWizard = 1;
+    use wizards;
+    my %type = (
+	2 => N("PDC - primary domain controller"),
+	3 => N("Standalone - standalone server"),
+	);
+    my @yesorno = qw(yes no); push @yesorno, "";
+    my @loglevel = qw(0 1 2 3 4 5 6 7 8 9);
+    my $wiz = wizards->new({
+			    name => N("Samba Wizard"),
+			    pages => {
+				      welcome => {
+						  name => N("Samba server configuration Wizard") . "\n\n" . N("Samba allows your server to behave as a file and print server for workstations running non-Linux systems."),
+						  no_back => 1,
+						  pre => sub {
+						    if (-f $wiz_samba_etc) {
+						      my $data = cat_($wiz_samba_etc);
+						      # detect old Samba type
+						      my ($old_type) = $data =~ /type=(\d)/;
+						      $o->{var}{wiz_type} = chomp_($old_type);
+						    } else { $o->{var}{wiz_type} = 3 }
+						  },
+						  post => sub {
+						    if ($o->{var}{wiz_type} == 2) {
+						      return 'pdc' }
+						    elsif ($o->{var}{wiz_type} == 3) {
+						      return 'ask_workgroup' }
+						  },
+						  data => [
+							   { label => "", val => \$o->{var}{wiz_type}, type => 'list', list => [ sort keys %type ], format => sub { $type{$_[0]} } },
+							  ],
+						 },
+				      pdc => {
+					      name => N("PDC server: primary domain controller")  . "\n\n" . N("Server configured as a PDC is responsible for Windows authentication throughout the domain.") . "\n" . N("Single server installations may use smbpasswd or tdbsam password backends") . "\n" . N("Domain master = yes, causes the server to register the NetBIOS name <pdc name>. This name will be recognized by other servers."),
+					      pre => sub {
+						$o->{var}{wiz_domain_master} = "yes";
+						$o->{var}{wiz_security} = "user";
+						$o->{var}{wiz_domain_logons} = "yes";
+						$o->{var}{wiz_wins_support} ||= $samba->{global}{'wins support'};
+						$o->{var}{wiz_oslevel} = "128";
+						if (exists $samba->{global}{'passdb backend'}) {
+						  $o->{var}{wiz_passdb_backend_yn} = "yes";
+						}
+						else {
+						  $o->{var}{wiz_passdb_backend_yn} = "no";
+						}
+					      },
+					      next => 'ask_workgroup',
+					      data => [
+						       { label => N("Domain logons:"), val_ref => \$o->{var}{wiz_domain_logons} },
+						       { label => N("Domain master:"), val_ref => \$o->{var}{wiz_domain_master} },
+						       { label => N("Security:"), val_ref => \$o->{var}{wiz_security} },
+						       { label => N("Wins support:"), val => \$o->{var}{wiz_wins_support}, fixed_list => \@yesorno },
+						       { label => N("admin users:"), val => \$o->{var}{wiz_admin_users}, help => N("root \@adm") },
+						       { label => N("Os level:"), val_ref => \$o->{var}{wiz_oslevel}, help => N("The global os level option dictates the operating system level at which Samba will masquerade during a browser election. If you wish to have Samba win an election and become the master browser, you can set the level above that of the operating system on your network with the highest current value. ie: os level = 34") },
+						      ],
+					      complete => sub {
+						  if (!$o->{var}{wiz_domain_master}) {
+						  $in->ask_warn(N("Error"), N("The domain is wrong."));
+						  return 1;
+						} else { return 0 }
+					      },
+					      next => 'ask_workgroup',
+					     },
+				      ask_workgroup => {
+							name => N("Workgroup") . "\n\n" . N("Samba needs to know the Windows Workgroup it will serve."),
+							pre => sub {
+							  $o->{var}{wiz_workgroup} ||= $samba->{global}{workgroup};
+							  $o->{var}{wiz_netbios} ||= $samba->{global}{netbios};
+							  $o->{var}{wiz_netbios_name} ||= $samba->{global}{"netbios name"};
+							},
+							data => [
+								 { label => N("Workgroup:"), val => \$o->{var}{wiz_workgroup} },
+								 { label => N("Netbios name:"), val => \$o->{var}{wiz_netbios_name} },
+								],
+							complete => sub {
+							  if (!$o->{var}{wiz_workgroup}) {
+							    $in->ask_warn(N("Error"), N("The Workgroup is wrong."));
+							    return 1;
+							  } else { return 0 }
+							},
+							next => 'ask_banner',
+						       },
+				      ask_banner => {
+						     name => N("Server Banner.") . "\n\n" . N("The banner is the way this server will be described in the Windows workstations."),
+						     pre => sub {
+						       $o->{var}{wiz_banner} ||= $samba->{global}{'server string'};
+						     },
+						     data => [
+							      { label => N("Banner:"), val => \$o->{var}{wiz_banner}, help => "Samba Server %v" },
+							     ],
+						     complete => sub {
+						       if (!$o->{var}{wiz_banner}) {
+							 $in->ask_warn(N("Error"), N("The Server Banner is incorrect."));
+							 return 1;
+						       } else { return 0 }
+						     },
+						     next => 'ask_log',
+						    },
+				      ask_log => {
+						  name => N("Samba Log") . "\n" . N("Log file: use file.%m to use a separate log file for each machine that connects") . "\n" . N("Log level: set the log (verbosity) level (0 <= log level <= 10)") . "\n" . N("Max Log size: put a capping on the size of the log files (in Kb)."),
+						  pre => sub {
+						    $o->{var}{wiz_log_file} ||= $samba->{global}{'log file'};
+						    $o->{var}{wiz_log_level} ||= $samba->{global}{'log level'};
+						    $o->{var}{wiz_max_log_size} ||= $samba->{global}{'max log size'};
+						  },
+						  data => [
+							   { label => N("Log file:"), val => \$o->{var}{wiz_log_file}, help => "/var/log/samba/log.%m" },
+							   { label => N("Max log size:"), val => \$o->{var}{wiz_max_log_size}, help => "50" },
+							   { label => N("Log level:"), val => \$o->{var}{wiz_log_level}, fixed_list => \@loglevel },
+							  ],
+						  next => 'summary',
+						 },
+				      summary => {
+						  name =>  N("The wizard collected the following parameters to configure Samba.") . "\n\n" . N("To accept these values, and configure your server, click the Next button or use the Back button to correct them.") . "\n" . N("If you have previously create some shares, they will appear in this configuration. Run 'drakwizard sambashare' to manage your shares."),
+						  pre => sub {
+						    $o->{var}{wiz_sambatype} = $type{$o->{var}{wiz_type}};
+						  },
+						  data => [
+							   { label => N("Samba type:"), val_ref => \$o->{var}{wiz_sambatype} },
+							   { label => N("Workgroup:"), val_ref => \$o->{var}{wiz_workgroup} },
+							   { label => N("Server banner:"), val_ref => \$o->{var}{wiz_banner} },
+							   { label => N("Log file:"), val_ref => \$o->{var}{wiz_log_file} },
+							  ],
+						  post => sub {
+							   $samba->{global}{workgroup} = $o->{var}{wiz_workgroup};
+							   exists $o->{var}{wiz_netbios_name} and $samba->{global}{"netbios name"} = $o->{var}{wiz_netbios_name};
+							   $samba->{global}{'server string'} = $o->{var}{wiz_banner};
+							   $o->{var}{wiz_log_file} and $samba->{global}{'log file'} = $o->{var}{wiz_log_file};
+							   $o->{var}{wiz_log_level} and $samba->{global}{'log level'} = $o->{var}{wiz_log_level};
+							   $o->{var}{wiz_max_log_size} and $samba->{global}{'max log size'} = $o->{var}{wiz_max_log_size};
+							   global_special_options();
+							  },
+						  next => 'endconf',
+						  no_back => 1,
+						 },
+				      endconf => {
+					      name => N("Congratulations") . "\n\n" . N("The wizard successfully configured your Samba server."),
+						  no_back => 1,
+					      end => 1,
+					      next => 0
+					     },
+				     },
+			   });
+    $wiz->process($in);
+    gtkset_mousecursor_normal();
+  }
+
+sub global_special_options() {
+  # set charset
+  $samba->{global}{'dos charset'} ||= "850";
+  $samba->{global}{'unix charset'} ||= "ISO8859-1";
+  # detect Samba type 3 is standalone
+  if ($o->{var}{wiz_type} == "3") {
+    $samba->{global}{security} = "share";
+    exists $samba->{global}{domain_master} and delete $samba->{global}{domain_master};
+    exists $samba->{global}{'domain logons'} and delete $samba->{global}{'domain logons'};
+    exists $samba->{global}{'wins support'} and delete $samba->{global}{'wins support'};
+    exists $samba->{global}{'os level'} and delete $samba->{global}{'os level'};
+  } else {
+    # so pdc
+    $o->{var}{wiz_local_master} and $samba->{global}{'local master'} = $o->{var}{wiz_local_master};
+    $o->{var}{wiz_preferred_master} and $samba->{global}{'preferred master'} = $o->{var}{wiz_preferred_master};
+    $o->{var}{wiz_wins_server} and $samba->{global}{'wins server'} = $o->{var}{wiz_wins_server};
+    $o->{var}{wiz_name_resolve_order} and $samba->{global}{'name resolve order'} = $o->{var}{wiz_name_resolve_order};
+    $o->{var}{wiz_dns_proxy} and $samba->{global}{'dns proxy'} = $o->{var}{wiz_dns_proxy};
+    $o->{var}{wiz_domain_master} and $samba->{global}{'domain master'} = $o->{var}{wiz_domain_master};
+    $o->{var}{wiz_security} and $samba->{global}{security} = $o->{var}{wiz_security};
+    $o->{var}{wiz_domain_logons} and $samba->{global}{'domain logons'} = $o->{var}{wiz_domain_logons};
+    $o->{var}{wiz_oslevel} and $samba->{global}{'os level'} = $o->{var}{wiz_oslevel};
+    $o->{var}{wiz_passdb_backend} and $samba->{global}{'passdb backend'} = $o->{var}{wiz_passdb_backend};
+    $o->{var}{wiz_wins_support} and $samba->{global}{'wins support'} = $o->{var}{wiz_wins_support};
+    $o->{var}{wiz_password_server} and $samba->{global}{'password server'} = $o->{var}{wiz_password_server};
+    $o->{var}{wiz_admin_users} and $samba->{global}{'admin users'} = $o->{var}{wiz_admin_users};
+    $samba->{global}{'add machine script'} = "/usr/sbin/useradd -d /dev/null -g machines -c 'Machine Account' -s /bin/false -M '%u'";
+    
+  }
+  my $conf = "/etc/group";
+  my @groups;
+  foreach (cat_($conf)) {
+    push @groups, $1 if m/^([^#:]+):[^:]+:([^:]+):/ and $2 > 499;
+  }
+  foreach (@groups) {
+      system("net groupmap add unixgroup=$_ ntgroup=$_");
+  }
+}
+
+sub launch_samba_wizard() {
+  eval { configure_samba() };
+  my $err = $@;
+  $::WizardWindow->destroy if defined $::WizardWindow;
+  undef $::WizardWindow;
+  if ($err && $err !~ /wizcancel/) {
+    err_dialog(N("Error"), N("The Samba wizard has unexpectedly failed:") . "\n\n" . $err);
   }
 }
 
