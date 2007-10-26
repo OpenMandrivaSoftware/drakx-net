@@ -1045,12 +1045,7 @@ sub add_data_printer_list {
 
 
 sub configure_samba {
-    local $::isEmbedded = 0;
-    my $in = 'interactive'->vnew('su');
-    undef $::WizardTable;
-    undef $::WizardWindow;
-    $::isWizard = 1;
-    use wizards;
+    require wizards;
     my %type = (
 	2 => N("PDC - primary domain controller"),
 	3 => N("Standalone - standalone server"),
@@ -1196,10 +1191,17 @@ sub configure_samba {
 					     },
 				     },
 			   });
-    $wiz->process($in);
-    gtkset_mousecursor_normal();
+  eval { $wiz->process($in) };
+  my $err = $@;
+  $::isWizard = 0;
+  $::WizardWindow->destroy;
+  undef $::WizardTable;
+  undef $::WizardWindow;
+  if ($err && $err !~ /wizcancel/) {
+      err_dialog(N("Error"), N("Failed to configure Samba server.") . "\n\n" . $err);
   }
-
+}
+ 
 sub global_special_options() {
   # set charset
   $samba->{global}{'dos charset'} ||= "850";
