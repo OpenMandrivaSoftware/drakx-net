@@ -22,7 +22,6 @@ use utf8;
 use lib qw(/usr/lib/libDrakX);
 
 # i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
-# note to Translator: most of the new strings are already translated in drakwizard/samba server
 BEGIN { unshift @::textdomains, 'drakx-net' }
 use standalone;
 use common;
@@ -1025,6 +1024,7 @@ sub configure_samba {
 	);
     my @yesorno = qw(yes no); push @yesorno, "";
     my @loglevel = qw(0 1 2 3 4 5 6 7 8 9);
+    my @security_list = qw(share user domain);
     my $wiz = wizards->new({
 			    name => N("Samba Wizard"),
 			    pages => {
@@ -1032,12 +1032,7 @@ sub configure_samba {
 						  name => N("Samba server configuration Wizard") . "\n\n" . N("Samba allows your server to behave as a file and print server for workstations running non-Linux systems."),
 						  no_back => 1,
 						  pre => sub {
-						    if (-f $wiz_samba_etc) {
-						      my $data = cat_($wiz_samba_etc);
-						      # detect old Samba type
-						      my ($old_type) = $data =~ /type=(\d)/;
-						      $o->{var}{wiz_type} = chomp_($old_type);
-						    } else { $o->{var}{wiz_type} = 3 }
+						      $o->{var}{wiz_type} = "2";
 						  },
 						  post => sub {
 						    if ($o->{var}{wiz_type} == 2) {
@@ -1064,12 +1059,10 @@ sub configure_samba {
 						  $o->{var}{wiz_passdb_backend_yn} = "no";
 						}
 					      },
-					      next => 'ask_workgroup',
 					      data => [
-						       { label => N("Domain logons:"), val_ref => \$o->{var}{wiz_domain_logons} },
-						       { label => N("Domain master:"), val_ref => \$o->{var}{wiz_domain_master} },
-						       { label => N("Security:"), val_ref => \$o->{var}{wiz_security} },
-						       { label => N("Wins support:"), val => \$o->{var}{wiz_wins_support}, fixed_list => \@yesorno },
+						       #{ label => N("Domain logons:"), val_ref => \$o->{var}{wiz_domain_logons} },
+						       #{ label => N("Domain master:"), val_ref => \$o->{var}{wiz_domain_master} },
+						       { label => N("Wins support:"), val => \$o->{var}{wiz_wins_support}, list => \@yesorno },
 						       { label => N("admin users:"), val => \$o->{var}{wiz_admin_users}, help => N("root \@adm") },
 						       { label => N("Os level:"), val_ref => \$o->{var}{wiz_oslevel}, help => N("The global os level option dictates the operating system level at which Samba will masquerade during a browser election. If you wish to have Samba win an election and become the master browser, you can set the level above that of the operating system on your network with the highest current value. ie: os level = 34") },
 						      ],
@@ -1098,8 +1091,18 @@ sub configure_samba {
 							    return 1;
 							  } else { return 0 }
 							},
-							next => 'ask_banner',
+							next => 'ask_security',
 						       },
+				      ask_security => {
+					  name => N("Security mode") . "\n\n" . N("User level: the client sends a session setup request directly following protocol negotiation. This request provides a username and password.") . "\n" . N("Share level: the client authenticates itself separately for each share") . "\n" . N("Domain level: provides a mechanism for storing all user and group accounts in a central, shared, account repository. The centralized account repository is shared between domain (security) controllers."),
+					  pre => sub {
+					      $o->{var}{wiz_securit} ||= $samba->{global}{security};
+					  },
+					   data => [
+					       { label => N("Security mode"), val => \$o->{var}{wiz_security}, list => \@security_list },
+					       ],
+					       next => 'ask_banner',
+				      },
 				      ask_banner => {
 						     name => N("Server Banner.") . "\n\n" . N("The banner is the way this server will be described in the Windows workstations."),
 						     pre => sub {
@@ -1126,7 +1129,7 @@ sub configure_samba {
 						  data => [
 							   { label => N("Log file:"), val => \$o->{var}{wiz_log_file}, help => "/var/log/samba/log.%m" },
 							   { label => N("Max log size:"), val => \$o->{var}{wiz_max_log_size}, help => "50" },
-							   { label => N("Log level:"), val => \$o->{var}{wiz_log_level}, fixed_list => \@loglevel },
+							   { label => N("Log level:"), val => \$o->{var}{wiz_log_level}, list => \@loglevel },
 							  ],
 						  next => 'summary',
 						 },
@@ -1169,9 +1172,9 @@ sub global_special_options() {
   # set charset
   $samba->{global}{'dos charset'} ||= "850";
   $samba->{global}{'unix charset'} ||= "ISO8859-1";
+  $samba->{global}{security} = $o->{var}{wiz_security};
   # detect Samba type 3 is standalone
   if ($o->{var}{wiz_type} == "3") {
-    $samba->{global}{security} = "share";
     exists $samba->{global}{domain_master} and delete $samba->{global}{domain_master};
     exists $samba->{global}{'domain logons'} and delete $samba->{global}{'domain logons'};
     exists $samba->{global}{'wins support'} and delete $samba->{global}{'wins support'};
