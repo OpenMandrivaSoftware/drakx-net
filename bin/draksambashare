@@ -57,6 +57,7 @@ my $pixbuf_user = Gtk2::Gdk::Pixbuf->new_from_file($sambauser_icon);
 my $printer_list = create_printer_list();
 my $share_list = create_share_list();
 my $user_list = create_user_list();
+my $display_share = create_display_share(); 
 
 sub create_user_list() {
   my $user_list = Gtk2::SimpleList->new('' => 'pixbuf',
@@ -86,16 +87,28 @@ sub create_share_list() {
 					 N("Force create mode") => 'text',
 					 N("Force group") => 'text',
 					 N("Default case") => 'text',
-					);
-  $share_list->set_headers_clickable(1);
+					  );
+    foreach (1, 2, 3) {
+      $share_list->get_column($_)->set_sort_column_id($_ == 0 ? 1 : $_ + 2);
+    }
+    $share_list;
+  }
+
+sub create_display_share() {
+  my $display_share = Gtk2::SimpleList->new('' => 'pixbuf',
+					    N("Share name") => 'text',
+					    N("Share directory") => 'text',
+					    N("Comment") => 'text',
+					   );
+  $display_share->set_headers_clickable(1);
   foreach ($share_list->get_columns) {
     $_->set_resizable(1);
   }
   foreach (1, 2, 3) {
-    $share_list->get_column($_)->signal_connect('clicked', \&sort_by_column, $share_list->get_model);
-    $share_list->get_column($_)->set_sort_column_id($_ == 0 ? 1 : $_ + 2);
+    $display_share->get_column($_)->signal_connect('clicked', \&sort_by_column, $display_share->get_model);
+    $display_share->get_column($_)->set_sort_column_id($_ == 0 ? 1 : $_ + 2);
   }
-  $share_list;
+  $display_share;
 }
 
 sub create_printer_list() {
@@ -172,8 +185,8 @@ sub get_items() {
                my $license = formatAlaTeX(translate($::license));
                $license =~ s/\n/\n\n/sg; # nicer formatting
                my $w = gtknew('AboutDialog', name => N("Draksambashare"),
-                              version => '2007',
-                              copyright => N("Copyright (C) %s by Mandriva", '2001-2006'),
+                              version => '2008',
+                              copyright => N("Copyright (C) %s by Mandriva", '2001-2007'),
                               license => $license, wrap_license => 1,
                               comments => N("This is a simple tool to easily manage Samba configuration."),
                               website => 'http://mandrivalinux.com',
@@ -389,6 +402,12 @@ sub add_entry() {
 										  $test_dir,
 										  $comment,
 										  ];
+						    push @{$display_share->{data}}, [
+                                                                                  $pixbuf_file,
+                                                                                  $share,
+                                                                                  $test_dir,
+                                                                                  $comment,
+						    ];
 						    # update listshare
 						    push @listshare, {
 							share_name => $share,
@@ -812,6 +831,14 @@ sub modify_entry {
 											     $default_case->get_text,
 											     $inherit_permissions->get_text,
 											    ];
+							       remove_entry($selected, $display_share);
+							       push @{$display_share->{data}}, [
+                                                                                             $pixbuf_file,
+                                                                                             $share_name->get_text,
+                                                                                             $dir->get_text,
+                                                                                             $comment->get_text,
+							       ];
+
 							       # update $samba with the new value
 							       # $samba->{$share};
 							       $samba->{$share}{path} = $dir->get_text;
@@ -972,6 +999,12 @@ sub add_data_share_list {
 				  $data->{force_group},
 				  $data->{default_case},
 				 ];
+    push @{$display_share->{data}}, [
+	$pixbuf_file,
+	$data->{share_name},
+	$data->{path},
+	$data->{comment},
+    ];
   }
 }
 
@@ -1154,7 +1187,6 @@ sub configure_samba {
 							   global_special_options();
 							  },
 						  next => 'endconf',
-						  no_back => 1,
 						 },
 				      endconf => {
 					      name => N("Congratulations") . "\n\n" . N("The wizard successfully configured your Samba server."),
@@ -1224,7 +1256,7 @@ sub launch_samba_wizard() {
 add_data_share_list($share_list);
 add_data_printer_list($printer_list);
 add_data_user_list($user_list);
-$_->set_rules_hint(1) foreach $share_list, $printer_list, $user_list;
+$_->set_rules_hint(1) foreach $display_share, $printer_list, $user_list;
 
 $ugtk2::wm_icon = $fileshare_icon;
 $window = ugtk2->new(N("Manage Samba configuration"));
@@ -1235,10 +1267,10 @@ my $W = $window->{window};
 $W->signal_connect(delete_event => sub { ugtk2->exit });
 
 # double clic and popup modify window
-$share_list->signal_connect(button_press_event => sub {
+$display_share->signal_connect(button_press_event => sub {
 			      my (undef, $event) = @_;
-			      my ($selected) = $share_list->get_selected_indices;
-			      $share_list->{data}[$selected][1] and modify_entry($selected) if $event->type eq '2button-press';
+			      my ($selected) = $display_share->get_selected_indices;
+			      $display_share->{data}[$selected][1] and modify_entry($selected) if $event->type eq '2button-press';
 			    });
 
 $printer_list->signal_connect(button_press_event => sub {
@@ -1268,27 +1300,27 @@ my $menupopup = Gtk2::Menu->new;
 my $menuitem1 = Gtk2::MenuItem->new(N("Modify"));
 my $menuitem2 = Gtk2::MenuItem->new(N("Remove"));
 $menuitem1->signal_connect(activate => sub {
-			     my ($selected) = $share_list->get_selected_indices;
+			     my ($selected) = $display_share->get_selected_indices;
 			     modify_entry($selected);
 			   });
 $menuitem2->signal_connect(activate => sub {
-			     my ($selected) = $share_list->get_selected_indices;
-			     ask_okcancel("Remove entry ?", "Remove $share_list->{data}[$selected][1]") or return;
-			     remove_entry($selected, $share_list);
+			     my ($selected) = $display_share->get_selected_indices;
+			     ask_okcancel("Remove entry ?", "Remove $display_share->{data}[$selected][1]") or return;
+			     remove_entry($selected, $display_share);
 			   });
 $_->show foreach $menuitem1, $menuitem2;
 $menupopup->append($_) foreach $menuitem1, $menuitem2;
-$share_list->signal_connect('button-press-event' => sub {
+$display_share->signal_connect('button-press-event' => sub {
 			      my (undef, $event) = @_;
 			      return unless $event->button == 3;
 			      $menupopup->popup(undef, undef, undef, undef, $event->button, $event->time);
 			    }
 			   );
 
-$share_list->signal_connect(key_press_event => sub {
+$display_share->signal_connect(key_press_event => sub {
     my (undef, $event) = @_;
     return unless $event->keyval == $Gtk2::Gdk::Keysyms{Return};
-    my ($selected) = $share_list->get_selected_indices;
+    my ($selected) = $display_share->get_selected_indices;
     modify_entry($selected);
     return 1;
 });
@@ -1306,12 +1338,12 @@ my $okcancel = create_okcancel({
 			      );
 
 gtkappend_page(my $nb = Gtk2::Notebook->new, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 0),
-                                                      1, create_scrolled_window($share_list),
+                                                      1, create_scrolled_window($display_share),
 						      0, gtkpack_(create_vbox('start'),
 								  0, gtksignal_connect(Gtk2::Button->new(N("Add")), clicked => \&add_entry),
 								  0, Gtk2::HSeparator->new,
 								  0, gtksignal_connect(Gtk2::Button->new(N("Modify")), clicked => sub {
-											 my ($selected) = $share_list->get_selected_indices;
+											 my ($selected) = $display_share->get_selected_indices;
 											 eval { modify_entry($selected) };
 											 my $err = $@;
 											 if ($err) {
@@ -1319,9 +1351,9 @@ gtkappend_page(my $nb = Gtk2::Notebook->new, gtkpack_(gtkset_border_width(Gtk2::
 											 }
 										       }),
 								  0, gtksignal_connect(Gtk2::Button->new(N("Remove")), clicked => sub {
-											 my ($selected) = $share_list->get_selected_indices;
-											 ask_okcancel("Remove entry ?", "Remove $share_list->{data}[$selected][1]") or return;
-											 eval { remove_entry($selected, $share_list) };
+											 my ($selected) = $display_share->get_selected_indices;
+											 ask_okcancel("Remove entry ?", "Remove $display_share->{data}[$selected][1]") or return;
+											 eval { remove_entry($selected, $display_share) };
 											 my $err = $@;
 											 if ($err) {
 											   err_dialog(N("Error"), N("Failed to remove a Samba share.") . "\n\n" . $err);
