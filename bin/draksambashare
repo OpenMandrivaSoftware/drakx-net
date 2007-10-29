@@ -276,13 +276,13 @@ sub get_samba_share() {
 			write_list => $samba->{$clef}{'write list'},
 			admin_users => $samba->{$clef}{'admin users'},
 			valid_users => $samba->{$clef}{'valid users'},
+			inherit_permissions => $samba->{$clef}{'inherit permissions'},
 			hide_dot_files => $samba->{$clef}{'hide dot files'},
 			hide_files => $samba->{$clef}{'hide files'},
 			preserve_case => $samba->{$clef}{'preserve case'},
 			force_create_mode => $samba->{$clef}{'force create mode'},
 			force_group => $samba->{$clef}{'force group'},
 			default_case => $samba->{$clef}{'default case'},
-			inherit_permissions => $samba->{$clef}{'inherit permissions'},
 		       };
     }
   }
@@ -829,13 +829,13 @@ sub modify_entry {
 											     $write_list->get_text,
 											     $admin_users->get_text,
 											     $valid_users->get_text,
+											     $inherit_permissions->get_text,
 											     $hide_dot_files->get_text,
 											     $hide_files->get_text,
 											     $preserve_case->get_text,
 											     $force_create_mode->get_text,
 											     $force_group->get_text,
 											     $default_case->get_text,
-											     $inherit_permissions->get_text,
 											    ];
 							       remove_entry($selected, $display_share);
 							       push @{$display_share->{data}}, [
@@ -858,13 +858,13 @@ sub modify_entry {
 							       $write_list->get_text and $samba->{$share}{'write list'} = $write_list->get_text || delete $samba->{$share}{'write list'};
 							       $admin_users->get_text and $samba->{$share}{'admin users'} = $admin_users->get_text || delete $samba->{$share}{'admin users'};
 							       $valid_users->get_text and $samba->{$share}{'valid users'} = $valid_users->get_text || delete $samba->{$share}{'valid users'};
+							       $inherit_permissions->get_text and $samba->{$share}{'inherit permissions'} = $inherit_permissions->get_text || delete $samba->{$share}{'inherit permissions'};
 							       $hide_dot_files->get_text and $samba->{$share}{'hide dot files'} = $hide_dot_files->get_text || delete $samba->{$share}{'hide dot files'};
 							       $hide_files->get_text and $samba->{$share}{'hide files'} = $hide_files->get_text || delete $samba->{$share}{'hide files'};
 							       $preserve_case->get_text and $samba->{$share}{'preserve case'} = $preserve_case->get_text || delete $samba->{$share}{'preserve case'};
 							       $force_create_mode->get_text and $samba->{$share}{'force create mode'} = $force_create_mode->get_text || delete $samba->{$share}{'force create mode'};
 							       $force_group->get_text and $samba->{$share}{'force group'} = $force_group->get_text || delete $samba->{$share}{'force group'};
 							       $default_case->get_text and $samba->{$share}{'default case'} = $default_case->get_text || delete $samba->{$share}{'default case'};
-							       $inherit_permissions->get_text and $samba->{$share}{'inherit permissions'} = $inherit_permissions->get_text || delete $samba->{$share}{'inherit permissions'};
 
 							       # update listshare
 							       push @listshare, {
@@ -880,13 +880,13 @@ sub modify_entry {
 										 write_list => $samba->{$share}{'write list'},
 										 admin_users => $samba->{$share}{'admin users'},
 										 valid_users => $samba->{$share}{'valid users'},
+										 inherit_permissions => $samba->{$share}{'inherit permissions'},
 										 hide_dot_files => $samba->{$share}{'hide dot files'},
 										 hide_files => $samba->{$share}{'hide files'},
 										 preserve_case => $samba->{$share}{'preserve case'},
 										 force_create_mode => $samba->{$share}{'force create mode'},
 										 force_group => $samba->{$share}{'force group'},
 										 default_case => $samba->{$share}{'default case'},
-										 inherit_permissions => $samba->{$share}{'inherit permissions'},
 										};
 							       $w->destroy;
 							     },
@@ -1130,7 +1130,7 @@ sub configure_samba {
 				      ask_security => {
 					  name => N("Security mode") . "\n\n" . N("User level: the client sends a session setup request directly following protocol negotiation. This request provides a username and password.") . "\n" . N("Share level: the client authenticates itself separately for each share") . "\n" . N("Domain level: provides a mechanism for storing all user and group accounts in a central, shared, account repository. The centralized account repository is shared between domain (security) controllers."),
 					  pre => sub {
-					      $o->{var}{wiz_securit} ||= $samba->{global}{security};
+					      $o->{var}{wiz_security} ||= $samba->{global}{security};
 					  },
 					   data => [
 					       { label => N("Security mode"), val => \$o->{var}{wiz_security}, list => \@security_list },
@@ -1212,7 +1212,8 @@ sub global_special_options() {
   # set charset
   $samba->{global}{'dos charset'} ||= "850";
   $samba->{global}{'unix charset'} ||= "ISO8859-1";
-  $samba->{global}{security} = $o->{var}{wiz_security};
+  $o->{var}{wiz_security} and $samba->{global}{security} = $o->{var}{wiz_security};
+#  $samba->{global}{security} = $o->{var}{wiz_security};
   # detect Samba type 3 is standalone
   if ($o->{var}{wiz_type} == "3") {
     exists $samba->{global}{domain_master} and delete $samba->{global}{domain_master};
@@ -1227,7 +1228,6 @@ sub global_special_options() {
     $o->{var}{wiz_name_resolve_order} and $samba->{global}{'name resolve order'} = $o->{var}{wiz_name_resolve_order};
     $o->{var}{wiz_dns_proxy} and $samba->{global}{'dns proxy'} = $o->{var}{wiz_dns_proxy};
     $o->{var}{wiz_domain_master} and $samba->{global}{'domain master'} = $o->{var}{wiz_domain_master};
-    $o->{var}{wiz_security} and $samba->{global}{security} = $o->{var}{wiz_security};
     $o->{var}{wiz_domain_logons} and $samba->{global}{'domain logons'} = $o->{var}{wiz_domain_logons};
     $o->{var}{wiz_oslevel} and $samba->{global}{'os level'} = $o->{var}{wiz_oslevel};
     $o->{var}{wiz_passdb_backend} and $samba->{global}{'passdb backend'} = $o->{var}{wiz_passdb_backend};
