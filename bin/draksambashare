@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # -*- coding: utf-8 -*-
-# Copyright (C) 2006 by Mandriva aginies _ateuh_ mandriva.com
+# Copyright (C) 2006-2008 by Mandriva aginies _ateuh_ mandriva.com
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -335,9 +335,9 @@ sub printdollar_section() {
   $samba->{'print$'}{browseable} = "yes";
   $samba->{'print$'}{path} = "/var/lib/samba/printers";
   $samba->{'print$'}{browseable} = "yes";
-  $samba->{'print$'}{'write list'} = '@adm root';
+#  $samba->{'print$'}{'write list'} = '@adm root';
   $samba->{'print$'}{'guest ok'} = "yes";
-  $samba->{'print$'}{'inherit permissions'} = "yes";
+#  $samba->{'print$'}{'inherit permissions'} = "yes";
 }
 
 sub pdf_section() {
@@ -1131,9 +1131,15 @@ sub configure_samba {
 					  name => N("Security mode") . "\n\n" . N("User level: the client sends a session setup request directly following protocol negotiation. This request provides a username and password.") . "\n" . N("Share level: the client authenticates itself separately for each share") . "\n" . N("Domain level: provides a mechanism for storing all user and group accounts in a central, shared, account repository. The centralized account repository is shared between domain (security) controllers."),
 					  pre => sub {
 					      $o->{var}{wiz_security} ||= $samba->{global}{security};
+					      $o->{var}{host_allow} ||= $samba->{global}{'hosts allow'};
+					      if ($o->{var}{wiz_type} == 3) {
+						      # remove domain security mode for standalone server
+						      pop(@security_list);
+					      }
 					  },
 					   data => [
 					       { label => N("Security mode"), val => \$o->{var}{wiz_security}, list => \@security_list },
+					       { label => N("Hosts allow"), val => \$o->{var}{hosts_allow}, help => "127. 192.168.0. 192.168.1.253" },
 					       ],
 					       next => 'ask_banner',
 				      },
@@ -1213,6 +1219,7 @@ sub global_special_options() {
   $samba->{global}{'dos charset'} ||= "850";
   $samba->{global}{'unix charset'} ||= "ISO8859-1";
   $o->{var}{wiz_security} and $samba->{global}{security} = $o->{var}{wiz_security};
+  $o->{var}{hosts_allow} and $samba->{global}{'hosts allow'} = $o->{var}{hosts_allow};
 #  $samba->{global}{security} = $o->{var}{wiz_security};
   # detect Samba type 3 is standalone
   if ($o->{var}{wiz_type} == "3") {
