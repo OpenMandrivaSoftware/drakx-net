@@ -112,11 +112,11 @@ sub configure_connection {
                    ],
                ) or return;
         if ($cmanager->{connection}->can('check_network_access_settings') && !$cmanager->{connection}->check_network_access_settings) {
-            $cmanager->{in}->ask_warn(N("Error"), $cmanager->{connection}->{network_access}{error}{message});
+            $cmanager->{in}->ask_warn(N("Error"), $cmanager->{connection}{network_access}{error}{message});
             $error = 1;
         }
         if ($cmanager->{connection}->can('check_address_settings') && !$cmanager->{connection}->check_address_settings($cmanager->{net})) {
-            $cmanager->{in}->ask_warn(N("Error"), $cmanager->{connection}->{address}{error}{message});
+            $cmanager->{in}->ask_warn(N("Error"), $cmanager->{connection}{address}{error}{message});
             $error = 1;
         }
     } while $error;
