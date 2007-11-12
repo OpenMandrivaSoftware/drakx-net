@@ -208,7 +208,7 @@ sub create_networks_list {
 
     $cmanager->{gui}{networks_list}->signal_connect('query-tooltip' => sub {
         my ($widget, $x, $y, $kbd_tip, $tooltip) = @_;
-        my ($x, $y, $model, $path, $iter) = $widget->get_tooltip_context($x, $y, $kbd_tip) or return;
+        (undef, undef, my $model, my $path, my $iter) = $widget->get_tooltip_context($x, $y, $kbd_tip) or return;
         my $ap = $model->get($iter, 0);
         my $network = $cmanager->{connection}{networks}{$ap};
         $tooltip->set_text("$network->{signal_strength}% $network->{flags}");
