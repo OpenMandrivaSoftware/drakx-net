@@ -350,7 +350,7 @@ sub add_modify_entry {
     $_->set_sensitive(0) foreach $anongid, $anonuid;
   }
 
-  my $expender = Gtk2::Expander->new('Advanced options');
+  my $expender = Gtk2::Expander->new(N("Advanced options"));
   $expender->add(gtknew('VBox', spacing => 5, children_tight => [
                           $label_and_widgets->($adv_options{sync}, $lsync, help_b($help_global)),
                           $label_and_widgets->($adv_options{secured}, $lsecure, ""),
