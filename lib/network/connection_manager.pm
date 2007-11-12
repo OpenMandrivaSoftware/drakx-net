@@ -299,6 +299,12 @@ sub update_on_status_change {
     $cmanager->{gui}{buttons}{configure}->set_sensitive($may_have_network)
       if $cmanager->{gui}{buttons}{configure};
 
+    my $has_interface = to_bool($cmanager->{connection} && $cmanager->{connection}->get_interface);
+    $cmanager->{gui}{buttons}{refresh}->set_sensitive($has_interface)
+      if $cmanager->{gui}{buttons}{refresh};
+    $cmanager->{gui}{buttons}{monitor}->set_sensitive($has_interface)
+      if $cmanager->{gui}{buttons}{monitor};
+
     if ($cmanager->{gui}{status_image} && $cmanager->{connection}) {
         my $icon = $cmanager->{connection}->get_status_icon;
         ugtk2::_find_imgfile($icon) or $icon = $cmanager->{connection}->get_type_icon;
