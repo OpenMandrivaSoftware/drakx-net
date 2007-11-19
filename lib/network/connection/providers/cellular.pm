@@ -15,6 +15,11 @@ our %data = (
         login => "orange",
         password => "orange",
     },
+    N("France") . "|Orange WAP" => {
+        apn => "orange",
+        login => "orange",
+        password => "orange",
+    },
     N("France") . "|Orange Entreprises" => {
         apn => "internet-entreprise",
         login => "orange",
