@@ -10,7 +10,7 @@ use utf8;
 # http://www.taniwha.org.uk/gprs.html
 
 our %data = (
-    N("France") . "|Orange Grand Public" => {
+    N("France") . "|Orange Web" => {
         apn => "orange.fr",
         login => "orange",
         password => "orange",
