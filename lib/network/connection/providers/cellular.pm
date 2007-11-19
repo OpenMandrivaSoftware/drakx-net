@@ -15,6 +15,8 @@ our %data = (
         login => "orange",
         password => "orange",
     },
+    # http://www.actua-mobiles.com/p800/viewtopic.php?p=12184#12184
+    # http://www.planete-se.net/index.php?showtopic=18184&st=0&p=186768&#entry186768
     N("France") . "|Orange WAP" => {
         apn => "orange",
         login => "orange",
