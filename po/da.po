@@ -1,3 +1,4 @@
+# translation of da2.po to dansk
 # translation of da.po to dansk
 # translation of da1.po to
 # translation of da.po to
@@ -11,9 +12,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: da\n"
+"Project-Id-Version: da2\n"
 "POT-Creation-Date: 2007-09-25 21:56+0200\n"
-"PO-Revision-Date: 2007-12-15 05:01+0100\n"
+"PO-Revision-Date: 2007-12-16 04:45+0100\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: dansk <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
@@ -1564,7 +1565,7 @@ msgstr "Skrivebeskyttet delt ressurce:"
 #: ../bin/draknfs:174
 #, c-format
 msgid "Subtree checking:"
-msgstr ""
+msgstr "Undertræ-kontrol:"
 
 #: ../bin/draknfs:176
 #, c-format
@@ -1613,6 +1614,9 @@ msgid ""
 "help improve security in some cases, but can decrease reliability. See "
 "exports(5) man page for more details."
 msgstr ""
+"<span foreground=\"royalblue3\">%s</span> aktivér undertrækontrol, som kan "
+"forbedre sikkerheden i nogen tilfælde, men som ikke nødvendigvis er pålidelig. "
+"Se manualsiden \"exports(5)\" for mere information."
 
 #: ../bin/draknfs:185 ../bin/draksambashare:609 ../bin/draksambashare:776
 #, c-format
@@ -2294,7 +2298,7 @@ msgstr "DrakVPN"
 #: ../bin/drakvpn-old:87
 #, c-format
 msgid "The VPN connection is enabled."
-msgstr ""
+msgstr "VPN-opkoblingen er aktiveret."
 
 #: ../bin/drakvpn-old:88
 #, c-format
@@ -2305,36 +2309,41 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
+"Der er allerede opsat en VPN-opkobling.\n"
+"\n"
+"Den er for øjeblikket aktiveret.\n"
+"\n"
+"Hvad ønsker du at gøre?"
 
 #: ../bin/drakvpn-old:93
 #, c-format
 msgid "disable"
-msgstr ""
+msgstr "deaktivér"
 
 #: ../bin/drakvpn-old:93 ../bin/drakvpn-old:119
 #, c-format
 msgid "reconfigure"
-msgstr ""
+msgstr "ændr opsætning"
 
 #: ../bin/drakvpn-old:93 ../bin/drakvpn-old:119 ../bin/drakvpn-old:432
 #, c-format
 msgid "dismiss"
-msgstr ""
+msgstr "forkast"
 
 #: ../bin/drakvpn-old:97
 #, c-format
 msgid "Disabling VPN..."
-msgstr ""
+msgstr "Deaktiverer VPN..."
 
 #: ../bin/drakvpn-old:106
 #, c-format
 msgid "The VPN connection is now disabled."
-msgstr ""
+msgstr "VPN-opkoblingen er nu deaktiveret."
 
 #: ../bin/drakvpn-old:113
 #, c-format
 msgid "VPN connection currently disabled"
-msgstr ""
+msgstr "VPN-opkoblingen er for øjeblikket deaktiveret"
 
 #: ../bin/drakvpn-old:114
 #, c-format
@@ -2345,26 +2354,31 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
+"Opsætning af en VPN-opkobling er allerede udført.\n"
+"\n"
+"Den er for øjeblikket deaktiveret.\n"
+"\n"
+"Hvad ønsker du at gøre?"
 
 #: ../bin/drakvpn-old:119
 #, c-format
 msgid "enable"
-msgstr ""
+msgstr "aktivér"
 
 #: ../bin/drakvpn-old:127
 #, c-format
 msgid "Enabling VPN..."
-msgstr ""
+msgstr "Aktiverer VPN..."
 
 #: ../bin/drakvpn-old:133
 #, c-format
 msgid "The VPN connection is now enabled."
-msgstr ""
+msgstr "VPN-opkoblingen er nu aktiveret."
 
 #: ../bin/drakvpn-old:147 ../bin/drakvpn-old:164
 #, c-format
 msgid "Simple VPN setup."
-msgstr ""
+msgstr "Simpel VPN-opsætning."
 
 #: ../bin/drakvpn-old:148
 #, c-format
@@ -2381,6 +2395,18 @@ msgid ""
 "Make sure you have configured your Network/Internet access using\n"
 "drakconnect before going any further."
 msgstr ""
+"Du er i færd med at opsætte din datamaskine til at bruge en VPN-opkobling.\n"
+"\n"
+"Med denne funktion kan datamaskiner på dit private netværk og "
+"datamaskiner\n"
+"på nogen andre eksterne private netværk dele resurser via \n"
+"deres brandmure over internettet på en sikker måde.\n"
+"\n"
+"Kommunikationen over internet er krypteret. De lokale og eksterne\n"
+"datamaskiner vil fungere som om de var på samme netværk.\n"
+"\n"
+"Sørg for at du har opsat din Netværks/Internetadgang med\n"
+"drakconnect før du går videre."
 
 #: ../bin/drakvpn-old:165
 #, c-format
@@ -2397,26 +2423,37 @@ msgid ""
 "Please read AT LEAST the ipsec-howto docs\n"
 "before going any further."
 msgstr ""
+"VPN-opkobling.\n"
+"\n"
+"Dette program er baseret på følgende projekter:\n"
+" - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
+" - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
+" - ipsec-værktøj: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
+" - ipsec-vejledning: \t\thttp://www.ipsec-howto.org\n"
+" - dokumenterne og man-siderne som kommer med %s pakken\n"
+"\n"
+"Læs i det MINDSTE ipsec-vejledningsdokumenterne\n"
+"før du går videre."
 
 #: ../bin/drakvpn-old:208
 #, c-format
 msgid "Problems installing package %s"
-msgstr ""
+msgstr "Problemer ved installering af pakke %s"
 
 #: ../bin/drakvpn-old:222
 #, c-format
 msgid "Security Policies"
-msgstr ""
+msgstr "Sikkerhedspraksis"
 
 #: ../bin/drakvpn-old:222
 #, c-format
 msgid "IKE daemon racoon"
-msgstr ""
+msgstr "IKE-server racoon"
 
 #: ../bin/drakvpn-old:224
 #, c-format
 msgid "Configuration file"
-msgstr ""
+msgstr "Opsætningfil"
 
 #: ../bin/drakvpn-old:225
 #, c-format
@@ -2429,11 +2466,18 @@ msgid ""
 "\n"
 "What would you like to configure?\n"
 msgstr ""
+"Konfigurationstrin!\n"
+"\n"
+"Du skal definere Sikkerhedspraksis og derefter \n"
+"sætte den automatiske server for nøgleludveksling (IKE) op.\n"
+"KAME IKE-serveren vi bruger heder 'racoon'.\n"
+"\n"
+"Hvad ønsker du at sætte op?\n"
 
 #: ../bin/drakvpn-old:245 ../bin/drakvpn-old:382
 #, c-format
 msgid "%s entries"
-msgstr ""
+msgstr "%s opføringer"
 
 #: ../bin/drakvpn-old:246
 #, c-format
@@ -2448,13 +2492,22 @@ msgid ""
 "\n"
 "What would you like to do?\n"
 msgstr ""
+"%s-filens indhold\n"
+"er delt ind i blokke.\n"
+"\n"
+"Du kan nu:\n"
+"\n"
+"  - vise, tilføje, ændre, eller fjerne blokke, derefter\n"
+"  - udføre ændringene\n"
+"\n"
+"Hvad ønsker du at gøre?\n"
 
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid ""
 "_:display here is a verb\n"
 "Display"
-msgstr ""
+msgstr "Vís"
 
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
@@ -2464,7 +2517,7 @@ msgstr "Redigér"
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Commit"
-msgstr ""
+msgstr "Udfør"
 
 #: ../bin/drakvpn-old:267 ../bin/drakvpn-old:271 ../bin/drakvpn-old:406
 #: ../bin/drakvpn-old:410
@@ -2472,7 +2525,7 @@ msgstr ""
 msgid ""
 "_:display here is a verb\n"
 "Display configuration"
-msgstr ""
+msgstr "Vís opsætning"
 
 #: ../bin/drakvpn-old:272
 #, c-format
@@ -2483,6 +2536,11 @@ msgid ""
 "\n"
 "You'll have to go back and choose 'add'.\n"
 msgstr ""
+"Filen %s eksisterer ikke.\n"
+"\n"
+"Dette må være en ny opsætning.\n"
+"\n"
+"Du må gå tilbage og vælge 'tilføj'.\n"
 
 #: ../bin/drakvpn-old:301
 #, c-format
@@ -2493,11 +2551,16 @@ msgid ""
 "\n"
 "Choose continue when you are done to write the data.\n"
 msgstr ""
+"Tilføj en Sikkerhedspraksis.\n"
+"\n"
+"Du kan nu tilføje en Sikkerhedspraksis.\n"
+"\n"
+"Vælg fortsæt når du er færdig med at skrive ind alle data.\n"
 
 #: ../bin/drakvpn-old:333 ../bin/drakvpn-old:523
 #, c-format
 msgid "Edit section"
-msgstr ""
+msgstr "Ændr blok"
 
 #: ../bin/drakvpn-old:334
 #, c-format
@@ -2507,12 +2570,16 @@ msgid ""
 "You can choose here below the one you want to edit \n"
 "and then click on next.\n"
 msgstr ""
+"Filen %s har flere blokke eller opkoblinger.\n"
+"\n"
+"Du kan herunder vælge den du ønsker at ændre \n"
+"og derefter trykke på næste.\n"
 
 #: ../bin/drakvpn-old:337 ../bin/drakvpn-old:357 ../bin/drakvpn-old:528
 #: ../bin/drakvpn-old:574
 #, c-format
 msgid "Section names"
-msgstr ""
+msgstr "Bloknavne"
 
 #: ../bin/drakvpn-old:344
 #, c-format
@@ -2523,11 +2590,16 @@ msgid ""
 "\n"
 "Choose continue when you are done to write the data.\n"
 msgstr ""
+"Ændr en Sikkerhedspraksis.\n"
+"\n"
+"Du kan nu ændre en Sikkerhedspraksis.\n"
+"\n"
+"Vælg fortsæt når du er færdig med at skrive ind alle data.\n"
 
 #: ../bin/drakvpn-old:353 ../bin/drakvpn-old:570
 #, c-format
 msgid "Remove section"
-msgstr ""
+msgstr "Fjern blok"
 
 #: ../bin/drakvpn-old:354 ../bin/drakvpn-old:571
 #, c-format
@@ -2537,6 +2609,10 @@ msgid ""
 "You can choose here below the one you want to remove\n"
 "and then click on next.\n"
 msgstr ""
+"Filen %s har flere blokke eller opkoblinger.\n"
+"\n"
+"Du kan herunder vælge den du ønsker at fjerne \n"
+"og derefter trykke på næste.\n"
 
 #: ../bin/drakvpn-old:383
 #, c-format
@@ -2551,6 +2627,15 @@ msgid ""
 "  - remove \t\t (remove an existing section)\n"
 "  - commit \t\t (writes the changes to the real file)"
 msgstr ""
+"'racoon.conf'-filopsætning.\n"
+"\n"
+"Indholdet i denne fil er delt op i blokke.\n"
+"Du kan nu:\n"
+"  - vis \t\t (vis filens indhold)\n"
+"  - tilføj\t\t\t (tilføj en blok)\n"
+"  - redigér \t\t\t (ændre parametre i en eksisterende blok)\n"
+"  - fjern \t\t (fjern en eksisterende blok)\n"
+"  - gem \t\t (gemme ændringene i filen)"
 
 #: ../bin/drakvpn-old:411
 #, c-format
@@ -2561,11 +2646,16 @@ msgid ""
 "\n"
 "You'll have to go back and choose configure.\n"
 msgstr ""
+"Filen %s eksisterer ikke.\n"
+"\n"
+"Dette må være en ny opsætning.\n"
+"\n"
+"Du må gå tilbage og vælge opsætning.\n"
 
 #: ../bin/drakvpn-old:425
 #, c-format
 msgid "racoon.conf entries"
-msgstr ""
+msgstr "'racoon.conf'-opføringer"
 
 #: ../bin/drakvpn-old:426
 #, c-format
@@ -2579,11 +2669,19 @@ msgid ""
 "\n"
 "Choose the section you would like to add.\n"
 msgstr ""
+"Trinnet Tilføj blokke.\n"
+"\n"
+"Her er skelettet til 'racoon.conf'-filen:\n"
+"\t'sti'\n"
+"\t'ekstern'\n"
+"\t'sainfo' \n"
+"\n"
+"Vælg blokken du ønsker at tilføje.\n"
 
 #: ../bin/drakvpn-old:432
 #, c-format
 msgid "path"
-msgstr ""
+msgstr "sti"
 
 #: ../bin/drakvpn-old:432
 #, c-format
@@ -2593,7 +2691,7 @@ msgstr "fjern"
 #: ../bin/drakvpn-old:432
 #, c-format
 msgid "sainfo"
-msgstr ""
+msgstr "sainfo"
 
 #: ../bin/drakvpn-old:440
 #, c-format
@@ -2604,11 +2702,16 @@ msgid ""
 "\n"
 "Put your mouse over the certificate entry to obtain online help."
 msgstr ""
+"Trinnet 'Tilføj sti'.\n"
+"\n"
+"Stiblokkene må være øverst i 'racoon.conf'-filen.\n"
+"\n"
+"Bevæg din mus over certifikat-opføringen for hjælp."
 
 #: ../bin/drakvpn-old:443
 #, c-format
 msgid "path type"
-msgstr ""
+msgstr "stitype"
 
 #: ../bin/drakvpn-old:447
 #, c-format
@@ -2633,11 +2736,29 @@ msgid ""
 "of the identifier and the shared secret key which are used at\n"
 "Pre-shared key authentication method in phase 1."
 msgstr ""
+"path include-sti: specificerer en sti for at inkludere\n"
+"en fil. Se Filinkludering.\n"
+"\tEksempel: path include '/etc/racoon'\n"
+"\n"
+"path pre_shared_key-fil: specificerer en fil som indeholder\n"
+"forhåndsdelte nøgler for forskellige ID(er). Se Forhåndsdelt nøgle Fil.\n"
+"\tEksempel: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
+"\n"
+"path certificate-sti: racoon(8) vil søge i dette katalog\n"
+"ved modtagelse af certifikat eller certifikatforespørgsel.\tEksempel: path certificate '/etc/cert' ;\n"
+"\n"
+"Filinkludering: include file \n"
+"andre opsætningfiler kan inkluderes..\n"
+"\tEksempel: include \"remote.conf\" ;\n"
+"\n"
+"Forhåndsdelt nøglefil: Filen definerer et par\n"
+"for identifikatoren og den hemmelige, delte nøgle som er brugt i\n"
+"forhåndsdelt nøgle autenticeringsmetoden i fase 1."
 
 #: ../bin/drakvpn-old:467 ../bin/drakvpn-old:560
 #, c-format
 msgid "real file"
-msgstr ""
+msgstr "virkelig fil"
 
 #: ../bin/drakvpn-old:490
 #, c-format
@@ -2648,6 +2769,11 @@ msgid ""
 "You can now choose the remote settings.\n"
 "Choose continue or previous when you are done.\n"
 msgstr ""
+"Sørg for at du allerede har stiblokkene\n"
+"øverst i 'racoon.conf'-filen.\n"
+"\n"
+"Du kan nu vælge de eksterne indstillinger.\n"
+"Vælg 'fortsæt' eller 'forrige' når du er færdig.\n"
 
 #: ../bin/drakvpn-old:507
 #, c-format
@@ -2658,6 +2784,11 @@ msgid ""
 "You can now choose the sainfo settings.\n"
 "Choose continue or previous when you are done.\n"
 msgstr ""
+"Sørg for at du allerede har stiblokkene\n"
+"øverst i din %s-fil.\n"
+"\n"
+"Du kan nu vælge 'sainfo'-opsætningen.\n"
+"Vælg 'fortsæt' eller 'forrige' når du er færdig.\n"
 
 #: ../bin/drakvpn-old:524
 #, c-format
@@ -2667,6 +2798,10 @@ msgid ""
 "You can choose here in the list below the one you want\n"
 "to edit and then click on next.\n"
 msgstr ""
+"Filen %s har flere blokke eller opkoblinger.\n"
+"\n"
+"Du kan herunder vælge den du ønsker at ændre \n"
+"og derefter trykke på næste.\n"
 
 #: ../bin/drakvpn-old:535
 #, c-format
@@ -2678,6 +2813,12 @@ msgid ""
 "\n"
 "Choose continue when you are done to write the data.\n"
 msgstr ""
+"Filen '%s' har flere blokke eller opkoblinger.\n"
+"\n"
+"\n"
+"Du kan nu ændre eksterne blok-opføringer.\n"
+"\n"
+"Tryk 'fortsæt' når du er færdig med at skrive ind alle data.\n"
 
 #: ../bin/drakvpn-old:544
 #, c-format
@@ -2688,6 +2829,11 @@ msgid ""
 "\n"
 "Choose continue when you are done to write the data."
 msgstr ""
+"Filen '%s' har flere blokke eller opkoblinger.\n"
+"\n"
+"Du kan nu ændre 'sainfo'-blokkene.\n"
+"\n"
+"Tryk 'fortsæt' når du er færdig med at skrive ind alle data."
 
 #: ../bin/drakvpn-old:552
 #, c-format
@@ -2702,11 +2848,19 @@ msgid ""
 "\n"
 "Choose continue or previous when you are done.\n"
 msgstr ""
+"Denne blok skal være øverst i '%s'-filen.\n"
+"\n"
+"Sørg for at alle andre blokke følger efter disse\n"
+"stiblokke.\n"
+"\n"
+"Du kan nu ændre sti-indgangene.\n"
+"\n"
+"Tryk 'fortsæt' eller 'forrige' når du er færdig.\n"
 
 #: ../bin/drakvpn-old:559
 #, c-format
 msgid "path_type"
-msgstr ""
+msgstr "sti_type"
 
 #: ../bin/drakvpn-old:599
 #, c-format
@@ -2724,11 +2878,18 @@ msgid ""
 "You should make sure that the tunnels shorewall\n"
 "section is configured."
 msgstr ""
+"Alt er nu sat op.\n"
+"\n"
+"Du kan nu dele resurser via internet\n"
+"på en sikker måde via en VPN-opkobling.\n"
+"\n"
+"Du bør sikre dig at tunnelerne i shorewall-blokken\n"
+"er sat op."
 
 #: ../bin/drakvpn-old:620
 #, c-format
 msgid "Sainfo source address"
-msgstr ""
+msgstr "Sainfo-kildeaddresse"
 
 #: ../bin/drakvpn-old:621
 #, c-format
@@ -2752,11 +2913,29 @@ msgid ""
 "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
 "\t172.16.1.0/24 is the source address"
 msgstr ""
+"sainfo (kilde_id mål_id | anonymous) { udtryk }\n"
+"definerer parametrene til IKE fase 2\n"
+"(IPsec-SA etablering).\n"
+"\n"
+"kilde_id og mål_id er opbygget som:\n"
+"\n"
+"\taddress adresse [/ præfiks] [[port]] ul_proto\n"
+"\n"
+"Eksempler: \n"
+"\n"
+"sainfo anonymous (tillader opkoblinger fra alle kilder)\n"
+"\tlad dette felt stå blankt hvis du ønsker anonym\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\t203.178.141.209 er kilde-adressen\n"
+"\n"
+"sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
+"\t172.16.1.0/24 er kilde adressen"
 
 #: ../bin/drakvpn-old:638
 #, c-format
 msgid "Sainfo source protocol"
-msgstr ""
+msgstr "Sainfo-kildeprotokol"
 
 #: ../bin/drakvpn-old:639
 #, c-format
@@ -2777,11 +2956,26 @@ msgid ""
 "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
 "\tthe first 'any' allows any protocol for the source"
 msgstr ""
+"sainfo (kilde_id mål_id | anonymous) { udtryk }\n"
+"definerer parametrene til IKE fase 2\n"
+"(IPsec-SA etablering).\n"
+"\n"
+"kilde_id og mål_id er opbygget som:\n"
+"\n"
+"\taddress adresse [/ præfiks] [[port]] ul_proto\n"
+"\n"
+"Eksempler: \n"
+"\n"
+"sainfo anonymous (tillader opkoblinger fra alle kilder)\n"
+"\tlad dette felt stå blankt hvis du ønsker anonym\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\tden første 'any' tillader hvilken som helst protokol fra kilden"
 
 #: ../bin/drakvpn-old:653
 #, c-format
 msgid "Sainfo destination address"
-msgstr ""
+msgstr "Sainfo-mål-addresse"
 
 #: ../bin/drakvpn-old:654
 #, c-format
@@ -2805,11 +2999,29 @@ msgid ""
 "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
 "\t172.16.2.0/24 is the destination address"
 msgstr ""
+"sainfo (kilde_id mål_id | anonymous) { udtryk }\n"
+"definerer parametrene til IKE fase 2\n"
+"(IPsec-SA etablering).\n"
+"\n"
+"kilde_id og mål_id er opbygget som:\n"
+"\n"
+"\taddress adresse [/ præfiks] [[port]] ul_proto\n"
+"\n"
+"Eksempler: \n"
+"\n"
+"sainfo anonymous (tillader opkoblinger fra alle kilder)\n"
+"\tlad dette felt stå blankt hvis du ønsker anonym\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\t203.178.141.218 er mål-adressen\n"
+"\n"
+"sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
+"\t172.16.2.0/24 er mål-adressen"
 
 #: ../bin/drakvpn-old:671
 #, c-format
 msgid "Sainfo destination protocol"
-msgstr ""
+msgstr "Sainfo-målprotokol"
 
 #: ../bin/drakvpn-old:672
 #, c-format
@@ -2830,11 +3042,26 @@ msgid ""
 "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
 "\tthe last 'any' allows any protocol for the destination"
 msgstr ""
+"sainfo (kilde_id mål_id | anonymous) { udtryk }\n"
+"definerer parametrene til IKE fase 2\n"
+"(IPsec-SA etablering).\n"
+"\n"
+"kilde_id og mål_id er opbygget som:\n"
+"\n"
+"\taddress adresse [/ præfiks] [[port]] ul_proto\n"
+"\n"
+"Eksempler: \n"
+"\n"
+"sainfo anonymous (tillader opkoblinger fra alle kilder)\n"
+"\tlad dette felt stå blankt hvis du ønsker anonym\n"
+"\n"
+"sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
+"\tden sidste 'any' godtager alle protokoller for målet"
 
 #: ../bin/drakvpn-old:686
 #, c-format
 msgid "PFS group"
-msgstr ""
+msgstr "PFS-gruppe"
 
 #: ../bin/drakvpn-old:688
 #, c-format
@@ -2845,11 +3072,16 @@ msgid ""
 "group is one of the following: modp768, modp1024, modp1536.\n"
 "Or you can define 1, 2, or 5 as the DH group number."
 msgstr ""
+"definer gruppen for Diffie-Hellman eksponentieringerne.\n"
+"Hvis du ikke kræver PFD så kan du udelade dette direktiv.\n"
+"Alle forslag vil blive accepteret hvis du ikke specificerer én.\n"
+"Gruppe er en af følgende: modp768, modp1024, modp1536.\n"
+"Eller du kan definere 1, 2, eller 5 som DH-gruppenummer."
 
 #: ../bin/drakvpn-old:693
 #, c-format
 msgid "Lifetime number"
-msgstr ""
+msgstr "Levetidnummer"
 
 #: ../bin/drakvpn-old:694
 #, c-format
@@ -2871,11 +3103,27 @@ msgid ""
 "\n"
 "So, here, the lifetime numbers are 1, 1, 30, 30, 60 and 12.\n"
 msgstr ""
+"Definér en levetid for en bestemt tid som vil blive foreslået\n"
+"i fase 1-forhandlinger. Alle forslag vil blive accepteret\n"
+"og attributter vil ikke blive foreslået til maskinen, hvis\n"
+"du ikke specificerer dem. De kan være\n"
+"specificeret individuelt for hvert forslag.\n"
+"\n"
+"Eksempler: \n"
+"\n"
+"        lifetime time 1 min;    # sek,min,timer\n"
+"        lifetime time 1 min;    # sek,min,timer\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 60 sec;\n"
+"\tlifetime time 12 hour;\n"
+"\n"
+"Her er levetidtallene  1, 1, 30, 30, 60 og 12.\n"
 
 #: ../bin/drakvpn-old:710
 #, c-format
 msgid "Lifetime unit"
-msgstr ""
+msgstr "Levetidsenhed"
 
 #: ../bin/drakvpn-old:712
 #, c-format
@@ -2898,6 +3146,22 @@ msgid ""
 "So, here, the lifetime units are 'min', 'min', 'sec', 'sec', 'sec' and "
 "'hour'.\n"
 msgstr ""
+"Definér en levetid for en bestemt tid som vil blive foreslået\n"
+"i fase 1-forhandlinger. Alle forslag vil blive accepteret\n"
+"og attributter vil ikke blive foreslået til den anden maskine, hvis\n"
+"du ikke specificerer dem. De kan være\n"
+"specificeret individuelt for hvert forslag.\n"
+"\n"
+"Eksempler: \n"
+"\n"
+"        lifetime time 1 min;    # sek,min,timer\n"
+"        lifetime time 1 min;    # sek,min,timer\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 30 sec;\n"
+"        lifetime time 60 sec;\n"
+"\tlifetime time 12 hour;\n"
+"\n"
+"Her er levetidsenhederne 'min', 'min', 'sek', 'sek', 'sek' og 'time'.\n"
 
 #: ../bin/drakvpn-old:728 ../bin/drakvpn-old:813
 #, c-format
@@ -2907,17 +3171,17 @@ msgstr "Krypteringsalgoritme"
 #: ../bin/drakvpn-old:730
 #, c-format
 msgid "Authentication algorithm"
-msgstr ""
+msgstr "Autentiseringsalgoritme"
 
 #: ../bin/drakvpn-old:732
 #, c-format
 msgid "Compression algorithm"
-msgstr ""
+msgstr "Komprimeringsalgoritme"
 
 #: ../bin/drakvpn-old:733
 #, c-format
 msgid "deflate"
-msgstr ""
+msgstr "sænk"
 
 #: ../bin/drakvpn-old:740
 #, c-format
@@ -2938,11 +3202,21 @@ msgid ""
 "remote anonymous\n"
 "remote ::1 [8000]"
 msgstr ""
+"remote (adresse | anonymous) [[port]] { udtryk }\n"
+"Specificerer parametrene for IKE fase 1 for hver ekstern node.\n"
+"Standardport er 500.  Hvis 'anonymous' er specificeret, gælder\n"
+"udtrykkene alle maskiner som ikke passer til nogen andre eksterne\n"
+"direktiver.\n"
+"\n"
+"Eksempler: \n"
+"\n"
+"remote anonymous\n"
+"remote ::1 [8000]"
 
 #: ../bin/drakvpn-old:749
 #, c-format
 msgid "Exchange mode"
-msgstr ""
+msgstr "Udvekslingsmodus"
 
 #: ../bin/drakvpn-old:751
 #, c-format
@@ -2954,21 +3228,26 @@ msgid ""
 "modes are acceptable. The first exchange mode is what\n"
 "racoon uses when it is the initiator.\n"
 msgstr ""
+"Definerer udvekslingsmodus for fase 1 når racoon er starteren.\n"
+"Det betyder også den acceptable udvekslingsmodus,\n"
+"når racoon er svareren. Du kan vælge mere end en modus\n"
+"ved at separere dem med komma. Alle modi er acceptable.\n"
+"Første udvekslingsmodus bruges når racoon er starteren.\n"
 
 #: ../bin/drakvpn-old:757
 #, c-format
 msgid "Generate policy"
-msgstr ""
+msgstr "Generér praksis"
 
 #: ../bin/drakvpn-old:758 ../bin/drakvpn-old:774 ../bin/drakvpn-old:787
 #, c-format
 msgid "off"
-msgstr ""
+msgstr "fra"
 
 #: ../bin/drakvpn-old:758 ../bin/drakvpn-old:774 ../bin/drakvpn-old:787
 #, c-format
 msgid "on"
-msgstr ""
+msgstr "til"
 
 #: ../bin/drakvpn-old:759
 #, c-format
@@ -2988,11 +3267,22 @@ msgid ""
 "tiator and the responder.  This directive is ignored in\n"
 "the initiator case.  The default value is off."
 msgstr ""
+"Dette direktiv er for svareren. Derfor bør du sætte\n"
+"passiv til, så racoon(8) bare bliver en svarer.\n"
+"Hvis svareren ikke har en praksis i SPD under fase 2-forhandling, og "
+"direktivet er slået til, vil racoon(8) vælge det\n"
+"første forslag i SA-payload fra starteren, og generere\n"
+"praksisopføringer fra forslaget.  Det er nyttigt at forhandle\n"
+"med klienten som har fået tildelt IP-adresse dynamisk. Bemærk\n"
+"at en uegnet praksis kan blive installeret i svarerens\n"
+"SPD af starteren, så anden kommunikation ikke\n"
+"fungerer. Dette direktiv er ignoreret hos starteren.\n"
+"Standard er fra."
 
 #: ../bin/drakvpn-old:773
 #, c-format
 msgid "Passive"
-msgstr ""
+msgstr "Passiv"
 
 #: ../bin/drakvpn-old:775
 #, c-format
@@ -3001,46 +3291,48 @@ msgid ""
 "to on.  The default value is off.  It is useful for a\n"
 "server."
 msgstr ""
+"Hvis du ikke ønsker at starte forhandlingen, så sæt denne\n"
+"til aktiveret. Standard er deaktiveret. Det er nyttigt for en server."
 
 #: ../bin/drakvpn-old:778
 #, c-format
 msgid "Certificate type"
-msgstr ""
+msgstr "Certifikattype"
 
 #: ../bin/drakvpn-old:780
 #, c-format
 msgid "My certfile"
-msgstr ""
+msgstr "Min certfikatfil"
 
 #: ../bin/drakvpn-old:781
 #, c-format
 msgid "Name of the certificate"
-msgstr ""
+msgstr "Navn på certifikatet"
 
 #: ../bin/drakvpn-old:782
 #, c-format
 msgid "My private key"
-msgstr ""
+msgstr "Min private nøgle"
 
 #: ../bin/drakvpn-old:783
 #, c-format
 msgid "Name of the private key"
-msgstr ""
+msgstr "Navn på den private nøgle"
 
 #: ../bin/drakvpn-old:784
 #, c-format
 msgid "Peers certfile"
-msgstr ""
+msgstr "Certifikatfil for anden maskine"
 
 #: ../bin/drakvpn-old:785
 #, c-format
 msgid "Name of the peers certificate"
-msgstr ""
+msgstr "Navn på certifikatet for den anden maskine"
 
 #: ../bin/drakvpn-old:786
 #, c-format
 msgid "Verify cert"
-msgstr ""
+msgstr "Bekræft certifikatet"
 
 #: ../bin/drakvpn-old:788
 #, c-format
@@ -3048,11 +3340,13 @@ msgid ""
 "If you do not want to verify the peer's certificate for\n"
 "some reason, set this to off.  The default is on."
 msgstr ""
+"Hvis du ikke ønsker at bekræfte den anden maskines certifikat,\n"
+"så sæt denne til deaktiveret. Standard er aktiveret."
 
 #: ../bin/drakvpn-old:790
 #, c-format
 msgid "My identifier"
-msgstr ""
+msgstr "Min identifikator"
 
 #: ../bin/drakvpn-old:791
 #, c-format
@@ -3080,16 +3374,37 @@ msgid ""
 "\n"
 "my_identifier user_fqdn \"myemail@mydomain.com\""
 msgstr ""
+"Specificerer identifikatoren sendt til ekstern vært og typen\n"
+"som skal bruges i fase 1-forhandling. Adresse, FQDN,\n"
+"user_fqdn, keyid og asn1dn kan blive brugt som en id-type.\n"
+"De bruges sådan:\n"
+"\tmy_identifier address [adresse];\n"
+"\t\tTypen er IP-adresse.  Dette er standard\n"
+"\t\thvis du ikke vælger en identifikator som skal bruges.\n"
+"\tmy_identifier user_fqdn string;\n"
+"\t\tTypen er en USER_FQDN (bruger-fuldkvalificeret domænenavn).\n"
+"\tmy_identifier FQDN string;\n"
+"\t\tTypen er en FQDN (fuldkvalificeret domænenavn).\n"
+"\tmy_identifier keyid file;\n"
+"\t\tTypen er en KEY_ID.\n"
+"\tmy_identifier asn1dn [string];\n"
+"\t\tTypen er et ASN.1-specifikt navn. Hvis\n"
+"\t\ttekst er udeladt, vil racoon(8) hente DN fra\n"
+"\t\t'Subject'-feltet for certifikatet.\n"
+"\n"
+"Eksempler: \n"
+"\n"
+"my_identifier user_fqdn \"min-epost@mit-firma.dk\""
 
 #: ../bin/drakvpn-old:811
 #, c-format
 msgid "Peers identifier"
-msgstr ""
+msgstr "Identifikator for andre maskiner"
 
 #: ../bin/drakvpn-old:812
 #, c-format
 msgid "Proposal"
-msgstr ""
+msgstr "Forslag"
 
 #: ../bin/drakvpn-old:814
 #, c-format
@@ -3102,11 +3417,18 @@ msgid ""
 "\n"
 "For other transforms, this statement should not be used."
 msgstr ""
+"Specificér krypteringsalgoritme som skal bruges i\n"
+"fase 1-forhandling. Dette skal være defineret. \n"
+"Algoritmen er en af følgende: \n"
+"\n"
+"DES, 3DES, blowfish, cast128 for oakley.\n"
+"\n"
+"For andre transformationer bør dette direktiv ikke bruges."
 
 #: ../bin/drakvpn-old:821
 #, c-format
 msgid "Hash algorithm"
-msgstr ""
+msgstr "Hash-algoritme"
 
 #: ../bin/drakvpn-old:822
 #, c-format
@@ -3116,7 +3438,7 @@ msgstr "Autentifikationsmetode"
 #: ../bin/drakvpn-old:823
 #, c-format
 msgid "DH group"
-msgstr ""
+msgstr "DH-gruppe"
 
 #: ../bin/drakvpn-old:830
 #, c-format
@@ -3126,47 +3448,47 @@ msgstr "Kommando"
 #: ../bin/drakvpn-old:831
 #, c-format
 msgid "Source IP range"
-msgstr ""
+msgstr "IP-område for kilde"
 
 #: ../bin/drakvpn-old:832
 #, c-format
 msgid "Destination IP range"
-msgstr ""
+msgstr "IP-område for mål"
 
 #: ../bin/drakvpn-old:833
 #, c-format
 msgid "Upper-layer protocol"
-msgstr ""
+msgstr "Protokol for øvre lag"
 
 #: ../bin/drakvpn-old:833 ../bin/drakvpn-old:840
 #, c-format
 msgid "any"
-msgstr ""
+msgstr "vilkårlig"
 
 #: ../bin/drakvpn-old:835
 #, c-format
 msgid "Flag"
-msgstr ""
+msgstr "Flag"
 
 #: ../bin/drakvpn-old:836
 #, c-format
 msgid "Direction"
-msgstr ""
+msgstr "Retning"
 
 #: ../bin/drakvpn-old:837
 #, c-format
 msgid "IPsec policy"
-msgstr ""
+msgstr "IPsec-praksis"
 
 #: ../bin/drakvpn-old:837
 #, c-format
 msgid "ipsec"
-msgstr ""
+msgstr "ipsec"
 
 #: ../bin/drakvpn-old:837
 #, c-format
 msgid "discard"
-msgstr ""
+msgstr "forkast"
 
 #: ../bin/drakvpn-old:840
 #, c-format
@@ -3176,17 +3498,17 @@ msgstr "Tilstand"
 #: ../bin/drakvpn-old:840
 #, c-format
 msgid "tunnel"
-msgstr ""
+msgstr "tunnel"
 
 #: ../bin/drakvpn-old:840
 #, c-format
 msgid "transport"
-msgstr ""
+msgstr "transport"
 
 #: ../bin/drakvpn-old:842
 #, c-format
 msgid "Source/destination"
-msgstr ""
+msgstr "Kilde/mål"
 
 #: ../bin/drakvpn-old:843
 #, c-format
@@ -3196,22 +3518,22 @@ msgstr "Niveau"
 #: ../bin/drakvpn-old:843
 #, c-format
 msgid "require"
-msgstr ""
+msgstr "kræv"
 
 #: ../bin/drakvpn-old:843
 #, c-format
 msgid "default"
-msgstr ""
+msgstr "standard"
 
 #: ../bin/drakvpn-old:843
 #, c-format
 msgid "use"
-msgstr ""
+msgstr "brug"
 
 #: ../bin/drakvpn-old:843
 #, c-format
 msgid "unique"
-msgstr ""
+msgstr "unik"
 
 #: ../bin/net_applet:62
 #, c-format
@@ -3303,7 +3625,7 @@ msgstr "Netværksforbindelse"
 #: ../bin/net_applet:446
 #, c-format
 msgid "More networks"
-msgstr ""
+msgstr "Flere netværk"
 
 #: ../bin/net_applet:473
 #, c-format
@@ -4354,6 +4676,8 @@ msgid ""
 "Modems using Conexant AccessRunner chipsets cannot be supported due to "
 "binary firmware distribution problem."
 msgstr ""
+"Modemmer som bruger Conexant AccessRunner chipsæt kan ikke understøttes "
+"pga. problem med distribution af binær firmware."
 
 #: ../lib/network/connection/xdsl.pm:186
 #, c-format
@@ -4657,7 +4981,7 @@ msgstr "Vælg typen af VPN"
 #: ../lib/network/drakvpn.pm:49
 #, c-format
 msgid "Initializing tools and detecting devices for %s..."
-msgstr ""
+msgstr "Klargør værktøjer og leder efter enheden for %s..."
 
 #: ../lib/network/drakvpn.pm:52
 #, c-format
@@ -5505,7 +5829,7 @@ msgstr ""
 #: ../lib/network/thirdparty.pm:135
 #, c-format
 msgid "Some components (%s) are required but aren't available for %s hardware."
-msgstr ""
+msgstr "Nogen komponenter ('%s') behøves, men er ikke tilgængelige for %s-udstyret."
 
 #: ../lib/network/thirdparty.pm:136
 #, c-format
@@ -5524,7 +5848,7 @@ msgstr ""
 #: ../lib/network/thirdparty.pm:139
 #, c-format
 msgid "The following component is missing: %s"
-msgstr ""
+msgstr "Følgende komponent mangler: %s"
 
 #: ../lib/network/thirdparty.pm:141
 #, c-format
@@ -5698,12 +6022,12 @@ msgstr "Enhedsnummer for virtuelt netværk (valgfrit)"
 #: ../lib/network/vpn/openvpn.pm:365
 #, c-format
 msgid "Starting connection.."
-msgstr ""
+msgstr "Starter opkobling..."
 
 #: ../lib/network/vpn/openvpn.pm:380
 #, c-format
 msgid "Please insert your token"
-msgstr ""
+msgstr "Indsæt dit symbol"
 
 #: ../lib/network/vpn/vpnc.pm:9
 #, c-format
