@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2007-09-25 21:56+0200\n"
+"POT-Creation-Date: 2008-01-31 11:33+0100\n"
 "PO-Revision-Date: 2002-09-09 09:08+0900\n"
 "Last-Translator: Jaegeum Cze <baedaron@hanafos.com>\n"
 "Language-Team: Korean <beadaron@hanafos.com>\n"
@@ -47,18 +47,18 @@ msgstr "인터페이스"
 
 #: ../bin/drakconnect:113 ../bin/drakconnect:321 ../bin/drakconnect:888
 #: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:125
-#: ../lib/network/netconnect.pm:604 ../lib/network/vpn/openvpn.pm:221
+#: ../lib/network/netconnect.pm:612 ../lib/network/vpn/openvpn.pm:221
 #, c-format
 msgid "IP address"
 msgstr "IP 주소"
 
 #: ../bin/drakconnect:113 ../bin/drakconnect:305 ../bin/drakconnect:563
-#: ../bin/drakids:252 ../bin/drakvpn-old:839 ../lib/network/netconnect.pm:448
+#: ../bin/drakids:252 ../bin/drakvpn-old:839 ../lib/network/netconnect.pm:456
 #, c-format
 msgid "Protocol"
 msgstr "프로토콜"
 
-#: ../bin/drakconnect:113 ../lib/network/netconnect.pm:434
+#: ../bin/drakconnect:113 ../lib/network/netconnect.pm:442
 #, c-format
 msgid "Driver"
 msgstr "드라이버"
@@ -113,8 +113,8 @@ msgid "Ok"
 msgstr "확인"
 
 #: ../bin/drakconnect:164 ../bin/drakconnect:636 ../bin/drakgw:359
-#: ../bin/draksambashare:211 ../lib/network/connection_manager.pm:132
-#: ../lib/network/connection_manager.pm:150
+#: ../bin/draksambashare:228 ../lib/network/connection_manager.pm:146
+#: ../lib/network/connection_manager.pm:164
 #, c-format
 msgid "Please wait"
 msgstr "기다려 주세요"
@@ -146,7 +146,7 @@ msgid "Netmask"
 msgstr "넷마스크"
 
 #: ../bin/drakconnect:332 ../lib/network/connection/ethernet.pm:133
-#: ../lib/network/netconnect.pm:636 ../lib/network/vpn/openvpn.pm:212
+#: ../lib/network/netconnect.pm:644 ../lib/network/vpn/openvpn.pm:212
 #: ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
@@ -213,64 +213,64 @@ msgstr ""
 msgid "Get NTPD servers from DHCP"
 msgstr ""
 
-#: ../bin/drakconnect:406 ../lib/network/connection/wireless.pm:312
-#: ../lib/network/connection_manager.pm:190
+#: ../bin/drakconnect:406 ../lib/network/connection/wireless.pm:327
+#: ../lib/network/connection_manager.pm:204
 #, fuzzy, c-format
 msgid "Operating Mode"
 msgstr "전문가 모드"
 
-#: ../bin/drakconnect:407 ../lib/network/connection/wireless.pm:316
+#: ../bin/drakconnect:407 ../lib/network/connection/wireless.pm:331
 #, c-format
 msgid "Network name (ESSID)"
 msgstr ""
 
-#: ../bin/drakconnect:408 ../lib/network/connection/wireless.pm:322
+#: ../bin/drakconnect:408 ../lib/network/connection/wireless.pm:337
 #, fuzzy, c-format
 msgid "Network ID"
 msgstr "네트웍"
 
-#: ../bin/drakconnect:409 ../lib/network/connection/wireless.pm:323
+#: ../bin/drakconnect:409 ../lib/network/connection/wireless.pm:338
 #, c-format
 msgid "Operating frequency"
 msgstr ""
 
-#: ../bin/drakconnect:410 ../lib/network/connection/wireless.pm:324
+#: ../bin/drakconnect:410 ../lib/network/connection/wireless.pm:339
 #, c-format
 msgid "Sensitivity threshold"
 msgstr ""
 
-#: ../bin/drakconnect:411 ../lib/network/connection/wireless.pm:325
+#: ../bin/drakconnect:411 ../lib/network/connection/wireless.pm:340
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr ""
 
-#: ../bin/drakconnect:421 ../lib/network/connection/wireless.pm:320
+#: ../bin/drakconnect:421 ../lib/network/connection/wireless.pm:335
 #, c-format
 msgid "Encryption key"
 msgstr "암호화 키"
 
-#: ../bin/drakconnect:422 ../lib/network/connection/wireless.pm:326
+#: ../bin/drakconnect:422 ../lib/network/connection/wireless.pm:341
 #, c-format
 msgid "RTS/CTS"
 msgstr ""
 
-#: ../bin/drakconnect:423 ../lib/network/connection/wireless.pm:334
+#: ../bin/drakconnect:423 ../lib/network/connection/wireless.pm:349
 #, fuzzy, c-format
 msgid "Fragmentation"
 msgstr "게임 스테이션"
 
-#: ../bin/drakconnect:424 ../lib/network/connection/wireless.pm:335
+#: ../bin/drakconnect:424 ../lib/network/connection/wireless.pm:350
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr ""
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../bin/drakconnect:425 ../lib/network/connection/wireless.pm:343
+#: ../bin/drakconnect:425 ../lib/network/connection/wireless.pm:358
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr ""
 
-#: ../bin/drakconnect:426 ../lib/network/connection/wireless.pm:352
+#: ../bin/drakconnect:426 ../lib/network/connection/wireless.pm:367
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr ""
@@ -285,48 +285,48 @@ msgstr "부팅시 시작"
 msgid "Network Hotplugging"
 msgstr "네트웍 환경 설정"
 
-#: ../bin/drakconnect:446 ../lib/network/netconnect.pm:323
+#: ../bin/drakconnect:446 ../lib/network/netconnect.pm:331
 #, c-format
 msgid "Dialing mode"
 msgstr "다이얼링 모드"
 
 #: ../bin/drakconnect:451 ../bin/drakconnect:518
-#: ../lib/network/netconnect.pm:324
+#: ../lib/network/netconnect.pm:332
 #, c-format
 msgid "Connection speed"
 msgstr "연결 속도"
 
-#: ../bin/drakconnect:456 ../lib/network/netconnect.pm:325
+#: ../bin/drakconnect:456 ../lib/network/netconnect.pm:333
 #, c-format
 msgid "Connection timeout (in sec)"
 msgstr "연결 시간초과 (초)"
 
-#: ../bin/drakconnect:462 ../lib/network/connection.pm:181
+#: ../bin/drakconnect:462 ../lib/network/connection.pm:186
 #, c-format
 msgid "Metric"
 msgstr "단위"
 
 #: ../bin/drakconnect:482 ../lib/network/connection/cable.pm:48
-#: ../lib/network/netconnect.pm:587
+#: ../lib/network/netconnect.pm:595
 #, c-format
 msgid "Authentication"
 msgstr "사용자 인증"
 
 #: ../bin/drakconnect:492 ../lib/network/connection/cable.pm:50
-#: ../lib/network/connection/ppp.pm:22 ../lib/network/netconnect.pm:326
+#: ../lib/network/connection/ppp.pm:22 ../lib/network/netconnect.pm:334
 #: ../lib/network/vpn/openvpn.pm:393
 #, c-format
 msgid "Account Login (user name)"
 msgstr "로그인 계정(사용자명)"
 
 #: ../bin/drakconnect:493 ../lib/network/connection/cable.pm:52
-#: ../lib/network/connection/ppp.pm:23 ../lib/network/netconnect.pm:327
+#: ../lib/network/connection/ppp.pm:23 ../lib/network/netconnect.pm:335
 #: ../lib/network/vpn/openvpn.pm:394
 #, c-format
 msgid "Account Password"
 msgstr "계정 암호"
 
-#: ../bin/drakconnect:494 ../lib/network/netconnect.pm:320
+#: ../bin/drakconnect:494 ../lib/network/netconnect.pm:328
 #, c-format
 msgid "Provider phone number"
 msgstr "공급자 전화번호"
@@ -406,22 +406,22 @@ msgstr "사용"
 msgid "Disable"
 msgstr "사용불가"
 
-#: ../bin/drakconnect:555 ../lib/network/netconnect.pm:328
+#: ../bin/drakconnect:555 ../lib/network/netconnect.pm:336
 #, c-format
 msgid "Card IRQ"
 msgstr "카드 IRQ"
 
-#: ../bin/drakconnect:556 ../lib/network/netconnect.pm:329
+#: ../bin/drakconnect:556 ../lib/network/netconnect.pm:337
 #, c-format
 msgid "Card mem (DMA)"
 msgstr "카드 메모리 (DMA)"
 
-#: ../bin/drakconnect:557 ../lib/network/netconnect.pm:330
+#: ../bin/drakconnect:557 ../lib/network/netconnect.pm:338
 #, c-format
 msgid "Card IO"
 msgstr "카드 IO"
 
-#: ../bin/drakconnect:558 ../lib/network/netconnect.pm:331
+#: ../bin/drakconnect:558 ../lib/network/netconnect.pm:339
 #, c-format
 msgid "Card IO_0"
 msgstr "카드 IO_0"
@@ -481,27 +481,32 @@ msgstr "버스상의 위치"
 #: ../bin/drakinvictus:72 ../bin/draknetprofile:113 ../bin/draknfs:88
 #: ../bin/draknfs:109 ../bin/draknfs:279 ../bin/draknfs:412 ../bin/draknfs:414
 #: ../bin/draknfs:417 ../bin/draknfs:509 ../bin/draknfs:516 ../bin/draknfs:579
-#: ../bin/draknfs:586 ../bin/draknfs:593 ../bin/draksambashare:376
-#: ../bin/draksambashare:383 ../bin/draksambashare:386
-#: ../bin/draksambashare:432 ../bin/draksambashare:456
-#: ../bin/draksambashare:522 ../bin/draksambashare:537
-#: ../bin/draksambashare:615 ../bin/draksambashare:682
-#: ../bin/draksambashare:782 ../bin/draksambashare:789
-#: ../bin/draksambashare:920 ../bin/draksambashare:1113
-#: ../bin/draksambashare:1122 ../bin/draksambashare:1144
-#: ../bin/draksambashare:1153 ../bin/draksambashare:1172
-#: ../bin/draksambashare:1181 ../bin/draksambashare:1193
-#: ../lib/network/connection/xdsl.pm:324
+#: ../bin/draknfs:586 ../bin/draknfs:593 ../bin/draksambashare:393
+#: ../bin/draksambashare:400 ../bin/draksambashare:403
+#: ../bin/draksambashare:455 ../bin/draksambashare:479
+#: ../bin/draksambashare:545 ../bin/draksambashare:560
+#: ../bin/draksambashare:638 ../bin/draksambashare:705
+#: ../bin/draksambashare:805 ../bin/draksambashare:812
+#: ../bin/draksambashare:951 ../bin/draksambashare:1105
+#: ../bin/draksambashare:1124 ../bin/draksambashare:1156
+#: ../bin/draksambashare:1213 ../bin/draksambashare:1263
+#: ../bin/draksambashare:1365 ../bin/draksambashare:1374
+#: ../bin/draksambashare:1396 ../bin/draksambashare:1405
+#: ../bin/draksambashare:1424 ../bin/draksambashare:1433
+#: ../bin/draksambashare:1445 ../lib/network/connection/xdsl.pm:332
 #: ../lib/network/connection_manager.pm:41
 #: ../lib/network/connection_manager.pm:47
-#: ../lib/network/connection_manager.pm:60 ../lib/network/drakvpn.pm:45
+#: ../lib/network/connection_manager.pm:60
+#: ../lib/network/connection_manager.pm:115
+#: ../lib/network/connection_manager.pm:119 ../lib/network/drakvpn.pm:45
 #: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:27
 #: ../lib/network/ndiswrapper.pm:42 ../lib/network/ndiswrapper.pm:86
 #: ../lib/network/ndiswrapper.pm:102 ../lib/network/netconnect.pm:131
-#: ../lib/network/netconnect.pm:179 ../lib/network/netconnect.pm:268
-#: ../lib/network/netconnect.pm:813 ../lib/network/thirdparty.pm:115
-#: ../lib/network/thirdparty.pm:132 ../lib/network/thirdparty.pm:215
-#: ../lib/network/thirdparty.pm:217 ../lib/network/thirdparty.pm:238
+#: ../lib/network/netconnect.pm:179 ../lib/network/netconnect.pm:235
+#: ../lib/network/netconnect.pm:276 ../lib/network/netconnect.pm:821
+#: ../lib/network/thirdparty.pm:115 ../lib/network/thirdparty.pm:132
+#: ../lib/network/thirdparty.pm:215 ../lib/network/thirdparty.pm:217
+#: ../lib/network/thirdparty.pm:238
 #, c-format
 msgid "Error"
 msgstr "오류"
@@ -526,7 +531,7 @@ msgstr ""
 msgid "No Mask"
 msgstr "잘못된 팩키지"
 
-#: ../bin/drakconnect:689 ../lib/network/netconnect.pm:798
+#: ../bin/drakconnect:689 ../lib/network/netconnect.pm:806
 #, fuzzy, c-format
 msgid "Gateway address should be in format 1.2.3.4"
 msgstr "IP 주소는 1.2.3.4과 같은 형식이어야 합니다."
@@ -549,8 +554,8 @@ msgstr "네트웍 인터페이스를 선택하세요."
 msgid "Select the network interface to remove:"
 msgstr "네트웍 인터페이스를 선택하세요."
 
-#: ../bin/drakconnect:719 ../bin/drakgw:123 ../lib/network/netconnect.pm:350
-#: ../lib/network/netconnect.pm:385
+#: ../bin/drakconnect:719 ../bin/drakgw:123 ../lib/network/netconnect.pm:358
+#: ../lib/network/netconnect.pm:393
 #, fuzzy, c-format
 msgid "Net Device"
 msgstr "Xinetd 서비스"
@@ -656,7 +661,7 @@ msgstr "인터넷 연결 설정"
 #: ../bin/drakconnect:979 ../bin/draknetprofile:129 ../bin/draknetprofile:131
 #: ../bin/drakproxy:36 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:92
-#: ../lib/network/netconnect.pm:471
+#: ../lib/network/netconnect.pm:479
 #, c-format
 msgid "Warning"
 msgstr "경고"
@@ -681,12 +686,12 @@ msgstr "네트웍 인터페이스를 선택하세요."
 msgid "Host name (optional)"
 msgstr "첫번째 DNS 서버 (옵션)"
 
-#: ../bin/drakconnect:997 ../lib/network/netconnect.pm:622
+#: ../bin/drakconnect:997 ../lib/network/netconnect.pm:630
 #, c-format
 msgid "First DNS Server (optional)"
 msgstr "첫번째 DNS 서버 (옵션)"
 
-#: ../bin/drakconnect:998 ../lib/network/netconnect.pm:623
+#: ../bin/drakconnect:998 ../lib/network/netconnect.pm:631
 #, c-format
 msgid "Second DNS Server (optional)"
 msgstr "두번째 DNS 서버 (옵션)"
@@ -716,7 +721,7 @@ msgstr "연결 유형: "
 msgid "Status:"
 msgstr "상태:"
 
-#: ../bin/drakconnect:1028 ../lib/network/netconnect.pm:704
+#: ../bin/drakconnect:1028 ../lib/network/netconnect.pm:712
 #, c-format
 msgid "Testing your connection..."
 msgstr "연결 테스트 중..."
@@ -998,9 +1003,9 @@ msgstr "호스트명: :"
 msgid "Host Aliases:"
 msgstr "호스트명:"
 
-#: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:212
-#: ../bin/draksambashare:233 ../bin/draksambashare:380
-#: ../bin/draksambashare:611 ../bin/draksambashare:778
+#: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:229
+#: ../bin/draksambashare:250 ../bin/draksambashare:397
+#: ../bin/draksambashare:634 ../bin/draksambashare:801
 #, c-format
 msgid "Error!"
 msgstr "오류!"
@@ -1035,8 +1040,8 @@ msgstr "캐이블 연결"
 msgid "Modify entry"
 msgstr ""
 
-#: ../bin/drakhosts:241 ../bin/draknfs:575 ../bin/draksambashare:1106
-#: ../bin/draksambashare:1137 ../bin/draksambashare:1168
+#: ../bin/drakhosts:241 ../bin/draknfs:575 ../bin/draksambashare:1358
+#: ../bin/draksambashare:1389 ../bin/draksambashare:1420
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Add"
@@ -1052,9 +1057,9 @@ msgstr "프린터"
 msgid "Failed to add host."
 msgstr ""
 
-#: ../bin/drakhosts:248 ../bin/draknfs:582 ../bin/draksambashare:1063
-#: ../bin/draksambashare:1108 ../bin/draksambashare:1139
-#: ../bin/draksambashare:1176
+#: ../bin/drakhosts:248 ../bin/draknfs:582 ../bin/draksambashare:1315
+#: ../bin/draksambashare:1360 ../bin/draksambashare:1391
+#: ../bin/draksambashare:1428
 #, c-format
 msgid "Modify"
 msgstr "변경"
@@ -1065,8 +1070,8 @@ msgid "Failed to Modify host."
 msgstr ""
 
 #: ../bin/drakhosts:255 ../bin/drakids:87 ../bin/drakids:96 ../bin/draknfs:589
-#: ../bin/draksambashare:1064 ../bin/draksambashare:1116
-#: ../bin/draksambashare:1147 ../bin/draksambashare:1184
+#: ../bin/draksambashare:1316 ../bin/draksambashare:1368
+#: ../bin/draksambashare:1399 ../bin/draksambashare:1436
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Remove"
@@ -1078,8 +1083,8 @@ msgid "Failed to remove host."
 msgstr ""
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:147
-#: ../bin/net_applet:139 ../lib/network/drakroam.pm:114
-#: ../lib/network/netcenter.pm:123
+#: ../bin/net_applet:139 ../lib/network/drakroam.pm:113
+#: ../lib/network/netcenter.pm:113
 #, c-format
 msgid "Quit"
 msgstr "종료"
@@ -1091,8 +1096,8 @@ msgstr "모든 사용자 허용"
 
 #: ../bin/drakids:41 ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190
 #: ../bin/drakids:215 ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
-#: ../bin/net_applet:78 ../bin/net_applet:239 ../bin/net_applet:522
-#: ../bin/net_applet:549 ../lib/network/drakfirewall.pm:255
+#: ../bin/net_applet:78 ../bin/net_applet:245 ../bin/net_applet:521
+#: ../bin/net_applet:548 ../lib/network/drakfirewall.pm:255
 #: ../lib/network/drakfirewall.pm:258
 #, fuzzy, c-format
 msgid "Interactive Firewall"
@@ -1100,7 +1105,7 @@ msgstr "방화벽"
 
 #: ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190 ../bin/drakids:215
 #: ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
-#: ../bin/net_applet:239 ../bin/net_applet:522
+#: ../bin/net_applet:245 ../bin/net_applet:521
 #, fuzzy, c-format
 msgid "Unable to contact daemon"
 msgstr "분기할 수 없습니다: %s"
@@ -1110,12 +1115,12 @@ msgstr "분기할 수 없습니다: %s"
 msgid "Log"
 msgstr "기록"
 
-#: ../bin/drakids:78 ../bin/drakids:97 ../bin/net_applet:666
+#: ../bin/drakids:78 ../bin/drakids:97 ../bin/net_applet:665
 #, c-format
 msgid "Allow"
 msgstr "허용"
 
-#: ../bin/drakids:79 ../bin/drakids:88 ../bin/net_applet:667
+#: ../bin/drakids:79 ../bin/drakids:88 ../bin/net_applet:666
 #, c-format
 msgid "Block"
 msgstr ""
@@ -1142,12 +1147,12 @@ msgstr "사용자 파일 백업"
 msgid "Clear logs"
 msgstr "모두 삭제"
 
-#: ../bin/drakids:107 ../bin/drakids:112 ../bin/net_applet:610
+#: ../bin/drakids:107 ../bin/drakids:112 ../bin/net_applet:609
 #, c-format
 msgid "Blacklist"
 msgstr ""
 
-#: ../bin/drakids:108 ../bin/drakids:125 ../bin/net_applet:615
+#: ../bin/drakids:108 ../bin/drakids:125 ../bin/net_applet:614
 #, c-format
 msgid "Whitelist"
 msgstr ""
@@ -1254,7 +1259,7 @@ msgstr ""
 msgid "Virtual ID"
 msgstr ""
 
-#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:586
+#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:594
 #: ../lib/network/vpn/vpnc.pm:56
 #, c-format
 msgid "Password"
@@ -1365,23 +1370,23 @@ msgid "allow real remote root access"
 msgstr ""
 
 #: ../bin/draknfs:61 ../bin/draknfs:62 ../bin/draknfs:63
-#: ../bin/draksambashare:164 ../bin/draksambashare:165
-#: ../bin/draksambashare:166
+#: ../bin/draksambashare:174 ../bin/draksambashare:175
+#: ../bin/draksambashare:176
 #, c-format
 msgid "/_File"
 msgstr "/파일(_F)"
 
-#: ../bin/draknfs:62 ../bin/draksambashare:165
+#: ../bin/draknfs:62 ../bin/draksambashare:175
 #, c-format
 msgid "/_Write conf"
 msgstr ""
 
-#: ../bin/draknfs:63 ../bin/draksambashare:166
+#: ../bin/draknfs:63 ../bin/draksambashare:176
 #, c-format
 msgid "/_Quit"
 msgstr "/종료(_Q)"
 
-#: ../bin/draknfs:63 ../bin/draksambashare:166
+#: ../bin/draknfs:63 ../bin/draksambashare:176
 #, c-format
 msgid "<control>Q"
 msgstr "<control>Q"
@@ -1391,12 +1396,12 @@ msgstr "<control>Q"
 msgid "/_NFS Server"
 msgstr "DNS 서버"
 
-#: ../bin/draknfs:67 ../bin/draksambashare:169
+#: ../bin/draknfs:67 ../bin/draksambashare:180
 #, c-format
 msgid "/_Restart"
 msgstr ""
 
-#: ../bin/draknfs:68 ../bin/draksambashare:170
+#: ../bin/draknfs:68 ../bin/draksambashare:181
 #, c-format
 msgid "/R_eload"
 msgstr ""
@@ -1416,12 +1421,12 @@ msgstr ""
 msgid "Error Restarting/Reloading NFS server"
 msgstr ""
 
-#: ../bin/draknfs:104 ../bin/draksambashare:228
+#: ../bin/draknfs:104 ../bin/draksambashare:245
 #, c-format
 msgid "Directory Selection"
 msgstr ""
 
-#: ../bin/draknfs:109 ../bin/draksambashare:233
+#: ../bin/draknfs:109 ../bin/draksambashare:250
 #, c-format
 msgid "Should be a directory."
 msgstr ""
@@ -1537,7 +1542,7 @@ msgid ""
 "exports(5) man page for more details."
 msgstr ""
 
-#: ../bin/draknfs:185 ../bin/draksambashare:609 ../bin/draksambashare:776
+#: ../bin/draknfs:185 ../bin/draksambashare:632 ../bin/draksambashare:799
 #, c-format
 msgid "Information"
 msgstr "정보"
@@ -1557,13 +1562,18 @@ msgstr ""
 msgid "Please add an NFS share to be able to modify it."
 msgstr ""
 
+#: ../bin/draknfs:353 ../bin/draksambashare:607
+#, c-format
+msgid "Advanced options"
+msgstr ""
+
 #: ../bin/draknfs:368
 #, c-format
 msgid "NFS directory"
 msgstr ""
 
-#: ../bin/draknfs:369 ../bin/draksambashare:364 ../bin/draksambashare:574
-#: ../bin/draksambashare:753
+#: ../bin/draknfs:369 ../bin/draksambashare:381 ../bin/draksambashare:597
+#: ../bin/draksambashare:776
 #, c-format
 msgid "Directory:"
 msgstr "폴더:"
@@ -1633,8 +1643,8 @@ msgstr "일반적인 선택사항"
 msgid "Custom Options"
 msgstr ""
 
-#: ../bin/draknfs:509 ../bin/draksambashare:380 ../bin/draksambashare:611
-#: ../bin/draksambashare:778
+#: ../bin/draknfs:509 ../bin/draksambashare:397 ../bin/draksambashare:634
+#: ../bin/draksambashare:801
 #, c-format
 msgid "Please enter a directory to share."
 msgstr ""
@@ -1674,533 +1684,789 @@ msgstr ""
 msgid "You need to log out and back in again for changes to take effect"
 msgstr ""
 
-#: ../bin/draksambashare:66
+#: ../bin/draksambashare:64
 #, c-format
 msgid "User name"
 msgstr "사용자명"
 
-#: ../bin/draksambashare:73
+#: ../bin/draksambashare:71 ../bin/draksambashare:99
 #, c-format
 msgid "Share name"
 msgstr "공유 이름"
 
-#: ../bin/draksambashare:74
+#: ../bin/draksambashare:72 ../bin/draksambashare:100
 #, fuzzy, c-format
 msgid "Share directory"
 msgstr "디렉토리가 아닙니다"
 
-#: ../bin/draksambashare:75 ../bin/draksambashare:108
+#: ../bin/draksambashare:73 ../bin/draksambashare:101
+#: ../bin/draksambashare:118
 #, c-format
 msgid "Comment"
 msgstr "설명"
 
-#: ../bin/draksambashare:76 ../bin/draksambashare:109
+#: ../bin/draksambashare:74 ../bin/draksambashare:119
 #, fuzzy, c-format
 msgid "Browseable"
 msgstr "찾아보기"
 
-#: ../bin/draksambashare:77
+#: ../bin/draksambashare:75
 #, c-format
 msgid "Public"
 msgstr "공개"
 
-#: ../bin/draksambashare:78 ../bin/draksambashare:114
+#: ../bin/draksambashare:76 ../bin/draksambashare:124
 #, fuzzy, c-format
 msgid "Writable"
 msgstr "쓰기"
 
-#: ../bin/draksambashare:79 ../bin/draksambashare:155
+#: ../bin/draksambashare:77 ../bin/draksambashare:165
 #, fuzzy, c-format
 msgid "Create mask"
 msgstr "생성"
 
-#: ../bin/draksambashare:80 ../bin/draksambashare:156
+#: ../bin/draksambashare:78 ../bin/draksambashare:166
 #, fuzzy, c-format
 msgid "Directory mask"
 msgstr "모든 백업 복구"
 
-#: ../bin/draksambashare:81
+#: ../bin/draksambashare:79
 #, fuzzy, c-format
 msgid "Read list"
 msgstr "읽기"
 
-#: ../bin/draksambashare:82 ../bin/draksambashare:115
-#: ../bin/draksambashare:588
+#: ../bin/draksambashare:80 ../bin/draksambashare:125
+#: ../bin/draksambashare:611
 #, fuzzy, c-format
 msgid "Write list"
 msgstr "쓰기"
 
-#: ../bin/draksambashare:83 ../bin/draksambashare:147
+#: ../bin/draksambashare:81 ../bin/draksambashare:157
 #, fuzzy, c-format
 msgid "Admin users"
 msgstr "사용자 추가"
 
-#: ../bin/draksambashare:84 ../bin/draksambashare:148
+#: ../bin/draksambashare:82 ../bin/draksambashare:158
 #, fuzzy, c-format
 msgid "Valid users"
 msgstr "사용자 추가"
 
-#: ../bin/draksambashare:85
+#: ../bin/draksambashare:83
 #, fuzzy, c-format
 msgid "Inherit Permissions"
 msgstr "허가권"
 
-#: ../bin/draksambashare:86 ../bin/draksambashare:149
+#: ../bin/draksambashare:84 ../bin/draksambashare:159
 #, fuzzy, c-format
 msgid "Hide dot files"
 msgstr "파일 숨기기"
 
-#: ../bin/draksambashare:87 ../bin/draksambashare:150
+#: ../bin/draksambashare:85 ../bin/draksambashare:160
 #, c-format
 msgid "Hide files"
 msgstr "파일 숨기기"
 
-#: ../bin/draksambashare:88 ../bin/draksambashare:154
+#: ../bin/draksambashare:86 ../bin/draksambashare:164
 #, fuzzy, c-format
 msgid "Preserve case"
 msgstr "선택사항"
 
-#: ../bin/draksambashare:89
+#: ../bin/draksambashare:87
 #, fuzzy, c-format
 msgid "Force create mode"
 msgstr "프린터 모델"
 
-#: ../bin/draksambashare:90
+#: ../bin/draksambashare:88
 #, fuzzy, c-format
 msgid "Force group"
 msgstr "작업 그룹"
 
-#: ../bin/draksambashare:91 ../bin/draksambashare:153
+#: ../bin/draksambashare:89 ../bin/draksambashare:163
 #, fuzzy, c-format
 msgid "Default case"
 msgstr "기본 프린터"
 
-#: ../bin/draksambashare:106
+#: ../bin/draksambashare:116
 #, c-format
 msgid "Printer name"
 msgstr "프린터 이름"
 
-#: ../bin/draksambashare:107
+#: ../bin/draksambashare:117
 #, c-format
 msgid "Path"
 msgstr "경로"
 
-#: ../bin/draksambashare:110 ../bin/draksambashare:580
+#: ../bin/draksambashare:120 ../bin/draksambashare:603
 #, c-format
 msgid "Printable"
 msgstr "인쇄 가능"
 
-#: ../bin/draksambashare:111
+#: ../bin/draksambashare:121
 #, fuzzy, c-format
 msgid "Print Command"
 msgstr "명령"
 
-#: ../bin/draksambashare:112
+#: ../bin/draksambashare:122
 #, fuzzy, c-format
 msgid "LPQ command"
 msgstr "명령"
 
-#: ../bin/draksambashare:113
+#: ../bin/draksambashare:123
 #, c-format
 msgid "Guest ok"
 msgstr ""
 
-#: ../bin/draksambashare:116 ../bin/draksambashare:157
-#: ../bin/draksambashare:589
+#: ../bin/draksambashare:126 ../bin/draksambashare:167
+#: ../bin/draksambashare:612
 #, fuzzy, c-format
 msgid "Inherit permissions"
 msgstr "허가권"
 
-#: ../bin/draksambashare:117
+#: ../bin/draksambashare:127
 #, c-format
 msgid "Printing"
 msgstr "인쇄"
 
-#: ../bin/draksambashare:118
+#: ../bin/draksambashare:128
 #, fuzzy, c-format
 msgid "Create mode"
 msgstr "카드 모델:"
 
-#: ../bin/draksambashare:119
+#: ../bin/draksambashare:129
 #, fuzzy, c-format
 msgid "Use client driver"
 msgstr "X 서버"
 
-#: ../bin/draksambashare:145
+#: ../bin/draksambashare:155
 #, fuzzy, c-format
 msgid "Read List"
 msgstr "제거 목록"
 
-#: ../bin/draksambashare:146
+#: ../bin/draksambashare:156
 #, fuzzy, c-format
 msgid "Write List"
 msgstr "쓰기"
 
-#: ../bin/draksambashare:151
+#: ../bin/draksambashare:161
 #, fuzzy, c-format
 msgid "Force Group"
 msgstr "그룹"
 
-#: ../bin/draksambashare:152
+#: ../bin/draksambashare:162
 #, c-format
 msgid "Force create group"
 msgstr ""
 
-#: ../bin/draksambashare:168 ../bin/draksambashare:169
-#: ../bin/draksambashare:170
+#: ../bin/draksambashare:178 ../bin/draksambashare:179
+#: ../bin/draksambashare:180 ../bin/draksambashare:181
 #, fuzzy, c-format
 msgid "/_Samba Server"
 msgstr "웹 서버"
 
-#: ../bin/draksambashare:172 ../bin/draksambashare:173
+#: ../bin/draksambashare:179
+#, fuzzy, c-format
+msgid "/_Configure"
+msgstr "설정"
+
+#: ../bin/draksambashare:183
+#, fuzzy, c-format
+msgid "/_Help"
+msgstr "도움말"
+
+#: ../bin/draksambashare:183
+#, fuzzy, c-format
+msgid "/Samba Documentation"
+msgstr "게임 스테이션"
+
+#: ../bin/draksambashare:189 ../bin/draksambashare:190
 #, c-format
 msgid "/_About"
 msgstr "/정보(_A)"
 
-#: ../bin/draksambashare:172
+#: ../bin/draksambashare:189
 #, c-format
 msgid "/_Report Bug"
 msgstr "/버그 보고(_R)"
 
-#: ../bin/draksambashare:173
+#: ../bin/draksambashare:190
 #, c-format
 msgid "/About..."
 msgstr ""
 
-#: ../bin/draksambashare:176
+#: ../bin/draksambashare:193
 #, c-format
 msgid "Draksambashare"
 msgstr ""
 
-#: ../bin/draksambashare:178
+#: ../bin/draksambashare:195
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr ""
 
-#: ../bin/draksambashare:180
+#: ../bin/draksambashare:197
 #, c-format
 msgid "This is a simple tool to easily manage Samba configuration."
 msgstr ""
 
-#: ../bin/draksambashare:182
+#: ../bin/draksambashare:199
 #, fuzzy, c-format
 msgid "Mandriva Linux"
 msgstr "맨드리바 온라인"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../bin/draksambashare:187
+#: ../bin/draksambashare:204
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 
-#: ../bin/draksambashare:211
+#: ../bin/draksambashare:228
 #, c-format
 msgid "Restarting/Reloading Samba server..."
 msgstr ""
 
-#: ../bin/draksambashare:212
+#: ../bin/draksambashare:229
 #, c-format
 msgid "Error Restarting/Reloading Samba server"
 msgstr ""
 
-#: ../bin/draksambashare:352 ../bin/draksambashare:553
-#: ../bin/draksambashare:674
+#: ../bin/draksambashare:369 ../bin/draksambashare:576
+#: ../bin/draksambashare:697
 #, c-format
 msgid "Open"
 msgstr "열기"
 
-#: ../bin/draksambashare:355
+#: ../bin/draksambashare:372
 #, c-format
 msgid "DrakSamba add entry"
 msgstr ""
 
-#: ../bin/draksambashare:359
+#: ../bin/draksambashare:376
 #, fuzzy, c-format
 msgid "Add a share"
 msgstr "규칙 추가"
 
-#: ../bin/draksambashare:362
+#: ../bin/draksambashare:379
 #, fuzzy, c-format
 msgid "Name of the share:"
 msgstr "프린터 이름"
 
-#: ../bin/draksambashare:363 ../bin/draksambashare:573
-#: ../bin/draksambashare:754
+#: ../bin/draksambashare:380 ../bin/draksambashare:596
+#: ../bin/draksambashare:777
 #, c-format
 msgid "Comment:"
 msgstr "주석:"
 
-#: ../bin/draksambashare:376
+#: ../bin/draksambashare:393
 #, c-format
 msgid ""
 "Share with the same name already exist or share name empty, please choose "
 "another name."
 msgstr ""
 
-#: ../bin/draksambashare:383
+#: ../bin/draksambashare:400
 #, c-format
 msgid "Can't create the directory, please enter a correct path."
 msgstr ""
 
-#: ../bin/draksambashare:386 ../bin/draksambashare:609
-#: ../bin/draksambashare:776
+#: ../bin/draksambashare:403 ../bin/draksambashare:632
+#: ../bin/draksambashare:799
 #, fuzzy, c-format
 msgid "Please enter a Comment for this share."
 msgstr "호스트 이름 또는 IP를 입력하세요."
 
-#: ../bin/draksambashare:417
+#: ../bin/draksambashare:440
 #, c-format
 msgid "pdf-gen - a PDF generator"
 msgstr ""
 
-#: ../bin/draksambashare:418
+#: ../bin/draksambashare:441
 #, c-format
 msgid "printers - all printers available"
 msgstr ""
 
-#: ../bin/draksambashare:422
+#: ../bin/draksambashare:445
 #, c-format
 msgid "Add Special Printer share"
 msgstr ""
 
-#: ../bin/draksambashare:425
+#: ../bin/draksambashare:448
 #, c-format
 msgid ""
 "Goal of this wizard is to easily create a new special printer Samba share."
 msgstr ""
 
-#: ../bin/draksambashare:432
+#: ../bin/draksambashare:455
 #, c-format
 msgid "A PDF generator already exists."
 msgstr ""
 
-#: ../bin/draksambashare:456
+#: ../bin/draksambashare:479
 #, c-format
 msgid "Printers and print$ already exist."
 msgstr ""
 
-#: ../bin/draksambashare:506
+#: ../bin/draksambashare:529 ../bin/draksambashare:1199
 #, c-format
 msgid "Congratulations"
 msgstr "축하합니다."
 
-#: ../bin/draksambashare:507
+#: ../bin/draksambashare:530
 #, c-format
 msgid "The wizard successfully added the printer Samba share"
 msgstr ""
 
-#: ../bin/draksambashare:522
+#: ../bin/draksambashare:545
 #, c-format
 msgid "Failed to add printers."
 msgstr ""
 
-#: ../bin/draksambashare:537
+#: ../bin/draksambashare:560
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
 msgstr ""
 
-#: ../bin/draksambashare:556
+#: ../bin/draksambashare:579
 #, c-format
 msgid "DrakSamba Printers entry"
 msgstr ""
 
-#: ../bin/draksambashare:569
+#: ../bin/draksambashare:592
 #, c-format
 msgid "Printer share"
 msgstr ""
 
-#: ../bin/draksambashare:572
+#: ../bin/draksambashare:595
 #, c-format
 msgid "Printer name:"
 msgstr "프린터 이름:"
 
-#: ../bin/draksambashare:578 ../bin/draksambashare:759
+#: ../bin/draksambashare:601 ../bin/draksambashare:782
 #, fuzzy, c-format
 msgid "Writable:"
 msgstr "쓰기"
 
-#: ../bin/draksambashare:579 ../bin/draksambashare:760
+#: ../bin/draksambashare:602 ../bin/draksambashare:783
 #, fuzzy, c-format
 msgid "Browseable:"
 msgstr "찾아보기"
 
-#: ../bin/draksambashare:584
-#, c-format
-msgid "Advanced options"
-msgstr ""
-
-#: ../bin/draksambashare:586
+#: ../bin/draksambashare:609
 #, fuzzy, c-format
 msgid "Printer access"
 msgstr "인터넷 액세스"
 
-#: ../bin/draksambashare:590
+#: ../bin/draksambashare:613
 #, c-format
 msgid "Guest ok:"
 msgstr ""
 
-#: ../bin/draksambashare:591
+#: ../bin/draksambashare:614
 #, fuzzy, c-format
 msgid "Create mode:"
 msgstr "카드 모델:"
 
-#: ../bin/draksambashare:595
+#: ../bin/draksambashare:618
 #, c-format
 msgid "Printer command"
 msgstr ""
 
-#: ../bin/draksambashare:597
+#: ../bin/draksambashare:620
 #, c-format
 msgid "Print command:"
 msgstr ""
 
-#: ../bin/draksambashare:598
+#: ../bin/draksambashare:621
 #, fuzzy, c-format
 msgid "LPQ command:"
 msgstr "명령"
 
-#: ../bin/draksambashare:599
+#: ../bin/draksambashare:622
 #, fuzzy, c-format
 msgid "Printing:"
 msgstr "경고"
 
-#: ../bin/draksambashare:615
+#: ../bin/draksambashare:638
 #, c-format
 msgid "create mode should be numeric. ie: 0755."
 msgstr ""
 
-#: ../bin/draksambashare:677
+#: ../bin/draksambashare:700
 #, c-format
 msgid "DrakSamba entry"
 msgstr ""
 
-#: ../bin/draksambashare:682
+#: ../bin/draksambashare:705
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
 msgstr ""
 
-#: ../bin/draksambashare:705
+#: ../bin/draksambashare:728
 #, fuzzy, c-format
 msgid "Samba user access"
 msgstr "삼바 서비스"
 
-#: ../bin/draksambashare:713
+#: ../bin/draksambashare:736
 #, fuzzy, c-format
 msgid "Mask options"
 msgstr "DrakSec 기본 옵션"
 
-#: ../bin/draksambashare:727
+#: ../bin/draksambashare:750
 #, fuzzy, c-format
 msgid "Display options"
 msgstr "옵션 지정"
 
-#: ../bin/draksambashare:749
+#: ../bin/draksambashare:772
 #, fuzzy, c-format
 msgid "Samba share directory"
 msgstr "디렉토리가 아닙니다"
 
-#: ../bin/draksambashare:752
+#: ../bin/draksambashare:775
 #, fuzzy, c-format
 msgid "Share name:"
 msgstr "공유 이름"
 
-#: ../bin/draksambashare:758
+#: ../bin/draksambashare:781
 #, c-format
 msgid "Public:"
 msgstr "전체:"
 
-#: ../bin/draksambashare:782
+#: ../bin/draksambashare:805
 #, c-format
 msgid ""
 "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 
-#: ../bin/draksambashare:789
+#: ../bin/draksambashare:812
 #, c-format
 msgid "Please create this Samba user: %s"
 msgstr ""
 
-#: ../bin/draksambashare:893
+#: ../bin/draksambashare:924
 #, c-format
 msgid "Add Samba user"
 msgstr ""
 
-#: ../bin/draksambashare:908
+#: ../bin/draksambashare:939
 #, c-format
 msgid "User information"
 msgstr "사용자 정보:"
 
-#: ../bin/draksambashare:910
+#: ../bin/draksambashare:941
 #, c-format
 msgid "User name:"
 msgstr "사용자 이름:"
 
-#: ../bin/draksambashare:911
+#: ../bin/draksambashare:942
 #, c-format
 msgid "Password:"
 msgstr "열쇠글:"
 
-#: ../bin/draksambashare:1025
+#: ../bin/draksambashare:1056
+#, c-format
+msgid "PDC - primary domain controller"
+msgstr ""
+
+#: ../bin/draksambashare:1057
+#, c-format
+msgid "Standalone - standalone server"
+msgstr ""
+
+#: ../bin/draksambashare:1063
+#, c-format
+msgid "Samba Wizard"
+msgstr ""
+
+#: ../bin/draksambashare:1066
+#, fuzzy, c-format
+msgid "Samba server configuration Wizard"
+msgstr "메일 경고 설정"
+
+#: ../bin/draksambashare:1066
+#, c-format
+msgid ""
+"Samba allows your server to behave as a file and print server for "
+"workstations running non-Linux systems."
+msgstr ""
+
+#: ../bin/draksambashare:1082
+#, c-format
+msgid "PDC server: primary domain controller"
+msgstr ""
+
+#: ../bin/draksambashare:1082
+#, c-format
+msgid ""
+"Server configured as a PDC is responsible for Windows authentication "
+"throughout the domain."
+msgstr ""
+
+#: ../bin/draksambashare:1082
+#, c-format
+msgid ""
+"Single server installations may use smbpasswd or tdbsam password backends"
+msgstr ""
+
+#: ../bin/draksambashare:1082
+#, c-format
+msgid ""
+"Domain master = yes, causes the server to register the NetBIOS name <pdc "
+"name>. This name will be recognized by other servers."
+msgstr ""
+
+#: ../bin/draksambashare:1099
+#, c-format
+msgid "Wins support:"
+msgstr ""
+
+#: ../bin/draksambashare:1100
+#, fuzzy, c-format
+msgid "admin users:"
+msgstr "사용자 추가"
+
+#: ../bin/draksambashare:1100
+#, c-format
+msgid "root @adm"
+msgstr ""
+
+#: ../bin/draksambashare:1101
+#, c-format
+msgid "Os level:"
+msgstr ""
+
+#: ../bin/draksambashare:1101
+#, c-format
+msgid ""
+"The global os level option dictates the operating system level at which "
+"Samba will masquerade during a browser election. If you wish to have Samba "
+"win an election and become the master browser, you can set the level above "
+"that of the operating system on your network with the highest current value. "
+"ie: os level = 34"
+msgstr ""
+
+#: ../bin/draksambashare:1105
+#, c-format
+msgid "The domain is wrong."
+msgstr ""
+
+#: ../bin/draksambashare:1112
+#, fuzzy, c-format
+msgid "Workgroup"
+msgstr "작업 그룹"
+
+#: ../bin/draksambashare:1112
+#, c-format
+msgid "Samba needs to know the Windows Workgroup it will serve."
+msgstr ""
+
+#: ../bin/draksambashare:1119 ../bin/draksambashare:1183
+#, fuzzy, c-format
+msgid "Workgroup:"
+msgstr "작업 그룹"
+
+#: ../bin/draksambashare:1120
+#, fuzzy, c-format
+msgid "Netbios name:"
+msgstr "호스트명: :"
+
+#: ../bin/draksambashare:1124
+#, c-format
+msgid "The Workgroup is wrong."
+msgstr ""
+
+#: ../bin/draksambashare:1131 ../bin/draksambashare:1141
+#, fuzzy, c-format
+msgid "Security mode"
+msgstr "프린터 모델"
+
+#: ../bin/draksambashare:1131
+#, c-format
+msgid ""
+"User level: the client sends a session setup request directly following "
+"protocol negotiation. This request provides a username and password."
+msgstr ""
+
+#: ../bin/draksambashare:1131
+#, c-format
+msgid "Share level: the client authenticates itself separately for each share"
+msgstr ""
+
+#: ../bin/draksambashare:1131
+#, c-format
+msgid ""
+"Domain level: provides a mechanism for storing all user and group accounts "
+"in a central, shared, account repository. The centralized account repository "
+"is shared between domain (security) controllers."
+msgstr ""
+
+#: ../bin/draksambashare:1142
+#, fuzzy, c-format
+msgid "Hosts allow"
+msgstr "호스트명:"
+
+#: ../bin/draksambashare:1147
+#, c-format
+msgid "Server Banner."
+msgstr ""
+
+#: ../bin/draksambashare:1147
+#, c-format
+msgid ""
+"The banner is the way this server will be described in the Windows "
+"workstations."
+msgstr ""
+
+#: ../bin/draksambashare:1152
+#, c-format
+msgid "Banner:"
+msgstr ""
+
+#: ../bin/draksambashare:1156
+#, c-format
+msgid "The Server Banner is incorrect."
+msgstr ""
+
+#: ../bin/draksambashare:1163
+#, c-format
+msgid "Samba Log"
+msgstr ""
+
+#: ../bin/draksambashare:1163
+#, c-format
+msgid ""
+"Log file: use file.%m to use a separate log file for each machine that "
+"connects"
+msgstr ""
+
+#: ../bin/draksambashare:1163
+#, c-format
+msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
+msgstr ""
+
+#: ../bin/draksambashare:1163
+#, c-format
+msgid "Max Log size: put a capping on the size of the log files (in Kb)."
+msgstr ""
+
+#: ../bin/draksambashare:1170 ../bin/draksambashare:1185
+#, fuzzy, c-format
+msgid "Log file:"
+msgstr "프로파일"
+
+#: ../bin/draksambashare:1171
+#, c-format
+msgid "Max log size:"
+msgstr ""
+
+#: ../bin/draksambashare:1172
+#, fuzzy, c-format
+msgid "Log level:"
+msgstr "레벨"
+
+#: ../bin/draksambashare:1177
+#, c-format
+msgid "The wizard collected the following parameters to configure Samba."
+msgstr ""
+
+#: ../bin/draksambashare:1177
+#, c-format
+msgid ""
+"To accept these values, and configure your server, click the Next button or "
+"use the Back button to correct them."
+msgstr ""
+
+#: ../bin/draksambashare:1177
+#, c-format
+msgid ""
+"If you have previously create some shares, they will appear in this "
+"configuration. Run 'drakwizard sambashare' to manage your shares."
+msgstr ""
+
+#: ../bin/draksambashare:1182
+#, c-format
+msgid "Samba type:"
+msgstr ""
+
+#: ../bin/draksambashare:1184
+#, c-format
+msgid "Server banner:"
+msgstr ""
+
+#: ../bin/draksambashare:1199
+#, c-format
+msgid "The wizard successfully configured your Samba server."
+msgstr ""
+
+#: ../bin/draksambashare:1213
+#, c-format
+msgid "Failed to configure Samba server."
+msgstr ""
+
+#: ../bin/draksambashare:1263
+#, c-format
+msgid "The Samba wizard has unexpectedly failed:"
+msgstr ""
+
+#: ../bin/draksambashare:1277
 #, fuzzy, c-format
 msgid "Manage Samba configuration"
 msgstr "메일 경고 설정"
 
-#: ../bin/draksambashare:1113
+#: ../bin/draksambashare:1365
 #, c-format
 msgid "Failed to Modify Samba share."
 msgstr ""
 
-#: ../bin/draksambashare:1122
+#: ../bin/draksambashare:1374
 #, c-format
 msgid "Failed to remove a Samba share."
 msgstr ""
 
-#: ../bin/draksambashare:1129
+#: ../bin/draksambashare:1381
 #, c-format
 msgid "File share"
 msgstr ""
 
-#: ../bin/draksambashare:1144
+#: ../bin/draksambashare:1396
 #, c-format
 msgid "Failed to Modify."
 msgstr ""
 
-#: ../bin/draksambashare:1153
+#: ../bin/draksambashare:1405
 #, c-format
 msgid "Failed to remove."
 msgstr ""
 
-#: ../bin/draksambashare:1160
+#: ../bin/draksambashare:1412
 #, c-format
 msgid "Printers"
 msgstr "프린터"
 
-#: ../bin/draksambashare:1172
+#: ../bin/draksambashare:1424
 #, c-format
 msgid "Failed to add user."
 msgstr ""
 
-#: ../bin/draksambashare:1181
+#: ../bin/draksambashare:1433
 #, c-format
 msgid "Failed to change user password."
 msgstr ""
 
-#: ../bin/draksambashare:1193
+#: ../bin/draksambashare:1445
 #, c-format
 msgid "Failed to delete user."
 msgstr ""
 
-#: ../bin/draksambashare:1198
+#: ../bin/draksambashare:1450
 #, c-format
 msgid "Userdrake"
 msgstr "사용자 드레이크"
 
-#: ../bin/draksambashare:1206
+#: ../bin/draksambashare:1458
 #, c-format
 msgid "Samba Users"
 msgstr ""
 
-#: ../bin/draksambashare:1215
+#: ../bin/draksambashare:1467
 #, c-format
 msgid "DrakSamba manage Samba shares"
 msgstr ""
@@ -3207,124 +3473,124 @@ msgstr ""
 msgid "Profiles"
 msgstr "프로파일"
 
-#: ../bin/net_applet:130 ../lib/network/connection.pm:165
+#: ../bin/net_applet:130 ../lib/network/connection.pm:170
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, fuzzy, c-format
 msgid "VPN connection"
 msgstr "LAN 연결"
 
-#: ../bin/net_applet:319
+#: ../bin/net_applet:325
 #, fuzzy, c-format
 msgid "Network connection"
 msgstr "추가 옵션"
 
-#: ../bin/net_applet:446
+#: ../bin/net_applet:445
 #, c-format
 msgid "More networks"
 msgstr ""
 
-#: ../bin/net_applet:473
+#: ../bin/net_applet:472
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr ""
 
-#: ../bin/net_applet:478
+#: ../bin/net_applet:477
 #, c-format
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../bin/net_applet:483
+#: ../bin/net_applet:482
 #, fuzzy, c-format
 msgid "Wireless networks"
 msgstr "무선 연결"
 
-#: ../bin/net_applet:490 ../bin/net_monitor:96
+#: ../bin/net_applet:489 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "설정값"
 
-#: ../bin/net_applet:565
+#: ../bin/net_applet:564
 #, fuzzy, c-format
 msgid "Interactive Firewall: intrusion detected"
 msgstr "방화벽 설정이 감지되었습니다!"
 
-#: ../bin/net_applet:582
+#: ../bin/net_applet:581
 #, fuzzy, c-format
 msgid "What do you want to do with this attacker?"
 msgstr "게임을 계속할까요?"
 
-#: ../bin/net_applet:585
+#: ../bin/net_applet:584
 #, fuzzy, c-format
 msgid "Attack details"
 msgstr "상세설명"
 
-#: ../bin/net_applet:589
+#: ../bin/net_applet:588
 #, fuzzy, c-format
 msgid "Attack time: %s"
 msgstr "동작: %s"
 
-#: ../bin/net_applet:590
+#: ../bin/net_applet:589
 #, fuzzy, c-format
 msgid "Network interface: %s"
 msgstr "네트웍 인터페이스"
 
-#: ../bin/net_applet:591
+#: ../bin/net_applet:590
 #, fuzzy, c-format
 msgid "Attack type: %s"
 msgstr "유형: "
 
-#: ../bin/net_applet:592
+#: ../bin/net_applet:591
 #, fuzzy, c-format
 msgid "Protocol: %s"
 msgstr "프로토콜"
 
-#: ../bin/net_applet:593
+#: ../bin/net_applet:592
 #, fuzzy, c-format
 msgid "Attacker IP address: %s"
 msgstr "고정 IP 주소"
 
-#: ../bin/net_applet:594
+#: ../bin/net_applet:593
 #, fuzzy, c-format
 msgid "Attacker hostname: %s"
 msgstr " 호스트 위치를 알 수 없음: %s "
 
-#: ../bin/net_applet:597
+#: ../bin/net_applet:596
 #, fuzzy, c-format
 msgid "Service attacked: %s"
 msgstr "서비스 종류(_T):"
 
-#: ../bin/net_applet:598
+#: ../bin/net_applet:597
 #, fuzzy, c-format
 msgid "Port attacked: %s"
 msgstr "포트"
 
-#: ../bin/net_applet:600
+#: ../bin/net_applet:599
 #, c-format
 msgid "Type of ICMP attack: %s"
 msgstr ""
 
-#: ../bin/net_applet:605
+#: ../bin/net_applet:604
 #, c-format
 msgid "Always blacklist (do not ask again)"
 msgstr ""
 
-#: ../bin/net_applet:620
+#: ../bin/net_applet:619
 #, c-format
 msgid "Ignore"
 msgstr "무시"
 
-#: ../bin/net_applet:638 ../bin/net_applet:651
+#: ../bin/net_applet:637 ../bin/net_applet:650
 #, fuzzy, c-format
 msgid "Interactive Firewall: new service"
 msgstr "방화벽 설정이 감지되었습니다!"
 
-#: ../bin/net_applet:661
+#: ../bin/net_applet:660
 #, fuzzy, c-format
 msgid "Do you want to open this service?"
 msgstr "이 설정을 테스트해 보시겠습니까?"
 
-#: ../bin/net_applet:664
+#: ../bin/net_applet:663
 #, fuzzy, c-format
 msgid "Remember this answer"
 msgstr "비밀번호 기억"
@@ -3459,44 +3725,44 @@ msgstr "인터넷 연결 설정"
 msgid "Unknown connection type"
 msgstr "알 수 없는 연결 유형"
 
-#: ../lib/network/connection.pm:131
+#: ../lib/network/connection.pm:136
 #, c-format
 msgid "Network access settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:132
+#: ../lib/network/connection.pm:137
 #, c-format
 msgid "Access settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:133
+#: ../lib/network/connection.pm:138
 #, c-format
 msgid "Address settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:167 ../lib/network/connection/cable.pm:44
+#: ../lib/network/connection.pm:172 ../lib/network/connection/cable.pm:44
 #: ../lib/network/connection/wireless.pm:43 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "없음"
 
-#: ../lib/network/connection.pm:179
+#: ../lib/network/connection.pm:184
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr ""
 
-#: ../lib/network/connection.pm:180
+#: ../lib/network/connection.pm:185
 #, c-format
 msgid "Start the connection at boot"
 msgstr ""
 
-#: ../lib/network/connection.pm:246
+#: ../lib/network/connection.pm:251
 #, fuzzy, c-format
 msgid "Link detected on interface %s"
 msgstr "%s 포트에서 발견"
 
-#: ../lib/network/connection.pm:247 ../lib/network/connection/ethernet.pm:274
+#: ../lib/network/connection.pm:252 ../lib/network/connection/ethernet.pm:274
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr ""
@@ -3687,28 +3953,28 @@ msgstr "ISDN"
 
 #: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:197
 #: ../lib/network/netconnect.pm:200 ../lib/network/netconnect.pm:218
-#: ../lib/network/netconnect.pm:463 ../lib/network/netconnect.pm:559
-#: ../lib/network/netconnect.pm:562
+#: ../lib/network/netconnect.pm:471 ../lib/network/netconnect.pm:567
+#: ../lib/network/netconnect.pm:570
 #, c-format
 msgid "Unlisted - edit manually"
 msgstr ""
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:395
+#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:403
 #, c-format
 msgid "ISA / PCMCIA"
 msgstr "ISA / PCMCIA"
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:395
+#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:403
 #, c-format
 msgid "I do not know"
 msgstr "모르겠음"
 
-#: ../lib/network/connection/isdn.pm:197 ../lib/network/netconnect.pm:395
+#: ../lib/network/connection/isdn.pm:197 ../lib/network/netconnect.pm:403
 #, c-format
 msgid "PCI"
 msgstr "PCI"
 
-#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:395
+#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:403
 #, c-format
 msgid "USB"
 msgstr "USB"
@@ -3728,8 +3994,9 @@ msgid "Analog telephone modem (POTS)"
 msgstr ""
 
 #: ../lib/network/connection/providers/cellular.pm:13
-#: ../lib/network/connection/providers/cellular.pm:18
-#: ../lib/network/connection/providers/cellular.pm:23
+#: ../lib/network/connection/providers/cellular.pm:20
+#: ../lib/network/connection/providers/cellular.pm:25
+#: ../lib/network/connection/providers/cellular.pm:30
 #: ../lib/network/connection/providers/xdsl.pm:492
 #: ../lib/network/connection/providers/xdsl.pm:504
 #: ../lib/network/connection/providers/xdsl.pm:516
@@ -3866,161 +4133,171 @@ msgid "Ireland"
 msgstr "아일랜드"
 
 #: ../lib/network/connection/providers/xdsl.pm:677
+#: ../lib/network/connection/providers/xdsl.pm:687
+#: ../lib/network/connection/providers/xdsl.pm:697
+#: ../lib/network/connection/providers/xdsl.pm:707
+#: ../lib/network/connection/providers/xdsl.pm:717
+#: ../lib/network/connection/providers/xdsl.pm:727
+#: ../lib/network/connection/providers/xdsl.pm:737
+#: ../lib/network/connection/providers/xdsl.pm:747
+#: ../lib/network/connection/providers/xdsl.pm:757
+#: ../lib/network/connection/providers/xdsl.pm:767
+#: ../lib/network/connection/providers/xdsl.pm:777
 #, c-format
 msgid "Israel"
 msgstr "이스라엘"
 
-#: ../lib/network/connection/providers/xdsl.pm:687
+#: ../lib/network/connection/providers/xdsl.pm:787
 #, c-format
 msgid "India"
 msgstr "인도"
 
-#: ../lib/network/connection/providers/xdsl.pm:696
-#: ../lib/network/connection/providers/xdsl.pm:705
+#: ../lib/network/connection/providers/xdsl.pm:796
+#: ../lib/network/connection/providers/xdsl.pm:805
 #, c-format
 msgid "Iceland"
 msgstr "아이스랜드"
 
-#: ../lib/network/connection/providers/xdsl.pm:714
-#: ../lib/network/connection/providers/xdsl.pm:725
-#: ../lib/network/connection/providers/xdsl.pm:735
-#: ../lib/network/connection/providers/xdsl.pm:746
+#: ../lib/network/connection/providers/xdsl.pm:814
+#: ../lib/network/connection/providers/xdsl.pm:825
+#: ../lib/network/connection/providers/xdsl.pm:835
+#: ../lib/network/connection/providers/xdsl.pm:846
 #: ../lib/network/netconnect.pm:35
 #, c-format
 msgid "Italy"
 msgstr "이탈리아"
 
-#: ../lib/network/connection/providers/xdsl.pm:758
+#: ../lib/network/connection/providers/xdsl.pm:858
 #, c-format
 msgid "Sri Lanka"
 msgstr "스리랑카"
 
-#: ../lib/network/connection/providers/xdsl.pm:770
+#: ../lib/network/connection/providers/xdsl.pm:870
 #, c-format
 msgid "Lithuania"
 msgstr "리투아니아"
 
-#: ../lib/network/connection/providers/xdsl.pm:779
-#: ../lib/network/connection/providers/xdsl.pm:789
+#: ../lib/network/connection/providers/xdsl.pm:879
+#: ../lib/network/connection/providers/xdsl.pm:889
 #, c-format
 msgid "Mauritius"
 msgstr "모리셔스"
 
-#: ../lib/network/connection/providers/xdsl.pm:800
+#: ../lib/network/connection/providers/xdsl.pm:900
 #, c-format
 msgid "Morocco"
 msgstr "모로코"
 
-#: ../lib/network/connection/providers/xdsl.pm:810
-#: ../lib/network/connection/providers/xdsl.pm:819
-#: ../lib/network/connection/providers/xdsl.pm:828
-#: ../lib/network/connection/providers/xdsl.pm:837
+#: ../lib/network/connection/providers/xdsl.pm:910
+#: ../lib/network/connection/providers/xdsl.pm:919
+#: ../lib/network/connection/providers/xdsl.pm:928
+#: ../lib/network/connection/providers/xdsl.pm:937
 #: ../lib/network/netconnect.pm:34
 #, c-format
 msgid "Netherlands"
 msgstr "네덜란드"
 
-#: ../lib/network/connection/providers/xdsl.pm:846
-#: ../lib/network/connection/providers/xdsl.pm:852
-#: ../lib/network/connection/providers/xdsl.pm:858
-#: ../lib/network/connection/providers/xdsl.pm:864
-#: ../lib/network/connection/providers/xdsl.pm:870
-#: ../lib/network/connection/providers/xdsl.pm:876
-#: ../lib/network/connection/providers/xdsl.pm:882
+#: ../lib/network/connection/providers/xdsl.pm:946
+#: ../lib/network/connection/providers/xdsl.pm:952
+#: ../lib/network/connection/providers/xdsl.pm:958
+#: ../lib/network/connection/providers/xdsl.pm:964
+#: ../lib/network/connection/providers/xdsl.pm:970
+#: ../lib/network/connection/providers/xdsl.pm:976
+#: ../lib/network/connection/providers/xdsl.pm:982
 #, c-format
 msgid "Norway"
 msgstr "노르웨이"
 
-#: ../lib/network/connection/providers/xdsl.pm:890
+#: ../lib/network/connection/providers/xdsl.pm:990
 #, c-format
 msgid "Pakistan"
 msgstr "파키스탄"
 
-#: ../lib/network/connection/providers/xdsl.pm:901
-#: ../lib/network/connection/providers/xdsl.pm:911
+#: ../lib/network/connection/providers/xdsl.pm:1001
+#: ../lib/network/connection/providers/xdsl.pm:1011
 #, c-format
 msgid "Poland"
 msgstr "폴란드"
 
-#: ../lib/network/connection/providers/xdsl.pm:922
+#: ../lib/network/connection/providers/xdsl.pm:1022
 #, c-format
 msgid "Portugal"
 msgstr "포르투갈"
 
-#: ../lib/network/connection/providers/xdsl.pm:931
+#: ../lib/network/connection/providers/xdsl.pm:1031
 #, c-format
 msgid "Russia"
 msgstr "러시아"
 
-#: ../lib/network/connection/providers/xdsl.pm:942
+#: ../lib/network/connection/providers/xdsl.pm:1042
 #, c-format
 msgid "Singapore"
 msgstr "싱가포르"
 
-#: ../lib/network/connection/providers/xdsl.pm:951
+#: ../lib/network/connection/providers/xdsl.pm:1051
 #, c-format
 msgid "Senegal"
 msgstr "세네갈"
 
-#: ../lib/network/connection/providers/xdsl.pm:961
+#: ../lib/network/connection/providers/xdsl.pm:1061
 #, c-format
 msgid "Slovenia"
 msgstr "슬로베니아"
 
-#: ../lib/network/connection/providers/xdsl.pm:972
-#: ../lib/network/connection/providers/xdsl.pm:984
-#: ../lib/network/connection/providers/xdsl.pm:996
-#: ../lib/network/connection/providers/xdsl.pm:1009
-#: ../lib/network/connection/providers/xdsl.pm:1019
-#: ../lib/network/connection/providers/xdsl.pm:1029
-#: ../lib/network/connection/providers/xdsl.pm:1040
-#: ../lib/network/connection/providers/xdsl.pm:1050
-#: ../lib/network/connection/providers/xdsl.pm:1060
-#: ../lib/network/connection/providers/xdsl.pm:1070
-#: ../lib/network/connection/providers/xdsl.pm:1080
-#: ../lib/network/connection/providers/xdsl.pm:1090
-#: ../lib/network/connection/providers/xdsl.pm:1101
-#: ../lib/network/connection/providers/xdsl.pm:1112
-#: ../lib/network/connection/providers/xdsl.pm:1124
-#: ../lib/network/connection/providers/xdsl.pm:1136
+#: ../lib/network/connection/providers/xdsl.pm:1072
+#: ../lib/network/connection/providers/xdsl.pm:1084
+#: ../lib/network/connection/providers/xdsl.pm:1096
+#: ../lib/network/connection/providers/xdsl.pm:1109
+#: ../lib/network/connection/providers/xdsl.pm:1119
+#: ../lib/network/connection/providers/xdsl.pm:1129
+#: ../lib/network/connection/providers/xdsl.pm:1140
+#: ../lib/network/connection/providers/xdsl.pm:1150
+#: ../lib/network/connection/providers/xdsl.pm:1160
+#: ../lib/network/connection/providers/xdsl.pm:1170
+#: ../lib/network/connection/providers/xdsl.pm:1180
+#: ../lib/network/connection/providers/xdsl.pm:1190
+#: ../lib/network/connection/providers/xdsl.pm:1201
+#: ../lib/network/connection/providers/xdsl.pm:1212
+#: ../lib/network/connection/providers/xdsl.pm:1224
+#: ../lib/network/connection/providers/xdsl.pm:1236
 #, c-format
 msgid "Spain"
 msgstr "스페인"
 
-#: ../lib/network/connection/providers/xdsl.pm:1149
+#: ../lib/network/connection/providers/xdsl.pm:1249
 #, c-format
 msgid "Sweden"
 msgstr "스웨덴"
 
-#: ../lib/network/connection/providers/xdsl.pm:1158
-#: ../lib/network/connection/providers/xdsl.pm:1167
-#: ../lib/network/connection/providers/xdsl.pm:1177
+#: ../lib/network/connection/providers/xdsl.pm:1258
+#: ../lib/network/connection/providers/xdsl.pm:1267
+#: ../lib/network/connection/providers/xdsl.pm:1277
 #, c-format
 msgid "Switzerland"
 msgstr "스위스"
 
-#: ../lib/network/connection/providers/xdsl.pm:1186
+#: ../lib/network/connection/providers/xdsl.pm:1286
 #, c-format
 msgid "Thailand"
 msgstr "태국"
 
-#: ../lib/network/connection/providers/xdsl.pm:1196
+#: ../lib/network/connection/providers/xdsl.pm:1296
 #, c-format
 msgid "Tunisia"
 msgstr "튀니지"
 
-#: ../lib/network/connection/providers/xdsl.pm:1207
+#: ../lib/network/connection/providers/xdsl.pm:1307
 #, c-format
 msgid "Turkey"
 msgstr "터키"
 
-#: ../lib/network/connection/providers/xdsl.pm:1220
+#: ../lib/network/connection/providers/xdsl.pm:1320
 #, c-format
 msgid "United Arab Emirates"
 msgstr "아랍 에미리트 연합"
 
-#: ../lib/network/connection/providers/xdsl.pm:1230
-#: ../lib/network/connection/providers/xdsl.pm:1240
+#: ../lib/network/connection/providers/xdsl.pm:1330
+#: ../lib/network/connection/providers/xdsl.pm:1340
 #: ../lib/network/netconnect.pm:38
 #, c-format
 msgid "United Kingdom"
@@ -4051,59 +4328,59 @@ msgstr ""
 msgid "WPA Pre-Shared Key"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:182 ../lib/network/thirdparty.pm:175
+#: ../lib/network/connection/wireless.pm:197 ../lib/network/thirdparty.pm:175
 #, c-format
 msgid "Firmware files are required for this device."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:248
+#: ../lib/network/connection/wireless.pm:263
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
 "switch) first."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:307
+#: ../lib/network/connection/wireless.pm:322
 #, fuzzy, c-format
 msgid "Wireless settings"
 msgstr "무선 연결"
 
-#: ../lib/network/connection/wireless.pm:313
+#: ../lib/network/connection/wireless.pm:328
 #, c-format
 msgid "Ad-hoc"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:313
+#: ../lib/network/connection/wireless.pm:328
 #, fuzzy, c-format
 msgid "Managed"
 msgstr "언어 선택"
 
-#: ../lib/network/connection/wireless.pm:313
+#: ../lib/network/connection/wireless.pm:328
 #, c-format
 msgid "Master"
 msgstr "마스터"
 
-#: ../lib/network/connection/wireless.pm:313
+#: ../lib/network/connection/wireless.pm:328
 #, fuzzy, c-format
 msgid "Repeater"
 msgstr "복구"
 
-#: ../lib/network/connection/wireless.pm:313
+#: ../lib/network/connection/wireless.pm:328
 #, c-format
 msgid "Secondary"
 msgstr "두번째"
 
-#: ../lib/network/connection/wireless.pm:313
+#: ../lib/network/connection/wireless.pm:328
 #, c-format
 msgid "Auto"
 msgstr "자동"
 
-#: ../lib/network/connection/wireless.pm:318
+#: ../lib/network/connection/wireless.pm:333
 #, c-format
 msgid "Encryption mode"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:327
+#: ../lib/network/connection/wireless.pm:342
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -4117,7 +4394,7 @@ msgid ""
 "or off."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:336
+#: ../lib/network/connection/wireless.pm:351
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -4127,7 +4404,7 @@ msgid ""
 "See iwconfig(8) man page for further information."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:344
+#: ../lib/network/connection/wireless.pm:359
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -4139,7 +4416,7 @@ msgid ""
 "See iwpspy(8) man page for further information."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:354
+#: ../lib/network/connection/wireless.pm:369
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -4157,36 +4434,36 @@ msgid ""
 "See iwpriv(8) man page for further information."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:372
+#: ../lib/network/connection/wireless.pm:387
 #, c-format
 msgid "An encryption key is required."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:378
+#: ../lib/network/connection/wireless.pm:393
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
 "frequency), or add enough '0' (zeroes)."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:384
+#: ../lib/network/connection/wireless.pm:399
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
 "enough '0' (zeroes)."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:396
+#: ../lib/network/connection/wireless.pm:411
 #, c-format
 msgid "Allow access point roaming"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:499
+#: ../lib/network/connection/wireless.pm:514
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:500
+#: ../lib/network/connection/wireless.pm:515
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr ""
@@ -4196,7 +4473,7 @@ msgstr ""
 msgid "DSL"
 msgstr "SSL"
 
-#: ../lib/network/connection/xdsl.pm:76 ../lib/network/netconnect.pm:755
+#: ../lib/network/connection/xdsl.pm:76 ../lib/network/netconnect.pm:763
 #, fuzzy, c-format
 msgid "Alcatel speedtouch USB modem"
 msgstr "알카텔 스피드터치 USB"
@@ -4210,54 +4487,54 @@ msgid ""
 "You can find a driver on http://eciadsl.flashtux.org/"
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:166
+#: ../lib/network/connection/xdsl.pm:164
 #, c-format
 msgid ""
 "Modems using Conexant AccessRunner chipsets cannot be supported due to "
 "binary firmware distribution problem."
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:186
+#: ../lib/network/connection/xdsl.pm:184
 #, c-format
 msgid "DSL over CAPI"
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:179
+#: ../lib/network/connection/xdsl.pm:187
 #, c-format
 msgid "Dynamic Host Configuration Protocol (DHCP)"
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:180
+#: ../lib/network/connection/xdsl.pm:188
 #, fuzzy, c-format
 msgid "Manual TCP/IP configuration"
 msgstr "수동 설정"
 
-#: ../lib/network/connection/xdsl.pm:181
+#: ../lib/network/connection/xdsl.pm:189
 #, c-format
 msgid "Point to Point Tunneling Protocol (PPTP)"
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:182
+#: ../lib/network/connection/xdsl.pm:190
 #, c-format
 msgid "PPP over Ethernet (PPPoE)"
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:183
+#: ../lib/network/connection/xdsl.pm:191
 #, c-format
 msgid "PPP over ATM (PPPoA)"
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:223
+#: ../lib/network/connection/xdsl.pm:231
 #, c-format
 msgid "Virtual Path ID (VPI):"
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:224
+#: ../lib/network/connection/xdsl.pm:232
 #, c-format
 msgid "Virtual Circuit ID (VCI):"
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:324
+#: ../lib/network/connection/xdsl.pm:332
 #: ../lib/network/connection_manager.pm:41 ../lib/network/drakvpn.pm:45
 #: ../lib/network/netconnect.pm:131 ../lib/network/thirdparty.pm:115
 #, fuzzy, c-format
@@ -4265,13 +4542,13 @@ msgid "Could not install the packages (%s)!"
 msgstr "%s 팩키지 설치중"
 
 #: ../lib/network/connection_manager.pm:53
-#: ../lib/network/connection_manager.pm:85
+#: ../lib/network/connection_manager.pm:88
 #, fuzzy, c-format
 msgid "Network settings"
 msgstr "C 클래스 지역 네트웍"
 
 #: ../lib/network/connection_manager.pm:54
-#: ../lib/network/connection_manager.pm:86
+#: ../lib/network/connection_manager.pm:89
 #, fuzzy, c-format
 msgid "Please enter settings for network"
 msgstr "자세한 정보"
@@ -4281,42 +4558,42 @@ msgstr "자세한 정보"
 msgid "Configuring device..."
 msgstr "설정 중..."
 
-#: ../lib/network/connection_manager.pm:132
+#: ../lib/network/connection_manager.pm:146
 #, c-format
 msgid "Connecting..."
 msgstr "접속중입니다..."
 
-#: ../lib/network/connection_manager.pm:150
+#: ../lib/network/connection_manager.pm:164
 #, fuzzy, c-format
 msgid "Disconnecting..."
 msgstr "연결 끊기..."
 
-#: ../lib/network/connection_manager.pm:187
+#: ../lib/network/connection_manager.pm:201
 #, c-format
 msgid "SSID"
 msgstr ""
 
-#: ../lib/network/connection_manager.pm:188
+#: ../lib/network/connection_manager.pm:202
 #, c-format
 msgid "Signal strength"
 msgstr ""
 
-#: ../lib/network/connection_manager.pm:189
+#: ../lib/network/connection_manager.pm:203
 #, c-format
 msgid "Encryption"
 msgstr "암호화"
 
-#: ../lib/network/connection_manager.pm:222 ../lib/network/netconnect.pm:209
+#: ../lib/network/connection_manager.pm:244 ../lib/network/netconnect.pm:209
 #, fuzzy, c-format
 msgid "Scanning for networks..."
 msgstr "네트웍 검색 중 ..."
 
-#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:111
+#: ../lib/network/connection_manager.pm:281 ../lib/network/drakroam.pm:111
 #, c-format
 msgid "Disconnect"
 msgstr "접속해제"
 
-#: ../lib/network/connection_manager.pm:260 ../lib/network/drakroam.pm:110
+#: ../lib/network/connection_manager.pm:281 ../lib/network/drakroam.pm:110
 #, c-format
 msgid "Connect"
 msgstr "연결"
@@ -4476,17 +4753,17 @@ msgstr "장치를 찾을 수 없습니다"
 msgid "Hostname changed to \"%s\""
 msgstr ""
 
-#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:82
+#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:72
 #, c-format
 msgid "Configure"
 msgstr "설정"
 
-#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:87
+#: ../lib/network/drakroam.pm:112 ../lib/network/netcenter.pm:77
 #, c-format
 msgid "Refresh"
 msgstr "새로 고침"
 
-#: ../lib/network/drakroam.pm:124 ../lib/network/netconnect.pm:761
+#: ../lib/network/drakroam.pm:123 ../lib/network/netconnect.pm:769
 #, c-format
 msgid "Wireless connection"
 msgstr "무선 연결"
@@ -4541,7 +4818,7 @@ msgstr "WebDAV 서버 URL을 입력하세요."
 msgid "Please enter the settings of your VPN connection"
 msgstr "분기할 수 없습니다: %s"
 
-#: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:291
+#: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:299
 #, c-format
 msgid "Do you want to start the connection now?"
 msgstr ""
@@ -4616,8 +4893,8 @@ msgid "port %d"
 msgstr "보고"
 
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
-#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:603
-#: ../lib/network/netconnect.pm:620 ../lib/network/netconnect.pm:636
+#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:611
+#: ../lib/network/netconnect.pm:628 ../lib/network/netconnect.pm:644
 #, c-format
 msgid "Manual"
 msgstr "수동"
@@ -4625,10 +4902,10 @@ msgstr "수동"
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
 #: ../lib/network/modem.pm:44 ../lib/network/modem.pm:63
 #: ../lib/network/modem.pm:76 ../lib/network/modem.pm:81
-#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:598
-#: ../lib/network/netconnect.pm:603 ../lib/network/netconnect.pm:615
-#: ../lib/network/netconnect.pm:620 ../lib/network/netconnect.pm:636
-#: ../lib/network/netconnect.pm:638
+#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:606
+#: ../lib/network/netconnect.pm:611 ../lib/network/netconnect.pm:623
+#: ../lib/network/netconnect.pm:628 ../lib/network/netconnect.pm:644
+#: ../lib/network/netconnect.pm:646
 #, c-format
 msgid "Automatic"
 msgstr "자동"
@@ -4685,17 +4962,17 @@ msgstr "시스템 설치"
 msgid "Select a device:"
 msgstr ""
 
-#: ../lib/network/netcenter.pm:40
+#: ../lib/network/netcenter.pm:30
 #, fuzzy, c-format
 msgid "Network Center"
 msgstr "네트웍 인터페이스"
 
-#: ../lib/network/netcenter.pm:73 ../lib/network/netconnect.pm:212
+#: ../lib/network/netcenter.pm:62 ../lib/network/netconnect.pm:212
 #, c-format
 msgid "Please select your network:"
 msgstr ""
 
-#: ../lib/network/netcenter.pm:78
+#: ../lib/network/netcenter.pm:68
 #, fuzzy, c-format
 msgid ""
 "_: This is a verb\n"
@@ -4707,8 +4984,8 @@ msgstr "네트웍을 통한 복구"
 msgid "United States"
 msgstr "미국"
 
-#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:493
-#: ../lib/network/netconnect.pm:507
+#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:501
+#: ../lib/network/netconnect.pm:515
 #, fuzzy, c-format
 msgid "Manual choice"
 msgstr "미얀마"
@@ -4728,8 +5005,8 @@ msgstr "다른 지역을 위한 프로토콜"
 msgid "Choose the connection you want to configure"
 msgstr "설정할 연결을 선택하세요."
 
-#: ../lib/network/netconnect.pm:145 ../lib/network/netconnect.pm:348
-#: ../lib/network/netconnect.pm:788
+#: ../lib/network/netconnect.pm:145 ../lib/network/netconnect.pm:356
+#: ../lib/network/netconnect.pm:796
 #, fuzzy, c-format
 msgid "Select the network interface to configure:"
 msgstr "네트웍 인터페이스를 선택하세요."
@@ -4749,76 +5026,76 @@ msgstr "네트웍 환경 설정"
 msgid "Please select your provider:"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:241
+#: ../lib/network/netconnect.pm:249
 #, c-format
 msgid ""
 "Please select your connection protocol.\n"
 "If you do not know it, keep the preselected protocol."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:285 ../lib/network/netconnect.pm:655
+#: ../lib/network/netconnect.pm:293 ../lib/network/netconnect.pm:663
 #, c-format
 msgid "Connection control"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:315
+#: ../lib/network/netconnect.pm:323
 #, c-format
 msgid "Connection Configuration"
 msgstr "연결 설정"
 
-#: ../lib/network/netconnect.pm:315
+#: ../lib/network/netconnect.pm:323
 #, c-format
 msgid "Please fill or check the field below"
 msgstr "아래 양식을 채워 주세요."
 
-#: ../lib/network/netconnect.pm:318
+#: ../lib/network/netconnect.pm:326
 #, c-format
 msgid "Your personal phone number"
 msgstr "님의 개인 전화 번호"
 
-#: ../lib/network/netconnect.pm:319
+#: ../lib/network/netconnect.pm:327
 #, c-format
 msgid "Provider name (ex provider.net)"
 msgstr "공급자 이름 (예 provider.net)"
 
-#: ../lib/network/netconnect.pm:321
+#: ../lib/network/netconnect.pm:329
 #, fuzzy, c-format
 msgid "Provider DNS 1 (optional)"
 msgstr "공급자 DNS 1 (옵션)"
 
-#: ../lib/network/netconnect.pm:322
+#: ../lib/network/netconnect.pm:330
 #, fuzzy, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "공급자 DNS 2 (옵션)"
 
-#: ../lib/network/netconnect.pm:332
+#: ../lib/network/netconnect.pm:340
 #, c-format
 msgid "Card IO_1"
 msgstr "카드 IO_1"
 
-#: ../lib/network/netconnect.pm:351 ../lib/network/netconnect.pm:356
+#: ../lib/network/netconnect.pm:359 ../lib/network/netconnect.pm:364
 #, c-format
 msgid "External ISDN modem"
 msgstr "외장 ISDN 모뎀"
 
-#: ../lib/network/netconnect.pm:384
+#: ../lib/network/netconnect.pm:392
 #, fuzzy, c-format
 msgid "Select a device!"
 msgstr "스캐너 선택"
 
-#: ../lib/network/netconnect.pm:393 ../lib/network/netconnect.pm:403
-#: ../lib/network/netconnect.pm:413 ../lib/network/netconnect.pm:446
-#: ../lib/network/netconnect.pm:460
+#: ../lib/network/netconnect.pm:401 ../lib/network/netconnect.pm:411
+#: ../lib/network/netconnect.pm:421 ../lib/network/netconnect.pm:454
+#: ../lib/network/netconnect.pm:468
 #, c-format
 msgid "ISDN Configuration"
 msgstr "ISDN 설정"
 
-#: ../lib/network/netconnect.pm:394
+#: ../lib/network/netconnect.pm:402
 #, c-format
 msgid "What kind of card do you have?"
 msgstr "어떤 종유의 카드를 가지고 있습니까?"
 
-#: ../lib/network/netconnect.pm:404
+#: ../lib/network/netconnect.pm:412
 #, c-format
 msgid ""
 "\n"
@@ -4832,22 +5109,22 @@ msgstr ""
 "\n"
 "만약 PCMCIA 카드를 가지고 있다면, IRQ와 IO 값을 알고 있어야 합니다.\n"
 
-#: ../lib/network/netconnect.pm:408
+#: ../lib/network/netconnect.pm:416
 #, c-format
 msgid "Continue"
 msgstr "계속"
 
-#: ../lib/network/netconnect.pm:408
+#: ../lib/network/netconnect.pm:416
 #, c-format
 msgid "Abort"
 msgstr "중지"
 
-#: ../lib/network/netconnect.pm:414
+#: ../lib/network/netconnect.pm:422
 #, fuzzy, c-format
 msgid "Which of the following is your ISDN card?"
 msgstr "어느 것이 님의 ISDN 카드입니까?"
 
-#: ../lib/network/netconnect.pm:432
+#: ../lib/network/netconnect.pm:440
 #, c-format
 msgid ""
 "A CAPI driver is available for this modem. This CAPI driver can offer more "
@@ -4855,12 +5132,12 @@ msgid ""
 "want to use?"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:446
+#: ../lib/network/netconnect.pm:454
 #, c-format
 msgid "Which protocol do you want to use?"
 msgstr "어떤 프로토콜을 사용하시겠습니까?"
 
-#: ../lib/network/netconnect.pm:460
+#: ../lib/network/netconnect.pm:468
 #, c-format
 msgid ""
 "Select your provider.\n"
@@ -4869,134 +5146,134 @@ msgstr ""
 "공급자를 선택하세요.\n"
 "목록에 없으면, 「목록에 없음」을 선택하세요."
 
-#: ../lib/network/netconnect.pm:462 ../lib/network/netconnect.pm:558
+#: ../lib/network/netconnect.pm:470 ../lib/network/netconnect.pm:566
 #, fuzzy, c-format
 msgid "Provider:"
 msgstr "프로파일: "
 
-#: ../lib/network/netconnect.pm:471
+#: ../lib/network/netconnect.pm:479
 #, c-format
 msgid ""
 "Your modem is not supported by the system.\n"
 "Take a look at http://www.linmodems.org"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:490
+#: ../lib/network/netconnect.pm:498
 #, fuzzy, c-format
 msgid "Select the modem to configure:"
 msgstr "네트웍 인터페이스를 선택하세요."
 
-#: ../lib/network/netconnect.pm:492
+#: ../lib/network/netconnect.pm:500
 #, c-format
 msgid "Modem"
 msgstr "모뎀"
 
-#: ../lib/network/netconnect.pm:527
+#: ../lib/network/netconnect.pm:535
 #, c-format
 msgid "Please choose which serial port your modem is connected to."
 msgstr "어떤 시리얼 포트에 마우스가 연결되어 있나요?"
 
-#: ../lib/network/netconnect.pm:556
+#: ../lib/network/netconnect.pm:564
 #, fuzzy, c-format
 msgid "Select your provider:"
 msgstr "프린터 스풀러을 선택하세요."
 
-#: ../lib/network/netconnect.pm:580
+#: ../lib/network/netconnect.pm:588
 #, fuzzy, c-format
 msgid "Dialup: account options"
 msgstr "다이얼업 옵션"
 
-#: ../lib/network/netconnect.pm:583
+#: ../lib/network/netconnect.pm:591
 #, c-format
 msgid "Connection name"
 msgstr "연결 이름"
 
-#: ../lib/network/netconnect.pm:584
+#: ../lib/network/netconnect.pm:592
 #, c-format
 msgid "Phone number"
 msgstr "전화 번호"
 
-#: ../lib/network/netconnect.pm:585
+#: ../lib/network/netconnect.pm:593
 #, c-format
 msgid "Login ID"
 msgstr "로그인 ID"
 
-#: ../lib/network/netconnect.pm:600 ../lib/network/netconnect.pm:633
+#: ../lib/network/netconnect.pm:608 ../lib/network/netconnect.pm:641
 #, fuzzy, c-format
 msgid "Dialup: IP parameters"
 msgstr "인자"
 
-#: ../lib/network/netconnect.pm:603
+#: ../lib/network/netconnect.pm:611
 #, fuzzy, c-format
 msgid "IP parameters"
 msgstr "인자"
 
-#: ../lib/network/netconnect.pm:605
+#: ../lib/network/netconnect.pm:613
 #, fuzzy, c-format
 msgid "Subnet mask"
 msgstr "넷마스크"
 
-#: ../lib/network/netconnect.pm:617
+#: ../lib/network/netconnect.pm:625
 #, c-format
 msgid "Dialup: DNS parameters"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:620
+#: ../lib/network/netconnect.pm:628
 #, c-format
 msgid "DNS"
 msgstr "DNS"
 
-#: ../lib/network/netconnect.pm:621
+#: ../lib/network/netconnect.pm:629
 #, c-format
 msgid "Domain name"
 msgstr "도메인 이름"
 
-#: ../lib/network/netconnect.pm:624
+#: ../lib/network/netconnect.pm:632
 #, fuzzy, c-format
 msgid "Set hostname from IP"
 msgstr "프린터 호스트명 또는 IP"
 
-#: ../lib/network/netconnect.pm:637
+#: ../lib/network/netconnect.pm:645
 #, fuzzy, c-format
 msgid "Gateway IP address"
 msgstr "IP 주소"
 
-#: ../lib/network/netconnect.pm:670
+#: ../lib/network/netconnect.pm:678
 #, fuzzy, c-format
 msgid "Automatically at boot"
 msgstr "부팅시 시작"
 
-#: ../lib/network/netconnect.pm:672
+#: ../lib/network/netconnect.pm:680
 #, c-format
 msgid "By using Net Applet in the system tray"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:674
+#: ../lib/network/netconnect.pm:682
 #, c-format
 msgid "Manually (the interface would still be activated at boot)"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:683
+#: ../lib/network/netconnect.pm:691
 #, fuzzy, c-format
 msgid "How do you want to dial this connection?"
 msgstr "부팅시에 연결하도록 하겠습니까?"
 
-#: ../lib/network/netconnect.pm:696
+#: ../lib/network/netconnect.pm:704
 #, c-format
 msgid "Do you want to try to connect to the Internet now?"
 msgstr "지금 인터넷 연결을 시도해 보시겠습니까?"
 
-#: ../lib/network/netconnect.pm:723
+#: ../lib/network/netconnect.pm:731
 #, fuzzy, c-format
 msgid "The system is now connected to the Internet."
 msgstr "지금 시스템이 인터넷에 연결되었습니다."
 
-#: ../lib/network/netconnect.pm:724
+#: ../lib/network/netconnect.pm:732
 #, fuzzy, c-format
 msgid "For security reasons, it will be disconnected now."
 msgstr "보안상의 이유로 이제 연결을 끊을 것입니다."
 
-#: ../lib/network/netconnect.pm:725
+#: ../lib/network/netconnect.pm:733
 #, fuzzy, c-format
 msgid ""
 "The system does not seem to be connected to the Internet.\n"
@@ -5005,7 +5282,7 @@ msgstr ""
 "시스템이 인터넷에 연결되지 않은 듯합니다.\n"
 "연결 설정을 다시해 보세요."
 
-#: ../lib/network/netconnect.pm:740
+#: ../lib/network/netconnect.pm:748
 #, fuzzy, c-format
 msgid ""
 "Congratulations, the network and Internet configuration is finished.\n"
@@ -5015,7 +5292,7 @@ msgstr ""
 "\n"
 "이제 설정이 시스템에 적용될 것입니다.\n"
 
-#: ../lib/network/netconnect.pm:743
+#: ../lib/network/netconnect.pm:751
 #, c-format
 msgid ""
 "After this is done, we recommend that you restart your X environment to "
@@ -5024,7 +5301,7 @@ msgstr ""
 "완료된 후에, X를 다시 시작하여 호스트명 변경에 따른\n"
 "문제 발생을 피하시기 바랍니다."
 
-#: ../lib/network/netconnect.pm:744
+#: ../lib/network/netconnect.pm:752
 #, c-format
 msgid ""
 "Problems occurred during configuration.\n"
@@ -5032,78 +5309,78 @@ msgid ""
 "work, you might want to relaunch the configuration."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:756
+#: ../lib/network/netconnect.pm:764
 #, fuzzy, c-format
 msgid "Sagem USB modem"
 msgstr "시스템 모드"
 
-#: ../lib/network/netconnect.pm:757 ../lib/network/netconnect.pm:758
+#: ../lib/network/netconnect.pm:765 ../lib/network/netconnect.pm:766
 #, c-format
 msgid "Bewan modem"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:759
+#: ../lib/network/netconnect.pm:767
 #, c-format
 msgid "ECI Hi-Focus modem"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:760
+#: ../lib/network/netconnect.pm:768
 #, c-format
 msgid "LAN connection"
 msgstr "LAN 연결"
 
-#: ../lib/network/netconnect.pm:762
+#: ../lib/network/netconnect.pm:770
 #, c-format
 msgid "ADSL connection"
 msgstr "ADSL 연결"
 
-#: ../lib/network/netconnect.pm:763
+#: ../lib/network/netconnect.pm:771
 #, c-format
 msgid "Cable connection"
 msgstr "캐이블 연결"
 
-#: ../lib/network/netconnect.pm:764
+#: ../lib/network/netconnect.pm:772
 #, c-format
 msgid "ISDN connection"
 msgstr "ISDN 연결"
 
-#: ../lib/network/netconnect.pm:765
+#: ../lib/network/netconnect.pm:773
 #, c-format
 msgid "Modem connection"
 msgstr "모뎀 연결"
 
-#: ../lib/network/netconnect.pm:766
+#: ../lib/network/netconnect.pm:774
 #, c-format
 msgid "DVB connection"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:768
+#: ../lib/network/netconnect.pm:776
 #, fuzzy, c-format
 msgid "(detected on port %s)"
 msgstr "%s 포트에서 발견"
 
 #. -PO: here, "(detected)" string will be appended to eg "ADSL connection"
-#: ../lib/network/netconnect.pm:770
+#: ../lib/network/netconnect.pm:778
 #, fuzzy, c-format
 msgid "(detected %s)"
 msgstr "%s 발견"
 
-#: ../lib/network/netconnect.pm:770
+#: ../lib/network/netconnect.pm:778
 #, fuzzy, c-format
 msgid "(detected)"
 msgstr "%s 발견"
 
-#: ../lib/network/netconnect.pm:771
+#: ../lib/network/netconnect.pm:779
 #, c-format
 msgid "Network Configuration"
 msgstr "네트웍 환경 설정"
 
-#: ../lib/network/netconnect.pm:772
+#: ../lib/network/netconnect.pm:780
 #, fuzzy, c-format
 msgid "Zeroconf hostname resolution"
 msgstr "호스트명:"
 
-#: ../lib/network/netconnect.pm:773
+#: ../lib/network/netconnect.pm:781
 #, c-format
 msgid ""
 "If desired, enter a Zeroconf hostname.\n"
@@ -5112,17 +5389,17 @@ msgid ""
 "It is not necessary on most networks."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:777
+#: ../lib/network/netconnect.pm:785
 #, fuzzy, c-format
 msgid "Zeroconf Host name"
 msgstr "호스트명:"
 
-#: ../lib/network/netconnect.pm:778
+#: ../lib/network/netconnect.pm:786
 #, c-format
 msgid "Zeroconf host name must not contain a ."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:779
+#: ../lib/network/netconnect.pm:787
 #, c-format
 msgid ""
 "Because you are doing a network installation, your network is already "
@@ -5135,12 +5412,12 @@ msgstr ""
 "「확인」을 눌러 현재 설정을 유지하거나, 「취소」를 눌러 인터넷/네트웍 연결을 "
 "다시 설정하세요.\n"
 
-#: ../lib/network/netconnect.pm:782
+#: ../lib/network/netconnect.pm:790
 #, fuzzy, c-format
 msgid "The network needs to be restarted. Do you want to restart it?"
 msgstr "팩키지 %s가 필요합니다. 설치하겠습니까?"
 
-#: ../lib/network/netconnect.pm:783
+#: ../lib/network/netconnect.pm:791
 #, c-format
 msgid ""
 "A problem occurred while restarting the network: \n"
@@ -5151,7 +5428,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../lib/network/netconnect.pm:784
+#: ../lib/network/netconnect.pm:792
 #, fuzzy, c-format
 msgid ""
 "We are now going to configure the %s connection.\n"
@@ -5167,12 +5444,12 @@ msgstr ""
 "\n"
 "시작하려면 「확인」을 누르세요."
 
-#: ../lib/network/netconnect.pm:785
+#: ../lib/network/netconnect.pm:793
 #, fuzzy, c-format
 msgid "Configuration is complete, do you want to apply settings?"
 msgstr "어느 Xorg 설정을 선택하시겠습니까?"
 
-#: ../lib/network/netconnect.pm:786
+#: ../lib/network/netconnect.pm:794
 #, c-format
 msgid ""
 "You have configured multiple ways to connect to the Internet.\n"
@@ -5183,24 +5460,24 @@ msgstr ""
 "연결에 사용할 방식을 선택하세요.\n"
 "\n"
 
-#: ../lib/network/netconnect.pm:787
+#: ../lib/network/netconnect.pm:795
 #, c-format
 msgid "Internet connection"
 msgstr "인터넷 연결"
 
-#: ../lib/network/netconnect.pm:789
+#: ../lib/network/netconnect.pm:797
 #, fuzzy, c-format
 msgid "Configuring network device %s (driver %s)"
 msgstr "%s 네트웍 카드 설정중"
 
-#: ../lib/network/netconnect.pm:790
+#: ../lib/network/netconnect.pm:798
 #, c-format
 msgid ""
 "The following protocols can be used to configure a LAN connection. Please "
 "choose the one you want to use."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:791
+#: ../lib/network/netconnect.pm:799
 #, c-format
 msgid ""
 "Please enter your host name.\n"
@@ -5213,22 +5490,22 @@ msgstr ""
 "이름이어야 합니다. \n"
 "게이트 웨이가 있다면 그 IP 주소도 입력해야 합니다."
 
-#: ../lib/network/netconnect.pm:796
+#: ../lib/network/netconnect.pm:804
 #, c-format
 msgid "Last but not least you can also type in your DNS server IP addresses."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:797
+#: ../lib/network/netconnect.pm:805
 #, fuzzy, c-format
 msgid "DNS server address should be in format 1.2.3.4"
 msgstr "IP 주소는 1.2.3.4과 같은 형식이어야 합니다."
 
-#: ../lib/network/netconnect.pm:799
+#: ../lib/network/netconnect.pm:807
 #, c-format
 msgid "Gateway device"
 msgstr "게이트웨이 장치"
 
-#: ../lib/network/netconnect.pm:813
+#: ../lib/network/netconnect.pm:821
 #, c-format
 msgid ""
 "An unexpected error has happened:\n"
@@ -5402,7 +5679,7 @@ msgstr "장치 %s를 어디에 마운트 하시겠습니까?"
 msgid "Looking for required software and drivers..."
 msgstr ""
 
-#: ../lib/network/thirdparty.pm:338
+#: ../lib/network/thirdparty.pm:340
 #, fuzzy, c-format
 msgid "Please wait, running device configuration commands..."
 msgstr "희망하는 보안 단계를 선택해 주세요."
