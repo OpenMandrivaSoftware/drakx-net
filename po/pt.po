@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: pt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-31 11:33+0100\n"
-"PO-Revision-Date: 2008-02-02 22:34+0000\n"
+"PO-Revision-Date: 2008-02-02 23:41+0000\n"
 "Last-Translator: Zé <mmodem00@gmail.com>\n"
 "Language-Team: Português <pt@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -2261,7 +2261,7 @@ msgstr "Senha:"
 #: ../bin/draksambashare:1056
 #, c-format
 msgid "PDC - primary domain controller"
-msgstr "PDC - primeiro controlador do domínio"
+msgstr "PDC - controlador primário do domínio"
 
 #: ../bin/draksambashare:1057
 #, c-format
@@ -2312,6 +2312,8 @@ msgid ""
 "Domain master = yes, causes the server to register the NetBIOS name <pdc "
 "name>. This name will be recognized by other servers."
 msgstr ""
+"Domínio Principal = sim, faz com que o servidor registe o nome NetBIOS <nome "
+"pdc>. Este nome será reconhecido por outros servidores."
 
 #: ../bin/draksambashare:1099
 #, c-format
@@ -2356,7 +2358,7 @@ msgstr "Grupo de Trabalho"
 #: ../bin/draksambashare:1112
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
-msgstr ""
+msgstr "O Samba precisa saber se o Grupo de Trabalho Windows irá servir."
 
 #: ../bin/draksambashare:1119 ../bin/draksambashare:1183
 #, c-format
@@ -2384,11 +2386,14 @@ msgid ""
 "User level: the client sends a session setup request directly following "
 "protocol negotiation. This request provides a username and password."
 msgstr ""
+"Nível do utilizador: o cliente envia directamente um pedido de configuração "
+"da sessão seguindo o protocolo de negociação. Este pedido fornece um "
+"nome de utilizador e uma senha."
 
 #: ../bin/draksambashare:1131
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
+msgstr "Nível de partilha: o cliente autentica-se separadamente para cada partilha"
 
 #: ../bin/draksambashare:1131
 #, c-format
@@ -2426,9 +2431,9 @@ msgid "The Server Banner is incorrect."
 msgstr ""
 
 #: ../bin/draksambashare:1163
-#, fuzzy, c-format
+#, c-format
 msgid "Samba Log"
-msgstr "Utilizadores Samba"
+msgstr "Registo Samba"
 
 #: ../bin/draksambashare:1163
 #, c-format
@@ -2436,36 +2441,38 @@ msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
 "connects"
 msgstr ""
+"Ficheiro de registo: use ficheiro.%m para usar um ficheiro de registo de separação "
+"para cada máquina que se conecta."
 
 #: ../bin/draksambashare:1163
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
-msgstr ""
+msgstr "Nível de registo: define o nível (detalhe) do registo (0 <= nível do registo <= 10)"
 
 #: ../bin/draksambashare:1163
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
+msgstr "Tamanho Máximo do Registo: ponha um limite no tamanho dos ficheiros de registo (em Kb)."
 
 #: ../bin/draksambashare:1170 ../bin/draksambashare:1185
-#, fuzzy, c-format
+#, c-format
 msgid "Log file:"
-msgstr "Perfil"
+msgstr "Ficheiro de registo:"
 
 #: ../bin/draksambashare:1171
 #, c-format
 msgid "Max log size:"
-msgstr ""
+msgstr "Tamanho máximo do registo:"
 
 #: ../bin/draksambashare:1172
-#, fuzzy, c-format
+#, c-format
 msgid "Log level:"
-msgstr "Nível"
+msgstr "Nível de registo:"
 
 #: ../bin/draksambashare:1177
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
+msgstr "O assistente reuniu os seguintes parâmetros para configurar o Samba."
 
 #: ../bin/draksambashare:1177
 #, c-format
@@ -2473,6 +2480,8 @@ msgid ""
 "To accept these values, and configure your server, click the Next button or "
 "use the Back button to correct them."
 msgstr ""
+"Para aceitar estes valores, e configurar o seu servidor, clique no botão Próximo "
+"ou use o botão Voltar para os corrigir."
 
 #: ../bin/draksambashare:1177
 #, c-format
@@ -2480,11 +2489,13 @@ msgid ""
 "If you have previously create some shares, they will appear in this "
 "configuration. Run 'drakwizard sambashare' to manage your shares."
 msgstr ""
+"Se criou anteriormente algumas partilhas, irão aparecer nesta configuração. "
+"Execute 'drakwizard sambashare' para gerir as suas partilhas."
 
 #: ../bin/draksambashare:1182
-#, fuzzy, c-format
+#, c-format
 msgid "Samba type:"
-msgstr "Utilizadores Samba"
+msgstr "Tipo de samba:"
 
 #: ../bin/draksambashare:1184
 #, c-format
@@ -2492,19 +2503,19 @@ msgid "Server banner:"
 msgstr ""
 
 #: ../bin/draksambashare:1199
-#, fuzzy, c-format
+#, c-format
 msgid "The wizard successfully configured your Samba server."
-msgstr "O assistente adicionou com sucesso a partilha Samba da impressora"
+msgstr "O assistente configurou com sucesso o seu servidor Samba."
 
 #: ../bin/draksambashare:1213
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to configure Samba server."
-msgstr "Falha ao modificar partilha Samba."
+msgstr "Falha ao configurar o servidor Samba."
 
 #: ../bin/draksambashare:1263
 #, c-format
 msgid "The Samba wizard has unexpectedly failed:"
-msgstr ""
+msgstr "O assistente Samba falhou inesperadamente:"
 
 #: ../bin/draksambashare:1277
 #, c-format
