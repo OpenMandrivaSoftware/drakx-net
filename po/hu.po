@@ -8,14 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hu\n"
 "POT-Creation-Date: 2008-01-31 11:33+0100\n"
-"PO-Revision-Date: 2007-09-25 22:47+0200\n"
-"Last-Translator: Arpad Biro <biro_arpad@yahoo.com>\n"
-"Language-Team: Hungarian\n"
+"PO-Revision-Date: 2008-02-14 22:02+0100\n"
+"Last-Translator: Lónyai Gergely <alephlg@gmail.com>\n"
+"Language-Team: Hungarian <alephlg@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Hungarian\n"
+"X-Poedit-Country: HUNGARY\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 # címfelirat
 #: ../bin/drakconnect:61 ../lib/network/netconnect.pm:118
@@ -1961,19 +1964,19 @@ msgid "/_Samba Server"
 msgstr "/_Samba-kiszolgáló"
 
 #: ../bin/draksambashare:179
-#, fuzzy, c-format
+#, c-format
 msgid "/_Configure"
-msgstr "Beállítás"
+msgstr "/_Beállítás"
 
 #: ../bin/draksambashare:183
-#, fuzzy, c-format
+#, c-format
 msgid "/_Help"
-msgstr "Segítség"
+msgstr "/_Segítség"
 
 #: ../bin/draksambashare:183
-#, fuzzy, c-format
+#, c-format
 msgid "/Samba Documentation"
-msgstr "Töredezés"
+msgstr "/Samba _Dokumentáció"
 
 #: ../bin/draksambashare:189 ../bin/draksambashare:190
 #, c-format
@@ -2271,22 +2274,22 @@ msgstr "Jelszó:"
 #: ../bin/draksambashare:1056
 #, c-format
 msgid "PDC - primary domain controller"
-msgstr ""
+msgstr "PDC - elsődleges domainvezérlő"
 
 #: ../bin/draksambashare:1057
 #, c-format
 msgid "Standalone - standalone server"
-msgstr ""
+msgstr "Standalone - normál szerver"
 
 #: ../bin/draksambashare:1063
-#, fuzzy, c-format
+#, c-format
 msgid "Samba Wizard"
-msgstr "Samba-felhasználók"
+msgstr "Samba-varázsló"
 
 #: ../bin/draksambashare:1066
-#, fuzzy, c-format
+#, c-format
 msgid "Samba server configuration Wizard"
-msgstr "Samba-beállítás kezelése"
+msgstr "Samba-kiszolgáló beállítása varázsló"
 
 #: ../bin/draksambashare:1066
 #, c-format
@@ -2294,11 +2297,13 @@ msgid ""
 "Samba allows your server to behave as a file and print server for "
 "workstations running non-Linux systems."
 msgstr ""
+"A Sambával a szerverének fájl és nyomtatási erőforrásait nem Linux "
+"munkaállomások rendszerein is használhatja."
 
 #: ../bin/draksambashare:1082
 #, c-format
 msgid "PDC server: primary domain controller"
-msgstr ""
+msgstr "PDC kiszolgáló: elsődleges domainvezérlő"
 
 #: ../bin/draksambashare:1082
 #, c-format
@@ -2306,12 +2311,16 @@ msgid ""
 "Server configured as a PDC is responsible for Windows authentication "
 "throughout the domain."
 msgstr ""
+"A kiszolgáló beállítva PDC-nek, a domain Windows azonosítási folyamatát "
+"végzi."
 
 #: ../bin/draksambashare:1082
 #, c-format
 msgid ""
 "Single server installations may use smbpasswd or tdbsam password backends"
 msgstr ""
+"Egyszerű kiszolgálótelepítéshez szükség lehet az smbpasswd vagy tdbsam "
+"jelszókezelő felületekre"
 
 #: ../bin/draksambashare:1082
 #, c-format
@@ -2319,26 +2328,28 @@ msgid ""
 "Domain master = yes, causes the server to register the NetBIOS name <pdc "
 "name>. This name will be recognized by other servers."
 msgstr ""
+"Domain master = yes esetén szükséges a kiszolgáló <pdc name> NetBIOS nevének "
+"regisztrálására. Ez a név különbözteti meg a többi kiszolgálójától."
 
 #: ../bin/draksambashare:1099
 #, c-format
 msgid "Wins support:"
-msgstr ""
+msgstr "Wins támogatás:"
 
 #: ../bin/draksambashare:1100
-#, fuzzy, c-format
+#, c-format
 msgid "admin users:"
-msgstr "Rendszergazdai jogú felhasználók"
+msgstr "Rendszergazdai jogú felhasználók:"
 
 #: ../bin/draksambashare:1100
 #, c-format
 msgid "root @adm"
-msgstr ""
+msgstr "root @adm"
 
 #: ../bin/draksambashare:1101
 #, c-format
 msgid "Os level:"
-msgstr ""
+msgstr "Os szint:"
 
 #: ../bin/draksambashare:1101
 #, c-format
@@ -2349,41 +2360,45 @@ msgid ""
 "that of the operating system on your network with the highest current value. "
 "ie: os level = 34"
 msgstr ""
+"Az általános os szint meghatározza az operációs rendszernek azt a szintjét, "
+"amit a Samba mutat egy böngészés alatt.  Ha Ön a Sambája a \"master browser"
+"\", akkor be tudja állítani a hálózatán elérhető legmagasabb operációs "
+"szintet. Pl.: os szint = 34"
 
 #: ../bin/draksambashare:1105
 #, c-format
 msgid "The domain is wrong."
-msgstr ""
+msgstr "A domain hibás."
 
 #: ../bin/draksambashare:1112
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup"
-msgstr "Kikényszerített csoport"
+msgstr "Munkacsoport"
 
 #: ../bin/draksambashare:1112
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
-msgstr ""
+msgstr "A Samba egy Windows Munkacsoport meghatározását igényli."
 
 #: ../bin/draksambashare:1119 ../bin/draksambashare:1183
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup:"
-msgstr "Kikényszerített csoport"
+msgstr "Munkacsoport:"
 
 #: ../bin/draksambashare:1120
-#, fuzzy, c-format
+#, c-format
 msgid "Netbios name:"
-msgstr "Gépnév:"
+msgstr "Netbios név:"
 
 #: ../bin/draksambashare:1124
 #, c-format
 msgid "The Workgroup is wrong."
-msgstr ""
+msgstr "A Munkacsoport hibás."
 
 #: ../bin/draksambashare:1131 ../bin/draksambashare:1141
-#, fuzzy, c-format
+#, c-format
 msgid "Security mode"
-msgstr "Biztonsági szabályzatok"
+msgstr "Biztonsági mód"
 
 #: ../bin/draksambashare:1131
 #, c-format
@@ -2391,11 +2406,13 @@ msgid ""
 "User level: the client sends a session setup request directly following "
 "protocol negotiation. This request provides a username and password."
 msgstr ""
+"Felhasználó szint: a kliens küld egy kérést a munkafolyamat protokolljának "
+"beállításához. A kérés egy felhasználónév - jelszó párost tartalmaz."
 
 #: ../bin/draksambashare:1131
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
+msgstr "Megosztási szint: a kliens azonositja a különböző megosztásokat"
 
 #: ../bin/draksambashare:1131
 #, c-format
@@ -2404,38 +2421,41 @@ msgid ""
 "in a central, shared, account repository. The centralized account repository "
 "is shared between domain (security) controllers."
 msgstr ""
+"Domain szint: ez a módszer minden felhasználót és minden jelszót egy "
+"központi helyen, - az osztott hozzáférés-megosztásban - tárol, és kezel. Az "
+"osztott hozzáférés-megosztásról a domain (biztonsági) vezérlő gondoskodik."
 
 #: ../bin/draksambashare:1142
-#, fuzzy, c-format
+#, c-format
 msgid "Hosts allow"
-msgstr "Gépnév"
+msgstr "Elfogadott gépnevek"
 
 #: ../bin/draksambashare:1147
 #, c-format
 msgid "Server Banner."
-msgstr ""
+msgstr "Kiszolgáló üzenete."
 
 #: ../bin/draksambashare:1147
 #, c-format
 msgid ""
 "The banner is the way this server will be described in the Windows "
 "workstations."
-msgstr ""
+msgstr "Az üzenetet minden Windows munkaállomáson meg fog jelenni."
 
 #: ../bin/draksambashare:1152
 #, c-format
 msgid "Banner:"
-msgstr ""
+msgstr "Üzenet:"
 
 #: ../bin/draksambashare:1156
 #, c-format
 msgid "The Server Banner is incorrect."
-msgstr ""
+msgstr "A szerverüzenet hibás."
 
 #: ../bin/draksambashare:1163
-#, fuzzy, c-format
+#, c-format
 msgid "Samba Log"
-msgstr "Samba-felhasználók"
+msgstr "Samba-napló"
 
 #: ../bin/draksambashare:1163
 #, c-format
@@ -2443,36 +2463,40 @@ msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
 "connects"
 msgstr ""
+"Naplófájl: használjon egy %m fájlt a számítógéphez történő csatlakozások "
+"adatainak rögzítésére."
 
 #: ../bin/draksambashare:1163
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
 msgstr ""
+"Naplózás szintje: a naplózás bőbeszédűségét szabályozza (0 <= szint <= 10)"
 
 #: ../bin/draksambashare:1163
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
+msgstr "Max naplóméret: a naplófájl vágása ennél a méretnél történik (Kb-ban)"
 
 #: ../bin/draksambashare:1170 ../bin/draksambashare:1185
-#, fuzzy, c-format
+#, c-format
 msgid "Log file:"
-msgstr "Profil"
+msgstr "Naplófájl"
 
 #: ../bin/draksambashare:1171
 #, c-format
 msgid "Max log size:"
-msgstr ""
+msgstr "Max naplóméret:"
 
 #: ../bin/draksambashare:1172
-#, fuzzy, c-format
+#, c-format
 msgid "Log level:"
-msgstr "Szint"
+msgstr "Naplózási szint"
 
 #: ../bin/draksambashare:1177
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
 msgstr ""
+"A varázsló használatával adja meg a Samba beállításához szükséges adatokat."
 
 #: ../bin/draksambashare:1177
 #, c-format
@@ -2480,6 +2504,8 @@ msgid ""
 "To accept these values, and configure your server, click the Next button or "
 "use the Back button to correct them."
 msgstr ""
+"Az értékek elfogadásához, és a kiszolgáló beállításához kattintson a "
+"Következő gombra vagy a Vissza gombbal menjen vissza javításokat végezni."
 
 #: ../bin/draksambashare:1177
 #, c-format
@@ -2487,31 +2513,33 @@ msgid ""
 "If you have previously create some shares, they will appear in this "
 "configuration. Run 'drakwizard sambashare' to manage your shares."
 msgstr ""
+"Ha előzőleg már létrehozott megosztásokat, akkor azokat látni fogja. A "
+"megosztásai kezeléséhez futtassa a 'drakwizard sambashare' parancsot."
 
 #: ../bin/draksambashare:1182
-#, fuzzy, c-format
+#, c-format
 msgid "Samba type:"
-msgstr "Samba-felhasználók"
+msgstr "Samba-típus:"
 
 #: ../bin/draksambashare:1184
 #, c-format
 msgid "Server banner:"
-msgstr ""
+msgstr "Kiszolgáló üzenete:"
 
 #: ../bin/draksambashare:1199
-#, fuzzy, c-format
+#, c-format
 msgid "The wizard successfully configured your Samba server."
-msgstr "A varázsló felvette a Samba-nyomtatómegosztást."
+msgstr "A varázsló sikeresen beállította a Samba kiszolgálót."
 
 #: ../bin/draksambashare:1213
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to configure Samba server."
-msgstr "Nem sikerült módosítani a Samba-megosztást."
+msgstr "Nem sikerült beállítani a Samba-kiszolgálót."
 
 #: ../bin/draksambashare:1263
 #, c-format
 msgid "The Samba wizard has unexpectedly failed:"
-msgstr ""
+msgstr "A Samba-beállítás sikertelenségének oka:"
 
 #: ../bin/draksambashare:1277
 #, c-format
