@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
 "POT-Creation-Date: 2008-01-31 11:33+0100\n"
-"PO-Revision-Date: 2008-02-20 10:06+0100\n"
+"PO-Revision-Date: 2008-02-20 21:23+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Euskara <eu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -1587,7 +1587,7 @@ msgid ""
 "read and write requests on this NFS volume. The default is to disallow any "
 "request which changes the filesystem. This can also be made explicit by "
 "using this option."
-msgstr ""
+msgstr "<span foreground=\"royalblue3\">%s</span> irakurri soilik edo irakurri eta idazteko eskaerak onartu NFS bolumen honetan. Lehenetsia fitxategi sistema aldatzen duen eskaera oro ukatzea da. Hau esplizituki ere egin daiteke aukera hau erabiliz."
 
 #: ../bin/draknfs:179
 #, c-format
@@ -1595,7 +1595,7 @@ msgid ""
 "<span foreground=\"royalblue3\">%s</span> disallows the NFS server to "
 "violate the NFS protocol and to reply to requests before any changes made by "
 "these requests have been committed to stable storage (e.g. disc drive)."
-msgstr ""
+msgstr "<span foreground=\"royalblue3\">%s</span> NFS zerbitzariak NFS protokoloa bortxatu eta eskaerek eragindako aldaketak biltegi egonkor batean (adib. disko unitate bat) burutu aurretik eskaera hauei erantzutea ekiditen du."
 
 #: ../bin/draknfs:180
 #, c-format
@@ -1603,7 +1603,7 @@ msgid ""
 "<span foreground=\"royalblue3\">%s</span> enable subtree checking which can "
 "help improve security in some cases, but can decrease reliability. See "
 "exports(5) man page for more details."
-msgstr ""
+msgstr "<span foreground=\"royalblue3\">%s</span> azpizuhaitzaren egiaztapena gaitu, segurtasuna hobetzen lagundu dezake zenbait kasutan, baino fidagarritasuna murriztu dezake. Begiratu exports(5) man man orria xehetasun bila."
 
 #: ../bin/draknfs:185 ../bin/draksambashare:632 ../bin/draksambashare:799
 #, c-format
@@ -1694,7 +1694,7 @@ msgstr "Partekatu Direktorioa"
 #: ../bin/draknfs:497
 #, c-format
 msgid "Hosts Wildcard"
-msgstr ""
+msgstr "Baimendutako ostalariak"
 
 #: ../bin/draknfs:497
 #, c-format
@@ -2405,7 +2405,7 @@ msgstr "Samba log"
 msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
 "connects"
-msgstr ""
+msgstr "Egunkari fitxategia: erabili 'fitxategi.%m' konektatzen den makina bakoitzarentzako egunkari fitxategi propioa erabiltzeko"
 
 #: ../bin/draksambashare:1163
 #, c-format
@@ -3240,6 +3240,11 @@ msgid ""
 "group is one of the following: modp768, modp1024, modp1536.\n"
 "Or you can define 1, 2, or 5 as the DH group number."
 msgstr ""
+"definitu Diffie-Hellman esponentziazio taldeak.\n"
+"Ez baduzu PFS behar, zuzentarau hau ahaztu dezakezu.\n"
+"Edozein proposamen onartuko da ez baduzu batere zehazten.\n"
+"Taldea hauetako bat da: modp768, modp1024, modp1536.\n"
+"Edo 1, 2, edo 5 definitu dezakezu DH talde zenbaki bezala."
 
 #: ../bin/drakvpn-old:693
 #, c-format
@@ -3312,7 +3317,7 @@ msgstr "Konpresio algoritmoa"
 #: ../bin/drakvpn-old:733
 #, c-format
 msgid "deflate"
-msgstr ""
+msgstr "hustu"
 
 #: ../bin/drakvpn-old:740
 #, c-format
@@ -3333,6 +3338,15 @@ msgid ""
 "remote anonymous\n"
 "remote ::1 [8000]"
 msgstr ""
+"remote (helbidea | anonymous) [[ataka]] { adierazpenak }\n"
+"IKE lehen faserako parametroak zehazten ditu urruneko nodo bakoitzerako.\n"
+"Ataka lehenetsia 500 da. 'anonymous' zehazten bada, adierazpenak\n"
+"beste urruneko zuzentarau batekin bat egiten ez duen pareko orori\n egokitzen zaio.\n"
+"\n"
+"Adibideak: \n"
+"\n"
+"remote anonymous\n"
+"remote ::1 [8000]"
 
 #: ../bin/drakvpn-old:749
 #, c-format
@@ -3349,6 +3363,12 @@ msgid ""
 "modes are acceptable. The first exchange mode is what\n"
 "racoon uses when it is the initiator.\n"
 msgstr ""
+"lehen faserako truke modua definitzen du racoon-ek negoziaketa\n"
+"hasten duenean. Racoon erantzuten duena denean truke modu\n"
+"onargarria ere adierazten du. Modu bat baino gehiago zehaztu\n"
+"daiteke koma bitartez banandu ezkero. Modu guztiak onargarriak\n"
+"dira. Lehenengo truke modua racoon-ek negoziaketa hasten\n"
+"duenean erabiltzen duena da.\n"
 
 #: ../bin/drakvpn-old:757
 #, c-format
@@ -3502,7 +3522,7 @@ msgid ""
 "\n"
 "For other transforms, this statement should not be used."
 msgstr ""
-"zehaztu lehen aldiko negoziaketan erabili beharreko\n"
+"zehaztu lehen faseko negoziaketan erabili beharreko\n"
 "zifraketa algoritmoa. Zuzentarau hau definitu behar da.\n"
 "Algoritmoa hauetako bat izan behar da: \n"
 "\n"
@@ -4077,7 +4097,7 @@ msgstr "Moldagailu txartela"
 #: ../lib/network/connection/dvb.pm:57
 #, c-format
 msgid "Net demux"
-msgstr ""
+msgstr "Sare demux"
 
 #: ../lib/network/connection/dvb.pm:58
 #, c-format
@@ -4574,7 +4594,7 @@ msgstr "Firmware fitxategiak behar dira gailu honekin."
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
 "switch) first."
-msgstr ""
+msgstr "Zure sareko irrati txartela ezgaituta dago, mesedez gaitu irrati etengailua lehenengo."
 
 #: ../lib/network/connection/wireless.pm:322
 #, c-format
