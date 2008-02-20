@@ -61,6 +61,7 @@ sub setup_connection {
             return;
         }
     }
+    $cmanager->{connection}{passed_setup} = 1;
 }
 
 sub load_settings {
@@ -78,6 +79,12 @@ sub load_settings {
 
 sub configure_connection {
     my ($cmanager) = @_;
+
+    if (!$cmanager->{connection}{passed_setup}) {
+        setup_connection($cmanager);
+        update_on_status_change($cmanager);
+        return;
+    }
 
     load_settings($cmanager);
 
@@ -294,9 +301,18 @@ sub update_on_status_change {
     $cmanager->{gui}{buttons}{connect_stop}->set_sensitive($cmanager->{connection} && $cmanager->{connection}->get_status)
       if $cmanager->{gui}{buttons}{connect_stop};
 
-    my $may_have_network = $cmanager->{connection} &&
-      (!$cmanager->{connection}->can('get_networks') || $cmanager->{connection}{network});
-    $cmanager->{gui}{buttons}{configure}->set_sensitive($may_have_network)
+    my $allow_configure;
+    if ($cmanager->{connection}) {
+        my $may_have_network =
+          !$cmanager->{connection}->can('get_networks') ||
+          $cmanager->{connection}{network};
+        $cmanager->{connection}{passed_setup} =
+          !$cmanager->{connection}->can("check_device") ||
+          $cmanager->{connection}->check_device;
+        $allow_configure = $may_have_network || !$cmanager->{connection}{passed_setup};
+    }
+
+    $cmanager->{gui}{buttons}{configure}->set_sensitive($allow_configure)
       if $cmanager->{gui}{buttons}{configure};
 
     my $has_interface = to_bool($cmanager->{connection} && $cmanager->{connection}->get_interface);
