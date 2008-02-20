@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
 "POT-Creation-Date: 2008-01-31 11:33+0100\n"
-"PO-Revision-Date: 2008-02-19 12:59+0100\n"
+"PO-Revision-Date: 2008-02-20 10:06+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Euskara <eu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -1252,7 +1252,7 @@ msgstr "Pasahitz bat behar da."
 msgid ""
 "This tool allows to set up network interfaces failover and firewall "
 "replication."
-msgstr ""
+msgstr "Tresna honek sareko interfazeen akatsak gainditzea eta suhesi erreplikazioa ezarri ditzake."
 
 #: ../bin/drakinvictus:102
 #, c-format
@@ -1523,6 +1523,26 @@ msgid ""
 "<span foreground=\"royalblue3\">anonuid and anongid:</span> explicitly set "
 "the uid and gid of the anonymous account.\n"
 msgstr ""
+"<span weight=\"bold\">Erabiltzailearen ID aukerak</span>\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">mapeatu root erabiltzailea anonimo bezala:</span> mapeatu"
+"uid/gid 0 duten eskaerak uid/gid (root_squash) anonimora.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">onartu urruneko root sarbide "
+"erreala:</span> itzaldu "
+"root squashing. Aukera hau gehien bat diskoak ez dituzten bezeroentzako erabilgarria da (no_root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">mapeatu erabiltzaile guztiak"
+"erabiltzaile anonimora:</span> mapeatu"
+"uid eta gid guztiak erabiltzaile anonimora (all_squash). Erabilgarria "
+"NFS bitartez esportatutako FTP direktorio publikoentzako, berrien spool "
+"direktorioak, etabar. Kontrako aukera UID ez mapeatzea da (no_all_squash), aukera lehenetsia.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">anonuid eta anongid:</span> kontu anonimoen uid eta gid esplizituki ezarri.\n"
 
 #: ../bin/draknfs:171
 #, c-format
@@ -1556,6 +1576,9 @@ msgid ""
 "originate on an internet port less than IPPORT_RESERVED (1024). This option "
 "is on by default."
 msgstr ""
+"<span foreground=\"royalblue3\">%s</span> aukera honek eskaerek bere "
+"jatorria IPPORT_RESERVED (1024) baino ataka txikiagoan izan dezaten behar "
+"du. Aukera hau jarrita dago era lehenetsian."
 
 #: ../bin/draknfs:178
 #, c-format
@@ -2335,7 +2358,7 @@ msgstr "Erabiltzaile maila: erabiltzaileak saio ezarpen eskaera bat zuzenean bid
 #: ../bin/draksambashare:1131
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
+msgstr "Partekatze maila: bezeroa partekatutako baliabide bakoitzera egiaztatzen da"
 
 #: ../bin/draksambashare:1131
 #, c-format
@@ -2343,12 +2366,12 @@ msgid ""
 "Domain level: provides a mechanism for storing all user and group accounts "
 "in a central, shared, account repository. The centralized account repository "
 "is shared between domain (security) controllers."
-msgstr ""
+msgstr "Domeinu maila: Erabiltzaile eta talde guztien kontuak, kontu gordetegi zentralizatu, partekatu batean gordetzeko mekanismoak hornitzen ditu. Kontu gordetegi zentralizatua domeinu (segurtasun) kontrolatzaileen artean partekatzen da."
 
 #: ../bin/draksambashare:1142
 #, c-format
 msgid "Hosts allow"
-msgstr ""
+msgstr "Ostalariak onartu"
 
 #: ../bin/draksambashare:1147
 #, c-format
@@ -2387,12 +2410,12 @@ msgstr ""
 #: ../bin/draksambashare:1163
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
-msgstr ""
+msgstr "Egunkari maila: ezarri egunkariaren (hitz-jario) maila (0 <= egunkari maila <= 10)"
 
 #: ../bin/draksambashare:1163
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
+msgstr "Egunkariaren gehienezko neurria: egunkari fitxategien neurria mugatu (Kb-tan)."
 
 #: ../bin/draksambashare:1170 ../bin/draksambashare:1185
 #, c-format
@@ -2426,7 +2449,7 @@ msgstr "Balio hauek onartu, eta zure zerbitzaria konfiguratzeko, klikatu 'Hurren
 msgid ""
 "If you have previously create some shares, they will appear in this "
 "configuration. Run 'drakwizard sambashare' to manage your shares."
-msgstr ""
+msgstr "Aurrez baliabideak partekatu badituzu, konfiguraketa honetan agertuko dira. Exekutatu 'drakwizard sambashare' zure partekatzeak kudeatzeko."
 
 #: ../bin/draksambashare:1182
 #, c-format
@@ -2676,7 +2699,7 @@ msgstr "Segurtasun Politikak"
 #: ../bin/drakvpn-old:222
 #, c-format
 msgid "IKE daemon racoon"
-msgstr ""
+msgstr "racoon IKE deabrua"
 
 #: ../bin/drakvpn-old:224
 #, c-format
@@ -2897,6 +2920,14 @@ msgid ""
 "\n"
 "Choose the section you would like to add.\n"
 msgstr ""
+"Atalak 'erantsi' urratsa.\n"
+"\n"
+"Hemen azpian dago racoon.conf fitxategiaren eskema:\n"
+"\t'path'\n"
+"\t'remote'\n"
+"\t'sainfo'\n"
+"\n"
+"Hautatu erantsi nahi duzun atala.\n"
 
 #: ../bin/drakvpn-old:432
 #, c-format
@@ -2922,6 +2953,11 @@ msgid ""
 "\n"
 "Put your mouse over the certificate entry to obtain online help."
 msgstr ""
+"'bidea erantsi' atal urratsa.\n"
+"\n"
+"Bide atalak zure racoon.conf fitxategiaren gainaldean egon behar dira.\n"
+"\n"
+"Ipini zure sagua ziurtagiri sarreraren gainean lerroko laguntza lortzeko."
 
 #: ../bin/drakvpn-old:443
 #, c-format
@@ -2966,6 +3002,11 @@ msgid ""
 "You can now choose the remote settings.\n"
 "Choose continue or previous when you are done.\n"
 msgstr ""
+"Ziurtatu bide atalak dagoeneko zure racoon.conf\n"
+"fitxategiaren gainaldean dituzula.\n"
+"\n"
+"Orain urruneko ezarpenak aukeratu ditzakezu.\n"
+"Hautatu jarraitu edo aurrekoa amaitu duzunean.\n"
 
 #: ../bin/drakvpn-old:507
 #, c-format
@@ -2976,6 +3017,11 @@ msgid ""
 "You can now choose the sainfo settings.\n"
 "Choose continue or previous when you are done.\n"
 msgstr ""
+"Ziurtatu bide atalak dagoeneko zure %s\n"
+"fitxategiaren gainaldean dituzula.\n"
+"\n"
+"Orain sainfo ezarpenak aukeratu ditzakezu.\n"
+"Hautatu jarraitu edo aurrekoa amaitu duzunean.\n"
 
 #: ../bin/drakvpn-old:524
 #, c-format
@@ -3035,6 +3081,15 @@ msgid ""
 "\n"
 "Choose continue or previous when you are done.\n"
 msgstr ""
+"Atal hau zure %s fitxategiaren gainaldean\n"
+"egon behar da.\n"
+"\n"
+"Ziurtatu beste atal guztiek bide atal hauek\n"
+"jarraitzen dituztela.\n"
+"\n"
+"Orain bide sarrerak editatu ditzakezu.\n"
+"\n"
+"Hautatu jarraitu edo aurrekoa amaitu duzunean.\n"
 
 #: ../bin/drakvpn-old:559
 #, c-format
@@ -3057,6 +3112,13 @@ msgid ""
 "You should make sure that the tunnels shorewall\n"
 "section is configured."
 msgstr ""
+"Guztia konfiguratu da.\n"
+"\n"
+"Orain Internetean zehar baliabideak partekatu ditzakezu,\n"
+"era seguruan, VPN lotura bat erabiliz.\n"
+"\n"
+"Tunelei buruzko shorewall atala konfiguratuta\n"
+"dagoela ziurtatu beharko zenuke."
 
 #: ../bin/drakvpn-old:620
 #, c-format
@@ -3182,7 +3244,7 @@ msgstr ""
 #: ../bin/drakvpn-old:693
 #, c-format
 msgid "Lifetime number"
-msgstr ""
+msgstr "Bizitza iraupen balioa"
 
 #: ../bin/drakvpn-old:694
 #, c-format
@@ -3208,7 +3270,7 @@ msgstr ""
 #: ../bin/drakvpn-old:710
 #, c-format
 msgid "Lifetime unit"
-msgstr ""
+msgstr "Bizitza iraupen unitatea"
 
 #: ../bin/drakvpn-old:712
 #, c-format
@@ -3275,7 +3337,7 @@ msgstr ""
 #: ../bin/drakvpn-old:749
 #, c-format
 msgid "Exchange mode"
-msgstr ""
+msgstr "Trukatzeko modua"
 
 #: ../bin/drakvpn-old:751
 #, c-format
@@ -3334,6 +3396,9 @@ msgid ""
 "to on.  The default value is off.  It is useful for a\n"
 "server."
 msgstr ""
+"Negoziaketa hasi nahi ez baduzu, ezarri baiezkoa aukera\n"
+"honetan. Balio lehenetsia ezezkoa da. Zerbitzari batentzako\n"
+"baliogarria da."
 
 #: ../bin/drakvpn-old:778
 #, c-format
@@ -3381,6 +3446,8 @@ msgid ""
 "If you do not want to verify the peer's certificate for\n"
 "some reason, set this to off.  The default is on."
 msgstr ""
+"Edozein arrazoi dela, parekoaren ziurtagiria ez baduzu egiaztatu\n"
+"nahi, ezarri hau ezezkoan. Lehenetsia baiezkoa da."
 
 #: ../bin/drakvpn-old:790
 #, c-format
@@ -3435,6 +3502,13 @@ msgid ""
 "\n"
 "For other transforms, this statement should not be used."
 msgstr ""
+"zehaztu lehen aldiko negoziaketan erabili beharreko\n"
+"zifraketa algoritmoa. Zuzentarau hau definitu behar da.\n"
+"Algoritmoa hauetako bat izan behar da: \n"
+"\n"
+"DES, 3DES, blowfish, cast128 oakley-rentzako.\n"
+"\n"
+"Beste transformatutetarako, ez litzateke adierazpen hau erabili behar."
 
 #: ../bin/drakvpn-old:821
 #, c-format
@@ -3923,7 +3997,7 @@ msgstr "Lotura sumatu da %s interfazean"
 #: ../lib/network/connection.pm:252 ../lib/network/connection/ethernet.pm:274
 #, c-format
 msgid "Link beat lost on interface %s"
-msgstr ""
+msgstr "Lotura taupada galdu da %s interfazean"
 
 #: ../lib/network/connection/cable.pm:13
 #, c-format
@@ -3953,7 +4027,7 @@ msgstr "Bluetooth"
 #: ../lib/network/connection/cellular_bluetooth.pm:11
 #, c-format
 msgid "Bluetooth Dial Up Networking"
-msgstr ""
+msgstr "Bluetooth sare lotura"
 
 #: ../lib/network/connection/cellular_card.pm:8
 #, c-format
@@ -4018,7 +4092,7 @@ msgstr "Ethernet"
 #: ../lib/network/connection/ethernet.pm:53
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
-msgstr ""
+msgstr "Ezin da aukeratutako gailuarentzako sare interfazea aurkitu (%s gidaria erabiltzen)."
 
 #: ../lib/network/connection/ethernet.pm:61 ../lib/network/vpn/openvpn.pm:207
 #, c-format
@@ -4071,7 +4145,7 @@ msgstr ""
 #: ../lib/network/connection/ethernet.pm:149
 #, c-format
 msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
-msgstr ""
+msgstr "Zeroconf-era atzera ez egin (169.254.0.0 sarea)"
 
 #: ../lib/network/connection/ethernet.pm:170
 #, c-format
@@ -4091,22 +4165,22 @@ msgstr "Gaitu IPv6-tik IPv4-ra tunela"
 #: ../lib/network/connection/ethernet.pm:273
 #, c-format
 msgid "Link beat detected on interface %s"
-msgstr ""
+msgstr "Lotura taupada sumatu da %s interfazean"
 
 #: ../lib/network/connection/ethernet.pm:276
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
-msgstr ""
+msgstr "%s interfazean sare helbide bat eskatzen (%s protokoloa)..."
 
 #: ../lib/network/connection/ethernet.pm:277
 #, c-format
 msgid "Got a network address on interface %s (%s protocol)"
-msgstr ""
+msgstr "%s interfazeak sareko helbide bat lortu du (%s protokoloa)"
 
 #: ../lib/network/connection/ethernet.pm:278
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
-msgstr ""
+msgstr "%s interfazeak ezin izan du sareko helbide bat lortu (%s protokoloa)"
 
 #: ../lib/network/connection/isdn.pm:8
 #, c-format
@@ -4656,7 +4730,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:411
 #, c-format
 msgid "Allow access point roaming"
-msgstr ""
+msgstr "Sarbide puntuen ibiltaritza onartu"
 
 #: ../lib/network/connection/wireless.pm:514
 #, c-format
@@ -4696,7 +4770,7 @@ msgstr ""
 msgid ""
 "Modems using Conexant AccessRunner chipsets cannot be supported due to "
 "binary firmware distribution problem."
-msgstr ""
+msgstr "Conexant AccessRunner chipset-ak erabiltzen dituzten modemei ezin zaie euskarririk eman firmware bitarraren banaketa arazoengatik."
 
 #: ../lib/network/connection/xdsl.pm:184
 #, c-format
@@ -4947,15 +5021,14 @@ msgid "Log firewall messages in system logs"
 msgstr "Erregistratu suhesiaren mezuak sistemaren erregistroetan"
 
 #: ../lib/network/drakfirewall.pm:256
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You can be warned when someone accesses to a service or tries to intrude "
 "into your computer.\n"
 "Please select which network activities should be watched."
 msgstr ""
-"Norbait zerbitzuren batera sartu edo zure konputagailuan muturra sartzen "
-"saiatzen bada oharra jaso dezakezu.\n"
-"Mesedez aukeratu zein sare jarduera gainbegiratu behar den."
+"Norbait zure konputagailuan muturra sartzen saiatu edo zerbitzu batera sartzen bada ohartarazia izan zaitezke.\n"
+"Mesedez aukeratu zein sare jarduera gainbegiratu behar diren."
 
 #: ../lib/network/drakfirewall.pm:261
 #, c-format
@@ -5057,6 +5130,10 @@ msgid ""
 "It can be done by reconfiguring the network connection and selecting this "
 "VPN connection.\n"
 msgstr ""
+"VPN lotura orain konfiguratuta dago.\n"
+"\n"
+"VPN lotura hau sare lotura batekin automatikoki abiarazi daiteke.\n"
+"Sare lotura birkonfiguratu eta VPN lotura hau aukeratuz egin daiteke.\n"
 
 #: ../lib/network/ifw.pm:129
 #, c-format
@@ -5103,7 +5180,7 @@ msgstr "\"%s\" eraso bat egiten saiatu da %s"
 msgid ""
 "The \"%s\" application is trying to make a service (%s) available to the "
 "network."
-msgstr ""
+msgstr "\"%s\" aplikazioa zerbitzu bat (%s) sarean eskuragarri jartzen saiatzen ari da."
 
 #. -PO: this should be kept lowercase since the expression is meant to be used between brackets
 #: ../lib/network/ifw.pm:150
@@ -5259,7 +5336,7 @@ msgstr ""
 #: ../lib/network/netconnect.pm:293 ../lib/network/netconnect.pm:663
 #, c-format
 msgid "Connection control"
-msgstr ""
+msgstr "Lotura agintea"
 
 #: ../lib/network/netconnect.pm:323
 #, c-format
@@ -5782,9 +5859,9 @@ msgid "FTP proxy"
 msgstr "FTP proxy-a"
 
 #: ../lib/network/network.pm:435
-#, fuzzy, c-format
+#, c-format
 msgid "No proxy for (comma separated list):"
-msgstr "koma bidez bereizitako %d kate"
+msgstr "Ez dago honentzako proxy (koma bidez bereizitako zerrenda):"
 
 #: ../lib/network/network.pm:440
 #, c-format
@@ -5792,9 +5869,9 @@ msgid "Proxy should be http://..."
 msgstr "Proxy-ak http://... izan behar du"
 
 #: ../lib/network/network.pm:441
-#, fuzzy, c-format
+#, c-format
 msgid "Proxy should be http://... or https://..."
-msgstr "Proxya https?://... izan beharko litzateke"
+msgstr "Proxy izan beharko luke http://... edo https://..."
 
 #: ../lib/network/network.pm:442
 #, c-format
@@ -5811,16 +5888,22 @@ msgid ""
 "\n"
 "Which interfaces should be protected?\n"
 msgstr ""
+"Mesedez aukeratu suhesiak babestuko dituen interfazeak.\n"
+"\n"
+"Internetera zuzenean lotutako interfaze guztiak aukeratu beharko\n"
+"lirateke, bertako sarera lotutakoak berriz ez lirateke hautatu beharko.\n"
+"\n"
+"Zein interfaze babestu beharko lirateke?\n"
 
 #: ../lib/network/shorewall.pm:136
 #, c-format
 msgid "Keep custom rules"
-msgstr ""
+msgstr "Mantendu arau pertsonalizatuak"
 
 #: ../lib/network/shorewall.pm:137
 #, c-format
 msgid "Drop custom rules"
-msgstr ""
+msgstr "Bota arau pertsonalizatuak"
 
 #: ../lib/network/shorewall.pm:142
 #, c-format
@@ -5829,11 +5912,14 @@ msgid ""
 "rules that may conflict with the configuration that has just been set up.\n"
 "What do you want to do?"
 msgstr ""
+"Zure suhesiaren konfiguraketa eskuz editatu da eta oraintxe ezarri\n"
+"den konfiguraketarekin gatazkak sortu ditzaketen arauak dauzka.\n"
+"Zer egin nahi duzu?"
 
 #: ../lib/network/thirdparty.pm:135
 #, c-format
 msgid "Some components (%s) are required but aren't available for %s hardware."
-msgstr ""
+msgstr "Zenbait osagai (%s) behar dira baino ez daude %s hardwarearentzako eskuragarri."
 
 #: ../lib/network/thirdparty.pm:136
 #, c-format
@@ -5852,7 +5938,7 @@ msgstr ""
 #: ../lib/network/thirdparty.pm:139
 #, c-format
 msgid "The following component is missing: %s"
-msgstr ""
+msgstr "Ondoko osagaia falta da: %s"
 
 #: ../lib/network/thirdparty.pm:141
 #, c-format
@@ -5879,9 +5965,9 @@ msgid "Select file"
 msgstr "Hautatu fitxategia"
 
 #: ../lib/network/thirdparty.pm:191
-#, fuzzy, c-format
+#, c-format
 msgid "Please select the firmware file (for example: %s)"
-msgstr "Mesedez aukeratu Windows gidaria (.inf fitxategia)"
+msgstr "Mesedez hautatu firmware fitxategia (adibidez: %s)"
 
 #: ../lib/network/thirdparty.pm:215
 #, c-format
@@ -5930,7 +6016,7 @@ msgstr "Itxoin, gailuak konfiguratzeko komandoak exekutatzen..."
 #: ../lib/network/vpn/openvpn.pm:107
 #, c-format
 msgid "X509 Public Key Infrastructure"
-msgstr ""
+msgstr "X509 gako publikoen azpiegitura"
 
 #: ../lib/network/vpn/openvpn.pm:108
 #, c-format
@@ -5946,7 +6032,7 @@ msgstr "Mota"
 #: ../lib/network/vpn/openvpn.pm:142
 #, c-format
 msgid "Certificate Authority (CA)"
-msgstr ""
+msgstr "Ziurtagiri Agintaritza (CA)"
 
 #: ../lib/network/vpn/openvpn.pm:148
 #, c-format
@@ -5959,14 +6045,14 @@ msgid "Key"
 msgstr "Gakoa"
 
 #: ../lib/network/vpn/openvpn.pm:160
-#, fuzzy, c-format
+#, c-format
 msgid "TLS control channel key"
-msgstr "Ezkerreko Kontrol tekla"
+msgstr "TLS aginte kanalarentzako gakoa"
 
 #: ../lib/network/vpn/openvpn.pm:167
 #, c-format
 msgid "Key direction"
-msgstr ""
+msgstr "Gakoaren norabidea"
 
 #: ../lib/network/vpn/openvpn.pm:175
 #, c-format
@@ -6031,7 +6117,7 @@ msgstr "Lotura abiarazten..."
 #: ../lib/network/vpn/openvpn.pm:380
 #, c-format
 msgid "Please insert your token"
-msgstr ""
+msgstr "Mesedez sartu zure marka-ikurra"
 
 #: ../lib/network/vpn/vpnc.pm:9
 #, c-format
@@ -6046,7 +6132,7 @@ msgstr "Talde izena"
 #: ../lib/network/vpn/vpnc.pm:47
 #, c-format
 msgid "Group secret"
-msgstr ""
+msgstr "Taldearen sekretua"
 
 #: ../lib/network/vpn/vpnc.pm:52
 #, c-format
