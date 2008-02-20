@@ -475,13 +475,6 @@ sub network_is_configured {
     }
 }
 
-sub selected_network_is_configured {
-    my ($self) = @_;
-
-    my $network = $self->get_selected_network or return;
-    $self->network_is_configured($network);
-}
-
 sub prepare_connection {
     my ($self) = @_;
     if ($self->{control}{roaming}) {
