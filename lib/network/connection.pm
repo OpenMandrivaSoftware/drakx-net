@@ -119,6 +119,13 @@ sub get_selected_network {
     exists $self->{networks}{$self->{network}} && $self->{networks}{$self->{network}};
 }
 
+sub selected_network_is_configured {
+    my ($self) = @_;
+
+    my $network = $self->get_selected_network or return;
+    $self->network_is_configured($network);
+}
+
 sub load_interface_settings {
     my ($self) = @_;
     require network::network;

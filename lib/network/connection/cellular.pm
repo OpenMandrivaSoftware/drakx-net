@@ -30,11 +30,6 @@ sub network_is_configured {
     defined($self->load_cellular_settings);
 }
 
-sub selected_network_is_configured {
-    my ($self) = @_;
-    $self->network_is_configured($network);
-}
-
 sub write_cellular_settings {
     my ($self) = @_;
     my $file = $self->get_cellular_settings_file or return;
