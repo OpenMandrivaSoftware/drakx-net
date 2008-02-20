@@ -45,7 +45,7 @@ $in->do_pkgs->ensure_is_installed('samba-server', '/usr/sbin/smbd') or exit(1);
 #    err_dialog(N("Error"), N("Please setup a samba server")) and return;    
 #}
 
-
+my $draksambashare = "/etc/sysconfig/draksambashare_first";
 my $icon_path = "/usr/lib/libDrakX/icons";
 my $fileshare_icon = "$icon_path/IC-winacces2-16.png";
 my $printershare_icon = "$icon_path/IC-sambaprt-16.png";
@@ -192,7 +192,7 @@ sub get_items() {
                $license =~ s/\n/\n\n/sg; # nicer formatting
                my $w = gtknew('AboutDialog', name => N("Draksambashare"),
                               version => '2008',
-                              copyright => N("Copyright (C) %s by Mandriva", '2001-2007'),
+                              copyright => N("Copyright (C) %s by Mandriva", '2001-2008'),
                               license => $license, wrap_license => 1,
                               comments => N("This is a simple tool to easily manage Samba configuration."),
                               website => 'http://mandrivalinux.com',
@@ -388,8 +388,7 @@ sub add_entry() {
 						    my $comment = $addshare_comment->get_text;
 						    my $test_dir = $addshare_dir->get_text;
 						    foreach my $clef (keys %$samba) {
-							if ($clef =~
-								/\b$share\b/) {
+							if ($clef =~ /\b$share\b/) {
 							    err_dialog(N("Error"), N("Share with the same name already exist or share name empty, please choose another name.")) and return;
 							}
 						    }
@@ -534,16 +533,8 @@ sub add_printers_entry() {
 				  },
 		      }
 	    });
-  eval { $wiz->process($in) };
-  my $err = $@;
+  $wiz->process($in);
   $::isWizard = 0;
-  $::WizardWindow->destroy;
-  undef $::WizardTable;
-  undef $::WizardWindow;
-  #  gtkset_mousecursor_normal()
-  if ($err && $err !~ /wizcancel/) {
-      err_dialog(N("Error"), N("Failed to add printers.") . "\n\n" . $err);
-  }
 }
 
 sub modify_printers_entry {
@@ -1064,7 +1055,7 @@ sub configure_samba {
 			    pages => {
 				      welcome => {
 						  name => N("Samba server configuration Wizard") . "\n\n" . N("Samba allows your server to behave as a file and print server for workstations running non-Linux systems."),
-						  no_back => 1,
+						  #no_back => 1,
 						  pre => sub {
 						      $o->{var}{wiz_type} = "2";
 						  },
@@ -1196,6 +1187,7 @@ sub configure_samba {
 						  next => 'endconf',
 						 },
 				      endconf => {
+					  pre => sub { output($draksambashare, "draksambshare check") },
 					      name => N("Congratulations") . "\n\n" . N("The wizard successfully configured your Samba server."),
 						  no_back => 1,
 					      end => 1,
@@ -1203,15 +1195,8 @@ sub configure_samba {
 					     },
 				     },
 			   });
-  eval { $wiz->process($in) };
-  my $err = $@;
+  $wiz->process($in);
   $::isWizard = 0;
-  $::WizardWindow->destroy;
-  undef $::WizardTable;
-  undef $::WizardWindow;
-  if ($err && $err !~ /wizcancel/) {
-      err_dialog(N("Error"), N("Failed to configure Samba server.") . "\n\n" . $err);
-  }
 }
  
 sub global_special_options() {
@@ -1257,8 +1242,6 @@ sub global_special_options() {
 sub launch_samba_wizard() {
   eval { configure_samba() };
   my $err = $@;
-  $::WizardWindow->destroy if defined $::WizardWindow;
-  undef $::WizardWindow;
   if ($err && $err !~ /wizcancel/) {
     err_dialog(N("Error"), N("The Samba wizard has unexpectedly failed:") . "\n\n" . $err);
   }
@@ -1461,6 +1444,13 @@ gtkappend_page($nb, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 0),
 
 $nb->set_show_border(0);
 
+sub check_first_launch() {
+    if (!-f $draksambashare) {
+	info_dialog(N("Please configure your Samba server"), N("It seems this is the first time you run this tool.\nA wizard will appear to configure a basic Samba server"));
+	launch_samba_wizard();
+    }
+}
+
 # main interface
 $W->add(gtkpack_(Gtk2::VBox->new(0,0),
 		 0, $menu,
@@ -1471,5 +1461,6 @@ $W->add(gtkpack_(Gtk2::VBox->new(0,0),
 		 ),
 	);
 
+check_first_launch;
 $W->show_all;
 Gtk2->main;
