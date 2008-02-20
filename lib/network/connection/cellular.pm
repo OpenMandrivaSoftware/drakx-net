@@ -24,9 +24,15 @@ sub load_cellular_settings {
     -f $file && { getVarsFromSh($file) };
 }
 
+sub network_is_configured {
+    my ($self, $_network) = @_;
+    #- only one network is supported, assume it is configured if settings are available
+    defined($self->load_cellular_settings);
+}
+
 sub selected_network_is_configured {
     my ($self) = @_;
-    defined($self->load_cellular_settings);
+    $self->network_is_configured($network);
 }
 
 sub write_cellular_settings {
