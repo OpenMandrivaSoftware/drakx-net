@@ -299,7 +299,7 @@ sub install_packages {
 	my $optional = ref $settings->{$option} eq 'HASH' && $settings->{$option}{optional};
 	if (my @avalaible = get_available_packages($option, $in, @packages)) {
 	    log::explanations("Installing thirdparty packages ($option) " . join(', ', @avalaible));
-	    if ($in->do_pkgs->install(@avalaible) && check_installed($option, $settings, $in)) {
+	    if ($in->do_pkgs->install(@avalaible) && check_installed($option, $settings, $driver)) {
                 next;
 	    } elsif (!$optional) {
                 warn_not_installed($in, @avalaible);
