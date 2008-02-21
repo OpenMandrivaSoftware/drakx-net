@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mandriva drakx-net.cy\n"
 "POT-Creation-Date: 2008-01-31 11:33+0100\n"
-"PO-Revision-Date: 2007-09-25 23:16+0100\n"
+"PO-Revision-Date: 2008-02-20 20:18-0000\n"
 "Last-Translator: Rhoslyn Prys <post@meddal.com>\n"
 "Language-Team: Cymraeg <post@meddal.com>\n"
 "MIME-Version: 1.0\n"
@@ -19,12 +19,12 @@ msgstr ""
 #: ../bin/drakconnect:61 ../lib/network/netconnect.pm:118
 #, c-format
 msgid "Network & Internet Configuration"
-msgstr "Ffurfweddiad y Rhwydwaith a'r Rhyngrwyd"
+msgstr "Ffurfweddu y Rhwydwaith a'r Rhyngrwyd"
 
 #: ../bin/drakconnect:81
 #, c-format
 msgid "Network configuration (%d adapters)"
-msgstr "Ffurfweddiad y rhwydwaith (%d addasydd)"
+msgstr "Ffurfweddu'r rhwydwaith (%d addasydd)"
 
 #: ../bin/drakconnect:93 ../bin/drakconnect:813
 #, c-format
@@ -82,7 +82,7 @@ msgstr "Ffurfweddu enw gwestai..."
 #: ../bin/drakconnect:146 ../bin/drakconnect:851
 #, c-format
 msgid "LAN configuration"
-msgstr "Ffurfweddiad y Rhwydwaith Lleol"
+msgstr "Ffurfweddu'r Rhwydwaith Lleol"
 
 #: ../bin/drakconnect:151
 #, c-format
@@ -1945,19 +1945,19 @@ msgid "/_Samba Server"
 msgstr "/_Gweinydd Samba"
 
 #: ../bin/draksambashare:179
-#, fuzzy, c-format
+#, c-format
 msgid "/_Configure"
-msgstr "Ffurfweddu"
+msgstr "/_Ffurfweddu"
 
 #: ../bin/draksambashare:183
-#, fuzzy, c-format
+#, c-format
 msgid "/_Help"
-msgstr "Cymorth"
+msgstr "/_Cymorth"
 
 #: ../bin/draksambashare:183
-#, fuzzy, c-format
+#, c-format
 msgid "/Samba Documentation"
-msgstr "Darniad"
+msgstr "/Dogfennau Samba"
 
 #: ../bin/draksambashare:189 ../bin/draksambashare:190
 #, c-format
@@ -2245,22 +2245,22 @@ msgstr "Cyfrinair:"
 #: ../bin/draksambashare:1056
 #, c-format
 msgid "PDC - primary domain controller"
-msgstr ""
+msgstr "PDC - rheolwr prif barth "
 
 #: ../bin/draksambashare:1057
 #, c-format
 msgid "Standalone - standalone server"
-msgstr ""
+msgstr "Standalone - gweinydd unigol"
 
 #: ../bin/draksambashare:1063
-#, fuzzy, c-format
+#, c-format
 msgid "Samba Wizard"
-msgstr "Defnyddwyr Samba"
+msgstr "Dewin Samba"
 
 #: ../bin/draksambashare:1066
-#, fuzzy, c-format
+#, c-format
 msgid "Samba server configuration Wizard"
-msgstr "Rheoli ffurfweddiad Samba"
+msgstr "Dewin ffurfweddu gweinydd Samba"
 
 #: ../bin/draksambashare:1066
 #, c-format
@@ -2268,11 +2268,13 @@ msgid ""
 "Samba allows your server to behave as a file and print server for "
 "workstations running non-Linux systems."
 msgstr ""
+"Mae Samba'n caniatáu i'ch gweinydd ymddwyn fel gweinydd ffeiliau ac argraffu "
+"ar gyfer mannau gwaith sy'n rhedeg systemau ar wahân i Linux. "
 
 #: ../bin/draksambashare:1082
 #, c-format
 msgid "PDC server: primary domain controller"
-msgstr ""
+msgstr "Gweinydd PDC: rheolwr prif barth"
 
 #: ../bin/draksambashare:1082
 #, c-format
@@ -2280,12 +2282,16 @@ msgid ""
 "Server configured as a PDC is responsible for Windows authentication "
 "throughout the domain."
 msgstr ""
+"Mae gweinydd wedi ei ffurfweddu fel PDC yn gyfrifol am ddilysu Windows "
+"drwy'r parth cyfan."
 
 #: ../bin/draksambashare:1082
 #, c-format
 msgid ""
 "Single server installations may use smbpasswd or tdbsam password backends"
 msgstr ""
+"Gall osodiadau gweinydd sengl ddefnyddio cyfrineiriau cefn smbpasswd neu "
+"tdbsam"
 
 #: ../bin/draksambashare:1082
 #, c-format
@@ -2293,26 +2299,28 @@ msgid ""
 "Domain master = yes, causes the server to register the NetBIOS name <pdc "
 "name>. This name will be recognized by other servers."
 msgstr ""
+"Mae domain master = yes, yn achosi'r gweinydd i gofrestru'r enw NetBIOS <pdc "
+"name>. Bydd yr enw'n cael ei adnabod gan weinyddion eraill."
 
 #: ../bin/draksambashare:1099
 #, c-format
 msgid "Wins support:"
-msgstr ""
+msgstr "Cefnogaeth Wins:"
 
 #: ../bin/draksambashare:1100
-#, fuzzy, c-format
+#, c-format
 msgid "admin users:"
-msgstr "Defnyddiwr Gwein"
+msgstr "defnyddiwyr gweinyddol:"
 
 #: ../bin/draksambashare:1100
 #, c-format
 msgid "root @adm"
-msgstr ""
+msgstr "root @adm"
 
 #: ../bin/draksambashare:1101
 #, c-format
 msgid "Os level:"
-msgstr ""
+msgstr "Lefel SW:"
 
 #: ../bin/draksambashare:1101
 #, c-format
@@ -2323,41 +2331,45 @@ msgid ""
 "that of the operating system on your network with the highest current value. "
 "ie: os level = 34"
 msgstr ""
+"Mae dewis lefel system weithredu eang yn pennu'r lefel y bydd Samba yn "
+"ffugio yn ystod dewis porwr. Os ydych am i Samba ennill y dewis a dod yn "
+"brif borwr, yna gallwch osod y lefel uwchlaw'r system weithredu ar eich "
+"rhwydwaith gyda'r gwerth cyfredol uchaf, h.y. lefel sw = 34"
 
 #: ../bin/draksambashare:1105
 #, c-format
 msgid "The domain is wrong."
-msgstr ""
+msgstr "Maeth parth yn anghywir"
 
 #: ../bin/draksambashare:1112
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup"
-msgstr "Gorfodi grŵp"
+msgstr "Workgroup"
 
 #: ../bin/draksambashare:1112
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
-msgstr ""
+msgstr "Mae Samba angen gwybod i ba Windows Workgroup bydd yn gweini."
 
 #: ../bin/draksambashare:1119 ../bin/draksambashare:1183
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup:"
-msgstr "Gorfodi grŵp"
+msgstr "Workgroup:"
 
 #: ../bin/draksambashare:1120
-#, fuzzy, c-format
+#, c-format
 msgid "Netbios name:"
-msgstr "Enw gwesteiwr :"
+msgstr "Enw Netbios :"
 
 #: ../bin/draksambashare:1124
 #, c-format
 msgid "The Workgroup is wrong."
-msgstr ""
+msgstr "Mae'r Workgroup yn anghywir."
 
 #: ../bin/draksambashare:1131 ../bin/draksambashare:1141
-#, fuzzy, c-format
+#, c-format
 msgid "Security mode"
-msgstr "Polisïau Diogelwch"
+msgstr "Modd diogelwch"
 
 #: ../bin/draksambashare:1131
 #, c-format
@@ -2365,11 +2377,14 @@ msgid ""
 "User level: the client sends a session setup request directly following "
 "protocol negotiation. This request provides a username and password."
 msgstr ""
+"Lefel defnyddiwr: mae'r rhaglen angen anfon cais am osod sesiwn yn union "
+"wedi negodi'r protocol. Bydd y cais yn darparu enw defnyddiwr a chyfrinair."
 
 #: ../bin/draksambashare:1131
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
 msgstr ""
+"Lefel rhannu: mae'r rhaglen yn dilysu ei hun ar wahân ar gyfer pob rhaniad."
 
 #: ../bin/draksambashare:1131
 #, c-format
@@ -2378,16 +2393,19 @@ msgid ""
 "in a central, shared, account repository. The centralized account repository "
 "is shared between domain (security) controllers."
 msgstr ""
+"Lefel parth: mae'n darparu peirianwaith ar gyfer storio pob cyfrif "
+"defnyddiwr a grŵp mewn ystorfa cyfrif ranedig canolog. Mae'r ystorfa cyfrif "
+"ganolog yn cael ei rannu rhwng rheolyddion parth (diogelwch)."
 
 #: ../bin/draksambashare:1142
-#, fuzzy, c-format
+#, c-format
 msgid "Hosts allow"
-msgstr "Enw gwesteiwr"
+msgstr "Caniatâd gwesteiwyr"
 
 #: ../bin/draksambashare:1147
 #, c-format
 msgid "Server Banner."
-msgstr ""
+msgstr "Baner Gweinydd."
 
 #: ../bin/draksambashare:1147
 #, c-format
@@ -2395,21 +2413,23 @@ msgid ""
 "The banner is the way this server will be described in the Windows "
 "workstations."
 msgstr ""
+"Y faner yw'r ffordd mae'r gweinydd hwn yn cael ei ddisgrifio i'r mannau "
+"gwaith Windows."
 
 #: ../bin/draksambashare:1152
 #, c-format
 msgid "Banner:"
-msgstr ""
+msgstr "Baner:"
 
 #: ../bin/draksambashare:1156
 #, c-format
 msgid "The Server Banner is incorrect."
-msgstr ""
+msgstr "Mae'r Faner Gweinydd yn anghywir."
 
 #: ../bin/draksambashare:1163
-#, fuzzy, c-format
+#, c-format
 msgid "Samba Log"
-msgstr "Defnyddwyr Samba"
+msgstr "Cofnod Samba"
 
 #: ../bin/draksambashare:1163
 #, c-format
@@ -2417,36 +2437,40 @@ msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
 "connects"
 msgstr ""
+"Ffeil cofnod: defnyddio ffeil.%m i ddefnyddio ffeil cofnod gwahanol ar gyfer "
+"pob peiriant mae'n cysylltu iddynt"
 
 #: ../bin/draksambashare:1163
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
 msgstr ""
+"Lefel cofnod: gosod y cofnod (geiriogrwydd) lefel (0 <= lefel cofnod <= 10)"
 
 #: ../bin/draksambashare:1163
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
+msgstr "Mant confod mwyaf: gosod terfyn ar maint y feil cofnod (mewn kb)."
 
 #: ../bin/draksambashare:1170 ../bin/draksambashare:1185
-#, fuzzy, c-format
+#, c-format
 msgid "Log file:"
-msgstr "Proffiliau"
+msgstr "Ffeil cofnod:"
 
 #: ../bin/draksambashare:1171
 #, c-format
 msgid "Max log size:"
-msgstr ""
+msgstr "Maint cofnod mwyaf:"
 
 #: ../bin/draksambashare:1172
-#, fuzzy, c-format
+#, c-format
 msgid "Log level:"
-msgstr "Lefel"
+msgstr "Lefel cofnod:"
 
 #: ../bin/draksambashare:1177
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
 msgstr ""
+"Mae'r dewin wedi casglu'r paramedrau canlynol ar gyfer ffurfweddu Samba."
 
 #: ../bin/draksambashare:1177
 #, c-format
@@ -2454,6 +2478,8 @@ msgid ""
 "To accept these values, and configure your server, click the Next button or "
 "use the Back button to correct them."
 msgstr ""
+"I dderbyn y gwerthoedd hyn, a ffurfweddu eich gweinydd, cliciwch y botwm "
+"Nesaf neu ddefnyddio'r botwm Nôl i'w cywiro."
 
 #: ../bin/draksambashare:1177
 #, c-format
@@ -2461,31 +2487,33 @@ msgid ""
 "If you have previously create some shares, they will appear in this "
 "configuration. Run 'drakwizard sambashare' to manage your shares."
 msgstr ""
+"Os ydych wedi creu rhaniadau yng nghynt, byddant yn ymddangos yn y "
+"ffurfweddiad hwn. Rhedwch 'drakwizard sambashare' i reoli eich rhannu."
 
 #: ../bin/draksambashare:1182
-#, fuzzy, c-format
+#, c-format
 msgid "Samba type:"
-msgstr "Defnyddwyr Samba"
+msgstr "Math o Samba"
 
 #: ../bin/draksambashare:1184
 #, c-format
 msgid "Server banner:"
-msgstr ""
+msgstr "Baner gweinydd:"
 
 #: ../bin/draksambashare:1199
-#, fuzzy, c-format
+#, c-format
 msgid "The wizard successfully configured your Samba server."
-msgstr "Mae'r dewin wedi ychwanegu cyfran argraffydd Samba yn llwyddiannus."
+msgstr "Mae'r dewin wedi ffurfweddu eich gweinydd Samba yn llwyddiannus."
 
 #: ../bin/draksambashare:1213
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to configure Samba server."
-msgstr "Methwyd newid cyfran Samba."
+msgstr "Methwyd ffurfweddu eich gweinydd Samba."
 
 #: ../bin/draksambashare:1263
 #, c-format
 msgid "The Samba wizard has unexpectedly failed:"
-msgstr ""
+msgstr "Mae dewin Samba wedi methu'n annisgwyl"
 
 #: ../bin/draksambashare:1277
 #, c-format
