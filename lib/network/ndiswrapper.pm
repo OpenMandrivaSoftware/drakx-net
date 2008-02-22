@@ -85,7 +85,8 @@ Do you really want to use a ndiswrapper driver?", $conflicts[0]->{drivers}[0])) 
         #- stop old interfaces
         network::tools::stop_interface($_->{interface}, 0) foreach grep { defined $_->{interface} } @conflicts;
         #- unload old modules before trying to load ndiswrapper
-        my @drivers = map { @{$_->{drivers}} } @conflicts;
+        #- (sorted according to /proc/modules to handle deps nicely)
+        my @drivers = intersection([ modules::loaded_modules() ], [ map { @{$_->{drivers}} } @conflicts ]);
         eval { modules::unload($_) } foreach @drivers;
     }
 
