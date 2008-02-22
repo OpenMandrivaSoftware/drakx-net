@@ -8,6 +8,8 @@ use services;
 use fs::get;
 use fs;
 use log;
+use modules;
+use list_modules;
 
 #- using bsd_glob() since glob("/DONT_EXIST") return "/DONT_EXIST" instead of () (and we don't want this)
 use File::Glob ':glob';
@@ -151,8 +153,9 @@ sub is_file_installed {
 
 sub is_module_installed {
     my ($settings, $driver) = @_;
-    require modules;
     my $module = ref $settings->{kernel_module} eq 'HASH' && $settings->{kernel_module}{test_file} || $driver;
+    #- reload modules.dep so that newly added dkms modules are recognized
+    list_modules::load_default_moddeps();
     modules::module_is_available($module);
 }
 
