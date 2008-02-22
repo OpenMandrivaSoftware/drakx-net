@@ -264,6 +264,10 @@ sub write_settings {
     my ($self, $o_net, $o_modules_conf) = @_;
     if ($o_modules_conf) {
         $o_modules_conf->set_alias($self->get_interface, $self->get_driver);
+        if ($self->{device}{sysfs_device}) {
+            my $modalias = chomp_(cat_($self->{device}{sysfs_device} . "/modalias"));
+            $o_modules_conf->set_alias($modalias, $self->get_driver) if $modalias;
+        }
     }
     $self->SUPER::write_settings($o_net, $o_modules_conf);
 }
