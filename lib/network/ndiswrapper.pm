@@ -78,15 +78,6 @@ sub find_interface {
 sub setup_device {
     my ($in, $device) = @_;
 
-    #- unload ndiswrapper first so that the newly installed .inf files will be read
-    eval { modules::unload("ndiswrapper") };
-    eval { modules::load("ndiswrapper") };
-
-    if ($@) {
-        $in->ask_warn(N("Error"), N("Unable to load the ndiswrapper module!"));
-        return;
-    }
-
     my @conflicts = find_conflicting_devices($device);
     if (@conflicts) {
         $in->ask_yesorno(N("Warning"), N("The selected device has already been configured with the %s driver.
@@ -95,6 +86,15 @@ Do you really want to use a ndiswrapper driver?", $conflicts[0][1])) or return;
         eval { modules::unload($conflicts[0][1]) };
         eval { modules::unload("ndiswrapper") };
         eval { modules::load("ndiswrapper") };
+    }
+
+    #- unload ndiswrapper first so that the newly installed .inf files will be read
+    eval { modules::unload("ndiswrapper") };
+    eval { modules::load("ndiswrapper") };
+
+    if ($@) {
+        $in->ask_warn(N("Error"), N("Unable to load the ndiswrapper module!"));
+        return;
     }
 
     my $interface = find_interface($device);
