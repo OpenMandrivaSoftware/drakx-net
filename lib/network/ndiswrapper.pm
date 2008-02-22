@@ -53,6 +53,8 @@ sub find_matching_devices {
     my $net_path = '/sys/class/net';
     my @devices;
 
+    my $is_driver_listed = sub { my ($driver) = @_; any { member($driver, @{$_->{drivers}}) } @devices };
+
     require network::connection::ethernet;
     foreach my $interface (all($net_path)) {
         if (network::connection::ethernet::device_matches_interface($device, $interface)) {
