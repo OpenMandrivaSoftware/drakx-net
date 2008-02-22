@@ -262,7 +262,9 @@ sub build_ifcfg_settings {
 
 sub write_settings {
     my ($self, $o_net, $o_modules_conf) = @_;
-    $o_modules_conf->set_alias($self->get_interface, $self->get_driver) if $o_modules_conf;
+    if ($o_modules_conf) {
+        $o_modules_conf->set_alias($self->get_interface, $self->get_driver);
+    }
     $self->SUPER::write_settings($o_net, $o_modules_conf);
 }
 
