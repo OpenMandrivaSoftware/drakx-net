@@ -63,6 +63,14 @@ sub find_matching_devices {
         }
     }
 
+    #- find drivers with no net interface
+    my $sysfs_driver = $device->{sysfs_device} && basename(readlink($device->{sysfs_device} . "/driver/module"));
+    if ($sysfs_driver) {
+	my @sysfs_drivers = $sysfs_driver;
+	@sysfs_drivers = grep { !$is_driver_listed->($_) } @sysfs_drivers;
+	push @devices, { interface => undef, drivers => \@sysfs_drivers } if @sysfs_drivers;
+    }
+
     #- add original driver
     push @devices, { interface => undef, drivers => [ $device->{driver} ] }
         if !$is_driver_listed->($device->{driver}) && any { $_ eq $device->{driver} } modules::loaded_modules();
