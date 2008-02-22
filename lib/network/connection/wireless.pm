@@ -194,6 +194,7 @@ my @thirdparty_settings = (
             explanations => N_("Firmware files are required for this device."),
             no_package => 1,
         },
+        no_module_reload => 1,
     },
 
     {
