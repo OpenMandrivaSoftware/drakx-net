@@ -432,6 +432,7 @@ sub update() {
                                     gtkset($measure_t, text => formatXiB($transmitted));
                                 });
 	    $darea->{$intf}->signal_connect(expose_event => sub {
+                         return if !$darea->{$intf}->window;
                          $darea->{$intf}->window->draw_drawable($darea->{$intf}->style->bg_gc('normal'), $pixmap->{$intf}, 0, 0, 0, 0, $width, $height);
                      });
             $gc_lines->{$intf} = Gtk2::Gdk::GC->new($darea->{$intf}->window);
