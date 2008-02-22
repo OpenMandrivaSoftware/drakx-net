@@ -5,6 +5,9 @@ use common;
 use modules;
 use detect_devices;
 
+#- using bsd_glob() since glob("/DONT_EXIST") return "/DONT_EXIST" instead of () (and we don't want this)
+use File::Glob ':glob';
+
 my $ndiswrapper_root = "/etc/ndiswrapper";
 
 sub installed_drivers() {
@@ -67,6 +70,9 @@ sub find_matching_devices {
     my $sysfs_driver = $device->{sysfs_device} && basename(readlink($device->{sysfs_device} . "/driver/module"));
     if ($sysfs_driver) {
 	my @sysfs_drivers = $sysfs_driver;
+	if ($sysfs_drivers[0] eq 'ssb') {
+	    push @sysfs_drivers, map { basename(readlink($_)) } bsd_glob($device->{sysfs_device} . "/ssb*/driver/module");
+	}
 	@sysfs_drivers = grep { !$is_driver_listed->($_) } @sysfs_drivers;
 	push @devices, { interface => undef, drivers => \@sysfs_drivers } if @sysfs_drivers;
     }
