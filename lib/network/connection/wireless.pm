@@ -1,8 +1,5 @@
 package network::connection::wireless;
 
-use strict;
-use common;
-
 use base qw(network::connection::ethernet);
 
 use strict;
