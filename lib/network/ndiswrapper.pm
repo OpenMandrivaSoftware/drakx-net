@@ -82,7 +82,7 @@ sub setup_device {
     if (@conflicts) {
         $in->ask_yesorno(N("Warning"), N("The selected device has already been configured with the %s driver.
 Do you really want to use a ndiswrapper driver?", $conflicts[0]->{drivers}[0])) or return;
-        #- unload the old module and try immediately to load ndiswrapper
+        #- unload old modules before trying to load ndiswrapper
         my @drivers = map { @{$_->{drivers}} } @conflicts;
         eval { modules::unload($_) } foreach @drivers;
     }
