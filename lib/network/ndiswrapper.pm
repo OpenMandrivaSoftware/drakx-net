@@ -63,6 +63,10 @@ sub find_matching_devices {
         }
     }
 
+    #- add original driver
+    push @devices, { interface => undef, drivers => [ $device->{driver} ] }
+        if !$is_driver_listed->($device->{driver}) && any { $_ eq $device->{driver} } modules::loaded_modules();
+
     @devices;
 }
 
