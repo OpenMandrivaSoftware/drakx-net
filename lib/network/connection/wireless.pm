@@ -187,8 +187,8 @@ my @thirdparty_settings = (
                 my ($settings, $in) = @_;
                 require network::ndiswrapper;
                 $settings->{device} = network::ndiswrapper::select_device($in) or return;
-                $settings->{device}{driver} = $settings->{name};
                 network::ndiswrapper::setup_device($in, $settings->{device});
+                $settings->{device}{driver} = $settings->{name};
             },
             url => 'http://ndiswrapper.sourceforge.net/mediawiki/index.php/List',
             explanations => N_("Firmware files are required for this device."),
