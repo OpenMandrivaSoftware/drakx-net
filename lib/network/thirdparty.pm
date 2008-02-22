@@ -156,6 +156,7 @@ sub is_module_installed {
     my $module = ref $settings->{kernel_module} eq 'HASH' && $settings->{kernel_module}{test_file} || $driver;
     #- reload modules.dep so that newly added dkms modules are recognized
     list_modules::load_default_moddeps();
+    #- FIXME: modules::module_is_available() won't use the chroot modules.dep in installer
     modules::module_is_available($module);
 }
 
