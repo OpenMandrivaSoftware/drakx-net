@@ -57,7 +57,7 @@ sub find_matching_devices {
     foreach my $interface (all($net_path)) {
         if (network::connection::ethernet::device_matches_interface($device, $interface)) {
             my $driver = network::connection::ethernet::interface_to_driver($interface);
-            push @devices, [ $interface, $driver ] if $driver;
+            push @devices, { interface => $interface, drivers => [ $driver ] } if $driver;
         }
     }
 
@@ -66,13 +66,13 @@ sub find_matching_devices {
 
 sub find_conflicting_devices {
     my ($device) = @_;
-    grep { $_->[1] ne "ndiswrapper" } find_matching_devices($device);
+    grep { !member("ndiswrapper", @{$_->{drivers}}) } find_matching_devices($device);
 }
 
 sub find_interface {
     my ($device) = @_;
-    my $dev = find { $_->[1] eq "ndiswrapper" } find_matching_devices($device);
-    $dev->[0];
+    my $dev = find { member("ndiswrapper", @{$_->{drivers}}) } find_matching_devices($device);
+    $dev->{interface};
 }
 
 sub setup_device {
@@ -81,9 +81,9 @@ sub setup_device {
     my @conflicts = find_conflicting_devices($device);
     if (@conflicts) {
         $in->ask_yesorno(N("Warning"), N("The selected device has already been configured with the %s driver.
-Do you really want to use a ndiswrapper driver?", $conflicts[0][1])) or return;
+Do you really want to use a ndiswrapper driver?", $conflicts[0]->{drivers}[0])) or return;
         #- unload the old module and try immediately to load ndiswrapper
-        eval { modules::unload($conflicts[0][1]) };
+        eval { modules::unload($_) } foreach @{$conflicts[0]->{drivers}};
     }
 
     #- unload ndiswrapper first so that the newly installed .inf files will be read
