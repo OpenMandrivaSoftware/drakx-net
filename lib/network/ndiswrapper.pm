@@ -83,7 +83,8 @@ sub setup_device {
         $in->ask_yesorno(N("Warning"), N("The selected device has already been configured with the %s driver.
 Do you really want to use a ndiswrapper driver?", $conflicts[0]->{drivers}[0])) or return;
         #- unload the old module and try immediately to load ndiswrapper
-        eval { modules::unload($_) } foreach @{$conflicts[0]->{drivers}};
+        my @drivers = map { @{$_->{drivers}} } @conflicts;
+        eval { modules::unload($_) } foreach @drivers;
     }
 
     #- unload ndiswrapper first so that the newly installed .inf files will be read
