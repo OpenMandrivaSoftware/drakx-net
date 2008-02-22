@@ -332,13 +332,15 @@ sub apply_settings {
 
 	install_packages($in, $settings, $driver, @thirdparty_types) or return;
 
-        if (exists $settings->{firmware} && !$settings->{old_status}{firmware}) {
-            log::explanations("Reloading module $driver");
-            eval { modules::unload($driver) };
-        } else {
-            log::explanations("Loading module $driver");
+        if (!$settings->{no_module_reload}) {
+            if (exists $settings->{firmware} && !$settings->{old_status}{firmware}) {
+                log::explanations("Reloading module $driver");
+                eval { modules::unload($driver) };
+            } else {
+                log::explanations("Loading module $driver");
+            }
+            eval { modules::load($driver) };
         }
-        eval { modules::load($driver) };
 
         undef $wait;
         $wait = $in->wait_message('', N("Please wait, running device configuration commands..."));
