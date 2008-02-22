@@ -84,8 +84,6 @@ sub setup_device {
 Do you really want to use a ndiswrapper driver?", $conflicts[0][1])) or return;
         #- unload the old module and try immediately to load ndiswrapper
         eval { modules::unload($conflicts[0][1]) };
-        eval { modules::unload("ndiswrapper") };
-        eval { modules::load("ndiswrapper") };
     }
 
     #- unload ndiswrapper first so that the newly installed .inf files will be read
