@@ -136,6 +136,9 @@ $gca->set_foreground($colora);
 $statusbar->push(1, N("Wait please, testing your connection..."));
 $window1->{window}->show_all;
 
+# make sure widgets got realized before any event callback is called (#36537):
+gtkflush();
+
 Glib::Timeout->add(1000, \&rescan);
 my $time_tag2 = Glib::Timeout->add(1000, \&update);
 
