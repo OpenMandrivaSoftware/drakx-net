@@ -1,8 +1,5 @@
 package network::connection::dvb;
 
-use strict;
-use common;
-
 use base qw(network::connection::ethernet);
 
 use strict;
