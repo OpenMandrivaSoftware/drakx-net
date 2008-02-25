@@ -189,7 +189,7 @@ sub real_main {
                            @providers_data = $connection->get_providers;
                            require lang;
                            my $locale_country = lang::c2name($::o->{locale}{country} || lang::read()->{country});
-                           $provider_name = find { /^$locale_country/ } sort(keys %{$providers_data[0]});
+                           $provider_name = find { /^\Q$locale_country\E/ } sort(keys %{$providers_data[0]});
                        },
                        name => sub { $net->{type}->get_type_name . "\n\n" . N("Please select your provider:") },
                        data => sub {
