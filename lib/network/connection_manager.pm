@@ -72,6 +72,7 @@ sub setup_connection {
             return;
         }
     }
+    write_settings($cmanager);
     $cmanager->{connection}{passed_setup} = 1;
 }
 
