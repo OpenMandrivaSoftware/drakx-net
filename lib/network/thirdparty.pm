@@ -131,10 +131,11 @@ sub warn_not_found {
     my %opt;
     $opt{$_} = ref $settings->{$option} eq 'HASH' && $settings->{$option}{$_} || $settings->{$_} foreach qw(url explanations no_club no_package);
     my $checked = get_checked_element($settings, $driver, $option);
+    my $component_name = ref $settings->{$option} eq 'HASH' && translate($settings->{$option}{component_name}) || $option;
     $in->ask_warn(N("Error"),
                   join(" ",
                        ($opt{no_package} ?
-                          N("Some components (%s) are required but aren't available for %s hardware.", $option, $settings->{name}) :
+                          N("Some components (%s) are required but aren't available for %s hardware.", $component_name, $settings->{name}) :
                           N("Some packages (%s) are required but aren't available.", join(', ', @packages))),
                        join("\n\n",
                             if_(!$opt{no_club} && !$opt{no_package}, N("These packages can be found in Mandriva Club or in Mandriva commercial releases.")),
