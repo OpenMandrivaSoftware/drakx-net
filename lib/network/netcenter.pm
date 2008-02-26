@@ -16,10 +16,11 @@ sub build_cmanager {
 
     my $cmanager = network::connection_manager::create($in, $net, $w, $pixbufs);
     $cmanager->{connection} = $connection;
-    $cmanager->{gui}{show_networks} = $connection->can('get_networks') && !$connection->network_scan_is_slow;
-    if ($cmanager->{gui}{show_networks}) {
+
+    if ($connection->can('get_networks')) {
         network::connection_manager::create_networks_list($cmanager);
-        network::connection_manager::update_networks($cmanager);
+        network::connection_manager::update_networks($cmanager)
+            if !$connection->network_scan_is_slow;
     }
     $cmanager;
 }
@@ -35,7 +36,7 @@ sub main {
     #- so that transient_for is defined, for wait messages and popups to be centered
     $::main_window = $w->{real_window};
 
-    my @connections = map { $_->get_connections(automatic_only => 1) } network::connection::get_types;
+    my @connections = map { $_->get_connections(automatic_only => 1, fast_only => 1) } network::connection::get_types;
     @connections = uniq_ { $_->{device} } @connections;
 
     my $pixbufs = network::connection_manager::create_pixbufs();
@@ -58,7 +59,7 @@ sub main {
                    my $content = gtknew('HBox', children => [
                                0, gtknew('Label', padding => [ 5, 0 ]),
                                1, gtknew('VBox', spacing => 5, children_tight => [
-                                   ($cmanager->{gui}{show_networks} ? (
+                                   ($cmanager->{connection}->can('get_networks') ? (
                                        gtknew('Label', text => N("Please select your network:"), alignment => [ 0, 0 ]),
                                        gtknew('ScrolledWindow', height => 160, child => $cmanager->{gui}{networks_list}),
                                    ) : ()),
@@ -72,7 +73,7 @@ sub main {
                                                  gtknew('Button', text => N("Configure"),
                                                         image => gtknew('Image', file => 'configure-16'),
                                                         clicked => sub { network::connection_manager::configure_connection($cmanager) }),
-                                               ($cmanager->{gui}{show_networks} ?
+                                               ($cmanager->{connection}->can('get_networks') ?
                                                   $cmanager->{gui}{buttons}{refresh} =
                                                     gtknew('Button', text => N("Refresh"),
                                                            image => gtknew('Image', file => 'refresh', size => 16),
