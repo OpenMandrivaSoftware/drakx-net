@@ -102,6 +102,8 @@ sub configure_connection {
 
     if (!check_setup($cmanager)) {
         setup_connection($cmanager);
+        network::connection_manager::update_networks($cmanager)
+            if $cmanager->{connection}->can('get_networks');
         update_on_status_change($cmanager);
         return;
     }
