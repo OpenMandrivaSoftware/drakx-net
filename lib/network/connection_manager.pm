@@ -33,6 +33,15 @@ sub create {
     { in => $in, net => $net, gui => { w => $w, pixbufs => $pixbufs } };
 }
 
+sub check_setup {
+    my ($cmanager) = @_;
+    $cmanager->{connection}{passed_setup} =
+      (!$cmanager->{connection}->can("check_device") ||
+       $cmanager->{connection}->check_device)
+        if !defined $cmanager->{connection}{passed_setup};
+    $cmanager->{connection}{passed_setup};
+}
+
 sub setup_connection {
     my ($cmanager) = @_;
 
@@ -80,7 +89,7 @@ sub load_settings {
 sub configure_connection {
     my ($cmanager) = @_;
 
-    if (!$cmanager->{connection}{passed_setup}) {
+    if (!check_setup($cmanager)) {
         setup_connection($cmanager);
         update_on_status_change($cmanager);
         return;
@@ -251,7 +260,6 @@ sub update_networks {
         my $wait = $cmanager->{connection}->network_scan_is_slow && $cmanager->{in}->wait_message('', N("Scanning for networks..."));
         $cmanager->{connection}{networks} = $cmanager->{connection}->get_networks;
         undef $wait;
-
         $cmanager->{connection}{network} ||= find { $cmanager->{connection}{networks}{$_}{current} } keys %{$cmanager->{connection}{networks}};
 
         my $routes = network::tools::get_routes();
@@ -306,10 +314,7 @@ sub update_on_status_change {
         my $may_have_network =
           !$cmanager->{connection}->can('get_networks') ||
           $cmanager->{connection}{network};
-        $cmanager->{connection}{passed_setup} =
-          !$cmanager->{connection}->can("check_device") ||
-          $cmanager->{connection}->check_device;
-        $allow_configure = $may_have_network || !$cmanager->{connection}{passed_setup};
+        $allow_configure = $may_have_network || !check_setup($cmanager);
     }
 
     $cmanager->{gui}{buttons}{configure}->set_sensitive($allow_configure)
