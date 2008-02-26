@@ -32,15 +32,19 @@ sub get_type_icon {
     $icon || '/usr/share/mcc/themes/default/drakconnect-mdk';
 }
 
-=item get_devices()
+=item get_devices(%options)
 
 Get the devices supported by this connection type
+Options:
+- automatic_only (no device requiring manual configuration should be returned)
+- fast_only (no slow detection should be performed)
 
 =cut
 
-=item get_connections()
+=item get_connections(%options)
 
 List connections that can be configured by the class
+Options: see get_devices()
 
 =cut
 
