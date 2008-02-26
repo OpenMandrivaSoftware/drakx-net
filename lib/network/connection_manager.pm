@@ -37,7 +37,9 @@ sub check_setup {
     my ($cmanager) = @_;
     $cmanager->{connection}{passed_setup} =
       (!$cmanager->{connection}->can("check_device") ||
-       $cmanager->{connection}->check_device)
+       $cmanager->{connection}->check_device) &&
+      (!$cmanager->{connection}->can("check_hardware") ||
+       !$cmanager->{connection}->check_hardware_is_slow && $cmanager->{connection}->check_hardware)
         if !defined $cmanager->{connection}{passed_setup};
     $cmanager->{connection}{passed_setup};
 }
