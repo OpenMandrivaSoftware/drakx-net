@@ -274,7 +274,6 @@ sub update_networks {
     if ($cmanager->{connection}) {
         my $wait = $cmanager->{connection}->network_scan_is_slow && $cmanager->{in}->wait_message('', N("Scanning for networks..."));
         $cmanager->{connection}{networks} = $cmanager->{connection}->get_networks;
-        undef $wait;
         $cmanager->{connection}{network} ||= find { $cmanager->{connection}{networks}{$_}{current} } keys %{$cmanager->{connection}{networks}};
 
         my $routes = network::tools::get_routes();
@@ -298,6 +297,8 @@ sub update_networks {
             my $index = eval { find_index { $_->[0] eq $cmanager->{connection}{network} } @{$cmanager->{gui}{networks_list}{data}} };
             $cmanager->{gui}{networks_list}->select($index) if defined $index;
         }
+
+        undef $wait;
     }
 
     update_on_status_change($cmanager);
