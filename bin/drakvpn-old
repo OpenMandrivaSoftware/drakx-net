@@ -94,7 +94,7 @@ What would you like to do?"),
      # FIXME: reconfigure is not handled
 	if ($r eq "disable") {
 	    if (!$::testing) {
-		my $_wait_disabl = $in->wait_message('', N("Disabling VPN..."));
+		my $_wait_disabl = $in->wait_message(N("Please wait"), N("Disabling VPN..."));
 		network::ipsec::stop_daemons();
 	    }
 	    foreach ($ipsec_conf, $tunnels_file) {
@@ -124,7 +124,7 @@ What would you like to do?"),
 		rename("$_.drakvpndisable", $_) or die "Could not find configuration. Please reconfigure.";
 	    }
 	    {
-		my $_wait_enabl = $in->wait_message('', N("Enabling VPN..."));
+		my $_wait_enabl = $in->wait_message(N("Please wait"), N("Enabling VPN..."));
 		network::ipsec::start_daemons();
 	    }
             log::l("[drakvpn] Enabled");

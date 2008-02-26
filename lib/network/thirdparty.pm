@@ -329,7 +329,7 @@ sub apply_settings {
     if ($settings) {
 	log::explanations(qq(Found settings for driver "$driver" in category "$category"));
 
-	my $wait = $in->wait_message('', N("Looking for required software and drivers..."));
+	my $wait = $in->wait_message(N("Please wait"), N("Looking for required software and drivers..."));
 
 	install_packages($in, $settings, $driver, @thirdparty_types) or return;
 
@@ -344,7 +344,7 @@ sub apply_settings {
         }
 
         undef $wait;
-        $wait = $in->wait_message('', N("Please wait, running device configuration commands..."));
+        $wait = $in->wait_message(N("Please wait"), N("Please wait, running device configuration commands..."));
         device_run_command($settings, $driver, 'post');
 
 	if (my $service = device_get_option($settings, 'restart_service')) {

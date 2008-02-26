@@ -174,7 +174,7 @@ sub real_main {
                        data => sub { $hardware_settings },
                        complete => sub {
                            if ($connection->can('check_hardware')) {
-                               my $_w = $in->wait_message('', N("Configuring device..."));
+                               my $_w = $in->wait_message(N("Please wait"), N("Configuring device..."));
                                if (!$connection->check_hardware) {
                                    $in->ask_warn(N("Error"), $connection->{hardware}{error}) if $connection->{hardware}{error};
                                    return 1;
@@ -207,7 +207,7 @@ sub real_main {
 
                    select_network => {
                        pre => sub {
-                           my $_w = $in->wait_message('', N("Scanning for networks..."));
+                           my $_w = $in->wait_message(N("Please wait"), N("Scanning for networks..."));
                            $connection->get_networks;
                        },
                        name => sub { $net->{type}->get_type_name . "\n\n" . N("Please select your network:") },
@@ -710,7 +710,7 @@ Take a look at http://www.linmodems.org"),
                         $up = 1;
                         if ($a) {
                             # local $::isWizard = 0;
-                            my $_w = $in->wait_message('', N("Testing your connection..."), 1);
+                            my $_w = $in->wait_message(N("Please wait"), N("Testing your connection..."), 1);
                             network::tools::stop_net_interface($net, 0);
                             sleep 1;
                             network::tools::start_net_interface($net, 1);

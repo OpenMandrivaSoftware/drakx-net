@@ -46,7 +46,7 @@ sub create_connection {
                         return 1;
                     }
                     if ($vpn_type->can('prepare')) {
-                        my $wait = $in->wait_message('', N("Initializing tools and detecting devices for %s...", $vpn_type->get_type));
+                        my $wait = $in->wait_message(N("Please wait"), N("Initializing tools and detecting devices for %s...", $vpn_type->get_type));
                         if (!$vpn_type->prepare) {
                           undef $wait;
                           $in->ask_warn(N("Error"), N("Unable to initialize %s connection type!", $vpn_type->get_type));
