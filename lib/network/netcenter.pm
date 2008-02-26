@@ -19,8 +19,9 @@ sub build_cmanager {
 
     if ($connection->can('get_networks')) {
         network::connection_manager::create_networks_list($cmanager);
+        #- do not check if it is slow (either scan or device check) or unavailable
         network::connection_manager::update_networks($cmanager)
-            if !$connection->network_scan_is_slow;
+            if !$connection->network_scan_is_slow && network::connection_manager::check_setup($cmanager);
     }
     $cmanager;
 }
