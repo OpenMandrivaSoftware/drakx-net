@@ -88,6 +88,14 @@ sub load_settings {
     $cmanager->{connection}->guess_control_settings;
 }
 
+sub write_settings {
+    my ($cmanager) = @_;
+
+    my $modules_conf = modules::any_conf->read;
+    $cmanager->{connection}->write_settings($cmanager->{net}, $modules_conf);
+    $modules_conf->write;
+}
+
 sub configure_connection {
     my ($cmanager) = @_;
 
@@ -142,9 +150,7 @@ sub configure_connection {
     $cmanager->{connection}->install_packages($cmanager->{in}) if $cmanager->{connection}->can('install_packages');
     $cmanager->{connection}->unload_connection if $cmanager->{connection}->can('unload_connection');
 
-    my $modules_conf = modules::any_conf->read;
-    $cmanager->{connection}->write_settings($cmanager->{net}, $modules_conf);
-    $modules_conf->write;
+    write_settings($cmanager);
 
     1;
 }
@@ -165,7 +171,7 @@ sub start_connection {
     #- settings have to be rewritten only if they are impacted by choices from the main window
     if ($cmanager->{connection}->can('get_networks')) {
         load_settings($cmanager);
-        $cmanager->{connection}->write_settings($cmanager->{net});
+        write_settings($cmanager);
     }
     $cmanager->{connection}->prepare_connection if $cmanager->{connection}->can('prepare_connection');
     $cmanager->{connection}->disconnect;
