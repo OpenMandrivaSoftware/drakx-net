@@ -1,8 +1,38 @@
-- net_monitor:
+- draknetcenter:
+  o fix crash with cellular cards (#36801)
+  o allow to configure device if not installed (#33531)
+  o setup connection if needed when updating networks list
+  o do not enable by default devices that require slow hardware check
+    (like cellular cards)
+  o allow to scan networks even if slow (like cellular cards), just
+    don't do it at startup
+  o do not scan networks at startup if device is unavailable
+  o write settings after initial connection setup
+  o update networks list after initial connection setup
+  o do not run sdptool search when detecting connections
+  o add wait message at start
+  o remove wait message when displaying device setup error
+- net_monitor (tv):
   o make expose_event callback more robust (#36537)
   o make sure widgets got realized before any event callback is called
     (#36537)
   o make sure not to run timers after quitting the main loop (#37635)
+- connection backend:
+  o fix checking dkms modules after package installation (#33044)
+  o write modalias for ethernet and wireless interfaces
+    (mostly useful with ndiswrapper: #34660, #37026, #37106)
+  o fix crash in providers list when weirdly translated locale country
+    contains metacharacters (reported by Cosmin Humeniuc)
+  o be stricter when matching provider country
+  o add title in wait messages
+- ndiswrapper support:
+  o find more conflicting drivers: original driver from ldetect, sysfs
+    driver, and drivers registered on the ssb bus
+    (to find all of bcm43xx, ssb and b43 for Broadcom devices)
+  o unload drivers for all conflicting interfaces
+  o stop conflicting interfaces before removing conflicting modules
+  o do not reload ndiswrapper module twice or more
+  o improve error message for ndiswrapper setup (#28335)
 
 0.25:
 - draksambashare (aginies):
@@ -12,9 +42,9 @@
   o add security options, fix list problem, fix default PDC configuration
   o add a wizard to configure a PDC or a standalone Samba server
   o fix wizard bug
+  o add host allow option
 - draknfs:
   o translate "Advanced options"
-  o add host allow option (aginies)
 - connection frontend:
   o do not make refresh/monitor buttons sensitive if device has no interface
 - 3G/GPRS providers list:
