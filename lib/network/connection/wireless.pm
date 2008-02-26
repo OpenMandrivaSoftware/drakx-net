@@ -191,7 +191,7 @@ my @thirdparty_settings = (
                 $settings->{device}{driver} = $settings->{name};
             },
             url => 'http://ndiswrapper.sourceforge.net/mediawiki/index.php/List',
-            explanations => N_("Firmware files are required for this device."),
+            component_name => N_("Windows driver"),
             no_package => 1,
         },
         no_module_reload => 1,
