@@ -139,6 +139,8 @@ sub load_interface_settings {
 
 #- override to return 1 if the connection network scan is slow
 sub network_scan_is_slow { 0 }
+#- override to return 1 if the hardware check is slow
+sub check_hardware_is_slow { 0 }
 
 sub get_network_access_settings_label { N("Network access settings") }
 sub get_access_settings_label { N("Access settings") }
