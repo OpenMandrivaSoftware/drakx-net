@@ -265,6 +265,9 @@ sub filter_networks {
 
 sub update_networks {
     my ($cmanager) = @_;
+
+    check_setup($cmanager) || setup_connection($cmanager) or return;
+
     @{$cmanager->{gui}{networks_list}{data}} = ();
 
     if ($cmanager->{connection}) {
