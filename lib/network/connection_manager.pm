@@ -66,8 +66,9 @@ sub setup_connection {
         }, $cmanager->{connection}->get_hardware_settings) or return;
     }
     if ($cmanager->{connection}->can('check_hardware')) {
-        my $_w = $cmanager->{in}->wait_message('', N("Configuring device..."));
+        my $wait = $cmanager->{in}->wait_message('', N("Configuring device..."));
         if (!$cmanager->{connection}->check_hardware) {
+            undef $wait;
             $cmanager->{in}->ask_warn(N("Error"), $cmanager->{connection}{hardware}{error}) if $cmanager->{connection}{hardware}{error};
             return;
         }
