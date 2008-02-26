@@ -10,7 +10,11 @@ my $rfcomm_dev_prefix = "/dev/rfcomm";
 sub get_type_name { N("Bluetooth") }
 sub get_type_description { N("Bluetooth Dial Up Networking") }
 sub _get_type_icon { 'bluetooth' }
-sub get_devices { search_services('DUN') }
+sub get_devices {
+    my ($_class, %options) = @_;
+    ($options{fast_only} ? () : search_services('DUN'));
+}
+
 sub get_metric { 45 }
 sub get_interface { "ppp0" }
 
