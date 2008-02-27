@@ -64,6 +64,7 @@ sub list_wireless {
         my $quality_match = qr/Quality[:=](\S*)/;
         my $eval_quality = sub {
             my ($qual) = @_;
+            $qual =~ s!/0+$!/255!; #- prism54 reports quality with division by zero
             $qual =~ m!/! ? eval($qual)*100 : $qual;
         };
 	foreach (@list) {
