@@ -75,7 +75,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "POT-Creation-Date: 2008-01-31 11:33+0100\n"
-"PO-Revision-Date: 2008-02-18 23:28+0100\n"
+"PO-Revision-Date: 2008-02-27 09:53+0100\n"
 "Last-Translator: Christophe Berthelé <cpjc@free.fr>\n"
 "Language-Team: French <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -2025,7 +2025,7 @@ msgstr "Droits forcés à la création"
 #: ../bin/draksambashare:180 ../bin/draksambashare:181
 #, c-format
 msgid "/_Samba Server"
-msgstr "/Serveur _Samba"
+msgstr "/_Serveur Samba"
 
 #: ../bin/draksambashare:179
 #, c-format
@@ -2033,9 +2033,9 @@ msgid "/_Configure"
 msgstr "/_Configurer"
 
 #: ../bin/draksambashare:183
-#, fuzzy, c-format
+#, c-format
 msgid "/_Help"
-msgstr "Aide"
+msgstr "/_Aide"
 
 #: ../bin/draksambashare:183
 #, c-format
@@ -2417,9 +2417,9 @@ msgid "Wins support:"
 msgstr "Support Wins : "
 
 #: ../bin/draksambashare:1100
-#, fuzzy, c-format
+#, c-format
 msgid "admin users:"
-msgstr "Administrateurs"
+msgstr "Utilisateurs Administrateurs : "
 
 #: ../bin/draksambashare:1100
 #, c-format
@@ -2452,9 +2452,9 @@ msgid "The domain is wrong."
 msgstr "Le domaine est incorrect."
 
 #: ../bin/draksambashare:1112
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup"
-msgstr "Forcer le groupe"
+msgstr "Groupe de travail"
 
 #: ../bin/draksambashare:1112
 #, c-format
@@ -2463,14 +2463,14 @@ msgstr ""
 "Samba doit connaître le nom du groupe de travail Windows qu'il servira."
 
 #: ../bin/draksambashare:1119 ../bin/draksambashare:1183
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup:"
-msgstr "Forcer le groupe"
+msgstr "Groupe de travail : "
 
 #: ../bin/draksambashare:1120
-#, fuzzy, c-format
+#, c-format
 msgid "Netbios name:"
-msgstr "Nom d'hôte :"
+msgstr "Nom NetBios : "
 
 #: ../bin/draksambashare:1124
 #, c-format
@@ -2478,9 +2478,9 @@ msgid "The Workgroup is wrong."
 msgstr "Le groupe de travail est incorrect."
 
 #: ../bin/draksambashare:1131 ../bin/draksambashare:1141
-#, fuzzy, c-format
+#, c-format
 msgid "Security mode"
-msgstr "Politiques de sécurité"
+msgstr "Mode Sécurité"
 
 #: ../bin/draksambashare:1131
 #, c-format
@@ -2488,11 +2488,14 @@ msgid ""
 "User level: the client sends a session setup request directly following "
 "protocol negotiation. This request provides a username and password."
 msgstr ""
+"Niveau Utilisateur : le client envoie directement une demande d'ouverture de "
+"session après la négociation du protocole. Cette demande contient un nom "
+"d'utilisateur et un mot de passe."
 
 #: ../bin/draksambashare:1131
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
+msgstr "Niveau partage : le client s'identifie séparément pour chaque partage"
 
 #: ../bin/draksambashare:1131
 #, c-format
@@ -2501,11 +2504,14 @@ msgid ""
 "in a central, shared, account repository. The centralized account repository "
 "is shared between domain (security) controllers."
 msgstr ""
+"Niveau Domaine : permet de stocker tous les comptes et groupes "
+"d'utilisateurs dans un espace centralisé de comptes, partagé entre les "
+"contrôleurs (sécurité) du domaine."
 
 #: ../bin/draksambashare:1142
-#, fuzzy, c-format
+#, c-format
 msgid "Hosts allow"
-msgstr "Nom d'hôte"
+msgstr "Hôtes autorisés"
 
 #: ../bin/draksambashare:1147
 #, c-format
@@ -2532,9 +2538,9 @@ msgid "The Server Banner is incorrect."
 msgstr "La Bannière du serveur est incorrecte."
 
 #: ../bin/draksambashare:1163
-#, fuzzy, c-format
+#, c-format
 msgid "Samba Log"
-msgstr "Utilisateurs Samba"
+msgstr "Journaux de Samba"
 
 #: ../bin/draksambashare:1163
 #, c-format
@@ -2548,13 +2554,14 @@ msgstr ""
 #: ../bin/draksambashare:1163
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
-msgstr "Détail journal : détermine le niveau de détail (0 <= niveau <= 10)"
+msgstr ""
+"Détail des journaux : détermine le niveau de détail (0 <= niveau <= 10)"
 
 #: ../bin/draksambashare:1163
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
 msgstr ""
-"Taille max des journaux  : limite la taille des fichiers journaux (en ko)"
+"Taille max des journaux : limite la taille des fichiers journaux (en ko)"
 
 #: ../bin/draksambashare:1170 ../bin/draksambashare:1185
 #, c-format
@@ -2567,9 +2574,9 @@ msgid "Max log size:"
 msgstr "Taille max des journaux : "
 
 #: ../bin/draksambashare:1172
-#, fuzzy, c-format
+#, c-format
 msgid "Log level:"
-msgstr "Niveau"
+msgstr "Détail des journaux : "
 
 #: ../bin/draksambashare:1177
 #, c-format
@@ -2612,7 +2619,7 @@ msgstr "L'assistant a configuré votre serveur Samba avec succès."
 #: ../bin/draksambashare:1213
 #, c-format
 msgid "Failed to configure Samba server."
-msgstr "Echec dans la configuration du serveur Samba."
+msgstr "Échec dans la configuration du serveur Samba."
 
 #: ../bin/draksambashare:1263
 #, c-format
@@ -2692,7 +2699,7 @@ msgstr "DrakVPN"
 #: ../bin/drakvpn-old:87
 #, c-format
 msgid "The VPN connection is enabled."
-msgstr "La connection VPN est établie."
+msgstr "La connexion VPN est établie."
 
 #: ../bin/drakvpn-old:88
 #, c-format
@@ -2732,12 +2739,12 @@ msgstr "Désactivation du VPN en cours ..."
 #: ../bin/drakvpn-old:106
 #, c-format
 msgid "The VPN connection is now disabled."
-msgstr "La connection VPN est désormais désactivée."
+msgstr "La connexion VPN est désormais désactivée."
 
 #: ../bin/drakvpn-old:113
 #, c-format
 msgid "VPN connection currently disabled"
-msgstr "La connection VPN est actuellement désactivée."
+msgstr "La connexion VPN est actuellement désactivée."
 
 #: ../bin/drakvpn-old:114
 #, c-format
@@ -2767,7 +2774,7 @@ msgstr "Activation du VPN en cours ..."
 #: ../bin/drakvpn-old:133
 #, c-format
 msgid "The VPN connection is now enabled."
-msgstr "La connection VPN est désormais activée."
+msgstr "La connexion VPN est désormais activée."
 
 #: ../bin/drakvpn-old:147 ../bin/drakvpn-old:164
 #, c-format
@@ -2861,7 +2868,7 @@ msgid ""
 "\n"
 "What would you like to configure?\n"
 msgstr ""
-"Etape de configuration !\n"
+"Étape de configuration !\n"
 "\n"
 "Vous devez définir les Politiques de Sécurité puis ensuite \n"
 "configurer le démon d'échange de clés automatique (IKE).\n"
