@@ -322,7 +322,7 @@ sub mapIntfToDevice {
     my $hw_addr = c::getHwIDs($interface);
     return {} if $hw_addr =~ /^usb/;
     my $device = parse_hwaddr($hw_addr);
-    $device ? grep { are_same_HwIDs($_, $device) } detect_devices::probeall__real() : {};
+    $device ? grep { are_same_HwIDs($_, $device) } detect_devices::probeall() : {};
 }
 
 sub device_matches_interface_HwIDs {
@@ -367,7 +367,7 @@ sub device_to_interface {
 sub interface_to_device {
     my ($interface) = @_;
     my $sysfs_ids = get_interface_ids($interface);
-    find { detect_devices::device_matches_sysfs_ids($_, $sysfs_ids) } detect_devices::probeall__real();
+    find { detect_devices::device_matches_sysfs_ids($_, $sysfs_ids) } detect_devices::probeall();
 }
 
 sub interface_to_driver {
@@ -387,6 +387,8 @@ sub interface_to_driver {
 # - special interfaces (IP aliasing, VLAN)
 sub get_eth_cards {
     my ($modules_conf) = @_;
+
+    detect_devices::probeall_update_cache();
     my @all_cards = detect_devices::get_lan_interfaces();
 
     my @devs = detect_devices::pcmcia_probe();
@@ -440,7 +442,7 @@ sub get_eth_cards {
         # 6) try to match a device by driver for device description:
         #    (eg: madwifi, ndiswrapper, ...)
         if (!$description) {
-            my @cards = grep { $_->{driver} eq ($a || $saved_driver) } detect_devices::probeall__real();
+            my @cards = grep { $_->{driver} eq ($a || $saved_driver) } detect_devices::probeall();
             $description = $cards[0]{description} if @cards == 1;
         }
         $a and $saved_driver = $a; # handle multiple cards managed by the same driver
