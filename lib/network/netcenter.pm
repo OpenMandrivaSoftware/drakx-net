@@ -44,10 +44,12 @@ sub main {
     my $pixbufs = network::connection_manager::create_pixbufs();
     my @cmanagers = map { build_cmanager($in, $net, $w, $pixbufs, $_) } @connections;
 
+    (undef, my $rootwin_height) = gtkroot()->get_size();
+    my $scrolled_height = $rootwin_height > 480 ? 400 : 295;
     gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
            $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
-           1, gtknew('ScrolledWindow', width => 600, height => 400, shadow_type => 'none',
+           1, gtknew('ScrolledWindow', width => 600, height => $scrolled_height, shadow_type => 'none',
                      child => gtknew('VBox', spacing => 5, children_tight => [
                map_index {
                    my $cmanager = $cmanagers[$::i];

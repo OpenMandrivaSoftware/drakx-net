@@ -99,12 +99,14 @@ sub create_drakroam_gui {
         dbus_object::set_gtk2_watch_helper($dbus);
     }
 
+    (undef, my $rootwin_height) = gtkroot()->get_size();
+    my $scrolled_height = $rootwin_height > 480 ? 300 : 225;
     gtkadd($droam->{gui}{w}{window},
            gtknew('VBox', spacing => 5, children => [
                $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
                0, gtknew('HBox', children_tight => [ gtknew('Label_Left', text => N("Device: "), alignment => [ 0.5, 0.5 ]),
                                                      gtksignal_connect($droam->{gui}{connections_combo}, changed => sub { select_connection($droam) }) ]),
-               1, gtknew('ScrolledWindow', width => 500, height => 300, child => $droam->{gui}{networks_list}),
+               1, gtknew('ScrolledWindow', width => 500, height => $scrolled_height, child => $droam->{gui}{networks_list}),
                0, gtknew('HButtonBox', layout => 'edge', children_loose => [
                    $droam->{gui}{buttons}{configure} = gtknew('Button', text => N("Configure"), clicked => sub { network::connection_manager::configure_connection($droam) }),
                    $droam->{gui}{buttons}{connect_start} = gtknew('Button', text => N("Connect"), relief => 'half', clicked => sub { network::connection_manager::start_connection($droam) }),
