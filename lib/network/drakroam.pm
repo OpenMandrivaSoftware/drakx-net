@@ -133,6 +133,8 @@ sub main {
     network::connection_manager::create_networks_list($droam);
     create_drakroam_gui($droam, $dbus, $title, $icon);
 
+    $droam->{gui}{w}->show;
+
     my @connection_types = qw(network::connection::wireless network::connection::cellular_card);
     @{$droam->{all_connections}} = map { $_->get_connections(automatic_only => 1) } @connection_types;
     $droam->{connection} = $o_interface && find { $_->get_interface eq $o_interface } @{$droam->{all_connections}};
@@ -142,7 +144,6 @@ sub main {
 
     if ($o_ap && $droam->{connection}) {
         $droam->{connection}{network} = $o_ap;
-        $droam->{gui}{w}->show;
         network::connection_manager::start_connection($droam);
     }
 
