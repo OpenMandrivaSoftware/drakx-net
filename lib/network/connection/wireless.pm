@@ -901,8 +901,8 @@ sub wpa_supplicant_load_eap_settings {
 					#Remove quotes on selected variables
 					$network->{$ui_var} = $1 if $myeap_vars->{$myone} == 2 && $network->{$ui_var} =~ /^"(.*)"$/;
 					if ($myone eq "proto") {
-						$network->{forceeap} = 'WPA2' if $old_net->{$myone} =~ /^RSN$/;
-						$network->{forceeap} = 'WPA' if $old_net->{$myone} =~ /^WPA$/;
+						$network->{forceeap} = 'WPA2' if $old_net->{$myone} eq "RSN";
+						$network->{forceeap} = 'WPA' if $old_net->{$myone} eq "WPA";
 					}
 				}
 			}
