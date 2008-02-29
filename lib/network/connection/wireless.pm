@@ -533,7 +533,7 @@ sub get_control_settings {
 
 sub need_wpa_supplicant {
     my ($self) = @_;
-    ($self->{control}{roaming} || $self->{access}{network}{encryption} =~ /wpa/i) && !is_old_rt2x00($self->get_driver);
+    ($self->{control}{roaming} || $self->{access}{network}{encryption} =~ /^wpa-/) && !is_old_rt2x00($self->get_driver);
 }
 
 sub install_packages {
