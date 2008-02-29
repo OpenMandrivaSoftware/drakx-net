@@ -338,15 +338,13 @@ sub guess_network_access_settings {
     $self->{access}{network}{essid} = $network && $network->{essid} || $ifcfg->{WIRELESS_ESSID} || !$network && "any";
     ($self->{access}{network}{key}, my $restricted) = get_wep_key_from_iwconfig($ifcfg->{WIRELESS_ENC_KEY});
     $self->{access}{network}{encryption} =
+      $network && $network->{flags} =~ /eap/i ?
+        'wpa-eap' :
       $network && $network->{flags} =~ /wpa/i ?
         'wpa-psk' :
       $network && $network->{flags} =~ /wep/i || $self->{access}{network}{key} ?
         ($restricted ? 'restricted' : 'open') :
         'none';
-	#The above selects between wep and wpa-psk now for wpa-eap
-	if ($network->{flags} =~ /eap/i) {
-		$self->{access}{network}{encryption} = "wpa-eap";
-	}
 	#load settings if only we use wpa_suuplicant
 	wpa_supplicant_load_eap_settings($self->{access}{network}) if $self->need_wpa_supplicant;
 
