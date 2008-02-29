@@ -461,7 +461,7 @@ possible values are WPA-EAP, IEEE8021X, NONE") },
           disabled => sub { $self->{access}{network}{encryption} !~ /eap/ },
           help => N("Anonymous identity string for EAP: to be used as the
 unencrypted identity with EAP types that support different 
-tunnelled identity, e.g., TTLS")},
+tunnelled identity, e.g., TTLS") },
         { label => N("EAP phase2"), val => \$self->{access}{network}{eap_phase2}, advanced => 1,
           disabled => sub { $self->{access}{network}{encryption} !~ /eap/ } ,
           help => N("Inner authentication with TLS tunnel parameters.
@@ -945,7 +945,7 @@ sub wpa_supplicant_add_eap_network {
 	};
 	#Sets the value
 	foreach $myone (keys %$myeap_vars) {
-		$mykey = join ('_', "eap", $myone);
+		$mykey = join('_', "eap", $myone);
 		if (!defined $ui_input->{$mykey}) {
 			#Only if it is defined and not empty
 			$network->{$myone} = $default_eap_cfg->{$myone} if (defined $default_eap_cfg->{$myone} && $default_eap_cfg->{$myone} ne "");
