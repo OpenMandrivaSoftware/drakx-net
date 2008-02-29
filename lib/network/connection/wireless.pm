@@ -901,8 +901,8 @@ sub wpa_supplicant_load_eap_settings {
 					#Remove quotes on selected variables
 					$network->{$ui_var} = "$1" if $myeap_vars->{$myone} == 2 && $network->{$ui_var} =~ /^"(.*)"$/;
 					if ($myone eq "proto") {
-						$network->{forceeap} = 'WPA2' if ($old_net->{$myone} =~ /^RSN$/);
-						$network->{forceeap} = 'WPA' if ($old_net->{$myone} =~ /^WPA$/);
+						$network->{forceeap} = 'WPA2' if $old_net->{$myone} =~ /^RSN$/;
+						$network->{forceeap} = 'WPA' if $old_net->{$myone} =~ /^WPA$/;
 					}
 				}
 			}
@@ -948,14 +948,14 @@ sub wpa_supplicant_add_eap_network {
 		$mykey = join('_', "eap", $myone);
 		if (!defined $ui_input->{$mykey}) {
 			#Only if it is defined and not empty
-			$network->{$myone} = $default_eap_cfg->{$myone} if (defined $default_eap_cfg->{$myone} && $default_eap_cfg->{$myone} ne "");
+			$network->{$myone} = $default_eap_cfg->{$myone} if defined $default_eap_cfg->{$myone} && $default_eap_cfg->{$myone} ne "";
 		} elsif ($ui_input->{$mykey} =~ /auto detect/i) {
 			#Only if it is defined and not empty
-			$network->{$myone} = $default_eap_cfg->{$myone} if (defined $default_eap_cfg->{$myone} && $default_eap_cfg->{$myone} ne "");
+			$network->{$myone} = $default_eap_cfg->{$myone} if defined $default_eap_cfg->{$myone} && $default_eap_cfg->{$myone} ne "";
 		} else {
 			#Handle also quoting
 			    #Do not define if blank, the save routine will delete entry from file
-			    next if ($ui_input->{$mykey} eq "");
+			    next if $ui_input->{$mykey} eq "";
 			$network->{$myone} = $myeap_vars->{$myone} == 2 ? qq("$ui_input->{$mykey}") : "$ui_input->{$mykey}";
 		}
 	}
