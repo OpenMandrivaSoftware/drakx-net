@@ -932,25 +932,25 @@ sub wpa_supplicant_add_eap_network {
     my $network = { ssid => qq("$ui_input->{essid}") };
     #- set the values
     foreach my $eap_var (keys %eap_vars) {
-        my $mykey = join('_', "eap", $eap_var);
-        if (!defined $ui_input->{$mykey}) {
+        my $key = join('_', "eap", $eap_var);
+        if (!defined $ui_input->{$key}) {
             #- only if it is defined and not empty
             $network->{$eap_var} = $default_eap_cfg->{$eap_var} if $default_eap_cfg->{$eap_var};
-        } elsif ($ui_input->{$mykey} =~ /auto detect/i) {
+        } elsif ($ui_input->{$key} =~ /auto detect/i) {
             #- only if it is defined and not empty
             $network->{$eap_var} = $default_eap_cfg->{$eap_var} if $default_eap_cfg->{$eap_var};
         } else {
             #- do not define if blank, the save routine will delete entry from file
-            next if !$ui_input->{$mykey};
-            $network->{$eap_var} = $eap_vars{$eap_var} == 2 ? qq("$ui_input->{$mykey}") : $ui_input->{$mykey};
+            next if !$ui_input->{$key};
+            $network->{$eap_var} = $eap_vars{$eap_var} == 2 ? qq("$ui_input->{$key}") : $ui_input->{$key};
         }
     }
     #- handle eapextra as final overides
     if (defined $ui_input->{eapextra} && $ui_input->{eapextra} ne "") {
         #- FIXME: should split it on what the # sign?
         foreach my $eap_var (split('#', $ui_input->{eapextra})) {
-            my ($mykey, $myval) = split('=', $eap_var, 2);
-            $network->{$mykey} = $myval;
+            my ($key, $val) = split('=', $eap_var, 2);
+            $network->{$key} = $val;
         }
     }
     $network->{mode} = to_bool($ui_input->{mode} eq 'Ad-Hoc');
