@@ -345,8 +345,6 @@ sub guess_network_access_settings {
       $network && $network->{flags} =~ /wep/i || $self->{access}{network}{key} ?
         ($restricted ? 'restricted' : 'open') :
         'none';
-	#load settings if only we use wpa_suuplicant
-	wpa_supplicant_load_eap_settings($self->{access}{network}) if $self->need_wpa_supplicant;
 
     undef $self->{ifcfg}{WIRELESS_IWPRIV} if is_old_rt2x00($self->get_driver) && $self->{ifcfg}{WIRELESS_IWPRIV} =~ /WPAPSK/;
 
@@ -356,6 +354,8 @@ sub guess_network_access_settings {
         $network && $network->{mode} ||
         $ifcfg->{WIRELESS_MODE} ||
         'Managed';
+
+    wpa_supplicant_load_eap_settings($self->{access}{network}) if $self->need_wpa_supplicant;
 }
 
 sub get_network_access_settings_label { N("Wireless settings") }
