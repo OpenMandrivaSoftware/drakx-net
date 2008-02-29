@@ -882,7 +882,7 @@ sub wpa_supplicant_load_eap_settings {
     $conf = wpa_supplicant_read_conf();
     foreach $old_net (@$conf) {
 
-	if ($old_net->{ssid} eq $network->{essid} or $old_net->{ssid} eq $quoted_essid) {
+	if ($old_net->{ssid} eq $network->{essid} || $old_net->{ssid} eq $quoted_essid) {
 		$network->{eapextra} = '';
 		foreach $myone (keys %$myeap_vars) {
 			next if ($myone eq 'ssid');
