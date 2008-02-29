@@ -907,60 +907,53 @@ sub wpa_supplicant_load_eap_settings {
 }
 
 sub wpa_supplicant_add_eap_network {
-	my ($ui_input, $mykey, $default_eap_cfg, $conf, $eap_var, $myval);
-	$ui_input = shift;
+    my ($ui_input) = @_;
 
-	#Handle WPA Enterprise
-	#expect all variables for us to be prefixed with eap_
-    	$conf = wpa_supplicant_read_conf();
-    	$default_eap_cfg = {
-	 	pairwise => 'CCMP TKIP',
-	    	group => 'CCMP TKIP',
-	    	proto => 'RSN WPA',
-		key_mgmt => 'WPA-EAP IEEE8021X NONE',
-		scan_ssid => 1,
-    	};
-	#did user force a particular version?
-    	if ($ui_input->{forceeap} eq 'WPA') {
-		#WPA only
-	    	$default_eap_cfg->{pairwise} = 'TKIP';
-	    	$default_eap_cfg->{group} = 'TKIP';
-	    	$default_eap_cfg->{proto} = 'WPA';
-	} elsif ($ui_input->{forceeap} eq 'WPA2') {
-		#WPA2 only
-	    	$default_eap_cfg->{pairwise} = 'CCMP TKIP';
-	    	$default_eap_cfg->{group} = 'CCMP TKIP';
-	    	$default_eap_cfg->{proto} = 'RSN';
-    	}
-    	my $network = {
-		ssid => qq("$ui_input->{essid}"),
-	};
-	#Sets the value
-	foreach my $eap_var (keys %eap_vars) {
-		$mykey = join('_', "eap", $eap_var);
-		if (!defined $ui_input->{$mykey}) {
-			#Only if it is defined and not empty
-			$network->{$eap_var} = $default_eap_cfg->{$eap_var} if $default_eap_cfg->{$eap_var};
-		} elsif ($ui_input->{$mykey} =~ /auto detect/i) {
-			#Only if it is defined and not empty
-			$network->{$eap_var} = $default_eap_cfg->{$eap_var} if $default_eap_cfg->{$eap_var};
-		} else {
-			#Handle also quoting
-			    #Do not define if blank, the save routine will delete entry from file
-			    next if !$ui_input->{$mykey};
-			$network->{$eap_var} = $eap_vars{$eap_var} == 2 ? qq("$ui_input->{$mykey}") : $ui_input->{$mykey};
-		}
-	}
-	#handle eapextra as final overides
-	if (defined $ui_input->{eapextra} && $ui_input->{eapextra} ne "") {
-		#Should split it on what the # sign?
-		foreach my $eap_var (split('#', $ui_input->{eapextra})) {
-			($mykey, $myval) = split('=', $eap_var, 2);
-			$network->{$mykey} = $myval;
-		}
-	}
-	#final fixes
-        $network->{mode} = to_bool($ui_input->{mode} eq 'Ad-Hoc');
+    #- expect all variables for us to be prefixed with eap_
+    my $conf = wpa_supplicant_read_conf();
+    my $default_eap_cfg = {
+        pairwise => 'CCMP TKIP',
+        group => 'CCMP TKIP',
+        proto => 'RSN WPA',
+        key_mgmt => 'WPA-EAP IEEE8021X NONE',
+        scan_ssid => 1,
+    };
+    if ($ui_input->{forceeap} eq 'WPA') {
+        #- WPA only
+        $default_eap_cfg->{pairwise} = 'TKIP';
+        $default_eap_cfg->{group} = 'TKIP';
+        $default_eap_cfg->{proto} = 'WPA';
+    } elsif ($ui_input->{forceeap} eq 'WPA2') {
+        #- WPA2 only
+        $default_eap_cfg->{pairwise} = 'CCMP TKIP';
+        $default_eap_cfg->{group} = 'CCMP TKIP';
+        $default_eap_cfg->{proto} = 'RSN';
+    }
+    my $network = { ssid => qq("$ui_input->{essid}") };
+    #- set the values
+    foreach my $eap_var (keys %eap_vars) {
+        my $mykey = join('_', "eap", $eap_var);
+        if (!defined $ui_input->{$mykey}) {
+            #- only if it is defined and not empty
+            $network->{$eap_var} = $default_eap_cfg->{$eap_var} if $default_eap_cfg->{$eap_var};
+        } elsif ($ui_input->{$mykey} =~ /auto detect/i) {
+            #- only if it is defined and not empty
+            $network->{$eap_var} = $default_eap_cfg->{$eap_var} if $default_eap_cfg->{$eap_var};
+        } else {
+            #- do not define if blank, the save routine will delete entry from file
+            next if !$ui_input->{$mykey};
+            $network->{$eap_var} = $eap_vars{$eap_var} == 2 ? qq("$ui_input->{$mykey}") : $ui_input->{$mykey};
+        }
+    }
+    #- handle eapextra as final overides
+    if (defined $ui_input->{eapextra} && $ui_input->{eapextra} ne "") {
+        #- FIXME: should split it on what the # sign?
+        foreach my $eap_var (split('#', $ui_input->{eapextra})) {
+            my ($mykey, $myval) = split('=', $eap_var, 2);
+            $network->{$mykey} = $myval;
+        }
+    }
+    $network->{mode} = to_bool($ui_input->{mode} eq 'Ad-Hoc');
 
     @$conf = difference2($conf, [ wpa_supplicant_find_similar($conf, $network) ]);
     push @$conf, $network;
