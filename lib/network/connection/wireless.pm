@@ -374,13 +374,13 @@ sub get_network_access_settings {
         { label => N("Encryption key"), val => \$self->{access}{network}{key},
           disabled => sub { member($self->{access}{network}{encryption}, qw(none wpa-eap)) } },
         { label => N("EAP Login/Username"), val => \$self->{access}{network}{eap_identity},
-          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' }, 
-	  help => N("The login or username. Format is plain text. If you 
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
+	  help => N("The login or username. Format is plain text. If you
 need to specify domain then try the untested syntax
   DOMAIN\\username") },
         { label => N("EAP Password"), val => \$self->{access}{network}{eap_password},
-          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' }, 
-	  help => N(" Password: A string. 
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
+	  help => N(" Password: A string.
 Note that this is not the same thing as a psk.
 ____________________________________________________
 RELATED ADDITIONAL INFORMATION:
@@ -389,15 +389,15 @@ is used for authentication. For the eap mode setting
    Auto Detect: implies all possible modes are tried.
 
 If Auto Detect fails, try the PEAP TTLS combo bofore others
-Note: 
-	The settings MD5, MSCHAPV2, OTP and GTC imply 
-automatically PEAP and TTLS modes. 
-  TLS mode is completely certificate based and may ignore 
+Note:
+	The settings MD5, MSCHAPV2, OTP and GTC imply
+automatically PEAP and TTLS modes.
+  TLS mode is completely certificate based and may ignore
 the username and password values specified here.") },
         { label => N("EAP client certificate"), val => \$self->{access}{network}{eap_client_cert},
-          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' }, 
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
 help => N("The complete path and filename of client certificate. This is
-only used for EAP certificate based authentication. It could be 
+only used for EAP certificate based authentication. It could be
 considered as the alternative to username/password combo.
  Note: other related settings are shown on the Advanced page.")  },
         { label => N("Network ID"), val => \$self->{ifcfg}{WIRELESS_NWID}, advanced => 1 },
@@ -445,39 +445,39 @@ See iwpriv(8) man page for further information."),
           },
         { label => N("EAP Protocol"), val => \$self->{access}{network}{forceeap},
           list => [ N_("Auto Detect"), N_("WPA2"), N_("WPA") ],
-          sort => 1, format => \&translate, advanced => 1, 
-	  help => N("Auto Detect is recommended as it first tries WPA version 2 with 
+          sort => 1, format => \&translate, advanced => 1,
+	  help => N("Auto Detect is recommended as it first tries WPA version 2 with
 a fallback to WPA version 1") },
         { label => N("EAP Mode"), val => \$self->{access}{network}{eap_eap},
           list => [ N_("Auto Detect"), N_("PEAP"), N_("TTLS"), N_("TLS"), N_("MSCHAPV2"), N_("MD5"), N_("OTP"), N_("GTC"), N_("LEAP") , N_("PEAP TTLS"), N_("TTLS TLS") ],
           sort => 1, format => \&translate, advanced => 1, },
         { label => N("EAP key_mgmt"), val => \$self->{access}{network}{eap_key_mgmt}, advanced => 1,
-          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' }, help => 
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' }, help =>
 N("list of accepted authenticated key management protocols.
 possible values are WPA-EAP, IEEE8021X, NONE") },
         { label => N("EAP outer identity"), val => \$self->{access}{network}{eap_anonymous_identity}, advanced => 1,
           disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
           help => N("Anonymous identity string for EAP: to be used as the
-unencrypted identity with EAP types that support different 
+unencrypted identity with EAP types that support different
 tunnelled identity, e.g., TTLS") },
         { label => N("EAP phase2"), val => \$self->{access}{network}{eap_phase2}, advanced => 1,
           disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' } ,
           help => N("Inner authentication with TLS tunnel parameters.
-input is string with field-value pairs, Examples: 
+input is string with field-value pairs, Examples:
 auth=MSCHAPV2 for PEAP or
 autheap=MSCHAPV2 autheap=MD5 for TTLS") },
         { label => N("EAP CA certificate"), val => \$self->{access}{network}{eap_ca_cert}, advanced => 1,
           disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
-          help => N("Full file path to CA certificate file (PEM/DER). This file 
-can have one or more trusted CA certificates. If ca_cert are not 
+          help => N("Full file path to CA certificate file (PEM/DER). This file
+can have one or more trusted CA certificates. If ca_cert are not
 included, server certificate will not be verified. If possible,
-a trusted CA certificate should always be configured 
+a trusted CA certificate should always be configured
 when using TLS or TTLS or PEAP.") },
         { label => N("EAP certificate subject match"), val => \$self->{access}{network}{eap_subject_match}, advanced => 1,
           disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
-          help => N(" Substring to be matched against the subject of 
-the authentication server certificate. If this string is set, 
-the server sertificate is only accepted if it contains this 
+          help => N(" Substring to be matched against the subject of
+the authentication server certificate. If this string is set,
+the server sertificate is only accepted if it contains this
 string in the subject.  The subject string is in following format:
 /C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as\@example.com") },
         { label => N("EAP extra directives"), val => \$self->{access}{network}{eapextra}, advanced => 1,
@@ -486,14 +486,14 @@ string in the subject.  The subject string is in following format:
 The expected format is a string field=value pair. Multiple values
 maybe specified, separating each value with the # character.
 Note: directives are passed unchecked and may cause the wpa
-negotiation to fail silently. Supported directives are preserved 
+negotiation to fail silently. Supported directives are preserved
 across editing.
 Supported directives are :
-	disabled, id_str, bssid, priority, auth_alg, eapol_flags, 
-	proactive_key_caching, peerkey, ca_path, private_key, 
-	private_key_passwd, dh_file, altsubject_match, phase1, 
+	disabled, id_str, bssid, priority, auth_alg, eapol_flags,
+	proactive_key_caching, peerkey, ca_path, private_key,
+	private_key_passwd, dh_file, altsubject_match, phase1,
 	fragment_size and eap_workaround, pairwise, group
-	Others such as key_mgmt, eap maybe used to force 
+	Others such as key_mgmt, eap maybe used to force
 	special settings different from the U.I settings.") },
     ];
 }
