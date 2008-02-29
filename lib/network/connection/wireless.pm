@@ -41,7 +41,44 @@ our %wireless_enc_modes = (
     open => N_("Open WEP"),
     restricted => N_("Restricted WEP"),
     'wpa-psk' => N_("WPA Pre-Shared Key"),
+    'wpa-eap' => N_("WPA2/WPA Enterprise"),
 );
+#define the eap related variables we handle
+#0 means we preserve value if found
+#1 means we save without quotes
+#2 save with quotes
+our $myeap_vars = {
+	ssid => 2,
+	scan_ssid => 1,
+	identity => 2,
+	password => 2,
+	key_mgmt => 1,
+	eap => 1,
+	pairwise => 1,
+	group => 1,
+	proto => 1,
+	ca_cert => 2,
+	client_cert => 2,
+	phase2 => 2,
+	anonymous_identity => 2,
+	subject_match => 2,
+	disabled => 0,
+	id_str => 0,
+	bssid => 0,
+	priority => 0,
+	auth_alg => 0,
+	eapol_flags => 0,
+	proactive_key_caching => 0,
+	peerkey => 0,
+	ca_path => 0,
+	private_key => 0,
+	private_key_passwd => 0,
+	dh_file => 0,
+	altsubject_match => 0,
+	phase1 => 0,
+	fragment_size => 0,
+	eap_workaround => 0,
+};
 
 my @thirdparty_settings = (
     {
@@ -306,6 +343,12 @@ sub guess_network_access_settings {
       $network && $network->{flags} =~ /wep/i || $self->{access}{network}{key} ?
         ($restricted ? 'restricted' : 'open') :
         'none';
+	#The above selects between wep and wpa-psk now for wpa-eap
+	if ($network->{flags} =~ /eap/i) {
+		$self->{access}{network}{encryption} = "wpa-eap";
+	}
+	#load settings if only we use wpa_suuplicant
+	wpa_supplicant_load_eap_settings($self->{access}{network}) if ($self->need_wpa_supplicant);
 
     undef $self->{ifcfg}{WIRELESS_IWPRIV} if is_old_rt2x00($self->get_driver) && $self->{ifcfg}{WIRELESS_IWPRIV} =~ /WPAPSK/;
 
@@ -331,7 +374,34 @@ sub get_network_access_settings {
         { label => N("Encryption mode"), val => \$self->{access}{network}{encryption}, list => [ keys %wireless_enc_modes ],
           sort => 1, format => sub { translate($wireless_enc_modes{$_[0]}) } },
         { label => N("Encryption key"), val => \$self->{access}{network}{key},
-          disabled => sub { $self->{access}{network}{encryption} eq 'none' } },
+          disabled => sub { $self->{access}{network}{encryption} =~ /none|eap/ } },
+        { label => N("EAP Login/Username"), val => \$self->{access}{network}{eap_identity},
+          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ }, 
+	  help => N("The login or username. Format is plain text. If you 
+need to specify domain then try the untested syntax
+  DOMAIN\\username") },
+        { label => N("EAP Password"), val => \$self->{access}{network}{eap_password},
+          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ }, 
+	  help => N(" Password: A string. 
+Note that this is not the same thing as a psk.
+____________________________________________________
+RELATED ADDITIONAL INFORMATION:
+In the Advanced Page, you can select which EAP mode
+is used for authentication. For the eap mode setting
+   Auto Detect: implies all possible modes are tried.
+
+If Auto Detect fails, try the PEAP TTLS combo bofore others
+Note: 
+	The settings MD5, MSCHAPV2, OTP and GTC imply 
+automatically PEAP and TTLS modes. 
+  TLS mode is completely certificate based and may ignore 
+the username and password values specified here.") },
+        { label => N("EAP client certificate"), val => \$self->{access}{network}{eap_client_cert},
+          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ }, 
+help => N("The complete path and filename of client certificate. This is
+only used for EAP certificate based authentication. It could be 
+considered as the alternative to username/password combo.
+ Note: other related settings are shown on the Advanced page.")  },
         { label => N("Network ID"), val => \$self->{ifcfg}{WIRELESS_NWID}, advanced => 1 },
         { label => N("Operating frequency"), val => \$self->{ifcfg}{WIRELESS_FREQ}, advanced => 1 },
         { label => N("Sensitivity threshold"), val => \$self->{ifcfg}{WIRELESS_SENS}, advanced => 1 },
@@ -375,13 +445,65 @@ those interface specific commands and their effect.
 
 See iwpriv(8) man page for further information."),
           },
+        { label => N("EAP Protocol"), val => \$self->{access}{network}{forceeap},
+          list => [ N_("Auto Detect"), N_("WPA2"), N_("WPA") ],
+          sort => 1, format => \&translate, advanced => 1, 
+	  help => N("Auto Detect is recommended as it first tries WPA version 2 with 
+a fallback to WPA version 1") },
+        { label => N("EAP Mode"), val => \$self->{access}{network}{eap_eap},
+          list => [ N_("Auto Detect"), N_("PEAP"), N_("TTLS"), N_("TLS"), N_("MSCHAPV2"), N_("MD5"), N_("OTP"), N_("GTC"), N_("LEAP") , N_("PEAP TTLS"), N_("TTLS TLS") ],
+          sort => 1, format => \&translate, advanced => 1, },
+        { label => N("EAP key_mgmt"), val => \$self->{access}{network}{eap_key_mgmt}, advanced => 1,
+          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ }, help => 
+N("list of accepted authenticated key management protocols.
+possible values are WPA-EAP, IEEE8021X, NONE") },
+        { label => N("EAP outer identity"), val => \$self->{access}{network}{eap_anonymous_identity}, advanced => 1,
+          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ },
+help => N("Anonymous identity string for EAP: to be used as the
+unencrypted identity with EAP types that support different 
+tunnelled identity, e.g., TTLS")},
+        { label => N("EAP phase2"), val => \$self->{access}{network}{eap_phase2}, advanced => 1,
+          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ } ,
+help => N("Inner authentication with TLS tunnel parameters.
+input is string with field-value pairs, Examples: 
+auth=MSCHAPV2 for PEAP or
+autheap=MSCHAPV2 autheap=MD5 for TTLS") },
+        { label => N("EAP CA certificate"), val => \$self->{access}{network}{eap_ca_cert}, advanced => 1,
+          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ },
+help => N("Full file path to CA certificate file (PEM/DER). This file 
+can have one or more trusted CA certificates. If ca_cert are not 
+included, server certificate will not be verified. If possible,
+a trusted CA certificate should always be configured 
+when using TLS or TTLS or PEAP.") },
+        { label => N("EAP certificate subject match"), val => \$self->{access}{network}{eap_subject_match}, advanced => 1,
+          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ },
+help => N(" Substring to be matched against the subject of 
+the authentication server certificate. If this string is set, 
+the server sertificate is only accepted if it contains this 
+string in the subject.  The subject string is in following format:
+/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com") },
+        { label => N("EAP extra directives"), val => \$self->{access}{network}{eapextra}, advanced => 1,
+          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ },
+help => N("Here one can pass extra settings to wpa_supplicant
+The expected format is a string field=value pair. Multiple values
+maybe specified, separating each value with the # character.
+Note: directives are passed unchecked and may cause the wpa
+negotiation to fail silently. Supported directives are preserved 
+across editing.
+Supported directives are :
+	disabled, id_str, bssid, priority, auth_alg, eapol_flags, 
+	proactive_key_caching, peerkey, ca_path, private_key, 
+	private_key_passwd, dh_file, altsubject_match, phase1, 
+	fragment_size and eap_workaround, pairwise, group
+	Others such as key_mgmt, eap maybe used to force 
+	special settings different from the U.I settings.") },
     ];
 }
 
 sub check_network_access_settings {
     my ($self) = @_;
 
-    if ($self->{access}{network}{encryption} ne 'none' && !$self->{access}{network}{key}) {
+    if ($self->{access}{network}{encryption} !~ /none|eap/ && !$self->{access}{network}{key}) {
         $self->{network_access}{error}{message} = N("An encryption key is required.");
         $self->{network_access}{error}{field} =  \$self->{access}{network}{key};
         return 0;
@@ -413,7 +535,7 @@ sub get_control_settings {
 
 sub need_wpa_supplicant {
     my ($self) = @_;
-    ($self->{control}{roaming} || $self->{access}{network}{encryption} eq 'wpa-psk') && !is_old_rt2x00($self->get_driver);
+    ($self->{control}{roaming} || $self->{access}{network}{encryption} =~ /wpa/i) && !is_old_rt2x00($self->get_driver);
 }
 
 sub install_packages {
@@ -452,7 +574,15 @@ set TxRate=0)),
 sub write_settings {
     my ($self, $o_net, $o_modules_conf) = @_;
 
-    wpa_supplicant_add_network($self->{access}{network}{essid}, $self->{access}{network}{encryption}, $self->{access}{network}{key}, $self->{access}{network}{mode}) if $self->need_wpa_supplicant;
+    if ($self->need_wpa_supplicant) {
+	if ($self->{access}{network}{encryption} =~ /eap/i) {
+		#for eap
+    		wpa_supplicant_add_eap_network($self->{access}{network});
+	} else {
+		#For WEP/PSK
+    		wpa_supplicant_add_network($self->{access}{network}{essid}, $self->{access}{network}{encryption}, $self->{access}{network}{key}, $self->{access}{network}{mode});
+	}
+    }
 
     wlan_ng_configure($self->{access}{network}{essid}, $self->{access}{network}{key}, $self->get_interface, $self->get_driver) if $self->{thirdparty}{name} eq 'prism2';
 
@@ -745,4 +875,103 @@ sub wpa_supplicant_write_conf {
     chmod 0600, $::prefix . $wpa_supplicant_conf;
 }
 
+sub wpa_supplicant_load_eap_settings {
+    my ($network, $conf, $old_net, $myone, $ui_var, $quoted_essid);
+    $network = shift;
+    $quoted_essid = qq("$network->{essid}");
+    $conf = wpa_supplicant_read_conf();
+    foreach $old_net (@$conf) {
+
+	if ($old_net->{ssid} eq $network->{essid} or $old_net->{ssid} eq $quoted_essid) {
+		$network->{eapextra} = '';
+		foreach $myone (keys %$myeap_vars) {
+			next if ($myone eq 'ssid');
+			$ui_var = join('_', "eap", $myone);
+			if (defined $old_net->{$myone}) {
+				if ($myeap_vars->{$myone} == 0) {
+					#load into the eapextra variable
+					if ($network->{eapextra} eq "") {
+						$network->{eapextra} = "$myone=$old_net->{$myone}";
+					} else {
+						$network->{eapextra} = join('#', $network->{eapextra}, "$myone=$old_net->{$myone}");
+					}
+				} else {
+					#case > 1 or 2
+					$network->{$ui_var} = "$old_net->{$myone}"; 
+					#Remove quotes on selected variables
+					$network->{$ui_var} = "$1" if ($myeap_vars->{$myone} == 2 && $network->{$ui_var} =~ /^\"(.*)\"$/);
+					if ($myone eq "proto") {
+						$network->{forceeap} = 'WPA2' if ($old_net->{$myone} =~ /^RSN$/);
+						$network->{forceeap} = 'WPA' if ($old_net->{$myone} =~ /^WPA$/);
+					}
+				}
+			}
+
+		}
+		last;
+	}
+    }
+
+}
+
+sub wpa_supplicant_add_eap_network {
+	my ($ui_input, $mykey, $default_eap_cfg, $conf, $myone, $myval);
+	$ui_input = shift;
+
+	#Handle WPA Enterprise
+	#expect all variables for us to be prefixed with eap_
+    	$conf = wpa_supplicant_read_conf();
+    	$default_eap_cfg = {
+	 	pairwise => 'CCMP TKIP',
+	    	group => 'CCMP TKIP',
+	    	proto => 'RSN WPA',
+		key_mgmt => 'WPA-EAP IEEE8021X NONE',
+		scan_ssid => 1,
+    	};
+	#did user force a particular version?
+    	if ($ui_input->{forceeap} eq 'WPA') {
+		#WPA only
+	    	$default_eap_cfg->{pairwise} = 'TKIP';
+	    	$default_eap_cfg->{group} = 'TKIP';
+	    	$default_eap_cfg->{proto} = 'WPA';
+	} elsif ($ui_input->{forceeap} eq 'WPA2') {
+		#WPA2 only
+	    	$default_eap_cfg->{pairwise} = 'CCMP TKIP';
+	    	$default_eap_cfg->{group} = 'CCMP TKIP';
+	    	$default_eap_cfg->{proto} = 'RSN';
+    	}
+    	my $network = {
+		ssid => qq("$ui_input->{essid}"),
+	};
+	#Sets the value
+	foreach $myone (keys %$myeap_vars) {
+		$mykey = join ('_', "eap", $myone);
+		if (!defined $ui_input->{$mykey}) {
+			#Only if it is defined and not empty
+			$network->{$myone} = $default_eap_cfg->{$myone} if (defined $default_eap_cfg->{$myone} && $default_eap_cfg->{$myone} ne "");
+		} elsif ($ui_input->{$mykey} =~ /auto detect/i) {
+			#Only if it is defined and not empty
+			$network->{$myone} = $default_eap_cfg->{$myone} if (defined $default_eap_cfg->{$myone} && $default_eap_cfg->{$myone} ne "");
+		} else {
+			#Handle also quoting
+			    #Do not define if blank, the save routine will delete entry from file
+			    next if ($ui_input->{$mykey} eq "");
+			$network->{$myone} = $myeap_vars->{$myone} == 2 ? qq("$ui_input->{$mykey}") : "$ui_input->{$mykey}";
+		}
+	}
+	#handle eapextra as final overides
+	if (defined $ui_input->{eapextra} && $ui_input->{eapextra} ne "") {
+		#Should split it on what the # sign?
+		foreach $myone (split('#', $ui_input->{eapextra})) {
+			($mykey, $myval) = split('=', $myone, 2);
+			$network->{$mykey} = "$myval";
+		}
+	}
+	#final fixes
+        $network->{mode} = to_bool($ui_input->{mode} eq 'Ad-Hoc');
+
+    @$conf = difference2($conf, [ wpa_supplicant_find_similar($conf, $network) ]);
+    push @$conf, $network;
+    wpa_supplicant_write_conf($conf);
+}
 1;
