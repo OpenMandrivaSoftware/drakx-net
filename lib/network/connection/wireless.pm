@@ -948,14 +948,14 @@ sub wpa_supplicant_add_eap_network {
 		$mykey = join('_', "eap", $myone);
 		if (!defined $ui_input->{$mykey}) {
 			#Only if it is defined and not empty
-			$network->{$myone} = $default_eap_cfg->{$myone} if defined $default_eap_cfg->{$myone} && $default_eap_cfg->{$myone} ne "";
+			$network->{$myone} = $default_eap_cfg->{$myone} if $default_eap_cfg->{$myone};
 		} elsif ($ui_input->{$mykey} =~ /auto detect/i) {
 			#Only if it is defined and not empty
-			$network->{$myone} = $default_eap_cfg->{$myone} if defined $default_eap_cfg->{$myone} && $default_eap_cfg->{$myone} ne "";
+			$network->{$myone} = $default_eap_cfg->{$myone} if $default_eap_cfg->{$myone};
 		} else {
 			#Handle also quoting
 			    #Do not define if blank, the save routine will delete entry from file
-			    next if $ui_input->{$mykey} eq "";
+			    next if !$ui_input->{$mykey};
 			$network->{$myone} = $myeap_vars->{$myone} == 2 ? qq("$ui_input->{$mykey}") : $ui_input->{$mykey};
 		}
 	}
