@@ -396,7 +396,7 @@ automatically PEAP and TTLS modes.
 the username and password values specified here.") },
         { label => N("EAP client certificate"), val => \$self->{access}{network}{eap_client_cert},
           disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
-help => N("The complete path and filename of client certificate. This is
+          help => N("The complete path and filename of client certificate. This is
 only used for EAP certificate based authentication. It could be
 considered as the alternative to username/password combo.
  Note: other related settings are shown on the Advanced page.")  },
@@ -452,8 +452,8 @@ a fallback to WPA version 1") },
           list => [ N_("Auto Detect"), N_("PEAP"), N_("TTLS"), N_("TLS"), N_("MSCHAPV2"), N_("MD5"), N_("OTP"), N_("GTC"), N_("LEAP") , N_("PEAP TTLS"), N_("TTLS TLS") ],
           sort => 1, format => \&translate, advanced => 1, },
         { label => N("EAP key_mgmt"), val => \$self->{access}{network}{eap_key_mgmt}, advanced => 1,
-          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' }, help =>
-N("list of accepted authenticated key management protocols.
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
+          help => N("list of accepted authenticated key management protocols.
 possible values are WPA-EAP, IEEE8021X, NONE") },
         { label => N("EAP outer identity"), val => \$self->{access}{network}{eap_anonymous_identity}, advanced => 1,
           disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
