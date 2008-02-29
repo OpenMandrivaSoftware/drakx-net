@@ -874,42 +874,36 @@ sub wpa_supplicant_write_conf {
 }
 
 sub wpa_supplicant_load_eap_settings {
-    my ($network, $conf, $old_net, $myone, $ui_var, $quoted_essid);
-    $network = shift;
-    $quoted_essid = qq("$network->{essid}");
-    $conf = wpa_supplicant_read_conf();
+    my ($network) = @_;
+    my $quoted_essid = qq("$network->{essid}");
+    my $conf = wpa_supplicant_read_conf();
     foreach my $old_net (@$conf) {
-
 	if ($old_net->{ssid} eq $network->{essid} || $old_net->{ssid} eq $quoted_essid) {
-		$network->{eapextra} = '';
-		foreach my $myone (keys %eap_vars) {
-			next if $myone eq 'ssid';
-			$ui_var = join('_', "eap", $myone);
-			if (defined $old_net->{$myone}) {
-				if ($eap_vars{$myone} == 0) {
-					#load into the eapextra variable
-					if ($network->{eapextra} eq "") {
-						$network->{eapextra} = "$myone=$old_net->{$myone}";
-					} else {
-						$network->{eapextra} = join('#', $network->{eapextra}, "$myone=$old_net->{$myone}");
-					}
-				} else {
-					#case > 1 or 2
-					$network->{$ui_var} = $old_net->{$myone};
-					#Remove quotes on selected variables
-					$network->{$ui_var} = $1 if $eap_vars{$myone} == 2 && $network->{$ui_var} =~ /^"(.*)"$/;
-					if ($myone eq "proto") {
-						$network->{forceeap} = 'WPA2' if $old_net->{$myone} eq "RSN";
-						$network->{forceeap} = 'WPA' if $old_net->{$myone} eq "WPA";
-					}
-				}
-			}
-
-		}
-		last;
+            $network->{eapextra} = '';
+            foreach my $myone (keys %eap_vars) {
+                next if $myone eq 'ssid';
+                my $ui_var = join('_', "eap", $myone);
+                if (defined $old_net->{$myone}) {
+                    if ($eap_vars{$myone} == 0) {
+                        if ($network->{eapextra} eq "") {
+                            $network->{eapextra} = "$myone=$old_net->{$myone}";
+                        } else {
+                            $network->{eapextra} = join('#', $network->{eapextra}, "$myone=$old_net->{$myone}");
+                        }
+                    } else {
+                        $network->{$ui_var} = $old_net->{$myone};
+                        #- remove quotes on selected variables
+                        $network->{$ui_var} = $1 if $eap_vars{$myone} == 2 && $network->{$ui_var} =~ /^"(.*)"$/;
+                        if ($myone eq "proto") {
+                            $network->{forceeap} = 'WPA2' if $old_net->{$myone} eq "RSN";
+                            $network->{forceeap} = 'WPA' if $old_net->{$myone} eq "WPA";
+                        }
+                    }
+                }
+            }
+            last;
 	}
     }
-
 }
 
 sub wpa_supplicant_add_eap_network {
