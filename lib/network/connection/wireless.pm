@@ -47,7 +47,7 @@ our %wireless_enc_modes = (
 #0 means we preserve value if found
 #1 means we save without quotes
 #2 save with quotes
-our $myeap_vars = {
+my %eap_vars = (
 	ssid => 2,
 	scan_ssid => 1,
 	identity => 2,
@@ -78,7 +78,7 @@ our $myeap_vars = {
 	phase1 => 0,
 	fragment_size => 0,
 	eap_workaround => 0,
-};
+);
 
 my @thirdparty_settings = (
     {
@@ -884,11 +884,11 @@ sub wpa_supplicant_load_eap_settings {
 
 	if ($old_net->{ssid} eq $network->{essid} || $old_net->{ssid} eq $quoted_essid) {
 		$network->{eapextra} = '';
-		foreach my $myone (keys %$myeap_vars) {
+		foreach my $myone (keys %eap_vars) {
 			next if $myone eq 'ssid';
 			$ui_var = join('_', "eap", $myone);
 			if (defined $old_net->{$myone}) {
-				if ($myeap_vars->{$myone} == 0) {
+				if ($eap_vars{$myone} == 0) {
 					#load into the eapextra variable
 					if ($network->{eapextra} eq "") {
 						$network->{eapextra} = "$myone=$old_net->{$myone}";
@@ -899,7 +899,7 @@ sub wpa_supplicant_load_eap_settings {
 					#case > 1 or 2
 					$network->{$ui_var} = $old_net->{$myone};
 					#Remove quotes on selected variables
-					$network->{$ui_var} = $1 if $myeap_vars->{$myone} == 2 && $network->{$ui_var} =~ /^"(.*)"$/;
+					$network->{$ui_var} = $1 if $eap_vars{$myone} == 2 && $network->{$ui_var} =~ /^"(.*)"$/;
 					if ($myone eq "proto") {
 						$network->{forceeap} = 'WPA2' if $old_net->{$myone} eq "RSN";
 						$network->{forceeap} = 'WPA' if $old_net->{$myone} eq "WPA";
@@ -944,7 +944,7 @@ sub wpa_supplicant_add_eap_network {
 		ssid => qq("$ui_input->{essid}"),
 	};
 	#Sets the value
-	foreach my $myone (keys %$myeap_vars) {
+	foreach my $myone (keys %eap_vars) {
 		$mykey = join('_', "eap", $myone);
 		if (!defined $ui_input->{$mykey}) {
 			#Only if it is defined and not empty
@@ -956,7 +956,7 @@ sub wpa_supplicant_add_eap_network {
 			#Handle also quoting
 			    #Do not define if blank, the save routine will delete entry from file
 			    next if !$ui_input->{$mykey};
-			$network->{$myone} = $myeap_vars->{$myone} == 2 ? qq("$ui_input->{$mykey}") : $ui_input->{$mykey};
+			$network->{$myone} = $eap_vars{$myone} == 2 ? qq("$ui_input->{$mykey}") : $ui_input->{$mykey};
 		}
 	}
 	#handle eapextra as final overides
