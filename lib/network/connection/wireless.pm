@@ -481,7 +481,7 @@ when using TLS or TTLS or PEAP.") },
 the authentication server certificate. If this string is set, 
 the server sertificate is only accepted if it contains this 
 string in the subject.  The subject string is in following format:
-/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com") },
+/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as\@example.com") },
         { label => N("EAP extra directives"), val => \$self->{access}{network}{eapextra}, advanced => 1,
           disabled => sub { $self->{access}{network}{encryption} !~ /eap/ },
           help => N("Here one can pass extra settings to wpa_supplicant
