@@ -372,14 +372,14 @@ sub get_network_access_settings {
         { label => N("Encryption mode"), val => \$self->{access}{network}{encryption}, list => [ keys %wireless_enc_modes ],
           sort => 1, format => sub { translate($wireless_enc_modes{$_[0]}) } },
         { label => N("Encryption key"), val => \$self->{access}{network}{key},
-          disabled => sub { $self->{access}{network}{encryption} =~ /none|eap/ } },
+          disabled => sub { member($self->{access}{network}{encryption}, qw(none wpa-eap)) } },
         { label => N("EAP Login/Username"), val => \$self->{access}{network}{eap_identity},
-          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ }, 
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' }, 
 	  help => N("The login or username. Format is plain text. If you 
 need to specify domain then try the untested syntax
   DOMAIN\\username") },
         { label => N("EAP Password"), val => \$self->{access}{network}{eap_password},
-          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ }, 
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' }, 
 	  help => N(" Password: A string. 
 Note that this is not the same thing as a psk.
 ____________________________________________________
@@ -395,7 +395,7 @@ automatically PEAP and TTLS modes.
   TLS mode is completely certificate based and may ignore 
 the username and password values specified here.") },
         { label => N("EAP client certificate"), val => \$self->{access}{network}{eap_client_cert},
-          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ }, 
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' }, 
 help => N("The complete path and filename of client certificate. This is
 only used for EAP certificate based authentication. It could be 
 considered as the alternative to username/password combo.
@@ -452,36 +452,36 @@ a fallback to WPA version 1") },
           list => [ N_("Auto Detect"), N_("PEAP"), N_("TTLS"), N_("TLS"), N_("MSCHAPV2"), N_("MD5"), N_("OTP"), N_("GTC"), N_("LEAP") , N_("PEAP TTLS"), N_("TTLS TLS") ],
           sort => 1, format => \&translate, advanced => 1, },
         { label => N("EAP key_mgmt"), val => \$self->{access}{network}{eap_key_mgmt}, advanced => 1,
-          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ }, help => 
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' }, help => 
 N("list of accepted authenticated key management protocols.
 possible values are WPA-EAP, IEEE8021X, NONE") },
         { label => N("EAP outer identity"), val => \$self->{access}{network}{eap_anonymous_identity}, advanced => 1,
-          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ },
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
           help => N("Anonymous identity string for EAP: to be used as the
 unencrypted identity with EAP types that support different 
 tunnelled identity, e.g., TTLS") },
         { label => N("EAP phase2"), val => \$self->{access}{network}{eap_phase2}, advanced => 1,
-          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ } ,
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' } ,
           help => N("Inner authentication with TLS tunnel parameters.
 input is string with field-value pairs, Examples: 
 auth=MSCHAPV2 for PEAP or
 autheap=MSCHAPV2 autheap=MD5 for TTLS") },
         { label => N("EAP CA certificate"), val => \$self->{access}{network}{eap_ca_cert}, advanced => 1,
-          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ },
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
           help => N("Full file path to CA certificate file (PEM/DER). This file 
 can have one or more trusted CA certificates. If ca_cert are not 
 included, server certificate will not be verified. If possible,
 a trusted CA certificate should always be configured 
 when using TLS or TTLS or PEAP.") },
         { label => N("EAP certificate subject match"), val => \$self->{access}{network}{eap_subject_match}, advanced => 1,
-          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ },
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
           help => N(" Substring to be matched against the subject of 
 the authentication server certificate. If this string is set, 
 the server sertificate is only accepted if it contains this 
 string in the subject.  The subject string is in following format:
 /C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as\@example.com") },
         { label => N("EAP extra directives"), val => \$self->{access}{network}{eapextra}, advanced => 1,
-          disabled => sub { $self->{access}{network}{encryption} !~ /eap/ },
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
           help => N("Here one can pass extra settings to wpa_supplicant
 The expected format is a string field=value pair. Multiple values
 maybe specified, separating each value with the # character.
@@ -501,7 +501,7 @@ Supported directives are :
 sub check_network_access_settings {
     my ($self) = @_;
 
-    if ($self->{access}{network}{encryption} !~ /none|eap/ && !$self->{access}{network}{key}) {
+    if (!member($self->{access}{network}{encryption}, qw(none wpa-eap)) && !$self->{access}{network}{key}) {
         $self->{network_access}{error}{message} = N("An encryption key is required.");
         $self->{network_access}{error}{field} =  \$self->{access}{network}{key};
         return 0;
@@ -573,7 +573,7 @@ sub write_settings {
     my ($self, $o_net, $o_modules_conf) = @_;
 
     if ($self->need_wpa_supplicant) {
-	if ($self->{access}{network}{encryption} =~ /eap/i) {
+	if ($self->{access}{network}{encryption} eq 'wpa-eap') {
             wpa_supplicant_add_eap_network($self->{access}{network});
 	} else {
             wpa_supplicant_add_network($self->{access}{network}{essid}, $self->{access}{network}{encryption}, $self->{access}{network}{key}, $self->{access}{network}{mode});
