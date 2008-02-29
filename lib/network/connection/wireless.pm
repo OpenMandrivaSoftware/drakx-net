@@ -348,7 +348,7 @@ sub guess_network_access_settings {
 		$self->{access}{network}{encryption} = "wpa-eap";
 	}
 	#load settings if only we use wpa_suuplicant
-	wpa_supplicant_load_eap_settings($self->{access}{network}) if ($self->need_wpa_supplicant);
+	wpa_supplicant_load_eap_settings($self->{access}{network}) if $self->need_wpa_supplicant;
 
     undef $self->{ifcfg}{WIRELESS_IWPRIV} if is_old_rt2x00($self->get_driver) && $self->{ifcfg}{WIRELESS_IWPRIV} =~ /WPAPSK/;
 
