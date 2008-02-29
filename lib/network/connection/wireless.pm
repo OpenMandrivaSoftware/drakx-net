@@ -880,23 +880,23 @@ sub wpa_supplicant_load_eap_settings {
     foreach my $old_net (@$conf) {
 	if ($old_net->{ssid} eq $network->{essid} || $old_net->{ssid} eq $quoted_essid) {
             $network->{eapextra} = '';
-            foreach my $myone (keys %eap_vars) {
-                next if $myone eq 'ssid';
-                my $ui_var = join('_', "eap", $myone);
-                if (defined $old_net->{$myone}) {
-                    if ($eap_vars{$myone} == 0) {
+            foreach my $eap_var (keys %eap_vars) {
+                next if $eap_var eq 'ssid';
+                my $ui_var = join('_', "eap", $eap_var);
+                if (defined $old_net->{$eap_var}) {
+                    if ($eap_vars{$eap_var} == 0) {
                         if ($network->{eapextra} eq "") {
-                            $network->{eapextra} = "$myone=$old_net->{$myone}";
+                            $network->{eapextra} = "$eap_var=$old_net->{$eap_var}";
                         } else {
-                            $network->{eapextra} = join('#', $network->{eapextra}, "$myone=$old_net->{$myone}");
+                            $network->{eapextra} = join('#', $network->{eapextra}, "$eap_var=$old_net->{$eap_var}");
                         }
                     } else {
-                        $network->{$ui_var} = $old_net->{$myone};
+                        $network->{$ui_var} = $old_net->{$eap_var};
                         #- remove quotes on selected variables
-                        $network->{$ui_var} = $1 if $eap_vars{$myone} == 2 && $network->{$ui_var} =~ /^"(.*)"$/;
-                        if ($myone eq "proto") {
-                            $network->{forceeap} = 'WPA2' if $old_net->{$myone} eq "RSN";
-                            $network->{forceeap} = 'WPA' if $old_net->{$myone} eq "WPA";
+                        $network->{$ui_var} = $1 if $eap_vars{$eap_var} == 2 && $network->{$ui_var} =~ /^"(.*)"$/;
+                        if ($eap_var eq "proto") {
+                            $network->{forceeap} = 'WPA2' if $old_net->{$eap_var} eq "RSN";
+                            $network->{forceeap} = 'WPA' if $old_net->{$eap_var} eq "WPA";
                         }
                     }
                 }
@@ -907,7 +907,7 @@ sub wpa_supplicant_load_eap_settings {
 }
 
 sub wpa_supplicant_add_eap_network {
-	my ($ui_input, $mykey, $default_eap_cfg, $conf, $myone, $myval);
+	my ($ui_input, $mykey, $default_eap_cfg, $conf, $eap_var, $myval);
 	$ui_input = shift;
 
 	#Handle WPA Enterprise
@@ -936,26 +936,26 @@ sub wpa_supplicant_add_eap_network {
 		ssid => qq("$ui_input->{essid}"),
 	};
 	#Sets the value
-	foreach my $myone (keys %eap_vars) {
-		$mykey = join('_', "eap", $myone);
+	foreach my $eap_var (keys %eap_vars) {
+		$mykey = join('_', "eap", $eap_var);
 		if (!defined $ui_input->{$mykey}) {
 			#Only if it is defined and not empty
-			$network->{$myone} = $default_eap_cfg->{$myone} if $default_eap_cfg->{$myone};
+			$network->{$eap_var} = $default_eap_cfg->{$eap_var} if $default_eap_cfg->{$eap_var};
 		} elsif ($ui_input->{$mykey} =~ /auto detect/i) {
 			#Only if it is defined and not empty
-			$network->{$myone} = $default_eap_cfg->{$myone} if $default_eap_cfg->{$myone};
+			$network->{$eap_var} = $default_eap_cfg->{$eap_var} if $default_eap_cfg->{$eap_var};
 		} else {
 			#Handle also quoting
 			    #Do not define if blank, the save routine will delete entry from file
 			    next if !$ui_input->{$mykey};
-			$network->{$myone} = $eap_vars{$myone} == 2 ? qq("$ui_input->{$mykey}") : $ui_input->{$mykey};
+			$network->{$eap_var} = $eap_vars{$eap_var} == 2 ? qq("$ui_input->{$mykey}") : $ui_input->{$mykey};
 		}
 	}
 	#handle eapextra as final overides
 	if (defined $ui_input->{eapextra} && $ui_input->{eapextra} ne "") {
 		#Should split it on what the # sign?
-		foreach my $myone (split('#', $ui_input->{eapextra})) {
-			($mykey, $myval) = split('=', $myone, 2);
+		foreach my $eap_var (split('#', $ui_input->{eapextra})) {
+			($mykey, $myval) = split('=', $eap_var, 2);
 			$network->{$mykey} = $myval;
 		}
 	}
