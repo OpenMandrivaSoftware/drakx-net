@@ -36,6 +36,8 @@ sub main {
     my $w = ugtk2->new($title);
     #- so that transient_for is defined, for wait messages and popups to be centered
     $::main_window = $w->{real_window};
+
+    $w->show;
     my $wait = $in->wait_message(N("Please wait"), N("Please wait"));
 
     my @connections = map { $_->get_connections(automatic_only => 1, fast_only => 1) } network::connection::get_types;
