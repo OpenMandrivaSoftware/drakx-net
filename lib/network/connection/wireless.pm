@@ -574,11 +574,9 @@ sub write_settings {
 
     if ($self->need_wpa_supplicant) {
 	if ($self->{access}{network}{encryption} =~ /eap/i) {
-		#for eap
-    		wpa_supplicant_add_eap_network($self->{access}{network});
+            wpa_supplicant_add_eap_network($self->{access}{network});
 	} else {
-		#For WEP/PSK
-    		wpa_supplicant_add_network($self->{access}{network}{essid}, $self->{access}{network}{encryption}, $self->{access}{network}{key}, $self->{access}{network}{mode});
+            wpa_supplicant_add_network($self->{access}{network}{essid}, $self->{access}{network}{encryption}, $self->{access}{network}{key}, $self->{access}{network}{mode});
 	}
     }
 
