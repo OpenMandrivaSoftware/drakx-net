@@ -880,11 +880,11 @@ sub wpa_supplicant_load_eap_settings {
     $network = shift;
     $quoted_essid = qq("$network->{essid}");
     $conf = wpa_supplicant_read_conf();
-    foreach $old_net (@$conf) {
+    foreach my $old_net (@$conf) {
 
 	if ($old_net->{ssid} eq $network->{essid} || $old_net->{ssid} eq $quoted_essid) {
 		$network->{eapextra} = '';
-		foreach $myone (keys %$myeap_vars) {
+		foreach my $myone (keys %$myeap_vars) {
 			next if $myone eq 'ssid';
 			$ui_var = join('_', "eap", $myone);
 			if (defined $old_net->{$myone}) {
@@ -944,7 +944,7 @@ sub wpa_supplicant_add_eap_network {
 		ssid => qq("$ui_input->{essid}"),
 	};
 	#Sets the value
-	foreach $myone (keys %$myeap_vars) {
+	foreach my $myone (keys %$myeap_vars) {
 		$mykey = join('_', "eap", $myone);
 		if (!defined $ui_input->{$mykey}) {
 			#Only if it is defined and not empty
@@ -962,7 +962,7 @@ sub wpa_supplicant_add_eap_network {
 	#handle eapextra as final overides
 	if (defined $ui_input->{eapextra} && $ui_input->{eapextra} ne "") {
 		#Should split it on what the # sign?
-		foreach $myone (split('#', $ui_input->{eapextra})) {
+		foreach my $myone (split('#', $ui_input->{eapextra})) {
 			($mykey, $myval) = split('=', $myone, 2);
 			$network->{$mykey} = "$myval";
 		}
