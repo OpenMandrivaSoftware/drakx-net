@@ -885,7 +885,7 @@ sub wpa_supplicant_load_eap_settings {
 	if ($old_net->{ssid} eq $network->{essid} || $old_net->{ssid} eq $quoted_essid) {
 		$network->{eapextra} = '';
 		foreach $myone (keys %$myeap_vars) {
-			next if ($myone eq 'ssid');
+			next if $myone eq 'ssid';
 			$ui_var = join('_', "eap", $myone);
 			if (defined $old_net->{$myone}) {
 				if ($myeap_vars->{$myone} == 0) {
@@ -899,7 +899,7 @@ sub wpa_supplicant_load_eap_settings {
 					#case > 1 or 2
 					$network->{$ui_var} = "$old_net->{$myone}"; 
 					#Remove quotes on selected variables
-					$network->{$ui_var} = "$1" if ($myeap_vars->{$myone} == 2 && $network->{$ui_var} =~ /^"(.*)"$/);
+					$network->{$ui_var} = "$1" if $myeap_vars->{$myone} == 2 && $network->{$ui_var} =~ /^"(.*)"$/;
 					if ($myone eq "proto") {
 						$network->{forceeap} = 'WPA2' if ($old_net->{$myone} =~ /^RSN$/);
 						$network->{forceeap} = 'WPA' if ($old_net->{$myone} =~ /^WPA$/);
