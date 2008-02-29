@@ -956,7 +956,7 @@ sub wpa_supplicant_add_eap_network {
 			#Handle also quoting
 			    #Do not define if blank, the save routine will delete entry from file
 			    next if $ui_input->{$mykey} eq "";
-			$network->{$myone} = $myeap_vars->{$myone} == 2 ? qq("$ui_input->{$mykey}") : "$ui_input->{$mykey}";
+			$network->{$myone} = $myeap_vars->{$myone} == 2 ? qq("$ui_input->{$mykey}") : $ui_input->{$mykey};
 		}
 	}
 	#handle eapextra as final overides
@@ -964,7 +964,7 @@ sub wpa_supplicant_add_eap_network {
 		#Should split it on what the # sign?
 		foreach my $myone (split('#', $ui_input->{eapextra})) {
 			($mykey, $myval) = split('=', $myone, 2);
-			$network->{$mykey} = "$myval";
+			$network->{$mykey} = $myval;
 		}
 	}
 	#final fixes
