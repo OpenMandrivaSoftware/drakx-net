@@ -897,7 +897,7 @@ sub wpa_supplicant_load_eap_settings {
 					}
 				} else {
 					#case > 1 or 2
-					$network->{$ui_var} = "$old_net->{$myone}";
+					$network->{$ui_var} = $old_net->{$myone};
 					#Remove quotes on selected variables
 					$network->{$ui_var} = "$1" if $myeap_vars->{$myone} == 2 && $network->{$ui_var} =~ /^"(.*)"$/;
 					if ($myone eq "proto") {
