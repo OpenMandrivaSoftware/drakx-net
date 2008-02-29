@@ -931,11 +931,7 @@ sub wpa_supplicant_add_eap_network {
     #- set the values
     foreach my $eap_var (keys %eap_vars) {
         my $key = join('_', "eap", $eap_var);
-        if (!defined $ui_input->{$key}) {
-            #- only if it is defined and not empty
-            $network->{$eap_var} = $default_eap_cfg->{$eap_var} if $default_eap_cfg->{$eap_var};
-        } elsif ($ui_input->{$key} =~ /auto detect/i) {
-            #- only if it is defined and not empty
+        if (!defined $ui_input->{$key} || $ui_input->{$key} =~ /auto detect/i) {
             $network->{$eap_var} = $default_eap_cfg->{$eap_var} if $default_eap_cfg->{$eap_var};
         } else {
             #- do not define if blank, the save routine will delete entry from file
