@@ -459,32 +459,32 @@ N("list of accepted authenticated key management protocols.
 possible values are WPA-EAP, IEEE8021X, NONE") },
         { label => N("EAP outer identity"), val => \$self->{access}{network}{eap_anonymous_identity}, advanced => 1,
           disabled => sub { $self->{access}{network}{encryption} !~ /eap/ },
-help => N("Anonymous identity string for EAP: to be used as the
+          help => N("Anonymous identity string for EAP: to be used as the
 unencrypted identity with EAP types that support different 
 tunnelled identity, e.g., TTLS")},
         { label => N("EAP phase2"), val => \$self->{access}{network}{eap_phase2}, advanced => 1,
           disabled => sub { $self->{access}{network}{encryption} !~ /eap/ } ,
-help => N("Inner authentication with TLS tunnel parameters.
+          help => N("Inner authentication with TLS tunnel parameters.
 input is string with field-value pairs, Examples: 
 auth=MSCHAPV2 for PEAP or
 autheap=MSCHAPV2 autheap=MD5 for TTLS") },
         { label => N("EAP CA certificate"), val => \$self->{access}{network}{eap_ca_cert}, advanced => 1,
           disabled => sub { $self->{access}{network}{encryption} !~ /eap/ },
-help => N("Full file path to CA certificate file (PEM/DER). This file 
+          help => N("Full file path to CA certificate file (PEM/DER). This file 
 can have one or more trusted CA certificates. If ca_cert are not 
 included, server certificate will not be verified. If possible,
 a trusted CA certificate should always be configured 
 when using TLS or TTLS or PEAP.") },
         { label => N("EAP certificate subject match"), val => \$self->{access}{network}{eap_subject_match}, advanced => 1,
           disabled => sub { $self->{access}{network}{encryption} !~ /eap/ },
-help => N(" Substring to be matched against the subject of 
+          help => N(" Substring to be matched against the subject of 
 the authentication server certificate. If this string is set, 
 the server sertificate is only accepted if it contains this 
 string in the subject.  The subject string is in following format:
 /C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com") },
         { label => N("EAP extra directives"), val => \$self->{access}{network}{eapextra}, advanced => 1,
           disabled => sub { $self->{access}{network}{encryption} !~ /eap/ },
-help => N("Here one can pass extra settings to wpa_supplicant
+          help => N("Here one can pass extra settings to wpa_supplicant
 The expected format is a string field=value pair. Multiple values
 maybe specified, separating each value with the # character.
 Note: directives are passed unchecked and may cause the wpa
