@@ -1,3 +1,20 @@
+0.27:
+- connection backend:
+  o initial import of WPA-EAP support
+    (patch from Clement Onime, with minor changes, #23925)
+  o do not crash with prism54 driver which reports quality with
+    division by zero (assume max signal quality is 255 instead,
+    from Eddy De Greef, #34845 and #37879)
+- net_applet:
+  o update icons (from Hélène)
+- drakroam/draknetcenter:
+  o show the GUI earlier to fix window icon, it gets destroyed after
+    initial wait message is destroyed
+  o be 800x480 friendly (#38049)
+- draknetcenter:
+  o use cached result to match detected devices (update cache when
+    needed only), not to show the same interface multiple times
+
 0.26:
 - draknetcenter:
   o fix crash with cellular cards (#36801)
