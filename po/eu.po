@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
 "POT-Creation-Date: 2008-03-03 18:09+0100\n"
-"PO-Revision-Date: 2008-03-03 19:17+0100\n"
+"PO-Revision-Date: 2008-03-03 23:48+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Euskara <eu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -4913,6 +4913,10 @@ msgid ""
 "considered as the alternative to username/password combo.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
+"Bezero ziurtagiriaren bide osoa eta fitxategi izena. EAP\n"
+"ziurtagirietan oinarritutako autentikazioan bakarrik erabiltzen da.\n"
+"Erabiltzaileizen/pasahitz bikotearen ordezkotzat hartu daiteke.\n"
+"Oharra: zerikusia duten ezarpenak erakusten dira Aurreratua orrian."
 
 #: ../lib/network/connection/wireless.pm:408
 #, c-format
@@ -5029,6 +5033,8 @@ msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr ""
+"Auto Detekzioa gomendatzen da lehenengo WPA 2 bertsioarekin\n"
+"saiatzen bait da eta ondoren WPA 1 bertsioarekin"
 
 #: ../lib/network/connection/wireless.pm:451
 #, c-format
@@ -5088,7 +5094,7 @@ msgstr "TTLS TLS"
 #: ../lib/network/connection/wireless.pm:454
 #, c-format
 msgid "EAP key_mgmt"
-msgstr ""
+msgstr "EAP key_mgmt"
 
 #: ../lib/network/connection/wireless.pm:456
 #, c-format
@@ -5111,6 +5117,9 @@ msgid ""
 "unencrypted identity with EAP types that support different\n"
 "tunnelled identity, e.g., TTLS"
 msgstr ""
+"EAP-rentzako testu lerro identitate anonimoa: zifratu\n"
+"gabeko identitate bezela erabiltzeko tuneleratutako identitate\n"
+"desberdinak onartzen dituzten EAP motekin, adib, TTLS"
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
@@ -5125,6 +5134,10 @@ msgid ""
 "auth=MSCHAPV2 for PEAP or\n"
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
+"Barruko autentikazioa TLS tunel parametroekin.\n"
+"Sarrera eremu-balio pareak dituen testu lerro bat da. Adibidez:\n"
+"auth=MSCHAPV2 PEAP-ekin edo\n"
+"autheap=MSCHAPV2 autheap=MD5 TTLS-rekin"
 
 #: ../lib/network/connection/wireless.pm:469
 #, c-format
@@ -5140,6 +5153,11 @@ msgid ""
 "a trusted CA certificate should always be configured\n"
 "when using TLS or TTLS or PEAP."
 msgstr ""
+"CA ziurtagiri fitxategiaren (PEM/DER) fitxategi bide osoa. Fitxategi\n"
+"honek konfidantzazko CA ziurtagiri bat edo gehiago izan ditzake.\n"
+"ca_cert ez badira sartzen, zerbitzari ziurtagiriak ez dira egiaztatuko.\n"
+"Posible bada, beti konfiguratu beharko litzateke konfidantzazko\n"
+"CA ziurtagiri bat TLS edo TTLS edo PEAP erabiltzerakoan."
 
 #: ../lib/network/connection/wireless.pm:476
 #, c-format
