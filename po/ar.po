@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2008-01-31 11:33+0100\n"
+"POT-Creation-Date: 2008-03-03 18:09+0100\n"
 "PO-Revision-Date: 2005-03-03 01:06+0300\n"
 "Last-Translator: Ossama M. Khayat <okhayat@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
@@ -2031,12 +2031,7 @@ msgstr "تهانينا"
 msgid "The wizard successfully added the printer Samba share"
 msgstr ""
 
-#: ../bin/draksambashare:545
-#, c-format
-msgid "Failed to add printers."
-msgstr ""
-
-#: ../bin/draksambashare:560
+#: ../bin/draksambashare:551
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
 msgstr ""
@@ -2412,12 +2407,7 @@ msgstr ""
 msgid "The wizard successfully configured your Samba server."
 msgstr ""
 
-#: ../bin/draksambashare:1213
-#, c-format
-msgid "Failed to configure Samba server."
-msgstr ""
-
-#: ../bin/draksambashare:1263
+#: ../bin/draksambashare:1246
 #, c-format
 msgid "The Samba wizard has unexpectedly failed:"
 msgstr ""
@@ -2482,7 +2472,19 @@ msgstr "Userdrake"
 msgid "Samba Users"
 msgstr ""
 
-#: ../bin/draksambashare:1467
+#: ../bin/draksambashare:1449
+#, c-format
+msgid "Please configure your Samba server"
+msgstr ""
+
+#: ../bin/draksambashare:1449
+#, c-format
+msgid ""
+"It seems this is the first time you run this tool.\n"
+"A wizard will appear to configure a basic Samba server"
+msgstr ""
+
+#: ../bin/draksambashare:1457
 #, c-format
 msgid "DrakSamba manage Samba shares"
 msgstr ""
@@ -4683,12 +4685,17 @@ msgstr ""
 msgid "WPA Pre-Shared Key"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:197 ../lib/network/thirdparty.pm:175
+#: ../lib/network/connection/wireless.pm:44
 #, c-format
-msgid "Firmware files are required for this device."
+msgid "WPA2/WPA Enterprise"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:263
+#: ../lib/network/connection/wireless.pm:231
+#, c-format
+msgid "Windows driver"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:298
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
@@ -4735,7 +4742,58 @@ msgstr "آلي"
 msgid "Encryption mode"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:342
+#: ../lib/network/connection/wireless.pm:376
+#, fuzzy, c-format
+msgid "EAP Login/Username"
+msgstr "اسم الدخول للحساب (اسم المستخدم)"
+
+#: ../lib/network/connection/wireless.pm:378
+#, c-format
+msgid ""
+"The login or username. Format is plain text. If you\n"
+"need to specify domain then try the untested syntax\n"
+"  DOMAIN\\username"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:381
+#, fuzzy, c-format
+msgid "EAP Password"
+msgstr "كلمة المرور"
+
+#: ../lib/network/connection/wireless.pm:383
+#, c-format
+msgid ""
+" Password: A string.\n"
+"Note that this is not the same thing as a psk.\n"
+"____________________________________________________\n"
+"RELATED ADDITIONAL INFORMATION:\n"
+"In the Advanced Page, you can select which EAP mode\n"
+"is used for authentication. For the eap mode setting\n"
+"   Auto Detect: implies all possible modes are tried.\n"
+"\n"
+"If Auto Detect fails, try the PEAP TTLS combo bofore others\n"
+"Note:\n"
+"\tThe settings MD5, MSCHAPV2, OTP and GTC imply\n"
+"automatically PEAP and TTLS modes.\n"
+"  TLS mode is completely certificate based and may ignore\n"
+"the username and password values specified here."
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:397
+#, fuzzy, c-format
+msgid "EAP client certificate"
+msgstr "اسم الشّهادة"
+
+#: ../lib/network/connection/wireless.pm:399
+#, c-format
+msgid ""
+"The complete path and filename of client certificate. This is\n"
+"only used for EAP certificate based authentication. It could be\n"
+"considered as the alternative to username/password combo.\n"
+" Note: other related settings are shown on the Advanced page."
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:408
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -4817,7 +4875,182 @@ msgstr ""
 "\n"
 "راجع صفحة دليل iwpriv(8) للمزيد من المعلومات."
 
-#: ../lib/network/connection/wireless.pm:387
+#: ../lib/network/connection/wireless.pm:446
+#, fuzzy, c-format
+msgid "EAP Protocol"
+msgstr "البروتوكول"
+
+#: ../lib/network/connection/wireless.pm:447
+#: ../lib/network/connection/wireless.pm:452
+#, fuzzy, c-format
+msgid "Auto Detect"
+msgstr "تحقق آلي"
+
+#: ../lib/network/connection/wireless.pm:447
+#, c-format
+msgid "WPA2"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:447
+#, fuzzy, c-format
+msgid "WPA"
+msgstr "PAP"
+
+#: ../lib/network/connection/wireless.pm:449
+#, c-format
+msgid ""
+"Auto Detect is recommended as it first tries WPA version 2 with\n"
+"a fallback to WPA version 1"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:451
+#, fuzzy, c-format
+msgid "EAP Mode"
+msgstr "الوضع"
+
+#: ../lib/network/connection/wireless.pm:452
+#, fuzzy, c-format
+msgid "PEAP"
+msgstr "PAP"
+
+#: ../lib/network/connection/wireless.pm:452
+#, c-format
+msgid "TTLS"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:452
+#, c-format
+msgid "TLS"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:452
+#, fuzzy, c-format
+msgid "MSCHAPV2"
+msgstr "CHAP"
+
+#: ../lib/network/connection/wireless.pm:452
+#, c-format
+msgid "MD5"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:452
+#, c-format
+msgid "OTP"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:452
+#, c-format
+msgid "GTC"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:452
+#, c-format
+msgid "LEAP"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:452
+#, c-format
+msgid "PEAP TTLS"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:452
+#, c-format
+msgid "TTLS TLS"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:454
+#, c-format
+msgid "EAP key_mgmt"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:456
+#, c-format
+msgid ""
+"list of accepted authenticated key management protocols.\n"
+"possible values are WPA-EAP, IEEE8021X, NONE"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:458
+#, c-format
+msgid "EAP outer identity"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:460
+#, c-format
+msgid ""
+"Anonymous identity string for EAP: to be used as the\n"
+"unencrypted identity with EAP types that support different\n"
+"tunnelled identity, e.g., TTLS"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:463
+#, c-format
+msgid "EAP phase2"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:465
+#, c-format
+msgid ""
+"Inner authentication with TLS tunnel parameters.\n"
+"input is string with field-value pairs, Examples:\n"
+"auth=MSCHAPV2 for PEAP or\n"
+"autheap=MSCHAPV2 autheap=MD5 for TTLS"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:469
+#, fuzzy, c-format
+msgid "EAP CA certificate"
+msgstr "نوع الشّهادة"
+
+#: ../lib/network/connection/wireless.pm:471
+#, c-format
+msgid ""
+"Full file path to CA certificate file (PEM/DER). This file\n"
+"can have one or more trusted CA certificates. If ca_cert are not\n"
+"included, server certificate will not be verified. If possible,\n"
+"a trusted CA certificate should always be configured\n"
+"when using TLS or TTLS or PEAP."
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:476
+#, c-format
+msgid "EAP certificate subject match"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:478
+#, c-format
+msgid ""
+" Substring to be matched against the subject of\n"
+"the authentication server certificate. If this string is set,\n"
+"the server sertificate is only accepted if it contains this\n"
+"string in the subject.  The subject string is in following format:\n"
+"/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:483
+#, c-format
+msgid "EAP extra directives"
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:485
+#, c-format
+msgid ""
+"Here one can pass extra settings to wpa_supplicant\n"
+"The expected format is a string field=value pair. Multiple values\n"
+"maybe specified, separating each value with the # character.\n"
+"Note: directives are passed unchecked and may cause the wpa\n"
+"negotiation to fail silently. Supported directives are preserved\n"
+"across editing.\n"
+"Supported directives are :\n"
+"\tdisabled, id_str, bssid, priority, auth_alg, eapol_flags,\n"
+"\tproactive_key_caching, peerkey, ca_path, private_key,\n"
+"\tprivate_key_passwd, dh_file, altsubject_match, phase1,\n"
+"\tfragment_size and eap_workaround, pairwise, group\n"
+"\tOthers such as key_mgmt, eap maybe used to force\n"
+"\tspecial settings different from the U.I settings."
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:505
 #, c-format
 msgid "An encryption key is required."
 msgstr ""
@@ -5328,19 +5561,19 @@ msgstr "الرجاء اختيار مشغّل ويندوز (ملف .inf)"
 msgid "Unable to install the %s ndiswrapper driver!"
 msgstr ""
 
-#: ../lib/network/ndiswrapper.pm:86
-#, c-format
-msgid "Unable to load the ndiswrapper module!"
-msgstr ""
-
-#: ../lib/network/ndiswrapper.pm:92
+#: ../lib/network/ndiswrapper.pm:103
 #, c-format
 msgid ""
 "The selected device has already been configured with the %s driver.\n"
 "Do you really want to use a ndiswrapper driver?"
 msgstr ""
 
-#: ../lib/network/ndiswrapper.pm:102
+#: ../lib/network/ndiswrapper.pm:118
+#, c-format
+msgid "Unable to load the ndiswrapper module!"
+msgstr ""
+
+#: ../lib/network/ndiswrapper.pm:124
 #, c-format
 msgid "Unable to find the ndiswrapper interface!"
 msgstr ""
@@ -6036,7 +6269,12 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../lib/network/thirdparty.pm:178 ../lib/network/thirdparty.pm:183
+#: ../lib/network/thirdparty.pm:180
+#, c-format
+msgid "Firmware files are required for this device."
+msgstr ""
+
+#: ../lib/network/thirdparty.pm:183 ../lib/network/thirdparty.pm:188
 #, c-format
 msgid "Use a floppy"
 msgstr "استخدام قرص مرن"
