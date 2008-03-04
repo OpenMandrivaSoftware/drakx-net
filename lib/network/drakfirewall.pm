@@ -6,9 +6,9 @@ use diagnostics;
 use network::shorewall;
 use common;
 
-my @all_servers = 
+my @all_servers =
 (
-  { 
+  {
    name => N_("Web Server"),
    pkg => 'apache apache-mod_perl boa',
    ports => '80/tcp 443/tcp',
@@ -143,7 +143,7 @@ sub set_ports {
 
     if (!$disabled || -x "$::prefix/sbin/shorewall") {
 	$do_pkgs->ensure_binary_is_installed('shorewall', 'shorewall', $::isInstall) or return;
-    
+
 	$shorewall->{disabled} = $disabled;
 	$shorewall->{ports} = $ports;
         $shorewall->{log_net_drop} = $log_net_drop;
@@ -154,7 +154,7 @@ sub set_ports {
 
 sub get_conf {
     my ($in, $disabled, $o_ports) = @_;
-		
+
     my $possible_servers = default_from_pkgs($in->do_pkgs);
     $_->{hide} = 0 foreach @$possible_servers;
 
