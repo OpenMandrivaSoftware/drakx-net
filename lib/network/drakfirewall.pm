@@ -139,7 +139,7 @@ sub get_ports() {
 sub set_ports {
     my ($do_pkgs, $disabled, $ports, $log_net_drop, $o_in) = @_;
 
-    my $shorewall = network::shorewall::read($o_in) or return;
+    my $shorewall = network::shorewall::read(!$disabled && $o_in) or return;
 
     if (!$disabled || -x "$::prefix/sbin/shorewall") {
 	$do_pkgs->ensure_binary_is_installed('shorewall', 'shorewall', $::isInstall) or return;
