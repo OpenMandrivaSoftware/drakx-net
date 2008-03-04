@@ -43,11 +43,11 @@ sub dev_to_shorewall {
 }
 
 sub get_net_zone_interfaces {
-    my ($net) = @_;
+    my ($net, $all_intf) = @_;
     #- read shorewall configuration first
     my @interfaces = map { $_->[1] } grep { $_->[0] eq 'net' } get_config_file('interfaces');
     #- else try to find the best interface available
-    @interfaces ? @interfaces : dev_to_shorewall(network::tools::get_default_gateway_interface($net));
+    @interfaces ? @interfaces : @{$all_intf || []};
 }
 
 sub get_zones {
@@ -57,7 +57,7 @@ sub get_zones {
     #- find all interfaces but alias interfaces
     my @all_intf = grep { !/:/ } uniq(keys(%{$net->{ifcfg}}), detect_devices::get_net_interfaces());
     my %net_zone = map { $_ => undef } @all_intf;
-    $net_zone{$_} = 1 foreach get_net_zone_interfaces($net);
+    $net_zone{$_} = 1 foreach get_net_zone_interfaces($net, \@all_intf);
     $o_in and $o_in->ask_from('', N("Please select the interfaces that will be protected by the firewall.
 
 All interfaces directly connected to Internet should be selected,
