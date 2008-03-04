@@ -204,7 +204,7 @@ You can also give a range of ports (eg: 24300:24350/udp)", $invalid_port));
 			    }
 			},
 		   } },
-		  [ 
+		  [
 		   { text => N("Everything (no firewall)"), val => \$disabled, type => 'bool' },
 		   (map { { text => translate($_->{name}), val => \$_->{on}, type => 'bool', disabled => sub { $disabled } } } @l),
 		   { label => N("Other ports"), val => \$unlisted, advanced => 1, disabled => sub { $disabled } },
