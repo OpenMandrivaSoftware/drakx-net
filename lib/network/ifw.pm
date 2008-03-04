@@ -129,11 +129,13 @@ sub attack_to_hash {
         $attack->{prefix} eq 'SCAN' ? N("Port scanning")
       : $attack->{prefix} eq 'SERV' ? N("Service attack")
       : $attack->{prefix} eq 'PASS' ? N("Password cracking")
+      : $attack->{prefix} eq 'NEW' ? N("New connection")
       : N(qq("%s" attack), $attack->{prefix});
     $attack->{msg} =
         $attack->{prefix} eq "SCAN" ? N("A port scanning attack has been attempted by %s.", $attack->{hostname})
       : $attack->{prefix} eq "SERV" ? N("The %s service has been attacked by %s.", $attack->{service}, $attack->{hostname})
       : $attack->{prefix} eq "PASS" ? N("A password cracking attack has been attempted by %s.", $attack->{hostname})
+      : $attack->{prefix} eq "NEW" ? N("%s is connecting on the %s service.", $attack->{hostname}, $attack->{service})
       : N(qq(A "%s" attack has been attempted by %s), $attack->{prefix}, $attack->{hostname});
     $attack;
 }
