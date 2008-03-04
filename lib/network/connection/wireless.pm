@@ -540,6 +540,7 @@ sub install_packages {
     my ($self, $in) = @_;
     if ($self->need_wpa_supplicant) {
         $in->do_pkgs->ensure_is_installed('wpa_supplicant', '/usr/sbin/wpa_supplicant') or return;
+        $in->do_pkgs->ensure_is_installed('mandi', '/usr/sbin/mandi');
     }
     $self->SUPER::install_packages($in);
 }
