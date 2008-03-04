@@ -538,22 +538,28 @@ sub apply_verdict_whitelist {
 }
 
 sub handle_ifw_message {
-    my $attack = network::ifw::attack_to_hash(\@_);
-    unless ($attack->{msg}) {
+    my $message = network::ifw::attack_to_hash(\@_);
+    unless ($message->{msg}) {
         print "unhandled attack type, skipping\n";
         return;
     }
-    enable_ifw_alert();
+    my $is_attack = $message->{prefix} ne 'NEW';
+    enable_ifw_alert() if $is_attack;
     $bubble_queue->add({
         title => N("Interactive Firewall"),
         pixbuf => $pixbufs{firewall},
-        message => $attack->{msg},
+        message => $message->{msg},
         timeout => sub {
-            set_verdict($attack, \&apply_verdict_ignore);
+            set_verdict($message, \&apply_verdict_ignore);
         },
         clicked => sub {
-            disable_ifw_alert();
-            ask_attack_verdict($attack);
+            if ($is_attack) {
+                disable_ifw_alert();
+                ask_attack_verdict($message);
+            } else {
+                set_verdict($message, \&apply_verdict_ignore);
+                $bubble_queue->process_next;
+            }
         },
     });
 }
