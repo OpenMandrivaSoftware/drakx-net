@@ -120,8 +120,8 @@ sub default_from_pkgs {
     my @pkgs = $do_pkgs->are_installed(map { split ' ', $_->{pkg} } @all_servers);
     [ grep {
 	my $s = $_;
-	exists $s->{force_default_selection} ? 
-	  $s->{force_default_selection} : 
+	exists $s->{force_default_selection} ?
+	  $s->{force_default_selection} :
 	  any { member($_, @pkgs) } split(' ', $s->{pkg});
     } @all_servers ];
 }
