@@ -229,7 +229,7 @@ sub get_default_metric {
 
 sub get_interface_ip_address {
     my ($net, $interface) = @_;
-    `/sbin/ip addr show dev $interface` =~ /^\s*inet\s+([\d.]+)/m && $1 ||
+    `/sbin/ip addr show dev $interface` =~ /^\s*inet\s+([\d.]+).*\s+$interface$/m && $1 ||
     $net->{ifcfg}{$interface}{IPADDR};
 }
 
