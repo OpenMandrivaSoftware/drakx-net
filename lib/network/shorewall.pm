@@ -7,6 +7,7 @@ use common;
 use log;
 
 my $shorewall_root = "/etc/shorewall";
+our $firewall_icon = $::isInstall ? 'banner-security' : '/usr/share/mcc/themes/default/firewall-mdk.png';
 
 sub check_iptables() {
     -f "$::prefix/etc/sysconfig/iptables" ||
@@ -60,7 +61,7 @@ sub get_zones {
     $net_zone{$_} = 1 foreach get_net_zone_interfaces($net, \@all_intf);
     $o_in and $o_in->ask_from_({
         title => N("Firewall configuration"),
-        icon => 'banner-security',
+        icon => $firewall_icon,
         messages => N("Please select the interfaces that will be protected by the firewall.
 
 All interfaces directly connected to Internet should be selected,

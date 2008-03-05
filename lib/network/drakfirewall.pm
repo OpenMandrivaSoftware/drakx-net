@@ -188,7 +188,7 @@ sub choose_allowed_services {
     $in->ask_from_({
 		    messages => N("Which services would you like to allow the Internet to connect to?"),
 		    title => N("Firewall"),
-		    icon => 'banner-security',
+		    icon => $network::shorewall::firewall_icon,
 		    banner_title => N("Firewall"),
 		    advanced_messages => N("You can enter miscellaneous ports. 
 Valid examples are: 139/tcp 139/udp 600:610/tcp 600:610/udp.
@@ -252,7 +252,7 @@ sub choose_watched_services {
     $_->{ifw} = 1 foreach @l;
 
     $in->ask_from_({
-        icon => 'banner-security',
+        icon => $network::shorewall::firewall_icon,
         banner_title => N("Interactive Firewall"),
         messages =>
           N("You can be warned when someone accesses to a service or tries to intrude into your computer.
