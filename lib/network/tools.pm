@@ -180,6 +180,11 @@ sub is_real_interface {
     !is_virtual_interface($intf) && !is_vlan_interface($intf);
 }
 
+sub is_zeroconf_interface {
+    my ($intf) = @_;
+    is_virtual_interface($intf) && get_interface_ip_address({}, $intf) =~ /^(127|169\.254)\./;
+}
+
 sub get_interface_status {
     my ($intf) = @_;
     $intf = get_real_interface($intf);
