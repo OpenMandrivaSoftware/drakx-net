@@ -10,6 +10,7 @@ use mygtk2;
 use ugtk2 qw(:create :helpers :wrappers);
 use network::connection;
 use network::connection_manager;
+use network::tools;
 
 sub build_cmanager {
     my ($in, $net, $w, $pixbufs, $connection) = @_;
@@ -41,9 +42,12 @@ sub main {
     my $wait = $in->wait_message(N("Please wait"), N("Please wait"));
 
     my @all_connections = map { $_->get_connections(automatic_only => 1, fast_only => 1) } network::connection::get_types;
+    @all_connections = grep { !network::tools::is_zeroconf_interface($_->get_interface) } @all_connections;
     my ($sysfs, $no_sysfs) = partition { exists $_->{device}{sysfs_device} } @all_connections;
+    my ($real, $other) = partition { network::tools::is_real_interface($_->get_interface) } @$sysfs;
     my @connections = (
-        (uniq_ { $_->{device}{sysfs_device} } @$sysfs),
+        (uniq_ { $_->{device}{sysfs_device} } @$real),
+        (uniq_ { $_->{device}{sysfs_device} } @$other),
         (uniq_ { $_->{device}{interface} } @$no_sysfs),
     );
 
