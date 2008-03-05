@@ -160,6 +160,7 @@ sub get_default_gateway_interface {
 
 sub get_interface_status {
     my ($intf) = @_;
+    $intf =~ s/:\d+$//;
     my $routes = get_routes();
     return $routes->{$intf}{network}, $routes->{$intf}{network} eq '0.0.0.0' && $routes->{$intf}{gateway};
 }
