@@ -339,6 +339,7 @@ sub device_matches_interface_HwIDs {
 
 sub get_interface_sysfs_path {
     my ($interface) = @_;
+    $interface =~ s/:\d+$//;
     my $dev_path = "/sys/class/net/$interface/device";
     my $bus = detect_devices::get_sysfs_field_from_link($dev_path, 'bus');
     if ($bus eq 'ieee1394') {
