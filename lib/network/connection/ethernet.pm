@@ -470,8 +470,8 @@ sub get_eth_card_mac_address {
 
 #- write interfaces MAC address in iftab
 sub update_iftab() {
-    #- skip aliases interfaces
-    foreach my $intf (grep { !network::tools::is_virtual_interface($_) } detect_devices::get_lan_interfaces()) {
+    #- skip aliases and vlan interfaces
+    foreach my $intf (grep { network::tools::is_real_interface($_) } detect_devices::get_lan_interfaces()) {
         my ($link_type, $mac_address) = get_eth_card_mac_address($intf) or next;
         #- do not write zeroed MAC addresses in iftab, it confuses ifrename
         $mac_address =~ /^[0:]+$/ and next;
