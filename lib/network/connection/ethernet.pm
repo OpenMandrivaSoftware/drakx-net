@@ -22,7 +22,10 @@ sub get_devices() {
 sub get_unlisted_devices {
     my ($interfaces, $listed_devices) = @_;
     my @unlisted_interfaces = sort(difference2($interfaces, [ map { device_to_interface($_) } @$listed_devices ]));
-    map { interface_to_device($_) || +{ description => $_, interface => $_ } } @unlisted_interfaces;
+    map { interface_to_device($_) || +{
+       description => $_ =~ /:\d+$/ ? N("Virtual interface") : $_,
+       interface => $_ },
+    } @unlisted_interfaces;
 }
 
 sub handles_ifcfg {
