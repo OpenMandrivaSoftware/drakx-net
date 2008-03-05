@@ -44,7 +44,7 @@ sub main {
     my ($sysfs, $no_sysfs) = partition { exists $_->{device}{sysfs_device} } @all_connections;
     my @connections = (
         (uniq_ { $_->{device}{sysfs_device} } @$sysfs),
-        (uniq_ { $_->{device}{interface} } @$no_sysfs)
+        (uniq_ { $_->{device}{interface} } @$no_sysfs),
     );
 
     my $pixbufs = network::connection_manager::create_pixbufs();
@@ -79,7 +79,7 @@ sub main {
                                                  gtknew('Button', text => N("_: This is a verb\nMonitor"),
                                                         image => gtknew('Image', file => 'monitor-16'),
                                                         clicked => sub { network::connection_manager::monitor_connection($cmanager) }),
-                                               $cmanager->{gui}{buttons}{configure} = 
+                                               $cmanager->{gui}{buttons}{configure} =
                                                  gtknew('Button', text => N("Configure"),
                                                         image => gtknew('Image', file => 'configure-16'),
                                                         clicked => sub { network::connection_manager::configure_connection($cmanager) }),
@@ -88,7 +88,7 @@ sub main {
                                                     gtknew('Button', text => N("Refresh"),
                                                            image => gtknew('Image', file => 'refresh', size => 16),
                                                            clicked => sub { network::connection_manager::update_networks($cmanager) }))
-                                                      : ()),
+                                                  : ()),
                                            ]),
                                        0, $cmanager->{gui}{buttons}{connect_toggle} =
                                                  gtknew('Button',
