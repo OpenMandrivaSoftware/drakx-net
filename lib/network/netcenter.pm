@@ -40,8 +40,12 @@ sub main {
     $w->show;
     my $wait = $in->wait_message(N("Please wait"), N("Please wait"));
 
-    my @connections = map { $_->get_connections(automatic_only => 1, fast_only => 1) } network::connection::get_types;
-    @connections = uniq_ { $_->{device} } @connections;
+    my @all_connections = map { $_->get_connections(automatic_only => 1, fast_only => 1) } network::connection::get_types;
+    my ($intf, $no_intf) = partition { exists $_->{device}{interface} } @all_connections;
+    my @connections = (
+        (uniq_ { $_->{device} } @$no_intf),
+        (uniq_ { $_->{device}{interface} } @$intf)
+    );
 
     my $pixbufs = network::connection_manager::create_pixbufs();
     my @cmanagers = map { build_cmanager($in, $net, $w, $pixbufs, $_) } @connections;
