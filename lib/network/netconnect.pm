@@ -144,7 +144,7 @@ sub real_main {
                    select_connection => {
                        name => sub { $net->{type}->get_type_name . "\n\n" . N("Select the network interface to configure:") },
                        data => [ { val => \$connection, type => 'list', list => \@connections_list,
-                                   format => sub { $_[0] && $_[0]->get_description }, allow_empty_list => 1 } ],
+                                   format => sub { $_[0] && $_[0]->get_label }, allow_empty_list => 1 } ],
                        complete => sub {
                            $connection->setup_thirdparty($in) or return 1;
                            $connection->prepare_device;
