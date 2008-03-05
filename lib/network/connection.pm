@@ -80,6 +80,13 @@ sub get_description {
     $description;
 }
 
+sub get_label {
+    my ($self) = @_;
+    my $intf = $self->get_interface;
+    my $descr = $self->get_description;
+    $intf ? sprintf("%s (%s)", $descr, $intf) : $descr;
+}
+
 sub get_driver {
     my ($self) = @_;
     $self->{device}{driver};
