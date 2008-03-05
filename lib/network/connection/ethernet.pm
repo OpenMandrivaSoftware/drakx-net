@@ -438,7 +438,7 @@ sub get_eth_cards {
             # 4) try to lookup a device by hardware address for device description:
             #    maybe should have we try sysfs first for robustness?
             my @devices = mapIntfToDevice($interface);
-            ($description) = $devices[0]->{description} if @devices;
+            ($description) = $devices[0]{description} if @devices;
         }
         # 5) try to match a device through sysfs for driver & device description:
         #     (eg: ipw2100 driver for intel centrino do not support ETHTOOL)
