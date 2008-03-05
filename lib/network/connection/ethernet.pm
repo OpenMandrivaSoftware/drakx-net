@@ -24,7 +24,8 @@ sub get_unlisted_devices {
     my ($interfaces, $listed_devices) = @_;
     my @unlisted_interfaces = sort(difference2($interfaces, [ map { device_to_interface($_) } @$listed_devices ]));
     map {
-        my %device = %{interface_to_device($_) || +{ interface => $_, description => $_ }};
+        my %device = %{interface_to_device($_) || +{ description => $_ }};
+        $device{interface} = $_;
         $device{description} = N("Virtual interface") if network::tools::is_virtual_interface($_);
         \%device;
     } @unlisted_interfaces;
