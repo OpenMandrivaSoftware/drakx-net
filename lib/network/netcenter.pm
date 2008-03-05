@@ -50,7 +50,7 @@ sub main {
     my $pixbufs = network::connection_manager::create_pixbufs();
     my @cmanagers = map { build_cmanager($in, $net, $w, $pixbufs, $_) } @connections;
 
-    (undef, my $rootwin_height) = gtkroot()->get_size();
+    (undef, my $rootwin_height) = gtkroot()->get_size;
     my $scrolled_height = $rootwin_height > 480 ? 400 : 295;
     gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
@@ -84,10 +84,10 @@ sub main {
                                                         image => gtknew('Image', file => 'configure-16'),
                                                         clicked => sub { network::connection_manager::configure_connection($cmanager) }),
                                                ($cmanager->{connection}->can('get_networks') ?
-                                                  $cmanager->{gui}{buttons}{refresh} =
+                                                  ($cmanager->{gui}{buttons}{refresh} =
                                                     gtknew('Button', text => N("Refresh"),
                                                            image => gtknew('Image', file => 'refresh', size => 16),
-                                                           clicked => sub { network::connection_manager::update_networks($cmanager) })
+                                                           clicked => sub { network::connection_manager::update_networks($cmanager) }))
                                                       : ()),
                                            ]),
                                        0, $cmanager->{gui}{buttons}{connect_toggle} =
