@@ -4,6 +4,7 @@ use base qw(network::connection);
 
 use strict;
 use common;
+use network::tools;
 
 our @dhcp_clients = qw(dhclient dhcpcd pump dhcpxd);
 
@@ -23,7 +24,7 @@ sub get_unlisted_devices {
     my ($interfaces, $listed_devices) = @_;
     my @unlisted_interfaces = sort(difference2($interfaces, [ map { device_to_interface($_) } @$listed_devices ]));
     map { interface_to_device($_) || +{
-       description => $_ =~ /:\d+$/ ? N("Virtual interface") : $_,
+       description => network::tools::is_virtual_interface($_) ? N("Virtual interface") : $_,
        interface => $_ },
     } @unlisted_interfaces;
 }
@@ -339,7 +340,7 @@ sub device_matches_interface_HwIDs {
 
 sub get_interface_sysfs_path {
     my ($interface) = @_;
-    $interface =~ s/:\d+$//;
+    $interface = network::tools::get_real_interface($interface);
     my $dev_path = "/sys/class/net/$interface/device";
     my $bus = detect_devices::get_sysfs_field_from_link($dev_path, 'bus');
     if ($bus eq 'ieee1394') {
@@ -470,7 +471,7 @@ sub get_eth_card_mac_address {
 #- write interfaces MAC address in iftab
 sub update_iftab() {
     #- skip aliases interfaces
-    foreach my $intf (grep { !/:\d+$/ } detect_devices::get_lan_interfaces()) {
+    foreach my $intf (grep { !network::tools::is_virtual_interface($_) } detect_devices::get_lan_interfaces()) {
         my ($link_type, $mac_address) = get_eth_card_mac_address($intf) or next;
         #- do not write zeroed MAC addresses in iftab, it confuses ifrename
         $mac_address =~ /^[0:]+$/ and next;
@@ -490,7 +491,7 @@ sub update_udev_net_config() {
     my $udev_net_config = "/etc/udev/rules.d/61-net_config.rules";
     my @old_config = cat_($udev_net_config);
     #- skip aliases and vlan interfaces
-    foreach my $intf (grep { !/[:.]\d+$/ } detect_devices::get_lan_interfaces()) {
+    foreach my $intf (grep { network::tools::is_real_interface($_) } detect_devices::get_lan_interfaces()) {
         (undef, my $mac_address) = get_eth_card_mac_address($intf) or next;
         #- do not write zeroed MAC addresses
         $mac_address =~ /^[0:]+$/ and next;

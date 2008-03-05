@@ -158,9 +158,31 @@ sub get_default_gateway_interface {
     (find { get_interface_type($net->{ifcfg}{$_}) eq 'ethernet' && $net->{ifcfg}{$_}{BOOTPROTO} eq 'dhcp' } @intfs);
 }
 
-sub get_interface_status {
+#- remove suffix from virtual interfaces
+sub get_real_interface {
     my ($intf) = @_;
     $intf =~ s/:\d+$//;
+    $intf;
+}
+
+sub is_virtual_interface {
+    my ($intf) = @_;
+    $intf =~ /:\d+$/;
+}
+
+sub is_vlan_interface {
+    my ($intf) = @_;
+    $intf =~ /\.\d+$/;
+}
+
+sub is_real_interface {
+    my ($intf) = @_;
+    !is_virtual_interface($intf) && !is_vlan_interface($intf);
+}
+
+sub get_interface_status {
+    my ($intf) = @_;
+    $intf = get_real_interface($intf);
     my $routes = get_routes();
     return $routes->{$intf}{network}, $routes->{$intf}{network} eq '0.0.0.0' && $routes->{$intf}{gateway};
 }
