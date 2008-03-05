@@ -364,10 +364,11 @@ sub device_matches_interface {
 sub device_to_interface {
     my ($device) = @_;
     my @all_interfaces = detect_devices::get_net_interfaces();
+    my ($real, $other) = partition { network::tools::is_real_interface($_) } @all_interfaces;
     find {
         device_matches_interface_HwIDs($device, $_) ||
         device_matches_interface($device, $_);
-    } @all_interfaces;
+    } @$real, @$other;
 }
 
 sub interface_to_device {
