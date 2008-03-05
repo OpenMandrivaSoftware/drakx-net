@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
 "POT-Creation-Date: 2008-03-03 18:09+0100\n"
-"PO-Revision-Date: 2008-03-03 23:48+0100\n"
+"PO-Revision-Date: 2008-03-05 10:48+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Euskara <eu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -5102,13 +5102,13 @@ msgid ""
 "list of accepted authenticated key management protocols.\n"
 "possible values are WPA-EAP, IEEE8021X, NONE"
 msgstr ""
-"Onartutako kautotutako gako kudeatzeko protokoloen zerrenda.\n"
+"Onartutako autentikatutako gako kudeatzeko protokoloen zerrenda.\n"
 "Izan daitezkeen balioak WPA-EAP, IEEE8021X eta NONE dira"
 
 #: ../lib/network/connection/wireless.pm:458
 #, c-format
 msgid "EAP outer identity"
-msgstr ""
+msgstr "EAP kanpoko nortasuna"
 
 #: ../lib/network/connection/wireless.pm:460
 #, c-format
@@ -5162,7 +5162,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:476
 #, c-format
 msgid "EAP certificate subject match"
-msgstr ""
+msgstr "EAP ziurtagiriaren 'subject' eremua parekatu"
 
 #: ../lib/network/connection/wireless.pm:478
 #, c-format
@@ -5173,6 +5173,11 @@ msgid ""
 "string in the subject.  The subject string is in following format:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
+" Autentikazio zerbitzariaren ziurtagiriaren 'subject' eremuarekin\n"
+"bat etorri behar den azpi-testu-lerroa. Testu lerro hau ezartzen bada,\n"
+"zerbitzariaren ziurtagiria onartuko da soilik 'subject' eremuan testu\n"
+"lerro hau eduki ezkero. 'Subject' testu lerroa ondorengo formatuan dago:\n"
+"/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
 #: ../lib/network/connection/wireless.pm:483
 #, c-format
@@ -5196,6 +5201,19 @@ msgid ""
 "\tOthers such as key_mgmt, eap maybe used to force\n"
 "\tspecial settings different from the U.I settings."
 msgstr ""
+"Hemen 'wpa_supplicant'-eri ezarpen gehigarriak pasatu daitezke.\n"
+"Espero den formatua 'field=value' parea duen testu lerroa da. Balio\n"
+"anitz zehaztu daitezke, balio bakoitza # karakterearekin banatuz.\n"
+"Oharra: zuzentarauak egiaztatu gabe pasatzen dira eta wpa\n"
+"negoziaketak era isilean huts egitea eragin dezakete. Onartutako\n"
+"zuzentarauak mantendu egiten dira edizio ezberdinetan.\n"
+"Onartutako zuzentarauak dira:\n"
+"\tdisabled, id_str, bssid, priority, auth_alg, eapol_flags,\n"
+"\tproactive_key_caching, peerkey, ca_path, private_key,\n"
+"\tprivate_key_passwd, dh_file, altsubject_match, phase1,\n"
+"\tfragment_size eta eap_workaround, pairwise, group.\n"
+"\tBeste batzuk, key_mgmt, eap, U.I. ezarpenen ezberdinak\n"
+"\tdiren ezarpen bereziak behartzeko erabili daitezke."
 
 #: ../lib/network/connection/wireless.pm:505
 #, c-format
