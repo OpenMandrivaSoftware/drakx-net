@@ -58,13 +58,17 @@ sub get_zones {
     my @all_intf = grep { !/:/ } uniq(keys(%{$net->{ifcfg}}), detect_devices::get_net_interfaces());
     my %net_zone = map { $_ => undef } @all_intf;
     $net_zone{$_} = 1 foreach get_net_zone_interfaces($net, \@all_intf);
-    $o_in and $o_in->ask_from('', N("Please select the interfaces that will be protected by the firewall.
+    $o_in and $o_in->ask_from_({
+        title => N("Firewall configuration"),
+        icon => 'banner-security',
+        messages => N("Please select the interfaces that will be protected by the firewall.
 
 All interfaces directly connected to Internet should be selected,
 while interfaces connected to a local network may be unselected.
 
 Which interfaces should be protected?
-"), [
+"),
+    }, [
         map {
             { text => network::tools::get_interface_description($net, $_), val => \$net_zone{$_}, type => 'bool' };
         } (sort keys %net_zone) ]);
