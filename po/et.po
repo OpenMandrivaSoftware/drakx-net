@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-et\n"
 "POT-Creation-Date: 2008-03-03 18:09+0100\n"
-"PO-Revision-Date: 2008-02-22 22:49+0200\n"
+"PO-Revision-Date: 2008-03-06 12:53+0200\n"
 "Last-Translator: Marek Laane <bald@starman.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -2551,9 +2551,9 @@ msgid "Samba Users"
 msgstr "Samba kasutajad"
 
 #: ../bin/draksambashare:1449
-#, fuzzy, c-format
+#, c-format
 msgid "Please configure your Samba server"
-msgstr "Samba serveri seadistamine ebaõnnestus."
+msgstr "Palun seadistage oma Samba server"
 
 #: ../bin/draksambashare:1449
 #, c-format
@@ -2561,6 +2561,8 @@ msgid ""
 "It seems this is the first time you run this tool.\n"
 "A wizard will appear to configure a basic Samba server"
 msgstr ""
+"Tundub, et te kasutate seda tööriista esimest korda.\n"
+"Nõustaja aitab Teil sooritada Samba serveri esmase häälestuse"
 
 #: ../bin/draksambashare:1457
 #, c-format
@@ -4762,12 +4764,12 @@ msgstr "WPA eeljagatud võti"
 #: ../lib/network/connection/wireless.pm:44
 #, c-format
 msgid "WPA2/WPA Enterprise"
-msgstr ""
+msgstr "WPA2/WPA Enterprise"
 
 #: ../lib/network/connection/wireless.pm:231
 #, c-format
 msgid "Windows driver"
-msgstr ""
+msgstr "Windowsi draiver"
 
 #: ../lib/network/connection/wireless.pm:298
 #, c-format
@@ -4819,9 +4821,9 @@ msgid "Encryption mode"
 msgstr "Krüptorežiim"
 
 #: ../lib/network/connection/wireless.pm:376
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Login/Username"
-msgstr "Kasutajatunnus"
+msgstr "EAP kasutajatunnus"
 
 #: ../lib/network/connection/wireless.pm:378
 #, c-format
@@ -4830,11 +4832,14 @@ msgid ""
 "need to specify domain then try the untested syntax\n"
 "  DOMAIN\\username"
 msgstr ""
+"Kasutajatunnus. See on klaartekstina. Kui peate\n"
+"määrama ka domeeni, võite proovida testimata süntaksit\n"
+"  DOMEEN\\kasutajanimi"
 
 #: ../lib/network/connection/wireless.pm:381
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Password"
-msgstr "Parool"
+msgstr "EAP parool"
 
 #: ../lib/network/connection/wireless.pm:383
 #, c-format
@@ -4854,11 +4859,25 @@ msgid ""
 "  TLS mode is completely certificate based and may ignore\n"
 "the username and password values specified here."
 msgstr ""
+" Parool: string.\n"
+"Pange tähele, et see ei ole sama mis psk.\n"
+"____________________________________________________\n"
+"LISAINFO:\n"
+"Muude valikute leheküljel saate valida, millist EAP režiimi\n"
+"autentimiseks kasutada. EAP režiimi seadistuse korral tähendab\n"
+"   automaatne tuvastamine, et proovitakse kõiki võimalikke režiime.\n"
+"\n"
+"Kui automaatne tuvastamine nurjub, proovige enne teisi PEAP TTLS\n"
+"Märkus:\n"
+"\tSeadistused MD5, MSCHAPV2, OTP ja GTC tähendavad\n"
+"automaatselt PEAP ja TTLS režiime.\n"
+"  TLS režiim on täielikult sertifikaadipõhine ning võib eirata\n"
+"siin määratud kasutajanime ja parooli."
 
 #: ../lib/network/connection/wireless.pm:397
-#, fuzzy, c-format
+#, c-format
 msgid "EAP client certificate"
-msgstr "Sertifikaadi nimi"
+msgstr "EAP kliendi sertifikaat"
 
 #: ../lib/network/connection/wireless.pm:399
 #, c-format
@@ -4868,6 +4887,10 @@ msgid ""
 "considered as the alternative to username/password combo.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
+"Kleindi sertifikaadi täielik asukoht ja failinimi. Seda kasutatakse\n"
+"ainult EAP sertifikaadipõhisel autentimisel. Seda võib pidada\n"
+"kasutajanime ja parooli kasutamise alternatiiviks.\n"
+" Märkus: täiendavad seadistused leiab muude valikute leheküljel."
 
 #: ../lib/network/connection/wireless.pm:408
 #, c-format
@@ -4951,25 +4974,25 @@ msgstr ""
 "Täpsemat infot annab man-lehekülg iwpriv(8)."
 
 #: ../lib/network/connection/wireless.pm:446
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Protocol"
-msgstr "Protokoll"
+msgstr "EAP protokoll"
 
 #: ../lib/network/connection/wireless.pm:447
 #: ../lib/network/connection/wireless.pm:452
-#, fuzzy, c-format
+#, c-format
 msgid "Auto Detect"
-msgstr "Automaattuvastus"
+msgstr "Automaatne tuvastamine"
 
 #: ../lib/network/connection/wireless.pm:447
 #, c-format
 msgid "WPA2"
-msgstr ""
+msgstr "WPA2"
 
 #: ../lib/network/connection/wireless.pm:447
-#, fuzzy, c-format
+#, c-format
 msgid "WPA"
-msgstr "PAP"
+msgstr "WPA"
 
 #: ../lib/network/connection/wireless.pm:449
 #, c-format
@@ -4977,66 +5000,68 @@ msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr ""
+"Soovitatav on valida automaatne tuvastamine, sest see proovib\n"
+"kõigepealt WPA versiooni 2 ja seejärel WPA versiooni 1"
 
 #: ../lib/network/connection/wireless.pm:451
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Mode"
-msgstr "Režiim"
+msgstr "EAP režiim"
 
 #: ../lib/network/connection/wireless.pm:452
-#, fuzzy, c-format
+#, c-format
 msgid "PEAP"
-msgstr "PAP"
+msgstr "PEAP"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "TTLS"
-msgstr ""
+msgstr "TTLS"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "TLS"
-msgstr ""
+msgstr "TLS"
 
 #: ../lib/network/connection/wireless.pm:452
-#, fuzzy, c-format
+#, c-format
 msgid "MSCHAPV2"
-msgstr "CHAP"
+msgstr "MSCHAPV2"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "MD5"
-msgstr ""
+msgstr "MD5"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "OTP"
-msgstr ""
+msgstr "OTP"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "GTC"
-msgstr ""
+msgstr "GTC"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "LEAP"
-msgstr ""
+msgstr "LEAP"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "PEAP TTLS"
-msgstr ""
+msgstr "PEAP TTLS"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "TTLS TLS"
-msgstr ""
+msgstr "TTLS TLS"
 
 #: ../lib/network/connection/wireless.pm:454
 #, c-format
 msgid "EAP key_mgmt"
-msgstr ""
+msgstr "EAP key_mgmt"
 
 #: ../lib/network/connection/wireless.pm:456
 #, c-format
@@ -5044,11 +5069,13 @@ msgid ""
 "list of accepted authenticated key management protocols.\n"
 "possible values are WPA-EAP, IEEE8021X, NONE"
 msgstr ""
+"Aktsepteeritud autenditud võtmehalduse protokollide loend.\n"
+"Võimalikud väärtused on WPA-EAP, IEEE8021X, NONE"
 
 #: ../lib/network/connection/wireless.pm:458
 #, c-format
 msgid "EAP outer identity"
-msgstr ""
+msgstr "EAP väline identiteet"
 
 #: ../lib/network/connection/wireless.pm:460
 #, c-format
@@ -5057,11 +5084,14 @@ msgid ""
 "unencrypted identity with EAP types that support different\n"
 "tunnelled identity, e.g., TTLS"
 msgstr ""
+"EAP anonüümse identiteedi string: kasutage seda krüptimata\n"
+"identiteedina EAP tüüpide korral, mis toetavad erinevat\n"
+"tunneldatud identiteeti, nt. TTLS"
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
 msgid "EAP phase2"
-msgstr ""
+msgstr "EAP faas 2"
 
 #: ../lib/network/connection/wireless.pm:465
 #, c-format
@@ -5071,11 +5101,15 @@ msgid ""
 "auth=MSCHAPV2 for PEAP or\n"
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
+"Seesmine autentimine TLS tunneli parameetritega.\n"
+"Sisend on string välja-väärtuse paaridega. Näited:\n"
+"auth=MSCHAPV2 PEAP korral või\n"
+"autheap=MSCHAPV2 autheap=MD5 TTLS korral"
 
 #: ../lib/network/connection/wireless.pm:469
-#, fuzzy, c-format
+#, c-format
 msgid "EAP CA certificate"
-msgstr "Sertifikaat"
+msgstr "EAP SK sertifikaat"
 
 #: ../lib/network/connection/wireless.pm:471
 #, c-format
@@ -5086,11 +5120,16 @@ msgid ""
 "a trusted CA certificate should always be configured\n"
 "when using TLS or TTLS or PEAP."
 msgstr ""
+"SK sertifikaadifaili (PEM/DER) täielik asukoht. See fail\n"
+"võib olla üks või ka mitu usaldusväärset SK sertifikaati. Kui \n"
+"ca_cert ei ole antud, ei saa serveri sertifikaati verifitseerida.\n"
+"Võimaluse korral tuleks TLS või TTLS või PEAP kasutamisel\n"
+"alati määrata usaldusväärne SK sertifikaat."
 
 #: ../lib/network/connection/wireless.pm:476
 #, c-format
 msgid "EAP certificate subject match"
-msgstr ""
+msgstr "EAP sertifikaadi subjekti sobivus"
 
 #: ../lib/network/connection/wireless.pm:478
 #, c-format
@@ -5101,11 +5140,16 @@ msgid ""
 "string in the subject.  The subject string is in following format:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
+" Alamstring, mida võrreldakse autentimisserveri\n"
+"sertifikaadi subjektiga. Kui string on määratud, aktsepteeritakse\n"
+"serveri sertifikaati ainult juhul, kui selle subjektis sisaldub\n"
+"määratud string. Subjektistringi vorming on järgmine:\n"
+"/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
 #: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid "EAP extra directives"
-msgstr ""
+msgstr "EAP lisadirektiivid"
 
 #: ../lib/network/connection/wireless.pm:485
 #, c-format
@@ -5124,6 +5168,20 @@ msgid ""
 "\tOthers such as key_mgmt, eap maybe used to force\n"
 "\tspecial settings different from the U.I settings."
 msgstr ""
+"Siin saab määrata wpa_supplicanti lisaseadistusi.\n"
+"Vorming peab olema väli=väärtus paar. Määrata võib ka\n"
+"mitu väärtust, neid tuleb eraldada märgiga #.\n"
+"Märkus: direktiivid edastatakse täiendava kontrollita ning\n"
+"need võivad nurjata wpa läbirääkimised. Toetatud\n"
+"direktiivid säiluvad ka redigeerimisel.\n"
+"Toetatud direktiivid on järgmised:\n"
+"\tdisabled, id_str, bssid, priority, auth_alg, eapol_flags,\n"
+"\tproactive_key_caching, peerkey, ca_path, private_key,\n"
+"\tprivate_key_passwd, dh_file, altsubject_match, phase1,\n"
+"\tfragment_size and eap_workaround, pairwise, group\n"
+"\tSpetsiaalsete, kasutajaliideses määratud seadistustest\n"
+"\terinevate seadistuste pealesundimiseks võib kasutada\n"
+"\tka teisi direktiive, key_mgmt."
 
 #: ../lib/network/connection/wireless.pm:505
 #, c-format
