@@ -75,7 +75,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "POT-Creation-Date: 2008-03-03 18:09+0100\n"
-"PO-Revision-Date: 2008-03-03 20:37+0100\n"
+"PO-Revision-Date: 2008-03-09 16:32+0100\n"
 "Last-Translator: Christophe Berthelé <cpjc@free.fr>\n"
 "Language-Team: French <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -4999,6 +4999,20 @@ msgid ""
 "  TLS mode is completely certificate based and may ignore\n"
 "the username and password values specified here."
 msgstr ""
+" Mot de passe : une chaîne de caractère.\n"
+"Note ça n'est pas la même chose que psk.\n"
+"____________________________________________________\n"
+"INFORMATIONS COMPLÉMENTAIRES :\n"
+"Dans la page Options avancées, vous pouvez choisir le mode\n"
+"d'authentification EAP à utiliser. Pour le mode EAP\n"
+"   Auto-détecter : tous les modes possibles seront essayés.\n"
+"\n"
+"Si Auto-détecter échoue, tentez PEAP avec TTLS en priorité\n"
+"Note:\n"
+"\tLes options MD5, MSCHAPV2, OTP et GTC impliquent\n"
+"automatiquement les modes PEAP et TTLS.\n"
+"  Le mode TLS est basé uniquement sur un certificat et peut\n"
+"ignorer le nom d'utilisateur et le mot de passe donnés ici."
 
 #: ../lib/network/connection/wireless.pm:397
 #, c-format
@@ -5013,6 +5027,10 @@ msgid ""
 "considered as the alternative to username/password combo.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
+"Chemin et nom du fichier du certificat client. Ceci est utilisé\n"
+"uniquement pour les authentifications basées sur un certificat\n"
+"EAP. C'est une alternative au couple utilisateur/mot de passe.\n"
+" Note : les autres paramètres associés sont les Options avancées."
 
 #: ../lib/network/connection/wireless.pm:408
 #, c-format
@@ -5129,6 +5147,8 @@ msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr ""
+"Auto-détecter est recommandé car cela essaye d'abord WPA\n"
+"version 2 avec en secours WPA version 1"
 
 #: ../lib/network/connection/wireless.pm:451
 #, c-format
@@ -5196,11 +5216,13 @@ msgid ""
 "list of accepted authenticated key management protocols.\n"
 "possible values are WPA-EAP, IEEE8021X, NONE"
 msgstr ""
+"liste des protocoles de gestion de clés d'authentification acceptés.\n"
+"Valeurs possibles : WPA-EAP, IEEE8021X, NONE"
 
 #: ../lib/network/connection/wireless.pm:458
 #, c-format
 msgid "EAP outer identity"
-msgstr ""
+msgstr "Identité externe EAP"
 
 #: ../lib/network/connection/wireless.pm:460
 #, c-format
@@ -5209,6 +5231,9 @@ msgid ""
 "unencrypted identity with EAP types that support different\n"
 "tunnelled identity, e.g., TTLS"
 msgstr ""
+"Chaîne d'identification anonyme pour EAP : sera utilisée\n"
+"comme identité non chiffrée avec les types d'EAP supportant\n"
+"différentes identités encapsulées dans des tunnels, ex. TTLS"
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
@@ -5223,6 +5248,10 @@ msgid ""
 "auth=MSCHAPV2 for PEAP or\n"
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
+"Authentification interne avec des paramètres de tunnel TLS.\n"
+"C'est une chaîne avec des couples champ=valeur, exemples :\n"
+"auth=MSCHAPV2 pour PEAP ou\n"
+"autheap=MSCHAPV2 autheap=MD5 pour TTLS"
 
 #: ../lib/network/connection/wireless.pm:469
 #, c-format
@@ -5238,11 +5267,16 @@ msgid ""
 "a trusted CA certificate should always be configured\n"
 "when using TLS or TTLS or PEAP."
 msgstr ""
+"Chemin complet du fichier certificat CA (PEM/DER). Ce fichier\n"
+"peut inclure un ou plusieurs certificats de confiance. Si des\n"
+"ca_cert ne sont pas inclus, le certificat serveur ne sera pas\n"
+"vérifié. Si possible, un certificat CA de confiance doit être\n"
+"toujours configuré lors de l'utilisation de TLS, TTLS ou PEAP."
 
 #: ../lib/network/connection/wireless.pm:476
 #, c-format
 msgid "EAP certificate subject match"
-msgstr ""
+msgstr "Modèle de sujet du certificat EAP"
 
 #: ../lib/network/connection/wireless.pm:478
 #, c-format
@@ -5253,11 +5287,16 @@ msgid ""
 "string in the subject.  The subject string is in following format:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
+" Chaîne à laquelle devra correspondre le sujet du\n"
+"certificat d'authentification du serveur. Si cette chaîne est\n"
+"définie, le certificat serveur ne sera accepté que s'il contient\n"
+"cette chaîne dans son sujet. Le format du sujet est le suivant :\n"
+"/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
 #: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid "EAP extra directives"
-msgstr ""
+msgstr "Directives EAP supplémentaires"
 
 #: ../lib/network/connection/wireless.pm:485
 #, c-format
@@ -5276,6 +5315,19 @@ msgid ""
 "\tOthers such as key_mgmt, eap maybe used to force\n"
 "\tspecial settings different from the U.I settings."
 msgstr ""
+"Paramètres supplémentaires pour wpa_supplicant\n"
+"Le format attendu est un couple champ=valeur. Plusieurs\n"
+"valeurs peuvent être saisies, séparées par le caractère #.\n"
+"Note : il n'y a pas de vérification de ces directives et elles\n"
+"peuvent faire échouer la négociation wpa silencieusement.\n"
+"Les directives saisies sont conservées entre les éditions.\n"
+"Les directives valides sont :\n"
+"\tdisabled, id_str, bssid, priority, auth_alg, eapol_flags,\n"
+"\tproactive_key_caching, peerkey, ca_path, private_key,\n"
+"\tprivate_key_passwd, dh_file, altsubject_match, phase1,\n"
+"\tfragment_size et eap_workaround, pairwise, group\n"
+"\tD'autres comme key_mgmt, eap permettent de forcer\n"
+"\tdes valeurs différentes de celles de l'interface."
 
 #: ../lib/network/connection/wireless.pm:505
 #, c-format
