@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-tools\n"
 "POT-Creation-Date: 2008-03-03 18:09+0100\n"
-"PO-Revision-Date: 2008-03-03 20:41+0100\n"
+"PO-Revision-Date: 2008-03-09 13:36+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -4849,6 +4849,10 @@ msgid ""
 "considered as the alternative to username/password combo.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
+"Den fullstendige adressa og filnamnet til klientsertifikatet. Dette\n"
+"vert berre brukt for EAP-sertifikatbasert autentisering. Det er eit\n"
+"alternativ til bruk av brukarnamn og passord.\n"
+"Merk: Andre relevante innstillingar vert vist på «Avansert»-sida."
 
 #: ../lib/network/connection/wireless.pm:408
 #, c-format
@@ -4964,6 +4968,8 @@ msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr ""
+"Det er anbefalt å bruka «Finn automatisk», då denne først prøver WPA\n"
+"versjon 2, med WPA versjon 1 som reserve."
 
 #: ../lib/network/connection/wireless.pm:451
 #, c-format
@@ -5031,6 +5037,8 @@ msgid ""
 "list of accepted authenticated key management protocols.\n"
 "possible values are WPA-EAP, IEEE8021X, NONE"
 msgstr ""
+"Liste over moglege autentiseringsnøkkelprotokollar.\n"
+"Moglege verdiar: WPA-EAP, IEEE8021X og NONE."
 
 #: ../lib/network/connection/wireless.pm:458
 #, c-format
@@ -5044,6 +5052,9 @@ msgid ""
 "unencrypted identity with EAP types that support different\n"
 "tunnelled identity, e.g., TTLS"
 msgstr ""
+"Anonym identitetstekst for EAP: Vert brukt som\n"
+"ukryptert identitet med EAP-typar som støttar\n"
+"forskjellige tunellerte identitetar, som TTLS."
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
@@ -5058,6 +5069,10 @@ msgid ""
 "auth=MSCHAPV2 for PEAP or\n"
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
+"Indre autentisering med TLS-tunellparametrar.\n"
+"Innverdi er ein tekst med feltverdipar. Eksempel:\n"
+"auth=MSCHAPV2 for PEAP, eller\n"
+"autheap=MSCHAPV2 autheap=MD5 for TTLS"
 
 #: ../lib/network/connection/wireless.pm:469
 #, c-format
@@ -5073,11 +5088,16 @@ msgid ""
 "a trusted CA certificate should always be configured\n"
 "when using TLS or TTLS or PEAP."
 msgstr ""
+"Fill filadresse til CA-sertifikatfila (PEM/DER). Denne fila\n"
+"kan ha eitt eller fleire tiltrudde CA-sertifikat. Viss «ca_cert»\n"
+"ikkje er med, vert ikkje tentarsertifikatet sjekka. Viss,\n"
+"mogleg bør eit tiltrudd CA-sertifikat alltid setjast opp ved\n"
+"bruk av TLS, TTLS eller PEAP."
 
 #: ../lib/network/connection/wireless.pm:476
 #, c-format
 msgid "EAP certificate subject match"
-msgstr ""
+msgstr "«Subject»-samsvar for EAP-sertifikat"
 
 #: ../lib/network/connection/wireless.pm:478
 #, c-format
@@ -5088,6 +5108,11 @@ msgid ""
 "string in the subject.  The subject string is in following format:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
+"Tekst som skal sjekkast mot «subject» til autentiserings-\n"
+"tenarsertifikatet. Viss teksten er sett, vert tentarsertifikatet\n"
+"berre godteken om det inneheld denne teksten i «subject».\n"
+"«Subject»-teksten har følgjande format:\n"
+"/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
 #: ../lib/network/connection/wireless.pm:483
 #, c-format
