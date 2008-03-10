@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mandriva drakx-net.cy\n"
-"POT-Creation-Date: 2008-03-03 18:09+0100\n"
+"POT-Creation-Date: 2008-03-10 20:27+0100\n"
 "PO-Revision-Date: 2008-02-20 20:18-0000\n"
 "Last-Translator: Rhoslyn Prys <post@meddal.com>\n"
 "Language-Team: Cymraeg <post@meddal.com>\n"
@@ -47,19 +47,19 @@ msgid "Interface"
 msgstr "Rhyngwyneb"
 
 #: ../bin/drakconnect:113 ../bin/drakconnect:321 ../bin/drakconnect:888
-#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:125
-#: ../lib/network/netconnect.pm:612 ../lib/network/vpn/openvpn.pm:221
+#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:131
+#: ../lib/network/netconnect.pm:613 ../lib/network/vpn/openvpn.pm:221
 #, c-format
 msgid "IP address"
 msgstr "Cyfeiriad IP"
 
 #: ../bin/drakconnect:113 ../bin/drakconnect:305 ../bin/drakconnect:563
-#: ../bin/drakids:252 ../bin/drakvpn-old:839 ../lib/network/netconnect.pm:456
+#: ../bin/drakids:258 ../bin/drakvpn-old:839 ../lib/network/netconnect.pm:457
 #, c-format
 msgid "Protocol"
 msgstr "Protocol"
 
-#: ../bin/drakconnect:113 ../lib/network/netconnect.pm:442
+#: ../bin/drakconnect:113 ../lib/network/netconnect.pm:443
 #, c-format
 msgid "Driver"
 msgstr "Gyrrwr"
@@ -102,20 +102,26 @@ msgid "Apply"
 msgstr "Gosod"
 
 #: ../bin/drakconnect:161 ../bin/drakconnect:943 ../bin/drakconnect:1034
-#: ../bin/draknetprofile:106 ../bin/net_monitor:341
+#: ../bin/draknetprofile:106 ../bin/net_monitor:347
 #, c-format
 msgid "Cancel"
 msgstr "Diddymu"
 
 #: ../bin/drakconnect:162 ../bin/drakconnect:858 ../bin/drakconnect:945
-#: ../bin/drakconnect:1035 ../bin/draknetprofile:108 ../bin/net_monitor:342
+#: ../bin/drakconnect:1035 ../bin/draknetprofile:108 ../bin/net_monitor:348
 #, c-format
 msgid "Ok"
 msgstr "Iawn"
 
 #: ../bin/drakconnect:164 ../bin/drakconnect:636 ../bin/drakgw:359
-#: ../bin/draksambashare:228 ../lib/network/connection_manager.pm:146
-#: ../lib/network/connection_manager.pm:164
+#: ../bin/draksambashare:228 ../bin/drakvpn-old:97 ../bin/drakvpn-old:127
+#: ../lib/network/connection_manager.pm:69
+#: ../lib/network/connection_manager.pm:174
+#: ../lib/network/connection_manager.pm:192
+#: ../lib/network/connection_manager.pm:275 ../lib/network/drakvpn.pm:49
+#: ../lib/network/netcenter.pm:42 ../lib/network/netconnect.pm:177
+#: ../lib/network/netconnect.pm:210 ../lib/network/netconnect.pm:713
+#: ../lib/network/thirdparty.pm:332 ../lib/network/thirdparty.pm:347
 #, c-format
 msgid "Please wait"
 msgstr "Arhoswch"
@@ -130,7 +136,7 @@ msgstr "Arhoswch...Gosod y ffurfweddiad"
 msgid "Manage connections"
 msgstr "Rheoli cysylltiadau"
 
-#: ../bin/drakconnect:219 ../lib/network/drakroam.pm:105
+#: ../bin/drakconnect:219 ../lib/network/drakroam.pm:107
 #, c-format
 msgid "Device: "
 msgstr "Dyfais: "
@@ -141,13 +147,13 @@ msgid "IP configuration"
 msgstr "Ffurfweddiad IP"
 
 #: ../bin/drakconnect:326 ../bin/drakconnect:889 ../bin/drakgw:177
-#: ../lib/network/connection/ethernet.pm:132
+#: ../lib/network/connection/ethernet.pm:138
 #, c-format
 msgid "Netmask"
 msgstr "Netmask"
 
-#: ../bin/drakconnect:332 ../lib/network/connection/ethernet.pm:133
-#: ../lib/network/netconnect.pm:644 ../lib/network/vpn/openvpn.pm:212
+#: ../bin/drakconnect:332 ../lib/network/connection/ethernet.pm:139
+#: ../lib/network/netconnect.pm:645 ../lib/network/vpn/openvpn.pm:212
 #: ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
@@ -179,99 +185,99 @@ msgid "DHCP"
 msgstr "DHCP"
 
 #: ../bin/drakconnect:369 ../bin/drakconnect:892
-#: ../lib/network/connection/ethernet.pm:143
+#: ../lib/network/connection/ethernet.pm:149
 #, c-format
 msgid "DHCP client"
 msgstr "Cleient DHCP"
 
-#: ../bin/drakconnect:373 ../lib/network/connection/ethernet.pm:201
+#: ../bin/drakconnect:373 ../lib/network/connection/ethernet.pm:207
 #, c-format
 msgid "Assign host name from DHCP address"
 msgstr "Rhowch enw'r gwesteiwr o'r cyfeiriad DHCP"
 
-#: ../bin/drakconnect:375 ../lib/network/connection/ethernet.pm:147
+#: ../bin/drakconnect:375 ../lib/network/connection/ethernet.pm:153
 #, c-format
 msgid "DHCP host name"
 msgstr "Enw gwesteiwr DHCP"
 
-#: ../bin/drakconnect:379 ../lib/network/connection/ethernet.pm:144
+#: ../bin/drakconnect:379 ../lib/network/connection/ethernet.pm:150
 #, c-format
 msgid "DHCP timeout (in seconds)"
 msgstr "Amser allan DHCP (mewn eiliadau)"
 
-#: ../bin/drakconnect:382 ../lib/network/connection/ethernet.pm:136
+#: ../bin/drakconnect:382 ../lib/network/connection/ethernet.pm:142
 #, c-format
 msgid "Get DNS servers from DHCP"
 msgstr "Estyn gweinyddion DNS o DHCP"
 
-#: ../bin/drakconnect:383 ../lib/network/connection/ethernet.pm:145
+#: ../bin/drakconnect:383 ../lib/network/connection/ethernet.pm:151
 #, c-format
 msgid "Get YP servers from DHCP"
 msgstr "Estyn gweinyddion YP o DHCP"
 
-#: ../bin/drakconnect:384 ../lib/network/connection/ethernet.pm:146
+#: ../bin/drakconnect:384 ../lib/network/connection/ethernet.pm:152
 #, c-format
 msgid "Get NTPD servers from DHCP"
 msgstr "Estyn gwenyddion NTPD o DHCP"
 
-#: ../bin/drakconnect:406 ../lib/network/connection/wireless.pm:327
-#: ../lib/network/connection_manager.pm:204
+#: ../bin/drakconnect:406 ../lib/network/connection/wireless.pm:366
+#: ../lib/network/connection_manager.pm:232
 #, c-format
 msgid "Operating Mode"
 msgstr "Modd Gweithredu"
 
-#: ../bin/drakconnect:407 ../lib/network/connection/wireless.pm:331
+#: ../bin/drakconnect:407 ../lib/network/connection/wireless.pm:370
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "Enw'r rhwydwaith (ESSID)"
 
-#: ../bin/drakconnect:408 ../lib/network/connection/wireless.pm:337
+#: ../bin/drakconnect:408 ../lib/network/connection/wireless.pm:403
 #, c-format
 msgid "Network ID"
 msgstr "Enw Rhwydwaith"
 
-#: ../bin/drakconnect:409 ../lib/network/connection/wireless.pm:338
+#: ../bin/drakconnect:409 ../lib/network/connection/wireless.pm:404
 #, c-format
 msgid "Operating frequency"
 msgstr "Amledd gweithredu"
 
-#: ../bin/drakconnect:410 ../lib/network/connection/wireless.pm:339
+#: ../bin/drakconnect:410 ../lib/network/connection/wireless.pm:405
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "Trothwy sensitifrwydd"
 
-#: ../bin/drakconnect:411 ../lib/network/connection/wireless.pm:340
+#: ../bin/drakconnect:411 ../lib/network/connection/wireless.pm:406
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "Didradd (mewn b/s)"
 
-#: ../bin/drakconnect:421 ../lib/network/connection/wireless.pm:335
+#: ../bin/drakconnect:421 ../lib/network/connection/wireless.pm:374
 #, c-format
 msgid "Encryption key"
 msgstr "Allwedd amgryptio"
 
-#: ../bin/drakconnect:422 ../lib/network/connection/wireless.pm:341
+#: ../bin/drakconnect:422 ../lib/network/connection/wireless.pm:407
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../bin/drakconnect:423 ../lib/network/connection/wireless.pm:349
+#: ../bin/drakconnect:423 ../lib/network/connection/wireless.pm:415
 #, c-format
 msgid "Fragmentation"
 msgstr "Darniad"
 
-#: ../bin/drakconnect:424 ../lib/network/connection/wireless.pm:350
+#: ../bin/drakconnect:424 ../lib/network/connection/wireless.pm:416
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "ymresymiadau ychwanegol gorchymyn iwconfig"
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../bin/drakconnect:425 ../lib/network/connection/wireless.pm:358
+#: ../bin/drakconnect:425 ../lib/network/connection/wireless.pm:424
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "ymresymiadau ychwanegol gorchymyn lwspy"
 
-#: ../bin/drakconnect:426 ../lib/network/connection/wireless.pm:367
+#: ../bin/drakconnect:426 ../lib/network/connection/wireless.pm:433
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "ymresymiadau ychwanegol gorchymyn iwpriv"
@@ -281,53 +287,53 @@ msgstr "ymresymiadau ychwanegol gorchymyn iwpriv"
 msgid "Start at boot"
 msgstr "Cychwyn y peiriant"
 
-#: ../bin/drakconnect:440 ../lib/network/connection/ethernet.pm:221
+#: ../bin/drakconnect:440 ../lib/network/connection/ethernet.pm:227
 #, c-format
 msgid "Network Hotplugging"
 msgstr "Plygio byw'r Rhwydwaith"
 
-#: ../bin/drakconnect:446 ../lib/network/netconnect.pm:331
+#: ../bin/drakconnect:446 ../lib/network/netconnect.pm:332
 #, c-format
 msgid "Dialing mode"
 msgstr "Modd deialu"
 
 #: ../bin/drakconnect:451 ../bin/drakconnect:518
-#: ../lib/network/netconnect.pm:332
+#: ../lib/network/netconnect.pm:333
 #, c-format
 msgid "Connection speed"
 msgstr "Cyflymder y cysylltiad"
 
-#: ../bin/drakconnect:456 ../lib/network/netconnect.pm:333
+#: ../bin/drakconnect:456 ../lib/network/netconnect.pm:334
 #, c-format
 msgid "Connection timeout (in sec)"
 msgstr "Oediad yn y cysylltiad (mewn eiliadau)"
 
-#: ../bin/drakconnect:462 ../lib/network/connection.pm:186
+#: ../bin/drakconnect:462 ../lib/network/connection.pm:206
 #, c-format
 msgid "Metric"
 msgstr "Metrig"
 
-#: ../bin/drakconnect:482 ../lib/network/connection/cable.pm:48
-#: ../lib/network/netconnect.pm:595
+#: ../bin/drakconnect:482 ../lib/network/connection/cable.pm:45
+#: ../lib/network/netconnect.pm:596
 #, c-format
 msgid "Authentication"
 msgstr "Dilysu"
 
-#: ../bin/drakconnect:492 ../lib/network/connection/cable.pm:50
-#: ../lib/network/connection/ppp.pm:22 ../lib/network/netconnect.pm:334
+#: ../bin/drakconnect:492 ../lib/network/connection/cable.pm:47
+#: ../lib/network/connection/ppp.pm:22 ../lib/network/netconnect.pm:335
 #: ../lib/network/vpn/openvpn.pm:393
 #, c-format
 msgid "Account Login (user name)"
 msgstr "Mewngofnod Cyfrif (enw defnyddiwr)"
 
-#: ../bin/drakconnect:493 ../lib/network/connection/cable.pm:52
-#: ../lib/network/connection/ppp.pm:23 ../lib/network/netconnect.pm:335
+#: ../bin/drakconnect:493 ../lib/network/connection/cable.pm:49
+#: ../lib/network/connection/ppp.pm:23 ../lib/network/netconnect.pm:336
 #: ../lib/network/vpn/openvpn.pm:394
 #, c-format
 msgid "Account Password"
 msgstr "Cyfrinair y Cyfrif"
 
-#: ../bin/drakconnect:494 ../lib/network/netconnect.pm:328
+#: ../bin/drakconnect:494 ../lib/network/netconnect.pm:329
 #, c-format
 msgid "Provider phone number"
 msgstr "Rhif ffôn y darparwr"
@@ -407,22 +413,22 @@ msgstr "Galluogi"
 msgid "Disable"
 msgstr "Analluogi"
 
-#: ../bin/drakconnect:555 ../lib/network/netconnect.pm:336
+#: ../bin/drakconnect:555 ../lib/network/netconnect.pm:337
 #, c-format
 msgid "Card IRQ"
 msgstr "IRQ y cerdyn"
 
-#: ../bin/drakconnect:556 ../lib/network/netconnect.pm:337
+#: ../bin/drakconnect:556 ../lib/network/netconnect.pm:338
 #, c-format
 msgid "Card mem (DMA)"
 msgstr "Cof Cerdyn (DMA)"
 
-#: ../bin/drakconnect:557 ../lib/network/netconnect.pm:338
+#: ../bin/drakconnect:557 ../lib/network/netconnect.pm:339
 #, c-format
 msgid "Card IO"
 msgstr "IO'r Cerdyn"
 
-#: ../bin/drakconnect:558 ../lib/network/netconnect.pm:339
+#: ../bin/drakconnect:558 ../lib/network/netconnect.pm:340
 #, c-format
 msgid "Card IO_0"
 msgstr "IO_O y cerdyn"
@@ -482,42 +488,41 @@ msgstr "Lleoliad ar y bws"
 #: ../bin/drakinvictus:72 ../bin/draknetprofile:113 ../bin/draknfs:88
 #: ../bin/draknfs:109 ../bin/draknfs:279 ../bin/draknfs:412 ../bin/draknfs:414
 #: ../bin/draknfs:417 ../bin/draknfs:509 ../bin/draknfs:516 ../bin/draknfs:579
-#: ../bin/draknfs:586 ../bin/draknfs:593 ../bin/draksambashare:393
-#: ../bin/draksambashare:400 ../bin/draksambashare:403
-#: ../bin/draksambashare:455 ../bin/draksambashare:479
-#: ../bin/draksambashare:545 ../bin/draksambashare:560
-#: ../bin/draksambashare:638 ../bin/draksambashare:705
-#: ../bin/draksambashare:805 ../bin/draksambashare:812
-#: ../bin/draksambashare:951 ../bin/draksambashare:1105
-#: ../bin/draksambashare:1124 ../bin/draksambashare:1156
-#: ../bin/draksambashare:1213 ../bin/draksambashare:1263
-#: ../bin/draksambashare:1365 ../bin/draksambashare:1374
-#: ../bin/draksambashare:1396 ../bin/draksambashare:1405
-#: ../bin/draksambashare:1424 ../bin/draksambashare:1433
-#: ../bin/draksambashare:1445 ../lib/network/connection/xdsl.pm:332
-#: ../lib/network/connection_manager.pm:41
-#: ../lib/network/connection_manager.pm:47
-#: ../lib/network/connection_manager.pm:60
-#: ../lib/network/connection_manager.pm:115
-#: ../lib/network/connection_manager.pm:119 ../lib/network/drakvpn.pm:45
-#: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:27
-#: ../lib/network/ndiswrapper.pm:42 ../lib/network/ndiswrapper.pm:86
-#: ../lib/network/ndiswrapper.pm:102 ../lib/network/netconnect.pm:131
-#: ../lib/network/netconnect.pm:179 ../lib/network/netconnect.pm:235
-#: ../lib/network/netconnect.pm:276 ../lib/network/netconnect.pm:821
-#: ../lib/network/thirdparty.pm:115 ../lib/network/thirdparty.pm:132
-#: ../lib/network/thirdparty.pm:215 ../lib/network/thirdparty.pm:217
-#: ../lib/network/thirdparty.pm:238
+#: ../bin/draknfs:586 ../bin/draknfs:593 ../bin/draksambashare:392
+#: ../bin/draksambashare:399 ../bin/draksambashare:402
+#: ../bin/draksambashare:454 ../bin/draksambashare:478
+#: ../bin/draksambashare:551 ../bin/draksambashare:629
+#: ../bin/draksambashare:696 ../bin/draksambashare:796
+#: ../bin/draksambashare:803 ../bin/draksambashare:942
+#: ../bin/draksambashare:1096 ../bin/draksambashare:1115
+#: ../bin/draksambashare:1147 ../bin/draksambashare:1246
+#: ../bin/draksambashare:1348 ../bin/draksambashare:1357
+#: ../bin/draksambashare:1379 ../bin/draksambashare:1388
+#: ../bin/draksambashare:1407 ../bin/draksambashare:1416
+#: ../bin/draksambashare:1428 ../lib/network/connection/xdsl.pm:332
+#: ../lib/network/connection_manager.pm:52
+#: ../lib/network/connection_manager.pm:58
+#: ../lib/network/connection_manager.pm:72
+#: ../lib/network/connection_manager.pm:145
+#: ../lib/network/connection_manager.pm:149 ../lib/network/drakvpn.pm:45
+#: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
+#: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
+#: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:131
+#: ../lib/network/netconnect.pm:179 ../lib/network/netconnect.pm:236
+#: ../lib/network/netconnect.pm:277 ../lib/network/netconnect.pm:822
+#: ../lib/network/thirdparty.pm:117 ../lib/network/thirdparty.pm:135
+#: ../lib/network/thirdparty.pm:220 ../lib/network/thirdparty.pm:222
+#: ../lib/network/thirdparty.pm:243
 #, c-format
 msgid "Error"
 msgstr "Gwall"
 
-#: ../bin/drakconnect:676 ../lib/network/connection/ethernet.pm:160
+#: ../bin/drakconnect:676 ../lib/network/connection/ethernet.pm:166
 #, c-format
 msgid "IP address should be in format 1.2.3.4"
 msgstr "dylai cyfeiriad IP fod mewn fformat  1.2.3.4"
 
-#: ../bin/drakconnect:680 ../lib/network/connection/ethernet.pm:165
+#: ../bin/drakconnect:680 ../lib/network/connection/ethernet.pm:171
 #, c-format
 msgid "Netmask should be in format 255.255.224.0"
 msgstr "Dylai Netmask fod ar fformat 255.255.224.0"
@@ -532,7 +537,7 @@ msgstr "Dim IP"
 msgid "No Mask"
 msgstr "Dim Mask"
 
-#: ../bin/drakconnect:689 ../lib/network/netconnect.pm:806
+#: ../bin/drakconnect:689 ../lib/network/netconnect.pm:807
 #, c-format
 msgid "Gateway address should be in format 1.2.3.4"
 msgstr "Dylai cyfeiriad mynedfa fod mewn fformat  1.2.3.4"
@@ -556,8 +561,8 @@ msgstr "Tynnu rhyngwyneb rhwydwaith"
 msgid "Select the network interface to remove:"
 msgstr "Dewis y rhyngwyneb rhwydwaith i'w dynnu:"
 
-#: ../bin/drakconnect:719 ../bin/drakgw:123 ../lib/network/netconnect.pm:358
-#: ../lib/network/netconnect.pm:393
+#: ../bin/drakconnect:719 ../bin/drakgw:123 ../lib/network/netconnect.pm:359
+#: ../lib/network/netconnect.pm:394
 #, c-format
 msgid "Net Device"
 msgstr "Dyfais Rhyngrwyd"
@@ -589,12 +594,12 @@ msgstr "fyny"
 msgid "down"
 msgstr "lawr"
 
-#: ../bin/drakconnect:804 ../bin/net_monitor:465
+#: ../bin/drakconnect:804 ../bin/net_monitor:472
 #, c-format
 msgid "Connected"
 msgstr "Wedi cysylltu"
 
-#: ../bin/drakconnect:804 ../bin/net_monitor:465
+#: ../bin/drakconnect:804 ../bin/net_monitor:472
 #, c-format
 msgid "Not connected"
 msgstr "Heb gysylltu"
@@ -666,8 +671,8 @@ msgstr "Ffurfweddiad cysylltiad â'r Rhyngrwyd"
 
 #: ../bin/drakconnect:979 ../bin/draknetprofile:129 ../bin/draknetprofile:131
 #: ../bin/drakproxy:36 ../lib/network/drakvpn.pm:70
-#: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:92
-#: ../lib/network/netconnect.pm:479
+#: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
+#: ../lib/network/netconnect.pm:480
 #, c-format
 msgid "Warning"
 msgstr "Rhybudd"
@@ -692,12 +697,12 @@ msgstr "Gosod rhygnwyneb rhwydwaith newydd (LAN, ISDN, ADSL, ...)"
 msgid "Host name (optional)"
 msgstr "Enw gwesteiwr (dewisol)"
 
-#: ../bin/drakconnect:997 ../lib/network/netconnect.pm:630
+#: ../bin/drakconnect:997 ../lib/network/netconnect.pm:631
 #, c-format
 msgid "First DNS Server (optional)"
 msgstr "Gweinydd DNS Cyntaf (dewisol)"
 
-#: ../bin/drakconnect:998 ../lib/network/netconnect.pm:631
+#: ../bin/drakconnect:998 ../lib/network/netconnect.pm:632
 #, c-format
 msgid "Second DNS Server (optional)"
 msgstr "Ail Wasanaethwr DNS (dewisol)"
@@ -727,7 +732,7 @@ msgstr "Math o gyswllt:"
 msgid "Status:"
 msgstr "Statws:"
 
-#: ../bin/drakconnect:1028 ../lib/network/netconnect.pm:712
+#: ../bin/drakconnect:1028 ../lib/network/netconnect.pm:713
 #, c-format
 msgid "Testing your connection..."
 msgstr "Profi eich cysylltiad..."
@@ -1024,8 +1029,8 @@ msgid "Host Aliases:"
 msgstr "Enw arall Gwesteiwr:"
 
 #: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:229
-#: ../bin/draksambashare:250 ../bin/draksambashare:397
-#: ../bin/draksambashare:634 ../bin/draksambashare:801
+#: ../bin/draksambashare:250 ../bin/draksambashare:396
+#: ../bin/draksambashare:625 ../bin/draksambashare:792
 #, c-format
 msgid "Error!"
 msgstr "Gwall!"
@@ -1040,7 +1045,7 @@ msgstr "Rhowch gyfeiriad IP dilys."
 msgid "Same IP is already in %s file."
 msgstr "Mae'r un IP yn ffeil %s."
 
-#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:203
+#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:209
 #, c-format
 msgid "Host name"
 msgstr "Enw gwesteiwr"
@@ -1060,8 +1065,8 @@ msgstr "Rheoli diffiniadau gwesteiwyr"
 msgid "Modify entry"
 msgstr "Newid cofnod"
 
-#: ../bin/drakhosts:241 ../bin/draknfs:575 ../bin/draksambashare:1358
-#: ../bin/draksambashare:1389 ../bin/draksambashare:1420
+#: ../bin/drakhosts:241 ../bin/draknfs:575 ../bin/draksambashare:1341
+#: ../bin/draksambashare:1372 ../bin/draksambashare:1403
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Add"
@@ -1077,9 +1082,9 @@ msgstr "Ychwanegu cofnod"
 msgid "Failed to add host."
 msgstr "Methwyd ychwanegu gwesteiwr."
 
-#: ../bin/drakhosts:248 ../bin/draknfs:582 ../bin/draksambashare:1315
-#: ../bin/draksambashare:1360 ../bin/draksambashare:1391
-#: ../bin/draksambashare:1428
+#: ../bin/drakhosts:248 ../bin/draknfs:582 ../bin/draksambashare:1298
+#: ../bin/draksambashare:1343 ../bin/draksambashare:1374
+#: ../bin/draksambashare:1411
 #, c-format
 msgid "Modify"
 msgstr "Newid"
@@ -1089,9 +1094,9 @@ msgstr "Newid"
 msgid "Failed to Modify host."
 msgstr "Methwyd Newid Gwesteiwr."
 
-#: ../bin/drakhosts:255 ../bin/drakids:87 ../bin/drakids:96 ../bin/draknfs:589
-#: ../bin/draksambashare:1316 ../bin/draksambashare:1368
-#: ../bin/draksambashare:1399 ../bin/draksambashare:1436
+#: ../bin/drakhosts:255 ../bin/drakids:92 ../bin/drakids:101
+#: ../bin/draknfs:589 ../bin/draksambashare:1299 ../bin/draksambashare:1351
+#: ../bin/draksambashare:1382 ../bin/draksambashare:1419
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Remove"
@@ -1103,8 +1108,8 @@ msgid "Failed to remove host."
 msgstr "Methwyd tynnu gwesteiwr."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:147
-#: ../bin/net_applet:139 ../lib/network/drakroam.pm:113
-#: ../lib/network/netcenter.pm:113
+#: ../bin/net_applet:139 ../lib/network/drakroam.pm:115
+#: ../lib/network/netcenter.pm:128
 #, c-format
 msgid "Quit"
 msgstr "Gadael"
@@ -1114,125 +1119,125 @@ msgstr "Gadael"
 msgid "Allowed addresses"
 msgstr "Cyfeiriadau caniatawyd"
 
-#: ../bin/drakids:41 ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190
-#: ../bin/drakids:215 ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
+#: ../bin/drakids:40 ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196
+#: ../bin/drakids:221 ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
 #: ../bin/net_applet:78 ../bin/net_applet:245 ../bin/net_applet:521
-#: ../bin/net_applet:548 ../lib/network/drakfirewall.pm:255
-#: ../lib/network/drakfirewall.pm:258
+#: ../bin/net_applet:549 ../lib/network/drakfirewall.pm:256
+#: ../lib/network/drakfirewall.pm:260
 #, c-format
 msgid "Interactive Firewall"
 msgstr "Mur Cadarn Rhyngweithiol"
 
-#: ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190 ../bin/drakids:215
-#: ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
+#: ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196 ../bin/drakids:221
+#: ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
 #: ../bin/net_applet:245 ../bin/net_applet:521
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "Methu cysylltu â daemon"
 
-#: ../bin/drakids:74 ../bin/drakids:102
+#: ../bin/drakids:79 ../bin/drakids:107
 #, c-format
 msgid "Log"
 msgstr "Cofnodion"
 
-#: ../bin/drakids:78 ../bin/drakids:97 ../bin/net_applet:665
+#: ../bin/drakids:83 ../bin/drakids:102 ../bin/net_applet:671
 #, c-format
 msgid "Allow"
 msgstr "Caniatáu"
 
-#: ../bin/drakids:79 ../bin/drakids:88 ../bin/net_applet:666
+#: ../bin/drakids:84 ../bin/drakids:93 ../bin/net_applet:672
 #, c-format
 msgid "Block"
 msgstr "Rhwystro"
 
-#: ../bin/drakids:80 ../bin/drakids:89 ../bin/drakids:98 ../bin/drakids:109
-#: ../bin/drakids:122 ../bin/drakids:130 ../bin/draknfs:191
+#: ../bin/drakids:85 ../bin/drakids:94 ../bin/drakids:103 ../bin/drakids:114
+#: ../bin/drakids:127 ../bin/drakids:135 ../bin/draknfs:191
 #: ../bin/net_monitor:120
 #, c-format
 msgid "Close"
 msgstr "Cau"
 
-#: ../bin/drakids:83
+#: ../bin/drakids:88
 #, c-format
 msgid "Allowed services"
 msgstr "Gwasanaethau caniateir"
 
-#: ../bin/drakids:92
+#: ../bin/drakids:97
 #, c-format
 msgid "Blocked services"
 msgstr "Gwasanaethau rhwystrwyd"
 
-#: ../bin/drakids:106
+#: ../bin/drakids:111
 #, c-format
 msgid "Clear logs"
 msgstr "Clirio cofnodion"
 
-#: ../bin/drakids:107 ../bin/drakids:112 ../bin/net_applet:609
+#: ../bin/drakids:112 ../bin/drakids:117 ../bin/net_applet:615
 #, c-format
 msgid "Blacklist"
 msgstr "Rhestr Atal"
 
-#: ../bin/drakids:108 ../bin/drakids:125 ../bin/net_applet:614
+#: ../bin/drakids:113 ../bin/drakids:130 ../bin/net_applet:620
 #, c-format
 msgid "Whitelist"
 msgstr "Rhestr Caniatáu"
 
-#: ../bin/drakids:116
+#: ../bin/drakids:121
 #, c-format
 msgid "Remove from blacklist"
 msgstr "Tynnu o'r rhestr wrthod LVM"
 
-#: ../bin/drakids:117
+#: ../bin/drakids:122
 #, c-format
 msgid "Move to whitelist"
 msgstr "Symud i'r rhestr caniatáu"
 
-#: ../bin/drakids:129
+#: ../bin/drakids:134
 #, c-format
 msgid "Remove from whitelist"
 msgstr "Tynnu o'r rhestr caniatáu"
 
-#: ../bin/drakids:247
+#: ../bin/drakids:253
 #, c-format
 msgid "Date"
 msgstr "Dyddiad"
 
-#: ../bin/drakids:248
-#, c-format
-msgid "Attacker"
-msgstr "Ymosodwr"
+#: ../bin/drakids:254
+#, fuzzy, c-format
+msgid "Remote host"
+msgstr "Pell"
 
-#: ../bin/drakids:249
+#: ../bin/drakids:255 ../lib/network/vpn/openvpn.pm:115
 #, c-format
-msgid "Attack type"
-msgstr "Math o ymosodiad"
+msgid "Type"
+msgstr "Math"
 
-#: ../bin/drakids:250 ../bin/drakids:283
+#: ../bin/drakids:256 ../bin/drakids:289
 #, c-format
 msgid "Service"
 msgstr "Gwasanaeth"
 
-#: ../bin/drakids:251
+#: ../bin/drakids:257
 #, c-format
 msgid "Network interface"
 msgstr "Rhyngwyneb rhwydwaith"
 
-#: ../bin/drakids:282
+#: ../bin/drakids:288
 #, c-format
 msgid "Application"
 msgstr "Rhaglen"
 
-#: ../bin/drakids:284
+#: ../bin/drakids:290
 #, c-format
 msgid "Status"
 msgstr "Statws"
 
-#: ../bin/drakids:286
+#: ../bin/drakids:292
 #, c-format
 msgid "Allowed"
 msgstr "Caniateir"
 
-#: ../bin/drakids:287
+#: ../bin/drakids:293
 #, c-format
 msgid "Blocked"
 msgstr "Rhwystrwyd"
@@ -1283,7 +1288,7 @@ msgstr "Cyfeiriad rhith rhanedig"
 msgid "Virtual ID"
 msgstr "Rhith ID"
 
-#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:594
+#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:595
 #: ../lib/network/vpn/vpnc.pm:56
 #, c-format
 msgid "Password"
@@ -1623,7 +1628,7 @@ msgstr ""
 "gallu cynorthwyo diogelwch mewn rhai achosion, ond gall leihau dibyniaeth. "
 "Gw. tudalen man allforio (5) am ragor o wybodaeth."
 
-#: ../bin/draknfs:185 ../bin/draksambashare:632 ../bin/draksambashare:799
+#: ../bin/draknfs:185 ../bin/draksambashare:623 ../bin/draksambashare:790
 #, c-format
 msgid "Information"
 msgstr "Gwybodaeth"
@@ -1643,7 +1648,7 @@ msgstr "Cofnod Draknfs"
 msgid "Please add an NFS share to be able to modify it."
 msgstr "Ychwanegwch ran NFS i allu ei newid."
 
-#: ../bin/draknfs:353 ../bin/draksambashare:607
+#: ../bin/draknfs:353 ../bin/draksambashare:598
 #, c-format
 msgid "Advanced options"
 msgstr "Gosodiadau uwch"
@@ -1653,8 +1658,8 @@ msgstr "Gosodiadau uwch"
 msgid "NFS directory"
 msgstr "Cyfeiriadur NFS"
 
-#: ../bin/draknfs:369 ../bin/draksambashare:381 ../bin/draksambashare:597
-#: ../bin/draksambashare:776
+#: ../bin/draknfs:369 ../bin/draksambashare:381 ../bin/draksambashare:588
+#: ../bin/draksambashare:767
 #, c-format
 msgid "Directory:"
 msgstr "Cyfeiriadur :"
@@ -1724,8 +1729,8 @@ msgstr "Dewisiadau Cyffredinol"
 msgid "Custom Options"
 msgstr "Dewisiadau Addasu"
 
-#: ../bin/draknfs:509 ../bin/draksambashare:397 ../bin/draksambashare:634
-#: ../bin/draksambashare:801
+#: ../bin/draknfs:509 ../bin/draksambashare:396 ../bin/draksambashare:625
+#: ../bin/draksambashare:792
 #, c-format
 msgid "Please enter a directory to share."
 msgstr "Rhowch gyfeiriadur i'w rannu."
@@ -1817,7 +1822,7 @@ msgid "Read list"
 msgstr "Rhestr Ddarllen"
 
 #: ../bin/draksambashare:80 ../bin/draksambashare:125
-#: ../bin/draksambashare:611
+#: ../bin/draksambashare:602
 #, c-format
 msgid "Write list"
 msgstr "Rhestr ysgrifennu"
@@ -1877,7 +1882,7 @@ msgstr "Enw'r argraffydd:"
 msgid "Path"
 msgstr "Llwybr"
 
-#: ../bin/draksambashare:120 ../bin/draksambashare:603
+#: ../bin/draksambashare:120 ../bin/draksambashare:594
 #, c-format
 msgid "Printable"
 msgstr "Argraffadwy"
@@ -1898,7 +1903,7 @@ msgid "Guest ok"
 msgstr "Gwestai'n Ianw"
 
 #: ../bin/draksambashare:126 ../bin/draksambashare:167
-#: ../bin/draksambashare:612
+#: ../bin/draksambashare:603
 #, c-format
 msgid "Inherit permissions"
 msgstr "Etifeddu caniatâd"
@@ -2010,8 +2015,8 @@ msgstr "Algychwyn/Ail-lwytho gweinydd Samba..."
 msgid "Error Restarting/Reloading Samba server"
 msgstr "Error Restarting/Reloading Samba server"
 
-#: ../bin/draksambashare:369 ../bin/draksambashare:576
-#: ../bin/draksambashare:697
+#: ../bin/draksambashare:369 ../bin/draksambashare:567
+#: ../bin/draksambashare:688
 #, c-format
 msgid "Open"
 msgstr "Agor"
@@ -2031,67 +2036,67 @@ msgstr "Ychwanegu cyfran"
 msgid "Name of the share:"
 msgstr "Enw'r gyfran:"
 
-#: ../bin/draksambashare:380 ../bin/draksambashare:596
-#: ../bin/draksambashare:777
+#: ../bin/draksambashare:380 ../bin/draksambashare:587
+#: ../bin/draksambashare:768
 #, c-format
 msgid "Comment:"
 msgstr "Sylwad:"
 
-#: ../bin/draksambashare:393
+#: ../bin/draksambashare:392
 #, c-format
 msgid ""
 "Share with the same name already exist or share name empty, please choose "
 "another name."
 msgstr "Cyfrannu gyda'r un enw presennol neu enw gwag, dewiswch enw arall."
 
-#: ../bin/draksambashare:400
+#: ../bin/draksambashare:399
 #, c-format
 msgid "Can't create the directory, please enter a correct path."
 msgstr "Methu creu y cyfeiriadur arall, rhowch y llwybr cywir."
 
-#: ../bin/draksambashare:403 ../bin/draksambashare:632
-#: ../bin/draksambashare:799
+#: ../bin/draksambashare:402 ../bin/draksambashare:623
+#: ../bin/draksambashare:790
 #, c-format
 msgid "Please enter a Comment for this share."
 msgstr "Rhowch Sylw ar gyfer y gyfran."
 
-#: ../bin/draksambashare:440
+#: ../bin/draksambashare:439
 #, c-format
 msgid "pdf-gen - a PDF generator"
 msgstr "pdf-gen - cynhyrchydd PDF"
 
-#: ../bin/draksambashare:441
+#: ../bin/draksambashare:440
 #, c-format
 msgid "printers - all printers available"
 msgstr "argraffydd - pob argraffydd"
 
-#: ../bin/draksambashare:445
+#: ../bin/draksambashare:444
 #, c-format
 msgid "Add Special Printer share"
 msgstr "Ychwanegu cyfran Argraffydd Arbennig"
 
-#: ../bin/draksambashare:448
+#: ../bin/draksambashare:447
 #, c-format
 msgid ""
 "Goal of this wizard is to easily create a new special printer Samba share."
 msgstr "Nod y dewin yw creu cyfran argraffydd arbennig newydd Samba ."
 
-#: ../bin/draksambashare:455
+#: ../bin/draksambashare:454
 #, c-format
 msgid "A PDF generator already exists."
 msgstr "Mae cynhyrchydd PDF eisoes yn bod."
 
-#: ../bin/draksambashare:479
+#: ../bin/draksambashare:478
 #, c-format
 msgid "Printers and print$ already exist."
 msgstr "Argraffyddion ac argraff$ yn bodoli eisoes."
 
-#: ../bin/draksambashare:529 ../bin/draksambashare:1199
+#: ../bin/draksambashare:528 ../bin/draksambashare:1191
 #, c-format
 msgid "Congratulations"
 msgstr "Llongyfarchiadau"
 
-#: ../bin/draksambashare:530
+#: ../bin/draksambashare:529
 #, c-format
 msgid "The wizard successfully added the printer Samba share"
 msgstr "Mae'r dewin wedi ychwanegu cyfran argraffydd Samba yn llwyddiannus."
@@ -2101,163 +2106,163 @@ msgstr "Mae'r dewin wedi ychwanegu cyfran argraffydd Samba yn llwyddiannus."
 msgid "Please add or select a Samba printer share to be able to modify it."
 msgstr "Ychwanegwch neu ddewis cyfran argraffydd Samba i allu ei newid."
 
-#: ../bin/draksambashare:579
+#: ../bin/draksambashare:570
 #, c-format
 msgid "DrakSamba Printers entry"
 msgstr "Cofnod DrakSamba Printers"
 
-#: ../bin/draksambashare:592
+#: ../bin/draksambashare:583
 #, c-format
 msgid "Printer share"
 msgstr "Cyfran argraffydd"
 
-#: ../bin/draksambashare:595
+#: ../bin/draksambashare:586
 #, c-format
 msgid "Printer name:"
 msgstr "Enw'r argraffydd:"
 
-#: ../bin/draksambashare:601 ../bin/draksambashare:782
+#: ../bin/draksambashare:592 ../bin/draksambashare:773
 #, c-format
 msgid "Writable:"
 msgstr "Ysgrifenadwy :"
 
-#: ../bin/draksambashare:602 ../bin/draksambashare:783
+#: ../bin/draksambashare:593 ../bin/draksambashare:774
 #, c-format
 msgid "Browseable:"
 msgstr "Poradwy:"
 
-#: ../bin/draksambashare:609
+#: ../bin/draksambashare:600
 #, c-format
 msgid "Printer access"
 msgstr "Mynediad argraffydd"
 
-#: ../bin/draksambashare:613
+#: ../bin/draksambashare:604
 #, c-format
 msgid "Guest ok:"
 msgstr "Gwestai'n iawn:"
 
-#: ../bin/draksambashare:614
+#: ../bin/draksambashare:605
 #, c-format
 msgid "Create mode:"
 msgstr "Creu modd:"
 
-#: ../bin/draksambashare:618
+#: ../bin/draksambashare:609
 #, c-format
 msgid "Printer command"
 msgstr "Gorchymyn argraffydd"
 
-#: ../bin/draksambashare:620
+#: ../bin/draksambashare:611
 #, c-format
 msgid "Print command:"
 msgstr "Gorchymyn argraffu:"
 
-#: ../bin/draksambashare:621
+#: ../bin/draksambashare:612
 #, c-format
 msgid "LPQ command:"
 msgstr "Gorchymyn LPQ:"
 
-#: ../bin/draksambashare:622
+#: ../bin/draksambashare:613
 #, c-format
 msgid "Printing:"
 msgstr "Argraffu :"
 
-#: ../bin/draksambashare:638
+#: ../bin/draksambashare:629
 #, c-format
 msgid "create mode should be numeric. ie: 0755."
 msgstr "dylai'r modd creu fod yn rhifol, h.y. 0755."
 
-#: ../bin/draksambashare:700
+#: ../bin/draksambashare:691
 #, c-format
 msgid "DrakSamba entry"
 msgstr "Cofnod DrakSamba"
 
-#: ../bin/draksambashare:705
+#: ../bin/draksambashare:696
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
 msgstr "Ychwanegwch neu ddewis cyfran Samba i allu ei newid."
 
-#: ../bin/draksambashare:728
+#: ../bin/draksambashare:719
 #, c-format
 msgid "Samba user access"
 msgstr "Mynediad defnyddiwr Samba"
 
-#: ../bin/draksambashare:736
+#: ../bin/draksambashare:727
 #, c-format
 msgid "Mask options"
 msgstr "Dewisiadau masg"
 
-#: ../bin/draksambashare:750
+#: ../bin/draksambashare:741
 #, c-format
 msgid "Display options"
 msgstr "Dewisiadau masg"
 
-#: ../bin/draksambashare:772
+#: ../bin/draksambashare:763
 #, c-format
 msgid "Samba share directory"
 msgstr "Cyfeiriadur cyfran Samba"
 
-#: ../bin/draksambashare:775
+#: ../bin/draksambashare:766
 #, c-format
 msgid "Share name:"
 msgstr "Rhannu enw :"
 
-#: ../bin/draksambashare:781
+#: ../bin/draksambashare:772
 #, c-format
 msgid "Public:"
 msgstr "Cyhoeddus :"
 
-#: ../bin/draksambashare:805
+#: ../bin/draksambashare:796
 #, c-format
 msgid ""
 "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr "Dylai creu masg, modd creu a masg cyfeiriadur fod yn rhifol, h.y. 0755"
 
-#: ../bin/draksambashare:812
+#: ../bin/draksambashare:803
 #, c-format
 msgid "Please create this Samba user: %s"
 msgstr "Crëwch y defnyddiwr Samba yma: %s"
 
-#: ../bin/draksambashare:924
+#: ../bin/draksambashare:915
 #, c-format
 msgid "Add Samba user"
 msgstr "Ychwanegu defnyddiwr Samba"
 
-#: ../bin/draksambashare:939
+#: ../bin/draksambashare:930
 #, c-format
 msgid "User information"
 msgstr "Gwybodaeth defnyddiwr"
 
-#: ../bin/draksambashare:941
+#: ../bin/draksambashare:932
 #, c-format
 msgid "User name:"
 msgstr "Enw'r defnyddiwr :"
 
-#: ../bin/draksambashare:942
+#: ../bin/draksambashare:933
 #, c-format
 msgid "Password:"
 msgstr "Cyfrinair:"
 
-#: ../bin/draksambashare:1056
+#: ../bin/draksambashare:1047
 #, c-format
 msgid "PDC - primary domain controller"
 msgstr "PDC - rheolwr prif barth "
 
-#: ../bin/draksambashare:1057
+#: ../bin/draksambashare:1048
 #, c-format
 msgid "Standalone - standalone server"
 msgstr "Standalone - gweinydd unigol"
 
-#: ../bin/draksambashare:1063
+#: ../bin/draksambashare:1054
 #, c-format
 msgid "Samba Wizard"
 msgstr "Dewin Samba"
 
-#: ../bin/draksambashare:1066
+#: ../bin/draksambashare:1057
 #, c-format
 msgid "Samba server configuration Wizard"
 msgstr "Dewin ffurfweddu gweinydd Samba"
 
-#: ../bin/draksambashare:1066
+#: ../bin/draksambashare:1057
 #, c-format
 msgid ""
 "Samba allows your server to behave as a file and print server for "
@@ -2266,12 +2271,12 @@ msgstr ""
 "Mae Samba'n caniatáu i'ch gweinydd ymddwyn fel gweinydd ffeiliau ac argraffu "
 "ar gyfer mannau gwaith sy'n rhedeg systemau ar wahân i Linux. "
 
-#: ../bin/draksambashare:1082
+#: ../bin/draksambashare:1073
 #, c-format
 msgid "PDC server: primary domain controller"
 msgstr "Gweinydd PDC: rheolwr prif barth"
 
-#: ../bin/draksambashare:1082
+#: ../bin/draksambashare:1073
 #, c-format
 msgid ""
 "Server configured as a PDC is responsible for Windows authentication "
@@ -2280,7 +2285,7 @@ msgstr ""
 "Mae gweinydd wedi ei ffurfweddu fel PDC yn gyfrifol am ddilysu Windows "
 "drwy'r parth cyfan."
 
-#: ../bin/draksambashare:1082
+#: ../bin/draksambashare:1073
 #, c-format
 msgid ""
 "Single server installations may use smbpasswd or tdbsam password backends"
@@ -2288,7 +2293,7 @@ msgstr ""
 "Gall osodiadau gweinydd sengl ddefnyddio cyfrineiriau cefn smbpasswd neu "
 "tdbsam"
 
-#: ../bin/draksambashare:1082
+#: ../bin/draksambashare:1073
 #, c-format
 msgid ""
 "Domain master = yes, causes the server to register the NetBIOS name <pdc "
@@ -2297,27 +2302,27 @@ msgstr ""
 "Mae domain master = yes, yn achosi'r gweinydd i gofrestru'r enw NetBIOS <pdc "
 "name>. Bydd yr enw'n cael ei adnabod gan weinyddion eraill."
 
-#: ../bin/draksambashare:1099
+#: ../bin/draksambashare:1090
 #, c-format
 msgid "Wins support:"
 msgstr "Cefnogaeth Wins:"
 
-#: ../bin/draksambashare:1100
+#: ../bin/draksambashare:1091
 #, c-format
 msgid "admin users:"
 msgstr "defnyddiwyr gweinyddol:"
 
-#: ../bin/draksambashare:1100
+#: ../bin/draksambashare:1091
 #, c-format
 msgid "root @adm"
 msgstr "root @adm"
 
-#: ../bin/draksambashare:1101
+#: ../bin/draksambashare:1092
 #, c-format
 msgid "Os level:"
 msgstr "Lefel SW:"
 
-#: ../bin/draksambashare:1101
+#: ../bin/draksambashare:1092
 #, c-format
 msgid ""
 "The global os level option dictates the operating system level at which "
@@ -2331,42 +2336,42 @@ msgstr ""
 "brif borwr, yna gallwch osod y lefel uwchlaw'r system weithredu ar eich "
 "rhwydwaith gyda'r gwerth cyfredol uchaf, h.y. lefel sw = 34"
 
-#: ../bin/draksambashare:1105
+#: ../bin/draksambashare:1096
 #, c-format
 msgid "The domain is wrong."
 msgstr "Maeth parth yn anghywir"
 
-#: ../bin/draksambashare:1112
+#: ../bin/draksambashare:1103
 #, c-format
 msgid "Workgroup"
 msgstr "Workgroup"
 
-#: ../bin/draksambashare:1112
+#: ../bin/draksambashare:1103
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
 msgstr "Mae Samba angen gwybod i ba Windows Workgroup bydd yn gweini."
 
-#: ../bin/draksambashare:1119 ../bin/draksambashare:1183
+#: ../bin/draksambashare:1110 ../bin/draksambashare:1174
 #, c-format
 msgid "Workgroup:"
 msgstr "Workgroup:"
 
-#: ../bin/draksambashare:1120
+#: ../bin/draksambashare:1111
 #, c-format
 msgid "Netbios name:"
 msgstr "Enw Netbios :"
 
-#: ../bin/draksambashare:1124
+#: ../bin/draksambashare:1115
 #, c-format
 msgid "The Workgroup is wrong."
 msgstr "Mae'r Workgroup yn anghywir."
 
-#: ../bin/draksambashare:1131 ../bin/draksambashare:1141
+#: ../bin/draksambashare:1122 ../bin/draksambashare:1132
 #, c-format
 msgid "Security mode"
 msgstr "Modd diogelwch"
 
-#: ../bin/draksambashare:1131
+#: ../bin/draksambashare:1122
 #, c-format
 msgid ""
 "User level: the client sends a session setup request directly following "
@@ -2375,13 +2380,13 @@ msgstr ""
 "Lefel defnyddiwr: mae'r rhaglen angen anfon cais am osod sesiwn yn union "
 "wedi negodi'r protocol. Bydd y cais yn darparu enw defnyddiwr a chyfrinair."
 
-#: ../bin/draksambashare:1131
+#: ../bin/draksambashare:1122
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
 msgstr ""
 "Lefel rhannu: mae'r rhaglen yn dilysu ei hun ar wahân ar gyfer pob rhaniad."
 
-#: ../bin/draksambashare:1131
+#: ../bin/draksambashare:1122
 #, c-format
 msgid ""
 "Domain level: provides a mechanism for storing all user and group accounts "
@@ -2392,17 +2397,17 @@ msgstr ""
 "defnyddiwr a grŵp mewn ystorfa cyfrif ranedig canolog. Mae'r ystorfa cyfrif "
 "ganolog yn cael ei rannu rhwng rheolyddion parth (diogelwch)."
 
-#: ../bin/draksambashare:1142
+#: ../bin/draksambashare:1133
 #, c-format
 msgid "Hosts allow"
 msgstr "Caniatâd gwesteiwyr"
 
-#: ../bin/draksambashare:1147
+#: ../bin/draksambashare:1138
 #, c-format
 msgid "Server Banner."
 msgstr "Baner Gweinydd."
 
-#: ../bin/draksambashare:1147
+#: ../bin/draksambashare:1138
 #, c-format
 msgid ""
 "The banner is the way this server will be described in the Windows "
@@ -2411,22 +2416,22 @@ msgstr ""
 "Y faner yw'r ffordd mae'r gweinydd hwn yn cael ei ddisgrifio i'r mannau "
 "gwaith Windows."
 
-#: ../bin/draksambashare:1152
+#: ../bin/draksambashare:1143
 #, c-format
 msgid "Banner:"
 msgstr "Baner:"
 
-#: ../bin/draksambashare:1156
+#: ../bin/draksambashare:1147
 #, c-format
 msgid "The Server Banner is incorrect."
 msgstr "Mae'r Faner Gweinydd yn anghywir."
 
-#: ../bin/draksambashare:1163
+#: ../bin/draksambashare:1154
 #, c-format
 msgid "Samba Log"
 msgstr "Cofnod Samba"
 
-#: ../bin/draksambashare:1163
+#: ../bin/draksambashare:1154
 #, c-format
 msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
@@ -2435,39 +2440,39 @@ msgstr ""
 "Ffeil cofnod: defnyddio ffeil.%m i ddefnyddio ffeil cofnod gwahanol ar gyfer "
 "pob peiriant mae'n cysylltu iddynt"
 
-#: ../bin/draksambashare:1163
+#: ../bin/draksambashare:1154
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
 msgstr ""
 "Lefel cofnod: gosod y cofnod (geiriogrwydd) lefel (0 <= lefel cofnod <= 10)"
 
-#: ../bin/draksambashare:1163
+#: ../bin/draksambashare:1154
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
 msgstr "Mant confod mwyaf: gosod terfyn ar maint y feil cofnod (mewn kb)."
 
-#: ../bin/draksambashare:1170 ../bin/draksambashare:1185
+#: ../bin/draksambashare:1161 ../bin/draksambashare:1176
 #, c-format
 msgid "Log file:"
 msgstr "Ffeil cofnod:"
 
-#: ../bin/draksambashare:1171
+#: ../bin/draksambashare:1162
 #, c-format
 msgid "Max log size:"
 msgstr "Maint cofnod mwyaf:"
 
-#: ../bin/draksambashare:1172
+#: ../bin/draksambashare:1163
 #, c-format
 msgid "Log level:"
 msgstr "Lefel cofnod:"
 
-#: ../bin/draksambashare:1177
+#: ../bin/draksambashare:1168
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
 msgstr ""
 "Mae'r dewin wedi casglu'r paramedrau canlynol ar gyfer ffurfweddu Samba."
 
-#: ../bin/draksambashare:1177
+#: ../bin/draksambashare:1168
 #, c-format
 msgid ""
 "To accept these values, and configure your server, click the Next button or "
@@ -2476,7 +2481,7 @@ msgstr ""
 "I dderbyn y gwerthoedd hyn, a ffurfweddu eich gweinydd, cliciwch y botwm "
 "Nesaf neu ddefnyddio'r botwm Nôl i'w cywiro."
 
-#: ../bin/draksambashare:1177
+#: ../bin/draksambashare:1168
 #, c-format
 msgid ""
 "If you have previously create some shares, they will appear in this "
@@ -2485,17 +2490,17 @@ msgstr ""
 "Os ydych wedi creu rhaniadau yng nghynt, byddant yn ymddangos yn y "
 "ffurfweddiad hwn. Rhedwch 'drakwizard sambashare' i reoli eich rhannu."
 
-#: ../bin/draksambashare:1182
+#: ../bin/draksambashare:1173
 #, c-format
 msgid "Samba type:"
 msgstr "Math o Samba"
 
-#: ../bin/draksambashare:1184
+#: ../bin/draksambashare:1175
 #, c-format
 msgid "Server banner:"
 msgstr "Baner gweinydd:"
 
-#: ../bin/draksambashare:1199
+#: ../bin/draksambashare:1191
 #, c-format
 msgid "The wizard successfully configured your Samba server."
 msgstr "Mae'r dewin wedi ffurfweddu eich gweinydd Samba yn llwyddiannus."
@@ -2505,62 +2510,62 @@ msgstr "Mae'r dewin wedi ffurfweddu eich gweinydd Samba yn llwyddiannus."
 msgid "The Samba wizard has unexpectedly failed:"
 msgstr "Mae dewin Samba wedi methu'n annisgwyl"
 
-#: ../bin/draksambashare:1277
+#: ../bin/draksambashare:1260
 #, c-format
 msgid "Manage Samba configuration"
 msgstr "Rheoli ffurfweddiad Samba"
 
-#: ../bin/draksambashare:1365
+#: ../bin/draksambashare:1348
 #, c-format
 msgid "Failed to Modify Samba share."
 msgstr "Methwyd newid cyfran Samba."
 
-#: ../bin/draksambashare:1374
+#: ../bin/draksambashare:1357
 #, c-format
 msgid "Failed to remove a Samba share."
 msgstr "Methwyd tynnu cyfran Samba."
 
-#: ../bin/draksambashare:1381
+#: ../bin/draksambashare:1364
 #, c-format
 msgid "File share"
 msgstr "Cyfran ffeil"
 
-#: ../bin/draksambashare:1396
+#: ../bin/draksambashare:1379
 #, c-format
 msgid "Failed to Modify."
 msgstr "Methwyd Newid."
 
-#: ../bin/draksambashare:1405
+#: ../bin/draksambashare:1388
 #, c-format
 msgid "Failed to remove."
 msgstr "Methwyd tynnu."
 
-#: ../bin/draksambashare:1412
+#: ../bin/draksambashare:1395
 #, c-format
 msgid "Printers"
 msgstr "Argraffyddion"
 
-#: ../bin/draksambashare:1424
+#: ../bin/draksambashare:1407
 #, c-format
 msgid "Failed to add user."
 msgstr "Methwyd ychwanegu defnyddiwr."
 
-#: ../bin/draksambashare:1433
+#: ../bin/draksambashare:1416
 #, c-format
 msgid "Failed to change user password."
 msgstr "Methwyd newid cyfrinair defnyddiwr."
 
-#: ../bin/draksambashare:1445
+#: ../bin/draksambashare:1428
 #, c-format
 msgid "Failed to delete user."
 msgstr "Methwyd dileu defnyddiwr."
 
-#: ../bin/draksambashare:1450
+#: ../bin/draksambashare:1433
 #, c-format
 msgid "Userdrake"
 msgstr "Userdrake"
 
-#: ../bin/draksambashare:1458
+#: ../bin/draksambashare:1441
 #, c-format
 msgid "Samba Users"
 msgstr "Defnyddwyr Samba"
@@ -3861,12 +3866,12 @@ msgstr "Cysylltwyd â %s (lefel cyswllt: %d %%)"
 msgid "Network is down on interface %s."
 msgstr "Mae'r rhwydwaith i lawr ar ryngwyneb %s."
 
-#: ../bin/net_applet:75 ../bin/net_monitor:468
+#: ../bin/net_applet:75 ../bin/net_monitor:475
 #, c-format
 msgid "Connect %s"
 msgstr "Cysylltu %s"
 
-#: ../bin/net_applet:76 ../bin/net_monitor:468
+#: ../bin/net_applet:76 ../bin/net_monitor:475
 #, c-format
 msgid "Disconnect %s"
 msgstr "Datgysylltu %s"
@@ -3911,7 +3916,7 @@ msgstr "Rhyngwynebau gweithredol"
 msgid "Profiles"
 msgstr "Proffeiliau"
 
-#: ../bin/net_applet:130 ../lib/network/connection.pm:170
+#: ../bin/net_applet:130 ../lib/network/connection.pm:190
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
@@ -3948,87 +3953,87 @@ msgstr "Rhwydweithiau diwifr"
 msgid "Settings"
 msgstr "Gosodiadau"
 
-#: ../bin/net_applet:564
+#: ../bin/net_applet:570
 #, c-format
 msgid "Interactive Firewall: intrusion detected"
 msgstr "Mur Cadarn Rhyngweithiol: canfod ymwthiad"
 
-#: ../bin/net_applet:581
+#: ../bin/net_applet:587
 #, c-format
 msgid "What do you want to do with this attacker?"
 msgstr "Beth hoffech wneud gyda'r ymosodwr?"
 
-#: ../bin/net_applet:584
+#: ../bin/net_applet:590
 #, c-format
 msgid "Attack details"
 msgstr "Manylion yr ymosodiad"
 
-#: ../bin/net_applet:588
+#: ../bin/net_applet:594
 #, c-format
 msgid "Attack time: %s"
 msgstr "Amser yr ymosodiad: %s"
 
-#: ../bin/net_applet:589
+#: ../bin/net_applet:595
 #, c-format
 msgid "Network interface: %s"
 msgstr "Rhyngwynebau rhwydwaith: %s"
 
-#: ../bin/net_applet:590
+#: ../bin/net_applet:596
 #, c-format
 msgid "Attack type: %s"
 msgstr "Math o ymosodiad:  %s"
 
-#: ../bin/net_applet:591
+#: ../bin/net_applet:597
 #, c-format
 msgid "Protocol: %s"
 msgstr "Protocol: %s"
 
-#: ../bin/net_applet:592
+#: ../bin/net_applet:598
 #, c-format
 msgid "Attacker IP address: %s"
 msgstr "Cyfeiriad IP yr ymosodwr: %s"
 
-#: ../bin/net_applet:593
+#: ../bin/net_applet:599
 #, c-format
 msgid "Attacker hostname: %s"
 msgstr "Enw gwesteiwr yr ymosodwr: %s"
 
-#: ../bin/net_applet:596
+#: ../bin/net_applet:602
 #, c-format
 msgid "Service attacked: %s"
 msgstr "Ymosodwyd ar wasanaeth: %s"
 
-#: ../bin/net_applet:597
+#: ../bin/net_applet:603
 #, c-format
 msgid "Port attacked: %s"
 msgstr "Ymosodwyd ar borth: %s"
 
-#: ../bin/net_applet:599
+#: ../bin/net_applet:605
 #, c-format
 msgid "Type of ICMP attack: %s"
 msgstr "Math o ymosodiad ICMP: %s"
 
-#: ../bin/net_applet:604
+#: ../bin/net_applet:610
 #, c-format
 msgid "Always blacklist (do not ask again)"
 msgstr "Rhestr gwahardd (peidiwch gofyn eto)"
 
-#: ../bin/net_applet:619
+#: ../bin/net_applet:625
 #, c-format
 msgid "Ignore"
 msgstr "Anwybyddu"
 
-#: ../bin/net_applet:637 ../bin/net_applet:650
+#: ../bin/net_applet:643 ../bin/net_applet:656
 #, c-format
 msgid "Interactive Firewall: new service"
 msgstr "Mur Cadarn Rhyngweithiol: gwasanaeth newydd"
 
-#: ../bin/net_applet:660
+#: ../bin/net_applet:666
 #, c-format
 msgid "Do you want to open this service?"
 msgstr "Hoffech chi agor y gwasanaeth"
 
-#: ../bin/net_applet:663
+#: ../bin/net_applet:669
 #, c-format
 msgid "Remember this answer"
 msgstr "Cofiwch yr ateb"
@@ -4095,32 +4100,32 @@ msgstr "Defnyddio'r un raddfa ar gyfer derbyniwyd a throsglwyddo"
 msgid "Wait please, testing your connection..."
 msgstr "Arhoswch, profi eich cysylltiad..."
 
-#: ../bin/net_monitor:185 ../bin/net_monitor:198
+#: ../bin/net_monitor:191 ../bin/net_monitor:204
 #, c-format
 msgid "Disconnecting from Internet "
 msgstr "Datgysylltu o'r Rhyngrwyd"
 
-#: ../bin/net_monitor:185 ../bin/net_monitor:198
+#: ../bin/net_monitor:191 ../bin/net_monitor:204
 #, c-format
 msgid "Connecting to Internet "
 msgstr "Cysylltu â'r Rhyngrwyd"
 
-#: ../bin/net_monitor:229
+#: ../bin/net_monitor:235
 #, c-format
 msgid "Disconnection from Internet failed."
 msgstr "Methodd datgysylltu o'r Rhyngrwyd."
 
-#: ../bin/net_monitor:230
+#: ../bin/net_monitor:236
 #, c-format
 msgid "Disconnection from Internet complete."
 msgstr "Datgysylltu o'r Rhyngrwyd wedi ei gwblhau."
 
-#: ../bin/net_monitor:232
+#: ../bin/net_monitor:238
 #, c-format
 msgid "Connection complete."
 msgstr "Cysylltiad wedi ei gwblhau."
 
-#: ../bin/net_monitor:233
+#: ../bin/net_monitor:239
 #, c-format
 msgid ""
 "Connection failed.\n"
@@ -4129,32 +4134,32 @@ msgstr ""
 "Methodd y cysylltiad.\n"
 "Gwiriwch eich ffurfweddiad yng Nghanolfan Rheoli Mandriva Linux."
 
-#: ../bin/net_monitor:338
+#: ../bin/net_monitor:344
 #, c-format
 msgid "Color configuration"
 msgstr "Ffurfweddiad lliw"
 
-#: ../bin/net_monitor:395 ../bin/net_monitor:407
+#: ../bin/net_monitor:401 ../bin/net_monitor:413
 #, c-format
 msgid "sent: "
 msgstr "anfonwyd: "
 
-#: ../bin/net_monitor:398 ../bin/net_monitor:411
+#: ../bin/net_monitor:404 ../bin/net_monitor:417
 #, c-format
 msgid "received: "
 msgstr "derbyniwyd:"
 
-#: ../bin/net_monitor:401
+#: ../bin/net_monitor:407
 #, c-format
 msgid "average"
 msgstr "cyfartaledd"
 
-#: ../bin/net_monitor:404
+#: ../bin/net_monitor:410
 #, c-format
 msgid "Local measure"
 msgstr "Mesur lleol"
 
-#: ../bin/net_monitor:461
+#: ../bin/net_monitor:468
 #, c-format
 msgid ""
 "Warning, another internet connection has been detected, maybe using your "
@@ -4163,7 +4168,7 @@ msgstr ""
 "Rhybudd, mae cysylltiad arall gyda'r rhyngrwyd wedi ei ganfod, efallai'n "
 "defnyddio eich rhwydwaith."
 
-#: ../bin/net_monitor:472
+#: ../bin/net_monitor:479
 #, c-format
 msgid "No internet connection configured"
 msgstr "Dim cysylltiad â'r rhyngrwyd wedi ei ffurfweddu"
@@ -4173,64 +4178,64 @@ msgstr "Dim cysylltiad â'r rhyngrwyd wedi ei ffurfweddu"
 msgid "Unknown connection type"
 msgstr "Math anhysbys o gysylltiad"
 
-#: ../lib/network/connection.pm:136
+#: ../lib/network/connection.pm:156
 #, c-format
 msgid "Network access settings"
 msgstr "Gosodiadau mynediad rhwydwaith"
 
-#: ../lib/network/connection.pm:137
+#: ../lib/network/connection.pm:157
 #, c-format
 msgid "Access settings"
 msgstr "Gosodiadau mynediad"
 
-#: ../lib/network/connection.pm:138
+#: ../lib/network/connection.pm:158
 #, c-format
 msgid "Address settings"
 msgstr "Gosodiadau cyfeiriad"
 
-#: ../lib/network/connection.pm:172 ../lib/network/connection/cable.pm:44
-#: ../lib/network/connection/wireless.pm:43 ../lib/network/vpn/openvpn.pm:127
+#: ../lib/network/connection.pm:192 ../lib/network/connection/cable.pm:41
+#: ../lib/network/connection/wireless.pm:40 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "Dim"
 
-#: ../lib/network/connection.pm:184
+#: ../lib/network/connection.pm:204
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr "Gadael i ddefnyddwyr reoli'r cysylltiad"
 
-#: ../lib/network/connection.pm:185
+#: ../lib/network/connection.pm:205
 #, c-format
 msgid "Start the connection at boot"
 msgstr "Cychwyn y cysylltiad wrth gychwyn y cyfrifiadur"
 
-#: ../lib/network/connection.pm:251
+#: ../lib/network/connection.pm:271
 #, c-format
 msgid "Link detected on interface %s"
 msgstr "Canfuwyd cyswllt ar ryngwyneb %s"
 
-#: ../lib/network/connection.pm:252 ../lib/network/connection/ethernet.pm:274
+#: ../lib/network/connection.pm:272 ../lib/network/connection/ethernet.pm:286
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "Collwyd cyswllt link beat ar rhyngwyneb %s"
 
-#: ../lib/network/connection/cable.pm:13
+#: ../lib/network/connection/cable.pm:10
 #, c-format
 msgid "Cable"
 msgstr "Cebl"
 
-#: ../lib/network/connection/cable.pm:14
+#: ../lib/network/connection/cable.pm:11
 #, c-format
 msgid "Cable modem"
 msgstr "Modem cebl"
 
-#: ../lib/network/connection/cable.pm:45
+#: ../lib/network/connection/cable.pm:42
 #, c-format
 msgid "Use BPALogin (needed for Telstra)"
 msgstr "Defnyddiwch BPALogin (ar gyfer Telstra)"
 
-#: ../lib/network/connection/cellular.pm:47
+#: ../lib/network/connection/cellular.pm:48
 #, c-format
 msgid "Access Point Name"
 msgstr "Enw'r Pwynt Mynediad"
@@ -4250,23 +4255,23 @@ msgstr "Rhwydwaith Deialu Bluetooth"
 msgid "GPRS/Edge/3G"
 msgstr "GPRS/Edge/3G"
 
-#: ../lib/network/connection/cellular_card.pm:67
+#: ../lib/network/connection/cellular_card.pm:68
 #: ../lib/network/vpn/openvpn.pm:391
 #, c-format
 msgid "PIN number"
 msgstr "Rhif PIN"
 
-#: ../lib/network/connection/cellular_card.pm:130
+#: ../lib/network/connection/cellular_card.pm:131
 #, c-format
 msgid "Unable to open device %s"
 msgstr "Methu agor dyfais %s"
 
-#: ../lib/network/connection/cellular_card.pm:155
+#: ../lib/network/connection/cellular_card.pm:156
 #, c-format
 msgid "Please check that your SIM card is inserted."
 msgstr "Gwiriwch bob eich cerdyn SIM yn ei le."
 
-#: ../lib/network/connection/cellular_card.pm:161
+#: ../lib/network/connection/cellular_card.pm:162
 #, c-format
 msgid ""
 "You entered a wrong PIN code.\n"
@@ -4275,59 +4280,64 @@ msgstr ""
 "Rydych wedi cynnig cod PIN anghywir. \n"
 "Gall gynnig cod pin nifer o weithiau gloi eich cerdyn SIM!"
 
-#: ../lib/network/connection/dvb.pm:12
+#: ../lib/network/connection/dvb.pm:9
 #, c-format
 msgid "DVB"
 msgstr "DVB"
 
-#: ../lib/network/connection/dvb.pm:13
+#: ../lib/network/connection/dvb.pm:10
 #, c-format
 msgid "Satellite (DVB)"
 msgstr "Lloeren (DVB)"
 
-#: ../lib/network/connection/dvb.pm:56
+#: ../lib/network/connection/dvb.pm:53
 #, c-format
 msgid "Adapter card"
 msgstr "Cerdyn addasu"
 
-#: ../lib/network/connection/dvb.pm:57
+#: ../lib/network/connection/dvb.pm:54
 #, c-format
 msgid "Net demux"
 msgstr "Demux gwe"
 
-#: ../lib/network/connection/dvb.pm:58
+#: ../lib/network/connection/dvb.pm:55
 #, c-format
 msgid "PID"
 msgstr "PID"
 
-#: ../lib/network/connection/ethernet.pm:10
+#: ../lib/network/connection/ethernet.pm:11
 #, c-format
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: ../lib/network/connection/ethernet.pm:53
+#: ../lib/network/connection/ethernet.pm:29
+#, fuzzy, c-format
+msgid "Virtual interface"
+msgstr "Rhyngwyneb rhwydwaith"
+
+#: ../lib/network/connection/ethernet.pm:59
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
 msgstr ""
 "Methu canfod rhyngwynebau rhwydwaith ar gyfer y gyrrwr yma (defnyddio gyrrwr "
 "%s)"
 
-#: ../lib/network/connection/ethernet.pm:61 ../lib/network/vpn/openvpn.pm:207
+#: ../lib/network/connection/ethernet.pm:67 ../lib/network/vpn/openvpn.pm:207
 #, c-format
 msgid "Manual configuration"
 msgstr "Ffurfweddiad gyda llaw"
 
-#: ../lib/network/connection/ethernet.pm:62
+#: ../lib/network/connection/ethernet.pm:68
 #, c-format
 msgid "Automatic IP (BOOTP/DHCP)"
 msgstr "IP awtomatig (BOOTP/DHCP)"
 
-#: ../lib/network/connection/ethernet.pm:116
+#: ../lib/network/connection/ethernet.pm:122
 #, c-format
 msgid "IP settings"
 msgstr "Gosodiadau IP"
 
-#: ../lib/network/connection/ethernet.pm:129
+#: ../lib/network/connection/ethernet.pm:135
 #, c-format
 msgid ""
 "Please enter the IP configuration for this machine.\n"
@@ -4338,63 +4348,63 @@ msgstr ""
 "Dylai pob eitem ei roi fel cyfeiriad IP nodiant collnod degymol\n"
 "(e.e.1.2.3.4)."
 
-#: ../lib/network/connection/ethernet.pm:138
+#: ../lib/network/connection/ethernet.pm:144
 #, c-format
 msgid "DNS server 1"
 msgstr "Gweinydd DNS 1"
 
-#: ../lib/network/connection/ethernet.pm:139
+#: ../lib/network/connection/ethernet.pm:145
 #, c-format
 msgid "DNS server 2"
 msgstr "Gweinydd DNS 2"
 
-#: ../lib/network/connection/ethernet.pm:140
+#: ../lib/network/connection/ethernet.pm:146
 #, c-format
 msgid "Search domain"
 msgstr "Chwilio parth"
 
-#: ../lib/network/connection/ethernet.pm:141
+#: ../lib/network/connection/ethernet.pm:147
 #, c-format
 msgid "By default search domain will be set from the fully-qualified host name"
 msgstr ""
 "Drwy ragosodiad bydd y parch chwilio'n cae ei osod o enw gwesteiwr cymwys"
 
-#: ../lib/network/connection/ethernet.pm:149
+#: ../lib/network/connection/ethernet.pm:155
 #, c-format
 msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
 msgstr "Peidiwch dychwelyd i Zeroconf (rhwydwaith 169.254.0.0)"
 
-#: ../lib/network/connection/ethernet.pm:170
+#: ../lib/network/connection/ethernet.pm:176
 #, c-format
 msgid "Warning: IP address %s is usually reserved!"
 msgstr "Rhybudd : cyfeiriad IP %s wedi ei gadw fel rheol !"
 
-#: ../lib/network/connection/ethernet.pm:176
+#: ../lib/network/connection/ethernet.pm:182
 #, c-format
 msgid "%s already in use\n"
 msgstr "%s yn cael ei ddefnyddio eisoes\n"
 
-#: ../lib/network/connection/ethernet.pm:225
+#: ../lib/network/connection/ethernet.pm:231
 #, c-format
 msgid "Enable IPv6 to IPv4 tunnel"
 msgstr "Enable IPv6 to IPv4 tunnel"
 
-#: ../lib/network/connection/ethernet.pm:273
+#: ../lib/network/connection/ethernet.pm:285
 #, c-format
 msgid "Link beat detected on interface %s"
 msgstr "Link beat wedi ei ganfod ar rhyngwyneb %s"
 
-#: ../lib/network/connection/ethernet.pm:276
+#: ../lib/network/connection/ethernet.pm:288
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
 msgstr "Yn gofyn am gyfeiriad rhwydwaith ar ryngwyneb %s (protocol %s)..."
 
-#: ../lib/network/connection/ethernet.pm:277
+#: ../lib/network/connection/ethernet.pm:289
 #, c-format
 msgid "Got a network address on interface %s (%s protocol)"
 msgstr "Mae cyfeiriad rhwydwaith ar ryngwyneb %s (protocol %s)"
 
-#: ../lib/network/connection/ethernet.pm:278
+#: ../lib/network/connection/ethernet.pm:290
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
 msgstr "Methu cael cyfeiriad rhwydwaith ar ryngwyneb %s (protocol %s)"
@@ -4404,30 +4414,30 @@ msgstr "Methu cael cyfeiriad rhwydwaith ar ryngwyneb %s (protocol %s)"
 msgid "ISDN"
 msgstr "ISDN"
 
-#: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:197
-#: ../lib/network/netconnect.pm:200 ../lib/network/netconnect.pm:218
-#: ../lib/network/netconnect.pm:471 ../lib/network/netconnect.pm:567
-#: ../lib/network/netconnect.pm:570
+#: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:198
+#: ../lib/network/netconnect.pm:201 ../lib/network/netconnect.pm:219
+#: ../lib/network/netconnect.pm:472 ../lib/network/netconnect.pm:568
+#: ../lib/network/netconnect.pm:571
 #, c-format
 msgid "Unlisted - edit manually"
 msgstr "Heb ei restru - golygu gyda llaw"
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:403
+#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:404
 #, c-format
 msgid "ISA / PCMCIA"
 msgstr "ISA / PCMCIA"
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:403
+#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:404
 #, c-format
 msgid "I do not know"
 msgstr "Dim syniad"
 
-#: ../lib/network/connection/isdn.pm:197 ../lib/network/netconnect.pm:403
+#: ../lib/network/connection/isdn.pm:197 ../lib/network/netconnect.pm:404
 #, c-format
 msgid "PCI"
 msgstr "PCI"
 
-#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:403
+#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:404
 #, c-format
 msgid "USB"
 msgstr "USB"
@@ -4756,34 +4766,34 @@ msgstr "United Arab Emirates"
 msgid "United Kingdom"
 msgstr "Y Deyrnas Unedig"
 
-#: ../lib/network/connection/wireless.pm:11
+#: ../lib/network/connection/wireless.pm:8
 #, c-format
 msgid "Wireless"
 msgstr "Diwyfr"
 
-#: ../lib/network/connection/wireless.pm:27
+#: ../lib/network/connection/wireless.pm:24
 #, c-format
 msgid "Use a Windows driver (with ndiswrapper)"
 msgstr "Defnyddiwch yrrwr Windows (gydan ndiswrapper)"
 
-#: ../lib/network/connection/wireless.pm:44
+#: ../lib/network/connection/wireless.pm:41
 #, c-format
 msgid "Open WEP"
 msgstr "Agor WEP"
 
-#: ../lib/network/connection/wireless.pm:45
+#: ../lib/network/connection/wireless.pm:42
 #, c-format
 msgid "Restricted WEP"
 msgstr "WEP cyfyngedig"
 
-#: ../lib/network/connection/wireless.pm:46
-#, c-format
-msgid "WPA Pre-Shared Key"
+#: ../lib/network/connection/wireless.pm:43
+#, fuzzy, c-format
+msgid "WPA/WPA2 Pre-Shared Key"
 msgstr "Allwedd Cyn Rhannu WEP"
 
 #: ../lib/network/connection/wireless.pm:44
 #, c-format
-msgid "WPA2/WPA Enterprise"
+msgid "WPA/WPA2 Enterprise"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:231
@@ -4800,42 +4810,42 @@ msgstr ""
 "Mae eich cerdyn diwyfr wedi ei anablu, galluogwch y switch diwyfr(switch "
 "diffodd RF) yn gyntaf."
 
-#: ../lib/network/connection/wireless.pm:322
+#: ../lib/network/connection/wireless.pm:361
 #, c-format
 msgid "Wireless settings"
 msgstr "Gosodiadau diwyfr"
 
-#: ../lib/network/connection/wireless.pm:328
+#: ../lib/network/connection/wireless.pm:367
 #, c-format
 msgid "Ad-hoc"
 msgstr "Ad-hoc"
 
-#: ../lib/network/connection/wireless.pm:328
+#: ../lib/network/connection/wireless.pm:367
 #, c-format
 msgid "Managed"
 msgstr "Rheolwyd"
 
-#: ../lib/network/connection/wireless.pm:328
+#: ../lib/network/connection/wireless.pm:367
 #, c-format
 msgid "Master"
 msgstr "Meistr"
 
-#: ../lib/network/connection/wireless.pm:328
+#: ../lib/network/connection/wireless.pm:367
 #, c-format
 msgid "Repeater"
 msgstr "Eilydd"
 
-#: ../lib/network/connection/wireless.pm:328
+#: ../lib/network/connection/wireless.pm:367
 #, c-format
 msgid "Secondary"
 msgstr "Eilradd"
 
-#: ../lib/network/connection/wireless.pm:328
+#: ../lib/network/connection/wireless.pm:367
 #, c-format
 msgid "Auto"
 msgstr "Awtomatig"
 
-#: ../lib/network/connection/wireless.pm:333
+#: ../lib/network/connection/wireless.pm:372
 #, c-format
 msgid "Encryption mode"
 msgstr "Modd Amgryptiedig"
@@ -4914,7 +4924,7 @@ msgstr ""
 "i awto,\n"
 "gosodedig  neu ddiffodd"
 
-#: ../lib/network/connection/wireless.pm:351
+#: ../lib/network/connection/wireless.pm:417
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -4929,7 +4939,7 @@ msgstr ""
 "\n"
 "Gw. tudalen iwpriv(8) man am ragor o wybodaeth"
 
-#: ../lib/network/connection/wireless.pm:359
+#: ../lib/network/connection/wireless.pm:425
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -4948,7 +4958,7 @@ msgstr ""
 "\n"
 "Gw. tudalennau man iwpspy(8) am ragor o wybodaeth. "
 
-#: ../lib/network/connection/wireless.pm:369
+#: ../lib/network/connection/wireless.pm:435
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -5156,7 +5166,7 @@ msgstr ""
 msgid "An encryption key is required."
 msgstr "Mae angen allwedd amgryptio."
 
-#: ../lib/network/connection/wireless.pm:393
+#: ../lib/network/connection/wireless.pm:511
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -5165,7 +5175,7 @@ msgstr ""
 "Dylai Frqu gael rhagosodiad k, M neu G (ee \"2.46G\" am donfedd 2.46 GHz ), "
 "neu ychwanegu '0' (sero)."
 
-#: ../lib/network/connection/wireless.pm:399
+#: ../lib/network/connection/wireless.pm:517
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
@@ -5174,17 +5184,17 @@ msgstr ""
 "Dylai'r raddfa gael rhagosodiad K, M neu G (e.e.\"11M\" am 11M),  neu "
 "ychwanegi '0' (sero)."
 
-#: ../lib/network/connection/wireless.pm:411
+#: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "Allow access point roaming"
 msgstr "Caniatáu crwydro pwynt mynediad"
 
-#: ../lib/network/connection/wireless.pm:514
+#: ../lib/network/connection/wireless.pm:632
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "Wedi ei gysylltu â rhwydwaith diwyfr \"%s\" ar ryngwyneb %s"
 
-#: ../lib/network/connection/wireless.pm:515
+#: ../lib/network/connection/wireless.pm:633
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "Wedi colli'r cysylltiad â'r rhwydwaith diwyfr ar ryngwyneb %s"
@@ -5194,7 +5204,7 @@ msgstr "Wedi colli'r cysylltiad â'r rhwydwaith diwyfr ar ryngwyneb %s"
 msgid "DSL"
 msgstr "DSL"
 
-#: ../lib/network/connection/xdsl.pm:76 ../lib/network/netconnect.pm:763
+#: ../lib/network/connection/xdsl.pm:76 ../lib/network/netconnect.pm:764
 #, c-format
 msgid "Alcatel speedtouch USB modem"
 msgstr "Modem USB Alcatel Speedtouch"
@@ -5261,65 +5271,65 @@ msgid "Virtual Circuit ID (VCI):"
 msgstr "Virtual Circuit ID (VCI):"
 
 #: ../lib/network/connection/xdsl.pm:332
-#: ../lib/network/connection_manager.pm:41 ../lib/network/drakvpn.pm:45
-#: ../lib/network/netconnect.pm:131 ../lib/network/thirdparty.pm:115
+#: ../lib/network/connection_manager.pm:52 ../lib/network/drakvpn.pm:45
+#: ../lib/network/netconnect.pm:131 ../lib/network/thirdparty.pm:117
 #, c-format
 msgid "Could not install the packages (%s)!"
 msgstr "Methu gosod pecynnau: (%s)!"
 
-#: ../lib/network/connection_manager.pm:53
-#: ../lib/network/connection_manager.pm:88
+#: ../lib/network/connection_manager.pm:64
+#: ../lib/network/connection_manager.pm:118
 #, c-format
 msgid "Network settings"
 msgstr "Gosodiadau rhwydwaith"
 
-#: ../lib/network/connection_manager.pm:54
-#: ../lib/network/connection_manager.pm:89
+#: ../lib/network/connection_manager.pm:65
+#: ../lib/network/connection_manager.pm:119
 #, c-format
 msgid "Please enter settings for network"
 msgstr "Rhowch osodiadau'r rhwydwaith"
 
-#: ../lib/network/connection_manager.pm:58 ../lib/network/netconnect.pm:177
+#: ../lib/network/connection_manager.pm:69 ../lib/network/netconnect.pm:177
 #, c-format
 msgid "Configuring device..."
 msgstr "Ffurfweddu dyfais..."
 
-#: ../lib/network/connection_manager.pm:146
+#: ../lib/network/connection_manager.pm:174
 #, c-format
 msgid "Connecting..."
 msgstr "Cysylltu..."
 
-#: ../lib/network/connection_manager.pm:164
+#: ../lib/network/connection_manager.pm:192
 #, c-format
 msgid "Disconnecting..."
 msgstr "Yn Datgysylltu..."
 
-#: ../lib/network/connection_manager.pm:201
+#: ../lib/network/connection_manager.pm:229
 #, c-format
 msgid "SSID"
 msgstr "SSID"
 
-#: ../lib/network/connection_manager.pm:202
+#: ../lib/network/connection_manager.pm:230
 #, c-format
 msgid "Signal strength"
 msgstr "Nerth signal"
 
-#: ../lib/network/connection_manager.pm:203
+#: ../lib/network/connection_manager.pm:231
 #, c-format
 msgid "Encryption"
 msgstr "Amgryptiad"
 
-#: ../lib/network/connection_manager.pm:244 ../lib/network/netconnect.pm:209
+#: ../lib/network/connection_manager.pm:275 ../lib/network/netconnect.pm:210
 #, c-format
 msgid "Scanning for networks..."
 msgstr "Chwilio am rhwydweithiau..."
 
-#: ../lib/network/connection_manager.pm:281 ../lib/network/drakroam.pm:111
+#: ../lib/network/connection_manager.pm:312 ../lib/network/drakroam.pm:113
 #, c-format
 msgid "Disconnect"
 msgstr "Datgysylltu"
 
-#: ../lib/network/connection_manager.pm:281 ../lib/network/drakroam.pm:110
+#: ../lib/network/connection_manager.pm:312 ../lib/network/drakroam.pm:112
 #, c-format
 msgid "Connect"
 msgstr "Cysylltu"
@@ -5385,6 +5395,7 @@ msgid "Port scan detection"
 msgstr "Canfyddwr sgan porth"
 
 #: ../lib/network/drakfirewall.pm:166 ../lib/network/drakfirewall.pm:172
+#: ../lib/network/shorewall.pm:63
 #, c-format
 msgid "Firewall configuration"
 msgstr "Ffurfweddiad mur cadarn"
@@ -5422,12 +5433,13 @@ msgstr ""
 msgid "Which services would you like to allow the Internet to connect to?"
 msgstr "Pa wasanaethau'r hoffech i'r Rhyngrwyd gysylltu â hwy?"
 
-#: ../lib/network/drakfirewall.pm:190 ../lib/network/shorewall.pm:145
+#: ../lib/network/drakfirewall.pm:190 ../lib/network/drakfirewall.pm:192
+#: ../lib/network/shorewall.pm:150
 #, c-format
 msgid "Firewall"
 msgstr "Mur Cadarn"
 
-#: ../lib/network/drakfirewall.pm:192
+#: ../lib/network/drakfirewall.pm:193
 #, c-format
 msgid ""
 "You can enter miscellaneous ports. \n"
@@ -5438,7 +5450,7 @@ msgstr ""
 "Eng. dilys: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
 "Am wybodaeth ewch i /etc/services."
 
-#: ../lib/network/drakfirewall.pm:198
+#: ../lib/network/drakfirewall.pm:199
 #, c-format
 msgid ""
 "Invalid port given: %s.\n"
@@ -5453,22 +5465,22 @@ msgstr ""
 "\n"
 "Cewch hefyd gynnig ystod o byrth (ee: 24300:24350/udp)"
 
-#: ../lib/network/drakfirewall.pm:208
+#: ../lib/network/drakfirewall.pm:209
 #, c-format
 msgid "Everything (no firewall)"
 msgstr "Popeth (dim mur cadarn)"
 
-#: ../lib/network/drakfirewall.pm:210
+#: ../lib/network/drakfirewall.pm:211
 #, c-format
 msgid "Other ports"
 msgstr "Pyrth eraill"
 
-#: ../lib/network/drakfirewall.pm:211
+#: ../lib/network/drakfirewall.pm:212
 #, c-format
 msgid "Log firewall messages in system logs"
 msgstr "Cofnodi negeseuon y mur cadarn yng nghofnodion y system"
 
-#: ../lib/network/drakfirewall.pm:256
+#: ../lib/network/drakfirewall.pm:258
 #, c-format
 msgid ""
 "You can be warned when someone accesses to a service or tries to intrude "
@@ -5479,7 +5491,7 @@ msgstr ""
 "neu i'ch cyfrifiadur.\n"
 "Pennwch pa wasanaeth rhwydwaith dylid ei wylio."
 
-#: ../lib/network/drakfirewall.pm:261
+#: ../lib/network/drakfirewall.pm:263
 #, c-format
 msgid "Use Interactive Firewall"
 msgstr "Defnyddio Mur Cadarn Rhyngweithiol"
@@ -5494,17 +5506,17 @@ msgstr "Heb ganfod dyfais"
 msgid "Hostname changed to \"%s\""
 msgstr "Newidiodd enw'r gwestai i \"%s\""
 
-#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:72
+#: ../lib/network/drakroam.pm:111 ../lib/network/netcenter.pm:87
 #, c-format
 msgid "Configure"
 msgstr "Ffurfweddu"
 
-#: ../lib/network/drakroam.pm:112 ../lib/network/netcenter.pm:77
+#: ../lib/network/drakroam.pm:114 ../lib/network/netcenter.pm:92
 #, c-format
 msgid "Refresh"
 msgstr "Adnewyddu"
 
-#: ../lib/network/drakroam.pm:123 ../lib/network/netconnect.pm:769
+#: ../lib/network/drakroam.pm:125 ../lib/network/netconnect.pm:770
 #, c-format
 msgid "Wireless connection"
 msgstr "Cysylltiad diwyfr"
@@ -5559,7 +5571,7 @@ msgstr "Rhowch yr allwedd(i) angenrheidiol"
 msgid "Please enter the settings of your VPN connection"
 msgstr "Rhowch osodiadau eich cysylltiad VPN"
 
-#: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:299
+#: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:300
 #, c-format
 msgid "Do you want to start the connection now?"
 msgstr "Hoffech chi gychwyn y cysylltiad nawr?"
@@ -5601,31 +5613,41 @@ msgid "Password cracking"
 msgstr "Agor cyfrinair"
 
 #: ../lib/network/ifw.pm:132
+#, fuzzy, c-format
+msgid "New connection"
+msgstr "Cysylltiad rhwydwaith"
+
+#: ../lib/network/ifw.pm:133
 #, c-format
 msgid "\"%s\" attack"
 msgstr "Ymosodiad \"%s\" "
 
-#: ../lib/network/ifw.pm:134
+#: ../lib/network/ifw.pm:135
 #, c-format
 msgid "A port scanning attack has been attempted by %s."
 msgstr "Gwnaed ymgais i ymosod ar borth gan %s."
 
-#: ../lib/network/ifw.pm:135
+#: ../lib/network/ifw.pm:136
 #, c-format
 msgid "The %s service has been attacked by %s."
 msgstr "Mae gwasanaeth %s wedi derbyn ymosodiad gan %s."
 
-#: ../lib/network/ifw.pm:136
+#: ../lib/network/ifw.pm:137
 #, c-format
 msgid "A password cracking attack has been attempted by %s."
 msgstr "Gwnaed ymgais i agor cyfrinair gan %s."
 
-#: ../lib/network/ifw.pm:137
+#: ../lib/network/ifw.pm:138
+#, fuzzy, c-format
+msgid "%s is connecting on the %s service."
+msgstr "Datgysylltu o'r Rhyngrwyd"
+
+#: ../lib/network/ifw.pm:139
 #, c-format
 msgid "A \"%s\" attack has been attempted by %s"
 msgstr "Gwnaed ymgais i greu ymosodiad  \"%s\"gan %s."
 
-#: ../lib/network/ifw.pm:146
+#: ../lib/network/ifw.pm:148
 #, c-format
 msgid ""
 "The \"%s\" application is trying to make a service (%s) available to the "
@@ -5634,14 +5656,14 @@ msgstr ""
 "Mae rhaglen \"%s\" yn ceisio gwneud gwasanaeth (%s) ar gael i'r rhwydwaith."
 
 #. -PO: this should be kept lowercase since the expression is meant to be used between brackets
-#: ../lib/network/ifw.pm:150
+#: ../lib/network/ifw.pm:152
 #, c-format
 msgid "port %d"
 msgstr "porth %d"
 
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
-#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:611
-#: ../lib/network/netconnect.pm:628 ../lib/network/netconnect.pm:644
+#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:612
+#: ../lib/network/netconnect.pm:629 ../lib/network/netconnect.pm:645
 #, c-format
 msgid "Manual"
 msgstr "Llaw"
@@ -5649,25 +5671,25 @@ msgstr "Llaw"
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
 #: ../lib/network/modem.pm:44 ../lib/network/modem.pm:63
 #: ../lib/network/modem.pm:76 ../lib/network/modem.pm:81
-#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:606
-#: ../lib/network/netconnect.pm:611 ../lib/network/netconnect.pm:623
-#: ../lib/network/netconnect.pm:628 ../lib/network/netconnect.pm:644
-#: ../lib/network/netconnect.pm:646
+#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:607
+#: ../lib/network/netconnect.pm:612 ../lib/network/netconnect.pm:624
+#: ../lib/network/netconnect.pm:629 ../lib/network/netconnect.pm:645
+#: ../lib/network/netconnect.pm:647
 #, c-format
 msgid "Automatic"
 msgstr "Awtomatig"
 
-#: ../lib/network/ndiswrapper.pm:27
+#: ../lib/network/ndiswrapper.pm:30
 #, c-format
 msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "Does dim dyfais sy'n cynnal gyrrwr %s ndiswrapper yn bresenol!"
 
-#: ../lib/network/ndiswrapper.pm:33
+#: ../lib/network/ndiswrapper.pm:36
 #, c-format
 msgid "Please select the Windows driver (.inf file)"
 msgstr "Dewiswch y gyrrwr Windows (.inf file)"
 
-#: ../lib/network/ndiswrapper.pm:42
+#: ../lib/network/ndiswrapper.pm:45
 #, c-format
 msgid "Unable to install the %s ndiswrapper driver!"
 msgstr "Methu arsefydlu y gyrrydd ndiswrapper %s!"
@@ -5691,37 +5713,37 @@ msgstr "methu llwytho'r modiwl ndiswrapper!"
 msgid "Unable to find the ndiswrapper interface!"
 msgstr "Methu canfod rhyngwyneb ndiswrapper!"
 
-#: ../lib/network/ndiswrapper.pm:115
+#: ../lib/network/ndiswrapper.pm:137
 #, c-format
 msgid "Choose an ndiswrapper driver"
 msgstr "Dewis gyrrwr ndiswrapper"
 
-#: ../lib/network/ndiswrapper.pm:118
+#: ../lib/network/ndiswrapper.pm:140
 #, c-format
 msgid "Use the ndiswrapper driver %s"
 msgstr "Defnyddiwch y gyrrydd ndiswrapper %s"
 
-#: ../lib/network/ndiswrapper.pm:118
+#: ../lib/network/ndiswrapper.pm:140
 #, c-format
 msgid "Install a new driver"
 msgstr "Gosod gyrrwr newydd"
 
-#: ../lib/network/ndiswrapper.pm:129
+#: ../lib/network/ndiswrapper.pm:151
 #, c-format
 msgid "Select a device:"
 msgstr "Dewis dyfais:"
 
-#: ../lib/network/netcenter.pm:30
+#: ../lib/network/netcenter.pm:33
 #, c-format
 msgid "Network Center"
 msgstr "Canolfan Rhwydwaith"
 
-#: ../lib/network/netcenter.pm:62 ../lib/network/netconnect.pm:212
+#: ../lib/network/netcenter.pm:77 ../lib/network/netconnect.pm:213
 #, c-format
 msgid "Please select your network:"
 msgstr "Dewiswch eich rhwydwaith:"
 
-#: ../lib/network/netcenter.pm:68
+#: ../lib/network/netcenter.pm:83
 #, c-format
 msgid ""
 "_: This is a verb\n"
@@ -5733,8 +5755,8 @@ msgstr "Monitor"
 msgid "United States"
 msgstr "Yr Unol Daleithiau"
 
-#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:501
-#: ../lib/network/netconnect.pm:515
+#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:502
+#: ../lib/network/netconnect.pm:516
 #, c-format
 msgid "Manual choice"
 msgstr "Dewis gyda llaw"
@@ -5754,8 +5776,8 @@ msgstr "Protocol ar gyfer gweddill y byd"
 msgid "Choose the connection you want to configure"
 msgstr "Dewiswch y math o gysylltiad rydych am ei ffurfweddu"
 
-#: ../lib/network/netconnect.pm:145 ../lib/network/netconnect.pm:356
-#: ../lib/network/netconnect.pm:796
+#: ../lib/network/netconnect.pm:145 ../lib/network/netconnect.pm:357
+#: ../lib/network/netconnect.pm:797
 #, c-format
 msgid "Select the network interface to configure:"
 msgstr "Dewis y rhyngwyneb rhwydwaith i'w ffurfweddu:"
@@ -5770,12 +5792,12 @@ msgstr "Heb gannfod dyfais ar gyfer y math yma o gysylltiad."
 msgid "Hardware Configuration"
 msgstr "Ffurfweddu Caedwedd"
 
-#: ../lib/network/netconnect.pm:194
+#: ../lib/network/netconnect.pm:195
 #, c-format
 msgid "Please select your provider:"
 msgstr "Dewiswch eich darparwr:"
 
-#: ../lib/network/netconnect.pm:249
+#: ../lib/network/netconnect.pm:250
 #, c-format
 msgid ""
 "Please select your connection protocol.\n"
@@ -5784,69 +5806,69 @@ msgstr ""
 "Dewiswch eich protocol cysylltu.\n"
 "Os nad ydych yn gwybod pa un, cadwch at y protocol cyntaf."
 
-#: ../lib/network/netconnect.pm:293 ../lib/network/netconnect.pm:663
+#: ../lib/network/netconnect.pm:294 ../lib/network/netconnect.pm:664
 #, c-format
 msgid "Connection control"
 msgstr "Rheolydd cysylltu"
 
-#: ../lib/network/netconnect.pm:323
+#: ../lib/network/netconnect.pm:324
 #, c-format
 msgid "Connection Configuration"
 msgstr "Ffurfweddiad y Cysylltiad"
 
-#: ../lib/network/netconnect.pm:323
+#: ../lib/network/netconnect.pm:324
 #, c-format
 msgid "Please fill or check the field below"
 msgstr "Llanwch neu ticiwch y maes islaw"
 
-#: ../lib/network/netconnect.pm:326
+#: ../lib/network/netconnect.pm:327
 #, c-format
 msgid "Your personal phone number"
 msgstr "Eich rhif ffôn personol"
 
-#: ../lib/network/netconnect.pm:327
+#: ../lib/network/netconnect.pm:328
 #, c-format
 msgid "Provider name (ex provider.net)"
 msgstr "Enw darparwr (eng. darparwr.net)"
 
-#: ../lib/network/netconnect.pm:329
+#: ../lib/network/netconnect.pm:330
 #, c-format
 msgid "Provider DNS 1 (optional)"
 msgstr "Darparwr DNS 1 (dewisol)"
 
-#: ../lib/network/netconnect.pm:330
+#: ../lib/network/netconnect.pm:331
 #, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "Darparwr DNS 2 (dewisol)"
 
-#: ../lib/network/netconnect.pm:340
+#: ../lib/network/netconnect.pm:341
 #, c-format
 msgid "Card IO_1"
 msgstr "IO_1 y cerdyn"
 
-#: ../lib/network/netconnect.pm:359 ../lib/network/netconnect.pm:364
+#: ../lib/network/netconnect.pm:360 ../lib/network/netconnect.pm:365
 #, c-format
 msgid "External ISDN modem"
 msgstr "Modem IDSN Allanol"
 
-#: ../lib/network/netconnect.pm:392
+#: ../lib/network/netconnect.pm:393
 #, c-format
 msgid "Select a device!"
 msgstr "Dewis dyfais!"
 
-#: ../lib/network/netconnect.pm:401 ../lib/network/netconnect.pm:411
-#: ../lib/network/netconnect.pm:421 ../lib/network/netconnect.pm:454
-#: ../lib/network/netconnect.pm:468
+#: ../lib/network/netconnect.pm:402 ../lib/network/netconnect.pm:412
+#: ../lib/network/netconnect.pm:422 ../lib/network/netconnect.pm:455
+#: ../lib/network/netconnect.pm:469
 #, c-format
 msgid "ISDN Configuration"
 msgstr "Ffurfweddiad ISDN"
 
-#: ../lib/network/netconnect.pm:402
+#: ../lib/network/netconnect.pm:403
 #, c-format
 msgid "What kind of card do you have?"
 msgstr "Pa fath o gerdyn sydd gennych?"
 
-#: ../lib/network/netconnect.pm:412
+#: ../lib/network/netconnect.pm:413
 #, c-format
 msgid ""
 "\n"
@@ -5862,22 +5884,22 @@ msgstr ""
 "Os oes gennych gerdyn PCMCIA, rhaid i chi wybod \"irq\" ac \"o\" eich "
 "cerdyn.\n"
 
-#: ../lib/network/netconnect.pm:416
+#: ../lib/network/netconnect.pm:417
 #, c-format
 msgid "Continue"
 msgstr "Parhau"
 
-#: ../lib/network/netconnect.pm:416
+#: ../lib/network/netconnect.pm:417
 #, c-format
 msgid "Abort"
 msgstr "Peidio"
 
-#: ../lib/network/netconnect.pm:422
+#: ../lib/network/netconnect.pm:423
 #, c-format
 msgid "Which of the following is your ISDN card?"
 msgstr "Pa un o'r canlynol yw eich cerdyn IDSN?"
 
-#: ../lib/network/netconnect.pm:440
+#: ../lib/network/netconnect.pm:441
 #, c-format
 msgid ""
 "A CAPI driver is available for this modem. This CAPI driver can offer more "
@@ -5888,12 +5910,12 @@ msgstr ""
 "swyddogaethau na'r gyrrwr rhydd (fel anfon ffacs). Pa yrrwr hoffech chi ei "
 "ddefnyddio?"
 
-#: ../lib/network/netconnect.pm:454
+#: ../lib/network/netconnect.pm:455
 #, c-format
 msgid "Which protocol do you want to use?"
 msgstr "Pa brotocol ydych chi eisiau ei ddefnyddio?"
 
-#: ../lib/network/netconnect.pm:468
+#: ../lib/network/netconnect.pm:469
 #, c-format
 msgid ""
 "Select your provider.\n"
@@ -5902,12 +5924,12 @@ msgstr ""
 "Dewiswch eich darparwr.\n"
 "Os nad yw ar eich rhestr, dewiswch Heb ei Restri"
 
-#: ../lib/network/netconnect.pm:470 ../lib/network/netconnect.pm:566
+#: ../lib/network/netconnect.pm:471 ../lib/network/netconnect.pm:567
 #, c-format
 msgid "Provider:"
 msgstr "Darparwr:"
 
-#: ../lib/network/netconnect.pm:479
+#: ../lib/network/netconnect.pm:480
 #, c-format
 msgid ""
 "Your modem is not supported by the system.\n"
@@ -5916,122 +5938,122 @@ msgstr ""
 "Nid yw'r system yn cynnal eich modem.\n"
 "Ewch i http://www.linmodems.org"
 
-#: ../lib/network/netconnect.pm:498
+#: ../lib/network/netconnect.pm:499
 #, c-format
 msgid "Select the modem to configure:"
 msgstr "Dewis y modem i'w ffurfweddu:"
 
-#: ../lib/network/netconnect.pm:500
+#: ../lib/network/netconnect.pm:501
 #, c-format
 msgid "Modem"
 msgstr "Modem"
 
-#: ../lib/network/netconnect.pm:535
+#: ../lib/network/netconnect.pm:536
 #, c-format
 msgid "Please choose which serial port your modem is connected to."
 msgstr "Dewiswch ba borth cyfresol mae eich modem wedi cysylltu iddo."
 
-#: ../lib/network/netconnect.pm:564
+#: ../lib/network/netconnect.pm:565
 #, c-format
 msgid "Select your provider:"
 msgstr "Dewis eich darparwr:"
 
-#: ../lib/network/netconnect.pm:588
+#: ../lib/network/netconnect.pm:589
 #, c-format
 msgid "Dialup: account options"
 msgstr "Deialu: dewisiadau cyfrif"
 
-#: ../lib/network/netconnect.pm:591
+#: ../lib/network/netconnect.pm:592
 #, c-format
 msgid "Connection name"
 msgstr "Enw'r cysylltiad"
 
-#: ../lib/network/netconnect.pm:592
+#: ../lib/network/netconnect.pm:593
 #, c-format
 msgid "Phone number"
 msgstr "Rhif ffôn"
 
-#: ../lib/network/netconnect.pm:593
+#: ../lib/network/netconnect.pm:594
 #, c-format
 msgid "Login ID"
 msgstr "Dynodiad Mewngofnodi"
 
-#: ../lib/network/netconnect.pm:608 ../lib/network/netconnect.pm:641
+#: ../lib/network/netconnect.pm:609 ../lib/network/netconnect.pm:642
 #, c-format
 msgid "Dialup: IP parameters"
 msgstr "Deialu: paramedrau'r IP"
 
-#: ../lib/network/netconnect.pm:611
+#: ../lib/network/netconnect.pm:612
 #, c-format
 msgid "IP parameters"
 msgstr "Paramedrau IP"
 
-#: ../lib/network/netconnect.pm:613
+#: ../lib/network/netconnect.pm:614
 #, c-format
 msgid "Subnet mask"
 msgstr "Masg Isnet"
 
-#: ../lib/network/netconnect.pm:625
+#: ../lib/network/netconnect.pm:626
 #, c-format
 msgid "Dialup: DNS parameters"
 msgstr "Deialu: paramedrau DNS"
 
-#: ../lib/network/netconnect.pm:628
+#: ../lib/network/netconnect.pm:629
 #, c-format
 msgid "DNS"
 msgstr "DNS"
 
-#: ../lib/network/netconnect.pm:629
+#: ../lib/network/netconnect.pm:630
 #, c-format
 msgid "Domain name"
 msgstr "Enw parth"
 
-#: ../lib/network/netconnect.pm:632
+#: ../lib/network/netconnect.pm:633
 #, c-format
 msgid "Set hostname from IP"
 msgstr "Gosod enw'r gwesteiwr o'r IP"
 
-#: ../lib/network/netconnect.pm:645
+#: ../lib/network/netconnect.pm:646
 #, c-format
 msgid "Gateway IP address"
 msgstr "Cyfeiriad porth IP"
 
-#: ../lib/network/netconnect.pm:678
+#: ../lib/network/netconnect.pm:679
 #, c-format
 msgid "Automatically at boot"
 msgstr "Yna awtomatig wrth gychwyn"
 
-#: ../lib/network/netconnect.pm:680
+#: ../lib/network/netconnect.pm:681
 #, c-format
 msgid "By using Net Applet in the system tray"
 msgstr "Drwy ddefnyddio Net Applet yn y gilfach"
 
-#: ../lib/network/netconnect.pm:682
+#: ../lib/network/netconnect.pm:683
 #, c-format
 msgid "Manually (the interface would still be activated at boot)"
 msgstr "Gyda llaw (bydd y rhyngwyneb yn dal i gychwyn wrth gychwyn)"
 
-#: ../lib/network/netconnect.pm:691
+#: ../lib/network/netconnect.pm:692
 #, c-format
 msgid "How do you want to dial this connection?"
 msgstr "Sut ydych am ddeialu’r cysylltiad?"
 
-#: ../lib/network/netconnect.pm:704
+#: ../lib/network/netconnect.pm:705
 #, c-format
 msgid "Do you want to try to connect to the Internet now?"
 msgstr "Hoffech chi gysylltu â'r Rhyngrwyd nawr?"
 
-#: ../lib/network/netconnect.pm:731
+#: ../lib/network/netconnect.pm:732
 #, c-format
 msgid "The system is now connected to the Internet."
 msgstr "Mae'r system wedi cysylltu â'r Rhyngrwyd."
 
-#: ../lib/network/netconnect.pm:732
+#: ../lib/network/netconnect.pm:733
 #, c-format
 msgid "For security reasons, it will be disconnected now."
 msgstr "Am resymau diogelwch, bydd yn cael ei ddatgysylltu."
 
-#: ../lib/network/netconnect.pm:733
+#: ../lib/network/netconnect.pm:734
 #, c-format
 msgid ""
 "The system does not seem to be connected to the Internet.\n"
@@ -6040,7 +6062,7 @@ msgstr ""
 "Nid yw'n ymddangos i'ch system gysylltu â'r Rhyngrwyd.\n"
 "Ailffurfweddwch eich cysylltiad."
 
-#: ../lib/network/netconnect.pm:748
+#: ../lib/network/netconnect.pm:749
 #, c-format
 msgid ""
 "Congratulations, the network and Internet configuration is finished.\n"
@@ -6049,7 +6071,7 @@ msgstr ""
 "Llongyfarchiadau, mae ffurfweddiad y rhwydwaith a'r Rhyngrwyd wedi ei "
 "gwblhau\n"
 
-#: ../lib/network/netconnect.pm:751
+#: ../lib/network/netconnect.pm:752
 #, c-format
 msgid ""
 "After this is done, we recommend that you restart your X environment to "
@@ -6059,7 +6081,7 @@ msgstr ""
 "amgylchedd X i osgoi unrhyw anawsterau'n perthyn i enwau gwesteiwr.\n"
 "."
 
-#: ../lib/network/netconnect.pm:752
+#: ../lib/network/netconnect.pm:753
 #, c-format
 msgid ""
 "Problems occurred during configuration.\n"
@@ -6070,78 +6092,78 @@ msgstr ""
 "Profwch eich cysylltiad drwy net_monitor neu mcc. Os nad yw eich cysylltiad "
 "yn gweithio, efallai y byddwch eisiau ailgychwyn y ffurfweddiad"
 
-#: ../lib/network/netconnect.pm:764
+#: ../lib/network/netconnect.pm:765
 #, c-format
 msgid "Sagem USB modem"
 msgstr "Modem USB Sagem"
 
-#: ../lib/network/netconnect.pm:765 ../lib/network/netconnect.pm:766
+#: ../lib/network/netconnect.pm:766 ../lib/network/netconnect.pm:767
 #, c-format
 msgid "Bewan modem"
 msgstr "Modem Bewan"
 
-#: ../lib/network/netconnect.pm:767
+#: ../lib/network/netconnect.pm:768
 #, c-format
 msgid "ECI Hi-Focus modem"
 msgstr "Modem ECI Hi-Focus"
 
-#: ../lib/network/netconnect.pm:768
+#: ../lib/network/netconnect.pm:769
 #, c-format
 msgid "LAN connection"
 msgstr "cysylltiad LAN"
 
-#: ../lib/network/netconnect.pm:770
+#: ../lib/network/netconnect.pm:771
 #, c-format
 msgid "ADSL connection"
 msgstr "Cysylltiad ADSL"
 
-#: ../lib/network/netconnect.pm:771
+#: ../lib/network/netconnect.pm:772
 #, c-format
 msgid "Cable connection"
 msgstr "Cysylltiad cebl"
 
-#: ../lib/network/netconnect.pm:772
+#: ../lib/network/netconnect.pm:773
 #, c-format
 msgid "ISDN connection"
 msgstr "Cysylltiad ISDN"
 
-#: ../lib/network/netconnect.pm:773
+#: ../lib/network/netconnect.pm:774
 #, c-format
 msgid "Modem connection"
 msgstr "Cysylltiad modem"
 
-#: ../lib/network/netconnect.pm:774
+#: ../lib/network/netconnect.pm:775
 #, c-format
 msgid "DVB connection"
 msgstr "Cysylltiad DVB"
 
-#: ../lib/network/netconnect.pm:776
+#: ../lib/network/netconnect.pm:777
 #, c-format
 msgid "(detected on port %s)"
 msgstr "(canfuwyd ar borth %s)"
 
 #. -PO: here, "(detected)" string will be appended to eg "ADSL connection"
-#: ../lib/network/netconnect.pm:778
+#: ../lib/network/netconnect.pm:779
 #, c-format
 msgid "(detected %s)"
 msgstr "(canfuwyd %s)"
 
-#: ../lib/network/netconnect.pm:778
+#: ../lib/network/netconnect.pm:779
 #, c-format
 msgid "(detected)"
 msgstr "(canfuwyd)"
 
-#: ../lib/network/netconnect.pm:779
+#: ../lib/network/netconnect.pm:780
 #, c-format
 msgid "Network Configuration"
 msgstr "Ffurfweddiad y Rhwydwaith"
 
-#: ../lib/network/netconnect.pm:780
+#: ../lib/network/netconnect.pm:781
 #, c-format
 msgid "Zeroconf hostname resolution"
 msgstr "Cydraniad enw gwesteiwr Zeroconf"
 
-#: ../lib/network/netconnect.pm:781
+#: ../lib/network/netconnect.pm:782
 #, c-format
 msgid ""
 "If desired, enter a Zeroconf hostname.\n"
@@ -6154,17 +6176,17 @@ msgstr ""
 "unrhyw un o'i adnoddau rhannwyd nad ydynt wedi eu rheoli gan\n"
 "rwydwaith. Nid oes angen gyda'r rhan fwyaf o rwydweithiau."
 
-#: ../lib/network/netconnect.pm:785
+#: ../lib/network/netconnect.pm:786
 #, c-format
 msgid "Zeroconf Host name"
 msgstr "Enw Gwesteiwr Zeroconf"
 
-#: ../lib/network/netconnect.pm:786
+#: ../lib/network/netconnect.pm:787
 #, c-format
 msgid "Zeroconf host name must not contain a ."
 msgstr "Rhaid i enw gwesteiwr Zeroconf beidio cynnwys ."
 
-#: ../lib/network/netconnect.pm:787
+#: ../lib/network/netconnect.pm:788
 #, c-format
 msgid ""
 "Because you are doing a network installation, your network is already "
@@ -6177,12 +6199,12 @@ msgstr ""
 "Cliciwch Iawn i gadw eich ffurfweddiad, neu ddiddymu i ail ffurfweddi eich "
 "cysylltiad Rhyngrwyd a Rhwydwaith.\n"
 
-#: ../lib/network/netconnect.pm:790
+#: ../lib/network/netconnect.pm:791
 #, c-format
 msgid "The network needs to be restarted. Do you want to restart it?"
 msgstr "Rhaid i'r rhwydwaith gael ei ailgychwyn.  Ydych chi am ei ailgychwyn?"
 
-#: ../lib/network/netconnect.pm:791
+#: ../lib/network/netconnect.pm:792
 #, c-format
 msgid ""
 "A problem occurred while restarting the network: \n"
@@ -6193,7 +6215,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../lib/network/netconnect.pm:792
+#: ../lib/network/netconnect.pm:793
 #, c-format
 msgid ""
 "We are now going to configure the %s connection.\n"
@@ -6206,12 +6228,12 @@ msgstr ""
 "\n"
 "Pwyswch \"%s\" i barhau."
 
-#: ../lib/network/netconnect.pm:793
+#: ../lib/network/netconnect.pm:794
 #, c-format
 msgid "Configuration is complete, do you want to apply settings?"
 msgstr "Mae'r ffurfweddu wedi ei gwblhau, hoffech eu gosod?"
 
-#: ../lib/network/netconnect.pm:794
+#: ../lib/network/netconnect.pm:795
 #, c-format
 msgid ""
 "You have configured multiple ways to connect to the Internet.\n"
@@ -6222,17 +6244,17 @@ msgstr ""
 "Dewiswch ba un rydych am ei ddefnyddio.\n"
 "\n"
 
-#: ../lib/network/netconnect.pm:795
+#: ../lib/network/netconnect.pm:796
 #, c-format
 msgid "Internet connection"
 msgstr "Cysylltiad â'r Rhyngrwyd"
 
-#: ../lib/network/netconnect.pm:797
+#: ../lib/network/netconnect.pm:798
 #, c-format
 msgid "Configuring network device %s (driver %s)"
 msgstr "Ffurfweddu dyfais rhwydwaith %s (gyrrwr %s)"
 
-#: ../lib/network/netconnect.pm:798
+#: ../lib/network/netconnect.pm:799
 #, c-format
 msgid ""
 "The following protocols can be used to configure a LAN connection. Please "
@@ -6241,7 +6263,7 @@ msgstr ""
 "Mae modd defnyddio'r protocolau canlynol i ffurfweddu cysylltiad LAN. "
 "Dewiswch yr un i'w ddefnyddio."
 
-#: ../lib/network/netconnect.pm:799
+#: ../lib/network/netconnect.pm:800
 #, c-format
 msgid ""
 "Please enter your host name.\n"
@@ -6254,22 +6276,22 @@ msgstr ""
 "megis \"fymlwch.fynesg.fyngho.com\".\n"
 "Gallwch hefyd gynnig eich cyfeiriad IP os oes gennych un"
 
-#: ../lib/network/netconnect.pm:804
+#: ../lib/network/netconnect.pm:805
 #, c-format
 msgid "Last but not least you can also type in your DNS server IP addresses."
 msgstr "Yn olaf mae modd i chi deipio cyfeiriadau IP eich gweinydd DNS."
 
-#: ../lib/network/netconnect.pm:805
+#: ../lib/network/netconnect.pm:806
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
 msgstr "Dylai cyfeiriad DNS fod mewn fformat  1.2.3.4"
 
-#: ../lib/network/netconnect.pm:807
+#: ../lib/network/netconnect.pm:808
 #, c-format
 msgid "Gateway device"
 msgstr "Dyfais mynedfa"
 
-#: ../lib/network/netconnect.pm:821
+#: ../lib/network/netconnect.pm:822
 #, c-format
 msgid ""
 "An unexpected error has happened:\n"
@@ -6332,7 +6354,7 @@ msgstr "Dylai'r dirprwy fod yn http://... neu https://..."
 msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "Dylai'r URL ddechrau gyda 'ftp' neu 'http:'"
 
-#: ../lib/network/shorewall.pm:61
+#: ../lib/network/shorewall.pm:65
 #, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
@@ -6349,17 +6371,17 @@ msgstr ""
 "\n"
 "Pa ryngwynebau sydd i'w diogelu?\n"
 
-#: ../lib/network/shorewall.pm:136
+#: ../lib/network/shorewall.pm:141
 #, c-format
 msgid "Keep custom rules"
 msgstr "Cadw rheolau addasu"
 
-#: ../lib/network/shorewall.pm:137
+#: ../lib/network/shorewall.pm:142
 #, c-format
 msgid "Drop custom rules"
 msgstr "Hepgor rheolau addasu"
 
-#: ../lib/network/shorewall.pm:142
+#: ../lib/network/shorewall.pm:147
 #, c-format
 msgid ""
 "Your firewall configuration has been manually edited and contains\n"
@@ -6370,18 +6392,18 @@ msgstr ""
 "rheolau all wrthdaro gyda'r ffurfweddiad sydd newydd ei osod.\n"
 "Beth ydych am ei wneud?"
 
-#: ../lib/network/thirdparty.pm:135
+#: ../lib/network/thirdparty.pm:138
 #, c-format
 msgid "Some components (%s) are required but aren't available for %s hardware."
 msgstr ""
 "Mae angen rhai cydrannau (%s) ond nid ydynt ar gael ar gyfer caledwedd %s."
 
-#: ../lib/network/thirdparty.pm:136
+#: ../lib/network/thirdparty.pm:139
 #, c-format
 msgid "Some packages (%s) are required but aren't available."
 msgstr "Mae angen rhai pecynnau (%s) ond nid ydynt ar gael."
 
-#: ../lib/network/thirdparty.pm:138
+#: ../lib/network/thirdparty.pm:141
 #, c-format
 msgid ""
 "These packages can be found in Mandriva Club or in Mandriva commercial "
@@ -6390,12 +6412,12 @@ msgstr ""
 "Mae'r pecynnau hyn i'w cael ar Mandriva Club neu fersiynnau masnachol "
 "Mandriva."
 
-#: ../lib/network/thirdparty.pm:139
+#: ../lib/network/thirdparty.pm:142
 #, c-format
 msgid "The following component is missing: %s"
 msgstr "Mae cydran ganlynol ar goll: %s"
 
-#: ../lib/network/thirdparty.pm:141
+#: ../lib/network/thirdparty.pm:144
 #, c-format
 msgid ""
 "The required files can also be installed from this URL:\n"
@@ -6414,37 +6436,37 @@ msgstr "Mae angen ffeiliau cadarnwedd ar gyfer y ddyfais"
 msgid "Use a floppy"
 msgstr "Defnyddiwch ddisg meddal"
 
-#: ../lib/network/thirdparty.pm:179 ../lib/network/thirdparty.pm:186
+#: ../lib/network/thirdparty.pm:184 ../lib/network/thirdparty.pm:191
 #, c-format
 msgid "Use my Windows partition"
 msgstr "Defnyddio fy rhaniad Windows"
 
-#: ../lib/network/thirdparty.pm:180
+#: ../lib/network/thirdparty.pm:185
 #, c-format
 msgid "Select file"
 msgstr "Dewiswch ffeil"
 
-#: ../lib/network/thirdparty.pm:191
+#: ../lib/network/thirdparty.pm:196
 #, c-format
 msgid "Please select the firmware file (for example: %s)"
 msgstr "Dewiswch y ffeil cadarnwedd (e.e. %s)"
 
-#: ../lib/network/thirdparty.pm:215
+#: ../lib/network/thirdparty.pm:220
 #, c-format
 msgid "Unable to find \"%s\" on your Windows system!"
 msgstr "Methu canfod \"%s\" ar eich system Windows!"
 
-#: ../lib/network/thirdparty.pm:217
+#: ../lib/network/thirdparty.pm:222
 #, c-format
 msgid "No Windows system has been detected!"
 msgstr "Heb ganfod system Windows!"
 
-#: ../lib/network/thirdparty.pm:227
+#: ../lib/network/thirdparty.pm:232
 #, c-format
 msgid "Insert floppy"
 msgstr "Rhowch ddisg meddal"
 
-#: ../lib/network/thirdparty.pm:228
+#: ../lib/network/thirdparty.pm:233
 #, c-format
 msgid ""
 "Insert a FAT formatted floppy in drive %s with %s in root directory and "
@@ -6453,22 +6475,22 @@ msgstr ""
 "Rhowch ddisg meddal wedi ei fformatio i FAT yng ngyrrwr %s gyda %s yng "
 "nghyfeiriadur gwraidd a phwyso %s"
 
-#: ../lib/network/thirdparty.pm:228
+#: ../lib/network/thirdparty.pm:233
 #, c-format
 msgid "Next"
 msgstr "Nesaf"
 
-#: ../lib/network/thirdparty.pm:238
+#: ../lib/network/thirdparty.pm:243
 #, c-format
 msgid "Floppy access error, unable to mount device %s"
 msgstr "Gwall mynediad i'r disg meddal, methu arosod dyfais %s"
 
-#: ../lib/network/thirdparty.pm:327
+#: ../lib/network/thirdparty.pm:332
 #, c-format
 msgid "Looking for required software and drivers..."
 msgstr "Chwilio am y feddalwedd a'r gyrrwyr angenrheidiol..."
 
-#: ../lib/network/thirdparty.pm:340
+#: ../lib/network/thirdparty.pm:347
 #, c-format
 msgid "Please wait, running device configuration commands..."
 msgstr "Arhoswch, rhedeg gorchmynion ffurfweddu dyfais..."
@@ -6482,11 +6504,6 @@ msgstr "Allwedd Gyhoeddus Isadeiledd X509"
 #, c-format
 msgid "Static Key"
 msgstr "Allwedd Statig"
-
-#: ../lib/network/vpn/openvpn.pm:115
-#, c-format
-msgid "Type"
-msgstr "Math"
 
 #. -PO: please don't translate the CA acronym
 #: ../lib/network/vpn/openvpn.pm:142
@@ -6608,6 +6625,12 @@ msgstr "Defnyddio mewngapsiwleiddio Cisco-UDP"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Defnyddio porth UDP penodol"
+
+#~ msgid "Attacker"
+#~ msgstr "Ymosodwr"
+
+#~ msgid "Attack type"
+#~ msgstr "Math o ymosodiad"
 
 #~ msgid "Failed to add printers."
 #~ msgstr "Methwyd ychwanegu argraffydd."

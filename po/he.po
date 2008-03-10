@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-tools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-03 18:09+0100\n"
+"POT-Creation-Date: 2008-03-10 20:27+0100\n"
 "PO-Revision-Date: 2008-02-19 03:04+0200\n"
 "Last-Translator: \n"
 "Language-Team: Hebrew <he@li.org>\n"
@@ -54,19 +54,19 @@ msgid "Interface"
 msgstr "ממשק"
 
 #: ../bin/drakconnect:113 ../bin/drakconnect:321 ../bin/drakconnect:888
-#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:125
-#: ../lib/network/netconnect.pm:612 ../lib/network/vpn/openvpn.pm:221
+#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:131
+#: ../lib/network/netconnect.pm:613 ../lib/network/vpn/openvpn.pm:221
 #, c-format
 msgid "IP address"
 msgstr "כתובת IP"
 
 #: ../bin/drakconnect:113 ../bin/drakconnect:305 ../bin/drakconnect:563
-#: ../bin/drakids:252 ../bin/drakvpn-old:839 ../lib/network/netconnect.pm:456
+#: ../bin/drakids:258 ../bin/drakvpn-old:839 ../lib/network/netconnect.pm:457
 #, c-format
 msgid "Protocol"
 msgstr "פרוטוקול"
 
-#: ../bin/drakconnect:113 ../lib/network/netconnect.pm:442
+#: ../bin/drakconnect:113 ../lib/network/netconnect.pm:443
 #, c-format
 msgid "Driver"
 msgstr "מנהל התקן"
@@ -109,20 +109,26 @@ msgid "Apply"
 msgstr "החל"
 
 #: ../bin/drakconnect:161 ../bin/drakconnect:943 ../bin/drakconnect:1034
-#: ../bin/draknetprofile:106 ../bin/net_monitor:341
+#: ../bin/draknetprofile:106 ../bin/net_monitor:347
 #, c-format
 msgid "Cancel"
 msgstr "ביטול"
 
 #: ../bin/drakconnect:162 ../bin/drakconnect:858 ../bin/drakconnect:945
-#: ../bin/drakconnect:1035 ../bin/draknetprofile:108 ../bin/net_monitor:342
+#: ../bin/drakconnect:1035 ../bin/draknetprofile:108 ../bin/net_monitor:348
 #, c-format
 msgid "Ok"
 msgstr "אישור"
 
 #: ../bin/drakconnect:164 ../bin/drakconnect:636 ../bin/drakgw:359
-#: ../bin/draksambashare:228 ../lib/network/connection_manager.pm:146
-#: ../lib/network/connection_manager.pm:164
+#: ../bin/draksambashare:228 ../bin/drakvpn-old:97 ../bin/drakvpn-old:127
+#: ../lib/network/connection_manager.pm:69
+#: ../lib/network/connection_manager.pm:174
+#: ../lib/network/connection_manager.pm:192
+#: ../lib/network/connection_manager.pm:275 ../lib/network/drakvpn.pm:49
+#: ../lib/network/netcenter.pm:42 ../lib/network/netconnect.pm:177
+#: ../lib/network/netconnect.pm:210 ../lib/network/netconnect.pm:713
+#: ../lib/network/thirdparty.pm:332 ../lib/network/thirdparty.pm:347
 #, c-format
 msgid "Please wait"
 msgstr "נא להמתין"
@@ -137,7 +143,7 @@ msgstr "נא להמתין... מיישם את ההגדרות"
 msgid "Manage connections"
 msgstr "ניהול חיבורים"
 
-#: ../bin/drakconnect:219 ../lib/network/drakroam.pm:105
+#: ../bin/drakconnect:219 ../lib/network/drakroam.pm:107
 #, c-format
 msgid "Device: "
 msgstr "התקן: "
@@ -148,13 +154,13 @@ msgid "IP configuration"
 msgstr "הגדרת IP"
 
 #: ../bin/drakconnect:326 ../bin/drakconnect:889 ../bin/drakgw:177
-#: ../lib/network/connection/ethernet.pm:132
+#: ../lib/network/connection/ethernet.pm:138
 #, c-format
 msgid "Netmask"
 msgstr "מיסוך רשת"
 
-#: ../bin/drakconnect:332 ../lib/network/connection/ethernet.pm:133
-#: ../lib/network/netconnect.pm:644 ../lib/network/vpn/openvpn.pm:212
+#: ../bin/drakconnect:332 ../lib/network/connection/ethernet.pm:139
+#: ../lib/network/netconnect.pm:645 ../lib/network/vpn/openvpn.pm:212
 #: ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
@@ -186,99 +192,99 @@ msgid "DHCP"
 msgstr "DHCP"
 
 #: ../bin/drakconnect:369 ../bin/drakconnect:892
-#: ../lib/network/connection/ethernet.pm:143
+#: ../lib/network/connection/ethernet.pm:149
 #, c-format
 msgid "DHCP client"
 msgstr "לקוח DHCP"
 
-#: ../bin/drakconnect:373 ../lib/network/connection/ethernet.pm:201
+#: ../bin/drakconnect:373 ../lib/network/connection/ethernet.pm:207
 #, c-format
 msgid "Assign host name from DHCP address"
 msgstr "הקצאת שם מחשב לפי כתובת DHCP"
 
-#: ../bin/drakconnect:375 ../lib/network/connection/ethernet.pm:147
+#: ../bin/drakconnect:375 ../lib/network/connection/ethernet.pm:153
 #, c-format
 msgid "DHCP host name"
 msgstr "שם מארח DHCP"
 
-#: ../bin/drakconnect:379 ../lib/network/connection/ethernet.pm:144
+#: ../bin/drakconnect:379 ../lib/network/connection/ethernet.pm:150
 #, c-format
 msgid "DHCP timeout (in seconds)"
 msgstr "תפוגת חוזה DHCP (בשניות)"
 
-#: ../bin/drakconnect:382 ../lib/network/connection/ethernet.pm:136
+#: ../bin/drakconnect:382 ../lib/network/connection/ethernet.pm:142
 #, c-format
 msgid "Get DNS servers from DHCP"
 msgstr "קבלת שרתי DNS משרות DHCP"
 
-#: ../bin/drakconnect:383 ../lib/network/connection/ethernet.pm:145
+#: ../bin/drakconnect:383 ../lib/network/connection/ethernet.pm:151
 #, c-format
 msgid "Get YP servers from DHCP"
 msgstr "השג רשימת שרתי YP בעזרת DHCP"
 
-#: ../bin/drakconnect:384 ../lib/network/connection/ethernet.pm:146
+#: ../bin/drakconnect:384 ../lib/network/connection/ethernet.pm:152
 #, c-format
 msgid "Get NTPD servers from DHCP"
 msgstr "השג רשימת שרתי NTPD דרך DHCP"
 
-#: ../bin/drakconnect:406 ../lib/network/connection/wireless.pm:327
-#: ../lib/network/connection_manager.pm:204
+#: ../bin/drakconnect:406 ../lib/network/connection/wireless.pm:366
+#: ../lib/network/connection_manager.pm:232
 #, c-format
 msgid "Operating Mode"
 msgstr "אופן פעולה"
 
-#: ../bin/drakconnect:407 ../lib/network/connection/wireless.pm:331
+#: ../bin/drakconnect:407 ../lib/network/connection/wireless.pm:370
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "שם הרשת (ESSID)"
 
-#: ../bin/drakconnect:408 ../lib/network/connection/wireless.pm:337
+#: ../bin/drakconnect:408 ../lib/network/connection/wireless.pm:403
 #, c-format
 msgid "Network ID"
 msgstr "זיהוי רשת"
 
-#: ../bin/drakconnect:409 ../lib/network/connection/wireless.pm:338
+#: ../bin/drakconnect:409 ../lib/network/connection/wireless.pm:404
 #, c-format
 msgid "Operating frequency"
 msgstr "תדירות פעולה"
 
-#: ../bin/drakconnect:410 ../lib/network/connection/wireless.pm:339
+#: ../bin/drakconnect:410 ../lib/network/connection/wireless.pm:405
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "סף רגישות"
 
-#: ../bin/drakconnect:411 ../lib/network/connection/wireless.pm:340
+#: ../bin/drakconnect:411 ../lib/network/connection/wireless.pm:406
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "קצב סיביות - סל\"ש"
 
-#: ../bin/drakconnect:421 ../lib/network/connection/wireless.pm:335
+#: ../bin/drakconnect:421 ../lib/network/connection/wireless.pm:374
 #, c-format
 msgid "Encryption key"
 msgstr "מפתח הצפנה"
 
-#: ../bin/drakconnect:422 ../lib/network/connection/wireless.pm:341
+#: ../bin/drakconnect:422 ../lib/network/connection/wireless.pm:407
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../bin/drakconnect:423 ../lib/network/connection/wireless.pm:349
+#: ../bin/drakconnect:423 ../lib/network/connection/wireless.pm:415
 #, c-format
 msgid "Fragmentation"
 msgstr "פיצוליות"
 
-#: ../bin/drakconnect:424 ../lib/network/connection/wireless.pm:350
+#: ../bin/drakconnect:424 ../lib/network/connection/wireless.pm:416
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "משתנים נוספים עבור פקודת lwconfig"
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../bin/drakconnect:425 ../lib/network/connection/wireless.pm:358
+#: ../bin/drakconnect:425 ../lib/network/connection/wireless.pm:424
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "משתנים נוספים עבור פקודת lwspy"
 
-#: ../bin/drakconnect:426 ../lib/network/connection/wireless.pm:367
+#: ../bin/drakconnect:426 ../lib/network/connection/wireless.pm:433
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "משתנים נוספים עבור פקודת lwpriv"
@@ -288,53 +294,53 @@ msgstr "משתנים נוספים עבור פקודת lwpriv"
 msgid "Start at boot"
 msgstr "חיבור באתחול המערכת"
 
-#: ../bin/drakconnect:440 ../lib/network/connection/ethernet.pm:221
+#: ../bin/drakconnect:440 ../lib/network/connection/ethernet.pm:227
 #, c-format
 msgid "Network Hotplugging"
 msgstr "חיבור \"חם\" לרשת"
 
-#: ../bin/drakconnect:446 ../lib/network/netconnect.pm:331
+#: ../bin/drakconnect:446 ../lib/network/netconnect.pm:332
 #, c-format
 msgid "Dialing mode"
 msgstr "שיטת חיוג"
 
 #: ../bin/drakconnect:451 ../bin/drakconnect:518
-#: ../lib/network/netconnect.pm:332
+#: ../lib/network/netconnect.pm:333
 #, c-format
 msgid "Connection speed"
 msgstr "מהירות חיבור"
 
-#: ../bin/drakconnect:456 ../lib/network/netconnect.pm:333
+#: ../bin/drakconnect:456 ../lib/network/netconnect.pm:334
 #, c-format
 msgid "Connection timeout (in sec)"
 msgstr "תפוגת חיבור (בשניות)"
 
-#: ../bin/drakconnect:462 ../lib/network/connection.pm:186
+#: ../bin/drakconnect:462 ../lib/network/connection.pm:206
 #, c-format
 msgid "Metric"
 msgstr "מטרי"
 
-#: ../bin/drakconnect:482 ../lib/network/connection/cable.pm:48
-#: ../lib/network/netconnect.pm:595
+#: ../bin/drakconnect:482 ../lib/network/connection/cable.pm:45
+#: ../lib/network/netconnect.pm:596
 #, c-format
 msgid "Authentication"
 msgstr "אימות"
 
-#: ../bin/drakconnect:492 ../lib/network/connection/cable.pm:50
-#: ../lib/network/connection/ppp.pm:22 ../lib/network/netconnect.pm:334
+#: ../bin/drakconnect:492 ../lib/network/connection/cable.pm:47
+#: ../lib/network/connection/ppp.pm:22 ../lib/network/netconnect.pm:335
 #: ../lib/network/vpn/openvpn.pm:393
 #, c-format
 msgid "Account Login (user name)"
 msgstr "שם משתמש (כניסה לחשבון)"
 
-#: ../bin/drakconnect:493 ../lib/network/connection/cable.pm:52
-#: ../lib/network/connection/ppp.pm:23 ../lib/network/netconnect.pm:335
+#: ../bin/drakconnect:493 ../lib/network/connection/cable.pm:49
+#: ../lib/network/connection/ppp.pm:23 ../lib/network/netconnect.pm:336
 #: ../lib/network/vpn/openvpn.pm:394
 #, c-format
 msgid "Account Password"
 msgstr "סיסמת חשבון"
 
-#: ../bin/drakconnect:494 ../lib/network/netconnect.pm:328
+#: ../bin/drakconnect:494 ../lib/network/netconnect.pm:329
 #, c-format
 msgid "Provider phone number"
 msgstr "מספר הטלפון של הספק"
@@ -414,22 +420,22 @@ msgstr "אפשר"
 msgid "Disable"
 msgstr "נטרל"
 
-#: ../bin/drakconnect:555 ../lib/network/netconnect.pm:336
+#: ../bin/drakconnect:555 ../lib/network/netconnect.pm:337
 #, c-format
 msgid "Card IRQ"
 msgstr "פסיקת IRQ של הכרטיס"
 
-#: ../bin/drakconnect:556 ../lib/network/netconnect.pm:337
+#: ../bin/drakconnect:556 ../lib/network/netconnect.pm:338
 #, c-format
 msgid "Card mem (DMA)"
 msgstr "כרטיס זכרון (DMA)"
 
-#: ../bin/drakconnect:557 ../lib/network/netconnect.pm:338
+#: ../bin/drakconnect:557 ../lib/network/netconnect.pm:339
 #, c-format
 msgid "Card IO"
 msgstr "קלט פלט של הכרטיס"
 
-#: ../bin/drakconnect:558 ../lib/network/netconnect.pm:339
+#: ../bin/drakconnect:558 ../lib/network/netconnect.pm:340
 #, c-format
 msgid "Card IO_0"
 msgstr "ערך IO_0 של הכרטיס"
@@ -489,42 +495,41 @@ msgstr "מיקום על הערוץ"
 #: ../bin/drakinvictus:72 ../bin/draknetprofile:113 ../bin/draknfs:88
 #: ../bin/draknfs:109 ../bin/draknfs:279 ../bin/draknfs:412 ../bin/draknfs:414
 #: ../bin/draknfs:417 ../bin/draknfs:509 ../bin/draknfs:516 ../bin/draknfs:579
-#: ../bin/draknfs:586 ../bin/draknfs:593 ../bin/draksambashare:393
-#: ../bin/draksambashare:400 ../bin/draksambashare:403
-#: ../bin/draksambashare:455 ../bin/draksambashare:479
-#: ../bin/draksambashare:545 ../bin/draksambashare:560
-#: ../bin/draksambashare:638 ../bin/draksambashare:705
-#: ../bin/draksambashare:805 ../bin/draksambashare:812
-#: ../bin/draksambashare:951 ../bin/draksambashare:1105
-#: ../bin/draksambashare:1124 ../bin/draksambashare:1156
-#: ../bin/draksambashare:1213 ../bin/draksambashare:1263
-#: ../bin/draksambashare:1365 ../bin/draksambashare:1374
-#: ../bin/draksambashare:1396 ../bin/draksambashare:1405
-#: ../bin/draksambashare:1424 ../bin/draksambashare:1433
-#: ../bin/draksambashare:1445 ../lib/network/connection/xdsl.pm:332
-#: ../lib/network/connection_manager.pm:41
-#: ../lib/network/connection_manager.pm:47
-#: ../lib/network/connection_manager.pm:60
-#: ../lib/network/connection_manager.pm:115
-#: ../lib/network/connection_manager.pm:119 ../lib/network/drakvpn.pm:45
-#: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:27
-#: ../lib/network/ndiswrapper.pm:42 ../lib/network/ndiswrapper.pm:86
-#: ../lib/network/ndiswrapper.pm:102 ../lib/network/netconnect.pm:131
-#: ../lib/network/netconnect.pm:179 ../lib/network/netconnect.pm:235
-#: ../lib/network/netconnect.pm:276 ../lib/network/netconnect.pm:821
-#: ../lib/network/thirdparty.pm:115 ../lib/network/thirdparty.pm:132
-#: ../lib/network/thirdparty.pm:215 ../lib/network/thirdparty.pm:217
-#: ../lib/network/thirdparty.pm:238
+#: ../bin/draknfs:586 ../bin/draknfs:593 ../bin/draksambashare:392
+#: ../bin/draksambashare:399 ../bin/draksambashare:402
+#: ../bin/draksambashare:454 ../bin/draksambashare:478
+#: ../bin/draksambashare:551 ../bin/draksambashare:629
+#: ../bin/draksambashare:696 ../bin/draksambashare:796
+#: ../bin/draksambashare:803 ../bin/draksambashare:942
+#: ../bin/draksambashare:1096 ../bin/draksambashare:1115
+#: ../bin/draksambashare:1147 ../bin/draksambashare:1246
+#: ../bin/draksambashare:1348 ../bin/draksambashare:1357
+#: ../bin/draksambashare:1379 ../bin/draksambashare:1388
+#: ../bin/draksambashare:1407 ../bin/draksambashare:1416
+#: ../bin/draksambashare:1428 ../lib/network/connection/xdsl.pm:332
+#: ../lib/network/connection_manager.pm:52
+#: ../lib/network/connection_manager.pm:58
+#: ../lib/network/connection_manager.pm:72
+#: ../lib/network/connection_manager.pm:145
+#: ../lib/network/connection_manager.pm:149 ../lib/network/drakvpn.pm:45
+#: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
+#: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
+#: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:131
+#: ../lib/network/netconnect.pm:179 ../lib/network/netconnect.pm:236
+#: ../lib/network/netconnect.pm:277 ../lib/network/netconnect.pm:822
+#: ../lib/network/thirdparty.pm:117 ../lib/network/thirdparty.pm:135
+#: ../lib/network/thirdparty.pm:220 ../lib/network/thirdparty.pm:222
+#: ../lib/network/thirdparty.pm:243
 #, c-format
 msgid "Error"
 msgstr "שגיאה"
 
-#: ../bin/drakconnect:676 ../lib/network/connection/ethernet.pm:160
+#: ../bin/drakconnect:676 ../lib/network/connection/ethernet.pm:166
 #, c-format
 msgid "IP address should be in format 1.2.3.4"
 msgstr "כתובת IP צריכה להראות ככה 1.2.3.4"
 
-#: ../bin/drakconnect:680 ../lib/network/connection/ethernet.pm:165
+#: ../bin/drakconnect:680 ../lib/network/connection/ethernet.pm:171
 #, c-format
 msgid "Netmask should be in format 255.255.224.0"
 msgstr "התחביר להגדרת Netmask הוא 255.255.224.0"
@@ -539,7 +544,7 @@ msgstr "אין IP"
 msgid "No Mask"
 msgstr "אין מסכה"
 
-#: ../bin/drakconnect:689 ../lib/network/netconnect.pm:806
+#: ../bin/drakconnect:689 ../lib/network/netconnect.pm:807
 #, c-format
 msgid "Gateway address should be in format 1.2.3.4"
 msgstr "התחביר להגדרת כתובת שער הוא 1.2.3.4"
@@ -561,8 +566,8 @@ msgstr "הסרת ממשק רשת"
 msgid "Select the network interface to remove:"
 msgstr "נא לבחור את מנשק הרשת שיש להסיר:"
 
-#: ../bin/drakconnect:719 ../bin/drakgw:123 ../lib/network/netconnect.pm:358
-#: ../lib/network/netconnect.pm:393
+#: ../bin/drakconnect:719 ../bin/drakgw:123 ../lib/network/netconnect.pm:359
+#: ../lib/network/netconnect.pm:394
 #, c-format
 msgid "Net Device"
 msgstr "התקן רשת"
@@ -594,12 +599,12 @@ msgstr "למעלה"
 msgid "down"
 msgstr "למטה"
 
-#: ../bin/drakconnect:804 ../bin/net_monitor:465
+#: ../bin/drakconnect:804 ../bin/net_monitor:472
 #, c-format
 msgid "Connected"
 msgstr "מחובר"
 
-#: ../bin/drakconnect:804 ../bin/net_monitor:465
+#: ../bin/drakconnect:804 ../bin/net_monitor:472
 #, c-format
 msgid "Not connected"
 msgstr "לא מחובר"
@@ -669,8 +674,8 @@ msgstr "הגדרת חיבור לאינטרנט"
 
 #: ../bin/drakconnect:979 ../bin/draknetprofile:129 ../bin/draknetprofile:131
 #: ../bin/drakproxy:36 ../lib/network/drakvpn.pm:70
-#: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:92
-#: ../lib/network/netconnect.pm:479
+#: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
+#: ../lib/network/netconnect.pm:480
 #, c-format
 msgid "Warning"
 msgstr "אזהרה"
@@ -695,12 +700,12 @@ msgstr "הגדרת ממשק רשת חדש (LAN, ISDN, ADSL, ...)"
 msgid "Host name (optional)"
 msgstr "שם מחשב (לא חובה)"
 
-#: ../bin/drakconnect:997 ../lib/network/netconnect.pm:630
+#: ../bin/drakconnect:997 ../lib/network/netconnect.pm:631
 #, c-format
 msgid "First DNS Server (optional)"
 msgstr "שרת DNS ראשון (לא חובה)"
 
-#: ../bin/drakconnect:998 ../lib/network/netconnect.pm:631
+#: ../bin/drakconnect:998 ../lib/network/netconnect.pm:632
 #, c-format
 msgid "Second DNS Server (optional)"
 msgstr "שרת DNS שני (לא חובה)"
@@ -730,7 +735,7 @@ msgstr "סוג חיבור: "
 msgid "Status:"
 msgstr "מצב:"
 
-#: ../bin/drakconnect:1028 ../lib/network/netconnect.pm:712
+#: ../bin/drakconnect:1028 ../lib/network/netconnect.pm:713
 #, c-format
 msgid "Testing your connection..."
 msgstr "בודק את החיבור שלך..."
@@ -1020,8 +1025,8 @@ msgid "Host Aliases:"
 msgstr "כינויי מארח:"
 
 #: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:229
-#: ../bin/draksambashare:250 ../bin/draksambashare:397
-#: ../bin/draksambashare:634 ../bin/draksambashare:801
+#: ../bin/draksambashare:250 ../bin/draksambashare:396
+#: ../bin/draksambashare:625 ../bin/draksambashare:792
 #, c-format
 msgid "Error!"
 msgstr "שגיאה!"
@@ -1036,7 +1041,7 @@ msgstr "נא להגדיר כתובת IP תקנית."
 msgid "Same IP is already in %s file."
 msgstr "כתובת IP זו כבר מופיעה בקובץ %s."
 
-#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:203
+#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:209
 #, c-format
 msgid "Host name"
 msgstr "שם מארח"
@@ -1056,8 +1061,8 @@ msgstr "ניהול הגדרות מארחים"
 msgid "Modify entry"
 msgstr "שינוי מובאה"
 
-#: ../bin/drakhosts:241 ../bin/draknfs:575 ../bin/draksambashare:1358
-#: ../bin/draksambashare:1389 ../bin/draksambashare:1420
+#: ../bin/drakhosts:241 ../bin/draknfs:575 ../bin/draksambashare:1341
+#: ../bin/draksambashare:1372 ../bin/draksambashare:1403
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Add"
@@ -1073,9 +1078,9 @@ msgstr "הוספת מובאה"
 msgid "Failed to add host."
 msgstr "כשל בהוספת המארח."
 
-#: ../bin/drakhosts:248 ../bin/draknfs:582 ../bin/draksambashare:1315
-#: ../bin/draksambashare:1360 ../bin/draksambashare:1391
-#: ../bin/draksambashare:1428
+#: ../bin/drakhosts:248 ../bin/draknfs:582 ../bin/draksambashare:1298
+#: ../bin/draksambashare:1343 ../bin/draksambashare:1374
+#: ../bin/draksambashare:1411
 #, c-format
 msgid "Modify"
 msgstr "שינוי"
@@ -1085,9 +1090,9 @@ msgstr "שינוי"
 msgid "Failed to Modify host."
 msgstr "כשל בשינוי המארח."
 
-#: ../bin/drakhosts:255 ../bin/drakids:87 ../bin/drakids:96 ../bin/draknfs:589
-#: ../bin/draksambashare:1316 ../bin/draksambashare:1368
-#: ../bin/draksambashare:1399 ../bin/draksambashare:1436
+#: ../bin/drakhosts:255 ../bin/drakids:92 ../bin/drakids:101
+#: ../bin/draknfs:589 ../bin/draksambashare:1299 ../bin/draksambashare:1351
+#: ../bin/draksambashare:1382 ../bin/draksambashare:1419
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid "Remove"
@@ -1099,8 +1104,8 @@ msgid "Failed to remove host."
 msgstr "כשל בהסרת המארח."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:147
-#: ../bin/net_applet:139 ../lib/network/drakroam.pm:113
-#: ../lib/network/netcenter.pm:113
+#: ../bin/net_applet:139 ../lib/network/drakroam.pm:115
+#: ../lib/network/netcenter.pm:128
 #, c-format
 msgid "Quit"
 msgstr "יציאה"
@@ -1110,125 +1115,125 @@ msgstr "יציאה"
 msgid "Allowed addresses"
 msgstr "כתובות מותרות"
 
-#: ../bin/drakids:41 ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190
-#: ../bin/drakids:215 ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
+#: ../bin/drakids:40 ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196
+#: ../bin/drakids:221 ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
 #: ../bin/net_applet:78 ../bin/net_applet:245 ../bin/net_applet:521
-#: ../bin/net_applet:548 ../lib/network/drakfirewall.pm:255
-#: ../lib/network/drakfirewall.pm:258
+#: ../bin/net_applet:549 ../lib/network/drakfirewall.pm:256
+#: ../lib/network/drakfirewall.pm:260
 #, c-format
 msgid "Interactive Firewall"
 msgstr "חומת אש אינטראקטיבית"
 
-#: ../bin/drakids:65 ../bin/drakids:181 ../bin/drakids:190 ../bin/drakids:215
-#: ../bin/drakids:224 ../bin/drakids:234 ../bin/drakids:326
+#: ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196 ../bin/drakids:221
+#: ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
 #: ../bin/net_applet:245 ../bin/net_applet:521
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "לא יכול להתחבר לתכנת הרקע"
 
-#: ../bin/drakids:74 ../bin/drakids:102
+#: ../bin/drakids:79 ../bin/drakids:107
 #, c-format
 msgid "Log"
 msgstr "רישום"
 
-#: ../bin/drakids:78 ../bin/drakids:97 ../bin/net_applet:665
+#: ../bin/drakids:83 ../bin/drakids:102 ../bin/net_applet:671
 #, c-format
 msgid "Allow"
 msgstr "התר"
 
-#: ../bin/drakids:79 ../bin/drakids:88 ../bin/net_applet:666
+#: ../bin/drakids:84 ../bin/drakids:93 ../bin/net_applet:672
 #, c-format
 msgid "Block"
 msgstr "חסום"
 
-#: ../bin/drakids:80 ../bin/drakids:89 ../bin/drakids:98 ../bin/drakids:109
-#: ../bin/drakids:122 ../bin/drakids:130 ../bin/draknfs:191
+#: ../bin/drakids:85 ../bin/drakids:94 ../bin/drakids:103 ../bin/drakids:114
+#: ../bin/drakids:127 ../bin/drakids:135 ../bin/draknfs:191
 #: ../bin/net_monitor:120
 #, c-format
 msgid "Close"
 msgstr "סגור"
 
-#: ../bin/drakids:83
+#: ../bin/drakids:88
 #, c-format
 msgid "Allowed services"
 msgstr "שירותים מותרים"
 
-#: ../bin/drakids:92
+#: ../bin/drakids:97
 #, c-format
 msgid "Blocked services"
 msgstr "שירותים חסומים"
 
-#: ../bin/drakids:106
+#: ../bin/drakids:111
 #, c-format
 msgid "Clear logs"
 msgstr "נקה דו\"חות"
 
-#: ../bin/drakids:107 ../bin/drakids:112 ../bin/net_applet:609
+#: ../bin/drakids:112 ../bin/drakids:117 ../bin/net_applet:615
 #, c-format
 msgid "Blacklist"
 msgstr "רשימה שחורה"
 
-#: ../bin/drakids:108 ../bin/drakids:125 ../bin/net_applet:614
+#: ../bin/drakids:113 ../bin/drakids:130 ../bin/net_applet:620
 #, c-format
 msgid "Whitelist"
 msgstr "רשימה לבנה"
 
-#: ../bin/drakids:116
+#: ../bin/drakids:121
 #, c-format
 msgid "Remove from blacklist"
 msgstr "הסרה מהרשימה השחורה"
 
-#: ../bin/drakids:117
+#: ../bin/drakids:122
 #, c-format
 msgid "Move to whitelist"
 msgstr "העבר לרשימה לבנה"
 
-#: ../bin/drakids:129
+#: ../bin/drakids:134
 #, c-format
 msgid "Remove from whitelist"
 msgstr "הסרה מהרשימה הלבנה"
 
-#: ../bin/drakids:247
+#: ../bin/drakids:253
 #, c-format
 msgid "Date"
 msgstr "תאריך"
 
-#: ../bin/drakids:248
-#, c-format
-msgid "Attacker"
-msgstr "מתקיף"
+#: ../bin/drakids:254
+#, fuzzy, c-format
+msgid "Remote host"
+msgstr "מרוחק"
 
-#: ../bin/drakids:249
+#: ../bin/drakids:255 ../lib/network/vpn/openvpn.pm:115
 #, c-format
-msgid "Attack type"
-msgstr "סוג ההתקפה"
+msgid "Type"
+msgstr "סוג"
 
-#: ../bin/drakids:250 ../bin/drakids:283
+#: ../bin/drakids:256 ../bin/drakids:289
 #, c-format
 msgid "Service"
 msgstr "שרות"
 
-#: ../bin/drakids:251
+#: ../bin/drakids:257
 #, c-format
 msgid "Network interface"
 msgstr "ממשק רשת"
 
-#: ../bin/drakids:282
+#: ../bin/drakids:288
 #, c-format
 msgid "Application"
 msgstr "יישום"
 
-#: ../bin/drakids:284
+#: ../bin/drakids:290
 #, c-format
 msgid "Status"
 msgstr "מצב"
 
-#: ../bin/drakids:286
+#: ../bin/drakids:292
 #, c-format
 msgid "Allowed"
 msgstr "מותרים"
 
-#: ../bin/drakids:287
+#: ../bin/drakids:293
 #, c-format
 msgid "Blocked"
 msgstr "חסומים"
@@ -1275,7 +1280,7 @@ msgstr "כתובת משותפת מדומה"
 msgid "Virtual ID"
 msgstr "זהוי מדומה"
 
-#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:594
+#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:595
 #: ../lib/network/vpn/vpnc.pm:56
 #, c-format
 msgid "Password"
@@ -1608,7 +1613,7 @@ msgstr ""
 "את האבטחה בחלק מהמקרים אך יכולה גם לפגוע באמינותץ מידע נוסף ניתן למצוא בדף "
 "המידע exports(5)."
 
-#: ../bin/draknfs:185 ../bin/draksambashare:632 ../bin/draksambashare:799
+#: ../bin/draknfs:185 ../bin/draksambashare:623 ../bin/draksambashare:790
 #, c-format
 msgid "Information"
 msgstr "מידע"
@@ -1628,7 +1633,7 @@ msgstr "מובאת Draknfs"
 msgid "Please add an NFS share to be able to modify it."
 msgstr "נא להוסיף שיתוף NFS כדי שניתן יהיה לשנותו."
 
-#: ../bin/draknfs:353 ../bin/draksambashare:607
+#: ../bin/draknfs:353 ../bin/draksambashare:598
 #, c-format
 msgid "Advanced options"
 msgstr "הגדרות מתקדמות"
@@ -1638,8 +1643,8 @@ msgstr "הגדרות מתקדמות"
 msgid "NFS directory"
 msgstr "ספריית NFS"
 
-#: ../bin/draknfs:369 ../bin/draksambashare:381 ../bin/draksambashare:597
-#: ../bin/draksambashare:776
+#: ../bin/draknfs:369 ../bin/draksambashare:381 ../bin/draksambashare:588
+#: ../bin/draksambashare:767
 #, c-format
 msgid "Directory:"
 msgstr "ספריה:"
@@ -1709,8 +1714,8 @@ msgstr "אפשרויות כלליות"
 msgid "Custom Options"
 msgstr "אפשרויות מותאמות אישית"
 
-#: ../bin/draknfs:509 ../bin/draksambashare:397 ../bin/draksambashare:634
-#: ../bin/draksambashare:801
+#: ../bin/draknfs:509 ../bin/draksambashare:396 ../bin/draksambashare:625
+#: ../bin/draksambashare:792
 #, c-format
 msgid "Please enter a directory to share."
 msgstr "נא להכניס ספריה לשיתוף."
@@ -1802,7 +1807,7 @@ msgid "Read list"
 msgstr "קרא רשימה"
 
 #: ../bin/draksambashare:80 ../bin/draksambashare:125
-#: ../bin/draksambashare:611
+#: ../bin/draksambashare:602
 #, c-format
 msgid "Write list"
 msgstr "כתוב רשימה"
@@ -1862,7 +1867,7 @@ msgstr "שם מדפסת"
 msgid "Path"
 msgstr "נתיב"
 
-#: ../bin/draksambashare:120 ../bin/draksambashare:603
+#: ../bin/draksambashare:120 ../bin/draksambashare:594
 #, c-format
 msgid "Printable"
 msgstr "ניתן להדפסה"
@@ -1883,7 +1888,7 @@ msgid "Guest ok"
 msgstr "אפשר כניסת אורחים"
 
 #: ../bin/draksambashare:126 ../bin/draksambashare:167
-#: ../bin/draksambashare:612
+#: ../bin/draksambashare:603
 #, c-format
 msgid "Inherit permissions"
 msgstr "קבל הרשאות בירושה"
@@ -1995,8 +2000,8 @@ msgstr "מאתחל/טוען מחדש את שרת הסמבה..."
 msgid "Error Restarting/Reloading Samba server"
 msgstr "חלה שגיאה בעת אתחול/טעינה מחדש של שרת הסמבה"
 
-#: ../bin/draksambashare:369 ../bin/draksambashare:576
-#: ../bin/draksambashare:697
+#: ../bin/draksambashare:369 ../bin/draksambashare:567
+#: ../bin/draksambashare:688
 #, c-format
 msgid "Open"
 msgstr "פתיחה"
@@ -2016,67 +2021,67 @@ msgstr "הוספת שיתוף"
 msgid "Name of the share:"
 msgstr "שם השיתוף:"
 
-#: ../bin/draksambashare:380 ../bin/draksambashare:596
-#: ../bin/draksambashare:777
+#: ../bin/draksambashare:380 ../bin/draksambashare:587
+#: ../bin/draksambashare:768
 #, c-format
 msgid "Comment:"
 msgstr "הערה:"
 
-#: ../bin/draksambashare:393
+#: ../bin/draksambashare:392
 #, c-format
 msgid ""
 "Share with the same name already exist or share name empty, please choose "
 "another name."
 msgstr "שיתוף עם שם דומה כבר קיים או ששם השיתוף ריק, נא לבחור אחד אחר."
 
-#: ../bin/draksambashare:400
+#: ../bin/draksambashare:399
 #, c-format
 msgid "Can't create the directory, please enter a correct path."
 msgstr "לא ניתן ליצור את הספרייה, נא להכניס כתובת תקינה."
 
-#: ../bin/draksambashare:403 ../bin/draksambashare:632
-#: ../bin/draksambashare:799
+#: ../bin/draksambashare:402 ../bin/draksambashare:623
+#: ../bin/draksambashare:790
 #, c-format
 msgid "Please enter a Comment for this share."
 msgstr "נא להכניס הערה עבור שיתוף זה."
 
-#: ../bin/draksambashare:440
+#: ../bin/draksambashare:439
 #, c-format
 msgid "pdf-gen - a PDF generator"
 msgstr "pdf-gen - יוצר PDF"
 
-#: ../bin/draksambashare:441
+#: ../bin/draksambashare:440
 #, c-format
 msgid "printers - all printers available"
 msgstr "מדפסות - כל המדפסות זמינות"
 
-#: ../bin/draksambashare:445
+#: ../bin/draksambashare:444
 #, c-format
 msgid "Add Special Printer share"
 msgstr "הוספת שיתוף מדפסת מיוחד"
 
-#: ../bin/draksambashare:448
+#: ../bin/draksambashare:447
 #, c-format
 msgid ""
 "Goal of this wizard is to easily create a new special printer Samba share."
 msgstr "מטרת אשף זה ליצור בקלות שיתוף מדפסת מיוחד בסמבה"
 
-#: ../bin/draksambashare:455
+#: ../bin/draksambashare:454
 #, c-format
 msgid "A PDF generator already exists."
 msgstr "יוצר PDF כבר קיים."
 
-#: ../bin/draksambashare:479
+#: ../bin/draksambashare:478
 #, c-format
 msgid "Printers and print$ already exist."
 msgstr "Printers ו-print$ כבר קיימים."
 
-#: ../bin/draksambashare:529 ../bin/draksambashare:1199
+#: ../bin/draksambashare:528 ../bin/draksambashare:1191
 #, c-format
 msgid "Congratulations"
 msgstr "ברכותינו!"
 
-#: ../bin/draksambashare:530
+#: ../bin/draksambashare:529
 #, c-format
 msgid "The wizard successfully added the printer Samba share"
 msgstr "האשף הוסיף בהצלחה את שיתוף המדפסת בסמבה"
@@ -2086,163 +2091,163 @@ msgstr "האשף הוסיף בהצלחה את שיתוף המדפסת בסמבה
 msgid "Please add or select a Samba printer share to be able to modify it."
 msgstr "נא להוסיף או לבחור שיתוף מדפסת סמבה כדי שניתן יהיה לשנותו."
 
-#: ../bin/draksambashare:579
+#: ../bin/draksambashare:570
 #, c-format
 msgid "DrakSamba Printers entry"
 msgstr "DrakSamba מובאת מדפסות"
 
-#: ../bin/draksambashare:592
+#: ../bin/draksambashare:583
 #, c-format
 msgid "Printer share"
 msgstr "שיתוף מדפסת"
 
-#: ../bin/draksambashare:595
+#: ../bin/draksambashare:586
 #, c-format
 msgid "Printer name:"
 msgstr "שם מדפסת:"
 
-#: ../bin/draksambashare:601 ../bin/draksambashare:782
+#: ../bin/draksambashare:592 ../bin/draksambashare:773
 #, c-format
 msgid "Writable:"
 msgstr "בעל הרשאות כתיבה:"
 
-#: ../bin/draksambashare:602 ../bin/draksambashare:783
+#: ../bin/draksambashare:593 ../bin/draksambashare:774
 #, c-format
 msgid "Browseable:"
 msgstr "בר לעיון:"
 
-#: ../bin/draksambashare:609
+#: ../bin/draksambashare:600
 #, c-format
 msgid "Printer access"
 msgstr "גישה למדפסת"
 
-#: ../bin/draksambashare:613
+#: ../bin/draksambashare:604
 #, c-format
 msgid "Guest ok:"
 msgstr "אפשר כניסת אורחים:"
 
-#: ../bin/draksambashare:614
+#: ../bin/draksambashare:605
 #, c-format
 msgid "Create mode:"
 msgstr "אופן יצירה:"
 
-#: ../bin/draksambashare:618
+#: ../bin/draksambashare:609
 #, c-format
 msgid "Printer command"
 msgstr "פקודת מדפסת"
 
-#: ../bin/draksambashare:620
+#: ../bin/draksambashare:611
 #, c-format
 msgid "Print command:"
 msgstr "פקודת הדפסה:"
 
-#: ../bin/draksambashare:621
+#: ../bin/draksambashare:612
 #, c-format
 msgid "LPQ command:"
 msgstr "פקודת LPQ:"
 
-#: ../bin/draksambashare:622
+#: ../bin/draksambashare:613
 #, c-format
 msgid "Printing:"
 msgstr "מדפיס:"
 
-#: ../bin/draksambashare:638
+#: ../bin/draksambashare:629
 #, c-format
 msgid "create mode should be numeric. ie: 0755."
 msgstr "מצב היצירה צריך להיות מספרי. לדוגמה: 0755."
 
-#: ../bin/draksambashare:700
+#: ../bin/draksambashare:691
 #, c-format
 msgid "DrakSamba entry"
 msgstr "מובאת DrakSamba"
 
-#: ../bin/draksambashare:705
+#: ../bin/draksambashare:696
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
 msgstr "נא להוסיף או לבחור שיתוף סמבה כדי שניתן יהיה לשנותו."
 
-#: ../bin/draksambashare:728
+#: ../bin/draksambashare:719
 #, c-format
 msgid "Samba user access"
 msgstr "גישת משתמש סמבה"
 
-#: ../bin/draksambashare:736
+#: ../bin/draksambashare:727
 #, c-format
 msgid "Mask options"
 msgstr "אפשרויות מיסוך"
 
-#: ../bin/draksambashare:750
+#: ../bin/draksambashare:741
 #, c-format
 msgid "Display options"
 msgstr "אפשרויות תצוגה"
 
-#: ../bin/draksambashare:772
+#: ../bin/draksambashare:763
 #, c-format
 msgid "Samba share directory"
 msgstr "ספריית שיתוף סמבה"
 
-#: ../bin/draksambashare:775
+#: ../bin/draksambashare:766
 #, c-format
 msgid "Share name:"
 msgstr "שם השיתוף:"
 
-#: ../bin/draksambashare:781
+#: ../bin/draksambashare:772
 #, c-format
 msgid "Public:"
 msgstr "ציבורי:"
 
-#: ../bin/draksambashare:805
+#: ../bin/draksambashare:796
 #, c-format
 msgid ""
 "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr "על מיסוך יצירה, מצב יצירה ומיסוך ספריה להיות מספריים כמו לדוגמה: 0755"
 
-#: ../bin/draksambashare:812
+#: ../bin/draksambashare:803
 #, c-format
 msgid "Please create this Samba user: %s"
 msgstr "צור בבקשה את משתמש סמבה זה: %s"
 
-#: ../bin/draksambashare:924
+#: ../bin/draksambashare:915
 #, c-format
 msgid "Add Samba user"
 msgstr "הוסף משתמש סמבה"
 
-#: ../bin/draksambashare:939
+#: ../bin/draksambashare:930
 #, c-format
 msgid "User information"
 msgstr "מידע משתמש"
 
-#: ../bin/draksambashare:941
+#: ../bin/draksambashare:932
 #, c-format
 msgid "User name:"
 msgstr "שם משתמש:"
 
-#: ../bin/draksambashare:942
+#: ../bin/draksambashare:933
 #, c-format
 msgid "Password:"
 msgstr "ססמה:"
 
-#: ../bin/draksambashare:1056
+#: ../bin/draksambashare:1047
 #, c-format
 msgid "PDC - primary domain controller"
 msgstr "PDC - בקר מתחם ראשי"
 
-#: ../bin/draksambashare:1057
+#: ../bin/draksambashare:1048
 #, c-format
 msgid "Standalone - standalone server"
 msgstr "Standalone - שרת עצמאי"
 
-#: ../bin/draksambashare:1063
+#: ../bin/draksambashare:1054
 #, c-format
 msgid "Samba Wizard"
 msgstr "אשף סמבה"
 
-#: ../bin/draksambashare:1066
+#: ../bin/draksambashare:1057
 #, c-format
 msgid "Samba server configuration Wizard"
 msgstr "אשף הגדרת שרת סמבה"
 
-#: ../bin/draksambashare:1066
+#: ../bin/draksambashare:1057
 #, c-format
 msgid ""
 "Samba allows your server to behave as a file and print server for "
@@ -2251,52 +2256,52 @@ msgstr ""
 "סמבה מאפשרת לשרת שלך להתנהג כשרת קבצים והדפסות לתחנות עבודה שמריצות מערכות "
 "שאינן לינוקס."
 
-#: ../bin/draksambashare:1082
+#: ../bin/draksambashare:1073
 #, c-format
 msgid "PDC server: primary domain controller"
 msgstr "PDC server: בקר מתחם ראשי"
 
-#: ../bin/draksambashare:1082
+#: ../bin/draksambashare:1073
 #, c-format
 msgid ""
 "Server configured as a PDC is responsible for Windows authentication "
 "throughout the domain."
 msgstr "שרת המוגדר כ-PDC אחראי להזדהות וינדוז ברחבי המתחם."
 
-#: ../bin/draksambashare:1082
+#: ../bin/draksambashare:1073
 #, c-format
 msgid ""
 "Single server installations may use smbpasswd or tdbsam password backends"
 msgstr "בהתקנות עם שרת יחיד ניתן להשתמש בתשתית smbpasswd או  tdbsam password"
 
-#: ../bin/draksambashare:1082
+#: ../bin/draksambashare:1073
 #, c-format
 msgid ""
 "Domain master = yes, causes the server to register the NetBIOS name <pdc "
 "name>. This name will be recognized by other servers."
 msgstr ""
 
-#: ../bin/draksambashare:1099
+#: ../bin/draksambashare:1090
 #, c-format
 msgid "Wins support:"
 msgstr "תמיכה ב-Wins:"
 
-#: ../bin/draksambashare:1100
+#: ../bin/draksambashare:1091
 #, c-format
 msgid "admin users:"
 msgstr "משתמשים מנהלים:"
 
-#: ../bin/draksambashare:1100
+#: ../bin/draksambashare:1091
 #, c-format
 msgid "root @adm"
 msgstr ""
 
-#: ../bin/draksambashare:1101
+#: ../bin/draksambashare:1092
 #, c-format
 msgid "Os level:"
 msgstr ""
 
-#: ../bin/draksambashare:1101
+#: ../bin/draksambashare:1092
 #, c-format
 msgid ""
 "The global os level option dictates the operating system level at which "
@@ -2306,54 +2311,54 @@ msgid ""
 "ie: os level = 34"
 msgstr ""
 
-#: ../bin/draksambashare:1105
+#: ../bin/draksambashare:1096
 #, c-format
 msgid "The domain is wrong."
 msgstr ""
 
-#: ../bin/draksambashare:1112
+#: ../bin/draksambashare:1103
 #, fuzzy, c-format
 msgid "Workgroup"
 msgstr "הכרח קבוצה"
 
-#: ../bin/draksambashare:1112
+#: ../bin/draksambashare:1103
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
 msgstr ""
 
-#: ../bin/draksambashare:1119 ../bin/draksambashare:1183
+#: ../bin/draksambashare:1110 ../bin/draksambashare:1174
 #, fuzzy, c-format
 msgid "Workgroup:"
 msgstr "הכרח קבוצה"
 
-#: ../bin/draksambashare:1120
+#: ../bin/draksambashare:1111
 #, fuzzy, c-format
 msgid "Netbios name:"
 msgstr "שם מחשב מארח:"
 
-#: ../bin/draksambashare:1124
+#: ../bin/draksambashare:1115
 #, c-format
 msgid "The Workgroup is wrong."
 msgstr ""
 
-#: ../bin/draksambashare:1131 ../bin/draksambashare:1141
+#: ../bin/draksambashare:1122 ../bin/draksambashare:1132
 #, fuzzy, c-format
 msgid "Security mode"
 msgstr "מדיניות אבטחה"
 
-#: ../bin/draksambashare:1131
+#: ../bin/draksambashare:1122
 #, c-format
 msgid ""
 "User level: the client sends a session setup request directly following "
 "protocol negotiation. This request provides a username and password."
 msgstr ""
 
-#: ../bin/draksambashare:1131
+#: ../bin/draksambashare:1122
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
 msgstr ""
 
-#: ../bin/draksambashare:1131
+#: ../bin/draksambashare:1122
 #, c-format
 msgid ""
 "Domain level: provides a mechanism for storing all user and group accounts "
@@ -2361,100 +2366,100 @@ msgid ""
 "is shared between domain (security) controllers."
 msgstr ""
 
-#: ../bin/draksambashare:1142
+#: ../bin/draksambashare:1133
 #, fuzzy, c-format
 msgid "Hosts allow"
 msgstr "שם מארח"
 
-#: ../bin/draksambashare:1147
+#: ../bin/draksambashare:1138
 #, c-format
 msgid "Server Banner."
 msgstr ""
 
-#: ../bin/draksambashare:1147
+#: ../bin/draksambashare:1138
 #, c-format
 msgid ""
 "The banner is the way this server will be described in the Windows "
 "workstations."
 msgstr ""
 
-#: ../bin/draksambashare:1152
+#: ../bin/draksambashare:1143
 #, c-format
 msgid "Banner:"
 msgstr ""
 
-#: ../bin/draksambashare:1156
+#: ../bin/draksambashare:1147
 #, c-format
 msgid "The Server Banner is incorrect."
 msgstr ""
 
-#: ../bin/draksambashare:1163
+#: ../bin/draksambashare:1154
 #, fuzzy, c-format
 msgid "Samba Log"
 msgstr "משתמשי סמבה"
 
-#: ../bin/draksambashare:1163
+#: ../bin/draksambashare:1154
 #, c-format
 msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
 "connects"
 msgstr ""
 
-#: ../bin/draksambashare:1163
+#: ../bin/draksambashare:1154
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
 msgstr ""
 
-#: ../bin/draksambashare:1163
+#: ../bin/draksambashare:1154
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
 msgstr ""
 
-#: ../bin/draksambashare:1170 ../bin/draksambashare:1185
+#: ../bin/draksambashare:1161 ../bin/draksambashare:1176
 #, fuzzy, c-format
 msgid "Log file:"
 msgstr "מתאר"
 
-#: ../bin/draksambashare:1171
+#: ../bin/draksambashare:1162
 #, c-format
 msgid "Max log size:"
 msgstr ""
 
-#: ../bin/draksambashare:1172
+#: ../bin/draksambashare:1163
 #, fuzzy, c-format
 msgid "Log level:"
 msgstr "שלב"
 
-#: ../bin/draksambashare:1177
+#: ../bin/draksambashare:1168
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
 msgstr ""
 
-#: ../bin/draksambashare:1177
+#: ../bin/draksambashare:1168
 #, c-format
 msgid ""
 "To accept these values, and configure your server, click the Next button or "
 "use the Back button to correct them."
 msgstr ""
 
-#: ../bin/draksambashare:1177
+#: ../bin/draksambashare:1168
 #, c-format
 msgid ""
 "If you have previously create some shares, they will appear in this "
 "configuration. Run 'drakwizard sambashare' to manage your shares."
 msgstr ""
 
-#: ../bin/draksambashare:1182
+#: ../bin/draksambashare:1173
 #, fuzzy, c-format
 msgid "Samba type:"
 msgstr "משתמשי סמבה"
 
-#: ../bin/draksambashare:1184
+#: ../bin/draksambashare:1175
 #, c-format
 msgid "Server banner:"
 msgstr ""
 
-#: ../bin/draksambashare:1199
+#: ../bin/draksambashare:1191
 #, fuzzy, c-format
 msgid "The wizard successfully configured your Samba server."
 msgstr "האשף הוסיף בהצלחה את שיתוף המדפסת בסמבה"
@@ -2464,62 +2469,62 @@ msgstr "האשף הוסיף בהצלחה את שיתוף המדפסת בסמבה
 msgid "The Samba wizard has unexpectedly failed:"
 msgstr ""
 
-#: ../bin/draksambashare:1277
+#: ../bin/draksambashare:1260
 #, c-format
 msgid "Manage Samba configuration"
 msgstr "ניהול תצורת סמבה"
 
-#: ../bin/draksambashare:1365
+#: ../bin/draksambashare:1348
 #, c-format
 msgid "Failed to Modify Samba share."
 msgstr "כשל בשינוי שיתוף הסמבה."
 
-#: ../bin/draksambashare:1374
+#: ../bin/draksambashare:1357
 #, c-format
 msgid "Failed to remove a Samba share."
 msgstr "כשל בהסרת שיתוף הסמבה."
 
-#: ../bin/draksambashare:1381
+#: ../bin/draksambashare:1364
 #, c-format
 msgid "File share"
 msgstr "שיתוף קבצים"
 
-#: ../bin/draksambashare:1396
+#: ../bin/draksambashare:1379
 #, c-format
 msgid "Failed to Modify."
 msgstr "כשל בשינוי."
 
-#: ../bin/draksambashare:1405
+#: ../bin/draksambashare:1388
 #, c-format
 msgid "Failed to remove."
 msgstr "כשל בהסרה."
 
-#: ../bin/draksambashare:1412
+#: ../bin/draksambashare:1395
 #, c-format
 msgid "Printers"
 msgstr "מדפסות"
 
-#: ../bin/draksambashare:1424
+#: ../bin/draksambashare:1407
 #, c-format
 msgid "Failed to add user."
 msgstr "כשל בהוספת משתמש."
 
-#: ../bin/draksambashare:1433
+#: ../bin/draksambashare:1416
 #, c-format
 msgid "Failed to change user password."
 msgstr "כשל בשינוי סיסמת משתמש."
 
-#: ../bin/draksambashare:1445
+#: ../bin/draksambashare:1428
 #, c-format
 msgid "Failed to delete user."
 msgstr "כשל בהסרת משתמש."
 
-#: ../bin/draksambashare:1450
+#: ../bin/draksambashare:1433
 #, c-format
 msgid "Userdrake"
 msgstr "Userdrake"
 
-#: ../bin/draksambashare:1458
+#: ../bin/draksambashare:1441
 #, c-format
 msgid "Samba Users"
 msgstr "משתמשי סמבה"
@@ -3808,12 +3813,12 @@ msgstr "מחובר אל %s (רמת חיבור: %d %%)"
 msgid "Network is down on interface %s."
 msgstr "הרשת משותקת במנשק %s."
 
-#: ../bin/net_applet:75 ../bin/net_monitor:468
+#: ../bin/net_applet:75 ../bin/net_monitor:475
 #, c-format
 msgid "Connect %s"
 msgstr "מחבר %s"
 
-#: ../bin/net_applet:76 ../bin/net_monitor:468
+#: ../bin/net_applet:76 ../bin/net_monitor:475
 #, c-format
 msgid "Disconnect %s"
 msgstr "מנתק %s"
@@ -3858,7 +3863,7 @@ msgstr "מנשקים פעילים"
 msgid "Profiles"
 msgstr "פרופילים"
 
-#: ../bin/net_applet:130 ../lib/network/connection.pm:170
+#: ../bin/net_applet:130 ../lib/network/connection.pm:190
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
@@ -3895,87 +3900,87 @@ msgstr "רשתות אלחוטיות"
 msgid "Settings"
 msgstr "הגדרות"
 
-#: ../bin/net_applet:564
+#: ../bin/net_applet:570
 #, c-format
 msgid "Interactive Firewall: intrusion detected"
 msgstr "חומת אש אינטראקטיבית: זוהתה חדירה"
 
-#: ../bin/net_applet:581
+#: ../bin/net_applet:587
 #, c-format
 msgid "What do you want to do with this attacker?"
 msgstr "מה ברצונך לעשות עם מתקיף זה?"
 
-#: ../bin/net_applet:584
+#: ../bin/net_applet:590
 #, c-format
 msgid "Attack details"
 msgstr "מידע אודות ההתקפה"
 
-#: ../bin/net_applet:588
+#: ../bin/net_applet:594
 #, c-format
 msgid "Attack time: %s"
 msgstr "משך ההתקפה: %s"
 
-#: ../bin/net_applet:589
+#: ../bin/net_applet:595
 #, c-format
 msgid "Network interface: %s"
 msgstr "ממשקי רשת: %s"
 
-#: ../bin/net_applet:590
+#: ../bin/net_applet:596
 #, c-format
 msgid "Attack type: %s"
 msgstr "סוג ההתקפה: %s"
 
-#: ../bin/net_applet:591
+#: ../bin/net_applet:597
 #, c-format
 msgid "Protocol: %s"
 msgstr "פרוטוקול: %s"
 
-#: ../bin/net_applet:592
+#: ../bin/net_applet:598
 #, c-format
 msgid "Attacker IP address: %s"
 msgstr "כתובת ה-IP של התוקף: %s"
 
-#: ../bin/net_applet:593
+#: ../bin/net_applet:599
 #, c-format
 msgid "Attacker hostname: %s"
 msgstr "שם המחשב של התוקף %s: "
 
-#: ../bin/net_applet:596
+#: ../bin/net_applet:602
 #, c-format
 msgid "Service attacked: %s"
 msgstr "סוג שירות המותקף: %s"
 
-#: ../bin/net_applet:597
+#: ../bin/net_applet:603
 #, c-format
 msgid "Port attacked: %s"
 msgstr "הערוץ המותקף: %s"
 
-#: ../bin/net_applet:599
+#: ../bin/net_applet:605
 #, c-format
 msgid "Type of ICMP attack: %s"
 msgstr "סוג התקפת ICMP: %s"
 
-#: ../bin/net_applet:604
+#: ../bin/net_applet:610
 #, c-format
 msgid "Always blacklist (do not ask again)"
 msgstr "חסום באופן תמידי (אל תשאל שנית)"
 
-#: ../bin/net_applet:619
+#: ../bin/net_applet:625
 #, c-format
 msgid "Ignore"
 msgstr "התעלם"
 
-#: ../bin/net_applet:637 ../bin/net_applet:650
+#: ../bin/net_applet:643 ../bin/net_applet:656
 #, c-format
 msgid "Interactive Firewall: new service"
 msgstr "חומת אש אינטראקטיבית: שירות חדש"
 
-#: ../bin/net_applet:660
+#: ../bin/net_applet:666
 #, c-format
 msgid "Do you want to open this service?"
 msgstr "האם ברצונך לפתוח שירות זה?"
 
-#: ../bin/net_applet:663
+#: ../bin/net_applet:669
 #, c-format
 msgid "Remember this answer"
 msgstr "זכור תשובה זאת"
@@ -4042,32 +4047,32 @@ msgstr "שימוש באותו קנה מידה למידע מתקבל ונשלח"
 msgid "Wait please, testing your connection..."
 msgstr "נא להמתין, בזמן בדיקת החיבור שלך..."
 
-#: ../bin/net_monitor:185 ../bin/net_monitor:198
+#: ../bin/net_monitor:191 ../bin/net_monitor:204
 #, c-format
 msgid "Disconnecting from Internet "
 msgstr "מתנתק מהאינטרנט"
 
-#: ../bin/net_monitor:185 ../bin/net_monitor:198
+#: ../bin/net_monitor:191 ../bin/net_monitor:204
 #, c-format
 msgid "Connecting to Internet "
 msgstr "מתחבר לאינטרנט"
 
-#: ../bin/net_monitor:229
+#: ../bin/net_monitor:235
 #, c-format
 msgid "Disconnection from Internet failed."
 msgstr "ההתנתקות מהאינטרנט נכשלה."
 
-#: ../bin/net_monitor:230
+#: ../bin/net_monitor:236
 #, c-format
 msgid "Disconnection from Internet complete."
 msgstr "ההתנתקות מהאינטרנט הושלמה בהצלחה."
 
-#: ../bin/net_monitor:232
+#: ../bin/net_monitor:238
 #, c-format
 msgid "Connection complete."
 msgstr "התחברות הושלמה."
 
-#: ../bin/net_monitor:233
+#: ../bin/net_monitor:239
 #, c-format
 msgid ""
 "Connection failed.\n"
@@ -4076,39 +4081,39 @@ msgstr ""
 "התחברות נכשלה.\n"
 "נא לבדוק את ההגדרות במרכז ההגדרות של Mandriva."
 
-#: ../bin/net_monitor:338
+#: ../bin/net_monitor:344
 #, c-format
 msgid "Color configuration"
 msgstr "הגדרות צבע"
 
-#: ../bin/net_monitor:395 ../bin/net_monitor:407
+#: ../bin/net_monitor:401 ../bin/net_monitor:413
 #, c-format
 msgid "sent: "
 msgstr "נשלחו:"
 
-#: ../bin/net_monitor:398 ../bin/net_monitor:411
+#: ../bin/net_monitor:404 ../bin/net_monitor:417
 #, c-format
 msgid "received: "
 msgstr "התקבלו:"
 
-#: ../bin/net_monitor:401
+#: ../bin/net_monitor:407
 #, c-format
 msgid "average"
 msgstr "ממוצע"
 
-#: ../bin/net_monitor:404
+#: ../bin/net_monitor:410
 #, c-format
 msgid "Local measure"
 msgstr "מעקב"
 
-#: ../bin/net_monitor:461
+#: ../bin/net_monitor:468
 #, c-format
 msgid ""
 "Warning, another internet connection has been detected, maybe using your "
 "network"
 msgstr "אזהרה, חיבור אינטרנט אחר זוהה, אולי משתמש ברשת שלך"
 
-#: ../bin/net_monitor:472
+#: ../bin/net_monitor:479
 #, c-format
 msgid "No internet connection configured"
 msgstr "לא הוגדר חיבור לאינטרנט"
@@ -4118,64 +4123,64 @@ msgstr "לא הוגדר חיבור לאינטרנט"
 msgid "Unknown connection type"
 msgstr "סוג חיבור לא מוכר"
 
-#: ../lib/network/connection.pm:136
+#: ../lib/network/connection.pm:156
 #, c-format
 msgid "Network access settings"
 msgstr "הגדרות גישה לרשת"
 
-#: ../lib/network/connection.pm:137
+#: ../lib/network/connection.pm:157
 #, c-format
 msgid "Access settings"
 msgstr "הגדרות גישה"
 
-#: ../lib/network/connection.pm:138
+#: ../lib/network/connection.pm:158
 #, c-format
 msgid "Address settings"
 msgstr "הגדרות כתובת"
 
-#: ../lib/network/connection.pm:172 ../lib/network/connection/cable.pm:44
-#: ../lib/network/connection/wireless.pm:43 ../lib/network/vpn/openvpn.pm:127
+#: ../lib/network/connection.pm:192 ../lib/network/connection/cable.pm:41
+#: ../lib/network/connection/wireless.pm:40 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "כלום"
 
-#: ../lib/network/connection.pm:184
+#: ../lib/network/connection.pm:204
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr "אפשר למשתמשים לנהל את ההתחברות"
 
-#: ../lib/network/connection.pm:185
+#: ../lib/network/connection.pm:205
 #, c-format
 msgid "Start the connection at boot"
 msgstr "הפעלת את החיבור באתחול המחשב"
 
-#: ../lib/network/connection.pm:251
+#: ../lib/network/connection.pm:271
 #, c-format
 msgid "Link detected on interface %s"
 msgstr "קישור זוהה בהתקן %s"
 
-#: ../lib/network/connection.pm:252 ../lib/network/connection/ethernet.pm:274
+#: ../lib/network/connection.pm:272 ../lib/network/connection/ethernet.pm:286
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "אבד הקישור בהתקן %s"
 
-#: ../lib/network/connection/cable.pm:13
+#: ../lib/network/connection/cable.pm:10
 #, c-format
 msgid "Cable"
 msgstr "כבלים"
 
-#: ../lib/network/connection/cable.pm:14
+#: ../lib/network/connection/cable.pm:11
 #, c-format
 msgid "Cable modem"
 msgstr "מודם כבלים"
 
-#: ../lib/network/connection/cable.pm:45
+#: ../lib/network/connection/cable.pm:42
 #, c-format
 msgid "Use BPALogin (needed for Telstra)"
 msgstr "שימוש ב-BPALogin (משמש את Telstra)"
 
-#: ../lib/network/connection/cellular.pm:47
+#: ../lib/network/connection/cellular.pm:48
 #, c-format
 msgid "Access Point Name"
 msgstr "שם נקודת גישה (Access Point)"
@@ -4195,23 +4200,23 @@ msgstr "חיוג לרשת דרך שן כחולה (Bluetooth)"
 msgid "GPRS/Edge/3G"
 msgstr "GPRS/Edge/3G"
 
-#: ../lib/network/connection/cellular_card.pm:67
+#: ../lib/network/connection/cellular_card.pm:68
 #: ../lib/network/vpn/openvpn.pm:391
 #, c-format
 msgid "PIN number"
 msgstr "קוד זיהוי (PIN)"
 
-#: ../lib/network/connection/cellular_card.pm:130
+#: ../lib/network/connection/cellular_card.pm:131
 #, c-format
 msgid "Unable to open device %s"
 msgstr "אין אפשרות לפתוח את ההתקן %s"
 
-#: ../lib/network/connection/cellular_card.pm:155
+#: ../lib/network/connection/cellular_card.pm:156
 #, c-format
 msgid "Please check that your SIM card is inserted."
 msgstr "נא לבדוק שכרטיס ה-SIM מוכנס."
 
-#: ../lib/network/connection/cellular_card.pm:161
+#: ../lib/network/connection/cellular_card.pm:162
 #, c-format
 msgid ""
 "You entered a wrong PIN code.\n"
@@ -4220,57 +4225,62 @@ msgstr ""
 "הזנת קוד PIN שגוי.\n"
 "הזנת קוד PIN שגוי מספר פעמים עלולה לנעול את כרטיס ה-SIM שלך!"
 
-#: ../lib/network/connection/dvb.pm:12
+#: ../lib/network/connection/dvb.pm:9
 #, c-format
 msgid "DVB"
 msgstr "DVB"
 
-#: ../lib/network/connection/dvb.pm:13
+#: ../lib/network/connection/dvb.pm:10
 #, c-format
 msgid "Satellite (DVB)"
 msgstr "לווין (DVB)"
 
-#: ../lib/network/connection/dvb.pm:56
+#: ../lib/network/connection/dvb.pm:53
 #, c-format
 msgid "Adapter card"
 msgstr "כרטיס מתאם"
 
-#: ../lib/network/connection/dvb.pm:57
+#: ../lib/network/connection/dvb.pm:54
 #, c-format
 msgid "Net demux"
 msgstr "Net demux"
 
-#: ../lib/network/connection/dvb.pm:58
+#: ../lib/network/connection/dvb.pm:55
 #, c-format
 msgid "PID"
 msgstr "PID"
 
-#: ../lib/network/connection/ethernet.pm:10
+#: ../lib/network/connection/ethernet.pm:11
 #, c-format
 msgid "Ethernet"
 msgstr "את'רנט (רשת)"
 
-#: ../lib/network/connection/ethernet.pm:53
+#: ../lib/network/connection/ethernet.pm:29
+#, fuzzy, c-format
+msgid "Virtual interface"
+msgstr "ממשק רשת"
+
+#: ../lib/network/connection/ethernet.pm:59
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
 msgstr "אין אפשרות לאתר את התקן הרשת לרכיב שנבחר (משתמש בהתקן ההינע %s)."
 
-#: ../lib/network/connection/ethernet.pm:61 ../lib/network/vpn/openvpn.pm:207
+#: ../lib/network/connection/ethernet.pm:67 ../lib/network/vpn/openvpn.pm:207
 #, c-format
 msgid "Manual configuration"
 msgstr "הגדרה ידנית"
 
-#: ../lib/network/connection/ethernet.pm:62
+#: ../lib/network/connection/ethernet.pm:68
 #, c-format
 msgid "Automatic IP (BOOTP/DHCP)"
 msgstr "כתובת IP אוטומטית (BOOTP/DHCP)"
 
-#: ../lib/network/connection/ethernet.pm:116
+#: ../lib/network/connection/ethernet.pm:122
 #, c-format
 msgid "IP settings"
 msgstr "הגדרות IP"
 
-#: ../lib/network/connection/ethernet.pm:129
+#: ../lib/network/connection/ethernet.pm:135
 #, c-format
 msgid ""
 "Please enter the IP configuration for this machine.\n"
@@ -4281,62 +4291,62 @@ msgstr ""
 "על כל פריט להיות מוזן ככתובת IP עם שדות עשרוניים מופרדים\n"
 "בנקודות (לדוגמה - 1.2.3.4)."
 
-#: ../lib/network/connection/ethernet.pm:138
+#: ../lib/network/connection/ethernet.pm:144
 #, c-format
 msgid "DNS server 1"
 msgstr "שרת DNS ראשון"
 
-#: ../lib/network/connection/ethernet.pm:139
+#: ../lib/network/connection/ethernet.pm:145
 #, c-format
 msgid "DNS server 2"
 msgstr "שרת DNS שני"
 
-#: ../lib/network/connection/ethernet.pm:140
+#: ../lib/network/connection/ethernet.pm:146
 #, c-format
 msgid "Search domain"
 msgstr "חיפוש מתחם"
 
-#: ../lib/network/connection/ethernet.pm:141
+#: ../lib/network/connection/ethernet.pm:147
 #, c-format
 msgid "By default search domain will be set from the fully-qualified host name"
 msgstr "ברירת המחדל תגדיר את מתחם החיפוש על פי שם מחשב המתאים לכך"
 
-#: ../lib/network/connection/ethernet.pm:149
+#: ../lib/network/connection/ethernet.pm:155
 #, c-format
 msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
 msgstr "אל תפול להגדרת Zeroconf (רשת 169.254.0.0)"
 
-#: ../lib/network/connection/ethernet.pm:170
+#: ../lib/network/connection/ethernet.pm:176
 #, c-format
 msgid "Warning: IP address %s is usually reserved!"
 msgstr "אזהרה: כתובת IP זו (%s) היא כתובת שמורה!"
 
-#: ../lib/network/connection/ethernet.pm:176
+#: ../lib/network/connection/ethernet.pm:182
 #, c-format
 msgid "%s already in use\n"
 msgstr "%s כבר בשימוש \n"
 
-#: ../lib/network/connection/ethernet.pm:225
+#: ../lib/network/connection/ethernet.pm:231
 #, c-format
 msgid "Enable IPv6 to IPv4 tunnel"
 msgstr "אפשור tunnel מ-IPv6 ל-IPv4"
 
-#: ../lib/network/connection/ethernet.pm:273
+#: ../lib/network/connection/ethernet.pm:285
 #, c-format
 msgid "Link beat detected on interface %s"
 msgstr "אותר קישור בהתקן %s"
 
-#: ../lib/network/connection/ethernet.pm:276
+#: ../lib/network/connection/ethernet.pm:288
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
 msgstr "מבקש כתובת רשת בהתקן %s (פרוטוקול %s)..."
 
-#: ../lib/network/connection/ethernet.pm:277
+#: ../lib/network/connection/ethernet.pm:289
 #, c-format
 msgid "Got a network address on interface %s (%s protocol)"
 msgstr "התקבלה כתובת רשת בהתקן %s (פרוטוקול %s)"
 
-#: ../lib/network/connection/ethernet.pm:278
+#: ../lib/network/connection/ethernet.pm:290
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
 msgstr "כשל בקבלת כתובת רשת בהתקן %s (פרוטוקול %s)"
@@ -4346,30 +4356,30 @@ msgstr "כשל בקבלת כתובת רשת בהתקן %s (פרוטוקול %s)"
 msgid "ISDN"
 msgstr "ISDN"
 
-#: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:197
-#: ../lib/network/netconnect.pm:200 ../lib/network/netconnect.pm:218
-#: ../lib/network/netconnect.pm:471 ../lib/network/netconnect.pm:567
-#: ../lib/network/netconnect.pm:570
+#: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:198
+#: ../lib/network/netconnect.pm:201 ../lib/network/netconnect.pm:219
+#: ../lib/network/netconnect.pm:472 ../lib/network/netconnect.pm:568
+#: ../lib/network/netconnect.pm:571
 #, c-format
 msgid "Unlisted - edit manually"
 msgstr "לא רשום - עריכה ידנית"
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:403
+#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:404
 #, c-format
 msgid "ISA / PCMCIA"
 msgstr "ISA / PCMCIA"
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:403
+#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:404
 #, c-format
 msgid "I do not know"
 msgstr "לא ידוע"
 
-#: ../lib/network/connection/isdn.pm:197 ../lib/network/netconnect.pm:403
+#: ../lib/network/connection/isdn.pm:197 ../lib/network/netconnect.pm:404
 #, c-format
 msgid "PCI"
 msgstr "PCI"
 
-#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:403
+#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:404
 #, c-format
 msgid "USB"
 msgstr "USB"
@@ -4698,34 +4708,34 @@ msgstr "איחוד הנסיכויות הערביות"
 msgid "United Kingdom"
 msgstr "בריטניה"
 
-#: ../lib/network/connection/wireless.pm:11
+#: ../lib/network/connection/wireless.pm:8
 #, c-format
 msgid "Wireless"
 msgstr "אלחוטי"
 
-#: ../lib/network/connection/wireless.pm:27
+#: ../lib/network/connection/wireless.pm:24
 #, c-format
 msgid "Use a Windows driver (with ndiswrapper)"
 msgstr "שימוש במנהל התקן של חלונות (בעזרת שכבת התאימות ndiswrapper)"
 
-#: ../lib/network/connection/wireless.pm:44
+#: ../lib/network/connection/wireless.pm:41
 #, c-format
 msgid "Open WEP"
 msgstr "WEP פתוח"
 
-#: ../lib/network/connection/wireless.pm:45
+#: ../lib/network/connection/wireless.pm:42
 #, c-format
 msgid "Restricted WEP"
 msgstr "WEP מוגבל"
 
-#: ../lib/network/connection/wireless.pm:46
-#, c-format
-msgid "WPA Pre-Shared Key"
+#: ../lib/network/connection/wireless.pm:43
+#, fuzzy, c-format
+msgid "WPA/WPA2 Pre-Shared Key"
 msgstr "WPA Pre-Shared Key"
 
 #: ../lib/network/connection/wireless.pm:44
 #, c-format
-msgid "WPA2/WPA Enterprise"
+msgid "WPA/WPA2 Enterprise"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:231
@@ -4741,42 +4751,42 @@ msgid ""
 msgstr ""
 "פעולת כרטיס האלחוט שלך מבוטלת, נא להפעיל את מתג האלחוט (מתג ה-RF kill) תחילה."
 
-#: ../lib/network/connection/wireless.pm:322
+#: ../lib/network/connection/wireless.pm:361
 #, c-format
 msgid "Wireless settings"
 msgstr "הגדרות אלחוט"
 
-#: ../lib/network/connection/wireless.pm:328
+#: ../lib/network/connection/wireless.pm:367
 #, c-format
 msgid "Ad-hoc"
 msgstr "לפי הצורך"
 
-#: ../lib/network/connection/wireless.pm:328
+#: ../lib/network/connection/wireless.pm:367
 #, c-format
 msgid "Managed"
 msgstr "מנוהל"
 
-#: ../lib/network/connection/wireless.pm:328
+#: ../lib/network/connection/wireless.pm:367
 #, c-format
 msgid "Master"
 msgstr "ראשי"
 
-#: ../lib/network/connection/wireless.pm:328
+#: ../lib/network/connection/wireless.pm:367
 #, c-format
 msgid "Repeater"
 msgstr "משחזר"
 
-#: ../lib/network/connection/wireless.pm:328
+#: ../lib/network/connection/wireless.pm:367
 #, c-format
 msgid "Secondary"
 msgstr "משני"
 
-#: ../lib/network/connection/wireless.pm:328
+#: ../lib/network/connection/wireless.pm:367
 #, c-format
 msgid "Auto"
 msgstr "אוטומטי"
 
-#: ../lib/network/connection/wireless.pm:333
+#: ../lib/network/connection/wireless.pm:372
 #, c-format
 msgid "Encryption mode"
 msgstr "אופן הצפנה"
@@ -4852,7 +4862,7 @@ msgstr ""
 "לגודל החבילה המירבי מבטל את הסכמה. באפשרותך גם לכוון ערך זה לנקבע אוטומטית "
 "או לכבוי."
 
-#: ../lib/network/connection/wireless.pm:351
+#: ../lib/network/connection/wireless.pm:417
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -4867,7 +4877,7 @@ msgstr ""
 "\n"
 "מידע נוסף בנושא זה ניתן למצוא בדף ההסבר iwconfig(8) man page."
 
-#: ../lib/network/connection/wireless.pm:359
+#: ../lib/network/connection/wireless.pm:425
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -4886,7 +4896,7 @@ msgstr ""
 "\n"
 "מידע נוסף בנושא זה ניתן למצוא בדף ההסבר iwpspy(8) man page."
 
-#: ../lib/network/connection/wireless.pm:369
+#: ../lib/network/connection/wireless.pm:435
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -5093,7 +5103,7 @@ msgstr ""
 msgid "An encryption key is required."
 msgstr "דרוש מפתח הצפנה."
 
-#: ../lib/network/connection/wireless.pm:393
+#: ../lib/network/connection/wireless.pm:511
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -5102,7 +5112,7 @@ msgstr ""
 "באפשרותך להגדיר תדירות עם הסיומת k, M או G (למשל \"2.46G\" עבור תדירות 2.46 "
 "GHz). לחלופין עליך לרפד את המספר עם מספיק אפסים."
 
-#: ../lib/network/connection/wireless.pm:399
+#: ../lib/network/connection/wireless.pm:517
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
@@ -5111,17 +5121,17 @@ msgstr ""
 "על הקצב להיות בעל הסיומת k, M או G (למשל \"11M\" עבור קצב של 11M). לחלופין "
 "ניתן להוסיף את מספר האפסים המתאים."
 
-#: ../lib/network/connection/wireless.pm:411
+#: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "Allow access point roaming"
 msgstr "אפשר גישה לנקודת הגישה ממיקום בחו\"ל (roaming)"
 
-#: ../lib/network/connection/wireless.pm:514
+#: ../lib/network/connection/wireless.pm:632
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "מקושר לרשת האלחוטית \"%s\" בהתקן %s"
 
-#: ../lib/network/connection/wireless.pm:515
+#: ../lib/network/connection/wireless.pm:633
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "אבד הקישור לרשת האלחוטית בהתקן %s"
@@ -5131,7 +5141,7 @@ msgstr "אבד הקישור לרשת האלחוטית בהתקן %s"
 msgid "DSL"
 msgstr "DSL"
 
-#: ../lib/network/connection/xdsl.pm:76 ../lib/network/netconnect.pm:763
+#: ../lib/network/connection/xdsl.pm:76 ../lib/network/netconnect.pm:764
 #, c-format
 msgid "Alcatel speedtouch USB modem"
 msgstr "מודם Alcatel speedtouch USB"
@@ -5198,65 +5208,65 @@ msgid "Virtual Circuit ID (VCI):"
 msgstr "זיהוי מעגל וירטואלי (VCI):"
 
 #: ../lib/network/connection/xdsl.pm:332
-#: ../lib/network/connection_manager.pm:41 ../lib/network/drakvpn.pm:45
-#: ../lib/network/netconnect.pm:131 ../lib/network/thirdparty.pm:115
+#: ../lib/network/connection_manager.pm:52 ../lib/network/drakvpn.pm:45
+#: ../lib/network/netconnect.pm:131 ../lib/network/thirdparty.pm:117
 #, c-format
 msgid "Could not install the packages (%s)!"
 msgstr "נכשלה התקנת החבילות (%s)!"
 
-#: ../lib/network/connection_manager.pm:53
-#: ../lib/network/connection_manager.pm:88
+#: ../lib/network/connection_manager.pm:64
+#: ../lib/network/connection_manager.pm:118
 #, fuzzy, c-format
 msgid "Network settings"
 msgstr "הגדרות גישה לרשת"
 
-#: ../lib/network/connection_manager.pm:54
-#: ../lib/network/connection_manager.pm:89
+#: ../lib/network/connection_manager.pm:65
+#: ../lib/network/connection_manager.pm:119
 #, c-format
 msgid "Please enter settings for network"
 msgstr "נא להכניס הגדרות עבור רשת"
 
-#: ../lib/network/connection_manager.pm:58 ../lib/network/netconnect.pm:177
+#: ../lib/network/connection_manager.pm:69 ../lib/network/netconnect.pm:177
 #, c-format
 msgid "Configuring device..."
 msgstr "מגדיר התקן..."
 
-#: ../lib/network/connection_manager.pm:146
+#: ../lib/network/connection_manager.pm:174
 #, c-format
 msgid "Connecting..."
 msgstr "מתחבר..."
 
-#: ../lib/network/connection_manager.pm:164
+#: ../lib/network/connection_manager.pm:192
 #, c-format
 msgid "Disconnecting..."
 msgstr "מתנתק..."
 
-#: ../lib/network/connection_manager.pm:201
+#: ../lib/network/connection_manager.pm:229
 #, c-format
 msgid "SSID"
 msgstr "SSID"
 
-#: ../lib/network/connection_manager.pm:202
+#: ../lib/network/connection_manager.pm:230
 #, c-format
 msgid "Signal strength"
 msgstr "חוזק אות"
 
-#: ../lib/network/connection_manager.pm:203
+#: ../lib/network/connection_manager.pm:231
 #, c-format
 msgid "Encryption"
 msgstr "הצפנה"
 
-#: ../lib/network/connection_manager.pm:244 ../lib/network/netconnect.pm:209
+#: ../lib/network/connection_manager.pm:275 ../lib/network/netconnect.pm:210
 #, c-format
 msgid "Scanning for networks..."
 msgstr "מחפש רשתות...."
 
-#: ../lib/network/connection_manager.pm:281 ../lib/network/drakroam.pm:111
+#: ../lib/network/connection_manager.pm:312 ../lib/network/drakroam.pm:113
 #, c-format
 msgid "Disconnect"
 msgstr "התנתק"
 
-#: ../lib/network/connection_manager.pm:281 ../lib/network/drakroam.pm:110
+#: ../lib/network/connection_manager.pm:312 ../lib/network/drakroam.pm:112
 #, c-format
 msgid "Connect"
 msgstr "התחבר"
@@ -5322,6 +5332,7 @@ msgid "Port scan detection"
 msgstr "זיהוי סריקת שערים"
 
 #: ../lib/network/drakfirewall.pm:166 ../lib/network/drakfirewall.pm:172
+#: ../lib/network/shorewall.pm:63
 #, c-format
 msgid "Firewall configuration"
 msgstr "הגדרות חומת-אש"
@@ -5359,12 +5370,13 @@ msgstr ""
 msgid "Which services would you like to allow the Internet to connect to?"
 msgstr "לאיזה שרותים ברצונך לאפשר חיבור מהאינטרנט?"
 
-#: ../lib/network/drakfirewall.pm:190 ../lib/network/shorewall.pm:145
+#: ../lib/network/drakfirewall.pm:190 ../lib/network/drakfirewall.pm:192
+#: ../lib/network/shorewall.pm:150
 #, c-format
 msgid "Firewall"
 msgstr "חומת אש"
 
-#: ../lib/network/drakfirewall.pm:192
+#: ../lib/network/drakfirewall.pm:193
 #, c-format
 msgid ""
 "You can enter miscellaneous ports. \n"
@@ -5375,7 +5387,7 @@ msgstr ""
 "לדוגמא: tcp/139 או udp/139 או tcp 600:610\n"
 "למידע נוסף עליך לעיין בקובץ /etc/services."
 
-#: ../lib/network/drakfirewall.pm:198
+#: ../lib/network/drakfirewall.pm:199
 #, c-format
 msgid ""
 "Invalid port given: %s.\n"
@@ -5390,22 +5402,22 @@ msgstr ""
 "\n"
 "יש באפשרותך גם לקבוע תחום (למשל: 24300:24350/udp)"
 
-#: ../lib/network/drakfirewall.pm:208
+#: ../lib/network/drakfirewall.pm:209
 #, c-format
 msgid "Everything (no firewall)"
 msgstr "הכל (ללא חומת אש)"
 
-#: ../lib/network/drakfirewall.pm:210
+#: ../lib/network/drakfirewall.pm:211
 #, c-format
 msgid "Other ports"
 msgstr "שערים אחרים"
 
-#: ../lib/network/drakfirewall.pm:211
+#: ../lib/network/drakfirewall.pm:212
 #, c-format
 msgid "Log firewall messages in system logs"
 msgstr "שמור הודעות מחומת האש בדו\"ח המערכת"
 
-#: ../lib/network/drakfirewall.pm:256
+#: ../lib/network/drakfirewall.pm:258
 #, c-format
 msgid ""
 "You can be warned when someone accesses to a service or tries to intrude "
@@ -5415,7 +5427,7 @@ msgstr ""
 "באפשרותך לקבל אזהרה כשמישהו ניגש לשירות או מנזה לחדור אל המחשב שלך.\n"
 "נא לבחור אילו פעילויות רשת יפוקחו."
 
-#: ../lib/network/drakfirewall.pm:261
+#: ../lib/network/drakfirewall.pm:263
 #, c-format
 msgid "Use Interactive Firewall"
 msgstr "השתמש בחומת אש אינטראקטיבית"
@@ -5430,17 +5442,17 @@ msgstr "לא נמצאו התקנים"
 msgid "Hostname changed to \"%s\""
 msgstr "שם המארח שונה ל-\"%s\""
 
-#: ../lib/network/drakroam.pm:109 ../lib/network/netcenter.pm:72
+#: ../lib/network/drakroam.pm:111 ../lib/network/netcenter.pm:87
 #, c-format
 msgid "Configure"
 msgstr "הגדרות"
 
-#: ../lib/network/drakroam.pm:112 ../lib/network/netcenter.pm:77
+#: ../lib/network/drakroam.pm:114 ../lib/network/netcenter.pm:92
 #, c-format
 msgid "Refresh"
 msgstr "רענן"
 
-#: ../lib/network/drakroam.pm:123 ../lib/network/netconnect.pm:769
+#: ../lib/network/drakroam.pm:125 ../lib/network/netconnect.pm:770
 #, c-format
 msgid "Wireless connection"
 msgstr "חיבור אלחוטי"
@@ -5495,7 +5507,7 @@ msgstr "נא להזין את המפתח הנדרש"
 msgid "Please enter the settings of your VPN connection"
 msgstr "נא להזין את הגדרות חיבור ה-VPN שלך"
 
-#: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:299
+#: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:300
 #, c-format
 msgid "Do you want to start the connection now?"
 msgstr "האם ברצונך להתחיל את החיבור כעת?"
@@ -5536,31 +5548,41 @@ msgid "Password cracking"
 msgstr "פיצוח סיסמה"
 
 #: ../lib/network/ifw.pm:132
+#, fuzzy, c-format
+msgid "New connection"
+msgstr "חיבורי רשת"
+
+#: ../lib/network/ifw.pm:133
 #, c-format
 msgid "\"%s\" attack"
 msgstr "התקפת \"%s\""
 
-#: ../lib/network/ifw.pm:134
+#: ../lib/network/ifw.pm:135
 #, c-format
 msgid "A port scanning attack has been attempted by %s."
 msgstr "התקפת סריקת שערים נוסתה על ידי %s."
 
-#: ../lib/network/ifw.pm:135
+#: ../lib/network/ifw.pm:136
 #, c-format
 msgid "The %s service has been attacked by %s."
 msgstr "השרות %s הותקף על ידי %s."
 
-#: ../lib/network/ifw.pm:136
+#: ../lib/network/ifw.pm:137
 #, c-format
 msgid "A password cracking attack has been attempted by %s."
 msgstr "התקפת password cracking נוסתה על ידי %s."
 
-#: ../lib/network/ifw.pm:137
+#: ../lib/network/ifw.pm:138
+#, fuzzy, c-format
+msgid "%s is connecting on the %s service."
+msgstr "מתנתק מהאינטרנט"
+
+#: ../lib/network/ifw.pm:139
 #, c-format
 msgid "A \"%s\" attack has been attempted by %s"
 msgstr "התקפת \"%s\" נוסתה על ידי %s"
 
-#: ../lib/network/ifw.pm:146
+#: ../lib/network/ifw.pm:148
 #, c-format
 msgid ""
 "The \"%s\" application is trying to make a service (%s) available to the "
@@ -5568,14 +5590,14 @@ msgid ""
 msgstr "היישום \"%s\" מנסה לגרום לשירות (%s) להיות זמין לרשת."
 
 #. -PO: this should be kept lowercase since the expression is meant to be used between brackets
-#: ../lib/network/ifw.pm:150
+#: ../lib/network/ifw.pm:152
 #, c-format
 msgid "port %d"
 msgstr "שער %d"
 
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
-#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:611
-#: ../lib/network/netconnect.pm:628 ../lib/network/netconnect.pm:644
+#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:612
+#: ../lib/network/netconnect.pm:629 ../lib/network/netconnect.pm:645
 #, c-format
 msgid "Manual"
 msgstr "ידני"
@@ -5583,25 +5605,25 @@ msgstr "ידני"
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
 #: ../lib/network/modem.pm:44 ../lib/network/modem.pm:63
 #: ../lib/network/modem.pm:76 ../lib/network/modem.pm:81
-#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:606
-#: ../lib/network/netconnect.pm:611 ../lib/network/netconnect.pm:623
-#: ../lib/network/netconnect.pm:628 ../lib/network/netconnect.pm:644
-#: ../lib/network/netconnect.pm:646
+#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:607
+#: ../lib/network/netconnect.pm:612 ../lib/network/netconnect.pm:624
+#: ../lib/network/netconnect.pm:629 ../lib/network/netconnect.pm:645
+#: ../lib/network/netconnect.pm:647
 #, c-format
 msgid "Automatic"
 msgstr "אוטומטי"
 
-#: ../lib/network/ndiswrapper.pm:27
+#: ../lib/network/ndiswrapper.pm:30
 #, c-format
 msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "לא נמצא התקן התומך במנהל ההתקן %s ndiswrapper!"
 
-#: ../lib/network/ndiswrapper.pm:33
+#: ../lib/network/ndiswrapper.pm:36
 #, c-format
 msgid "Please select the Windows driver (.inf file)"
 msgstr "עליך לבחור את מנהל ההתקן של חלונות (קובץ עם סיומת ini)"
 
-#: ../lib/network/ndiswrapper.pm:42
+#: ../lib/network/ndiswrapper.pm:45
 #, c-format
 msgid "Unable to install the %s ndiswrapper driver!"
 msgstr "התקנת מנהל ההתקן %s ndiswrapper נכשלה!"
@@ -5625,37 +5647,37 @@ msgstr "טעינת המודול ndiswrapper נכשלה!"
 msgid "Unable to find the ndiswrapper interface!"
 msgstr "אין אפשרות לאתר את מנשק ה-Ndiswrapper"
 
-#: ../lib/network/ndiswrapper.pm:115
+#: ../lib/network/ndiswrapper.pm:137
 #, c-format
 msgid "Choose an ndiswrapper driver"
 msgstr "בחירת מנהל התקן אלחוטי עבור ndiswrapper"
 
-#: ../lib/network/ndiswrapper.pm:118
+#: ../lib/network/ndiswrapper.pm:140
 #, c-format
 msgid "Use the ndiswrapper driver %s"
 msgstr "השתמש במנהל ההתקן ndiswrapper %s"
 
-#: ../lib/network/ndiswrapper.pm:118
+#: ../lib/network/ndiswrapper.pm:140
 #, c-format
 msgid "Install a new driver"
 msgstr "התקנת מנהל התקן חדש"
 
-#: ../lib/network/ndiswrapper.pm:129
+#: ../lib/network/ndiswrapper.pm:151
 #, c-format
 msgid "Select a device:"
 msgstr "נא לבחור התקן:"
 
-#: ../lib/network/netcenter.pm:30
+#: ../lib/network/netcenter.pm:33
 #, c-format
 msgid "Network Center"
 msgstr "מרכז הרשת"
 
-#: ../lib/network/netcenter.pm:62 ../lib/network/netconnect.pm:212
+#: ../lib/network/netcenter.pm:77 ../lib/network/netconnect.pm:213
 #, c-format
 msgid "Please select your network:"
 msgstr "נא לבחור את הרשת שלך:"
 
-#: ../lib/network/netcenter.pm:68
+#: ../lib/network/netcenter.pm:83
 #, c-format
 msgid ""
 "_: This is a verb\n"
@@ -5667,8 +5689,8 @@ msgstr "ניטור"
 msgid "United States"
 msgstr "ארצות הברית"
 
-#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:501
-#: ../lib/network/netconnect.pm:515
+#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:502
+#: ../lib/network/netconnect.pm:516
 #, c-format
 msgid "Manual choice"
 msgstr "בחירה ידנית"
@@ -5688,8 +5710,8 @@ msgstr "פרוטוקול לשאר העולם"
 msgid "Choose the connection you want to configure"
 msgstr "נא לבחור את החיבור שברצונך לערוך"
 
-#: ../lib/network/netconnect.pm:145 ../lib/network/netconnect.pm:356
-#: ../lib/network/netconnect.pm:796
+#: ../lib/network/netconnect.pm:145 ../lib/network/netconnect.pm:357
+#: ../lib/network/netconnect.pm:797
 #, c-format
 msgid "Select the network interface to configure:"
 msgstr "נא לבחור את מנשק הרשת שברצונך להגדיר:"
@@ -5704,12 +5726,12 @@ msgstr "לא ניתן למצוא התקן עבור סוג חיבור זה."
 msgid "Hardware Configuration"
 msgstr "הגדרת חומרה"
 
-#: ../lib/network/netconnect.pm:194
+#: ../lib/network/netconnect.pm:195
 #, c-format
 msgid "Please select your provider:"
 msgstr "נא לבחור את הספק שלך:"
 
-#: ../lib/network/netconnect.pm:249
+#: ../lib/network/netconnect.pm:250
 #, c-format
 msgid ""
 "Please select your connection protocol.\n"
@@ -5718,69 +5740,69 @@ msgstr ""
 "נא לבחור את פרוטוקול החיבור שלך.\n"
 "אם אינך יודע מהו יש להשאיר את הפרטוקול שנבחר מראש."
 
-#: ../lib/network/netconnect.pm:293 ../lib/network/netconnect.pm:663
+#: ../lib/network/netconnect.pm:294 ../lib/network/netconnect.pm:664
 #, c-format
 msgid "Connection control"
 msgstr "בקרת חיבור"
 
-#: ../lib/network/netconnect.pm:323
+#: ../lib/network/netconnect.pm:324
 #, c-format
 msgid "Connection Configuration"
 msgstr "הגדרת חיבור"
 
-#: ../lib/network/netconnect.pm:323
+#: ../lib/network/netconnect.pm:324
 #, c-format
 msgid "Please fill or check the field below"
 msgstr "נא למלא או לבדוק את השדה מטה"
 
-#: ../lib/network/netconnect.pm:326
+#: ../lib/network/netconnect.pm:327
 #, c-format
 msgid "Your personal phone number"
 msgstr "מספר הטלפון הפרטי שלך"
 
-#: ../lib/network/netconnect.pm:327
+#: ../lib/network/netconnect.pm:328
 #, c-format
 msgid "Provider name (ex provider.net)"
 msgstr "שם הספק (לדוגמה provider.net)"
 
-#: ../lib/network/netconnect.pm:329
+#: ../lib/network/netconnect.pm:330
 #, c-format
 msgid "Provider DNS 1 (optional)"
 msgstr "שרת DNS ראשון של ספק השירות (לא חובה)"
 
-#: ../lib/network/netconnect.pm:330
+#: ../lib/network/netconnect.pm:331
 #, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "שרת DNS משני של ספק השירות (לא חובה)"
 
-#: ../lib/network/netconnect.pm:340
+#: ../lib/network/netconnect.pm:341
 #, c-format
 msgid "Card IO_1"
 msgstr "ערך IO_1 של הכרטיס"
 
-#: ../lib/network/netconnect.pm:359 ../lib/network/netconnect.pm:364
+#: ../lib/network/netconnect.pm:360 ../lib/network/netconnect.pm:365
 #, c-format
 msgid "External ISDN modem"
 msgstr "מודם ISDN חיצוני"
 
-#: ../lib/network/netconnect.pm:392
+#: ../lib/network/netconnect.pm:393
 #, c-format
 msgid "Select a device!"
 msgstr "יש לבחור התקן!"
 
-#: ../lib/network/netconnect.pm:401 ../lib/network/netconnect.pm:411
-#: ../lib/network/netconnect.pm:421 ../lib/network/netconnect.pm:454
-#: ../lib/network/netconnect.pm:468
+#: ../lib/network/netconnect.pm:402 ../lib/network/netconnect.pm:412
+#: ../lib/network/netconnect.pm:422 ../lib/network/netconnect.pm:455
+#: ../lib/network/netconnect.pm:469
 #, c-format
 msgid "ISDN Configuration"
 msgstr "הגדרת ISDN"
 
-#: ../lib/network/netconnect.pm:402
+#: ../lib/network/netconnect.pm:403
 #, c-format
 msgid "What kind of card do you have?"
 msgstr "איזה סוג כרטיס יש לך?"
 
-#: ../lib/network/netconnect.pm:412
+#: ../lib/network/netconnect.pm:413
 #, c-format
 msgid ""
 "\n"
@@ -5793,22 +5815,22 @@ msgstr ""
 "אם יש לך כרטיס ISA הערכים  במסך הבא אמורים להיות נכונים \n"
 "אם יש לך כרטיס מסוג  PCMCIA אתה צריך לציין את ה \"irq\" ו \"io\" של הכרטיס \n"
 
-#: ../lib/network/netconnect.pm:416
+#: ../lib/network/netconnect.pm:417
 #, c-format
 msgid "Continue"
 msgstr "המשך"
 
-#: ../lib/network/netconnect.pm:416
+#: ../lib/network/netconnect.pm:417
 #, c-format
 msgid "Abort"
 msgstr "ביטול"
 
-#: ../lib/network/netconnect.pm:422
+#: ../lib/network/netconnect.pm:423
 #, c-format
 msgid "Which of the following is your ISDN card?"
 msgstr "אילו מהבאים הוא כרטיס ה-ISDN שלך?"
 
-#: ../lib/network/netconnect.pm:440
+#: ../lib/network/netconnect.pm:441
 #, c-format
 msgid ""
 "A CAPI driver is available for this modem. This CAPI driver can offer more "
@@ -5818,12 +5840,12 @@ msgstr ""
 "התקן הינע CAPI זמין למודם זה. התקן הינע זה יכול להציע יכולות רבות יותר מהתקן "
 "ההינע החופשי (כמו שליחת פקסים). באיזה התקן הינע ברצונך להשתמש?"
 
-#: ../lib/network/netconnect.pm:454
+#: ../lib/network/netconnect.pm:455
 #, c-format
 msgid "Which protocol do you want to use?"
 msgstr "באיזה פרוטוקול ברצונך להשתמש?"
 
-#: ../lib/network/netconnect.pm:468
+#: ../lib/network/netconnect.pm:469
 #, c-format
 msgid ""
 "Select your provider.\n"
@@ -5832,12 +5854,12 @@ msgstr ""
 "נא לבחור את ספק החומרה שלך. אם הספק\n"
 "לא מופיע ברשימה עליך לבחור \"לא ברשימה\"."
 
-#: ../lib/network/netconnect.pm:470 ../lib/network/netconnect.pm:566
+#: ../lib/network/netconnect.pm:471 ../lib/network/netconnect.pm:567
 #, c-format
 msgid "Provider:"
 msgstr "ספק שרות:"
 
-#: ../lib/network/netconnect.pm:479
+#: ../lib/network/netconnect.pm:480
 #, c-format
 msgid ""
 "Your modem is not supported by the system.\n"
@@ -5846,122 +5868,122 @@ msgstr ""
 "המודם שלך אינו נתמך על יד המערכת.\n"
 "יש לבקר ב- http://www.linmodems.org למידע נוסף."
 
-#: ../lib/network/netconnect.pm:498
+#: ../lib/network/netconnect.pm:499
 #, c-format
 msgid "Select the modem to configure:"
 msgstr "נא לבחור את המודם שברצונך להגדיר:"
 
-#: ../lib/network/netconnect.pm:500
+#: ../lib/network/netconnect.pm:501
 #, c-format
 msgid "Modem"
 msgstr "מודם"
 
-#: ../lib/network/netconnect.pm:535
+#: ../lib/network/netconnect.pm:536
 #, c-format
 msgid "Please choose which serial port your modem is connected to."
 msgstr "נא לבחור לאיזו יציאה טורית המודם מחובר."
 
-#: ../lib/network/netconnect.pm:564
+#: ../lib/network/netconnect.pm:565
 #, c-format
 msgid "Select your provider:"
 msgstr "נא לבחור את הספק שלך:"
 
-#: ../lib/network/netconnect.pm:588
+#: ../lib/network/netconnect.pm:589
 #, c-format
 msgid "Dialup: account options"
 msgstr "חיוג: הגדרות חשבון"
 
-#: ../lib/network/netconnect.pm:591
+#: ../lib/network/netconnect.pm:592
 #, c-format
 msgid "Connection name"
 msgstr "שם התחברות"
 
-#: ../lib/network/netconnect.pm:592
+#: ../lib/network/netconnect.pm:593
 #, c-format
 msgid "Phone number"
 msgstr "מספר טלפון"
 
-#: ../lib/network/netconnect.pm:593
+#: ../lib/network/netconnect.pm:594
 #, c-format
 msgid "Login ID"
 msgstr "שם משתמש"
 
-#: ../lib/network/netconnect.pm:608 ../lib/network/netconnect.pm:641
+#: ../lib/network/netconnect.pm:609 ../lib/network/netconnect.pm:642
 #, c-format
 msgid "Dialup: IP parameters"
 msgstr "חיוג: נתוני IP"
 
-#: ../lib/network/netconnect.pm:611
+#: ../lib/network/netconnect.pm:612
 #, c-format
 msgid "IP parameters"
 msgstr "מאפייני IP"
 
-#: ../lib/network/netconnect.pm:613
+#: ../lib/network/netconnect.pm:614
 #, c-format
 msgid "Subnet mask"
 msgstr "מסיכת Subnet"
 
-#: ../lib/network/netconnect.pm:625
+#: ../lib/network/netconnect.pm:626
 #, c-format
 msgid "Dialup: DNS parameters"
 msgstr "חיבור אנלוגי: משתני DNS"
 
-#: ../lib/network/netconnect.pm:628
+#: ../lib/network/netconnect.pm:629
 #, c-format
 msgid "DNS"
 msgstr "DNS"
 
-#: ../lib/network/netconnect.pm:629
+#: ../lib/network/netconnect.pm:630
 #, c-format
 msgid "Domain name"
 msgstr "שם מתחם"
 
-#: ../lib/network/netconnect.pm:632
+#: ../lib/network/netconnect.pm:633
 #, c-format
 msgid "Set hostname from IP"
 msgstr "הגדרת שם מארח עפ\"י כתובת IP"
 
-#: ../lib/network/netconnect.pm:645
+#: ../lib/network/netconnect.pm:646
 #, c-format
 msgid "Gateway IP address"
 msgstr "כתובת IP של השער"
 
-#: ../lib/network/netconnect.pm:678
+#: ../lib/network/netconnect.pm:679
 #, c-format
 msgid "Automatically at boot"
 msgstr "אוטומטית באתחול המערכת"
 
-#: ../lib/network/netconnect.pm:680
+#: ../lib/network/netconnect.pm:681
 #, c-format
 msgid "By using Net Applet in the system tray"
 msgstr "על ידי שימוש בתוסף הרשת במגש המערכת"
 
-#: ../lib/network/netconnect.pm:682
+#: ../lib/network/netconnect.pm:683
 #, c-format
 msgid "Manually (the interface would still be activated at boot)"
 msgstr "ידני (הממשק יופעל בכל מקרה בזמן האתחול)"
 
-#: ../lib/network/netconnect.pm:691
+#: ../lib/network/netconnect.pm:692
 #, c-format
 msgid "How do you want to dial this connection?"
 msgstr "איך ברצונך לחייג לחיבור זה?"
 
-#: ../lib/network/netconnect.pm:704
+#: ../lib/network/netconnect.pm:705
 #, c-format
 msgid "Do you want to try to connect to the Internet now?"
 msgstr "האם לנסות להתחבר לאינטרנט עכשיו?"
 
-#: ../lib/network/netconnect.pm:731
+#: ../lib/network/netconnect.pm:732
 #, c-format
 msgid "The system is now connected to the Internet."
 msgstr "המערכת מחוברת כעת לאינטרנט."
 
-#: ../lib/network/netconnect.pm:732
+#: ../lib/network/netconnect.pm:733
 #, c-format
 msgid "For security reasons, it will be disconnected now."
 msgstr "משיקולי אבטחה, המערכת תנותק כעת מהאינטרנט."
 
-#: ../lib/network/netconnect.pm:733
+#: ../lib/network/netconnect.pm:734
 #, c-format
 msgid ""
 "The system does not seem to be connected to the Internet.\n"
@@ -5970,7 +5992,7 @@ msgstr ""
 "נראה שהמערכת אינה מחוברת לאינטרנט.\n"
 "כדאי לנסות להגדיר מחדש את החיבור שלך."
 
-#: ../lib/network/netconnect.pm:748
+#: ../lib/network/netconnect.pm:749
 #, c-format
 msgid ""
 "Congratulations, the network and Internet configuration is finished.\n"
@@ -5979,7 +6001,7 @@ msgstr ""
 "ברכותינו! הגדרת הרשת והאינטרנט הסתיימה.\n"
 "\n"
 
-#: ../lib/network/netconnect.pm:751
+#: ../lib/network/netconnect.pm:752
 #, c-format
 msgid ""
 "After this is done, we recommend that you restart your X environment to "
@@ -5988,7 +6010,7 @@ msgstr ""
 "עם סיום פעולה זו, אנו ממליצים לך לאתחל את הסביבה הגרפית שלך בכדי למנוע בעיות "
 "שקשורות לשם המחשב."
 
-#: ../lib/network/netconnect.pm:752
+#: ../lib/network/netconnect.pm:753
 #, c-format
 msgid ""
 "Problems occurred during configuration.\n"
@@ -5999,78 +6021,78 @@ msgstr ""
 "נא לבדוק את החיבור דרך net_monitor או mcc. אם החיבור לא עובד, יהיה צורך "
 "להריץ את תצורה שוב."
 
-#: ../lib/network/netconnect.pm:764
+#: ../lib/network/netconnect.pm:765
 #, c-format
 msgid "Sagem USB modem"
 msgstr "מודם Sagem USB"
 
-#: ../lib/network/netconnect.pm:765 ../lib/network/netconnect.pm:766
+#: ../lib/network/netconnect.pm:766 ../lib/network/netconnect.pm:767
 #, c-format
 msgid "Bewan modem"
 msgstr "מודם Bewan"
 
-#: ../lib/network/netconnect.pm:767
+#: ../lib/network/netconnect.pm:768
 #, c-format
 msgid "ECI Hi-Focus modem"
 msgstr "מודם ECI Hi-Focus"
 
-#: ../lib/network/netconnect.pm:768
+#: ../lib/network/netconnect.pm:769
 #, c-format
 msgid "LAN connection"
 msgstr "חיבור רשת פנימית"
 
-#: ../lib/network/netconnect.pm:770
+#: ../lib/network/netconnect.pm:771
 #, c-format
 msgid "ADSL connection"
 msgstr "חיבור ADSL"
 
-#: ../lib/network/netconnect.pm:771
+#: ../lib/network/netconnect.pm:772
 #, c-format
 msgid "Cable connection"
 msgstr "חיבור כבלים"
 
-#: ../lib/network/netconnect.pm:772
+#: ../lib/network/netconnect.pm:773
 #, c-format
 msgid "ISDN connection"
 msgstr "חיבור ISDN"
 
-#: ../lib/network/netconnect.pm:773
+#: ../lib/network/netconnect.pm:774
 #, c-format
 msgid "Modem connection"
 msgstr "חיבור מודם"
 
-#: ../lib/network/netconnect.pm:774
+#: ../lib/network/netconnect.pm:775
 #, c-format
 msgid "DVB connection"
 msgstr "חיבור DVB"
 
-#: ../lib/network/netconnect.pm:776
+#: ../lib/network/netconnect.pm:777
 #, c-format
 msgid "(detected on port %s)"
 msgstr "(זוהה בשער %s)"
 
 #. -PO: here, "(detected)" string will be appended to eg "ADSL connection"
-#: ../lib/network/netconnect.pm:778
+#: ../lib/network/netconnect.pm:779
 #, c-format
 msgid "(detected %s)"
 msgstr "(זוהה %s)"
 
-#: ../lib/network/netconnect.pm:778
+#: ../lib/network/netconnect.pm:779
 #, c-format
 msgid "(detected)"
 msgstr "(זוהה)"
 
-#: ../lib/network/netconnect.pm:779
+#: ../lib/network/netconnect.pm:780
 #, c-format
 msgid "Network Configuration"
 msgstr "הגדרת הרשת"
 
-#: ../lib/network/netconnect.pm:780
+#: ../lib/network/netconnect.pm:781
 #, c-format
 msgid "Zeroconf hostname resolution"
 msgstr "פענוח שם מארח Zeroconf"
 
-#: ../lib/network/netconnect.pm:781
+#: ../lib/network/netconnect.pm:782
 #, c-format
 msgid ""
 "If desired, enter a Zeroconf hostname.\n"
@@ -6082,17 +6104,17 @@ msgstr ""
 "שם זה ישמש את מחשבך לפרסם את המשאבים הניתנים לשיתוף\n"
 "ואשר לא מנוהלים על ידי הרשת. ברוב הרשתות, אין צורך בהגדרה זו."
 
-#: ../lib/network/netconnect.pm:785
+#: ../lib/network/netconnect.pm:786
 #, c-format
 msgid "Zeroconf Host name"
 msgstr "שם מחשב לחיבור Zeroconf"
 
-#: ../lib/network/netconnect.pm:786
+#: ../lib/network/netconnect.pm:787
 #, c-format
 msgid "Zeroconf host name must not contain a ."
 msgstr "שם מארח Zeroconf חייב שלא להכיל a ."
 
-#: ../lib/network/netconnect.pm:787
+#: ../lib/network/netconnect.pm:788
 #, c-format
 msgid ""
 "Because you are doing a network installation, your network is already "
@@ -6103,12 +6125,12 @@ msgstr ""
 "מאחר והתקנה זו מבוצעת מהרשת, החיבור לרשת כבר מוגדר. עליך ללחוץ על \"המשך\"\n"
 "לשמירת ההגדרות הקיימות, או על\"בטל\" להגדרה מחדש של הרשת והאינטרנט.\n"
 
-#: ../lib/network/netconnect.pm:790
+#: ../lib/network/netconnect.pm:791
 #, c-format
 msgid "The network needs to be restarted. Do you want to restart it?"
 msgstr "יש צורך לאתחל את הרשת. האם ברצונך לאתחל אותה עכשיו?"
 
-#: ../lib/network/netconnect.pm:791
+#: ../lib/network/netconnect.pm:792
 #, c-format
 msgid ""
 "A problem occurred while restarting the network: \n"
@@ -6119,7 +6141,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../lib/network/netconnect.pm:792
+#: ../lib/network/netconnect.pm:793
 #, c-format
 msgid ""
 "We are now going to configure the %s connection.\n"
@@ -6132,12 +6154,12 @@ msgstr ""
 "\n"
 "יש ללחוץ על \"%s\" בכדי להמשיך."
 
-#: ../lib/network/netconnect.pm:793
+#: ../lib/network/netconnect.pm:794
 #, c-format
 msgid "Configuration is complete, do you want to apply settings?"
 msgstr "הגדרת התצורה הסתיימה, האם להפעיל את ההגדרות?"
 
-#: ../lib/network/netconnect.pm:794
+#: ../lib/network/netconnect.pm:795
 #, c-format
 msgid ""
 "You have configured multiple ways to connect to the Internet.\n"
@@ -6148,17 +6170,17 @@ msgstr ""
 "נא לבחור את חיבור בו ברצונך להשתמש.\n"
 "\n"
 
-#: ../lib/network/netconnect.pm:795
+#: ../lib/network/netconnect.pm:796
 #, c-format
 msgid "Internet connection"
 msgstr "חיבור אינטרנט"
 
-#: ../lib/network/netconnect.pm:797
+#: ../lib/network/netconnect.pm:798
 #, c-format
 msgid "Configuring network device %s (driver %s)"
 msgstr "הגדרת התקן רשת %s (מנהל התקן %s)"
 
-#: ../lib/network/netconnect.pm:798
+#: ../lib/network/netconnect.pm:799
 #, c-format
 msgid ""
 "The following protocols can be used to configure a LAN connection. Please "
@@ -6167,7 +6189,7 @@ msgstr ""
 "הפרוטוקולים הבאים יכולים לשמש להגדרת חיבור LAN. נא לבחור את זה בו ברצונך "
 "להשתמש."
 
-#: ../lib/network/netconnect.pm:799
+#: ../lib/network/netconnect.pm:800
 #, c-format
 msgid ""
 "Please enter your host name.\n"
@@ -6180,22 +6202,22 @@ msgstr ""
 "mybox.mylab.myco.co יש באפשרותך גם\n"
 "להגדיר את כתובת ה-IP של השער אם יש לך אחד."
 
-#: ../lib/network/netconnect.pm:804
+#: ../lib/network/netconnect.pm:805
 #, c-format
 msgid "Last but not least you can also type in your DNS server IP addresses."
 msgstr "לסיום באפשרותך להגדיר גם את כתובות ה-IP של שרת ה-DNS."
 
-#: ../lib/network/netconnect.pm:805
+#: ../lib/network/netconnect.pm:806
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
 msgstr "התחביר להגדרת כתובת שרת DNS הוא 1.2.3.4"
 
-#: ../lib/network/netconnect.pm:807
+#: ../lib/network/netconnect.pm:808
 #, c-format
 msgid "Gateway device"
 msgstr "התקן שער"
 
-#: ../lib/network/netconnect.pm:821
+#: ../lib/network/netconnect.pm:822
 #, c-format
 msgid ""
 "An unexpected error has happened:\n"
@@ -6258,7 +6280,7 @@ msgstr "שרת מתווך צריך להיות //:http... או //:https..."
 msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "הכתובת צריכה להתחיל עם 'ftp://' או 'http://'"
 
-#: ../lib/network/shorewall.pm:61
+#: ../lib/network/shorewall.pm:65
 #, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
@@ -6275,17 +6297,17 @@ msgstr ""
 "\n"
 "אילו התקנים יהיו מוגנים?\n"
 
-#: ../lib/network/shorewall.pm:136
+#: ../lib/network/shorewall.pm:141
 #, c-format
 msgid "Keep custom rules"
 msgstr "שמור חוקים מותאמים אישית"
 
-#: ../lib/network/shorewall.pm:137
+#: ../lib/network/shorewall.pm:142
 #, c-format
 msgid "Drop custom rules"
 msgstr "מחק חוקים מותאמים אישית"
 
-#: ../lib/network/shorewall.pm:142
+#: ../lib/network/shorewall.pm:147
 #, c-format
 msgid ""
 "Your firewall configuration has been manually edited and contains\n"
@@ -6296,29 +6318,29 @@ msgstr ""
 "התצורה שהוגדרה.\n"
 "מה ברצונך לעשות?"
 
-#: ../lib/network/thirdparty.pm:135
+#: ../lib/network/thirdparty.pm:138
 #, c-format
 msgid "Some components (%s) are required but aren't available for %s hardware."
 msgstr "מספר רכיבים (%s) דרושים אך אנים זמינים עבור חומרת %s."
 
-#: ../lib/network/thirdparty.pm:136
+#: ../lib/network/thirdparty.pm:139
 #, c-format
 msgid "Some packages (%s) are required but aren't available."
 msgstr "מספר חבילות (%s) נדרשות אך אינן זמינות."
 
-#: ../lib/network/thirdparty.pm:138
+#: ../lib/network/thirdparty.pm:141
 #, c-format
 msgid ""
 "These packages can be found in Mandriva Club or in Mandriva commercial "
 "releases."
 msgstr "חבילות אלו זמינות במועדון מנדריבה או באריזות המסחריות של מנדריבה."
 
-#: ../lib/network/thirdparty.pm:139
+#: ../lib/network/thirdparty.pm:142
 #, c-format
 msgid "The following component is missing: %s"
 msgstr "הרכיב הבא חסר: %s"
 
-#: ../lib/network/thirdparty.pm:141
+#: ../lib/network/thirdparty.pm:144
 #, c-format
 msgid ""
 "The required files can also be installed from this URL:\n"
@@ -6337,37 +6359,37 @@ msgstr "קבצי קושחה נחוצים להתקן זה."
 msgid "Use a floppy"
 msgstr "שימוש בתקליטון"
 
-#: ../lib/network/thirdparty.pm:179 ../lib/network/thirdparty.pm:186
+#: ../lib/network/thirdparty.pm:184 ../lib/network/thirdparty.pm:191
 #, c-format
 msgid "Use my Windows partition"
 msgstr "השתמש במחיצת החלונות שלי"
 
-#: ../lib/network/thirdparty.pm:180
+#: ../lib/network/thirdparty.pm:185
 #, c-format
 msgid "Select file"
 msgstr "יש לבחור קובץ"
 
-#: ../lib/network/thirdparty.pm:191
+#: ../lib/network/thirdparty.pm:196
 #, c-format
 msgid "Please select the firmware file (for example: %s)"
 msgstr "נא לבחור את קובץ הקושחה (לדוגמה: %s)"
 
-#: ../lib/network/thirdparty.pm:215
+#: ../lib/network/thirdparty.pm:220
 #, c-format
 msgid "Unable to find \"%s\" on your Windows system!"
 msgstr "לא נמצא \"%s\" במערכת החלונות שלך!"
 
-#: ../lib/network/thirdparty.pm:217
+#: ../lib/network/thirdparty.pm:222
 #, c-format
 msgid "No Windows system has been detected!"
 msgstr "לא זוהתה מערכת ווינדוס!"
 
-#: ../lib/network/thirdparty.pm:227
+#: ../lib/network/thirdparty.pm:232
 #, c-format
 msgid "Insert floppy"
 msgstr "נא להכניס תקליטון"
 
-#: ../lib/network/thirdparty.pm:228
+#: ../lib/network/thirdparty.pm:233
 #, c-format
 msgid ""
 "Insert a FAT formatted floppy in drive %s with %s in root directory and "
@@ -6375,22 +6397,22 @@ msgid ""
 msgstr ""
 "נא להכניס תקליטון מפורמט כ FAT לכונן %s, עם %s בספריית השורש, וללחוץ על %s"
 
-#: ../lib/network/thirdparty.pm:228
+#: ../lib/network/thirdparty.pm:233
 #, c-format
 msgid "Next"
 msgstr "המשך"
 
-#: ../lib/network/thirdparty.pm:238
+#: ../lib/network/thirdparty.pm:243
 #, c-format
 msgid "Floppy access error, unable to mount device %s"
 msgstr "שגיאה בגישה לתקליטון. לא יכול לעגן את ההתקן %s"
 
-#: ../lib/network/thirdparty.pm:327
+#: ../lib/network/thirdparty.pm:332
 #, c-format
 msgid "Looking for required software and drivers..."
 msgstr "מחפש תוכנה ומנהלי התקנים דרושים..."
 
-#: ../lib/network/thirdparty.pm:340
+#: ../lib/network/thirdparty.pm:347
 #, c-format
 msgid "Please wait, running device configuration commands..."
 msgstr "נא להמתין, מגדיר את תצורת התקנים..."
@@ -6404,11 +6426,6 @@ msgstr "תשתית מפת ציבורי X509"
 #, c-format
 msgid "Static Key"
 msgstr "מפתח סטטי"
-
-#: ../lib/network/vpn/openvpn.pm:115
-#, c-format
-msgid "Type"
-msgstr "סוג"
 
 #. -PO: please don't translate the CA acronym
 #: ../lib/network/vpn/openvpn.pm:142
@@ -6530,6 +6547,12 @@ msgstr ""
 #, c-format
 msgid "Use specific UDP port"
 msgstr "השתמש בשער UDP מסוים"
+
+#~ msgid "Attacker"
+#~ msgstr "מתקיף"
+
+#~ msgid "Attack type"
+#~ msgstr "סוג ההתקפה"
 
 #~ msgid "Failed to add printers."
 #~ msgstr "כשל בהוספת מדפסות."
