@@ -40,8 +40,8 @@ our %wireless_enc_modes = (
     none => N_("None"),
     open => N_("Open WEP"),
     restricted => N_("Restricted WEP"),
-    'wpa-psk' => N_("WPA Pre-Shared Key"),
-    'wpa-eap' => N_("WPA2/WPA Enterprise"),
+    'wpa-psk' => N_("WPA/WPA2 Pre-Shared Key"),
+    'wpa-eap' => N_("WPA/WPA2 Enterprise"),
 );
 #define the eap related variables we handle
 #0 means we preserve value if found
