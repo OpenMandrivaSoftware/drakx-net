@@ -23,7 +23,9 @@ sub update_connections_list {
     $droam->{gui}{model}->set($droam->{gui}{model}->append,
                 0, gtknew('Pixbuf', file => $_->get_type_icon)->scale_simple($droam->{gui}{pixbuf_size}, $droam->{gui}{pixbuf_size}, 'hyper'),
                 1, $_->get_description) foreach @{$droam->{all_connections}};
-    my $index = $droam->{connection} && eval { find_index { $_ == $droam->{connection} } @{$droam->{all_connections}} };
+    my $index = $droam->{connection} ?
+      eval { find_index { $_ == $droam->{connection} } @{$droam->{all_connections}} }
+      : 0;
     $droam->{gui}{connections_combo}->set_active($index) if defined $index;
 }
 
