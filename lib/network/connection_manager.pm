@@ -267,11 +267,11 @@ sub filter_networks {
 sub update_networks {
     my ($cmanager) = @_;
 
-    check_setup($cmanager) || setup_connection($cmanager) or return;
-
     @{$cmanager->{gui}{networks_list}{data}} = ();
 
     if ($cmanager->{connection}) {
+        check_setup($cmanager) || setup_connection($cmanager) or return;
+
         my $wait = $cmanager->{connection}->network_scan_is_slow && $cmanager->{in}->wait_message(N("Please wait"), N("Scanning for networks..."));
         $cmanager->{connection}{networks} = $cmanager->{connection}->get_networks;
         $cmanager->{connection}{network} ||= find { $cmanager->{connection}{networks}{$_}{current} } keys %{$cmanager->{connection}{networks}};
