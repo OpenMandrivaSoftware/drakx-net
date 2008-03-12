@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-ja\n"
 "POT-Creation-Date: 2008-03-10 20:27+0100\n"
-"PO-Revision-Date: 2008-02-04 20:00+0900\n"
+"PO-Revision-Date: 2008-03-12 19:00+0900\n"
 "Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 "Language-Team: Japanese <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -1195,9 +1195,9 @@ msgid "Date"
 msgstr "日付"
 
 #: ../bin/drakids:254
-#, fuzzy, c-format
+#, c-format
 msgid "Remote host"
-msgstr "リモート"
+msgstr "リモートホスト"
 
 #: ../bin/drakids:255 ../lib/network/vpn/openvpn.pm:115
 #, c-format
@@ -2554,9 +2554,9 @@ msgid "Samba Users"
 msgstr "Samba ユーザ"
 
 #: ../bin/draksambashare:1449
-#, fuzzy, c-format
+#, c-format
 msgid "Please configure your Samba server"
-msgstr "Samba サーバの設定に失敗しました。"
+msgstr "Samba サーバを設定してください"
 
 #: ../bin/draksambashare:1449
 #, c-format
@@ -2564,6 +2564,8 @@ msgid ""
 "It seems this is the first time you run this tool.\n"
 "A wizard will appear to configure a basic Samba server"
 msgstr ""
+"今回初めてこのツールを起動したようです。\n"
+"Samba サーバの基本的な設定を行うためのウィザードが表示されます。"
 
 #: ../bin/draksambashare:1457
 #, c-format
@@ -4283,9 +4285,9 @@ msgid "Ethernet"
 msgstr "Ethernet"
 
 #: ../lib/network/connection/ethernet.pm:29
-#, fuzzy, c-format
+#, c-format
 msgid "Virtual interface"
-msgstr "ネットワークインターフェース"
+msgstr "仮想インターフェース"
 
 #: ../lib/network/connection/ethernet.pm:59
 #, c-format
@@ -4760,19 +4762,19 @@ msgid "Restricted WEP"
 msgstr "restricted モード WEP"
 
 #: ../lib/network/connection/wireless.pm:43
-#, fuzzy, c-format
+#, c-format
 msgid "WPA/WPA2 Pre-Shared Key"
-msgstr "WPA 事前共有鍵 (PSK)"
+msgstr "WPA/WPA2 事前共有鍵"
 
 #: ../lib/network/connection/wireless.pm:44
 #, c-format
 msgid "WPA/WPA2 Enterprise"
-msgstr ""
+msgstr "WPA/WPA2 Enterprise"
 
 #: ../lib/network/connection/wireless.pm:231
 #, c-format
 msgid "Windows driver"
-msgstr ""
+msgstr "Windows ドライバ"
 
 #: ../lib/network/connection/wireless.pm:298
 #, c-format
@@ -4824,9 +4826,9 @@ msgid "Encryption mode"
 msgstr "暗号化モード"
 
 #: ../lib/network/connection/wireless.pm:376
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Login/Username"
-msgstr "アカウントのログイン (ユーザ名)"
+msgstr "EAP ログイン/ユーザ名"
 
 #: ../lib/network/connection/wireless.pm:378
 #, c-format
@@ -4837,9 +4839,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:381
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Password"
-msgstr "パスワード"
+msgstr "EAP パスワード"
 
 #: ../lib/network/connection/wireless.pm:383
 #, c-format
@@ -4861,9 +4863,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:397
-#, fuzzy, c-format
+#, c-format
 msgid "EAP client certificate"
-msgstr "証明書の名前"
+msgstr "EAP クライアント証明書"
 
 #: ../lib/network/connection/wireless.pm:399
 #, c-format
@@ -4953,25 +4955,25 @@ msgstr ""
 "詳しくは man iwpriv(8) を参照してください。"
 
 #: ../lib/network/connection/wireless.pm:446
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Protocol"
-msgstr "プロトコル"
+msgstr "EAP プロトコル"
 
 #: ../lib/network/connection/wireless.pm:447
 #: ../lib/network/connection/wireless.pm:452
-#, fuzzy, c-format
+#, c-format
 msgid "Auto Detect"
 msgstr "自動検出"
 
 #: ../lib/network/connection/wireless.pm:447
 #, c-format
 msgid "WPA2"
-msgstr ""
+msgstr "WPA2"
 
 #: ../lib/network/connection/wireless.pm:447
-#, fuzzy, c-format
+#, c-format
 msgid "WPA"
-msgstr "PAP"
+msgstr "WPA"
 
 #: ../lib/network/connection/wireless.pm:449
 #, c-format
@@ -4979,66 +4981,68 @@ msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr ""
+"自動検出は最初に WPA のバージョン 2 を試し、使えない場合は\n"
+"バージョン 1 にフォールバックするので、これをお勧めします。"
 
 #: ../lib/network/connection/wireless.pm:451
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Mode"
-msgstr "モード"
+msgstr "EAP モード"
 
 #: ../lib/network/connection/wireless.pm:452
-#, fuzzy, c-format
+#, c-format
 msgid "PEAP"
-msgstr "PAP"
+msgstr "PEAP"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "TTLS"
-msgstr ""
+msgstr "TTLS"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "TLS"
-msgstr ""
+msgstr "TLS"
 
 #: ../lib/network/connection/wireless.pm:452
-#, fuzzy, c-format
+#, c-format
 msgid "MSCHAPV2"
-msgstr "CHAP"
+msgstr "MSCHAPV2"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "MD5"
-msgstr ""
+msgstr "MD5"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "OTP"
-msgstr ""
+msgstr "OTP"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "GTC"
-msgstr ""
+msgstr "GTC"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "LEAP"
-msgstr ""
+msgstr "LEAP"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "PEAP TTLS"
-msgstr ""
+msgstr "PEAP TTLS"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "TTLS TLS"
-msgstr ""
+msgstr "TTLS TLS"
 
 #: ../lib/network/connection/wireless.pm:454
 #, c-format
 msgid "EAP key_mgmt"
-msgstr ""
+msgstr "EAP key_mgmt"
 
 #: ../lib/network/connection/wireless.pm:456
 #, c-format
@@ -5063,7 +5067,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
 msgid "EAP phase2"
-msgstr ""
+msgstr "EAP フェーズ 2"
 
 #: ../lib/network/connection/wireless.pm:465
 #, c-format
@@ -5075,9 +5079,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:469
-#, fuzzy, c-format
+#, c-format
 msgid "EAP CA certificate"
-msgstr "証明書"
+msgstr "EAP CA 証明書"
 
 #: ../lib/network/connection/wireless.pm:471
 #, c-format
@@ -5578,7 +5582,7 @@ msgid "Password cracking"
 msgstr "パスワード破り"
 
 #: ../lib/network/ifw.pm:132
-#, fuzzy, c-format
+#, c-format
 msgid "New connection"
 msgstr "ネットワーク接続"
 
@@ -5603,9 +5607,9 @@ msgid "A password cracking attack has been attempted by %s."
 msgstr "%s がパスワードクラック攻撃を試みました"
 
 #: ../lib/network/ifw.pm:138
-#, fuzzy, c-format
+#, c-format
 msgid "%s is connecting on the %s service."
-msgstr "インターネットから切断 "
+msgstr "%s が %s サービスに接続しています。"
 
 #: ../lib/network/ifw.pm:139
 #, c-format
