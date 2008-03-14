@@ -173,6 +173,10 @@ sub real_main {
                        name => sub { $net->{type}->get_type_name . "\n\n" . N("Hardware Configuration") },
                        data => sub { $hardware_settings },
                        complete => sub {
+                           if ($connection->can("check_hardware_settings") && !$connection->check_hardware_settings) {
+                               $in->ask_warn('', $connection->{hardware}{error});
+                               return 1;
+                           }
                            if ($connection->can('check_hardware')) {
                                my $_w = $in->wait_message(N("Please wait"), N("Configuring device..."));
                                if (!$connection->check_hardware) {

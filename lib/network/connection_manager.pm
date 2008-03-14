@@ -73,6 +73,10 @@ sub setup_connection {
             title => N("Network settings"),
             messages => N("Please enter settings for network")
         }, $cmanager->{connection}->get_hardware_settings) or return;
+        if ($cmanager->{connection}->can("check_hardware_settings") && !$cmanager->{connection}->check_hardware_settings) {
+            $cmanager->{in}->ask_warn(N("Error"), $cmanager->{connection}->{hardware}{error});
+            return;
+        }
     }
     if ($cmanager->{connection}->can('check_hardware')) {
         my $wait = $cmanager->{in}->wait_message(N("Please wait"), N("Configuring device..."));
