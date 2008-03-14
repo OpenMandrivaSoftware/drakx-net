@@ -21,14 +21,11 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 
-use strict;
-
 use lib qw(/usr/lib/libDrakX);
-
 # i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
 BEGIN { unshift @::textdomains, 'drakx-net' }
+use strict;
 use standalone;     #- warning, standalone must be loaded very first, for 'explanations'
-
 use interactive;
 use common;
 use network::network;
