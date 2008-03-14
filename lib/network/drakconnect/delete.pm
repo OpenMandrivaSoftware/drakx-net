@@ -3,6 +3,7 @@ package network::drakconnect::delete;
 use common;
 use wizards;
 use interactive;
+use network::connection::ethernet;
 
 sub del_intf {
     my ($in, $net, $modules_conf) = @_;
