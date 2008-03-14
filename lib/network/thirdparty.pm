@@ -291,32 +291,42 @@ sub user_install {
 }
 
 sub install_packages {
+    my ($in, $settings, $driver, $option, @packages) = @_;
+
+    unless (@packages) {
+        log::explanations(qq(No $option package for module "$driver" is required, skipping));
+        return 1;
+    }
+
+    if (check_installed($option, $settings, $driver)) {
+        $settings->{old_status}{$option} = 1;
+        log::explanations(qq(Required $option package for module "$driver" is already installed, skipping));
+        return 1;
+    }
+
+    my $optional = ref $settings->{$option} eq 'HASH' && $settings->{$option}{optional};
+    if (my @available = get_available_packages($option, $in, @packages)) {
+        log::explanations("Installing thirdparty packages ($option) " . join(', ', @available));
+        if ($in->do_pkgs->install(@available) && check_installed($option, $settings, $driver)) {
+            return 1;
+        } elsif (!$optional) {
+            warn_not_installed($in, @available);
+        }
+    }
+    return 1 if $optional;
+    log::explanations("Thirdparty package @packages ($option) is required but not available");
+
+    0;
+}
+
+sub install_components {
     my ($in, $settings, $driver, @options) = @_;
 
     foreach my $option (@options) {
 	my @packages = get_required_packages($option, $settings);
-	unless (@packages) {
-	    log::explanations(qq(No $option package for module "$driver" is required, skipping));
-	    next;
-	}
-
-	if (check_installed($option, $settings, $driver)) {
-	    $settings->{old_status}{$option} = 1;
-	    log::explanations(qq(Required $option package for module "$driver" is already installed, skipping));
-	    next;
-	}
-
-	my $optional = ref $settings->{$option} eq 'HASH' && $settings->{$option}{optional};
-	if (my @available = get_available_packages($option, $in, @packages)) {
-	    log::explanations("Installing thirdparty packages ($option) " . join(', ', @available));
-	    if ($in->do_pkgs->install(@available) && check_installed($option, $settings, $driver)) {
-                next;
-	    } elsif (!$optional) {
-                warn_not_installed($in, @available);
-	    }
-	}
-	next if $optional;
-	log::explanations("Thirdparty package @packages ($option) is required but not available");
+        if (!component_get_option($settings, $option, 'no_package')) {
+            install_packages($in, $settings, $driver, $option, @packages) and next;
+        }
 
 	unless (user_install($option, $settings, $in)) {
 	    warn_not_found($in, $settings, $driver, $option, @packages);
@@ -336,7 +346,7 @@ sub apply_settings {
 
 	my $wait = $in->wait_message(N("Please wait"), N("Looking for required software and drivers..."));
 
-	install_packages($in, $settings, $driver, @thirdparty_types) or return;
+	install_components($in, $settings, $driver, @thirdparty_types) or return;
 
         if (!$settings->{no_module_reload}) {
             if (exists $settings->{firmware} && !$settings->{old_status}{firmware}) {
