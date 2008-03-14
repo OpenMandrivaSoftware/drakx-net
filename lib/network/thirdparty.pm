@@ -144,7 +144,13 @@ sub warn_not_found {
                           N("Some components (%s) are required but aren't available for %s hardware.", $component_name, $settings->{name}) :
                           N("Some packages (%s) are required but aren't available.", join(', ', @packages))),
                        join("\n\n",
-                            if_(!$opt{no_distro_package} && !$opt{no_package}, N("These packages can be found in Mandriva Club or in Mandriva commercial releases.")),
+                            if_(!$opt{no_distro_package} && !$opt{no_package},
+                                #-PO: first argument is a list of Mandriva distributions
+                                #-PO: second argument is a package media name
+                                N("These packages can be found in %s, or in the official %s package repository.",
+                                  join(", ", "Mandriva Linux One", "Mandriva Linux Powerpack"),
+                                  "non-free"),
+                            ),
                             if_($checked, N("The following component is missing: %s", $checked)),
                             if_($opt{explanations}, translate($opt{explanations})),
                             if_($opt{url}, N("The required files can also be installed from this URL:
