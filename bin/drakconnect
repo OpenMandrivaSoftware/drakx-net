@@ -977,7 +977,6 @@ sub configure_net() {
     if (!$net->{type}) {
         $in->ask_warn(
                     N("Warning"),
-                    #-PO: here "Add Connection" should be translated the same was as in control-center
                     N("You do not have any configured Internet connection.
 Run the \"%s\" assistant from the Mandriva Linux Control Center", N("Set up a new network interface (LAN, ISDN, ADSL, ...)")));
         $in->exit;
