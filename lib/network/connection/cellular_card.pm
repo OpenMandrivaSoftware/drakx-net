@@ -5,6 +5,8 @@ use base qw(network::connection::cellular);
 use strict;
 use common;
 
+my $wrong_pin_error = N_("Wrong PIN number format: it should be 4 digits.");
+
 sub get_type_name() { N("GPRS/Edge/3G") }
 sub _get_type_icon() { 'cellular' }
 sub get_devices() {
@@ -71,7 +73,7 @@ sub get_hardware_settings {
 sub check_hardware_settings {
     my ($self) = @_;
     if ($self->{hardware}{pin} !~ /^[0-9]{4}$/) {
-        $self->{hardware}{error} = N("Wrong PIN number format: it should be 4 digits.");
+        $self->{hardware}{error} = translate($wrong_pin_error);
         return 0;
     }
     1;
