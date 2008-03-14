@@ -545,15 +545,14 @@ sub handle_ifw_message {
         timeout => sub {
             set_verdict($message, \&apply_verdict_ignore);
         },
-        clicked => sub {
-            if ($is_attack) {
+        if_($is_attack, actions => [ {
+            action => 'clicked',
+            label => N("Process attack"),
+            callback => sub {
                 disable_ifw_alert();
                 ask_attack_verdict($message);
-            } else {
-                set_verdict($message, \&apply_verdict_ignore);
-                $bubble_queue->process_next;
-            }
-        },
+            },
+        } ]),
     });
 }
 
@@ -636,10 +635,14 @@ sub handle_ifw_listen {
         title => N("Interactive Firewall: new service"),
         pixbuf => $pixbufs{firewall},
         message => $listen->{message},
-        clicked => sub {
-            disable_ifw_alert();
-            ask_listen_verdict($listen);
-        },
+        actions => [ {
+            action => 'clicked',
+            label => N("Process connection"),
+            callback => sub {
+                disable_ifw_alert();
+                ask_listen_verdict($listen);
+            },
+        } ],
     });
 }
 
