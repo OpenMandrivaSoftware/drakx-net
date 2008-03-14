@@ -70,13 +70,13 @@ our $firmware_directory = "/lib/firmware";
 our @thirdparty_types = qw(kernel_module tools firmware);
 
 sub device_get_packages {
-    my ($settings, $option, $o_default) = @_;
-    $settings->{$option} or return;
+    my ($settings, $component, $o_default) = @_;
+    $settings->{$component} or return;
     my $package;
-    if (ref $settings->{$option} eq 'HASH') {
-	$package = $settings->{$option}{package} || 1;
+    if (ref $settings->{$component} eq 'HASH') {
+	$package = $settings->{$component}{package} || 1;
     } else {
-	$package = $settings->{$option};
+	$package = $settings->{$component};
     }
     $package == 1 ? $o_default || $settings->{name} : ref $package eq 'ARRAY' ? @$package : $package;
 }
@@ -106,13 +106,13 @@ sub find_settings {
 }
 
 sub device_run_command {
-    my ($settings, $driver, $option) = @_;
-    my $command = $settings->{$option} or return;
+    my ($settings, $driver, $component) = @_;
+    my $command = $settings->{$component} or return;
 
     if (ref $command eq 'CODE') {
         $command->($driver);
     } else {
-        log::explanations("Running $option command $command");
+        log::explanations("Running $component command $command");
         run_program::rooted($::prefix, $command);
     }
 }
@@ -123,20 +123,20 @@ sub warn_not_installed {
 }
 
 sub get_checked_element {
-    my ($settings, $driver, $option) = @_;
-    $option eq 'firmware' ?
+    my ($settings, $driver, $component) = @_;
+    $component eq 'firmware' ?
       get_firmware_path($settings) :
-    $option eq 'kernel_module' ?
+    $component eq 'kernel_module' ?
       $driver :
-      ref $settings->{$option} eq 'HASH' && $settings->{$option}{test_file};
+      ref $settings->{$component} eq 'HASH' && $settings->{$component}{test_file};
 }
 
 sub warn_not_found {
-    my ($in, $settings, $driver, $option, @packages) = @_;
+    my ($in, $settings, $driver, $component, @packages) = @_;
     my %opt;
-    $opt{$_} = component_get_option($settings, $option, $_) foreach qw(url explanations no_club no_package);
-    my $checked = get_checked_element($settings, $driver, $option);
-    my $component_name = ref $settings->{$option} eq 'HASH' && translate($settings->{$option}{component_name}) || $option;
+    $opt{$_} = component_get_option($settings, $component, $_) foreach qw(url explanations no_club no_package);
+    my $checked = get_checked_element($settings, $driver, $component);
+    my $component_name = ref $settings->{$component} eq 'HASH' && translate($settings->{$component}{component_name}) || $component;
     $in->ask_warn(N("Error"),
                   join(" ",
                        ($opt{no_package} ?
@@ -152,8 +152,8 @@ sub warn_not_found {
 }
 
 sub is_file_installed {
-    my ($settings, $option) = @_;
-    my $file = ref $settings->{$option} eq 'HASH' && $settings->{$option}{test_file};
+    my ($settings, $component) = @_;
+    my $file = ref $settings->{$component} eq 'HASH' && $settings->{$component}{test_file};
     $file && -e "$::prefix$file";
 }
 
@@ -291,45 +291,45 @@ sub user_install {
 }
 
 sub install_packages {
-    my ($in, $settings, $driver, $option, @packages) = @_;
+    my ($in, $settings, $driver, $component, @packages) = @_;
 
     unless (@packages) {
-        log::explanations(qq(No $option package for module "$driver" is required, skipping));
+        log::explanations(qq(No $component package for module "$driver" is required, skipping));
         return 1;
     }
 
-    if (check_installed($option, $settings, $driver)) {
-        $settings->{old_status}{$option} = 1;
-        log::explanations(qq(Required $option package for module "$driver" is already installed, skipping));
+    if (check_installed($component, $settings, $driver)) {
+        $settings->{old_status}{$component} = 1;
+        log::explanations(qq(Required $component package for module "$driver" is already installed, skipping));
         return 1;
     }
 
-    my $optional = ref $settings->{$option} eq 'HASH' && $settings->{$option}{optional};
-    if (my @available = get_available_packages($option, $in, @packages)) {
-        log::explanations("Installing thirdparty packages ($option) " . join(', ', @available));
-        if ($in->do_pkgs->install(@available) && check_installed($option, $settings, $driver)) {
+    my $optional = ref $settings->{$component} eq 'HASH' && $settings->{$component}{optional};
+    if (my @available = get_available_packages($component, $in, @packages)) {
+        log::explanations("Installing thirdparty packages ($component) " . join(', ', @available));
+        if ($in->do_pkgs->install(@available) && check_installed($component, $settings, $driver)) {
             return 1;
         } elsif (!$optional) {
             warn_not_installed($in, @available);
         }
     }
     return 1 if $optional;
-    log::explanations("Thirdparty package @packages ($option) is required but not available");
+    log::explanations("Thirdparty package @packages ($component) is required but not available");
 
     0;
 }
 
 sub install_components {
-    my ($in, $settings, $driver, @options) = @_;
+    my ($in, $settings, $driver, @components) = @_;
 
-    foreach my $option (@options) {
-	my @packages = get_required_packages($option, $settings);
-        if (!component_get_option($settings, $option, 'no_package')) {
-            install_packages($in, $settings, $driver, $option, @packages) and next;
+    foreach my $component (@components) {
+	my @packages = get_required_packages($component, $settings);
+        if (!component_get_option($settings, $component, 'no_package')) {
+            install_packages($in, $settings, $driver, $component, @packages) and next;
         }
 
-	unless (user_install($option, $settings, $in)) {
-	    warn_not_found($in, $settings, $driver, $option, @packages);
+	unless (user_install($component, $settings, $in)) {
+	    warn_not_found($in, $settings, $driver, $component, @packages);
 	    return;
 	}
     }
