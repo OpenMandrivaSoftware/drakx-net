@@ -28,9 +28,11 @@ sub create_pixbufs() {
     };
 }
 
-sub create {
-    my ($in, $net, $w, $pixbufs) = @_;
-    { in => $in, net => $net, gui => { w => $w, pixbufs => $pixbufs } };
+sub new {
+    my ($class, $in, $net, $w, $pixbufs) = @_;
+    bless {
+        in => $in, net => $net, gui => { w => $w, pixbufs => $pixbufs },
+    }, $class;
 }
 
 sub set_connection {

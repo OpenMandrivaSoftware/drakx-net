@@ -134,7 +134,7 @@ sub main {
     $::main_window = $w->{real_window};
 
     my $pixbufs = network::connection_manager::create_pixbufs();
-    my $droam = network::connection_manager::create($in, $net, $w, $pixbufs);
+    my $droam = network::connection_manager->new($in, $net, $w, $pixbufs);
     network::connection_manager::create_networks_list($droam);
     create_drakroam_gui($droam, $dbus, $title, $icon);
 
