@@ -40,7 +40,7 @@ sub get_connection {
 sub select_connection {
     my ($droam) = @_;
 
-    $droam->{connection} = get_connection($droam);
+    network::connection_manager::set_connection($droam, get_connection($droam));
     network::connection_manager::check_setup($droam) || network::connection_manager::setup_connection($droam)
         if $droam->{connection};
     update_on_connection_change($droam);
@@ -142,8 +142,9 @@ sub main {
 
     my @connection_types = qw(network::connection::wireless network::connection::cellular_card);
     @{$droam->{all_connections}} = map { $_->get_connections(automatic_only => 1) } @connection_types;
-    $droam->{connection} = $o_interface && find { $_->get_interface eq $o_interface } @{$droam->{all_connections}};
-    $droam->{connection} ||= find { !$_->network_scan_is_slow } @{$droam->{all_connections}};
+    my $connection = $o_interface && find { $_->get_interface eq $o_interface } @{$droam->{all_connections}};
+    $connection ||= find { !$_->network_scan_is_slow } @{$droam->{all_connections}};
+    network::connection_manager::set_connection($droam, $connection) if $connection;
     update_connections_list($droam);
     update_on_connection_change($droam);
 
