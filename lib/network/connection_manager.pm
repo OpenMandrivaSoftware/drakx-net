@@ -33,6 +33,11 @@ sub create {
     { in => $in, net => $net, gui => { w => $w, pixbufs => $pixbufs } };
 }
 
+sub set_connection {
+    my ($cmanager, $connection) = @_;
+    $cmanager->{connection} = $connection;
+}
+
 sub check_setup {
     my ($cmanager) = @_;
     $cmanager->{connection}{passed_setup} =
