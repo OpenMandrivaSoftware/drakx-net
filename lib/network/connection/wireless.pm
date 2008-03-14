@@ -590,6 +590,13 @@ sub write_settings {
     $self->SUPER::write_settings($o_net, $o_modules_conf);
 }
 
+sub apply_network_selection {
+    my ($self) = @_;
+    require network::network;
+    my $file = network::network::get_ifcfg_file($self->get_interface);
+    network::network::write_interface_settings($self->build_ifcfg_settings, $file);
+}
+
 sub network_is_configured {
     my ($self, $network) = @_;
     if ($self->{control}{roaming}) {
