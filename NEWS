@@ -1,3 +1,55 @@
+0.28:
+- wireless support:
+  o detect EAP support when parsing iwlist scan (#38792)
+  o rephrase WPA/WPA2 PSK/Enterprise labels
+  o install mandi if wpa_supplicant is enabled, so that net_applet can
+    trigger connections without being root
+- cellular cards support:
+  o check that PIN number is 4 digits
+  o do not enter PIN multiple times in gcom
+    (to prevent wrong PIN from being entered and SIM card to be locked)
+- connection frontend:
+  o improve message about non-free packages (#37258)
+  o only write network settings that really have to be applied before
+    starting connection (#38792)
+  o do not crash if no device is detected when updating networks (#38734)
+- connection backend:
+  o do not check connection setup again if the first time failed
+  o preverse existing settings when configuring a new device
+  o fix crash during ethernet devices detection (#33517)
+- netcenter:
+  o show only non-zeroconf virtual interfaces (#38310)
+  o improve virtual/alias interfaces support
+  o show wait_message earlier and remove main window showing hack
+    (wait_message will end with a default window icon though)
+- drakroam:
+  o do not run the whole setup check if interface is already ok
+  o preselect "No device found" in connections list if no device is found
+- net_applet:
+  o add support for "new connection" messages from Interactive Firewall
+    (do not show them as "attacks")
+  o use Gtk2::Notify and Gtk2::StatusIcon
+    (#37509, reworked based on a patch from Titi)
+  o set 'critical' urgency in attack notifications popup
+  o flush gtk before displaying notifications
+    (so that they appear on the status icon position)
+- drakfirewall:
+  o adapt Ifw rule to new shorewall (remove old Ifw rule if needed)
+  o do not ask which interfaces to protect if disabled (#27049)
+  o protect all interfaces by default, let the user unselect
+    local ones (#27978)
+  o add banner
+- drakids:
+  o add banner
+  o better phrasing (do not read Attack when it can be a simple 
+    connection notification)
+- drakconnect:
+  o include interface name when selecting device
+  o split code in sub-modules (startup should be slightly faster)
+  o always write modules conf before exiting
+    (this could fix some bugs with drakconnect --del)
+  o drop --old and --install option
+
 0.27:
 - connection backend:
   o initial import of WPA-EAP support
