@@ -546,6 +546,7 @@ sub handle_ifw_message {
             set_verdict($message, \&apply_verdict_ignore);
         },
         if_($is_attack,
+            urgency => 'critical',
             actions => [ {
                 action => 'clicked',
                 label => N("Process attack"),
