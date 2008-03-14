@@ -404,10 +404,10 @@ sub create_action_item {
         my @menu = create_menu_choices($action);
         @menu || $actions{$action}{header} or return ();
         gtkshow(create_menu($name,
-                            if_($actions{$action}{header},
+                            $actions{$action}{header} ? (
                                 create_action_item($actions{$action}{header}),
                                 gtkshow(Gtk2::SeparatorMenuItem->new),
-                            ),
+                            ) : (),
                             @menu,
                         ));
     } else {
