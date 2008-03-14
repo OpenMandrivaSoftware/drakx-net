@@ -65,10 +65,6 @@ local $_ = join '', @ARGV;
 /--skip-wizard/ and manage();
 /--add/ and add_intf();
 /--del/ and del_intf();
-if (/--install/) {
-    $::isInstall = 1;
-    add_intf();
-}
 /--internet/ and configure_net();
 
 # default is to run wizard
