@@ -209,7 +209,7 @@ my @thirdparty_settings = (
         firmware => {
             url => 'http://acx100.sourceforge.net/wiki/Firmware',
             test_file => 'tiacx1*',
-            no_package => 1,
+            no_distro_package => 1,
         },
     },
 
