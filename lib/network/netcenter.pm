@@ -136,7 +136,7 @@ sub main {
         $dbus->{connection}->add_filter(sub {
             my ($_con, $msg) = @_;
             if ($msg->get_member eq 'status') {
-                my ($status, $interface) = $msg->get_args_list;
+                my ($_status, $interface) = $msg->get_args_list;
                 my $cmanager = find { $_->{connection}->get_interface eq $interface } @cmanagers
                   or return;
                 #- FIXME: factorize in update_on_status_change() and check why update_networks() calls update_on_status_change()
