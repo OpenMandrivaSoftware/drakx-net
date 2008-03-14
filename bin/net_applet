@@ -545,14 +545,16 @@ sub handle_ifw_message {
         timeout => sub {
             set_verdict($message, \&apply_verdict_ignore);
         },
-        if_($is_attack, actions => [ {
-            action => 'clicked',
-            label => N("Process attack"),
-            callback => sub {
-                disable_ifw_alert();
-                ask_attack_verdict($message);
-            },
-        } ]),
+        if_($is_attack,
+            actions => [ {
+                action => 'clicked',
+                label => N("Process attack"),
+                callback => sub {
+                    disable_ifw_alert();
+                    ask_attack_verdict($message);
+                },
+            } ],
+        ),
     });
 }
 
