@@ -159,7 +159,7 @@ eval {
     });
 } if $dbus;
 
-my $bubble_queue = Gtk2::Notify::Queue->new($icon);
+my $notification_queue = Gtk2::Notify::Queue->new($icon);
 
 $icon->signal_connect(activate => sub {
         my ($_icon, $button, $time) = @_;
@@ -312,9 +312,9 @@ sub go2State {
         $need_update = 1;
     }
     if ($current_state ne $state_type) {
-        my $show = defined $current_state; # don't show bubble at applet startup
+        my $show = defined $current_state; # don't show notification at applet startup
         $current_state = $state_type;
-        $bubble_queue->add({
+        $notification_queue->add({
             title => $old_description || $current_description || N("Network connection"),
             pixbuf => get_state_pixbuf(),
             message => get_state_message($old_interface || $current_interface),
@@ -538,7 +538,7 @@ sub handle_ifw_message {
     }
     my $is_attack = $message->{prefix} ne 'NEW';
     enable_ifw_alert() if $is_attack;
-    $bubble_queue->add({
+    $notification_queue->add({
         title => N("Interactive Firewall"),
         pixbuf => $pixbufs{firewall},
         message => $message->{msg},
@@ -567,7 +567,7 @@ sub ask_attack_verdict {
     my $set_verdict = sub {
         my ($verdict) = @_;
         set_verdict($attack, $verdict);
-        $bubble_queue->process_next;
+        $notification_queue->process_next;
     };
     gtkadd($w->{window},
            gtknew('VBox', spacing => 5, children_loose => [
@@ -631,7 +631,7 @@ sub ask_attack_verdict {
 sub handle_ifw_listen {
     my $listen = network::ifw::parse_listen_message(\@_);
     enable_ifw_alert();
-    $bubble_queue->add({
+    $notification_queue->add({
         title => N("Interactive Firewall: new service"),
         pixbuf => $pixbufs{firewall},
         message => $listen->{message},
@@ -651,7 +651,7 @@ sub ask_listen_verdict {
 
     my $w = ugtk2->new(N("Interactive Firewall: new service"), icon => "drakfirewall");
     my $set_verdict = sub {
-        $bubble_queue->process_next;
+        $notification_queue->process_next;
     };
     gtkadd($w->{window},
            gtknew('VBox', spacing => 5, children_loose => [
