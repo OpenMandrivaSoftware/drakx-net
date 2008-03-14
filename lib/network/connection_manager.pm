@@ -80,7 +80,7 @@ sub setup_connection {
             return;
         }
     }
-    write_settings($cmanager);
+    $cmanager->write_settings;
     $cmanager->{connection}{passed_setup} = 1;
 }
 
@@ -108,15 +108,14 @@ sub write_settings {
 sub configure_connection {
     my ($cmanager) = @_;
 
-    if (!check_setup($cmanager)) {
-        setup_connection($cmanager);
-        network::connection_manager::update_networks($cmanager)
-            if $cmanager->{connection}->can('get_networks');
-        update_on_status_change($cmanager);
+    if (!$cmanager->check_setup) {
+        $cmanager->setup_connection;
+        $cmanager->update_networks if $cmanager->{connection}->can('get_networks');
+        $cmanager->update_on_status_change;
         return;
     }
 
-    load_settings($cmanager);
+    $cmanager->load_settings;
 
     my $error;
     do {
@@ -161,7 +160,7 @@ sub configure_connection {
     $cmanager->{connection}->install_packages($cmanager->{in}) if $cmanager->{connection}->can('install_packages');
     $cmanager->{connection}->unload_connection if $cmanager->{connection}->can('unload_connection');
 
-    write_settings($cmanager);
+    $cmanager->write_settings;
 
     1;
 }
@@ -173,14 +172,14 @@ sub start_connection {
     if ($cmanager->{connection}->can('get_networks')) {
         $cmanager->{connection}{network} &&
         ($cmanager->{connection}->selected_network_is_configured ||
-         configure_connection($cmanager))
+         $cmanager->configure_connection)
           or return;
     }
 
     gtkset_mousecursor_wait($cmanager->{gui}{w}{window}->window);
     my $_wait = $cmanager->{in}->wait_message(N("Please wait"), N("Connecting..."));
     if ($cmanager->{connection}->can('apply_network_selection')) {
-        load_settings($cmanager);
+        $cmanager->load_settings;
         $cmanager->{connection}->apply_network_selection($cmanager);
     }
     $cmanager->{connection}->prepare_connection if $cmanager->{connection}->can('prepare_connection');
@@ -188,7 +187,7 @@ sub start_connection {
     $cmanager->{connection}->connect($cmanager->{in}, $cmanager->{net});
     gtkset_mousecursor_normal($cmanager->{gui}{w}{window}->window);
 
-    update_on_status_change($cmanager);
+    $cmanager->update_on_status_change;
 }
 
 sub stop_connection {
@@ -199,7 +198,7 @@ sub stop_connection {
     $cmanager->{connection}->disconnect;
     gtkset_mousecursor_normal($cmanager->{gui}{w}{window}->window);
 
-    update_on_status_change($cmanager);
+    $cmanager->update_on_status_change;
 }
 
 sub monitor_connection {
@@ -219,10 +218,10 @@ sub toggle_would_disconnect {
 sub toggle_connection {
     my ($cmanager) = @_;
 
-    if (toggle_would_disconnect($cmanager)) {
-        stop_connection($cmanager);
+    if ($cmanager->toggle_would_disconnect) {
+        $cmanager->stop_connection;
     } else {
-        start_connection($cmanager);
+        $cmanager->start_connection;
     }
 }
 
@@ -238,7 +237,7 @@ sub create_networks_list {
         N("Operating Mode") => "text",
     );
     $cmanager->{gui}{networks_list}->get_selection->set_mode('single');
-    $cmanager->{gui}{networks_list}->get_selection->signal_connect('changed' => sub { select_network($cmanager) });
+    $cmanager->{gui}{networks_list}->get_selection->signal_connect('changed' => sub { $cmanager->select_network });
 
     $cmanager->{gui}{networks_list}->signal_connect('query-tooltip' => sub {
         my ($widget, $x, $y, $kbd_tip, $tooltip) = @_;
@@ -259,7 +258,7 @@ sub select_network {
         my ($selected) = $cmanager->{gui}{networks_list}->get_selected_indices;
         $cmanager->{connection}{network} = defined $selected && $cmanager->{gui}{networks_list}{data}[$selected][0];
     }
-    update_on_status_change($cmanager);
+    $cmanager->update_on_status_change;
 }
 
 sub filter_networks {
@@ -276,7 +275,7 @@ sub update_networks {
     @{$cmanager->{gui}{networks_list}{data}} = ();
 
     if ($cmanager->{connection}) {
-        check_setup($cmanager) || setup_connection($cmanager) or return;
+        $cmanager->check_setup || $cmanager->setup_connection or return;
 
         my $wait = $cmanager->{connection}->network_scan_is_slow && $cmanager->{in}->wait_message(N("Please wait"), N("Scanning for networks..."));
         $cmanager->{connection}{networks} = $cmanager->{connection}->get_networks;
@@ -307,14 +306,14 @@ sub update_networks {
         undef $wait;
     }
 
-    update_on_status_change($cmanager);
+    $cmanager->update_on_status_change;
 }
 
 sub update_on_status_change {
     my ($cmanager) = @_;
 
     if ($cmanager->{gui}{buttons}{connect_toggle}) {
-        my $disconnect = toggle_would_disconnect($cmanager);
+        my $disconnect = $cmanager->toggle_would_disconnect;
         $cmanager->{gui}{buttons}{connect_toggle}->set_label($disconnect ? N("Disconnect") : N("Connect"));
         gtkset($cmanager->{gui}{buttons}{connect_toggle}, image => gtknew('Image', file => $disconnect ? 'stop-16' : 'activate-16'))
           if $cmanager->{gui}{buttons}{connect_toggle}->get_image;
@@ -336,7 +335,7 @@ sub update_on_status_change {
         my $may_have_network =
           !$cmanager->{connection}->can('get_networks') ||
           $cmanager->{connection}{network};
-        $allow_configure = $may_have_network || !check_setup($cmanager);
+        $allow_configure = $may_have_network || !$cmanager->check_setup;
     }
 
     $cmanager->{gui}{buttons}{configure}->set_sensitive($allow_configure)

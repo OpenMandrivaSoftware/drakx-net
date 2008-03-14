@@ -16,13 +16,13 @@ sub build_cmanager {
     my ($in, $net, $w, $pixbufs, $connection) = @_;
 
     my $cmanager = network::connection_manager->new($in, $net, $w, $pixbufs);
-    network::connection_manager::set_connection($cmanager, $connection);
+    $cmanager->set_connection($connection);
 
     if ($connection->can('get_networks')) {
-        network::connection_manager::create_networks_list($cmanager);
+        $cmanager->create_networks_list;
         #- do not check if it is slow (either scan or device check) or unavailable
-        network::connection_manager::update_networks($cmanager)
-            if !$connection->network_scan_is_slow && network::connection_manager::check_setup($cmanager);
+        $cmanager->update_networks
+            if !$connection->network_scan_is_slow && $cmanager->check_setup;
     }
     $cmanager;
 }
@@ -82,22 +82,22 @@ sub main {
                                                $cmanager->{gui}{buttons}{monitor} =
                                                  gtknew('Button', text => N("_: This is a verb\nMonitor"),
                                                         image => gtknew('Image', file => 'monitor-16'),
-                                                        clicked => sub { network::connection_manager::monitor_connection($cmanager) }),
+                                                        clicked => sub { $cmanager->monitor_connection }),
                                                $cmanager->{gui}{buttons}{configure} =
                                                  gtknew('Button', text => N("Configure"),
                                                         image => gtknew('Image', file => 'configure-16'),
-                                                        clicked => sub { network::connection_manager::configure_connection($cmanager) }),
+                                                        clicked => sub { $cmanager->configure_connection }),
                                                ($cmanager->{connection}->can('get_networks') ?
                                                   ($cmanager->{gui}{buttons}{refresh} =
                                                     gtknew('Button', text => N("Refresh"),
                                                            image => gtknew('Image', file => 'refresh', size => 16),
-                                                           clicked => sub { network::connection_manager::update_networks($cmanager) }))
+                                                           clicked => sub { $cmanager->update_networks }))
                                                   : ()),
                                            ]),
                                        0, $cmanager->{gui}{buttons}{connect_toggle} =
                                                  gtknew('Button',
                                                         image => gtknew('Image', file => 'activate-16'),
-                                                        clicked => sub { network::connection_manager::toggle_connection($cmanager) }),
+                                                        clicked => sub { $cmanager->toggle_connection }),
                                            ]),
                                ]),
                    ]);
@@ -119,7 +119,7 @@ sub main {
                    ]);
                    $content->hide;
 
-                   network::connection_manager::update_on_status_change($cmanager);
+                   $cmanager->update_on_status_change;
 
                    ($::i > 0 ? Gtk2::HSeparator->new : ()), $box;
                } @connections,
@@ -141,9 +141,9 @@ sub main {
                   or return;
                 #- FIXME: factorize in update_on_status_change() and check why update_networks() calls update_on_status_change()
                 if ($cmanager->{connection}->can('get_networks') && !$cmanager->{connection}->network_scan_is_slow) {
-                    network::connection_manager::update_networks($cmanager);
+                    $cmanager->update_networks;
                 } else {
-                    network::connection_manager::update_on_status_change($cmanager);
+                    $cmanager->network::connection_manager::update_on_status_change;
                 }
             }
         });
