@@ -1,6 +1,7 @@
 package network::drakconnect;
 
 use common;
+use network::network;
 
 sub apply {
     my ($in, $net, $modules_conf) = @_;
