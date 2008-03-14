@@ -253,13 +253,13 @@ sub create_networks_list {
 }
 
 sub select_network {
-    my ($droam) = @_;
+    my ($cmanager) = @_;
 
-    if ($droam->{connection}) {
-        my ($selected) = $droam->{gui}{networks_list}->get_selected_indices;
-        $droam->{connection}{network} = defined $selected && $droam->{gui}{networks_list}{data}[$selected][0];
+    if ($cmanager->{connection}) {
+        my ($selected) = $cmanager->{gui}{networks_list}->get_selected_indices;
+        $cmanager->{connection}{network} = defined $selected && $cmanager->{gui}{networks_list}{data}[$selected][0];
     }
-    update_on_status_change($droam);
+    update_on_status_change($cmanager);
 }
 
 sub filter_networks {
