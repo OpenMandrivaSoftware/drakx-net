@@ -68,6 +68,15 @@ sub get_hardware_settings {
    [ { label => N("PIN number"), val => \$self->{hardware}{pin}, hidden => 1 } ];
 }
 
+sub check_hardware_settings {
+    my ($self) = @_;
+    if ($self->{hardware}{pin} !~ /^[0-9]{4}$/) {
+        $self->{hardware}{error} = N("Wrong PIN number format: it should be 4 digits.");
+        return 0;
+    }
+    1;
+}
+
 sub get_peer_default_options {
     my ($self) = @_;
     $self->SUPER::get_peer_default_options,
