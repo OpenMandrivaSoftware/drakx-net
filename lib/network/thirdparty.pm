@@ -63,8 +63,9 @@ use File::Glob ':glob';
 #-     function to call if the package installation fails
 #- o explanations:
 #-     additionnal text to display if the installation fails
-#- o no_club:
-#-     1 if the package isn't available on Mandriva club
+#- o no_distro_package:
+#-     1 if the package isn't available in the official distribution
+#        (because of missing distribution rights for example)
 
 our $firmware_directory = "/lib/firmware";
 our @thirdparty_types = qw(kernel_module tools firmware);
@@ -134,7 +135,7 @@ sub get_checked_element {
 sub warn_not_found {
     my ($in, $settings, $driver, $component, @packages) = @_;
     my %opt;
-    $opt{$_} = component_get_option($settings, $component, $_) foreach qw(url explanations no_club no_package);
+    $opt{$_} = component_get_option($settings, $component, $_) foreach qw(url explanations no_distro_package no_package);
     my $checked = get_checked_element($settings, $driver, $component);
     my $component_name = ref $settings->{$component} eq 'HASH' && translate($settings->{$component}{component_name}) || $component;
     $in->ask_warn(N("Error"),
@@ -143,7 +144,7 @@ sub warn_not_found {
                           N("Some components (%s) are required but aren't available for %s hardware.", $component_name, $settings->{name}) :
                           N("Some packages (%s) are required but aren't available.", join(', ', @packages))),
                        join("\n\n",
-                            if_(!$opt{no_club} && !$opt{no_package}, N("These packages can be found in Mandriva Club or in Mandriva commercial releases.")),
+                            if_(!$opt{no_distro_package} && !$opt{no_package}, N("These packages can be found in Mandriva Club or in Mandriva commercial releases.")),
                             if_($checked, N("The following component is missing: %s", $checked)),
                             if_($opt{explanations}, translate($opt{explanations})),
                             if_($opt{url}, N("The required files can also be installed from this URL:

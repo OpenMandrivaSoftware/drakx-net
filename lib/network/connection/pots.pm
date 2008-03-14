@@ -104,7 +104,7 @@ my @thirdparty_settings = (
         kernel_module => {
             package => 'sm56',
         },
-        no_club => 1,
+        no_distro_package => 1,
         device => '/dev/sm56',
     },
 );
