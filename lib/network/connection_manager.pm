@@ -115,7 +115,7 @@ sub configure_connection {
     my ($cmanager) = @_;
 
     if (!$cmanager->check_setup) {
-        $cmanager->setup_connection;
+        $cmanager->setup_connection or return;
         $cmanager->update_networks if $cmanager->{connection}->can('get_networks');
         $cmanager->update_on_status_change;
         return;
