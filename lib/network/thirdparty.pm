@@ -88,6 +88,11 @@ sub device_get_option {
     $value == 1 ? $o_default || $settings->{name} : $value;
 }
 
+sub component_get_option {
+    my ($settings, $component, $option) = @_;
+    ref $settings->{$component} eq 'HASH' && $settings->{$component}{$option} || $settings->{$option};
+}
+
 sub find_settings {
     my ($settings_list, $driver) = @_;
     find {
@@ -129,7 +134,7 @@ sub get_checked_element {
 sub warn_not_found {
     my ($in, $settings, $driver, $option, @packages) = @_;
     my %opt;
-    $opt{$_} = ref $settings->{$option} eq 'HASH' && $settings->{$option}{$_} || $settings->{$_} foreach qw(url explanations no_club no_package);
+    $opt{$_} = component_get_option($settings, $option, $_) foreach qw(url explanations no_club no_package);
     my $checked = get_checked_element($settings, $driver, $option);
     my $component_name = ref $settings->{$option} eq 'HASH' && translate($settings->{$option}{component_name}) || $option;
     $in->ask_warn(N("Error"),
