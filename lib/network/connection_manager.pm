@@ -54,6 +54,8 @@ sub check_setup {
 sub setup_connection {
     my ($cmanager) = @_;
 
+    $cmanager->load_settings;
+
     my @packages = $cmanager->{connection}->can('get_packages') ? $cmanager->{connection}->get_packages : ();
     if (@packages && !$cmanager->{in}->do_pkgs->install(@packages)) {
         $cmanager->{in}->ask_warn(N("Error"), N("Could not install the packages (%s)!", join(', ', @packages)));
