@@ -34,7 +34,7 @@ sub configure_net {
                     N("Warning"),
                     N("You do not have any configured Internet connection.
 Run the \"%s\" assistant from the Mandriva Linux Control Center", N("Set up a new network interface (LAN, ISDN, ADSL, ...)")));
-        $in->exit;
+        return;
     }
     unless ($::isEmbedded) {
         $dialog->{rwindow}->set_position('center');
@@ -102,7 +102,6 @@ Run the \"%s\" assistant from the Mandriva Linux Control Center", N("Set up a ne
     $update->();
     Glib::Timeout->add(2000, $update);
     $dialog->main;
-    ugtk2->exit(0);
 }
 
 1;
