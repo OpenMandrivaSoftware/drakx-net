@@ -340,7 +340,7 @@ sub update_tray_icon() {
     if (!$ifw_alert || $icon->get_storage_type ne 'pixbuf') {
         $icon->set_from_pixbuf(get_state_pixbuf());
     } else {
-        $icon->set_from_stock('gtk-dialog-warning', 'small-toolbar');
+        $icon->set_from_stock('gtk-dialog-warning');
     }
 }
 
