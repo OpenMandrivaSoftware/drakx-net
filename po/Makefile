@@ -32,7 +32,7 @@ clean:
 $(POTFILE): $(PL_FILES)
 	perl_checker -q --generate-pot $@ $(PL_FILES)
 
-update_n_merge: $(POTFILE).pot merge
+update_n_merge: $(POTFILE) merge
 
 merge:
 	@for n in $(POFILES); do \
