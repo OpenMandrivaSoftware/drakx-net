@@ -90,7 +90,6 @@ sub manage {
 
     $window->{rwindow}->show_all;
     $window->main;
-    ugtk2->exit(0);
 }
 
 sub build_tree {

@@ -10,7 +10,7 @@ sub del_intf {
     my ($intf2delete, $failure);
     if (!keys %{$net->{ifcfg}}) {
       $in->ask_warn(N("Error"), N("No ethernet network adapter has been detected on your system. Please run the hardware configuration tool."));
-      $in->exit(0);
+      return;
     }
     my @all_cards = network::connection::ethernet::get_eth_cards($modules_conf);
     my %names = network::connection::ethernet::get_eth_cards_names(@all_cards);
@@ -63,7 +63,6 @@ sub del_intf {
                 },
       });
     $wiz->safe_process($in);
-    $in->exit(0);
 }
 
 1;
