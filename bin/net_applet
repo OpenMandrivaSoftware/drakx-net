@@ -20,8 +20,7 @@ use network::monitor;
 use network::signal_strength;
 use detect_devices;
 use modules;
-
-use Gtk2::TrayIcon;
+use Gtk2::Notify -init, 'notify';
 
 use ugtk2 qw(:create :helpers :wrappers :dialogs);
 
@@ -31,7 +30,6 @@ shouldStart() or die "$onstartupfile should be set to TRUE or use net_applet --f
 #- Allow multiple instances, but only one per user:
 is_running('net_applet') and die "net_applet already running\n";
 
-my ($eventbox, $img);
 my ($current_state, $current_interface, $current_description, $simple_menu, $menu, $wireless_device, $timeout, $update_timeout);
 add_icon_path("/usr/share/libDrakX/pixmaps/");
 
@@ -139,12 +137,7 @@ my %actions = (
                'quit' => { name => N("Quit"), launch => \&mainQuit },
               );
 
-gtkadd(my $icon = Gtk2::TrayIcon->new("Net_Applet"),
-       gtkadd($eventbox = Gtk2::EventBox->new,
-              gtkpack($img = Gtk2::Image->new)
-             )
-      );
-$icon->show_all;
+my $icon = Gtk2::StatusIcon->new;
 
 my ($dbus, $monitor, $ifw, $interactive_cb, $ifw_alert);
 eval { $dbus = dbus_object::system_bus() };
@@ -166,22 +159,22 @@ eval {
     });
 } if $dbus;
 
-my $bubble_queue = Gtk2::NotificationBubble::Queue->new;
-$bubble_queue->{bubble}->attach($icon);
+my $bubble_queue = Gtk2::NotificationBubble::Queue->new($icon);
 
-$eventbox->signal_connect(button_press_event => sub {
-    if ($_[1]->button == 1) {
+$icon->signal_connect(activate => sub {
+        my ($_icon, $button, $time) = @_;
         if ($ifw_alert) {
             run_drakids();
         } elsif ($simple_menu) {
-           $simple_menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
+           $simple_menu->popup(undef, undef, undef, undef, $button, $time);
        } else {
             run_netcenter();
         }
-    } elsif ($_[1]->button == 3 && $menu) {
-        $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
-    }
-});
+    });
+$icon->signal_connect(popup_menu => sub {
+        my ($_icon, $button, $time) = @_;
+        $menu->popup(undef, undef, undef, undef, $button, $time);
+    });
 
 checkNetworkForce();
 cronNetwork();
@@ -344,10 +337,10 @@ sub get_state_pixbuf() {
 }
 
 sub update_tray_icon() {
-    if (!$ifw_alert || $img->get_storage_type ne 'pixbuf') {
-        $img->set_from_pixbuf(get_state_pixbuf());
+    if (!$ifw_alert || $icon->get_storage_type ne 'pixbuf') {
+        $icon->set_from_pixbuf(get_state_pixbuf());
     } else {
-        $img->set_from_stock('gtk-dialog-warning', 'small-toolbar');
+        $icon->set_from_stock('gtk-dialog-warning', 'small-toolbar');
     }
 }
 
@@ -374,7 +367,7 @@ sub update_applet() {
     generate_menu();
 
     update_tray_icon();
-    gtkset_tip(Gtk2::Tooltips->new, $eventbox, get_state_message()); #gtkset($eventbox, tip => get_state_message());
+    $icon->set_tooltip(get_state_message());
 }
 
 sub create_menu_choices {
