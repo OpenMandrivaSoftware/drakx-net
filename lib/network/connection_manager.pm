@@ -172,10 +172,9 @@ sub start_connection {
 
     gtkset_mousecursor_wait($cmanager->{gui}{w}{window}->window);
     my $_wait = $cmanager->{in}->wait_message(N("Please wait"), N("Connecting..."));
-    #- settings have to be rewritten only if they are impacted by choices from the main window
-    if ($cmanager->{connection}->can('get_networks')) {
+    if ($cmanager->{connection}->can('apply_network_selection')) {
         load_settings($cmanager);
-        write_settings($cmanager);
+        $cmanager->{connection}->apply_network_selection($cmanager);
     }
     $cmanager->{connection}->prepare_connection if $cmanager->{connection}->can('prepare_connection');
     $cmanager->{connection}->disconnect;
