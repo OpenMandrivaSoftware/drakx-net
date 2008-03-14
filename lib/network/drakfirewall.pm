@@ -240,6 +240,9 @@ sub set_ifw {
             $_ .= join("\n", @list) . "\n" if eof && $enabled;
         } "$::prefix/etc/shorewall/$file";
     };
+    substInFile {
+            undef $_ if $_ eq "INCLUDE /etc/ifw/rules", "iptables -I INPUT 2 -j Ifw";
+    } "$::prefix/etc/shorewall/start";
     $set_in_file->('start', "INCLUDE /etc/ifw/start", "INCLUDE /etc/ifw/rules", "iptables -I INPUT 1 -j Ifw");
     $set_in_file->('stop', "iptables -D INPUT -j Ifw", "INCLUDE /etc/ifw/stop");
 }
