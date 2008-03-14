@@ -38,9 +38,6 @@ my $net = {};
 network::network::read_net_conf($net);
 my $modules_conf = modules::any_conf->read;
 
-$::Wizard_title = N("Network & Internet Configuration");
-$::Wizard_pix_up = "drakconnect";
-
 local $_ = join '', @ARGV;
 if (/--skip-wizard/) {
     require network::drakconnect::edit;
