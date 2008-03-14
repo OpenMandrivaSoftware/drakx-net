@@ -40,9 +40,8 @@ sub get_connection {
 sub select_connection {
     my ($droam) = @_;
 
-    network::connection_manager::set_connection($droam, get_connection($droam));
-    network::connection_manager::check_setup($droam) || network::connection_manager::setup_connection($droam)
-        if $droam->{connection};
+    $droam->set_connection(get_connection($droam));
+    $droam->check_setup || $droam->setup_connection if $droam->{connection};
     update_on_connection_change($droam);
 }
 
@@ -50,7 +49,7 @@ sub update_on_connection_change {
     my ($droam) = @_;
     $droam->{gui}{buttons}{refresh}->set_sensitive(to_bool($droam->{connection}))
       if $droam->{gui}{buttons}{refresh};
-    network::connection_manager::update_networks($droam);
+    $droam->update_networks;
 }
 
 sub get_network_event_message {
@@ -96,7 +95,7 @@ sub create_drakroam_gui {
                                             my $member = $msg->get_member;
                                             my $message = get_network_event_message($droam, $member, $msg->get_args_list) or return;
                                             $droam->{on_network_event}($message) if $droam->{on_network_event};
-                                            network::connection_manager::update_networks($droam) if $member eq 'status';
+                                            $droam->update_networks if $member eq 'status';
                                         });
         $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
         dbus_object::set_gtk2_watch_helper($dbus);
@@ -111,10 +110,10 @@ sub create_drakroam_gui {
                                                      gtksignal_connect($droam->{gui}{connections_combo}, changed => sub { select_connection($droam) }) ]),
                1, gtknew('ScrolledWindow', width => 500, height => $scrolled_height, child => $droam->{gui}{networks_list}),
                0, gtknew('HButtonBox', layout => 'edge', children_loose => [
-                   $droam->{gui}{buttons}{configure} = gtknew('Button', text => N("Configure"), clicked => sub { network::connection_manager::configure_connection($droam) }),
-                   $droam->{gui}{buttons}{connect_start} = gtknew('Button', text => N("Connect"), relief => 'half', clicked => sub { network::connection_manager::start_connection($droam) }),
-                   $droam->{gui}{buttons}{connect_stop} = gtknew('Button', text => N("Disconnect"), relief => 'half', clicked => sub { network::connection_manager::stop_connection($droam) }),
-                   $droam->{gui}{buttons}{refresh} = gtknew('Button', text => N("Refresh"), clicked => sub { network::connection_manager::update_networks($droam) }),
+                   $droam->{gui}{buttons}{configure} = gtknew('Button', text => N("Configure"), clicked => sub { $droam->configure_connection }),
+                   $droam->{gui}{buttons}{connect_start} = gtknew('Button', text => N("Connect"), relief => 'half', clicked => sub { $droam->start_connection }),
+                   $droam->{gui}{buttons}{connect_stop} = gtknew('Button', text => N("Disconnect"), relief => 'half', clicked => sub { $droam->stop_connection }),
+                   $droam->{gui}{buttons}{refresh} = gtknew('Button', text => N("Refresh"), clicked => sub { $droam->update_networks }),
                    gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit })
                ]),
                0, $status_bar,
@@ -135,7 +134,7 @@ sub main {
 
     my $pixbufs = network::connection_manager::create_pixbufs();
     my $droam = network::connection_manager->new($in, $net, $w, $pixbufs);
-    network::connection_manager::create_networks_list($droam);
+    $droam->create_networks_list;
     create_drakroam_gui($droam, $dbus, $title, $icon);
 
     $droam->{gui}{w}->show;
@@ -144,13 +143,13 @@ sub main {
     @{$droam->{all_connections}} = map { $_->get_connections(automatic_only => 1) } @connection_types;
     my $connection = $o_interface && find { $_->get_interface eq $o_interface } @{$droam->{all_connections}};
     $connection ||= find { !$_->network_scan_is_slow } @{$droam->{all_connections}};
-    network::connection_manager::set_connection($droam, $connection) if $connection;
+    $droam->set_connection($connection) if $connection;
     update_connections_list($droam);
     update_on_connection_change($droam);
 
     if ($o_ap && $droam->{connection}) {
         $droam->{connection}{network} = $o_ap;
-        network::connection_manager::start_connection($droam);
+        $droam->start_connection;
     }
 
     $droam->{gui}{w}->main;
