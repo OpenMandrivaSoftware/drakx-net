@@ -15,7 +15,7 @@ use network::tools;
 sub build_cmanager {
     my ($in, $net, $w, $pixbufs, $connection) = @_;
 
-    my $cmanager = network::connection_manager::create($in, $net, $w, $pixbufs);
+    my $cmanager = network::connection_manager->new($in, $net, $w, $pixbufs);
     network::connection_manager::set_connection($cmanager, $connection);
 
     if ($connection->can('get_networks')) {
