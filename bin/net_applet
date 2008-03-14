@@ -159,7 +159,7 @@ eval {
     });
 } if $dbus;
 
-my $bubble_queue = Gtk2::NotificationBubble::Queue->new($icon);
+my $bubble_queue = Gtk2::Notify::Queue->new($icon);
 
 $icon->signal_connect(activate => sub {
         my ($_icon, $button, $time) = @_;
