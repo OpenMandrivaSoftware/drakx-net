@@ -173,7 +173,7 @@ $icon->signal_connect(activate => sub {
     });
 $icon->signal_connect(popup_menu => sub {
         my ($_icon, $button, $time) = @_;
-        $menu->popup(undef, undef, undef, undef, $button, $time);
+        $menu->popup(undef, undef, undef, undef, $button, $time) if $menu;
     });
 
 checkNetworkForce();
