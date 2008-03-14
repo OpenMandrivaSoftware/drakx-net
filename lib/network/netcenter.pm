@@ -38,7 +38,6 @@ sub main {
     #- so that transient_for is defined, for wait messages and popups to be centered
     $::main_window = $w->{real_window};
 
-    $w->show;
     my $wait = $in->wait_message(N("Please wait"), N("Please wait"));
 
     my @all_connections = map { $_->get_connections(automatic_only => 1, fast_only => 1) } network::connection::get_types;
@@ -151,6 +150,7 @@ sub main {
         dbus_object::set_gtk2_watch_helper($dbus);
     }
 
+    $w->show;
     undef $wait;
     $w->main;
 }
