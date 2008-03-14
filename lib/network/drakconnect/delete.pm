@@ -1,5 +1,4 @@
 package network::drakconnect::delete;
-use lib qw(/usr/lib/libDrakX);
 
 use common;
 use wizards;
