@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: pt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-03-10 20:27+0100\n"
-"PO-Revision-Date: 2008-03-11 17:45+0000\n"
+"PO-Revision-Date: 2008-03-14 07:25+0000\n"
 "Last-Translator: Zé <mmodem00@gmail.com>\n"
 "Language-Team: Português <pt@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -5157,6 +5157,10 @@ msgid ""
 "auth=MSCHAPV2 for PEAP or\n"
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
+"Autenticação interna com parâmetros de túnel TLS.\n"
+"A entrada é uma string com pares de campo-valor, Exemplos:\n"
+"auth=MSCHAPV2 para PEAP ou\n"
+"autheap=MSCHAPV2 autheap=MD5 para TTLS"
 
 #: ../lib/network/connection/wireless.pm:469
 #, c-format
@@ -5181,7 +5185,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:476
 #, c-format
 msgid "EAP certificate subject match"
-msgstr ""
+msgstr "Correspondência de assunto do certificado EAP"
 
 #: ../lib/network/connection/wireless.pm:478
 #, c-format
@@ -5192,6 +5196,11 @@ msgid ""
 "string in the subject.  The subject string is in following format:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
+" O sub-texto (substring) a que deve corresponder no assunto do\n"
+"certificado do servidor de autenticação. Se este texto for definido,\n"
+"o certificado do servidor é apenas aceite se tiver este texto no\n"
+"assunto.  O texto assunto está no o seguinte formato:\n"
+"/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=como@exemplo.com"
 
 #: ../lib/network/connection/wireless.pm:483
 #, c-format
@@ -5215,6 +5224,19 @@ msgid ""
 "\tOthers such as key_mgmt, eap maybe used to force\n"
 "\tspecial settings different from the U.I settings."
 msgstr ""
+"Aqui é possível passar opções extra para o wpa_supplicant\n"
+"O formato esperado é um texto (string) de pares campo-valor. Os vários\n"
+"valores podem ser especificados, separando cada valor com o caracter #.\n"
+"Note: as directivas são passadas sem verificação e podem causar a falha\n"
+"silenciosa da negociação wpa. As directivas suportadas são preservadas\n"
+"entre edições\n"
+"As directivas suportadas são:\n"
+"\tdisabled, id_str, bssid, priority, auth_alg, eapol_flags,\n"
+"\tproactive_key_caching, peerkey, ca_path, private_key,\n"
+"\tprivate_key_passwd, dh_file, altsubject_match, phase1,\n"
+"\tfragment_size e eap_workaround, pairwise, group\n"
+"\tOutras directivas como key_mgmt, eap, podem ser usadas para\n"
+"\tforçar definições especiais diferentes das definições U.I."
 
 #: ../lib/network/connection/wireless.pm:505
 #, c-format
