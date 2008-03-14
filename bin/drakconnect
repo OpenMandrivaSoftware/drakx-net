@@ -49,19 +49,16 @@ local $_ = join '', @ARGV;
 if (/--skip-wizard/) {
     require network::drakconnect::edit;
     network::drakconnect::edit::manage($in, $net, $modules_conf);
-}
-/--add/ and add_intf();
-if (/--del/) {
+} elsif (/--del/) {
     require network::drakconnect::delete;
     network::drakconnect::delete::del_intf($in, $net, $modules_conf);
-}
-if (/--internet/) {
+} elsif (/--internet/) {
     require network::drakconnect::global;
     network::drakconnect::global::configure_net($in, $net, $modules_conf);
+} else {
+    # default is to run wizard (--add)
+    add_intf();
 }
-
-# default is to run wizard
-add_intf();
 
 sub add_intf() {
     $::isWizard = 1;
