@@ -65,7 +65,6 @@ local $_ = join '', @ARGV;
 /--skip-wizard/ and manage();
 /--add/ and add_intf();
 /--del/ and del_intf();
-/--old/ and goto old;
 if (/--install/) {
     $::isInstall = 1;
     add_intf();
@@ -75,113 +74,12 @@ if (/--install/) {
 # default is to run wizard
 add_intf();
 
-old:
-my @all_cards;
-
-my $window1 = ugtk2->new(N("Network configuration (%d adapters)", scalar @all_cards));
-$window1->{rwindow}->signal_connect(delete_event => sub { ugtk2->exit(0) });
-unless ($::isEmbedded) {
-    $window1->{rwindow}->set_position('center');
-    $window1->{rwindow}->set_size_request(-1, -1);
-}
-$window1->{rwindow}->set_border_width(10);
-
-my $button_apply;
-
-
-my $hostname = chomp_(`hostname`);
+my @all_cards = network::connection::ethernet::get_eth_cards($modules_conf);
+my %names = network::connection::ethernet::get_eth_cards_names(@all_cards);
+my $int_state;
 my $int_label = Gtk2::WrappedLabel->new($net->{type} eq 'lan' ? N("Gateway:") : N("Interface:"));
 my $int_name = Gtk2::Label->new($net->{type} eq 'lan' ? $net->{network}{GATEWAY} : $net->{net_interface});
 my $isconnected = -1;
-
-my $int_connect = Gtk2::Button->new(N("Wait please"));
-$int_connect->set_sensitive(0);
-$int_connect->signal_connect(clicked => sub {
-    if (!$isconnected) {
-        network::tools::start_net_interface($net, 1);
-    } else {
-        network::tools::stop_net_interface($net, 1);
-    }
-});
-
-my $tree_model = Gtk2::TreeStore->new("Gtk2::Gdk::Pixbuf", map { "Glib::String" } 2..6);
-my $list = Gtk2::TreeView->new_with_model($tree_model);
-$list->append_column(Gtk2::TreeViewColumn->new_with_attributes(undef, Gtk2::CellRendererPixbuf->new, 'pixbuf' => 0));
-each_index {
-    $list->append_column(my $col = Gtk2::TreeViewColumn->new_with_attributes($_, Gtk2::CellRendererText->new, 'text' => $::i + 1));
-    $col->set_sort_column_id($::i);
-} (N("Interface"), N("IP address"), N("Protocol"), N("Driver"), N("State"));
-
-$list->signal_connect(button_press_event => sub {
-                          my (undef, $event) = @_;
-                          my (undef, $iter) = $list->get_selection->get_selected;
-                          return unless $iter;
-                          configure_lan() if $event->type eq '2button-press';
-                      });
-
-update_list($modules_conf);
-
-my ($label_host, $int_state);
-
-
-$window1->{window}->add(
-                        gtkpack__(Gtk2::VBox->new(0,10),
-                                  gtkpack(Gtk2::HBox->new,
-                                            Gtk2::Label->new(N("Hostname: ")),
-                                            $label_host = Gtk2::Label->new($hostname),
-                                            gtksignal_connect(Gtk2::Button->new(N("Configure hostname...")),
-                                                              clicked => sub {
-                                                                  local ($::isWizard, $::Wizard_finished) = (1, 1);
-                                                                  eval { # For wizcancel
-                                                                      network::netconnect::real_main($net, $in, $modules_conf);
-                                                                      $button_apply->set_sensitive(1);
-                                                                      update();
-                                                                  };
-                                                                  if ($@ =~ /wizcancel/) {}
-                                                                  $::WizardWindow->destroy;
-                                                                  undef $::WizardWindow;
-                                                              }
-                                                             ),
-                                           ),
-                                  gtkadd(gtkcreate_frame(N("LAN configuration")),
-                                           gtkpack_(gtkset_border_width(Gtk2::VBox->new(0,0), 5),
-                                                    0, $list,
-                                                    0, Gtk2::HBox->new(0,0),
-                                                    0, gtkpack_(Gtk2::HBox->new(0, 0),
-                                                                0, gtksignal_connect(Gtk2::Button->new(N("Configure Local Area Network...")),
-                                                                                     clicked => \&configure_lan),
-                                                               ),
-                                                   )
-                                          ),
-                                 gtkpack(Gtk2::HButtonBox->new,
-                                            gtksignal_connect(Gtk2::Button->new(N("Help")), clicked => sub {
-                                                                  run_program::raw({ detach => 1 }, 'drakhelp', '--id', 'internet-connection') }),
-                                            $button_apply = gtksignal_connect(gtkset_sensitive(Gtk2::Button->new(N("Apply")), 0),
-                                                                              clicked => \&apply),
-                                            gtksignal_connect(Gtk2::Button->new(N("Cancel")), clicked => \&quit_global),
-                                            gtksignal_connect(Gtk2::Button->new(N("Ok")), clicked => sub {
-                                                                  if ($button_apply->get('sensitive')) {
-                                                                      my $dialog = _create_dialog(N("Please wait"));
-                                                                      gtkpack($dialog->vbox,
-                                                                              Gtk2::Label->new(N("Please Wait... Applying the configuration")));
-                                                                      $dialog->show_all;
-                                                                      gtkflush();
-                                                                      apply();
-                                                                      $dialog->destroy;
-                                                                  }
-                                                                  update();
-                                                                  quit_global();
-                                                              }),
-                                           ),
-                                ),
-                       );
-
-
-
-$window1->{rwindow}->show_all;
-gtkflush();
-$window1->main;
-ugtk2->exit(0);
 
 sub manage() {
     my $p = {};
@@ -196,8 +94,6 @@ sub manage() {
     $notebook->set_property('show-tabs', 0);
     $notebook->set_property('show-border', 0);
 
-    @all_cards = network::connection::ethernet::get_eth_cards($modules_conf);
-    my %names = network::connection::ethernet::get_eth_cards_names(@all_cards);
     foreach (keys %names) {
 	my $dev = detect_devices::is_lan_interface($_) ? $names{$_} : $_;
 	$p->{$dev} = {
@@ -705,8 +601,6 @@ sub del_intf() {
       $in->ask_warn(N("Error"), N("No ethernet network adapter has been detected on your system. Please run the hardware configuration tool."));
       $in->exit(0);
     }
-    @all_cards = network::connection::ethernet::get_eth_cards($modules_conf);
-    my %ethernet_names = network::connection::ethernet::get_eth_cards_names(@all_cards);
     require wizards;
     my $wiz = wizards->new(
       {
@@ -720,7 +614,7 @@ sub del_intf() {
                                           list => [ keys %{$net->{ifcfg}} ],
                                           format => sub {
                                               my $type = network::tools::get_interface_type($net->{ifcfg}{$_[0]});
-                                              $ethernet_names{$_[0]} || ($type ? "$type ($_[0])" : $_[0]);
+                                              $names{$_[0]} || ($type ? "$type ($_[0])" : $_[0]);
                                             }
                                         }
                                       ],
@@ -774,54 +668,12 @@ sub get_intf_ip {
     ($ip, $state, $mask);
 }
 
-my %intf;
-
-sub update_list {
-    my ($modules_conf) = @_;
-    @all_cards = network::connection::ethernet::get_eth_cards($modules_conf);
-    my %new_intf = map { @$_ } @all_cards;
-    my @new_intf = sort keys %new_intf;
-    foreach my $interface (difference2(\@new_intf, [ keys %intf ])) {
-        $intf{$interface} = $tree_model->append(undef);
-    }
-    foreach my $interface (@new_intf) {
-        my ($ip, $state) = get_intf_ip($interface);
-        $tree_model->set($intf{$interface}, map_index { $::i => $_ } (gtkcreate_pixbuf("eth_card_mini2"), $interface, $ip , $net->{ifcfg}{$interface}{BOOTPROTO}, $new_intf{$interface}, $state));
-    }
-    foreach my $i (difference2([ keys %intf ], \@new_intf)) {
-        $tree_model->remove($intf{$i});
-        delete $intf{$i};
-    }
-}
-
 sub apply() {
     network::network::configure_network($net, $in, $modules_conf);
 }
 
-sub ethisup { `LC_ALL=C LANGUAGE=C /sbin/ifconfig $_[0]` =~ /inet/ }
-
 sub update_intbutt() {
     $int_state->set($isconnected ? N("Connected") : N("Not connected"));
-    return if !$int_connect;
-    $int_connect->child->set($isconnected ? N("Disconnect...") : N("Connect..."));
-    $int_connect->set_sensitive(1);
-}
-
-sub update() {
-    my $h = chomp_(`hostname`);
-    $label_host->set_label($h);
-    $int_label->set($net->{type} eq 'lan' ? N("Gateway:") : N("Interface:"));
-    $int_name->set($net->{type} eq 'lan' ? $net->{network}{GATEWAY} : $net->{net_interface});
-    update_list($modules_conf);
-    update_intbutt() if $isconnected != -1;
-    1;
-}
-
-sub in_ifconfig {
-    my ($intf) = @_;
-    -e '/sbin/ifconfig' or return 1;
-    $intf eq '' and return 1;
-    `/sbin/ifconfig` =~ /$intf/;
 }
 
 my $net_test;
@@ -837,139 +689,6 @@ sub update_network_status() {
     }
     1;
 }
-
-sub quit_global() {
-    ugtk2->exit(0);
-}
-
-sub get_intf_status {
-    my ($c) = @_;
-    ethisup($c) ? N("Deactivate now") : N("Activate now");
-}
-
-sub configure_lan() {
-    my $window = _create_dialog(N("LAN configuration"));
-    my @card_tab;
-
-    if (@all_cards < 1) {
-	$window->vbox->add(Gtk2::Label->new(N("You do not have any configured interface.
-Configure them first by clicking on 'Configure'")));
-	gtkpack(gtkset_layout($window->action_area, 'end'),
-             gtksignal_connect(Gtk2::Button->new(N("Ok")),
-                               clicked => sub { Gtk2->main_quit })
-            );
-	$window->show_all;
-	$window->run;
-	$window->destroy;
-	return;
-    }
-
-    $window->set_border_width(10);
-    gtkpack($window->vbox,
-            Gtk2::Label->new(N("LAN Configuration")),
-            my $notebook = Gtk2::Notebook->new,
-           );
-
-    foreach (0..$#all_cards) {
-	my @infos;
-	my @conf_data;
-	$card_tab[2*$_] = \@infos;
-	$card_tab[2*$_+1] = \@conf_data;
-
-	my $vbox_local = Gtk2::VBox->new(0,0);
-	$vbox_local->set_border_width(10);
-	$vbox_local->pack_start(Gtk2::Label->new(N("Adapter %s: %s", $_+1 , $all_cards[$_][0])),1,1,0);
-	#	Eth${_}Hostname = $netc->{HOSTNAME}
-	#       Eth${_}HostAlias = " . do { $netc->{HOSTNAME} =~ /([^\.]*)\./; $1 } . "
-	#	Eth${_}Driver = $all_cards[$_]->[1]
-	my $interface = $all_cards[$_][0];
-	my ($ip, undef, $mask) = get_intf_ip($interface);
-	$mask ||= $net->{ifcfg}{$interface}{NETMASK};
-        @conf_data = ([ N("IP address"), \$ip ],
-		      [ N("Netmask"), \$mask ],
-		      [ N("Boot Protocol"), \$net->{ifcg}{$interface}{BOOTPROTO}, ["static", "dhcp", "bootp"] ],
-		      [ N("Started on boot"), \$net->{ifcg}{$interface}{ONBOOT} , ["yes", "no"] ],
-		      [ N("DHCP client"), \$net->{ifcfg}{$interface}{DHCP_CLIENT} ]
-		     );
-	my $i = 0;
-	my $size_group = Gtk2::SizeGroup->new('horizontal');
-
-	foreach my $j (@conf_data) {
-	    my $l = Gtk2::Label->new($j->[0]);
-	    $l->set_justify('left');
-	    $infos[2*$i] = gtkpack_(Gtk2::HBox->new,
-				    1, $l);
-	    $vbox_local->pack_start($infos[2*$i], 1, 1, 0);
-	    my $c;
-	    if (defined $j->[2]) {
-		$c = Gtk2::ComboBox->new_text;
-		$c->set_popdown_strings(@{$j->[2]});
-		$infos[2*$i+1] = $c->entry;
-		$infos[2*$i]->pack_start($c,0,0,0);
-	    } else {
-		$infos[2*$i+1] = ($c = Gtk2::Entry->new);
-		$infos[2*$i]->pack_start($infos[2*$i+1],0,0,0);
-	    }
-	    $size_group->add_widget($c);
-	    $infos[2*$i+1]->set_text(${$j->[1]});
-	    $i++;
-	}
-
-	my $widget_temp;
-	if (-e "/etc/sysconfig/network-scripts/ifcfg-$interface") {
-         $widget_temp = gtksignal_connect(Gtk2::Button->new(get_intf_status($interface)),
-                                          clicked => sub {
-                                              system("/sbin/if" . (ethisup($interface) ? "down" : "up") . " $interface");
-                                              $_[0]->set_label(get_intf_status($interface));
-                                              update();
-                                          });
-	} else {
-	    $widget_temp = N("This interface has not been configured yet.\nRun the \"%s\" assistant from the Mandriva Linux Control Center", N("Set up a new network interface (LAN, ISDN, ADSL, ...)"));
-	}
-	$vbox_local->pack_start(gtkpack__(Gtk2::HBox->new(0,0),
-					  $widget_temp
-					 ),0,0,0);
-	#	$list->append($_+1, $interface, $intf->{$interface}{IPADDR}, $intf->{$interface}{BOOTPROTO}, $all_cards[$_]->[1]);
-	#	$list->set_selectable($_, 0);
-	$notebook->append_page($vbox_local, Gtk2::Label->new($interface));
-    }
-
-    my $exit_dialogsub = sub {
-        $window->destroy;
-        Gtk2->main_quit;
-    };
-
-    gtkpack($window->action_area,
-            gtksignal_connect(Gtk2::Button->new(N("Cancel")),
-                              clicked => $exit_dialogsub),
-            gtksignal_connect(Gtk2::Button->new(N("Ok")), clicked => sub {
-                                  foreach (0..$#all_cards) {
-                                      my @infos = @{$card_tab[2*$_]};
-                                      each_index { ${$_->[1]} = $infos[2*$::i+1]->get_text } @{$card_tab[2*$_+1]};
-                                      my $interface = $all_cards[$_][0];
-                                      if ($net->{ifcfg}{$interface}{BOOTPROTO} ne "static") {
-                                          delete @{$net->{ifcfg}{$interface}}{qw(IPADDR NETWORK NETMASK BROADCAST)};
-                                      } else {
-                                          if ($infos[1]->get_text ne N("No IP")) {
-                                              $net->{ifcfg}{$interface}{IPADDR}  = $infos[1]->get_text;
-                                              $net->{ifcfg}{$interface}{NETMASK} = $infos[3]->get_text;
-                                          }
-                                      }
-                                  }
-                                  update();
-                                  $button_apply->set_sensitive(1);
-                                  $exit_dialogsub->();
-                              }),
-          );
-
-    $window->show_all;
-    foreach (0..$#all_cards) {
-	my @infos = @{$card_tab[2*$_]};
-	$net->{ifcfg}{$all_cards[$_][0]}{BOOTPROTO} eq "dhcp" or $infos[8]->hide;
-    }
-    $window->run;
-}
-
 
 sub configure_net() {
     my $dialog = ugtk2->new(N("Internet connection configuration"));
@@ -1035,13 +754,7 @@ Run the \"%s\" assistant from the Mandriva Linux Control Center", N("Set up a ne
                                                                           foreach my $i (0..$#conf_data) {
                                                                               ${$conf_data[$i][1]} = $infos[2*$i+1]->get_text;
                                                                           }
-                                                                          # called from old GUI?
-                                                                          if ($label_host) {
-                                                                              update();
-                                                                              $button_apply->set_sensitive(1);
-                                                                          } else {
-                                                                              apply();
-                                                                          }
+                                                                          apply();
                                                                           $exit_dialogsub->();
                                                                       }),
                                                 ),
