@@ -159,6 +159,8 @@ sub check_hardware {
     my $pid = IPC::Open2::open2(my $cmd_out, my $cmd_in, "gcom", "-d", $self->get_tty_device);
     common::nonblock($cmd_out);
     my $selector = IO::Select->new($cmd_out);
+    my $already_entered_pin;
+
     while ($selector->can_read) {
         local $_;
         my $rv = sysread($cmd_out, $_, 512);
@@ -168,6 +170,11 @@ sub check_hardware {
             last;
         } elsif (/^Enter PIN number:/m) {
             $self->{hardware}{pin} or last;
+            if ($already_entered_pin) {
+                $self->{hardware}{error} = translate($wrong_pin_error);
+                last;
+            }
+            $already_entered_pin = 1;
             print $cmd_in $self->{hardware}{pin} . "\n";
         } elsif (/^ERROR entering PIN/m) {
             $self->{hardware}{error} = N("You entered a wrong PIN code.
