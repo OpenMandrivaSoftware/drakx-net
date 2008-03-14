@@ -31,16 +31,9 @@ use standalone;     #- warning, standalone must be loaded very first, for 'expla
 
 use interactive;
 use common;
-use run_program;
-use network::drakconnect;
 use network::netconnect;
-use network::connection::ethernet;
-use network::tools;
 use network::network;
-use detect_devices;
-use c;
 use modules;
-use POSIX ":sys_wait_h";
 
 $ugtk2::wm_icon = "drakconnect";
 my $in = 'interactive'->vnew('su');
