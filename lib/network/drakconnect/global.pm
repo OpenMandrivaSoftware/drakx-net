@@ -22,7 +22,7 @@ sub update_network_status {
 }
 
 sub configure_net {
-    my ($in, $net) = @_;
+    my ($in, $net, $modules_conf) = @_;
     my $int_state;
     my $int_label = Gtk2::WrappedLabel->new($net->{type} eq 'lan' ? N("Gateway:") : N("Interface:"));
     my $int_name = Gtk2::Label->new($net->{type} eq 'lan' ? $net->{network}{GATEWAY} : $net->{net_interface});
@@ -90,7 +90,7 @@ Run the \"%s\" assistant from the Mandriva Linux Control Center", N("Set up a ne
                                                                           foreach my $i (0..$#conf_data) {
                                                                               ${$conf_data[$i][1]} = $infos[2*$i+1]->get_text;
                                                                           }
-                                                                          network::drakconnect::apply();
+                                                                          network::drakconnect::apply($in, $net, $modules_conf);
                                                                           $exit_dialogsub->();
                                                                       }),
                                                 ),

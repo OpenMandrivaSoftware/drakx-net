@@ -70,7 +70,7 @@ if (/--del/) {
 }
 if (/--internet/) {
     require network::drakconnect::global;
-    network::drakconnect::global::configure_net($in, $net);
+    network::drakconnect::global::configure_net($in, $net, $modules_conf);
 }
 
 # default is to run wizard

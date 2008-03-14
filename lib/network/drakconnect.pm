@@ -2,12 +2,13 @@ package network::drakconnect;
 
 use common;
 
-sub apply() {
+sub apply {
+    my ($in, $net, $modules_conf) = @_;
     network::network::configure_network($net, $in, $modules_conf);
 }
 
 sub get_intf_ip {
-    my ($interface) = @_;
+    my ($net, $interface) = @_;
     my ($ip, $state, $mask);
     if (-x "/sbin/ifconfig") {
 	local $_ = `LC_ALL=C LANGUAGE=C /sbin/ifconfig $interface`;

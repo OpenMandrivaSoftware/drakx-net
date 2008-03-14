@@ -58,7 +58,7 @@ sub manage {
                                                          cancel_clicked => sub { $window->destroy; Gtk2->main_quit },
                                                          ok_clicked => sub {
                                                              if ($apply_button->get_property('sensitive')) {
-                                                                 save($in, $net, $p, $apply_button);
+                                                                 save($in, $net, $modules_conf, $p, $apply_button);
                                                              }
                                                              $window->destroy;
                                                              Gtk2->main_quit;
@@ -66,7 +66,7 @@ sub manage {
                                                         },
                                                         undef, undef, '',
                                                         [ N("Help"), sub { run_program::raw({ detach => 1 }, 'drakhelp', '--id', 'internet-connection') } ],
-                                                        [ N("Apply"), sub { save($in, $net, $p, $apply_button) }, 0, 1 ],
+                                                        [ N("Apply"), sub { save($in, $net, $modules_conf, $p, $apply_button) }, 0, 1 ],
                                                        ),
                                     ),
                            );
@@ -186,7 +186,7 @@ sub build_notebook {
 	    $_->set_sensitive(0) foreach $gui->{intf}{IPADDR}, $gui->{intf}{NETMASK}, $gui->{network}{GATEWAY};
 	    delete $gui->{intf}{BOOTPROTO};
 	}
-	!$intf->{IPADDR} and ($intf->{IPADDR}, $gui->{active}, $intf->{NETMASK}) = network::drakconnect::get_intf_ip($interface_name);
+	!$intf->{IPADDR} and ($intf->{IPADDR}, $gui->{active}, $intf->{NETMASK}) = network::drakconnect::get_intf_ip($net, $interface_name);
 	$gui->{network}{$_}->set_text($net->{network}{$_}) foreach keys %{$gui->{network}};
     }
 
@@ -459,7 +459,7 @@ sub populate_notebook {
 }
 
 sub save {
-    my ($in, $net, $p, $apply_button) = @_;
+    my ($in, $net, $modules_conf, $p, $apply_button) = @_;
 
     my $dialog = _create_dialog(N("Please wait"));
     gtkpack($dialog->vbox,
@@ -474,7 +474,7 @@ sub save {
                                save_notebook($in, $net, $p->{$_}{intf}, $p->{$_}{gui}) or return;
                                $p->{$_}{intf}{save} and $p->{$_}{intf}{save}->();
                            }
-                           network::drakconnect::apply();
+                           network::drakconnect::apply($in, $net, $modules_conf);
                            system("/etc/rc.d/init.d/network restart");
                            $dialog->response(0);
                        });
