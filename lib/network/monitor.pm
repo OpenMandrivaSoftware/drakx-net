@@ -67,14 +67,15 @@ sub list_wireless {
             $qual =~ s!/0+$!/255!; #- prism54 reports quality with division by zero
             $qual =~ m!/! ? eval($qual)*100 : $qual;
         };
-        my ($has_key, $has_wpa);
+        my ($has_key, $has_wpa, $has_eap);
         foreach (@list) {
             if ((/^\s*$/ || /Cell/) && exists $net->{ap}) {
                 $net->{current} = to_bool($net->{ap} ? $net->{ap} eq $current_ap : $net->{essid} && $net->{essid} eq $current_essid);
                 $net->{flags} = $has_wpa ? '[WPA]' : $has_key ? '[WEP]' : '';
+                $net->{flags} .= '[EAP]' if $has_eap;
                 $networks{$net->{ap}} = $net;
                 $net = {};
-                $has_key = $has_wpa = undef;
+                $has_key = $has_wpa = $has_eap = undef;
             }
             /Address: (.*)/ and $net->{ap} = lc($1);
             /ESSID:"(.*?)"/ and $net->{essid} = $1;
@@ -84,6 +85,7 @@ sub list_wireless {
             m|Signal level:([0-9]+/[0-9]+)| && !$net->{signal_strength} and $net->{signal_strength} = eval($1)*100;
             /key:(\S*)\s/ && $1 eq 'on' and $has_key = 1;
             /Extra:wpa_ie=|IE:.*WPA/ and $has_wpa = 1;
+            /Authentication Suites \(\d+\) :.*\b802\.1x\b/ and $has_eap = 1;
         }
         if ($current_ap && exists $networks{$current_ap}) {
             foreach (`/sbin/iwconfig $o_intf 2>/dev/null`) {
