@@ -61,7 +61,6 @@ if (/--skip-wizard/) {
 }
 
 sub add_intf() {
-    $::isWizard = 1;
     network::netconnect::safe_main($net, $in, $modules_conf);
     $modules_conf->write;
     $in->exit(0);
