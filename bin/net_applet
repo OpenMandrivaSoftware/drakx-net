@@ -178,6 +178,7 @@ $icon->signal_connect(popup_menu => sub {
 
 checkNetworkForce();
 cronNetwork();
+gtkflush(); #- for notifications to appear on the status icon position
 get_unprocessed_ifw_messages();
 
 $SIG{HUP} = sub {
