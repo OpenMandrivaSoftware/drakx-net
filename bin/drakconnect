@@ -37,12 +37,6 @@ use modules;
 
 $ugtk2::wm_icon = "drakconnect";
 my $in = 'interactive'->vnew('su');
-if ($in->isa('interactive::gtk')) {
-    require mygtk2;
-    require ugtk2;
-    ugtk2->import(qw(:create :dialogs :helpers :wrappers));
-    mygtk2->import(qw(gtknew));
-}
 
 my $net = {};
 network::network::read_net_conf($net);
