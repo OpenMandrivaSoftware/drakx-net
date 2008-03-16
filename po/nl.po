@@ -1,7 +1,5 @@
-# translation of drakx-net-nl.po to
-# translation of drakx-net-nl.po to Nederlands
-# Dutch translation of drakx-net.
-# Copyright (C) 2000, 2005, 2006 Free Software Foundation, Inc.
+# translation of network-tools to Nederlands
+# Copyright (C) 2000, 2005, 2006, 2008 Free Software Foundation, Inc.
 # Copyright (c) 2000 Mandriva
 # Niels Gras <niels.gras@wanadoo.nl>, 2000.
 # Jeroen ten Berge <j.ten.berge@twinbit.nl>, 2002.
@@ -9,123 +7,630 @@
 # Peter Bosch <peter.bosch@hccnet.nl>, 2002.
 # Rob Teng <mandrake.tips@free.fr>, 2005.
 # Arno Fleming, 2006.
+# C. Verschuuren, 2008
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: drakx-net-nl\n"
-"POT-Creation-Date: 2008-03-14 23:03+0100\n"
-"PO-Revision-Date: 2007-09-25 22:42+0200\n"
-"Last-Translator: Reinout van Schouwen <reinouts@gnome.org>\n"
-"Language-Team:  Dutch <vertaling@vrijschrift.org>\n"
+"Project-Id-Version: network-tools\n"
+"POT-Creation-Date: 2008-03-10 20:27+0100\n"
+"PO-Revision-Date: 2008-03-16 18:09+0100\n"
+"Last-Translator: Reinout van Schouwen <reinout@gmail.com>\n"
+"Language-Team: Nederlands\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../bin/drakconnect-old:45
+#: ../bin/drakconnect:61 ../lib/network/netconnect.pm:118
+#, c-format
+msgid "Network & Internet Configuration"
+msgstr "Netwerk- & Internetconfiguratie"
+
+#: ../bin/drakconnect:81
 #, c-format
 msgid "Network configuration (%d adapters)"
-msgstr "Netwerk-configuratie (%d adapters)"
+msgstr "Netwerkconfiguratie (%d adapters)"
 
-#: ../bin/drakconnect-old:64 ../bin/drakinvictus:105
+#: ../bin/drakconnect:93 ../bin/drakconnect:813
+#, c-format
+msgid "Gateway:"
+msgstr "Gateway:"
+
+#: ../bin/drakconnect:93 ../bin/drakconnect:813
+#, c-format
+msgid "Interface:"
+msgstr "Interface:"
+
+#: ../bin/drakconnect:97 ../bin/net_monitor:119
+#, c-format
+msgid "Wait please"
+msgstr "Even geduld"
+
+#: ../bin/drakconnect:113 ../bin/drakinvictus:105
 #, c-format
 msgid "Interface"
 msgstr "Interface"
 
-#: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:196
-#: ../lib/network/connection/ethernet.pm:131 ../lib/network/netconnect.pm:617
-#: ../lib/network/vpn/openvpn.pm:221
+#: ../bin/drakconnect:113 ../bin/drakconnect:321 ../bin/drakconnect:888
+#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:131
+#: ../lib/network/netconnect.pm:613 ../lib/network/vpn/openvpn.pm:221
 #, c-format
 msgid "IP address"
-msgstr "IP adres"
+msgstr "IP-adres"
 
-#: ../bin/drakconnect-old:64 ../bin/drakids:258 ../bin/drakvpn-old:839
-#: ../lib/network/netconnect.pm:461
+#: ../bin/drakconnect:113 ../bin/drakconnect:305 ../bin/drakconnect:563
+#: ../bin/drakids:258 ../bin/drakvpn-old:839 ../lib/network/netconnect.pm:457
 #, c-format
 msgid "Protocol"
 msgstr "Protocol"
 
-#: ../bin/drakconnect-old:64 ../lib/network/netconnect.pm:447
+#: ../bin/drakconnect:113 ../lib/network/netconnect.pm:443
 #, c-format
 msgid "Driver"
 msgstr "Stuurprogramma"
 
-#: ../bin/drakconnect-old:64
+#: ../bin/drakconnect:113
 #, c-format
 msgid "State"
 msgstr "Status"
 
-#: ../bin/drakconnect-old:79
+#: ../bin/drakconnect:130
 #, c-format
 msgid "Hostname: "
 msgstr "Computernaam:"
 
-#: ../bin/drakconnect-old:81
+#: ../bin/drakconnect:132
 #, c-format
 msgid "Configure hostname..."
-msgstr "Hostnaam configureren..."
+msgstr "Hostnaam configureren…"
 
-#: ../bin/drakconnect-old:95 ../bin/drakconnect-old:171
+#: ../bin/drakconnect:146 ../bin/drakconnect:851
 #, c-format
 msgid "LAN configuration"
 msgstr "LAN configuratie"
 
-#: ../bin/drakconnect-old:100
+#: ../bin/drakconnect:151
 #, c-format
 msgid "Configure Local Area Network..."
-msgstr "Local Area Network configureren..."
+msgstr "Local Area Network configureren…"
 
-#: ../bin/drakconnect-old:106 ../bin/draknfs:186 ../bin/net_applet:136
+#: ../bin/drakconnect:157 ../bin/drakconnect:240 ../bin/draknfs:186
+#: ../bin/net_applet:138
 #, c-format
 msgid "Help"
 msgstr "Hulp"
 
-#: ../bin/drakconnect-old:108 ../bin/drakinvictus:140
+#: ../bin/drakconnect:159 ../bin/drakconnect:241 ../bin/drakconnect:245
+#: ../bin/drakinvictus:140
 #, c-format
 msgid "Apply"
 msgstr "Toepassen"
 
-#: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
+#: ../bin/drakconnect:161 ../bin/drakconnect:943 ../bin/drakconnect:1034
 #: ../bin/draknetprofile:106 ../bin/net_monitor:347
 #, c-format
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
-#: ../bin/drakconnect-old:265 ../bin/draknetprofile:108 ../bin/net_monitor:348
+#: ../bin/drakconnect:162 ../bin/drakconnect:858 ../bin/drakconnect:945
+#: ../bin/drakconnect:1035 ../bin/draknetprofile:108 ../bin/net_monitor:348
 #, c-format
 msgid "Ok"
 msgstr "Ok"
 
-#: ../bin/drakconnect-old:113 ../bin/drakgw:359 ../bin/draksambashare:228
-#: ../bin/drakvpn-old:97 ../bin/drakvpn-old:127
-#: ../lib/network/connection_manager.pm:82
-#: ../lib/network/connection_manager.pm:186
-#: ../lib/network/connection_manager.pm:203
-#: ../lib/network/connection_manager.pm:286 ../lib/network/drakvpn.pm:49
-#: ../lib/network/netcenter.pm:33 ../lib/network/netconnect.pm:181
-#: ../lib/network/netconnect.pm:214 ../lib/network/netconnect.pm:717
-#: ../lib/network/thirdparty.pm:354 ../lib/network/thirdparty.pm:369
+#: ../bin/drakconnect:164 ../bin/drakconnect:636 ../bin/drakgw:359
+#: ../bin/draksambashare:228 ../bin/drakvpn-old:97 ../bin/drakvpn-old:127
+#: ../lib/network/connection_manager.pm:69
+#: ../lib/network/connection_manager.pm:174
+#: ../lib/network/connection_manager.pm:192
+#: ../lib/network/connection_manager.pm:275 ../lib/network/drakvpn.pm:49
+#: ../lib/network/netcenter.pm:42 ../lib/network/netconnect.pm:177
+#: ../lib/network/netconnect.pm:210 ../lib/network/netconnect.pm:713
+#: ../lib/network/thirdparty.pm:332 ../lib/network/thirdparty.pm:347
 #, c-format
 msgid "Please wait"
 msgstr "Even geduld"
 
-#: ../bin/drakconnect-old:115
+#: ../bin/drakconnect:166 ../bin/drakconnect:638
 #, c-format
 msgid "Please Wait... Applying the configuration"
-msgstr "Even geduld... bezig met toepassen van de configuratie"
+msgstr "Even geduld… bezig met toepassen van de configuratie"
 
-#: ../bin/drakconnect-old:141
+#: ../bin/drakconnect:192
+#, c-format
+msgid "Manage connections"
+msgstr "Verbindingen beheren"
+
+#: ../bin/drakconnect:219 ../lib/network/drakroam.pm:107
+#, c-format
+msgid "Device: "
+msgstr "Apparaat: "
+
+#: ../bin/drakconnect:302
+#, c-format
+msgid "IP configuration"
+msgstr "IP-configuratie"
+
+#: ../bin/drakconnect:326 ../bin/drakconnect:889 ../bin/drakgw:177
+#: ../lib/network/connection/ethernet.pm:138
+#, c-format
+msgid "Netmask"
+msgstr "Netmasker"
+
+#: ../bin/drakconnect:332 ../lib/network/connection/ethernet.pm:139
+#: ../lib/network/netconnect.pm:645 ../lib/network/vpn/openvpn.pm:212
+#: ../lib/network/vpn/vpnc.pm:39
+#, c-format
+msgid "Gateway"
+msgstr "Gateway"
+
+#: ../bin/drakconnect:337
+#, c-format
+msgid "DNS servers"
+msgstr "DNS-servers"
+
+#: ../bin/drakconnect:343
+#, c-format
+msgid "Search Domain"
+msgstr "Zoekdomein"
+
+#: ../bin/drakconnect:351 ../bin/drakvpn-old:837
+#, c-format
+msgid "none"
+msgstr "geen"
+
+#: ../bin/drakconnect:351
+#, c-format
+msgid "static"
+msgstr "statisch"
+
+#: ../bin/drakconnect:351
+#, c-format
+msgid "DHCP"
+msgstr "DHCP"
+
+#: ../bin/drakconnect:369 ../bin/drakconnect:892
+#: ../lib/network/connection/ethernet.pm:149
+#, c-format
+msgid "DHCP client"
+msgstr "DHCP client"
+
+#: ../bin/drakconnect:373 ../lib/network/connection/ethernet.pm:207
+#, c-format
+msgid "Assign host name from DHCP address"
+msgstr "Hostnaam toewijzen vanaf DHCP-adres"
+
+#: ../bin/drakconnect:375 ../lib/network/connection/ethernet.pm:153
+#, c-format
+msgid "DHCP host name"
+msgstr "DHCP-hostnaam"
+
+#: ../bin/drakconnect:379 ../lib/network/connection/ethernet.pm:150
+#, c-format
+msgid "DHCP timeout (in seconds)"
+msgstr "DHCP-wachttijd (in seconden)"
+
+#: ../bin/drakconnect:382 ../lib/network/connection/ethernet.pm:142
+#, c-format
+msgid "Get DNS servers from DHCP"
+msgstr "DNS-servers van DHCP ophalen"
+
+#: ../bin/drakconnect:383 ../lib/network/connection/ethernet.pm:151
+#, c-format
+msgid "Get YP servers from DHCP"
+msgstr "YP-server van DHCP ophalen"
+
+#: ../bin/drakconnect:384 ../lib/network/connection/ethernet.pm:152
+#, c-format
+msgid "Get NTPD servers from DHCP"
+msgstr "NTPD-servers van DHCP ophalen"
+
+#: ../bin/drakconnect:406 ../lib/network/connection/wireless.pm:366
+#: ../lib/network/connection_manager.pm:232
+#, c-format
+msgid "Operating Mode"
+msgstr "Operatiemodus"
+
+#: ../bin/drakconnect:407 ../lib/network/connection/wireless.pm:370
+#, c-format
+msgid "Network name (ESSID)"
+msgstr "Netwerknaam (ESSID)"
+
+#: ../bin/drakconnect:408 ../lib/network/connection/wireless.pm:403
+#, c-format
+msgid "Network ID"
+msgstr "Netwerk-ID"
+
+#: ../bin/drakconnect:409 ../lib/network/connection/wireless.pm:404
+#, c-format
+msgid "Operating frequency"
+msgstr "Operatiefrequentie"
+
+#: ../bin/drakconnect:410 ../lib/network/connection/wireless.pm:405
+#, c-format
+msgid "Sensitivity threshold"
+msgstr "Drempelwaarde gevoeligheid"
+
+#: ../bin/drakconnect:411 ../lib/network/connection/wireless.pm:406
+#, c-format
+msgid "Bitrate (in b/s)"
+msgstr "Bitsnelheid (in b/s)"
+
+#: ../bin/drakconnect:421 ../lib/network/connection/wireless.pm:374
+#, c-format
+msgid "Encryption key"
+msgstr "Vercijferingssleutel"
+
+#: ../bin/drakconnect:422 ../lib/network/connection/wireless.pm:407
+#, c-format
+msgid "RTS/CTS"
+msgstr "RTS/CTS"
+
+#
+#: ../bin/drakconnect:423 ../lib/network/connection/wireless.pm:415
+#, c-format
+msgid "Fragmentation"
+msgstr "Fragmentatie"
+
+#: ../bin/drakconnect:424 ../lib/network/connection/wireless.pm:416
+#, c-format
+msgid "iwconfig command extra arguments"
+msgstr "Extra argumenten voor iwconfig-opdracht"
+
+#. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
+#: ../bin/drakconnect:425 ../lib/network/connection/wireless.pm:424
+#, c-format
+msgid "iwspy command extra arguments"
+msgstr "Extra argumenten voor iwspy-opdracht"
+
+#: ../bin/drakconnect:426 ../lib/network/connection/wireless.pm:433
+#, c-format
+msgid "iwpriv command extra arguments"
+msgstr "Extra argumenten voor iwpriv-opdracht"
+
+#: ../bin/drakconnect:434
+#, c-format
+msgid "Start at boot"
+msgstr "Bij opstarten starten"
+
+#: ../bin/drakconnect:440 ../lib/network/connection/ethernet.pm:227
+#, c-format
+msgid "Network Hotplugging"
+msgstr "\"Hot\"-aansluiten van netwerk"
+
+#: ../bin/drakconnect:446 ../lib/network/netconnect.pm:332
+#, c-format
+msgid "Dialing mode"
+msgstr "Inbelmodus"
+
+#: ../bin/drakconnect:451 ../bin/drakconnect:518
+#: ../lib/network/netconnect.pm:333
+#, c-format
+msgid "Connection speed"
+msgstr "Verbindingssnelheid"
+
+#: ../bin/drakconnect:456 ../lib/network/netconnect.pm:334
+#, c-format
+msgid "Connection timeout (in sec)"
+msgstr "Maximale wachttijd voor verbinding (in seconden)"
+
+#: ../bin/drakconnect:462 ../lib/network/connection.pm:206
+#, c-format
+msgid "Metric"
+msgstr "Metrisch"
+
+#: ../bin/drakconnect:482 ../lib/network/connection/cable.pm:45
+#: ../lib/network/netconnect.pm:596
+#, c-format
+msgid "Authentication"
+msgstr "Aanmeldingscontrole"
+
+#: ../bin/drakconnect:492 ../lib/network/connection/cable.pm:47
+#: ../lib/network/connection/ppp.pm:22 ../lib/network/netconnect.pm:335
+#: ../lib/network/vpn/openvpn.pm:393
+#, c-format
+msgid "Account Login (user name)"
+msgstr "Account-aanmelding (gebruikersnaam)"
+
+#: ../bin/drakconnect:493 ../lib/network/connection/cable.pm:49
+#: ../lib/network/connection/ppp.pm:23 ../lib/network/netconnect.pm:336
+#: ../lib/network/vpn/openvpn.pm:394
+#, c-format
+msgid "Account Password"
+msgstr "Account-wachtwoord"
+
+#: ../bin/drakconnect:494 ../lib/network/netconnect.pm:329
+#, c-format
+msgid "Provider phone number"
+msgstr "Telefoonnummer van uw provider"
+
+#: ../bin/drakconnect:499 ../lib/network/connection/ppp.pm:10
+#: ../lib/network/netconnect.pm:75
+#, c-format
+msgid "PAP"
+msgstr "PAP"
+
+#: ../bin/drakconnect:499 ../lib/network/connection/ppp.pm:11
+#: ../lib/network/netconnect.pm:76
+#, c-format
+msgid "Terminal-based"
+msgstr "Gebaseerd op een terminal"
+
+#: ../bin/drakconnect:499 ../lib/network/connection/ppp.pm:9
+#: ../lib/network/netconnect.pm:74
+#, c-format
+msgid "Script-based"
+msgstr "Script-gebaseerd"
+
+#: ../bin/drakconnect:499 ../lib/network/connection/ppp.pm:12
+#: ../lib/network/netconnect.pm:77
+#, c-format
+msgid "CHAP"
+msgstr "CHAP"
+
+#: ../bin/drakconnect:499 ../lib/network/connection/ppp.pm:13
+#: ../lib/network/netconnect.pm:78
+#, c-format
+msgid "PAP/CHAP"
+msgstr "PAP/CHAP"
+
+#: ../bin/drakconnect:516
+#, c-format
+msgid "Flow control"
+msgstr "Flow control"
+
+#: ../bin/drakconnect:517
+#, c-format
+msgid "Line termination"
+msgstr "Regeleinde"
+
+#: ../bin/drakconnect:528
+#, c-format
+msgid "Modem timeout"
+msgstr "Modemwachttijd"
+
+#: ../bin/drakconnect:532
+#, c-format
+msgid "Use lock file"
+msgstr "Lock-bestand gebruiken"
+
+#: ../bin/drakconnect:534
+#, c-format
+msgid "Wait for dialup tone before dialing"
+msgstr "Wachten op kiestoon voor inbellen"
+
+#: ../bin/drakconnect:537
+#, c-format
+msgid "Busy wait"
+msgstr "Wachten bij in gesprek"
+
+#: ../bin/drakconnect:542
+#, c-format
+msgid "Modem sound"
+msgstr "Modemgeluid"
+
+#: ../bin/drakconnect:543 ../bin/drakgw:101
+#, c-format
+msgid "Enable"
+msgstr "Inschakelen"
+
+#: ../bin/drakconnect:543 ../bin/drakgw:101
+#, c-format
+msgid "Disable"
+msgstr "Uitschakelen"
+
+#: ../bin/drakconnect:555 ../lib/network/netconnect.pm:337
+#, c-format
+msgid "Card IRQ"
+msgstr "IRQ van de kaart"
+
+#: ../bin/drakconnect:556 ../lib/network/netconnect.pm:338
+#, c-format
+msgid "Card mem (DMA)"
+msgstr "Mem (DMA) van de kaart"
+
+#: ../bin/drakconnect:557 ../lib/network/netconnect.pm:339
+#, c-format
+msgid "Card IO"
+msgstr "IO van de kaart"
+
+#: ../bin/drakconnect:558 ../lib/network/netconnect.pm:340
+#, c-format
+msgid "Card IO_0"
+msgstr "IO_0 van de kaart"
+
+#: ../bin/drakconnect:564 ../lib/network/netconnect.pm:67
+#, c-format
+msgid "European protocol (EDSS1)"
+msgstr "Europees protocol (EDSS1)"
+
+#: ../bin/drakconnect:565 ../lib/network/netconnect.pm:68
+#, c-format
+msgid ""
+"Protocol for the rest of the world\n"
+"No D-Channel (leased lines)"
+msgstr ""
+"Protocol voor de rest van de wereld \n"
+" geen D-Channel (geleasde lijnen)"
+
+#: ../bin/drakconnect:592
+#, c-format
+msgid "Vendor"
+msgstr "Fabrikant"
+
+#: ../bin/drakconnect:593
+#, c-format
+msgid "Description"
+msgstr "Beschrijving"
+
+#: ../bin/drakconnect:594
+#, c-format
+msgid "Media class"
+msgstr "Mediaklasse"
+
+#: ../bin/drakconnect:595
+#, c-format
+msgid "Module name"
+msgstr "Modulenaam"
+
+#: ../bin/drakconnect:596
+#, c-format
+msgid "Mac Address"
+msgstr "Mac-adres"
+
+#: ../bin/drakconnect:597
+#, c-format
+msgid "Bus"
+msgstr "Bus"
+
+#: ../bin/drakconnect:598
+#, c-format
+msgid "Location on the bus"
+msgstr "Locatie op de bus"
+
+#: ../bin/drakconnect:676 ../bin/drakconnect:680 ../bin/drakconnect:689
+#: ../bin/drakconnect:705 ../bin/drakgw:184 ../bin/drakhosts:100
+#: ../bin/drakhosts:245 ../bin/drakhosts:252 ../bin/drakhosts:259
+#: ../bin/drakinvictus:72 ../bin/draknetprofile:113 ../bin/draknfs:88
+#: ../bin/draknfs:109 ../bin/draknfs:279 ../bin/draknfs:412 ../bin/draknfs:414
+#: ../bin/draknfs:417 ../bin/draknfs:509 ../bin/draknfs:516 ../bin/draknfs:579
+#: ../bin/draknfs:586 ../bin/draknfs:593 ../bin/draksambashare:392
+#: ../bin/draksambashare:399 ../bin/draksambashare:402
+#: ../bin/draksambashare:454 ../bin/draksambashare:478
+#: ../bin/draksambashare:551 ../bin/draksambashare:629
+#: ../bin/draksambashare:696 ../bin/draksambashare:796
+#: ../bin/draksambashare:803 ../bin/draksambashare:942
+#: ../bin/draksambashare:1096 ../bin/draksambashare:1115
+#: ../bin/draksambashare:1147 ../bin/draksambashare:1246
+#: ../bin/draksambashare:1348 ../bin/draksambashare:1357
+#: ../bin/draksambashare:1379 ../bin/draksambashare:1388
+#: ../bin/draksambashare:1407 ../bin/draksambashare:1416
+#: ../bin/draksambashare:1428 ../lib/network/connection/xdsl.pm:332
+#: ../lib/network/connection_manager.pm:52
+#: ../lib/network/connection_manager.pm:58
+#: ../lib/network/connection_manager.pm:72
+#: ../lib/network/connection_manager.pm:145
+#: ../lib/network/connection_manager.pm:149 ../lib/network/drakvpn.pm:45
+#: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
+#: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
+#: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:131
+#: ../lib/network/netconnect.pm:179 ../lib/network/netconnect.pm:236
+#: ../lib/network/netconnect.pm:277 ../lib/network/netconnect.pm:822
+#: ../lib/network/thirdparty.pm:117 ../lib/network/thirdparty.pm:135
+#: ../lib/network/thirdparty.pm:220 ../lib/network/thirdparty.pm:222
+#: ../lib/network/thirdparty.pm:243
+#, c-format
+msgid "Error"
+msgstr "Fout"
+
+#: ../bin/drakconnect:676 ../lib/network/connection/ethernet.pm:166
+#, c-format
+msgid "IP address should be in format 1.2.3.4"
+msgstr "Het IP-adres behoort het formaat 1.2.3.4 te hebben"
+
+#: ../bin/drakconnect:680 ../lib/network/connection/ethernet.pm:171
+#, c-format
+msgid "Netmask should be in format 255.255.224.0"
+msgstr "Netmasker behoort het formaat 255.255.224.0 te hebben"
+
+#: ../bin/drakconnect:685 ../bin/drakconnect:767 ../bin/drakconnect:953
+#, c-format
+msgid "No IP"
+msgstr "Geen IP"
+
+#: ../bin/drakconnect:686 ../bin/drakconnect:768
+#, c-format
+msgid "No Mask"
+msgstr "Geen masker"
+
+#: ../bin/drakconnect:689 ../lib/network/netconnect.pm:807
+#, c-format
+msgid "Gateway address should be in format 1.2.3.4"
+msgstr "Het gateway-adres moet in het formaat 1.2.3.4 staan"
+
+#: ../bin/drakconnect:705 ../bin/drakgw:307
+#, c-format
+msgid ""
+"No ethernet network adapter has been detected on your system. Please run the "
+"hardware configuration tool."
+msgstr ""
+"Er is geen ethernet netwerkadapter op uw systeem gevonden. Gelieve het "
+"hardware configuratieprogramma te draaien."
+
+#: ../bin/drakconnect:714
+#, c-format
+msgid "Remove a network interface"
+msgstr "Een netwerkinterface verwijderen"
+
+#: ../bin/drakconnect:718
+#, c-format
+msgid "Select the network interface to remove:"
+msgstr "Kies de te verwijderen netwerkinterface:"
+
+#: ../bin/drakconnect:719 ../bin/drakgw:123 ../lib/network/netconnect.pm:359
+#: ../lib/network/netconnect.pm:394
+#, c-format
+msgid "Net Device"
+msgstr "Netwerkapparaat"
+
+#: ../bin/drakconnect:751
+#, c-format
+msgid ""
+"An error occurred while deleting the \"%s\" network interface:\n"
+"\n"
+"%s"
+msgstr ""
+"Een probleem deed zich voor bij het verwijderen van de \"%s\" "
+"netwerkinterface:\n"
+"\n"
+"%s"
+
+#: ../bin/drakconnect:752
+#, c-format
+msgid "Congratulations, the \"%s\" network interface has been successfully deleted"
+msgstr "Gefeliciteerd, de netwerkinterface \"%s\" is succesvol verwijderd"
+
+#: ../bin/drakconnect:769
+#, c-format
+msgid "up"
+msgstr "up"
+
+#: ../bin/drakconnect:769
+#, c-format
+msgid "down"
+msgstr "down"
+
+#: ../bin/drakconnect:804 ../bin/net_monitor:472
+#, c-format
+msgid "Connected"
+msgstr "Verbonden"
+
+#: ../bin/drakconnect:804 ../bin/net_monitor:472
+#, c-format
+msgid "Not connected"
+msgstr "Niet verbonden"
+
+#: ../bin/drakconnect:806
+#, c-format
+msgid "Disconnect..."
+msgstr "Verbinding verbreken…"
+
+#: ../bin/drakconnect:806
+#, c-format
+msgid "Connect..."
+msgstr "Verbinding maken…"
+
+#: ../bin/drakconnect:847
 #, c-format
 msgid "Deactivate now"
 msgstr "Nu deactiveren"
 
-#: ../bin/drakconnect-old:141
+#: ../bin/drakconnect:847
 #, c-format
 msgid "Activate now"
 msgstr "Nu activeren"
 
-#: ../bin/drakconnect-old:175
+#: ../bin/drakconnect:855
 #, c-format
 msgid ""
 "You do not have any configured interface.\n"
@@ -134,72 +639,113 @@ msgstr ""
 "U heeft helemaal geen geconfigureerde interface.\n"
 "Configureer deze eerst door op 'Configureer' te klikken"
 
-#: ../bin/drakconnect-old:189
+#: ../bin/drakconnect:869
 #, c-format
 msgid "LAN Configuration"
 msgstr "LAN Configuratie"
 
-#: ../bin/drakconnect-old:201
+#: ../bin/drakconnect:881
 #, c-format
 msgid "Adapter %s: %s"
 msgstr "Adapter %s: %s"
 
-#: ../bin/drakconnect-old:209 ../bin/drakgw:177
-#: ../lib/network/connection/ethernet.pm:138
-#, c-format
-msgid "Netmask"
-msgstr "Netmasker"
-
-#: ../bin/drakconnect-old:210
+#: ../bin/drakconnect:890
 #, c-format
 msgid "Boot Protocol"
 msgstr "Opstart-protocol"
 
-#: ../bin/drakconnect-old:211
+#: ../bin/drakconnect:891
 #, c-format
 msgid "Started on boot"
 msgstr "Aangezet bij het opstarten"
 
-#: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:149
+#: ../bin/drakconnect:927
 #, c-format
-msgid "DHCP client"
-msgstr "DHCP client"
-
-#: ../bin/drakconnect-old:247
-#, fuzzy, c-format
 msgid ""
 "This interface has not been configured yet.\n"
-"Run the \"%s\" assistant from the Mandriva Linux Control Center"
+"Run the \"Add an interface\" assistant from the Mandriva Linux Control Center"
 msgstr ""
 "Deze interface is nog niet geconfigureerd.\n"
 "Start de \"Interface toevoegen\"-assistent vanuit het Mandriva "
 "configuratiecentrum."
 
-#: ../bin/drakconnect-old:247 ../bin/net_applet:68
+#: ../bin/drakconnect:975
+#, c-format
+msgid "Internet connection configuration"
+msgstr "Internetverbinding configureren"
+
+#: ../bin/drakconnect:979 ../bin/draknetprofile:129 ../bin/draknetprofile:131
+#: ../bin/drakproxy:36 ../lib/network/drakvpn.pm:70
+#: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
+#: ../lib/network/netconnect.pm:480
+#, c-format
+msgid "Warning"
+msgstr "Waarschuwing"
+
+#: ../bin/drakconnect:981 ../bin/net_applet:69
+#, c-format
+msgid ""
+"You do not have any configured Internet connection.\n"
+"Run the \"%s\" assistant from the Mandriva Linux Control Center"
+msgstr ""
+"U heeft nog geen geconfigureerde internetverbinding.\n"
+"Start de \"%s\"-assistent vanuit het Mandriva Linux configuratiecentrum."
+
+#. -PO: here "Add Connection" should be translated the same was as in control-center
+#: ../bin/drakconnect:982 ../bin/net_applet:70
 #, c-format
 msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
 msgstr "Nieuwe netwerkinterface instellen (LAN, ISDN, ADSL, ...)"
 
-#: ../bin/drakconnect-old:273 ../bin/drakconnect-old:305
-#: ../lib/network/drakconnect.pm:16
+#: ../bin/drakconnect:996
 #, c-format
-msgid "No IP"
-msgstr "Geen IP"
+msgid "Host name (optional)"
+msgstr "Hostnaam (optioneel)"
 
-#: ../bin/drakconnect-old:306 ../lib/network/drakconnect.pm:17
+#: ../bin/drakconnect:997 ../lib/network/netconnect.pm:631
 #, c-format
-msgid "No Mask"
-msgstr "Geen masker"
+msgid "First DNS Server (optional)"
+msgstr "Eerste DNS-server (optioneel)"
 
-#: ../bin/drakconnect-old:307 ../lib/network/drakconnect.pm:18
+#: ../bin/drakconnect:998 ../lib/network/netconnect.pm:632
 #, c-format
-msgid "up"
-msgstr "up"
+msgid "Second DNS Server (optional)"
+msgstr "Tweede DNS-server (optioneel)"
 
-#: ../bin/drakconnect-old:307 ../lib/network/drakconnect.pm:18
+#: ../bin/drakconnect:999
 #, c-format
-msgid "down"
-msgstr "down"
+msgid "Third DNS server (optional)"
+msgstr "Derde DNS-server (optioneel)"
+
+#: ../bin/drakconnect:1021
+#, c-format
+msgid "Internet Connection Configuration"
+msgstr "Internetverbinding configureren"
+
+#: ../bin/drakconnect:1022
+#, c-format
+msgid "Internet access"
+msgstr "Internet-toegang"
+
+#: ../bin/drakconnect:1024 ../bin/net_monitor:98
+#, c-format
+msgid "Connection type: "
+msgstr "Soort verbinding: "
+
+#: ../bin/drakconnect:1027
+#, c-format
+msgid "Status:"
+msgstr "Status:"
+
+#: ../bin/drakconnect:1028 ../lib/network/netconnect.pm:713
+#, c-format
+msgid "Testing your connection..."
+msgstr "Bezig met testen van uw verbinding…"
+
+#: ../bin/drakconnect:1032
+#, c-format
+msgid "Parameters"
+msgstr "Parameters"
 
 #: ../bin/drakgw:71
 #, c-format
@@ -257,16 +803,6 @@ msgstr ""
 
 #: ../bin/drakgw:101
 #, c-format
-msgid "Disable"
-msgstr "Uitschakelen"
-
-#: ../bin/drakgw:101
-#, c-format
-msgid "Enable"
-msgstr "Inschakelen"
-
-#: ../bin/drakgw:101
-#, c-format
 msgid "Reconfigure"
 msgstr "Herconfigureren"
 
@@ -276,12 +812,6 @@ msgid "Please select the network interface directly connected to the internet."
 msgstr ""
 "Kies alstublieft de netwerkinterface die rechtstreeks is verbonden met het "
 "internet."
-
-#: ../bin/drakgw:123 ../lib/network/netconnect.pm:363
-#: ../lib/network/netconnect.pm:398
-#, c-format
-msgid "Net Device"
-msgstr "Netwerkapparaat"
 
 #: ../bin/drakgw:141
 #, c-format
@@ -322,41 +852,6 @@ msgstr "Lokaal IP adres"
 #, c-format
 msgid "The internal domain name"
 msgstr "De interne domeinnaam"
-
-#: ../bin/drakgw:184 ../bin/drakhosts:100 ../bin/drakhosts:245
-#: ../bin/drakhosts:252 ../bin/drakhosts:259 ../bin/drakinvictus:72
-#: ../bin/draknetprofile:113 ../bin/draknfs:88 ../bin/draknfs:109
-#: ../bin/draknfs:279 ../bin/draknfs:412 ../bin/draknfs:414 ../bin/draknfs:417
-#: ../bin/draknfs:509 ../bin/draknfs:516 ../bin/draknfs:579 ../bin/draknfs:586
-#: ../bin/draknfs:593 ../bin/draksambashare:392 ../bin/draksambashare:399
-#: ../bin/draksambashare:402 ../bin/draksambashare:454
-#: ../bin/draksambashare:478 ../bin/draksambashare:551
-#: ../bin/draksambashare:629 ../bin/draksambashare:696
-#: ../bin/draksambashare:796 ../bin/draksambashare:803
-#: ../bin/draksambashare:942 ../bin/draksambashare:1096
-#: ../bin/draksambashare:1115 ../bin/draksambashare:1147
-#: ../bin/draksambashare:1246 ../bin/draksambashare:1348
-#: ../bin/draksambashare:1357 ../bin/draksambashare:1379
-#: ../bin/draksambashare:1388 ../bin/draksambashare:1407
-#: ../bin/draksambashare:1416 ../bin/draksambashare:1428
-#: ../lib/network/connection/xdsl.pm:332
-#: ../lib/network/connection_manager.pm:61
-#: ../lib/network/connection_manager.pm:67
-#: ../lib/network/connection_manager.pm:77
-#: ../lib/network/connection_manager.pm:85
-#: ../lib/network/connection_manager.pm:157
-#: ../lib/network/connection_manager.pm:161 ../lib/network/drakvpn.pm:45
-#: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
-#: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
-#: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:131
-#: ../lib/network/netconnect.pm:183 ../lib/network/netconnect.pm:240
-#: ../lib/network/netconnect.pm:281 ../lib/network/netconnect.pm:826
-#: ../lib/network/thirdparty.pm:123 ../lib/network/thirdparty.pm:141
-#: ../lib/network/thirdparty.pm:232 ../lib/network/thirdparty.pm:234
-#: ../lib/network/thirdparty.pm:255
-#, c-format
-msgid "Error"
-msgstr "Fout"
 
 #: ../bin/drakgw:184
 #, c-format
@@ -452,15 +947,6 @@ msgstr "Buffergrootte (MB)"
 #, c-format
 msgid "Broadcast printer information"
 msgstr "Printer informatie uitzenden"
-
-#: ../bin/drakgw:307
-#, c-format
-msgid ""
-"No ethernet network adapter has been detected on your system. Please run the "
-"hardware configuration tool."
-msgstr ""
-"Er is geen ethernet netwerkadapter op uw systeem gevonden. Gelieve het "
-"hardware configuratieprogramma te draaien."
 
 #: ../bin/drakgw:313
 #, c-format
@@ -629,8 +1115,8 @@ msgid "Failed to remove host."
 msgstr "Host verwijderen mislukt."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:147
-#: ../bin/net_applet:137 ../lib/network/drakroam.pm:117
-#: ../lib/network/netcenter.pm:127
+#: ../bin/net_applet:139 ../lib/network/drakroam.pm:115
+#: ../lib/network/netcenter.pm:128
 #, c-format
 msgid "Quit"
 msgstr "Afsluiten"
@@ -642,16 +1128,16 @@ msgstr "Toegestane adressen"
 
 #: ../bin/drakids:40 ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196
 #: ../bin/drakids:221 ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
-#: ../bin/net_applet:76 ../bin/net_applet:239 ../bin/net_applet:515
-#: ../bin/net_applet:543 ../lib/network/drakfirewall.pm:259
-#: ../lib/network/drakfirewall.pm:263
+#: ../bin/net_applet:78 ../bin/net_applet:245 ../bin/net_applet:521
+#: ../bin/net_applet:549 ../lib/network/drakfirewall.pm:256
+#: ../lib/network/drakfirewall.pm:260
 #, c-format
 msgid "Interactive Firewall"
 msgstr "Interactieve firewall"
 
 #: ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196 ../bin/drakids:221
 #: ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
-#: ../bin/net_applet:239 ../bin/net_applet:515
+#: ../bin/net_applet:245 ../bin/net_applet:521
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "Niet in staat met deamon te verbinden"
@@ -693,12 +1179,12 @@ msgstr "Geblokkeerde diensten"
 msgid "Clear logs"
 msgstr "Logboeken wissen"
 
-#: ../bin/drakids:112 ../bin/drakids:117 ../bin/net_applet:611
+#: ../bin/drakids:112 ../bin/drakids:117 ../bin/net_applet:615
 #, c-format
 msgid "Blacklist"
 msgstr "Zwarte lijst"
 
-#: ../bin/drakids:113 ../bin/drakids:130 ../bin/net_applet:616
+#: ../bin/drakids:113 ../bin/drakids:130 ../bin/net_applet:620
 #, c-format
 msgid "Whitelist"
 msgstr "Witte lijst"
@@ -724,9 +1210,9 @@ msgid "Date"
 msgstr "Datum"
 
 #: ../bin/drakids:254
-#, fuzzy, c-format
+#, c-format
 msgid "Remote host"
-msgstr "Op afstand"
+msgstr "Host op afstand"
 
 #: ../bin/drakids:255 ../lib/network/vpn/openvpn.pm:115
 #, c-format
@@ -807,7 +1293,7 @@ msgstr "Vitueel gedeeld adres"
 msgid "Virtual ID"
 msgstr "Virtuele ID"
 
-#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:599
+#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:595
 #: ../lib/network/vpn/vpnc.pm:56
 #, c-format
 msgid "Password"
@@ -861,13 +1347,6 @@ msgstr ""
 #, c-format
 msgid "The \"%s\" profile already exists!"
 msgstr "Het profiel \"%s\" bestaat al!"
-
-#: ../bin/draknetprofile:129 ../bin/draknetprofile:131 ../bin/drakproxy:36
-#: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
-#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:484
-#, c-format
-msgid "Warning"
-msgstr "Waarschuwing"
 
 #: ../bin/draknetprofile:129
 #, c-format
@@ -1482,20 +1961,20 @@ msgid "/_Samba Server"
 msgstr "/_Samba Server"
 
 #: ../bin/draksambashare:179
-#, fuzzy, c-format
+#, c-format
 msgid "/_Configure"
-msgstr "Configureren"
+msgstr "/_Configureren"
 
 #: ../bin/draksambashare:183
-#, fuzzy, c-format
+#, c-format
 msgid "/_Help"
-msgstr "Hulp"
+msgstr "/_Hulp"
 
 #
 #: ../bin/draksambashare:183
-#, fuzzy, c-format
+#, c-format
 msgid "/Samba Documentation"
-msgstr "Fragmentatie"
+msgstr "/Samba-documentatie"
 
 #: ../bin/draksambashare:189 ../bin/draksambashare:190
 #, c-format
@@ -1505,12 +1984,12 @@ msgstr "/_Info"
 #: ../bin/draksambashare:189
 #, c-format
 msgid "/_Report Bug"
-msgstr "/_Rapporteer Bug"
+msgstr "/_Fout rapporteren"
 
 #: ../bin/draksambashare:190
 #, c-format
 msgid "/About..."
-msgstr "/Over..."
+msgstr "/Over…"
 
 #: ../bin/draksambashare:193
 #, c-format
@@ -1538,12 +2017,13 @@ msgstr "Mandriva Linux"
 #: ../bin/draksambashare:204
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
-msgstr "Reinout van Schouwen <reinout@cs.vu.nl>\n"
+msgstr "Reinout van Schouwen <reinout@gmail.com>\n"
+"C. Verschuuren\n"
 
 #: ../bin/draksambashare:228
 #, c-format
 msgid "Restarting/Reloading Samba server..."
-msgstr "Herstarten/herladen Samba server..."
+msgstr "Herstarten/herladen Samba server…"
 
 #: ../bin/draksambashare:229
 #, c-format
@@ -1595,7 +2075,7 @@ msgstr "Map kan niet aangemaakt worden, voer een correct pad in."
 #: ../bin/draksambashare:790
 #, c-format
 msgid "Please enter a Comment for this share."
-msgstr "Voer een Opmerking voor deze gedeelde map in."
+msgstr "Voer een opmerking voor deze gedeelde map in."
 
 #: ../bin/draksambashare:439
 #, c-format
@@ -1614,8 +2094,7 @@ msgstr "Speciale gedeelde printer toevoegen"
 
 #: ../bin/draksambashare:447
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
 msgstr ""
 "Het doel van deze wizard is om gemakkelijk een nieuwe speciale Samba "
 "gedeelde printer te maken."
@@ -1643,8 +2122,7 @@ msgstr "De wizard heeft de gedeelde Samba-map met succes toegevoegd."
 #: ../bin/draksambashare:551
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
-msgstr ""
-"Selecteer of voeg een Samba gedeelde printer toe om hem te kunnen wijzigen."
+msgstr "Selecteer of voeg een Samba gedeelde printer toe om hem te kunnen wijzigen."
 
 #: ../bin/draksambashare:570
 #, c-format
@@ -1719,8 +2197,7 @@ msgstr "DrakSamba ingang"
 #: ../bin/draksambashare:696
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
-msgstr ""
-"Selecteer of voeg een Samba gedeelde map toe om hem te kunnen wijzigen."
+msgstr "Selecteer of voeg een Samba gedeelde map toe om hem te kunnen wijzigen."
 
 #: ../bin/draksambashare:719
 #, c-format
@@ -1754,8 +2231,7 @@ msgstr "Publiek:"
 
 #: ../bin/draksambashare:796
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 "Aanmaakmasker, aanmaakmodus en mapmasker dienen een getal te zijn, "
 "bijvoorbeeld: 0755."
@@ -1788,47 +2264,46 @@ msgstr "Wachtwoord:"
 #: ../bin/draksambashare:1047
 #, c-format
 msgid "PDC - primary domain controller"
-msgstr ""
+msgstr "PDC - primaire domein controller"
 
 #: ../bin/draksambashare:1048
 #, c-format
 msgid "Standalone - standalone server"
-msgstr ""
+msgstr "Standalone - op zichzelf staande server"
 
 #: ../bin/draksambashare:1054
-#, fuzzy, c-format
+#, c-format
 msgid "Samba Wizard"
-msgstr "Samba gebruikers"
+msgstr "Samba-wizard"
 
 #: ../bin/draksambashare:1057
-#, fuzzy, c-format
+#, c-format
 msgid "Samba server configuration Wizard"
-msgstr "Samba-configuratie beheren"
+msgstr "Samba server configuratiewizard"
 
 #: ../bin/draksambashare:1057
 #, c-format
 msgid ""
 "Samba allows your server to behave as a file and print server for "
 "workstations running non-Linux systems."
-msgstr ""
+msgstr "Samba laat u uw server functioneren als een bestands- en printerserver voor werkstations met niet-Linux systemen."
 
 #: ../bin/draksambashare:1073
 #, c-format
 msgid "PDC server: primary domain controller"
-msgstr ""
+msgstr "PDC server: primaire domeincontroller"
 
 #: ../bin/draksambashare:1073
 #, c-format
 msgid ""
 "Server configured as a PDC is responsible for Windows authentication "
 "throughout the domain."
-msgstr ""
+msgstr "een als PDC geconfigureerde server is verantwoordelijk voor Windows toegangsverlening in het domein."
 
 #: ../bin/draksambashare:1073
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
-msgstr ""
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
+msgstr "Op zichzelf staande serverinstallaties kunnen smbpasswd of tdbsam wachtwoord backends gebruiken"
 
 #: ../bin/draksambashare:1073
 #, c-format
@@ -1836,26 +2311,28 @@ msgid ""
 "Domain master = yes, causes the server to register the NetBIOS name <pdc "
 "name>. This name will be recognized by other servers."
 msgstr ""
+"Domain master = ja, laat de server de NetBIOS-naam <pdc "
+"name> registreren. Deze naam zal door andere servers herkend worden."
 
 #: ../bin/draksambashare:1090
 #, c-format
 msgid "Wins support:"
-msgstr ""
+msgstr "Wins ondersteuning:"
 
 #: ../bin/draksambashare:1091
-#, fuzzy, c-format
+#, c-format
 msgid "admin users:"
-msgstr "Gebruikersadministratie"
+msgstr "admin-gebruikers:"
 
 #: ../bin/draksambashare:1091
 #, c-format
 msgid "root @adm"
-msgstr ""
+msgstr "root @adm"
 
 #: ../bin/draksambashare:1092
 #, c-format
 msgid "Os level:"
-msgstr ""
+msgstr "OS niveau"
 
 #: ../bin/draksambashare:1092
 #, c-format
@@ -1865,54 +2342,54 @@ msgid ""
 "win an election and become the master browser, you can set the level above "
 "that of the operating system on your network with the highest current value. "
 "ie: os level = 34"
-msgstr ""
+msgstr "De algemene os niveau-optie bepaalt het besturingssysteemniveau waarop Samba zich zal tonen tijdens een verkiezingsronde. Als u wilt dat Samba de verkiezing wint en master browser wordt, kunt u het niveau instellen boven dat van het andere besturingssysteem in uw netwerk met de hoogste waarde op dat moment, bijv.: os niveau = 34"
 
 #: ../bin/draksambashare:1096
 #, c-format
 msgid "The domain is wrong."
-msgstr ""
+msgstr "Het domein is niet juist"
 
 #: ../bin/draksambashare:1103
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup"
-msgstr "Groep afdwingen"
+msgstr "Werkgroep"
 
 #: ../bin/draksambashare:1103
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
-msgstr ""
+msgstr "Samba heeft de naam van de Windows Werkgroep nodig die het zal bedienen."
 
 #: ../bin/draksambashare:1110 ../bin/draksambashare:1174
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup:"
-msgstr "Groep afdwingen"
+msgstr "Werkgroep:"
 
 #: ../bin/draksambashare:1111
-#, fuzzy, c-format
+#, c-format
 msgid "Netbios name:"
-msgstr "Hostnaam:"
+msgstr "Netbios naam:"
 
 #: ../bin/draksambashare:1115
 #, c-format
 msgid "The Workgroup is wrong."
-msgstr ""
+msgstr "De werkgroep in niet juist"
 
 #: ../bin/draksambashare:1122 ../bin/draksambashare:1132
-#, fuzzy, c-format
+#, c-format
 msgid "Security mode"
-msgstr "Beveiligingsbeleid"
+msgstr "Beveiligingsmodus"
 
 #: ../bin/draksambashare:1122
 #, c-format
 msgid ""
 "User level: the client sends a session setup request directly following "
 "protocol negotiation. This request provides a username and password."
-msgstr ""
+msgstr "Gebruikersniveau: de client zendt een verzoek om een sessie op te zetten, direct gevolgd door een protocolonderhandeling. Dit verzoek vereist een gebruikersnaam en wachtwoord."
 
 #: ../bin/draksambashare:1122
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
+msgstr "Deelniveau: de client meldt zich afzonderlijk aan voor iedere gedeelde map"
 
 #: ../bin/draksambashare:1122
 #, c-format
@@ -1920,110 +2397,110 @@ msgid ""
 "Domain level: provides a mechanism for storing all user and group accounts "
 "in a central, shared, account repository. The centralized account repository "
 "is shared between domain (security) controllers."
-msgstr ""
+msgstr "Domeinniveau: voorziet in een mechanisme voor het opslaan van alle gebruikrs- en groepsaccounts in een centale, gedeelde accountdatabase. De gecentraliseerde accountdatabase wordt gedeeld tussen domein (beveiligings) controllers."
 
 #: ../bin/draksambashare:1133
-#, fuzzy, c-format
+#, c-format
 msgid "Hosts allow"
-msgstr "Hostnaam"
+msgstr "Toegestane hosts"
 
 #: ../bin/draksambashare:1138
 #, c-format
 msgid "Server Banner."
-msgstr ""
+msgstr "Server-omschrijving."
 
 #: ../bin/draksambashare:1138
 #, c-format
 msgid ""
 "The banner is the way this server will be described in the Windows "
 "workstations."
-msgstr ""
+msgstr "Het servernaamis de wijze waarop de server wordt omschreven in de Windows werkstations."
 
 #: ../bin/draksambashare:1143
 #, c-format
 msgid "Banner:"
-msgstr ""
+msgstr "Omschrijving:"
 
 #: ../bin/draksambashare:1147
 #, c-format
 msgid "The Server Banner is incorrect."
-msgstr ""
+msgstr "De servernaam is niet juist"
 
 #: ../bin/draksambashare:1154
-#, fuzzy, c-format
+#, c-format
 msgid "Samba Log"
-msgstr "Samba gebruikers"
+msgstr "Samba logbestand"
 
 #: ../bin/draksambashare:1154
 #, c-format
 msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
 "connects"
-msgstr ""
+msgstr "Logbestand: gebruik file.%m om een apart logbestand aan te maken voor elke machine die verbinding maakt"
 
 #: ../bin/draksambashare:1154
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
-msgstr ""
+msgstr "Logniveau: stel het logniveau (hoeveelheid informatie) in (tussen 0 en 10)"
 
 #: ../bin/draksambashare:1154
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
+msgstr "Maximale grootte logbestand: maximeer de grootte van het logbestand (in Kb)."
 
 #: ../bin/draksambashare:1161 ../bin/draksambashare:1176
-#, fuzzy, c-format
+#, c-format
 msgid "Log file:"
-msgstr "Profiel"
+msgstr "Logbestand:"
 
 #: ../bin/draksambashare:1162
 #, c-format
 msgid "Max log size:"
-msgstr ""
+msgstr "Maximum grootte logbestand:"
 
 #: ../bin/draksambashare:1163
-#, fuzzy, c-format
+#, c-format
 msgid "Log level:"
-msgstr "Niveau"
+msgstr "Logniveau:"
 
 #: ../bin/draksambashare:1168
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
+msgstr "De configuratieassistent verzamelde de volgende paramaters voor het configureren van Samba"
 
 #: ../bin/draksambashare:1168
 #, c-format
 msgid ""
 "To accept these values, and configure your server, click the Next button or "
 "use the Back button to correct them."
-msgstr ""
+msgstr "Klik op Volgende om de waarden te accepteren en uw server te configureren of klik op Terug om ze te corrigeren."
 
 #: ../bin/draksambashare:1168
 #, c-format
 msgid ""
 "If you have previously create some shares, they will appear in this "
 "configuration. Run 'drakwizard sambashare' to manage your shares."
-msgstr ""
+msgstr "Als u al eerder gedeelde mappen heeft aangemaakt, zullen deze verschijnen in deze configuratie. Voer 'drakwizard sambashare' uit om uw gedeelde mappen te beheren. "
 
 #: ../bin/draksambashare:1173
-#, fuzzy, c-format
+#, c-format
 msgid "Samba type:"
-msgstr "Samba gebruikers"
+msgstr "Samba-type:"
 
 #: ../bin/draksambashare:1175
 #, c-format
 msgid "Server banner:"
-msgstr ""
+msgstr "Serveromschrijving:"
 
 #: ../bin/draksambashare:1191
-#, fuzzy, c-format
+#, c-format
 msgid "The wizard successfully configured your Samba server."
-msgstr "De wizard heeft de gedeelde Samba-map met succes toegevoegd."
+msgstr "De configuratieassistent heeft uw Sambaserver met succes geconfigureerd."
 
 #: ../bin/draksambashare:1246
 #, c-format
 msgid "The Samba wizard has unexpectedly failed:"
-msgstr ""
+msgstr "De Samba configuratieassistent is onverwacht beëindigd:"
 
 #: ../bin/draksambashare:1260
 #, c-format
@@ -2086,16 +2563,16 @@ msgid "Samba Users"
 msgstr "Samba gebruikers"
 
 #: ../bin/draksambashare:1449
-#, fuzzy, c-format
+#, c-format
 msgid "Please configure your Samba server"
-msgstr "Samba gedeelde map wijzigen mislukt."
+msgstr "Configureer alstublieft uw Samba server"
 
 #: ../bin/draksambashare:1449
 #, c-format
 msgid ""
 "It seems this is the first time you run this tool.\n"
 "A wizard will appear to configure a basic Samba server"
-msgstr ""
+msgstr "Dit is de eerste keer dat u dit hulpmiddel gebruikt.\n Een configuratieassistent zal u helpen bij het instellen van een basis Samba server"
 
 #: ../bin/draksambashare:1457
 #, c-format
@@ -3305,11 +3782,6 @@ msgstr "ipsec"
 msgid "discard"
 msgstr "verwerpen"
 
-#: ../bin/drakvpn-old:837
-#, c-format
-msgid "none"
-msgstr "geen"
-
 #: ../bin/drakvpn-old:840
 #, c-format
 msgid "Mode"
@@ -3355,211 +3827,192 @@ msgstr "gebruikt"
 msgid "unique"
 msgstr "uniek"
 
-#: ../bin/net_applet:60
+#: ../bin/net_applet:62
 #, c-format
 msgid "Network is up on interface %s."
 msgstr "Netwerk is in de lucht op verbinding %s"
 
-#: ../bin/net_applet:61
+#: ../bin/net_applet:63
 #, c-format
 msgid "IP address: %s"
 msgstr "IP-adres: %s"
 
-#: ../bin/net_applet:62
+#: ../bin/net_applet:64
 #, c-format
 msgid "Gateway: %s"
 msgstr "Gateway: %s"
 
-#: ../bin/net_applet:63
+#: ../bin/net_applet:65
 #, c-format
 msgid "Connected to %s (link level: %d %%)"
 msgstr "Verbonden met %s (linkniveau: %d %%)"
 
-#: ../bin/net_applet:65
-#, c-format
-msgid "Network is down on interface %s."
-msgstr "Netwerk is verbroken op verbinding %s"
-
 #: ../bin/net_applet:67
 #, c-format
-msgid ""
-"You do not have any configured Internet connection.\n"
-"Run the \"%s\" assistant from the Mandriva Linux Control Center"
-msgstr ""
-"U heeft nog geen geconfigureerde Internetverbinding.\n"
-"Start de \"%s\"-assistent vanuit het Mandriva Linux configuratiecentrum."
+msgid "Network is down on interface %s."
+msgstr "Netwerk is verbroken op interface %s"
 
-#: ../bin/net_applet:73 ../bin/net_monitor:475
+#: ../bin/net_applet:75 ../bin/net_monitor:475
 #, c-format
 msgid "Connect %s"
 msgstr "%s verbinden"
 
-#: ../bin/net_applet:74 ../bin/net_monitor:475
+#: ../bin/net_applet:76 ../bin/net_monitor:475
 #, c-format
 msgid "Disconnect %s"
 msgstr "Verbinding %s verbreken"
 
-#: ../bin/net_applet:75
+#: ../bin/net_applet:77
 #, c-format
 msgid "Monitor Network"
 msgstr "Netwerk observeren"
 
-#: ../bin/net_applet:77
+#: ../bin/net_applet:79
 #, c-format
 msgid "Manage wireless networks"
 msgstr "Draadloze netwerken beheer"
 
-#: ../bin/net_applet:79
+#: ../bin/net_applet:81
 #, c-format
 msgid "Manage VPN connections"
 msgstr "VPN-verbindingen beheren"
 
-#: ../bin/net_applet:83
+#: ../bin/net_applet:85
 #, c-format
 msgid "Configure Network"
 msgstr "Netwerk configureren"
 
-#: ../bin/net_applet:85
+#: ../bin/net_applet:87
 #, c-format
 msgid "Watched interface"
 msgstr "Gevolgde interface"
 
-#: ../bin/net_applet:86 ../bin/net_applet:87 ../bin/net_applet:89
+#: ../bin/net_applet:88 ../bin/net_applet:89 ../bin/net_applet:91
 #, c-format
 msgid "Auto-detect"
 msgstr "Automatisch bespeuren"
 
-#: ../bin/net_applet:94
+#: ../bin/net_applet:96
 #, c-format
 msgid "Active interfaces"
 msgstr "Actieve interfaces"
 
-#: ../bin/net_applet:118
+#: ../bin/net_applet:120
 #, c-format
 msgid "Profiles"
 msgstr "Profielen"
 
-#: ../bin/net_applet:128 ../lib/network/connection.pm:190
+#: ../bin/net_applet:130 ../lib/network/connection.pm:190
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
 msgid "VPN connection"
 msgstr "VPN-verbinding"
 
-#: ../bin/net_applet:319
+#: ../bin/net_applet:325
 #, c-format
 msgid "Network connection"
 msgstr "Netwerkverbinding"
 
-#: ../bin/net_applet:439
+#: ../bin/net_applet:445
 #, c-format
 msgid "More networks"
 msgstr "Meer netwerken"
 
-#: ../bin/net_applet:466
+#: ../bin/net_applet:472
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "Interactieve firewall automatische modus"
 
-#: ../bin/net_applet:471
+#: ../bin/net_applet:477
 #, c-format
 msgid "Always launch on startup"
 msgstr "Altijd starten na opstartfase"
 
-#: ../bin/net_applet:476
+#: ../bin/net_applet:482
 #, c-format
 msgid "Wireless networks"
 msgstr "Draadloze verbindingen"
 
-#: ../bin/net_applet:483 ../bin/net_monitor:96
+#: ../bin/net_applet:489 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Instellingen"
 
-#: ../bin/net_applet:553
-#, fuzzy, c-format
-msgid "Process attack"
-msgstr "Dienst-aanval"
-
-#: ../bin/net_applet:566
+#: ../bin/net_applet:570
 #, c-format
 msgid "Interactive Firewall: intrusion detected"
 msgstr "Interactieve firewall: inbraak bespeurd"
 
-#: ../bin/net_applet:583
+#: ../bin/net_applet:587
 #, c-format
 msgid "What do you want to do with this attacker?"
 msgstr "Wat wilt u met deze aanvaller doen?"
 
-#: ../bin/net_applet:586
+#: ../bin/net_applet:590
 #, c-format
 msgid "Attack details"
 msgstr "Aanvalsdetails"
 
-#: ../bin/net_applet:590
+#: ../bin/net_applet:594
 #, c-format
 msgid "Attack time: %s"
 msgstr "Aanvalstijd: %s"
 
-#: ../bin/net_applet:591
+#: ../bin/net_applet:595
 #, c-format
 msgid "Network interface: %s"
 msgstr "Netwerk-interface: %s"
 
-#: ../bin/net_applet:592
+#: ../bin/net_applet:596
 #, c-format
 msgid "Attack type: %s"
 msgstr "Aanvalstype: %s"
 
-#: ../bin/net_applet:593
+#: ../bin/net_applet:597
 #, c-format
 msgid "Protocol: %s"
 msgstr "Protocol: %s"
 
-#: ../bin/net_applet:594
+#: ../bin/net_applet:598
 #, c-format
 msgid "Attacker IP address: %s"
 msgstr "IP-adres van de aanvaller: %s"
 
-#: ../bin/net_applet:595
+#: ../bin/net_applet:599
 #, c-format
 msgid "Attacker hostname: %s"
 msgstr "Hostnaam van de aanvaller: %s"
 
-#: ../bin/net_applet:598
+#: ../bin/net_applet:602
 #, c-format
 msgid "Service attacked: %s"
 msgstr "Aangevallen dienst: %s"
 
-#: ../bin/net_applet:599
+#: ../bin/net_applet:603
 #, c-format
 msgid "Port attacked: %s"
 msgstr "Aangevallen poort: %s"
 
-#: ../bin/net_applet:601
+#: ../bin/net_applet:605
 #, c-format
 msgid "Type of ICMP attack: %s"
 msgstr "Type ICMP-aanval: %s"
 
-#: ../bin/net_applet:606
+#: ../bin/net_applet:610
 #, c-format
 msgid "Always blacklist (do not ask again)"
 msgstr "Altijd op de zwarte lijst zetten (niet nogmaals vragen)"
 
-#: ../bin/net_applet:621
+#: ../bin/net_applet:625
 #, c-format
 msgid "Ignore"
 msgstr "Negeren"
 
-#: ../bin/net_applet:639 ../bin/net_applet:656
+#: ../bin/net_applet:643 ../bin/net_applet:656
 #, c-format
 msgid "Interactive Firewall: new service"
 msgstr "Interactieve firewall: nieuwe dienst"
-
-#: ../bin/net_applet:644
-#, fuzzy, c-format
-msgid "Process connection"
-msgstr "Draadloze verbinding"
 
 #: ../bin/net_applet:666
 #, c-format
@@ -3575,11 +4028,6 @@ msgstr "Onthoud dit antwoord"
 #, c-format
 msgid "Network Monitoring"
 msgstr "Netwerkobservatie"
-
-#: ../bin/net_monitor:98
-#, c-format
-msgid "Connection type: "
-msgstr "Soort verbinding: "
 
 #: ../bin/net_monitor:101
 #, c-format
@@ -3633,15 +4081,10 @@ msgstr ""
 msgid "Use same scale for received and transmitted"
 msgstr "Dezelfde schaal gebruiken voor ontvangen en verzonden"
 
-#: ../bin/net_monitor:119
-#, c-format
-msgid "Wait please"
-msgstr "Even geduld"
-
 #: ../bin/net_monitor:136
 #, c-format
 msgid "Wait please, testing your connection..."
-msgstr "Even geduld, bezig met testen van uw verbinding..."
+msgstr "Even geduld, bezig met testen van uw verbinding…"
 
 #: ../bin/net_monitor:191 ../bin/net_monitor:204
 #, c-format
@@ -3711,16 +4154,6 @@ msgstr ""
 "Waarschuwing: een andere internetverbinding is bespeurd, misschien gebruikt "
 "deze uw netwerk."
 
-#: ../bin/net_monitor:472
-#, c-format
-msgid "Connected"
-msgstr "Verbonden"
-
-#: ../bin/net_monitor:472
-#, c-format
-msgid "Not connected"
-msgstr "Niet verbonden"
-
 #: ../bin/net_monitor:479
 #, c-format
 msgid "No internet connection configured"
@@ -3763,11 +4196,6 @@ msgstr "Gebruikers toestaan de verbinding te beheren"
 msgid "Start the connection at boot"
 msgstr "De verbinding bij het opstarten maken"
 
-#: ../lib/network/connection.pm:206
-#, c-format
-msgid "Metric"
-msgstr "Metrisch"
-
 #: ../lib/network/connection.pm:271
 #, c-format
 msgid "Link detected on interface %s"
@@ -3793,23 +4221,6 @@ msgstr "Kabelmodem"
 msgid "Use BPALogin (needed for Telstra)"
 msgstr "BPALogin gebruiken (nodig voor Telstra)"
 
-#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:600
-#, c-format
-msgid "Authentication"
-msgstr "Aanmeldingscontrole"
-
-#: ../lib/network/connection/cable.pm:47 ../lib/network/connection/ppp.pm:22
-#: ../lib/network/netconnect.pm:339 ../lib/network/vpn/openvpn.pm:393
-#, c-format
-msgid "Account Login (user name)"
-msgstr "Account-aanmelding (gebruikersnaam)"
-
-#: ../lib/network/connection/cable.pm:49 ../lib/network/connection/ppp.pm:23
-#: ../lib/network/netconnect.pm:340 ../lib/network/vpn/openvpn.pm:394
-#, c-format
-msgid "Account Password"
-msgstr "Account-wachtwoord"
-
 #: ../lib/network/connection/cellular.pm:48
 #, c-format
 msgid "Access Point Name"
@@ -3827,31 +4238,26 @@ msgstr "Bluetooth inbelnetwerk"
 
 #: ../lib/network/connection/cellular_card.pm:8
 #, c-format
-msgid "Wrong PIN number format: it should be 4 digits."
-msgstr ""
-
-#: ../lib/network/connection/cellular_card.pm:10
-#, c-format
 msgid "GPRS/Edge/3G"
 msgstr "GPRS / Edge / 3G"
 
-#: ../lib/network/connection/cellular_card.pm:70
+#: ../lib/network/connection/cellular_card.pm:68
 #: ../lib/network/vpn/openvpn.pm:391
 #, c-format
 msgid "PIN number"
 msgstr "PIN-code"
 
-#: ../lib/network/connection/cellular_card.pm:142
+#: ../lib/network/connection/cellular_card.pm:131
 #, c-format
 msgid "Unable to open device %s"
 msgstr "Niet in staat apparaat %s te openen"
 
-#: ../lib/network/connection/cellular_card.pm:169
+#: ../lib/network/connection/cellular_card.pm:156
 #, c-format
 msgid "Please check that your SIM card is inserted."
 msgstr "Ga na of uw SIM-kaart ingestoken is."
 
-#: ../lib/network/connection/cellular_card.pm:180
+#: ../lib/network/connection/cellular_card.pm:162
 #, c-format
 msgid ""
 "You entered a wrong PIN code.\n"
@@ -3891,9 +4297,9 @@ msgid "Ethernet"
 msgstr "Ethernet"
 
 #: ../lib/network/connection/ethernet.pm:29
-#, fuzzy, c-format
+#, c-format
 msgid "Virtual interface"
-msgstr "Netwerk Interface"
+msgstr "Virtuele interface"
 
 #: ../lib/network/connection/ethernet.pm:59
 #, c-format
@@ -3928,17 +4334,6 @@ msgstr ""
 "Elke ingang moet ingegeven worden als een IP adres in `dotted-decimal'-\n"
 "vorm (bijvoorbeeld 1.2.3.4)."
 
-#: ../lib/network/connection/ethernet.pm:139 ../lib/network/netconnect.pm:649
-#: ../lib/network/vpn/openvpn.pm:212 ../lib/network/vpn/vpnc.pm:39
-#, c-format
-msgid "Gateway"
-msgstr "Gateway"
-
-#: ../lib/network/connection/ethernet.pm:142
-#, c-format
-msgid "Get DNS servers from DHCP"
-msgstr "DNS-servers van DHCP ophalen"
-
 #: ../lib/network/connection/ethernet.pm:144
 #, c-format
 msgid "DNS server 1"
@@ -3961,40 +4356,10 @@ msgstr ""
 "Gewoonlijk wordt het zoekdomein ingesteld vanuit de volledig gekwalificeerde "
 "hostnaam"
 
-#: ../lib/network/connection/ethernet.pm:150
-#, c-format
-msgid "DHCP timeout (in seconds)"
-msgstr "DHCP-wachttijd (in seconden)"
-
-#: ../lib/network/connection/ethernet.pm:151
-#, c-format
-msgid "Get YP servers from DHCP"
-msgstr "YP-server van DHCP ophalen"
-
-#: ../lib/network/connection/ethernet.pm:152
-#, c-format
-msgid "Get NTPD servers from DHCP"
-msgstr "NTPD-servers van DHCP ophalen"
-
-#: ../lib/network/connection/ethernet.pm:153
-#, c-format
-msgid "DHCP host name"
-msgstr "DHCP-hostnaam"
-
 #: ../lib/network/connection/ethernet.pm:155
 #, c-format
 msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
 msgstr "Niet terugvallen naar Zeroconf (169.254.0.0 netwerk)"
-
-#: ../lib/network/connection/ethernet.pm:166
-#, c-format
-msgid "IP address should be in format 1.2.3.4"
-msgstr "Het IP-adres behoort het formaat 1.2.3.4 te hebben"
-
-#: ../lib/network/connection/ethernet.pm:171
-#, c-format
-msgid "Netmask should be in format 255.255.224.0"
-msgstr "Netmasker behoort het formaat 255.255.224.0 te hebben"
 
 #: ../lib/network/connection/ethernet.pm:176
 #, c-format
@@ -4005,16 +4370,6 @@ msgstr "Waarschuwing: IP-adres %s is normaal gesproken gereserveerd!"
 #, c-format
 msgid "%s already in use\n"
 msgstr "%s reeds in gebruik\n"
-
-#: ../lib/network/connection/ethernet.pm:207
-#, c-format
-msgid "Assign host name from DHCP address"
-msgstr "Hostnaam toewijzen vanaf DHCP-adres"
-
-#: ../lib/network/connection/ethernet.pm:227
-#, c-format
-msgid "Network Hotplugging"
-msgstr "\"Hot\"-aansluiten van netwerk"
 
 #: ../lib/network/connection/ethernet.pm:231
 #, c-format
@@ -4046,30 +4401,30 @@ msgstr "Netwerkadres niet gekregen op interface %s (met protocol %s)"
 msgid "ISDN"
 msgstr "ISDN"
 
-#: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:202
-#: ../lib/network/netconnect.pm:205 ../lib/network/netconnect.pm:223
-#: ../lib/network/netconnect.pm:476 ../lib/network/netconnect.pm:572
-#: ../lib/network/netconnect.pm:575
+#: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:198
+#: ../lib/network/netconnect.pm:201 ../lib/network/netconnect.pm:219
+#: ../lib/network/netconnect.pm:472 ../lib/network/netconnect.pm:568
+#: ../lib/network/netconnect.pm:571
 #, c-format
 msgid "Unlisted - edit manually"
 msgstr "Niet opgenomen - handmatig bewerken"
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:404
 #, c-format
 msgid "ISA / PCMCIA"
 msgstr "ISA / PCMCIA"
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:404
 #, c-format
 msgid "I do not know"
 msgstr "Ik weet het niet"
 
-#: ../lib/network/connection/isdn.pm:197 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:197 ../lib/network/netconnect.pm:404
 #, c-format
 msgid "PCI"
 msgstr "PCI"
 
-#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:404
 #, c-format
 msgid "USB"
 msgstr "USB"
@@ -4087,31 +4442,6 @@ msgstr "POTS"
 #, c-format
 msgid "Analog telephone modem (POTS)"
 msgstr "Analoge telefoonmodem"
-
-#: ../lib/network/connection/ppp.pm:9 ../lib/network/netconnect.pm:74
-#, c-format
-msgid "Script-based"
-msgstr "Script-gebaseerd"
-
-#: ../lib/network/connection/ppp.pm:10 ../lib/network/netconnect.pm:75
-#, c-format
-msgid "PAP"
-msgstr "PAP"
-
-#: ../lib/network/connection/ppp.pm:11 ../lib/network/netconnect.pm:76
-#, c-format
-msgid "Terminal-based"
-msgstr "Gebaseerd op een terminal"
-
-#: ../lib/network/connection/ppp.pm:12 ../lib/network/netconnect.pm:77
-#, c-format
-msgid "CHAP"
-msgstr "CHAP"
-
-#: ../lib/network/connection/ppp.pm:13 ../lib/network/netconnect.pm:78
-#, c-format
-msgid "PAP/CHAP"
-msgstr "PAP/CHAP"
 
 #: ../lib/network/connection/providers/cellular.pm:13
 #: ../lib/network/connection/providers/cellular.pm:20
@@ -4444,19 +4774,19 @@ msgid "Restricted WEP"
 msgstr "Beperkte WEP"
 
 #: ../lib/network/connection/wireless.pm:43
-#, fuzzy, c-format
+#, c-format
 msgid "WPA/WPA2 Pre-Shared Key"
-msgstr "WPA vooraf gedeelde sleutel"
+msgstr "WPA/WPA2 vooraf gedeelde sleutel"
 
 #: ../lib/network/connection/wireless.pm:44
 #, c-format
 msgid "WPA/WPA2 Enterprise"
-msgstr ""
+msgstr "WPA/WPA2 Enterprise"
 
 #: ../lib/network/connection/wireless.pm:231
 #, c-format
 msgid "Windows driver"
-msgstr ""
+msgstr "Windows stuurprogramma"
 
 #: ../lib/network/connection/wireless.pm:298
 #, c-format
@@ -4471,12 +4801,6 @@ msgstr ""
 #, c-format
 msgid "Wireless settings"
 msgstr "Draadloze instellingen"
-
-#: ../lib/network/connection/wireless.pm:366
-#: ../lib/network/connection_manager.pm:243
-#, c-format
-msgid "Operating Mode"
-msgstr "Operatiemodus"
 
 # Wifi-termen
 #: ../lib/network/connection/wireless.pm:367
@@ -4512,25 +4836,15 @@ msgstr "Secundaire"
 msgid "Auto"
 msgstr "Automatisch"
 
-#: ../lib/network/connection/wireless.pm:370
-#, c-format
-msgid "Network name (ESSID)"
-msgstr "Netwerknaam (ESSID)"
-
 #: ../lib/network/connection/wireless.pm:372
 #, c-format
 msgid "Encryption mode"
 msgstr "Versleutelingsmodus"
 
-#: ../lib/network/connection/wireless.pm:374
-#, c-format
-msgid "Encryption key"
-msgstr "Vercijferingssleutel"
-
 #: ../lib/network/connection/wireless.pm:376
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Login/Username"
-msgstr "Account-aanmelding (gebruikersnaam)"
+msgstr "EAP Account-aanmelding/gebruikersnaam"
 
 #: ../lib/network/connection/wireless.pm:378
 #, c-format
@@ -4539,11 +4853,13 @@ msgid ""
 "need to specify domain then try the untested syntax\n"
 "  DOMAIN\\username"
 msgstr ""
+"De account-aanmelding of gebruikersnaam. Het format is platte tekst. Als u een domein op moet geven, probeer dan de volgende syntax\n"
+"  DOMEIN\\gebruikersnaam"
 
 #: ../lib/network/connection/wireless.pm:381
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Password"
-msgstr "Wachtwoord"
+msgstr "EAP Wachtwoord"
 
 #: ../lib/network/connection/wireless.pm:383
 #, c-format
@@ -4563,11 +4879,23 @@ msgid ""
 "  TLS mode is completely certificate based and may ignore\n"
 "the username and password values specified here."
 msgstr ""
+" Wachtwoord: Een tekenreeks.\n"
+"Merk op dat dit niet hetzelfde is als een vooraf gedeelde sleutel.\n"
+"____________________________________________________\n"
+"AANVULLENDE INFORMATIE:\n"
+"Op de pagina voor geavanceerde instellingen, kunt u aangeve welke EAP modus\n wordt gebruikt voor aanmelding. Voor de eap instelling\n"
+"   Automatisch bespeuren: betekent dat alle mogelijke modi worden geprobeerd.\n"
+"\n"
+"Als Automatisch bespeuren mislukt, probeer dan eerst het PEAP TTLS combo\n"
+"Noot:\n"
+"\tDe instellingen MD5, MSCHAPV2, OTP en GTC impliceren\n"
+"automatisch PEAP en TTLS modi.\n"
+"  TLS modus is volledig certificaatgebaseerd en kan de gebruikersnaam\n en wachtwoordwaarden volledig negeren."
 
 #: ../lib/network/connection/wireless.pm:397
-#, fuzzy, c-format
+#, c-format
 msgid "EAP client certificate"
-msgstr "Naam van het certificaat"
+msgstr "EAP clientcertificaat"
 
 #: ../lib/network/connection/wireless.pm:399
 #, c-format
@@ -4577,31 +4905,11 @@ msgid ""
 "considered as the alternative to username/password combo.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
-
-#: ../lib/network/connection/wireless.pm:403
-#, c-format
-msgid "Network ID"
-msgstr "Netwerk-ID"
-
-#: ../lib/network/connection/wireless.pm:404
-#, c-format
-msgid "Operating frequency"
-msgstr "Operatiefrequentie"
-
-#: ../lib/network/connection/wireless.pm:405
-#, c-format
-msgid "Sensitivity threshold"
-msgstr "Drempelwaarde gevoeligheid"
-
-#: ../lib/network/connection/wireless.pm:406
-#, c-format
-msgid "Bitrate (in b/s)"
-msgstr "Bitsnelheid (in b/s)"
-
-#: ../lib/network/connection/wireless.pm:407
-#, c-format
-msgid "RTS/CTS"
-msgstr "RTS/CTS"
+"Het volledige pad en bestandsnaam van het clientcertificaat. Dit wordt\n"
+"alleen gebruikt voor EAP certificaat gebaseerde aanmelding. Het kan gezien\n"
+"worden als een alternatief voor de gebruikersnaam/wachtwoord \n"
+"combinatie.\n"
+"Noot: andere gerelateerd instellingen vindt u op het blad voor geavanceerde instellingen."
 
 #: ../lib/network/connection/wireless.pm:408
 #, c-format
@@ -4624,17 +4932,6 @@ msgstr ""
 "aan de maximum-packetgrootte maakt dit ontwerp ongedaan. U kunt deze \n"
 "parameter ook instellen op auto, fixed (vast) of off (uit). "
 
-#
-#: ../lib/network/connection/wireless.pm:415
-#, c-format
-msgid "Fragmentation"
-msgstr "Fragmentatie"
-
-#: ../lib/network/connection/wireless.pm:416
-#, c-format
-msgid "iwconfig command extra arguments"
-msgstr "Extra argumenten voor iwconfig-opdracht"
-
 #: ../lib/network/connection/wireless.pm:417
 #, c-format
 msgid ""
@@ -4649,12 +4946,6 @@ msgstr ""
 "ingesteld als de hostnaam.\n"
 "\n"
 "Zie de iwconfig(8) manpagina voor meer informatie."
-
-#. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:424
-#, c-format
-msgid "iwspy command extra arguments"
-msgstr "Extra argumenten voor iwspy-opdracht"
 
 #: ../lib/network/connection/wireless.pm:425
 #, c-format
@@ -4676,11 +4967,6 @@ msgstr ""
 "kwaliteit van de link, signaalsterkte en ruisniveau.\n"
 "\n"
 "Zie iwpspy(8) man pagina voor meer informatie."
-
-#: ../lib/network/connection/wireless.pm:433
-#, c-format
-msgid "iwpriv command extra arguments"
-msgstr "Extra argumenten voor iwpriv-opdracht"
 
 #: ../lib/network/connection/wireless.pm:435
 #, c-format
@@ -4714,25 +5000,25 @@ msgstr ""
 "Zie de iwpriv(8) man-pagina voor meer informatie."
 
 #: ../lib/network/connection/wireless.pm:446
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Protocol"
-msgstr "Protocol"
+msgstr "EAP-protocol"
 
 #: ../lib/network/connection/wireless.pm:447
 #: ../lib/network/connection/wireless.pm:452
-#, fuzzy, c-format
+#, c-format
 msgid "Auto Detect"
 msgstr "Automatisch bespeuren"
 
 #: ../lib/network/connection/wireless.pm:447
 #, c-format
 msgid "WPA2"
-msgstr ""
+msgstr "WPA2"
 
 #: ../lib/network/connection/wireless.pm:447
-#, fuzzy, c-format
+#, c-format
 msgid "WPA"
-msgstr "PAP"
+msgstr "WPA"
 
 #: ../lib/network/connection/wireless.pm:449
 #, c-format
@@ -4740,66 +5026,68 @@ msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr ""
+"Automatisch bespeuren wordt aanbevolen omdat dit eerst WPA versie 2 probeert\n"
+"en eventueel terugvalt op WPA versie 1."
 
 #: ../lib/network/connection/wireless.pm:451
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Mode"
-msgstr "Modus"
+msgstr "EAP-modus"
 
 #: ../lib/network/connection/wireless.pm:452
-#, fuzzy, c-format
+#, c-format
 msgid "PEAP"
-msgstr "PAP"
+msgstr "PEAP"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "TTLS"
-msgstr ""
+msgstr "TTLS"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "TLS"
-msgstr ""
+msgstr "TLS"
 
 #: ../lib/network/connection/wireless.pm:452
-#, fuzzy, c-format
+#, c-format
 msgid "MSCHAPV2"
-msgstr "CHAP"
+msgstr "MSCHAPV2"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "MD5"
-msgstr ""
+msgstr "MD5"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "OTP"
-msgstr ""
+msgstr "OTP"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "GTC"
-msgstr ""
+msgstr "GTC"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "LEAP"
-msgstr ""
+msgstr "LEAP"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "PEAP TTLS"
-msgstr ""
+msgstr "PEAP TTLS"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "TTLS TLS"
-msgstr ""
+msgstr "TTLS TLS"
 
 #: ../lib/network/connection/wireless.pm:454
 #, c-format
 msgid "EAP key_mgmt"
-msgstr ""
+msgstr "EAP sleutel_beheer"
 
 #: ../lib/network/connection/wireless.pm:456
 #, c-format
@@ -4807,11 +5095,13 @@ msgid ""
 "list of accepted authenticated key management protocols.\n"
 "possible values are WPA-EAP, IEEE8021X, NONE"
 msgstr ""
+"lijst van toegestane sleutelbeheer protocollen voor aanmelding\n"
+"mogelijke waarden zijn WPA-EAP, IEEE8021X, NONE"
 
 #: ../lib/network/connection/wireless.pm:458
 #, c-format
 msgid "EAP outer identity"
-msgstr ""
+msgstr "EAP externe identiteit"
 
 #: ../lib/network/connection/wireless.pm:460
 #, c-format
@@ -4820,11 +5110,13 @@ msgid ""
 "unencrypted identity with EAP types that support different\n"
 "tunnelled identity, e.g., TTLS"
 msgstr ""
+"Tekenreeks onbekende identiteit voor EAP: wordt gebruikt als de\n"
+"niet versleutelde identiteit van EAP types die verschillende getunnelde identiteiten ondersteunen, bijv. TTLS"
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
 msgid "EAP phase2"
-msgstr ""
+msgstr "EAP fase2"
 
 #: ../lib/network/connection/wireless.pm:465
 #, c-format
@@ -4834,11 +5126,15 @@ msgid ""
 "auth=MSCHAPV2 for PEAP or\n"
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
+"Interne aanmelding met TLS tunnel waarden.\n"
+"invoer is tekst met veldwaarde paren. Bijvoorbeeld:\n"
+"auth=MSCHAPV2 voor PEAP of\n"
+"autheap=MSCHAPV2 autheap=MD5 voor TTLS"
 
 #: ../lib/network/connection/wireless.pm:469
-#, fuzzy, c-format
+#, c-format
 msgid "EAP CA certificate"
-msgstr "Certificaat"
+msgstr "EAP CA certificaat"
 
 #: ../lib/network/connection/wireless.pm:471
 #, c-format
@@ -4849,11 +5145,16 @@ msgid ""
 "a trusted CA certificate should always be configured\n"
 "when using TLS or TTLS or PEAP."
 msgstr ""
+"Volledig pad naar het CA certificaatbestand (PEM/DER). Dit bestand\n"
+"kan een of meer vertrouwde CA certificaten bevatten. Als ca_cert niet zijn inbegrepen,\n"
+"zal het servercertificaat niet geverifieerd worden. Indien mogelijk,\n"
+"moet altijd een vertrouwd CA certificaat geconfigureerd worden\n"
+"als TLS, TTLS of PEAP gebruikt wordt."
 
 #: ../lib/network/connection/wireless.pm:476
 #, c-format
 msgid "EAP certificate subject match"
-msgstr ""
+msgstr "EAP certificaat onderwerp komt overeen"
 
 #: ../lib/network/connection/wireless.pm:478
 #, c-format
@@ -4864,11 +5165,16 @@ msgid ""
 "string in the subject.  The subject string is in following format:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
+" Deelreeks die moet overeenkomen met het onderwerp van \n"
+"het aanmeldingsservercertificaat. Als deze tekenreeks is ingesteld,\n"
+"wordt het servercertificaat alleen geaccepteerd als het deze\n"
+"tekenreeks bevat in het onderwerp. De onderwerp-tekenreeks heeft het volgende format:\n"
+"/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
 #: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid "EAP extra directives"
-msgstr ""
+msgstr "EAP extra aanwijzingen"
 
 #: ../lib/network/connection/wireless.pm:485
 #, c-format
@@ -4887,6 +5193,18 @@ msgid ""
 "\tOthers such as key_mgmt, eap maybe used to force\n"
 "\tspecial settings different from the U.I settings."
 msgstr ""
+"Hier kunt u extra instellingen meegeven voor wpa_supplicant\n"
+"Het verwachte format is een tekstveld=waarde paar. Meerdere waarden\n"
+"kunnen aangegeven worden, waarbij elke waarde gescheiden wordt met het karakter #.\n"
+"Noot: aanwijzingen worden ongecontroleerd doorgegeven en kunnen veroorzaken\n"
+"dat de wpa aanmelding zonder foutmelding mislukt. Ondersteunde aanwijzingen worden\n gehandhaafd bij wijzigingen.\n"
+"Ondersteunde aanwijzingen zijn:\n"
+"\tdisabled, id_str, bssid, priority, auth_alg, eapol_flags,\n"
+"\tproactive_key_caching, peerkey, ca_path, private_key,\n"
+"\tprivate_key_passwd, dh_file, altsubject_match, phase1,\n"
+"\tfragment_size and eap_workaround, pairwise, group\n"
+"\tAnderen zoals key_mgmt, eap kunnen gebruikt worden om speciale instellingen te forceren\n"
+"\tdie afwijken van de instellingen in de gebruikersinterface."
 
 #: ../lib/network/connection/wireless.pm:505
 #, c-format
@@ -4917,12 +5235,12 @@ msgstr ""
 msgid "Allow access point roaming"
 msgstr "Sta access point roaming toe"
 
-#: ../lib/network/connection/wireless.pm:639
+#: ../lib/network/connection/wireless.pm:632
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "Toegewezen aan draadloos netwerk \"%s\" op interface %s"
 
-#: ../lib/network/connection/wireless.pm:640
+#: ../lib/network/connection/wireless.pm:633
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "Verbinding met met het draadloos netwerk is verbroken met interface %s"
@@ -4932,7 +5250,7 @@ msgstr "Verbinding met met het draadloos netwerk is verbroken met interface %s"
 msgid "DSL"
 msgstr "DSL"
 
-#: ../lib/network/connection/xdsl.pm:76 ../lib/network/netconnect.pm:768
+#: ../lib/network/connection/xdsl.pm:76 ../lib/network/netconnect.pm:764
 #, c-format
 msgid "Alcatel speedtouch USB modem"
 msgstr "Alcatel speedtouch USB-modem"
@@ -5000,65 +5318,65 @@ msgid "Virtual Circuit ID (VCI):"
 msgstr "Virtueel circuit-ID (VCI):"
 
 #: ../lib/network/connection/xdsl.pm:332
-#: ../lib/network/connection_manager.pm:61 ../lib/network/drakvpn.pm:45
-#: ../lib/network/netconnect.pm:131 ../lib/network/thirdparty.pm:123
+#: ../lib/network/connection_manager.pm:52 ../lib/network/drakvpn.pm:45
+#: ../lib/network/netconnect.pm:131 ../lib/network/thirdparty.pm:117
 #, c-format
 msgid "Could not install the packages (%s)!"
 msgstr "Kan de pakketten (%s) niet installeren!"
 
-#: ../lib/network/connection_manager.pm:73
-#: ../lib/network/connection_manager.pm:130
+#: ../lib/network/connection_manager.pm:64
+#: ../lib/network/connection_manager.pm:118
 #, c-format
 msgid "Network settings"
 msgstr "Netwerkinstellingen"
 
-#: ../lib/network/connection_manager.pm:74
-#: ../lib/network/connection_manager.pm:131
+#: ../lib/network/connection_manager.pm:65
+#: ../lib/network/connection_manager.pm:119
 #, c-format
 msgid "Please enter settings for network"
 msgstr "Geef de instellingen voor het netwerk"
 
-#: ../lib/network/connection_manager.pm:82 ../lib/network/netconnect.pm:181
+#: ../lib/network/connection_manager.pm:69 ../lib/network/netconnect.pm:177
 #, c-format
 msgid "Configuring device..."
 msgstr "Apparaat configureren..."
 
-#: ../lib/network/connection_manager.pm:186
+#: ../lib/network/connection_manager.pm:174
 #, c-format
 msgid "Connecting..."
 msgstr "Verbinden..."
 
-#: ../lib/network/connection_manager.pm:203
+#: ../lib/network/connection_manager.pm:192
 #, c-format
 msgid "Disconnecting..."
 msgstr "Verbinding verbreken..."
 
-#: ../lib/network/connection_manager.pm:240
+#: ../lib/network/connection_manager.pm:229
 #, c-format
 msgid "SSID"
 msgstr "SSID"
 
-#: ../lib/network/connection_manager.pm:241
+#: ../lib/network/connection_manager.pm:230
 #, c-format
 msgid "Signal strength"
 msgstr "Signaalsterkte"
 
-#: ../lib/network/connection_manager.pm:242
+#: ../lib/network/connection_manager.pm:231
 #, c-format
 msgid "Encryption"
 msgstr "Vercijfering"
 
-#: ../lib/network/connection_manager.pm:286 ../lib/network/netconnect.pm:214
+#: ../lib/network/connection_manager.pm:275 ../lib/network/netconnect.pm:210
 #, c-format
 msgid "Scanning for networks..."
-msgstr "Scannen op netwerken..."
+msgstr "Zoeken naar netwerken…"
 
-#: ../lib/network/connection_manager.pm:323 ../lib/network/drakroam.pm:115
+#: ../lib/network/connection_manager.pm:312 ../lib/network/drakroam.pm:113
 #, c-format
 msgid "Disconnect"
 msgstr "Verbinding verbreken"
 
-#: ../lib/network/connection_manager.pm:323 ../lib/network/drakroam.pm:114
+#: ../lib/network/connection_manager.pm:312 ../lib/network/drakroam.pm:112
 #, c-format
 msgid "Connect"
 msgstr "Verbinden"
@@ -5210,7 +5528,7 @@ msgstr "Overige poorten"
 msgid "Log firewall messages in system logs"
 msgstr "Verslag van firewall meldingen vastleggen in het systeemlogboek"
 
-#: ../lib/network/drakfirewall.pm:261
+#: ../lib/network/drakfirewall.pm:258
 #, c-format
 msgid ""
 "You can be warned when someone accesses to a service or tries to intrude "
@@ -5221,7 +5539,7 @@ msgstr ""
 "dienst of in probeert te breken in uw computer.\n"
 "Selecteer alstublieft welke netwerkactiviteit gevolgd dient te worden."
 
-#: ../lib/network/drakfirewall.pm:266
+#: ../lib/network/drakfirewall.pm:263
 #, c-format
 msgid "Use Interactive Firewall"
 msgstr "Interactieve firewall gebruiken"
@@ -5231,27 +5549,22 @@ msgstr "Interactieve firewall gebruiken"
 msgid "No device found"
 msgstr "Geen apparaten gevonden"
 
-#: ../lib/network/drakroam.pm:60
+#: ../lib/network/drakroam.pm:58
 #, c-format
 msgid "Hostname changed to \"%s\""
 msgstr "Hostnaam is gewijzigd in ‘%s’"
 
-#: ../lib/network/drakroam.pm:109
-#, c-format
-msgid "Device: "
-msgstr "Apparaat: "
-
-#: ../lib/network/drakroam.pm:113 ../lib/network/netcenter.pm:86
+#: ../lib/network/drakroam.pm:111 ../lib/network/netcenter.pm:87
 #, c-format
 msgid "Configure"
 msgstr "Configureren"
 
-#: ../lib/network/drakroam.pm:116 ../lib/network/netcenter.pm:91
+#: ../lib/network/drakroam.pm:114 ../lib/network/netcenter.pm:92
 #, c-format
 msgid "Refresh"
 msgstr "Verversen"
 
-#: ../lib/network/drakroam.pm:127 ../lib/network/netconnect.pm:774
+#: ../lib/network/drakroam.pm:125 ../lib/network/netconnect.pm:770
 #, c-format
 msgid "Wireless connection"
 msgstr "Draadloze verbinding"
@@ -5306,7 +5619,7 @@ msgstr "Voer de vereiste sleutel(s) in"
 msgid "Please enter the settings of your VPN connection"
 msgstr "Voer de instellingen voor uw VPN-verbinding in"
 
-#: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:304
+#: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:300
 #, c-format
 msgid "Do you want to start the connection now?"
 msgstr "Wilt u de verbinding nu starten?"
@@ -5348,9 +5661,9 @@ msgid "Password cracking"
 msgstr "Wachtwoord kraken"
 
 #: ../lib/network/ifw.pm:132
-#, fuzzy, c-format
+#, c-format
 msgid "New connection"
-msgstr "Netwerkverbinding"
+msgstr "Nieuwe verbinding"
 
 #: ../lib/network/ifw.pm:133
 #, c-format
@@ -5373,9 +5686,9 @@ msgid "A password cracking attack has been attempted by %s."
 msgstr "Een poging om wachtwoorden te kraken is gedaan door %s."
 
 #: ../lib/network/ifw.pm:138
-#, fuzzy, c-format
+#, c-format
 msgid "%s is connecting on the %s service."
-msgstr "Bezig met internetverbinding verbreken "
+msgstr "%s maakt verbinding met de dienst %s."
 
 #: ../lib/network/ifw.pm:139
 #, c-format
@@ -5398,8 +5711,8 @@ msgid "port %d"
 msgstr "poort %d"
 
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
-#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:616
-#: ../lib/network/netconnect.pm:633 ../lib/network/netconnect.pm:649
+#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:612
+#: ../lib/network/netconnect.pm:629 ../lib/network/netconnect.pm:645
 #, c-format
 msgid "Manual"
 msgstr "Handmatig"
@@ -5407,10 +5720,10 @@ msgstr "Handmatig"
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
 #: ../lib/network/modem.pm:44 ../lib/network/modem.pm:63
 #: ../lib/network/modem.pm:76 ../lib/network/modem.pm:81
-#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:611
-#: ../lib/network/netconnect.pm:616 ../lib/network/netconnect.pm:628
-#: ../lib/network/netconnect.pm:633 ../lib/network/netconnect.pm:649
-#: ../lib/network/netconnect.pm:651
+#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:607
+#: ../lib/network/netconnect.pm:612 ../lib/network/netconnect.pm:624
+#: ../lib/network/netconnect.pm:629 ../lib/network/netconnect.pm:645
+#: ../lib/network/netconnect.pm:647
 #, c-format
 msgid "Automatic"
 msgstr "Automatisch"
@@ -5418,8 +5731,7 @@ msgstr "Automatisch"
 #: ../lib/network/ndiswrapper.pm:30
 #, c-format
 msgid "No device supporting the %s ndiswrapper driver is present!"
-msgstr ""
-"Geen apparaat aanwezig dat het %s-ndiswrapper-stuurprogramma ondersteunt!"
+msgstr "Geen apparaat aanwezig dat het %s-ndiswrapper-stuurprogramma ondersteunt!"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -5470,17 +5782,17 @@ msgstr "Nieuw stuurprogramma installeren"
 msgid "Select a device:"
 msgstr "Selecteer een apparaat:"
 
-#: ../lib/network/netcenter.pm:35
+#: ../lib/network/netcenter.pm:33
 #, c-format
 msgid "Network Center"
 msgstr "Netwerkcentrum"
 
-#: ../lib/network/netcenter.pm:76 ../lib/network/netconnect.pm:217
+#: ../lib/network/netcenter.pm:77 ../lib/network/netconnect.pm:213
 #, c-format
 msgid "Please select your network:"
 msgstr "Selecteer uw netwerk:"
 
-#: ../lib/network/netcenter.pm:82
+#: ../lib/network/netcenter.pm:83
 #, c-format
 msgid ""
 "_: This is a verb\n"
@@ -5492,8 +5804,8 @@ msgstr "Observatie"
 msgid "United States"
 msgstr "Verenigde Staten"
 
-#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:506
-#: ../lib/network/netconnect.pm:520
+#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:502
+#: ../lib/network/netconnect.pm:516
 #, c-format
 msgid "Manual choice"
 msgstr "Handmatige keuze"
@@ -5508,32 +5820,13 @@ msgstr "Interne ISDN kaart"
 msgid "Protocol for the rest of the world"
 msgstr "Protocol voor de rest van de wereld"
 
-#: ../lib/network/netconnect.pm:67
-#, c-format
-msgid "European protocol (EDSS1)"
-msgstr "Europees protocol (EDSS1)"
-
-#: ../lib/network/netconnect.pm:68
-#, c-format
-msgid ""
-"Protocol for the rest of the world\n"
-"No D-Channel (leased lines)"
-msgstr ""
-"Protocol voor de rest van de wereld \n"
-" geen D-Channel (geleasde lijnen)"
-
-#: ../lib/network/netconnect.pm:118
-#, c-format
-msgid "Network & Internet Configuration"
-msgstr "Netwerk- & Internetconfiguratie"
-
 #: ../lib/network/netconnect.pm:123
 #, c-format
 msgid "Choose the connection you want to configure"
 msgstr "Selecteer de verbinding die u wenst in te stellen"
 
-#: ../lib/network/netconnect.pm:145 ../lib/network/netconnect.pm:361
-#: ../lib/network/netconnect.pm:801
+#: ../lib/network/netconnect.pm:145 ../lib/network/netconnect.pm:357
+#: ../lib/network/netconnect.pm:797
 #, c-format
 msgid "Select the network interface to configure:"
 msgstr "Selecteer de in te stellen netwerkinterface:"
@@ -5548,12 +5841,12 @@ msgstr "Het apparaat dat nodig is voor deze verbinding is niet gevonden."
 msgid "Hardware Configuration"
 msgstr "Apparaatinstellingen"
 
-#: ../lib/network/netconnect.pm:199
+#: ../lib/network/netconnect.pm:195
 #, c-format
 msgid "Please select your provider:"
 msgstr "Selecteer uw aanbieder:"
 
-#: ../lib/network/netconnect.pm:254
+#: ../lib/network/netconnect.pm:250
 #, c-format
 msgid ""
 "Please select your connection protocol.\n"
@@ -5562,109 +5855,69 @@ msgstr ""
 "Selecteer het protocol voor de verbinding.\n"
 "Als u niet weet welke u moet kiezen, laat de standaard keuze dan staan."
 
-#: ../lib/network/netconnect.pm:298 ../lib/network/netconnect.pm:668
+#: ../lib/network/netconnect.pm:294 ../lib/network/netconnect.pm:664
 #, c-format
 msgid "Connection control"
 msgstr "Verbindingsbeheer"
 
-#: ../lib/network/netconnect.pm:328
+#: ../lib/network/netconnect.pm:324
 #, c-format
 msgid "Connection Configuration"
 msgstr "Configuratie van verbinding"
 
-#: ../lib/network/netconnect.pm:328
+#: ../lib/network/netconnect.pm:324
 #, c-format
 msgid "Please fill or check the field below"
 msgstr "Controleer het onderstaande veld of vul het in"
 
-#: ../lib/network/netconnect.pm:331
+#: ../lib/network/netconnect.pm:327
 #, c-format
 msgid "Your personal phone number"
 msgstr "Uw persoonlijke telefoonnummer"
 
-#: ../lib/network/netconnect.pm:332
+#: ../lib/network/netconnect.pm:328
 #, c-format
 msgid "Provider name (ex provider.net)"
 msgstr "Naam van uw provider (bijv. provider.nl)"
 
-#: ../lib/network/netconnect.pm:333
-#, c-format
-msgid "Provider phone number"
-msgstr "Telefoonnummer van uw provider"
-
-#: ../lib/network/netconnect.pm:334
+#: ../lib/network/netconnect.pm:330
 #, c-format
 msgid "Provider DNS 1 (optional)"
 msgstr "DNS 1 van uw provider (optioneel)"
 
-#: ../lib/network/netconnect.pm:335
+#: ../lib/network/netconnect.pm:331
 #, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "DNS 2 van uw provider (optioneel)"
 
-#: ../lib/network/netconnect.pm:336
-#, c-format
-msgid "Dialing mode"
-msgstr "Inbelmodus"
-
-#: ../lib/network/netconnect.pm:337
-#, c-format
-msgid "Connection speed"
-msgstr "Verbindingssnelheid"
-
-#: ../lib/network/netconnect.pm:338
-#, c-format
-msgid "Connection timeout (in sec)"
-msgstr "Maximale wachttijd voor verbinding (in seconden)"
-
 #: ../lib/network/netconnect.pm:341
-#, c-format
-msgid "Card IRQ"
-msgstr "IRQ van de kaart"
-
-#: ../lib/network/netconnect.pm:342
-#, c-format
-msgid "Card mem (DMA)"
-msgstr "Mem (DMA) van de kaart"
-
-#: ../lib/network/netconnect.pm:343
-#, c-format
-msgid "Card IO"
-msgstr "IO van de kaart"
-
-#: ../lib/network/netconnect.pm:344
-#, c-format
-msgid "Card IO_0"
-msgstr "IO_0 van de kaart"
-
-#: ../lib/network/netconnect.pm:345
 #, c-format
 msgid "Card IO_1"
 msgstr "IO_1 van de kaart"
 
-#: ../lib/network/netconnect.pm:364 ../lib/network/netconnect.pm:369
+#: ../lib/network/netconnect.pm:360 ../lib/network/netconnect.pm:365
 #, c-format
 msgid "External ISDN modem"
 msgstr "Extern ISDN modem"
 
-#: ../lib/network/netconnect.pm:397
+#: ../lib/network/netconnect.pm:393
 #, c-format
 msgid "Select a device!"
 msgstr "Selecteer een apparaat!"
 
-#: ../lib/network/netconnect.pm:406 ../lib/network/netconnect.pm:416
-#: ../lib/network/netconnect.pm:426 ../lib/network/netconnect.pm:459
-#: ../lib/network/netconnect.pm:473
+#: ../lib/network/netconnect.pm:402 ../lib/network/netconnect.pm:412
+#: ../lib/network/netconnect.pm:422 ../lib/network/netconnect.pm:455
+#: ../lib/network/netconnect.pm:469
 #, c-format
 msgid "ISDN Configuration"
 msgstr "ISDN Configuratie"
 
-#: ../lib/network/netconnect.pm:407
+#: ../lib/network/netconnect.pm:403
 #, c-format
 msgid "What kind of card do you have?"
 msgstr "Welk type kaart heeft u?"
 
-#: ../lib/network/netconnect.pm:417
+#: ../lib/network/netconnect.pm:413
 #, c-format
 msgid ""
 "\n"
@@ -5679,22 +5932,22 @@ msgstr ""
 "\n"
 "Als  u een PCMCIA kaart bezit, moet u het irq en io van uw kaart weten.\n"
 
-#: ../lib/network/netconnect.pm:421
+#: ../lib/network/netconnect.pm:417
 #, c-format
 msgid "Continue"
 msgstr "Doorgaan"
 
-#: ../lib/network/netconnect.pm:421
+#: ../lib/network/netconnect.pm:417
 #, c-format
 msgid "Abort"
 msgstr "Afbreken"
 
-#: ../lib/network/netconnect.pm:427
+#: ../lib/network/netconnect.pm:423
 #, c-format
 msgid "Which of the following is your ISDN card?"
 msgstr "Welke van de volgende is uw ISDN kaart?"
 
-#: ../lib/network/netconnect.pm:445
+#: ../lib/network/netconnect.pm:441
 #, c-format
 msgid ""
 "A CAPI driver is available for this modem. This CAPI driver can offer more "
@@ -5705,12 +5958,12 @@ msgstr ""
 "stuurprogramma biedt meer mogelijkheden dan de vrije versie (zoals het "
 "verzenden van faxen). Welk stuurprogramma wilt u gebruiken?"
 
-#: ../lib/network/netconnect.pm:459
+#: ../lib/network/netconnect.pm:455
 #, c-format
 msgid "Which protocol do you want to use?"
 msgstr "Welk protocol wenst u te gebruiken?"
 
-#: ../lib/network/netconnect.pm:473
+#: ../lib/network/netconnect.pm:469
 #, c-format
 msgid ""
 "Select your provider.\n"
@@ -5719,12 +5972,12 @@ msgstr ""
 "Selecteer uw provider.\n"
 " Als uw provider niet in de lijst staat, kiest u Unlisted"
 
-#: ../lib/network/netconnect.pm:475 ../lib/network/netconnect.pm:571
+#: ../lib/network/netconnect.pm:471 ../lib/network/netconnect.pm:567
 #, c-format
 msgid "Provider:"
 msgstr "Provider:"
 
-#: ../lib/network/netconnect.pm:484
+#: ../lib/network/netconnect.pm:480
 #, c-format
 msgid ""
 "Your modem is not supported by the system.\n"
@@ -5733,137 +5986,122 @@ msgstr ""
 "Het systeem ondersteunt uw modem niet.\n"
 "Neem eens een kijkje op http://www.linmodems.org"
 
-#: ../lib/network/netconnect.pm:503
+#: ../lib/network/netconnect.pm:499
 #, c-format
 msgid "Select the modem to configure:"
 msgstr "Kies de te configureren modem:"
 
-#: ../lib/network/netconnect.pm:505
+#: ../lib/network/netconnect.pm:501
 #, c-format
 msgid "Modem"
 msgstr "Modem"
 
-#: ../lib/network/netconnect.pm:540
+#: ../lib/network/netconnect.pm:536
 #, c-format
 msgid "Please choose which serial port your modem is connected to."
 msgstr "Geef aan met welke seriële poort uw modem verbonden is."
 
-#: ../lib/network/netconnect.pm:569
+#: ../lib/network/netconnect.pm:565
 #, c-format
 msgid "Select your provider:"
 msgstr "Selecteer uw provider:"
 
-#: ../lib/network/netconnect.pm:593
+#: ../lib/network/netconnect.pm:589
 #, c-format
 msgid "Dialup: account options"
 msgstr "Inbellen: account-opties"
 
-#: ../lib/network/netconnect.pm:596
+#: ../lib/network/netconnect.pm:592
 #, c-format
 msgid "Connection name"
 msgstr "Verbindingsnaam"
 
-#: ../lib/network/netconnect.pm:597
+#: ../lib/network/netconnect.pm:593
 #, c-format
 msgid "Phone number"
 msgstr "Telefoonnummer"
 
-#: ../lib/network/netconnect.pm:598
+#: ../lib/network/netconnect.pm:594
 #, c-format
 msgid "Login ID"
 msgstr "Aanmeldingsnaam"
 
-#: ../lib/network/netconnect.pm:613 ../lib/network/netconnect.pm:646
+#: ../lib/network/netconnect.pm:609 ../lib/network/netconnect.pm:642
 #, c-format
 msgid "Dialup: IP parameters"
 msgstr "Inbellen: IP-parameters"
 
-#: ../lib/network/netconnect.pm:616
+#: ../lib/network/netconnect.pm:612
 #, c-format
 msgid "IP parameters"
 msgstr "IP-parameters"
 
-#: ../lib/network/netconnect.pm:618
+#: ../lib/network/netconnect.pm:614
 #, c-format
 msgid "Subnet mask"
 msgstr "Subnetmasker"
 
-#: ../lib/network/netconnect.pm:630
+#: ../lib/network/netconnect.pm:626
 #, c-format
 msgid "Dialup: DNS parameters"
 msgstr "Inbellen: DNS-parameters"
 
-#: ../lib/network/netconnect.pm:633
+#: ../lib/network/netconnect.pm:629
 #, c-format
 msgid "DNS"
 msgstr "DNS"
 
-#: ../lib/network/netconnect.pm:634
+#: ../lib/network/netconnect.pm:630
 #, c-format
 msgid "Domain name"
 msgstr "Domeinnaam"
 
-#: ../lib/network/netconnect.pm:635
-#, c-format
-msgid "First DNS Server (optional)"
-msgstr "Eerste DNS-server (optioneel)"
-
-#: ../lib/network/netconnect.pm:636
-#, c-format
-msgid "Second DNS Server (optional)"
-msgstr "Tweede DNS-server (optioneel)"
-
-#: ../lib/network/netconnect.pm:637
+#: ../lib/network/netconnect.pm:633
 #, c-format
 msgid "Set hostname from IP"
 msgstr "Hostnaam bepalen a.d.h.v. IP-adres"
 
-#: ../lib/network/netconnect.pm:650
+#: ../lib/network/netconnect.pm:646
 #, c-format
 msgid "Gateway IP address"
 msgstr "IP-adres van gateway"
 
-#: ../lib/network/netconnect.pm:683
+#: ../lib/network/netconnect.pm:679
 #, c-format
 msgid "Automatically at boot"
 msgstr "Automatisch bij opstarten"
 
-#: ../lib/network/netconnect.pm:685
+#: ../lib/network/netconnect.pm:681
 #, c-format
 msgid "By using Net Applet in the system tray"
 msgstr "Door gebruik van het Net-applet in het systeemvak"
 
-#: ../lib/network/netconnect.pm:687
+#: ../lib/network/netconnect.pm:683
 #, c-format
 msgid "Manually (the interface would still be activated at boot)"
 msgstr "Handmatig (de interface wordt nog wel geactiveerd bij opstarten)"
 
-#: ../lib/network/netconnect.pm:696
+#: ../lib/network/netconnect.pm:692
 #, c-format
 msgid "How do you want to dial this connection?"
 msgstr "Op welke manier wilt u contact maken met deze verbinding?"
 
-#: ../lib/network/netconnect.pm:709
+#: ../lib/network/netconnect.pm:705
 #, c-format
 msgid "Do you want to try to connect to the Internet now?"
-msgstr "Wilt u nu proberen om een connectie te maken met Internet?"
+msgstr "Wilt u nu proberen om een verbinding te maken met Internet?"
 
-#: ../lib/network/netconnect.pm:717
-#, c-format
-msgid "Testing your connection..."
-msgstr "Bezig met testen van uw connectie..."
-
-#: ../lib/network/netconnect.pm:736
+#: ../lib/network/netconnect.pm:732
 #, c-format
 msgid "The system is now connected to the Internet."
 msgstr "Het systeem is op dit moment aangesloten op het Internet."
 
-#: ../lib/network/netconnect.pm:737
+#: ../lib/network/netconnect.pm:733
 #, c-format
 msgid "For security reasons, it will be disconnected now."
 msgstr "Vanwege beveiligingsredenen wordt de verbinding nu verbroken."
 
-#: ../lib/network/netconnect.pm:738
+#: ../lib/network/netconnect.pm:734
 #, c-format
 msgid ""
 "The system does not seem to be connected to the Internet.\n"
@@ -5872,7 +6110,7 @@ msgstr ""
 "Het lijkt erop dat dit systeem niet aangesloten is op\n"
 "het internet. Probeer uw verbinding opnieuw in te stellen."
 
-#: ../lib/network/netconnect.pm:753
+#: ../lib/network/netconnect.pm:749
 #, c-format
 msgid ""
 "Congratulations, the network and Internet configuration is finished.\n"
@@ -5881,7 +6119,7 @@ msgstr ""
 "Gefeliciteerd, de netwerk- en internetconfiguratie is af.\n"
 "\n"
 
-#: ../lib/network/netconnect.pm:756
+#: ../lib/network/netconnect.pm:752
 #, c-format
 msgid ""
 "After this is done, we recommend that you restart your X environment to "
@@ -5890,7 +6128,7 @@ msgstr ""
 "We raden u aan om nadat dit gebeurd is, uw X omgeving te herstarten om "
 "hostnaam gerelateerde problemen te voorkomen."
 
-#: ../lib/network/netconnect.pm:757
+#: ../lib/network/netconnect.pm:753
 #, c-format
 msgid ""
 "Problems occurred during configuration.\n"
@@ -5901,78 +6139,78 @@ msgstr ""
 "Test uw verbinding via net_monitor of mcc. Indien uw verbinding niet werkt, "
 "kunt u proberen de configuratie opnieuw op te starten."
 
-#: ../lib/network/netconnect.pm:769
+#: ../lib/network/netconnect.pm:765
 #, c-format
 msgid "Sagem USB modem"
 msgstr "Sagem USB modem"
 
-#: ../lib/network/netconnect.pm:770 ../lib/network/netconnect.pm:771
+#: ../lib/network/netconnect.pm:766 ../lib/network/netconnect.pm:767
 #, c-format
 msgid "Bewan modem"
 msgstr "Bewan modem"
 
-#: ../lib/network/netconnect.pm:772
+#: ../lib/network/netconnect.pm:768
 #, c-format
 msgid "ECI Hi-Focus modem"
 msgstr "ECI Hi-Focus modem"
 
-#: ../lib/network/netconnect.pm:773
+#: ../lib/network/netconnect.pm:769
 #, c-format
 msgid "LAN connection"
 msgstr "LAN-verbinding"
 
-#: ../lib/network/netconnect.pm:775
+#: ../lib/network/netconnect.pm:771
 #, c-format
 msgid "ADSL connection"
 msgstr "ADSL-verbinding"
 
-#: ../lib/network/netconnect.pm:776
+#: ../lib/network/netconnect.pm:772
 #, c-format
 msgid "Cable connection"
 msgstr "Kabelverbinding"
 
-#: ../lib/network/netconnect.pm:777
+#: ../lib/network/netconnect.pm:773
 #, c-format
 msgid "ISDN connection"
 msgstr "ISDN-verbinding"
 
-#: ../lib/network/netconnect.pm:778
+#: ../lib/network/netconnect.pm:774
 #, c-format
 msgid "Modem connection"
 msgstr "Modemverbinding"
 
-#: ../lib/network/netconnect.pm:779
+#: ../lib/network/netconnect.pm:775
 #, c-format
 msgid "DVB connection"
 msgstr "DVB-aansluiting"
 
-#: ../lib/network/netconnect.pm:781
+#: ../lib/network/netconnect.pm:777
 #, c-format
 msgid "(detected on port %s)"
 msgstr "(gevonden op poort %s)"
 
 #. -PO: here, "(detected)" string will be appended to eg "ADSL connection"
-#: ../lib/network/netconnect.pm:783
+#: ../lib/network/netconnect.pm:779
 #, c-format
 msgid "(detected %s)"
 msgstr "(%s gevonden)"
 
-#: ../lib/network/netconnect.pm:783
+#: ../lib/network/netconnect.pm:779
 #, c-format
 msgid "(detected)"
 msgstr "(gevonden)"
 
-#: ../lib/network/netconnect.pm:784
+#: ../lib/network/netconnect.pm:780
 #, c-format
 msgid "Network Configuration"
 msgstr "Netwerkinstellingen"
 
-#: ../lib/network/netconnect.pm:785
+#: ../lib/network/netconnect.pm:781
 #, c-format
 msgid "Zeroconf hostname resolution"
 msgstr "Hostnaam opzoeken met zeroconf"
 
-#: ../lib/network/netconnect.pm:786
+#: ../lib/network/netconnect.pm:782
 #, c-format
 msgid ""
 "If desired, enter a Zeroconf hostname.\n"
@@ -5986,17 +6224,17 @@ msgstr ""
 "maken.\n"
 "Op de meeste netwerken is dit niet nodig."
 
-#: ../lib/network/netconnect.pm:790
+#: ../lib/network/netconnect.pm:786
 #, c-format
 msgid "Zeroconf Host name"
 msgstr "Zeroconf hostnaam"
 
-#: ../lib/network/netconnect.pm:791
+#: ../lib/network/netconnect.pm:787
 #, c-format
 msgid "Zeroconf host name must not contain a ."
 msgstr "Zeroconf-hostnaam mag geen . bevatten"
 
-#: ../lib/network/netconnect.pm:792
+#: ../lib/network/netconnect.pm:788
 #, c-format
 msgid ""
 "Because you are doing a network installation, your network is already "
@@ -6008,12 +6246,12 @@ msgstr ""
 "Klik op OK om uw instellingen te behouden, of op Annuleren om uw Internet & "
 "Netwerkverbinding opnieuw in te stellen.\n"
 
-#: ../lib/network/netconnect.pm:795
+#: ../lib/network/netconnect.pm:791
 #, c-format
 msgid "The network needs to be restarted. Do you want to restart it?"
 msgstr "Het netwerk dient herstart te worden. Wilt u het herstarten?"
 
-#: ../lib/network/netconnect.pm:796
+#: ../lib/network/netconnect.pm:792
 #, c-format
 msgid ""
 "A problem occurred while restarting the network: \n"
@@ -6024,7 +6262,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../lib/network/netconnect.pm:797
+#: ../lib/network/netconnect.pm:793
 #, c-format
 msgid ""
 "We are now going to configure the %s connection.\n"
@@ -6037,12 +6275,12 @@ msgstr ""
 "\n"
 "Klik op \"%s\" om door te gaan."
 
-#: ../lib/network/netconnect.pm:798
+#: ../lib/network/netconnect.pm:794
 #, c-format
 msgid "Configuration is complete, do you want to apply settings?"
 msgstr "Configuratie is voltooid, wilt u de instellingen toepassen?"
 
-#: ../lib/network/netconnect.pm:799
+#: ../lib/network/netconnect.pm:795
 #, c-format
 msgid ""
 "You have configured multiple ways to connect to the Internet.\n"
@@ -6053,17 +6291,17 @@ msgstr ""
 "Kies degene die u wenst te gebruiken.\n"
 "\n"
 
-#: ../lib/network/netconnect.pm:800
+#: ../lib/network/netconnect.pm:796
 #, c-format
 msgid "Internet connection"
 msgstr "Internetverbinding"
 
-#: ../lib/network/netconnect.pm:802
+#: ../lib/network/netconnect.pm:798
 #, c-format
 msgid "Configuring network device %s (driver %s)"
 msgstr "Bezig met configureren van netwerkapparaat %s (stuurprogramma %s)"
 
-#: ../lib/network/netconnect.pm:803
+#: ../lib/network/netconnect.pm:799
 #, c-format
 msgid ""
 "The following protocols can be used to configure a LAN connection. Please "
@@ -6072,7 +6310,7 @@ msgstr ""
 "Een LANverbinding kan met de volgende protocollen geconfigureerd worden. "
 "Kiest u degene die u wenst."
 
-#: ../lib/network/netconnect.pm:804
+#: ../lib/network/netconnect.pm:800
 #, c-format
 msgid ""
 "Please enter your host name.\n"
@@ -6084,27 +6322,22 @@ msgstr ""
 "Het moet een volledige computernaam zijn, zoals ``mybox.mylab.myco.com''.\n"
 "U mag ook het IP-adres van de gateway invoeren als u er een heeft."
 
-#: ../lib/network/netconnect.pm:809
+#: ../lib/network/netconnect.pm:805
 #, c-format
 msgid "Last but not least you can also type in your DNS server IP addresses."
 msgstr "Tenslotte kunt u ook de IP-adressen van uw DNS-server intypen."
 
-#: ../lib/network/netconnect.pm:810
+#: ../lib/network/netconnect.pm:806
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
 msgstr "Het DNS-serveradres moet in het formaat 1.2.3.4 staan"
 
-#: ../lib/network/netconnect.pm:811
-#, c-format
-msgid "Gateway address should be in format 1.2.3.4"
-msgstr "Het gateway-adres moet in het formaat 1.2.3.4 staan"
-
-#: ../lib/network/netconnect.pm:812
+#: ../lib/network/netconnect.pm:808
 #, c-format
 msgid "Gateway device"
 msgstr "Gateway apparaat"
 
-#: ../lib/network/netconnect.pm:826
+#: ../lib/network/netconnect.pm:822
 #, c-format
 msgid ""
 "An unexpected error has happened:\n"
@@ -6188,12 +6421,12 @@ msgstr ""
 #: ../lib/network/shorewall.pm:141
 #, c-format
 msgid "Keep custom rules"
-msgstr "De handmatige wijzigingen behouden"
+msgstr "De zelfaangepaste regels behouden"
 
 #: ../lib/network/shorewall.pm:142
 #, c-format
 msgid "Drop custom rules"
-msgstr "De handmatige wijzigingen verwijderen"
+msgstr "De zefaangepaste regels verwijderen"
 
 #: ../lib/network/shorewall.pm:147
 #, c-format
@@ -6207,34 +6440,33 @@ msgstr ""
 "wellicht in tegenspraak zijn met de regels die zojuist zijn ingesteld.\n"
 "Wat wit u doen?"
 
-#: ../lib/network/thirdparty.pm:144
+#: ../lib/network/thirdparty.pm:138
 #, c-format
 msgid "Some components (%s) are required but aren't available for %s hardware."
 msgstr ""
 "Sommige componenten (%s) zijn vereist maar niet beschikbaar voor %s-"
 "apparatuur"
 
-#: ../lib/network/thirdparty.pm:145
+#: ../lib/network/thirdparty.pm:139
 #, c-format
 msgid "Some packages (%s) are required but aren't available."
 msgstr "Sommige pakketten (%s) zijn nodig maar niet verkrijgbaar."
 
-#. -PO: first argument is a list of Mandriva distributions
-#. -PO: second argument is a package media name
-#: ../lib/network/thirdparty.pm:150
-#, fuzzy, c-format
+#: ../lib/network/thirdparty.pm:141
+#, c-format
 msgid ""
-"These packages can be found in %s, or in the official %s package repository."
+"These packages can be found in Mandriva Club or in Mandriva commercial "
+"releases."
 msgstr ""
 "Deze pakketten kunnen worden gevonden in Mandriva Club of Mandriva "
-"commerciële releases."
+"commerciële versies."
 
-#: ../lib/network/thirdparty.pm:154
+#: ../lib/network/thirdparty.pm:142
 #, c-format
 msgid "The following component is missing: %s"
 msgstr "Het volgende component ontbreekt: %s"
 
-#: ../lib/network/thirdparty.pm:156
+#: ../lib/network/thirdparty.pm:144
 #, c-format
 msgid ""
 "The required files can also be installed from this URL:\n"
@@ -6243,47 +6475,47 @@ msgstr ""
 "De benodigde bestanden kunnen ook geïnstalleerd worden vanaf deze URL:\n"
 "%s"
 
-#: ../lib/network/thirdparty.pm:192
+#: ../lib/network/thirdparty.pm:180
 #, c-format
 msgid "Firmware files are required for this device."
 msgstr "Firmware-bestanden zijn vereist voor dit apparaat."
 
-#: ../lib/network/thirdparty.pm:195 ../lib/network/thirdparty.pm:200
+#: ../lib/network/thirdparty.pm:183 ../lib/network/thirdparty.pm:188
 #, c-format
 msgid "Use a floppy"
 msgstr "Een diskette gebruiken"
 
-#: ../lib/network/thirdparty.pm:196 ../lib/network/thirdparty.pm:203
+#: ../lib/network/thirdparty.pm:184 ../lib/network/thirdparty.pm:191
 #, c-format
 msgid "Use my Windows partition"
 msgstr "Mijn Windows-partitie gebruiken"
 
-#: ../lib/network/thirdparty.pm:197
+#: ../lib/network/thirdparty.pm:185
 #, c-format
 msgid "Select file"
 msgstr "Selecteer bestand"
 
-#: ../lib/network/thirdparty.pm:208
+#: ../lib/network/thirdparty.pm:196
 #, c-format
 msgid "Please select the firmware file (for example: %s)"
 msgstr "Selecteer het firmware-bestand (bijvoorbeeld: %s)"
 
-#: ../lib/network/thirdparty.pm:232
+#: ../lib/network/thirdparty.pm:220
 #, c-format
 msgid "Unable to find \"%s\" on your Windows system!"
 msgstr "Niet in staat \"%s\" op uw Windows systeem te vinden!"
 
-#: ../lib/network/thirdparty.pm:234
+#: ../lib/network/thirdparty.pm:222
 #, c-format
 msgid "No Windows system has been detected!"
 msgstr "Er is geen Windows systeem gedetecteerd!"
 
-#: ../lib/network/thirdparty.pm:244
+#: ../lib/network/thirdparty.pm:232
 #, c-format
 msgid "Insert floppy"
 msgstr "Plaats een diskette"
 
-#: ../lib/network/thirdparty.pm:245
+#: ../lib/network/thirdparty.pm:233
 #, c-format
 msgid ""
 "Insert a FAT formatted floppy in drive %s with %s in root directory and "
@@ -6292,26 +6524,25 @@ msgstr ""
 "Plaats een met het FAT-bestandssysteem geformatteerde diskette in station %s "
 "met %s in de hoofdmap en druk op %s"
 
-#: ../lib/network/thirdparty.pm:245
+#: ../lib/network/thirdparty.pm:233
 #, c-format
 msgid "Next"
 msgstr "Volgende"
 
-#: ../lib/network/thirdparty.pm:255
+#: ../lib/network/thirdparty.pm:243
 #, c-format
 msgid "Floppy access error, unable to mount device %s"
-msgstr ""
-"Probleem bij benaderen van diskette, niet in staat apparaat %s te koppelen"
+msgstr "Probleem bij benaderen van diskette, niet in staat apparaat %s te koppelen"
 
-#: ../lib/network/thirdparty.pm:354
+#: ../lib/network/thirdparty.pm:332
 #, c-format
 msgid "Looking for required software and drivers..."
-msgstr "Aan het zoeken naar benodigde software en stuurprogramma's..."
+msgstr "Aan het zoeken naar benodigde software en stuurprogramma's…"
 
-#: ../lib/network/thirdparty.pm:369
+#: ../lib/network/thirdparty.pm:347
 #, c-format
 msgid "Please wait, running device configuration commands..."
-msgstr "Even geduld, bezig met apparaten-configuratie commando's..."
+msgstr "Even geduld, bezig met apparaatconfiguratie-opdrachten…"
 
 #: ../lib/network/vpn/openvpn.pm:107
 #, c-format
@@ -6444,131 +6675,3 @@ msgstr "Cisco-UDP encapsulatie gebruiken"
 msgid "Use specific UDP port"
 msgstr "Specifieke UDP-poort gebruiken"
 
-#~ msgid "Gateway:"
-#~ msgstr "Gateway:"
-
-#~ msgid "Interface:"
-#~ msgstr "Interface:"
-
-#~ msgid "Manage connections"
-#~ msgstr "Verbindingen beheren"
-
-#~ msgid "IP configuration"
-#~ msgstr "IP-configuratie"
-
-#~ msgid "DNS servers"
-#~ msgstr "DNS-servers"
-
-#~ msgid "Search Domain"
-#~ msgstr "Zoekdomein"
-
-#~ msgid "static"
-#~ msgstr "statisch"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Start at boot"
-#~ msgstr "Bij opstarten starten"
-
-#~ msgid "Flow control"
-#~ msgstr "Flow control"
-
-#~ msgid "Line termination"
-#~ msgstr "Regeleinde"
-
-#~ msgid "Modem timeout"
-#~ msgstr "Modemwachttijd"
-
-#~ msgid "Use lock file"
-#~ msgstr "Lock-bestand gebruiken"
-
-#~ msgid "Wait for dialup tone before dialing"
-#~ msgstr "Wachten op kiestoon voor inbellen"
-
-#~ msgid "Busy wait"
-#~ msgstr "Wachten bij in gesprek"
-
-#~ msgid "Modem sound"
-#~ msgstr "Modemgeluid"
-
-#~ msgid "Vendor"
-#~ msgstr "Fabrikant"
-
-#~ msgid "Description"
-#~ msgstr "Beschrijving"
-
-#~ msgid "Media class"
-#~ msgstr "Mediaklasse"
-
-#~ msgid "Module name"
-#~ msgstr "Modulenaam"
-
-#~ msgid "Mac Address"
-#~ msgstr "Mac-adres"
-
-#~ msgid "Bus"
-#~ msgstr "Bus"
-
-#~ msgid "Location on the bus"
-#~ msgstr "Locatie op de bus"
-
-#~ msgid "Remove a network interface"
-#~ msgstr "Een netwerkinterface verwijderen"
-
-#~ msgid "Select the network interface to remove:"
-#~ msgstr "Kies de te verwijderen netwerkinterface:"
-
-#~ msgid ""
-#~ "An error occurred while deleting the \"%s\" network interface:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Een probleem deed zich voor bij het verwijderen van de \"%s\" "
-#~ "netwerkinterface:\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Congratulations, the \"%s\" network interface has been successfully "
-#~ "deleted"
-#~ msgstr "Gefeliciteerd, de netwerkinterface \"%s\" is succesvol verwijderd"
-
-#~ msgid "Disconnect..."
-#~ msgstr "Verbinding neerleggen..."
-
-#~ msgid "Connect..."
-#~ msgstr "Verbinding maken..."
-
-#~ msgid "Internet connection configuration"
-#~ msgstr "Internetverbinding configureren"
-
-#~ msgid "Host name (optional)"
-#~ msgstr "Hostnaam (optioneel)"
-
-#~ msgid "Third DNS server (optional)"
-#~ msgstr "Derde DNS-server (optioneel)"
-
-#~ msgid "Internet Connection Configuration"
-#~ msgstr "Internetverbinding configureren"
-
-#~ msgid "Internet access"
-#~ msgstr "Internet-toegang"
-
-#~ msgid "Status:"
-#~ msgstr "Status:"
-
-#~ msgid "Parameters"
-#~ msgstr "Parameters"
-
-#~ msgid "Attacker"
-#~ msgstr "Aanvaller"
-
-#~ msgid "Attack type"
-#~ msgstr "Aanvalstype"
-
-#~ msgid "Failed to add printers."
-#~ msgstr "Printers toevoegen mislukt."
-
-#~ msgid "Get Online Help"
-#~ msgstr "On-line hulp opzoeken"
