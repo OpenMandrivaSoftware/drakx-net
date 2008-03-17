@@ -550,7 +550,8 @@ sub handle_ifw_message {
             urgency => 'critical',
             actions => [ {
                 action => 'clicked',
-                label => N("Process attack"),
+                label => #-PO: "Process" is a verb
+                  N("Process attack"),
                 callback => sub {
                     disable_ifw_alert();
                     ask_attack_verdict($message);
@@ -641,7 +642,8 @@ sub handle_ifw_listen {
         message => $listen->{message},
         actions => [ {
             action => 'clicked',
-            label => N("Process connection"),
+            label => #-PO: "Process" is a verb
+              N("Process connection"),
             callback => sub {
                 disable_ifw_alert();
                 ask_listen_verdict($listen);
