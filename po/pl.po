@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-tools\n"
 "POT-Creation-Date: 2008-03-17 15:16+0100\n"
-"PO-Revision-Date: 2008-03-13 11:23+0100\n"
+"PO-Revision-Date: 2008-03-18 09:28+0100\n"
 "Last-Translator: Tomasz Bednarski - Amazis.net <tomasz.bednarski@mandriva."
 "pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -169,13 +169,13 @@ msgid "DHCP client"
 msgstr "Klient DHCP"
 
 #: ../bin/drakconnect-old:247
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This interface has not been configured yet.\n"
 "Run the \"%s\" assistant from the Mandriva Linux Control Center"
 msgstr ""
 "Ten interfejs nie został jeszcze skonfigurowany.\n"
-"Uruchom druida \"Dodaj interfejs\" z Centrum Sterowania Mandriva Linux"
+"Uruchom druida \"%s\" z Centrum Sterowania Mandriva Linux"
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:68
 #, c-format
@@ -1490,7 +1490,7 @@ msgid "/_Help"
 msgstr "/_Pomoc"
 
 #: ../bin/draksambashare:183
-#, fuzzy, c-format
+#, c-format
 msgid "/_Samba Documentation"
 msgstr "/_Dokumentacja Samby"
 
@@ -3514,9 +3514,9 @@ msgstr "Ustawienia"
 
 #. -PO: "Process" is a verb
 #: ../bin/net_applet:554
-#, fuzzy, c-format
+#, c-format
 msgid "Process attack"
-msgstr "Zaatakowana usługa"
+msgstr "Informacje o ataku"
 
 #: ../bin/net_applet:567
 #, c-format
@@ -3595,9 +3595,9 @@ msgstr "Interaktywna zapora sieciowa: nowa usługa"
 
 #. -PO: "Process" is a verb
 #: ../bin/net_applet:646
-#, fuzzy, c-format
+#, c-format
 msgid "Process connection"
-msgstr "Połączenie bezprzewodowe"
+msgstr "Informacje o połączeniu"
 
 #: ../bin/net_applet:668
 #, c-format
@@ -3866,7 +3866,7 @@ msgstr "Połączenia Dial Up dla Bluetooth"
 #: ../lib/network/connection/cellular_card.pm:8
 #, c-format
 msgid "Wrong PIN number format: it should be 4 digits."
-msgstr ""
+msgstr "Nieprawidłowy format numeru PIN: powinien składać się z czterech cyfr."
 
 #: ../lib/network/connection/cellular_card.pm:10
 #, c-format
@@ -4845,6 +4845,8 @@ msgid ""
 "list of accepted authenticated key management protocols.\n"
 "possible values are WPA-EAP, IEEE8021X, NONE"
 msgstr ""
+"lista zaakceptowanych uwierzytelnionych kluczy zarządzania protokołami.\n"
+"Możliwe wartości to WPA-EAP, IEEE8021X, BRAK"
 
 #: ../lib/network/connection/wireless.pm:458
 #, c-format
@@ -6255,12 +6257,11 @@ msgstr "Niektóre pakiety (%s) są wymagane, ale są niedostępne."
 #. -PO: first argument is a list of Mandriva distributions
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "These packages can be found in %s, or in the official %s package repository."
 msgstr ""
-"Pakiety te można znaleźć w Klubie Mandriva lub komercyjnych wydaniach "
-"Mandrivy."
+"Pakiety te można znaleźć w %s lub oficjalnych repozytoriach pakietów dla %s."
 
 #: ../lib/network/thirdparty.pm:154
 #, c-format
@@ -6477,119 +6478,3 @@ msgstr "Użyj enkapsulacji Cisco-UDP"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Użyj określonego portu UDP"
-
-#~ msgid "Gateway:"
-#~ msgstr "Router:"
-
-#~ msgid "Interface:"
-#~ msgstr "Interfejs:"
-
-#~ msgid "Manage connections"
-#~ msgstr "Zarządzanie połączeniami"
-
-#~ msgid "IP configuration"
-#~ msgstr "Konfiguracja IP"
-
-#~ msgid "DNS servers"
-#~ msgstr "Serwery DNS"
-
-#~ msgid "Search Domain"
-#~ msgstr "Domena wyszukiwania"
-
-#~ msgid "static"
-#~ msgstr "statyczny"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Start at boot"
-#~ msgstr "Uruchamianie przy starcie"
-
-#~ msgid "Flow control"
-#~ msgstr "Kontrola przepływu"
-
-#~ msgid "Line termination"
-#~ msgstr "Zakończenie wiersza"
-
-#~ msgid "Modem timeout"
-#~ msgstr "Opóźnienie modemu"
-
-#~ msgid "Use lock file"
-#~ msgstr "Użycie pliku blokady"
-
-#~ msgid "Wait for dialup tone before dialing"
-#~ msgstr "Oczekiwanie na ton wybierania przez dzwonieniem"
-
-#~ msgid "Busy wait"
-#~ msgstr "Oczekiwanie zajętości"
-
-#~ msgid "Modem sound"
-#~ msgstr "Dźwięk modemu"
-
-#~ msgid "Vendor"
-#~ msgstr "Dostawca"
-
-#~ msgid "Description"
-#~ msgstr "Opis"
-
-#~ msgid "Media class"
-#~ msgstr "Klasa nośnika"
-
-#~ msgid "Module name"
-#~ msgstr "Nazwa modułu"
-
-#~ msgid "Mac Address"
-#~ msgstr "Adres MAC"
-
-#~ msgid "Bus"
-#~ msgstr "Szyna"
-
-#~ msgid "Location on the bus"
-#~ msgstr "Położenie na szynie"
-
-#~ msgid "Remove a network interface"
-#~ msgstr "Usuń interfejs sieciowy"
-
-#~ msgid "Select the network interface to remove:"
-#~ msgstr "Wybierz interfejs sieciowy do usunięcia:"
-
-#~ msgid ""
-#~ "An error occurred while deleting the \"%s\" network interface:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Wystąpił problem podczas usuwania interfejsu sieciowego \"%s\":\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Congratulations, the \"%s\" network interface has been successfully "
-#~ "deleted"
-#~ msgstr "Gratulacje, interfejs sieciowy \"%s\" został pomyślnie usunięty"
-
-#~ msgid "Disconnect..."
-#~ msgstr "Rozłącz..."
-
-#~ msgid "Connect..."
-#~ msgstr "Połącz..."
-
-#~ msgid "Internet connection configuration"
-#~ msgstr "Konfiguracja połączenia z Internetem"
-
-#~ msgid "Host name (optional)"
-#~ msgstr "Nazwa komputera (opcjonalnie)"
-
-#~ msgid "Third DNS server (optional)"
-#~ msgstr "Trzeci serwer DNS (opcjonalnie)"
-
-#~ msgid "Internet Connection Configuration"
-#~ msgstr "Konfiguracja połączenia z Internetem"
-
-#~ msgid "Internet access"
-#~ msgstr "Dostęp do Internetu"
-
-#~ msgid "Status:"
-#~ msgstr "Status:"
-
-#~ msgid "Parameters"
-#~ msgstr "Parametry"
