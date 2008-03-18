@@ -104,7 +104,7 @@ sub read {
     $conf{log_net_drop} = @policy ? (any { $_->[0] eq 'net' && $_->[1] eq 'all' && $_->[2] eq 'DROP' && $_->[3] } @policy) : 1;
 
     get_zones(\%conf, $o_in);
-    $conf{net_zone}[0] && \%conf;
+    @policy && \%conf;
 }
 
 sub ports_by_proto {
