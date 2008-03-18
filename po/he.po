@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: network-tools\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-03-17 15:16+0100\n"
-"PO-Revision-Date: 2008-03-18 00:14+0200\n"
+"PO-Revision-Date: 2008-03-18 02:18+0200\n"
 "Last-Translator: Dotan Kamber <kamberd@yahoo.com>\n"
 "Language-Team: Hebrew\n"
 "MIME-Version: 1.0\n"
@@ -758,7 +758,7 @@ msgid "Invictus Firewall"
 msgstr "חומת האש Invictus"
 
 #: ../bin/drakinvictus:53
-#, fuzzy, c-format
+#, c-format
 msgid "Start as master"
 msgstr "התחל כראשית"
 
@@ -2997,7 +2997,7 @@ msgid "Exchange mode"
 msgstr "שיטת תמסורת"
 
 #: ../bin/drakvpn-old:751
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "defines the exchange mode for phase 1 when racoon is the\n"
 "initiator. Also it means the acceptable exchange mode\n"
@@ -3006,11 +3006,11 @@ msgid ""
 "modes are acceptable. The first exchange mode is what\n"
 "racoon uses when it is the initiator.\n"
 msgstr ""
-"מגדיר את מצב ההחלפה בשלב 1 כש-racoon הוא המאתחל.\n"
-"המשמעות הנוספת היא מצב ההחלפה המקובל כש- racoon מגיב.\n"
+"מגדיר את מצב ההחלפה בשלב 1 כש-racoon הוא היוזם.\n"
+"בנוסף זה  אומר מה מצב ההחלפה המקובל כש- racoon מגיב.\n"
 "ניתן להגדיר יותר ממצב אחד על ידי הפרדה בעזרת פסיק.\n"
 "כל המצבים מקובלים. מצב ההחלפה הראשון הוא זה ש-racoon\n"
-"משתמש בו כשהוא המאתחל.\n"
+"משתמש בו כשהוא היוזם.\n"
 
 #: ../bin/drakvpn-old:757
 #, c-format
@@ -4492,11 +4492,14 @@ msgid ""
 "need to specify domain then try the untested syntax\n"
 "  DOMAIN\\username"
 msgstr ""
+"שם המשתמש בטקסט רגיל. אם יעליך לציין מתחם\n"
+"נסה את התחביר שלא נבדק -\n"
+"  מתחם\\שם משתמש"
 
 #: ../lib/network/connection/wireless.pm:381
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Password"
-msgstr "סיסמה"
+msgstr "ססמת EAP"
 
 #: ../lib/network/connection/wireless.pm:383
 #, c-format
@@ -4518,9 +4521,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:397
-#, fuzzy, c-format
+#, c-format
 msgid "EAP client certificate"
-msgstr "שם האישור"
+msgstr "אישור לקוח EAP"
 
 #: ../lib/network/connection/wireless.pm:399
 #, c-format
@@ -4530,6 +4533,10 @@ msgid ""
 "considered as the alternative to username/password combo.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
+"הנתיב המלא ושם הקובץ של אישור הלקוח. בשימוש רק עבור\n"
+"הזדהות מבוססת אישורי EAP. יכול להחשב כחלופה לצירוף\n"
+"שם משתמש/ססמה.\n"
+"לתשומת לבך: הגדרות קשורות נוספות מוצגות בדף המתקדם."
 
 #: ../lib/network/connection/wireless.pm:403
 #, c-format
@@ -4557,7 +4564,8 @@ msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
 #: ../lib/network/connection/wireless.pm:408
-#, fuzzy, c-format
+#, c-format
+#, fuzzy
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
 "the\n"
@@ -4569,11 +4577,11 @@ msgid ""
 "fixed\n"
 "or off."
 msgstr ""
-"RTS/CTS מוסיף \"לחיצת-יד\" לפני שידור כל חבילה כדי לודא שהערוץ נקי.\n"
+"RTS/CTS מוסיף \"לחיצת-יד\" לפני שידור כל חבילה כדי לוודא שהערוץ נקי.\n"
 "זה מוסיף תקורה אך משפר ביצועים במקרה של קצוות נסתרים או מספר גדול של קצוות\n"
 "פעילים. מדד זה קובע את גודל החבילה הקטנה ביותר עבורה הקצה שולח RTS, ערך "
 "השווה\n"
-"לגודל החבילה המירבי מבטל את הסכמה. באפשרותך גם לכוון ערך זה לנקבע אוטומטית "
+"לגודל החבילה המרבי מבטל את הסכמה. באפשרותך גם לכוון ערך זה לנקבע אוטומטית "
 "או לכבוי."
 
 #: ../lib/network/connection/wireless.pm:415
@@ -4659,25 +4667,25 @@ msgstr ""
 "מידע נוסף בנושא זה ניתן למצוא בדף ההסבר iwpriv(8) man page."
 
 #: ../lib/network/connection/wireless.pm:446
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Protocol"
-msgstr "פרוטוקול"
+msgstr "פרוטוקול EAP"
 
 #: ../lib/network/connection/wireless.pm:447
 #: ../lib/network/connection/wireless.pm:452
-#, fuzzy, c-format
+#, c-format
 msgid "Auto Detect"
-msgstr "זיהוי-אוטומטי"
+msgstr "זיהוי אוטומטי"
 
 #: ../lib/network/connection/wireless.pm:447
 #, c-format
 msgid "WPA2"
-msgstr ""
+msgstr "WPA2"
 
 #: ../lib/network/connection/wireless.pm:447
-#, fuzzy, c-format
+#, c-format
 msgid "WPA"
-msgstr "PAP"
+msgstr "WPA"
 
 #: ../lib/network/connection/wireless.pm:449
 #, c-format
@@ -4685,21 +4693,23 @@ msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr ""
+"זיהוי אוטומטי מומלץ היות והוא מנסה ראשית WPA מגרסה 2 עם\n"
+"נפילה ל-WPA מגרסה 1"
 
 #: ../lib/network/connection/wireless.pm:451
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Mode"
-msgstr "אופן"
+msgstr "מצב EAP"
 
 #: ../lib/network/connection/wireless.pm:452
-#, fuzzy, c-format
+#, c-format
 msgid "PEAP"
-msgstr "PAP"
+msgstr "PEAP"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "TTLS"
-msgstr ""
+msgstr "TTLS"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
@@ -4707,44 +4717,44 @@ msgid "TLS"
 msgstr "TLS"
 
 #: ../lib/network/connection/wireless.pm:452
-#, fuzzy, c-format
+#, c-format
 msgid "MSCHAPV2"
-msgstr "CHAP"
+msgstr "MSCHAPV2"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "MD5"
-msgstr ""
+msgstr "MD5"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "OTP"
-msgstr ""
+msgstr "OTP"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "GTC"
-msgstr ""
+msgstr "GTC"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "LEAP"
-msgstr ""
+msgstr "LEAP"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "PEAP TTLS"
-msgstr ""
+msgstr "PEAP TTLS"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "TTLS TLS"
-msgstr ""
+msgstr "TTLS TLS"
 
 #: ../lib/network/connection/wireless.pm:454
 #, c-format
 msgid "EAP key_mgmt"
-msgstr ""
+msgstr "EAP key_mgmt"
 
 #: ../lib/network/connection/wireless.pm:456
 #, c-format
@@ -4752,11 +4762,13 @@ msgid ""
 "list of accepted authenticated key management protocols.\n"
 "possible values are WPA-EAP, IEEE8021X, NONE"
 msgstr ""
+"רשימת פרוטוקולים מקובלים לניהול מפתחות הזדהות.\n"
+"הערכים האפשריים הם WPA-EAP, IEEE8021X, NONE"
 
 #: ../lib/network/connection/wireless.pm:458
 #, c-format
 msgid "EAP outer identity"
-msgstr ""
+msgstr "זהות EAP חיצונית"
 
 #: ../lib/network/connection/wireless.pm:460
 #, c-format
@@ -4769,7 +4781,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
 msgid "EAP phase2"
-msgstr ""
+msgstr "EAP phase2"
 
 #: ../lib/network/connection/wireless.pm:465
 #, c-format
@@ -4781,9 +4793,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:469
-#, fuzzy, c-format
+#, c-format
 msgid "EAP CA certificate"
-msgstr "אישור"
+msgstr "אישור CA EAP"
 
 #: ../lib/network/connection/wireless.pm:471
 #, c-format
@@ -4798,7 +4810,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:476
 #, c-format
 msgid "EAP certificate subject match"
-msgstr ""
+msgstr "התאמת נושא אישור EAP"
 
 #: ../lib/network/connection/wireless.pm:478
 #, c-format
@@ -4813,7 +4825,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid "EAP extra directives"
-msgstr ""
+msgstr "הנחיות EAP נוספות"
 
 #: ../lib/network/connection/wireless.pm:485
 #, c-format
@@ -4951,9 +4963,9 @@ msgstr "נכשלה התקנת החבילות (%s)!"
 
 #: ../lib/network/connection_manager.pm:73
 #: ../lib/network/connection_manager.pm:130
-#, fuzzy, c-format
+#, c-format
 msgid "Network settings"
-msgstr "הגדרות גישה לרשת"
+msgstr "הגדרות רשת"
 
 #: ../lib/network/connection_manager.pm:74
 #: ../lib/network/connection_manager.pm:131
@@ -5313,9 +5325,9 @@ msgid "A password cracking attack has been attempted by %s."
 msgstr "התקפת password cracking נוסתה על ידי %s."
 
 #: ../lib/network/ifw.pm:138
-#, fuzzy, c-format
+#, c-format
 msgid "%s is connecting on the %s service."
-msgstr "מתנתק מהאינטרנט"
+msgstr "%s מתחבר על שירות ה- %s."
 
 #: ../lib/network/ifw.pm:139
 #, c-format
@@ -5451,7 +5463,7 @@ msgid "European protocol (EDSS1)"
 msgstr "פרוטוקול אירופאי (EDSS1)"
 
 #: ../lib/network/netconnect.pm:68
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Protocol for the rest of the world\n"
 "No D-Channel (leased lines)"
@@ -6150,9 +6162,9 @@ msgstr "מספר חבילות (%s) נדרשות אך אינן זמינות."
 #. -PO: first argument is a list of Mandriva distributions
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
-#, fuzzy, c-format
+#, c-format
 msgid "These packages can be found in %s, or in the official %s package repository."
-msgstr "חבילות אלו זמינות במועדון מנדריבה או באריזות המסחריות של מנדריבה."
+msgstr "חבילות אלו זמינות ב-%s או במאגר %s הרשמי."
 
 #: ../lib/network/thirdparty.pm:154
 #, c-format
@@ -6262,7 +6274,7 @@ msgid "Key"
 msgstr "מפתח"
 
 #: ../lib/network/vpn/openvpn.pm:160
-#, fuzzy, c-format
+#, c-format
 msgid "TLS control channel key"
 msgstr "מפתח ערוץ שליטת TLS"
 
