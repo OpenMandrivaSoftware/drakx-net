@@ -199,6 +199,11 @@ sub get_default_connection {
     return $gw_intf, get_interface_status($gw_intf), $net->{resolv}{dnsServer};
 }
 
+sub has_network_connection() {
+    (undef, undef, $gw_address) = get_default_connection({});
+    to_bool($gw_address);
+}
+
 sub get_interface_type {
     my ($interface, $o_module) = @_;
     require detect_devices;
