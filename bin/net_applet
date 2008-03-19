@@ -279,7 +279,7 @@ sub checkWireless() {
 sub checkNetwork() {
     my ($gw_intf, $_is_up, $gw_address) = $watched_interface ?
       ($watched_interface, network::tools::get_interface_status($watched_interface)) :
-      network::tools::get_internet_connection($net);
+      network::tools::get_default_connection($net);
     go2State($gw_address ? 'connected' : $gw_intf ? 'disconnected' : 'unconfigured', $gw_intf);
 }
 sub checkNetworkForce() {
