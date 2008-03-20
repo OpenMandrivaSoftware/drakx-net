@@ -1,9 +1,3 @@
-# drakx messages in Simplified Chinese
-# Danny Zeng <danny@zeng.com.cn>, 2000, 2002
-# Jesse Kuang <kjx@mandriva.com>, 2002
-# Shiyu Tang <shiyutang@netscape.net>, 2003, 2004
-# Funda Wang <fundawang@linux.net.cn>, 2002, 2003, 2004, 2005
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net 2007\n"
@@ -159,13 +153,13 @@ msgid "DHCP client"
 msgstr "DHCP 客户端"
 
 #: ../bin/drakconnect-old:247
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This interface has not been configured yet.\n"
 "Run the \"%s\" assistant from the Mandriva Linux Control Center"
 msgstr ""
 "这块网卡还没有配置过。\n"
-"请从“Mandriva Linux 控制中心”运行“添加网卡”助手"
+"请从 Mandriva Linux 控制中心运行“%s”助手"
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:68
 #, c-format
@@ -701,9 +695,9 @@ msgid "Date"
 msgstr "日期"
 
 #: ../bin/drakids:254
-#, fuzzy, c-format
+#, c-format
 msgid "Remote host"
-msgstr "远程"
+msgstr "远程主机"
 
 #: ../bin/drakids:255 ../lib/network/vpn/openvpn.pm:115
 #, c-format
@@ -1438,9 +1432,9 @@ msgid "/_Samba Server"
 msgstr "/_Samba 服务器"
 
 #: ../bin/draksambashare:179
-#, fuzzy, c-format
+#, c-format
 msgid "/_Configure"
-msgstr "配置"
+msgstr "/配置(_C)"
 
 #: ../bin/draksambashare:183
 #, c-format
@@ -1448,9 +1442,9 @@ msgid "/_Help"
 msgstr "/帮助(_H)"
 
 #: ../bin/draksambashare:183
-#, fuzzy, c-format
+#, c-format
 msgid "/_Samba Documentation"
-msgstr "块"
+msgstr "/_Samba 文档"
 
 #: ../bin/draksambashare:189 ../bin/draksambashare:190
 #, c-format
@@ -1733,22 +1727,22 @@ msgstr "密码："
 #: ../bin/draksambashare:1047
 #, c-format
 msgid "PDC - primary domain controller"
-msgstr ""
+msgstr "PDC - 主域控制器"
 
 #: ../bin/draksambashare:1048
 #, c-format
 msgid "Standalone - standalone server"
-msgstr ""
+msgstr "独立 - 独立服务器"
 
 #: ../bin/draksambashare:1054
-#, fuzzy, c-format
+#, c-format
 msgid "Samba Wizard"
-msgstr "Samba 用户"
+msgstr "Samba 向导"
 
 #: ../bin/draksambashare:1057
-#, fuzzy, c-format
+#, c-format
 msgid "Samba server configuration Wizard"
-msgstr "管理 Samba 配置"
+msgstr "Samba 服务器配置向导"
 
 #: ../bin/draksambashare:1057
 #, c-format
@@ -1756,24 +1750,25 @@ msgid ""
 "Samba allows your server to behave as a file and print server for "
 "workstations running non-Linux systems."
 msgstr ""
+"Samba 让您的服务器为运行 Linux 以外操作系统的工作站提供文件和打印服务。"
 
 #: ../bin/draksambashare:1073
 #, c-format
 msgid "PDC server: primary domain controller"
-msgstr ""
+msgstr "PDC 服务器: 主域控制器"
 
 #: ../bin/draksambashare:1073
 #, c-format
 msgid ""
 "Server configured as a PDC is responsible for Windows authentication "
 "throughout the domain."
-msgstr ""
+msgstr "配置为 PDC 的服务器担负着域中进行 Windows 验证的责任。"
 
 #: ../bin/draksambashare:1073
 #, c-format
 msgid ""
 "Single server installations may use smbpasswd or tdbsam password backends"
-msgstr ""
+msgstr "单服务器安装可以使用 smbpasswd 或 tdbsam 密码后端"
 
 #: ../bin/draksambashare:1073
 #, c-format
@@ -1781,26 +1776,28 @@ msgid ""
 "Domain master = yes, causes the server to register the NetBIOS name <pdc "
 "name>. This name will be recognized by other servers."
 msgstr ""
+"域主浏览器 = 是，将导致服务器注册 NetBIOS 名称 <pdc 名称>。此名称可为其它服"
+"务器所识别。"
 
 #: ../bin/draksambashare:1090
 #, c-format
 msgid "Wins support:"
-msgstr ""
+msgstr "Wins 支持:"
 
 #: ../bin/draksambashare:1091
-#, fuzzy, c-format
+#, c-format
 msgid "admin users:"
-msgstr "管理员用户"
+msgstr "管理员用户:"
 
 #: ../bin/draksambashare:1091
 #, c-format
 msgid "root @adm"
-msgstr ""
+msgstr "root @adm"
 
 #: ../bin/draksambashare:1092
 #, c-format
 msgid "Os level:"
-msgstr ""
+msgstr "操作系统级别:"
 
 #: ../bin/draksambashare:1092
 #, c-format
@@ -1811,41 +1808,44 @@ msgid ""
 "that of the operating system on your network with the highest current value. "
 "ie: os level = 34"
 msgstr ""
+"全局操作系统级别选项将用来当 Samba 在浏览器选择时伪装使用。如果您希望 Samba "
+"进行选择并成为主浏览器，您可以将上面操作系统的级别设定为网络中最高的值，如 "
+"os level = 34"
 
 #: ../bin/draksambashare:1096
 #, c-format
 msgid "The domain is wrong."
-msgstr ""
+msgstr "域不对。"
 
 #: ../bin/draksambashare:1103
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup"
-msgstr "强制组"
+msgstr "工作组"
 
 #: ../bin/draksambashare:1103
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
-msgstr ""
+msgstr "Samba 要服务的 Windows 工作组。"
 
 #: ../bin/draksambashare:1110 ../bin/draksambashare:1174
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup:"
-msgstr "强制组"
+msgstr "工作组:"
 
 #: ../bin/draksambashare:1111
-#, fuzzy, c-format
+#, c-format
 msgid "Netbios name:"
-msgstr "主机名:"
+msgstr "Netbios 名称:"
 
 #: ../bin/draksambashare:1115
 #, c-format
 msgid "The Workgroup is wrong."
-msgstr ""
+msgstr "工作组不对。"
 
 #: ../bin/draksambashare:1122 ../bin/draksambashare:1132
-#, fuzzy, c-format
+#, c-format
 msgid "Security mode"
-msgstr "强制创建模式"
+msgstr "安全性模式"
 
 #: ../bin/draksambashare:1122
 #, c-format
@@ -1868,73 +1868,73 @@ msgid ""
 msgstr ""
 
 #: ../bin/draksambashare:1133
-#, fuzzy, c-format
+#, c-format
 msgid "Hosts allow"
-msgstr "主机名"
+msgstr "允许的主机"
 
 #: ../bin/draksambashare:1138
 #, c-format
 msgid "Server Banner."
-msgstr ""
+msgstr "服务器标语。"
 
 #: ../bin/draksambashare:1138
 #, c-format
 msgid ""
 "The banner is the way this server will be described in the Windows "
 "workstations."
-msgstr ""
+msgstr "这个标语会显示在 Windows 网络邻居中这个服务器名字旁边作为描述。"
 
 #: ../bin/draksambashare:1143
 #, c-format
 msgid "Banner:"
-msgstr ""
+msgstr "标语:"
 
 #: ../bin/draksambashare:1147
 #, c-format
 msgid "The Server Banner is incorrect."
-msgstr ""
+msgstr "服务器标语不对。"
 
 #: ../bin/draksambashare:1154
-#, fuzzy, c-format
+#, c-format
 msgid "Samba Log"
-msgstr "Samba 用户"
+msgstr "Samba 日志"
 
 #: ../bin/draksambashare:1154
 #, c-format
 msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
 "connects"
-msgstr ""
+msgstr "日志文件：使用 file.%m 为每台连接的计算机是用独立的日志文件"
 
 #: ../bin/draksambashare:1154
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
-msgstr ""
+msgstr "日志级别: 设定日志的详细级别(0 <= 日志级别 <= 10)"
 
 #: ../bin/draksambashare:1154
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
+msgstr "日志最大大小：限制日志文件的大小(以 K 字节计)。"
 
 #: ../bin/draksambashare:1161 ../bin/draksambashare:1176
-#, fuzzy, c-format
+#, c-format
 msgid "Log file:"
-msgstr "配置文件"
+msgstr "日志文件:"
 
 #: ../bin/draksambashare:1162
 #, c-format
 msgid "Max log size:"
-msgstr ""
+msgstr "日志最大大小:"
 
 #: ../bin/draksambashare:1163
-#, fuzzy, c-format
+#, c-format
 msgid "Log level:"
-msgstr "级别"
+msgstr "日志级别:"
 
 #: ../bin/draksambashare:1168
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
+msgstr "为了配置 Samba，向导收集了下列需要的参数。"
 
 #: ../bin/draksambashare:1168
 #, c-format
@@ -1942,6 +1942,8 @@ msgid ""
 "To accept these values, and configure your server, click the Next button or "
 "use the Back button to correct them."
 msgstr ""
+"要接受这些值，并配置您的服务器，请单击“下一步”按钮或使用“上一步”按钮来修改它"
+"们。"
 
 #: ../bin/draksambashare:1168
 #, c-format
@@ -1949,21 +1951,23 @@ msgid ""
 "If you have previously create some shares, they will appear in this "
 "configuration. Run 'drakwizard sambashare' to manage your shares."
 msgstr ""
+"如果您先前创建了共享，此配置中将会显示出来。请运行“drakwizard sambashare”管理"
+"您的共享。"
 
 #: ../bin/draksambashare:1173
-#, fuzzy, c-format
+#, c-format
 msgid "Samba type:"
-msgstr "Samba 用户"
+msgstr "Samba 类型:"
 
 #: ../bin/draksambashare:1175
 #, c-format
 msgid "Server banner:"
-msgstr ""
+msgstr "服务器标语:"
 
 #: ../bin/draksambashare:1191
-#, fuzzy, c-format
+#, c-format
 msgid "The wizard successfully configured your Samba server."
-msgstr "向导成功添加了打印机 Samba 共享"
+msgstr "向导成功地配置了您的 Samba 服务器。"
 
 #: ../bin/draksambashare:1246
 #, c-format
@@ -2031,9 +2035,9 @@ msgid "Samba Users"
 msgstr "Samba 用户"
 
 #: ../bin/draksambashare:1449
-#, fuzzy, c-format
+#, c-format
 msgid "Please configure your Samba server"
-msgstr "修改 Samba 共享失败。"
+msgstr "请配置您的 Samba 服务器"
 
 #: ../bin/draksambashare:1449
 #, c-format
@@ -2041,6 +2045,7 @@ msgid ""
 "It seems this is the first time you run this tool.\n"
 "A wizard will appear to configure a basic Samba server"
 msgstr ""
+"似乎这是您第一次运行此工具。\n向导将会协助您配置基本的 Samba 服务器"
 
 #: ../bin/draksambashare:1457
 #, c-format
@@ -2058,7 +2063,7 @@ msgid "The VPN connection is enabled."
 msgstr "VPN 连接已经启用。"
 
 #: ../bin/drakvpn-old:88
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "The setup of a VPN connection has already been done.\n"
 "\n"
@@ -2066,6 +2071,10 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
+"Internet 连接共享的设置已经完成。\n"
+"目前连接共享已被启用。\n"
+"\n"
+"您要做什么?"
 
 #: ../bin/drakvpn-old:93
 #, c-format
@@ -2073,9 +2082,9 @@ msgid "disable"
 msgstr "禁用"
 
 #: ../bin/drakvpn-old:93 ../bin/drakvpn-old:119
-#, c-format
+#, fuzzy, c-format
 msgid "reconfigure"
-msgstr ""
+msgstr "重新配置"
 
 #: ../bin/drakvpn-old:93 ../bin/drakvpn-old:119 ../bin/drakvpn-old:432
 #, c-format
@@ -2083,22 +2092,22 @@ msgid "dismiss"
 msgstr ""
 
 #: ../bin/drakvpn-old:97
-#, c-format
+#, fuzzy, c-format
 msgid "Disabling VPN..."
-msgstr ""
+msgstr "正在启用 VPN..."
 
 #: ../bin/drakvpn-old:106
-#, c-format
+#, fuzzy, c-format
 msgid "The VPN connection is now disabled."
-msgstr ""
+msgstr "VPN 连接已经启用。"
 
 #: ../bin/drakvpn-old:113
-#, c-format
+#, fuzzy, c-format
 msgid "VPN connection currently disabled"
-msgstr ""
+msgstr "VPN 连接已经启用。"
 
 #: ../bin/drakvpn-old:114
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "The setup of a VPN connection has already been done.\n"
 "\n"
@@ -2106,6 +2115,10 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
+"Internet 连接共享的设置已经完成。\n"
+"目前连接共享已被禁用。\n"
+"\n"
+"您要做什么?"
 
 #: ../bin/drakvpn-old:119
 #, c-format
@@ -2118,9 +2131,9 @@ msgid "Enabling VPN..."
 msgstr "正在启用 VPN..."
 
 #: ../bin/drakvpn-old:133
-#, c-format
+#, fuzzy, c-format
 msgid "The VPN connection is now enabled."
-msgstr ""
+msgstr "VPN 连接已经启用。"
 
 #: ../bin/drakvpn-old:147 ../bin/drakvpn-old:164
 #, c-format
@@ -2160,14 +2173,14 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:208
-#, c-format
+#, fuzzy, c-format
 msgid "Problems installing package %s"
-msgstr ""
+msgstr "无法安装软件包(%s)!"
 
 #: ../bin/drakvpn-old:222
-#, c-format
+#, fuzzy, c-format
 msgid "Security Policies"
-msgstr ""
+msgstr "安全性:"
 
 #: ../bin/drakvpn-old:222
 #, c-format
@@ -2175,9 +2188,9 @@ msgid "IKE daemon racoon"
 msgstr ""
 
 #: ../bin/drakvpn-old:224
-#, c-format
+#, fuzzy, c-format
 msgid "Configuration file"
-msgstr ""
+msgstr "LAN 配置"
 
 #: ../bin/drakvpn-old:225
 #, c-format
@@ -2223,9 +2236,9 @@ msgid "Edit"
 msgstr "编辑"
 
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
-#, c-format
+#, fuzzy, c-format
 msgid "Commit"
-msgstr ""
+msgstr "注释"
 
 #: ../bin/drakvpn-old:267 ../bin/drakvpn-old:271 ../bin/drakvpn-old:406
 #: ../bin/drakvpn-old:410
@@ -2256,9 +2269,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:333 ../bin/drakvpn-old:523
-#, c-format
+#, fuzzy, c-format
 msgid "Edit section"
-msgstr ""
+msgstr "密钥方向"
 
 #: ../bin/drakvpn-old:334
 #, c-format
@@ -2271,9 +2284,9 @@ msgstr ""
 
 #: ../bin/drakvpn-old:337 ../bin/drakvpn-old:357 ../bin/drakvpn-old:528
 #: ../bin/drakvpn-old:574
-#, c-format
+#, fuzzy, c-format
 msgid "Section names"
-msgstr ""
+msgstr "连接名称"
 
 #: ../bin/drakvpn-old:344
 #, c-format
@@ -2286,9 +2299,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:353 ../bin/drakvpn-old:570
-#, c-format
+#, fuzzy, c-format
 msgid "Remove section"
-msgstr ""
+msgstr "删除主机:"
 
 #: ../bin/drakvpn-old:354 ../bin/drakvpn-old:571
 #, c-format
@@ -2342,9 +2355,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:432
-#, c-format
+#, fuzzy, c-format
 msgid "path"
-msgstr ""
+msgstr "路径"
 
 #: ../bin/drakvpn-old:432
 #, c-format
@@ -2367,9 +2380,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:443
-#, c-format
+#, fuzzy, c-format
 msgid "path type"
-msgstr ""
+msgstr "Samba 类型:"
 
 #: ../bin/drakvpn-old:447
 #, c-format
@@ -2396,9 +2409,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:467 ../bin/drakvpn-old:560
-#, c-format
+#, fuzzy, c-format
 msgid "real file"
-msgstr ""
+msgstr "选择文件"
 
 #: ../bin/drakvpn-old:490
 #, c-format
@@ -2487,9 +2500,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:620
-#, c-format
+#, fuzzy, c-format
 msgid "Sainfo source address"
-msgstr ""
+msgstr "虚拟共享地址"
 
 #: ../bin/drakvpn-old:621
 #, c-format
@@ -2593,9 +2606,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:686
-#, c-format
+#, fuzzy, c-format
 msgid "PFS group"
-msgstr ""
+msgstr "强制组"
 
 #: ../bin/drakvpn-old:688
 #, c-format
@@ -2666,19 +2679,19 @@ msgid "Encryption algorithm"
 msgstr "加密算法"
 
 #: ../bin/drakvpn-old:730
-#, c-format
+#, fuzzy, c-format
 msgid "Authentication algorithm"
-msgstr ""
+msgstr "身份验证方式"
 
 #: ../bin/drakvpn-old:732
-#, c-format
+#, fuzzy, c-format
 msgid "Compression algorithm"
-msgstr ""
+msgstr "加密算法"
 
 #: ../bin/drakvpn-old:733
-#, c-format
+#, fuzzy, c-format
 msgid "deflate"
-msgstr ""
+msgstr "默认"
 
 #: ../bin/drakvpn-old:740
 #, c-format
@@ -2701,9 +2714,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:749
-#, c-format
+#, fuzzy, c-format
 msgid "Exchange mode"
-msgstr ""
+msgstr "拨号模式"
 
 #: ../bin/drakvpn-old:751
 #, c-format
@@ -2717,9 +2730,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:757
-#, c-format
+#, fuzzy, c-format
 msgid "Generate policy"
-msgstr ""
+msgstr "常规选项"
 
 #: ../bin/drakvpn-old:758 ../bin/drakvpn-old:774 ../bin/drakvpn-old:787
 #, c-format
@@ -2727,9 +2740,9 @@ msgid "off"
 msgstr ""
 
 #: ../bin/drakvpn-old:758 ../bin/drakvpn-old:774 ../bin/drakvpn-old:787
-#, c-format
+#, fuzzy, c-format
 msgid "on"
-msgstr ""
+msgstr "无"
 
 #: ../bin/drakvpn-old:759
 #, c-format
@@ -2764,9 +2777,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:778
-#, c-format
+#, fuzzy, c-format
 msgid "Certificate type"
-msgstr ""
+msgstr "证书"
 
 #: ../bin/drakvpn-old:780
 #, c-format
@@ -2774,9 +2787,9 @@ msgid "My certfile"
 msgstr ""
 
 #: ../bin/drakvpn-old:781
-#, c-format
+#, fuzzy, c-format
 msgid "Name of the certificate"
-msgstr ""
+msgstr "机器名:"
 
 #: ../bin/drakvpn-old:782
 #, c-format
@@ -2784,19 +2797,19 @@ msgid "My private key"
 msgstr ""
 
 #: ../bin/drakvpn-old:783
-#, c-format
+#, fuzzy, c-format
 msgid "Name of the private key"
-msgstr ""
+msgstr "共享名称:"
 
 #: ../bin/drakvpn-old:784
-#, c-format
+#, fuzzy, c-format
 msgid "Peers certfile"
-msgstr ""
+msgstr "选择文件"
 
 #: ../bin/drakvpn-old:785
-#, c-format
+#, fuzzy, c-format
 msgid "Name of the peers certificate"
-msgstr ""
+msgstr "检查服务器证书"
 
 #: ../bin/drakvpn-old:786
 #, c-format
@@ -2848,9 +2861,9 @@ msgid "Peers identifier"
 msgstr ""
 
 #: ../bin/drakvpn-old:812
-#, c-format
+#, fuzzy, c-format
 msgid "Proposal"
-msgstr ""
+msgstr "协议"
 
 #: ../bin/drakvpn-old:814
 #, c-format
@@ -2865,9 +2878,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:821
-#, c-format
+#, fuzzy, c-format
 msgid "Hash algorithm"
-msgstr ""
+msgstr "加密算法"
 
 #: ../bin/drakvpn-old:822
 #, c-format
@@ -2875,9 +2888,9 @@ msgid "Authentication method"
 msgstr "身份验证方式"
 
 #: ../bin/drakvpn-old:823
-#, c-format
+#, fuzzy, c-format
 msgid "DH group"
-msgstr ""
+msgstr "强制组"
 
 #: ../bin/drakvpn-old:830
 #, c-format
@@ -2895,14 +2908,14 @@ msgid "Destination IP range"
 msgstr ""
 
 #: ../bin/drakvpn-old:833
-#, c-format
+#, fuzzy, c-format
 msgid "Upper-layer protocol"
-msgstr ""
+msgstr "使用 TCP 协议"
 
 #: ../bin/drakvpn-old:833 ../bin/drakvpn-old:840
-#, c-format
+#, fuzzy, c-format
 msgid "any"
-msgstr ""
+msgstr "德国"
 
 #: ../bin/drakvpn-old:835
 #, c-format
@@ -2910,9 +2923,9 @@ msgid "Flag"
 msgstr "旗帜"
 
 #: ../bin/drakvpn-old:836
-#, c-format
+#, fuzzy, c-format
 msgid "Direction"
-msgstr ""
+msgstr "目录"
 
 #: ../bin/drakvpn-old:837
 #, c-format
@@ -2940,9 +2953,9 @@ msgid "Mode"
 msgstr "模式"
 
 #: ../bin/drakvpn-old:840
-#, c-format
+#, fuzzy, c-format
 msgid "tunnel"
-msgstr ""
+msgstr "无"
 
 #: ../bin/drakvpn-old:840
 #, c-format
@@ -2950,9 +2963,9 @@ msgid "transport"
 msgstr "传送"
 
 #: ../bin/drakvpn-old:842
-#, c-format
+#, fuzzy, c-format
 msgid "Source/destination"
-msgstr ""
+msgstr "我的目标:"
 
 #: ../bin/drakvpn-old:843
 #, c-format
@@ -2960,9 +2973,9 @@ msgid "Level"
 msgstr "级别"
 
 #: ../bin/drakvpn-old:843
-#, c-format
+#, fuzzy, c-format
 msgid "require"
-msgstr ""
+msgstr "需要 helo:"
 
 #: ../bin/drakvpn-old:843
 #, c-format
@@ -3517,7 +3530,7 @@ msgstr "以太网"
 #: ../lib/network/connection/ethernet.pm:29
 #, fuzzy, c-format
 msgid "Virtual interface"
-msgstr "网卡"
+msgstr "inet 网卡:"
 
 #: ../lib/network/connection/ethernet.pm:59
 #, c-format
@@ -4064,9 +4077,9 @@ msgid "Restricted WEP"
 msgstr "限制 WEP"
 
 #: ../lib/network/connection/wireless.pm:43
-#, fuzzy, c-format
+#, c-format
 msgid "WPA/WPA2 Pre-Shared Key"
-msgstr "WPA 预共享密钥"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:44
 #, c-format
@@ -4157,7 +4170,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:381
 #, fuzzy, c-format
 msgid "EAP Password"
-msgstr "密码"
+msgstr "LDAP 密码:"
 
 #: ../lib/network/connection/wireless.pm:383
 #, c-format
@@ -4181,7 +4194,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:397
 #, fuzzy, c-format
 msgid "EAP client certificate"
-msgstr "检查服务器证书"
+msgstr "客户机身份:"
 
 #: ../lib/network/connection/wireless.pm:399
 #, c-format
@@ -4320,25 +4333,25 @@ msgstr ""
 "请参看 iwpriv(8) man page 中的更多信息。"
 
 #: ../lib/network/connection/wireless.pm:446
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Protocol"
-msgstr "协议"
+msgstr "EAP 协议"
 
 #: ../lib/network/connection/wireless.pm:447
 #: ../lib/network/connection/wireless.pm:452
-#, fuzzy, c-format
+#, c-format
 msgid "Auto Detect"
 msgstr "自动检测"
 
 #: ../lib/network/connection/wireless.pm:447
 #, c-format
 msgid "WPA2"
-msgstr ""
+msgstr "WPA2"
 
 #: ../lib/network/connection/wireless.pm:447
-#, fuzzy, c-format
+#, c-format
 msgid "WPA"
-msgstr "PAP"
+msgstr "WPA"
 
 #: ../lib/network/connection/wireless.pm:449
 #, c-format
@@ -4348,19 +4361,19 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:451
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Mode"
-msgstr "模式"
+msgstr "EAP 模式"
 
 #: ../lib/network/connection/wireless.pm:452
-#, fuzzy, c-format
+#, c-format
 msgid "PEAP"
-msgstr "PAP"
+msgstr "PEAP"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "TTLS"
-msgstr ""
+msgstr "TTLS"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
@@ -4368,9 +4381,9 @@ msgid "TLS"
 msgstr "TLS"
 
 #: ../lib/network/connection/wireless.pm:452
-#, fuzzy, c-format
+#, c-format
 msgid "MSCHAPV2"
-msgstr "CHAP"
+msgstr "MSCHAPV2"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
@@ -4380,7 +4393,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
 msgid "OTP"
-msgstr ""
+msgstr "OTP"
 
 #: ../lib/network/connection/wireless.pm:452
 #, c-format
@@ -4442,9 +4455,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:469
-#, fuzzy, c-format
+#, c-format
 msgid "EAP CA certificate"
-msgstr "证书"
+msgstr "EAP CA 证书"
 
 #: ../lib/network/connection/wireless.pm:471
 #, c-format
@@ -4969,9 +4982,9 @@ msgid "A password cracking attack has been attempted by %s."
 msgstr "%s 正在尝试密码破解攻击。"
 
 #: ../lib/network/ifw.pm:138
-#, fuzzy, c-format
+#, c-format
 msgid "%s is connecting on the %s service."
-msgstr "从 Internet 断开 "
+msgstr "%s 正连接到 %s 服务。"
 
 #: ../lib/network/ifw.pm:139
 #, c-format
@@ -5798,10 +5811,10 @@ msgstr "需要某些软件包(%s)，这些软件包不可用。"
 #. -PO: first argument is a list of Mandriva distributions
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "These packages can be found in %s, or in the official %s package repository."
-msgstr "这些软件包可以在 Mandriva Club 或 Mandriva Linux 零售产品中找到。"
+msgstr ""
 
 #: ../lib/network/thirdparty.pm:154
 #, c-format
@@ -6016,128 +6029,3 @@ msgstr "使用 Cisco-UDP 封装"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "使用指定的 UDP 端口"
-
-#~ msgid "Gateway:"
-#~ msgstr "网关:"
-
-#~ msgid "Interface:"
-#~ msgstr "网卡:"
-
-#~ msgid "Manage connections"
-#~ msgstr "管理连接"
-
-#~ msgid "IP configuration"
-#~ msgstr "IP 配置"
-
-#~ msgid "DNS servers"
-#~ msgstr "DNS 服务器"
-
-#~ msgid "Search Domain"
-#~ msgstr "搜索域"
-
-#~ msgid "static"
-#~ msgstr "静态"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Start at boot"
-#~ msgstr "开机时启动"
-
-#~ msgid "Flow control"
-#~ msgstr "流控制"
-
-#~ msgid "Line termination"
-#~ msgstr "挂线"
-
-#~ msgid "Modem timeout"
-#~ msgstr "调制解调器超时"
-
-#~ msgid "Use lock file"
-#~ msgstr "使用锁定文件"
-
-#~ msgid "Wait for dialup tone before dialing"
-#~ msgstr "在拨号前等候拨号音"
-
-#~ msgid "Busy wait"
-#~ msgstr "遇忙等待"
-
-#~ msgid "Modem sound"
-#~ msgstr "调制解调器声音"
-
-#~ msgid "Vendor"
-#~ msgstr "厂家"
-
-#~ msgid "Description"
-#~ msgstr "描述"
-
-#~ msgid "Media class"
-#~ msgstr "介质类别"
-
-#~ msgid "Module name"
-#~ msgstr "模块名"
-
-#~ msgid "Mac Address"
-#~ msgstr "Mac 地址"
-
-#~ msgid "Bus"
-#~ msgstr "总线"
-
-#~ msgid "Location on the bus"
-#~ msgstr "在总线上的位置"
-
-#~ msgid "Remove a network interface"
-#~ msgstr "删除网卡"
-
-#~ msgid "Select the network interface to remove:"
-#~ msgstr "选择要删除的网卡:"
-
-#~ msgid ""
-#~ "An error occurred while deleting the \"%s\" network interface:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "删除“%s”网卡时发生了错误: \n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Congratulations, the \"%s\" network interface has been successfully "
-#~ "deleted"
-#~ msgstr "恭喜, “%s”网卡已经成功删除"
-
-#~ msgid "Disconnect..."
-#~ msgstr "断开连接..."
-
-#~ msgid "Connect..."
-#~ msgstr "连接..."
-
-#~ msgid "Internet connection configuration"
-#~ msgstr "Internet 连接配置"
-
-#~ msgid "Host name (optional)"
-#~ msgstr "主机名(可选)"
-
-#~ msgid "Third DNS server (optional)"
-#~ msgstr "第三 DNS 服务器(可选)"
-
-#~ msgid "Internet Connection Configuration"
-#~ msgstr "Internet 连接配置"
-
-#~ msgid "Internet access"
-#~ msgstr "Internet 访问"
-
-#~ msgid "Status:"
-#~ msgstr "状态:"
-
-#~ msgid "Parameters"
-#~ msgstr "参数"
-
-#~ msgid "Attacker"
-#~ msgstr "攻击者"
-
-#~ msgid "Attack type"
-#~ msgstr "攻击类型"
-
-#~ msgid "Failed to add printers."
-#~ msgstr "添加打印机失败。"
