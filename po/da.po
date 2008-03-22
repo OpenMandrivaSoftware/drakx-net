@@ -1,3 +1,4 @@
+# translation of da1.po to dansk
 # translation of da2.po to dansk
 # translation of da.po to dansk
 # translation of da1.po to
@@ -12,9 +13,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: da\n"
+"Project-Id-Version: da1\n"
 "POT-Creation-Date: 2008-03-17 15:16+0100\n"
-"PO-Revision-Date: 2008-03-20 14:48+0100\n"
+"PO-Revision-Date: 2008-03-22 12:40+0100\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: dansk <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
@@ -1905,11 +1906,13 @@ msgid ""
 "User level: the client sends a session setup request directly following "
 "protocol negotiation. This request provides a username and password."
 msgstr ""
+"Brugerniveau: Klienten sender en forespørgsel om opsætning lige efter "
+"protokolforhandling. Denne forespørgsel indeholder brugernavn og adgangskode."
 
 #: ../bin/draksambashare:1122
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
+msgstr "Deleniveau: Klienten autentificerer sig igen for hvert delt område"
 
 #: ../bin/draksambashare:1122
 #, c-format
@@ -1918,6 +1921,9 @@ msgid ""
 "in a central, shared, account repository. The centralized account repository "
 "is shared between domain (security) controllers."
 msgstr ""
+"Domæneniveau: En måde at lagre alle bruger- og gruppekonti i et centralt, "
+"delt kontolager. Dette centrale kontolager er delt mellem "
+"domænekontrollanterne af sikkerheden."
 
 #: ../bin/draksambashare:1133
 #, c-format
@@ -1927,24 +1933,24 @@ msgstr "Tillad værter"
 #: ../bin/draksambashare:1138
 #, c-format
 msgid "Server Banner."
-msgstr ""
+msgstr "Serverbanner."
 
 #: ../bin/draksambashare:1138
 #, c-format
 msgid ""
 "The banner is the way this server will be described in the Windows "
 "workstations."
-msgstr ""
+msgstr "Banneret definerer hvordan serveren bliver beskrevet på Windows-arbejdsstationer."
 
 #: ../bin/draksambashare:1143
 #, c-format
 msgid "Banner:"
-msgstr ""
+msgstr "Banner:"
 
 #: ../bin/draksambashare:1147
 #, c-format
 msgid "The Server Banner is incorrect."
-msgstr ""
+msgstr "Serverbanneret er forkert."
 
 #: ../bin/draksambashare:1154
 #, c-format
@@ -1968,7 +1974,7 @@ msgstr "Log-niveau: sæt log (udførlighed) niveau (0 <= logniveau <= 10)"
 #: ../bin/draksambashare:1154
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
+msgstr "Største logstørrelse: Sæt en grænse for størrelsen på logfilerne (i kB)."
 
 #: ../bin/draksambashare:1161 ../bin/draksambashare:1176
 #, c-format
@@ -1988,7 +1994,7 @@ msgstr "Log-niveau:"
 #: ../bin/draksambashare:1168
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
+msgstr "Hjælpeprogrammet indsamlede følgende parametre for opsætningen af Samba."
 
 #: ../bin/draksambashare:1168
 #, c-format
@@ -1996,6 +2002,8 @@ msgid ""
 "To accept these values, and configure your server, click the Next button or "
 "use the Back button to correct them."
 msgstr ""
+"Tryk \"Næste\" for at godtage værdierne og opsætte serveren, eller \"Tilbage\" for "
+"at lave ændringer."
 
 #: ../bin/draksambashare:1168
 #, c-format
@@ -2003,6 +2011,8 @@ msgid ""
 "If you have previously create some shares, they will appear in this "
 "configuration. Run 'drakwizard sambashare' to manage your shares."
 msgstr ""
+"Hves du tidligere har oprette nogen delte områder, vil disse vises i denne "
+"opsætning. Kør \"drakwizard sambashare\" for at håndtere dine delte områder."
 
 #: ../bin/draksambashare:1173
 #, c-format
@@ -2012,7 +2022,7 @@ msgstr "Samba-type:"
 #: ../bin/draksambashare:1175
 #, c-format
 msgid "Server banner:"
-msgstr ""
+msgstr "Serverbanner:"
 
 #: ../bin/draksambashare:1191
 #, c-format
@@ -4530,6 +4540,9 @@ msgid ""
 "need to specify domain then try the untested syntax\n"
 "  DOMAIN\\username"
 msgstr ""
+"Brugernavn. Formatet er ren tekst. Hvis du behøver at\n"
+"specificere domænet, så prøv den utestede syntaks\n"
+"  DOMÆNE\\brugernavn"
 
 #: ../lib/network/connection/wireless.pm:381
 #, c-format
@@ -4554,6 +4567,20 @@ msgid ""
 "  TLS mode is completely certificate based and may ignore\n"
 "the username and password values specified here."
 msgstr ""
+" Adgangskode: Tekst.\n"
+"Bemærk at dette ikke er det samme som en psk.\n"
+"____________________________________________________\n"
+"RELEVANT YDERLIGERE INFORMATION:\n"
+"På \"Avanceret\"-siden kan du vælge hvilken EAP-tilstand som\n"
+"bruges for autentificering. EAP-tilstanden\n"
+"\"Find automatisk\" fører til at alle mulige tilstande prøves.\n"
+"\n"
+"Hvis automatisk opdagelse ikke fungerer, bør du først prøve PEAP TTLS.\n"
+"Bemærk:\n"
+"\tInnstillingerne MD5, MSCHAPV2, OTP og GTC medfører\n"
+"automatisk PEAP- og TTLS-tilstande.\n"
+"  TLS-tilstand er fuldstændig certifikatbaseret, og kan ignorere\n"
+"brugernavnet og adgangskoden angivet her."
 
 #: ../lib/network/connection/wireless.pm:397
 #, c-format
@@ -4568,6 +4595,10 @@ msgid ""
 "considered as the alternative to username/password combo.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
+"Den fuldstændige adresse og filnavnet på klientcertifikatet. Dette\n"
+"bruges kun for EAP-certifikatbaseret autentificering. Det er et\n"
+"alternativ til brug af brugernavn og adgangskode.\n"
+"Bemærk: Andre relevante indstillinger vises på \"Avanceret\"-siden."
 
 #: ../lib/network/connection/wireless.pm:403
 #, c-format
@@ -4816,6 +4847,9 @@ msgid ""
 "unencrypted identity with EAP types that support different\n"
 "tunnelled identity, e.g., TTLS"
 msgstr ""
+"Anonym identitetstekst for EAP: bruges som\n"
+"den ukrypterede identitet med EAP-typer som støtter\n"
+"forskellige tunellerede identiteter, som TTLS."
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
@@ -4845,11 +4879,16 @@ msgid ""
 "a trusted CA certificate should always be configured\n"
 "when using TLS or TTLS or PEAP."
 msgstr ""
+"Fuld filadresse til CA-certifikatfilen (PEM/DER). Denne fil\n"
+"kan have et eller flere tiltroede CA-certifikater. Hvis \"ca_cert\"\n"
+"ikke er med, bliver servercertifikatet ikke kontrolleret. Om \n"
+"muligt bør et tiltroet CA-certifikat altid sættes op ved\n"
+"brug af TLS, TTLS eller PEAP."
 
 #: ../lib/network/connection/wireless.pm:476
 #, c-format
 msgid "EAP certificate subject match"
-msgstr ""
+msgstr "\"Subject\"-overensstemmelse for EAP-certifikat"
 
 #: ../lib/network/connection/wireless.pm:478
 #, c-format
@@ -4860,6 +4899,11 @@ msgid ""
 "string in the subject.  The subject string is in following format:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
+"Tekst som skal tjekked mod \"subject\" til autentificerings-\n"
+"servercertifikatet. Hvis teksten er sat, bliver servercertifikatet\n"
+"kun godtaget hvis det indeholder denne tekst i \"subject\".\n"
+"\"Subject\"-teksten har følgende format:\n"
+"/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
 #: ../lib/network/connection/wireless.pm:483
 #, c-format
@@ -4867,7 +4911,7 @@ msgid "EAP extra directives"
 msgstr "EAP ekstra direktiver"
 
 #: ../lib/network/connection/wireless.pm:485
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
 "The expected format is a string field=value pair. Multiple values\n"
@@ -4883,6 +4927,20 @@ msgid ""
 "\tOthers such as key_mgmt, eap maybe used to force\n"
 "\tspecial settings different from the U.I settings."
 msgstr ""
+"Her kan du senda ekstrainnstillingar til wpa_supplicant.\n"
+"Innstillingane er på formatet «felt=værdi». Du kan senda\n"
+"fleire værdiar ved at skilja kvar værdi med teiknet «#».\n"
+"Merk: Direktiv vært ikkje kontrollert før dei vært sende,\n"
+"og kan føra til at wpa-forhandlinga mislukkast utan å\n"
+"gje fejlmeldingar. Støtta direktiv vært bevarte ved\n"
+"redigering.\n"
+"Støtta direktiv:\n"
+"\tdisabled, id_str, bssid, priority, auth_alg, eapol_flags,\n"
+"\tproactive_key_caching, peerkey, ca_path, private_key,\n"
+"\tprivate_key_passwd, dh_file, altsubject_match, phase1,\n"
+"\tfragment_size and eap_workaround, pairwise, group\n"
+"\tAndre, slike som key_mgmt, eap kan brugast til at tvinga\n"
+"\tspecielle innstillingar som er forskellige frå UI-innstillingane."
 
 #: ../lib/network/connection/wireless.pm:505
 #, c-format
