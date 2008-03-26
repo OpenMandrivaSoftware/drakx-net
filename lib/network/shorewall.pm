@@ -163,39 +163,39 @@ What do you want to do?"),
     };
 
     set_config_file("zones",
-		    [ 'net', 'ipv4' ],
-		    if_($has_loc_zone, [ 'loc', 'ipv4' ]),
-		    [ 'fw', 'firewall' ],
-		   );
+                    [ 'net', 'ipv4' ],
+                    if_($has_loc_zone, [ 'loc', 'ipv4' ]),
+                    [ 'fw', 'firewall' ],
+                );
     set_config_file('interfaces',
-                   (map { $interface_settings->('net', $_) } @{$conf->{net_zone}}),
-                   (map { $interface_settings->('loc', $_) } @{$conf->{loc_zone} || []}),
-		   );
+                    (map { $interface_settings->('net', $_) } @{$conf->{net_zone}}),
+                    (map { $interface_settings->('loc', $_) } @{$conf->{loc_zone} || []}),
+                );
     set_config_file('policy',
-		    if_($has_loc_zone, [ 'loc', 'net', 'ACCEPT' ], [ 'loc', 'fw', 'ACCEPT' ], [ 'fw', 'loc', 'ACCEPT' ]),
-		    [ 'fw', 'net', 'ACCEPT' ],
-		    [ 'net', 'all', 'DROP', if_($conf->{log_net_drop}, 'info') ],
-		    [ 'all', 'all', 'REJECT', 'info' ],
-		   );
+                    if_($has_loc_zone, [ 'loc', 'net', 'ACCEPT' ], [ 'loc', 'fw', 'ACCEPT' ], [ 'fw', 'loc', 'ACCEPT' ]),
+                    [ 'fw', 'net', 'ACCEPT' ],
+                    [ 'net', 'all', 'DROP', if_($conf->{log_net_drop}, 'info') ],
+                    [ 'all', 'all', 'REJECT', 'info' ],
+                );
     if (is_empty_array_ref($include_drakx)) {
         #- make sure the rules.drakx config is read, erasing user modifications
         set_config_file('rules', [ 'INCLUDE', 'rules.drakx' ]);
     }
     output_with_perm("$::prefix${shorewall_root}/" . 'rules.drakx', 0600, map { join("\t", @$_) . "\n" } (
-    		    if_($use_pptp, [ 'ACCEPT', 'fw', 'loc:10.0.0.138', 'tcp', '1723' ]),
-		    if_($use_pptp, [ 'ACCEPT', 'fw', 'loc:10.0.0.138', 'gre' ]),
-		    (map_each { [ 'ACCEPT', 'net', 'fw', $::a, join(',', @$::b), '-' ] } %$ports_by_proto),
-		    (map_each {
-                        print "b: $::b\n";
-                        if_($::b, [ 'ACCEPT+', 'fw', 'net', 'tcp', $::a, '-', '-', '-', $::b ]);
-		    } %{$conf->{accept_local_user}}),
-		    (map {
-                        #- WARNING: won't redirect ports from the firewall system if a local zone exists
-			map_each {
-                            [ 'REDIRECT', $has_loc_zone ? 'loc' : 'fw', $::b, $_, $::a, '-' ]
-			} %{$conf->{redirects}{$_}};
-		    } keys %{$conf->{redirects}}),
-		   ));
+        if_($use_pptp, [ 'ACCEPT', 'fw', 'loc:10.0.0.138', 'tcp', '1723' ]),
+        if_($use_pptp, [ 'ACCEPT', 'fw', 'loc:10.0.0.138', 'gre' ]),
+        (map_each { [ 'ACCEPT', 'net', 'fw', $::a, join(',', @$::b), '-' ] } %$ports_by_proto),
+        (map_each {
+            print "b: $::b\n";
+            if_($::b, [ 'ACCEPT+', 'fw', 'net', 'tcp', $::a, '-', '-', '-', $::b ]);
+        } %{$conf->{accept_local_user}}),
+        (map {
+            #- WARNING: won't redirect ports from the firewall system if a local zone exists
+            map_each {
+                [ 'REDIRECT', $has_loc_zone ? 'loc' : 'fw', $::b, $_, $::a, '-' ]
+            } %{$conf->{redirects}{$_}};
+        } keys %{$conf->{redirects}}),
+    ));
     set_config_file('masq', if_(exists $conf->{masq}, [ $conf->{masq}{net_interface}, $conf->{masq}{subnet} ]));
 
     upgrade_to_shorewall3();
