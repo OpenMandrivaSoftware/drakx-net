@@ -44,7 +44,7 @@ sub dev_to_shorewall {
 }
 
 sub get_net_zone_interfaces {
-    my ($net, $all_intf) = @_;
+    my ($_net, $all_intf) = @_;
     #- read shorewall configuration first
     my @interfaces = map { $_->[1] } grep { $_->[0] eq 'net' } get_config_file('interfaces');
     #- else try to find the best interface available
@@ -192,7 +192,7 @@ What do you want to do?"),
         (map {
             #- WARNING: won't redirect ports from the firewall system if a local zone exists
             map_each {
-                [ 'REDIRECT', $has_loc_zone ? 'loc' : 'fw', $::b, $_, $::a, '-' ]
+                [ 'REDIRECT', $has_loc_zone ? 'loc' : 'fw', $::b, $_, $::a, '-' ];
             } %{$conf->{redirects}{$_}};
         } keys %{$conf->{redirects}}),
     ));
