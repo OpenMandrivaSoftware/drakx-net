@@ -133,6 +133,7 @@ sub write {
     my ($conf, $o_in) = @_;
     my $use_pptp = any { /^ppp/ && cat_("$::prefix/etc/ppp/peers/$_") =~ /pptp/ } @{$conf->{net_zone}};
     my $ports_by_proto = ports_by_proto($conf->{ports});
+    my $has_loc_zone = to_bool(@{$conf->{loc_zone} || []});
 
     my ($include_drakx, $other_rules) = partition { $_ eq "INCLUDE\trules.drakx\n" } grep { !/^#/ } cat_("$::prefix${shorewall_root}/rules");
     #- warn if the config is already in rules.drakx and additionnal rules are configured
@@ -162,7 +163,7 @@ What do you want to do?"),
 
     set_config_file("zones",
 		    [ 'net', 'ipv4' ],
-		    if_($conf->{loc_zone}[0], [ 'loc', 'ipv4' ]),
+		    if_($has_loc_zone, [ 'loc', 'ipv4' ]),
 		    [ 'fw', 'firewall' ],
 		   );
     set_config_file('interfaces',
@@ -170,7 +171,7 @@ What do you want to do?"),
                    (map { $interface_settings->('loc', $_) } @{$conf->{loc_zone} || []}),
 		   );
     set_config_file('policy',
-		    if_($conf->{loc_zone}[0], [ 'loc', 'net', 'ACCEPT' ], [ 'loc', 'fw', 'ACCEPT' ], [ 'fw', 'loc', 'ACCEPT' ]),
+		    if_($has_loc_zone, [ 'loc', 'net', 'ACCEPT' ], [ 'loc', 'fw', 'ACCEPT' ], [ 'fw', 'loc', 'ACCEPT' ]),
 		    [ 'fw', 'net', 'ACCEPT' ],
 		    [ 'net', 'all', 'DROP', if_($conf->{log_net_drop}, 'info') ],
 		    [ 'all', 'all', 'REJECT', 'info' ],
