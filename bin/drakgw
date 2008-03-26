@@ -282,11 +282,7 @@ If you do not know the meaning of an option, simply leave it as it is."),
 	      post => sub {
 		  network::squid::write_squid_conf($squid_conf, $lan_intf, $internal_domain_name) if $use_caching_proxy;
 		  services::set_status("squid", $use_caching_proxy);
-		  if ($use_caching_proxy) {
-		      set_proxy_port($squid_conf->{http_port}[0]);
-		  } else {
-		      delete_proxy_ports();
-		  }
+                  network::shorewall::set_redirected_ports($shorewall, 'tcp', $squid_conf->{http_port}[0], if_($use_caching_proxy, 'www'));
 		  -f $cups_conf ? "cups" : end_step();
 	      },
 	     },
@@ -344,20 +340,11 @@ sub end_step() {
     "end";
 }
 
-sub delete_proxy_ports() {
-    delete $shorewall->{redirects}{tcp}{www};
-}
-
-sub set_proxy_port {
-    my ($port) = @_;
-    $shorewall->{redirects}{tcp}{www} = $port;
-}
-
 sub gw_disable() {
     my $_wait_disabl = $in->wait_message(N("Please wait"), N("Disabling servers..."));
     return if $::testing;
     services::set_status($_, 0) foreach qw(dhcpd squid named);
-    delete_proxy_ports();
+    network::shorewall::set_redirected_ports($shorewall, 'tcp', $squid_conf->{http_port}[0], ());
     network::shorewall::write($shorewall);
     foreach ($network::dhcpd::dhcpd_conf_file, $network::squid::squid_conf_file, $masq_file) {
 	if (-f $_) { rename($_, "$_.drakgwdisable") or die "Could not rename $_ to $_.drakgwdisable" }
