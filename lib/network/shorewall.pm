@@ -209,6 +209,17 @@ What do you want to do?"),
     }
 }
 
+sub set_redirected_ports {
+    my ($conf, $proto, $dest, @ports) = @_;
+    if (@ports) {
+        $conf->{redirects}{$proto}{$_} = $dest foreach @ports;
+    } else {
+        my $r = $conf->{redirects}{$proto};
+        @ports = grep { $r->{$_} eq $dest } keys %$r;
+        delete $r->{$_} foreach @ports;
+    }
+}
+
 sub update_interfaces_list {
     my ($o_intf) = @_;
     $o_intf && member($o_intf, map { $_->[1] } get_config_file('interfaces')) and return;
