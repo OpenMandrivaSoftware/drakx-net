@@ -345,14 +345,12 @@ sub end_step() {
 }
 
 sub delete_proxy_ports() {
-    my $r = $shorewall->{redirects}{tcp};
-    my @ports = grep { $r->{$_} eq 'www' } keys %$r;
-    delete $r->{$_} foreach @ports;
+    delete $shorewall->{redirects}{tcp}{www};
 }
 
 sub set_proxy_port {
     my ($port) = @_;
-    $shorewall->{redirects}{tcp}{$port} = 'www';
+    $shorewall->{redirects}{tcp}{www} = $port;
 }
 
 sub gw_disable() {

@@ -94,7 +94,7 @@ sub read {
                     map { "$_/$e->[3]" } split(',', $e->[4]);
                 } grep { $_->[0] eq 'ACCEPT' && $_->[1] eq 'net' } @rules),
                );
-    $conf{redirects}{$_->[3]}{$_->[2]} = $_->[4] foreach grep { $_->[0] eq 'REDIRECT' } @rules;
+    $conf{redirects}{$_->[3]}{$_->[4]} = $_->[2] foreach grep { $_->[0] eq 'REDIRECT' } @rules;
 
     if (my ($e) = get_config_file('masq')) {
 	($conf{masq}{net_interface}, $conf{masq}{subnet}) = @$e;
@@ -185,7 +185,7 @@ What do you want to do?"),
 		    if_($use_pptp, [ 'ACCEPT', 'fw', 'loc:10.0.0.138', 'gre' ]),
 		    (map_each { [ 'ACCEPT', 'net', 'fw', $::a, join(',', @$::b), '-' ] } %$ports_by_proto),
 		    (map {
-			map_each { [ 'REDIRECT', 'loc', $::a, $_, $::b, '-' ] } %{$conf->{redirects}{$_}};
+			map_each { [ 'REDIRECT', 'loc', $::b, $_, $::a, '-' ] } %{$conf->{redirects}{$_}};
 		    } keys %{$conf->{redirects}}),
 		   ));
     set_config_file('masq', if_(exists $conf->{masq}, [ $conf->{masq}{net_interface}, $conf->{masq}{subnet} ]));
