@@ -186,7 +186,6 @@ What do you want to do?"),
         if_($use_pptp, [ 'ACCEPT', 'fw', 'loc:10.0.0.138', 'gre' ]),
         (map_each { [ 'ACCEPT', 'net', 'fw', $::a, join(',', @$::b), '-' ] } %$ports_by_proto),
         (map_each {
-            print "b: $::b\n";
             if_($::b, [ 'ACCEPT+', 'fw', 'net', 'tcp', $::a, '-', '-', '-', $::b ]);
         } %{$conf->{accept_local_user}}),
         (map {
