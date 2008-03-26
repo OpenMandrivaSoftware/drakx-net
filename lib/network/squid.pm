@@ -8,7 +8,7 @@ our $squid_conf_file = "$::prefix/etc/squid/squid.conf";
 sub read_squid_conf {
     my ($o_file) = @_;
     my $s = cat_($o_file || $squid_conf_file);
-    { http_port => [ $s =~ /^\s*http_port\s+(.*)/mg ],
+    { http_port => [ $s =~ /^\s*http_port\s+(?:\S+:)?(\d+)\b/mg ],
       cache_size => [ if_($s =~ /^\s*cache_dir diskd\s+(.*)/mg, split(' ', $1)) ],
       admin_mail => [ if_($s =~ /^\s*err_html_text\s+(.*)/mg, split(' ', $1)) ] };
 }
