@@ -200,7 +200,7 @@ sub get_default_connection {
 }
 
 sub has_network_connection() {
-    (undef, undef, $gw_address) = get_default_connection({});
+    (undef, undef, my $gw_address) = get_default_connection({});
     to_bool($gw_address);
 }
 
