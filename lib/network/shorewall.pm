@@ -185,7 +185,10 @@ What do you want to do?"),
 		    if_($use_pptp, [ 'ACCEPT', 'fw', 'loc:10.0.0.138', 'gre' ]),
 		    (map_each { [ 'ACCEPT', 'net', 'fw', $::a, join(',', @$::b), '-' ] } %$ports_by_proto),
 		    (map {
-			map_each { [ 'REDIRECT', 'loc', $::b, $_, $::a, '-' ] } %{$conf->{redirects}{$_}};
+                        #- WARNING: won't redirect ports from the firewall system if a local zone exists
+			map_each {
+                            [ 'REDIRECT', $has_loc_zone ? 'loc' : 'fw', $::b, $_, $::a, '-' ]
+			} %{$conf->{redirects}{$_}};
 		    } keys %{$conf->{redirects}}),
 		   ));
     set_config_file('masq', if_(exists $conf->{masq}, [ $conf->{masq}{net_interface}, $conf->{masq}{subnet} ]));
