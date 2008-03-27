@@ -667,6 +667,7 @@ sub need_rt2x00_iwpriv {
 
 sub get_hex_key {
     my ($key) = @_;
+    #- odd number or non-hexa characters, consider the key as ASCII and prepend "s:"
     if ($key =~ /^([[:xdigit:]]{4}[\:-]?)+[[:xdigit:]]{2,}$/) {
         $key =~ s/[\:-]//g;
         return lc($key);
@@ -674,9 +675,6 @@ sub get_hex_key {
 }
 
 sub convert_wep_key_for_iwconfig {
-    #- 5 or 13 characters, consider the key as ASCII and prepend "s:"
-    #- else consider the key as hexadecimal, do not strip dashes
-    #- always quote the key as string
     my ($real_key, $restricted) = @_;
     my $key = get_hex_key($real_key) || "s:$real_key";
     $restricted ? "restricted $key" : "open $key";
@@ -688,8 +686,6 @@ sub convert_wep_key_for_wpa_supplicant {
 }
 
 sub get_wep_key_from_iwconfig {
-    #- strip "s:" if the key is 5 or 13 characters (ASCII)
-    #- else the key as hexadecimal, do not modify
     my ($key) = @_;
     my ($mode, $real_key) = $key =~ /^(?:(open|restricted)\s+)?(.*)$/;
     $real_key =~ s/^s://;
