@@ -697,7 +697,7 @@ sub convert_key_for_wpa_supplicant {
     length($key) == 64 && get_hex_key($key) || qq("$key");
 }
 
-#- FIXME: to be improved (quotes, comments) and moved in common files
+#- FIXME: to be improved (quotes, comments)
 sub wlan_ng_update_vars {
     my ($file, $vars) = @_;
     substInFile {
