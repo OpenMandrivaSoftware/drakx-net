@@ -47,7 +47,7 @@ install:
 dis:
 	rm -rf $(NAME)-$(VERSION) ../$(NAME)-$(VERSION).tar*
 	svn export -q -rBASE . $(NAME)-$(VERSION)
-	tar cfY ../$(NAME)-$(VERSION).tar.lzma $(NAME)-$(VERSION)
+	tar cfj ../$(NAME)-$(VERSION).tar.bz2 $(NAME)-$(VERSION)
 	rm -rf $(NAME)-$(VERSION)
 
 clean:
