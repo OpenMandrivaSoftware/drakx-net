@@ -13,9 +13,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: da1\n"
+"Project-Id-Version: da\n"
 "POT-Creation-Date: 2008-03-17 15:16+0100\n"
-"PO-Revision-Date: 2008-03-22 12:40+0100\n"
+"PO-Revision-Date: 2008-03-30 17:19+0200\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: dansk <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
@@ -4864,6 +4864,10 @@ msgid ""
 "auth=MSCHAPV2 for PEAP or\n"
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
+"Indre autentifikation med TLS tunnelparametre.\n"
+"indput er tekst with felt-værdi par, Eksempler:\n"
+"auth=MSCHAPV2 for PEAP eller\n"
+"autheap=MSCHAPV2 autheap=MD5 for TTLS"
 
 #: ../lib/network/connection/wireless.pm:469
 #, c-format
@@ -4911,7 +4915,7 @@ msgid "EAP extra directives"
 msgstr "EAP ekstra direktiver"
 
 #: ../lib/network/connection/wireless.pm:485
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
 "The expected format is a string field=value pair. Multiple values\n"
@@ -4927,20 +4931,20 @@ msgid ""
 "\tOthers such as key_mgmt, eap maybe used to force\n"
 "\tspecial settings different from the U.I settings."
 msgstr ""
-"Her kan du senda ekstrainnstillingar til wpa_supplicant.\n"
-"Innstillingane er på formatet «felt=værdi». Du kan senda\n"
-"fleire værdiar ved at skilja kvar værdi med teiknet «#».\n"
-"Merk: Direktiv vært ikkje kontrollert før dei vært sende,\n"
-"og kan føra til at wpa-forhandlinga mislukkast utan å\n"
-"gje fejlmeldingar. Støtta direktiv vært bevarte ved\n"
+"Her kan du overføre ekstraindstillinger til wpa_supplicant.\n"
+"Det forventede format er en tekst med 'felt=værdi'-par. Flere\n"
+"værdier kan angives ved at skille hver værdi med tegnet #.\n"
+"Bemærk: Direktiver overføres uden at være kontrolleret først,\n"
+"og dette kan føre til at wpa-forhandlingen mislykkes uden \n"
+"fejlmelding. Støttede direktiver bevares ved\n"
 "redigering.\n"
-"Støtta direktiv:\n"
+"Støttede direktiver:\n"
 "\tdisabled, id_str, bssid, priority, auth_alg, eapol_flags,\n"
 "\tproactive_key_caching, peerkey, ca_path, private_key,\n"
 "\tprivate_key_passwd, dh_file, altsubject_match, phase1,\n"
-"\tfragment_size and eap_workaround, pairwise, group\n"
-"\tAndre, slike som key_mgmt, eap kan brugast til at tvinga\n"
-"\tspecielle innstillingar som er forskellige frå UI-innstillingane."
+"\tfragment_size og eap_workaround, pairwise, group\n"
+"\tAndre, såsom key_mgmt, eap kan bruges til at tvinge\n"
+"\tspecielle indstillinger som er forskellige fra UI-indstillingerne."
 
 #: ../lib/network/connection/wireless.pm:505
 #, c-format
