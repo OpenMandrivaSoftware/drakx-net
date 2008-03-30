@@ -1,9 +1,11 @@
+# 汤诗语 <shiyu@mandriva.org>, 2008
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: drakx-net 2007\n"
+"Project-Id-Version: zh_CN\n"
 "POT-Creation-Date: 2008-03-17 15:16+0100\n"
-"PO-Revision-Date: 2006-09-10 21:48+0800\n"
-"Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
+"PO-Revision-Date: 2008-03-30 15:01+0800\n"
+"Last-Translator: 汤诗语 <shiyu@mandriva.org>\n"
 "Language-Team: Mandriva Linux i18n Team <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2063,7 +2065,7 @@ msgid "The VPN connection is enabled."
 msgstr "VPN 连接已经启用。"
 
 #: ../bin/drakvpn-old:88
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The setup of a VPN connection has already been done.\n"
 "\n"
@@ -2071,10 +2073,11 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
-"Internet 连接共享的设置已经完成。\n"
-"目前连接共享已被启用。\n"
+"VPN 连接的设置已经完成。\n"
 "\n"
-"您要做什么?"
+"目前该连接已被启用。\n"
+"\n"
+"您要做什么？"
 
 #: ../bin/drakvpn-old:93
 #, c-format
@@ -2082,32 +2085,32 @@ msgid "disable"
 msgstr "禁用"
 
 #: ../bin/drakvpn-old:93 ../bin/drakvpn-old:119
-#, fuzzy, c-format
+#, c-format
 msgid "reconfigure"
 msgstr "重新配置"
 
 #: ../bin/drakvpn-old:93 ../bin/drakvpn-old:119 ../bin/drakvpn-old:432
 #, c-format
 msgid "dismiss"
-msgstr ""
+msgstr "离开"
 
 #: ../bin/drakvpn-old:97
-#, fuzzy, c-format
+#, c-format
 msgid "Disabling VPN..."
-msgstr "正在启用 VPN..."
+msgstr "正在禁用 VPN..."
 
 #: ../bin/drakvpn-old:106
-#, fuzzy, c-format
+#, c-format
 msgid "The VPN connection is now disabled."
-msgstr "VPN 连接已经启用。"
+msgstr "VPN 连接已经被禁用。"
 
 #: ../bin/drakvpn-old:113
-#, fuzzy, c-format
+#, c-format
 msgid "VPN connection currently disabled"
-msgstr "VPN 连接已经启用。"
+msgstr "VPN 连接目前被禁用"
 
 #: ../bin/drakvpn-old:114
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The setup of a VPN connection has already been done.\n"
 "\n"
@@ -2115,10 +2118,11 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
-"Internet 连接共享的设置已经完成。\n"
+"VPN 连接的设置已经完成。\n"
+"\n"
 "目前连接共享已被禁用。\n"
 "\n"
-"您要做什么?"
+"您要做什么？"
 
 #: ../bin/drakvpn-old:119
 #, c-format
@@ -2131,14 +2135,14 @@ msgid "Enabling VPN..."
 msgstr "正在启用 VPN..."
 
 #: ../bin/drakvpn-old:133
-#, fuzzy, c-format
+#, c-format
 msgid "The VPN connection is now enabled."
 msgstr "VPN 连接已经启用。"
 
 #: ../bin/drakvpn-old:147 ../bin/drakvpn-old:164
 #, c-format
 msgid "Simple VPN setup."
-msgstr ""
+msgstr "简单 VPN 设置。"
 
 #: ../bin/drakvpn-old:148
 #, c-format
@@ -2155,6 +2159,16 @@ msgid ""
 "Make sure you have configured your Network/Internet access using\n"
 "drakconnect before going any further."
 msgstr ""
+"您即将配置您的计算机使用 VPN 连接。\n"
+"\n"
+"使用该功能，您的本地私有子网上的计算机和在其他远程私有子网上的计算机\n"
+"就能以一种安全的方式穿越各自的防火墙，通过 Internet 共享资源。\n"
+"\n"
+"通过 Internet 的通讯是被加密的。本地和远程的计算机看起来就像它们都在\n"
+"同一个子网上。\n"
+"\n"
+"在下一步之前，请确认您已经通过 drakconnect 连接配置工具配置好了你的网\n"
+"络/Internet连接。"
 
 #: ../bin/drakvpn-old:165
 #, c-format
@@ -2171,26 +2185,36 @@ msgid ""
 "Please read AT LEAST the ipsec-howto docs\n"
 "before going any further."
 msgstr ""
+"VPN 连接。\n"
+"\n"
+"本程序基于以下的工程：\n"
+" - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
+" - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
+" - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
+" - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
+" - 文档和手册（man）都和 %s 包一起提供\n"
+"\n"
+"在下一步之前，请至少务必阅读 ipsec-howto 文档。"
 
 #: ../bin/drakvpn-old:208
-#, fuzzy, c-format
+#, c-format
 msgid "Problems installing package %s"
-msgstr "无法安装软件包(%s)!"
+msgstr "无法安装软件包 %s"
 
 #: ../bin/drakvpn-old:222
-#, fuzzy, c-format
+#, c-format
 msgid "Security Policies"
-msgstr "安全性:"
+msgstr "安全策略"
 
 #: ../bin/drakvpn-old:222
 #, c-format
 msgid "IKE daemon racoon"
-msgstr ""
+msgstr "IKE daemon racoon"
 
 #: ../bin/drakvpn-old:224
-#, fuzzy, c-format
+#, c-format
 msgid "Configuration file"
-msgstr "LAN 配置"
+msgstr "配置文件"
 
 #: ../bin/drakvpn-old:225
 #, c-format
@@ -2203,11 +2227,18 @@ msgid ""
 "\n"
 "What would you like to configure?\n"
 msgstr ""
+"配置步骤！\n"
+"\n"
+"您需要定义安全策略并且随后还要配置自动密钥交换（IKE）\n"
+"守护进程。\n"
+"我们所使用的 KAME IKE 守护进程被称为“racoon”。\n"
+"\n"
+"您想要配置什么？\n"
 
 #: ../bin/drakvpn-old:245 ../bin/drakvpn-old:382
 #, c-format
 msgid "%s entries"
-msgstr ""
+msgstr "%s 条目"
 
 #: ../bin/drakvpn-old:246
 #, c-format
@@ -2222,13 +2253,22 @@ msgid ""
 "\n"
 "What would you like to do?\n"
 msgstr ""
+"%s 文件内容\n"
+"被分解为几个区段。\n"
+"\n"
+"您现在可以：\n"
+"\n"
+"  - 显示、添加、编辑或删除某区段，然后\n"
+"  - 提交这些改动\n"
+"\n"
+"您想要做什么？\n"
 
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
 msgid ""
 "_:display here is a verb\n"
 "Display"
-msgstr ""
+msgstr "显示"
 
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
 #, c-format
@@ -2236,9 +2276,9 @@ msgid "Edit"
 msgstr "编辑"
 
 #: ../bin/drakvpn-old:253 ../bin/drakvpn-old:391
-#, fuzzy, c-format
+#, c-format
 msgid "Commit"
-msgstr "注释"
+msgstr "提交"
 
 #: ../bin/drakvpn-old:267 ../bin/drakvpn-old:271 ../bin/drakvpn-old:406
 #: ../bin/drakvpn-old:410
@@ -2246,7 +2286,7 @@ msgstr "注释"
 msgid ""
 "_:display here is a verb\n"
 "Display configuration"
-msgstr ""
+msgstr "显示配置"
 
 #: ../bin/drakvpn-old:272
 #, c-format
@@ -2257,6 +2297,11 @@ msgid ""
 "\n"
 "You'll have to go back and choose 'add'.\n"
 msgstr ""
+"%s 文件不存在。\n"
+"\n"
+"必须要有一个新的配置。\n"
+"\n"
+"您需要后退，然后选择“添加”。\n"
 
 #: ../bin/drakvpn-old:301
 #, c-format
@@ -2267,11 +2312,16 @@ msgid ""
 "\n"
 "Choose continue when you are done to write the data.\n"
 msgstr ""
+"添加安全策略。\n"
+"\n"
+"您现在可以添加安全策略。\n"
+"\n"
+"当您写完数据之后，请选择下一步。\n"
 
 #: ../bin/drakvpn-old:333 ../bin/drakvpn-old:523
-#, fuzzy, c-format
+#, c-format
 msgid "Edit section"
-msgstr "密钥方向"
+msgstr "编辑区段"
 
 #: ../bin/drakvpn-old:334
 #, c-format
@@ -2281,12 +2331,15 @@ msgid ""
 "You can choose here below the one you want to edit \n"
 "and then click on next.\n"
 msgstr ""
+"您的 %s 文件含有数个区段或者连接。\n"
+"\n"
+"您可以在您想要编辑的下面选择，然后点击下一步。\n"
 
 #: ../bin/drakvpn-old:337 ../bin/drakvpn-old:357 ../bin/drakvpn-old:528
 #: ../bin/drakvpn-old:574
-#, fuzzy, c-format
+#, c-format
 msgid "Section names"
-msgstr "连接名称"
+msgstr "区段名称"
 
 #: ../bin/drakvpn-old:344
 #, c-format
@@ -2297,11 +2350,16 @@ msgid ""
 "\n"
 "Choose continue when you are done to write the data.\n"
 msgstr ""
+"编辑安全策略。\n"
+"\n"
+"您现在可以编辑安全策略。\n"
+"\n"
+"当您完成写入数据后，选择下一步。\n"
 
 #: ../bin/drakvpn-old:353 ../bin/drakvpn-old:570
-#, fuzzy, c-format
+#, c-format
 msgid "Remove section"
-msgstr "删除主机:"
+msgstr "删除区段"
 
 #: ../bin/drakvpn-old:354 ../bin/drakvpn-old:571
 #, c-format
@@ -2311,6 +2369,9 @@ msgid ""
 "You can choose here below the one you want to remove\n"
 "and then click on next.\n"
 msgstr ""
+"您的 %s 文件有数个区段或者连接。\n"
+"\n"
+"您可以在您想要删除的下面选择，然后点击下一步。\n"
 
 #: ../bin/drakvpn-old:383
 #, c-format
@@ -2325,6 +2386,15 @@ msgid ""
 "  - remove \t\t (remove an existing section)\n"
 "  - commit \t\t (writes the changes to the real file)"
 msgstr ""
+"racoon.conf 文件配置。\n"
+"\n"
+"此文件的内容被分为几个区段。\n"
+"您现在可以：\n"
+"  - display \t\t (显示文件的内容)\n"
+"  - add\t\t\t (添加一个区段)\n"
+"  - edit \t\t\t (编辑已有的某个区段的参数)\n"
+"  - remove \t\t (删除一个已有的区段)\n"
+"  - commit \t\t (将改动写入实际的配置文件)"
 
 #: ../bin/drakvpn-old:411
 #, c-format
@@ -2335,11 +2405,16 @@ msgid ""
 "\n"
 "You'll have to go back and choose configure.\n"
 msgstr ""
+"%s 文件不存在\n"
+"\n"
+"这里必须要有一个新的配置。\n"
+"\n"
+"您需要后退，然后选择配置。\n"
 
 #: ../bin/drakvpn-old:425
 #, c-format
 msgid "racoon.conf entries"
-msgstr ""
+msgstr "racoon.conf 条目"
 
 #: ../bin/drakvpn-old:426
 #, c-format
@@ -2353,9 +2428,17 @@ msgid ""
 "\n"
 "Choose the section you would like to add.\n"
 msgstr ""
+"“添加（add）”区段步骤。\n"
+"\n"
+"下面是 racoon.conf 文件的骨架：\n"
+"\t'path'\n"
+"\t'remote'\n"
+"\t'sainfo' \n"
+"\n"
+"选择你想要添加的区段。\n"
 
 #: ../bin/drakvpn-old:432
-#, fuzzy, c-format
+#, c-format
 msgid "path"
 msgstr "路径"
 
@@ -2367,7 +2450,7 @@ msgstr "远程"
 #: ../bin/drakvpn-old:432
 #, c-format
 msgid "sainfo"
-msgstr ""
+msgstr "sainfo"
 
 #: ../bin/drakvpn-old:440
 #, c-format
@@ -2378,11 +2461,16 @@ msgid ""
 "\n"
 "Put your mouse over the certificate entry to obtain online help."
 msgstr ""
+"路径添加（add path）区段步骤。\n"
+"\n"
+"路径的区段必须在 racoon.conf 文件的顶端。\n"
+"\n"
+"把您的鼠标放在认证条目上以获得在线帮助。"
 
 #: ../bin/drakvpn-old:443
-#, fuzzy, c-format
+#, c-format
 msgid "path type"
-msgstr "Samba 类型:"
+msgstr "路径类型"
 
 #: ../bin/drakvpn-old:447
 #, c-format
@@ -2409,9 +2497,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:467 ../bin/drakvpn-old:560
-#, fuzzy, c-format
+#, c-format
 msgid "real file"
-msgstr "选择文件"
+msgstr "真实文件"
 
 #: ../bin/drakvpn-old:490
 #, c-format
@@ -2500,9 +2588,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:620
-#, fuzzy, c-format
+#, c-format
 msgid "Sainfo source address"
-msgstr "虚拟共享地址"
+msgstr "Sainfo 源地址"
 
 #: ../bin/drakvpn-old:621
 #, c-format
@@ -2606,9 +2694,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:686
-#, fuzzy, c-format
+#, c-format
 msgid "PFS group"
-msgstr "强制组"
+msgstr "PFS 组"
 
 #: ../bin/drakvpn-old:688
 #, c-format
@@ -2679,19 +2767,19 @@ msgid "Encryption algorithm"
 msgstr "加密算法"
 
 #: ../bin/drakvpn-old:730
-#, fuzzy, c-format
+#, c-format
 msgid "Authentication algorithm"
-msgstr "身份验证方式"
+msgstr "认证算法"
 
 #: ../bin/drakvpn-old:732
-#, fuzzy, c-format
+#, c-format
 msgid "Compression algorithm"
-msgstr "加密算法"
+msgstr "压缩算法"
 
 #: ../bin/drakvpn-old:733
-#, fuzzy, c-format
+#, c-format
 msgid "deflate"
-msgstr "默认"
+msgstr "真空"
 
 #: ../bin/drakvpn-old:740
 #, c-format
@@ -2714,9 +2802,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:749
-#, fuzzy, c-format
+#, c-format
 msgid "Exchange mode"
-msgstr "拨号模式"
+msgstr "交换模式"
 
 #: ../bin/drakvpn-old:751
 #, c-format
@@ -2730,19 +2818,19 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:757
-#, fuzzy, c-format
+#, c-format
 msgid "Generate policy"
-msgstr "常规选项"
+msgstr "产生策略
 
 #: ../bin/drakvpn-old:758 ../bin/drakvpn-old:774 ../bin/drakvpn-old:787
 #, c-format
 msgid "off"
-msgstr ""
+msgstr "关"
 
 #: ../bin/drakvpn-old:758 ../bin/drakvpn-old:774 ../bin/drakvpn-old:787
-#, fuzzy, c-format
+#, c-format
 msgid "on"
-msgstr "无"
+msgstr "开"
 
 #: ../bin/drakvpn-old:759
 #, c-format
@@ -2777,44 +2865,44 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:778
-#, fuzzy, c-format
+#, c-format
 msgid "Certificate type"
-msgstr "证书"
+msgstr "认证类型"
 
 #: ../bin/drakvpn-old:780
 #, c-format
 msgid "My certfile"
-msgstr ""
+msgstr "我的认证文件"
 
 #: ../bin/drakvpn-old:781
-#, fuzzy, c-format
+#, c-format
 msgid "Name of the certificate"
-msgstr "机器名:"
+msgstr "认证的名称"
 
 #: ../bin/drakvpn-old:782
 #, c-format
 msgid "My private key"
-msgstr ""
+msgstr "我的私钥"
 
 #: ../bin/drakvpn-old:783
-#, fuzzy, c-format
+#, c-format
 msgid "Name of the private key"
-msgstr "共享名称:"
+msgstr "私钥的名称"
 
 #: ../bin/drakvpn-old:784
-#, fuzzy, c-format
+#, c-format
 msgid "Peers certfile"
-msgstr "选择文件"
+msgstr "认证文件对"
 
 #: ../bin/drakvpn-old:785
-#, fuzzy, c-format
+#, c-format
 msgid "Name of the peers certificate"
-msgstr "检查服务器证书"
+msgstr "认证文件对名称"
 
 #: ../bin/drakvpn-old:786
 #, c-format
 msgid "Verify cert"
-msgstr ""
+msgstr "验证认证"
 
 #: ../bin/drakvpn-old:788
 #, c-format
@@ -2826,7 +2914,7 @@ msgstr ""
 #: ../bin/drakvpn-old:790
 #, c-format
 msgid "My identifier"
-msgstr ""
+msgstr "我的认证符"
 
 #: ../bin/drakvpn-old:791
 #, c-format
@@ -2858,12 +2946,12 @@ msgstr ""
 #: ../bin/drakvpn-old:811
 #, c-format
 msgid "Peers identifier"
-msgstr ""
+msgstr "认证符对"
 
 #: ../bin/drakvpn-old:812
-#, fuzzy, c-format
+#, c-format
 msgid "Proposal"
-msgstr "协议"
+msgstr "建议"
 
 #: ../bin/drakvpn-old:814
 #, c-format
@@ -2878,9 +2966,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakvpn-old:821
-#, fuzzy, c-format
+#, c-format
 msgid "Hash algorithm"
-msgstr "加密算法"
+msgstr "哈希算法"
 
 #: ../bin/drakvpn-old:822
 #, c-format
@@ -2888,9 +2976,9 @@ msgid "Authentication method"
 msgstr "身份验证方式"
 
 #: ../bin/drakvpn-old:823
-#, fuzzy, c-format
+#, c-format
 msgid "DH group"
-msgstr "强制组"
+msgstr "DH 组"
 
 #: ../bin/drakvpn-old:830
 #, c-format
@@ -2900,22 +2988,22 @@ msgstr "命令"
 #: ../bin/drakvpn-old:831
 #, c-format
 msgid "Source IP range"
-msgstr ""
+msgstr "源 IP 范围"
 
 #: ../bin/drakvpn-old:832
 #, c-format
 msgid "Destination IP range"
-msgstr ""
+msgstr "目的 IP 范围"
 
 #: ../bin/drakvpn-old:833
-#, fuzzy, c-format
+#, c-format
 msgid "Upper-layer protocol"
-msgstr "使用 TCP 协议"
+msgstr "上一层协议"
 
 #: ../bin/drakvpn-old:833 ../bin/drakvpn-old:840
-#, fuzzy, c-format
+#, c-format
 msgid "any"
-msgstr "德国"
+msgstr "任何"
 
 #: ../bin/drakvpn-old:835
 #, c-format
@@ -2923,24 +3011,24 @@ msgid "Flag"
 msgstr "旗帜"
 
 #: ../bin/drakvpn-old:836
-#, fuzzy, c-format
+#, c-format
 msgid "Direction"
-msgstr "目录"
+msgstr "目的"
 
 #: ../bin/drakvpn-old:837
 #, c-format
 msgid "IPsec policy"
-msgstr ""
+msgstr "IPsec 策略"
 
 #: ../bin/drakvpn-old:837
 #, c-format
 msgid "ipsec"
-msgstr ""
+msgstr "ipsec"
 
 #: ../bin/drakvpn-old:837
 #, c-format
 msgid "discard"
-msgstr ""
+msgstr "忽略"
 
 #: ../bin/drakvpn-old:837
 #, c-format
@@ -2953,9 +3041,9 @@ msgid "Mode"
 msgstr "模式"
 
 #: ../bin/drakvpn-old:840
-#, fuzzy, c-format
+#, c-format
 msgid "tunnel"
-msgstr "无"
+msgstr "隧道"
 
 #: ../bin/drakvpn-old:840
 #, c-format
@@ -2963,9 +3051,9 @@ msgid "transport"
 msgstr "传送"
 
 #: ../bin/drakvpn-old:842
-#, fuzzy, c-format
+#, c-format
 msgid "Source/destination"
-msgstr "我的目标:"
+msgstr "源/目的"
 
 #: ../bin/drakvpn-old:843
 #, c-format
@@ -2973,9 +3061,9 @@ msgid "Level"
 msgstr "级别"
 
 #: ../bin/drakvpn-old:843
-#, fuzzy, c-format
+#, c-format
 msgid "require"
-msgstr "需要 helo:"
+msgstr "必须"
 
 #: ../bin/drakvpn-old:843
 #, c-format
@@ -3115,9 +3203,9 @@ msgstr "设置"
 
 #. -PO: "Process" is a verb
 #: ../bin/net_applet:554
-#, fuzzy, c-format
+#, c-format
 msgid "Process attack"
-msgstr "服务攻击"
+msgstr "进程攻击"
 
 #: ../bin/net_applet:567
 #, c-format
@@ -3196,9 +3284,9 @@ msgstr "交互式防火墙: 新服务"
 
 #. -PO: "Process" is a verb
 #: ../bin/net_applet:646
-#, fuzzy, c-format
+#, c-format
 msgid "Process connection"
-msgstr "无线连接"
+msgstr "进程连接"
 
 #: ../bin/net_applet:668
 #, c-format
@@ -3528,9 +3616,9 @@ msgid "Ethernet"
 msgstr "以太网"
 
 #: ../lib/network/connection/ethernet.pm:29
-#, fuzzy, c-format
+#, c-format
 msgid "Virtual interface"
-msgstr "inet 网卡:"
+msgstr "虚拟网卡"
 
 #: ../lib/network/connection/ethernet.pm:59
 #, c-format
@@ -4155,9 +4243,9 @@ msgid "Encryption key"
 msgstr "加密密钥"
 
 #: ../lib/network/connection/wireless.pm:376
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Login/Username"
-msgstr "账户登录(用户名)"
+msgstr "EAP 登录/用户名"
 
 #: ../lib/network/connection/wireless.pm:378
 #, c-format
@@ -4168,9 +4256,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:381
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Password"
-msgstr "LDAP 密码:"
+msgstr "EAP 密码"
 
 #: ../lib/network/connection/wireless.pm:383
 #, c-format
@@ -4192,9 +4280,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:397
-#, fuzzy, c-format
+#, c-format
 msgid "EAP client certificate"
-msgstr "客户机身份:"
+msgstr "EAP 客户机证书"
 
 #: ../lib/network/connection/wireless.pm:399
 #, c-format
