@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
 "POT-Creation-Date: 2008-03-17 15:16+0100\n"
-"PO-Revision-Date: 2008-03-12 23:06+0800\n"
-"Last-Translator: You-Cheng Hsieh <yochenhsieh@gmail.com>\n"
+"PO-Revision-Date: 2008-03-30 11:20+0800\n"
+"Last-Translator: Shiva Huang <shivahuang@gmail.com>\n"
 "Language-Team: Traditional Chinese <zh@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -173,13 +173,13 @@ msgid "DHCP client"
 msgstr "DHCP 用戶端"
 
 #: ../bin/drakconnect-old:247
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This interface has not been configured yet.\n"
 "Run the \"%s\" assistant from the Mandriva Linux Control Center"
 msgstr ""
-"網路介面尚未設定。\n"
-"請從 Mandriva Linux 控制中心執行「增加網路介面」精靈"
+"此網路介面尚未設定。\n"
+"請從 Mandriva Linux 控制中心執行「%s」"
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:68
 #, c-format
@@ -210,7 +210,7 @@ msgstr "停用"
 #: ../bin/drakgw:71
 #, c-format
 msgid "Internet Connection Sharing"
-msgstr "Internet 連線分享"
+msgstr "Internet 連線共享"
 
 #: ../bin/drakgw:75
 #, c-format
@@ -225,7 +225,7 @@ msgid ""
 "Note: you need a dedicated Network Adapter to set up a Local Area Network "
 "(LAN)."
 msgstr ""
-"您目前正要設定讓您的電腦分享 Internet 連線分享。\n"
+"您目前正要設定讓您的電腦分享它的 Internet 連線。\n"
 "這個功能能夠讓其他區域網路內的電腦使用這台電腦的網路連線。\n"
 "\n"
 "請在繼續之前確定您已經使用 drakconnect 設定好您的網路連線。\n"
@@ -240,7 +240,7 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
-"Internet 連線分享的設定已經完成了。目前已經啟用了。\n"
+"Internet 連線共享的設定已經完成了。目前已經啟用了。\n"
 "\n"
 "您打算要做什麼呢？"
 
@@ -252,7 +252,7 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
-"Internet 連線分享的設定已經完成了。目前是停用的狀態。\n"
+"Internet 連線共享的設定已經完成了。目前是停用的狀態。\n"
 "\n"
 "您打算要做什麼呢？"
 
@@ -715,9 +715,9 @@ msgid "Date"
 msgstr "日期"
 
 #: ../bin/drakids:254
-#, fuzzy, c-format
+#, c-format
 msgid "Remote host"
-msgstr "遠端"
+msgstr "遠端主機"
 
 #: ../bin/drakids:255 ../lib/network/vpn/openvpn.pm:115
 #, c-format
@@ -1042,7 +1042,7 @@ msgstr "安全連線："
 #: ../bin/draknfs:173
 #, c-format
 msgid "Read-Only share:"
-msgstr "唯讀分享："
+msgstr "唯讀共享："
 
 #: ../bin/draknfs:174
 #, c-format
@@ -1105,7 +1105,7 @@ msgstr "Draknfs 項目"
 #: ../bin/draknfs:279
 #, c-format
 msgid "Please add an NFS share to be able to modify it."
-msgstr "請加入一個 NFS 分享來修改它。"
+msgstr "請加入一個 NFS 共享來修改它。"
 
 #: ../bin/draknfs:353 ../bin/draksambashare:598
 #, c-format
@@ -1156,7 +1156,7 @@ msgstr "匿名群組 ID："
 #: ../bin/draknfs:412
 #, c-format
 msgid "Please specify a directory to share."
-msgstr "請指定要分享的目錄。"
+msgstr "請指定要共享的目錄。"
 
 #: ../bin/draknfs:414
 #, c-format
@@ -1171,7 +1171,7 @@ msgstr "您必須指定主機存取。"
 #: ../bin/draknfs:497
 #, c-format
 msgid "Share Directory"
-msgstr "分享目錄"
+msgstr "共享目錄"
 
 #: ../bin/draknfs:497
 #, c-format
@@ -1192,7 +1192,7 @@ msgstr "自定選項"
 #: ../bin/draksambashare:792
 #, c-format
 msgid "Please enter a directory to share."
-msgstr "請輸入要分享的目錄。"
+msgstr "請輸入要共享的目錄。"
 
 #: ../bin/draknfs:516
 #, c-format
@@ -1202,27 +1202,27 @@ msgstr "請用變更按鈕來設定正確的存取權限。"
 #: ../bin/draknfs:531
 #, c-format
 msgid "Manage NFS shares"
-msgstr "管理 NFS 分享"
+msgstr "管理 NFS 共享"
 
 #: ../bin/draknfs:570
 #, c-format
 msgid "DrakNFS manage NFS shares"
-msgstr "DrakNFS 管理 NFS 分享"
+msgstr "DrakNFS 管理 NFS 共享"
 
 #: ../bin/draknfs:579
 #, c-format
 msgid "Failed to add NFS share."
-msgstr "無法新增 NFS 分享。"
+msgstr "無法新增 NFS 共享。"
 
 #: ../bin/draknfs:586
 #, c-format
 msgid "Failed to Modify NFS share."
-msgstr "無法變更 NFS 分享。"
+msgstr "無法變更 NFS 共享。"
 
 #: ../bin/draknfs:593
 #, c-format
 msgid "Failed to remove an NFS share."
-msgstr "無法移除 NFS 分享。"
+msgstr "無法移除 NFS 共享。"
 
 #: ../bin/drakproxy:36
 #, c-format
@@ -1242,7 +1242,7 @@ msgstr "共享名稱"
 #: ../bin/draksambashare:72 ../bin/draksambashare:100
 #, c-format
 msgid "Share directory"
-msgstr "分享的目錄"
+msgstr "共享的目錄"
 
 #: ../bin/draksambashare:73 ../bin/draksambashare:101
 #: ../bin/draksambashare:118
@@ -1411,22 +1411,22 @@ msgstr "/_Samba 伺服器"
 #: ../bin/draksambashare:179
 #, c-format
 msgid "/_Configure"
-msgstr "/設定(_C)"
+msgstr "/組態設定 (_C)"
 
 #: ../bin/draksambashare:183
 #, c-format
 msgid "/_Help"
-msgstr "/輔助說明(_H)"
+msgstr "/輔助說明 (_H)"
 
 #: ../bin/draksambashare:183
-#, fuzzy, c-format
+#, c-format
 msgid "/_Samba Documentation"
-msgstr "/Samba 文件"
+msgstr "/Samba 文件 (_S)"
 
 #: ../bin/draksambashare:189 ../bin/draksambashare:190
 #, c-format
 msgid "/_About"
-msgstr "/關於(_A)"
+msgstr "/關於 (_A)"
 
 #: ../bin/draksambashare:189
 #, c-format
@@ -1490,12 +1490,12 @@ msgstr "DrakSamba 新增項目"
 #: ../bin/draksambashare:376
 #, c-format
 msgid "Add a share"
-msgstr "新增一個分享"
+msgstr "新增一個共享"
 
 #: ../bin/draksambashare:379
 #, c-format
 msgid "Name of the share:"
-msgstr "分享的名稱："
+msgstr "此共享的名稱："
 
 #: ../bin/draksambashare:380 ../bin/draksambashare:587
 #: ../bin/draksambashare:768
@@ -1508,7 +1508,7 @@ msgstr "註解："
 msgid ""
 "Share with the same name already exist or share name empty, please choose "
 "another name."
-msgstr "同名的分享已經存在或未輸入分享名稱，請選擇其他名稱。"
+msgstr "已經存在有同名的共享或共享名稱為空白，請選擇其他名稱。"
 
 #: ../bin/draksambashare:399
 #, c-format
@@ -1519,7 +1519,7 @@ msgstr "無法建立該目錄，請輸入正確路徑。"
 #: ../bin/draksambashare:790
 #, c-format
 msgid "Please enter a Comment for this share."
-msgstr "請輸入這個分享的註解。"
+msgstr "請輸入這個共享的註解。"
 
 #: ../bin/draksambashare:439
 #, c-format
@@ -1534,13 +1534,13 @@ msgstr "printers - 所有可用的印表機"
 #: ../bin/draksambashare:444
 #, c-format
 msgid "Add Special Printer share"
-msgstr "新增特定的印表機分享"
+msgstr "新增特定的印表機共享"
 
 #: ../bin/draksambashare:447
 #, c-format
 msgid ""
 "Goal of this wizard is to easily create a new special printer Samba share."
-msgstr "這個精靈的目標是為了便於建立一個新的特定印表機分享。"
+msgstr "這個精靈的目標是為了便於建立一個新的特定印表機共享。"
 
 #: ../bin/draksambashare:454
 #, c-format
@@ -1560,12 +1560,12 @@ msgstr "恭喜"
 #: ../bin/draksambashare:529
 #, c-format
 msgid "The wizard successfully added the printer Samba share"
-msgstr "精靈已經成功地新增了 Samba 印表機分享"
+msgstr "精靈已經成功地新增了 Samba 印表機共享"
 
 #: ../bin/draksambashare:551
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
-msgstr "請新增或選擇一個 Samba 印表機分享來變更它。"
+msgstr "請新增或選擇一個 Samba 印表機共享來變更它。"
 
 #: ../bin/draksambashare:570
 #, c-format
@@ -1575,7 +1575,7 @@ msgstr "DrakSamba 印表機項目"
 #: ../bin/draksambashare:583
 #, c-format
 msgid "Printer share"
-msgstr "印表機分享"
+msgstr "印表機共享"
 
 #: ../bin/draksambashare:586
 #, c-format
@@ -1640,7 +1640,7 @@ msgstr "DrakSamba 項目"
 #: ../bin/draksambashare:696
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
-msgstr "請新增或選擇一個 Samba 分享來變更它。"
+msgstr "請新增或選擇一個 Samba 共享來變更它。"
 
 #: ../bin/draksambashare:719
 #, c-format
@@ -1660,12 +1660,12 @@ msgstr "顯示選項"
 #: ../bin/draksambashare:763
 #, c-format
 msgid "Samba share directory"
-msgstr "Samba 分享目錄"
+msgstr "Samba 共享目錄"
 
 #: ../bin/draksambashare:766
 #, c-format
 msgid "Share name:"
-msgstr "分享名稱："
+msgstr "共享名稱："
 
 #: ../bin/draksambashare:772
 #, c-format
@@ -1706,12 +1706,12 @@ msgstr "密碼："
 #: ../bin/draksambashare:1047
 #, c-format
 msgid "PDC - primary domain controller"
-msgstr ""
+msgstr "PDC - 網域主控者"
 
 #: ../bin/draksambashare:1048
 #, c-format
 msgid "Standalone - standalone server"
-msgstr ""
+msgstr "Standalone - 獨立伺服器"
 
 #: ../bin/draksambashare:1054
 #, c-format
@@ -1729,11 +1729,12 @@ msgid ""
 "Samba allows your server to behave as a file and print server for "
 "workstations running non-Linux systems."
 msgstr ""
+"Samba 允許您的伺服器為非 Linux 系統的工作站提供檔案與列印伺服功能。"
 
 #: ../bin/draksambashare:1073
 #, c-format
 msgid "PDC server: primary domain controller"
-msgstr ""
+msgstr "PDC 伺服器：網域主控者"
 
 #: ../bin/draksambashare:1073
 #, c-format
@@ -1741,12 +1742,14 @@ msgid ""
 "Server configured as a PDC is responsible for Windows authentication "
 "throughout the domain."
 msgstr ""
+"設定為 PDC 的伺服器將負責此網域的 Windows 認證。"
 
 #: ../bin/draksambashare:1073
 #, c-format
 msgid ""
 "Single server installations may use smbpasswd or tdbsam password backends"
 msgstr ""
+"單一伺服器安裝可以使用 smbpasswd 或 tdbsam 的密碼後端"
 
 #: ../bin/draksambashare:1073
 #, c-format
@@ -1758,7 +1761,7 @@ msgstr ""
 #: ../bin/draksambashare:1090
 #, c-format
 msgid "Wins support:"
-msgstr ""
+msgstr "Wins 支援："
 
 #: ../bin/draksambashare:1091
 #, c-format
@@ -1768,12 +1771,12 @@ msgstr "管理者："
 #: ../bin/draksambashare:1091
 #, c-format
 msgid "root @adm"
-msgstr ""
+msgstr "root @adm"
 
 #: ../bin/draksambashare:1092
 #, c-format
 msgid "Os level:"
-msgstr ""
+msgstr "系統等級："
 
 #: ../bin/draksambashare:1092
 #, c-format
@@ -1788,7 +1791,7 @@ msgstr ""
 #: ../bin/draksambashare:1096
 #, c-format
 msgid "The domain is wrong."
-msgstr ""
+msgstr "網域錯誤。"
 
 #: ../bin/draksambashare:1103
 #, c-format
@@ -1798,7 +1801,7 @@ msgstr "工作群組"
 #: ../bin/draksambashare:1103
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
-msgstr ""
+msgstr "Samba 需要知道它要服務的 Windows 工作群組。"
 
 #: ../bin/draksambashare:1110 ../bin/draksambashare:1174
 #, c-format
@@ -1813,7 +1816,7 @@ msgstr "Netbios 名稱："
 #: ../bin/draksambashare:1115
 #, c-format
 msgid "The Workgroup is wrong."
-msgstr ""
+msgstr "工作群組錯誤。"
 
 #: ../bin/draksambashare:1122 ../bin/draksambashare:1132
 #, c-format
@@ -1848,7 +1851,7 @@ msgstr "主機名稱"
 #: ../bin/draksambashare:1138
 #, c-format
 msgid "Server Banner."
-msgstr ""
+msgstr "伺服器標語。"
 
 #: ../bin/draksambashare:1138
 #, c-format
@@ -1856,16 +1859,17 @@ msgid ""
 "The banner is the way this server will be described in the Windows "
 "workstations."
 msgstr ""
+"此標語是在 Windows 工作站中描述這台伺服器的方式。"
 
 #: ../bin/draksambashare:1143
 #, c-format
 msgid "Banner:"
-msgstr ""
+msgstr "標語："
 
 #: ../bin/draksambashare:1147
 #, c-format
 msgid "The Server Banner is incorrect."
-msgstr ""
+msgstr "伺服器標語不正確。"
 
 #: ../bin/draksambashare:1154
 #, c-format
@@ -1878,16 +1882,17 @@ msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
 "connects"
 msgstr ""
+"記錄檔：使用 file.%m 來為每台連線的機器使用不同的記錄檔"
 
 #: ../bin/draksambashare:1154
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
-msgstr ""
+msgstr "記錄等級：設定記錄 (詳細) 等級 ((0 <= 記錄等級 <= 10)"
 
 #: ../bin/draksambashare:1154
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
+msgstr "最大記錄大小：設定記錄檔大小的上限 (單位為 Kb)。"
 
 #: ../bin/draksambashare:1161 ../bin/draksambashare:1176
 #, c-format
@@ -1897,7 +1902,7 @@ msgstr "紀錄檔："
 #: ../bin/draksambashare:1162
 #, c-format
 msgid "Max log size:"
-msgstr ""
+msgstr "最大記錄大小："
 
 #: ../bin/draksambashare:1163
 #, c-format
@@ -1907,7 +1912,7 @@ msgstr "紀錄等級："
 #: ../bin/draksambashare:1168
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
+msgstr "此精靈收集了以下的參數來設定 Samba。"
 
 #: ../bin/draksambashare:1168
 #, c-format
@@ -1915,6 +1920,7 @@ msgid ""
 "To accept these values, and configure your server, click the Next button or "
 "use the Back button to correct them."
 msgstr ""
+"要接受這些數值並設定您的伺服器，請點選下一步，或者點選上一步來修正它們。"
 
 #: ../bin/draksambashare:1168
 #, c-format
@@ -1922,6 +1928,8 @@ msgid ""
 "If you have previously create some shares, they will appear in this "
 "configuration. Run 'drakwizard sambashare' to manage your shares."
 msgstr ""
+"如果您之前已經建立了一些共享，它們會出現在此設定中。執行 'drakwizard sambashare' "
+"來管理您的共享"
 
 #: ../bin/draksambashare:1173
 #, c-format
@@ -1931,7 +1939,7 @@ msgstr "Samba 類型："
 #: ../bin/draksambashare:1175
 #, c-format
 msgid "Server banner:"
-msgstr ""
+msgstr "伺服器標語："
 
 #: ../bin/draksambashare:1191
 #, c-format
@@ -1941,7 +1949,7 @@ msgstr "精靈已經成功地設定 Samba 伺服器。"
 #: ../bin/draksambashare:1246
 #, c-format
 msgid "The Samba wizard has unexpectedly failed:"
-msgstr ""
+msgstr "Samba 精靈遇到了未預期的錯誤："
 
 #: ../bin/draksambashare:1260
 #, c-format
@@ -1951,17 +1959,17 @@ msgstr "管理 Samba 組態設定"
 #: ../bin/draksambashare:1348
 #, c-format
 msgid "Failed to Modify Samba share."
-msgstr "無法變更 Samba 分享。"
+msgstr "無法變更 Samba 共享。"
 
 #: ../bin/draksambashare:1357
 #, c-format
 msgid "Failed to remove a Samba share."
-msgstr "無法移除 Samba 分享。"
+msgstr "無法移除 Samba 共享。"
 
 #: ../bin/draksambashare:1364
 #, c-format
 msgid "File share"
-msgstr "檔案分享"
+msgstr "檔案共享"
 
 #: ../bin/draksambashare:1379
 #, c-format
@@ -2018,7 +2026,7 @@ msgstr ""
 #: ../bin/draksambashare:1457
 #, c-format
 msgid "DrakSamba manage Samba shares"
-msgstr "DrakSamba 管理 Samba 分享"
+msgstr "DrakSamba 管理 Samba 共享"
 
 #: ../bin/drakvpn-old:65
 #, c-format
@@ -4659,7 +4667,7 @@ msgstr "Telnet 伺服器"
 #: ../lib/network/drakfirewall.pm:48
 #, c-format
 msgid "Windows Files Sharing (SMB)"
-msgstr "Wndows 檔案分享 (SMB)"
+msgstr "Wndows 檔案共享 (SMB)"
 
 #: ../lib/network/drakfirewall.pm:54
 #, c-format
