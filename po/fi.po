@@ -2,23 +2,24 @@
 #
 # Copyright (C) 2002,2003, 2004, 2005 Free Software Foundation, Inc.
 # Copyright (C) 2002 Mandriva
+#
+#
 # Matias Griese <mahagr@utu.fi>, 2001.
 # Taisto Kuikka <69319@batman.jypoly.fi>, 2003,2004.
 # Esa Linna <denzo@mbnet.fi>, 2004.
 # Thomas Backlund <tmb@mandrake.org>, 2002, 2003, 2004, 2005.
-#
-#
+# Anssi Hannula <anssi@mandriva.org>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-fi - LE2005 Release\n"
 "POT-Creation-Date: 2008-03-17 15:16+0100\n"
-"PO-Revision-Date: 2005-04-03 20:59+0300\n"
-"Last-Translator: Thomas Backlund <tmb@mandrake.org>\n"
+"PO-Revision-Date: 2008-03-31 17:45+0300\n"
+"Last-Translator: Anssi Hannula <anssi@mandriva.org>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../bin/drakconnect-old:45
 #, c-format
@@ -164,13 +165,13 @@ msgid "DHCP client"
 msgstr "DHCP-asiakas"
 
 #: ../bin/drakconnect-old:247
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This interface has not been configured yet.\n"
 "Run the \"%s\" assistant from the Mandriva Linux Control Center"
 msgstr ""
 "Tätä liitäntää ei ole vielä asetettu.\n"
-"Suorita Mandriva Linux Ohjauskeskuksesta \"Lisää liitäntä\"."
+"Suorita \"%s\"-avustaja Mandriva Linux Ohjauskeskuksesta"
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:68
 #, c-format
@@ -270,7 +271,7 @@ msgstr "Aseta uudelleen"
 #: ../bin/drakgw:122
 #, c-format
 msgid "Please select the network interface directly connected to the internet."
-msgstr ""
+msgstr "Valitse verkkoliitäntä, joka on suoraan internetiin suoraan."
 
 #: ../bin/drakgw:123 ../lib/network/netconnect.pm:363
 #: ../lib/network/netconnect.pm:398
@@ -301,14 +302,14 @@ msgid ""
 msgstr "Valitse verkkokortti, joka on kytketty paikallisverkkoon."
 
 #: ../bin/drakgw:173
-#, fuzzy, c-format
+#, c-format
 msgid "Local Area Network settings"
-msgstr "Paikallisverkko-osoite"
+msgstr "Paikallisverkkon asetukset"
 
 #: ../bin/drakgw:176 ../lib/network/vpn/openvpn.pm:227
-#, fuzzy, c-format
+#, c-format
 msgid "Local IP address"
-msgstr "IP-osoite"
+msgstr "Paikallinen IP-osoite"
 
 #: ../bin/drakgw:178
 #, c-format
@@ -353,18 +354,17 @@ msgstr "Virhe"
 #: ../bin/drakgw:184
 #, c-format
 msgid "Potential LAN address conflict found in current config of %s!\n"
-msgstr ""
-"Mahdollinen lähiverkon osoiteristiriita löydetty nykyisillä asetuksilla %s!\n"
+msgstr "Mahdollinen lähiverkon osoiteristiriita löydetty nykyisillä asetuksilla %s!\n"
 
 #: ../bin/drakgw:200
-#, fuzzy, c-format
+#, c-format
 msgid "Domain Name Server (DNS) configuration"
-msgstr "Päätepalvelimen asetukset"
+msgstr "Nimipalvelinasetukset (DNS)"
 
 #: ../bin/drakgw:204
 #, c-format
 msgid "Use this gateway as domain name server"
-msgstr ""
+msgstr "Käytä tätä yhdyskäytävää nimipalvelimena"
 
 #: ../bin/drakgw:205
 #, c-format
@@ -385,9 +385,9 @@ msgstr ""
 "Jos et tiedä jonkun option tarkoitusta, jätä se oletusarvoonsa."
 
 #: ../bin/drakgw:239
-#, fuzzy, c-format
+#, c-format
 msgid "Use automatic configuration (DHCP)"
-msgstr "Automaattinen uudelleenasetus"
+msgstr "Käytä automaattisia asetuksia (DHCP)"
 
 #: ../bin/drakgw:240
 #, c-format
@@ -412,22 +412,22 @@ msgstr "Maksimi käyttöaika (sekunneissa)"
 #: ../bin/drakgw:266
 #, c-format
 msgid "Proxy caching server (SQUID)"
-msgstr ""
+msgstr "Välitysvälimuistipalvelin (SQUID)"
 
 #: ../bin/drakgw:270
 #, c-format
 msgid "Use this gateway as proxy caching server"
-msgstr ""
+msgstr "Käytä tätä yhdyskäytävää välitysvälimuistipalvelimena"
 
 #: ../bin/drakgw:271
 #, c-format
 msgid "Admin mail"
-msgstr ""
+msgstr "Ylläpitäjän sähköpostiosoite"
 
 #: ../bin/drakgw:272
-#, fuzzy, c-format
+#, c-format
 msgid "Visible hostname"
-msgstr "Etäkoneen verkkonimi"
+msgstr "Näkyvä konenimi"
 
 #: ../bin/drakgw:273
 #, c-format
@@ -435,22 +435,21 @@ msgid "Proxy port"
 msgstr "Välityspalvelimen portti:"
 
 #: ../bin/drakgw:274
-#, fuzzy, c-format
+#, c-format
 msgid "Cache size (MB)"
-msgstr "Välimuistin koko"
+msgstr "Välimuistin koko (Mt)"
 
 #: ../bin/drakgw:296
-#, fuzzy, c-format
+#, c-format
 msgid "Broadcast printer information"
-msgstr "Kiintolevyn tiedot"
+msgstr "Yleislähetä tulostintiedot (broadcast)"
 
 #: ../bin/drakgw:307
 #, c-format
 msgid ""
 "No ethernet network adapter has been detected on your system. Please run the "
 "hardware configuration tool."
-msgstr ""
-"Koneestasi ei löytynyt yhtään verkkokorttia. Aja laitteistonasetustyökalu."
+msgstr "Koneestasi ei löytynyt yhtään verkkokorttia. Aja laitteistonasetustyökalu."
 
 #: ../bin/drakgw:313
 #, c-format
@@ -502,27 +501,27 @@ msgstr "Asetetaan..."
 #: ../bin/drakgw:380
 #, c-format
 msgid "Configuring firewall..."
-msgstr ""
+msgstr "Asetetaan palomuuri..."
 
 #: ../bin/drakhosts:100
 #, c-format
 msgid "Please add an host to be able to modify it."
-msgstr ""
+msgstr "Lisää verkko-osoite ennen sen muokkaamista."
 
 #: ../bin/drakhosts:110
-#, fuzzy, c-format
+#, c-format
 msgid "Please modify information"
-msgstr "Yksityiskohtaiset tiedot"
+msgstr "Muokkaa tietoja"
 
 #: ../bin/drakhosts:111
-#, fuzzy, c-format
+#, c-format
 msgid "Please delete information"
-msgstr "Yksityiskohtaiset tiedot"
+msgstr "Poista tietoja"
 
 #: ../bin/drakhosts:112
-#, fuzzy, c-format
+#, c-format
 msgid "Please add information"
-msgstr "Yksityiskohtaiset tiedot"
+msgstr "Lisää tietoja"
 
 #: ../bin/drakhosts:116
 #, c-format
@@ -535,9 +534,9 @@ msgid "Host name:"
 msgstr "Palvelimen osoite:"
 
 #: ../bin/drakhosts:118
-#, fuzzy, c-format
+#, c-format
 msgid "Host Aliases:"
-msgstr "Konenimi"
+msgstr "Osoite-aliakset:"
 
 #: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:229
 #: ../bin/draksambashare:250 ../bin/draksambashare:396
@@ -552,9 +551,9 @@ msgid "Please enter a valid IP address."
 msgstr "Ole hyvä ja syötä pätevän IP-osoitteen."
 
 #: ../bin/drakhosts:128
-#, fuzzy, c-format
+#, c-format
 msgid "Same IP is already in %s file."
-msgstr "%s on jo käytössä\n"
+msgstr "Sama IP on jo %s-tiedostossa."
 
 #: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:209
 #, c-format
@@ -562,9 +561,9 @@ msgid "Host name"
 msgstr "Konenimi"
 
 #: ../bin/drakhosts:196
-#, fuzzy, c-format
+#, c-format
 msgid "Host Aliases"
-msgstr "Konenimi"
+msgstr "Osoite-aliakset"
 
 #: ../bin/drakhosts:206 ../bin/drakhosts:236
 #, c-format
@@ -574,7 +573,7 @@ msgstr "Hallitse koneiden määritykset"
 #: ../bin/drakhosts:222 ../bin/drakhosts:249
 #, c-format
 msgid "Modify entry"
-msgstr ""
+msgstr "Muokkaa tietuetta"
 
 #: ../bin/drakhosts:241 ../bin/draknfs:575 ../bin/draksambashare:1341
 #: ../bin/draksambashare:1372 ../bin/draksambashare:1403
@@ -584,14 +583,14 @@ msgid "Add"
 msgstr "Lisää"
 
 #: ../bin/drakhosts:242
-#, fuzzy, c-format
+#, c-format
 msgid "Add entry"
-msgstr "Lisää tulostin"
+msgstr "Lisää tietue"
 
 #: ../bin/drakhosts:245
 #, c-format
 msgid "Failed to add host."
-msgstr ""
+msgstr "Verkkonimeä ei voitu lisätä."
 
 #: ../bin/drakhosts:248 ../bin/draknfs:582 ../bin/draksambashare:1298
 #: ../bin/draksambashare:1343 ../bin/draksambashare:1374
@@ -603,7 +602,7 @@ msgstr "Muokkaa"
 #: ../bin/drakhosts:252
 #, c-format
 msgid "Failed to Modify host."
-msgstr ""
+msgstr "Verkkonimeä ei voitu muokata."
 
 #: ../bin/drakhosts:255 ../bin/drakids:92 ../bin/drakids:101
 #: ../bin/draknfs:589 ../bin/draksambashare:1299 ../bin/draksambashare:1351
@@ -616,7 +615,7 @@ msgstr "Poista"
 #: ../bin/drakhosts:259
 #, c-format
 msgid "Failed to remove host."
-msgstr ""
+msgstr "Verkkonimeä ei voitu poistaa."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:147
 #: ../bin/net_applet:137 ../lib/network/drakroam.pm:117
@@ -627,25 +626,25 @@ msgstr "Lopeta"
 
 # Asennuksen sivuvalikko
 #: ../bin/drakids:28
-#, fuzzy, c-format
+#, c-format
 msgid "Allowed addresses"
-msgstr "Salli kaikille käyttäjille"
+msgstr "Sallitut osoitteet"
 
 #: ../bin/drakids:40 ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196
 #: ../bin/drakids:221 ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
 #: ../bin/net_applet:76 ../bin/net_applet:239 ../bin/net_applet:515
 #: ../bin/net_applet:543 ../lib/network/drakfirewall.pm:259
 #: ../lib/network/drakfirewall.pm:263
-#, fuzzy, c-format
+#, c-format
 msgid "Interactive Firewall"
-msgstr "Palomuuri"
+msgstr "Interaktiivinen palomuuri"
 
 #: ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196 ../bin/drakids:221
 #: ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
 #: ../bin/net_applet:239 ../bin/net_applet:515
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to contact daemon"
-msgstr "Yhteyttä peilipalvelimeen %s ei voitu muodostaa"
+msgstr "Yhteyttä taustaprosessiin voitu muodostaa"
 
 #: ../bin/drakids:79 ../bin/drakids:107
 #, c-format
@@ -653,14 +652,14 @@ msgid "Log"
 msgstr "Loki"
 
 #: ../bin/drakids:83 ../bin/drakids:102 ../bin/net_applet:673
-#, fuzzy, c-format
+#, c-format
 msgid "Allow"
-msgstr "Kaikki"
+msgstr "Salli"
 
 #: ../bin/drakids:84 ../bin/drakids:93 ../bin/net_applet:674
 #, c-format
 msgid "Block"
-msgstr ""
+msgstr "Estä"
 
 #: ../bin/drakids:85 ../bin/drakids:94 ../bin/drakids:103 ../bin/drakids:114
 #: ../bin/drakids:127 ../bin/drakids:135 ../bin/draknfs:191
@@ -671,44 +670,44 @@ msgstr "Sulje"
 
 # Asennuksen sivuvalikko
 #: ../bin/drakids:88
-#, fuzzy, c-format
+#, c-format
 msgid "Allowed services"
-msgstr "Salli kaikille käyttäjille"
+msgstr "Sallitut palvelut"
 
 #: ../bin/drakids:97
-#, fuzzy, c-format
+#, c-format
 msgid "Blocked services"
-msgstr "Varmuuskopioi käyttäjätiedostot"
+msgstr "Estetyt palvelut"
 
 #: ../bin/drakids:111
-#, fuzzy, c-format
+#, c-format
 msgid "Clear logs"
-msgstr "Tyhjennä kaikki"
+msgstr "Tyhjennä lokitiedostot"
 
 #: ../bin/drakids:112 ../bin/drakids:117 ../bin/net_applet:612
 #, c-format
 msgid "Blacklist"
-msgstr ""
+msgstr "Kielletty lista"
 
 #: ../bin/drakids:113 ../bin/drakids:130 ../bin/net_applet:617
 #, c-format
 msgid "Whitelist"
-msgstr ""
+msgstr "Sallittu lista"
 
 #: ../bin/drakids:121
-#, fuzzy, c-format
+#, c-format
 msgid "Remove from blacklist"
-msgstr "Poista LVM:stä"
+msgstr "Poista kieltolistalta"
 
 #: ../bin/drakids:122
 #, c-format
 msgid "Move to whitelist"
-msgstr ""
+msgstr "Siirrä sallittuihin"
 
 #: ../bin/drakids:134
-#, fuzzy, c-format
+#, c-format
 msgid "Remove from whitelist"
-msgstr "Poista LVM:stä"
+msgstr "Poista sallituista"
 
 #: ../bin/drakids:253
 #, c-format
@@ -716,7 +715,7 @@ msgid "Date"
 msgstr "Päiväys"
 
 #: ../bin/drakids:254
-#, fuzzy, c-format
+#, c-format
 msgid "Remote host"
 msgstr "Etäkone"
 
@@ -746,56 +745,56 @@ msgid "Status"
 msgstr "Tila"
 
 #: ../bin/drakids:292
-#, fuzzy, c-format
+#, c-format
 msgid "Allowed"
-msgstr "Kaikki"
+msgstr "Sallittu"
 
 #: ../bin/drakids:293
 #, c-format
 msgid "Blocked"
-msgstr ""
+msgstr "Estetty"
 
 #: ../bin/drakinvictus:36
 #, c-format
 msgid "Invictus Firewall"
-msgstr "Invictus Palomuuri"
+msgstr "Invictus -palomuuri"
 
 #: ../bin/drakinvictus:53
-#, fuzzy, c-format
+#, c-format
 msgid "Start as master"
-msgstr "Käynnistetty koneen käynnistämisen yhteydessä"
+msgstr "Käynnistä isäntänä (master)"
 
 #: ../bin/drakinvictus:72
-#, fuzzy, c-format
+#, c-format
 msgid "A password is required."
-msgstr "Salasana vaaditaan"
+msgstr "Salasana tarvitaan."
 
 #: ../bin/drakinvictus:100
 #, c-format
 msgid ""
 "This tool allows to set up network interfaces failover and firewall "
 "replication."
-msgstr ""
+msgstr "Tämä työkalu sallii verkkoliitäntöjen failover- ja palomuurireplikaatioasetusten tekemisen."
 
 #: ../bin/drakinvictus:102
 #, c-format
 msgid "Network redundancy (leave empty if interface is not used)"
-msgstr ""
+msgstr "Verkon redundanssi (jätä tyhjäksi, jos liitäntä ei ole käytössä)"
 
 #: ../bin/drakinvictus:105
-#, fuzzy, c-format
+#, c-format
 msgid "Real address"
-msgstr "MAC-osoite"
+msgstr "Oikea osoite"
 
 #: ../bin/drakinvictus:105
-#, fuzzy, c-format
+#, c-format
 msgid "Virtual shared address"
-msgstr "Sainfo lähdeosoite"
+msgstr "Näennäinen jaettu osoite"
 
 #: ../bin/drakinvictus:105
 #, c-format
 msgid "Virtual ID"
-msgstr ""
+msgstr "Näennäis-ID"
 
 #: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:599
 #: ../lib/network/vpn/vpnc.pm:56
@@ -804,34 +803,34 @@ msgid "Password"
 msgstr "Salasana"
 
 #: ../bin/drakinvictus:114
-#, fuzzy, c-format
+#, c-format
 msgid "Firewall replication"
-msgstr "Lopullinen tarkkuus"
+msgstr "Palomuurin replikointi"
 
 #: ../bin/drakinvictus:116
 #, c-format
 msgid "Synchronize firewall conntrack tables"
-msgstr ""
+msgstr "Synkronoi palomuurin conntrack-taulut"
 
 #: ../bin/drakinvictus:123
-#, fuzzy, c-format
+#, c-format
 msgid "Synchronization network interface"
-msgstr "Synkronointityökalu"
+msgstr "Synkronoinnin verkkoliitäntä"
 
 #: ../bin/drakinvictus:132
-#, fuzzy, c-format
+#, c-format
 msgid "Connection mark bit"
-msgstr "Yhteys"
+msgstr "Yhteyden merkintäbitti"
 
 #: ../bin/draknetprofile:36
-#, fuzzy, c-format
+#, c-format
 msgid "Network profiles"
-msgstr "Verkko-optiot"
+msgstr "Verkkoprofiilit"
 
 #: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#, c-format
 msgid "Profile"
-msgstr "Profiilit"
+msgstr "Profiili"
 
 #: ../bin/draknetprofile:99
 #, c-format
@@ -843,8 +842,7 @@ msgstr "Uusi profiili..."
 msgid ""
 "Name of the profile to create (the new profile is created as a copy of the "
 "current one):"
-msgstr ""
-"Luotavan profiilin nimi (käytössä oleva kopiodaan uudeksi profiiliksi):"
+msgstr "Luotavan profiilin nimi (käytössä oleva kopiodaan uudeksi profiiliksi):"
 
 #: ../bin/draknetprofile:113
 #, c-format
@@ -861,7 +859,7 @@ msgstr "Varoitus"
 #: ../bin/draknetprofile:129
 #, c-format
 msgid "You can not delete the default profile"
-msgstr ""
+msgstr "Et voi poistaa oletusprofiilia"
 
 #: ../bin/draknetprofile:131
 #, c-format
@@ -873,12 +871,12 @@ msgstr "Et voi poistaa käytössä olevaa profiilia"
 msgid ""
 "This tool allows to activate an existing network profile, and to manage "
 "(clone, delete) profiles."
-msgstr ""
+msgstr "Tällä työkalulla voit aktivoida olemassaolevan verkkoprofiilin ja hallita profiileja."
 
 #: ../bin/draknetprofile:141
 #, c-format
 msgid "To modify a profile, you have to activate it first."
-msgstr ""
+msgstr "Profiilin muokkaamiseksi aktivoi se ensin."
 
 #: ../bin/draknetprofile:144
 #, c-format
@@ -886,9 +884,9 @@ msgid "Activate"
 msgstr "Ota käyttöön"
 
 #: ../bin/draknetprofile:145
-#, fuzzy, c-format
+#, c-format
 msgid "Clone"
-msgstr "Yhdistä"
+msgstr "Kopioi"
 
 #: ../bin/draknetprofile:146
 #, c-format
@@ -898,22 +896,22 @@ msgstr "Poista"
 #: ../bin/draknfs:44
 #, c-format
 msgid "map root user as anonymous"
-msgstr ""
+msgstr "kartoita pääkäyttäjä anonymous-käyttäjäksi"
 
 #: ../bin/draknfs:45
 #, c-format
 msgid "map all users to anonymous user"
-msgstr ""
+msgstr "kartoita kaikki käyttäjät anonymous-käyttäjäksi"
 
 #: ../bin/draknfs:46
 #, c-format
 msgid "No user UID mapping"
-msgstr ""
+msgstr "Ei käyttäjä-ID -kartoitusta"
 
 #: ../bin/draknfs:47
 #, c-format
 msgid "allow real remote root access"
-msgstr ""
+msgstr "salli oikea etäpääkäyttäjä-pääsy (remote root access)"
 
 #: ../bin/draknfs:61 ../bin/draknfs:62 ../bin/draknfs:63
 #: ../bin/draksambashare:174 ../bin/draksambashare:175
@@ -925,7 +923,7 @@ msgstr "/_Tiedosto"
 #: ../bin/draknfs:62 ../bin/draksambashare:175
 #, c-format
 msgid "/_Write conf"
-msgstr ""
+msgstr "/T_allenna asetukset"
 
 #: ../bin/draknfs:63 ../bin/draksambashare:176
 #, c-format
@@ -938,19 +936,19 @@ msgid "<control>Q"
 msgstr "<control>L"
 
 #: ../bin/draknfs:66 ../bin/draknfs:67 ../bin/draknfs:68
-#, fuzzy, c-format
+#, c-format
 msgid "/_NFS Server"
-msgstr "Nimipalvelimet"
+msgstr "/_NFS-palvelin"
 
 #: ../bin/draknfs:67 ../bin/draksambashare:180
 #, c-format
 msgid "/_Restart"
-msgstr ""
+msgstr "/_Käynnistä uudelleen"
 
 #: ../bin/draknfs:68 ../bin/draksambashare:181
 #, c-format
 msgid "/R_eload"
-msgstr ""
+msgstr "/Lataa _uudelleen"
 
 #: ../bin/draknfs:87
 #, c-format
@@ -960,17 +958,17 @@ msgstr "NFS-palvelin"
 #: ../bin/draknfs:87
 #, c-format
 msgid "Restarting/Reloading NFS server..."
-msgstr ""
+msgstr "Uudelleenkäynnistetään/ladataan NFS-palvelin..."
 
 #: ../bin/draknfs:88
 #, c-format
 msgid "Error Restarting/Reloading NFS server"
-msgstr ""
+msgstr "Virhe NFS-palvelinta uudelleenkäynnistettäessä/ladattaessa"
 
 #: ../bin/draknfs:104 ../bin/draksambashare:245
 #, c-format
 msgid "Directory Selection"
-msgstr ""
+msgstr "Hakemiston valinta"
 
 #: ../bin/draknfs:109 ../bin/draksambashare:250
 #, c-format
@@ -1539,8 +1537,7 @@ msgstr ""
 
 #: ../bin/draksambashare:447
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
 msgstr ""
 
 #: ../bin/draksambashare:454
@@ -1675,8 +1672,7 @@ msgstr "Julkinen :"
 
 #: ../bin/draksambashare:796
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 
 #: ../bin/draksambashare:803
@@ -1745,8 +1741,7 @@ msgstr ""
 
 #: ../bin/draksambashare:1073
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
 msgstr ""
 
 #: ../bin/draksambashare:1073
@@ -5776,8 +5771,7 @@ msgstr ""
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
 #, c-format
-msgid ""
-"These packages can be found in %s, or in the official %s package repository."
+msgid "These packages can be found in %s, or in the official %s package repository."
 msgstr ""
 
 #: ../lib/network/thirdparty.pm:154
@@ -6118,3 +6112,4 @@ msgstr ""
 
 #~ msgid "Get Online Help"
 #~ msgstr "Verkossa olevat ohjeet"
+
