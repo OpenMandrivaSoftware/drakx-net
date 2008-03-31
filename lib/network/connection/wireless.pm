@@ -336,7 +336,9 @@ sub guess_network_access_settings {
     $ifcfg ||= {};
 
     $self->{access}{network}{essid} = $network && $network->{essid} || $ifcfg->{WIRELESS_ESSID} || !$network && "any";
-    ($self->{access}{network}{key}, my $restricted) = get_wep_key_from_iwconfig($ifcfg->{WIRELESS_ENC_KEY});
+    ($self->{access}{network}{key}, my $restricted, $self->{access}{network}{force_ascii_key}) =
+      get_wep_key_from_iwconfig($ifcfg->{WIRELESS_ENC_KEY});
+
     $self->{access}{network}{encryption} =
       $network && $network->{flags} =~ /eap/i ?
         'wpa-eap' :
@@ -373,6 +375,13 @@ sub get_network_access_settings {
           sort => 1, format => sub { translate($wireless_enc_modes{$_[0]}) } },
         { label => N("Encryption key"), val => \$self->{access}{network}{key},
           disabled => sub { member($self->{access}{network}{encryption}, qw(none wpa-eap)) } },
+        { text => N("Force using this key as ASCII string (e.g. for Livebox)"),
+          type => "bool", val => \$self->{access}{network}{force_ascii_key},
+          disabled => sub {
+              #- only for WEP keys looking like hexadecimal
+              !member($self->{access}{network}{encryption}, qw(open restricted)) ||
+              !get_hex_key($self->{access}{network}{key});
+          } },
         { label => N("EAP Login/Username"), val => \$self->{access}{network}{eap_identity},
           disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
 	  help => N("The login or username. Format is plain text. If you
@@ -556,7 +565,7 @@ sub build_ifcfg_settings {
         ),
         WIRELESS_ESSID => $self->{access}{network}{essid},
         if_($self->{access}{network}{encryption} ne 'none',
-            WIRELESS_ENC_KEY => convert_wep_key_for_iwconfig($self->{access}{network}{key}, $self->{access}{network}{encryption} eq 'restricted')),
+            WIRELESS_ENC_KEY => convert_wep_key_for_iwconfig($self->{access}{network}{key}, $self->{access}{network}{encryption} eq 'restricted', $self->{access}{network}{force_ascii_key})),
         if_($self->need_rt2x00_iwpriv,
             #- use iwpriv for WPA with rt2400/rt2500 drivers, they don't plan to support wpa_supplicant
             WIRELESS_IWPRIV => qq(set AuthMode=WPAPSK
@@ -577,7 +586,7 @@ sub write_settings {
 	if ($self->{access}{network}{encryption} eq 'wpa-eap') {
             wpa_supplicant_add_eap_network($self->{access}{network});
 	} else {
-            wpa_supplicant_add_network($self->{access}{network}{essid}, $self->{access}{network}{encryption}, $self->{access}{network}{key}, $self->{access}{network}{mode});
+            wpa_supplicant_add_network($self->{access}{network}{essid}, $self->{access}{network}{encryption}, $self->{access}{network}{key}, $self->{access}{network}{force_ascii_key}, $self->{access}{network}{mode});
 	}
     }
 
@@ -675,21 +684,22 @@ sub get_hex_key {
 }
 
 sub convert_wep_key_for_iwconfig {
-    my ($real_key, $restricted) = @_;
-    my $key = get_hex_key($real_key) || "s:$real_key";
+    my ($real_key, $restricted, $force_ascii) = @_;
+    my $key = !$force_ascii && get_hex_key($real_key) || "s:$real_key";
     $restricted ? "restricted $key" : "open $key";
 }
 
 sub convert_wep_key_for_wpa_supplicant {
-    my ($key) = @_;
-    get_hex_key($key) || qq("$key");
+    my ($key, $force_ascii) = @_;
+    !$force_ascii && get_hex_key($key) || qq("$key");
 }
 
 sub get_wep_key_from_iwconfig {
     my ($key) = @_;
     my ($mode, $real_key) = $key =~ /^(?:(open|restricted)\s+)?(.*)$/;
-    $real_key =~ s/^s://;
-    ($real_key, $mode eq 'restricted');
+    my $is_ascii = $real_key =~ s/^s://;
+    my $force_ascii = to_bool($is_ascii && get_hex_key($real_key));
+    ($real_key, $mode eq 'restricted', $force_ascii);
 }
 
 sub convert_psk_key_for_wpa_supplicant {
@@ -759,7 +769,7 @@ sub wpa_supplicant_get_driver {
 }
 
 sub wpa_supplicant_add_network {
-    my ($essid, $enc_mode, $key, $mode) = @_;
+    my ($essid, $enc_mode, $key, $force_ascii, $mode) = @_;
     my $conf = wpa_supplicant_read_conf();
     my $network = {
         ssid => qq("$essid"),
@@ -773,7 +783,7 @@ sub wpa_supplicant_add_network {
         $network->{mode} = to_bool($mode eq 'Ad-Hoc');
         if (member($enc_mode, qw(open restricted))) {
             put_in_hash($network, {
-                wep_key0 => convert_wep_key_for_wpa_supplicant($key),
+                wep_key0 => convert_wep_key_for_wpa_supplicant($key, $force_ascii),
                 wep_tx_keyidx => 0,
                 auth_alg => $enc_mode eq 'restricted' ? 'SHARED' : 'OPEN',
             });
