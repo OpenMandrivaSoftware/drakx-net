@@ -128,8 +128,8 @@ sub prepare_device {
     modules::load_and_configure($modules_conf, $driver,
                                 if_($driver eq 'usbserial', join(
                                     ' ',
-                                    "vendor=0x" . sprintf("%4x", $self->{device}{vendor}),
-                                    "product=0x" . sprintf("%4x", $self->{device}{id}))));
+                                    "vendor=0x" . sprintf("%04x", $self->{device}{vendor}),
+                                    "product=0x" . sprintf("%04x", $self->{device}{id}))));
     $modules_conf->write if !ref $::o;
     sleep 2 if $driver eq 'usbserial';
 }
