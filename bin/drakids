@@ -66,7 +66,7 @@ eval {
 
 if ($@) {
     err_dialog(N("Interactive Firewall"), N("Unable to contact daemon"));
-    ugtk2::exit;
+    $w->exit(1);
 }
 
 init_lists();
@@ -141,7 +141,7 @@ gtkadd($w->{window},
 $w->show;
 Gtk2->main;
 
-ugtk2::exit(0);
+$w->exit(0);
 
 sub sort_by_column {
     my ($column, $model) = @_;
