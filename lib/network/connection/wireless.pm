@@ -36,6 +36,8 @@ sub get_metric { 35 }
 #- class attributes:
 #-   network: ID of the selected network
 
+my $wpa_supplicant_max_wep_key_len = 16;
+
 our %wireless_enc_modes = (
     none => N_("None"),
     open => N_("Open WEP"),
@@ -691,7 +693,11 @@ sub convert_wep_key_for_iwconfig {
 
 sub convert_wep_key_for_wpa_supplicant {
     my ($key, $force_ascii) = @_;
-    !$force_ascii && get_hex_key($key) || qq("$key");
+    if (my $hex_key = !$force_ascii && get_hex_key($key)) {
+        return length($hex_key) <= $wpa_supplicant_max_wep_key_len * 2 && $hex_key;
+    } else {
+        return length($key) <= $wpa_supplicant_max_wep_key_len && qq("$key");
+    }
 }
 
 sub get_wep_key_from_iwconfig {
