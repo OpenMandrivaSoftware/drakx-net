@@ -692,7 +692,7 @@ sub get_wep_key_from_iwconfig {
     ($real_key, $mode eq 'restricted');
 }
 
-sub convert_key_for_wpa_supplicant {
+sub convert_psk_key_for_wpa_supplicant {
     my ($key) = @_;
     length($key) == 64 && get_hex_key($key) || qq("$key");
 }
@@ -762,7 +762,7 @@ sub wpa_supplicant_add_network {
     };
 
     if ($enc_mode eq 'wpa-psk') {
-        $network->{psk} = convert_key_for_wpa_supplicant($key);
+        $network->{psk} = convert_psk_key_for_wpa_supplicant($key);
     } else {
         $network->{key_mgmt} = 'NONE';
         $network->{mode} = to_bool($mode eq 'Ad-Hoc');
