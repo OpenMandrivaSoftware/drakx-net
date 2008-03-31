@@ -524,6 +524,13 @@ sub check_network_access_settings {
         $self->{network_access}{error}{field} =  \$self->{access}{network}{key};
         return 0;
     }
+    if (member($self->{access}{network}{encryption}, qw(open restricted)) &&
+          !convert_wep_key_for_wpa_supplicant($self->{access}{network}{key}, $self->{access}{network}{force_ascii_key})) {
+        $self->{network_access}{error}{message} = N("The WEP key should have at most %d ASCII characters or %d hexadecimal characters.",
+                                                    $wpa_supplicant_max_wep_key_len, $wpa_supplicant_max_wep_key_len * 2);
+        $self->{network_access}{error}{field} =  \$self->{access}{network}{key};
+        return 0;
+    }
 
     if ($self->{ifcfg}{WIRELESS_FREQ} && $self->{ifcfg}{WIRELESS_FREQ} !~ /[0-9.]*[kGM]/) {
         $self->{network_access}{error}{message} = N("Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz frequency), or add enough '0' (zeroes).");
