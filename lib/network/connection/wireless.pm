@@ -694,7 +694,12 @@ sub get_wep_key_from_iwconfig {
 
 sub convert_psk_key_for_wpa_supplicant {
     my ($key) = @_;
-    length($key) == 64 && get_hex_key($key) || qq("$key");
+    my $l = length($key);
+    $l == 64 ?
+      get_hex_key($key) :
+    $l >= 8 && $l <= 63 ?
+      qq("$key") :
+      undef;
 }
 
 #- FIXME: to be improved (quotes, comments)
