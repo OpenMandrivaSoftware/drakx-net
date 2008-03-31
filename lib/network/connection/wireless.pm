@@ -518,6 +518,13 @@ sub check_network_access_settings {
         return 0;
     }
 
+    if ($self->{access}{network}{encryption} eq 'wpa-psk' &&
+          !convert_psk_key_for_wpa_supplicant($self->{access}{network}{key})) {
+        $self->{network_access}{error}{message} = N("The pre-shared key should have between 8 and 63 ASCII characters, or 64 hexadecimal characters.");
+        $self->{network_access}{error}{field} =  \$self->{access}{network}{key};
+        return 0;
+    }
+
     if ($self->{ifcfg}{WIRELESS_FREQ} && $self->{ifcfg}{WIRELESS_FREQ} !~ /[0-9.]*[kGM]/) {
         $self->{network_access}{error}{message} = N("Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz frequency), or add enough '0' (zeroes).");
         $self->{network_access}{error}{field} = \$self->{ifcfg}{WIRELESS_FREQ};
