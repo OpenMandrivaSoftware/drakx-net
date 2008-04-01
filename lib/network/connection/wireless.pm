@@ -119,17 +119,18 @@ my @thirdparty_settings = (
     },
 
     (map {
+        my ($version, $ucode_api) = @$_;
         {
-            name => "iwl${_}",
-            description => "Intel(R) PRO/Wireless ${_}",
+            name => "iwl${version}",
+            description => "Intel(R) PRO/Wireless ${version}",
             url => "http://intellinuxwireless.org/",
             firmware => {
-                package => "iwlwifi-${_}-ucode",
-                test_file => "iwlwifi-${_}.ucode",
+                package => "iwlwifi-${version}-ucode",
+                test_file => "iwlwifi-${version}${ucode_api}.ucode",
             },
             sleep => 1,
         };
-    } (3945, 4965)),
+    } ([ 3945, '' ], [ 4965, '' ])),
 
     {
         name => 'prism54',
