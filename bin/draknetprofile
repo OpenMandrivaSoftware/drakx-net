@@ -31,6 +31,7 @@ use network::network;
 use mygtk2;
 use Gtk2::SimpleList;
 use ugtk2 qw(:create :helpers :wrappers :dialogs);
+use POSIX;
 
 $ugtk2::wm_icon = 'draknetprofile-16';
 my $title = N("Network profiles");
@@ -47,7 +48,6 @@ package Gtk2::CellRendererRadio;
 sub new {
     my $renderer = Gtk2::CellRendererToggle->new;
     $renderer->set_radio(1);
-    $renderer->set_property('mode', 'inert');
     $renderer;
 }
 
@@ -66,9 +66,22 @@ my $profiles_list = Gtk2::SimpleList->new(
     "" => 'radio',
     N("Profile") => 'text',
 );
+
+my @r = $profiles_list->get_column(0)->get_cell_renderers;
+$r[0]->signal_connect('toggled' => sub {
+                          my ($_renderer, $row, $_col) = @_;
+                          if ($profiles_list->{data}[$row][0]) {
+                              set_profile($profiles_list->{data}[$row][1]);
+                          } else {
+                              $profiles_list->{data}[$row][0] = 'active';
+                          }
+                      });
+
 $profiles_list->get_selection->signal_connect('changed' => sub {
-                                                  my ($index) = $profiles_list->get_selected_indices;
-                                                  $_->set_sensitive(defined $index) foreach values %buttons;
+                                                  if ($profiles_list->sensitive) {
+                                                      my ($index) = $profiles_list->get_selected_indices;
+                                                      $_->set_sensitive(defined $index) foreach values %buttons;
+                                                  }
                                               });
 
 sub get_selected_profile() {
@@ -86,12 +99,27 @@ sub update_profiles() {
 }
 
 sub set_selected_profile() {
-    my $profile = get_selected_profile();
+    set_profile(get_selected_profile());
+}
+
+sub set_profile {
+    my ($profile) = @_;
     gtkset_mousecursor_wait($w->{window}->window);
+    $profiles_list->set_sensitive(0);
+    $_->set_sensitive(0) foreach values %buttons;
     gtkflush();
-    network::network::netprofile_set($net, $profile);
-    gtkset_mousecursor_normal($w->{window}->window);
-    update_profiles();
+    unless (fork()) {
+	network::network::netprofile_set($net, $profile);
+        _exit(0);
+    }
+    $SIG{CHLD} = sub {
+	$SIG{CHLD} = 'IGNORE';
+	gtkset_mousecursor_normal($w->{window}->window);
+	update_profiles();
+	my ($index) = $profiles_list->get_selected_indices;
+	$_->set_sensitive(1) foreach values %buttons;
+    	$profiles_list->set_sensitive(1);
+    };
 }
 
 sub clone_profile() {
