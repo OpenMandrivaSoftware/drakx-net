@@ -30,6 +30,26 @@ our %data = (
     N("France") . "|SFR" => {
         apn => "websfr",
     },
+    N("Italy") . "|TIM" => {
+        apn => "ibox.internet.it",
+        login => "tim",
+        password => "tim",
+    },
+    N("Italy") . "|Vodafone" => {
+        apn => "web.omnitel.it",
+        login => "vodafone",
+        password => "vodafone",
+    },
+    N("Italy") . "|Wind" => {
+        apn => "internet.wind.it",
+        login => "wind",
+        password => "wind",
+    },
+    N("Italy") . "|Tre" => {
+        apn => "tre.it",
+        login => "tre",
+        password => "tre",
+    },
 );
 
 1;
