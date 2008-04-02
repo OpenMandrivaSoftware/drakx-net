@@ -519,7 +519,7 @@ sub configure_eth_aliases {
 
 sub get_link_detection_delay {
     my ($self) = @_;
-    member($self->get_driver, qw(forcedeth r8169 skge sky2 tg3)) && 6;
+    member($self->get_driver, qw(b44 forcedeth r8169 skge sky2 tg3)) && 6;
 }
 
 sub is_ifplugd_blacklisted {
