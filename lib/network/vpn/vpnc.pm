@@ -57,13 +57,13 @@ sub list_fields {
             val => \$connection->{password},
             hidden => 1,
         },
-        'UDP Encapsulate' => {
-            text => N("Use Cisco-UDP encapsulation"),
-            type => 'bool',
+        'NAT Traversal Mode' => {
+            label => N("NAT Mode"),
+            list => [ '', qw(natt none force-natt cisco-udp) ],
             val => \$connection->{udp},
             advanced => 1,
         },
-        'UDP Encapsulation Port' => {
+        'Cisco UDP Encapsulation Port' => {
             label => N("Use specific UDP port"),
             val => \$connection->{udp_port},
             advanced => 1,
