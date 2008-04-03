@@ -5,6 +5,9 @@ use base qw(network::connection::ethernet);
 use strict;
 use common;
 
+#- class attributes:
+#-   network: ID of the selected network
+
 sub get_type_name() { N("Wireless") }
 sub _get_type_icon() { 'wireless' }
 sub get_devices {
@@ -32,9 +35,6 @@ sub handles_ifcfg {
 }
 
 sub get_metric { 35 }
-
-#- class attributes:
-#-   network: ID of the selected network
 
 my $wpa_supplicant_max_wep_key_len = 32;
 
