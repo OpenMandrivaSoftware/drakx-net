@@ -282,8 +282,8 @@ If you do not know the meaning of an option, simply leave it as it is."),
 	      post => sub {
 		  network::squid::write_squid_conf($squid_conf, $lan_intf, $internal_domain_name) if $use_caching_proxy;
 		  services::set_status("squid", $use_caching_proxy);
-                  network::shorewall::set_redirected_ports($shorewall, 'tcp', $squid_conf->{http_port}[0], if_($use_caching_proxy, 'www'));
-                  $shorewall->{accept_local_user}{www} = $use_caching_proxy && 'squid';
+                  network::shorewall::set_redirected_ports($shorewall, 'tcp', $squid_conf->{http_port}[0], if_($use_caching_proxy, 'http'));
+                  $shorewall->{accept_local_user}{http} = $use_caching_proxy && 'squid';
 		  -f $cups_conf ? "cups" : end_step();
 	      },
 	     },
