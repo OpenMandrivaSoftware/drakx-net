@@ -349,7 +349,7 @@ sub guess_network_access_settings {
       $network && $network->{flags} =~ /wpa/i ?
         'wpa-psk' :
       $network && $network->{flags} =~ /wep/i || $self->{access}{network}{key} ?
-        ($restricted ? 'restricted' : 'open') :
+        $ifcfg->{WIRELESS_ENC_MODE} || ($restricted ? 'restricted' : 'open') :
         'none';
 
     undef $self->{ifcfg}{WIRELESS_IWPRIV} if is_old_rt2x00($self->get_driver) && $self->{ifcfg}{WIRELESS_IWPRIV} =~ /WPAPSK/;
@@ -583,7 +583,9 @@ sub build_ifcfg_settings {
         ),
         WIRELESS_ESSID => $self->{access}{network}{essid},
         if_($self->{access}{network}{encryption} ne 'none',
-            WIRELESS_ENC_KEY => convert_wep_key_for_iwconfig($self->{access}{network}{key}, $self->{access}{network}{encryption} eq 'restricted', $self->{access}{network}{force_ascii_key})),
+            WIRELESS_ENC_KEY => convert_wep_key_for_iwconfig($self->{access}{network}{key}, $self->{access}{network}{force_ascii_key})),
+        if_(member($self->{access}{network}{encryption}, qw(open restricted)),
+            WIRELESS_ENC_MODE =>  $self->{access}{network}{encryption}),
         if_($self->need_rt2x00_iwpriv,
             #- use iwpriv for WPA with rt2400/rt2500 drivers, they don't plan to support wpa_supplicant
             WIRELESS_IWPRIV => qq(set AuthMode=WPAPSK
@@ -702,9 +704,8 @@ sub get_hex_key {
 }
 
 sub convert_wep_key_for_iwconfig {
-    my ($real_key, $restricted, $force_ascii) = @_;
-    my $key = !$force_ascii && get_hex_key($real_key) || "s:$real_key";
-    $restricted ? "restricted $key" : "open $key";
+    my ($real_key, $force_ascii) = @_;
+    !$force_ascii && get_hex_key($real_key) || "s:$real_key";
 }
 
 sub convert_wep_key_for_wpa_supplicant {
