@@ -227,9 +227,11 @@ sub write_interface_conf {
 sub write_wireless_conf {
     my ($ssid, $ifcfg) = @_;
     my $wireless_file = $::prefix . $wireless_d . '/' . $ssid;
-    write_interface_settings($ifcfg, $wireless_file);
-    # FIXME: write only DHCP/IP settings here
-    substInFile { $_ = '' if /^DEVICE=/ } $wireless_file;
+    my %wireless_ifcfg = %$ifcfg;
+    # FIXME: be smarter to keep only DHCP/IP settings here
+    delete $wireless_ifcfg{$_}
+      foreach qw(DEVICE);
+    write_interface_settings(\%wireless_ifcfg, $wireless_file);
 }
 
 sub add2hosts {
