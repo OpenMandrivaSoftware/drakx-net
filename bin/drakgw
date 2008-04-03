@@ -365,7 +365,7 @@ sub gw_configure() {
                                               N("Configuring firewall..."));
 
     $shorewall->{disabled} = 0;
-    $shorewall->{masq}{subnet} = "$lan_intf->{NETWORK}/$lan_intf->{NETMASK}";
+    $shorewall->{masq}{subnet} = $lan_intf->{NETWORK} . '/' . network::network::netmask_to_vlsm($lan_intf->{NETMASK});
     network::shorewall::write($shorewall);
 
     #- be sure that FORWARD_IPV4 is enabled in /etc/sysconfig/network
