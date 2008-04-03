@@ -35,6 +35,9 @@ acl all src 0.0.0.0/0.0.0.0
 acl manager proto cache_object
 acl localhost src 127.0.0.1/255.255.255.255
 acl to_localhost dst 127.0.0.0/8
+acl localnet src 10.0.0.0/8     # RFC1918 possible internal network
+acl localnet src 172.16.0.0/12  # RFC1918 possible internal network
+acl localnet src 192.168.0.0/16 # RFC1918 possible internal network
 acl SSL_ports port 443 563
 acl Safe_ports port 80          # http
 acl Safe_ports port 21          # ftp
@@ -54,6 +57,7 @@ http_access deny CONNECT !SSL_ports
 http_access deny to_localhost
 acl mynetwork src $intf->{NETWORK}/$intf->{NETMASK}
 http_access allow mynetwork
+http_access allow localnet
 http_access allow localhost
 http_reply_access allow all
 icp_access allow all
