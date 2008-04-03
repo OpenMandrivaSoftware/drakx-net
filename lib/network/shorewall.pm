@@ -189,10 +189,12 @@ What do you want to do?"),
             if_($::b, [ 'ACCEPT+', 'fw', 'net', 'tcp', $::a, '-', '-', '-', $::b ]);
         } %{$conf->{accept_local_user}}),
         (map {
+            my $proto = $_;
             #- WARNING: won't redirect ports from the firewall system if a local zone exists
+            #- set redirect_fw_only to workaround
             map_each {
-                [ 'REDIRECT', $has_loc_zone ? 'loc' : 'fw', $::b, $_, $::a, '-' ];
-            } %{$conf->{redirects}{$_}};
+                map { [ 'REDIRECT', $_, $::b, $proto, $::a, '-' ] } 'fw', if_($has_loc_zone, 'loc');
+            } %{$conf->{redirects}{$proto}};
         } keys %{$conf->{redirects}}),
     ));
     set_config_file('masq', if_(exists $conf->{masq}, [ $conf->{masq}{net_interface}, $conf->{masq}{subnet} ]));
