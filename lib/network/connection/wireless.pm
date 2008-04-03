@@ -36,6 +36,7 @@ sub handles_ifcfg {
 
 sub get_metric { 35 }
 
+#- http://www.linux-wireless.org/Install-HOWTO/WL/WEP-Key-HOWTO.txt
 my $wpa_supplicant_max_wep_key_len = 32;
 
 our %wireless_enc_modes = (
