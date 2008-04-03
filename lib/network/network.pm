@@ -353,6 +353,18 @@ sub netmask {
     }
 }
 
+sub netmask_to_vlsm {
+    my ($netmask) = @_;
+    #- based on Network::IPv4Addr::ipv4_msk2cidr
+    my @bytes = split /\./, $netmask;
+    my $prefix = 0;
+    foreach (@bytes) {
+        my $bits = unpack("B*", pack("C", $_));
+        $prefix += $bits =~ tr/1/1/;
+    }
+    return $prefix;
+}
+
 sub masked_ip {
     my ($ip) = @_;
     my @ip = is_ip($ip) or return '';
