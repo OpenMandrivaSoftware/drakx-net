@@ -1,3 +1,34 @@
+0.33:
+- wireless backend:
+  o ensure that WPA keys are 8-63 long if ASCII, 64 is hex
+  o ensure that WEP keys are not longer than maximum key length for
+    wpa_supplicant (#28107), 32 bytes in latest cooker package
+  o allow to force using key as ASCII string (#27525)
+  o write open/restricted  mode in WIRELESS_ENC_MODE variable to be
+    able to use spaces in ASCII wireless keys (#26025)
+  o check firmware with ucode API '-1' for iwl3945/iwl4965
+    (default in our kernel)
+  o do not write MII_NOT_SUPPORTED in wireless.d files (so that its
+     value does not get overwritten when switching networks)
+- cellular backend:
+  o zero-pad module options to usbserial module
+  o add cellular provider data for Italy (from Giuseppe Ghibò)
+- ethernet backend
+  o add a link detection delay for b44 module (#38795)
+  o do not set RESOLV_MODS to "yes" if PEERDNS is "yes"  
+- firewall backend:
+  o redirect both fw and loc zone (if loc is available)
+  o allow to accept multiple users for the same port
+- drakgw:
+  o write netmask as VLSM for shorewall (#38447)
+  o allow more local networks in squid (from squid default conf)
+  o make sure squid user can connect to http
+- draknetprofile:
+  o allow to toggle radio buttons and set netprofile in background
+    (from Pascal Terjan, #33602)
+- drakvpn:
+  o use new advanced vpnc UDP options (mostly from Lonny, #35007)
+
 0.32:
 - drakfirewall backend:
   o really configure shorewall if not installed previously
