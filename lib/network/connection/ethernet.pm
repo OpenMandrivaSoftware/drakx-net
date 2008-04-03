@@ -250,7 +250,7 @@ sub build_ifcfg_settings {
         NEEDHOSTNAME => bool2yesno($self->{address}{needhostname}),
         PEERYP => bool2yesno($self->{address}{peeryp}),
         PEERDNS => bool2yesno($self->{address}{peerdns}),
-        RESOLV_MODS => bool2yesno($self->{address}{dns1} || $self->{address}{dns2}),
+        RESOLV_MODS => bool2yesno(!$self->{address}{peerdns} && ($self->{address}{dns1} || $self->{address}{dns2})),
         PEERNTPD => bool2yesno($self->{address}{peerntpd}),
         DHCP_CLIENT => $self->{address}{dhcp_client},
         DHCP_HOSTNAME => $self->{address}{dhcp_hostname},
