@@ -308,6 +308,7 @@ If you do not know it, keep the preselected protocol.") },
                        },
                        post => sub {
                            my ($answer) = @_;
+                           my $_w = $in->wait_message(N("Please wait"), N("Testing your connection..."), 1);
                            $connection->unload_connection if $connection->can('unload_connection');
                            $connection->write_settings($net, $modules_conf);
                            $connection->prepare_connection if $connection->can('prepare_connection');
