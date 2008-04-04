@@ -315,6 +315,9 @@ If you do not know it, keep the preselected protocol.") },
                            if ($answer) {
                                $connection->disconnect;
                                $connection->connect;
+                               #- FIXME: should use network::test for ppp (after future merge with network::connection)
+                               #- or start interface synchronously
+                               services::start('network-up') unless $::isInstall;
                            }
                            "end"; #- handle disconnection in install?
                        },
