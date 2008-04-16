@@ -8,6 +8,7 @@ use utf8;
 # http://www.unlocks.co.uk/gprs_settings.php
 # http://www.opera.com/products/smartphone/docs/connect/
 # http://www.taniwha.org.uk/gprs.html
+# https://rip.psg.com/~randy/gprs-ppp.html
 
 our %data = (
     N("France") . "|Orange Web" => {
