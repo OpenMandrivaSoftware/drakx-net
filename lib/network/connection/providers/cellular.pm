@@ -12,6 +12,19 @@ use utf8;
 # http://computer.cocus.co.il/Setup/V3X/MPT/Addons/GPRSope.inf
 
 our %data = (
+    N("France") . "|BouygTel" => {
+        apn => "ebouygtel.com",
+    },
+    N("France") . "|BouygTel Pro" => {
+        apn => "a2bouygtel.com",
+        login => "a2b",
+        password => "acces",
+    },
+    N("France") . "|BouygTel Pro GPRS" => {
+        apn => "b2bouygtel.com",
+        login => "B2B",
+        password => "NET",
+    },
     N("France") . "|Orange Web" => {
         apn => "orange.fr",
         login => "orange",
