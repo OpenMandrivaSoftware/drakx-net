@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-el\n"
 "POT-Creation-Date: 2008-01-31 11:33+0100\n"
-"PO-Revision-Date: 2008-04-13 22:43+0200\n"
+"PO-Revision-Date: 2008-04-19 23:09+0200\n"
 "Last-Translator: nikos papadopoulos <231036448@freemail.gr>\n"
 "Language-Team: el <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
@@ -20,6 +20,7 @@ msgstr ""
 "X-Generator: KBabel 1.0.1\n"
 "X-Poedit-Language: Greek\n"
 "X-Poedit-Country: GREECE\n"
+"X-Poedit-Bookmarks: -1,-1,-1,-1,-1,-1,-1,-1,393,-1\n"
 
 #: ../bin/drakconnect-old:45
 #, c-format
@@ -1871,17 +1872,17 @@ msgstr "PDC server: Πρωτεύον ελεγκτής τομέα (domain)"
 #: ../bin/draksambashare:1073
 #, c-format
 msgid "Server configured as a PDC is responsible for Windows authentication throughout the domain."
-msgstr ""
+msgstr "Ένας server ρυθμισμένος σαν PDC είναι υπεύθυνος για τον έλεγχο ταυτότητας των Windows σε όλο τον τομέα (domain)."
 
 #: ../bin/draksambashare:1073
 #, c-format
 msgid "Single server installations may use smbpasswd or tdbsam password backends"
-msgstr ""
+msgstr "Οι εγκαταστάσεις απλού server μπορούν να χρησιμοποιούν τα εργαλεία διαχείρισης κωδικών smbpasswd ή tdbsam"
 
 #: ../bin/draksambashare:1073
 #, c-format
 msgid "Domain master = yes, causes the server to register the NetBIOS name <pdc name>. This name will be recognized by other servers."
-msgstr ""
+msgstr "Domain master = yes, προκαλεί τον server να δηλωθεί στο όνομα NetBIOS < pdc name >. Αυτό το όνομα θα αναγνωρίζεται από τους άλλους servers."
 
 #: ../bin/draksambashare:1090
 #, fuzzy, c-format
@@ -1906,7 +1907,7 @@ msgstr "Ε&πίπεδο OS:"
 #: ../bin/draksambashare:1092
 #, c-format
 msgid "The global os level option dictates the operating system level at which Samba will masquerade during a browser election. If you wish to have Samba win an election and become the master browser, you can set the level above that of the operating system on your network with the highest current value. ie: os level = 34"
-msgstr ""
+msgstr "Η ολική επιλογή « Os level » ορίζει την τιμή του επιπέδου του  λειτουργικού συστήματος, που θα μιμείται ο Samba, κατά την διάρκεια των προσδιορισμών των servers. Αν επιθυμείτε ο Samba να προσδιοριστεί ως ο master server, πρέπει να ορίσετε επίπεδο ανώτερο από αυτό του λειτουργικού συστήματος στο δίκτυό σας. Π.χ. : Os level = 34"
 
 #: ../bin/draksambashare:1096
 #, fuzzy, c-format
@@ -1921,7 +1922,7 @@ msgstr "Ομάδα εργασίας:"
 #: ../bin/draksambashare:1103
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
-msgstr ""
+msgstr "Ο Samba πρέπει να γνωρίζει το όνομα της ομάδας εργασίας Windows που θα εξυπηρετεί."
 
 #: ../bin/draksambashare:1110
 #: ../bin/draksambashare:1174
@@ -1948,17 +1949,17 @@ msgstr "Ε&ξαναγκασμός λειτουργίας ασφαλείας κα
 #: ../bin/draksambashare:1122
 #, c-format
 msgid "User level: the client sends a session setup request directly following protocol negotiation. This request provides a username and password."
-msgstr ""
+msgstr "Επίπεδο Χρήστη : ο client στέλνει απευθείας αίτημα για να ανοίξει μια σύνδεση μετά από διαπραγμάτευση του πρωτοκόλλου. Αυτή η αίτηση περιέχει ένα  όνομα χρήστη και ένα κωδικό."
 
 #: ../bin/draksambashare:1122
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
+msgstr "Επίπεδο κοινής χρήσης : ο client αυτό-αναγνωρίζεται ξεχωριστά για κάθε κοινή χρήση."
 
 #: ../bin/draksambashare:1122
 #, c-format
 msgid "Domain level: provides a mechanism for storing all user and group accounts in a central, shared, account repository. The centralized account repository is shared between domain (security) controllers."
-msgstr ""
+msgstr "Επίπεδο τομέα (domain) : επιτρέπει την αποθήκευση όλων των λογαριασμών χρηστών και ομάδων χρηστών σε ένα κεντρικό αποθετήριο λογαριασμών, που είναι κοινόχρηστο ανάμεσα στους ελεγκτές (ασφαλείας) του τομέα (domain)."
 
 #: ../bin/draksambashare:1133
 #, fuzzy, c-format
@@ -1973,7 +1974,7 @@ msgstr "&Τελικό λογότυπο:"
 #: ../bin/draksambashare:1138
 #, c-format
 msgid "The banner is the way this server will be described in the Windows workstations."
-msgstr ""
+msgstr "Το banner είναι η μορφή με την οποία αυτός ο server θα περιγράφεται στα συστήματα υπολογιστών Windows."
 
 #: ../bin/draksambashare:1143
 #, fuzzy, c-format
@@ -1983,7 +1984,7 @@ msgstr "Αφίσα άλμπουμ"
 #: ../bin/draksambashare:1147
 #, c-format
 msgid "The Server Banner is incorrect."
-msgstr ""
+msgstr "Το banner του server είναι λάθος."
 
 #: ../bin/draksambashare:1154
 #, fuzzy, c-format
@@ -1993,17 +1994,17 @@ msgstr "Αρχείο καταγραφής της Samba: "
 #: ../bin/draksambashare:1154
 #, c-format
 msgid "Log file: use file.%m to use a separate log file for each machine that connects"
-msgstr ""
+msgstr "Αρχείο καταχωρήσεων (log file) : χρησιμοποιείστε αρχείο.%m για να γίνεται χρήση ξεχωριστού αρχείου καταχωρήσεων, για κάθε υπολογιστή που συνδέεται."
 
 #: ../bin/draksambashare:1154
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
-msgstr ""
+msgstr "Επίπεδο καταχωρήσεων (log) : καθορίστε το επίπεδο το πόσο λεπτομερειακές θα είναι οι καταχωρήσεις (0 <= επίπεδο <=10)"
 
 #: ../bin/draksambashare:1154
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
+msgstr "Μέγιστο μέγεθος των αρχείων καταχωρήσεων (log): περιορίζει το μέγεθος των αρχείων καταχωρήσεων (σε kb)."
 
 #: ../bin/draksambashare:1161
 #: ../bin/draksambashare:1176
@@ -2024,7 +2025,7 @@ msgstr "Επίπεδο καταγραφής:"
 #: ../bin/draksambashare:1168
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
+msgstr "Ο οδηγός έχει συγκεντρώσει τις ακόλουθες παραμέτρους για την ρύθμιση του Samba."
 
 #: ../bin/draksambashare:1168
 #, fuzzy, c-format
@@ -2034,7 +2035,7 @@ msgstr "Για να γίνουν δεκτές αυτές οι τιμές, και
 #: ../bin/draksambashare:1168
 #, c-format
 msgid "If you have previously create some shares, they will appear in this configuration. Run 'drakwizard sambashare' to manage your shares."
-msgstr ""
+msgstr "Αν είχατε προηγουμένως δημιουργήσει κοινές χρήσεις, θα εμφανιστούν σε αυτήν την ρύθμιση. Εκκινήστε 'drakwizard sambashare' για την διαχείρισή τους."
 
 #: ../bin/draksambashare:1173
 #, fuzzy, c-format
@@ -2049,12 +2050,12 @@ msgstr "&Τελικό λογότυπο:"
 #: ../bin/draksambashare:1191
 #, c-format
 msgid "The wizard successfully configured your Samba server."
-msgstr ""
+msgstr "Ο οδηγός ολοκλήρωσε την ρύθμιση του Samba server με επιτυχία."
 
 #: ../bin/draksambashare:1246
 #, c-format
 msgid "The Samba wizard has unexpectedly failed:"
-msgstr ""
+msgstr "Ο οδηγός Samba απέτυχε απροσδόκητα:"
 
 #: ../bin/draksambashare:1260
 #, fuzzy, c-format
@@ -2064,7 +2065,7 @@ msgstr "Διαχειρίσου τη ρύθμιση του Samba"
 #: ../bin/draksambashare:1348
 #, c-format
 msgid "Failed to Modify Samba share."
-msgstr ""
+msgstr "Αποτυχία στην επεξεργασία της κοινής χρήσης Samba."
 
 #: ../bin/draksambashare:1357
 #, c-format
@@ -2129,11 +2130,13 @@ msgid ""
 "It seems this is the first time you run this tool.\n"
 "A wizard will appear to configure a basic Samba server"
 msgstr ""
+"Φαίνεται ότι είναι η πρώτη φορά που εκτελείτε αυτό το εργαλείο.\n"
+"Ένας οδηγός θα εμφανιστεί για να ρυθμίσετε έναν βασικό Samba server."
 
 #: ../bin/draksambashare:1457
 #, c-format
 msgid "DrakSamba manage Samba shares"
-msgstr ""
+msgstr "Ο DrakSamba διαχειρίζεται τις κοινές χρήσεις Samba"
 
 #: ../bin/drakvpn-old:65
 #, c-format
@@ -2191,7 +2194,7 @@ msgstr "Η σύνδεση VPN είναι τώρα απενεργοποιημέν
 #: ../bin/drakvpn-old:113
 #, c-format
 msgid "VPN connection currently disabled"
-msgstr ""
+msgstr "Η σύνδεση VPN είναι τώρα απενεργοποιημένη"
 
 #: ../bin/drakvpn-old:114
 #, c-format
@@ -2227,7 +2230,7 @@ msgstr "Η σύνδεση VPN είναι τώρα ενεργοποιημένη."
 #: ../bin/drakvpn-old:164
 #, c-format
 msgid "Simple VPN setup."
-msgstr ""
+msgstr "Απλή ρύθμιση VPN"
 
 #: ../bin/drakvpn-old:148
 #, c-format
@@ -2244,6 +2247,17 @@ msgid ""
 "Make sure you have configured your Network/Internet access using\n"
 "drakconnect before going any further."
 msgstr ""
+"Είσαστε έτοιμοι να ρυθμίσετε μια σύνδεση VPN στον υπολογιστή σας.\n"
+"\n"
+"Με αυτήν την λειτουργία, οι υπολογιστές του ιδιωτικού τοπικού σας δικτύου και\n"
+"οι υπολογιστές άλλων απομακρυσμένων ιδιωτικών  δικτύων, θα μπορούν να μοιραστούν\n"
+"πόρους, ανάμεσα από τα αντίστοιχα τείχη προστασίας, μέσω Internet, με τρόπο ασφαλή .\n"
+"\n"
+"Η επικοινωνία μέσω του Internet είναι κρυπτογραφημένη. Οι τοπικοί και απομακρυσμένοι\n"
+"υπολογιστές θα φαίνονται σαν να είναι στο ίδιο δίκτυο.\n"
+"\n"
+"Σιγουρευτείτε ότι έχετε ρυθμίσει την πρόσβαση στο Δίκτυο/Internet\n"
+"χρησιμοποιώντας το drakconnect, πριν να συνεχίσετε. "
 
 #: ../bin/drakvpn-old:165
 #, c-format
@@ -2260,6 +2274,17 @@ msgid ""
 "Please read AT LEAST the ipsec-howto docs\n"
 "before going any further."
 msgstr ""
+"Σύνδεση VPN.\n"
+"\n"
+"Αυτό το πρόγραμμα είναι βασισμένο στα παρακάτω project:\n"
+" - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
+" - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
+" - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
+" - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
+" - Οι οδηγίες και τα εγχειρίδια χρήσης που παρέχονται με το πακέτο %s\n"
+"\n"
+"Παρακαλώ διαβάστε ΤΟΥΛΑΧΙΣΤΟΝ τις οδηγίες στο ipsec-howto,\n"
+"πριν να συνεχίσετε."
 
 #: ../bin/drakvpn-old:208
 #, c-format
@@ -2274,7 +2299,7 @@ msgstr "Πολιτικές Ασφάλειας"
 #: ../bin/drakvpn-old:222
 #, c-format
 msgid "IKE daemon racoon"
-msgstr ""
+msgstr "Δαίμονας IKE racoon"
 
 #: ../bin/drakvpn-old:224
 #, c-format
@@ -2292,6 +2317,13 @@ msgid ""
 "\n"
 "What would you like to configure?\n"
 msgstr ""
+"Βήμα ρυθμίσεων !\n"
+"\n"
+"Πρέπει να ορίσετε την Πολιτική Ασφαλείας και έπειτα\n"
+"να ρυθμίσετε τον δαίμονα της αυτόματης ανταλλαγής κλειδιών (IKE).\n"
+"Ο δαίμονας KAME IKE που χρησιμοποιείται, λέγεται 'racoon'.\n"
+"\n"
+"Τι θέλετε να ρυθμίσετε;\n"
 
 #: ../bin/drakvpn-old:245
 #: ../bin/drakvpn-old:382
@@ -2312,14 +2344,24 @@ msgid ""
 "\n"
 "What would you like to do?\n"
 msgstr ""
+"Το περιεχόμενο του αρχείου %s\n"
+"είναι χωρισμένο σε ενότητες.\n"
+"\n"
+"Τώρα μπορείτε να:\n"
+"\n"
+" - εμφανίσετε, προσθέσετε, επεξεργαστείτε ή να διαγράψετε τις ενότητες, και έπειτα να\n"
+" - επιβεβαιώσετε τις αλλαγές\n"
+"\n"
+"Τι επιθυμείτε να κάνετε;\n"
 
+# Σε σύκγριση με το Γαλλικό (;)
 #: ../bin/drakvpn-old:253
 #: ../bin/drakvpn-old:391
 #, c-format
 msgid ""
 "_:display here is a verb\n"
 "Display"
-msgstr ""
+msgstr "Εμφάνιση"
 
 #: ../bin/drakvpn-old:253
 #: ../bin/drakvpn-old:391
@@ -2333,6 +2375,7 @@ msgstr "Επεξεργασία"
 msgid "Commit"
 msgstr "Υποβολή"
 
+# Σε σύκγριση με το Γαλλικό (;)
 #: ../bin/drakvpn-old:267
 #: ../bin/drakvpn-old:271
 #: ../bin/drakvpn-old:406
@@ -2341,7 +2384,7 @@ msgstr "Υποβολή"
 msgid ""
 "_:display here is a verb\n"
 "Display configuration"
-msgstr ""
+msgstr "Εμφάνιση των ρυθμίσεων"
 
 #: ../bin/drakvpn-old:272
 #, c-format
@@ -2352,6 +2395,11 @@ msgid ""
 "\n"
 "You'll have to go back and choose 'add'.\n"
 msgstr ""
+"Το αρχείο %s δεν υπάρχει.\n"
+"\n"
+"Αυτή πρέπει να είναι μια νέα ρύθμιση.\n"
+"\n"
+"Πρέπει να πάτε πίσω και να επιλέξετε 'προσθήκη'.\n"
 
 #: ../bin/drakvpn-old:301
 #, c-format
@@ -2362,6 +2410,11 @@ msgid ""
 "\n"
 "Choose continue when you are done to write the data.\n"
 msgstr ""
+"Προσθήκη μίας Πολιτικής Ασφαλείας.\n"
+"\n"
+"Μπορείτε τώρα να προσθέσετε μια Πολιτική Ασφαλείας.\n"
+"\n"
+"Επιλέξτε «συνέχεια», όταν τελειώσετε, για να εγγραφούν τα δεδομένα.\n"
 
 #: ../bin/drakvpn-old:333
 #: ../bin/drakvpn-old:523
@@ -2377,6 +2430,10 @@ msgid ""
 "You can choose here below the one you want to edit \n"
 "and then click on next.\n"
 msgstr ""
+"Το αρχείο %s έχει μερικές ενότητες ή συνδέσεις.\n"
+"\n"
+"Μπορείτε να επιλέξετε, εδώ, αυτήν που επιθυμείτε να επεξεργαστείτε.\n"
+"Στη συνέχεια πατήσετε στο επόμενο.\n"
 
 #: ../bin/drakvpn-old:337
 #: ../bin/drakvpn-old:357
@@ -2395,6 +2452,11 @@ msgid ""
 "\n"
 "Choose continue when you are done to write the data.\n"
 msgstr ""
+"Επεξεργασία μίας Πολιτικής Ασφαλείας.\n"
+"\n"
+"Μπορείτε τώρα να επεξεργαστείτε μία Πολιτική Ασφαλείας.\n"
+"\n"
+"Επιλέξτε «συνέχεια», όταν τελειώσετε, για να εγγραφούν τα δεδομένα.\n"
 
 #: ../bin/drakvpn-old:353
 #: ../bin/drakvpn-old:570
@@ -2411,6 +2473,10 @@ msgid ""
 "You can choose here below the one you want to remove\n"
 "and then click on next.\n"
 msgstr ""
+"Το αρχείο %s έχει μερικές ενότητες ή συνδέσεις.\n"
+"\n"
+"Μπορείτε να επιλέξετε εδώ αυτήν που θέλετε να διαγράψετε.\n"
+"Έπειτα πατήστε στο επόμενο.\n"
 
 #: ../bin/drakvpn-old:383
 #, c-format
@@ -2425,6 +2491,15 @@ msgid ""
 "  - remove \t\t (remove an existing section)\n"
 "  - commit \t\t (writes the changes to the real file)"
 msgstr ""
+"Το αρχείο ρυθμίσεων racoon.conf.\n"
+"\n"
+"Αυτό το αρχείο είναι χωρισμένο σε ενότητες.\n"
+"Τώρα μπορείτε να:\n"
+" - εμφάνιση \t\t (εμφάνιση του περιεχομένου του αρχείου)\n"
+" - προσθήκη\t\t\t (προσθήκη μιας ενότητας)\n"
+" - επεξεργασία \t\t\t (επεξεργασία παραμέτρων μίας υπάρχουσας ενότητας)\n"
+" - διαγραφή \t\t (διαγραφή μίας υπάρχουσας ενότητας)\n"
+" - επιβεβαίωση \t\t (εγγραφή των αλλαγών στο πραγματικό αρχείο)"
 
 #: ../bin/drakvpn-old:411
 #, c-format
@@ -2435,11 +2510,16 @@ msgid ""
 "\n"
 "You'll have to go back and choose configure.\n"
 msgstr ""
+"Το αρχείο %s δεν υπάρχει.\n"
+"\n"
+"Αυτή πρέπει να είναι μια νέα ρύθμιση.\n"
+"\n"
+"Θα πρέπει να πάτε πίσω και να επιλέξετε ρύθμιση.\n"
 
 #: ../bin/drakvpn-old:425
 #, c-format
 msgid "racoon.conf entries"
-msgstr ""
+msgstr "εισαγωγές racoon.conf "
 
 #: ../bin/drakvpn-old:426
 #, c-format
@@ -2453,6 +2533,14 @@ msgid ""
 "\n"
 "Choose the section you would like to add.\n"
 msgstr ""
+"Το βήμα 'προσθήκη' ενότητας.\n"
+"\n"
+"Παρακάτω είναι ο σκελετός του αρχείου racoon.conf:\n"
+"\t'path'\n"
+"\t'remote'\n"
+"\t'sainfo' \n"
+"\n"
+"Επιλέξτε την ενότητα που θέλετε να προσθέσετε.\n"
 
 #: ../bin/drakvpn-old:432
 #, c-format
@@ -2467,7 +2555,7 @@ msgstr "απομακρυσμένος"
 #: ../bin/drakvpn-old:432
 #, c-format
 msgid "sainfo"
-msgstr ""
+msgstr "sainfo"
 
 #: ../bin/drakvpn-old:440
 #, c-format
@@ -2478,6 +2566,11 @@ msgid ""
 "\n"
 "Put your mouse over the certificate entry to obtain online help."
 msgstr ""
+"Το βήμα 'προσθήκη διαδρομής' ενότητας.\n"
+"\n"
+"Οι ενότητες των διαδρομών πρέπει να είναι στην αρχή του αρχείου racoon.conf.\n"
+"\n"
+"Τοποθετήστε το ποντίκι πάνω στο πλαίσιο εισαγωγής του πιστοποιητικού για να αποκτήσετε βοήθεια, μέσω διαδικτύου."
 
 #: ../bin/drakvpn-old:443
 #, c-format
@@ -2507,6 +2600,25 @@ msgid ""
 "of the identifier and the shared secret key which are used at\n"
 "Pre-shared key authentication method in phase 1."
 msgstr ""
+"path include διαδρομή: προσδιορίζει την διαδρομή για την συμπερίληψη\n"
+"ενός αρχείου. Βλέπε συμπερίληψη αρχείου.\n"
+"\tΠαράδειγμα: path include '/etc/racoon'\n"
+"\n"
+"path pre_shared_key αρχείο: προσδιορίζει ένα αρχείο που περιέχει\n"
+"τα κλειδιά pre-shared για περισσότερα ID(s). Βλέπε αρχείο κλειδιών Pre-shared.\n"
+"\tΠαράδειγμα: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
+"\n"
+"path certificate διαδρομή: το racoon(8) θα αναζητήσει σε αυτόν τον κατάλογο\n"
+"αν ένα πιστοποιητικό ή μια αίτηση πιστοποιητικού έχει ληφθεί.\n"
+"\tΠαράδειγμα: path certificate '/etc/cert' ;\n"
+"\n"
+"Συμπερίληψη αρχείου: συμπερίληψη ενός αρχείου\n"
+" και άλλα αρχεία ρυθμίσεων μπορούν να συμπεριληφθούν.\n"
+"\tΠαράδειγμα: include \"remote.conf\" ;\n"
+"\n"
+"Αρχείο κλειδιού Pre-shared: Το αρχείο του Pre-shared κλειδιού προσδιορίζει ένα ζεύγος\n"
+"του αναγνωριστικού και κοινόχρηστου μυστικού κλειδιού που χρησιμοποιούνται στη\n"
+"φάση 1 της μεθόδου ελέγχου ταυτότητας του κλειδιού Pre-shared."
 
 #: ../bin/drakvpn-old:467
 #: ../bin/drakvpn-old:560
@@ -2631,7 +2743,7 @@ msgstr ""
 #: ../bin/drakvpn-old:638
 #, c-format
 msgid "Sainfo source protocol"
-msgstr ""
+msgstr "Πρωτόκολλο της πηγής saininfo"
 
 #: ../bin/drakvpn-old:639
 #, c-format
