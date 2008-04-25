@@ -46,7 +46,7 @@ our %data = (
         apn => "websfr",
     },
     N("Italy") . "|TIM" => {
-        apn => "ibox.internet.it",
+        apn => "ibox.tim.it",
         login => "tim",
         password => "tim",
     },
