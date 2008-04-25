@@ -42,7 +42,7 @@ our %data = (
         login => "orange",
         password => "orange",
     },
-    N("France") . "|SFR" => {
+    N("France") . "|SFR Web (Clé Internet / Data)" => {
         apn => "websfr",
     },
     N("Italy") . "|TIM" => {
