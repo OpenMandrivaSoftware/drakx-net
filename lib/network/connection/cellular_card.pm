@@ -14,7 +14,8 @@ sub get_devices() {
        my @maybe_usbserial_modules = ('usbserial_generic', 'unknown');
        my @serial = grep { $_->{description} =~ /GPRS|EDGE|3G|UMTS|H.DPA|CDMA/i } detect_devices::matching_driver('serial_cs', 'usbserial', @maybe_usbserial_modules);
        member($_->{driver}, @maybe_usbserial_modules) and $_->{driver} = 'usbserial' foreach @serial;
-       @serial, detect_devices::probe_category('network/cellular');
+       #- cdc_acm can not be listed directly in network/cellular, it is already in network/isdn
+       @serial, detect_devices::probe_category('network/cellular'), detect_devices::matching_driver('cdc_acm');
 }
 sub get_metric { 40 }
 sub get_interface() { "ppp0" }
@@ -45,6 +46,8 @@ sub get_tty_device {
       "/dev/" . $self->{device}{device} :
     $self->get_driver eq "nozomi" ?
       "/dev/noz0" :
+    $self->get_driver eq "cdc_acm" ?
+      "/dev/ttyACM0" :
       "/dev/ttyUSB0";
 }
 
