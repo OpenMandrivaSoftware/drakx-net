@@ -42,6 +42,9 @@ our %data = (
         login => "orange",
         password => "orange",
     },
+    N("France") . "|SFR WAP (Illimythics / Pass Surf)" => {
+        apn => "wapsfr",
+    },
     N("France") . "|SFR Web (Clé Internet / Data)" => {
         apn => "websfr",
     },
