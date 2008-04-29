@@ -19,7 +19,6 @@ use network::ifw;
 use network::monitor;
 use network::signal_strength;
 use detect_devices;
-use modules;
 use Gtk2::Notify -init, 'notify';
 
 use ugtk2 qw(:create :helpers :wrappers :dialogs);
@@ -34,7 +33,6 @@ my ($current_state, $current_interface, $current_description, $simple_menu, $men
 add_icon_path("/usr/share/libDrakX/pixmaps/");
 
 my $net = {};
-my $modules_conf = modules::any_conf->read;
 my $watched_interface;
 
 my %pixbufs =
@@ -303,7 +301,7 @@ sub go2State {
     my $need_update;
     my ($old_interface, $old_description);
     if ($current_interface ne $interface) {
-        my $card = find { $_->[0] eq $interface } network::connection::ethernet::get_eth_cards($modules_conf);
+        my $card = find { $_->[0] eq $interface } network::connection::ethernet::get_eth_cards();
         if ($state_type eq 'disconnected') {
             $old_interface = $current_interface;
             $old_description = $current_description;
