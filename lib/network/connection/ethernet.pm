@@ -394,7 +394,7 @@ sub interface_to_driver {
 # - hotplug managed devices (USB, firewire)
 # - special interfaces (IP aliasing, VLAN)
 sub get_eth_cards {
-    my ($modules_conf) = @_;
+    my ($o_modules_conf) = @_;
 
     detect_devices::probeall_update_cache();
     my @all_cards = detect_devices::get_lan_interfaces();
@@ -410,9 +410,9 @@ sub get_eth_cards {
         $a = c::getNetDriver($interface);
         if ($a) {
             $detected_through_ethtool = 1;
-        } else {
+        } elsif ($o_modules_conf) {
             # 2) get interface's driver through module aliases:
-            $a = $modules_conf->get_alias($interface);
+            $a = $o_modules_conf->get_alias($interface);
         }
 
         # workaround buggy drivers that returns a bogus driver name for the GDRVINFO command of the ETHTOOL ioctl:
