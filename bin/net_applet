@@ -30,13 +30,18 @@ shouldStart() or die "$onstartupfile should be set to TRUE or use net_applet --f
 #- Allow multiple instances, but only one per user:
 is_running('net_applet') and die "net_applet already running\n";
 
-my ($current_state, $current_interface, $current_description, $simple_menu, $menu, $wireless_device, $timeout, $update_timeout);
-add_icon_path("/usr/share/libDrakX/pixmaps/");
+package network::net_applet;
 
-my $net = {};
-my $watched_interface;
+use mygtk2 qw(gtknew gtkset);
 
-my %pixbufs =
+our ($current_state, $current_interface);
+our ($icon, $notification_queue);
+our $dbus;
+our ($interactive_cb, $ifw, $ifw_alert);
+
+our %wireless_networks;
+
+our %pixbufs =
   (
       firewall => gtknew('Pixbuf', file => 'drakfirewall'),
       firewall_icon => gtknew('Pixbuf', file => 'drakfirewall')->scale_simple(24, 24, 'hyper'),
@@ -48,14 +53,42 @@ my %pixbufs =
           $_ => gtknew('Pixbuf', file => "encryption-$_-24");
       } qw(open weak strong) },
   );
-my %wireless_networks;
+
+sub get_current_network() {
+    detect_devices::is_wireless_interface($current_interface) && find { $_->{current} } values %wireless_networks;
+}
+
+sub get_state_pixbuf() {
+    my $wnet = $current_state eq 'connected' && get_current_network();
+    $wnet ?
+      network::signal_strength::get_strength_icon($wnet) :
+      $pixbufs{state}{$current_state};
+}
+
+sub update_tray_icon() {
+    if (!$ifw_alert || $icon->get_storage_type ne 'pixbuf') {
+        $icon->set_from_pixbuf(get_state_pixbuf());
+    } else {
+        $icon->set_from_stock('gtk-dialog-warning');
+    }
+}
+
+1;
+
+package main;
+
+my ($current_description, $simple_menu, $menu, $wireless_device, $timeout, $update_timeout);
+add_icon_path("/usr/share/libDrakX/pixmaps/");
+
+my $net = {};
+my $watched_interface;
 
 my %global_settings = getVarsFromSh($system_file);
 
 sub get_state_message {
     my ($o_interface) = @_;
     my $interface = $o_interface || $current_interface;
-    my $network = get_current_network();
+    my $network = network::net_applet::get_current_network();
     formatAlaTeX(
         $current_state eq 'connected' ?
           N("Network is up on interface %s.", $interface) .
@@ -138,9 +171,9 @@ my %actions = (
                'quit' => { name => N("Quit"), launch => \&mainQuit },
               );
 
-my $icon = Gtk2::StatusIcon->new;
+$icon = Gtk2::StatusIcon->new;
 
-my ($dbus, $monitor, $ifw, $interactive_cb, $ifw_alert);
+my ($monitor);
 eval { $dbus = dbus_object::system_bus() } if !defined($global_settings{DBUS}) || text2bool($global_settings{DBUS});
 eval { $monitor = network::monitor->new($dbus) } if $dbus;
 eval {
@@ -160,7 +193,7 @@ eval {
     });
 } if $dbus;
 
-my $notification_queue = Gtk2::Notify::Queue->new($icon);
+$notification_queue = Gtk2::Notify::Queue->new($icon);
 
 $icon->signal_connect(activate => sub {
         my ($_icon, $button, $time) = @_;
@@ -318,7 +351,7 @@ sub go2State {
         $current_state = $state_type;
         $notification_queue->add({
             title => $old_description || $current_description || N("Network connection"),
-            pixbuf => get_state_pixbuf(),
+            pixbuf => network::net_applet::get_state_pixbuf(),
             message => get_state_message($old_interface || $current_interface),
         }) if $show;
         $need_update = 1;
@@ -338,20 +371,12 @@ sub get_state_pixbuf() {
       $pixbufs{state}{$current_state};
 }
 
-sub update_tray_icon() {
-    if (!$ifw_alert || $icon->get_storage_type ne 'pixbuf') {
-        $icon->set_from_pixbuf(get_state_pixbuf());
-    } else {
-        $icon->set_from_stock('gtk-dialog-warning');
-    }
-}
-
 sub enable_ifw_alert() {
     unless ($ifw_alert) {
         $ifw_alert = 1;
-        update_tray_icon();
+        network::net_applet::update_tray_icon();
         Glib::Timeout->add(1000, sub {
-            update_tray_icon();
+            network::net_applet::update_tray_icon();
             $ifw_alert;
         });
     }
@@ -360,7 +385,7 @@ sub enable_ifw_alert() {
 sub disable_ifw_alert() {
     eval { $ifw->send_alert_ack };
     $ifw_alert = 0;
-    update_tray_icon();
+    network::net_applet::update_tray_icon();
 }
 
 sub update_applet() {
@@ -368,7 +393,7 @@ sub update_applet() {
 
     generate_menu();
 
-    update_tray_icon();
+    network::net_applet::update_tray_icon();
     $icon->set_tooltip(get_state_message());
 }
 
