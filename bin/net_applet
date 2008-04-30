@@ -141,7 +141,7 @@ my %actions = (
 my $icon = Gtk2::StatusIcon->new;
 
 my ($dbus, $monitor, $ifw, $interactive_cb, $ifw_alert);
-eval { $dbus = dbus_object::system_bus() };
+eval { $dbus = dbus_object::system_bus() } if !defined($global_settings{DBUS}) || text2bool($global_settings{DBUS});
 eval { $monitor = network::monitor->new($dbus) } if $dbus;
 eval {
     $ifw = network::ifw->new($dbus, sub {
