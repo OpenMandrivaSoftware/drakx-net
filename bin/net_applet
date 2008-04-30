@@ -200,7 +200,7 @@ $icon->signal_connect(popup_menu => sub {
 checkNetworkForce();
 cronNetwork();
 gtkflush(); #- for notifications to appear on the status icon position
-network::net_applet::ifw::get_unprocessed_ifw_messages();
+network::net_applet::ifw::get_unprocessed_ifw_messages() if $ifw;
 
 $SIG{HUP} = sub {
     print "received SIGHUP, reloading network configuration\n";
