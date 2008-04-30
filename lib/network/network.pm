@@ -8,7 +8,6 @@ use strict;
 
 use Socket;
 use common;
-use detect_devices;
 use run_program;
 use network::tools;
 use vars qw(@ISA @EXPORT);
@@ -216,7 +215,6 @@ sub write_interface_conf {
     $intf->{HWADDR} &&= $mac_address; #- set HWADDR to MAC address if required
 
     update_broadcast_and_network($intf);
-    $intf->{ONBOOT} ||= bool2yesno(!member($intf->{DEVICE}, map { $_->{device} } detect_devices::pcmcia_probe()));
 
     defined($intf->{METRIC}) or $intf->{METRIC} = network::tools::get_default_metric(network::tools::get_interface_type($intf)),
     $intf->{BOOTPROTO} =~ s/dhcp.*/dhcp/;
