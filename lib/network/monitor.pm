@@ -105,7 +105,16 @@ sub list_wireless {
 sub select_network {
     my ($o, $id) = @_;
     my $method = 'SelectNetwork';
-    $o->call_method($method, Net::DBus::dbus_uint32($id));
+    if ($o) {
+        $o->call_method($method, Net::DBus::dbus_uint32($id));
+    } else {
+        require run_program;
+        run_program::run("dbus-send", "--system", "--type=method_call",
+                         "--dest=" . $monitor_service,
+                         $monitor_path,
+                         $monitor_interface . '.' . $method,
+                         'uint32:' . $id);
+    }
 }
 
 1;
