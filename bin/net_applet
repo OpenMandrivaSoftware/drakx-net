@@ -235,7 +235,7 @@ sub generate_wireless_menuitem {
                                             0, $menuitem->{security} = Gtk2::Image->new,
                                 ));
     $menuitem->{activate} = $menuitem->{widget}->signal_connect('activate' => sub {
-        if (exists $wnet->{id}) {
+        if ($monitor && exists $wnet->{id}) {
             eval { $monitor->select_network($wnet->{id}) };
             $@ and err_dialog(N("Interactive Firewall"), N("Unable to contact daemon"));
         } else {
