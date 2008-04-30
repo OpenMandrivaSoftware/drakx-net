@@ -24,6 +24,7 @@ use Gtk2::Notify -init, 'notify';
 use ugtk2 qw(:create :helpers :wrappers :dialogs);
 
 my $onstartupfile = "$ENV{HOME}/.net_applet";
+my $system_file = '/etc/sysconfig/net_applet';
 shouldStart() or die "$onstartupfile should be set to TRUE or use net_applet --force\n";
 
 #- Allow multiple instances, but only one per user:
@@ -48,6 +49,8 @@ my %pixbufs =
       } qw(open weak strong) },
   );
 my %wireless_networks;
+
+my %global_settings = getVarsFromSh($system_file);
 
 sub get_state_message {
     my ($o_interface) = @_;
