@@ -5,13 +5,13 @@ use dbus_object;
 
 our @ISA = qw(dbus_object);
 
+my $monitor_service = "com.mandriva.monitoring";
+my $monitor_path = "/com/mandriva/monitoring/wireless";
+my $monitor_interface = "com.mandriva.monitoring.wireless";
+
 sub new {
     my ($type, $bus) = @_;
-    dbus_object::new($type,
-		       $bus,
-		       "com.mandriva.monitoring",
-		       "/com/mandriva/monitoring/wireless",
-		       "com.mandriva.monitoring.wireless");
+    dbus_object::new($type, $bus, $monitor_service, $monitor_path, $monitor_interface);
 }
 
 sub list_wireless {
@@ -104,7 +104,8 @@ sub list_wireless {
 
 sub select_network {
     my ($o, $id) = @_;
-    $o->call_method('SelectNetwork', Net::DBus::dbus_uint32($id));
+    my $method = 'SelectNetwork';
+    $o->call_method($method, Net::DBus::dbus_uint32($id));
 }
 
 1;
