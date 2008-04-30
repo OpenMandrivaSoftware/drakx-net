@@ -32,6 +32,7 @@ is_running('net_applet') and die "net_applet already running\n";
 package network::net_applet;
 
 use mygtk2 qw(gtknew gtkset);
+use common;
 
 our ($current_state, $current_interface);
 our ($icon, $notification_queue);
