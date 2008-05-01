@@ -9,7 +9,6 @@ use interactive;
 use mygtk2;
 use ugtk2 qw(:create :helpers :wrappers);
 use Gtk2::SimpleList;
-use network::monitor;
 use network::signal_strength;
 use network::network;
 use network::tools;
