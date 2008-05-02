@@ -627,6 +627,8 @@ sub apply_network_selection {
     require network::network;
     my $file = network::network::get_ifcfg_file($self->get_interface);
     network::network::write_interface_settings($self->build_ifcfg_settings, $file);
+
+    $self->add_nework_to_wpa_supplicant if $self->need_wpa_supplicant;
 }
 
 sub network_is_configured {
