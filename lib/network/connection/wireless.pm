@@ -611,13 +611,13 @@ sub add_nework_to_wpa_supplicant {
 sub write_settings {
     my ($self, $o_net, $o_modules_conf) = @_;
 
-    $self->add_nework_to_wpa_supplicant if $self->need_wpa_supplicant;
-
-    wlan_ng_configure($self->{access}{network}{essid}, $self->{access}{network}{key}, $self->get_interface, $self->get_driver) if $self->{thirdparty}{name} eq 'prism2';
-
     my $network = $self->get_selected_network;
     network::network::write_wireless_conf($_, $self->build_ifcfg_settings) foreach
         grep { $_ } ($network ? $network->{ap} : ()), $self->{access}{network}{essid};
+
+    $self->add_nework_to_wpa_supplicant if $self->need_wpa_supplicant;
+
+    wlan_ng_configure($self->{access}{network}{essid}, $self->{access}{network}{key}, $self->get_interface, $self->get_driver) if $self->{thirdparty}{name} eq 'prism2';
 
     $self->SUPER::write_settings($o_net, $o_modules_conf);
 }
