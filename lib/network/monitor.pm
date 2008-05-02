@@ -23,7 +23,7 @@ sub list_wireless {
         $results = $monitor->call_method('ScanResults');
         $list = $monitor->call_method('ListNetworks');
         $has_roaming = 1;
-    };
+    } if $monitor;
     #- try wpa_cli if we're root
     if (!$has_roaming && !$>) {
         $results = `/usr/sbin/wpa_cli scan_results 2>/dev/null`;
