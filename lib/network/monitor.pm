@@ -17,14 +17,15 @@ sub new {
 sub list_wireless {
     my ($monitor, $o_intf) = @_;
     my ($results, $list, %networks);
+    my $has_roaming;
     #- first try to use mandi
     eval {
         $results = $monitor->call_method('ScanResults');
         $list = $monitor->call_method('ListNetworks');
+        $has_roaming = 1;
     };
-    my $has_roaming = defined $results && defined $list;
     #- try wpa_cli if we're root
-    if ($@ && !$>) {
+    if (!$has_roaming && !$>) {
         $results = `/usr/sbin/wpa_cli scan_results 2>/dev/null`;
         $list = `/usr/sbin/wpa_cli list_networks 2>/dev/null`;
     }
