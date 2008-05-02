@@ -599,16 +599,19 @@ set TxRate=0)),
     $self->SUPER::build_ifcfg_settings($settings);
 }
 
+sub add_nework_to_wpa_supplicant {
+    my ($self) = @_;
+    if ($self->{access}{network}{encryption} eq 'wpa-eap') {
+        wpa_supplicant_add_eap_network($self->{access}{network});
+    } else {
+        wpa_supplicant_add_network($self->{access}{network}{essid}, $self->{access}{network}{encryption}, $self->{access}{network}{key}, $self->{access}{network}{force_ascii_key}, $self->{access}{network}{mode});
+    }
+}
+
 sub write_settings {
     my ($self, $o_net, $o_modules_conf) = @_;
 
-    if ($self->need_wpa_supplicant) {
-	if ($self->{access}{network}{encryption} eq 'wpa-eap') {
-            wpa_supplicant_add_eap_network($self->{access}{network});
-	} else {
-            wpa_supplicant_add_network($self->{access}{network}{essid}, $self->{access}{network}{encryption}, $self->{access}{network}{key}, $self->{access}{network}{force_ascii_key}, $self->{access}{network}{mode});
-	}
-    }
+    $self->add_nework_to_wpa_supplicant if $self->need_wpa_supplicant;
 
     wlan_ng_configure($self->{access}{network}{essid}, $self->{access}{network}{key}, $self->get_interface, $self->get_driver) if $self->{thirdparty}{name} eq 'prism2';
 
