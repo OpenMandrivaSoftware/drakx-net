@@ -28,6 +28,7 @@ sub list_wireless {
     if (!$has_roaming && !$>) {
         $results = `/usr/sbin/wpa_cli scan_results 2>/dev/null`;
         $list = `/usr/sbin/wpa_cli list_networks 2>/dev/null`;
+        $_ =~ s/^Selected interface (.*)\n//g foreach $results, $list;
     }
     if ($results && $list) {
         #- bssid / frequency / signal level / flags / ssid
