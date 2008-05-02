@@ -89,7 +89,7 @@ sub create_drakroam_gui {
         Glib::Timeout->add(20000, sub { $status_bar->remove($status_bar_cid, $m_id); 0 });
     };
     if ($dbus) {
-        eval { $droam->{net}{monitor} = network::monitor->new($dbus) };
+        #- FIXME: use network::monitor?
         $dbus->{connection}->add_filter(sub {
                                             my ($_con, $msg) = @_;
                                             my $member = $msg->get_member;
