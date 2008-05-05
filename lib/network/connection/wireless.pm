@@ -317,6 +317,15 @@ sub get_networks {
     $self->{networks};
 }
 
+sub refresh_roaming_ids {
+    my ($self) = @_;
+    #- needed when switching from non-roaming to roaming
+    #- to get wpa_supplicant network IDs
+    get_networks($self) if
+        $self->{control}{roaming} &&
+        !any { defined $_->{id} } values %{$self->{networks}};
+}
+
 sub guess_network {
     my ($_self) = @_;
     #- FIXME: try to find the AP matching $self->{ifcfg}{WIRELESS_ESSID};
@@ -656,6 +665,7 @@ sub connect {
     $self->SUPER::connect;
 
     if ($self->{control}{roaming}) {
+        refresh_roaming_ids($self);
         my $network = $self->get_selected_network;
         if ($network && defined $network->{id}) {
             eval { $net->{monitor}->select_network($network->{id}) };
