@@ -363,7 +363,11 @@ sub guess_network_access_settings {
 
     undef $self->{ifcfg}{WIRELESS_IWPRIV} if is_old_rt2x00($self->get_driver) && $self->{ifcfg}{WIRELESS_IWPRIV} =~ /WPAPSK/;
 
-    $self->{control}{roaming} = exists $self->{ifcfg}{WIRELESS_WPA_DRIVER} && !is_old_rt2x00($self->get_driver);
+    my $system_file = '/etc/sysconfig/drakx-net';
+    my %global_settings = getVarsFromSh($system_file);
+    $self->{control}{roaming} =
+      (exists $self->{ifcfg}{WIRELESS_WPA_DRIVER} || text2bool($global_settings{ROAMING}))
+        && !is_old_rt2x00($self->get_driver);
 
     $self->{access}{network}{mode} =
         $network && $network->{mode} ||
