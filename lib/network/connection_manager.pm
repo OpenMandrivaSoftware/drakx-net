@@ -121,6 +121,8 @@ sub configure_connection {
     }
 
     $cmanager->load_settings;
+    my $system_file = '/etc/sysconfig/drakx-net';
+    my %global_settings = getVarsFromSh($system_file);
 
     my $error;
     do {
@@ -143,7 +145,7 @@ sub configure_connection {
                          { label => $cmanager->{connection}->get_access_settings_label, title => 1, advanced => 1 },
                          @{$cmanager->{connection}->get_access_settings}
                        ) : (),
-                       $cmanager->{connection}->can('get_address_settings') ? (
+                       $cmanager->{connection}->can('get_address_settings') && !text2bool($global_settings{AUTOMATIC_ADDRESS}) ? (
                          { label => $cmanager->{connection}->get_address_settings_label, title => 1, advanced => 1 },
                          @{$cmanager->{connection}->get_address_settings('show_all')}
                        ) : (),
