@@ -62,6 +62,9 @@ sub real_main {
       my $db_path = "/usr/share/apps/kppp/Provider";
       my (%countries, @isp, $country, $provider, $old_provider);
 
+      my $system_file = '/etc/sysconfig/drakx-net';
+      my %global_settings = getVarsFromSh($system_file);
+
       my $_w = N("Protocol for the rest of the world");
       my %isdn_protocols = (
                             2 => N("European protocol (EDSS1)"),
@@ -136,7 +139,7 @@ sub real_main {
                         if (exists $steps_compat{$net->{type}}) {
                             return $steps_compat{$net->{type}};
                         }
-                        @connections_list = $net->{type}->get_connections;
+                        @connections_list = $net->{type}->get_connections(automatic_only => text2bool($global_settings{AUTOMATIC_IFACE_CHOICE}));
                         @connections_list ? "select_connection" : "no_connection";
                     },
                    },
@@ -144,7 +147,7 @@ sub real_main {
                    select_connection => {
                        name => sub { $net->{type}->get_type_name . "\n\n" . N("Select the network interface to configure:") },
                        data => [ { val => \$connection, type => 'list', list => \@connections_list,
-                                   format => sub { $_[0] && $_[0]->get_label }, allow_empty_list => 1 } ],
+                                   format => sub { $_[0] && $_[0]->get_description }, allow_empty_list => !text2bool($global_settings{AUTOMATIC_IFACE_CHOICE})} ],
                        complete => sub {
                            $connection->setup_thirdparty($in) or return 1;
                            $connection->prepare_device;
