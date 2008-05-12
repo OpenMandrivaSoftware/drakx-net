@@ -100,7 +100,7 @@ sub real_main {
               "select_protocol" => sub { $connection->can('get_protocols') },
               #- peer settings may depend on provider and protocol (VPI/VCI for xDSL)
               "configure_access" => sub { $connection->can('get_access_settings') },
-              "configure_address" => sub { $connection->can('get_address_settings') || $connection->can('get_hostname_settings') },
+              "configure_address" => sub { ($connection->can('get_address_settings') || $connection->can('get_hostname_settings')) && !text2bool($global_settings{AUTOMATIC_ADDRESS}) },
               "configure_control" => sub { $connection->can('get_control_settings') },
               "apply_connection" => sub { 1 },
           );

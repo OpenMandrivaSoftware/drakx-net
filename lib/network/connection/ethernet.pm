@@ -63,8 +63,10 @@ sub check_device {
 }
 
 sub get_protocols() {
-    {
-        static => N("Manual configuration"),
+    my $system_file = '/etc/sysconfig/drakx-net';
+    my %global_settings = getVarsFromSh($system_file);
+    +{
+        if_(!text2bool($global_settings{AUTOMATIC_ADDRESS}), static => N("Manual configuration")),
         dhcp   => N("Automatic IP (BOOTP/DHCP)"),
     };
 }
