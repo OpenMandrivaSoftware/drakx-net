@@ -23,7 +23,7 @@ use Gtk2::Notify -init, 'notify';
 use ugtk2 qw(:create :helpers :wrappers :dialogs);
 
 my $onstartupfile = "$ENV{HOME}/.net_applet";
-my $system_file = '/etc/sysconfig/net_applet';
+my $system_file = '/etc/sysconfig/drakx-net';
 shouldStart() or die "$onstartupfile should be set to TRUE or use net_applet --force\n";
 
 #- Allow multiple instances, but only one per user:
@@ -174,7 +174,7 @@ my %actions = (
 $icon = Gtk2::StatusIcon->new;
 
 my ($monitor);
-eval { $dbus = dbus_object::system_bus() } if !defined($global_settings{DBUS}) || text2bool($global_settings{DBUS});
+eval { $dbus = dbus_object::system_bus() } if !defined($global_settings{NET_APPLET_DBUS}) || text2bool($global_settings{NET_APPLET_DBUS});
 eval { $monitor = network::monitor->new($dbus) } if $dbus;
 eval {
     require network::net_applet::ifw;
