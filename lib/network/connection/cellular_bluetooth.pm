@@ -18,6 +18,8 @@ sub get_devices {
 sub get_metric { 45 }
 sub get_interface { "ppp0" }
 
+sub get_packages { 'bluez-utils', 'ppp' }
+
 sub get_rfcomm_device {
     my ($self) = @_;
     $self->{rfcomm_device} ||= find { ! -e ($rfcomm_dev_prefix . $_) } 0 .. 99;
