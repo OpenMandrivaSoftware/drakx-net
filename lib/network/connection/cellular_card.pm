@@ -48,6 +48,8 @@ sub get_tty_device {
       "/dev/noz0" :
     $self->get_driver eq "cdc_acm" ?
       "/dev/ttyACM0" :
+    $self->get_driver eq "hso" ?
+      "/dev/ttyHS0" :
       "/dev/ttyUSB0";
 }
 
