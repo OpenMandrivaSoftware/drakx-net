@@ -89,9 +89,13 @@ sub list_wireless {
             /Extra:wpa_ie=|IE:.*WPA/ and $has_wpa = 1;
             /Authentication Suites \(\d+\) :.*\b802\.1x\b/ and $has_eap = 1;
         }
+        my $incorrect_quality =
+          (every { $_->{signal_strength} == 100 } values %networks) &&
+          (any { $_->{signal_strength} != $_->{signal_level} } values %networks);
         foreach (values %networks) {
             my $level = delete $_->{signal_level};
             $_->{signal_strength} ||= $level;
+            $_->{signal_strength} = $level if $incorrect_quality;
         }
         if ($current_ap && exists $networks{$current_ap}) {
             foreach (`/sbin/iwconfig $o_intf 2>/dev/null`) {
