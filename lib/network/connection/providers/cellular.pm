@@ -60,7 +60,7 @@ our %data = (
         apn => "internet",
     },
     # http://www.gsm.aland.fi/tjanster/wap/wap.htm
-    N("Finland") . "|Ålands Mobiltelefon" => {
+    N("Finland") . "|Ã…lands Mobiltelefon" => {
         apn => "internet",
     },
     N("France") . "|BouygTel" => {
@@ -96,7 +96,7 @@ our %data = (
     N("France") . "|SFR WAP (Illimythics / Pass Surf)" => {
         apn => "wapsfr",
     },
-    N("France") . "|SFR Web (Clé Internet / Data)" => {
+    N("France") . "|SFR Web (ClÃ© Internet / Data)" => {
         apn => "websfr",
     },
     N("Italy") . "|TIM" => {
