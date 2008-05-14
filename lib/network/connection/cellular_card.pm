@@ -18,7 +18,6 @@ sub get_devices() {
        @serial, detect_devices::probe_category('network/cellular'), detect_devices::matching_driver('cdc_acm');
 }
 sub get_metric { 40 }
-sub get_interface() { "ppp0" }
 
 sub get_packages { 'comgt', 'ppp' }
 
@@ -38,6 +37,13 @@ sub get_thirdparty_settings() {
 sub guess_hardware_settings {
     my ($self) = @_;
     $self->{hardware}{pin} ||= chomp_(cat_("/etc/sysconfig/network-scripts/pin-" . $self->get_interface));
+}
+
+sub get_interface {
+    my ($self) = @_;
+    $self->get_driver eq "hso" ?
+	"hso0" :
+	"ppp0";
 }
 
 sub get_tty_device {
