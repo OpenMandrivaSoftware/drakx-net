@@ -84,10 +84,14 @@ sub list_wireless {
             /Mode:(\S*)/ and $net->{mode} = $1;
             $net->{mode} = 'Managed' if $net->{mode} eq 'Master';
             $_ =~ $quality_match and $net->{signal_strength} = $eval_quality->($1);
-            m|Signal level[:=]([0-9]+/[0-9]+)| && !$net->{signal_strength} and $net->{signal_strength} = $eval_quality->($1);
+            m|Signal level[:=]([0-9]+/[0-9]+)| and $net->{signal_level} = $eval_quality->($1);
             /key:(\S*)\s/ && $1 eq 'on' and $has_key = 1;
             /Extra:wpa_ie=|IE:.*WPA/ and $has_wpa = 1;
             /Authentication Suites \(\d+\) :.*\b802\.1x\b/ and $has_eap = 1;
+        }
+        foreach (values %networks) {
+            my $level = delete $_->{signal_level};
+            $_->{signal_strength} ||= $level;
         }
         if ($current_ap && exists $networks{$current_ap}) {
             foreach (`/sbin/iwconfig $o_intf 2>/dev/null`) {
