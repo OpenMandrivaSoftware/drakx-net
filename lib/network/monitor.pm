@@ -37,14 +37,18 @@ sub list_wireless {
             $networks{$ap}{ap} ||= $ap;
             #- wpa_supplicant may list the network two times, use ||=
             $networks{$ap}{frequency} ||= $frequency;
-            #- signal level is really too high in wpa_supplicant
-            #- this should be standardized at some point
-            $networks{$ap}{signal_strength} ||= int($signal_strength/3.5);
+            $networks{$ap}{signal_strength} ||= $signal_strength;
             my $adhoc = $flags =~ s/\[ibss\]//i;
             $networks{$ap}{mode} ||=  $adhoc ? "Ad-Hoc" : "Managed";
             $networks{$ap}{flags} ||= $flags;
             $networks{$ap}{essid} ||= $essid;
         }
+        if (any { $_->{signal_strength} > 100 } %networks) {
+            #- signal level is really too high in wpa_supplicant
+            #- this should be standardized at some point
+            $_->{signal_strength} = int($_->{signal_strength}/3.5);
+        }
+
         #- network id / ssid / bssid / flags
         while ($list =~ /^(\d+)\t(.*?)\t(.*?)\t(.*)$/mg) {
             foreach my $net (uniq(if_($networks{$3}, $networks{$3}), grep { $_->{essid} eq $2 } values(%networks))) {
