@@ -12,6 +12,57 @@ use utf8;
 # http://computer.cocus.co.il/Setup/V3X/MPT/Addons/GPRSope.inf
 
 our %data = (
+    # http://www.cubio.fi/fi/cubio_gsm/mms_ja_gprs_asetukset
+    N("Finland") . "|Cubio" => {
+        apn => "internet.cubio.net",
+    },
+    # http://www.dnaoy.fi/Yksityisille/Matkaviestinta/Asiakaspalvelu/Documents/Ohjeet/asetukset_yleiset_wxp.pdf
+    N("Finland") . "|DNA" => {
+        apn => "internet",
+    },
+    # http://matkaviestinta.elisa.fi/public/elisa.do?id=hen_liit_palvelut_gprs,ds_muut_0054.htm
+    # http://tuki.elisa.fi/asiakastuki/elisa.do?id=hen_as_matkaviest_ohjeet,as_help_page_0025.htm
+    # Official pages have inconsistent information on whether login and
+    # password are used. Presumably they are ignored, but we set them just to
+    # be sure.
+    N("Finland") . "|Elisa" => {
+        apn => "internet",
+        login => "rlnet",
+        password => "internet",
+    },
+    # http://koti.mbnet.fi/simopot/asetukset/index.php?operaattori=globetel
+    N("Finland") . "|Globetel" => {
+        apn => "internet",
+    },
+    # http://www.kolumbus.com/asiakaspalvelu_asetukset.html
+    # Redirects to Elisa automatic setup, presumably same settings apply.
+    N("Finland") . "|Kolumbus" => {
+        apn => "internet",
+        login => "rlnet",
+        password => "internet",
+    },
+    # http://saunalahti.fi/tuki/gsm/vo/ohjeemail.php
+    N("Finland") . "|Saunalahti" => {
+        apn => "internet.saunalahti",
+    },
+    # http://koti.mbnet.fi/simopot/asetukset/index.php?operaattori=sonera
+    N("Finland") . "|Sonera" => {
+        apn => "internet",
+    },
+    # http://tdc.fi/publish.php?dogtag=songfi_at_ojl_int
+    N("Finland") . "|Song" => {
+        apn => "internet.song.fi",
+        login => "song@internet",
+        password => "songnet",
+    },
+    # http://www.tele.fi/Asiakaspalvelu/Ohjeet/K%E4nnyk%E4ll%E4+nettiin+ja+tiedonsiirto/Asetukset/
+    N("Finland") . "|Tele Finland" => {
+        apn => "internet",
+    },
+    # http://www.gsm.aland.fi/tjanster/wap/wap.htm
+    N("Finland") . "|Ålands Mobiltelefon" => {
+        apn => "internet",
+    },
     N("France") . "|BouygTel" => {
         apn => "ebouygtel.com",
     },
