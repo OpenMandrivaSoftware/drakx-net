@@ -106,7 +106,9 @@ sub build_peer {
 
 sub set_ppp_settings {
     my ($self) = @_;
+    $self->{access}{no_dial} = $self->get_driver eq "hso";
     $self->{access}{cid} = 3;
+
     $self->{access}{at_commands} = [
         "AT+CPIN?",
         # Set +CGEE to 2
