@@ -125,7 +125,6 @@ sub write_settings {
     ];
     $self->{access}{dial_number} = "*99***$cid#";
 
-    $self->write_cellular_settings;
     $self->SUPER::write_settings;
 }
 
