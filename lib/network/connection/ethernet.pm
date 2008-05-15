@@ -526,7 +526,7 @@ sub get_link_detection_delay {
 
 sub is_ifplugd_blacklisted {
     my ($module) = @_;
-    !$module || member($module, qw(via-velocity));
+    !$module || member($module, qw(via_velocity));
 }
 
 1;
