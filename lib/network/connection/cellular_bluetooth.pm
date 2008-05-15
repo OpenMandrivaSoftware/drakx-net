@@ -73,8 +73,6 @@ sub search_services {
 sub write_settings {
     my ($self) = @_;
 
-    $self->write_cellular_settings;
-
     my $dev = $self->get_rfcomm_device;
     output("$::prefix/etc/bluetooth/rfcomm.conf", qq(
 rfcomm$dev {
@@ -89,6 +87,7 @@ rfcomm$dev {
     $self->{access}{at_commands} = [ qq(AT+CGDCONT=$cid,"IP","$self->{access}{apn}") ];
     $self->{access}{dial_number} = "*99***$cid#";
 
+    $self->write_cellular_settings;
     $self->SUPER::write_settings;
 }
 
