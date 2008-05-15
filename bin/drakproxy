@@ -33,8 +33,6 @@ my $u = { getVarsFromSh('/etc/profile.d/proxy.sh') };
 my $in = 'interactive'->vnew('su');
 if (network::network::miscellaneous_choose($in, $u)) {
     network::network::proxy_configure($u);
-    if ($in->ask_okcancel(N("Warning"), N("You need to log out and back in again for changes to take effect"), 1)) {
-        any::ask_for_X_restart($in);
-    }
+    any::ask_for_X_restart($in);
 }
 $in->exit(0);
