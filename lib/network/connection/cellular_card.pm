@@ -64,7 +64,7 @@ sub check_hardware_is_slow() { 1 }
 
 sub get_networks {
     my ($self) = @_;
-    my $cmd = "gcom -d " . $self->get_tty_device;
+    my $cmd = "comgt -d " . $self->get_tty_device;
     my ($network, $state) = `$cmd reg` =~ /^Registered on \w+ network: "(.*)",(\d+)$/m;
     my ($strength) = `$cmd sig` =~ /^Signal Quality:\s+(\d+),\d+$/;
     $self->{networks} = $network && {
@@ -100,8 +100,8 @@ sub get_peer_default_options {
 sub build_peer {
     my ($self) = @_;
     $self->SUPER::build_peer;
-    #- don't run gcom for now, it hangs on ttyUSB0 devices when run from pppd
-    #- $self->{access}{peer}->{init} = "gcom -d $dev < $pin_file"
+    #- don't run comgt for now, it hangs on ttyUSB0 devices when run from pppd
+    #- $self->{access}{peer}->{init} = "comgt -d $dev < $pin_file"
 }
 
 sub write_settings {
@@ -167,7 +167,7 @@ sub check_hardware {
     require c;
     use POSIX qw(:errno_h);
 
-    my $pid = IPC::Open2::open2(my $cmd_out, my $cmd_in, "gcom", "-d", $self->get_tty_device);
+    my $pid = IPC::Open2::open2(my $cmd_out, my $cmd_in, "comgt", "-d", $self->get_tty_device);
     common::nonblock($cmd_out);
     my $selector = IO::Select->new($cmd_out);
     my $already_entered_pin;
@@ -192,7 +192,7 @@ sub check_hardware {
 Entering the wrong PIN code multiple times may lock your SIM card!");
             last;
         } elsif (/^Waiting for Registration/m) {
-            #- the card seems to be resetted if gcom is killed right here, wait a bit
+            #- the card seems to be resetted if comgt is killed right here, wait a bit
             sleep 1;
             #- don't wait the full scan
             $device_ready = 1;
