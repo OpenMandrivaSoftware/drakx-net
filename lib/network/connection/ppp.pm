@@ -128,11 +128,16 @@ sub write_peer {
     output_with_perm($::prefix . $peer_file, 0755, join("\n", $self->build_peer, ''));
 }
 
-sub write_settings  {
+sub write_ppp_settings {
     my ($self) = @_;
     $self->write_secrets if $self->{access}{login};
     $self->write_chat if $self->{access}{dial_number};
     $self->write_peer;
+}
+
+sub write_settings  {
+    my ($self) = @_;
+    $self->write_ppp_settings;
     $self->network::connection::write_settings;
 }
 
