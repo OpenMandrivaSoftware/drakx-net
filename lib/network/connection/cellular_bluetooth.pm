@@ -87,7 +87,6 @@ rfcomm$dev {
     $self->{access}{at_commands} = [ qq(AT+CGDCONT=$cid,"IP","$self->{access}{apn}") ];
     $self->{access}{dial_number} = "*99***$cid#";
 
-    $self->write_cellular_settings;
     $self->SUPER::write_settings;
 }
 
