@@ -104,14 +104,8 @@ sub build_peer {
     #- $self->{access}{peer}->{init} = "comgt -d $dev < $pin_file"
 }
 
-sub write_settings {
+sub set_ppp_settings {
     my ($self) = @_;
-
-    my $interface = $self->get_interface;
-    my $pin_file = "/etc/sysconfig/network-scripts/pin-$interface";
-
-    output_with_perm($pin_file, 0600, $self->{hardware}{pin} . "\n");
-
     my $cid = 3;
     $self->{access}{at_commands} = [
         "AT+CPIN?",
@@ -124,6 +118,14 @@ sub write_settings {
         "AT+CGATT?",
     ];
     $self->{access}{dial_number} = "*99***$cid#";
+}
+
+sub write_settings {
+    my ($self) = @_;
+
+    my $interface = $self->get_interface;
+    my $pin_file = "/etc/sysconfig/network-scripts/pin-$interface";
+    output_with_perm($pin_file, 0600, $self->{hardware}{pin} . "\n");
 
     $self->SUPER::write_settings;
 }
