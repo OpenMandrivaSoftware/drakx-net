@@ -71,24 +71,25 @@ sub build_ifcfg_settings {
 
 sub build_chat {
     my ($self) = @_;
-    #- required access parameters:
-    #-   dial_number
     #- optional:
     #-   auth_method: key of %authentication_methods
+    #-   dial_number
     #-   login
     #-   password
     #-   at_commands: array ref of AT commands
     (map { "ABORT $_" } "BUSY", "ERROR", "'NO CARRIER'", "'NO DIALTONE'", "'Invalid Login'", "'Login incorrect'", "VOICE", "'NO ANSWER'", "DELAYED", "'SIM PIN'"),
     qq('' ATZ),
     if_(ref $self->{access}{at_commands}, map { qq(OK-AT-OK '$_') } @{$self->{access}{at_commands}}),
-    qq(OK 'ATDT$self->{access}{dial_number}'),
-    qq(TIMEOUT 120),
-    qq(CONNECT ''),
-    if_(member($self->{access}{auth_method}, qw(script terminal)),
-        qq('ogin:--ogin:' '$self->{access}{login}'),
-        qq('ord:' '$self->{access}{password}')),
-    qq(TIMEOUT 5),
-    qq('~--' '');
+    if_($self->{access}{dial_number},
+        qq(OK 'ATDT$self->{access}{dial_number}'),
+        qq(TIMEOUT 120),
+        qq(CONNECT ''),
+        if_(member($self->{access}{auth_method}, qw(script terminal)),
+            qq('ogin:--ogin:' '$self->{access}{login}'),
+            qq('ord:' '$self->{access}{password}')),
+        qq(TIMEOUT 5),
+        qq('~--' ''),
+    );
 }
 
 sub write_chat {
