@@ -106,18 +106,18 @@ sub build_peer {
 
 sub set_ppp_settings {
     my ($self) = @_;
-    my $cid = 3;
+    $self->{access}{cid} = 3;
     $self->{access}{at_commands} = [
         "AT+CPIN?",
         # Set +CGEE to 2
         "AT+CMEE=2",
-        qq(AT+CGDCONT=$cid,"IP","$self->{access}{apn}"),
+        qq(AT+CGDCONT=$self->{access}{cid},"IP","$self->{access}{apn}"),
         # Setup +CGEQREG (QoS, don't set it for now)
         # qq(AT+CGEQREQ=3,3,64,384,0,0,2,0,"0E0","0E0",3,0,0),
         # Attached to network, will return 1
         "AT+CGATT?",
     ];
-    $self->{access}{dial_number} = "*99***$cid#";
+    $self->{access}{dial_number} = "*99***$self->{access}{cid}#";
 }
 
 sub write_settings {
