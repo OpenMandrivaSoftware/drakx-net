@@ -132,7 +132,7 @@ sub write_peer {
 sub write_ppp_settings {
     my ($self) = @_;
     $self->write_secrets if $self->{access}{login};
-    $self->write_chat if $self->{access}{dial_number};
+    $self->write_chat if $self->{access}{use_chat};
     $self->write_peer;
 }
 
