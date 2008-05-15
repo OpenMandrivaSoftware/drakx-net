@@ -75,6 +75,8 @@ sub set_ppp_settings {
 
     $self->{access}{cid} = 1;
     $self->{access}{at_commands} = [ qq(AT+CGDCONT=$self->{access}{cid},"IP","$self->{access}{apn}") ];
+
+    $self->SUPER::set_ppp_settings;
 }
 
 sub write_settings {
