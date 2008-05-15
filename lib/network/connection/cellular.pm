@@ -53,6 +53,7 @@ sub get_access_settings {
 sub write_settings {
     my ($self) = @_;
     $self->write_cellular_settings;
+    $self->set_ppp_settings;
     $self->SUPER::write_settings;
 }
 

@@ -70,6 +70,14 @@ sub search_services {
     @services;
 }
 
+sub set_ppp_settings {
+    my ($self) = @_;
+
+    my $cid = 1;
+    $self->{access}{at_commands} = [ qq(AT+CGDCONT=$cid,"IP","$self->{access}{apn}") ];
+    $self->{access}{dial_number} = "*99***$cid#";
+}
+
 sub write_settings {
     my ($self) = @_;
 
@@ -82,10 +90,6 @@ rfcomm$dev {
 	comment "Dial-up networking";
 }
 ));
-
-    my $cid = 1;
-    $self->{access}{at_commands} = [ qq(AT+CGDCONT=$cid,"IP","$self->{access}{apn}") ];
-    $self->{access}{dial_number} = "*99***$cid#";
 
     $self->SUPER::write_settings;
 }
