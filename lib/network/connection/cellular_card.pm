@@ -118,6 +118,7 @@ sub set_ppp_settings {
         # qq(AT+CGEQREQ=3,3,64,384,0,0,2,0,"0E0","0E0",3,0,0),
         # Attached to network, will return 1
         "AT+CGATT?",
+        if_($self->get_driver eq "hso", ""),
     ];
 
     $self->SUPER::set_ppp_settings;
