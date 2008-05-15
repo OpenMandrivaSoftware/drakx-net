@@ -50,6 +50,11 @@ sub get_access_settings {
    ];
 }
 
+sub set_ppp_settings {
+    my ($self) = @_;
+    $self->{access}{dial_number} = "*99***$self->{access}{cid}#";
+}
+
 sub write_settings {
     my ($self) = @_;
     $self->write_cellular_settings;
