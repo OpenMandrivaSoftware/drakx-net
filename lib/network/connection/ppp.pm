@@ -65,6 +65,7 @@ sub build_ifcfg_settings {
         PERSIST => "yes",
         DEBUG => "yes",
         DEFROUTE => "yes",
+        if_($self->{access}{cid}, CELLULAR_CID => $self->{access}{cid}),
     });
     $self->SUPER::build_ifcfg_settings($settings);
 }
