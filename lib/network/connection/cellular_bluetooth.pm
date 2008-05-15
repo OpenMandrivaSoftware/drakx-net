@@ -73,9 +73,9 @@ sub search_services {
 sub set_ppp_settings {
     my ($self) = @_;
 
-    my $cid = 1;
-    $self->{access}{at_commands} = [ qq(AT+CGDCONT=$cid,"IP","$self->{access}{apn}") ];
-    $self->{access}{dial_number} = "*99***$cid#";
+    $self->{access}{cid} = 1;
+    $self->{access}{at_commands} = [ qq(AT+CGDCONT=$self->{access}{cid},"IP","$self->{access}{apn}") ];
+    $self->{access}{dial_number} = "*99***$self->{access}{cid}#";
 }
 
 sub write_settings {
