@@ -192,7 +192,7 @@ sub check_hardware {
 Entering the wrong PIN code multiple times may lock your SIM card!");
             last;
         } elsif (/^Waiting for Registration/m) {
-            #- the card seems to be resetted if comgt is killed right here, wait a bit
+            #- the card seems to be reset if comgt is killed right here, wait a bit
             sleep 1;
             #- don't wait the full scan
             $device_ready = 1;
