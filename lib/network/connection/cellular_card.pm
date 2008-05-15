@@ -117,7 +117,6 @@ sub set_ppp_settings {
         # Attached to network, will return 1
         "AT+CGATT?",
     ];
-    $self->{access}{dial_number} = "*99***$self->{access}{cid}#";
 }
 
 sub write_settings {

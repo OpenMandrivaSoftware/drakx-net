@@ -75,7 +75,6 @@ sub set_ppp_settings {
 
     $self->{access}{cid} = 1;
     $self->{access}{at_commands} = [ qq(AT+CGDCONT=$self->{access}{cid},"IP","$self->{access}{apn}") ];
-    $self->{access}{dial_number} = "*99***$self->{access}{cid}#";
 }
 
 sub write_settings {
