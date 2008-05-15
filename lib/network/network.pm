@@ -228,7 +228,7 @@ sub write_wireless_conf {
     my %wireless_ifcfg = %$ifcfg;
     # FIXME: be smarter to keep only DHCP/IP settings here
     delete $wireless_ifcfg{$_}
-      foreach qw(DEVICE MII_NOT_SUPPORTED);
+      foreach qw(DEVICE MII_NOT_SUPPORTED ONBOOT);
     write_interface_settings(\%wireless_ifcfg, $wireless_file);
 }
 
