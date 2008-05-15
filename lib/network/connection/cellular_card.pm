@@ -117,6 +117,8 @@ sub set_ppp_settings {
         # Attached to network, will return 1
         "AT+CGATT?",
     ];
+
+    $self->SUPER::set_ppp_settings;
 }
 
 sub write_settings {
