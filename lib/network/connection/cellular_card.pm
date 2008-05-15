@@ -107,8 +107,6 @@ sub build_peer {
 sub write_settings {
     my ($self) = @_;
 
-    $self->write_cellular_settings;
-
     my $interface = $self->get_interface;
     my $pin_file = "/etc/sysconfig/network-scripts/pin-$interface";
 
@@ -127,6 +125,7 @@ sub write_settings {
     ];
     $self->{access}{dial_number} = "*99***$cid#";
 
+    $self->write_cellular_settings;
     $self->SUPER::write_settings;
 }
 
