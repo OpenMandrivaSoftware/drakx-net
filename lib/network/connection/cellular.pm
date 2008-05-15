@@ -62,4 +62,10 @@ sub write_settings {
     $self->SUPER::write_settings;
 }
 
+sub apply_network_selection {
+    my ($self) = @_;
+    $self->set_ppp_settings;
+    $self->write_ppp_settings;
+}
+
 1;
