@@ -139,7 +139,7 @@ sub prepare_device {
 
     my $driver = $self->get_driver;
     require modules;
-    my $modules_conf = !is_empty_hash_ref($::o) ? $::o->{modules_conf} : modules::any_conf->read;
+    my $modules_conf = ref($::o) && $::o->{modules_conf} || modules::any_conf->read;
     modules::load_and_configure($modules_conf, $driver,
                                 if_($driver eq 'usbserial', join(
                                     ' ',
