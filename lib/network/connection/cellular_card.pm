@@ -61,7 +61,11 @@ sub get_tty_device {
 
 sub get_control_device {
     my ($self) = @_;
-    $self->get_tty_device;
+    my $tty_device = $self->get_tty_device;
+    my $usb_control_device = "/dev/ttyUSB1";
+    $tty_device eq "/dev/ttyUSB0" && -e $usb_control_device ?
+      $usb_control_device :
+      $tty_device;
 }
 
 sub network_scan_is_slow() { 1 }
