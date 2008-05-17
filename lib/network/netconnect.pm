@@ -195,7 +195,7 @@ sub real_main {
                        pre => sub {
                            @providers_data = $connection->get_providers;
                            require lang;
-                           my $locale_country = lang::c2name($::o->{locale}{country} || lang::read()->{country});
+                           my $locale_country = lang::c2name(ref($::o) && $::o->{locale}{country} || lang::read()->{country});
                            my $separator = $providers_data[1];
                            $provider_name = find { /^\Q$locale_country$separator\E/ } sort(keys %{$providers_data[0]});
                        },
