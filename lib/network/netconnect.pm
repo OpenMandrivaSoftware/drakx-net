@@ -205,7 +205,7 @@ sub real_main {
                                list => [ N("Unlisted - edit manually"), sort(keys %{$providers_data[0]}) ], sort => 0 } ];
                        },
                        post => sub {
-                           if ($provider ne N("Unlisted - edit manually")) {
+                           if ($provider_name ne N("Unlisted - edit manually")) {
                                $connection->set_provider($providers_data[0]{$provider_name});
                            }
                            $get_next->("select_provider");
