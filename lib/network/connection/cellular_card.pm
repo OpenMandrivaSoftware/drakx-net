@@ -59,12 +59,17 @@ sub get_tty_device {
       "/dev/ttyUSB0";
 }
 
+sub get_control_device {
+    my ($self) = @_;
+    $self->get_tty_device;
+}
+
 sub network_scan_is_slow() { 1 }
 sub check_hardware_is_slow() { 1 }
 
 sub get_networks {
     my ($self) = @_;
-    my $cmd = 'comgt -d ' . $self->get_tty_device;
+    my $cmd = 'comgt -d ' . $self->get_control_device;
     my ($network, $state) = `$cmd reg` =~ /^Registered on \w+ network: "(.*)",(\d+)$/m;
     my ($strength) = `$cmd sig` =~ /^Signal Quality:\s+(\d+),\d+$/;
     $self->{networks} = $network && {
@@ -171,7 +176,7 @@ sub check_hardware {
     require c;
     use POSIX qw(:errno_h);
 
-    my $pid = IPC::Open2::open2(my $cmd_out, my $cmd_in, 'comgt', '-d', $self->get_tty_device);
+    my $pid = IPC::Open2::open2(my $cmd_out, my $cmd_in, 'comgt', '-d', $self->get_control_device);
     common::nonblock($cmd_out);
     my $selector = IO::Select->new($cmd_out);
     my $already_entered_pin;
