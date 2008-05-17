@@ -90,7 +90,7 @@ sub real_main {
           my ($step) = @_;
           my @steps = (
               "select_connection" => sub { 0 },
-              "configure_hardware" => sub { $connection->can('get_hardware_settings') && !$connection->{device}{no_hardware_settings} },
+              "configure_hardware" => sub { $connection->can('get_hardware_settings') },
               #- network is for example wireless/3G access point
               "select_network" => sub { $connection->can('get_networks') },
               "configure_network_access" => sub { $connection->can('get_network_access_settings') },
