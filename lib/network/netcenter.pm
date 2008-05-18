@@ -107,7 +107,8 @@ sub main {
                    my $eventbox = gtksignal_connect(Gtk2::EventBox->new, button_press_event => sub {
                        $_[1]->button == 1 or return;
                        $toggle_expand->();
-                       $expander->set_expanded(!$expander->get_expanded);
+                       my $expanded = !$expander->get_expanded;
+                       $expander->set_expanded($expanded);
                    });
                    my $box = gtknew('VBox', spacing => 5, children_tight => [
                        gtknew('HBox', children => [
