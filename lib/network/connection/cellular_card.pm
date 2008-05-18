@@ -173,6 +173,11 @@ sub check_device {
 
 sub check_hardware {
     my ($self) = @_;
+    0;
+}
+
+sub configure_hardware {
+    my ($self) = @_;
 
     my $device_ready = 0;
 

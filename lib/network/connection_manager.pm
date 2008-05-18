@@ -66,7 +66,8 @@ sub setup_connection {
         $cmanager->{in}->ask_warn(N("Error"), $cmanager->{connection}{device}{error});
         return;
     }
-    if ($cmanager->{connection}->can('get_hardware_settings')) {
+    my $device_ready = !$cmanager->{connection}->can('check_hardware') || $cmanager->{connection}->check_hardware;
+    if ($cmanager->{connection}->can('get_hardware_settings') && !$device_ready) {
         $cmanager->{connection}->guess_hardware_settings if $cmanager->{connection}->can('guess_hardware_settings');
         $cmanager->{in}->ask_from_({
             title => N("Network settings"),
@@ -77,9 +78,9 @@ sub setup_connection {
             return;
         }
     }
-    if ($cmanager->{connection}->can('check_hardware')) {
+    if ($cmanager->{connection}->can('configure_hardware') && !$device_ready) {
         my $wait = $cmanager->{in}->wait_message(N("Please wait"), N("Configuring device..."));
-        if (!$cmanager->{connection}->check_hardware) {
+        if (!$cmanager->{connection}->configure_hardware) {
             undef $wait;
             $cmanager->{in}->ask_warn(N("Error"), $cmanager->{connection}{hardware}{error}) if $cmanager->{connection}{hardware}{error};
             return;

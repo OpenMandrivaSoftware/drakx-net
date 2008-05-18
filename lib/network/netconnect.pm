@@ -180,9 +180,10 @@ sub real_main {
                                $in->ask_warn('', $connection->{hardware}{error});
                                return 1;
                            }
-                           if ($connection->can('check_hardware')) {
+                           return 0 if !$connection->can('check_hardware') || $connection->check_hardware;
+                           if ($connection->can('configure_hardware')) {
                                my $_w = $in->wait_message(N("Please wait"), N("Configuring device..."));
-                               if (!$connection->check_hardware) {
+                               if (!$connection->configure_hardware) {
                                    $in->ask_warn(N("Error"), $connection->{hardware}{error}) if $connection->{hardware}{error};
                                    return 1;
                                }
