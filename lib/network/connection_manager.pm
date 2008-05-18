@@ -95,6 +95,10 @@ sub load_settings {
 
     $cmanager->{connection}->load_interface_settings;
     $cmanager->{connection}->guess_network_access_settings if $cmanager->{connection}->can('guess_network_access_settings');
+    if ($cmanager->{connection}->can('guess_provider_settings')) {
+        $cmanager->{connection}->guess_provider_settings;
+        $cmanager->{connection}->set_provider;
+    }
     $cmanager->{connection}->guess_protocol($cmanager->{net}) if $cmanager->{connection}->can('guess_protocol');
     $cmanager->{connection}->guess_access_settings if $cmanager->{connection}->can('guess_access_settings');
     $cmanager->{connection}->guess_address_settings if $cmanager->{connection}->can('guess_address_settings');
@@ -138,6 +142,9 @@ sub configure_connection {
                        $cmanager->{connection}->can('get_network_access_settings') ? (
                            { label => $cmanager->{connection}->get_network_access_settings_label, title => 1, advanced => 1 },
                            @{$cmanager->{connection}->get_network_access_settings},
+                       ) : (),
+                       $cmanager->{connection}->can('get_providers') ? (
+                         @{$cmanager->{connection}->get_provider_settings($cmanager->{net})}
                        ) : (),
                        $cmanager->{connection}->can('get_protocols') ? (
                          @{$cmanager->{connection}->get_protocol_settings},
