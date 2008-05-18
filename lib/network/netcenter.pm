@@ -109,6 +109,9 @@ sub main {
                        $toggle_expand->();
                        my $expanded = !$expander->get_expanded;
                        $expander->set_expanded($expanded);
+                       gtkflush();
+                       $cmanager->update_networks if
+                         $cmanager->{connection}->can('get_networks') && !$cmanager->{connection}{probed_networks} && $expanded;
                    });
                    my $box = gtknew('VBox', spacing => 5, children_tight => [
                        gtknew('HBox', children => [
