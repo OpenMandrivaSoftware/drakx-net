@@ -157,6 +157,7 @@ sub get_network_access_settings_label { N("Network access settings") }
 sub get_access_settings_label { N("Access settings") }
 sub get_address_settings_label { N("Address settings") }
 
+#- check that $self->can('get_providers') first
 sub set_provider {
     my ($self) = @_;
     if ($self->{provider_name} ne N("Unlisted - edit manually")) {
