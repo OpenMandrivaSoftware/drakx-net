@@ -51,7 +51,7 @@ sub real_main {
       my ($net, $in, $modules_conf) = @_;
       #- network configuration should have been already read in $net at this point
       my $mouse = $::o->{mouse} || {};
-      my (@connections_list, $connection, $provider_settings, @providers_data, $protocol_settings, $access_settings, $control_settings);
+      my (@connections_list, $connection, $provider_settings, $protocol_settings, $access_settings, $control_settings);
       my $connection_compat;
       my ($hardware_settings, $network_access_settings, $address_settings, $hostname_settings);
       my ($modem, $modem_name, $modem_dyn_dns, $modem_dyn_ip);
@@ -195,11 +195,7 @@ sub real_main {
                    select_provider => {
                        pre => sub {
                            $provider_settings = $connection->get_provider_settings;
-                           @providers_data = $connection->get_providers;
-                           require lang;
-                           my $locale_country = lang::c2name(ref($::o) && $::o->{locale}{country} || lang::read()->{country});
-                           my $separator = $providers_data[1];
-                           $connection->{provider_name} = find { /^\Q$locale_country$separator\E/ } sort(keys %{$providers_data[0]});
+                           $connection->guess_provider_settings;
                        },
                        name => sub { $net->{type}->get_type_name . "\n\n" . N("Please select your provider:") },
                        data => sub { $provider_settings },
