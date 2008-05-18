@@ -202,13 +202,13 @@ sub real_main {
                        },
                        name => sub { $net->{type}->get_type_name . "\n\n" . N("Please select your provider:") },
                        data => sub {
-                           [ { type => "list", val => \$self->{provider_name}, separator => $providers_data[1],
-                               list => [ N("Unlisted - edit manually"), sort(keys %{$providers_data[0]}) ], sort => 0 } ];
+                           [ {
+                               type => "list", val => \$self->{provider_name}, separator => $providers_data[1],
+                               list => [ N("Unlisted - edit manually"), sort(keys %{$providers_data[0]}) ], sort => 0,
+                               changed => { $self->set_provider },
+                           } ];
                        },
-                       post => sub {
-                           $self->_set_provider;
-                           $get_next->("select_provider");
-                       },
+                       post => sub { $get_next->("select_provider") },
                    },
 
                    select_network => {
