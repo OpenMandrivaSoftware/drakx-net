@@ -198,8 +198,8 @@ sub real_main {
                            require lang;
                            my $locale_country = lang::c2name(ref($::o) && $::o->{locale}{country} || lang::read()->{country});
                            my $separator = $providers_data[1];
-                           $self->{provider_name} = find { /^\Q$locale_country$separator\E/ } sort(keys %{$providers_data[0]});
-                           $provider_settings = $self->get_provider_settings;
+                           $connection->{provider_name} = find { /^\Q$locale_country$separator\E/ } sort(keys %{$providers_data[0]});
+                           $provider_settings = $connection->get_provider_settings;
                        },
                        name => sub { $net->{type}->get_type_name . "\n\n" . N("Please select your provider:") },
                        data => sub { $provider_settings },
