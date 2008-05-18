@@ -158,8 +158,11 @@ sub get_access_settings_label { N("Access settings") }
 sub get_address_settings_label { N("Address settings") }
 
 sub set_provider {
-    my ($self, $provider_data) = @_;
-    $self->{provider} = $provider_data;
+    my ($self) = @_;
+    if ($self->{provider_name} ne N("Unlisted - edit manually")) {
+        my @providers_data = $self->get_providers;
+        $self->{provider} = $providers_data[0]{$self->{provider_name}};
+    }
 }
 
 #- check that $self->can('get_protocols') first
