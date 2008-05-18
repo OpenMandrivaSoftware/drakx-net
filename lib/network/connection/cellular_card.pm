@@ -83,6 +83,7 @@ sub get_networks {
             current => $state == 2,
         }
     };
+    $self->SUPER::get_networks;
 }
 
 sub get_hardware_settings {
