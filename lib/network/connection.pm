@@ -165,6 +165,19 @@ sub set_provider {
     }
 }
 
+#- check that $self->can('get_providers') first
+sub get_provider_settings {
+    my ($self) = @_;
+    my @providers_data = $self->get_providers;
+    [
+        {
+            type => "list", val => \$self->{provider_name}, separator => $providers_data[1],
+            list => [ N("Unlisted - edit manually"), sort(keys %{$providers_data[0]}) ], sort => 0,
+            changed => sub { $self->set_provider },
+        },
+    ];
+}
+
 #- check that $self->can('get_protocols') first
 sub get_protocol_settings {
     my ($self) = @_;
