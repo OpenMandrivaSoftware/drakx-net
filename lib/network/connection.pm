@@ -164,7 +164,7 @@ sub guess_provider_settings {
     my @providers_data = $self->get_providers;
     my $locale_country = lang::c2name(ref($::o) && $::o->{locale}{country} || lang::read()->{country});
     my $separator = $providers_data[1];
-    $self->{provider_name} = find { /^\Q$locale_country$separator\E/ } sort(keys %{$providers_data[0]});
+    $self->{provider_name} ||= find { /^\Q$locale_country$separator\E/ } sort(keys %{$providers_data[0]});
 }
 
 sub set_provider {
