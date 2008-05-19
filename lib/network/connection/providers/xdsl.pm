@@ -84,7 +84,7 @@ our %data = (
                    dnsServers => [ qw(200.45.191.35 200.45.191.40) ],
                   },
 
-                  N("Austria") . "|Any" =>
+                  N("Austria") . "|" . N("Any") =>
                   {
                    provider_id => 'AT00',
                    vpi => 8,
@@ -443,7 +443,7 @@ our %data = (
                    method => 'pppoe',
                   },
 
-                  N("Denmark") . "|Any" =>
+                  N("Denmark") . "|" . N("Any") =>
                   {
                    provider_id => 'DK01',
                    vpi => 0,
@@ -647,7 +647,7 @@ our %data = (
                    method => 'pppoe',
                   },
 
-                  N("Greece") . "|Any" =>
+                  N("Greece") . "|" . N("Any") =>
                   {
                    provider_id => 'GR01',
                    vpi => 8,
@@ -665,7 +665,7 @@ our %data = (
                    method => 'pppoe',
                   },
 
-                  N("Ireland") . "|Any" =>
+                  N("Ireland") . "|" . N("Any") =>
                   {
                    provider_id => 'IE01',
                    vpi => 8,
@@ -784,7 +784,7 @@ our %data = (
                    method => 'pppoa'
                   },
 
-                  N("India") . "|Any" =>
+                  N("India") . "|" . N("Any") =>
                   {
 		   provider_id => 'IN01',
                    vpi => 0,
@@ -1255,7 +1255,7 @@ our %data = (
                    method => 'pppoe',
                   },
 
-                  N("Switzerland") . "|Any" =>
+                  N("Switzerland") . "|" . N("Any") =>
                   {
                    provider_id => 'CH01',
                    vpi => 8,
