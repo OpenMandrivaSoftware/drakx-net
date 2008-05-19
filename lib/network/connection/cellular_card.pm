@@ -76,6 +76,7 @@ sub get_networks {
     my $cmd = 'comgt -d ' . $self->get_control_device;
     my ($network, $state) = `$cmd reg` =~ /^Registered on \w+ network: "(.*)",(\d+)$/m;
     my ($strength) = `$cmd sig` =~ /^Signal Quality:\s+(\d+),\d+$/;
+    $self->probed_networks;
     $self->{networks} = $network && {
         $network => {
             name => $network,
@@ -83,7 +84,6 @@ sub get_networks {
             current => $state == 2,
         }
     };
-    $self->SUPER::get_networks;
 }
 
 sub get_hardware_settings {

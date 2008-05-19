@@ -257,10 +257,9 @@ sub write_settings {
     network::network::reload_net_applet();
 }
 
-sub get_networks {
+sub probed_networks {
     my ($self) = @_;
     $self->{probed_networks} = 1;
-    $self->{networks};
 }
 
 sub connect {

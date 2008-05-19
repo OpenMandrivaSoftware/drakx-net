@@ -314,7 +314,8 @@ sub get_networks {
     my ($self) = @_;
     require network::monitor;
     ($self->{networks}, $self->{control}{roaming}) = network::monitor::list_wireless(undef, $self->get_interface);
-    $self->SUPER::get_networks;
+    $self->probed_networks;
+    $self->{networks};
 }
 
 sub refresh_roaming_ids {
