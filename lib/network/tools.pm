@@ -189,7 +189,8 @@ sub get_interface_status {
     my ($intf) = @_;
     $intf = get_real_interface($intf);
     my $routes = get_routes();
-    return $routes->{$intf}{network}, $routes->{$intf}{network} eq '0.0.0.0' && $routes->{$intf}{gateway};
+    return $routes->{$intf}{network},
+      $routes->{$intf}{network} eq '0.0.0.0' && ($routes->{$intf}{gateway} || get_interface_ptp_address($intf));
 }
 
 #- returns (gateway_interface, interface is up, gateway address, dns server address)
@@ -241,6 +242,16 @@ sub get_interface_ip_address {
     my ($net, $interface) = @_;
     `/sbin/ip addr show dev $interface` =~ /^\s*inet\s+([\d.]+).*\s+$interface$/m && $1 ||
     $net->{ifcfg}{$interface}{IPADDR};
+}
+
+sub get_interface_ptp_address {
+    my ($interface) = @_;
+    my ($flags, $_link, $addrs) = `/sbin/ip addr show dev $interface`;
+    $flags =~ /\bPOINTOPOINT\b/ or return;
+    my ($peer) = $addrs =~ /peer\s+([\d.]+)/;
+    return $peer if $peer;
+    my ($addr) = $addrs =~ /inet\s+([\d.]+)/;
+    return $addr if $addr;
 }
 
 sub host_hex_to_dotted {
