@@ -66,7 +66,12 @@ sub setup_connection {
         $cmanager->{in}->ask_warn(N("Error"), $cmanager->{connection}{device}{error});
         return;
     }
-    my $device_ready = !$cmanager->{connection}->can('check_hardware') || $cmanager->{connection}->check_hardware;
+    my $device_ready = 1;
+    if ($cmanager->{connection}->can('check_hardware')) {
+        #- FIXME: change message to "Checking device..." in cooker
+        my $_wait = $cmanager->{in}->wait_message(N("Please wait"), N("Configuring device..."));
+        $device_ready = $cmanager->{connection}->check_hardware;
+    }
     if ($cmanager->{connection}->can('get_hardware_settings') && !$device_ready) {
         $cmanager->{connection}->guess_hardware_settings if $cmanager->{connection}->can('guess_hardware_settings');
         $cmanager->{in}->ask_from_({
