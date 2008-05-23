@@ -76,7 +76,8 @@ sub setup_connection {
         $cmanager->{connection}->guess_hardware_settings if $cmanager->{connection}->can('guess_hardware_settings');
         $cmanager->{in}->ask_from_({
             title => N("Network settings"),
-            messages => N("Please enter settings for network")
+            messages => N("Please enter settings for network"),
+            auto_window_size => 1,
         }, $cmanager->{connection}->get_hardware_settings) or return;
         if ($cmanager->{connection}->can("check_hardware_settings") && !$cmanager->{connection}->check_hardware_settings) {
             $cmanager->{in}->ask_warn(N("Error"), $cmanager->{connection}->{hardware}{error});
