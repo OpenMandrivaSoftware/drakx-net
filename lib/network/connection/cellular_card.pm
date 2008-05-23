@@ -33,6 +33,10 @@ my @thirdparty_settings = (
         description => 'Option High Speed Mobile Devices',
         url => 'http://www.pharscape.org/',
         kernel_module => 1,
+        tools => {
+            package => 'hso-rezero',
+            test_file => '/usr/sbin/rezero',
+        },
     },
 );
 
