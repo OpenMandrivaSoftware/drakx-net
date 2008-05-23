@@ -224,7 +224,7 @@ Entering the wrong PIN code multiple times may lock your SIM card!");
     kill 'TERM', $pid;
     close($cmd_out);
     close($cmd_in);
-    waitpid($pid, c::WNOHANG());
+    waitpid($pid, 0);
 
     $device_ready;
 }
