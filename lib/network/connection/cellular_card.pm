@@ -198,7 +198,7 @@ sub configure_hardware {
         local $_;
         my $rv = sysread($cmd_out, $_, 512);
         $rv == 0 and $selector->remove($cmd_out);
-        if (/^\*\*\*SIM ERROR\*\*\*/m) {
+        if (/^\s*\*\*\*SIM ERROR\*\*\*/m) {
             $self->{hardware}{error} = N("Please check that your SIM card is inserted.");
             last;
         } elsif (/^Enter PIN number:/m) {
