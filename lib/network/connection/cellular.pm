@@ -36,6 +36,24 @@ sub write_cellular_settings {
     setVarsInShMode($file, 0600, { map { (uc($_) => $self->{access}{$_}) } qw(login password apn) });
 }
 
+sub guess_apn_from_chat {
+    my ($self) = @_;
+    my $chat = cat_($::prefix . $self->get_chat_file);
+    my $chat_apn = $chat =~ /\bAT\+CGDCONT=\d+,"IP","([^"]+)"/ && $1;
+}
+
+sub guess_provider_settings {
+    my ($self) = @_;
+    my $settings = $self->load_cellular_settings;
+    my $apn = $self->guess_apn_from_chat || $settings && $settings->{APN};
+    if ($apn) {
+        my @providers_data = $self->get_providers;
+        $self->{provider_name} ||= find { $providers_data[0]{$_}{apn} eq $apn } keys %{$providers_data[0]};
+        return;
+    }
+    $self->SUPER::guess_provider_settings;
+}
+
 sub guess_access_settings {
     my ($self) = @_;
     my $settings = $self->load_cellular_settings || {};
