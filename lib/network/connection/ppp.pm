@@ -93,11 +93,14 @@ sub build_chat {
     );
 }
 
+sub get_chat_file {
+    my ($self) = @_;
+    "/etc/sysconfig/network-scripts/chat-" . $self->get_interface;
+}
+
 sub write_chat {
     my ($self) = @_;
-    my $interface = $self->get_interface;
-    my $chat_file = "/etc/sysconfig/network-scripts/chat-$interface";
-    output_with_perm($::prefix . $chat_file, 0755, join("\n", $self->build_chat, ''));
+    output_with_perm($::prefix . $self->get_chat_file, 0755, join("\n", $self->build_chat, ''));
 }
 
 sub get_peer_default_options {
@@ -113,8 +116,7 @@ sub build_peer {
     #-   pty
     #-   plugin
     if ($self->{access}{dial_number}) {
-        my $interface = $self->get_interface;
-        my $chat_file = "/etc/sysconfig/network-scripts/chat-$interface";
+        my $chat_file = $self->get_chat_file;
         $self->{access}{peer}{connect} ||= qq("/usr/sbin/chat -v -f $chat_file");
     }
     $self->get_peer_default_options,
