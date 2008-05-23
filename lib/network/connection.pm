@@ -172,7 +172,14 @@ sub set_provider {
     if ($self->{provider_name} ne N("Unlisted - edit manually")) {
         my @providers_data = $self->get_providers;
         $self->{provider} = $providers_data[0]{$self->{provider_name}};
+        $self->apply_provider_settings($net);
     }
+}
+
+sub apply_provider_settings {
+    my ($self, $net) = @_;
+    $self->guess_protocol($net) if $self->can('guess_protocol');
+    $self->guess_access_settings if $self->can('guess_access_settings');
 }
 
 #- check that $self->can('get_providers') first
