@@ -45,7 +45,7 @@ sub guess_apn_from_chat {
 sub guess_provider_settings {
     my ($self) = @_;
     my $settings = $self->load_cellular_settings;
-    my $apn = $self->guess_apn_from_chat || $settings && $settings->{APN};
+    my $apn = $settings && $settings->{APN} || $self->guess_apn_from_chat;
     if ($apn) {
         my @providers_data = $self->get_providers;
         $self->{provider_name} ||= find { $providers_data[0]{$_}{apn} eq $apn } keys %{$providers_data[0]};
