@@ -102,16 +102,25 @@ sub main {
                    ]);
 
                    my $expander = gtknew('Expander');
-                   my $toggle_expand = sub { $expander->get_expanded ? $content->hide : $content->show_all };
+                   my $on_expand = sub {
+                       my ($expanded) = @_;
+                       if ($expanded && $cmanager->{connection}->can('get_networks') &&
+                             !$cmanager->{connection}{probed_networks} && $expanded) {
+                           gtkflush();
+                           $cmanager->update_networks;
+                       }
+                   };
+                   my $toggle_expand = sub {
+                       my $was_expanded = $expander->get_expanded;
+                       $was_expanded ? $content->hide : $content->show_all;
+                       $on_expand->(!$was_expanded);
+                   };
                    $expander->signal_connect(activate => $toggle_expand);
                    my $eventbox = gtksignal_connect(Gtk2::EventBox->new, button_press_event => sub {
                        $_[1]->button == 1 or return;
                        $toggle_expand->();
-                       my $expanded = !$expander->get_expanded;
-                       $expander->set_expanded($expanded);
-                       gtkflush();
-                       $cmanager->update_networks if
-                         $cmanager->{connection}->can('get_networks') && !$cmanager->{connection}{probed_networks} && $expanded;
+                       my $was_expanded = $expander->get_expanded;
+                       $expander->set_expanded(!$was_expanded);
                    });
                    my $box = gtknew('VBox', spacing => 5, children_tight => [
                        gtknew('HBox', children => [
