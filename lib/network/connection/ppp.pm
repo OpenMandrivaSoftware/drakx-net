@@ -115,7 +115,7 @@ sub build_peer {
     #-   connect
     #-   pty
     #-   plugin
-    if ($self->{access}{dial_number}) {
+    if ($self->{access}{use_chat}) {
         my $chat_file = $self->get_chat_file;
         $self->{access}{peer}{connect} ||= qq("/usr/sbin/chat -v -f $chat_file");
     }
