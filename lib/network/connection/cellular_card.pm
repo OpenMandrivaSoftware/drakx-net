@@ -28,6 +28,12 @@ my @thirdparty_settings = (
         url => 'http://www.pharscape.org/',
         kernel_module => 1,
     },
+    {
+        name => 'hso',
+        description => 'Option High Speed Mobile Devices',
+        url => 'http://www.pharscape.org/',
+        kernel_module => 1,
+    },
 );
 
 sub get_thirdparty_settings() {
