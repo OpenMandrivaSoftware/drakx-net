@@ -55,8 +55,8 @@ sub guess_provider_settings {
 }
 
 sub guess_access_settings {
-    my ($self) = @_;
-    my $settings = $self->load_cellular_settings || {};
+    my ($self, $o_provider_only) = @_;
+    my $settings = !$o_provider_only && $self->load_cellular_settings || {};
     $self->{access}{$_} = $settings->{uc($_)} || $self->{provider}{$_} foreach qw(login password apn);
 }
 

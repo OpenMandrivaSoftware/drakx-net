@@ -179,7 +179,7 @@ sub set_provider {
 sub apply_provider_settings {
     my ($self, $net) = @_;
     $self->guess_protocol($net) if $self->can('guess_protocol');
-    $self->guess_access_settings if $self->can('guess_access_settings');
+    $self->guess_access_settings('provider_only') if $self->can('guess_access_settings');
 }
 
 #- check that $self->can('get_providers') first
