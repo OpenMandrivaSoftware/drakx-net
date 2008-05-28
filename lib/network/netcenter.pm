@@ -17,6 +17,7 @@ sub build_cmanager {
 
     my $cmanager = network::connection_manager->new($in, $net, $w, $pixbufs);
     $cmanager->set_connection($connection);
+    $cmanager->{gui}{show_unique_network} = $cmanager->{connection}->has_unique_network;
 
     if ($connection->can('get_networks')) {
         $cmanager->create_networks_list;
@@ -73,8 +74,12 @@ sub main {
                                0, gtknew('Label', padding => [ 5, 0 ]),
                                1, gtknew('VBox', spacing => 5, children_tight => [
                                    ($cmanager->{connection}->can('get_networks') ? (
-                                       gtknew('Label', text => N("Please select your network:"), alignment => [ 0, 0 ]),
-                                       gtknew('ScrolledWindow', height => 160, child => $cmanager->{gui}{networks_list}),
+                                       $cmanager->{gui}{show_unique_network} ? (
+                                           $cmanager->{gui}{networks_list},
+                                       ): ( 
+                                           gtknew('Label', text => N("Please select your network:"), alignment => [ 0, 0 ]),
+                                           gtknew('ScrolledWindow', height => 160, child => $cmanager->{gui}{networks_list})
+                                       ),
                                    ) : ()),
                                    gtknew('HBox', children => [
                                        1, gtknew('HButtonBox', spacing => 6, layout => 'start', children_loose => [
