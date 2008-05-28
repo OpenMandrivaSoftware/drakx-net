@@ -309,11 +309,14 @@ sub update_networks {
         my @networks = filter_networks($cmanager->{connection});
         foreach my $network (@networks) {
             my $ap = $network->{ap};
+            my $connected_pixbuf = $network->{current} ? $connected ? $cmanager->{gui}{pixbufs}{state}{connected} : $cmanager->{gui}{pixbufs}{state}{refresh} : undef;
+            my $network_name = !$network->{essid} && exists $cmanager->{net}{wireless}{$ap} && $cmanager->{net}{wireless}{$ap}{WIRELESS_ESSID} || $network->{name};
+            my $strength_pixbuf = network::signal_strength::get_strength_icon($network);
             push @{$cmanager->{gui}{networks_list}{data}}, [
                 $ap || $network->{name},
-                $network->{current} ? $connected ? $cmanager->{gui}{pixbufs}{state}{connected} : $cmanager->{gui}{pixbufs}{state}{refresh} : undef,
-                !$network->{essid} && exists $cmanager->{net}{wireless}{$ap} && $cmanager->{net}{wireless}{$ap}{WIRELESS_ESSID} || $network->{name},
-                network::signal_strength::get_strength_icon($network),
+                $connected_pixbuf,
+                $network_name,
+                $strength_pixbuf,
                 $cmanager->{gui}{pixbufs}{encryption}{$network->{flags} =~ /WPA/i ? 'strong' : $network->{flags} =~ /WEP/i ? 'weak' : 'open'},
                 $network->{mode},
             ];
