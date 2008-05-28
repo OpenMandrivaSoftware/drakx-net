@@ -83,6 +83,7 @@ sub get_control_device {
 
 sub network_scan_is_slow() { 1 }
 sub check_hardware_is_slow() { 1 }
+sub has_unique_network() { 1 }
 
 sub get_networks {
     my ($self) = @_;
