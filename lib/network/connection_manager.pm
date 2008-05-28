@@ -249,6 +249,11 @@ sub toggle_connection {
 sub create_networks_list {
     my ($cmanager) = @_;
 
+    if ($cmanager->{gui}{show_unique_network}) {
+        $cmanager->{gui}{networks_list} = gtknew('HBox', spacing => 20);
+        return;
+    }
+
     $cmanager->{gui}{networks_list} = Gtk2::SimpleList->new(
         "AP" => "hidden",
         '' => "pixbuf",
@@ -312,17 +317,27 @@ sub update_networks {
             my $connected_pixbuf = $network->{current} ? $connected ? $cmanager->{gui}{pixbufs}{state}{connected} : $cmanager->{gui}{pixbufs}{state}{refresh} : undef;
             my $network_name = !$network->{essid} && exists $cmanager->{net}{wireless}{$ap} && $cmanager->{net}{wireless}{$ap}{WIRELESS_ESSID} || $network->{name};
             my $strength_pixbuf = network::signal_strength::get_strength_icon($network);
-            push @{$cmanager->{gui}{networks_list}{data}}, [
-                $ap || $network->{name},
-                $connected_pixbuf,
-                $network_name,
-                $strength_pixbuf,
-                $cmanager->{gui}{pixbufs}{encryption}{$network->{flags} =~ /WPA/i ? 'strong' : $network->{flags} =~ /WEP/i ? 'weak' : 'open'},
-                $network->{mode},
-            ];
+
+            if ($cmanager->{gui}{show_unique_network}) {
+                gtkset($cmanager->{gui}{networks_list}, children => [
+                    0, Gtk2::Image->new_from_pixbuf($connected_pixbuf),
+                    1, $network_name,
+                    0, Gtk2::Image->new_from_pixbuf($strength_pixbuf),
+                ]);
+                $cmanager->{connection}{network} = $network_name;
+            } else {
+                push @{$cmanager->{gui}{networks_list}{data}}, [
+                    $ap || $network->{name},
+                    $connected_pixbuf,
+                    $network_name,
+                    $strength_pixbuf,
+                    $cmanager->{gui}{pixbufs}{encryption}{$network->{flags} =~ /WPA/i ? 'strong' : $network->{flags} =~ /WEP/i ? 'weak' : 'open'},
+                    $network->{mode},
+                ];
+            }
         }
 
-        if ($cmanager->{connection}{network}) {
+        if ($cmanager->{connection}{network} && !$cmanager->{gui}{show_unique_network}) {
             my $index = eval { find_index { $_->[0] eq $cmanager->{connection}{network} } @{$cmanager->{gui}{networks_list}{data}} };
             $cmanager->{gui}{networks_list}->select($index) if defined $index;
         }
