@@ -189,8 +189,7 @@ sub get_interface_status {
     my ($intf) = @_;
     $intf = get_real_interface($intf);
     my $routes = get_routes();
-    return $routes->{$intf}{network},
-      $routes->{$intf}{network} eq '0.0.0.0' && ($routes->{$intf}{gateway} || get_interface_ptp_address($intf));
+    return $routes->{$intf}{network}, $routes->{$intf}{network} eq '0.0.0.0' && $routes->{$intf}{gateway};
 }
 
 #- returns (gateway_interface, interface is up, gateway address, dns server address)
@@ -268,6 +267,7 @@ sub get_routes() {
 	    if (defined $4) { $routes{$1}{metric} = $4 }
 	}
     }
+    $routes{$_}{gateway} ||= get_interface_ptp_address($_) foreach keys %routes;
     #- TODO: handle IPv6 with /proc/net/ipv6_route
     \%routes;
 }
