@@ -63,8 +63,9 @@ sub build_ifcfg_settings {
         if_($modemport, MODEMPORT => $modemport),
         LINESPEED => "115200",
         PERSIST => "yes",
-        DEBUG => "yes",
         DEFROUTE => "yes",
+        #- FIXME: move in network::connection::cellular or network::connection::ellular_card
+        if_($self->get_interface !~ /^hso/, DEBUG => "yes"),
         if_($self->{access}{cid}, CELLULAR_CID => $self->{access}{cid}),
     });
     $self->SUPER::build_ifcfg_settings($settings);
