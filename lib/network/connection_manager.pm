@@ -320,7 +320,6 @@ sub update_networks {
 
             if ($cmanager->{gui}{show_unique_network}) {
                 gtkset($cmanager->{gui}{networks_list}, children => [
-                    0, Gtk2::Image->new_from_pixbuf($connected_pixbuf),
                     1, $network_name,
                     0, Gtk2::Image->new_from_pixbuf($strength_pixbuf),
                 ]);
