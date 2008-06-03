@@ -12,6 +12,7 @@ BEGIN { unshift @::textdomains, 'drakx-net' }
 use standalone;
 use network::network;
 use network::netcenter;
+use dbus_object;
 
 my $in = 'interactive'->vnew('su');
 my $net = {};
