@@ -73,7 +73,6 @@ sub setup_connection {
         $device_ready = $cmanager->{connection}->check_hardware;
     }
     if ($cmanager->{connection}->can('get_hardware_settings') && !$device_ready) {
-        $cmanager->{connection}->guess_hardware_settings if $cmanager->{connection}->can('guess_hardware_settings');
         $cmanager->{in}->ask_from_({
             title => N("Network settings"),
             messages => N("Please enter settings for network"),
@@ -100,6 +99,7 @@ sub load_settings {
     my ($cmanager) = @_;
 
     $cmanager->{connection}->load_interface_settings;
+    $cmanager->{connection}->guess_hardware_settings if $cmanager->{connection}->can('guess_hardware_settings');
     $cmanager->{connection}->guess_network_access_settings if $cmanager->{connection}->can('guess_network_access_settings');
     if ($cmanager->{connection}->can('get_providers')) {
         $cmanager->{connection}->guess_provider_settings;
