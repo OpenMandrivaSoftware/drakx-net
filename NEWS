@@ -1,3 +1,81 @@
+0.35:
+- cellular backend:
+  o add suport for cdc_acm USB modems in cellular backend
+  o install ppp (thanks Anssi) and bluez-utils when configuring a
+    cellular connection over bluetooth
+  o hso devices support (using ttyHS0 device and hso0 interface)
+    using ifup-hso script, together with dkms-hso and hso-rezero
+  o do not write DEBUG=yes for hso devices
+  o write CELLULAR_CID in ifcfg file if needed
+  o call comgt instead of gcom
+  o update chat/ppp files when connecting to a cellular network
+  o fix check for SIM card (adapt to latest comgt output)
+  o use "comgt PIN" to check cellular cards status
+  o use ttyUSB2 or ttyUSB1 as control device for usbserial devices
+    when possible
+  o hang when waiting for comgt to finish (not to have a zombie process)
+  o guess provider according to APN from chat file or from
+    configuration of current network
+- cellular providers:
+  o add BouygTel, SFR WAP (Illimythics / Pass Surf), SFR EeePC
+  o add Finnish providers (from Anssi)
+  o fix APN for TIM provider (from Giuseppe Ghibo)
+  o enhance label of SFR Web APN
+- ethernet backend:
+  o do not disable ONBOOT for PCMCIA interfaces (ifplugd is used by default)
+  o fix blacklisting via_velocity for ifplugd
+  o do not blacklist ifplugd for via_velocity, use a link detection
+    delay instead (reported working by Stefan van der Eijk)
+- generic backend:
+  o find gateway address for ptp connections with only one interface
+    route (like hso devices)
+- wireless backend:
+  o do not try to use mandi if not available
+  o really force using wireless-tools when wpa_supplicant gives empty
+    results (by removing useless info from wpa_cli output)
+  o add network to wpa_supplicant config if needed when connecting
+    (drakroam/netcenter)
+  o use signal level if all reported qualities are 100% and if signal
+    level is different
+  o parse "Signal level=" as well (was only parsing "Signal level:")
+  o try to normalize signal level reported by wpa_supplicant only if
+    some values are greater than 100
+  o refresh networks list when switching from non-roaming to roaming
+    (to get wpa_supplicant network IDs)
+  o default to roaming for all encryption types if ROAMING is true in
+    /etc/sysconfig/drakx-net
+  o do not write ONBOOT setting in access point files
+- connection frontends:
+  o make "Any" translatable in providers list (#40926)
+  o ask for ndiswrapper files in /media (not inexistant /media/cdrom)
+- connection managers (drakroam/draknetcenter):
+  o do not check and warn thrice about device setup (i.e. kill switch)
+  o allow to select provider (useful for cellular cards)
+  o check hardware and probe networks if not already done when expanding connection
+  o show wait message when checking hardware
+  o do not let interactive::gtk set huge window size when asking hardware
+    settings (PIN code)
+- drakconnect:
+  o allow skipping interface choice if AUTOMATIC_IFACE_CHOICE is true
+    in /etc/sysconfig/drakx-net and only one "automatic" interface is
+    detected (i.e. not ndiswrapper)
+  o allow to skip protocol and address configuration (defaulting to dhcp)
+    if AUTOMATIC_ADDRESS is true in /etc/sysconfig/drakx-net
+- draknetcenter:
+  o do not use a networks list when there is only one network, just
+    use one text line (cellular cards)
+- drakproxy: factorize code restarting window manager (tv)
+- net_applet:
+  o do not read modules_conf (saves 92 kB of RSS, 25808 -> 25716)
+  o allow to disable D-Bus usage by setting DBUS=no in /etc/sysconfig/drakx-net
+    (saves about 5200 kB of RSS memory)
+    this disables Interactive Firewall and switching wireless network
+    in the background without being root
+  o do not try to run ifw code if disabled (total memory gain of 156 kB
+    after network::net_applet::ifw move, if D-Bus is disabled)
+  o autostart in LXDE too (Funda Wang)
+- translation updates
+
 0.34:
 - show wait message when starting connection
 - use network-up to wait for connection to be started
