@@ -93,6 +93,9 @@ our %data = (
         login => "orange",
         password => "orange",
     },
+    N("France") . "|SFR EeePC (Clé Internet 3G+)" => {
+        apn => "slsfr",
+    },
     N("France") . "|SFR WAP (Illimythics / Pass Surf)" => {
         apn => "wapsfr",
     },
