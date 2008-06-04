@@ -43,10 +43,11 @@ sub list_wireless {
             $networks{$ap}{flags} ||= $flags;
             $networks{$ap}{essid} ||= $essid;
         }
-        if (any { $_->{signal_strength} > 100 } %networks) {
+        if (any { $_->{signal_strength} > 100 } values %networks) {
             #- signal level is really too high in wpa_supplicant
             #- this should be standardized at some point
-            $_->{signal_strength} = int($_->{signal_strength}/3.5);
+            $_->{signal_strength} = int($_->{signal_strength}/3.5)
+              foreach values %networks;
         }
 
         #- network id / ssid / bssid / flags
