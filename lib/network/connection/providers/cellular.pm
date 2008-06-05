@@ -102,6 +102,12 @@ our %data = (
     N("France") . "|SFR Web (Clé Internet / Data)" => {
         apn => "websfr",
     },
+    N("Germany") . "|Vodafone Live! WAP" => {
+        apn => "wap.vodafone.de",
+    },
+    N("Germany") . "|Vodafone Web" => {
+        apn => "web.vodafone.de",
+    },
     N("Italy") . "|TIM" => {
         apn => "ibox.tim.it",
         login => "tim",
