@@ -550,7 +550,7 @@ Take a look at http://www.linmodems.org"),
                    {
                     pre => sub {
                         add2hash($modem, network::modem::ppp_read_conf());
-                        $in->do_pkgs->ensure_is_installed('kdenetwork-kppp-provider', $db_path);
+                        $in->do_pkgs->ensure_is_installed('kppp-provider', $db_path);
                         my $p_db_path = "$::prefix$db_path";
                         @isp = map {
                             my $country = $_;

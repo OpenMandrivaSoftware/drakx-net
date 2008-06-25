@@ -50,7 +50,7 @@ sub ppp_read_conf() {
 sub ppp_configure {
     my ($net, $in, $modem) = @_;
     $in->do_pkgs->install('ppp') if !$::testing;
-    $in->do_pkgs->install('kdenetwork-kppp') if !$::testing && $in->do_pkgs->is_installed('kdebase');
+    $in->do_pkgs->install('kppp') if !$::testing && $in->do_pkgs->is_installed('kdebase');
 
     if ($modem->{device} ne "/dev/modem") {
         my $dev = $modem->{device};
