@@ -593,6 +593,7 @@ sub build_ifcfg_settings {
         WIRELESS_MODE => $self->{access}{network}{mode},
         if_($self->need_wpa_supplicant,
             WIRELESS_WPA_DRIVER => wpa_supplicant_get_driver($self->get_driver),
+            WIRELESS_WPA_REASSOCIATE => bool2yesno($self->need_wpa_supplicant_reassociate),
             MII_NOT_SUPPORTED => 'no',
         ),
         WIRELESS_ESSID => $self->{access}{network}{essid},
@@ -707,6 +708,11 @@ sub is_old_rt2x00 {
 sub is_wpa_supplicant_blacklisted {
     my ($module) = @_;
     is_old_rt2x00($module);
+}
+
+sub need_wpa_supplicant_reassociate {
+       my ($self) = @_;
+       $self->get_driver eq 'rt61pci';
 }
 
 sub need_rt2x00_iwpriv {
