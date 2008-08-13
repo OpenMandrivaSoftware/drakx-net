@@ -38,9 +38,13 @@ sub get_config_file {
 
 sub set_in_file {
     my ($file, $enabled, @list) = @_;
+    my $done;
     substInFile {
 	foreach my $l (@list) { s|^$l\n|| }
-	$_ .= join("\n", @list) . "\n" if eof && $enabled;
+	if (!$done && $enabled && (/^#LAST LINE/ || eof)) {
+	    $_ = join('', map { "$_\n" } @list) . $_;
+	    $done = 1;
+	}
     } "$::prefix/etc/shorewall/$file";
 }
 
