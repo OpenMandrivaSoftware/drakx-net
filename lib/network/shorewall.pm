@@ -36,6 +36,14 @@ sub get_config_file {
     map { [ split ' ' ] } grep { !/^#/ } cat_("$::prefix${shorewall_root}/$file");
 }
 
+sub set_in_file {
+    my ($file, $enabled, @list) = @_;
+    substInFile {
+	foreach my $l (@list) { s|^$l\n|| }
+	$_ .= join("\n", @list) . "\n" if eof && $enabled;
+    } "$::prefix/etc/shorewall/$file";
+}
+
 sub dev_to_shorewall {
     my ($dev) = @_;
     $dev =~ /^ippp/ && "ippp+" ||
