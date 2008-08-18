@@ -273,11 +273,11 @@ sub check_installed {
 }
 
 sub get_available_packages {
-    my ($type, $in, @names) = @_;
+    my ($type, $do_pkgs, @names) = @_;
     if ($type eq 'kernel_module') {
-        return map { my $l = $in->do_pkgs->check_kernel_module_packages($_); $l ? @$l : () } @names;
+        return map { my $l = $do_pkgs->check_kernel_module_packages($_); $l ? @$l : () } @names;
     } else {
-        return $in->do_pkgs->is_available(@names);
+        return $do_pkgs->is_available(@names);
     }
 }
 
@@ -312,7 +312,7 @@ sub install_packages {
     }
 
     my $optional = ref $settings->{$component} eq 'HASH' && $settings->{$component}{optional};
-    if (my @available = get_available_packages($component, $in, @packages)) {
+    if (my @available = get_available_packages($component, $in->do_pkgs, @packages)) {
         log::explanations("Installing thirdparty packages ($component) " . join(', ', @available));
         if ($in->do_pkgs->install(@available) && check_installed($component, $settings, $driver)) {
             return 1;
