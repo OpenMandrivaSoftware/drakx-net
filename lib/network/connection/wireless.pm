@@ -120,14 +120,15 @@ my @thirdparty_settings = (
     },
 
     (map {
-        my ($version, $ucode_api) = @$_;
+        my ($version, $ucode_api, $ucode_version) = @$_;
+        $ucode_version ||= $version;
         {
             name => "iwl${version}",
             description => "Intel(R) PRO/Wireless ${version}",
             url => "http://intellinuxwireless.org/",
             firmware => {
                 package => "iwlwifi-${version}-ucode",
-                test_file => "iwlwifi-${version}${ucode_api}.ucode",
+                test_file => "iwlwifi-${ucode_version}${ucode_api}.ucode",
             },
             sleep => 1,
         };
