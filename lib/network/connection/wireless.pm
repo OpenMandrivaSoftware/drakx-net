@@ -206,6 +206,28 @@ my @thirdparty_settings = (
         },
     },
 
+    (map {
+      +{
+        name => $_,
+        description => "Broadcom $_ wireless chips",
+        url => 'http://wireless.kernel.org/en/users/Drivers/b43',
+        firmware => {
+            test_file => $_ . "/ucode*.fw",
+            extract => {
+                name => 'b43-fwcutter',
+                test_file => '/usr/bin/b43-fwcutter',
+                windows_source => 'bcmwl5.sys',
+                default_source => 'bcmwl5.sys',
+                run => sub {
+                    my ($file) = @_;
+                    run_program::rooted($::prefix, '/usr/bin/b43-fwcutter',
+                                        '-w', $network::thirdparty::firmware_directory, $file);
+                },
+            },
+        },
+      };
+    } qw(b43 b43legacy)),
+
     {
         name => 'acx100',
         matching => [ qw(acx_pci acx_usb) ],
