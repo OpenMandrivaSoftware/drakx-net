@@ -189,7 +189,6 @@ sub choose_allowed_services {
     my @l = grep { $_->{on} || !$_->{hide} } @all_servers;
 
     $in->ask_from_({
-		    messages => N("Which services would you like to allow the Internet to connect to?"),
 		    title => N("Firewall"),
 		    icon => $network::shorewall::firewall_icon,
 		    banner_title => N("Firewall"),
@@ -209,6 +208,7 @@ You can also give a range of ports (eg: 24300:24350/udp)", $invalid_port));
 			},
 		   } },
 		  [
+		   { label => N("Which services would you like to allow the Internet to connect to?"), title => 1 },
 		   { text => N("Everything (no firewall)"), val => \$disabled, type => 'bool' },
 		   (map { { text => translate($_->{name}), val => \$_->{on}, type => 'bool', disabled => sub { $disabled } } } @l),
 		   { label => N("Other ports"), val => \$unlisted, advanced => 1, disabled => sub { $disabled } },
