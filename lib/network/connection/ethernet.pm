@@ -385,8 +385,8 @@ sub interface_to_driver {
     my $dev_path = get_interface_sysfs_path($interface);
     #- FIXME: use $bus and move in get_interface_sysfs_path if possible
     my $child = -f "$dev_path/idVendor" && first(glob("$dev_path/*-*:*.*"));
-    $dev_path = $child if -f "$child/driver";
-    detect_devices::get_sysfs_field_from_link($dev_path, 'driver');
+    $dev_path = $child if -f "$child/driver/module";
+    detect_devices::get_sysfs_field_from_link($dev_path, 'driver/module');
 }
 
 # return list of [ intf_name, module, device_description ] tuples such as:
