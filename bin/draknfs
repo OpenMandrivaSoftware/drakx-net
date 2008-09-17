@@ -17,7 +17,7 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
 # 02111-1307, USA.
 
-use strict;
+
 use lib qw(/usr/lib/libDrakX);
 
 # i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
@@ -26,7 +26,10 @@ use standalone;
 use common;
 use network::network;
 use interactive;
-$ugtk2::wm_icon = 'IC-NFS-48';
+use services;
+#$ugtk2::wm_icon = 'IC-NFS-48';
+my $nfsicon = "/usr/share/mcc/themes/default/draknfs.png";
+$ugtk2::wm_icon = $nfsicon;
 use mygtk2 qw(gtknew gtkset);
 use ugtk2 qw(:ask :wrappers :create :dialogs);
 
@@ -564,10 +567,14 @@ my $okcancel = create_okcancel({
 			       },
 			      );
 
+my $wait = $in->wait_message(N("Please wait"), N("Starting the NFS-server"));
+services::_run_action('nfs-server', services::is_service_running('nfs-server') ? "restart" : "start"); 
+undef $wait;
+
 # main interface
 $W->add(gtknew('VBox', children => [
 		 0, $menu,
-		 0, Gtk2::Banner->new('IC-NFS-48', N("DrakNFS manage NFS shares")),
+		 0, Gtk2::Banner->new($nfsicon, N("DrakNFS manage NFS shares")),
 		 #if_($::isEmbedded, 0, gtknew('Label', text => "Here you can add, remove and alter NFS shares.")),
 		 1, gtknew('HBox', border_width => 0, children => [
 			     1, gtknew('ScrolledWindow', child => $treeview),
