@@ -568,7 +568,7 @@ my $okcancel = create_okcancel({
 			      );
 
 my $wait = $in->wait_message(N("Please wait"), N("Starting the NFS-server"));
-services::_run_action('nfs-server', services::is_service_running('nfs-server') ? "restart" : "start"); 
+services::_run_action('nfs-server', services::is_service_running('nfs-server') ? "start" : "status"); 
 undef $wait;
 
 # main interface
