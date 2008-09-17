@@ -67,6 +67,11 @@ my @all_servers =
    hide => 1,
    pkg => 'bittorrent deluge ktorrent transmission vuze',
   },
+  {
+   name => N_("Windows Mobile device synchronization"),
+   pkg => 'synce-hal',
+   ports => '990/tcp 999/tcp 5678/tcp 5679/udp 26675/tcp',
+  },
 );
 
 my @ifw_rules = (
