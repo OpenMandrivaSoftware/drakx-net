@@ -65,7 +65,7 @@ my @all_servers =
    name => N_("BitTorrent"),
    ports => '6881:6999/tcp',
    hide => 1,
-   pkg => 'bittorrent bittorrent-shadowsclient',
+   pkg => 'bittorrent deluge ktorrent transmission vuze',
   },
 );
 
