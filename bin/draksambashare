@@ -1178,13 +1178,14 @@ sub configure_samba {
 							   { label => N("Workgroup:"), val_ref => \$o->{var}{wiz_workgroup} },
 							   { label => N("Server banner:"), val_ref => \$o->{var}{wiz_banner} },
 							   { label => N("Log file:"), val_ref => \$o->{var}{wiz_log_file} },
+							   { text => N(" "), advanced => 1 },
                                                            { label => N("Unix Charset:"), val => \$o->{var}{wiz_unixcharset}, help => "Unix Charset pecifies the charset the unix machine Samba runs on uses.", advanced => 1 },
                                                            { label => N("Dos Charset:"), val => \$o->{var}{wiz_doscharset}, help => "Dos Charset specifies which charset Samba should talk to DOS clients.", advanced => 1 },
                                                            { label => N("Display Charset:"), val => \$o->{var}{wiz_displaycharset}, help=> "Display Charset specifies the charset that samba will use to print messages to stdout and stderr. The default value is 'LOCALE', which means automatically set, depending on the current locale.", advanced => 1 },
 							  ],
 						  post => sub {
 							   $samba->{global}{workgroup} = $o->{var}{wiz_workgroup};
-							   exists $o->{var}{wiz_netbios_name} and $samba->{global}{"netbios name"} = $o->{var}{wiz_netbios_name};
+							   $o->{var}{wiz_netbios_name} and $samba->{global}{"netbios name"} = $o->{var}{wiz_netbios_name};
 							   $samba->{global}{'server string'} = $o->{var}{wiz_banner};
 							   $o->{var}{wiz_log_file} and $samba->{global}{'log file'} = $o->{var}{wiz_log_file};
 							   $o->{var}{wiz_log_level} and $samba->{global}{'log level'} = $o->{var}{wiz_log_level};
@@ -1196,9 +1197,8 @@ sub configure_samba {
 				      endconf => {
 					  pre => sub { output($draksambashare, "draksambshare check") },
 					      name => N("Congratulations") . "\n\n" . N("The wizard successfully configured your Samba server."),
-						  no_back => 1,
+					      no_back => 1,
 					      end => 1,
-					      next => 0,
 					     },
 				     },
 			   });
@@ -1208,9 +1208,9 @@ sub configure_samba {
  
 sub global_special_options() {
   # set charset
-  $samba->{global}{'dos charset'} = $o->{var}{wiz_doscharset};
-  $samba->{global}{'unix charset'} = $o->{var}{wiz_unixcharset};
-  $samba->{global}{'display charset'} = $o->{var}{wiz_displaycharset};
+  $o->{var}{wiz_doscharset} and $samba->{global}{'dos charset'} = $o->{var}{wiz_doscharset};
+  $o->{var}{wiz_unixcharset} and $samba->{global}{'unix charset'} = $o->{var}{wiz_unixcharset};
+  $o->{var}{wiz_displaycharset} and $samba->{global}{'display charset'} = $o->{var}{wiz_displaycharset};
   $o->{var}{wiz_security} and $samba->{global}{security} = $o->{var}{wiz_security};
   $o->{var}{hosts_allow} and $samba->{global}{'hosts allow'} = $o->{var}{hosts_allow};
 #  $samba->{global}{security} = $o->{var}{wiz_security};
