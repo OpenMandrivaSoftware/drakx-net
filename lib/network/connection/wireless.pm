@@ -289,6 +289,13 @@ my @thirdparty_settings = (
             test_file => 'rt2860.bin',
         },
     },
+
+    {
+        name => 'rtl8187se',
+        matching => 'r8180',
+        description => 'Realtek RTL8180 / RTL8185 WiFi',
+        kernel_module => 1,
+    },
 );
 
 sub get_packages { 'wireless-tools' }
