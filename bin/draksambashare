@@ -1185,7 +1185,7 @@ sub configure_samba {
 							  ],
 						  post => sub {
 							   $samba->{global}{workgroup} = $o->{var}{wiz_workgroup};
-							   $o->{var}{wiz_netbios_name} and $samba->{global}{"netbios name"} = $o->{var}{wiz_netbios_name};
+							   $o->{var}{wiz_netbios_name} ? $samba->{global}{"netbios name"} = $o->{var}{wiz_netbios_name} : delete $samba->{global}{"netbios name"};
 							   $samba->{global}{'server string'} = $o->{var}{wiz_banner};
 							   $o->{var}{wiz_log_file} and $samba->{global}{'log file'} = $o->{var}{wiz_log_file};
 							   $o->{var}{wiz_log_level} and $samba->{global}{'log level'} = $o->{var}{wiz_log_level};
@@ -1208,11 +1208,11 @@ sub configure_samba {
  
 sub global_special_options() {
   # set charset
-  $o->{var}{wiz_doscharset} and $samba->{global}{'dos charset'} = $o->{var}{wiz_doscharset};
-  $o->{var}{wiz_unixcharset} and $samba->{global}{'unix charset'} = $o->{var}{wiz_unixcharset};
-  $o->{var}{wiz_displaycharset} and $samba->{global}{'display charset'} = $o->{var}{wiz_displaycharset};
-  $o->{var}{wiz_security} and $samba->{global}{security} = $o->{var}{wiz_security};
-  $o->{var}{hosts_allow} and $samba->{global}{'hosts allow'} = $o->{var}{hosts_allow};
+  $o->{var}{wiz_doscharset} ? $samba->{global}{'dos charset'} = $o->{var}{wiz_doscharset} : delete $samba->{global}{'dos charset'};
+  $o->{var}{wiz_unixcharset} ? $samba->{global}{'unix charset'} = $o->{var}{wiz_unixcharset} : delete $samba->{global}{'unix charset'};
+  $o->{var}{wiz_displaycharset} ? $samba->{global}{'display charset'} = $o->{var}{wiz_displaycharset} : delete $samba->{global}{'display charset'};
+  $o->{var}{wiz_security} ? $samba->{global}{security} = $o->{var}{wiz_security} : delete $samba->{global}{security};
+  $o->{var}{hosts_allow} ? $samba->{global}{'hosts allow'} = $o->{var}{hosts_allow} : delete $samba->{global}{'hosts allow'};
 #  $samba->{global}{security} = $o->{var}{wiz_security};
   # detect Samba type 3 is standalone
   if ($o->{var}{wiz_type} == "3") {
