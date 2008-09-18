@@ -1169,16 +1169,15 @@ sub configure_samba {
 						  name =>  N("The wizard collected the following parameters to configure Samba.") . "\n\n" . N("To accept these values, and configure your server, click the Next button or use the Back button to correct them.") . "\n" . N("If you have previously create some shares, they will appear in this configuration. Run 'drakwizard sambashare' to manage your shares."),
 						  pre => sub {
 						    $o->{var}{wiz_sambatype} = $type{$o->{var}{wiz_type}};
-						    $o->{var}{wiz_unixcharset} = "ISO8859-1";
-                                                    $o->{var}{wiz_doscharset} = "cp850";
-                                                    $o->{var}{wiz_displaycharset} = "LOCALE";
+						    $o->{var}{wiz_unixcharset} ||= $samba->{global}{'unix charset'};
+                                                    $o->{var}{wiz_doscharset} ||= $samba->{global}{'dos charset'};
+                                                    $o->{var}{wiz_displaycharset} ||= $samba->{global}{'display charset'};
 						  },
 						  data => [
 							   { label => N("Samba type:"), val_ref => \$o->{var}{wiz_sambatype} },
 							   { label => N("Workgroup:"), val_ref => \$o->{var}{wiz_workgroup} },
 							   { label => N("Server banner:"), val_ref => \$o->{var}{wiz_banner} },
 							   { label => N("Log file:"), val_ref => \$o->{var}{wiz_log_file} },
-							   { text => N("  "), advanced => 1 },
                                                            { label => N("Unix Charset:"), val => \$o->{var}{wiz_unixcharset}, help => "Unix Charset pecifies the charset the unix machine Samba runs on uses.", advanced => 1 },
                                                            { label => N("Dos Charset:"), val => \$o->{var}{wiz_doscharset}, help => "Dos Charset specifies which charset Samba should talk to DOS clients.", advanced => 1 },
                                                            { label => N("Display Charset:"), val => \$o->{var}{wiz_displaycharset}, help=> "Display Charset specifies the charset that samba will use to print messages to stdout and stderr. The default value is 'LOCALE', which means automatically set, depending on the current locale.", advanced => 1 },
@@ -1209,9 +1208,9 @@ sub configure_samba {
  
 sub global_special_options() {
   # set charset
-  $samba->{global}{'dos charset'} ||= $o->{var}{wiz_doscharset};
-  $samba->{global}{'unix charset'} ||= $o->{var}{wiz_unixcharset};
-  $samba->{global}{'display charset'} ||= $o->{var}{wiz_displaycharset};
+  $samba->{global}{'dos charset'} = $o->{var}{wiz_doscharset};
+  $samba->{global}{'unix charset'} = $o->{var}{wiz_unixcharset};
+  $samba->{global}{'display charset'} = $o->{var}{wiz_displaycharset};
   $o->{var}{wiz_security} and $samba->{global}{security} = $o->{var}{wiz_security};
   $o->{var}{hosts_allow} and $samba->{global}{'hosts allow'} = $o->{var}{hosts_allow};
 #  $samba->{global}{security} = $o->{var}{wiz_security};
