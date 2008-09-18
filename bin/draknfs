@@ -27,7 +27,6 @@ use common;
 use network::network;
 use interactive;
 use services;
-#$ugtk2::wm_icon = 'IC-NFS-48';
 my $nfsicon = "/usr/share/mcc/themes/default/draknfs.png";
 $ugtk2::wm_icon = $nfsicon;
 use mygtk2 qw(gtknew gtkset);
@@ -270,8 +269,6 @@ sub add_modify_entry {
   $button->signal_connect(clicked => sub { $file_dialog->show });
 
 # test if modify or add a nfs share
-  my $dialog = _create_dialog(N("Draknfs entry"), { transient_for => $::main_window, modal => 1 });
-  local $::main_window = $dialog;
 
   my $anonuid = gtknew('ComboBox', list => [ get_user_or_group('passwd') ]);
   my $anongid = gtknew('ComboBox', list => [ get_user_or_group('group') ]);
@@ -353,100 +350,114 @@ sub add_modify_entry {
     $_->set_sensitive(0) foreach $anongid, $anonuid;
   }
 
-  my $expender = Gtk2::Expander->new(N("Advanced options"));
-  $expender->add(gtknew('VBox', spacing => 5, children_tight => [
-                          $label_and_widgets->($adv_options{sync}, $lsync, help_b($help_global)),
-                          $label_and_widgets->($adv_options{secured}, $lsecure, ""),
-                          $label_and_widgets->($adv_options{ro}, $lr, ""),
-			  $label_and_widgets->($adv_options{subtree_check}, $lsubtree_check, ""),
-			 ]),
-		);
-  $expender->signal_connect(activate => sub {
-			      gtkset($dialog);
-			      gtkflush();
-			    });
+  my $expender = Gtk2::Expander->new(N("Advanced"));
+  $expender->add(gtkpack_(Gtk2::HBox->new,
+			  0, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 1),
+				      0, gtkpack_(gtkset_border_width(Gtk2::VBox->new, 0),
+						  0, $label_and_widgets->($adv_options{sync}, $lsync, help_b($help_global)),
+						  0, $label_and_widgets->($adv_options{secured}, $lsecure, ""),
+						  0, $label_and_widgets->($adv_options{ro}, $lr, ""),
+						  0, $label_and_widgets->($adv_options{subtree_check}, $lsubtree_check, ""),
+				      ),
+			  ),
+		 ),
+      );
 
-  $dialog->vbox->set_spacing(5);
-  gtkpack__($dialog->vbox,
-            gtknew('Title2', label => N("NFS directory")),
-            $label_and_widgets->(N("Directory:"), $dir, $button),
-            gtknew('Title2', label => N("Host access")),
-            $label_and_widgets->(N("Access:"), $access, help_b($help_access)),
-            gtknew('Title2', label => N("User ID Mapping")),
-            $label_and_widgets->(N("User ID:"), $luserid, help_b($help_userid)),
-            $label_and_widgets->(N("Anonymous user ID:"), $anonuid, ""),
-            $label_and_widgets->(N("Anonymous Group ID:"), $anongid, ""),
-            $expender,
-	      create_okcancel({
-			       cancel_clicked => sub { $dialog->destroy },
-			       ok_clicked => sub {
-				 my ($anonu, $anong);
-				 if ($anonuid->get_text) {
-				   my ($uid) = $anonuid->get_text =~ /\[(\S*)\]/;
-				   $anonu = "anonuid=" . $uid;
-				 }
-                                 if ($anongid->get_text) {
-				     my ($gid) = $anongid->get_text =~ /\[(\S*)\]/;
-				     $anong = "anongid=" . $gid;
-				   }
-				 if ($lsync->get_text =~ /yes/) { $lsync_data = "sync" } elsif ($lsync->get_text =~ /no/) { $lsync_data = "async" } else { undef $lsync_data }
-				 if ($lr->get_text =~ /yes/) { $lr_data = "ro" } elsif ($lr->get_text =~ /no/) { $lr_data = "rw" } else { undef $lr_data }
-				 if ($lsecure->get_text =~ /yes/) { $lsecure_data = "secure" } elsif ($lsecure->get_text =~ /no/) { $lsecure_data = "insecure" } else { undef $lsecure_data }
-				 if ($lsubtree_check->get_text =~ /yes/) { $lsubtree_check_data = "subtree_check" } elsif ($lsubtree_check->get_text =~ /no/) { $lsubtree_check_data = "no_subtree_check" } else { undef $lsubtree_check }
-				 # test $luserid->get_text
-				 my $luserid_toput;
-				 if ($luserid->get_text =~ /$userid_data->{no_root_squash}/) {
-				     $luserid_toput = "no_root_squash";
-				     undef $anong; undef $anonu;
-				 } elsif ($luserid->get_text =~ /$userid_data->{root_squash}/) {
-				     $luserid_toput = "root_squash";
-				 } elsif ($luserid->get_text =~ /$userid_data->{no_all_squash}/) {
-				     $luserid_toput = "no_all_squash";
-				     undef $anong; undef $anonu;
-				 } elsif ($luserid->get_text =~ /$userid_data->{all_squash}/) {
-				     $luserid_toput = "all_squash";
-				     $anong = "anongid=65534";
-				     $anonu = "anonuid=65534";
-				 }
+  my $w = ugtk2->new(N("Modify entry"));
+  $w->{window}->set_modal(1);
+  $w->{window}->set_position('center');
 
-				 my $all_right = join(",", grep { defined $_ } $luserid_toput, $anonu, $anong, $lsync_data, $lsecure_data, $lsubtree_check_data, $lr_data);
-				 my $test_dir = $dir->get_text;
-				 if (! $test_dir) { 
-				     err_dialog(N("Error"), N("Please specify a directory to share.")) and return;
-				     }
-				 mkdir_p($test_dir) or err_dialog(N("Error"), N("Can't create this directory.")) and return;
-				 #my $test_access = $access->child->get_text;
-				 my $test_access = $access->entry->get_text;
-				 $test_access or err_dialog(N("Error"), N("You must specify hosts access.")) and return;
-				 if ($wanted =~ /add/) {
-				   $iter = $model->append;
-				   $i = "-1";
-				   push @listshare, {
-						     dir => $dir->get_text,
-						     #access => $access->child->get_text,
-						     access => $access->entry->get_text,
-						     right => $all_right,
-						     options => $options->get_text,
-						    };
-				 }
-				 $listshare[$i]{right} = $all_right;
-				 #$listshare[$i]{access} = $access->child->get_text;
-				 $listshare[$i]{access} = $access->entry->get_text;
-				 $listshare[$i]{dir} = $dir->get_text;
-				 $listshare[$i]{options} = $options->get_text;
-				 $model->set($iter,
-					     COLUMN_DIR, $listshare[$i]{dir},
-					     COLUMN_ACCESS, $listshare[$i]{access},
-					     COLUMN_RIGHT, $all_right,
-					     COLUMN_OPTIONS, $listshare[$i]{options},
-					    );
-				 $dialog->destroy;
+  $expender->signal_connect(activate => sub { $w->shrink_topwindow; });
+
+  gtkadd($w->{window},
+         gtknew('VBox', spacing => 0, children_loose => [
+#		    gtkadd(Gtk2::Frame->new(("")),
+			   gtkpack_(gtkset_border_width(Gtk2::VBox->new, 1),
+				    0, gtknew('Title2', label => N("NFS directory")),
+				    0, $label_and_widgets->(N("Directory:"), $dir, $button),
+				    0, gtknew('Title2', label => N("Host access")),
+				    0, $label_and_widgets->(N("Access:"), $access, help_b($help_access)),
+				    0, gtknew('Title2', label => N("User ID Mapping")),
+				    0, $label_and_widgets->(N("User ID:"), $luserid, help_b($help_userid)),
+				    0, $label_and_widgets->(N("Anonymous user ID:"), $anonuid, ""),
+				    0, $label_and_widgets->(N("Anonymous Group ID:"), $anongid, ""),
+			   ),
+#		    ),
+#		    gtkadd(Gtk2::Frame->new(""),
+		    gtkpack_(gtkset_border_width(Gtk2::VBox->new, 1),
+				    0, $expender,
+			   ),
+#		    ),
+		    create_okcancel({
+			cancel_clicked => sub { $w->destroy },
+			ok_clicked => sub {
+			    my ($anonu, $anong);
+			    if ($anonuid->get_text) {
+				my ($uid) = $anonuid->get_text =~ /\[(\S*)\]/;
+				$anonu = "anonuid=" . $uid;
+			    }
+			    if ($anongid->get_text) {
+				my ($gid) = $anongid->get_text =~ /\[(\S*)\]/;
+				$anong = "anongid=" . $gid;
+			    }
+			    if ($lsync->get_text =~ /yes/) { $lsync_data = "sync" } elsif ($lsync->get_text =~ /no/) { $lsync_data = "async" } else { undef $lsync_data }
+			    if ($lr->get_text =~ /yes/) { $lr_data = "ro" } elsif ($lr->get_text =~ /no/) { $lr_data = "rw" } else { undef $lr_data }
+			    if ($lsecure->get_text =~ /yes/) { $lsecure_data = "secure" } elsif ($lsecure->get_text =~ /no/) { $lsecure_data = "insecure" } else { undef $lsecure_data }
+			    if ($lsubtree_check->get_text =~ /yes/) { $lsubtree_check_data = "subtree_check" } elsif ($lsubtree_check->get_text =~ /no/) { $lsubtree_check_data = "no_subtree_check" } else { undef $lsubtree_check }
+			    # test $luserid->get_text
+			    my $luserid_toput;
+			    if ($luserid->get_text =~ /$userid_data->{no_root_squash}/) {
+				$luserid_toput = "no_root_squash";
+				undef $anong; undef $anonu;
+			    } elsif ($luserid->get_text =~ /$userid_data->{root_squash}/) {
+				$luserid_toput = "root_squash";
+			    } elsif ($luserid->get_text =~ /$userid_data->{no_all_squash}/) {
+				$luserid_toput = "no_all_squash";
+				undef $anong; undef $anonu;
+			    } elsif ($luserid->get_text =~ /$userid_data->{all_squash}/) {
+				$luserid_toput = "all_squash";
+				$anong = "anongid=65534";
+				$anonu = "anonuid=65534";
+			    }
+			    
+			    my $all_right = join(",", grep { defined $_ } $luserid_toput, $anonu, $anong, $lsync_data, $lsecure_data, $lsubtree_check_data, $lr_data);
+			    my $test_dir = $dir->get_text;
+			    if (! $test_dir) { 
+				err_dialog(N("Error"), N("Please specify a directory to share.")) and return;
+			    }
+			    mkdir_p($test_dir) or err_dialog(N("Error"), N("Can't create this directory.")) and return;
+			    #my $test_access = $access->child->get_text;
+			    my $test_access = $access->entry->get_text;
+			    $test_access or err_dialog(N("Error"), N("You must specify hosts access.")) and return;
+			    if ($wanted =~ /add/) {
+				$iter = $model->append;
+				$i = "-1";
+				push @listshare, {
+				dir => $dir->get_text,
+				#access => $access->child->get_text,
+				access => $access->entry->get_text,
+				right => $all_right,
+				options => $options->get_text,
+			    };
+			    }
+			    $listshare[$i]{right} = $all_right;
+			    #$listshare[$i]{access} = $access->child->get_text;
+			    $listshare[$i]{access} = $access->entry->get_text;
+			    $listshare[$i]{dir} = $dir->get_text;
+			    $listshare[$i]{options} = $options->get_text;
+			    $model->set($iter,
+					COLUMN_DIR, $listshare[$i]{dir},
+					COLUMN_ACCESS, $listshare[$i]{access},
+					COLUMN_RIGHT, $all_right,
+					COLUMN_OPTIONS, $listshare[$i]{options},
+				);
+			    $w->destroy;
 #				 write_conf();
-			       },
-			      },
-			     ),
-	  );
-  $dialog->show_all;
+			},
+				    }),
+		],
+	 ),),;
+  $w->{window}->show_all;
 }
 
 sub remove_entry {
