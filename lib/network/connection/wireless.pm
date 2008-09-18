@@ -279,6 +279,15 @@ my @thirdparty_settings = (
         },
     },
 
+    {
+        name => 'rt2860',
+        matching => 'rt2860sta',
+        description => 'Ralink RT2860 WiFi',
+        firmware => {
+            url => 'http://www.ralinktech.com/',
+            test_file => 'rt2860.bin',
+        },
+    },
 );
 
 sub get_packages { 'wireless-tools' }
