@@ -1226,9 +1226,9 @@ msgid "Manage NFS shares"
 msgstr "管理 NFS 共享"
 
 #: ../bin/draknfs:570
-#, fuzzy, c-format
+#, c-format
 msgid "Starting the NFS-server"
-msgstr "正在重新启动/重新装入 NFS 服务器..."
+msgstr "启动 NFS 服务器"
 
 #: ../bin/draknfs:577
 #, c-format
@@ -1851,11 +1851,12 @@ msgid ""
 "User level: the client sends a session setup request directly following "
 "protocol negotiation. This request provides a username and password."
 msgstr ""
+"用户级别: 客户端根据协议直接发送会话建立请求，此请求将提供用户名和密码。"
 
 #: ../bin/draksambashare:1123
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
+msgstr "共享级别: 客户端为每个认证提供单独的身份验证"
 
 #: ../bin/draksambashare:1123
 #, c-format
@@ -1864,6 +1865,7 @@ msgid ""
 "in a central, shared, account repository. The centralized account repository "
 "is shared between domain (security) controllers."
 msgstr ""
+"域级: 在集中的共享帐户仓库中存储全部用户和组帐户。集中式帐户仓库在域控制器之间共享。"
 
 #: ../bin/draksambashare:1134
 #, c-format
@@ -1965,22 +1967,22 @@ msgstr "服务器标语:"
 #: ../bin/draksambashare:1181
 #, c-format
 msgid " "
-msgstr ""
+msgstr " "
 
 #: ../bin/draksambashare:1182
 #, c-format
 msgid "Unix Charset:"
-msgstr ""
+msgstr "Unix 字符集:"
 
 #: ../bin/draksambashare:1183
 #, c-format
 msgid "Dos Charset:"
-msgstr ""
+msgstr "Dos 字符集:"
 
 #: ../bin/draksambashare:1184
 #, c-format
 msgid "Display Charset:"
-msgstr ""
+msgstr "显示字符集:"
 
 #: ../bin/draksambashare:1199
 #, c-format
@@ -1990,7 +1992,7 @@ msgstr "向导成功地配置了您的 Samba 服务器。"
 #: ../bin/draksambashare:1254
 #, c-format
 msgid "The Samba wizard has unexpectedly failed:"
-msgstr ""
+msgstr "Samba 向导意外失败:"
 
 #: ../bin/draksambashare:1268
 #, c-format
@@ -2455,7 +2457,7 @@ msgstr "蓝牙拨号网络"
 #: ../lib/network/connection/cellular_card.pm:8
 #, c-format
 msgid "Wrong PIN number format: it should be 4 digits."
-msgstr ""
+msgstr "错误的 PIN 数字格式: 应改为四位数字。"
 
 #: ../lib/network/connection/cellular_card.pm:10
 #, c-format
@@ -2815,9 +2817,9 @@ msgstr "奥地利"
 #: ../lib/network/connection/providers/xdsl.pm:668
 #: ../lib/network/connection/providers/xdsl.pm:787
 #: ../lib/network/connection/providers/xdsl.pm:1258
-#, fuzzy, c-format
+#, c-format
 msgid "Any"
-msgstr "德国"
+msgstr "任何"
 
 #: ../lib/network/connection/providers/xdsl.pm:114
 #: ../lib/network/connection/providers/xdsl.pm:124
@@ -3170,7 +3172,7 @@ msgstr "加密密钥"
 #: ../lib/network/connection/wireless.pm:419
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
-msgstr ""
+msgstr "将此密钥强制使用为 ASCII 字符串(如 Livebox)"
 
 #: ../lib/network/connection/wireless.pm:426
 #, c-format
@@ -3184,6 +3186,9 @@ msgid ""
 "need to specify domain then try the untested syntax\n"
 "  DOMAIN\\username"
 msgstr ""
+"登录或用户名。格式为纯文本。如果您需要指定域名，请使\n"
+"用以下格式\n"
+"  域\\用户名"
 
 #: ../lib/network/connection/wireless.pm:431
 #, c-format
@@ -3208,6 +3213,19 @@ msgid ""
 "  TLS mode is completely certificate based and may ignore\n"
 "the username and password values specified here."
 msgstr ""
+" 密码: 字符串。\n"
+"请注意，这与 psk 不一样。\n"
+"____________________________________________________\n"
+"相关的额外信息:\n"
+"在高级页面中，您可以选择进行身份验证的 EAP 模式。对于\n"
+"EAP 模式设置来说，\n"
+"   自动检测: 代表尝试各种可能的模式。\n"
+"\n"
+"如果自动检测失败，则首先尝试 PEAP TTLS 组合\n"
+"注意:\n"
+"\t设置 MD5、MSCHAPV2、OTP 和 GTC 代表自动 PEAP 和 TTLS\n"
+"模式。\n"
+"  TLS 模式完全基于证书，可能在此指定的用户名和密码无效。"
 
 #: ../lib/network/connection/wireless.pm:447
 #, c-format
@@ -3222,6 +3240,9 @@ msgid ""
 "considered as the alternative to username/password combo.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
+"客户端证书的完整路径和文件名。这仅用于基于身份验证的 EAP 证书。\n"
+"证书可视为用户名/密码组合的代替品。\n"
+" 注意: 其它相关设置显示于高级页面中。"
 
 #: ../lib/network/connection/wireless.pm:453
 #, c-format
@@ -3377,6 +3398,7 @@ msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr ""
+"推荐使用自动检测，因为它首先尝试 WPA 第2版，失败后再尝试 WPA 第1版"
 
 #: ../lib/network/connection/wireless.pm:501
 #, c-format
@@ -3406,7 +3428,7 @@ msgstr "MSCHAPV2"
 #: ../lib/network/connection/wireless.pm:502
 #, c-format
 msgid "MD5"
-msgstr ""
+msgstr "MD5"
 
 #: ../lib/network/connection/wireless.pm:502
 #, c-format
@@ -3416,27 +3438,27 @@ msgstr "OTP"
 #: ../lib/network/connection/wireless.pm:502
 #, c-format
 msgid "GTC"
-msgstr ""
+msgstr "GTC"
 
 #: ../lib/network/connection/wireless.pm:502
 #, c-format
 msgid "LEAP"
-msgstr ""
+msgstr "LEAP"
 
 #: ../lib/network/connection/wireless.pm:502
 #, c-format
 msgid "PEAP TTLS"
-msgstr ""
+msgstr "PEAP TTLS"
 
 #: ../lib/network/connection/wireless.pm:502
 #, c-format
 msgid "TTLS TLS"
-msgstr ""
+msgstr "TTLS TLS"
 
 #: ../lib/network/connection/wireless.pm:504
 #, c-format
 msgid "EAP key_mgmt"
-msgstr ""
+msgstr "EAP key_mgmt"
 
 #: ../lib/network/connection/wireless.pm:506
 #, c-format
@@ -3444,11 +3466,13 @@ msgid ""
 "list of accepted authenticated key management protocols.\n"
 "possible values are WPA-EAP, IEEE8021X, NONE"
 msgstr ""
+"列出可接受的身份验证密钥管理协议。\n可能的值包括 WPA-EAP、\n"
+"IEEE8021X、无"
 
 #: ../lib/network/connection/wireless.pm:508
 #, c-format
 msgid "EAP outer identity"
-msgstr ""
+msgstr "EAP 外部身份"
 
 #: ../lib/network/connection/wireless.pm:510
 #, c-format
@@ -3457,11 +3481,13 @@ msgid ""
 "unencrypted identity with EAP types that support different\n"
 "tunnelled identity, e.g., TTLS"
 msgstr ""
+"EAP 的匿名身份字符串: 用于支持不同的隧道身份的 EAP 不\n"
+"加密身份类型，如 TTLS"
 
 #: ../lib/network/connection/wireless.pm:513
 #, c-format
 msgid "EAP phase2"
-msgstr ""
+msgstr "EAP phase2"
 
 #: ../lib/network/connection/wireless.pm:515
 #, c-format
@@ -3486,11 +3512,15 @@ msgid ""
 "a trusted CA certificate should always be configured\n"
 "when using TLS or TTLS or PEAP."
 msgstr ""
+"CA 证书文件(PEM/DER)的完整文件路径。此文件可以包含一个或多个\n"
+"可信任的 CA 证书。如果不包括 CA 证书，则服务器证书无法验证。\n"
+"如果可能的话，当使用 TLS 或 TTLS 或 PEAP 时总是应该配置可信的\n"
+"CA 证书。"
 
 #: ../lib/network/connection/wireless.pm:526
 #, c-format
 msgid "EAP certificate subject match"
-msgstr ""
+msgstr "EAP 证书主题匹配"
 
 #: ../lib/network/connection/wireless.pm:528
 #, c-format
@@ -3505,7 +3535,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:533
 #, c-format
 msgid "EAP extra directives"
-msgstr ""
+msgstr "EAP 额外指令"
 
 #: ../lib/network/connection/wireless.pm:535
 #, c-format
@@ -3536,6 +3566,7 @@ msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
 "hexadecimal characters."
 msgstr ""
+"预共享密钥应该由 8 到 63 位 ASCII 字符或者 64 位十六进制字符组成。"
 
 #: ../lib/network/connection/wireless.pm:568
 #, c-format
@@ -3543,6 +3574,7 @@ msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
 "characters."
 msgstr ""
+"WEP 密钥应该至少由 %d 位 ASCII 字符或 %d 位十六进制字符组成。"
 
 #: ../lib/network/connection/wireless.pm:575
 #, c-format
@@ -3603,6 +3635,7 @@ msgid ""
 "Modems using Conexant AccessRunner chipsets cannot be supported due to "
 "binary firmware distribution problem."
 msgstr ""
+"由于二进制固件发行问题，无法支持使用 Conexant AccessRunner 芯片的调制解调器。"
 
 #: ../lib/network/connection/xdsl.pm:184
 #, c-format
@@ -3767,7 +3800,7 @@ msgstr "BitTorrent"
 #: ../lib/network/drakfirewall.pm:71
 #, c-format
 msgid "Windows Mobile device synchronization"
-msgstr ""
+msgstr "Windows Mobile 设备同步"
 
 #: ../lib/network/drakfirewall.pm:80
 #, c-format
@@ -4853,6 +4886,7 @@ msgstr "需要某些软件包(%s)，这些软件包不可用。"
 msgid ""
 "These packages can be found in %s, or in the official %s package repository."
 msgstr ""
+"这些包可以在 %s 中找到，或者在 %s 的官方软件包仓库中找到。"
 
 #: ../lib/network/thirdparty.pm:154
 #, c-format
@@ -5059,313 +5093,11 @@ msgid "Username"
 msgstr "用户名"
 
 #: ../lib/network/vpn/vpnc.pm:61
-#, fuzzy, c-format
+#, c-format
 msgid "NAT Mode"
-msgstr "EAP 模式"
+msgstr "NAT 模式"
 
 #: ../lib/network/vpn/vpnc.pm:67
 #, c-format
 msgid "Use specific UDP port"
 msgstr "使用指定的 UDP 端口"
-
-#~ msgid "DrakVPN"
-#~ msgstr "DrakVPN"
-
-#~ msgid "The VPN connection is enabled."
-#~ msgstr "VPN 连接已经启用。"
-
-#, fuzzy
-#~ msgid ""
-#~ "The setup of a VPN connection has already been done.\n"
-#~ "\n"
-#~ "It's currently enabled.\n"
-#~ "\n"
-#~ "What would you like to do?"
-#~ msgstr ""
-#~ "Internet 连接共享的设置已经完成。\n"
-#~ "目前连接共享已被启用。\n"
-#~ "\n"
-#~ "您要做什么?"
-
-#~ msgid "disable"
-#~ msgstr "禁用"
-
-#, fuzzy
-#~ msgid "reconfigure"
-#~ msgstr "重新配置"
-
-#, fuzzy
-#~ msgid "Disabling VPN..."
-#~ msgstr "正在启用 VPN..."
-
-#, fuzzy
-#~ msgid "The VPN connection is now disabled."
-#~ msgstr "VPN 连接已经启用。"
-
-#, fuzzy
-#~ msgid "VPN connection currently disabled"
-#~ msgstr "VPN 连接已经启用。"
-
-#, fuzzy
-#~ msgid ""
-#~ "The setup of a VPN connection has already been done.\n"
-#~ "\n"
-#~ "It's currently disabled.\n"
-#~ "\n"
-#~ "What would you like to do?"
-#~ msgstr ""
-#~ "Internet 连接共享的设置已经完成。\n"
-#~ "目前连接共享已被禁用。\n"
-#~ "\n"
-#~ "您要做什么?"
-
-#~ msgid "enable"
-#~ msgstr "启用"
-
-#~ msgid "Enabling VPN..."
-#~ msgstr "正在启用 VPN..."
-
-#, fuzzy
-#~ msgid "The VPN connection is now enabled."
-#~ msgstr "VPN 连接已经启用。"
-
-#, fuzzy
-#~ msgid "Problems installing package %s"
-#~ msgstr "无法安装软件包(%s)!"
-
-#, fuzzy
-#~ msgid "Security Policies"
-#~ msgstr "安全性:"
-
-#, fuzzy
-#~ msgid "Configuration file"
-#~ msgstr "LAN 配置"
-
-#~ msgid "Edit"
-#~ msgstr "编辑"
-
-#, fuzzy
-#~ msgid "Commit"
-#~ msgstr "注释"
-
-#, fuzzy
-#~ msgid "Edit section"
-#~ msgstr "密钥方向"
-
-#, fuzzy
-#~ msgid "Section names"
-#~ msgstr "连接名称"
-
-#, fuzzy
-#~ msgid "Remove section"
-#~ msgstr "删除主机:"
-
-#, fuzzy
-#~ msgid "path"
-#~ msgstr "路径"
-
-#~ msgid "remote"
-#~ msgstr "远程"
-
-#, fuzzy
-#~ msgid "path type"
-#~ msgstr "Samba 类型:"
-
-#, fuzzy
-#~ msgid "real file"
-#~ msgstr "选择文件"
-
-#~ msgid "Congratulations!"
-#~ msgstr "恭喜!"
-
-#, fuzzy
-#~ msgid "Sainfo source address"
-#~ msgstr "虚拟共享地址"
-
-#, fuzzy
-#~ msgid "PFS group"
-#~ msgstr "强制组"
-
-#~ msgid "Encryption algorithm"
-#~ msgstr "加密算法"
-
-#, fuzzy
-#~ msgid "Authentication algorithm"
-#~ msgstr "身份验证方式"
-
-#, fuzzy
-#~ msgid "Compression algorithm"
-#~ msgstr "加密算法"
-
-#, fuzzy
-#~ msgid "deflate"
-#~ msgstr "默认"
-
-#~ msgid "Remote"
-#~ msgstr "远程"
-
-#, fuzzy
-#~ msgid "Exchange mode"
-#~ msgstr "拨号模式"
-
-#, fuzzy
-#~ msgid "Generate policy"
-#~ msgstr "常规选项"
-
-#~ msgid "off"
-#~ msgstr "关"
-
-#~ msgid "on"
-#~ msgstr "开"
-
-#~ msgid "Passive"
-#~ msgstr "被动"
-
-#, fuzzy
-#~ msgid "Certificate type"
-#~ msgstr "证书"
-
-#, fuzzy
-#~ msgid "Name of the certificate"
-#~ msgstr "机器名:"
-
-#, fuzzy
-#~ msgid "Name of the private key"
-#~ msgstr "共享名称:"
-
-#, fuzzy
-#~ msgid "Peers certfile"
-#~ msgstr "选择文件"
-
-#, fuzzy
-#~ msgid "Name of the peers certificate"
-#~ msgstr "检查服务器证书"
-
-#, fuzzy
-#~ msgid "Proposal"
-#~ msgstr "协议"
-
-#, fuzzy
-#~ msgid "Hash algorithm"
-#~ msgstr "加密算法"
-
-#~ msgid "Authentication method"
-#~ msgstr "身份验证方式"
-
-#, fuzzy
-#~ msgid "DH group"
-#~ msgstr "强制组"
-
-#~ msgid "Command"
-#~ msgstr "命令"
-
-#, fuzzy
-#~ msgid "Upper-layer protocol"
-#~ msgstr "使用 TCP 协议"
-
-#, fuzzy
-#~ msgid "any"
-#~ msgstr "德国"
-
-#~ msgid "Flag"
-#~ msgstr "旗帜"
-
-#, fuzzy
-#~ msgid "Direction"
-#~ msgstr "目录"
-
-#~ msgid "none"
-#~ msgstr "无"
-
-#~ msgid "Mode"
-#~ msgstr "模式"
-
-#, fuzzy
-#~ msgid "tunnel"
-#~ msgstr "无"
-
-#~ msgid "transport"
-#~ msgstr "传送"
-
-#, fuzzy
-#~ msgid "Source/destination"
-#~ msgstr "我的目标:"
-
-#~ msgid "Level"
-#~ msgstr "级别"
-
-#, fuzzy
-#~ msgid "require"
-#~ msgstr "需要 helo:"
-
-#~ msgid "default"
-#~ msgstr "默认"
-
-#~ msgid "use"
-#~ msgstr "使用"
-
-#~ msgid "unique"
-#~ msgstr "唯一"
-
-#~ msgid "You need to log out and back in again for changes to take effect"
-#~ msgstr "您需要注销后重新登录才能让更改生效"
-
-#~ msgid "Process attack"
-#~ msgstr "处理攻击"
-
-#~ msgid "Interactive Firewall: intrusion detected"
-#~ msgstr "交互式防火墙: 检测到了入侵"
-
-#~ msgid "What do you want to do with this attacker?"
-#~ msgstr "您想要对入侵者进行什么操作?"
-
-#~ msgid "Attack details"
-#~ msgstr "攻击细节"
-
-#~ msgid "Attack time: %s"
-#~ msgstr "攻击时间: %s"
-
-#~ msgid "Network interface: %s"
-#~ msgstr "网卡: %s"
-
-#~ msgid "Attack type: %s"
-#~ msgstr "攻击类型: %s"
-
-#~ msgid "Protocol: %s"
-#~ msgstr "协议: %s"
-
-#~ msgid "Attacker IP address: %s"
-#~ msgstr "攻击者 IP 地址: %s"
-
-#~ msgid "Attacker hostname: %s"
-#~ msgstr "攻击者主机名: %s"
-
-#~ msgid "Service attacked: %s"
-#~ msgstr "攻击的服务: %s"
-
-#~ msgid "Port attacked: %s"
-#~ msgstr "攻击的端口: %s"
-
-#~ msgid "Type of ICMP attack: %s"
-#~ msgstr "ICMP 攻击的类型: %s"
-
-#~ msgid "Always blacklist (do not ask again)"
-#~ msgstr "总是黑名单(以后不再询问)"
-
-#~ msgid "Ignore"
-#~ msgstr "忽略"
-
-#~ msgid "Interactive Firewall: new service"
-#~ msgstr "交互式防火墙: 新服务"
-
-#~ msgid "Process connection"
-#~ msgstr "处理连接"
-
-#~ msgid "Do you want to open this service?"
-#~ msgstr "您想要开放此服务吗?"
-
-#~ msgid "Remember this answer"
-#~ msgstr "记住此选择"
-
-#~ msgid "Use Cisco-UDP encapsulation"
-#~ msgstr "使用 Cisco-UDP 封装"
