@@ -1,23 +1,25 @@
-# translation of drakx-net-uk.po to ukrainian
-# translation of drakx-net.po to ukrainian
+# translation of network-tools.po to ukrainian
 # $Id: uk.po 141732 2007-03-12 12:19:30Z tv $
-# Copyright (C) 2000,2003, 2004, 2005 Free Software Foundation, Inc.
+# Copyright (C) 2000,2003, 2004, 2005, 2008 Free Software Foundation, Inc.
+#
 # Dmytro  Kovalov <kov@tokyo.email.ne.jp>, 2000.
 # Taras Boychuk <btr1@torba.com>, 2003, 2004.
 # Taras Boychuk <btr1@mail.ru>, 2004, 2003.
 # Taras Boychuk <btr1@ukrpost.net>, 2004, 2005.
-#
+# Yuri Chornoivan <yurchor@ukr.net>, 2008.
+# Taras Boychuk <btr0001@ukr.net>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: drakx-net-uk\n"
+"Project-Id-Version: network-tools\n"
 "POT-Creation-Date: 2008-09-18 11:55+0200\n"
-"PO-Revision-Date: 2005-03-01 01:29+0200\n"
-"Last-Translator: Taras Boychuk <btr1@ukrpost.net>\n"
-"Language-Team: ukrainian <uk@li.org>\n"
+"PO-Revision-Date: 2008-08-31 04:25+0300\n"
+"Last-Translator: Taras Boychuk <btr0001@ukr.net>\n"
+"Language-Team: ukrainian <translation@linux.org.ua>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../bin/drakconnect-old:45
 #, c-format
@@ -65,7 +67,7 @@ msgstr "Налаштувати назву машини..."
 #: ../bin/drakconnect-old:95 ../bin/drakconnect-old:171
 #, c-format
 msgid "LAN configuration"
-msgstr "Конфіґурація мережі"
+msgstr "Налаштування LAN"
 
 #: ../bin/drakconnect-old:100
 #, c-format
@@ -116,7 +118,7 @@ msgstr "Зачекайте, будь ласка... Йде застосуванн
 #: ../bin/drakconnect-old:141
 #, c-format
 msgid "Deactivate now"
-msgstr "Деактивізувати зараз"
+msgstr "Деактивувати зараз"
 
 #: ../bin/drakconnect-old:141
 #, c-format
@@ -129,13 +131,13 @@ msgid ""
 "You do not have any configured interface.\n"
 "Configure them first by clicking on 'Configure'"
 msgstr ""
-"У вас немає жодного сконфіґурованого інтерфейса.\n"
-"Сконфіґуруйте їх спочатку, клацнувши на 'Налаштувати'"
+"Ви не налаштували жодного інтерфейсу.\n"
+"Спочатку налаштуйте інтерфейс за допомогою кнопки «Налаштувати»"
 
 #: ../bin/drakconnect-old:189
 #, c-format
 msgid "LAN Configuration"
-msgstr "Конфіґурація локальної мережі"
+msgstr "Налаштування місцевої мережі"
 
 #: ../bin/drakconnect-old:201
 #, c-format
@@ -161,16 +163,16 @@ msgstr "Стартувати при завантаженні"
 #: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:151
 #, c-format
 msgid "DHCP client"
-msgstr "клієнт DHCP"
+msgstr "Клієнт DHCP"
 
 #: ../bin/drakconnect-old:247
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This interface has not been configured yet.\n"
 "Run the \"%s\" assistant from the Mandriva Linux Control Center"
 msgstr ""
-"Цей інтерфейс ще не було сконфігуровано.\n"
-"Запустіть Помічник \"Додати інтерфейс\" Центрі Керування Мандріва "
+"Цей інтерфейс ще не було налаштовано.\n"
+"Запустіть Помічник «%s» з Центру Керування Мандріва Лінакс"
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:102
 #, c-format
@@ -222,7 +224,7 @@ msgstr ""
 "з'єднання з Інтернетом цього комп'ютера.\n"
 "\n"
 "Перш, ніж продовжувати, переконайтеся, що Ви налаштували доступ до мережі/"
-"інтернета з допомогою drakconnect \n"
+"інтернету з допомогою drakconnect \n"
 "\n"
 "Примітка: Вам для цього потрібно мати плату мережі, щоб встановити\n"
 "місцеву мережу (LAN)."
@@ -271,7 +273,7 @@ msgstr "Переналаштувати"
 #: ../bin/drakgw:122
 #, c-format
 msgid "Please select the network interface directly connected to the internet."
-msgstr ""
+msgstr "Будь ласка, оберіть мережевий інтерфейс, напряму з’єднаний з інтернетом."
 
 #: ../bin/drakgw:123 ../lib/network/netconnect.pm:360
 #: ../lib/network/netconnect.pm:395
@@ -299,23 +301,22 @@ msgstr ""
 msgid ""
 "Please choose what network adapter will be connected to your Local Area "
 "Network."
-msgstr ""
-"Виберіть, будь ласка, адаптер, який буде під'єднано до місцевої мережі."
+msgstr "Виберіть, будь ласка, адаптер, який буде під'єднано до місцевої мережі."
 
 #: ../bin/drakgw:173
-#, fuzzy, c-format
+#, c-format
 msgid "Local Area Network settings"
-msgstr "Адреса місцевої мережі"
+msgstr "Параметри місцевої мережі"
 
 #: ../bin/drakgw:176 ../lib/network/vpn/openvpn.pm:227
-#, fuzzy, c-format
+#, c-format
 msgid "Local IP address"
-msgstr "IP-адреса"
+msgstr "Місцева IP-адреса"
 
 #: ../bin/drakgw:178
 #, c-format
 msgid "The internal domain name"
-msgstr "Назва внутрішнього домена"
+msgstr "Внутрішня назва домену"
 
 #: ../bin/drakgw:184 ../bin/drakhosts:100 ../bin/drakhosts:245
 #: ../bin/drakhosts:252 ../bin/drakhosts:259 ../bin/drakinvictus:72
@@ -358,14 +359,14 @@ msgid "Potential LAN address conflict found in current config of %s!\n"
 msgstr "В даній конфігурації %s знайдено потенційний конфлікт адреси мережі!\n"
 
 #: ../bin/drakgw:200
-#, fuzzy, c-format
+#, c-format
 msgid "Domain Name Server (DNS) configuration"
-msgstr "Налаштування сервера терміналу"
+msgstr "Налаштування сервера назв домену (DNS)"
 
 #: ../bin/drakgw:204
 #, c-format
 msgid "Use this gateway as domain name server"
-msgstr ""
+msgstr "Використовувати цей шлюз як сервер назв домену"
 
 #: ../bin/drakgw:205
 #, c-format
@@ -387,9 +388,9 @@ msgstr ""
 "його без змін."
 
 #: ../bin/drakgw:239
-#, fuzzy, c-format
+#, c-format
 msgid "Use automatic configuration (DHCP)"
-msgstr "Автоматична переконфіґурація"
+msgstr "Використовувати автоматичне налаштування (DHCP)"
 
 #: ../bin/drakgw:240
 #, c-format
@@ -414,37 +415,37 @@ msgstr "Найдовше володіння (в секундах)"
 #: ../bin/drakgw:266
 #, c-format
 msgid "Proxy caching server (SQUID)"
-msgstr ""
+msgstr "Проксі-сервер з кешуванням (SQUID)"
 
 #: ../bin/drakgw:270
 #, c-format
 msgid "Use this gateway as proxy caching server"
-msgstr ""
+msgstr "Використовувати цей шлюз як проксі-сервер з кешуванням"
 
 #: ../bin/drakgw:271
 #, c-format
 msgid "Admin mail"
-msgstr ""
+msgstr "Адреса ел. пошти адміністратора"
 
 #: ../bin/drakgw:272
-#, fuzzy, c-format
+#, c-format
 msgid "Visible hostname"
-msgstr "Назва віддаленої машини"
+msgstr "Видима назва вузла"
 
 #: ../bin/drakgw:273
-#, fuzzy, c-format
+#, c-format
 msgid "Proxy port"
-msgstr "Властивість"
+msgstr "Порт проксі-сервера"
 
 #: ../bin/drakgw:274
-#, fuzzy, c-format
+#, c-format
 msgid "Cache size (MB)"
-msgstr "Розмір кешу"
+msgstr "Розмір кешу (МБ)"
 
 #: ../bin/drakgw:293
-#, fuzzy, c-format
+#, c-format
 msgid "Broadcast printer information"
-msgstr "Інформація про твердий диск"
+msgstr "Розповсюджувати відомості про друкарку"
 
 #: ../bin/drakgw:304
 #, c-format
@@ -452,7 +453,7 @@ msgid ""
 "No ethernet network adapter has been detected on your system. Please run the "
 "hardware configuration tool."
 msgstr ""
-"У Вашій системі немає сконфіґурованого адаптера мережі ethernet. "
+"У Вашій системі немає налаштованого адаптера мережі ethernet. "
 "Скористайтесь, будь ласка, програмою для конфігурації апаратних засобів."
 
 #: ../bin/drakgw:310
@@ -473,9 +474,9 @@ msgid ""
 "Area Network, using automatic network configuration (DHCP) and\n"
 " a Transparent Proxy Cache server (SQUID)."
 msgstr ""
-"Все сконфіґуровано.\n"
-"Зараз Ви можете надати доступ до інтернета іншим комп'ютерам Вашої місцевої "
-"мережі, використовуючи автоматичне конфіґурування мережі (DHCP) і "
+"Все налаштовано.\n"
+"Зараз Ви можете надати доступ до інтернету іншим комп'ютерам місцевої "
+"мережі, використовуючи автоматичне налаштування мережі (DHCP) і "
 "Transparent Proxy Cache сервер (SQUID)."
 
 #: ../bin/drakgw:345
@@ -486,7 +487,7 @@ msgstr "Заборона серверів..."
 #: ../bin/drakgw:359
 #, c-format
 msgid "Firewalling configuration detected!"
-msgstr "Знайдено конфігурацію firewall!"
+msgstr "Знайдено конфігурацію захисного шлюза!"
 
 #: ../bin/drakgw:360
 #, c-format
@@ -505,27 +506,27 @@ msgstr "Встановлюється конфігурація..."
 #: ../bin/drakgw:366
 #, c-format
 msgid "Configuring firewall..."
-msgstr ""
+msgstr "Налаштування захисного шлюза..."
 
 #: ../bin/drakhosts:100
 #, c-format
 msgid "Please add an host to be able to modify it."
-msgstr ""
+msgstr "Будь ласка, додайте вузол, щоб мати змогу його змінити."
 
 #: ../bin/drakhosts:110
-#, fuzzy, c-format
+#, c-format
 msgid "Please modify information"
-msgstr "Детальна інформація"
+msgstr "Будь ласка, змініть відомості"
 
 #: ../bin/drakhosts:111
-#, fuzzy, c-format
+#, c-format
 msgid "Please delete information"
-msgstr "Детальна інформація"
+msgstr "Будь ласка, вилучіть відомості"
 
 #: ../bin/drakhosts:112
-#, fuzzy, c-format
+#, c-format
 msgid "Please add information"
-msgstr "Детальна інформація"
+msgstr "Будь ласка, додайте відомості"
 
 #: ../bin/drakhosts:116
 #, c-format
@@ -535,12 +536,12 @@ msgstr "Адреса IP:"
 #: ../bin/drakhosts:117
 #, c-format
 msgid "Host name:"
-msgstr "Назва хоста:"
+msgstr "Назва машини:"
 
 #: ../bin/drakhosts:118
-#, fuzzy, c-format
+#, c-format
 msgid "Host Aliases:"
-msgstr "Назва машини"
+msgstr "Псевдоніми машини:"
 
 #: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:230
 #: ../bin/draksambashare:251 ../bin/draksambashare:397
@@ -555,9 +556,9 @@ msgid "Please enter a valid IP address."
 msgstr "Введіть правильну IP-адресу."
 
 #: ../bin/drakhosts:128
-#, fuzzy, c-format
+#, c-format
 msgid "Same IP is already in %s file."
-msgstr "%s вже використовується\n"
+msgstr "У файлі %s вже є така IP-адреса."
 
 #: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:211
 #, c-format
@@ -565,9 +566,9 @@ msgid "Host name"
 msgstr "Назва машини"
 
 #: ../bin/drakhosts:196
-#, fuzzy, c-format
+#, c-format
 msgid "Host Aliases"
-msgstr "Назва машини"
+msgstr "Псевдоніми машин"
 
 #: ../bin/drakhosts:206 ../bin/drakhosts:236
 #, c-format
@@ -577,7 +578,7 @@ msgstr "Налаштувати параметри машин"
 #: ../bin/drakhosts:222 ../bin/drakhosts:249
 #, c-format
 msgid "Modify entry"
-msgstr ""
+msgstr "Змінити запис"
 
 #: ../bin/drakhosts:241 ../bin/draknfs:582 ../bin/draksambashare:1349
 #: ../bin/draksambashare:1380 ../bin/draksambashare:1411
@@ -586,14 +587,14 @@ msgid "Add"
 msgstr "Додати"
 
 #: ../bin/drakhosts:242
-#, fuzzy, c-format
+#, c-format
 msgid "Add entry"
-msgstr "Додати друкарку"
+msgstr "Додати запис"
 
 #: ../bin/drakhosts:245
 #, c-format
 msgid "Failed to add host."
-msgstr ""
+msgstr "Спроба додати машину завершилася невдало."
 
 #: ../bin/drakhosts:248 ../bin/draknfs:589 ../bin/draksambashare:1306
 #: ../bin/draksambashare:1351 ../bin/draksambashare:1382
@@ -605,19 +606,19 @@ msgstr "Змінити"
 #: ../bin/drakhosts:252
 #, c-format
 msgid "Failed to Modify host."
-msgstr ""
+msgstr "Спроба змінити машину завершилася невдало."
 
 #: ../bin/drakhosts:255 ../bin/drakids:92 ../bin/drakids:101
 #: ../bin/draknfs:596 ../bin/draksambashare:1307 ../bin/draksambashare:1359
 #: ../bin/draksambashare:1390 ../bin/draksambashare:1427
 #, c-format
 msgid "Remove"
-msgstr "Видалити"
+msgstr "Вилучити"
 
 #: ../bin/drakhosts:259
 #, c-format
 msgid "Failed to remove host."
-msgstr ""
+msgstr "Спроба вилучити машину завершилася невдало."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:174
 #: ../bin/net_applet:171 ../lib/network/drakroam.pm:118
@@ -627,24 +628,24 @@ msgid "Quit"
 msgstr "Вийти"
 
 #: ../bin/drakids:28
-#, fuzzy, c-format
+#, c-format
 msgid "Allowed addresses"
-msgstr "Дозволити всіх користувачів"
+msgstr "Дозволені адреси"
 
 #: ../bin/drakids:40 ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196
 #: ../bin/drakids:221 ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
 #: ../bin/net_applet:110 ../bin/net_applet:261
 #: ../lib/network/drakfirewall.pm:261 ../lib/network/drakfirewall.pm:265
-#, fuzzy, c-format
+#, c-format
 msgid "Interactive Firewall"
-msgstr "Захисний шлюз"
+msgstr "Діалоговий захисний шлюз"
 
 #: ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196 ../bin/drakids:221
 #: ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
 #: ../bin/net_applet:261
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to contact daemon"
-msgstr "Неможливо з'єднатися з дзеркалом %s"
+msgstr "Неможливо зв'язатися з фоновою службою"
 
 #: ../bin/drakids:79 ../bin/drakids:107
 #, c-format
@@ -652,14 +653,14 @@ msgid "Log"
 msgstr "Журнал"
 
 #: ../bin/drakids:83 ../bin/drakids:102
-#, fuzzy, c-format
+#, c-format
 msgid "Allow"
-msgstr "Все"
+msgstr "Дозволити"
 
 #: ../bin/drakids:84 ../bin/drakids:93
 #, c-format
 msgid "Block"
-msgstr ""
+msgstr "Блокувати"
 
 #: ../bin/drakids:85 ../bin/drakids:94 ../bin/drakids:103 ../bin/drakids:114
 #: ../bin/drakids:127 ../bin/drakids:135 ../bin/draknfs:194
@@ -669,44 +670,44 @@ msgid "Close"
 msgstr "Закрити"
 
 #: ../bin/drakids:88
-#, fuzzy, c-format
+#, c-format
 msgid "Allowed services"
-msgstr "Дозволити всіх користувачів"
+msgstr "Дозволені служби"
 
 #: ../bin/drakids:97
-#, fuzzy, c-format
+#, c-format
 msgid "Blocked services"
-msgstr "Резервувати файли користувача"
+msgstr "Блоковані служби"
 
 #: ../bin/drakids:111
-#, fuzzy, c-format
+#, c-format
 msgid "Clear logs"
-msgstr "Очистити все"
+msgstr "Очистити журнали"
 
 #: ../bin/drakids:112 ../bin/drakids:117
 #, c-format
 msgid "Blacklist"
-msgstr ""
+msgstr "«Чорний» список"
 
 #: ../bin/drakids:113 ../bin/drakids:130
 #, c-format
 msgid "Whitelist"
-msgstr ""
+msgstr "«Білий» список"
 
 #: ../bin/drakids:121
-#, fuzzy, c-format
+#, c-format
 msgid "Remove from blacklist"
-msgstr "Видалити з LVM"
+msgstr "Вилучити з «чорного» списку"
 
 #: ../bin/drakids:122
 #, c-format
 msgid "Move to whitelist"
-msgstr ""
+msgstr "Пересунути до «білого» списку"
 
 #: ../bin/drakids:134
-#, fuzzy, c-format
+#, c-format
 msgid "Remove from whitelist"
-msgstr "Видалити з LVM"
+msgstr "Вилучити з «білого» списку"
 
 #: ../bin/drakids:253
 #, c-format
@@ -714,9 +715,9 @@ msgid "Date"
 msgstr "Дата"
 
 #: ../bin/drakids:254
-#, fuzzy, c-format
+#, c-format
 msgid "Remote host"
-msgstr "Remote"
+msgstr "Віддалена машина"
 
 #: ../bin/drakids:255 ../lib/network/vpn/openvpn.pm:115
 #, c-format
@@ -744,14 +745,14 @@ msgid "Status"
 msgstr "Стан"
 
 #: ../bin/drakids:292
-#, fuzzy, c-format
+#, c-format
 msgid "Allowed"
-msgstr "Все"
+msgstr "Дозволено"
 
 #: ../bin/drakids:293
 #, c-format
 msgid "Blocked"
-msgstr ""
+msgstr "Заблоковано"
 
 #: ../bin/drakinvictus:36
 #, c-format
@@ -759,41 +760,41 @@ msgid "Invictus Firewall"
 msgstr "Захисний шлюз Invictus"
 
 #: ../bin/drakinvictus:53
-#, fuzzy, c-format
+#, c-format
 msgid "Start as master"
-msgstr "Стартувати при завантаженні"
+msgstr "Запускати як головний"
 
 #: ../bin/drakinvictus:72
-#, fuzzy, c-format
+#, c-format
 msgid "A password is required."
-msgstr "Потрібний пароль"
+msgstr "Потрібен пароль."
 
 #: ../bin/drakinvictus:100
 #, c-format
 msgid ""
 "This tool allows to set up network interfaces failover and firewall "
 "replication."
-msgstr ""
+msgstr "За допомогою цього інструмента Ви зможете налаштувати резервну копію мережевих інтерфейсів та здублювати параметри захисного шлюзу"
 
 #: ../bin/drakinvictus:102
 #, c-format
 msgid "Network redundancy (leave empty if interface is not used)"
-msgstr ""
+msgstr "Запас мережі (не заповнюйте, якщо інтерфейс не використовується)"
 
 #: ../bin/drakinvictus:105
-#, fuzzy, c-format
+#, c-format
 msgid "Real address"
-msgstr "Mac-адреса"
+msgstr "Справжня адреса"
 
 #: ../bin/drakinvictus:105
-#, fuzzy, c-format
+#, c-format
 msgid "Virtual shared address"
-msgstr "вихідна адреса sainfo"
+msgstr "Віртуальна спільна адреса"
 
 #: ../bin/drakinvictus:105
 #, c-format
 msgid "Virtual ID"
-msgstr ""
+msgstr "Віртуальний ідентифікатор"
 
 #: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:596
 #: ../lib/network/vpn/vpnc.pm:56
@@ -802,34 +803,34 @@ msgid "Password"
 msgstr "Пароль"
 
 #: ../bin/drakinvictus:114
-#, fuzzy, c-format
+#, c-format
 msgid "Firewall replication"
-msgstr "кінцева роздільна здатність"
+msgstr "Дублювання захисного шлюзу"
 
 #: ../bin/drakinvictus:116
 #, c-format
 msgid "Synchronize firewall conntrack tables"
-msgstr ""
+msgstr "Синхронізувати таблиці conntrack захисного шлюзу"
 
 #: ../bin/drakinvictus:123
-#, fuzzy, c-format
+#, c-format
 msgid "Synchronization network interface"
-msgstr "Програма для синхронізації"
+msgstr "Синхронізація мережевого інтерфейсу"
 
 #: ../bin/drakinvictus:132
-#, fuzzy, c-format
+#, c-format
 msgid "Connection mark bit"
-msgstr "З'єднання"
+msgstr "Біт позначки з'єднання"
 
 #: ../bin/draknetprofile:37
-#, fuzzy, c-format
+#, c-format
 msgid "Network profiles"
-msgstr "Параметри мережі"
+msgstr "Профілі мережі"
 
 #: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#, c-format
 msgid "Profile"
-msgstr "Профілі"
+msgstr "Профіль"
 
 #: ../bin/draknetprofile:126
 #, c-format
@@ -841,8 +842,7 @@ msgstr "Новий профіль..."
 msgid ""
 "Name of the profile to create (the new profile is created as a copy of the "
 "current one):"
-msgstr ""
-"Назва профілю для створення (новий профіль створюється як копія поточного):"
+msgstr "Назва профілю для створення (новий профіль створюється як копія поточного):"
 
 #: ../bin/draknetprofile:140
 #, c-format
@@ -859,24 +859,24 @@ msgstr "Попередження"
 #: ../bin/draknetprofile:156
 #, c-format
 msgid "You can not delete the default profile"
-msgstr ""
+msgstr "Ви не можете вилучити типовий профіль"
 
 #: ../bin/draknetprofile:158
 #, c-format
 msgid "You can not delete the current profile"
-msgstr "Ви не можете видалити поточний профіль"
+msgstr "Ви не можете вилучити поточний профіль"
 
 #: ../bin/draknetprofile:168
 #, c-format
 msgid ""
 "This tool allows to activate an existing network profile, and to manage "
 "(clone, delete) profiles."
-msgstr ""
+msgstr "За допомогою цього інструменту Ви можете задіяти існуючий профіль мережі і керувати (клонувати, вилучати) профілями."
 
 #: ../bin/draknetprofile:168
 #, c-format
 msgid "To modify a profile, you have to activate it first."
-msgstr ""
+msgstr "Щоб змінити профіль, Вам спершу потрібно задіяти його."
 
 #: ../bin/draknetprofile:171
 #, c-format
@@ -884,34 +884,34 @@ msgid "Activate"
 msgstr "Задіяти"
 
 #: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#, c-format
 msgid "Clone"
-msgstr "З'єднатись"
+msgstr "Клонувати"
 
 #: ../bin/draknetprofile:173
 #, c-format
 msgid "Delete"
-msgstr "Видалити"
+msgstr "Вилучити"
 
 #: ../bin/draknfs:47
 #, c-format
 msgid "map root user as anonymous"
-msgstr ""
+msgstr "відображати користувача root як анонімного"
 
 #: ../bin/draknfs:48
 #, c-format
 msgid "map all users to anonymous user"
-msgstr ""
+msgstr "відображати всіх користувачів як анонімних"
 
 #: ../bin/draknfs:49
 #, c-format
 msgid "No user UID mapping"
-msgstr ""
+msgstr "Без відображення ід. користувачів"
 
 #: ../bin/draknfs:50
 #, c-format
 msgid "allow real remote root access"
-msgstr ""
+msgstr "дозволити справжній віддалений доступ root"
 
 #: ../bin/draknfs:64 ../bin/draknfs:65 ../bin/draknfs:66
 #: ../bin/draksambashare:175 ../bin/draksambashare:176
@@ -923,7 +923,7 @@ msgstr "/Файл"
 #: ../bin/draknfs:65 ../bin/draksambashare:176
 #, c-format
 msgid "/_Write conf"
-msgstr ""
+msgstr "/_Записати налаштування"
 
 #: ../bin/draknfs:66 ../bin/draksambashare:177
 #, c-format
@@ -936,19 +936,19 @@ msgid "<control>Q"
 msgstr "<control>Q"
 
 #: ../bin/draknfs:69 ../bin/draknfs:70 ../bin/draknfs:71
-#, fuzzy, c-format
+#, c-format
 msgid "/_NFS Server"
-msgstr "Сервери DNS"
+msgstr "/_Сервер NFS"
 
 #: ../bin/draknfs:70 ../bin/draksambashare:181
 #, c-format
 msgid "/_Restart"
-msgstr ""
+msgstr "/_Перезапуск"
 
 #: ../bin/draknfs:71 ../bin/draksambashare:182
 #, c-format
 msgid "/R_eload"
-msgstr ""
+msgstr "/Пере_завантаження"
 
 #: ../bin/draknfs:90
 #, c-format
@@ -958,17 +958,17 @@ msgstr "Сервер NFS"
 #: ../bin/draknfs:90
 #, c-format
 msgid "Restarting/Reloading NFS server..."
-msgstr ""
+msgstr "Перезапуск або перезавантаження сервера NFS..."
 
 #: ../bin/draknfs:91
 #, c-format
 msgid "Error Restarting/Reloading NFS server"
-msgstr ""
+msgstr "Помилка під час перезапуску або перезавантаження сервера NFS"
 
 #: ../bin/draknfs:107 ../bin/draksambashare:246
-#, fuzzy, c-format
+#, c-format
 msgid "Directory Selection"
-msgstr "Опис"
+msgstr "Вибір теки"
 
 #: ../bin/draknfs:112 ../bin/draksambashare:251
 #, c-format
@@ -1001,6 +1001,19 @@ msgid ""
 "either `/255.255.252.0' or  `/22'  appended to the network base address "
 "result.\n"
 msgstr ""
+"<span weight=\"bold\">Клієнтів NFS</span> можна вказати у декілька способів:\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">окрема машина:</span> вказати машину або у вигляді абревіатури назви, яку може бути розпізнано інструментом визначення адрес, або у вигляді повноцінної доменної назви, або у вигляді IP-адреси\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">мережеві групи:</span> мережеві групи NIS можна вказувати у вигляді @group.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">шаблони заміни:</span> назви комп’ютерів можуть містити символи шаблонів заміни, літери * і ?. Приклад: *.cs.foo.edu відповідає всім вузлам домену cs.foo.edu.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">IP-мережі:</span> крім того, Ви можете одночасно експортувати каталоги на всі теки IP-(під-)мережі. Приклад: `/255.255.252.0' або  `/22', додані до базової адреси мережі.\n"
 
 #: ../bin/draknfs:158
 #, c-format
@@ -1027,31 +1040,45 @@ msgid ""
 "<span foreground=\"royalblue3\">anonuid and anongid:</span> explicitly set "
 "the uid and gid of the anonymous account.\n"
 msgstr ""
+"<span weight=\"bold\">Параметри ідентифікатора користувача</span>\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">відображення користувача root як анонімного:</span> переспрямовувати запити з uid/gid 0 на анонімний uid/gid (root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">дозволити справжній віддалений доступ root:</span> вимкнути сплющування root. Цей параметри головним чином корисний для бездискових клієнтів "
+"(no_root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">відображення всіх користувачів як анонімних:</span> переспрямовувати всі запити до uid і gid користувачів до анонімного користувача (all_squash). Корисно для експортованих за допомогою NFS спільних каталогів FTP, каталогів новин, тощо. Параметр з протилежним значенням, без відображення користувачів (no_all_squash), є типовим.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">anonuid і anongid:</span> вказати явним чином uid і gid анонімного облікового запису.\n"
 
 #: ../bin/draknfs:174
 #, c-format
 msgid "Synchronous access:"
-msgstr ""
+msgstr "Синхронний доступ:"
 
 #: ../bin/draknfs:175
-#, fuzzy, c-format
+#, c-format
 msgid "Secured Connection:"
-msgstr "З'єднання з тенетами"
+msgstr "Безпечне з'єднання:"
 
 #: ../bin/draknfs:176
 #, c-format
 msgid "Read-Only share:"
-msgstr ""
+msgstr "Спільний ресурс лише для читання:"
 
 #: ../bin/draknfs:177
 #, c-format
 msgid "Subtree checking:"
-msgstr ""
+msgstr "Перевірка піддерев:"
 
 #: ../bin/draknfs:179
 #, c-format
 msgid "Advanced Options"
-msgstr ""
+msgstr "Додаткові параметри"
 
 #: ../bin/draknfs:180
 #, c-format
@@ -1059,7 +1086,7 @@ msgid ""
 "<span foreground=\"royalblue3\">%s</span> this option requires that requests "
 "originate on an internet port less than IPPORT_RESERVED (1024). This option "
 "is on by default."
-msgstr ""
+msgstr "<span foreground=\"royalblue3\">%s</span> цей параметр потребує, щоб запити надходили з інтернет-порту з номером, меншим за IPPORT_RESERVED (1024). Цей параметр типово увімкнено."
 
 #: ../bin/draknfs:181
 #, c-format
@@ -1068,7 +1095,7 @@ msgid ""
 "read and write requests on this NFS volume. The default is to disallow any "
 "request which changes the filesystem. This can also be made explicit by "
 "using this option."
-msgstr ""
+msgstr "<span foreground=\"royalblue3\">%s</span> надає змогу виконання запитів або лише на читання, або на читання і запис до цього тому NFS. Типовою є заборона будь-яких запитів, які змінюють файлову систему. Таку заборону також можна зробити явним чином за допомогою цього параметра."
 
 #: ../bin/draknfs:182
 #, c-format
@@ -1076,7 +1103,7 @@ msgid ""
 "<span foreground=\"royalblue3\">%s</span> disallows the NFS server to "
 "violate the NFS protocol and to reply to requests before any changes made by "
 "these requests have been committed to stable storage (e.g. disc drive)."
-msgstr ""
+msgstr "<span foreground=\"royalblue3\">%s</span> забороняє серверу NFS порушувати протокол NFS і відповідати на запити, перш ніж будь-які зміни, які є наслідком цих запитів, буде надіслано до стабільного сховища (наприклад, диска)."
 
 #: ../bin/draknfs:183
 #, c-format
@@ -1084,7 +1111,7 @@ msgid ""
 "<span foreground=\"royalblue3\">%s</span> enable subtree checking which can "
 "help improve security in some cases, but can decrease reliability. See "
 "exports(5) man page for more details."
-msgstr ""
+msgstr "<span foreground=\"royalblue3\">%s</span> вмикає перевірку піддерев, що у деяких випадках може покращити параметри безпеки, але знизити надійність роботи. Щоб дізнатися більше, прочитайте сторінку довідки exports(5)."
 
 #: ../bin/draknfs:188 ../bin/draksambashare:624 ../bin/draksambashare:791
 #, c-format
@@ -1094,17 +1121,17 @@ msgstr "Інформація"
 #: ../bin/draknfs:269
 #, c-format
 msgid "Directory"
-msgstr "Каталог"
+msgstr "Тека"
 
 #: ../bin/draknfs:273
 #, c-format
 msgid "Draknfs entry"
-msgstr ""
+msgstr "Запис Draknfs"
 
 #: ../bin/draknfs:282
 #, c-format
 msgid "Please add an NFS share to be able to modify it."
-msgstr ""
+msgstr "Будь ласка, додайте спільний ресурс NFS, щоб мати змогу його змінити."
 
 #: ../bin/draknfs:356 ../bin/draksambashare:599
 #, c-format
@@ -1114,18 +1141,18 @@ msgstr "Додаткові параметри"
 #: ../bin/draknfs:371
 #, c-format
 msgid "NFS directory"
-msgstr ""
+msgstr "Тека NFS"
 
 #: ../bin/draknfs:372 ../bin/draksambashare:382 ../bin/draksambashare:589
 #: ../bin/draksambashare:768
 #, c-format
 msgid "Directory:"
-msgstr "Каталог:"
+msgstr "Тека:"
 
 #: ../bin/draknfs:373
-#, fuzzy, c-format
+#, c-format
 msgid "Host access"
-msgstr "Назва машини"
+msgstr "Доступ до машини"
 
 #: ../bin/draknfs:374
 #, c-format
@@ -1135,7 +1162,7 @@ msgstr "Доступ:"
 #: ../bin/draknfs:375
 #, c-format
 msgid "User ID Mapping"
-msgstr ""
+msgstr "Відображення ід. користувача"
 
 #: ../bin/draknfs:376
 #, c-format
@@ -1145,37 +1172,37 @@ msgstr "Ід. користувача:"
 #: ../bin/draknfs:377
 #, c-format
 msgid "Anonymous user ID:"
-msgstr ""
+msgstr "Ід. анонімного користувача:"
 
 #: ../bin/draknfs:378
 #, c-format
 msgid "Anonymous Group ID:"
-msgstr ""
+msgstr "Ід. анонімної групи:"
 
 #: ../bin/draknfs:415
-#, fuzzy, c-format
+#, c-format
 msgid "Please specify a directory to share."
-msgstr "Будь ласка, введіть параметри безпровідного зв'язку для цієї плати:"
+msgstr "Будь ласка, введіть назву теки, ресурси якої потрібно віддати у спільне використання."
 
 #: ../bin/draknfs:417
 #, c-format
 msgid "Can't create this directory."
-msgstr ""
+msgstr "Не вдалося створити цю теку."
 
 #: ../bin/draknfs:420
 #, c-format
 msgid "You must specify hosts access."
-msgstr ""
+msgstr "Вам потрібно встановити доступ до машин."
 
 #: ../bin/draknfs:500
 #, c-format
 msgid "Share Directory"
-msgstr ""
+msgstr "Спільна тека"
 
 #: ../bin/draknfs:500
 #, c-format
 msgid "Hosts Wildcard"
-msgstr ""
+msgstr "Шаблон заміни машин"
 
 #: ../bin/draknfs:500
 #, c-format
@@ -1185,18 +1212,18 @@ msgstr "Загальні параметри"
 #: ../bin/draknfs:500
 #, c-format
 msgid "Custom Options"
-msgstr ""
+msgstr "Нетипові параметри"
 
 #: ../bin/draknfs:512 ../bin/draksambashare:397 ../bin/draksambashare:626
 #: ../bin/draksambashare:793
 #, c-format
 msgid "Please enter a directory to share."
-msgstr ""
+msgstr "Будь ласка, введіть назву спільної теки."
 
 #: ../bin/draknfs:519
 #, c-format
 msgid "Please use the modify button to set right access."
-msgstr ""
+msgstr "Будь ласка, скористайтеся кнопкою «Змінити», щоб встановити правильні права доступу."
 
 #: ../bin/draknfs:534
 #, c-format
@@ -1206,27 +1233,27 @@ msgstr "Налаштувати доступ по NFS"
 #: ../bin/draknfs:570
 #, c-format
 msgid "Starting the NFS-server"
-msgstr ""
+msgstr "Запуск сервера NFS"
 
 #: ../bin/draknfs:577
 #, c-format
 msgid "DrakNFS manage NFS shares"
-msgstr ""
+msgstr "DrakNFS — керування спільними ресурсами NFS"
 
 #: ../bin/draknfs:586
 #, c-format
 msgid "Failed to add NFS share."
-msgstr ""
+msgstr "Спроба додати спільний ресурс NFS зазнала невдачі."
 
 #: ../bin/draknfs:593
 #, c-format
 msgid "Failed to Modify NFS share."
-msgstr ""
+msgstr "Спроба змінити спільний ресурс NFS зазнала невдачі."
 
 #: ../bin/draknfs:600
 #, c-format
 msgid "Failed to remove an NFS share."
-msgstr ""
+msgstr "Спроба вилучення спільного ресурсу NFS зазнала невдачі."
 
 #: ../bin/draksambashare:65
 #, c-format
@@ -1239,9 +1266,9 @@ msgid "Share name"
 msgstr "Назва ресурсу"
 
 #: ../bin/draksambashare:73 ../bin/draksambashare:101
-#, fuzzy, c-format
+#, c-format
 msgid "Share directory"
-msgstr "Немає такої теки"
+msgstr "Спільна тека"
 
 #: ../bin/draksambashare:74 ../bin/draksambashare:102
 #: ../bin/draksambashare:119
@@ -1250,60 +1277,60 @@ msgid "Comment"
 msgstr "Коментар"
 
 #: ../bin/draksambashare:75 ../bin/draksambashare:120
-#, fuzzy, c-format
+#, c-format
 msgid "Browseable"
-msgstr "Перейти"
+msgstr "Доступність для перегляду"
 
 #: ../bin/draksambashare:76
 #, c-format
 msgid "Public"
-msgstr "Відкрито"
+msgstr "Відкритість"
 
 #: ../bin/draksambashare:77 ../bin/draksambashare:125
 #, c-format
 msgid "Writable"
-msgstr "Запис дозволено"
+msgstr "Доступність для запису"
 
 #: ../bin/draksambashare:78 ../bin/draksambashare:166
-#, fuzzy, c-format
+#, c-format
 msgid "Create mask"
-msgstr "Створити"
+msgstr "Маска створення"
 
 #: ../bin/draksambashare:79 ../bin/draksambashare:167
-#, fuzzy, c-format
+#, c-format
 msgid "Directory mask"
-msgstr "Тека з резервними копіями"
+msgstr "Маска теки"
 
 #: ../bin/draksambashare:80
-#, fuzzy, c-format
+#, c-format
 msgid "Read list"
-msgstr "Читати"
+msgstr "Список читання"
 
 #: ../bin/draksambashare:81 ../bin/draksambashare:126
 #: ../bin/draksambashare:603
-#, fuzzy, c-format
+#, c-format
 msgid "Write list"
-msgstr "Записати"
+msgstr "Список запису"
 
 #: ../bin/draksambashare:82 ../bin/draksambashare:158
-#, fuzzy, c-format
+#, c-format
 msgid "Admin users"
-msgstr "Додати користувача"
+msgstr "Користувачі-адміністратори"
 
 #: ../bin/draksambashare:83 ../bin/draksambashare:159
-#, fuzzy, c-format
+#, c-format
 msgid "Valid users"
-msgstr "Додати користувача"
+msgstr "Чинні користувачі"
 
 #: ../bin/draksambashare:84
-#, fuzzy, c-format
+#, c-format
 msgid "Inherit Permissions"
-msgstr "Права доступу"
+msgstr "Успадкування прав доступу"
 
 #: ../bin/draksambashare:85 ../bin/draksambashare:160
-#, fuzzy, c-format
+#, c-format
 msgid "Hide dot files"
-msgstr "Сховати файли"
+msgstr "Сховати файли з крапкою"
 
 #: ../bin/draksambashare:86 ../bin/draksambashare:161
 #, c-format
@@ -1311,29 +1338,29 @@ msgid "Hide files"
 msgstr "Сховати файли"
 
 #: ../bin/draksambashare:87 ../bin/draksambashare:165
-#, fuzzy, c-format
+#, c-format
 msgid "Preserve case"
-msgstr "Вподобання"
+msgstr "Зберігати регістр"
 
 #: ../bin/draksambashare:88
-#, fuzzy, c-format
+#, c-format
 msgid "Force create mode"
-msgstr "Модель Вашої друкарки"
+msgstr "Режим примусового створення"
 
 #: ../bin/draksambashare:89
-#, fuzzy, c-format
+#, c-format
 msgid "Force group"
-msgstr "група PFS"
+msgstr "Примусова група"
 
 #: ../bin/draksambashare:90 ../bin/draksambashare:164
-#, fuzzy, c-format
+#, c-format
 msgid "Default case"
-msgstr "Типовий користувач"
+msgstr "Типовий регістр"
 
 #: ../bin/draksambashare:117
 #, c-format
 msgid "Printer name"
-msgstr "Назва принтера"
+msgstr "Назва друкарки"
 
 #: ../bin/draksambashare:118
 #, c-format
@@ -1341,30 +1368,30 @@ msgid "Path"
 msgstr "Шлях"
 
 #: ../bin/draksambashare:121 ../bin/draksambashare:595
-#, fuzzy, c-format
+#, c-format
 msgid "Printable"
-msgstr "Увімкнути"
+msgstr "Придатність для друку"
 
 #: ../bin/draksambashare:122
-#, fuzzy, c-format
+#, c-format
 msgid "Print Command"
-msgstr "Команда"
+msgstr "Команда для друку"
 
 #: ../bin/draksambashare:123
-#, fuzzy, c-format
+#, c-format
 msgid "LPQ command"
-msgstr "Команда"
+msgstr "Команда LPQ"
 
 #: ../bin/draksambashare:124
 #, c-format
 msgid "Guest ok"
-msgstr ""
+msgstr "Гостьовий доступ"
 
 #: ../bin/draksambashare:127 ../bin/draksambashare:168
 #: ../bin/draksambashare:604
-#, fuzzy, c-format
+#, c-format
 msgid "Inherit permissions"
-msgstr "Права доступу"
+msgstr "Успадковувати права доступу"
 
 #: ../bin/draksambashare:128
 #, c-format
@@ -1372,45 +1399,45 @@ msgid "Printing"
 msgstr "Друк"
 
 #: ../bin/draksambashare:129
-#, fuzzy, c-format
+#, c-format
 msgid "Create mode"
-msgstr "Модель карти:"
+msgstr "Режим створення"
 
 #: ../bin/draksambashare:130
-#, fuzzy, c-format
+#, c-format
 msgid "Use client driver"
-msgstr "сервер Telnet"
+msgstr "Використовувати клієнтський драйвер"
 
 #: ../bin/draksambashare:156
-#, fuzzy, c-format
+#, c-format
 msgid "Read List"
-msgstr "Видалити список"
+msgstr "Список читання"
 
 #: ../bin/draksambashare:157
-#, fuzzy, c-format
+#, c-format
 msgid "Write List"
-msgstr "Записати"
+msgstr "Список запису"
 
 #: ../bin/draksambashare:162
-#, fuzzy, c-format
+#, c-format
 msgid "Force Group"
-msgstr "Група"
+msgstr "Примусова група"
 
 #: ../bin/draksambashare:163
 #, c-format
 msgid "Force create group"
-msgstr ""
+msgstr "Примусове створення групи"
 
 #: ../bin/draksambashare:179 ../bin/draksambashare:180
 #: ../bin/draksambashare:181 ../bin/draksambashare:182
-#, fuzzy, c-format
+#, c-format
 msgid "/_Samba Server"
-msgstr "Веб-сервер"
+msgstr "/_Сервер Samba"
 
 #: ../bin/draksambashare:180
-#, fuzzy, c-format
+#, c-format
 msgid "/_Configure"
-msgstr "Налаштувати"
+msgstr "/_Налаштувати"
 
 #: ../bin/draksambashare:184
 #, c-format
@@ -1418,9 +1445,9 @@ msgid "/_Help"
 msgstr "/Довідка"
 
 #: ../bin/draksambashare:184
-#, fuzzy, c-format
+#, c-format
 msgid "/_Samba Documentation"
-msgstr "Фрагментація"
+msgstr "/_Документація з Samba"
 
 #: ../bin/draksambashare:190 ../bin/draksambashare:191
 #, c-format
@@ -1440,17 +1467,17 @@ msgstr "/Про..."
 #: ../bin/draksambashare:194
 #, c-format
 msgid "Draksambashare"
-msgstr ""
+msgstr "Draksambashare"
 
 #: ../bin/draksambashare:196
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Авторські права належать © %s Mandriva"
 
 #: ../bin/draksambashare:198
 #, c-format
 msgid "This is a simple tool to easily manage Samba configuration."
-msgstr ""
+msgstr "Це простий інструмент для полегшення керування налаштуваннями Samba."
 
 #: ../bin/draksambashare:200
 #, c-format
@@ -1461,17 +1488,17 @@ msgstr "Mandriva Linux"
 #: ../bin/draksambashare:205
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
-msgstr ""
+msgstr "Тарас Бойчук (btr1@mail.ru), Юрій Чорноіван (yurchor@ukr.net)\n"
 
 #: ../bin/draksambashare:229
 #, c-format
 msgid "Restarting/Reloading Samba server..."
-msgstr ""
+msgstr "Перезапуск або перезавантаження сервера Samba..."
 
 #: ../bin/draksambashare:230
 #, c-format
 msgid "Error Restarting/Reloading Samba server"
-msgstr ""
+msgstr "Помилка під час перезапуску або перезавантаження сервера Samba"
 
 #: ../bin/draksambashare:370 ../bin/draksambashare:568
 #: ../bin/draksambashare:689
@@ -1482,12 +1509,12 @@ msgstr "Відкрити"
 #: ../bin/draksambashare:373
 #, c-format
 msgid "DrakSamba add entry"
-msgstr ""
+msgstr "Додавання запису DrakSamba"
 
 #: ../bin/draksambashare:377
-#, fuzzy, c-format
+#, c-format
 msgid "Add a share"
-msgstr "Додати правило"
+msgstr "Додати спільний ресурс"
 
 #: ../bin/draksambashare:380
 #, c-format
@@ -1505,49 +1532,48 @@ msgstr "Коментар:"
 msgid ""
 "Share with the same name already exist or share name empty, please choose "
 "another name."
-msgstr ""
+msgstr "Спільний ресурс з такою назвою вже існує, або Ви не вказали його назви, будь ласка, оберіть іншу назву."
 
 #: ../bin/draksambashare:400
 #, c-format
 msgid "Can't create the directory, please enter a correct path."
-msgstr ""
+msgstr "Не вдалося створити теку, будь ласка, введіть коректну адресу."
 
 #: ../bin/draksambashare:403 ../bin/draksambashare:624
 #: ../bin/draksambashare:791
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter a Comment for this share."
-msgstr "Будь ласка, введіть параметри безпровідного зв'язку для цієї плати:"
+msgstr "Будь ласка, введіть коментар до цього спільного ресурсу:"
 
 #: ../bin/draksambashare:440
 #, c-format
 msgid "pdf-gen - a PDF generator"
-msgstr ""
+msgstr "pdf-gen — інструмент для створення PDF"
 
 #: ../bin/draksambashare:441
 #, c-format
 msgid "printers - all printers available"
-msgstr ""
+msgstr "printers — всі доступні друкарки"
 
 #: ../bin/draksambashare:445
 #, c-format
 msgid "Add Special Printer share"
-msgstr ""
+msgstr "Додати особливий спільний ресурс друкарки"
 
 #: ../bin/draksambashare:448
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
-msgstr ""
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
+msgstr "Метою цього Помічника є спрощення створення нового особливого спільного ресурсу друкарки Samba."
 
 #: ../bin/draksambashare:455
-#, fuzzy, c-format
+#, c-format
 msgid "A PDF generator already exists."
-msgstr "Профіль \"%s\" вже існує!"
+msgstr "Інструмент створення PDF вже існує."
 
 #: ../bin/draksambashare:479
-#, fuzzy, c-format
+#, c-format
 msgid "Printers and print$ already exist."
-msgstr "Профіль \"%s\" вже існує!"
+msgstr "printers і print$ вже створено."
 
 #: ../bin/draksambashare:529 ../bin/draksambashare:1199
 #, c-format
@@ -1557,27 +1583,27 @@ msgstr "Вітання"
 #: ../bin/draksambashare:530
 #, c-format
 msgid "The wizard successfully added the printer Samba share"
-msgstr ""
+msgstr "Помічник успішно додав спільний ресурс друкарки Samba"
 
 #: ../bin/draksambashare:552
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
-msgstr ""
+msgstr "Будь ласка, додайте або оберіть спільний ресурс друкарки Samba, щоб мати змогу його змінити."
 
 #: ../bin/draksambashare:571
 #, c-format
 msgid "DrakSamba Printers entry"
-msgstr ""
+msgstr "Запис друкарок DrakSamba"
 
 #: ../bin/draksambashare:584
 #, c-format
 msgid "Printer share"
-msgstr ""
+msgstr "Спільна друкарка"
 
 #: ../bin/draksambashare:587
 #, c-format
 msgid "Printer name:"
-msgstr "Назва принтера:"
+msgstr "Назва друкарки:"
 
 #: ../bin/draksambashare:593 ../bin/draksambashare:774
 #, c-format
@@ -1587,17 +1613,17 @@ msgstr "Доступний для запису:"
 #: ../bin/draksambashare:594 ../bin/draksambashare:775
 #, c-format
 msgid "Browseable:"
-msgstr "Видимий:"
+msgstr "Видимість:"
 
 #: ../bin/draksambashare:601
-#, fuzzy, c-format
+#, c-format
 msgid "Printer access"
-msgstr "Доступ до Інтернету"
+msgstr "Доступ до друкарки"
 
 #: ../bin/draksambashare:605
 #, c-format
 msgid "Guest ok:"
-msgstr "Гість ОК:"
+msgstr "Гостьовий доступ:"
 
 #: ../bin/draksambashare:606
 #, c-format
@@ -1607,72 +1633,71 @@ msgstr "Режим створення:"
 #: ../bin/draksambashare:610
 #, c-format
 msgid "Printer command"
-msgstr ""
+msgstr "Команда друкарки"
 
 #: ../bin/draksambashare:612
 #, c-format
 msgid "Print command:"
-msgstr ""
+msgstr "Команда друку:"
 
 #: ../bin/draksambashare:613
-#, fuzzy, c-format
+#, c-format
 msgid "LPQ command:"
-msgstr "Команда"
+msgstr "Команда LPQ:"
 
 #: ../bin/draksambashare:614
-#, fuzzy, c-format
+#, c-format
 msgid "Printing:"
-msgstr "Попередження"
+msgstr "Друк:"
 
 #: ../bin/draksambashare:630
 #, c-format
 msgid "create mode should be numeric. ie: 0755."
-msgstr ""
+msgstr "режим створення потрібно вказувати у вигляді числа, приклад: 0755."
 
 #: ../bin/draksambashare:692
 #, c-format
 msgid "DrakSamba entry"
-msgstr ""
+msgstr "Запис DrakSamba"
 
 #: ../bin/draksambashare:697
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
-msgstr ""
+msgstr "Будь ласка, додайте або оберіть спільний ресурс Samba, щоб мати змогу його змінити."
 
 #: ../bin/draksambashare:720
-#, fuzzy, c-format
+#, c-format
 msgid "Samba user access"
-msgstr "Сервер Samba"
+msgstr "Доступ користувачів Samba"
 
 #: ../bin/draksambashare:728
-#, fuzzy, c-format
+#, c-format
 msgid "Mask options"
-msgstr "Основні параметри"
+msgstr "Параметри маски"
 
 #: ../bin/draksambashare:742
-#, fuzzy, c-format
+#, c-format
 msgid "Display options"
-msgstr "Вкажіть параметри"
+msgstr "Параметри показу"
 
 #: ../bin/draksambashare:764
-#, fuzzy, c-format
+#, c-format
 msgid "Samba share directory"
-msgstr "Немає такої теки"
+msgstr "Тека спільного ресурсу Samba"
 
 #: ../bin/draksambashare:767
-#, fuzzy, c-format
+#, c-format
 msgid "Share name:"
-msgstr "Назва ресурсу"
+msgstr "Назва спільного ресурсу:"
 
 #: ../bin/draksambashare:773
 #, c-format
 msgid "Public:"
-msgstr "Загальний:"
+msgstr "Відкритість:"
 
 #: ../bin/draksambashare:797
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 "Маска створення, примусовий режим створення і маска теки мають бути числами. "
 "Приклад: 0755."
@@ -1680,17 +1705,17 @@ msgstr ""
 #: ../bin/draksambashare:804
 #, c-format
 msgid "Please create this Samba user: %s"
-msgstr ""
+msgstr "Будь ласка, створіть такого користувача Samba: %s"
 
 #: ../bin/draksambashare:916
 #, c-format
 msgid "Add Samba user"
-msgstr ""
+msgstr "Додати користувача Samba"
 
 #: ../bin/draksambashare:931
-#, fuzzy, c-format
+#, c-format
 msgid "User information"
-msgstr "Використовувати мій розділ Windows"
+msgstr "Відомості про користувача"
 
 #: ../bin/draksambashare:933
 #, c-format
@@ -1705,74 +1730,73 @@ msgstr "Пароль:"
 #: ../bin/draksambashare:1048
 #, c-format
 msgid "PDC - primary domain controller"
-msgstr ""
+msgstr "PDC — основний контролер домену"
 
 #: ../bin/draksambashare:1049
 #, c-format
 msgid "Standalone - standalone server"
-msgstr ""
+msgstr "Самодостатній — самодостатній сервер"
 
 #: ../bin/draksambashare:1055
 #, c-format
 msgid "Samba Wizard"
-msgstr ""
+msgstr "Помічник Samba"
 
 #: ../bin/draksambashare:1058
-#, fuzzy, c-format
+#, c-format
 msgid "Samba server configuration Wizard"
-msgstr "Налаштувати параметри Самби"
+msgstr "Помічник налаштування сервера Samba"
 
 #: ../bin/draksambashare:1058
 #, c-format
 msgid ""
 "Samba allows your server to behave as a file and print server for "
 "workstations running non-Linux systems."
-msgstr ""
+msgstr "Samba надає змогу серверу поводитися як файловий сервер і сервер друку для робочих станцій з системами, відмінними від Linux."
 
 #: ../bin/draksambashare:1074
 #, c-format
 msgid "PDC server: primary domain controller"
-msgstr ""
+msgstr "Сервер PDC: основний контролер домену"
 
 #: ../bin/draksambashare:1074
 #, c-format
 msgid ""
 "Server configured as a PDC is responsible for Windows authentication "
 "throughout the domain."
-msgstr ""
+msgstr "Сервер, налаштований як PDC, відповідає за систему розпізнавання Windows у домені."
 
 #: ../bin/draksambashare:1074
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
-msgstr ""
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
+msgstr "У конфігураціях з єдиним сервером можна використовувати служби паролів smbpasswd або tdbsam"
 
 #: ../bin/draksambashare:1074
 #, c-format
 msgid ""
 "Domain master = yes, causes the server to register the NetBIOS name <pdc "
 "name>. This name will be recognized by other servers."
-msgstr ""
+msgstr "Встановлення параметра «головний» у значення «так», призведе до реєстрації назви NetBIOS <назва pdc>. За цією назвою сервер розпізнаватимуть інші сервери."
 
 #: ../bin/draksambashare:1091
 #, c-format
 msgid "Wins support:"
-msgstr ""
+msgstr "Підтримка Wins:"
 
 #: ../bin/draksambashare:1092
-#, fuzzy, c-format
+#, c-format
 msgid "admin users:"
-msgstr "Додати користувача"
+msgstr "користувачі-адміністратори:"
 
 #: ../bin/draksambashare:1092
 #, c-format
 msgid "root @adm"
-msgstr ""
+msgstr "root @adm"
 
 #: ../bin/draksambashare:1093
 #, c-format
 msgid "Os level:"
-msgstr ""
+msgstr "Рівень OS:"
 
 #: ../bin/draksambashare:1093
 #, c-format
@@ -1783,53 +1807,55 @@ msgid ""
 "that of the operating system on your network with the highest current value. "
 "ie: os level = 34"
 msgstr ""
+"Параметр глобального рівня операційної системи визначає рівень, під яким маскуватиметься "
+"Samba під час вибору переглядача. Якщо Ви бажаєте, щоб Samba виграла вибори і стала головним переглядачем, можете встановити найвищий рівень серед операційних систем Вашої мережі. Приклад: os level = 34"
 
 #: ../bin/draksambashare:1097
 #, c-format
 msgid "The domain is wrong."
-msgstr ""
+msgstr "Домен вказано неправильно."
 
 #: ../bin/draksambashare:1104
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup"
-msgstr "група PFS"
+msgstr "Робоча група"
 
 #: ../bin/draksambashare:1104
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
-msgstr ""
+msgstr "Samba потрібно знати робочу групу Windows, з якою вона працюватиме."
 
 #: ../bin/draksambashare:1111 ../bin/draksambashare:1178
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup:"
-msgstr "група PFS"
+msgstr "Робоча група:"
 
 #: ../bin/draksambashare:1112
-#, fuzzy, c-format
+#, c-format
 msgid "Netbios name:"
-msgstr "Назва хоста:"
+msgstr "Назва з Netbios:"
 
 #: ../bin/draksambashare:1116
 #, c-format
 msgid "The Workgroup is wrong."
-msgstr ""
+msgstr "Робочу групу вказано неправильно."
 
 #: ../bin/draksambashare:1123 ../bin/draksambashare:1133
-#, fuzzy, c-format
+#, c-format
 msgid "Security mode"
-msgstr "Політика безпеки"
+msgstr "Режим безпеки"
 
 #: ../bin/draksambashare:1123
 #, c-format
 msgid ""
 "User level: the client sends a session setup request directly following "
 "protocol negotiation. This request provides a username and password."
-msgstr ""
+msgstr "Рівень користувача: клієнт надсилає запит на встановлення сеансу напряму для узгодження протоколу. У цьому запиті містяться ім’я користувача і пароль."
 
 #: ../bin/draksambashare:1123
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
+msgstr "Рівень спільного ресурсу: клієнт надає дані для розпізнавання окремо для кожного спільного ресурсу"
 
 #: ../bin/draksambashare:1123
 #, c-format
@@ -1837,130 +1863,130 @@ msgid ""
 "Domain level: provides a mechanism for storing all user and group accounts "
 "in a central, shared, account repository. The centralized account repository "
 "is shared between domain (security) controllers."
-msgstr ""
+msgstr "Рівень домену: надається механізм для зберігання всіх облікових записів користувачів і груп у централізованому, спільному сховищі облікових записів. Централізоване сховище облікових записів надається у використання контролерами безпеки домену."
 
 #: ../bin/draksambashare:1134
-#, fuzzy, c-format
+#, c-format
 msgid "Hosts allow"
-msgstr "Назва машини"
+msgstr "Дозволені машини"
 
 #: ../bin/draksambashare:1139
 #, c-format
 msgid "Server Banner."
-msgstr ""
+msgstr "Банер сервера."
 
 #: ../bin/draksambashare:1139
 #, c-format
 msgid ""
 "The banner is the way this server will be described in the Windows "
 "workstations."
-msgstr ""
+msgstr "Банер — це спосіб, у який сервер буде представлено на робочих станціях Windows."
 
 #: ../bin/draksambashare:1144
 #, c-format
 msgid "Banner:"
-msgstr ""
+msgstr "Банер:"
 
 #: ../bin/draksambashare:1148
 #, c-format
 msgid "The Server Banner is incorrect."
-msgstr ""
+msgstr "Встановлено неправильний банер сервера."
 
 #: ../bin/draksambashare:1155
 #, c-format
 msgid "Samba Log"
-msgstr ""
+msgstr "Журнал Samba"
 
 #: ../bin/draksambashare:1155
 #, c-format
 msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
 "connects"
-msgstr ""
+msgstr "Файл журналу: скористайтеся записом файл.%m, щоб використовувати окремий журнал для кожного комп’ютера, який з’єднується з сервером"
 
 #: ../bin/draksambashare:1155
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
-msgstr ""
+msgstr "Рівень журналювання: встановіть рівень (докладність) журналу (значення від 0 до 10)"
 
 #: ../bin/draksambashare:1155
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
+msgstr "Максимальний розмір журналу: встановіть верхній рівень розміру файлів журналу (у кБ)."
 
 #: ../bin/draksambashare:1162 ../bin/draksambashare:1180
-#, fuzzy, c-format
+#, c-format
 msgid "Log file:"
-msgstr "Профілі"
+msgstr "Файл журналу:"
 
 #: ../bin/draksambashare:1163
 #, c-format
 msgid "Max log size:"
-msgstr ""
+msgstr "Максимальний розмір журналу:"
 
 #: ../bin/draksambashare:1164
-#, fuzzy, c-format
+#, c-format
 msgid "Log level:"
-msgstr "Рівень"
+msgstr "Рівень журналювання:"
 
 #: ../bin/draksambashare:1169
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
+msgstr "Помічник зібрав показані нижче параметри для налаштування Samba."
 
 #: ../bin/draksambashare:1169
 #, c-format
 msgid ""
 "To accept these values, and configure your server, click the Next button or "
 "use the Back button to correct them."
-msgstr ""
+msgstr "Щоб прийняти ці значення і налаштувати свій сервер натисніть кнопку «Далі», якщо бажаєте змінити значення, натисніть кнопку «Назад»."
 
 #: ../bin/draksambashare:1169
 #, c-format
 msgid ""
 "If you have previously create some shares, they will appear in this "
 "configuration. Run 'drakwizard sambashare' to manage your shares."
-msgstr ""
+msgstr "Якщо Ви раніше вже створювали якісь спільні ресурси, їх буде показано у цих налаштуваннях. Виконайте команду «drakwizard sambashare», щоб налаштувати свої спільні ресурси."
 
 #: ../bin/draksambashare:1177
-#, fuzzy, c-format
+#, c-format
 msgid "Samba type:"
-msgstr "тип шляху"
+msgstr "Тип Samba:"
 
 #: ../bin/draksambashare:1179
 #, c-format
 msgid "Server banner:"
-msgstr ""
+msgstr "Банер сервера:"
 
 #: ../bin/draksambashare:1181
 #, c-format
 msgid " "
-msgstr ""
+msgstr " "
 
 #: ../bin/draksambashare:1182
 #, c-format
 msgid "Unix Charset:"
-msgstr ""
+msgstr "Набір символів Unix:"
 
 #: ../bin/draksambashare:1183
 #, c-format
 msgid "Dos Charset:"
-msgstr ""
+msgstr "Набір символів Dos:"
 
 #: ../bin/draksambashare:1184
 #, c-format
 msgid "Display Charset:"
-msgstr ""
+msgstr "Набір символів показу:"
 
 #: ../bin/draksambashare:1199
 #, c-format
 msgid "The wizard successfully configured your Samba server."
-msgstr ""
+msgstr "Помічник успішно налаштував сервер Samba."
 
 #: ../bin/draksambashare:1254
 #, c-format
 msgid "The Samba wizard has unexpectedly failed:"
-msgstr ""
+msgstr "Помічник налаштування Samba несподівано завершив роботу:"
 
 #: ../bin/draksambashare:1268
 #, c-format
@@ -1970,47 +1996,47 @@ msgstr "Налаштувати параметри Самби"
 #: ../bin/draksambashare:1356
 #, c-format
 msgid "Failed to Modify Samba share."
-msgstr ""
+msgstr "Спроба змінити спільний ресурс Samba зазнала невдачі."
 
 #: ../bin/draksambashare:1365
 #, c-format
 msgid "Failed to remove a Samba share."
-msgstr ""
+msgstr "Спроба вилучення спільного ресурсу Samba зазнала невдачі."
 
 #: ../bin/draksambashare:1372
 #, c-format
 msgid "File share"
-msgstr ""
+msgstr "Файловий спільний ресурс"
 
 #: ../bin/draksambashare:1387
 #, c-format
 msgid "Failed to Modify."
-msgstr ""
+msgstr "Спроба зміни зазнала невдачі."
 
 #: ../bin/draksambashare:1396
 #, c-format
 msgid "Failed to remove."
-msgstr ""
+msgstr "Спроба вилучення зазнала невдачі."
 
 #: ../bin/draksambashare:1403
 #, c-format
 msgid "Printers"
-msgstr "Принтери"
+msgstr "Друкарки"
 
 #: ../bin/draksambashare:1415
 #, c-format
 msgid "Failed to add user."
-msgstr ""
+msgstr "Спроба додавання користувача зазнала невдачі."
 
 #: ../bin/draksambashare:1424
 #, c-format
 msgid "Failed to change user password."
-msgstr ""
+msgstr "Спроба зміни пароля користувача зазнала невдачі."
 
 #: ../bin/draksambashare:1436
 #, c-format
 msgid "Failed to delete user."
-msgstr ""
+msgstr "Спроба вилучення користувача зазнала невдачі."
 
 #: ../bin/draksambashare:1441
 #, c-format
@@ -2020,12 +2046,12 @@ msgstr "Userdrake"
 #: ../bin/draksambashare:1449
 #, c-format
 msgid "Samba Users"
-msgstr ""
+msgstr "Користувачі Samba"
 
 #: ../bin/draksambashare:1457
 #, c-format
 msgid "Please configure your Samba server"
-msgstr ""
+msgstr "Будь ласка, налаштуйте сервер Samba"
 
 #: ../bin/draksambashare:1457
 #, c-format
@@ -2033,36 +2059,38 @@ msgid ""
 "It seems this is the first time you run this tool.\n"
 "A wizard will appear to configure a basic Samba server"
 msgstr ""
+"Здається, Ви вперше запустили цей інструмент.\n"
+"Буде відкрито вікно Помічника, який допоможе виконати базове налаштування сервера Samba"
 
 #: ../bin/draksambashare:1466
 #, c-format
 msgid "DrakSamba manage Samba shares"
-msgstr ""
+msgstr "DrakSamba — керування спільними ресурсами Samba"
 
 #: ../bin/net_applet:94
-#, fuzzy, c-format
+#, c-format
 msgid "Network is up on interface %s."
-msgstr "Мережа увімкнена на інтерфейсі %s"
+msgstr "На інтерфейсі %s увімкнено мережу."
 
 #: ../bin/net_applet:95
-#, fuzzy, c-format
+#, c-format
 msgid "IP address: %s"
-msgstr "Адреса IP:"
+msgstr "Адреса IP: %s"
 
 #: ../bin/net_applet:96
-#, fuzzy, c-format
+#, c-format
 msgid "Gateway: %s"
-msgstr "Шлюз:"
+msgstr "Шлюз: %s"
 
 #: ../bin/net_applet:97
 #, c-format
 msgid "Connected to %s (link level: %d %%)"
-msgstr ""
+msgstr "Встановлено з’єднання з %s (рівень з’єднання: %d %%)"
 
 #: ../bin/net_applet:99
-#, fuzzy, c-format
+#, c-format
 msgid "Network is down on interface %s."
-msgstr "Мережа увімкнена на інтерфейсі %s"
+msgstr "На інтерфейсі %s мережу вимкнено."
 
 #: ../bin/net_applet:101
 #, c-format
@@ -2091,12 +2119,12 @@ msgstr "Спостерігати за мережею"
 #: ../bin/net_applet:111
 #, c-format
 msgid "Manage wireless networks"
-msgstr ""
+msgstr "Керування бездротовими мережами"
 
 #: ../bin/net_applet:113
-#, fuzzy, c-format
+#, c-format
 msgid "Manage VPN connections"
-msgstr "Керування з'єднаннями"
+msgstr "Керування з’єднаннями VPN"
 
 #: ../bin/net_applet:117
 #, c-format
@@ -2116,7 +2144,7 @@ msgstr "Користуватися автовизначенням"
 #: ../bin/net_applet:128
 #, c-format
 msgid "Active interfaces"
-msgstr ""
+msgstr "Активні інтерфейси"
 
 #: ../bin/net_applet:152
 #, c-format
@@ -2126,24 +2154,24 @@ msgstr "Профілі"
 #: ../bin/net_applet:162 ../lib/network/connection.pm:225
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
-#, fuzzy, c-format
+#, c-format
 msgid "VPN connection"
-msgstr "З'єднання через місцеву мережу"
+msgstr "З’єднання VPN"
 
 #: ../bin/net_applet:341
-#, fuzzy, c-format
+#, c-format
 msgid "Network connection"
-msgstr "Параметри мережі"
+msgstr "Мережеве з’єднання"
 
 #: ../bin/net_applet:425
 #, c-format
 msgid "More networks"
-msgstr ""
+msgstr "Додаткові мережі"
 
 #: ../bin/net_applet:452
 #, c-format
 msgid "Interactive Firewall automatic mode"
-msgstr ""
+msgstr "Автоматичний режим діалогового захисного шлюзу"
 
 #: ../bin/net_applet:457
 #, c-format
@@ -2151,9 +2179,9 @@ msgid "Always launch on startup"
 msgstr "Завжди запускати при завантаженні"
 
 #: ../bin/net_applet:462
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless networks"
-msgstr "Бездротове з'єднання"
+msgstr "Бездротові мережі"
 
 #: ../bin/net_applet:469 ../bin/net_monitor:96
 #, c-format
@@ -2183,7 +2211,7 @@ msgstr "Негайний"
 #: ../bin/net_monitor:104
 #, c-format
 msgid "Average"
-msgstr "Cередньо"
+msgstr "У середньому"
 
 #: ../bin/net_monitor:105
 #, c-format
@@ -2284,7 +2312,7 @@ msgstr "отримано: "
 #: ../bin/net_monitor:407
 #, c-format
 msgid "average"
-msgstr "середньо"
+msgstr "у середньому"
 
 #: ../bin/net_monitor:410
 #, c-format
@@ -2323,17 +2351,17 @@ msgstr "Невідомий тип з'єднання"
 #: ../lib/network/connection.pm:158
 #, c-format
 msgid "Network access settings"
-msgstr ""
+msgstr "Параметри доступу до мережі"
 
 #: ../lib/network/connection.pm:159
 #, c-format
 msgid "Access settings"
-msgstr ""
+msgstr "Параметри доступу"
 
 #: ../lib/network/connection.pm:160
 #, c-format
 msgid "Address settings"
-msgstr ""
+msgstr "Параметри адреси"
 
 #: ../lib/network/connection.pm:174 ../lib/network/connection.pm:194
 #: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:216
@@ -2353,12 +2381,12 @@ msgstr "Нічого"
 #: ../lib/network/connection.pm:239
 #, c-format
 msgid "Allow users to manage the connection"
-msgstr ""
+msgstr "Дозволити користувачам керувати з’єднанням"
 
 #: ../lib/network/connection.pm:240
 #, c-format
 msgid "Start the connection at boot"
-msgstr ""
+msgstr "З’єднуватися під час завантаження"
 
 #: ../lib/network/connection.pm:241
 #, c-format
@@ -2366,24 +2394,24 @@ msgid "Metric"
 msgstr "Метрика"
 
 #: ../lib/network/connection.pm:311
-#, fuzzy, c-format
+#, c-format
 msgid "Link detected on interface %s"
-msgstr "(знайдено на порту %s)"
+msgstr "Визначено з’єднання на інтерфейсі %s"
 
 #: ../lib/network/connection.pm:312 ../lib/network/connection/ethernet.pm:288
 #, c-format
 msgid "Link beat lost on interface %s"
-msgstr ""
+msgstr "Втрачено сигнал з’єднання на інтерфейсі %s"
 
 #: ../lib/network/connection/cable.pm:10
 #, c-format
 msgid "Cable"
-msgstr ""
+msgstr "Кабельний"
 
 #: ../lib/network/connection/cable.pm:11
-#, fuzzy, c-format
+#, c-format
 msgid "Cable modem"
-msgstr "Модель карти:"
+msgstr "Кабельний модем"
 
 #: ../lib/network/connection/cable.pm:42
 #, c-format
@@ -2393,7 +2421,7 @@ msgstr "Використовувати BPALogin (потрібний для Telst
 #: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:597
 #, c-format
 msgid "Authentication"
-msgstr "Автентифікація"
+msgstr "Розпізнавання"
 
 #: ../lib/network/connection/cable.pm:47 ../lib/network/connection/ppp.pm:22
 #: ../lib/network/netconnect.pm:336 ../lib/network/vpn/openvpn.pm:393
@@ -2410,45 +2438,43 @@ msgstr "Пароль рахунка"
 #: ../lib/network/connection/cellular.pm:66
 #, c-format
 msgid "Access Point Name"
-msgstr ""
+msgstr "Назва точки доступу"
 
 #: ../lib/network/connection/cellular_bluetooth.pm:10
 #, c-format
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: ../lib/network/connection/cellular_bluetooth.pm:11
 #, c-format
 msgid "Bluetooth Dial Up Networking"
-msgstr ""
+msgstr "Комутований доступ до мережі з Bluetooth"
 
 #: ../lib/network/connection/cellular_card.pm:8
 #, c-format
 msgid "Wrong PIN number format: it should be 4 digits."
-msgstr ""
+msgstr "Неправильний формат номера PIN: потрібно вказати 4 цифри."
 
 #: ../lib/network/connection/cellular_card.pm:10
 #, c-format
 msgid "GPRS/Edge/3G"
-msgstr ""
+msgstr "GPRS/Edge/3G"
 
 #: ../lib/network/connection/cellular_card.pm:105
 #: ../lib/network/vpn/openvpn.pm:391
 #, c-format
 msgid "PIN number"
-msgstr ""
+msgstr "Номер PIN"
 
 #: ../lib/network/connection/cellular_card.pm:181
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to open device %s"
-msgstr "Неможливо розгалузити: %s"
+msgstr "Неможливо відкрити пристрій %s"
 
 #: ../lib/network/connection/cellular_card.pm:213
-#, fuzzy, c-format
+#, c-format
 msgid "Please check that your SIM card is inserted."
-msgstr ""
-"\n"
-"Будь ласка, перевірте всі параметри, які Вам потрібні.\n"
+msgstr "Будь ласка, перевірте, чи вставлено SIM-карту."
 
 #: ../lib/network/connection/cellular_card.pm:224
 #, c-format
@@ -2456,26 +2482,28 @@ msgid ""
 "You entered a wrong PIN code.\n"
 "Entering the wrong PIN code multiple times may lock your SIM card!"
 msgstr ""
+"Ви ввели неправильний PIN-код.\n"
+"Послідовне введення неправильних PIN-кодів може призвести до блокування SIM-картки!"
 
 #: ../lib/network/connection/dvb.pm:9
 #, c-format
 msgid "DVB"
-msgstr ""
+msgstr "DVB"
 
 #: ../lib/network/connection/dvb.pm:10
 #, c-format
 msgid "Satellite (DVB)"
-msgstr ""
+msgstr "Супутниковий (DVB)"
 
 #: ../lib/network/connection/dvb.pm:53
 #, c-format
 msgid "Adapter card"
-msgstr ""
+msgstr "Картка адаптера"
 
 #: ../lib/network/connection/dvb.pm:54
 #, c-format
 msgid "Net demux"
-msgstr ""
+msgstr "Мережевий демультиплексор"
 
 #: ../lib/network/connection/dvb.pm:55
 #, c-format
@@ -2485,17 +2513,17 @@ msgstr "PID"
 #: ../lib/network/connection/ethernet.pm:11
 #, c-format
 msgid "Ethernet"
-msgstr ""
+msgstr "Ethernet"
 
 #: ../lib/network/connection/ethernet.pm:29
-#, fuzzy, c-format
+#, c-format
 msgid "Virtual interface"
-msgstr "Інтерфейс мережі"
+msgstr "Віртуальний інтерфейс"
 
 #: ../lib/network/connection/ethernet.pm:59
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
-msgstr ""
+msgstr "Неможливо знайти мережевий інтерфейс для вибраного пристрою (за допомогою драйвера %s)."
 
 #: ../lib/network/connection/ethernet.pm:69 ../lib/network/vpn/openvpn.pm:207
 #, c-format
@@ -2508,9 +2536,9 @@ msgid "Automatic IP (BOOTP/DHCP)"
 msgstr "Автоматична IP (BOOTP/DHCP)"
 
 #: ../lib/network/connection/ethernet.pm:124
-#, fuzzy, c-format
+#, c-format
 msgid "IP settings"
-msgstr "встановлення PLL :"
+msgstr "Параметри IP"
 
 #: ../lib/network/connection/ethernet.pm:137
 #, c-format
@@ -2519,8 +2547,8 @@ msgid ""
 "Each item should be entered as an IP address in dotted-decimal\n"
 "notation (for example, 1.2.3.4)."
 msgstr ""
-"Введіть, будь ласка, конфігурацію IP для цієї машини. Кожен пункт\n"
-"треба вводити як IP-адресу в точково-десятковій нотації\n"
+"Введіть, будь ласка, налаштування IP для цієї машини. Кожен пункт\n"
+"треба вводити як IP-адресу в точково-десятковому позначенні\n"
 "(наприклад, 1.2.3.4)"
 
 #: ../lib/network/connection/ethernet.pm:141 ../lib/network/netconnect.pm:646
@@ -2552,9 +2580,7 @@ msgstr "Домен для пошуку"
 #: ../lib/network/connection/ethernet.pm:149
 #, c-format
 msgid "By default search domain will be set from the fully-qualified host name"
-msgstr ""
-"За замовчуванням пошуковий домен буде встановлено з повністю заданої назви "
-"клієнта"
+msgstr "Типово пошуковий домен буде встановлено з повністю заданої назви клієнта"
 
 #: ../lib/network/connection/ethernet.pm:152
 #, c-format
@@ -2579,7 +2605,7 @@ msgstr "Назва машини DHCP"
 #: ../lib/network/connection/ethernet.pm:157
 #, c-format
 msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
-msgstr ""
+msgstr "Не повертатися до Zeroconf (мережі 169.254.0.0)"
 
 #: ../lib/network/connection/ethernet.pm:168
 #, c-format
@@ -2594,7 +2620,7 @@ msgstr "Маска мережі має бути у форматі 255.255.224.0"
 #: ../lib/network/connection/ethernet.pm:178
 #, c-format
 msgid "Warning: IP address %s is usually reserved!"
-msgstr "Попередження : IP-адреса %s вже зарезервована !"
+msgstr "Попередження : IP-адресу %s вже зарезервовано!"
 
 #: ../lib/network/connection/ethernet.pm:184
 #, c-format
@@ -2609,37 +2635,37 @@ msgstr "Визначити назву машини з адреси DHCP"
 #: ../lib/network/connection/ethernet.pm:229
 #, c-format
 msgid "Network Hotplugging"
-msgstr "Network Hotplugging"
+msgstr "Увімкнення мережі «вгарячу»"
 
 #: ../lib/network/connection/ethernet.pm:233
 #, c-format
 msgid "Enable IPv6 to IPv4 tunnel"
-msgstr ""
+msgstr "Увімкнути тунелювання з IPv6 до IPv4"
 
 #: ../lib/network/connection/ethernet.pm:287
 #, c-format
 msgid "Link beat detected on interface %s"
-msgstr ""
+msgstr "Виявлено сигнал з’єднання на інтерфейсі %s"
 
 #: ../lib/network/connection/ethernet.pm:290
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
-msgstr ""
+msgstr "Надсилання запиту на мережеву адресу на інтерфейсі %s (протокол %s)..."
 
 #: ../lib/network/connection/ethernet.pm:291
 #, c-format
 msgid "Got a network address on interface %s (%s protocol)"
-msgstr ""
+msgstr "Отримано мережеву адресу на інтерфейсі %s (протокол %s)"
 
 #: ../lib/network/connection/ethernet.pm:292
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
-msgstr ""
+msgstr "Не вдалося отримати мережеву адресу на інтерфейсі %s (протокол %s)"
 
 #: ../lib/network/connection/isdn.pm:8
 #, c-format
 msgid "ISDN"
-msgstr ""
+msgstr "ISDN"
 
 #: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:405
 #, c-format
@@ -2665,7 +2691,7 @@ msgstr "USB"
 #: ../lib/network/connection/pots.pm:10
 #, c-format
 msgid "POTS"
-msgstr ""
+msgstr "POTS"
 
 #. -PO: POTS means "Plain old telephone service"
 #. -PO: remove it if it doesn't have an equivalent in your language
@@ -2673,12 +2699,12 @@ msgstr ""
 #: ../lib/network/connection/pots.pm:16
 #, c-format
 msgid "Analog telephone modem (POTS)"
-msgstr ""
+msgstr "Аналоговий телефонний модем (POTS)"
 
 #: ../lib/network/connection/ppp.pm:9 ../lib/network/netconnect.pm:77
 #, c-format
 msgid "Script-based"
-msgstr "На основі скрипта"
+msgstr "На основі скрипту"
 
 #: ../lib/network/connection/ppp.pm:10 ../lib/network/netconnect.pm:78
 #, c-format
@@ -2787,9 +2813,9 @@ msgstr "Австрія"
 #: ../lib/network/connection/providers/xdsl.pm:668
 #: ../lib/network/connection/providers/xdsl.pm:787
 #: ../lib/network/connection/providers/xdsl.pm:1258
-#, fuzzy, c-format
+#, c-format
 msgid "Any"
-msgstr "будь-який"
+msgstr "Будь-які"
 
 #: ../lib/network/connection/providers/xdsl.pm:114
 #: ../lib/network/connection/providers/xdsl.pm:124
@@ -2949,7 +2975,7 @@ msgstr "Норвегія"
 #: ../lib/network/connection/providers/xdsl.pm:990
 #, c-format
 msgid "Pakistan"
-msgstr "Пакістан"
+msgstr "Пакистан"
 
 #: ../lib/network/connection/providers/xdsl.pm:1001
 #: ../lib/network/connection/providers/xdsl.pm:1011
@@ -2970,7 +2996,7 @@ msgstr "Росія"
 #: ../lib/network/connection/providers/xdsl.pm:1042
 #, c-format
 msgid "Singapore"
-msgstr "Сінгапур"
+msgstr "Сингапур"
 
 #: ../lib/network/connection/providers/xdsl.pm:1051
 #, c-format
@@ -3039,12 +3065,12 @@ msgstr "Об'єднані Арабські Емірати"
 #: ../lib/network/netconnect.pm:38
 #, c-format
 msgid "United Kingdom"
-msgstr "Об'єднане Королівство"
+msgstr "Великобританія"
 
 #: ../lib/network/connection/wireless.pm:11
 #, c-format
 msgid "Wireless"
-msgstr ""
+msgstr "Бездротова"
 
 #: ../lib/network/connection/wireless.pm:27
 #, c-format
@@ -3054,39 +3080,39 @@ msgstr "Використовувати драйвер Windows (з ndiswrapper)"
 #: ../lib/network/connection/wireless.pm:44
 #, c-format
 msgid "Open WEP"
-msgstr ""
+msgstr "Відкритий WEP"
 
 #: ../lib/network/connection/wireless.pm:45
 #, c-format
 msgid "Restricted WEP"
-msgstr ""
+msgstr "Закритий WEP"
 
 #: ../lib/network/connection/wireless.pm:46
 #, c-format
 msgid "WPA/WPA2 Pre-Shared Key"
-msgstr ""
+msgstr "Попередньо поширений ключ WPA/WPA2"
 
 #: ../lib/network/connection/wireless.pm:47
 #, c-format
 msgid "WPA/WPA2 Enterprise"
-msgstr ""
+msgstr "WPA/WPA2 Enterprise"
 
 #: ../lib/network/connection/wireless.pm:258
 #, c-format
 msgid "Windows driver"
-msgstr ""
+msgstr "Драйвер Windows"
 
 #: ../lib/network/connection/wireless.pm:325
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
 "switch) first."
-msgstr ""
+msgstr "Вашу картку бездротового зв’язку було вимкнено, будь ласка, спочатку увімкніть її за допомогою перемикача (перемикач RF kill)."
 
 #: ../lib/network/connection/wireless.pm:404
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless settings"
-msgstr "Бездротове з'єднання"
+msgstr "Параметри бездротового з'єднання"
 
 #: ../lib/network/connection/wireless.pm:409
 #: ../lib/network/connection_manager.pm:263
@@ -3132,7 +3158,7 @@ msgstr "Мережне ім'я (ESSID)"
 #: ../lib/network/connection/wireless.pm:415
 #, c-format
 msgid "Encryption mode"
-msgstr ""
+msgstr "Режим шифрування"
 
 #: ../lib/network/connection/wireless.pm:417
 #, c-format
@@ -3142,12 +3168,12 @@ msgstr "Ключ шифрування"
 #: ../lib/network/connection/wireless.pm:419
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
-msgstr ""
+msgstr "Примусово використовувати цей ключ у вигляді рядка ASCII (наприклад, для Livebox)"
 
 #: ../lib/network/connection/wireless.pm:426
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Login/Username"
-msgstr "Рахунок користувача (ім'я користувача)"
+msgstr "Обліковий запис/Користувач EAP"
 
 #: ../lib/network/connection/wireless.pm:428
 #, c-format
@@ -3156,11 +3182,14 @@ msgid ""
 "need to specify domain then try the untested syntax\n"
 "  DOMAIN\\username"
 msgstr ""
+"Обліковий запис або ім’я користувача у форматі звичайного тексту\n"
+"Якщо потрібно вказати домен, спробуйте синтаксис\n"
+"  ДОМЕН\\користувач"
 
 #: ../lib/network/connection/wireless.pm:431
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Password"
-msgstr "Пароль"
+msgstr "Пароль EAP"
 
 #: ../lib/network/connection/wireless.pm:433
 #, c-format
@@ -3180,11 +3209,25 @@ msgid ""
 "  TLS mode is completely certificate based and may ignore\n"
 "the username and password values specified here."
 msgstr ""
+" Пароль: рядок символів.\n"
+"Пам’ятайте, що це не те саме, що закритий ключ.\n"
+"____________________________________________________\n"
+"ДОДАТКОВА ІНФОРМАЦІЯ:\n"
+"На сторінці додаткових параметрів Ви можете обрати режим EAP\n"
+"для розпізнавання. За параметра режиму eap\n"
+"   «Автовизначення»: реалізуватимуться всі можливі режими.\n"
+"\n"
+"Якщо «Автовизначення» зазнає невдачі, спробуйте спочатку скористатися PEAP TTLS\n"
+"Зауваження:\n"
+"\tЗа використання параметрів MD5, MSCHAPV2, OTP і GTC\n"
+"автоматично використовуватимуться режими PEAP і TTLS.\n"
+"  Режим TLS повністю засновано на сертифікатах, значення користувача і пароля, вказані тут,\n"
+"може бути повністю проігноровано."
 
 #: ../lib/network/connection/wireless.pm:447
-#, fuzzy, c-format
+#, c-format
 msgid "EAP client certificate"
-msgstr "Назва сертифікату"
+msgstr "Клієнтський сертифікат EAP"
 
 #: ../lib/network/connection/wireless.pm:449
 #, c-format
@@ -3194,6 +3237,11 @@ msgid ""
 "considered as the alternative to username/password combo.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
+"Повний шлях і назва файла клієнтського сертифіката. Це значення\n"
+"буде використано лише за розпізнавання на основі EAP. Його можна\n"
+"розглядати як альтернативу до комбінацій користувач/пароль.\n"
+" Зауваження: інші параметри такого розпізнавання можна знайти\n"
+"на сторінці додаткових параметрів."
 
 #: ../lib/network/connection/wireless.pm:453
 #, c-format
@@ -3260,10 +3308,10 @@ msgid ""
 "\n"
 "See iwconfig(8) man page for further information."
 msgstr ""
-"Тут Ви можете настроїти деякі додаткові параметри дездротового\n"
+"Тут Ви можете налаштувати деякі додаткові параметри бездротового\n"
 "зв'язку, такі як: кадрове вікно, канал, фіксація транзакції,\n"
 "кодування, потужність, повтори, впізнавання, потужність tx\n"
-"(нік вже встановлено, як ім'я машини).\n"
+"(нік вже встановлено, як назва машини).\n"
 "\n"
 "Див. сторінку посібника iwconfig(8) для подальшої інформації."
 
@@ -3285,7 +3333,7 @@ msgid ""
 "See iwpspy(8) man page for further information."
 msgstr ""
 "lwspy використовується для встановлення списку адрес\n"
-"в локальній мережі та зчитування інформації про якість\n"
+"в місцевій мережі та зчитування інформації про якість\n"
 "зв'язку з кожною з них.\n"
 "\n"
 "Ця інформація аналогічна інформації з /proc/net/wireless:\n"
@@ -3316,9 +3364,9 @@ msgid ""
 "See iwpriv(8) man page for further information."
 msgstr ""
 "lwpriv дозволяє встановити необов'язкові (приватні) параметри\n"
-"безпровідного мережевого інтерфейсу.\n"
+"бездротового мережевого інтерфейсу.\n"
 "\n"
-"lwpriv має справу з параметрами і настройками, специфічними\n"
+"lwpriv має справу з параметрами і налаштуваннями, специфічними\n"
 "для кожного драйверу (на відміну від iwconfig, яка має справу\n"
 "лише з загальними).\n"
 "\n"
@@ -3329,25 +3377,25 @@ msgstr ""
 "Див. сторінку посібника iwpriv(8) для подальшої інформації."
 
 #: ../lib/network/connection/wireless.pm:496
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Protocol"
-msgstr "Протокол"
+msgstr "Протокол EAP"
 
 #: ../lib/network/connection/wireless.pm:497
 #: ../lib/network/connection/wireless.pm:502
-#, fuzzy, c-format
+#, c-format
 msgid "Auto Detect"
-msgstr "Користуватися автовизначенням"
+msgstr "Автовизначення"
 
 #: ../lib/network/connection/wireless.pm:497
 #, c-format
 msgid "WPA2"
-msgstr ""
+msgstr "WPA2"
 
 #: ../lib/network/connection/wireless.pm:497
-#, fuzzy, c-format
+#, c-format
 msgid "WPA"
-msgstr "PAP"
+msgstr "WPA"
 
 #: ../lib/network/connection/wireless.pm:499
 #, c-format
@@ -3355,21 +3403,23 @@ msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr ""
+"Рекомендуємо «Автовизначення», оскільки у такому режимі спочатку\n"
+"буде спроба WPA версії 2, а потім WPA версії 1"
 
 #: ../lib/network/connection/wireless.pm:501
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Mode"
-msgstr "Режим"
+msgstr "Режим EAP"
 
 #: ../lib/network/connection/wireless.pm:502
-#, fuzzy, c-format
+#, c-format
 msgid "PEAP"
-msgstr "PAP"
+msgstr "PEAP"
 
 #: ../lib/network/connection/wireless.pm:502
 #, c-format
 msgid "TTLS"
-msgstr ""
+msgstr "TTLS"
 
 #: ../lib/network/connection/wireless.pm:502
 #, c-format
@@ -3377,44 +3427,44 @@ msgid "TLS"
 msgstr "TLS"
 
 #: ../lib/network/connection/wireless.pm:502
-#, fuzzy, c-format
+#, c-format
 msgid "MSCHAPV2"
-msgstr "CHAP"
+msgstr "MSCHAPV2"
 
 #: ../lib/network/connection/wireless.pm:502
 #, c-format
 msgid "MD5"
-msgstr ""
+msgstr "MD5"
 
 #: ../lib/network/connection/wireless.pm:502
 #, c-format
 msgid "OTP"
-msgstr ""
+msgstr "OTP"
 
 #: ../lib/network/connection/wireless.pm:502
 #, c-format
 msgid "GTC"
-msgstr ""
+msgstr "GTC"
 
 #: ../lib/network/connection/wireless.pm:502
 #, c-format
 msgid "LEAP"
-msgstr ""
+msgstr "LEAP"
 
 #: ../lib/network/connection/wireless.pm:502
 #, c-format
 msgid "PEAP TTLS"
-msgstr ""
+msgstr "PEAP TTLS"
 
 #: ../lib/network/connection/wireless.pm:502
 #, c-format
 msgid "TTLS TLS"
-msgstr ""
+msgstr "TTLS TLS"
 
 #: ../lib/network/connection/wireless.pm:504
 #, c-format
 msgid "EAP key_mgmt"
-msgstr ""
+msgstr "EAP key_mgmt"
 
 #: ../lib/network/connection/wireless.pm:506
 #, c-format
@@ -3422,11 +3472,13 @@ msgid ""
 "list of accepted authenticated key management protocols.\n"
 "possible values are WPA-EAP, IEEE8021X, NONE"
 msgstr ""
+"список прийнятних протоколів керування ключами розпізнавання.\n"
+"можливі значення: WPA-EAP, IEEE8021X, NONE"
 
 #: ../lib/network/connection/wireless.pm:508
 #, c-format
 msgid "EAP outer identity"
-msgstr ""
+msgstr "Зовнішній профіль EAP"
 
 #: ../lib/network/connection/wireless.pm:510
 #, c-format
@@ -3435,11 +3487,14 @@ msgid ""
 "unencrypted identity with EAP types that support different\n"
 "tunnelled identity, e.g., TTLS"
 msgstr ""
+"Рядок анонімного профілю для EAP: буде використано як\n"
+"шифрований профіль з типами EAP, які підтримують тунелювання\n"
+"іншого профілю, наприклад, TTLS"
 
 #: ../lib/network/connection/wireless.pm:513
 #, c-format
 msgid "EAP phase2"
-msgstr ""
+msgstr "EAP phase2"
 
 #: ../lib/network/connection/wireless.pm:515
 #, c-format
@@ -3449,11 +3504,15 @@ msgid ""
 "auth=MSCHAPV2 for PEAP or\n"
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
+"Внутрішнє розпізнавання з параметрами тунелю TLS.\n"
+"Вхідним рядком є пара поле-значення. Приклади:\n"
+"auth=MSCHAPV2 для PEAP або\n"
+"autheap=MSCHAPV2 autheap=MD5 для TTLS"
 
 #: ../lib/network/connection/wireless.pm:519
-#, fuzzy, c-format
+#, c-format
 msgid "EAP CA certificate"
-msgstr "Тип сертифікату"
+msgstr "Сертифікат CA EAP"
 
 #: ../lib/network/connection/wireless.pm:521
 #, c-format
@@ -3464,11 +3523,16 @@ msgid ""
 "a trusted CA certificate should always be configured\n"
 "when using TLS or TTLS or PEAP."
 msgstr ""
+"Повний шлях до файла сертифіката CA (PEM/DER). У цьому файлі\n"
+"можуть зберігатися один або декілька сертифікатів надійних служб.\n"
+"Якщо не додано ca_cert, сертифікат сервера перевірятися не буде.\n"
+"За можливості, сертифікат надійної служби слід завжди налаштовувати,\n"
+"якщо Ви користуєтеся TLS, TTLS або PEAP."
 
 #: ../lib/network/connection/wireless.pm:526
 #, c-format
 msgid "EAP certificate subject match"
-msgstr ""
+msgstr "Відповідність призначення сертифікатів EAP"
 
 #: ../lib/network/connection/wireless.pm:528
 #, c-format
@@ -3479,11 +3543,16 @@ msgid ""
 "string in the subject.  The subject string is in following format:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
+" Підрядок порівнюватиметься з призначенням\n"
+"сертифіката розпізнавання сервера. Якщо встановлено значення,\n"
+"цього рядка, сертифікат буде прийнято, лише якщо у ньому\n"
+"міститься вказаних рядок призначення. Рядок призначення має такий формат:\n"
+"/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
 #: ../lib/network/connection/wireless.pm:533
 #, c-format
 msgid "EAP extra directives"
-msgstr ""
+msgstr "Додаткові директиви EAP"
 
 #: ../lib/network/connection/wireless.pm:535
 #, c-format
@@ -3502,25 +3571,39 @@ msgid ""
 "\tOthers such as key_mgmt, eap maybe used to force\n"
 "\tspecial settings different from the U.I settings."
 msgstr ""
+"Тут можна передати додаткові параметри до wpa_supplicant\n"
+"Параметри можна передавати у вигляді рядків пар поле=значення.\n"
+"Декілька параметрів слід відокремлювати символом #.\n"
+"Зауваження: перевірки параметрів не проводиться, це може\n"
+"спричинити аварійне завершення процесу з’єднання wpa.\n"
+"Підтримувані директиви не можна змінювати.\n"
+"Серед підтримуваних директив:\n"
+"\tdisabled, id_str, bssid, priority, auth_alg, eapol_flags,\n"
+"\tproactive_key_caching, peerkey, ca_path, private_key,\n"
+"\tprivate_key_passwd, dh_file, altsubject_match, phase1,\n"
+"\tfragment_size and eap_workaround, pairwise, group\n"
+"\tІнші, такі як key_mgmt, eap, можна використовувати\n"
+"\tдля примусового встановлення інших значень\n"
+"\tпорівняно з параметрами графічної оболонки."
 
 #: ../lib/network/connection/wireless.pm:555
 #, c-format
 msgid "An encryption key is required."
-msgstr ""
+msgstr "Потрібен ключ шифрування."
 
 #: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
 "hexadecimal characters."
-msgstr ""
+msgstr "У попередньо поширеному ключі має бути від 8 до 63 символів ASCII, або 64 шістнадцяткових символів."
 
 #: ../lib/network/connection/wireless.pm:568
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
 "characters."
-msgstr ""
+msgstr "У ключі WEP має бути не більше %d символів ASCII або %d шістнадцяткових символів."
 
 #: ../lib/network/connection/wireless.pm:575
 #, c-format
@@ -3543,22 +3626,22 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:593
 #, c-format
 msgid "Allow access point roaming"
-msgstr ""
+msgstr "Дозволити роумінг точки доступу"
 
 #: ../lib/network/connection/wireless.pm:712
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
-msgstr ""
+msgstr "Виконано прив’язку до бездротової мережі «%s» на інтерфейсі %s"
 
 #: ../lib/network/connection/wireless.pm:713
 #, c-format
 msgid "Lost association to wireless network on interface %s"
-msgstr ""
+msgstr "Втрачено прив’язку до бездротової мережі на інтерфейсі %s"
 
 #: ../lib/network/connection/xdsl.pm:8
-#, fuzzy, c-format
+#, c-format
 msgid "DSL"
-msgstr "SSL"
+msgstr "DSL"
 
 #: ../lib/network/connection/xdsl.pm:76 ../lib/network/netconnect.pm:765
 #, c-format
@@ -3583,7 +3666,7 @@ msgstr ""
 msgid ""
 "Modems using Conexant AccessRunner chipsets cannot be supported due to "
 "binary firmware distribution problem."
-msgstr ""
+msgstr "Підтримки модемів, які використовують чипи Conexant AccessRunner, немає через проблеми з поширенням двійкового коду мікропрограм до них."
 
 #: ../lib/network/connection/xdsl.pm:184
 #, c-format
@@ -3628,9 +3711,9 @@ msgstr "Віртуальний Коловий ID (VCI):"
 #: ../lib/network/connection/xdsl.pm:332
 #: ../lib/network/connection_manager.pm:60 ../lib/network/drakvpn.pm:45
 #: ../lib/network/netconnect.pm:134 ../lib/network/thirdparty.pm:123
-#, fuzzy, c-format
+#, c-format
 msgid "Could not install the packages (%s)!"
-msgstr "Неможливо встановити %s пакунків!"
+msgstr "Неможливо встановити пакунки (%s)!"
 
 #: ../lib/network/connection_manager.pm:72
 #: ../lib/network/connection_manager.pm:87 ../lib/network/netconnect.pm:185
@@ -3640,35 +3723,35 @@ msgstr "Налаштовується пристрій..."
 
 #: ../lib/network/connection_manager.pm:77
 #: ../lib/network/connection_manager.pm:142
-#, fuzzy, c-format
+#, c-format
 msgid "Network settings"
-msgstr "Адреса місцевої мережі"
+msgstr "Параметри мережі"
 
 #: ../lib/network/connection_manager.pm:78
 #: ../lib/network/connection_manager.pm:143
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter settings for network"
-msgstr "Детальна інформація"
+msgstr "Будь ласка, введіть параметри мережі"
 
 #: ../lib/network/connection_manager.pm:201
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting..."
 msgstr "З'єднання..."
 
 #: ../lib/network/connection_manager.pm:218
-#, fuzzy, c-format
+#, c-format
 msgid "Disconnecting..."
-msgstr "Від'єднання..."
+msgstr "Роз'єднання..."
 
 #: ../lib/network/connection_manager.pm:260
 #, c-format
 msgid "SSID"
-msgstr ""
+msgstr "SSID"
 
 #: ../lib/network/connection_manager.pm:261
 #, c-format
 msgid "Signal strength"
-msgstr ""
+msgstr "Потужність сигналу"
 
 #: ../lib/network/connection_manager.pm:262
 #, c-format
@@ -3676,9 +3759,9 @@ msgid "Encryption"
 msgstr "Шифрування"
 
 #: ../lib/network/connection_manager.pm:306 ../lib/network/netconnect.pm:207
-#, fuzzy, c-format
+#, c-format
 msgid "Scanning for networks..."
-msgstr "Вивчається мережа..."
+msgstr "Сканування мережі..."
 
 #: ../lib/network/connection_manager.pm:355 ../lib/network/drakroam.pm:116
 #, c-format
@@ -3698,7 +3781,7 @@ msgstr "Веб-сервер"
 #: ../lib/network/drakfirewall.pm:17
 #, c-format
 msgid "Domain Name Server"
-msgstr "Сервер назв домена"
+msgstr "Сервер назв домену"
 
 #: ../lib/network/drakfirewall.pm:22
 #, c-format
@@ -3723,12 +3806,12 @@ msgstr "Сервери POP і IMAP"
 #: ../lib/network/drakfirewall.pm:42
 #, c-format
 msgid "Telnet server"
-msgstr "сервер Telnet"
+msgstr "Сервер Telnet"
 
 #: ../lib/network/drakfirewall.pm:48
 #, c-format
 msgid "Windows Files Sharing (SMB)"
-msgstr "Доступ до файлів Віндовс (SMB)"
+msgstr "Доступ до файлів Windows (SMB)"
 
 #: ../lib/network/drakfirewall.pm:54
 #, c-format
@@ -3748,18 +3831,18 @@ msgstr "BitTorrent"
 #: ../lib/network/drakfirewall.pm:71
 #, c-format
 msgid "Windows Mobile device synchronization"
-msgstr ""
+msgstr "Синхронізація з пристроями на Windows Mobile"
 
 #: ../lib/network/drakfirewall.pm:80
 #, c-format
 msgid "Port scan detection"
-msgstr ""
+msgstr "Визначення сканування портів"
 
 #: ../lib/network/drakfirewall.pm:175 ../lib/network/drakfirewall.pm:181
 #: ../lib/network/shorewall.pm:75
-#, fuzzy, c-format
+#, c-format
 msgid "Firewall configuration"
-msgstr "Налаштування вручну"
+msgstr "Налаштування захисного шлюзу"
 
 #: ../lib/network/drakfirewall.pm:175
 #, c-format
@@ -3770,11 +3853,11 @@ msgid ""
 "For a powerful and dedicated firewall solution, please look to the\n"
 "specialized Mandriva Security Firewall distribution."
 msgstr ""
-"Конфігуратор захисного шлюзу\n"
+"Інструмент налаштування drakfirewall\n"
 "\n"
 "Це налаштовує персонального захисного шлюзу для цієї машини з\n"
-"Мандріва лінакс. Для того, щоб встановити більш потужного інтелектуального\n"
-"захисного шлюзу, зверніться, будь ласка, до спеціалізованого\n"
+"Мандріва Лінакс. Для того, щоб встановити потужніший інтелектуальний\n"
+"захисний шлюз, зверніться, будь ласка, до спеціалізованого\n"
 "дистрибутива Mandriva Security Firewall."
 
 #: ../lib/network/drakfirewall.pm:181
@@ -3840,7 +3923,7 @@ msgstr "Інші порти"
 #: ../lib/network/drakfirewall.pm:221
 #, c-format
 msgid "Log firewall messages in system logs"
-msgstr ""
+msgstr "Записувати повідомлення захисного шлюзу до системних журналів"
 
 #: ../lib/network/drakfirewall.pm:263
 #, c-format
@@ -3849,11 +3932,13 @@ msgid ""
 "into your computer.\n"
 "Please select which network activities should be watched."
 msgstr ""
+"Програми можуть сповіщати Вас, коли хтось намагається отримати доступ до служби або втрутитися у роботу Вашого комп’ютера.\n"
+"Будь ласка, оберіть дії, за якими потрібно спостерігати."
 
 #: ../lib/network/drakfirewall.pm:268
 #, c-format
 msgid "Use Interactive Firewall"
-msgstr ""
+msgstr "Використовувати діалоговий захисний шлюз"
 
 #: ../lib/network/drakroam.pm:22
 #, c-format
@@ -3863,7 +3948,7 @@ msgstr "Пристроїв не знайдено"
 #: ../lib/network/drakroam.pm:61
 #, c-format
 msgid "Hostname changed to \"%s\""
-msgstr ""
+msgstr "Назву машини змінено на «%s»"
 
 #: ../lib/network/drakroam.pm:110
 #, c-format
@@ -3891,59 +3976,59 @@ msgid "VPN configuration"
 msgstr "Налаштування VPN"
 
 #: ../lib/network/drakvpn.pm:34
-#, fuzzy, c-format
+#, c-format
 msgid "Choose the VPN type"
-msgstr "Виберіть новий розмір"
+msgstr "Виберіть тип VPN"
 
 #: ../lib/network/drakvpn.pm:49
 #, c-format
 msgid "Initializing tools and detecting devices for %s..."
-msgstr ""
+msgstr "Ініціалізація інструментів і визначення пристроїв для %s..."
 
 #: ../lib/network/drakvpn.pm:52
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize %s connection type!"
-msgstr "Невідомий тип з'єднання"
+msgstr "Не вдалося ініціалізувати тип з’єднання %s!"
 
 #: ../lib/network/drakvpn.pm:60
 #, c-format
 msgid "Please select an existing VPN connection or enter a new name."
-msgstr ""
+msgstr "Будь ласка, оберіть існуюче з’єднання VPN або введіть нову назву."
 
 #: ../lib/network/drakvpn.pm:64
-#, fuzzy, c-format
+#, c-format
 msgid "Configure a new connection..."
-msgstr "Випробування з'єднання..."
+msgstr "Налаштувати нове з'єднання..."
 
 #: ../lib/network/drakvpn.pm:66
-#, fuzzy, c-format
+#, c-format
 msgid "New name"
-msgstr "Дійсна назва"
+msgstr "Нова назва"
 
 #: ../lib/network/drakvpn.pm:70
 #, c-format
 msgid "You must select an existing connection or enter a new name."
-msgstr ""
+msgstr "Вам потрібно обрати існуюче з’єднання або ввести нову назву."
 
 #: ../lib/network/drakvpn.pm:81
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter the required key(s)"
-msgstr "Будь ласка, вкажіть посилання на сервер WebDAV"
+msgstr "Будь ласка, вкажіть потрібні ключі"
 
 #: ../lib/network/drakvpn.pm:86
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter the settings of your VPN connection"
-msgstr "Неможливо з'єднатися з дзеркалом %s"
+msgstr "Будь ласка, вкажіть параметри з’єднання VPN"
 
 #: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:297
 #, c-format
 msgid "Do you want to start the connection now?"
-msgstr ""
+msgstr "Бажаєте встановити це з’єднання зараз?"
 
 #: ../lib/network/drakvpn.pm:100
-#, fuzzy, c-format
+#, c-format
 msgid "Connection failed."
-msgstr "Назва зв'язку"
+msgstr "Спроба з’єднання зазнала невдачі."
 
 #: ../lib/network/drakvpn.pm:108
 #, c-format
@@ -3955,21 +4040,26 @@ msgid ""
 "It can be done by reconfiguring the network connection and selecting this "
 "VPN connection.\n"
 msgstr ""
+"Тепер VPN-з’єднання налаштовано.\n"
+"\n"
+"Це з’єднання VPN можна автоматично запускати разом зі з’єднанням з мережею.\n"
+"Це можна зробити за допомогою переналаштування мережевого з’єднання і вибору цього з’єднання "
+"VPN.\n"
 
 #: ../lib/network/ifw.pm:129
-#, fuzzy, c-format
+#, c-format
 msgid "Port scanning"
-msgstr "Немає спільного доступу"
+msgstr "Сканування портів"
 
 #: ../lib/network/ifw.pm:130
-#, fuzzy, c-format
+#, c-format
 msgid "Service attack"
-msgstr "Атакований сервер: %s"
+msgstr "Атака на службу"
 
 #: ../lib/network/ifw.pm:131
-#, fuzzy, c-format
+#, c-format
 msgid "Password cracking"
-msgstr "Пароль (ще раз)"
+msgstr "Зламування паролів"
 
 #: ../lib/network/ifw.pm:132
 #, c-format
@@ -3979,7 +4069,7 @@ msgstr "Нове з'єднання"
 #: ../lib/network/ifw.pm:133
 #, c-format
 msgid "\"%s\" attack"
-msgstr ""
+msgstr "Атака «%s»"
 
 #: ../lib/network/ifw.pm:135
 #, c-format
@@ -3994,30 +4084,30 @@ msgstr "Службу %s було атаковано %s."
 #: ../lib/network/ifw.pm:137
 #, c-format
 msgid "A password cracking attack has been attempted by %s."
-msgstr "Спробу атаки на злам пароля було здіснено %s."
+msgstr "Спробу атаки на злам пароля було здійснено %s."
 
 #: ../lib/network/ifw.pm:138
-#, fuzzy, c-format
+#, c-format
 msgid "%s is connecting on the %s service."
-msgstr "Виконується від'єднання від Інтернету "
+msgstr "%s з’єднується зі службою %s."
 
 #: ../lib/network/ifw.pm:139
-#, fuzzy, c-format
+#, c-format
 msgid "A \"%s\" attack has been attempted by %s"
-msgstr "Атаку на сканування портів було здійснено %s."
+msgstr "Спроба атаки «%s» з %s"
 
 #: ../lib/network/ifw.pm:148
 #, c-format
 msgid ""
 "The \"%s\" application is trying to make a service (%s) available to the "
 "network."
-msgstr ""
+msgstr "Програма «%s» намагається зробити службу (%s) доступною для роботи з нею з мережі."
 
 #. -PO: this should be kept lowercase since the expression is meant to be used between brackets
 #: ../lib/network/ifw.pm:152
-#, fuzzy, c-format
+#, c-format
 msgid "port %d"
-msgstr "Звіт"
+msgstr "порту %d"
 
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
 #: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:613
@@ -4040,7 +4130,7 @@ msgstr "Автоматично"
 #: ../lib/network/ndiswrapper.pm:30
 #, c-format
 msgid "No device supporting the %s ndiswrapper driver is present!"
-msgstr ""
+msgstr "Немає пристроїв, які б підтримували драйвер ndiswrapper %s!"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -4050,7 +4140,7 @@ msgstr "Виберіть драйвер Windows (файл .inf)"
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
 msgid "Unable to install the %s ndiswrapper driver!"
-msgstr ""
+msgstr "Не вдалося встановити драйвер ndiswrapper %s!"
 
 #: ../lib/network/ndiswrapper.pm:103
 #, c-format
@@ -4058,16 +4148,18 @@ msgid ""
 "The selected device has already been configured with the %s driver.\n"
 "Do you really want to use a ndiswrapper driver?"
 msgstr ""
+"Обраний пристрій вже було налаштовано на роботу з драйвером %s.\n"
+"Ви справді бажаєте використовувати драйвер ndiswrapper?"
 
 #: ../lib/network/ndiswrapper.pm:118
 #, c-format
 msgid "Unable to load the ndiswrapper module!"
-msgstr ""
+msgstr "Неможливо завантажити модуль ndiswrapper!"
 
 #: ../lib/network/ndiswrapper.pm:124
 #, c-format
 msgid "Unable to find the ndiswrapper interface!"
-msgstr ""
+msgstr "Неможливо знайти інтерфейс ndiswrapper!"
 
 #: ../lib/network/ndiswrapper.pm:137
 #, c-format
@@ -4077,7 +4169,7 @@ msgstr "Вибрати драйвер ndiswrapper "
 #: ../lib/network/ndiswrapper.pm:140
 #, c-format
 msgid "Use the ndiswrapper driver %s"
-msgstr ""
+msgstr "Використовувати драйвер ndiswrapper %s"
 
 #: ../lib/network/ndiswrapper.pm:140
 #, c-format
@@ -4087,7 +4179,7 @@ msgstr "Встановити новий драйвер"
 #: ../lib/network/ndiswrapper.pm:151
 #, c-format
 msgid "Select a device:"
-msgstr ""
+msgstr "Оберіть пристрій:"
 
 #: ../lib/network/netcenter.pm:36
 #, c-format
@@ -4097,14 +4189,14 @@ msgstr "Мережевий центр"
 #: ../lib/network/netcenter.pm:80 ../lib/network/netconnect.pm:210
 #, c-format
 msgid "Please select your network:"
-msgstr ""
+msgstr "Будь ласка, оберіть мережу:"
 
 #: ../lib/network/netcenter.pm:87
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "_: This is a verb\n"
 "Monitor"
-msgstr "Спостерігати за мережею"
+msgstr "Спостерігати"
 
 #: ../lib/network/netconnect.pm:37
 #, c-format
@@ -4144,7 +4236,7 @@ msgstr ""
 #: ../lib/network/netconnect.pm:121
 #, c-format
 msgid "Network & Internet Configuration"
-msgstr "Конфігурація мережі і Інтернету"
+msgstr "Налаштування мережі та Інтернету"
 
 #: ../lib/network/netconnect.pm:126
 #, c-format
@@ -4160,17 +4252,17 @@ msgstr "Виберіть інтерфейс мережі для налаштув
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
-msgstr ""
+msgstr "Пристроїв для цього типу з’єднання не виявлено."
 
 #: ../lib/network/netconnect.pm:176
-#, fuzzy, c-format
+#, c-format
 msgid "Hardware Configuration"
-msgstr "Конфігурація Помічника"
+msgstr "Налаштування обладнання"
 
 #: ../lib/network/netconnect.pm:200
 #, c-format
 msgid "Please select your provider:"
-msgstr ""
+msgstr "Будь ласка, оберіть постачальника послуг:"
 
 #: ../lib/network/netconnect.pm:247
 #, c-format
@@ -4178,11 +4270,13 @@ msgid ""
 "Please select your connection protocol.\n"
 "If you do not know it, keep the preselected protocol."
 msgstr ""
+"Будь ласка, оберіть протокол з’єднання.\n"
+"Якщо він невідомий, не змінюйте початкового значення."
 
 #: ../lib/network/netconnect.pm:291 ../lib/network/netconnect.pm:665
 #, c-format
 msgid "Connection control"
-msgstr ""
+msgstr "Контроль за з’єднанням"
 
 #: ../lib/network/netconnect.pm:304 ../lib/network/netconnect.pm:714
 #, c-format
@@ -4353,7 +4447,7 @@ msgid ""
 "Take a look at http://www.linmodems.org"
 msgstr ""
 "Ваш модем не підтримується системою.\n"
-"Проконсультуйтусь на http://www.linmodems.org"
+"Докладнішу інформацію можна отримати на сайті http://www.linmodems.org"
 
 #: ../lib/network/netconnect.pm:500
 #, c-format
@@ -4368,7 +4462,7 @@ msgstr "Модем"
 #: ../lib/network/netconnect.pm:537
 #, c-format
 msgid "Please choose which serial port your modem is connected to."
-msgstr "Виберіть, до якого послідовного порта під'єднаний Ваш модем."
+msgstr "Виберіть, до якого послідовного порту під'єднано Ваш модем."
 
 #: ../lib/network/netconnect.pm:566
 #, c-format
@@ -4413,7 +4507,7 @@ msgstr "Маска підмережі"
 #: ../lib/network/netconnect.pm:627
 #, c-format
 msgid "Dialup: DNS parameters"
-msgstr "Діал-ап: параметри DNS"
+msgstr "Комутований: параметри DNS"
 
 #: ../lib/network/netconnect.pm:630
 #, c-format
@@ -4561,7 +4655,7 @@ msgstr "З'єднання по модему"
 #: ../lib/network/netconnect.pm:776
 #, c-format
 msgid "DVB connection"
-msgstr ""
+msgstr "З’єднання DVB"
 
 #: ../lib/network/netconnect.pm:778
 #, c-format
@@ -4620,11 +4714,11 @@ msgid ""
 "Click on Ok to keep your configuration, or cancel to reconfigure your "
 "Internet & Network connection.\n"
 msgstr ""
-"Через те, що Ви робите встановлення мережі, Ваша мережа вже\n"
-"сконфіґурована.\n"
+"Через те, що Ви робите встановлення мережі, Вашу мережу вже\n"
+"налаштовано.\n"
 "\n"
-"Натисніть Гаразд, щоб зберегти установки мережі, або Відмінити,\n"
-"щоб змінити установки з'єднання Інтернету і мережі.\n"
+"Натисніть «Гаразд», щоб зберегти налаштування мережі, або Відмінити,\n"
+"щоб змінити налаштування з'єднання Інтернету і мережі.\n"
 
 #: ../lib/network/netconnect.pm:792
 #, c-format
@@ -4650,7 +4744,7 @@ msgid ""
 "\n"
 "Press \"%s\" to continue."
 msgstr ""
-"Зараз буде сконфіґуровано з'єднання %s.\n"
+"Зараз буде налаштовано з'єднання %s.\n"
 "\n"
 "\n"
 "Натисніть \"%s\" для продовження"
@@ -4679,7 +4773,7 @@ msgstr "З'єднання з тенетами"
 #: ../lib/network/netconnect.pm:799
 #, c-format
 msgid "Configuring network device %s (driver %s)"
-msgstr "Конфігурую пристрій мережі %s (драйвер %s)"
+msgstr "Налаштовую пристрій мережі %s (драйвер %s)"
 
 #: ../lib/network/netconnect.pm:800
 #, c-format
@@ -4737,7 +4831,7 @@ msgstr ""
 #: ../lib/network/network.pm:442
 #, c-format
 msgid "Proxies configuration"
-msgstr "Конфігурація проксі"
+msgstr "Налаштування проксі"
 
 #: ../lib/network/network.pm:443
 #, c-format
@@ -4745,31 +4839,33 @@ msgid ""
 "Here you can set up your proxies configuration (eg: http://"
 "my_caching_server:8080)"
 msgstr ""
+"Тут ви можете вказати налаштування проксі-серверів (приклад: http://"
+"мій_сервер_кешування:8080)"
 
 #: ../lib/network/network.pm:444
 #, c-format
 msgid "HTTP proxy"
-msgstr "Проксі HTTP"
+msgstr "HTTP-проксі"
 
 #: ../lib/network/network.pm:445
 #, c-format
 msgid "Use HTTP proxy for HTTPS connections"
-msgstr ""
+msgstr "Використовувати HTTP-проксі для з’єднань HTTPS"
 
 #: ../lib/network/network.pm:446
 #, c-format
 msgid "HTTPS proxy"
-msgstr ""
+msgstr "HTTPS-проксі"
 
 #: ../lib/network/network.pm:447
 #, c-format
 msgid "FTP proxy"
-msgstr "Проксі FTP"
+msgstr "FTP-проксі"
 
 #: ../lib/network/network.pm:448
-#, fuzzy, c-format
+#, c-format
 msgid "No proxy for (comma separated list):"
-msgstr "%d розділених комою рядків"
+msgstr "Не використовувати проксі для (список з комами):"
 
 #: ../lib/network/network.pm:453
 #, c-format
@@ -4777,9 +4873,9 @@ msgid "Proxy should be http://..."
 msgstr "Назва проксі має починатися з http://..."
 
 #: ../lib/network/network.pm:454
-#, fuzzy, c-format
+#, c-format
 msgid "Proxy should be http://... or https://..."
-msgstr "Назва проксі має починатися з http://..."
+msgstr "Назва проксі має починатися з http:// або https://"
 
 #: ../lib/network/network.pm:455
 #, c-format
@@ -4796,16 +4892,22 @@ msgid ""
 "\n"
 "Which interfaces should be protected?\n"
 msgstr ""
+"Будь ласка, оберіть інтерфейси, які буде захищено захисним шлюзом.\n"
+"\n"
+"Слід обрати всі інтерфейси з’єднані з Інтернетом,\n"
+"і зняти позначки з усіх інтерфейсів місцевої мережі.\n"
+"\n"
+"Отже, які інтерфейси слід захистити?\n"
 
 #: ../lib/network/shorewall.pm:155
 #, c-format
 msgid "Keep custom rules"
-msgstr ""
+msgstr "Зберегти нетипові правила"
 
 #: ../lib/network/shorewall.pm:156
 #, c-format
 msgid "Drop custom rules"
-msgstr ""
+msgstr "Скинути нетипові правила"
 
 #: ../lib/network/shorewall.pm:161
 #, c-format
@@ -4814,29 +4916,31 @@ msgid ""
 "rules that may conflict with the configuration that has just been set up.\n"
 "What do you want to do?"
 msgstr ""
+"Налаштування захисного шлюзу було змінено вручну, у них\n"
+"містяться правила, які можуть суперечити щойно встановленим налаштуванням.\n"
+"Що робити?"
 
 #: ../lib/network/thirdparty.pm:144
 #, c-format
 msgid "Some components (%s) are required but aren't available for %s hardware."
-msgstr ""
+msgstr "Потрібні деякі компоненти (%s), але вони недоступні для обладнання %s."
 
 #: ../lib/network/thirdparty.pm:145
 #, c-format
 msgid "Some packages (%s) are required but aren't available."
-msgstr ""
+msgstr "Потрібні деякі пакунки (%s), але вони зараз недоступні."
 
 #. -PO: first argument is a list of Mandriva distributions
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
 #, c-format
-msgid ""
-"These packages can be found in %s, or in the official %s package repository."
-msgstr ""
+msgid "These packages can be found in %s, or in the official %s package repository."
+msgstr "Ці пакунки можна знайти у %s або у офіційному сховищі пакунків %s."
 
 #: ../lib/network/thirdparty.pm:154
 #, c-format
 msgid "The following component is missing: %s"
-msgstr ""
+msgstr "Не вистачає такого компонента: %s"
 
 #: ../lib/network/thirdparty.pm:156
 #, c-format
@@ -4844,11 +4948,13 @@ msgid ""
 "The required files can also be installed from this URL:\n"
 "%s"
 msgstr ""
+"Потрібні файли також можна встановити з цієї адреси URL:\n"
+"%s"
 
 #: ../lib/network/thirdparty.pm:192
 #, c-format
 msgid "Firmware files are required for this device."
-msgstr ""
+msgstr "Для функціонування цього пристрою потрібні файли мікропрограми."
 
 #: ../lib/network/thirdparty.pm:195 ../lib/network/thirdparty.pm:200
 #, c-format
@@ -4866,19 +4972,19 @@ msgid "Select file"
 msgstr "Виберіть файл"
 
 #: ../lib/network/thirdparty.pm:208
-#, fuzzy, c-format
+#, c-format
 msgid "Please select the firmware file (for example: %s)"
-msgstr "Виберіть драйвер Windows (файл .inf)"
+msgstr "Будь ласка, виберіть файл мікропрограми (приклад: %s)"
 
 #: ../lib/network/thirdparty.pm:232
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to find \"%s\" on your Windows system!"
-msgstr "Видалення шрифтів з Вашої системи"
+msgstr "Не вдалося знайти «%s» на Вашій системі Windows!"
 
 #: ../lib/network/thirdparty.pm:234
 #, c-format
 msgid "No Windows system has been detected!"
-msgstr ""
+msgstr "Не виявлено жодної системи Windows!"
 
 #: ../lib/network/thirdparty.pm:244
 #, c-format
@@ -4907,62 +5013,61 @@ msgstr "Помилка доступу до дисковода, неможлив�
 #: ../lib/network/thirdparty.pm:354
 #, c-format
 msgid "Looking for required software and drivers..."
-msgstr ""
+msgstr "Пошук потрібних програм і драйверів..."
 
 #: ../lib/network/thirdparty.pm:369
-#, fuzzy, c-format
+#, c-format
 msgid "Please wait, running device configuration commands..."
-msgstr "Зачекайте, будь ласка, шукаються і налаштовуються пристрої..."
+msgstr "Будь ласка, зачекайте, запускаються команди налаштування пристроїв..."
 
 #: ../lib/network/vpn/openvpn.pm:107
 #, c-format
 msgid "X509 Public Key Infrastructure"
-msgstr ""
+msgstr "Інфраструктура відкритого ключа X509"
 
 #: ../lib/network/vpn/openvpn.pm:108
 #, c-format
 msgid "Static Key"
-msgstr ""
+msgstr "Статичний ключ"
 
 #. -PO: please don't translate the CA acronym
 #: ../lib/network/vpn/openvpn.pm:142
 #, c-format
 msgid "Certificate Authority (CA)"
-msgstr ""
+msgstr "Служба сертифікації (CA)"
 
 #: ../lib/network/vpn/openvpn.pm:148
 #, c-format
 msgid "Certificate"
-msgstr ""
+msgstr "Сертифікат"
 
 #: ../lib/network/vpn/openvpn.pm:154
-#, fuzzy, c-format
+#, c-format
 msgid "Key"
-msgstr "Кенія"
+msgstr "Ключ"
 
 #: ../lib/network/vpn/openvpn.pm:160
-#, fuzzy, c-format
+#, c-format
 msgid "TLS control channel key"
-msgstr "Ліва клавіша Control"
+msgstr "Контрольний ключ каналу TLS"
 
 #: ../lib/network/vpn/openvpn.pm:167
 #, c-format
 msgid "Key direction"
-msgstr ""
+msgstr "Напрямок ключа"
 
 #: ../lib/network/vpn/openvpn.pm:175
-#, fuzzy, c-format
+#, c-format
 msgid "Authenticate using username and password"
-msgstr ""
-"Неможливо зареєструватися з іменем користувача %s (неправильний пароль?)"
+msgstr "Розпізнавання за користувачем і паролем"
 
 #: ../lib/network/vpn/openvpn.pm:181
 #, c-format
 msgid "Check server certificate"
-msgstr ""
+msgstr "Перевірити сертифікат сервера"
 
 #: ../lib/network/vpn/openvpn.pm:187
-#, fuzzy, c-format
+#, c-format
 msgid "Cipher algorithm"
 msgstr "Алгоритм шифрування"
 
@@ -4974,62 +5079,62 @@ msgstr "Основна"
 #: ../lib/network/vpn/openvpn.pm:195
 #, c-format
 msgid "Size of cipher key"
-msgstr ""
+msgstr "Розмір ключа шифру"
 
 #: ../lib/network/vpn/openvpn.pm:206
-#, fuzzy, c-format
+#, c-format
 msgid "Get from server"
-msgstr "сервер Telnet"
+msgstr "Отримати з сервера"
 
 #: ../lib/network/vpn/openvpn.pm:216
-#, fuzzy, c-format
+#, c-format
 msgid "Gateway port"
-msgstr "Шлюз"
+msgstr "Порт шлюзу"
 
 #: ../lib/network/vpn/openvpn.pm:232
-#, fuzzy, c-format
+#, c-format
 msgid "Remote IP address"
-msgstr "IP-адреса шлюзу"
+msgstr "Віддалена IP-адреса"
 
 #: ../lib/network/vpn/openvpn.pm:237
-#, fuzzy, c-format
+#, c-format
 msgid "Use TCP protocol"
-msgstr "Протокол"
+msgstr "Використовувати протокол TCP"
 
 #: ../lib/network/vpn/openvpn.pm:243
 #, c-format
 msgid "Virtual network device type"
-msgstr ""
+msgstr "Тип пристрою віртуальної мережі"
 
 #: ../lib/network/vpn/openvpn.pm:250
 #, c-format
 msgid "Virtual network device number (optional)"
-msgstr ""
+msgstr "Номер пристрою віртуальної мережі (необов’язковий)"
 
 #: ../lib/network/vpn/openvpn.pm:365
 #, c-format
 msgid "Starting connection.."
-msgstr ""
+msgstr "Запуск процедури з’єднання..."
 
 #: ../lib/network/vpn/openvpn.pm:380
 #, c-format
 msgid "Please insert your token"
-msgstr ""
+msgstr "Будь ласка, вставте Ваш ключ"
 
 #: ../lib/network/vpn/vpnc.pm:9
 #, c-format
 msgid "Cisco VPN Concentrator"
-msgstr ""
+msgstr "Концентратор VPN Cisco"
 
 #: ../lib/network/vpn/vpnc.pm:43
-#, fuzzy, c-format
+#, c-format
 msgid "Group name"
-msgstr "Код групи"
+msgstr "Назва групи"
 
 #: ../lib/network/vpn/vpnc.pm:47
 #, c-format
 msgid "Group secret"
-msgstr ""
+msgstr "Пароль групи"
 
 #: ../lib/network/vpn/vpnc.pm:52
 #, c-format
@@ -5037,1218 +5142,12 @@ msgid "Username"
 msgstr "Ім'я користувача"
 
 #: ../lib/network/vpn/vpnc.pm:61
-#, fuzzy, c-format
+#, c-format
 msgid "NAT Mode"
-msgstr "Режим"
+msgstr "Режим NAT"
 
 #: ../lib/network/vpn/vpnc.pm:67
 #, c-format
 msgid "Use specific UDP port"
-msgstr ""
+msgstr "Використовувати вказаний порт UDP"
 
-#~ msgid "DrakVPN"
-#~ msgstr "DrakVPN"
-
-#~ msgid "The VPN connection is enabled."
-#~ msgstr "Під'єднання VPN увімкнено."
-
-#~ msgid ""
-#~ "The setup of a VPN connection has already been done.\n"
-#~ "\n"
-#~ "It's currently enabled.\n"
-#~ "\n"
-#~ "What would you like to do?"
-#~ msgstr ""
-#~ "Встановлення з'єднання VPN вже було виконано.\n"
-#~ "\n"
-#~ "Воно зараз увімкнене.\n"
-#~ "Що Ви бажаєте зробити?"
-
-#~ msgid "disable"
-#~ msgstr "відімкнути"
-
-#~ msgid "reconfigure"
-#~ msgstr "переналаштувати"
-
-#~ msgid "dismiss"
-#~ msgstr "відмінити"
-
-#~ msgid "Disabling VPN..."
-#~ msgstr "Вимикається VPN..."
-
-#~ msgid "The VPN connection is now disabled."
-#~ msgstr "З'єднання VPN вимкнене."
-
-#~ msgid "VPN connection currently disabled"
-#~ msgstr "З'єднанням VPN зараз вимкнене"
-
-#~ msgid ""
-#~ "The setup of a VPN connection has already been done.\n"
-#~ "\n"
-#~ "It's currently disabled.\n"
-#~ "\n"
-#~ "What would you like to do?"
-#~ msgstr ""
-#~ "Встановлення з'єднання VPN вже було зроблене.\n"
-#~ "\n"
-#~ "Доступ в даний момент вимкнено.\n"
-#~ "\n"
-#~ "Що Ви бажаєте зробити?"
-
-#~ msgid "enable"
-#~ msgstr "увімкнути"
-
-#~ msgid "Enabling VPN..."
-#~ msgstr "Вмикається VPN..."
-
-#~ msgid "The VPN connection is now enabled."
-#~ msgstr "З'єднанням VPN зараз увімкнено."
-
-#~ msgid "Simple VPN setup."
-#~ msgstr "Спрощене встановлення VPN."
-
-#~ msgid ""
-#~ "You are about to configure your computer to use a VPN connection.\n"
-#~ "\n"
-#~ "With this feature, computers on your local private network and computers\n"
-#~ "on some other remote private networks, can share resources, through\n"
-#~ "their respective firewalls, over the Internet, in a secure manner. \n"
-#~ "\n"
-#~ "The communication over the Internet is encrypted. The local and remote\n"
-#~ "computers look as if they were on the same network.\n"
-#~ "\n"
-#~ "Make sure you have configured your Network/Internet access using\n"
-#~ "drakconnect before going any further."
-#~ msgstr ""
-#~ "Зараз Ви налаштуєте свій комп'ютер на використання з'єднання VPN.\n"
-#~ "\n"
-#~ "З цією можливістю комп'ютери Вашої місцевої мережі зможуть\n"
-#~ "розділяти ресурси з комп'ютерами інших мереж через відповідні\n"
-#~ "шлюзи чи через Інтернет в захищеному режимі.\n"
-#~ "\n"
-#~ "Обмін через Інтернет шифрується. Місцеві і віддалені комп'ютери\n"
-#~ "бачуть один одного, ніби знаходяться в одній мережі.\n"
-#~ "\n"
-#~ "Перед тим, як продовжувати, переконайтеся, що Ви маєте\n"
-#~ "налаштований з допомогою drakconnect доступ до мережі/\n"
-#~ "Інтернету."
-
-#~ msgid ""
-#~ "VPN connection.\n"
-#~ "\n"
-#~ "This program is based on the following projects:\n"
-#~ " - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
-#~ " - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
-#~ " - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
-#~ " - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
-#~ " - the docs and man pages coming with the %s package\n"
-#~ "\n"
-#~ "Please read AT LEAST the ipsec-howto docs\n"
-#~ "before going any further."
-#~ msgstr ""
-#~ "З'єднання VPN.\n"
-#~ "\n"
-#~ "Ця програма основана на наступних проектах:\n"
-#~ " - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
-#~ " - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
-#~ " - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
-#~ " - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
-#~ " - документація та сторінки man взяті з пакунка %s\n"
-#~ "\n"
-#~ "Будь ласка, почитайте ЯК МІНІМУМ документацію ipsec-howto\n"
-#~ "перед тим, як продовжувати."
-
-#~ msgid "Problems installing package %s"
-#~ msgstr "Проблеми при встановленні пакунка %s"
-
-#~ msgid "Security Policies"
-#~ msgstr "Політика безпеки"
-
-#~ msgid "IKE daemon racoon"
-#~ msgstr "Сервіс IKE racoon"
-
-#~ msgid "Configuration file"
-#~ msgstr "Конфіґураційний файл"
-
-#~ msgid ""
-#~ "Configuration step!\n"
-#~ "\n"
-#~ "You need to define the Security Policies and then to \n"
-#~ "configure the automatic key exchange (IKE) daemon. \n"
-#~ "The KAME IKE daemon we're using is called 'racoon'.\n"
-#~ "\n"
-#~ "What would you like to configure?\n"
-#~ msgstr ""
-#~ "Крок налаштування !\n"
-#~ "\n"
-#~ "Вам необхідно визначити політику безпеки, потім налаштувати\n"
-#~ "сервіс автоматичного обміну ключами (IKE).\n"
-#~ "Сервіс KAME IKE, який ми використовуємо, називається 'racoon'.\n"
-#~ "\n"
-#~ "Що б Ви хотіли налаштувати?\n"
-
-#~ msgid "%s entries"
-#~ msgstr "%s пунктів"
-
-#~ msgid ""
-#~ "The %s file contents\n"
-#~ "is divided into sections.\n"
-#~ "\n"
-#~ "You can now:\n"
-#~ "\n"
-#~ "  - display, add, edit, or remove sections, then\n"
-#~ "  - commit the changes\n"
-#~ "\n"
-#~ "What would you like to do?\n"
-#~ msgstr ""
-#~ "Вміст файла %s \n"
-#~ "разділений на розділи.\n"
-#~ "\n"
-#~ "Зараз Ви можете :\n"
-#~ "\n"
-#~ "  - відобразити, додати, виправити або вилучитирозділи, тоді\n"
-#~ "  - підтвердити зміни\n"
-#~ "\n"
-#~ "Що Ви хочете зробити?\n"
-
-#~ msgid ""
-#~ "_:display here is a verb\n"
-#~ "Display"
-#~ msgstr "Показати"
-
-#~ msgid "Edit"
-#~ msgstr "Виправити"
-
-#~ msgid "Commit"
-#~ msgstr "Підтвердити"
-
-#~ msgid ""
-#~ "_:display here is a verb\n"
-#~ "Display configuration"
-#~ msgstr "Показати конфігурацію"
-
-#~ msgid ""
-#~ "The %s file does not exist.\n"
-#~ "\n"
-#~ "This must be a new configuration.\n"
-#~ "\n"
-#~ "You'll have to go back and choose 'add'.\n"
-#~ msgstr ""
-#~ "Файла %s не існує.\n"
-#~ "\n"
-#~ "Це повинна бути нова конфігурація.\n"
-#~ "\n"
-#~ "Поверніться назад і виберіть 'add'.\n"
-
-#~ msgid ""
-#~ "Add a Security Policy.\n"
-#~ "\n"
-#~ "You can now add a Security Policy.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data.\n"
-#~ msgstr ""
-#~ "Додати політику безпеки.\n"
-#~ "\n"
-#~ "Зараз Ви можете додати політику безпеки.\n"
-#~ "\n"
-#~ "Як закінчите, натисніть продовжити, щоб зберегти дані.\n"
-
-#~ msgid "Edit section"
-#~ msgstr "Редактувати розділ"
-
-#~ msgid ""
-#~ "Your %s file has several sections or connections.\n"
-#~ "\n"
-#~ "You can choose here below the one you want to edit \n"
-#~ "and then click on next.\n"
-#~ msgstr ""
-#~ "Ваш файл %s має декілька розділів або посилань.\n"
-#~ "\n"
-#~ "Зараз Ви можете вибрати нижче один з них\n"
-#~ "для редактування, тоді натисніть на \"Далі\".\n"
-
-#~ msgid "Section names"
-#~ msgstr "Назви розділів"
-
-#~ msgid ""
-#~ "Edit a Security Policy.\n"
-#~ "\n"
-#~ "You can now edit a Security Policy.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data.\n"
-#~ msgstr ""
-#~ "Додати політику безпеки.\n"
-#~ "\n"
-#~ "Зараз Ви можете додати політику безпеки.\n"
-#~ "\n"
-#~ "Як закінчите, натисніть продовжити, щоб записати дані.\n"
-
-#~ msgid "Remove section"
-#~ msgstr "Видалити розділ"
-
-#~ msgid ""
-#~ "Your %s file has several sections or connections.\n"
-#~ "\n"
-#~ "You can choose here below the one you want to remove\n"
-#~ "and then click on next.\n"
-#~ msgstr ""
-#~ "Ваш файл %s містить декілька розділів або посилань.\n"
-#~ "\n"
-#~ "Зараз Ви можете вибрати нижче один для видалення\n"
-#~ "тоді натисніть продовжити.\n"
-
-#~ msgid ""
-#~ "The racoon.conf file configuration.\n"
-#~ "\n"
-#~ "The contents of this file is divided into sections.\n"
-#~ "You can now:\n"
-#~ "  - display \t\t (display the file contents)\n"
-#~ "  - add\t\t\t (add one section)\n"
-#~ "  - edit \t\t\t (modify parameters of an existing section)\n"
-#~ "  - remove \t\t (remove an existing section)\n"
-#~ "  - commit \t\t (writes the changes to the real file)"
-#~ msgstr ""
-#~ "Файл конфігурації racoon.conf.\n"
-#~ "\n"
-#~ "Вміст даного файла розділено на дві частини.\n"
-#~ "Зараз Ви можете:\n"
-#~ "  - display \t\t (відобразити вміст файла)\n"
-#~ "  - add\t\t\t (додати один розділ)\n"
-#~ "  - edit \t\t\t (змінити параметри існуючого розділу)\n"
-#~ "  - remove \t\t (видалити існуючий розділ)\n"
-#~ "  - commit \t\t (записати зміни в цей файл)"
-
-#~ msgid ""
-#~ "The %s file does not exist\n"
-#~ "\n"
-#~ "This must be a new configuration.\n"
-#~ "\n"
-#~ "You'll have to go back and choose configure.\n"
-#~ msgstr ""
-#~ "Файла %s не існує\n"
-#~ "\n"
-#~ "Це повинна бути нова конфігурація.\n"
-#~ "\n"
-#~ "Поверніться назад і виберіть налаштувати.\n"
-
-#~ msgid "racoon.conf entries"
-#~ msgstr "записи racoon.conf"
-
-#~ msgid ""
-#~ "The 'add' sections step.\n"
-#~ "\n"
-#~ "Here below is the racoon.conf file skeleton:\n"
-#~ "\t'path'\n"
-#~ "\t'remote'\n"
-#~ "\t'sainfo' \n"
-#~ "\n"
-#~ "Choose the section you would like to add.\n"
-#~ msgstr ""
-#~ "Крок додавання розділів.\n"
-#~ "\n"
-#~ "Нижче приведена основа файла racoon.conf :\n"
-#~ "\t'path'\n"
-#~ "\t'remote'\n"
-#~ "\t'sainfo' \n"
-#~ "\n"
-#~ "Виберіть розділ, який хочете додати.\n"
-
-#~ msgid "path"
-#~ msgstr "шлях"
-
-#~ msgid "remote"
-#~ msgstr "віддалений"
-
-#~ msgid "sainfo"
-#~ msgstr "sainfo"
-
-#~ msgid ""
-#~ "The 'add path' section step.\n"
-#~ "\n"
-#~ "The path sections have to be on top of your racoon.conf file.\n"
-#~ "\n"
-#~ "Put your mouse over the certificate entry to obtain online help."
-#~ msgstr ""
-#~ "Крок розділу 'add path' .\n"
-#~ "\n"
-#~ "Розділ path повинен знаходитися на початку файла racoon.conf.\n"
-#~ "\n"
-#~ "Наведіть мишу на запис для отримання онлайн-довідки."
-
-#~ msgid "path type"
-#~ msgstr "тип шляху"
-
-#~ msgid ""
-#~ "path include path: specifies a path to include\n"
-#~ "a file. See File Inclusion.\n"
-#~ "\tExample: path include '/etc/racoon'\n"
-#~ "\n"
-#~ "path pre_shared_key file: specifies a file containing\n"
-#~ "pre-shared key(s) for various ID(s). See Pre-shared key File.\n"
-#~ "\tExample: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
-#~ "\n"
-#~ "path certificate path: racoon(8) will search this directory\n"
-#~ "if a certificate or certificate request is received.\n"
-#~ "\tExample: path certificate '/etc/cert' ;\n"
-#~ "\n"
-#~ "File Inclusion: include file \n"
-#~ "other configuration files can be included.\n"
-#~ "\tExample: include \"remote.conf\" ;\n"
-#~ "\n"
-#~ "Pre-shared key File: Pre-shared key file defines a pair\n"
-#~ "of the identifier and the shared secret key which are used at\n"
-#~ "Pre-shared key authentication method in phase 1."
-#~ msgstr ""
-#~ "path include path : задає шлях для вкладання файла\n"
-#~ "Див. Вкладання файла.\n"
-#~ "\tПриклад: path include '/etc/racoon'\n"
-#~ "\n"
-#~ "path pre_shared_key file : вказує файл, що містить\n"
-#~ "ключі pre-shared для різних ID. Див. файл Pre-shared key.\n"
-#~ "\tПриклад: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
-#~ "\n"
-#~ "path certificate path: racoon(8) шукатиме цю теку,\n"
-#~ "якщо отримано сертифікат або запит на сертифікат.\n"
-#~ "\tПриклад: path certificate '/etc/cert' ;\n"
-#~ "\n"
-#~ "Вкладання файла: include file \n"
-#~ "можна вкладати інші конфігураційні файли.\n"
-#~ "\tПриклад: include \"remote.conf\" ;\n"
-#~ "\n"
-#~ "Файл Pre-shared key: файл Pre-shared key визначає пару\n"
-#~ "ідентифікаторів і розділюваний секретний ключ, які використовуються\n"
-#~ "в методі розпізнавання Pre-shared key у фазі 1."
-
-#~ msgid "real file"
-#~ msgstr "реальний файл"
-
-#~ msgid ""
-#~ "Make sure you already have the path sections\n"
-#~ "on the top of your racoon.conf file.\n"
-#~ "\n"
-#~ "You can now choose the remote settings.\n"
-#~ "Choose continue or previous when you are done.\n"
-#~ msgstr ""
-#~ "Переконайтеся, що Ви вже маєте розділи зі шляхами\n"
-#~ "на початку файла racoon.conf.\n"
-#~ "\n"
-#~ "Зараз Ви можете вибрати налаштування remote.\n"
-#~ "Виберіть \"Продовжити\" або \"Повернутися\", коли закінчите.\n"
-
-#~ msgid ""
-#~ "Make sure you already have the path sections\n"
-#~ "on the top of your %s file.\n"
-#~ "\n"
-#~ "You can now choose the sainfo settings.\n"
-#~ "Choose continue or previous when you are done.\n"
-#~ msgstr ""
-#~ "Переконайтеся, що Ви вже маєте розділи зі шляхами\n"
-#~ "на початку файла %s.\n"
-#~ "\n"
-#~ "Зараз Ви можете вибрати налаштування sainfo.\n"
-#~ "Виберіть \"Продовжити\" або \"Повернутися\", коли закінчите.\n"
-
-#~ msgid ""
-#~ "Your %s file has several sections or connections.\n"
-#~ "\n"
-#~ "You can choose here in the list below the one you want\n"
-#~ "to edit and then click on next.\n"
-#~ msgstr ""
-#~ "Файл %s містить декілька розділів або посилань.\n"
-#~ "\n"
-#~ "Виберіть зі списку, що саме Ви хочете виправити,\n"
-#~ "і натисніть \"Продовжити\".\n"
-
-#~ msgid ""
-#~ "Your %s file has several sections.\n"
-#~ "\n"
-#~ "\n"
-#~ "You can now edit the remote section entries.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data.\n"
-#~ msgstr ""
-#~ "Файл %s містить декілька розділів.\n"
-#~ "\n"
-#~ "\n"
-#~ "Зараз Ви можете виправити записи в секції remote.\n"
-#~ "\n"
-#~ "Коли закінчите, виберіть \"Продовжити\", щоб зберегти дані.\n"
-
-#~ msgid ""
-#~ "Your %s file has several sections.\n"
-#~ "\n"
-#~ "You can now edit the sainfo section entries.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data."
-#~ msgstr ""
-#~ "Файл %s містить декілька розділів.\n"
-#~ "\n"
-#~ "Зараз Ви можете виправити записи в секції sainfo.\n"
-#~ "\n"
-#~ "Коли закінчите, виберіть \"Продовжити\", щоб зберегти дані."
-
-#~ msgid ""
-#~ "This section has to be on top of your\n"
-#~ "%s file.\n"
-#~ "\n"
-#~ "Make sure all other sections follow these path\n"
-#~ "sections.\n"
-#~ "\n"
-#~ "You can now edit the path entries.\n"
-#~ "\n"
-#~ "Choose continue or previous when you are done.\n"
-#~ msgstr ""
-#~ "Цей розділ повинен знаходитися на початку файла\n"
-#~ "%s.\n"
-#~ "\n"
-#~ "Перевірте, щоб усі інші розділи йшли після нього.\n"
-#~ "\n"
-#~ "Зараз Ви можете виправити записи path.\n"
-#~ "\n"
-#~ "Коли закінчите, виберіть \"Продовжити\" або \"Повернутися\".\n"
-
-#~ msgid "path_type"
-#~ msgstr "path_type"
-
-#~ msgid "Congratulations!"
-#~ msgstr "Вітання!"
-
-#~ msgid ""
-#~ "Everything has been configured.\n"
-#~ "\n"
-#~ "You may now share resources through the Internet,\n"
-#~ "in a secure way, using a VPN connection.\n"
-#~ "\n"
-#~ "You should make sure that the tunnels shorewall\n"
-#~ "section is configured."
-#~ msgstr ""
-#~ "Все налаштовано.\n"
-#~ "\n"
-#~ "Тепер Ви можете надати ресурси через Інтернет\n"
-#~ "в безпечному режимі з допомогою з'єднання VPN.\n"
-#~ "\n"
-#~ "Вам потрібно перевірити, чи налаштований розділ\n"
-#~ "tunnels shorewall."
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.209 is the source address\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.1.0/24 is the source address"
-#~ msgstr ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "визначає параметри для IKE phase 2\n"
-#~ "(створення IPsec-SA).\n"
-#~ "\n"
-#~ "source_id і destination_id конструюються так:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Приклади : \n"
-#~ "\n"
-#~ "sainfo anonymous (приймає з'єднання зівсюди)\n"
-#~ "\tзалиште порожнім, якщо хочете дозволити\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.209 це вихідна адреса\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.1.0/24 це вихідна адреса"
-
-#~ msgid "Sainfo source protocol"
-#~ msgstr "Вихідний протокол sainfo"
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tthe first 'any' allows any protocol for the source"
-#~ msgstr ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "визначає параметри для IKE phase 2\n"
-#~ "(створення IPsec-SA).\n"
-#~ "\n"
-#~ "source_id і destination_id конструюються так:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Приклади : \n"
-#~ "\n"
-#~ "sainfo anonymous (приймає під'єднання зівсюди)\n"
-#~ "\tзалиште порожнім, якщо хочете дозволити\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tперший 'any' дозволяє будь-який протокол для вихідної адреси"
-
-#~ msgid "Sainfo destination address"
-#~ msgstr "адреса призначення sainfo"
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.218 is the destination address\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.2.0/24 is the destination address"
-#~ msgstr ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "визначає параметри для IKE phase 2\n"
-#~ "(створення IPsec-SA).\n"
-#~ "\n"
-#~ "source_id і destination_id конструюються так:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Приклади : \n"
-#~ "\n"
-#~ "sainfo anonymous (приймає з'єднання зівсюди)\n"
-#~ "\tзалиште порожнім, якщо хочете дозволити\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.218 це адреса призначення\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.2.0/24 це адреса призначення"
-
-#~ msgid "Sainfo destination protocol"
-#~ msgstr "Протокол призначення sainfo"
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tthe last 'any' allows any protocol for the destination"
-#~ msgstr ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "визначає параметри для IKE phase 2\n"
-#~ "(створення IPsec-SA ).\n"
-#~ "\n"
-#~ "source_id і destination_id конструюються так:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Приклади : \n"
-#~ "\n"
-#~ "sainfo anonymous (приймає з'єднання зівсюди)\n"
-#~ "\tзалиште порожнім, якщо хочете дозволити\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tостаннє 'any' дозволяє будь-який протокол для адреси призначення"
-
-#~ msgid "PFS group"
-#~ msgstr "група PFS"
-
-#~ msgid ""
-#~ "define the group of Diffie-Hellman exponentiations.\n"
-#~ "If you do not require PFS then you can omit this directive.\n"
-#~ "Any proposal will be accepted if you do not specify one.\n"
-#~ "group is one of the following: modp768, modp1024, modp1536.\n"
-#~ "Or you can define 1, 2, or 5 as the DH group number."
-#~ msgstr ""
-#~ "задає групу потенціювань Diffie-Hellman.\n"
-#~ "Якщо Вам не потрібний PFS, можете пропустити цю директиву.\n"
-#~ "Якщо Ви нічого не задасте, будуть прийматися будь-які пропозиції.\n"
-#~ "Група може бути такою: modp768, modp1024, modp1536.\n"
-#~ "Або ж Ви можете визначити 1, 2, або 5 в якості номера групи DH."
-
-#~ msgid "Lifetime number"
-#~ msgstr "Число lifetime"
-
-#~ msgid ""
-#~ "define a lifetime of a certain time which will be pro-\n"
-#~ "posed in the phase 1 negotiations.  Any proposal will be\n"
-#~ "accepted, and the attribute(s) will not be proposed to\n"
-#~ "the peer if you do not specify it(them).  They can be\n"
-#~ "individually specified in each proposal.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "So, here, the lifetime numbers are 1, 1, 30, 30, 60 and 12.\n"
-#~ msgstr ""
-#~ "задає lifetime певного часу, який буде запропоновано\n"
-#~ "в переговорах phase 1. Буде прийматися будь-яка\n"
-#~ "пропозиція і протилежній стороні (peer) ніякі атрибути не будуть\n"
-#~ "пропонуватися, якщо Ви їх не вкажете. Вони можуть бути вказані\n"
-#~ "окремо в кожній пропозиції.\n"
-#~ "\n"
-#~ "Приклади : \n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "Таким чином числа lifetime тут 1, 1, 30, 30, 60 і 12.\n"
-
-#~ msgid "Lifetime unit"
-#~ msgstr "Розмірність lifetime"
-
-#~ msgid ""
-#~ "define a lifetime of a certain time which will be pro-\n"
-#~ "posed in the phase 1 negotiations.  Any proposal will be\n"
-#~ "accepted, and the attribute(s) will not be proposed to\n"
-#~ "the peer if you do not specify it(them).  They can be\n"
-#~ "individually specified in each proposal.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "So, here, the lifetime units are 'min', 'min', 'sec', 'sec', 'sec' and "
-#~ "'hour'.\n"
-#~ msgstr ""
-#~ "задає lifetime певного часу, який буде запропоновано\n"
-#~ "в переговорах phase 1. Буде прийматися будь-яка\n"
-#~ "пропозиція і протилежній стороні (peer) ніякі атрибути не будуть\n"
-#~ "пропонуватися, якщо Ви їх не вкажете. Вони можуть бути вказані\n"
-#~ "окремо в кожній пропозиції.\n"
-#~ "\n"
-#~ "Приклади : \n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "Таким чином, розмірностями lifetime тут є 'min', 'min', 'sec', 'sec', "
-#~ "'sec' і'hour'.\n"
-
-#~ msgid "Encryption algorithm"
-#~ msgstr "Алгоритм шифрування"
-
-#~ msgid "Authentication algorithm"
-#~ msgstr "Алгоритм розпізнавання"
-
-#~ msgid "Compression algorithm"
-#~ msgstr "Алгоритм стиснення"
-
-#~ msgid "deflate"
-#~ msgstr "зменшити"
-
-#~ msgid "Remote"
-#~ msgstr "Remote"
-
-#~ msgid ""
-#~ "remote (address | anonymous) [[port]] { statements }\n"
-#~ "specifies the parameters for IKE phase 1 for each remote node.\n"
-#~ "The default port is 500.  If anonymous is specified, the state-\n"
-#~ "ments apply to all peers which do not match any other remote\n"
-#~ "directive.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "remote anonymous\n"
-#~ "remote ::1 [8000]"
-#~ msgstr ""
-#~ "remote (address | anonymous) [[port]] { statements }\n"
-#~ "визначає параметри для IKE phase 1 для кожного віддаленого вузла.\n"
-#~ "Типовий порт -  500. Якщо anonymous визначено, тоді\n"
-#~ "statements приймаються для усіх вузлів, які не попадають під\n"
-#~ "будь-яку іншу віддалену директиву.\n"
-#~ "\n"
-#~ "Приклади : \n"
-#~ "\n"
-#~ "remote anonymous\n"
-#~ "remote ::1 [8000]"
-
-#~ msgid "Exchange mode"
-#~ msgstr "Режим обміну"
-
-#~ msgid ""
-#~ "defines the exchange mode for phase 1 when racoon is the\n"
-#~ "initiator. Also it means the acceptable exchange mode\n"
-#~ "when racoon is responder. More than one mode can be\n"
-#~ "specified by separating them with a comma. All of the\n"
-#~ "modes are acceptable. The first exchange mode is what\n"
-#~ "racoon uses when it is the initiator.\n"
-#~ msgstr ""
-#~ "задає режим обміну для phase 1, коли racoon є\n"
-#~ "ініціатором. Також це означає приймальний режим обміну,\n"
-#~ "коли racoon є відповідаючим. Може бути визначено декілька\n"
-#~ "режимів, разділених комами. Всі режими приймальні.\n"
-#~ "Перший режим обміну використовується racoon, якщо той є\n"
-#~ "ініціатором.\n"
-
-#~ msgid "Generate policy"
-#~ msgstr "Створити лінію поведінки"
-
-#~ msgid "off"
-#~ msgstr "вимкнути"
-
-#~ msgid "on"
-#~ msgstr "увімкнути"
-
-#~ msgid ""
-#~ "This directive is for the responder.  Therefore you\n"
-#~ "should set passive on in order that racoon(8) only\n"
-#~ "becomes a responder.  If the responder does not have any\n"
-#~ "policy in SPD during phase 2 negotiation, and the direc-\n"
-#~ "tive is set on, then racoon(8) will choose the first pro-\n"
-#~ "posal in the SA payload from the initiator, and generate\n"
-#~ "policy entries from the proposal.  It is useful to nego-\n"
-#~ "tiate with the client which is allocated IP address\n"
-#~ "dynamically.  Note that inappropriate policy might be\n"
-#~ "installed into the responder's SPD by the initiator.  So\n"
-#~ "that other communication might fail if such policies\n"
-#~ "installed due to some policy mismatches between the ini-\n"
-#~ "tiator and the responder.  This directive is ignored in\n"
-#~ "the initiator case.  The default value is off."
-#~ msgstr ""
-#~ "Ця директива призначена для відповідаючої сторони. \n"
-#~ "Тому потрібно встановити passive в on, щоб racoon(8)\n"
-#~ "став тільки відповідаючим. Якщо відповідаючий не має\n"
-#~ "жодної лінії поведінки в SPD під час узгодження у\n"
-#~ "phase 2 і директива встановлена в on, тоді racoon(8)\n"
-#~ "вибере першу заявку в SA від ініціатора і створить\n"
-#~ "записи поведінки із заявки. Це корисно для узгодження\n"
-#~ "з клієнтом, який отримує IP-адресу динамічно. Зауважте,\n"
-#~ "що в SPD відповідаючого ініціатором може бути\n"
-#~ "встановлена невідповідна поведінка. Через це інші\n"
-#~ "з'єднання можуть не створитися, якщо такі лінії поведінки\n"
-#~ "встановлені через невідповідності між ініціатором і\n"
-#~ "відповідаючим. Дана директива ігнорується\n"
-#~ "у випадку ініціатора. Типовим значенням є off."
-
-#~ msgid "Passive"
-#~ msgstr "Пасивний"
-
-#~ msgid ""
-#~ "If you do not want to initiate the negotiation, set this\n"
-#~ "to on.  The default value is off.  It is useful for a\n"
-#~ "server."
-#~ msgstr ""
-#~ "Якщо Ви не хочете розпочинати узгодження, встановіть\n"
-#~ "це значення в on. Типове значення - off.\n"
-#~ "Корисно для сервера."
-
-#~ msgid "Certificate type"
-#~ msgstr "Тип сертифікату"
-
-#~ msgid "My certfile"
-#~ msgstr "Мій файл сертифікату"
-
-#~ msgid "Name of the certificate"
-#~ msgstr "Назва сертифікату"
-
-#~ msgid "My private key"
-#~ msgstr "Мій особистий ключ"
-
-#~ msgid "Name of the private key"
-#~ msgstr "Назва приватного ключа"
-
-#~ msgid "Peers certfile"
-#~ msgstr "Файл сертификату вузлів"
-
-#~ msgid "Name of the peers certificate"
-#~ msgstr "Назва сертификату вузлів"
-
-#~ msgid "Verify cert"
-#~ msgstr "Перевірити сертифікат"
-
-#~ msgid ""
-#~ "If you do not want to verify the peer's certificate for\n"
-#~ "some reason, set this to off.  The default is on."
-#~ msgstr ""
-#~ "Якщо Ви з якихось причин не хочете перевіряти сертификат\n"
-#~ "вузла, встановіть значення в off (вимкнено). \n"
-#~ "Типове значення - on (увімкнено)."
-
-#~ msgid "My identifier"
-#~ msgstr "Мій ідентифікатор"
-
-#~ msgid ""
-#~ "specifies the identifier sent to the remote host and the\n"
-#~ "type to use in the phase 1 negotiation.  address, FQDN,\n"
-#~ "user_fqdn, keyid and asn1dn can be used as an idtype.\n"
-#~ "they are used like:\n"
-#~ "\tmy_identifier address [address];\n"
-#~ "\t\tthe type is the IP address.  This is the default\n"
-#~ "\t\ttype if you do not specify an identifier to use.\n"
-#~ "\tmy_identifier user_fqdn string;\n"
-#~ "\t\tthe type is a USER_FQDN (user fully-qualified\n"
-#~ "\t\tdomain name).\n"
-#~ "\tmy_identifier FQDN string;\n"
-#~ "\t\tthe type is a FQDN (fully-qualified domain name).\n"
-#~ "\tmy_identifier keyid file;\n"
-#~ "\t\tthe type is a KEY_ID.\n"
-#~ "\tmy_identifier asn1dn [string];\n"
-#~ "\t\tthe type is an ASN.1 distinguished name.  If\n"
-#~ "\t\tstring is omitted, racoon(8) will get DN from\n"
-#~ "\t\tSubject field in the certificate.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "my_identifier user_fqdn \"myemail@mydomain.com\""
-#~ msgstr ""
-#~ "вказує ідентифікатор, надісланий віддаленій машині, і тип\n"
-#~ "для використання в переговорах phase 1.  address, FQDN,\n"
-#~ "user_fqdn, keyid і asn1dn можуть використовуватися, як idtype.\n"
-#~ "вони використовуються так:\n"
-#~ "\tmy_identifier address [address];\n"
-#~ "\t\tтип - IP-адреса. Це типовий тип,\n"
-#~ "\t\tякщо Ви не задаєте ідентифікатор для використання.\n"
-#~ "\tmy_identifier user_fqdn string;\n"
-#~ "\t\tтип - USER_FQDN (user fully-qualified\n"
-#~ "\t\tdomain name).\n"
-#~ "\tmy_identifier FQDN string;\n"
-#~ "\t\tтип - FQDN (fully-qualified domain name).\n"
-#~ "\tmy_identifier keyid file;\n"
-#~ "\t\tтип - KEY_ID.\n"
-#~ "\tmy_identifier asn1dn [string];\n"
-#~ "\t\tтип - назва по ASN.1. Якщо рядок\n"
-#~ "\t\tпропускається, racoon(8) буде брати DN з\n"
-#~ "\t\tполя Subject сертифікату.\n"
-#~ "\n"
-#~ "Приклади : \n"
-#~ "\n"
-#~ "my_identifier user_fqdn \"myemail@mydomain.com\""
-
-#~ msgid "Peers identifier"
-#~ msgstr "Ідентифікатор вузлів"
-
-#~ msgid "Proposal"
-#~ msgstr "Пропозиція"
-
-#~ msgid ""
-#~ "specify the encryption algorithm used for the\n"
-#~ "phase 1 negotiation. This directive must be defined. \n"
-#~ "algorithm is one of the following: \n"
-#~ "\n"
-#~ "DES, 3DES, blowfish, cast128 for oakley.\n"
-#~ "\n"
-#~ "For other transforms, this statement should not be used."
-#~ msgstr ""
-#~ "вкажіть алгоритм шифрування, що використовуватиметься\n"
-#~ "у першій фазі узгодження. Він повинен бути вказаним. \n"
-#~ "алгоритм один з наступних: \n"
-#~ "\n"
-#~ "DES, 3DES, blowfish, cast128 for oakley.\n"
-#~ "\n"
-#~ "Для інших перетворень ця величина не використовується."
-
-#~ msgid "Hash algorithm"
-#~ msgstr "Алгоритм кешування"
-
-#~ msgid "Authentication method"
-#~ msgstr "Метод розпізнавання"
-
-#~ msgid "DH group"
-#~ msgstr "Група DH"
-
-#~ msgid "Command"
-#~ msgstr "Команда"
-
-#~ msgid "Source IP range"
-#~ msgstr "Вхідний діапазон IP"
-
-#~ msgid "Destination IP range"
-#~ msgstr "Вихідний діапазон IP"
-
-#~ msgid "Upper-layer protocol"
-#~ msgstr "Протокол вищого рівня"
-
-#~ msgid "any"
-#~ msgstr "будь-який"
-
-#~ msgid "Flag"
-#~ msgstr "Прапорець"
-
-#~ msgid "Direction"
-#~ msgstr "Опис"
-
-#~ msgid "IPsec policy"
-#~ msgstr "Безпека IPsec"
-
-#~ msgid "ipsec"
-#~ msgstr "ipsec"
-
-#~ msgid "discard"
-#~ msgstr "відмінити"
-
-#~ msgid "none"
-#~ msgstr "нічого"
-
-#~ msgid "Mode"
-#~ msgstr "Режим"
-
-#~ msgid "tunnel"
-#~ msgstr "канал"
-
-#~ msgid "transport"
-#~ msgstr "передача"
-
-#~ msgid "Source/destination"
-#~ msgstr "Джерело/призначення"
-
-#~ msgid "Level"
-#~ msgstr "Рівень"
-
-#~ msgid "require"
-#~ msgstr "потребує"
-
-#~ msgid "default"
-#~ msgstr "стандартний"
-
-#~ msgid "use"
-#~ msgstr "використовує"
-
-#~ msgid "unique"
-#~ msgstr "унікальний"
-
-#~ msgid "You need to log out and back in again for changes to take effect"
-#~ msgstr "Ви повинні перезареєструватися, щоб задіяти зміни"
-
-#, fuzzy
-#~ msgid "Process attack"
-#~ msgstr "Атакований сервер: %s"
-
-#, fuzzy
-#~ msgid "Interactive Firewall: intrusion detected"
-#~ msgstr "Активний захисний шлюз: виявлено вторгнення"
-
-#, fuzzy
-#~ msgid "What do you want to do with this attacker?"
-#~ msgstr "Чи хочете занести атакувальника в чорний список?"
-
-#~ msgid "Attack details"
-#~ msgstr "Деталі атаки"
-
-#~ msgid "Attack time: %s"
-#~ msgstr "Час атаки: %s"
-
-#~ msgid "Network interface: %s"
-#~ msgstr "Інтерфейс мережі: %s"
-
-#~ msgid "Attack type: %s"
-#~ msgstr "Тип атаки: %s"
-
-#~ msgid "Protocol: %s"
-#~ msgstr "Протокол: %s"
-
-#~ msgid "Attacker IP address: %s"
-#~ msgstr "IP-адреса атакованого комп'ютера: %s"
-
-#~ msgid "Attacker hostname: %s"
-#~ msgstr "Назва атакованої машини: %s"
-
-#~ msgid "Service attacked: %s"
-#~ msgstr "Атакований сервер: %s"
-
-#~ msgid "Port attacked: %s"
-#~ msgstr "Атакований порт: %s"
-
-#~ msgid "Type of ICMP attack: %s"
-#~ msgstr "Тип атаки ICMP: %s"
-
-#~ msgid "Always blacklist (do not ask again)"
-#~ msgstr "Завжди заносити в чорний список (не запитувати більше)"
-
-#~ msgid "Ignore"
-#~ msgstr "Ігнорувати"
-
-#, fuzzy
-#~ msgid "Interactive Firewall: new service"
-#~ msgstr "Активний захисний шлюз: виявлено вторгнення"
-
-#, fuzzy
-#~ msgid "Process connection"
-#~ msgstr "Бездротове з'єднання"
-
-#, fuzzy
-#~ msgid "Do you want to open this service?"
-#~ msgstr "Чи хочете Ви налаштувати?"
-
-#, fuzzy
-#~ msgid "Remember this answer"
-#~ msgstr "Запам'ятати цей пароль"
-
-#~ msgid "Gateway:"
-#~ msgstr "Шлюз:"
-
-#~ msgid "Interface:"
-#~ msgstr "Інтерфейс:"
-
-#~ msgid "Manage connections"
-#~ msgstr "Керування з'єднаннями"
-
-#~ msgid "IP configuration"
-#~ msgstr "Конфіґурація IP"
-
-#~ msgid "DNS servers"
-#~ msgstr "Сервери DNS"
-
-#~ msgid "Search Domain"
-#~ msgstr "Пошук домена"
-
-#~ msgid "static"
-#~ msgstr "статична"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Start at boot"
-#~ msgstr "Стартувати при завантаженні"
-
-#~ msgid "Flow control"
-#~ msgstr "Керування потоком"
-
-#~ msgid "Line termination"
-#~ msgstr "Завершення рядка"
-
-#~ msgid "Modem timeout"
-#~ msgstr "Затримка модему"
-
-#~ msgid "Use lock file"
-#~ msgstr "Використовувати файл lock"
-
-#~ msgid "Wait for dialup tone before dialing"
-#~ msgstr "Очікувати сигнал лінії перед набором"
-
-#~ msgid "Busy wait"
-#~ msgstr "Очікування \"Зайнятий\""
-
-#~ msgid "Modem sound"
-#~ msgstr "Звук модему"
-
-#~ msgid "Vendor"
-#~ msgstr "Виробник"
-
-#~ msgid "Description"
-#~ msgstr "Опис"
-
-#~ msgid "Media class"
-#~ msgstr "Клас носія"
-
-#~ msgid "Module name"
-#~ msgstr "Назва модуля"
-
-#~ msgid "Mac Address"
-#~ msgstr "Mac-адреса"
-
-#~ msgid "Bus"
-#~ msgstr "Шина"
-
-#~ msgid "Location on the bus"
-#~ msgstr "Розташування на шині"
-
-#~ msgid "Remove a network interface"
-#~ msgstr "Видалити мережевий інтерфейс"
-
-#~ msgid "Select the network interface to remove:"
-#~ msgstr "Виберіть інтерфейс мережі для видалення:"
-
-#~ msgid ""
-#~ "An error occurred while deleting the \"%s\" network interface:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "При видаленні інтерфейса мережі \"%s\" сталася помилка:\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Congratulations, the \"%s\" network interface has been successfully "
-#~ "deleted"
-#~ msgstr "Вітаємо, мережевий інтерфейс \"%s\" було успішно видалено"
-
-#~ msgid "Disconnect..."
-#~ msgstr "Від'єднання..."
-
-#~ msgid "Connect..."
-#~ msgstr "З'єднання..."
-
-#~ msgid "Internet connection configuration"
-#~ msgstr "Конфігурація з'єднання з Інтернетом"
-
-#~ msgid "Host name (optional)"
-#~ msgstr "Назва машини (необов'язково)"
-
-#~ msgid "Third DNS server (optional)"
-#~ msgstr "Третій сервер DNS (необов'язково)"
-
-#~ msgid "Internet Connection Configuration"
-#~ msgstr "Конфігурація з'єднання з Інтернетом"
-
-#~ msgid "Internet access"
-#~ msgstr "Доступ до Інтернету"
-
-#~ msgid "Status:"
-#~ msgstr "Статус:"
-
-#~ msgid "Parameters"
-#~ msgstr "Параметри"
-
-#, fuzzy
-#~ msgid "Attacker"
-#~ msgstr "Деталі атаки"
-
-#, fuzzy
-#~ msgid "Attack type"
-#~ msgstr "Тип атаки: %s"
-
-#~ msgid "Get Online Help"
-#~ msgstr "Отримати довідку Online"
