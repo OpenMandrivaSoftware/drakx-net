@@ -124,7 +124,7 @@ sub real_main {
                     pre => sub { undef $net->{type} },
                     if_(!$::isInstall, no_back => 1),
                     name => N("Choose the connection you want to configure"),
-                    interactive_help_id => 'configureNetwork',
+                    if_(!$::isInstall, interactive_help_id => 'configureNetwork'),
                     data => [ { list => [ network::connection::get_types ],
                                 type => 'list', val => \$net->{type}, format => sub { $_[0] && $_[0]->get_type_description },
                                 gtk => { use_scrolling => 1 } } ],
@@ -535,7 +535,7 @@ Take a look at http://www.linmodems.org"),
                         $modem->{device} ||= readlink "$::prefix/dev/modem";
                     },
                     name => N("Please choose which serial port your modem is connected to."),
-                    interactive_help_id => 'selectSerialPort',
+                    if_(!$::isInstall, interactive_help_id => 'selectSerialPort'),
                     data => sub {
                         [ { val => \$modem->{device}, format => \&mouse::serial_port2text, type => "list",
                             list => [ grep { $_ ne $mouse->{device} } (mouse::serial_ports(), glob_("/dev/ttyUSB*"), grep { -e $_ } '/dev/modem', '/dev/ttySL0', '/dev/ttyS14',) ] } ];
