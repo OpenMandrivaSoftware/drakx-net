@@ -14,8 +14,8 @@ sub create() {
         } elsif ($member eq 'Listen') {
             handle_ifw_listen($msg->get_args_list);
         } elsif ($member eq 'Init') {
-            $ifw->attach_object;
-            checkNetworkForce();
+            $network::net_applet::ifw->attach_object;
+            main::checkNetworkForce();
         } elsif ($member eq 'AlertAck') {
             $network::net_applet::ifw_alert = 0;
         }
