@@ -34,6 +34,7 @@ use ugtk2 qw(:ask :wrappers :create :dialogs);
 
 my $in = 'interactive'->vnew('su');
 $in->do_pkgs->ensure_is_installed('nfs-utils', '/etc/rc.d/init.d/nfs-server') or exit(1);
+$in->do_pkgs->ensure_is_installed('rpcbind', '/etc/rc.d/init.d/rpcbind') or exit(1);
 
 use constant COLUMN_DIR => 0;
 use constant COLUMN_ACCESS => 1;
@@ -579,7 +580,8 @@ my $okcancel = create_okcancel({
 			      );
 
 my $wait = $in->wait_message(N("Please wait"), N("Starting the NFS-server"));
-services::_run_action('nfs-server', services::is_service_running('nfs-server') ? "start" : "status"); 
+services::_run_action('rpcbind', "start"); 
+services::_run_action('nfs-server', "start"); 
 undef $wait;
 
 # main interface
