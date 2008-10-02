@@ -389,6 +389,7 @@ sub guess_network_access_settings {
       $self->{ifcfg};
     $ifcfg ||= {};
 
+    $self->{access}{network}{bssid} = $network && $network->{hidden} && $network->{ap};
     $self->{access}{network}{essid} = $network && $network->{essid} || $ifcfg->{WIRELESS_ESSID} || !$network && "any";
     ($self->{access}{network}{key}, my $restricted, $self->{access}{network}{force_ascii_key}) =
       get_wep_key_from_iwconfig($ifcfg->{WIRELESS_ENC_KEY});
@@ -659,7 +660,7 @@ sub add_nework_to_wpa_supplicant {
     if ($self->{access}{network}{encryption} eq 'wpa-eap') {
         wpa_supplicant_add_eap_network($self->{access}{network});
     } else {
-        wpa_supplicant_add_network($self->{access}{network}{essid}, $self->{access}{network}{encryption}, $self->{access}{network}{key}, $self->{access}{network}{force_ascii_key}, $self->{access}{network}{mode});
+        wpa_supplicant_add_network($self->{access}{network}{essid}, $self->{access}{network}{bssid}, $self->{access}{network}{encryption}, $self->{access}{network}{key}, $self->{access}{network}{force_ascii_key}, $self->{access}{network}{mode});
     }
 }
 
@@ -858,11 +859,12 @@ sub wpa_supplicant_get_driver {
 }
 
 sub wpa_supplicant_add_network {
-    my ($essid, $enc_mode, $key, $force_ascii, $mode) = @_;
+    my ($essid, $bssid, $enc_mode, $key, $force_ascii, $mode) = @_;
     my $conf = wpa_supplicant_read_conf();
     my $network = {
         ssid => qq("$essid"),
         scan_ssid => 1,
+        if_($bssid, bssid => $bssid),
     };
 
     if ($enc_mode eq 'wpa-psk') {
