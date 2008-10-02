@@ -702,9 +702,12 @@ sub connect {
     $self->SUPER::connect;
 
     if ($self->{control}{roaming}) {
-        refresh_roaming_ids($self);
-        my $network = $self->get_selected_network;
-        my $network_id = $network->{id} if $network && defined $network->{id};
+        my $network_id;
+        foreach (0 .. 1) {
+            refresh_roaming_ids($self) if $_;
+            my $network = $self->get_selected_network;
+            $network_id = $network->{id} if $network && defined $network->{id};
+        }
         if (defined $network_id) {
             if ($net->{monitor}) {
                 eval { $net->{monitor}->select_network($network_id) };
