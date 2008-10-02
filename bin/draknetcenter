@@ -11,6 +11,7 @@ BEGIN { unshift @::textdomains, 'drakx-net' }
 
 use standalone;
 use network::network;
+use network::monitor;
 use network::netcenter;
 use dbus_object;
 
@@ -19,5 +20,6 @@ my $net = {};
 network::network::read_net_conf($net);
 my $dbus;
 eval { $dbus = dbus_object::system_bus() };
+eval { $net->{monitor} = network::monitor->new($dbus) } if $dbus;
 
 network::netcenter::main($in, $net, $dbus);

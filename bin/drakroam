@@ -14,6 +14,7 @@ BEGIN { unshift @::textdomains, 'drakx-net' }
 use standalone;
 use common;
 use network::drakroam;
+use network::monitor;
 
 my %args = map { if_(/^--(\w+)=(.*)$/ && member($1, qw(ap interface)), $1 => $2) } @ARGV;
 
@@ -22,5 +23,6 @@ my $net = {};
 network::network::read_net_conf($net);
 my $dbus;
 eval { $dbus = dbus_object::system_bus() };
+eval { $net->{monitor} = network::monitor->new($dbus) } if $dbus;
 
 network::drakroam::main($in, $net, $dbus, $args{interface}, $args{ap});

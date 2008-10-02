@@ -173,9 +173,8 @@ my %actions = (
 
 $icon = Gtk2::StatusIcon->new;
 
-my ($monitor);
 eval { $dbus = dbus_object::system_bus() } if !defined($global_settings{NET_APPLET_DBUS}) || text2bool($global_settings{NET_APPLET_DBUS});
-eval { $monitor = network::monitor->new($dbus) } if $dbus;
+eval { $net->{monitor} = network::monitor->new($dbus) } if $dbus;
 eval {
     require network::net_applet::ifw;
     network::net_applet::ifw::create();
@@ -256,8 +255,8 @@ sub generate_wireless_menuitem {
                                             0, $menuitem->{security} = Gtk2::Image->new,
                                 ));
     $menuitem->{activate} = $menuitem->{widget}->signal_connect('activate' => sub {
-        if ($monitor && exists $wnet->{id}) {
-            eval { $monitor->select_network($wnet->{id}) };
+        if ($net->{monitor} && exists $wnet->{id}) {
+            eval { $net->{monitor}->select_network($wnet->{id}) };
             $@ and err_dialog(N("Interactive Firewall"), N("Unable to contact daemon"));
         } else {
             run_drakroam($wnet->{ap});
@@ -280,7 +279,7 @@ sub update_wireless_item {
 }
 sub checkWireless() {
     $wireless_device or return;
-    my ($networks) =  network::monitor::list_wireless($monitor);
+    my ($networks) =  network::monitor::list_wireless($net->{monitor});
     my $force_applet_update;
     foreach (keys %$networks) {
         exists $wireless_networks{$_} or $force_applet_update = 1;
