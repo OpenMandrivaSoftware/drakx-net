@@ -148,8 +148,6 @@ sub main {
     );
 
     if ($dbus) {
-        my $monitor;
-        eval { $monitor = network::monitor->new($dbus) };
         $dbus->{connection}->add_filter(sub {
             my ($_con, $msg) = @_;
             if ($msg->get_member eq 'status') {
