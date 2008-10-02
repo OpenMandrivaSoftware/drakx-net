@@ -714,8 +714,12 @@ sub connect {
         refresh_roaming_ids($self);
         my $network = $self->get_selected_network;
         if ($network && defined $network->{id}) {
-            eval { $net->{monitor}->select_network($network->{id}) };
-            return !$@;
+            if ($net->{monitor}) {
+                eval { $net->{monitor}->select_network($network->{id}) };
+                return !$@;
+            } else {
+                run_program::run('/usr/sbin/wpa_cli', 'select_network', $network->{id});
+            }
         }
     }
 }
