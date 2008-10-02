@@ -361,10 +361,9 @@ sub get_networks {
 sub refresh_roaming_ids {
     my ($self) = @_;
     #- needed when switching from non-roaming to roaming
-    #- to get wpa_supplicant network IDs
-    get_networks($self) if
-        $self->{control}{roaming} &&
-        !any { defined $_->{id} } values %{$self->{networks}};
+    #- or after restarting wpa_supplicant
+    #- to get fresh wpa_supplicant network IDs
+    get_networks($self) if $self->{control}{roaming};
 }
 
 sub guess_network {
