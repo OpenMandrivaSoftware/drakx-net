@@ -111,6 +111,7 @@ sub list_wireless {
     }
 
     foreach (values %networks) {
+        $_->{hidden} = member($_->{essid}, '', '<hidden>');
         $_->{essid} eq '<hidden>' and undef $_->{essid};
         $_->{name} = $_->{essid} || "[$_->{ap}]";
     }
