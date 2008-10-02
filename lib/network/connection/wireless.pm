@@ -863,7 +863,7 @@ sub wpa_supplicant_add_network {
     my $conf = wpa_supplicant_read_conf();
     my $network = {
         ssid => qq("$essid"),
-        scan_ssid => 1,
+        scan_ssid => to_bool($bssid), #- hidden or non-broadcasted SSIDs
         if_($bssid, bssid => $bssid),
     };
 
