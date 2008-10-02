@@ -4,6 +4,7 @@ use base qw(network::connection::ethernet);
 
 use strict;
 use common;
+use log;
 
 #- class attributes:
 #-   network: ID of the selected network
