@@ -696,15 +696,6 @@ sub network_is_configured {
     }
 }
 
-sub prepare_connection {
-    my ($self) = @_;
-    if ($self->{control}{roaming}) {
-        #- this should be handled by the monitoring daemon instead
-        run_program::run('/usr/sbin/wpa_cli', 'reconfigure');
-        sleep 2;
-    }
-}
-
 sub connect {
     my ($self, $_in, $net) = @_;
 
