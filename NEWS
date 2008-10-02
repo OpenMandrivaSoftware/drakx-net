@@ -1,3 +1,19 @@
+0.52:
+- wireless backend:
+  o correctly initialize monitor object in
+    draknetcenter/drakroam/net_applet so that it can be reused later
+    (and thus pre-select correct network in wpa_supplicant)
+  o run wpa_cli select_network as fallback when network monitor (mandi)
+    is not available
+  o refresh wpa_supplicant network ids after wpa_supplicant is restarted too
+  o keep track of hidden networks
+  o write bssid in wpa_supplicant.conf for hidden networks
+    (helps getting network ids of hidden networks)
+  o set scan_ssid to 1 only for hidden or non-broadcasted SSIDs
+    (based on an idea from Pascal Terjan)
+  o set higher priority (1) for encrypted wpa_supplicant networks
+    (based on an idea from Patrick Sinz)
+
 0.51:
 - net_applet: fix crash on mandi restart (#42557)
 - draknfs: start rpcbind service (from aginies, #44335)
