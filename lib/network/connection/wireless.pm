@@ -710,6 +710,7 @@ sub connect {
         }
         if (defined $network_id) {
             if ($net->{monitor}) {
+                log::explanations("selecting wpa_supplicant network $network_id through network monitor");
                 eval { $net->{monitor}->select_network($network_id) };
                 return !$@;
             } else {
