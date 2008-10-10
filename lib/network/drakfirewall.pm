@@ -283,7 +283,9 @@ sub main {
 
     ($disabled, $servers, $unlisted, $log_net_drop) = choose_allowed_services($in, $disabled, $servers, $unlisted, $log_net_drop) or return;
 
-    choose_watched_services($in, $servers, $unlisted) unless $disabled;
+    if (!$disabled) {
+        choose_watched_services($in, $servers, $unlisted) or return;
+    }
 
     my $ports = to_ports($servers, $unlisted);
     set_ports($in->do_pkgs, $disabled, $ports, $log_net_drop, $in) or return;
