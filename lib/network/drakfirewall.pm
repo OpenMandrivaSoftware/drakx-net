@@ -197,7 +197,7 @@ sub choose_allowed_services {
     $in->ask_from_({
 		    title => N("Firewall"),
 		    icon => $network::shorewall::firewall_icon,
-		    banner_title => N("Firewall"),
+		    if_(!$::isEmbedded, banner_title => N("Firewall")),
 		    advanced_messages => N("You can enter miscellaneous ports. 
 Valid examples are: 139/tcp 139/udp 600:610/tcp 600:610/udp.
 Have a look at /etc/services for information."),
