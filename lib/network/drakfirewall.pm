@@ -258,7 +258,7 @@ sub choose_watched_services {
 
     $in->ask_from_({
         icon => $network::shorewall::firewall_icon,
-        banner_title => N("Interactive Firewall"),
+        if_(!$::isEmbedded, banner_title => N("Interactive Firewall")),
         messages =>
           N("You can be warned when someone accesses to a service or tries to intrude into your computer.
 Please select which network activities should be watched."),
