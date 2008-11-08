@@ -1,4 +1,4 @@
-# translation of de.po to deutsch
+# translation of de.po to Deutsch
 # translation of de.po to
 # german translation of the MandrivaInstaller.
 # Copyright (C) 2000-2003 Mandriva S.A.
@@ -18,14 +18,15 @@
 # Nicolas Bauer <rastafarii@mandrivauser.de>, 2007.
 # Dotan Kamber <kamberd@yahoo.com>, 2008.
 # Oliver Burger <oliver@mandrivauser.de>, 2008.
+# Wolfgang Bornath <wolfgang@mandrivauser.de>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-09-18 11:55+0200\n"
-"PO-Revision-Date: 2008-09-22 10:01+0200\n"
-"Last-Translator: Oliver Burger <oliver@mandrivauser.de>\n"
-"Language-Team: deutsch <cooker-i18n@mandrivalinux.org>\n"
+"PO-Revision-Date: 2008-11-08 03:15+0100\n"
+"Last-Translator: Wolfgang Bornath <wolfgang@mandrivauser.de>\n"
+"Language-Team: Deutsch <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -799,7 +800,8 @@ msgstr ""
 #: ../bin/drakinvictus:102
 #, c-format
 msgid "Network redundancy (leave empty if interface is not used)"
-msgstr "Netzwerkredundanz (wenn das Interface nicht verwendet wird, leer lassen)"
+msgstr ""
+"Netzwerkredundanz (wenn das Interface nicht verwendet wird, leer lassen)"
 
 #: ../bin/drakinvictus:105
 #, c-format
@@ -1163,8 +1165,10 @@ msgid ""
 "help improve security in some cases, but can decrease reliability. See "
 "exports(5) man page for more details."
 msgstr ""
-"<span foreground=\"royalblue3\">%s</span> Aktivier die Überprüfung der Unterverzeichnisse. Dies kann in manchen Fällen helfen, die Sicherheit zu verbessern, kann aber die Zuverlässigkeit verringern. Vergleiche auch die"
-"exports(5) Manpage, um mehr Details zu erhalten."
+"<span foreground=\"royalblue3\">%s</span> Aktivier die Überprüfung der "
+"Unterverzeichnisse. Dies kann in manchen Fällen helfen, die Sicherheit zu "
+"verbessern, kann aber die Zuverlässigkeit verringern. Vergleiche auch "
+"dieexports(5) Manpage, um mehr Details zu erhalten."
 
 #: ../bin/draknfs:188 ../bin/draksambashare:624 ../bin/draksambashare:791
 #, c-format
@@ -1276,7 +1280,8 @@ msgstr "Bitte geben Sie ein Verzeichnis zur Freigabe an."
 #: ../bin/draknfs:519
 #, c-format
 msgid "Please use the modify button to set right access."
-msgstr "Bitte verwenden Sie den Ändern-Knopf, um den richtigen Zugriff einzustellen."
+msgstr ""
+"Bitte verwenden Sie den Ändern-Knopf, um den richtigen Zugriff einzustellen."
 
 #: ../bin/draknfs:534
 #, c-format
@@ -1621,7 +1626,8 @@ msgstr "Füge spezielle Druckerfreigabe hinzu"
 
 #: ../bin/draksambashare:448
 #, c-format
-msgid "Goal of this wizard is to easily create a new special printer Samba share."
+msgid ""
+"Goal of this wizard is to easily create a new special printer Samba share."
 msgstr ""
 "Ziel dieses Assistenten ist es, eine neue spezielle Samba-Druckerfreigabe "
 "einfach zu erzeugen."
@@ -1762,7 +1768,8 @@ msgstr "Öffentlich :"
 
 #: ../bin/draksambashare:797
 #, c-format
-msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid ""
+"Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 "Erzeugungsmaske, Erzeugungsmodus und Verzeichnismaske müssen numerisch sein "
 "(z.B. 0755)."
@@ -1837,15 +1844,20 @@ msgstr ""
 
 #: ../bin/draksambashare:1074
 #, c-format
-msgid "Single server installations may use smbpasswd or tdbsam password backends"
-msgstr "Einzelserver-Installationen können smbpasswd oder tdbsam Passwort-Backends nutzen"
+msgid ""
+"Single server installations may use smbpasswd or tdbsam password backends"
+msgstr ""
+"Einzelserver-Installationen können smbpasswd oder tdbsam Passwort-Backends "
+"nutzen"
 
 #: ../bin/draksambashare:1074
 #, c-format
 msgid ""
 "Domain master = yes, causes the server to register the NetBIOS name <pdc "
 "name>. This name will be recognized by other servers."
-msgstr "Domänen-Master = ja, veranlasst den Server, einen NetBIOS Namen <pdc name> einzutragen. Dieser Name wird von anderen Servern erkannt werden."
+msgstr ""
+"Domänen-Master = ja, veranlasst den Server, einen NetBIOS Namen <pdc name> "
+"einzutragen. Dieser Name wird von anderen Servern erkannt werden."
 
 #: ../bin/draksambashare:1091
 #, c-format
@@ -1865,7 +1877,7 @@ msgstr ""
 #: ../bin/draksambashare:1093
 #, c-format
 msgid "Os level:"
-msgstr ""
+msgstr "OS Level:"
 
 #: ../bin/draksambashare:1093
 #, c-format
@@ -1876,6 +1888,10 @@ msgid ""
 "that of the operating system on your network with the highest current value. "
 "ie: os level = 34"
 msgstr ""
+"Der globale OS-Level beeinflusst den OS-Level, den Samba während der "
+"Browserauswahl angibt. Wenn Sie Samba als Master-Browser definieren wollen, "
+"sollten Sie den OS-Level höher ansetzen als den des Betriebssystems mit dem "
+"höchsten Level in Ihrem Netzwerk, also z.B. os level = 34"
 
 #: ../bin/draksambashare:1097
 #, c-format
@@ -1890,7 +1906,9 @@ msgstr "Arbeitsgruppe"
 #: ../bin/draksambashare:1104
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
-msgstr "Samba muss die Windows Arbeitsgruppe kennen, für die es als Server dienen wird."
+msgstr ""
+"Samba muss die Windows Arbeitsgruppe kennen, für die es als Server dienen "
+"wird."
 
 #: ../bin/draksambashare:1111 ../bin/draksambashare:1178
 #, c-format
@@ -1918,6 +1936,8 @@ msgid ""
 "User level: the client sends a session setup request directly following "
 "protocol negotiation. This request provides a username and password."
 msgstr ""
+"User Level: der Client sendet direkt nach der Protokoll-Verständigung eine "
+"Anfrage. Diese Anfrage enthält einen Usernamen und ein Passwort."
 
 #: ../bin/draksambashare:1123
 #, c-format
@@ -1969,7 +1989,9 @@ msgstr "Samba-Log"
 msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
 "connects"
-msgstr "Logdatei: nutze file.%m um eine eigene Logdatei für jede Maschine zu erstellen, die sich verbindet"
+msgstr ""
+"Logdatei: nutze file.%m um eine eigene Logdatei für jede Maschine zu "
+"erstellen, die sich verbindet"
 
 #: ../bin/draksambashare:1155
 #, c-format
@@ -1979,7 +2001,8 @@ msgstr "Logstufe: Setze den Ausführlichkeitsgrad des Logs (0<= Logstufe <=10)"
 #: ../bin/draksambashare:1155
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr "Max. Loggröße: Setze eine ober Schranke für die Größe der Logfiles (in Kb)."
+msgstr ""
+"Max. Loggröße: Setze eine ober Schranke für die Größe der Logfiles (in Kb)."
 
 #: ../bin/draksambashare:1162 ../bin/draksambashare:1180
 #, c-format
@@ -2006,14 +2029,19 @@ msgstr "Der Assistent sammelte die folgenden Parameter, um Samba einzurichten."
 msgid ""
 "To accept these values, and configure your server, click the Next button or "
 "use the Back button to correct them."
-msgstr "Um diese Werte zu akzeptieren und Ihren Server einzurichten, klicken Sie den Weiter-Knopf oder nutzen Sie den Zurück-Knopf, um die Angaben zu korrigieren."
+msgstr ""
+"Um diese Werte zu akzeptieren und Ihren Server einzurichten, klicken Sie den "
+"Weiter-Knopf oder nutzen Sie den Zurück-Knopf, um die Angaben zu korrigieren."
 
 #: ../bin/draksambashare:1169
 #, c-format
 msgid ""
 "If you have previously create some shares, they will appear in this "
 "configuration. Run 'drakwizard sambashare' to manage your shares."
-msgstr "Wenn Sie bereits Freigaben eingerichtet haben, werden sie in dieser Einrichtung erscheinen. Nutzen Sie den 'Sambashare Drakwizard', um Ihre Freigaben zu verwalten."
+msgstr ""
+"Wenn Sie bereits Freigaben eingerichtet haben, werden sie in dieser "
+"Einrichtung erscheinen. Nutzen Sie den 'Sambashare Drakwizard', um Ihre "
+"Freigaben zu verwalten."
 
 #: ../bin/draksambashare:1177
 #, fuzzy, c-format
@@ -2722,7 +2750,8 @@ msgstr "Link auf Interface %s erkannt"
 #: ../lib/network/connection/ethernet.pm:290
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
-msgstr "Fordere eine Netzwerkadresse auf dem Interface %s ( %s Protokoll) an ..."
+msgstr ""
+"Fordere eine Netzwerkadresse auf dem Interface %s ( %s Protokoll) an ..."
 
 #: ../lib/network/connection/ethernet.pm:291
 #, c-format
@@ -3617,7 +3646,9 @@ msgstr ""
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
 "characters."
-msgstr "Der WEP-Schlüssel sollte höchstens %d ASCII- oder %d hexadezimale Zeichen lang sein."
+msgstr ""
+"Der WEP-Schlüssel sollte höchstens %d ASCII- oder %d hexadezimale Zeichen "
+"lang sein."
 
 #: ../lib/network/connection/wireless.pm:575
 #, c-format
@@ -4833,7 +4864,8 @@ msgstr "Zuguterletzt kann die DNS Server IP Adresse eingegeben werden."
 #: ../lib/network/netconnect.pm:807
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
-msgstr "Die IP-Adresse des DNS-Servers sollte etwa die Form „192.168.1.42“ haben!"
+msgstr ""
+"Die IP-Adresse des DNS-Servers sollte etwa die Form „192.168.1.42“ haben!"
 
 #: ../lib/network/netconnect.pm:808
 #, c-format
@@ -4963,8 +4995,10 @@ msgstr "Einige Pakete (%s) werden benötigt, sind jedoch nicht verfügbar."
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
 #, c-format
-msgid "These packages can be found in %s, or in the official %s package repository."
-msgstr "Diese Pakete befinden sich in den Versionen %s oder in der %s Paketquelle."
+msgid ""
+"These packages can be found in %s, or in the official %s package repository."
+msgstr ""
+"Diese Pakete befinden sich in den Versionen %s oder in der %s Paketquelle."
 
 #: ../lib/network/thirdparty.pm:154
 #, c-format
@@ -5179,4 +5213,3 @@ msgstr "NAT Modus"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Verwende speziellen UDP Port"
-
