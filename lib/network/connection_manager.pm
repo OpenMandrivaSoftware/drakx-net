@@ -298,6 +298,12 @@ sub create_networks_list {
 	#FIXME Should define an explicit order OPEN < WEP < WPA
         return $s1 cmp $s2;
     });
+    $cmanager->{gui}{networks_list}->set_enable_search(1);
+    $cmanager->{gui}{networks_list}->set_search_column(1);
+    $cmanager->{gui}{networks_list}->set_search_equal_func(sub {
+                    my ($model, $column, $key, $iter, $data) = @_;
+                        return $model->get($iter, 2) !~ /^\Q$key/i;
+                    });
 }
 
 sub select_network {
