@@ -275,6 +275,29 @@ sub create_networks_list {
         1;
     });
     $cmanager->{gui}{networks_list}->set_has_tooltip(1);
+    $cmanager->{gui}{networks_list}->get_column(1)->set_sort_column_id(1);
+    $cmanager->{gui}{networks_list}->get_model->set_sort_func (1, sub {
+        my ($sortable, $iter_left, $iter_right) = @_;
+        my $s1 = lc $sortable->get($iter_left, 2);
+        my $s2 = lc $sortable->get($iter_right, 2);
+        return $s1 eq $s2?0:($s1 gt $s2?1:-1);
+    });
+    $cmanager->{gui}{networks_list}->get_column(2)->set_sort_column_id(2);
+    $cmanager->{gui}{networks_list}->get_model->set_sort_func (2, sub {
+        my ($sortable, $iter_left, $iter_right) = @_;
+        my $s1 = $cmanager->{connection}{networks}{$sortable->get($iter_left, 0)}->{signal_strength};
+        my $s2 = $cmanager->{connection}{networks}{$sortable->get($iter_right, 0)}->{signal_strength};
+        return $s2 <=> $s1;
+    });
+    $cmanager->{gui}{networks_list}->get_column(3)->set_sort_column_id(3);
+    $cmanager->{gui}{networks_list}->get_model->set_sort_func (3, sub {
+        my ($sortable, $iter_left, $iter_right) = @_;
+        my $s1 = $cmanager->{connection}{networks}{$sortable->get($iter_left, 0)}->{flags};
+        my $s2 = $cmanager->{connection}{networks}{$sortable->get($iter_right, 0)}->{flags};
+	#FIXME Should define an explicit order OPEN < WEP < WPA
+        return $s1 eq $s2?0:($s1 lt $s2?1:-1);
+    });
+
 }
 
 sub select_network {
