@@ -298,7 +298,6 @@ sub create_networks_list {
 	#FIXME Should define an explicit order OPEN < WEP < WPA
         return $s1 cmp $s2;
     });
-
 }
 
 sub select_network {
