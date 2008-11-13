@@ -713,7 +713,7 @@ sub connect {
     if ($self->{control}{roaming}) {
         my $network_id;
         foreach (0 .. 1) {
-            refresh_roaming_ids($self) if $_;
+            $self->refresh_roaming_ids if $_;
             my $network = $self->get_selected_network;
             $network_id = $network->{id} if $network && defined $network->{id};
         }
