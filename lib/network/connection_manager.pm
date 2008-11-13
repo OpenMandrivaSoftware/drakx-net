@@ -14,6 +14,7 @@ use network::network;
 use network::tools;
 use network::connection;
 use modules;
+use locale; # for cmp
 
 sub create_pixbufs() {
     {
@@ -278,9 +279,9 @@ sub create_networks_list {
     $cmanager->{gui}{networks_list}->get_column(1)->set_sort_column_id(1);
     $cmanager->{gui}{networks_list}->get_model->set_sort_func (1, sub {
         my ($sortable, $iter_left, $iter_right) = @_;
-        my $s1 = lc $sortable->get($iter_left, 2);
-        my $s2 = lc $sortable->get($iter_right, 2);
-        return $s1 eq $s2?0:($s1 gt $s2?1:-1);
+        my $s1 = $sortable->get($iter_left, 2);
+        my $s2 = $sortable->get($iter_right, 2);
+        return $s1 cmp $s2;
     });
     $cmanager->{gui}{networks_list}->get_column(2)->set_sort_column_id(2);
     $cmanager->{gui}{networks_list}->get_model->set_sort_func (2, sub {
@@ -295,7 +296,7 @@ sub create_networks_list {
         my $s1 = $cmanager->{connection}{networks}{$sortable->get($iter_left, 0)}->{flags};
         my $s2 = $cmanager->{connection}{networks}{$sortable->get($iter_right, 0)}->{flags};
 	#FIXME Should define an explicit order OPEN < WEP < WPA
-        return $s1 eq $s2?0:($s1 lt $s2?1:-1);
+        return $s1 cmp $s2;
     });
 
 }
