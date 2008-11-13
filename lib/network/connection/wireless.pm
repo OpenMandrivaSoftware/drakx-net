@@ -655,7 +655,7 @@ set TxRate=0)),
     $self->SUPER::build_ifcfg_settings($settings);
 }
 
-sub add_nework_to_wpa_supplicant {
+sub add_network_to_wpa_supplicant {
     my ($self) = @_;
     if ($self->{access}{network}{encryption} eq 'wpa-eap') {
         wpa_supplicant_add_eap_network($self->{access}{network});
@@ -671,7 +671,7 @@ sub write_settings {
     network::network::write_wireless_conf($_, $self->build_ifcfg_settings) foreach
         grep { $_ } ($network ? $network->{ap} : ()), $self->{access}{network}{essid};
 
-    $self->add_nework_to_wpa_supplicant if $self->need_wpa_supplicant;
+    $self->add_network_to_wpa_supplicant if $self->need_wpa_supplicant;
 
     wlan_ng_configure($self->{access}{network}{essid}, $self->{access}{network}{key}, $self->get_interface, $self->get_driver) if $self->{thirdparty}{name} eq 'prism2';
 
@@ -684,7 +684,7 @@ sub apply_network_selection {
     my $file = network::network::get_ifcfg_file($self->get_interface);
     network::network::write_interface_settings($self->build_ifcfg_settings, $file);
 
-    $self->add_nework_to_wpa_supplicant if $self->need_wpa_supplicant;
+    $self->add_network_to_wpa_supplicant if $self->need_wpa_supplicant;
 }
 
 sub network_is_configured {
