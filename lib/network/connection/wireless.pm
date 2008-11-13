@@ -367,6 +367,12 @@ sub refresh_roaming_ids {
     get_networks($self) if $self->{control}{roaming};
 }
 
+sub selected_network_is_configured {
+    my ($self) = @_;
+    $self->refresh_roaming_ids;
+    $self->SUPER::selected_network_is_configured;
+}
+
 sub guess_network {
     my ($_self) = @_;
     #- FIXME: try to find the AP matching $self->{ifcfg}{WIRELESS_ESSID};
