@@ -1,6 +1,18 @@
+0.53:
 - drakfirewall:
   o do not display any banner when embedded (#44732)
   o honnor canceling interactive firewall
+- wireless backend:
+  o run wpa_cli reconfigure after writing network settings in wpa
+    config file
+  o reload networks list from wpa_supplicant before checking if a
+    network  is configured (fixes showing configure window again when
+    clicking Connect right after Configure)
+- connection frontends:
+  o allow to sort networks list (from Pascal Terjan, #40177)
+  o allow to search in networks list (from Pascal Terjan)
+- netcenter:
+  o use network connection type as primary interface label
 
 0.52:
 - wireless backend:
