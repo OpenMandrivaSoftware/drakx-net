@@ -20,6 +20,7 @@ SBIN_TOOLS=drakconnect drakfirewall drakgw drakhosts drakids drakinvictus drakne
 all:
 	(find lib -name '*.pm'; find bin -type f) | xargs perl -pi -e 's/\s*use\s+(diagnostics|vars|strict).*//g'
 	make -C po
+	make -C data
 
 check:
 	@for p in `find lib -name *.pm`; do perl -cw -I$(libdir)/libDrakX $$p || exit 1; done
