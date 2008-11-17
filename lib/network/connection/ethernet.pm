@@ -9,6 +9,7 @@ use network::tools;
 our @dhcp_clients = qw(dhclient dhcpcd pump dhcpxd);
 
 sub get_type_name() { N("Ethernet") }
+sub get_type_description() { N("Wired (Ethernet)") }
 sub _get_type_icon() { 'ethernet' }
 
 sub get_devices() {
