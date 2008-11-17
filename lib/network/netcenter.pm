@@ -166,6 +166,7 @@ sub main {
             my ($_con, $msg) = @_;
             if ($msg->get_member eq 'status') {
                 my ($_status, $interface) = $msg->get_args_list;
+                print "got connection status event: $status $interface\n";
                 my $cmanager = find { $_->{connection}->get_interface eq $interface } @cmanagers
                   or return;
                 #- FIXME: factorize in update_on_status_change() and check why update_networks() calls update_on_status_change()
