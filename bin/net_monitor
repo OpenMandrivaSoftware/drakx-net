@@ -96,7 +96,7 @@ gtkadd($window1->{window},
                                         0, gtknew('Frame', text => N("Settings"), shadow_type => 'etched_out', child => 
                                                   gtknew('HBox', border_width => 5, children_tight => [
                                                             N("Connection type: "), 
-                                                            my $label_cnx_type = gtknew('Label', text => "")]),
+                                                            my $label_cnx_type = gtknew('Label', text => "") ]),
                                                  ),
                                         1, gtknew('Frame', text => N("Global statistics"), shadow_type => 'etched_out', child => 
                                                   gtknew('VBox', border_width => 5, children_tight => [
@@ -393,18 +393,18 @@ sub update() {
 	    $darea->{$intf}->set_events(["pointer_motion_mask"]);
 	    $notebook->append_page(gtkshow(my $page = gtknew('VBox', children => [
 					       0, gtknew('HBox', border_width => 5, children_tight => [
-							    gtksize($darea->{$intf}, $width, $height)]),
+							    gtksize($darea->{$intf}, $width, $height) ]),
 					       0, gtknew('HBox', children => [
 							    1, gtknew('VBox', children_tight => [
 								      gtknew('HBox', spacing => 5, border_width => 5, children_tight => [
 										   color_button($gct, $colort),
-										   N("sent: "), $monitor->{$intf}{labelt} = gtknew('Label', text => "0")]),
+										   N("sent: "), $monitor->{$intf}{labelt} = gtknew('Label', text => "0") ]),
 								      gtknew('HBox', spacing => 5, border_width => 5, children_tight => [
 										   color_button($gcr, $colorr),
-										   N("received: "), $monitor->{$intf}{labelr} = gtknew('Label', text => "0")]),
+										   N("received: "), $monitor->{$intf}{labelr} = gtknew('Label', text => "0") ]),
 								      gtknew('HBox', spacing => 5, border_width => 5, children_tight => [
 										   color_button($gca, $colora),
-										   N("average")])
+										   N("average") ])
 								     ]),
 							    0, gtknew('VBox', border_width => 5, children_tight => [
 							      gtknew('Frame', text => N("Local measure"), shadow_type => 'etched_out', child => 
