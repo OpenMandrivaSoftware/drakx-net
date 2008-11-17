@@ -133,6 +133,7 @@ sub main {
                        $expander->set_expanded(!$was_expanded);
                    });
                    my $box = gtknew('VBox', spacing => 5, children_tight => [
+                       ($::i > 0 ? Gtk2::HSeparator->new : ()),
                        gtknew('HBox', children => [
                            0, $expander,
                            1, gtkadd($eventbox, $head),
@@ -143,7 +144,7 @@ sub main {
 
                    $cmanager->update_on_status_change;
 
-                   ($::i > 0 ? Gtk2::HSeparator->new : ()), $box;
+                   $box;
                } @connections,
            ])),
            0, gtknew('HButtonBox', spacing => 6, layout => 'end', children_loose => [
