@@ -103,11 +103,16 @@ Run the \"%s\" assistant from the Mandriva Linux Control Center", N("Set up a ne
     );
 }
 
-sub get_interface_name {
+sub get_interface_type {
     my ($interface) = @_;
     my $ifcfg = $net->{ifcfg}{$interface};
     require network::connection;
-    my $type = $ifcfg && network::connection->find_ifcfg_type($ifcfg);
+    $ifcfg && network::connection->find_ifcfg_type($ifcfg);
+}
+
+sub get_interface_name {
+    my ($interface) = @_;
+    my $type = get_interface_type($interface);
     my $type_name = $type && $type->get_type_name;
     $type_name ? "$type_name ($interface)" : $interface;
 }
