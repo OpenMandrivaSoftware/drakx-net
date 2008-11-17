@@ -10,6 +10,7 @@ use log;
 #-   network: ID of the selected network
 
 sub get_type_name() { N("Wireless") }
+sub get_type_description() { N("Wireless (Wi-Fi)") }
 sub _get_type_icon() { 'wireless' }
 sub get_devices {
     my ($_class, %options) = @_;
