@@ -165,10 +165,29 @@ sub main {
         $dbus->{connection}->add_filter(sub {
             my ($_con, $msg) = @_;
             if ($msg->get_member eq 'status') {
-                my ($_status, $interface) = $msg->get_args_list;
+                my ($status, $interface) = $msg->get_args_list;
                 print "got connection status event: $status $interface\n";
-                my $cmanager = find { $_->{connection}->get_interface eq $interface } @cmanagers
-                  or return;
+                my $cmanager = find { $_->{connection}->get_interface eq $interface } @cmanagers;
+                if ($status eq "add") {
+                    if (!$cmanager) {
+                        detect_devices::probeall_update_cache();
+                        my $connection = find { $_->get_interface eq $interface } get_connections()
+                          or return;
+                        $cmanager = build_cmanager($in, $net, $w, $pixbufs, $connection);
+                        push @connections, $connection;
+                        push @cmanagers, $cmanager;
+                        my $box = build_cmanager_box($cmanager, @connections == 0);
+                        $managers_box ->add($box);
+                        $box->show_all;
+                    }
+                    $cmanager->{parent_box}->show;
+                    return;
+                }
+                $cmanager or return;
+                if ($status eq "remove") {
+                    $cmanager->{parent_box}->hide;
+                    return;
+                }
                 #- FIXME: factorize in update_on_status_change() and check why update_networks() calls update_on_status_change()
                 if ($cmanager->{connection}->can('get_networks') && !$cmanager->{connection}->network_scan_is_slow) {
                     $cmanager->update_networks;
