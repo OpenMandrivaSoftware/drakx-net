@@ -18,7 +18,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
-"POT-Creation-Date: 2008-09-18 11:55+0200\n"
+"POT-Creation-Date: 2008-11-17 22:05+0100\n"
 "PO-Revision-Date: 2007-12-15 15:07+0100\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: dansk <dansk@dansk-gruppen.dk>\n"
@@ -39,7 +39,7 @@ msgid "Interface"
 msgstr "Grensesnitt"
 
 #: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:196
-#: ../lib/network/connection/ethernet.pm:133 ../lib/network/netconnect.pm:614
+#: ../lib/network/connection/ethernet.pm:134 ../lib/network/netconnect.pm:614
 #: ../lib/network/vpn/openvpn.pm:221
 #, c-format
 msgid "IP address"
@@ -81,7 +81,8 @@ msgstr "Nettverksoppsett"
 msgid "Configure Local Area Network..."
 msgstr "Sett opp lokalt nettverk ..."
 
-#: ../bin/drakconnect-old:106 ../bin/draknfs:189 ../bin/net_applet:170
+#: ../bin/drakconnect-old:106 ../bin/draknfs:189 ../bin/net_applet:186
+#: ../bin/net_applet.orig:170
 #, c-format
 msgid "Help"
 msgstr "Hjelp"
@@ -103,13 +104,13 @@ msgstr "Avbryt"
 msgid "Ok"
 msgstr "Ok"
 
-#: ../bin/drakconnect-old:113 ../bin/drakgw:345 ../bin/draknfs:570
-#: ../bin/draksambashare:229 ../lib/network/connection_manager.pm:72
-#: ../lib/network/connection_manager.pm:87
-#: ../lib/network/connection_manager.pm:201
-#: ../lib/network/connection_manager.pm:218
-#: ../lib/network/connection_manager.pm:306 ../lib/network/drakvpn.pm:49
-#: ../lib/network/netcenter.pm:34 ../lib/network/netconnect.pm:185
+#: ../bin/drakconnect-old:113 ../bin/drakgw:345 ../bin/draknfs:582
+#: ../bin/draksambashare:229 ../lib/network/connection_manager.pm:73
+#: ../lib/network/connection_manager.pm:88
+#: ../lib/network/connection_manager.pm:202
+#: ../lib/network/connection_manager.pm:219
+#: ../lib/network/connection_manager.pm:335 ../lib/network/drakvpn.pm:49
+#: ../lib/network/netcenter.pm:133 ../lib/network/netconnect.pm:185
 #: ../lib/network/netconnect.pm:207 ../lib/network/netconnect.pm:304
 #: ../lib/network/netconnect.pm:714 ../lib/network/thirdparty.pm:354
 #: ../lib/network/thirdparty.pm:369
@@ -152,7 +153,7 @@ msgid "Adapter %s: %s"
 msgstr "Adapter %s: %s"
 
 #: ../bin/drakconnect-old:209 ../bin/drakgw:177
-#: ../lib/network/connection/ethernet.pm:140
+#: ../lib/network/connection/ethernet.pm:141
 #, c-format
 msgid "Netmask"
 msgstr "Nettmaske"
@@ -167,7 +168,7 @@ msgstr "Oppstartsprotokoll"
 msgid "Started on boot"
 msgstr "Startet ved oppstart"
 
-#: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:151
+#: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:152
 #, c-format
 msgid "DHCP client"
 msgstr "DHCP-klient"
@@ -181,7 +182,7 @@ msgstr ""
 "Dette grensesnittet har ikke blitt satt opp ennå.\n"
 "Kjør «Legg til et grensesnitt»-assistenten fra Mandriva Linux Kontrollsenter"
 
-#: ../bin/drakconnect-old:247 ../bin/net_applet:102
+#: ../bin/drakconnect-old:247 ../bin/net_applet:102 ../bin/net_applet.orig:102
 #, c-format
 msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
 msgstr "Sett opp et nytt nettverksgrensesnitt (LAN, ISDN, ADSL, ...)"
@@ -329,9 +330,9 @@ msgstr "Det internasjonale domenenavnet"
 #: ../bin/drakgw:184 ../bin/drakhosts:100 ../bin/drakhosts:245
 #: ../bin/drakhosts:252 ../bin/drakhosts:259 ../bin/drakinvictus:72
 #: ../bin/draknetprofile:140 ../bin/draknfs:91 ../bin/draknfs:112
-#: ../bin/draknfs:282 ../bin/draknfs:415 ../bin/draknfs:417 ../bin/draknfs:420
-#: ../bin/draknfs:512 ../bin/draknfs:519 ../bin/draknfs:586 ../bin/draknfs:593
-#: ../bin/draknfs:600 ../bin/draksambashare:393 ../bin/draksambashare:400
+#: ../bin/draknfs:280 ../bin/draknfs:427 ../bin/draknfs:429 ../bin/draknfs:432
+#: ../bin/draknfs:524 ../bin/draknfs:531 ../bin/draknfs:599 ../bin/draknfs:606
+#: ../bin/draknfs:613 ../bin/draksambashare:393 ../bin/draksambashare:400
 #: ../bin/draksambashare:403 ../bin/draksambashare:455
 #: ../bin/draksambashare:479 ../bin/draksambashare:552
 #: ../bin/draksambashare:630 ../bin/draksambashare:697
@@ -343,12 +344,12 @@ msgstr "Det internasjonale domenenavnet"
 #: ../bin/draksambashare:1396 ../bin/draksambashare:1415
 #: ../bin/draksambashare:1424 ../bin/draksambashare:1436
 #: ../lib/network/connection/xdsl.pm:332
-#: ../lib/network/connection_manager.pm:60
-#: ../lib/network/connection_manager.pm:66
-#: ../lib/network/connection_manager.pm:82
-#: ../lib/network/connection_manager.pm:90
-#: ../lib/network/connection_manager.pm:172
-#: ../lib/network/connection_manager.pm:176 ../lib/network/drakvpn.pm:45
+#: ../lib/network/connection_manager.pm:61
+#: ../lib/network/connection_manager.pm:67
+#: ../lib/network/connection_manager.pm:83
+#: ../lib/network/connection_manager.pm:91
+#: ../lib/network/connection_manager.pm:173
+#: ../lib/network/connection_manager.pm:177 ../lib/network/drakvpn.pm:45
 #: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
 #: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:134
@@ -567,7 +568,7 @@ msgstr "Tast inn en gyldig IP-adresse."
 msgid "Same IP is already in %s file."
 msgstr "Samme IP eksisterer allerede i «%s»-fila."
 
-#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:211
+#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:212
 #, c-format
 msgid "Host name"
 msgstr "Vertsnavn"
@@ -582,12 +583,12 @@ msgstr "Vertsaliaser"
 msgid "Manage hosts definitions"
 msgstr "Håndter hosts-definisjoner"
 
-#: ../bin/drakhosts:222 ../bin/drakhosts:249
+#: ../bin/drakhosts:222 ../bin/drakhosts:249 ../bin/draknfs:367
 #, c-format
 msgid "Modify entry"
 msgstr "Endre oppføring"
 
-#: ../bin/drakhosts:241 ../bin/draknfs:582 ../bin/draksambashare:1349
+#: ../bin/drakhosts:241 ../bin/draknfs:595 ../bin/draksambashare:1349
 #: ../bin/draksambashare:1380 ../bin/draksambashare:1411
 #, c-format
 msgid "Add"
@@ -603,7 +604,7 @@ msgstr "Legg til oppføring"
 msgid "Failed to add host."
 msgstr "Klarte ikke å legge til vert."
 
-#: ../bin/drakhosts:248 ../bin/draknfs:589 ../bin/draksambashare:1306
+#: ../bin/drakhosts:248 ../bin/draknfs:602 ../bin/draksambashare:1306
 #: ../bin/draksambashare:1351 ../bin/draksambashare:1382
 #: ../bin/draksambashare:1419
 #, c-format
@@ -616,7 +617,7 @@ msgid "Failed to Modify host."
 msgstr "Klarte ikke å endre vert."
 
 #: ../bin/drakhosts:255 ../bin/drakids:92 ../bin/drakids:101
-#: ../bin/draknfs:596 ../bin/draksambashare:1307 ../bin/draksambashare:1359
+#: ../bin/draknfs:609 ../bin/draksambashare:1307 ../bin/draksambashare:1359
 #: ../bin/draksambashare:1390 ../bin/draksambashare:1427
 #, c-format
 msgid "Remove"
@@ -628,8 +629,8 @@ msgid "Failed to remove host."
 msgstr "Klarte ikke å fjerne vert."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:174
-#: ../bin/net_applet:171 ../lib/network/drakroam.pm:118
-#: ../lib/network/netcenter.pm:145
+#: ../bin/net_applet:187 ../bin/net_applet.orig:171
+#: ../lib/network/drakroam.pm:118 ../lib/network/netcenter.pm:159
 #, c-format
 msgid "Quit"
 msgstr "Avslutt"
@@ -641,15 +642,16 @@ msgstr "Tillatte adresser"
 
 #: ../bin/drakids:40 ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196
 #: ../bin/drakids:221 ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
-#: ../bin/net_applet:110 ../bin/net_applet:261
-#: ../lib/network/drakfirewall.pm:261 ../lib/network/drakfirewall.pm:265
+#: ../bin/net_applet:130 ../bin/net_applet:276 ../bin/net_applet.orig:110
+#: ../bin/net_applet.orig:260 ../lib/network/drakfirewall.pm:261
+#: ../lib/network/drakfirewall.pm:265
 #, c-format
 msgid "Interactive Firewall"
 msgstr "Interaktiv brannmur"
 
 #: ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196 ../bin/drakids:221
 #: ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
-#: ../bin/net_applet:261
+#: ../bin/net_applet:276 ../bin/net_applet.orig:260
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "Klarte ikke å kontakte tjeneste"
@@ -1164,134 +1166,129 @@ msgstr "Informasjon"
 msgid "Directory"
 msgstr "Katalog"
 
-#: ../bin/draknfs:273
-#, c-format
-msgid "Draknfs entry"
-msgstr "Draknfs-oppføring"
-
-#: ../bin/draknfs:282
+#: ../bin/draknfs:280
 #, c-format
 msgid "Please add an NFS share to be able to modify it."
 msgstr "Vennligst legg til en delt NFS-ressurs for å kunne endre på den."
 
-#: ../bin/draknfs:356 ../bin/draksambashare:599
-#, c-format
-msgid "Advanced options"
+#: ../bin/draknfs:354
+#, fuzzy, c-format
+msgid "Advanced"
 msgstr "Avanserte valg"
 
-#: ../bin/draknfs:371
+#: ../bin/draknfs:377
 #, c-format
 msgid "NFS directory"
 msgstr "NFS-katalog"
 
-#: ../bin/draknfs:372 ../bin/draksambashare:382 ../bin/draksambashare:589
+#: ../bin/draknfs:378 ../bin/draksambashare:382 ../bin/draksambashare:589
 #: ../bin/draksambashare:768
 #, c-format
 msgid "Directory:"
 msgstr "Katalog:"
 
-#: ../bin/draknfs:373
+#: ../bin/draknfs:379
 #, c-format
 msgid "Host access"
 msgstr "Verttilgang"
 
-#: ../bin/draknfs:374
+#: ../bin/draknfs:380
 #, c-format
 msgid "Access:"
 msgstr "Tilgang:"
 
-#: ../bin/draknfs:375
+#: ../bin/draknfs:381
 #, c-format
 msgid "User ID Mapping"
 msgstr "Tilordning av Bruker-ID"
 
-#: ../bin/draknfs:376
+#: ../bin/draknfs:382
 #, c-format
 msgid "User ID:"
 msgstr "Bruker-ID:"
 
-#: ../bin/draknfs:377
+#: ../bin/draknfs:383
 #, c-format
 msgid "Anonymous user ID:"
 msgstr "Anonym bruker-ID"
 
-#: ../bin/draknfs:378
+#: ../bin/draknfs:384
 #, c-format
 msgid "Anonymous Group ID:"
 msgstr "Anonym gruppe-ID"
 
-#: ../bin/draknfs:415
+#: ../bin/draknfs:427
 #, c-format
 msgid "Please specify a directory to share."
 msgstr "Spesifisér en katalog som skal deles."
 
-#: ../bin/draknfs:417
+#: ../bin/draknfs:429
 #, c-format
 msgid "Can't create this directory."
 msgstr "Kan ikke opprette denne katalogen."
 
-#: ../bin/draknfs:420
+#: ../bin/draknfs:432
 #, c-format
 msgid "You must specify hosts access."
 msgstr "Du må spesifisere verter som skal ha tilgang."
 
-#: ../bin/draknfs:500
+#: ../bin/draknfs:512
 #, c-format
 msgid "Share Directory"
 msgstr "Del katalog"
 
-#: ../bin/draknfs:500
+#: ../bin/draknfs:512
 #, c-format
 msgid "Hosts Wildcard"
 msgstr "Vert-asterisk"
 
-#: ../bin/draknfs:500
+#: ../bin/draknfs:512
 #, c-format
 msgid "General Options"
 msgstr "Generelle valg"
 
-#: ../bin/draknfs:500
+#: ../bin/draknfs:512
 #, c-format
 msgid "Custom Options"
 msgstr "Egendefinerte valg"
 
-#: ../bin/draknfs:512 ../bin/draksambashare:397 ../bin/draksambashare:626
+#: ../bin/draknfs:524 ../bin/draksambashare:397 ../bin/draksambashare:626
 #: ../bin/draksambashare:793
 #, c-format
 msgid "Please enter a directory to share."
 msgstr "Tast inn en katalog som skal deles."
 
-#: ../bin/draknfs:519
+#: ../bin/draknfs:531
 #, c-format
 msgid "Please use the modify button to set right access."
 msgstr "Bruk endre-knappen for å sette riktige rettigheter"
 
-#: ../bin/draknfs:534
+#: ../bin/draknfs:546
 #, c-format
 msgid "Manage NFS shares"
 msgstr "Håndter delte NFS-områder"
 
-#: ../bin/draknfs:570
+#: ../bin/draknfs:582
 #, fuzzy, c-format
 msgid "Starting the NFS-server"
 msgstr "Starter NFS-tjener på nytt ..."
 
-#: ../bin/draknfs:577
+#: ../bin/draknfs:590
 #, c-format
 msgid "DrakNFS manage NFS shares"
 msgstr "DrakNFS håndterer delte NFS-ressurser"
 
-#: ../bin/draknfs:586
+#: ../bin/draknfs:599
 #, c-format
 msgid "Failed to add NFS share."
 msgstr "Klarte ikke å legge til delt NFS-ressurs."
 
-#: ../bin/draknfs:593
+#: ../bin/draknfs:606
 #, c-format
 msgid "Failed to Modify NFS share."
 msgstr "Klarte ikke å endre delt NFS-ressurs."
 
-#: ../bin/draknfs:600
+#: ../bin/draknfs:613
 #, c-format
 msgid "Failed to remove an NFS share."
 msgstr "Klarte ikke å fjerne delt NFS-ressurs."
@@ -1669,6 +1666,11 @@ msgstr "Skrivbar:"
 #, c-format
 msgid "Browseable:"
 msgstr "Lesbar:"
+
+#: ../bin/draksambashare:599
+#, c-format
+msgid "Advanced options"
+msgstr "Avanserte valg"
 
 #: ../bin/draksambashare:601
 #, c-format
@@ -2121,32 +2123,32 @@ msgstr ""
 msgid "DrakSamba manage Samba shares"
 msgstr "DrakSamba håndterer håndterer delte Samba-ressurser"
 
-#: ../bin/net_applet:94
+#: ../bin/net_applet:94 ../bin/net_applet.orig:94
 #, c-format
 msgid "Network is up on interface %s."
 msgstr "Nettverk er oppe på grensesnitt %s."
 
-#: ../bin/net_applet:95
+#: ../bin/net_applet:95 ../bin/net_applet.orig:95
 #, c-format
 msgid "IP address: %s"
 msgstr "IP-adresse: %s"
 
-#: ../bin/net_applet:96
+#: ../bin/net_applet:96 ../bin/net_applet.orig:96
 #, c-format
 msgid "Gateway: %s"
 msgstr "Gateway: %s"
 
-#: ../bin/net_applet:97
+#: ../bin/net_applet:97 ../bin/net_applet.orig:97
 #, c-format
 msgid "Connected to %s (link level: %d %%)"
 msgstr "Koblet til %s (linknivå: %d %%)"
 
-#: ../bin/net_applet:99
+#: ../bin/net_applet:99 ../bin/net_applet.orig:99
 #, c-format
 msgid "Network is down on interface %s."
 msgstr "Nettverk er nede på grensesnitt %s."
 
-#: ../bin/net_applet:101
+#: ../bin/net_applet:101 ../bin/net_applet.orig:101
 #, c-format
 msgid ""
 "You do not have any configured Internet connection.\n"
@@ -2155,89 +2157,92 @@ msgstr ""
 "Du har ikke satt opp en internettilkobling enda.\n"
 "Kjør «%s»-assistenten fra Mandriva Linux Kontrollsenter."
 
-#: ../bin/net_applet:107 ../bin/net_monitor:475
+#: ../bin/net_applet:127 ../bin/net_applet.orig:107 ../bin/net_monitor:475
 #, c-format
 msgid "Connect %s"
 msgstr "Koble til %s"
 
-#: ../bin/net_applet:108 ../bin/net_monitor:475
+#: ../bin/net_applet:128 ../bin/net_applet.orig:108 ../bin/net_monitor:475
 #, c-format
 msgid "Disconnect %s"
 msgstr "Koble fra %s"
 
-#: ../bin/net_applet:109
+#: ../bin/net_applet:129 ../bin/net_applet.orig:109
 #, c-format
 msgid "Monitor Network"
 msgstr "Overvåk nettverk"
 
-#: ../bin/net_applet:111
+#: ../bin/net_applet:131 ../bin/net_applet.orig:111
 #, c-format
 msgid "Manage wireless networks"
 msgstr "Håndter trådløse nettverk"
 
-#: ../bin/net_applet:113
+#: ../bin/net_applet:133 ../bin/net_applet.orig:113
 #, c-format
 msgid "Manage VPN connections"
 msgstr "Håndter VPN-tilkoblinger"
 
-#: ../bin/net_applet:117
+#: ../bin/net_applet:137 ../bin/net_applet.orig:117
 #, c-format
 msgid "Configure Network"
 msgstr "Sett opp nettverk"
 
-#: ../bin/net_applet:119
+#: ../bin/net_applet:139 ../bin/net_applet.orig:119
 #, c-format
 msgid "Watched interface"
 msgstr "Grensesnitt som følges med på"
 
-#: ../bin/net_applet:120 ../bin/net_applet:121 ../bin/net_applet:123
+#: ../bin/net_applet:140 ../bin/net_applet:141 ../bin/net_applet:143
+#: ../bin/net_applet.orig:120 ../bin/net_applet.orig:121
+#: ../bin/net_applet.orig:123
 #, c-format
 msgid "Auto-detect"
 msgstr "Automatisk oppdagelse"
 
-#: ../bin/net_applet:128
+#: ../bin/net_applet:148 ../bin/net_applet.orig:128
 #, c-format
 msgid "Active interfaces"
 msgstr "Aktive grensesnitt"
 
-#: ../bin/net_applet:152
+#: ../bin/net_applet:168 ../bin/net_applet.orig:152
 #, c-format
 msgid "Profiles"
 msgstr "Profiler"
 
-#: ../bin/net_applet:162 ../lib/network/connection.pm:225
-#: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
-#: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
+#: ../bin/net_applet:178 ../bin/net_applet.orig:162
+#: ../lib/network/connection.pm:225 ../lib/network/drakvpn.pm:62
+#: ../lib/network/vpn/openvpn.pm:365 ../lib/network/vpn/openvpn.pm:379
+#: ../lib/network/vpn/openvpn.pm:390
 #, c-format
 msgid "VPN connection"
 msgstr "VPN-tilkobling"
 
-#: ../bin/net_applet:341
+#: ../bin/net_applet:356 ../bin/net_applet.orig:340
 #, c-format
 msgid "Network connection"
 msgstr "Nettverkstilkobling"
 
-#: ../bin/net_applet:425
+#: ../bin/net_applet:440 ../bin/net_applet.orig:424
 #, c-format
 msgid "More networks"
 msgstr "Flere nettverk"
 
-#: ../bin/net_applet:452
+#: ../bin/net_applet:467 ../bin/net_applet.orig:451
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "Automatisk interaktiv brannmur-modus"
 
-#: ../bin/net_applet:457
+#: ../bin/net_applet:472 ../bin/net_applet.orig:456
 #, c-format
 msgid "Always launch on startup"
 msgstr "Kjør alltid under oppstart"
 
-#: ../bin/net_applet:462
+#: ../bin/net_applet:477 ../bin/net_applet.orig:461
 #, c-format
 msgid "Wireless networks"
 msgstr "Trådløse nettverk"
 
-#: ../bin/net_applet:469 ../bin/net_monitor:96
+#: ../bin/net_applet:484 ../bin/net_applet.orig:468 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Instillinger"
@@ -2426,7 +2431,7 @@ msgid "Unlisted - edit manually"
 msgstr "Ulistet - endre manuelt"
 
 #: ../lib/network/connection.pm:227 ../lib/network/connection/cable.pm:41
-#: ../lib/network/connection/wireless.pm:43 ../lib/network/vpn/openvpn.pm:127
+#: ../lib/network/connection/wireless.pm:45 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
@@ -2452,7 +2457,7 @@ msgstr "Metrisk"
 msgid "Link detected on interface %s"
 msgstr "Tilkoblingslivstegn oppdaget på grensesnitt %s"
 
-#: ../lib/network/connection.pm:312 ../lib/network/connection/ethernet.pm:288
+#: ../lib/network/connection.pm:312 ../lib/network/connection/ethernet.pm:289
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "Tilkoblingslivstegn mistet på grensesnitt %s"
@@ -2514,23 +2519,23 @@ msgstr ""
 msgid "GPRS/Edge/3G"
 msgstr "GPRS/Edge/3G"
 
-#: ../lib/network/connection/cellular_card.pm:105
+#: ../lib/network/connection/cellular_card.pm:110
 #: ../lib/network/vpn/openvpn.pm:391
 #, c-format
 msgid "PIN number"
 msgstr "PIN-kode"
 
-#: ../lib/network/connection/cellular_card.pm:181
+#: ../lib/network/connection/cellular_card.pm:186
 #, c-format
 msgid "Unable to open device %s"
 msgstr "Klarte ikke å åpne enhet %s"
 
-#: ../lib/network/connection/cellular_card.pm:213
+#: ../lib/network/connection/cellular_card.pm:218
 #, c-format
 msgid "Please check that your SIM card is inserted."
 msgstr "Vennligst sjekk at ditt SIM-kort er satt inn."
 
-#: ../lib/network/connection/cellular_card.pm:224
+#: ../lib/network/connection/cellular_card.pm:229
 #, c-format
 msgid ""
 "You entered a wrong PIN code.\n"
@@ -2569,34 +2574,39 @@ msgstr "PID"
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: ../lib/network/connection/ethernet.pm:29
+#: ../lib/network/connection/ethernet.pm:12
+#, fuzzy, c-format
+msgid "Wired (Ethernet)"
+msgstr "Ethernet"
+
+#: ../lib/network/connection/ethernet.pm:30
 #, fuzzy, c-format
 msgid "Virtual interface"
 msgstr "Nettverksgrensesnitt"
 
-#: ../lib/network/connection/ethernet.pm:59
+#: ../lib/network/connection/ethernet.pm:60
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
 msgstr ""
 "Klarte ikke å finne nettverksgrensesnitt for den valgte enheten (bruker %s-"
 "driver)"
 
-#: ../lib/network/connection/ethernet.pm:69 ../lib/network/vpn/openvpn.pm:207
+#: ../lib/network/connection/ethernet.pm:70 ../lib/network/vpn/openvpn.pm:207
 #, c-format
 msgid "Manual configuration"
 msgstr "Manuelt oppsett"
 
-#: ../lib/network/connection/ethernet.pm:70
+#: ../lib/network/connection/ethernet.pm:71
 #, c-format
 msgid "Automatic IP (BOOTP/DHCP)"
 msgstr "Automatisk IP (BOOTP/DHCP)"
 
-#: ../lib/network/connection/ethernet.pm:124
+#: ../lib/network/connection/ethernet.pm:125
 #, c-format
 msgid "IP settings"
 msgstr "IP-oppsett"
 
-#: ../lib/network/connection/ethernet.pm:137
+#: ../lib/network/connection/ethernet.pm:138
 #, c-format
 msgid ""
 "Please enter the IP configuration for this machine.\n"
@@ -2607,115 +2617,115 @@ msgstr ""
 "Hvert element bør skrives som en IP-adresse i punkt-desimal\n"
 "notasjon (f.eks, 1.2.3.4)."
 
-#: ../lib/network/connection/ethernet.pm:141 ../lib/network/netconnect.pm:646
+#: ../lib/network/connection/ethernet.pm:142 ../lib/network/netconnect.pm:646
 #: ../lib/network/vpn/openvpn.pm:212 ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
 msgstr "Gateway"
 
-#: ../lib/network/connection/ethernet.pm:144
+#: ../lib/network/connection/ethernet.pm:145
 #, c-format
 msgid "Get DNS servers from DHCP"
 msgstr "Få DNS-tjenere fra DHCP"
 
-#: ../lib/network/connection/ethernet.pm:146
+#: ../lib/network/connection/ethernet.pm:147
 #, c-format
 msgid "DNS server 1"
 msgstr "DNS-tjener 1"
 
-#: ../lib/network/connection/ethernet.pm:147
+#: ../lib/network/connection/ethernet.pm:148
 #, c-format
 msgid "DNS server 2"
 msgstr "DNS-tjener 2"
 
-#: ../lib/network/connection/ethernet.pm:148
+#: ../lib/network/connection/ethernet.pm:149
 #, c-format
 msgid "Search domain"
 msgstr "Søk gjennom domene"
 
-#: ../lib/network/connection/ethernet.pm:149
+#: ../lib/network/connection/ethernet.pm:150
 #, c-format
 msgid "By default search domain will be set from the fully-qualified host name"
 msgstr ""
 "Som standard vil søkedomenet bli satt fra  fullkvalifiserte vertsnavnet "
 "(fqdn)"
 
-#: ../lib/network/connection/ethernet.pm:152
+#: ../lib/network/connection/ethernet.pm:153
 #, c-format
 msgid "DHCP timeout (in seconds)"
 msgstr "DHCP-tidsavbrudd (i sekunder)"
 
-#: ../lib/network/connection/ethernet.pm:153
+#: ../lib/network/connection/ethernet.pm:154
 #, c-format
 msgid "Get YP servers from DHCP"
 msgstr "Få YP-tjenere fra DHCP"
 
-#: ../lib/network/connection/ethernet.pm:154
+#: ../lib/network/connection/ethernet.pm:155
 #, c-format
 msgid "Get NTPD servers from DHCP"
 msgstr "Få NTPD-tjenere fra DHCP"
 
-#: ../lib/network/connection/ethernet.pm:155
+#: ../lib/network/connection/ethernet.pm:156
 #, c-format
 msgid "DHCP host name"
 msgstr "DHCP-vertsnavn"
 
-#: ../lib/network/connection/ethernet.pm:157
+#: ../lib/network/connection/ethernet.pm:158
 #, c-format
 msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
 msgstr "Ikke fall tilbake til Zeroconf (169.254.0.0-nettverk)"
 
-#: ../lib/network/connection/ethernet.pm:168
+#: ../lib/network/connection/ethernet.pm:169
 #, c-format
 msgid "IP address should be in format 1.2.3.4"
 msgstr "IP-adresse bør være i format 1.2.3.4"
 
-#: ../lib/network/connection/ethernet.pm:173
+#: ../lib/network/connection/ethernet.pm:174
 #, c-format
 msgid "Netmask should be in format 255.255.224.0"
 msgstr "Netmaske bør være i format 255.255.224.0"
 
-#: ../lib/network/connection/ethernet.pm:178
+#: ../lib/network/connection/ethernet.pm:179
 #, c-format
 msgid "Warning: IP address %s is usually reserved!"
 msgstr "Advarsel : IP-adresse %s er vanligvis reservert!"
 
-#: ../lib/network/connection/ethernet.pm:184
+#: ../lib/network/connection/ethernet.pm:185
 #, c-format
 msgid "%s already in use\n"
 msgstr "%s er allerede i bruk\n"
 
-#: ../lib/network/connection/ethernet.pm:209
+#: ../lib/network/connection/ethernet.pm:210
 #, c-format
 msgid "Assign host name from DHCP address"
 msgstr "Tilegn vertsnavn fra DHCP-adresse"
 
-#: ../lib/network/connection/ethernet.pm:229
+#: ../lib/network/connection/ethernet.pm:230
 #, c-format
 msgid "Network Hotplugging"
 msgstr "Nettverks Hotplugging"
 
-#: ../lib/network/connection/ethernet.pm:233
+#: ../lib/network/connection/ethernet.pm:234
 #, c-format
 msgid "Enable IPv6 to IPv4 tunnel"
 msgstr "Aktiver IPv6 til IPv4-tunnel"
 
-#: ../lib/network/connection/ethernet.pm:287
+#: ../lib/network/connection/ethernet.pm:288
 #, c-format
 msgid "Link beat detected on interface %s"
 msgstr "Tilkoblingslivstegn oppdaget på grensesnitt %s"
 
-#: ../lib/network/connection/ethernet.pm:290
+#: ../lib/network/connection/ethernet.pm:291
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
 msgstr "Forespørr en nettverksadresse på grensesnitt %s (%s-protokoll) ..."
 
-#: ../lib/network/connection/ethernet.pm:291
+#: ../lib/network/connection/ethernet.pm:292
 #, c-format
 msgid "Got a network address on interface %s (%s protocol)"
 msgstr "Mottok en nettverksadresse på grensesnitt %s (%s-protokoll)"
 
-#: ../lib/network/connection/ethernet.pm:292
+#: ../lib/network/connection/ethernet.pm:293
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
 msgstr ""
@@ -3126,42 +3136,47 @@ msgstr "Forente Arabiske Emirater"
 msgid "United Kingdom"
 msgstr "United Kingdom"
 
-#: ../lib/network/connection/wireless.pm:11
+#: ../lib/network/connection/wireless.pm:12
 #, c-format
 msgid "Wireless"
 msgstr "Trådløs"
 
-#: ../lib/network/connection/wireless.pm:27
+#: ../lib/network/connection/wireless.pm:13
+#, fuzzy, c-format
+msgid "Wireless (Wi-Fi)"
+msgstr "Trådløs"
+
+#: ../lib/network/connection/wireless.pm:29
 #, c-format
 msgid "Use a Windows driver (with ndiswrapper)"
 msgstr "Bruker en Windows-driver (med ndiswrapper)"
 
-#: ../lib/network/connection/wireless.pm:44
+#: ../lib/network/connection/wireless.pm:46
 #, c-format
 msgid "Open WEP"
 msgstr "Åpent WEP"
 
-#: ../lib/network/connection/wireless.pm:45
+#: ../lib/network/connection/wireless.pm:47
 #, c-format
 msgid "Restricted WEP"
 msgstr "Lukket WEP"
 
-#: ../lib/network/connection/wireless.pm:46
+#: ../lib/network/connection/wireless.pm:48
 #, fuzzy, c-format
 msgid "WPA/WPA2 Pre-Shared Key"
 msgstr "WPA forhåndsdelt nøkkel"
 
-#: ../lib/network/connection/wireless.pm:47
+#: ../lib/network/connection/wireless.pm:49
 #, c-format
 msgid "WPA/WPA2 Enterprise"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:258
+#: ../lib/network/connection/wireless.pm:260
 #, c-format
 msgid "Windows driver"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:325
+#: ../lib/network/connection/wireless.pm:344
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
@@ -3170,73 +3185,73 @@ msgstr ""
 "Ditt trådløse nettverskort er deaktivert, vennligst aktiver den trådløse "
 "bryteren (RF kill switch) først."
 
-#: ../lib/network/connection/wireless.pm:404
+#: ../lib/network/connection/wireless.pm:429
 #, c-format
 msgid "Wireless settings"
 msgstr "Trådløst oppsett"
 
-#: ../lib/network/connection/wireless.pm:409
-#: ../lib/network/connection_manager.pm:263
+#: ../lib/network/connection/wireless.pm:434
+#: ../lib/network/connection_manager.pm:264
 #, c-format
 msgid "Operating Mode"
 msgstr "Operasjonsmodus"
 
-#: ../lib/network/connection/wireless.pm:410
+#: ../lib/network/connection/wireless.pm:435
 #, c-format
 msgid "Ad-hoc"
 msgstr "Ad-hoc"
 
-#: ../lib/network/connection/wireless.pm:410
+#: ../lib/network/connection/wireless.pm:435
 #, c-format
 msgid "Managed"
 msgstr "Håndtert"
 
-#: ../lib/network/connection/wireless.pm:410
+#: ../lib/network/connection/wireless.pm:435
 #, c-format
 msgid "Master"
 msgstr "Mester"
 
-#: ../lib/network/connection/wireless.pm:410
+#: ../lib/network/connection/wireless.pm:435
 #, c-format
 msgid "Repeater"
 msgstr "Repeterer"
 
-#: ../lib/network/connection/wireless.pm:410
+#: ../lib/network/connection/wireless.pm:435
 #, c-format
 msgid "Secondary"
 msgstr "Sekundær"
 
-#: ../lib/network/connection/wireless.pm:410
+#: ../lib/network/connection/wireless.pm:435
 #, c-format
 msgid "Auto"
 msgstr "Auto"
 
-#: ../lib/network/connection/wireless.pm:413
+#: ../lib/network/connection/wireless.pm:438
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "Nettverksnavn (ESSID)"
 
-#: ../lib/network/connection/wireless.pm:415
+#: ../lib/network/connection/wireless.pm:440
 #, c-format
 msgid "Encryption mode"
 msgstr "Krypteringsmodus"
 
-#: ../lib/network/connection/wireless.pm:417
+#: ../lib/network/connection/wireless.pm:442
 #, c-format
 msgid "Encryption key"
 msgstr "Krypteringsnøkkel"
 
-#: ../lib/network/connection/wireless.pm:419
+#: ../lib/network/connection/wireless.pm:444
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:426
+#: ../lib/network/connection/wireless.pm:451
 #, fuzzy, c-format
 msgid "EAP Login/Username"
 msgstr "Innloggingskonto (brukernavn)"
 
-#: ../lib/network/connection/wireless.pm:428
+#: ../lib/network/connection/wireless.pm:453
 #, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
@@ -3244,12 +3259,12 @@ msgid ""
 "  DOMAIN\\username"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:431
+#: ../lib/network/connection/wireless.pm:456
 #, fuzzy, c-format
 msgid "EAP Password"
 msgstr "Passord"
 
-#: ../lib/network/connection/wireless.pm:433
+#: ../lib/network/connection/wireless.pm:458
 #, c-format
 msgid ""
 " Password: A string.\n"
@@ -3268,12 +3283,12 @@ msgid ""
 "the username and password values specified here."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:447
+#: ../lib/network/connection/wireless.pm:472
 #, fuzzy, c-format
 msgid "EAP client certificate"
 msgstr "Navn på sertifikatet"
 
-#: ../lib/network/connection/wireless.pm:449
+#: ../lib/network/connection/wireless.pm:474
 #, c-format
 msgid ""
 "The complete path and filename of client certificate. This is\n"
@@ -3282,32 +3297,32 @@ msgid ""
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:453
+#: ../lib/network/connection/wireless.pm:478
 #, c-format
 msgid "Network ID"
 msgstr "NettverksID"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:479
 #, c-format
 msgid "Operating frequency"
 msgstr "Operasjonsfrekvens"
 
-#: ../lib/network/connection/wireless.pm:455
+#: ../lib/network/connection/wireless.pm:480
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "Følsomhetsgrense"
 
-#: ../lib/network/connection/wireless.pm:456
+#: ../lib/network/connection/wireless.pm:481
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "Bitrate (i b/s)"
 
-#: ../lib/network/connection/wireless.pm:457
+#: ../lib/network/connection/wireless.pm:482
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../lib/network/connection/wireless.pm:458
+#: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -3331,17 +3346,17 @@ msgstr ""
 "parameteren til auto, fixed\n"
 "eller off."
 
-#: ../lib/network/connection/wireless.pm:465
+#: ../lib/network/connection/wireless.pm:490
 #, c-format
 msgid "Fragmentation"
 msgstr "Fragmentering"
 
-#: ../lib/network/connection/wireless.pm:466
+#: ../lib/network/connection/wireless.pm:491
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "iwconfig-kommando ekstra argumenter"
 
-#: ../lib/network/connection/wireless.pm:467
+#: ../lib/network/connection/wireless.pm:492
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -3357,12 +3372,12 @@ msgstr ""
 "Se iwconfig(8) man-siden for ytterligere informasjon."
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:474
+#: ../lib/network/connection/wireless.pm:499
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "iwspy-kommando ekstra argumenter"
 
-#: ../lib/network/connection/wireless.pm:475
+#: ../lib/network/connection/wireless.pm:500
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -3383,12 +3398,12 @@ msgstr ""
 "\n"
 "Se iwpspy(8) man-side for ytterligere informasjon."
 
-#: ../lib/network/connection/wireless.pm:483
+#: ../lib/network/connection/wireless.pm:508
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "iwpriv-kommando ekstra argumenter"
 
-#: ../lib/network/connection/wireless.pm:485
+#: ../lib/network/connection/wireless.pm:510
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -3418,107 +3433,107 @@ msgstr ""
 "\n"
 "Se iwpriv(8) man-side for ytterligere informasjon."
 
-#: ../lib/network/connection/wireless.pm:496
+#: ../lib/network/connection/wireless.pm:521
 #, fuzzy, c-format
 msgid "EAP Protocol"
 msgstr "Protokoll"
 
-#: ../lib/network/connection/wireless.pm:497
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:522
+#: ../lib/network/connection/wireless.pm:527
 #, fuzzy, c-format
 msgid "Auto Detect"
 msgstr "Automatisk oppdagelse"
 
-#: ../lib/network/connection/wireless.pm:497
+#: ../lib/network/connection/wireless.pm:522
 #, c-format
 msgid "WPA2"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:497
+#: ../lib/network/connection/wireless.pm:522
 #, fuzzy, c-format
 msgid "WPA"
 msgstr "PAP"
 
-#: ../lib/network/connection/wireless.pm:499
+#: ../lib/network/connection/wireless.pm:524
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:501
+#: ../lib/network/connection/wireless.pm:526
 #, fuzzy, c-format
 msgid "EAP Mode"
 msgstr "Modus"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, fuzzy, c-format
 msgid "PEAP"
 msgstr "PAP"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "TTLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "TLS"
 msgstr "TLS"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, fuzzy, c-format
 msgid "MSCHAPV2"
 msgstr "CHAP"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "MD5"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "OTP"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "GTC"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "LEAP"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "PEAP TTLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "TTLS TLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:504
+#: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "EAP key_mgmt"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:506
+#: ../lib/network/connection/wireless.pm:531
 #, c-format
 msgid ""
 "list of accepted authenticated key management protocols.\n"
 "possible values are WPA-EAP, IEEE8021X, NONE"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:508
+#: ../lib/network/connection/wireless.pm:533
 #, c-format
 msgid "EAP outer identity"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:510
+#: ../lib/network/connection/wireless.pm:535
 #, c-format
 msgid ""
 "Anonymous identity string for EAP: to be used as the\n"
@@ -3526,12 +3541,12 @@ msgid ""
 "tunnelled identity, e.g., TTLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:513
+#: ../lib/network/connection/wireless.pm:538
 #, c-format
 msgid "EAP phase2"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:515
+#: ../lib/network/connection/wireless.pm:540
 #, c-format
 msgid ""
 "Inner authentication with TLS tunnel parameters.\n"
@@ -3540,12 +3555,12 @@ msgid ""
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:519
+#: ../lib/network/connection/wireless.pm:544
 #, fuzzy, c-format
 msgid "EAP CA certificate"
 msgstr "Sertifikat"
 
-#: ../lib/network/connection/wireless.pm:521
+#: ../lib/network/connection/wireless.pm:546
 #, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
@@ -3555,12 +3570,12 @@ msgid ""
 "when using TLS or TTLS or PEAP."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:526
+#: ../lib/network/connection/wireless.pm:551
 #, c-format
 msgid "EAP certificate subject match"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:528
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid ""
 " Substring to be matched against the subject of\n"
@@ -3570,12 +3585,12 @@ msgid ""
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:533
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "EAP extra directives"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:535
+#: ../lib/network/connection/wireless.pm:560
 #, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
@@ -3593,26 +3608,26 @@ msgid ""
 "\tspecial settings different from the U.I settings."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:555
+#: ../lib/network/connection/wireless.pm:580
 #, c-format
 msgid "An encryption key is required."
 msgstr "En krypteringsnøkkel kreves"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:587
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
 "hexadecimal characters."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:568
+#: ../lib/network/connection/wireless.pm:593
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
 "characters."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:575
+#: ../lib/network/connection/wireless.pm:600
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -3622,7 +3637,7 @@ msgstr ""
 "frekvens),\n"
 "eller tilstrekkelig antall nuller (0). "
 
-#: ../lib/network/connection/wireless.pm:581
+#: ../lib/network/connection/wireless.pm:606
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
@@ -3631,17 +3646,17 @@ msgstr ""
 "Hastighet skal ha suffix k, M eller G (for eksempel «11M»), eller "
 "tilstrekkelig antall nuller"
 
-#: ../lib/network/connection/wireless.pm:593
+#: ../lib/network/connection/wireless.pm:618
 #, c-format
 msgid "Allow access point roaming"
 msgstr "Tillat gjennomstreifing av aksesspunkt"
 
-#: ../lib/network/connection/wireless.pm:712
+#: ../lib/network/connection/wireless.pm:739
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "Assosiert til trådløst nettverk «%s» på grensesnitt %s"
 
-#: ../lib/network/connection/wireless.pm:713
+#: ../lib/network/connection/wireless.pm:740
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "Tapte det assosierte trådløse nettverket på grensesnitt %s"
@@ -3719,66 +3734,66 @@ msgid "Virtual Circuit ID (VCI):"
 msgstr "Virtual Circuit ID (VCI):"
 
 #: ../lib/network/connection/xdsl.pm:332
-#: ../lib/network/connection_manager.pm:60 ../lib/network/drakvpn.pm:45
+#: ../lib/network/connection_manager.pm:61 ../lib/network/drakvpn.pm:45
 #: ../lib/network/netconnect.pm:134 ../lib/network/thirdparty.pm:123
 #, c-format
 msgid "Could not install the packages (%s)!"
 msgstr "Kunne ikke installere pakkene (%s)!"
 
-#: ../lib/network/connection_manager.pm:72
-#: ../lib/network/connection_manager.pm:87 ../lib/network/netconnect.pm:185
+#: ../lib/network/connection_manager.pm:73
+#: ../lib/network/connection_manager.pm:88 ../lib/network/netconnect.pm:185
 #, c-format
 msgid "Configuring device..."
 msgstr "Setter opp enhet ..."
 
-#: ../lib/network/connection_manager.pm:77
-#: ../lib/network/connection_manager.pm:142
+#: ../lib/network/connection_manager.pm:78
+#: ../lib/network/connection_manager.pm:143
 #, c-format
 msgid "Network settings"
 msgstr "Oppsett for nettverk"
 
-#: ../lib/network/connection_manager.pm:78
-#: ../lib/network/connection_manager.pm:143
+#: ../lib/network/connection_manager.pm:79
+#: ../lib/network/connection_manager.pm:144
 #, c-format
 msgid "Please enter settings for network"
 msgstr "Tast inn oppsett for nettverk"
 
-#: ../lib/network/connection_manager.pm:201
+#: ../lib/network/connection_manager.pm:202
 #, c-format
 msgid "Connecting..."
 msgstr "Kobler til ..."
 
-#: ../lib/network/connection_manager.pm:218
+#: ../lib/network/connection_manager.pm:219
 #, c-format
 msgid "Disconnecting..."
 msgstr "Kobler fra ..."
 
-#: ../lib/network/connection_manager.pm:260
+#: ../lib/network/connection_manager.pm:261
 #, c-format
 msgid "SSID"
 msgstr "SSID"
 
-#: ../lib/network/connection_manager.pm:261
+#: ../lib/network/connection_manager.pm:262
 #, c-format
 msgid "Signal strength"
 msgstr "Signalstyrke"
 
-#: ../lib/network/connection_manager.pm:262
+#: ../lib/network/connection_manager.pm:263
 #, c-format
 msgid "Encryption"
 msgstr "Kryptering"
 
-#: ../lib/network/connection_manager.pm:306 ../lib/network/netconnect.pm:207
+#: ../lib/network/connection_manager.pm:335 ../lib/network/netconnect.pm:207
 #, c-format
 msgid "Scanning for networks..."
 msgstr "Leter etter nettverk ..."
 
-#: ../lib/network/connection_manager.pm:355 ../lib/network/drakroam.pm:116
+#: ../lib/network/connection_manager.pm:384 ../lib/network/drakroam.pm:116
 #, c-format
 msgid "Disconnect"
 msgstr "Koble fra"
 
-#: ../lib/network/connection_manager.pm:355 ../lib/network/drakroam.pm:115
+#: ../lib/network/connection_manager.pm:384 ../lib/network/drakroam.pm:115
 #, c-format
 msgid "Connect"
 msgstr "Koble til"
@@ -3965,12 +3980,12 @@ msgstr "Vertsnavn endret til «%s»"
 msgid "Device: "
 msgstr "Enhet: "
 
-#: ../lib/network/drakroam.pm:114 ../lib/network/netcenter.pm:91
+#: ../lib/network/drakroam.pm:114 ../lib/network/netcenter.pm:64
 #, c-format
 msgid "Configure"
 msgstr "Sett opp"
 
-#: ../lib/network/drakroam.pm:117 ../lib/network/netcenter.pm:96
+#: ../lib/network/drakroam.pm:117 ../lib/network/netcenter.pm:69
 #, c-format
 msgid "Refresh"
 msgstr "Oppdater"
@@ -4194,22 +4209,22 @@ msgstr "Installer en ny driver"
 msgid "Select a device:"
 msgstr "Velg en enhet:"
 
-#: ../lib/network/netcenter.pm:36
-#, c-format
-msgid "Network Center"
-msgstr "Nettverkssenter"
-
-#: ../lib/network/netcenter.pm:80 ../lib/network/netconnect.pm:210
+#: ../lib/network/netcenter.pm:53 ../lib/network/netconnect.pm:210
 #, c-format
 msgid "Please select your network:"
 msgstr "Velg ditt nettverk:"
 
-#: ../lib/network/netcenter.pm:87
+#: ../lib/network/netcenter.pm:60
 #, c-format
 msgid ""
 "_: This is a verb\n"
 "Monitor"
 msgstr "Overvåk"
+
+#: ../lib/network/netcenter.pm:135
+#, c-format
+msgid "Network Center"
+msgstr "Nettverkssenter"
 
 #: ../lib/network/netconnect.pm:37
 #, c-format
@@ -5163,6 +5178,9 @@ msgstr "Modus"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Bruk spesifikk UDP-port"
+
+#~ msgid "Draknfs entry"
+#~ msgstr "Draknfs-oppføring"
 
 #~ msgid "DrakVPN"
 #~ msgstr "DrakVPN"
