@@ -153,7 +153,7 @@ sub main {
            $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
            1, gtknew('ScrolledWindow', width => 600, height => $scrolled_height, shadow_type => 'none',
                      child => $managers_box = gtknew('VBox', spacing => 5, children_tight => [
-               map_index { build_cmanager_box($cmanagers[$::i], $::i == 0) } @connections,
+               map_index { build_cmanager_box($_, $::i == 0) } @cmanagers,
            ])),
            0, gtknew('HButtonBox', spacing => 6, layout => 'end', children_loose => [
                gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit }),
