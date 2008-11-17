@@ -112,7 +112,7 @@ sub build_cmanager_box {
 
     $cmanager->update_on_status_change;
 
-    $box;
+    $cmanager->{parent_box} = $box;
 }
 
 sub get_connections() {
