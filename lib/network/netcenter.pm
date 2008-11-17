@@ -115,6 +115,18 @@ sub build_cmanager_box {
     $box;
 }
 
+sub get_connections() {
+    my @all_connections = map { $_->get_connections(automatic_only => 1, fast_only => 1) } network::connection::get_types;
+    @all_connections = grep { !network::tools::is_zeroconf_interface($_->get_interface) } @all_connections;
+    my ($sysfs, $no_sysfs) = partition { exists $_->{device}{sysfs_device} } @all_connections;
+    my ($real, $other) = partition { network::tools::is_real_interface($_->get_interface) } @$sysfs;
+    (
+        (uniq_ { $_->{device}{sysfs_device} } @$real),
+        (uniq_ { $_->{device}{sysfs_device} } @$other),
+        (uniq_ { $_->{device}{interface} } @$no_sysfs),
+    );
+}
+
 sub main {
     my ($in, $net, $dbus) = @_;
 
@@ -128,15 +140,7 @@ sub main {
     #- so that transient_for is defined, for wait messages and popups to be centered
     $::main_window = $w->{real_window};
 
-    my @all_connections = map { $_->get_connections(automatic_only => 1, fast_only => 1) } network::connection::get_types;
-    @all_connections = grep { !network::tools::is_zeroconf_interface($_->get_interface) } @all_connections;
-    my ($sysfs, $no_sysfs) = partition { exists $_->{device}{sysfs_device} } @all_connections;
-    my ($real, $other) = partition { network::tools::is_real_interface($_->get_interface) } @$sysfs;
-    my @connections = (
-        (uniq_ { $_->{device}{sysfs_device} } @$real),
-        (uniq_ { $_->{device}{sysfs_device} } @$other),
-        (uniq_ { $_->{device}{interface} } @$no_sysfs),
-    );
+    my @connections = get_connections();
 
     my $pixbufs = network::connection_manager::create_pixbufs();
     my @cmanagers = map { build_cmanager($in, $net, $w, $pixbufs, $_) } @connections;
