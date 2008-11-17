@@ -28,6 +28,93 @@ sub build_cmanager {
     $cmanager;
 }
 
+sub build_cmanager_box {
+    my ($cmanager, $is_first) = @_;
+
+    my $head = gtknew('HBox', children => [
+        0, $cmanager->{gui}{status_image} = gtknew('Image'),
+        0, gtknew('Label', padding => [ 5, 0 ]),
+        1, gtknew('VBox', children_tight => [
+            gtknew('HBox', children => [
+                1, gtknew('Label', alignment => [ 0, 0 ], text_markup => '<b>' . $cmanager->{connection}->get_type_name . '</b>'),
+                0, gtknew('Label', padding => [ 2, 0 ]),
+                0, $cmanager->{gui}{labels}{interface} = gtknew('Label', alignment => [ 0, 0 ], text_markup => $cmanager->{connection}->get_interface ? '<b>' . $cmanager->{connection}->get_interface . '</b>' : ""),
+            ]),
+            gtknew('Label', ellipsize => 'end', alignment => [ 0, 0 ], text_markup => $cmanager->{connection}->get_description),
+        ]),
+    ]);
+    my $content = gtknew('HBox', children => [
+        0, gtknew('Label', padding => [ 5, 0 ]),
+        1, gtknew('VBox', spacing => 5, children_tight => [
+            ($cmanager->{connection}->can('get_networks') ? (
+                $cmanager->{gui}{show_unique_network} ? (
+                    $cmanager->{gui}{networks_list},
+                ): (
+                    gtknew('Label', text => N("Please select your network:"), alignment => [ 0, 0 ]),
+                    gtknew('ScrolledWindow', height => 160, child => $cmanager->{gui}{networks_list})
+                ),
+            ) : ()),
+            gtknew('HBox', children => [
+                1, gtknew('HButtonBox', spacing => 6, layout => 'start', children_loose => [
+                    $cmanager->{gui}{buttons}{monitor} =
+                      gtknew('Button', text => N("_: This is a verb\nMonitor"),
+                             image => gtknew('Image', file => 'monitor-16'),
+                             clicked => sub { $cmanager->monitor_connection }),
+                    $cmanager->{gui}{buttons}{configure} =
+                      gtknew('Button', text => N("Configure"),
+                             image => gtknew('Image', file => 'configure-16'),
+                             clicked => sub { $cmanager->configure_connection }),
+                    ($cmanager->{connection}->can('get_networks') ?
+                       ($cmanager->{gui}{buttons}{refresh} =
+                          gtknew('Button', text => N("Refresh"),
+                                 image => gtknew('Image', file => 'refresh', size => 16),
+                                 clicked => sub { $cmanager->update_networks }))
+                         : ()),
+                ]),
+                0, $cmanager->{gui}{buttons}{connect_toggle} =
+                  gtknew('Button',
+                         image => gtknew('Image', file => 'activate-16'),
+                         clicked => sub { $cmanager->toggle_connection }),
+            ]),
+        ]),
+    ]);
+
+    my $expander = gtknew('Expander');
+    my $on_expand = sub {
+        my ($expanded) = @_;
+        if ($expanded && $cmanager->{connection}->can('get_networks') &&
+              !$cmanager->{connection}{probed_networks} && $expanded) {
+            gtkflush();
+            $cmanager->update_networks;
+        }
+    };
+    my $toggle_expand = sub {
+        my $was_expanded = $expander->get_expanded;
+        $was_expanded ? $content->hide : $content->show_all;
+        $on_expand->(!$was_expanded);
+    };
+    $expander->signal_connect(activate => $toggle_expand);
+    my $eventbox = gtksignal_connect(Gtk2::EventBox->new, button_press_event => sub {
+                                         $_[1]->button == 1 or return;
+                                         $toggle_expand->();
+                                         my $was_expanded = $expander->get_expanded;
+                                         $expander->set_expanded(!$was_expanded);
+                                     });
+    my $box = gtknew('VBox', spacing => 5, children_tight => [
+        (!$is_first ? Gtk2::HSeparator->new : ()),
+        gtknew('HBox', children => [
+            0, $expander,
+            1, gtkadd($eventbox, $head),
+        ]),
+        $content,
+    ]);
+    $content->hide;
+
+    $cmanager->update_on_status_change;
+
+    $box;
+}
+
 sub main {
     my ($in, $net, $dbus) = @_;
 
@@ -61,91 +148,7 @@ sub main {
            $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
            1, gtknew('ScrolledWindow', width => 600, height => $scrolled_height, shadow_type => 'none',
                      child => gtknew('VBox', spacing => 5, children_tight => [
-               map_index {
-                   my $cmanager = $cmanagers[$::i];
-                   my $head = gtknew('HBox', children => [
-                               0, $cmanager->{gui}{status_image} = gtknew('Image'),
-                               0, gtknew('Label', padding => [ 5, 0 ]),
-                               1, gtknew('VBox', children_tight => [
-                                   gtknew('HBox', children => [
-                                       1, gtknew('Label', alignment => [ 0, 0 ], text_markup => '<b>' . $cmanager->{connection}->get_type_name . '</b>'),
-                                       0, gtknew('Label', padding => [ 2, 0 ]),
-                                       0, $cmanager->{gui}{labels}{interface} = gtknew('Label', alignment => [ 0, 0 ], text_markup => $cmanager->{connection}->get_interface ? '<b>' . $cmanager->{connection}->get_interface . '</b>' : ""),
-                                   ]),
-                                   gtknew('Label', ellipsize => 'end', alignment => [ 0, 0 ], text_markup => $cmanager->{connection}->get_description),
-                               ]),
-                   ]);
-                   my $content = gtknew('HBox', children => [
-                               0, gtknew('Label', padding => [ 5, 0 ]),
-                               1, gtknew('VBox', spacing => 5, children_tight => [
-                                   ($cmanager->{connection}->can('get_networks') ? (
-                                       $cmanager->{gui}{show_unique_network} ? (
-                                           $cmanager->{gui}{networks_list},
-                                       ): ( 
-                                           gtknew('Label', text => N("Please select your network:"), alignment => [ 0, 0 ]),
-                                           gtknew('ScrolledWindow', height => 160, child => $cmanager->{gui}{networks_list})
-                                       ),
-                                   ) : ()),
-                                   gtknew('HBox', children => [
-                                       1, gtknew('HButtonBox', spacing => 6, layout => 'start', children_loose => [
-                                               $cmanager->{gui}{buttons}{monitor} =
-                                                 gtknew('Button', text => N("_: This is a verb\nMonitor"),
-                                                        image => gtknew('Image', file => 'monitor-16'),
-                                                        clicked => sub { $cmanager->monitor_connection }),
-                                               $cmanager->{gui}{buttons}{configure} =
-                                                 gtknew('Button', text => N("Configure"),
-                                                        image => gtknew('Image', file => 'configure-16'),
-                                                        clicked => sub { $cmanager->configure_connection }),
-                                               ($cmanager->{connection}->can('get_networks') ?
-                                                  ($cmanager->{gui}{buttons}{refresh} =
-                                                    gtknew('Button', text => N("Refresh"),
-                                                           image => gtknew('Image', file => 'refresh', size => 16),
-                                                           clicked => sub { $cmanager->update_networks }))
-                                                  : ()),
-                                           ]),
-                                       0, $cmanager->{gui}{buttons}{connect_toggle} =
-                                                 gtknew('Button',
-                                                        image => gtknew('Image', file => 'activate-16'),
-                                                        clicked => sub { $cmanager->toggle_connection }),
-                                           ]),
-                               ]),
-                   ]);
-
-                   my $expander = gtknew('Expander');
-                   my $on_expand = sub {
-                       my ($expanded) = @_;
-                       if ($expanded && $cmanager->{connection}->can('get_networks') &&
-                             !$cmanager->{connection}{probed_networks} && $expanded) {
-                           gtkflush();
-                           $cmanager->update_networks;
-                       }
-                   };
-                   my $toggle_expand = sub {
-                       my $was_expanded = $expander->get_expanded;
-                       $was_expanded ? $content->hide : $content->show_all;
-                       $on_expand->(!$was_expanded);
-                   };
-                   $expander->signal_connect(activate => $toggle_expand);
-                   my $eventbox = gtksignal_connect(Gtk2::EventBox->new, button_press_event => sub {
-                       $_[1]->button == 1 or return;
-                       $toggle_expand->();
-                       my $was_expanded = $expander->get_expanded;
-                       $expander->set_expanded(!$was_expanded);
-                   });
-                   my $box = gtknew('VBox', spacing => 5, children_tight => [
-                       ($::i > 0 ? Gtk2::HSeparator->new : ()),
-                       gtknew('HBox', children => [
-                           0, $expander,
-                           1, gtkadd($eventbox, $head),
-                       ]),
-                       $content,
-                   ]);
-                   $content->hide;
-
-                   $cmanager->update_on_status_change;
-
-                   $box;
-               } @connections,
+               map_index { build_cmanager_box($cmanagers[$::i], $::i == 0) } @connections,
            ])),
            0, gtknew('HButtonBox', spacing => 6, layout => 'end', children_loose => [
                gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit }),
