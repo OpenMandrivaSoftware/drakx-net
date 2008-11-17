@@ -36,7 +36,7 @@ sub build_cmanager_box {
         0, gtknew('Label', padding => [ 5, 0 ]),
         1, gtknew('VBox', children_tight => [
             gtknew('HBox', children => [
-                1, gtknew('Label', alignment => [ 0, 0 ], text_markup => '<b>' . $cmanager->{connection}->get_type_name . '</b>'),
+                1, gtknew('Label', alignment => [ 0, 0 ], text_markup => '<b>' . $cmanager->{connection}->get_type_description . '</b>'),
                 0, gtknew('Label', padding => [ 2, 0 ]),
                 0, $cmanager->{gui}{labels}{interface} = gtknew('Label', alignment => [ 0, 0 ], text_markup => $cmanager->{connection}->get_interface ? '<b>' . $cmanager->{connection}->get_interface . '</b>' : ""),
             ]),
