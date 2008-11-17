@@ -152,7 +152,7 @@ my %actions = (
                        my ($is_up, $_gw) = network::tools::get_interface_status($_[0]);
                        $is_up;
                    },
-                   format_choice => sub { get_interface_name($_[0]) },
+                   format_choice => \&get_interface_name,
                    get_icon => \&get_interface_icon,
                    launch => sub {
                        my ($is_up, $_gw) = network::tools::get_interface_status($_[0]);
