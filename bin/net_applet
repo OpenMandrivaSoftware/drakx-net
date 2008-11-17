@@ -110,6 +110,12 @@ sub get_interface_type {
     $ifcfg && network::connection->find_ifcfg_type($ifcfg);
 }
 
+sub get_interface_icon {
+    my ($interface) = @_;
+    my $type = get_interface_type($interface);
+    $type && $type->get_type_icon;
+}
+
 sub get_interface_name {
     my ($interface) = @_;
     my $type = get_interface_type($interface);
@@ -147,12 +153,7 @@ my %actions = (
                        $is_up;
                    },
                    format_choice => sub { get_interface_name($_[0]) },
-                   get_icon => sub {
-                       my $ifcfg = $net->{ifcfg}{$_[0]};
-                       require network::connection;
-                       my $type = $ifcfg && network::connection->find_ifcfg_type($ifcfg);
-                       $type && $type->get_type_icon;
-                   },
+                   get_icon => \&get_interface_icon,
                    launch => sub {
                        my ($is_up, $_gw) = network::tools::get_interface_status($_[0]);
                        if ($is_up) {
