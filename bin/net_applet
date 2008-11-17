@@ -103,9 +103,18 @@ Run the \"%s\" assistant from the Mandriva Linux Control Center", N("Set up a ne
     );
 }
 
+sub get_interface_name {
+    my ($interface) = @_;
+    my $ifcfg = $net->{ifcfg}{$interface};
+    require network::connection;
+    my $type = $ifcfg && network::connection->find_ifcfg_type($ifcfg);
+    my $type_name = $type && $type->get_type_name;
+    $type_name ? "$type_name ($interface)" : $interface;
+}
+
 my %actions = (
-               'upNetwork' => { name => sub { N("Connect %s", $_[0]) }, launch => sub { network::tools::start_interface($_[0], 1) } },
-               'downNetwork' => { name => sub { N("Disconnect %s", $_[0]) }, launch => sub { network::tools::stop_interface($_[0], 1) } },
+               'upNetwork' => { name => sub { N("Connect %s", get_interface_name($_[0])) }, launch => sub { network::tools::start_interface($_[0], 1) } },
+               'downNetwork' => { name => sub { N("Disconnect %s", get_interface_name($_[0])) }, launch => sub { network::tools::stop_interface($_[0], 1) } },
                'monitorNetwork' => { name => N("Monitor Network"), launch => \&run_net_monitor },
                'monitorIFW' => { name => N("Interactive Firewall"), launch => \&run_drakids },
                'wireless' => { name => N("Manage wireless networks"), launch => sub { run_drakroam() } },
@@ -132,6 +141,7 @@ my %actions = (
                        my ($is_up, $_gw) = network::tools::get_interface_status($_[0]);
                        $is_up;
                    },
+                   format_choice => sub { get_interface_name($_[0]) },
                    get_icon => sub {
                        my $ifcfg = $net->{ifcfg}{$_[0]};
                        require network::connection;
