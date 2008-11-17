@@ -50,7 +50,7 @@ sub get_metric {
 
 sub get_interface {
     my ($self) = @_;
-    $self->{device}{interface} || device_to_interface($self->{device});
+    $self->{device}{interface} ||= device_to_interface($self->{device});
 }
 
 sub check_device {
