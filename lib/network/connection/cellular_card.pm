@@ -21,6 +21,11 @@ sub get_metric { 40 }
 
 sub get_packages { 'comgt', 'ppp' }
 
+sub handles_ifcfg {
+    my ($_class, $ifcfg) = @_;
+    exists $ifcfg->{CELLULAR_CID};
+}
+
 my @thirdparty_settings = (
     {
         name => 'nozomi',
