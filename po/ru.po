@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
-"POT-Creation-Date: 2008-09-18 11:55+0200\n"
+"POT-Creation-Date: 2008-11-17 22:05+0100\n"
 "PO-Revision-Date: 2008-09-26 14:26+0200\n"
 "Last-Translator: Pavel Maryanov <acid_jack@ukr.net>\n"
 "Language-Team: Russian <gnu@mx.ru>\n"
@@ -29,7 +29,7 @@ msgid "Interface"
 msgstr "Интерфейс"
 
 #: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:196
-#: ../lib/network/connection/ethernet.pm:133 ../lib/network/netconnect.pm:614
+#: ../lib/network/connection/ethernet.pm:134 ../lib/network/netconnect.pm:614
 #: ../lib/network/vpn/openvpn.pm:221
 #, c-format
 msgid "IP address"
@@ -71,7 +71,8 @@ msgstr "Настройка локальной сети"
 msgid "Configure Local Area Network..."
 msgstr "Настроить локальную сеть..."
 
-#: ../bin/drakconnect-old:106 ../bin/draknfs:189 ../bin/net_applet:170
+#: ../bin/drakconnect-old:106 ../bin/draknfs:189 ../bin/net_applet:186
+#: ../bin/net_applet.orig:170
 #, c-format
 msgid "Help"
 msgstr "Справка"
@@ -93,13 +94,13 @@ msgstr "Отмена"
 msgid "Ok"
 msgstr "ОК"
 
-#: ../bin/drakconnect-old:113 ../bin/drakgw:345 ../bin/draknfs:570
-#: ../bin/draksambashare:229 ../lib/network/connection_manager.pm:72
-#: ../lib/network/connection_manager.pm:87
-#: ../lib/network/connection_manager.pm:201
-#: ../lib/network/connection_manager.pm:218
-#: ../lib/network/connection_manager.pm:306 ../lib/network/drakvpn.pm:49
-#: ../lib/network/netcenter.pm:34 ../lib/network/netconnect.pm:185
+#: ../bin/drakconnect-old:113 ../bin/drakgw:345 ../bin/draknfs:582
+#: ../bin/draksambashare:229 ../lib/network/connection_manager.pm:73
+#: ../lib/network/connection_manager.pm:88
+#: ../lib/network/connection_manager.pm:202
+#: ../lib/network/connection_manager.pm:219
+#: ../lib/network/connection_manager.pm:335 ../lib/network/drakvpn.pm:49
+#: ../lib/network/netcenter.pm:133 ../lib/network/netconnect.pm:185
 #: ../lib/network/netconnect.pm:207 ../lib/network/netconnect.pm:304
 #: ../lib/network/netconnect.pm:714 ../lib/network/thirdparty.pm:354
 #: ../lib/network/thirdparty.pm:369
@@ -142,7 +143,7 @@ msgid "Adapter %s: %s"
 msgstr "Адаптер %s: %s"
 
 #: ../bin/drakconnect-old:209 ../bin/drakgw:177
-#: ../lib/network/connection/ethernet.pm:140
+#: ../lib/network/connection/ethernet.pm:141
 #, c-format
 msgid "Netmask"
 msgstr "Сетевая маска"
@@ -157,7 +158,7 @@ msgstr "Протокол загрузки"
 msgid "Started on boot"
 msgstr "Запущен при загрузке"
 
-#: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:151
+#: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:152
 #, c-format
 msgid "DHCP client"
 msgstr "Клиент DHCP"
@@ -171,7 +172,7 @@ msgstr ""
 "Этот интерфейс ещё не был настроен.\n"
 "Запустите помощника \"%s\" из Центра Управления Mandriva Linux"
 
-#: ../bin/drakconnect-old:247 ../bin/net_applet:102
+#: ../bin/drakconnect-old:247 ../bin/net_applet:102 ../bin/net_applet.orig:102
 #, c-format
 msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
 msgstr "Настройка нового сетевого интерфейса (LAN, ISDN, ADSL, ...)"
@@ -318,9 +319,9 @@ msgstr "Имя внутреннего домена"
 #: ../bin/drakgw:184 ../bin/drakhosts:100 ../bin/drakhosts:245
 #: ../bin/drakhosts:252 ../bin/drakhosts:259 ../bin/drakinvictus:72
 #: ../bin/draknetprofile:140 ../bin/draknfs:91 ../bin/draknfs:112
-#: ../bin/draknfs:282 ../bin/draknfs:415 ../bin/draknfs:417 ../bin/draknfs:420
-#: ../bin/draknfs:512 ../bin/draknfs:519 ../bin/draknfs:586 ../bin/draknfs:593
-#: ../bin/draknfs:600 ../bin/draksambashare:393 ../bin/draksambashare:400
+#: ../bin/draknfs:280 ../bin/draknfs:427 ../bin/draknfs:429 ../bin/draknfs:432
+#: ../bin/draknfs:524 ../bin/draknfs:531 ../bin/draknfs:599 ../bin/draknfs:606
+#: ../bin/draknfs:613 ../bin/draksambashare:393 ../bin/draksambashare:400
 #: ../bin/draksambashare:403 ../bin/draksambashare:455
 #: ../bin/draksambashare:479 ../bin/draksambashare:552
 #: ../bin/draksambashare:630 ../bin/draksambashare:697
@@ -332,12 +333,12 @@ msgstr "Имя внутреннего домена"
 #: ../bin/draksambashare:1396 ../bin/draksambashare:1415
 #: ../bin/draksambashare:1424 ../bin/draksambashare:1436
 #: ../lib/network/connection/xdsl.pm:332
-#: ../lib/network/connection_manager.pm:60
-#: ../lib/network/connection_manager.pm:66
-#: ../lib/network/connection_manager.pm:82
-#: ../lib/network/connection_manager.pm:90
-#: ../lib/network/connection_manager.pm:172
-#: ../lib/network/connection_manager.pm:176 ../lib/network/drakvpn.pm:45
+#: ../lib/network/connection_manager.pm:61
+#: ../lib/network/connection_manager.pm:67
+#: ../lib/network/connection_manager.pm:83
+#: ../lib/network/connection_manager.pm:91
+#: ../lib/network/connection_manager.pm:173
+#: ../lib/network/connection_manager.pm:177 ../lib/network/drakvpn.pm:45
 #: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
 #: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:134
@@ -559,7 +560,7 @@ msgstr "Пожалуйста введите правильный IP адрес."
 msgid "Same IP is already in %s file."
 msgstr "Подобный IP уже находится в файле %s."
 
-#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:211
+#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:212
 #, c-format
 msgid "Host name"
 msgstr "Имя хоста"
@@ -574,12 +575,12 @@ msgstr "Алиасы хоста"
 msgid "Manage hosts definitions"
 msgstr "Управление определениями хостов"
 
-#: ../bin/drakhosts:222 ../bin/drakhosts:249
+#: ../bin/drakhosts:222 ../bin/drakhosts:249 ../bin/draknfs:367
 #, c-format
 msgid "Modify entry"
 msgstr "Изменить запись"
 
-#: ../bin/drakhosts:241 ../bin/draknfs:582 ../bin/draksambashare:1349
+#: ../bin/drakhosts:241 ../bin/draknfs:595 ../bin/draksambashare:1349
 #: ../bin/draksambashare:1380 ../bin/draksambashare:1411
 #, c-format
 msgid "Add"
@@ -595,7 +596,7 @@ msgstr "Добавить запись"
 msgid "Failed to add host."
 msgstr "Не удалось добавить хост."
 
-#: ../bin/drakhosts:248 ../bin/draknfs:589 ../bin/draksambashare:1306
+#: ../bin/drakhosts:248 ../bin/draknfs:602 ../bin/draksambashare:1306
 #: ../bin/draksambashare:1351 ../bin/draksambashare:1382
 #: ../bin/draksambashare:1419
 #, c-format
@@ -608,7 +609,7 @@ msgid "Failed to Modify host."
 msgstr "Не удалось изменить хост."
 
 #: ../bin/drakhosts:255 ../bin/drakids:92 ../bin/drakids:101
-#: ../bin/draknfs:596 ../bin/draksambashare:1307 ../bin/draksambashare:1359
+#: ../bin/draknfs:609 ../bin/draksambashare:1307 ../bin/draksambashare:1359
 #: ../bin/draksambashare:1390 ../bin/draksambashare:1427
 #, c-format
 msgid "Remove"
@@ -620,8 +621,8 @@ msgid "Failed to remove host."
 msgstr "Не удалось удалить хост."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:174
-#: ../bin/net_applet:171 ../lib/network/drakroam.pm:118
-#: ../lib/network/netcenter.pm:145
+#: ../bin/net_applet:187 ../bin/net_applet.orig:171
+#: ../lib/network/drakroam.pm:118 ../lib/network/netcenter.pm:159
 #, c-format
 msgid "Quit"
 msgstr "Выход"
@@ -633,15 +634,16 @@ msgstr "Разрешённые адреса"
 
 #: ../bin/drakids:40 ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196
 #: ../bin/drakids:221 ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
-#: ../bin/net_applet:110 ../bin/net_applet:261
-#: ../lib/network/drakfirewall.pm:261 ../lib/network/drakfirewall.pm:265
+#: ../bin/net_applet:130 ../bin/net_applet:276 ../bin/net_applet.orig:110
+#: ../bin/net_applet.orig:260 ../lib/network/drakfirewall.pm:261
+#: ../lib/network/drakfirewall.pm:265
 #, c-format
 msgid "Interactive Firewall"
 msgstr "Интерактивный файервол"
 
 #: ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196 ../bin/drakids:221
 #: ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
-#: ../bin/net_applet:261
+#: ../bin/net_applet:276 ../bin/net_applet.orig:260
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "Невозможно связаться с демоном"
@@ -1156,134 +1158,129 @@ msgstr "Информация"
 msgid "Directory"
 msgstr "Каталог"
 
-#: ../bin/draknfs:273
-#, c-format
-msgid "Draknfs entry"
-msgstr "Запись Draknfs"
-
-#: ../bin/draknfs:282
+#: ../bin/draknfs:280
 #, c-format
 msgid "Please add an NFS share to be able to modify it."
 msgstr "Добавьте ресурс NFS, чтобы его можно было изменить."
 
-#: ../bin/draknfs:356 ../bin/draksambashare:599
-#, c-format
-msgid "Advanced options"
-msgstr "Расширенные параметры"
+#: ../bin/draknfs:354
+#, fuzzy, c-format
+msgid "Advanced"
+msgstr "Дополнительные параметры"
 
-#: ../bin/draknfs:371
+#: ../bin/draknfs:377
 #, c-format
 msgid "NFS directory"
 msgstr "Каталог NFS"
 
-#: ../bin/draknfs:372 ../bin/draksambashare:382 ../bin/draksambashare:589
+#: ../bin/draknfs:378 ../bin/draksambashare:382 ../bin/draksambashare:589
 #: ../bin/draksambashare:768
 #, c-format
 msgid "Directory:"
 msgstr "Каталог:"
 
-#: ../bin/draknfs:373
+#: ../bin/draknfs:379
 #, c-format
 msgid "Host access"
 msgstr "Доступ хосту"
 
-#: ../bin/draknfs:374
+#: ../bin/draknfs:380
 #, c-format
 msgid "Access:"
 msgstr "Доступ:"
 
-#: ../bin/draknfs:375
+#: ../bin/draknfs:381
 #, c-format
 msgid "User ID Mapping"
 msgstr "Отображение пользовательских ID"
 
-#: ../bin/draknfs:376
+#: ../bin/draknfs:382
 #, c-format
 msgid "User ID:"
 msgstr "ID пользователя:"
 
-#: ../bin/draknfs:377
+#: ../bin/draknfs:383
 #, c-format
 msgid "Anonymous user ID:"
 msgstr "ID пользователя anonymous:"
 
-#: ../bin/draknfs:378
+#: ../bin/draknfs:384
 #, c-format
 msgid "Anonymous Group ID:"
 msgstr "ID группы anonymous:"
 
-#: ../bin/draknfs:415
+#: ../bin/draknfs:427
 #, c-format
 msgid "Please specify a directory to share."
 msgstr "Укажите каталог для общего доступа."
 
-#: ../bin/draknfs:417
+#: ../bin/draknfs:429
 #, c-format
 msgid "Can't create this directory."
 msgstr "Невозможно создать этот каталог."
 
-#: ../bin/draknfs:420
+#: ../bin/draknfs:432
 #, c-format
 msgid "You must specify hosts access."
 msgstr "Вы должны указать доступ для хостов."
 
-#: ../bin/draknfs:500
+#: ../bin/draknfs:512
 #, c-format
 msgid "Share Directory"
 msgstr "Общий каталог"
 
-#: ../bin/draknfs:500
+#: ../bin/draknfs:512
 #, c-format
 msgid "Hosts Wildcard"
 msgstr "Шаблоны хостов"
 
-#: ../bin/draknfs:500
+#: ../bin/draknfs:512
 #, c-format
 msgid "General Options"
 msgstr "Общие параметры"
 
-#: ../bin/draknfs:500
+#: ../bin/draknfs:512
 #, c-format
 msgid "Custom Options"
 msgstr "Дополнительные параметры"
 
-#: ../bin/draknfs:512 ../bin/draksambashare:397 ../bin/draksambashare:626
+#: ../bin/draknfs:524 ../bin/draksambashare:397 ../bin/draksambashare:626
 #: ../bin/draksambashare:793
 #, c-format
 msgid "Please enter a directory to share."
 msgstr "Укажите каталог для общего доступа."
 
-#: ../bin/draknfs:519
+#: ../bin/draknfs:531
 #, c-format
 msgid "Please use the modify button to set right access."
 msgstr "Используйте кнопку изменения, чтобы установить нужные права доступа."
 
-#: ../bin/draknfs:534
+#: ../bin/draknfs:546
 #, c-format
 msgid "Manage NFS shares"
 msgstr "Управление ресурсами NFS"
 
-#: ../bin/draknfs:570
+#: ../bin/draknfs:582
 #, c-format
 msgid "Starting the NFS-server"
 msgstr "Запускается NFS-сервер"
 
-#: ../bin/draknfs:577
+#: ../bin/draknfs:590
 #, c-format
 msgid "DrakNFS manage NFS shares"
 msgstr "DrakNFS управляет ресурсами NFS"
 
-#: ../bin/draknfs:586
+#: ../bin/draknfs:599
 #, c-format
 msgid "Failed to add NFS share."
 msgstr "Не удалось добавить NFS-ресурс."
 
-#: ../bin/draknfs:593
+#: ../bin/draknfs:606
 #, c-format
 msgid "Failed to Modify NFS share."
 msgstr "Не удалось изменить NFS-ресурс."
 
-#: ../bin/draknfs:600
+#: ../bin/draknfs:613
 #, c-format
 msgid "Failed to remove an NFS share."
 msgstr "Не удалось удалить NFS-ресурс."
@@ -1652,6 +1649,11 @@ msgstr "Разрешена запись:"
 #, c-format
 msgid "Browseable:"
 msgstr "Разрешён просмотр:"
+
+#: ../bin/draksambashare:599
+#, c-format
+msgid "Advanced options"
+msgstr "Расширенные параметры"
 
 #: ../bin/draksambashare:601
 #, c-format
@@ -2138,32 +2140,32 @@ msgstr ""
 msgid "DrakSamba manage Samba shares"
 msgstr "DrakSamba управляет общими ресурсами Samba"
 
-#: ../bin/net_applet:94
+#: ../bin/net_applet:94 ../bin/net_applet.orig:94
 #, c-format
 msgid "Network is up on interface %s."
 msgstr "Сеть поднята на интерфейсе %s."
 
-#: ../bin/net_applet:95
+#: ../bin/net_applet:95 ../bin/net_applet.orig:95
 #, c-format
 msgid "IP address: %s"
 msgstr "IP-адрес: %s"
 
-#: ../bin/net_applet:96
+#: ../bin/net_applet:96 ../bin/net_applet.orig:96
 #, c-format
 msgid "Gateway: %s"
 msgstr "Шлюз: %s"
 
-#: ../bin/net_applet:97
+#: ../bin/net_applet:97 ../bin/net_applet.orig:97
 #, c-format
 msgid "Connected to %s (link level: %d %%)"
 msgstr "Подключён к %s (тип связи: %d %%)"
 
-#: ../bin/net_applet:99
+#: ../bin/net_applet:99 ../bin/net_applet.orig:99
 #, c-format
 msgid "Network is down on interface %s."
 msgstr "Сеть опущена на интерфейсе %s."
 
-#: ../bin/net_applet:101
+#: ../bin/net_applet:101 ../bin/net_applet.orig:101
 #, c-format
 msgid ""
 "You do not have any configured Internet connection.\n"
@@ -2172,89 +2174,92 @@ msgstr ""
 "У вас ещё нет ни одного настроенного соединения с Интернет.\n"
 "Запустите помощника \"%s\" из Центра Управления Mandriva Linux"
 
-#: ../bin/net_applet:107 ../bin/net_monitor:475
+#: ../bin/net_applet:127 ../bin/net_applet.orig:107 ../bin/net_monitor:475
 #, c-format
 msgid "Connect %s"
 msgstr "Подключить %s"
 
-#: ../bin/net_applet:108 ../bin/net_monitor:475
+#: ../bin/net_applet:128 ../bin/net_applet.orig:108 ../bin/net_monitor:475
 #, c-format
 msgid "Disconnect %s"
 msgstr "Отключить %s"
 
-#: ../bin/net_applet:109
+#: ../bin/net_applet:129 ../bin/net_applet.orig:109
 #, c-format
 msgid "Monitor Network"
 msgstr "Мониторинг сети"
 
-#: ../bin/net_applet:111
+#: ../bin/net_applet:131 ../bin/net_applet.orig:111
 #, c-format
 msgid "Manage wireless networks"
 msgstr "Управление беспроводными сетями"
 
-#: ../bin/net_applet:113
+#: ../bin/net_applet:133 ../bin/net_applet.orig:113
 #, c-format
 msgid "Manage VPN connections"
 msgstr "Управление VPN-соединениями"
 
-#: ../bin/net_applet:117
+#: ../bin/net_applet:137 ../bin/net_applet.orig:117
 #, c-format
 msgid "Configure Network"
 msgstr "Настроить сеть"
 
-#: ../bin/net_applet:119
+#: ../bin/net_applet:139 ../bin/net_applet.orig:119
 #, c-format
 msgid "Watched interface"
 msgstr "Наблюдаемые интерфейсы"
 
-#: ../bin/net_applet:120 ../bin/net_applet:121 ../bin/net_applet:123
+#: ../bin/net_applet:140 ../bin/net_applet:141 ../bin/net_applet:143
+#: ../bin/net_applet.orig:120 ../bin/net_applet.orig:121
+#: ../bin/net_applet.orig:123
 #, c-format
 msgid "Auto-detect"
 msgstr "Автоопределение"
 
-#: ../bin/net_applet:128
+#: ../bin/net_applet:148 ../bin/net_applet.orig:128
 #, c-format
 msgid "Active interfaces"
 msgstr "Активные интерфейсы"
 
-#: ../bin/net_applet:152
+#: ../bin/net_applet:168 ../bin/net_applet.orig:152
 #, c-format
 msgid "Profiles"
 msgstr "Профили"
 
-#: ../bin/net_applet:162 ../lib/network/connection.pm:225
-#: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
-#: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
+#: ../bin/net_applet:178 ../bin/net_applet.orig:162
+#: ../lib/network/connection.pm:225 ../lib/network/drakvpn.pm:62
+#: ../lib/network/vpn/openvpn.pm:365 ../lib/network/vpn/openvpn.pm:379
+#: ../lib/network/vpn/openvpn.pm:390
 #, c-format
 msgid "VPN connection"
 msgstr "VPN-подключение"
 
-#: ../bin/net_applet:341
+#: ../bin/net_applet:356 ../bin/net_applet.orig:340
 #, c-format
 msgid "Network connection"
 msgstr "Сетевое подключение"
 
-#: ../bin/net_applet:425
+#: ../bin/net_applet:440 ../bin/net_applet.orig:424
 #, c-format
 msgid "More networks"
 msgstr "Другие сети"
 
-#: ../bin/net_applet:452
+#: ../bin/net_applet:467 ../bin/net_applet.orig:451
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "Автоматический режим интерактивного файервола"
 
-#: ../bin/net_applet:457
+#: ../bin/net_applet:472 ../bin/net_applet.orig:456
 #, c-format
 msgid "Always launch on startup"
 msgstr "Всегда запускать при старте"
 
-#: ../bin/net_applet:462
+#: ../bin/net_applet:477 ../bin/net_applet.orig:461
 #, c-format
 msgid "Wireless networks"
 msgstr "Беспроводные сети"
 
-#: ../bin/net_applet:469 ../bin/net_monitor:96
+#: ../bin/net_applet:484 ../bin/net_applet.orig:468 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Настройки"
@@ -2443,7 +2448,7 @@ msgid "Unlisted - edit manually"
 msgstr "Нет в списке - отредактируйте вручную"
 
 #: ../lib/network/connection.pm:227 ../lib/network/connection/cable.pm:41
-#: ../lib/network/connection/wireless.pm:43 ../lib/network/vpn/openvpn.pm:127
+#: ../lib/network/connection/wireless.pm:45 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
@@ -2469,7 +2474,7 @@ msgstr "Метрика"
 msgid "Link detected on interface %s"
 msgstr "На интерфейсе %s обнаружен линк"
 
-#: ../lib/network/connection.pm:312 ../lib/network/connection/ethernet.pm:288
+#: ../lib/network/connection.pm:312 ../lib/network/connection/ethernet.pm:289
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "На интерфейсе %s потерян линк"
@@ -2531,23 +2536,23 @@ msgstr "Неправильный формат записи PIN: должно б�
 msgid "GPRS/Edge/3G"
 msgstr "GPRS/Edge/3G"
 
-#: ../lib/network/connection/cellular_card.pm:105
+#: ../lib/network/connection/cellular_card.pm:110
 #: ../lib/network/vpn/openvpn.pm:391
 #, c-format
 msgid "PIN number"
 msgstr "Номер PIN"
 
-#: ../lib/network/connection/cellular_card.pm:181
+#: ../lib/network/connection/cellular_card.pm:186
 #, c-format
 msgid "Unable to open device %s"
 msgstr "Невозможно открыть устройство %s"
 
-#: ../lib/network/connection/cellular_card.pm:213
+#: ../lib/network/connection/cellular_card.pm:218
 #, c-format
 msgid "Please check that your SIM card is inserted."
 msgstr "Проверьте, вставлена ли ваша SIM-карта."
 
-#: ../lib/network/connection/cellular_card.pm:224
+#: ../lib/network/connection/cellular_card.pm:229
 #, c-format
 msgid ""
 "You entered a wrong PIN code.\n"
@@ -2587,34 +2592,39 @@ msgstr "PID"
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: ../lib/network/connection/ethernet.pm:29
+#: ../lib/network/connection/ethernet.pm:12
+#, fuzzy, c-format
+msgid "Wired (Ethernet)"
+msgstr "Ethernet"
+
+#: ../lib/network/connection/ethernet.pm:30
 #, c-format
 msgid "Virtual interface"
 msgstr "Виртуальный интерфейс"
 
-#: ../lib/network/connection/ethernet.pm:59
+#: ../lib/network/connection/ethernet.pm:60
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
 msgstr ""
 "Невозможно найти сетевой интерфейс для выбранного устройства (используя "
 "драйвер %s)."
 
-#: ../lib/network/connection/ethernet.pm:69 ../lib/network/vpn/openvpn.pm:207
+#: ../lib/network/connection/ethernet.pm:70 ../lib/network/vpn/openvpn.pm:207
 #, c-format
 msgid "Manual configuration"
 msgstr "Ручная настройка"
 
-#: ../lib/network/connection/ethernet.pm:70
+#: ../lib/network/connection/ethernet.pm:71
 #, c-format
 msgid "Automatic IP (BOOTP/DHCP)"
 msgstr "Автоматический IP (BOOTP/DHCP)"
 
-#: ../lib/network/connection/ethernet.pm:124
+#: ../lib/network/connection/ethernet.pm:125
 #, c-format
 msgid "IP settings"
 msgstr "Настройка IP"
 
-#: ../lib/network/connection/ethernet.pm:137
+#: ../lib/network/connection/ethernet.pm:138
 #, c-format
 msgid ""
 "Please enter the IP configuration for this machine.\n"
@@ -2625,113 +2635,113 @@ msgstr ""
 "Каждый пункт должен быть указан как IP-адрес в виде\n"
 "десятичных чисел, разделенных точками (например, 1.2.3.4)."
 
-#: ../lib/network/connection/ethernet.pm:141 ../lib/network/netconnect.pm:646
+#: ../lib/network/connection/ethernet.pm:142 ../lib/network/netconnect.pm:646
 #: ../lib/network/vpn/openvpn.pm:212 ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
 msgstr "Шлюз"
 
-#: ../lib/network/connection/ethernet.pm:144
+#: ../lib/network/connection/ethernet.pm:145
 #, c-format
 msgid "Get DNS servers from DHCP"
 msgstr "Получать серверы DNS от DHCP"
 
-#: ../lib/network/connection/ethernet.pm:146
+#: ../lib/network/connection/ethernet.pm:147
 #, c-format
 msgid "DNS server 1"
 msgstr "1-й DNS-сервер"
 
-#: ../lib/network/connection/ethernet.pm:147
+#: ../lib/network/connection/ethernet.pm:148
 #, c-format
 msgid "DNS server 2"
 msgstr "2-й DNS-сервер"
 
-#: ../lib/network/connection/ethernet.pm:148
+#: ../lib/network/connection/ethernet.pm:149
 #, c-format
 msgid "Search domain"
 msgstr "Домен поиска"
 
-#: ../lib/network/connection/ethernet.pm:149
+#: ../lib/network/connection/ethernet.pm:150
 #, c-format
 msgid "By default search domain will be set from the fully-qualified host name"
 msgstr "По умолчанию домен поиска будет взят из полного доменного имени хоста"
 
-#: ../lib/network/connection/ethernet.pm:152
+#: ../lib/network/connection/ethernet.pm:153
 #, c-format
 msgid "DHCP timeout (in seconds)"
 msgstr "Тайм-аут DHCP (в секундах)"
 
-#: ../lib/network/connection/ethernet.pm:153
+#: ../lib/network/connection/ethernet.pm:154
 #, c-format
 msgid "Get YP servers from DHCP"
 msgstr "Получать серверы YP от DHCP"
 
-#: ../lib/network/connection/ethernet.pm:154
+#: ../lib/network/connection/ethernet.pm:155
 #, c-format
 msgid "Get NTPD servers from DHCP"
 msgstr "Получать серверы NTPD от DHCP"
 
-#: ../lib/network/connection/ethernet.pm:155
+#: ../lib/network/connection/ethernet.pm:156
 #, c-format
 msgid "DHCP host name"
 msgstr "Имя хоста DHCP"
 
-#: ../lib/network/connection/ethernet.pm:157
+#: ../lib/network/connection/ethernet.pm:158
 #, c-format
 msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
 msgstr "Не откатываться до Zeroconf (сеть 169.254.0.0)"
 
-#: ../lib/network/connection/ethernet.pm:168
+#: ../lib/network/connection/ethernet.pm:169
 #, c-format
 msgid "IP address should be in format 1.2.3.4"
 msgstr "IP-адрес должен быть в формате 1.2.3.4"
 
-#: ../lib/network/connection/ethernet.pm:173
+#: ../lib/network/connection/ethernet.pm:174
 #, c-format
 msgid "Netmask should be in format 255.255.224.0"
 msgstr "Сетевая маска должна быть в формате 255.255.224.0"
 
-#: ../lib/network/connection/ethernet.pm:178
+#: ../lib/network/connection/ethernet.pm:179
 #, c-format
 msgid "Warning: IP address %s is usually reserved!"
 msgstr "Предупреждение: IP-адрес %s обычно зарезервирован!"
 
-#: ../lib/network/connection/ethernet.pm:184
+#: ../lib/network/connection/ethernet.pm:185
 #, c-format
 msgid "%s already in use\n"
 msgstr "%s уже используется\n"
 
-#: ../lib/network/connection/ethernet.pm:209
+#: ../lib/network/connection/ethernet.pm:210
 #, c-format
 msgid "Assign host name from DHCP address"
 msgstr "Определить имя хоста из адреса DHCP"
 
-#: ../lib/network/connection/ethernet.pm:229
+#: ../lib/network/connection/ethernet.pm:230
 #, c-format
 msgid "Network Hotplugging"
 msgstr "\"Горячая\" коммутация"
 
-#: ../lib/network/connection/ethernet.pm:233
+#: ../lib/network/connection/ethernet.pm:234
 #, c-format
 msgid "Enable IPv6 to IPv4 tunnel"
 msgstr "Разрешить туннель IPv6 в IPv4"
 
-#: ../lib/network/connection/ethernet.pm:287
+#: ../lib/network/connection/ethernet.pm:288
 #, c-format
 msgid "Link beat detected on interface %s"
 msgstr "На интерфейсе %s обнаружен действующий линк"
 
-#: ../lib/network/connection/ethernet.pm:290
+#: ../lib/network/connection/ethernet.pm:291
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
 msgstr "Запрашивается сетевой адрес на интерфейсе %s (протокол %s)..."
 
-#: ../lib/network/connection/ethernet.pm:291
+#: ../lib/network/connection/ethernet.pm:292
 #, c-format
 msgid "Got a network address on interface %s (%s protocol)"
 msgstr "Получен сетевой адрес на интерфейсе %s (протокол %s)"
 
-#: ../lib/network/connection/ethernet.pm:292
+#: ../lib/network/connection/ethernet.pm:293
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
 msgstr "Не удалось получить сетевой адрес на интерфейсе %s (протокол %s)"
@@ -3141,42 +3151,47 @@ msgstr "Объединенные арабские Эмираты"
 msgid "United Kingdom"
 msgstr "Объединенное Королевство"
 
-#: ../lib/network/connection/wireless.pm:11
+#: ../lib/network/connection/wireless.pm:12
 #, c-format
 msgid "Wireless"
 msgstr "Беспроводная связь"
 
-#: ../lib/network/connection/wireless.pm:27
+#: ../lib/network/connection/wireless.pm:13
+#, fuzzy, c-format
+msgid "Wireless (Wi-Fi)"
+msgstr "Беспроводная связь"
+
+#: ../lib/network/connection/wireless.pm:29
 #, c-format
 msgid "Use a Windows driver (with ndiswrapper)"
 msgstr "Использовать драйвер Windows (с ndiswrapper)"
 
-#: ../lib/network/connection/wireless.pm:44
+#: ../lib/network/connection/wireless.pm:46
 #, c-format
 msgid "Open WEP"
 msgstr "Открытый WEP"
 
-#: ../lib/network/connection/wireless.pm:45
+#: ../lib/network/connection/wireless.pm:47
 #, c-format
 msgid "Restricted WEP"
 msgstr "Закрытый WEP"
 
-#: ../lib/network/connection/wireless.pm:46
+#: ../lib/network/connection/wireless.pm:48
 #, c-format
 msgid "WPA/WPA2 Pre-Shared Key"
 msgstr "Ключ WPA/WPA2"
 
-#: ../lib/network/connection/wireless.pm:47
+#: ../lib/network/connection/wireless.pm:49
 #, c-format
 msgid "WPA/WPA2 Enterprise"
 msgstr "WPA/WPA2 Enterprise"
 
-#: ../lib/network/connection/wireless.pm:258
+#: ../lib/network/connection/wireless.pm:260
 #, c-format
 msgid "Windows driver"
 msgstr "Драйвер Windows"
 
-#: ../lib/network/connection/wireless.pm:325
+#: ../lib/network/connection/wireless.pm:344
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
@@ -3185,75 +3200,75 @@ msgstr ""
 "Ваша карта беспроводной связи отключена. Включите её сначала (переключатель "
 "RF)."
 
-#: ../lib/network/connection/wireless.pm:404
+#: ../lib/network/connection/wireless.pm:429
 #, c-format
 msgid "Wireless settings"
 msgstr "Параметры беспроводного соединения"
 
-#: ../lib/network/connection/wireless.pm:409
-#: ../lib/network/connection_manager.pm:263
+#: ../lib/network/connection/wireless.pm:434
+#: ../lib/network/connection_manager.pm:264
 #, c-format
 msgid "Operating Mode"
 msgstr "Режим управления"
 
-#: ../lib/network/connection/wireless.pm:410
+#: ../lib/network/connection/wireless.pm:435
 #, c-format
 msgid "Ad-hoc"
 msgstr "Ad-hoc"
 
-#: ../lib/network/connection/wireless.pm:410
+#: ../lib/network/connection/wireless.pm:435
 #, c-format
 msgid "Managed"
 msgstr "Управляемый"
 
-#: ../lib/network/connection/wireless.pm:410
+#: ../lib/network/connection/wireless.pm:435
 #, c-format
 msgid "Master"
 msgstr "Мастер"
 
-#: ../lib/network/connection/wireless.pm:410
+#: ../lib/network/connection/wireless.pm:435
 #, c-format
 msgid "Repeater"
 msgstr "Повторитель"
 
-#: ../lib/network/connection/wireless.pm:410
+#: ../lib/network/connection/wireless.pm:435
 #, c-format
 msgid "Secondary"
 msgstr "Вторичный"
 
-#: ../lib/network/connection/wireless.pm:410
+#: ../lib/network/connection/wireless.pm:435
 #, c-format
 msgid "Auto"
 msgstr "Авто"
 
-#: ../lib/network/connection/wireless.pm:413
+#: ../lib/network/connection/wireless.pm:438
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "Сетевое имя (ESSID)"
 
-#: ../lib/network/connection/wireless.pm:415
+#: ../lib/network/connection/wireless.pm:440
 #, c-format
 msgid "Encryption mode"
 msgstr "Режим шифрования"
 
-#: ../lib/network/connection/wireless.pm:417
+#: ../lib/network/connection/wireless.pm:442
 #, c-format
 msgid "Encryption key"
 msgstr "Ключ шифрования"
 
-#: ../lib/network/connection/wireless.pm:419
+#: ../lib/network/connection/wireless.pm:444
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr ""
 "Принудительно использовать этот ключ в качестве ASCII-строки (например для "
 "Livebox)"
 
-#: ../lib/network/connection/wireless.pm:426
+#: ../lib/network/connection/wireless.pm:451
 #, c-format
 msgid "EAP Login/Username"
 msgstr "Логин EAP (имя пользователя)"
 
-#: ../lib/network/connection/wireless.pm:428
+#: ../lib/network/connection/wireless.pm:453
 #, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
@@ -3265,12 +3280,12 @@ msgstr ""
 "ещё непроверенным синтаксисом\n"
 "  ДОМЕН\\имя_пользователя"
 
-#: ../lib/network/connection/wireless.pm:431
+#: ../lib/network/connection/wireless.pm:456
 #, c-format
 msgid "EAP Password"
 msgstr "Пароль EAP"
 
-#: ../lib/network/connection/wireless.pm:433
+#: ../lib/network/connection/wireless.pm:458
 #, c-format
 msgid ""
 " Password: A string.\n"
@@ -3306,12 +3321,12 @@ msgstr ""
 "него могут игнорироваться указанные здесь имя пользователя\n"
 "и пароль."
 
-#: ../lib/network/connection/wireless.pm:447
+#: ../lib/network/connection/wireless.pm:472
 #, c-format
 msgid "EAP client certificate"
 msgstr "Сертификат клиента EAP"
 
-#: ../lib/network/connection/wireless.pm:449
+#: ../lib/network/connection/wireless.pm:474
 #, c-format
 msgid ""
 "The complete path and filename of client certificate. This is\n"
@@ -3326,32 +3341,32 @@ msgstr ""
 "Замечание: на странице дополнительной настройки доступны\n"
 "другие параметры."
 
-#: ../lib/network/connection/wireless.pm:453
+#: ../lib/network/connection/wireless.pm:478
 #, c-format
 msgid "Network ID"
 msgstr "Сетевой ID"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:479
 #, c-format
 msgid "Operating frequency"
 msgstr "Рабочая частота"
 
-#: ../lib/network/connection/wireless.pm:455
+#: ../lib/network/connection/wireless.pm:480
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "Порог чувствительности"
 
-#: ../lib/network/connection/wireless.pm:456
+#: ../lib/network/connection/wireless.pm:481
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "Bitrate (in b/s)"
 
-#: ../lib/network/connection/wireless.pm:457
+#: ../lib/network/connection/wireless.pm:482
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../lib/network/connection/wireless.pm:458
+#: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -3372,17 +3387,17 @@ msgstr ""
 "посылает RTS, значение равное максимальному размеру пакета отключает схему.\n"
 " Вы также можете установить значение этого параметра в auto, fixed или off."
 
-#: ../lib/network/connection/wireless.pm:465
+#: ../lib/network/connection/wireless.pm:490
 #, c-format
 msgid "Fragmentation"
 msgstr "Фрагментация"
 
-#: ../lib/network/connection/wireless.pm:466
+#: ../lib/network/connection/wireless.pm:491
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "Дополнительные аргументы команды iwconfig"
 
-#: ../lib/network/connection/wireless.pm:467
+#: ../lib/network/connection/wireless.pm:492
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -3398,12 +3413,12 @@ msgstr ""
 "Читайте iwconfig(8) man страницу для получения подробной информации."
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:474
+#: ../lib/network/connection/wireless.pm:499
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "Дополнительные аргументы команды iwspy"
 
-#: ../lib/network/connection/wireless.pm:475
+#: ../lib/network/connection/wireless.pm:500
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -3423,12 +3438,12 @@ msgstr ""
 "\n"
 "Читайте iwpspy(8) man страницу для получения подробной информации."
 
-#: ../lib/network/connection/wireless.pm:483
+#: ../lib/network/connection/wireless.pm:508
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "Дополнительные аргументы команды iwpriv"
 
-#: ../lib/network/connection/wireless.pm:485
+#: ../lib/network/connection/wireless.pm:510
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -3459,28 +3474,28 @@ msgstr ""
 "\n"
 "Читайте iwpriv(8) man страницу для получения подробной информации."
 
-#: ../lib/network/connection/wireless.pm:496
+#: ../lib/network/connection/wireless.pm:521
 #, c-format
 msgid "EAP Protocol"
 msgstr "Протокол EAP"
 
-#: ../lib/network/connection/wireless.pm:497
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:522
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "Auto Detect"
 msgstr "Автоопределение"
 
-#: ../lib/network/connection/wireless.pm:497
+#: ../lib/network/connection/wireless.pm:522
 #, c-format
 msgid "WPA2"
 msgstr "WPA2"
 
-#: ../lib/network/connection/wireless.pm:497
+#: ../lib/network/connection/wireless.pm:522
 #, c-format
 msgid "WPA"
 msgstr "WPA"
 
-#: ../lib/network/connection/wireless.pm:499
+#: ../lib/network/connection/wireless.pm:524
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
@@ -3490,67 +3505,67 @@ msgstr ""
 "сначала выполняется попытка задействовать WPA версии 2,\n"
 "а затем WPA версии 1."
 
-#: ../lib/network/connection/wireless.pm:501
+#: ../lib/network/connection/wireless.pm:526
 #, c-format
 msgid "EAP Mode"
 msgstr "Режим EAP"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "PEAP"
 msgstr "PEAP"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "TTLS"
 msgstr "TTLS"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "TLS"
 msgstr "TLS"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "MSCHAPV2"
 msgstr "MSCHAPV2"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "MD5"
 msgstr "MD5"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "OTP"
 msgstr "OTP"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "GTC"
 msgstr "GTC"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "LEAP"
 msgstr "LEAP"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "PEAP TTLS"
 msgstr "PEAP TTLS"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid "TTLS TLS"
 msgstr "TTLS TLS"
 
-#: ../lib/network/connection/wireless.pm:504
+#: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "EAP key_mgmt"
 msgstr "Управление ключами EAP"
 
-#: ../lib/network/connection/wireless.pm:506
+#: ../lib/network/connection/wireless.pm:531
 #, c-format
 msgid ""
 "list of accepted authenticated key management protocols.\n"
@@ -3560,12 +3575,12 @@ msgstr ""
 "аутентификации.\n"
 "Возможные значения: WPA-EAP, IEEE8021X, NONE"
 
-#: ../lib/network/connection/wireless.pm:508
+#: ../lib/network/connection/wireless.pm:533
 #, c-format
 msgid "EAP outer identity"
 msgstr "Внешний идентификатор EAP"
 
-#: ../lib/network/connection/wireless.pm:510
+#: ../lib/network/connection/wireless.pm:535
 #, c-format
 msgid ""
 "Anonymous identity string for EAP: to be used as the\n"
@@ -3577,12 +3592,12 @@ msgstr ""
 "вместе с типами EAP, которые поддерживают различные\n"
 "виды туннелирования, например, TTLS"
 
-#: ../lib/network/connection/wireless.pm:513
+#: ../lib/network/connection/wireless.pm:538
 #, c-format
 msgid "EAP phase2"
 msgstr "Вторая фаза EAP"
 
-#: ../lib/network/connection/wireless.pm:515
+#: ../lib/network/connection/wireless.pm:540
 #, c-format
 msgid ""
 "Inner authentication with TLS tunnel parameters.\n"
@@ -3596,12 +3611,12 @@ msgstr ""
 "auth=MSCHAPV2 для PEAP или\n"
 "autheap=MSCHAPV2 autheap=MD5 для TTLS"
 
-#: ../lib/network/connection/wireless.pm:519
+#: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "EAP CA certificate"
 msgstr "Центр сертификации EAP"
 
-#: ../lib/network/connection/wireless.pm:521
+#: ../lib/network/connection/wireless.pm:546
 #, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
@@ -3617,12 +3632,12 @@ msgstr ""
 "доверенный сертификат всегда нужно настраивать при\n"
 "использовании вместе с TLS or TTLS или PEAP."
 
-#: ../lib/network/connection/wireless.pm:526
+#: ../lib/network/connection/wireless.pm:551
 #, c-format
 msgid "EAP certificate subject match"
 msgstr "Соответствие описания сертификата EAP"
 
-#: ../lib/network/connection/wireless.pm:528
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid ""
 " Substring to be matched against the subject of\n"
@@ -3638,12 +3653,12 @@ msgstr ""
 "Строка описания имеет следующий формат:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
-#: ../lib/network/connection/wireless.pm:533
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "EAP extra directives"
 msgstr "Дополнительные директивы EAP"
 
-#: ../lib/network/connection/wireless.pm:535
+#: ../lib/network/connection/wireless.pm:560
 #, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
@@ -3678,12 +3693,12 @@ msgstr ""
 "значений параметров, отличных от тех, что указываются \n"
 "в графическом инерфейсе."
 
-#: ../lib/network/connection/wireless.pm:555
+#: ../lib/network/connection/wireless.pm:580
 #, c-format
 msgid "An encryption key is required."
 msgstr "Требуется ключ шифрования."
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:587
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
@@ -3692,7 +3707,7 @@ msgstr ""
 "Ключ должен быть длиной от 8 до 63 ASCII-символов, или 64 шестнадцатиричных "
 "символа."
 
-#: ../lib/network/connection/wireless.pm:568
+#: ../lib/network/connection/wireless.pm:593
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
@@ -3701,7 +3716,7 @@ msgstr ""
 "WEP-ключ должен быть диной не более %d ASCII-символов или %d "
 "шестнадцатиричных символов."
 
-#: ../lib/network/connection/wireless.pm:575
+#: ../lib/network/connection/wireless.pm:600
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -3710,7 +3725,7 @@ msgstr ""
 "Freq (частота) должна иметь суффикс k, M или G (например, \"2.46G\" для "
 "частоты 2.46 ГГц), или добавьте нужное количество '0' (нулей)."
 
-#: ../lib/network/connection/wireless.pm:581
+#: ../lib/network/connection/wireless.pm:606
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
@@ -3719,17 +3734,17 @@ msgstr ""
 "Rate должна иметь суффикс k, M или G (например, \"11M\" для 11M), или "
 "добавьте нужное количество '0' (нулей)."
 
-#: ../lib/network/connection/wireless.pm:593
+#: ../lib/network/connection/wireless.pm:618
 #, c-format
 msgid "Allow access point roaming"
 msgstr "Разрешить роуминг точки доступа"
 
-#: ../lib/network/connection/wireless.pm:712
+#: ../lib/network/connection/wireless.pm:739
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "Установлена связь с беспроводной сетью \"%s\" на интерфейсе %s"
 
-#: ../lib/network/connection/wireless.pm:713
+#: ../lib/network/connection/wireless.pm:740
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "Потеряна связь с беспроводной сетью на интерфейсе %s"
@@ -3807,66 +3822,66 @@ msgid "Virtual Circuit ID (VCI):"
 msgstr "Virtual Circuit ID (VCI):"
 
 #: ../lib/network/connection/xdsl.pm:332
-#: ../lib/network/connection_manager.pm:60 ../lib/network/drakvpn.pm:45
+#: ../lib/network/connection_manager.pm:61 ../lib/network/drakvpn.pm:45
 #: ../lib/network/netconnect.pm:134 ../lib/network/thirdparty.pm:123
 #, c-format
 msgid "Could not install the packages (%s)!"
 msgstr "Невозможно установить пакеты (%s )!"
 
-#: ../lib/network/connection_manager.pm:72
-#: ../lib/network/connection_manager.pm:87 ../lib/network/netconnect.pm:185
+#: ../lib/network/connection_manager.pm:73
+#: ../lib/network/connection_manager.pm:88 ../lib/network/netconnect.pm:185
 #, c-format
 msgid "Configuring device..."
 msgstr "Настраивается устройство..."
 
-#: ../lib/network/connection_manager.pm:77
-#: ../lib/network/connection_manager.pm:142
+#: ../lib/network/connection_manager.pm:78
+#: ../lib/network/connection_manager.pm:143
 #, c-format
 msgid "Network settings"
 msgstr "Параметры сети"
 
-#: ../lib/network/connection_manager.pm:78
-#: ../lib/network/connection_manager.pm:143
+#: ../lib/network/connection_manager.pm:79
+#: ../lib/network/connection_manager.pm:144
 #, c-format
 msgid "Please enter settings for network"
 msgstr "Укажите сетевые параметры"
 
-#: ../lib/network/connection_manager.pm:201
+#: ../lib/network/connection_manager.pm:202
 #, c-format
 msgid "Connecting..."
 msgstr "Устанавливается соединение..."
 
-#: ../lib/network/connection_manager.pm:218
+#: ../lib/network/connection_manager.pm:219
 #, c-format
 msgid "Disconnecting..."
 msgstr "Разрывается соединение..."
 
-#: ../lib/network/connection_manager.pm:260
+#: ../lib/network/connection_manager.pm:261
 #, c-format
 msgid "SSID"
 msgstr "SSID"
 
-#: ../lib/network/connection_manager.pm:261
+#: ../lib/network/connection_manager.pm:262
 #, c-format
 msgid "Signal strength"
 msgstr "Мощность сигнала"
 
-#: ../lib/network/connection_manager.pm:262
+#: ../lib/network/connection_manager.pm:263
 #, c-format
 msgid "Encryption"
 msgstr "Шифрование"
 
-#: ../lib/network/connection_manager.pm:306 ../lib/network/netconnect.pm:207
+#: ../lib/network/connection_manager.pm:335 ../lib/network/netconnect.pm:207
 #, c-format
 msgid "Scanning for networks..."
 msgstr "Выполняется сканирование сетей..."
 
-#: ../lib/network/connection_manager.pm:355 ../lib/network/drakroam.pm:116
+#: ../lib/network/connection_manager.pm:384 ../lib/network/drakroam.pm:116
 #, c-format
 msgid "Disconnect"
 msgstr "Отключить"
 
-#: ../lib/network/connection_manager.pm:355 ../lib/network/drakroam.pm:115
+#: ../lib/network/connection_manager.pm:384 ../lib/network/drakroam.pm:115
 #, c-format
 msgid "Connect"
 msgstr "Подключиться"
@@ -4053,12 +4068,12 @@ msgstr "Имя хоста изменено на \"%s\""
 msgid "Device: "
 msgstr "Устройство: "
 
-#: ../lib/network/drakroam.pm:114 ../lib/network/netcenter.pm:91
+#: ../lib/network/drakroam.pm:114 ../lib/network/netcenter.pm:64
 #, c-format
 msgid "Configure"
 msgstr "Настройка"
 
-#: ../lib/network/drakroam.pm:117 ../lib/network/netcenter.pm:96
+#: ../lib/network/drakroam.pm:117 ../lib/network/netcenter.pm:69
 #, c-format
 msgid "Refresh"
 msgstr "Обновить"
@@ -4281,22 +4296,22 @@ msgstr "Установить новый драйвер"
 msgid "Select a device:"
 msgstr "Выбрать устройство:"
 
-#: ../lib/network/netcenter.pm:36
-#, c-format
-msgid "Network Center"
-msgstr "Сетевой центр"
-
-#: ../lib/network/netcenter.pm:80 ../lib/network/netconnect.pm:210
+#: ../lib/network/netcenter.pm:53 ../lib/network/netconnect.pm:210
 #, c-format
 msgid "Please select your network:"
 msgstr "Выберите свою сеть:"
 
-#: ../lib/network/netcenter.pm:87
+#: ../lib/network/netcenter.pm:60
 #, c-format
 msgid ""
 "_: This is a verb\n"
 "Monitor"
 msgstr "Наблюдать"
+
+#: ../lib/network/netcenter.pm:135
+#, c-format
+msgid "Network Center"
+msgstr "Сетевой центр"
 
 #: ../lib/network/netconnect.pm:37
 #, c-format
@@ -5248,3 +5263,6 @@ msgstr "Режим NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Использовать определённый порт UDP"
+
+#~ msgid "Draknfs entry"
+#~ msgstr "Запись Draknfs"
