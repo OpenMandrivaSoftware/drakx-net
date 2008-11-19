@@ -264,7 +264,8 @@ my @thirdparty_settings = (
     },
 
     {
-        name => 'rt61pci',
+        name => 'rt61',
+        matching => 'rt61pci',
         description => 'Ralink RT61 802.11abg WLAN',
         firmware => {
             url => 'http://rt2x00.serialmonkey.com/',
@@ -273,7 +274,8 @@ my @thirdparty_settings = (
     },
 
     {
-        name => 'rt73usb',
+        name => 'rt73',
+        matching => 'rt73usb',
         description => 'Ralink RT73 802.11abg WLAN',
         firmware => {
             url => 'http://rt2x00.serialmonkey.com/',
