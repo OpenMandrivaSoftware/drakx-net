@@ -91,12 +91,12 @@ sub get_state_message {
     my $network = network::net_applet::get_current_network();
     formatAlaTeX(
         $current_state eq 'connected' ?
-          N("Network is up on interface %s.", $interface) .
+          N("Network is up on interface %s.", get_interface_name($interface)) .
           "\n\n" . N("IP address: %s", network::tools::get_interface_ip_address($net, $interface)) .
           "\n\n" . N("Gateway: %s", [ network::tools::get_interface_status($interface) ]->[1]) .
             ($network && "\n\n" . N("Connected to %s (link level: %d %%)", $network->{name}, $network->{signal_strength}))
         : $current_state eq 'disconnected' ?
-          N("Network is down on interface %s.", $interface)
+          N("Network is down on interface %s.", get_interface_name($interface))
         :
           N("You do not have any configured Internet connection.
 Run the \"%s\" assistant from the Mandriva Linux Control Center", N("Set up a new network interface (LAN, ISDN, ADSL, ...)"))
