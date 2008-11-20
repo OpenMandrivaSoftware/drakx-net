@@ -119,7 +119,7 @@ sub get_interface_icon {
 sub get_interface_name {
     my ($interface) = @_;
     my $type = get_interface_type($interface);
-    my $type_name = $type && $type->get_type_name;
+    my $type_name = $type && $type->get_type_description;
     $type_name ? "$type_name ($interface)" : $interface;
 }
 
