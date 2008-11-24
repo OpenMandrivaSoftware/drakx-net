@@ -338,15 +338,16 @@ sub unload_connection {
 
 sub install_packages {
     my ($self, $in) = @_;
-    my $packages = {
+    my $per_type_packages = {
         pppoa => [ qw(ppp-pppoatm) ],
         pppoe => [ qw(rp-pppoe) ],
         pptp  => [ qw(pptp-linux) ],
         capi  => [ qw(ppp) ],
-    }->{$self->{protocol}};
-    push @$packages, 'linux-atm' if $self->uses_atm_arp || $self->uses_atm_bridging;
-    if ($packages && !$in->do_pkgs->install(@$packages)) {
-        $in->ask_warn(N("Error"), N("Could not install the packages (%s)!", @$packages));
+    };
+    my @packages = @{$per_type_packages->{$self->{protocol}} || []};
+    push @packages, 'linux-atm' if $self->uses_atm_arp || $self->uses_atm_bridging;
+    if (@packages && !$in->do_pkgs->install(@packages)) {
+        $in->ask_warn(N("Error"), N("Could not install the packages (%s)!", @packages));
         return;
     }
     if ($self->{protocol} eq 'capi') {
