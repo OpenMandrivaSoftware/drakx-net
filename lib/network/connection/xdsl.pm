@@ -30,7 +30,7 @@ sub uses_ppp {
     !member($self->{protocol}, @non_ppp_protocols);
 }
 
-sub uses_atmarp {
+sub uses_atm_arp {
     my ($self) = @_;
     $self->{device}{xdsl_type} eq 'usb' && !$self->uses_ppp;
 }
@@ -308,7 +308,7 @@ sub build_ifcfg_settings {
     my $settings = {
         if_($self->uses_ppp, TYPE => 'ADSL'),
     };
-    if ($self->uses_atmarp) {
+    if ($self->uses_atm_arp) {
         #- use ATMARP with the atm0 interface
         put_in_hash({
             DEVICE => "atm0",
