@@ -344,6 +344,7 @@ sub install_packages {
         pptp  => [ qw(pptp-linux) ],
         capi  => [ qw(ppp) ],
     }->{$self->{protocol}};
+    push @$packages, 'linux-atm' if $self->uses_atm_arp || $self->uses_atm_bridging;
     if ($packages && !$in->do_pkgs->install(@$packages)) {
         $in->ask_warn(N("Error"), N("Could not install the packages (%s)!", @$packages));
         return;
