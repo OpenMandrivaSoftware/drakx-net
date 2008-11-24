@@ -317,17 +317,17 @@ sub build_ifcfg_settings {
     };
     if ($self->uses_atm_arp) {
         #- use ATMARP with the atm0 interface
-        put_in_hash({
+        put_in_hash($settings, {
             DEVICE => $self->get_atm_arp_interface,
             ATM_ADDR => join('.', @{$self->{access}{peer}}{qw(vpi vci)}),
             MII_NOT_SUPPORTED => "yes",
-        }, $settings);
+        });
     }
     if ($self->uses_atm_bridging) {
-        put_in_hash({
+        put_in_hash($settings, {
             ATM_DEVICE => $self->get_atm_bridging_interface,
             ATM_ADDR => join('.', @{$self->{access}{peer}}{qw(vpi vci)}),
-        }, $settings);
+        });
     }
     $self->network::connection::build_ifcfg_settings($settings);
 }
