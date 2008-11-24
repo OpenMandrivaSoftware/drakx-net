@@ -34,11 +34,13 @@ sub uses_atm_arp {
     my ($self) = @_;
     $self->{device}{xdsl_type} eq 'usb' && !$self->uses_ppp;
 }
+sub get_atm_arp_interface { "atm0" }
 
 sub uses_atm_bridging {
     my ($self) = @_;
     $self->{device}{xdsl_type} eq 'usb' && member($self->{protocol}, qw(pppoe));
 }
+sub get_atm_bridging_interface { "nas0" }
 
 my %protocol_settings = (
     pppoa => {
@@ -316,14 +318,14 @@ sub build_ifcfg_settings {
     if ($self->uses_atm_arp) {
         #- use ATMARP with the atm0 interface
         put_in_hash({
-            DEVICE => "atm0",
+            DEVICE => $self->get_atm_arp_interface,
             ATM_ADDR => join('.', @{$self->{access}{peer}}{qw(vpi vci)}),
             MII_NOT_SUPPORTED => "yes",
         }, $settings);
     }
     if ($self->uses_atm_bridging) {
         put_in_hash({
-            ATM_DEVICE => "nas0",
+            ATM_DEVICE => $self->get_atm_bridging_interface,
             ATM_ADDR => join('.', @{$self->{access}{peer}}{qw(vpi vci)}),
         }, $settings);
     }
