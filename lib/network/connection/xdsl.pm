@@ -42,6 +42,13 @@ sub uses_atm_bridging {
 }
 sub get_atm_bridging_interface { "nas0" }
 
+sub get_pppoe_interface {
+    my ($self) = @_;
+    $self->uses_atm_bridging
+    ? $self->get_atm_bridging_interface
+    : $self->network::connection::ethernet::get_interface;
+}
+
 my %protocol_settings = (
     pppoa => {
         plugin => sub {
@@ -52,8 +59,8 @@ my %protocol_settings = (
     pppoe => {
         pty => sub {
             my ($self) = @_;
-            my $eth_interface = $self->network::connection::ethernet::get_interface;
-            qq("pppoe -m 1412 -I $eth_interface");
+            my $pppoe_interface = $self->get_pppoe_interface;
+            qq("pppoe -m 1412 -I $pppoe_interface");
         },
         options => [
             qw(default-asyncmap noaccomp nobsdcomp novjccomp nodeflate),
