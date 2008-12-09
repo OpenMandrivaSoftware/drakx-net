@@ -47,7 +47,7 @@ sub select_connection {
 
 sub update_on_connection_change {
     my ($droam) = @_;
-    return if !$droam->check_setup;
+    return if !($droam->{connection} && $droam->check_setup);
     $droam->{gui}{buttons}{refresh}->set_sensitive(to_bool($droam->{connection}))
       if $droam->{gui}{buttons}{refresh};
     $droam->update_networks;
