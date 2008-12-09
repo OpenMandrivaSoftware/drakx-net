@@ -355,9 +355,9 @@ sub load_interface_settings {
 }
 
 sub get_networks {
-    my ($self) = @_;
+    my ($self, $o_net) = @_;
     require network::monitor;
-    ($self->{networks}, $self->{control}{roaming}) = network::monitor::list_wireless(undef, $self->get_interface);
+    ($self->{networks}, $self->{control}{roaming}) = network::monitor::list_wireless($o_net && $o_net->{monitor}, $self->get_interface);
     $self->probed_networks;
     $self->{networks};
 }

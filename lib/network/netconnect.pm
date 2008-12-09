@@ -205,7 +205,7 @@ sub real_main {
                    select_network => {
                        pre => sub {
                            my $_w = $in->wait_message(N("Please wait"), N("Scanning for networks..."));
-                           $connection->get_networks;
+                           $connection->get_networks($net);
                        },
                        name => sub { $net->{type}->get_type_name . "\n\n" . N("Please select your network:") },
                        data => sub {
