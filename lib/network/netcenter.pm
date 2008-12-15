@@ -18,6 +18,7 @@ sub build_cmanager {
     my $cmanager = network::connection_manager->new($in, $net, $w, $pixbufs);
     $cmanager->set_connection($connection);
     $cmanager->{gui}{show_unique_network} = $cmanager->{connection}->has_unique_network;
+    $cmanager->{wait_message_timeout} = 20*1000 if ref($connection) eq 'network::connection::wireless' && $net->{monitor};
 
     if ($connection->can('get_networks')) {
         $cmanager->create_networks_list;
@@ -198,6 +199,15 @@ sub main {
             if ($msg->get_interface eq 'com.mandriva.monitoring.wireless' && $msg->get_member eq 'Event') {
                 my ($event, $interface) = $msg->get_args_list;
                 print "got wireless event: $event $interface\n";
+                my $cmanager = find { $_->{connection}->get_interface eq $interface } @cmanagers;
+                if ($cmanager && $cmanager->{wait_message}) {
+                    if ($event =~ /CTRL-EVENT-CONNECTED/) {
+                        undef $cmanager->{wait_message};
+                    } elsif ($event =~ /Authentication with (.+?) timed out/) {
+                        undef $cmanager->{wait_message};
+                        $cmanager->{in}->ask_warn(N("Error"), N("Connection failed."));
+                    }
+                }
             }
         });
         $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");

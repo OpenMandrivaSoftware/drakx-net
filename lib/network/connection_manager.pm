@@ -199,7 +199,7 @@ sub start_connection {
     }
 
     gtkset_mousecursor_wait($cmanager->{gui}{w}{window}->window);
-    my $_wait = $cmanager->{in}->wait_message(N("Please wait"), N("Connecting..."));
+    my $wait = $cmanager->{in}->wait_message(N("Please wait"), N("Connecting..."));
     if ($cmanager->{connection}->can('apply_network_selection')) {
         $cmanager->load_settings;
         $cmanager->{connection}->apply_network_selection($cmanager);
@@ -210,6 +210,10 @@ sub start_connection {
     gtkset_mousecursor_normal($cmanager->{gui}{w}{window}->window);
 
     $cmanager->update_on_status_change;
+    if ($cmanager->{wait_message_timeout}) {
+        $cmanager->{wait_message} = $wait;
+        Glib::Timeout->add($cmanager->{wait_message_timeout}, sub { undef $cmanager->{wait_message} });
+    };
 }
 
 sub stop_connection {
