@@ -195,8 +195,13 @@ sub main {
                     $cmanager->network::connection_manager::update_on_status_change;
                 }
             }
+            if ($msg->get_interface eq 'com.mandriva.monitoring.wireless' && $msg->get_member eq 'Event') {
+                my ($event) = $msg->get_args_list;
+                print "got wireless event: $event\n";
+            }
         });
         $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
+        $dbus->{connection}->add_match("type='signal',interface='com.mandriva.monitoring.wireless'");
         dbus_object::set_gtk2_watch_helper($dbus);
     }
 
