@@ -196,8 +196,8 @@ sub main {
                 }
             }
             if ($msg->get_interface eq 'com.mandriva.monitoring.wireless' && $msg->get_member eq 'Event') {
-                my ($event) = $msg->get_args_list;
-                print "got wireless event: $event\n";
+                my ($event, $interface) = $msg->get_args_list;
+                print "got wireless event: $event $interface\n";
             }
         });
         $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
