@@ -18,7 +18,7 @@ sub get_devices {
 sub get_metric { 45 }
 sub get_interface { "ppp0" }
 
-sub get_packages { 'bluez-utils', 'ppp' }
+sub get_packages { 'bluez', 'ppp' }
 
 sub get_rfcomm_device {
     my ($self) = @_;
