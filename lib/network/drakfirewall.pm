@@ -274,6 +274,9 @@ Please select which network activities should be watched."),
                    ]) or return;
     my ($rules, $ports) = partition { exists $_->{ifw_rule} } grep { $_->{ifw} } @l;
     set_ifw($in->do_pkgs, $enabled, [ map { $_->{ifw_rule} } @$rules ], to_ports($ports));
+
+    # return something to say that we are done ok
+    $rules, $ports;
 }
 
 sub main {
@@ -283,7 +286,9 @@ sub main {
 
     ($disabled, $servers, $unlisted, $log_net_drop) = choose_allowed_services($in, $disabled, $servers, $unlisted, $log_net_drop) or return;
 
-    choose_watched_services($in, $servers, $unlisted) unless $disabled;
+    if (!$disabled) {
+        choose_watched_services($in, $servers, $unlisted) or return;
+    }
 
     my $ports = to_ports($servers, $unlisted);
     set_ports($in->do_pkgs, $disabled, $ports, $log_net_drop, $in) or return;
