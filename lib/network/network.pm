@@ -435,6 +435,19 @@ sub netprofile_read {
 }
 
 
+sub advanced_choose {
+    my ($in, $u) = @_;
+
+    my $use_http_for_https = $u->{https_proxy} eq $u->{http_proxy};
+    $in->ask_from(N("Advanced network settings"),
+       N("Here you can configure advanced network settings"),
+       [ { text => N("Disable IPv6"), val => \$u->{ipv6_disabled}, type => "bool" },
+         { text => N("Disable TCP Window Scaling"), val => \$u->{window_scaling}, type => "bool"},
+       ]
+    ) or return;
+    1;
+}
+
 sub miscellaneous_choose {
     my ($in, $u) = @_;
 
