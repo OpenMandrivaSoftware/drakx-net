@@ -11,6 +11,7 @@ use ugtk2 qw(:create :helpers :wrappers);
 use network::connection;
 use network::connection_manager;
 use network::tools;
+use network::network;
 
 sub build_cmanager {
     my ($in, $net, $w, $pixbufs, $connection) = @_;
@@ -128,6 +129,14 @@ sub get_connections() {
     );
 }
 
+sub advanced_settings {
+	my ($in) = @_;
+	my $u = network::network::advanced_settings_read();
+	if (network::network::advanced_choose($in, $u)) {
+		network::network::advanced_settings_write($u);
+	}
+}
+
 sub main {
     my ($in, $net, $dbus) = @_;
 
@@ -157,6 +166,7 @@ sub main {
                map_index { build_cmanager_box($_, $::i == 0) } @cmanagers,
            ])),
            0, gtknew('HButtonBox', spacing => 6, layout => 'end', children_loose => [
+               gtknew('Button', text => N("Advanced settings"), clicked => sub { advanced_settings($in) }),
                gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit }),
            ]),
        ]),
