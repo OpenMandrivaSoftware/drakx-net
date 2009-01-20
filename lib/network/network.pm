@@ -434,6 +434,40 @@ sub netprofile_read {
     $net->{PROFILE} = $config->{PROFILE} || 'default';
 }
 
+sub advanced_settings_read {
+	my $modprobe = "$::prefix/etc/modprobe.conf";
+	my $sysctl = "$::prefix/etc/sysctl.conf";
+
+	# ipv6
+	my $ipv6_disabled=0;
+	foreach (cat_($modprobe)) {
+		/^install ipv6 \/bin\/true$/ and $ipv6_disabled=1;
+	} cat_($modprobe);
+
+	# sysctl
+	my $window_scaling=0;
+	foreach (cat_($sysctl)) {
+		/^net\.ipv4\.tcp_window_scaling\s*=\s*0/ and $window_scaling=1;
+	} cat_($modprobe);
+	{ ipv6_disabled => $ipv6_disabled, window_scaling => $window_scaling };
+}
+
+sub advanced_settings_write {
+	my ($u) = @_;
+	if ($u->{ipv6_disabled}) {
+		my $line = "install ipv6 /bin/true\n";
+		substInFile { s/^install ipv6 .*//; $_ = $line if eof } "$::prefix/etc/modprobe.conf";
+	} else {
+		substInFile { s/^install ipv6 \/bin\/true// } "$::prefix/etc/modprobe.conf";
+	}
+	if ($u->{window_scaling}) {
+		my $line = "net.ipv4.tcp_window_scaling=0\n";
+		substInFile { s/^net\.ipv4\.tcp_window_scaling=.*//; $_ = $line if eof } "$::prefix/etc/sysctl.conf";
+	} else {
+		my $line = "net.ipv4.tcp_window_scaling=1\n";
+		substInFile { s/^net\.ipv4\.tcp_window_scaling=.*//; $_ = $line if eof } "$::prefix/etc/sysctl.conf";
+	}
+}
 
 sub advanced_choose {
     my ($in, $u) = @_;
