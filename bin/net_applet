@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-use strict;
+
 use lib qw(/usr/lib/libDrakX);
 # i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
 BEGIN { unshift @::textdomains, 'drakx-net' }
@@ -94,6 +94,7 @@ sub get_state_message {
           N("Network is up on interface %s.", get_interface_name($interface)) .
           "\n\n" . N("IP address: %s", network::tools::get_interface_ip_address($net, $interface)) .
           "\n\n" . N("Gateway: %s", [ network::tools::get_interface_status($interface) ]->[1]) .
+          "\n\n" . N("DNS: %s", $net->{resolv}{dnsServer}) .
             ($network && "\n\n" . N("Connected to %s (link level: %d %%)", $network->{name}, $network->{signal_strength}))
         : $current_state eq 'disconnected' ?
           N("Network is down on interface %s.", get_interface_name($interface))
