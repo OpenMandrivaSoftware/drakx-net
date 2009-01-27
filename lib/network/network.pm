@@ -435,38 +435,53 @@ sub netprofile_read {
 }
 
 sub advanced_settings_read {
-	my $modprobe = "$::prefix/etc/modprobe.conf";
-	my $sysctl = "$::prefix/etc/sysctl.conf";
+    my $modprobe = "$::prefix/etc/modprobe.conf";
+    my $sysctl = "$::prefix/etc/sysctl.conf";
 
-	# ipv6
-	my $ipv6_disabled=0;
-	foreach (cat_($modprobe)) {
-		/^install ipv6 \/bin\/true$/ and $ipv6_disabled=1;
-	} cat_($modprobe);
+    my $ipv6_disabled = grep { /^install ipv6 \/bin\/true$/ } cat_($modprobe);
+    my $disable_window_scaling = grep { /^net\.ipv4\.tcp_window_scaling\s*=\s*0$/ } cat_($sysctl);
+    my $disable_tcp_timestamps = grep { /^net\.ipv4\.tcp_timestamps\s*=\s*0$/ } cat_($sysctl);
+    my $log_martians = grep { /^net\.ipv4\.conf\.all\.log_martians\s*=\s*1$/ } cat_($sysctl);
+    my $disable_icmp = grep { /^net\.ipv4\.icmp_echo_ignore_all\s*=\s*1$/ } cat_($sysctl);
+    my $disable_icmp_broadcasts = grep { /^net\.ipv4\.icmp_echo_ignore_broadcasts\s*=\s*1$/ } cat_($sysctl);
+    my $disable_bogus_error_responses = grep { /^net\.ipv4\.ignore_bogus_error_responses\s*=\s*1$/ } cat_($sysctl);
 
-	# sysctl
-	my $window_scaling=0;
-	foreach (cat_($sysctl)) {
-		/^net\.ipv4\.tcp_window_scaling\s*=\s*0/ and $window_scaling=1;
-	} cat_($modprobe);
-	{ ipv6_disabled => $ipv6_disabled, window_scaling => $window_scaling };
+    { ipv6_disabled => $ipv6_disabled, disable_window_scaling => $disable_window_scaling,
+        disable_tcp_timestamps => $disable_tcp_timestamps, log_martians => $log_martians,
+        disable_icmp => $disable_icmp, disable_icmp_broadcasts => $disable_icmp_broadcasts,
+        disable_bogus_error_responses => $disable_bogus_error_responses,
+    }
 }
 
 sub advanced_settings_write {
-	my ($u) = @_;
-	if ($u->{ipv6_disabled}) {
-		my $line = "install ipv6 /bin/true\n";
-		substInFile { s/^install ipv6 .*//; $_ = $line if eof } "$::prefix/etc/modprobe.conf";
-	} else {
-		substInFile { s/^install ipv6 \/bin\/true// } "$::prefix/etc/modprobe.conf";
-	}
-	if ($u->{window_scaling}) {
-		my $line = "net.ipv4.tcp_window_scaling=0\n";
-		substInFile { s/^net\.ipv4\.tcp_window_scaling=.*//; $_ = $line if eof } "$::prefix/etc/sysctl.conf";
-	} else {
-		my $line = "net.ipv4.tcp_window_scaling=1\n";
-		substInFile { s/^net\.ipv4\.tcp_window_scaling=.*//; $_ = $line if eof } "$::prefix/etc/sysctl.conf";
-	}
+    my ($u) = @_;
+    # ipv6
+    if ($u->{ipv6_disabled}) {
+        my $line = "install ipv6 /bin/true\n";
+        substInFile { s/^install ipv6 .*//; $_ = $line if eof } "$::prefix/etc/modprobe.conf";
+    } else {
+        substInFile { s/^install ipv6 \/bin\/true// } "$::prefix/etc/modprobe.conf";
+    }
+    # sysctl
+    substInFile {
+        # remove old entries
+        /^net\.ipv4\.(tcp_window_scaling|tcp_timestamps|conf\.all\.log_martians|icmp_echo_ignore_all|icmp_echo_ignore_broadcasts|ignore_bogus_error_responses).*/ and $_="";
+        if (eof) {
+            # add new values
+            my $window_scaling = ($u->{disable_window_scaling}) ? "0" : "1";
+            my $tcp_timestamps = ($u->{disable_tcp_timestamps}) ? "0" : "1";
+            my $log_martians = ($u->{log_martians}) ? "1" : "0";    # this is inversed property
+            my $disable_icmp = ($u->{disable_icmp}) ? "1" : "0";    # this is inversed property
+            my $disable_icmp_broadcasts = ($u->{disable_icmp_broadcasts}) ? "1" : "0";    # this is inversed property
+            my $disable_bogus_error_responses = ($u->{disable_bogus_error_responses}) ? "1" : "0";    # this is inversed property
+            $_ .= "net.ipv4.tcp_window_scaling=$window_scaling\n";
+            $_ .= "net.ipv4.tcp_timestamps=$tcp_timestamps\n";
+            $_ .= "net.ipv4.conf.all.log_martians=$log_martians\n";
+            $_ .= "net.ipv4.icmp_echo_ignore_all=$disable_icmp\n";
+            $_ .= "net.ipv4.icmp_echo_ignore_broadcasts=$disable_icmp_broadcasts\n";
+            $_ .= "net.ipv4.ignore_bogus_error_responses=$disable_bogus_error_responses\n";
+        }
+    } "$::prefix/etc/sysctl.conf";
 }
 
 sub advanced_choose {
@@ -474,9 +489,17 @@ sub advanced_choose {
 
     my $use_http_for_https = $u->{https_proxy} eq $u->{http_proxy};
     $in->ask_from(N("Advanced network settings"),
-       N("Here you can configure advanced network settings"),
-       [ { text => N("Disable IPv6"), val => \$u->{ipv6_disabled}, type => "bool" },
-         { text => N("Disable TCP Window Scaling"), val => \$u->{window_scaling}, type => "bool"},
+       N("Here you can configure advanced network settings. Please note that you have to reboot the machine for changes to take effect."),
+       [ { label => "<b>".N("TCP/IP settings")."</b>"},
+         { text => N("Disable IPv6"), val => \$u->{ipv6_disabled}, type => "bool" },
+         { text => N("Disable TCP Window Scaling"), val => \$u->{disable_window_scaling}, type => "bool"},
+         { text => N("Disable TCP Timestamps"), val => \$u->{disable_tcp_timestamps}, type => "bool"},
+         { label => "<b>".N("ICMP network messages")."</b>"},
+         { text => N("Disable ICMP echo"), val => \$u->{disable_icmp}, type => "bool"},
+         { text => N("Disable ICMP echo for broadcasting messages"), val => \$u->{disable_icmp_broadcasts}, type => "bool"},
+         { text => N("Disable invalid ICMP error responses"), val => \$u->{disable_bogus_error_responses}, type => "bool"},
+         { label => "<b>".N("Miscelaneous")."</b>"},
+         { text => N("Log strange packets"), val => \$u->{log_martians}, type => "bool"},
        ]
     ) or return;
     1;
