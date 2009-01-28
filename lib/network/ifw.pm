@@ -85,7 +85,9 @@ sub send_manage_request {
 sub format_date {
     my ($timestamp) = @_;
     require c;
-    c::strftime("%c", localtime($timestamp));
+    # "%c" has strange effects on utf-8 locales
+    #c::strftime("%c", localtime($timestamp));
+    c::strftime("%Y-%m-%d %H:%M:%S", localtime($timestamp));
 }
 
 sub get_service {
