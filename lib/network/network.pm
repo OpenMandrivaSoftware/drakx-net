@@ -437,6 +437,7 @@ sub netprofile_read {
 sub advanced_settings_read {
     my $modprobe = "$::prefix/etc/modprobe.conf";
     my $sysctl = "$::prefix/etc/sysctl.conf";
+    my $msecconf = "$::prefix/etc/security/msec/security.conf";
 
     my $ipv6_disabled = grep { /^install ipv6 \/bin\/true$/ } cat_($modprobe);
     my $disable_window_scaling = grep { /^net\.ipv4\.tcp_window_scaling\s*=\s*0$/ } cat_($sysctl);
@@ -445,11 +446,13 @@ sub advanced_settings_read {
     my $disable_icmp = grep { /^net\.ipv4\.icmp_echo_ignore_all\s*=\s*1$/ } cat_($sysctl);
     my $disable_icmp_broadcasts = grep { /^net\.ipv4\.icmp_echo_ignore_broadcasts\s*=\s*1$/ } cat_($sysctl);
     my $disable_bogus_error_responses = grep { /^net\.ipv4\.ignore_bogus_error_responses\s*=\s*1$/ } cat_($sysctl);
+    my $msec = grep { /^BASE_LEVEL=/ } cat_($msecconf);
 
     { ipv6_disabled => $ipv6_disabled, disable_window_scaling => $disable_window_scaling,
         disable_tcp_timestamps => $disable_tcp_timestamps, log_martians => $log_martians,
         disable_icmp => $disable_icmp, disable_icmp_broadcasts => $disable_icmp_broadcasts,
         disable_bogus_error_responses => $disable_bogus_error_responses,
+        msec => $msec,
     }
 }
 
@@ -494,12 +497,11 @@ sub advanced_choose {
          { text => N("Disable IPv6"), val => \$u->{ipv6_disabled}, type => "bool" },
          { text => N("Disable TCP Window Scaling"), val => \$u->{disable_window_scaling}, type => "bool"},
          { text => N("Disable TCP Timestamps"), val => \$u->{disable_tcp_timestamps}, type => "bool"},
-         { label => "<b>".N("ICMP network messages")."</b>"},
-         { text => N("Disable ICMP echo"), val => \$u->{disable_icmp}, type => "bool"},
-         { text => N("Disable ICMP echo for broadcasting messages"), val => \$u->{disable_icmp_broadcasts}, type => "bool"},
-         { text => N("Disable invalid ICMP error responses"), val => \$u->{disable_bogus_error_responses}, type => "bool"},
-         { label => "<b>".N("Miscelaneous")."</b>"},
-         { text => N("Log strange packets"), val => \$u->{log_martians}, type => "bool"},
+         { label => "<b>".N("Security settings (defined by MSEC policy)")."</b>"},
+         { text => N("Disable ICMP echo"), val => \$u->{disable_icmp}, type => "bool", disabled => sub { $u->{msec} }},
+         { text => N("Disable ICMP echo for broadcasting messages"), val => \$u->{disable_icmp_broadcasts}, type => "bool", disabled => sub { $u->{msec} }},
+         { text => N("Disable invalid ICMP error responses"), val => \$u->{disable_bogus_error_responses}, type => "bool", disabled => sub { $u->{msec} }},
+         { text => N("Log strange packets"), val => \$u->{log_martians}, type => "bool", disabled => sub { $u->{msec} }},
        ]
     ) or return;
     1;
