@@ -293,5 +293,9 @@ sub main {
     my $ports = to_ports($servers, $unlisted);
     set_ports($in->do_pkgs, $disabled, $ports, $log_net_drop, $in) or return;
 
+    # restart mandi
+    require services;
+    services::is_service_running("mandi") and services::restart("mandi");
+
     ($disabled, $ports);
 }
