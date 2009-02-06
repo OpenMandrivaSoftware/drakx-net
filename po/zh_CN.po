@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net 2007\n"
-"POT-Creation-Date: 2008-11-17 22:05+0100\n"
+"POT-Creation-Date: 2009-02-05 11:19-0200\n"
 "PO-Revision-Date: 2006-09-10 21:48+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: Mandriva Linux i18n Team <cooker-i18n@mandrivalinux.org>\n"
@@ -62,8 +62,7 @@ msgstr "局域网配置"
 msgid "Configure Local Area Network..."
 msgstr "配置局域网..."
 
-#: ../bin/drakconnect-old:106 ../bin/draknfs:189 ../bin/net_applet:186
-#: ../bin/net_applet.orig:170
+#: ../bin/drakconnect-old:106 ../bin/draknfs:189 ../bin/net_applet:188
 #, c-format
 msgid "Help"
 msgstr "帮助"
@@ -89,9 +88,9 @@ msgstr "确定"
 #: ../bin/draksambashare:229 ../lib/network/connection_manager.pm:73
 #: ../lib/network/connection_manager.pm:88
 #: ../lib/network/connection_manager.pm:202
-#: ../lib/network/connection_manager.pm:219
-#: ../lib/network/connection_manager.pm:335 ../lib/network/drakvpn.pm:49
-#: ../lib/network/netcenter.pm:133 ../lib/network/netconnect.pm:185
+#: ../lib/network/connection_manager.pm:223
+#: ../lib/network/connection_manager.pm:339 ../lib/network/drakvpn.pm:49
+#: ../lib/network/netcenter.pm:143 ../lib/network/netconnect.pm:185
 #: ../lib/network/netconnect.pm:207 ../lib/network/netconnect.pm:304
 #: ../lib/network/netconnect.pm:714 ../lib/network/thirdparty.pm:354
 #: ../lib/network/thirdparty.pm:369
@@ -163,7 +162,7 @@ msgstr ""
 "这块网卡还没有配置过。\n"
 "请从 Mandriva Linux 控制中心运行“%s”助手"
 
-#: ../bin/drakconnect-old:247 ../bin/net_applet:102 ../bin/net_applet.orig:102
+#: ../bin/drakconnect-old:247 ../bin/net_applet:104
 #, c-format
 msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
 msgstr "设置新的网络连接(局域网、ISDN、ADSL……)"
@@ -319,7 +318,7 @@ msgstr "内部域名"
 #: ../bin/draksambashare:1365 ../bin/draksambashare:1387
 #: ../bin/draksambashare:1396 ../bin/draksambashare:1415
 #: ../bin/draksambashare:1424 ../bin/draksambashare:1436
-#: ../lib/network/connection/xdsl.pm:332
+#: ../lib/network/connection/xdsl.pm:359
 #: ../lib/network/connection_manager.pm:61
 #: ../lib/network/connection_manager.pm:67
 #: ../lib/network/connection_manager.pm:83
@@ -328,12 +327,12 @@ msgstr "内部域名"
 #: ../lib/network/connection_manager.pm:177 ../lib/network/drakvpn.pm:45
 #: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
-#: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:134
-#: ../lib/network/netconnect.pm:187 ../lib/network/netconnect.pm:233
-#: ../lib/network/netconnect.pm:274 ../lib/network/netconnect.pm:823
-#: ../lib/network/thirdparty.pm:123 ../lib/network/thirdparty.pm:141
-#: ../lib/network/thirdparty.pm:232 ../lib/network/thirdparty.pm:234
-#: ../lib/network/thirdparty.pm:255
+#: ../lib/network/ndiswrapper.pm:124 ../lib/network/netcenter.pm:218
+#: ../lib/network/netconnect.pm:134 ../lib/network/netconnect.pm:187
+#: ../lib/network/netconnect.pm:233 ../lib/network/netconnect.pm:274
+#: ../lib/network/netconnect.pm:823 ../lib/network/thirdparty.pm:123
+#: ../lib/network/thirdparty.pm:141 ../lib/network/thirdparty.pm:232
+#: ../lib/network/thirdparty.pm:234 ../lib/network/thirdparty.pm:255
 #, c-format
 msgid "Error"
 msgstr "错误"
@@ -600,8 +599,8 @@ msgid "Failed to remove host."
 msgstr "删除主机失败。"
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:174
-#: ../bin/net_applet:187 ../bin/net_applet.orig:171
-#: ../lib/network/drakroam.pm:118 ../lib/network/netcenter.pm:159
+#: ../bin/net_applet:189 ../lib/network/drakroam.pm:118
+#: ../lib/network/netcenter.pm:170
 #, c-format
 msgid "Quit"
 msgstr "退出"
@@ -613,16 +612,15 @@ msgstr "允许的地址"
 
 #: ../bin/drakids:40 ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196
 #: ../bin/drakids:221 ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
-#: ../bin/net_applet:130 ../bin/net_applet:276 ../bin/net_applet.orig:110
-#: ../bin/net_applet.orig:260 ../lib/network/drakfirewall.pm:261
-#: ../lib/network/drakfirewall.pm:265
+#: ../bin/net_applet:132 ../bin/net_applet:278
+#: ../lib/network/drakfirewall.pm:261 ../lib/network/drakfirewall.pm:265
 #, c-format
 msgid "Interactive Firewall"
 msgstr "交互式防火墙"
 
 #: ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196 ../bin/drakids:221
 #: ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
-#: ../bin/net_applet:276 ../bin/net_applet.orig:260
+#: ../bin/net_applet:278
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "无法连接守护程序"
@@ -2076,32 +2074,37 @@ msgstr ""
 msgid "DrakSamba manage Samba shares"
 msgstr "DrakSamba 管理 Samba 共享"
 
-#: ../bin/net_applet:94 ../bin/net_applet.orig:94
+#: ../bin/net_applet:95
 #, c-format
 msgid "Network is up on interface %s."
 msgstr "网卡 %s 的网络已通。"
 
-#: ../bin/net_applet:95 ../bin/net_applet.orig:95
+#: ../bin/net_applet:96
 #, c-format
 msgid "IP address: %s"
 msgstr "IP 地址: %s"
 
-#: ../bin/net_applet:96 ../bin/net_applet.orig:96
+#: ../bin/net_applet:97
 #, c-format
 msgid "Gateway: %s"
 msgstr "网关: %s"
 
-#: ../bin/net_applet:97 ../bin/net_applet.orig:97
+#: ../bin/net_applet:98
+#, fuzzy, c-format
+msgid "DNS: %s"
+msgstr "DNS"
+
+#: ../bin/net_applet:99
 #, c-format
 msgid "Connected to %s (link level: %d %%)"
 msgstr "已经连接到 %s(连接等级: %d %%)"
 
-#: ../bin/net_applet:99 ../bin/net_applet.orig:99
+#: ../bin/net_applet:101
 #, c-format
 msgid "Network is down on interface %s."
 msgstr "网卡 %s 的网络已断。"
 
-#: ../bin/net_applet:101 ../bin/net_applet.orig:101
+#: ../bin/net_applet:103
 #, c-format
 msgid ""
 "You do not have any configured Internet connection.\n"
@@ -2110,92 +2113,89 @@ msgstr ""
 "您从未配置过 Internet 连接。\n"
 "请从 Mandriva Linux 控制中心运行“%s”助手"
 
-#: ../bin/net_applet:127 ../bin/net_applet.orig:107 ../bin/net_monitor:475
+#: ../bin/net_applet:129 ../bin/net_monitor:475
 #, c-format
 msgid "Connect %s"
 msgstr "连接 %s"
 
-#: ../bin/net_applet:128 ../bin/net_applet.orig:108 ../bin/net_monitor:475
+#: ../bin/net_applet:130 ../bin/net_monitor:475
 #, c-format
 msgid "Disconnect %s"
 msgstr "断开 %s"
 
-#: ../bin/net_applet:129 ../bin/net_applet.orig:109
+#: ../bin/net_applet:131
 #, c-format
 msgid "Monitor Network"
 msgstr "监视网络"
 
-#: ../bin/net_applet:131 ../bin/net_applet.orig:111
+#: ../bin/net_applet:133
 #, c-format
 msgid "Manage wireless networks"
 msgstr "管理无线网络"
 
-#: ../bin/net_applet:133 ../bin/net_applet.orig:113
+#: ../bin/net_applet:135
 #, c-format
 msgid "Manage VPN connections"
 msgstr "管理 VPN 连接"
 
-#: ../bin/net_applet:137 ../bin/net_applet.orig:117
+#: ../bin/net_applet:139
 #, c-format
 msgid "Configure Network"
 msgstr "配置网络"
 
-#: ../bin/net_applet:139 ../bin/net_applet.orig:119
+#: ../bin/net_applet:141
 #, c-format
 msgid "Watched interface"
 msgstr "监视的接口"
 
-#: ../bin/net_applet:140 ../bin/net_applet:141 ../bin/net_applet:143
-#: ../bin/net_applet.orig:120 ../bin/net_applet.orig:121
-#: ../bin/net_applet.orig:123
+#: ../bin/net_applet:142 ../bin/net_applet:143 ../bin/net_applet:145
 #, c-format
 msgid "Auto-detect"
 msgstr "自动检测"
 
-#: ../bin/net_applet:148 ../bin/net_applet.orig:128
+#: ../bin/net_applet:150
 #, c-format
 msgid "Active interfaces"
 msgstr "活动接口"
 
-#: ../bin/net_applet:168 ../bin/net_applet.orig:152
+#: ../bin/net_applet:170
 #, c-format
 msgid "Profiles"
 msgstr "配置文件"
 
-#: ../bin/net_applet:178 ../bin/net_applet.orig:162
-#: ../lib/network/connection.pm:225 ../lib/network/drakvpn.pm:62
-#: ../lib/network/vpn/openvpn.pm:365 ../lib/network/vpn/openvpn.pm:379
-#: ../lib/network/vpn/openvpn.pm:390
+#: ../bin/net_applet:180 ../lib/network/connection.pm:225
+#: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
+#: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
 msgid "VPN connection"
 msgstr "VPN 连接"
 
-#: ../bin/net_applet:356 ../bin/net_applet.orig:340
+#: ../bin/net_applet:358
 #, c-format
 msgid "Network connection"
 msgstr "网络连接"
 
-#: ../bin/net_applet:440 ../bin/net_applet.orig:424
+#: ../bin/net_applet:442
 #, c-format
 msgid "More networks"
 msgstr "更多网络"
 
-#: ../bin/net_applet:467 ../bin/net_applet.orig:451
+#: ../bin/net_applet:469
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "交互式防火墙自动模式"
 
-#: ../bin/net_applet:472 ../bin/net_applet.orig:456
+#: ../bin/net_applet:474
 #, c-format
 msgid "Always launch on startup"
 msgstr "启动时自动调用"
 
-#: ../bin/net_applet:477 ../bin/net_applet.orig:461
+#: ../bin/net_applet:479
 #, c-format
 msgid "Wireless networks"
 msgstr "无线网络"
 
-#: ../bin/net_applet:484 ../bin/net_applet.orig:468 ../bin/net_monitor:96
+#: ../bin/net_applet:486 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "设置"
@@ -3122,80 +3122,80 @@ msgstr "WPA/WPA2 企业"
 msgid "Windows driver"
 msgstr "Window 驱动程序"
 
-#: ../lib/network/connection/wireless.pm:344
+#: ../lib/network/connection/wireless.pm:346
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
 "switch) first."
 msgstr "您的无线网卡已经禁用，请先启用无线开关。"
 
-#: ../lib/network/connection/wireless.pm:429
+#: ../lib/network/connection/wireless.pm:431
 #, c-format
 msgid "Wireless settings"
 msgstr "无线设置"
 
-#: ../lib/network/connection/wireless.pm:434
-#: ../lib/network/connection_manager.pm:264
+#: ../lib/network/connection/wireless.pm:436
+#: ../lib/network/connection_manager.pm:268
 #, c-format
 msgid "Operating Mode"
 msgstr "操作模式"
 
-#: ../lib/network/connection/wireless.pm:435
+#: ../lib/network/connection/wireless.pm:437
 #, c-format
 msgid "Ad-hoc"
 msgstr "Ad-hoc"
 
-#: ../lib/network/connection/wireless.pm:435
+#: ../lib/network/connection/wireless.pm:437
 #, c-format
 msgid "Managed"
 msgstr "受控的"
 
-#: ../lib/network/connection/wireless.pm:435
+#: ../lib/network/connection/wireless.pm:437
 #, c-format
 msgid "Master"
 msgstr "主要的"
 
-#: ../lib/network/connection/wireless.pm:435
+#: ../lib/network/connection/wireless.pm:437
 #, c-format
 msgid "Repeater"
 msgstr "转发器"
 
-#: ../lib/network/connection/wireless.pm:435
+#: ../lib/network/connection/wireless.pm:437
 #, c-format
 msgid "Secondary"
 msgstr "次要的"
 
-#: ../lib/network/connection/wireless.pm:435
+#: ../lib/network/connection/wireless.pm:437
 #, c-format
 msgid "Auto"
 msgstr "自动"
 
-#: ../lib/network/connection/wireless.pm:438
+#: ../lib/network/connection/wireless.pm:440
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "网络名称(ESSID)"
 
-#: ../lib/network/connection/wireless.pm:440
+#: ../lib/network/connection/wireless.pm:442
 #, c-format
 msgid "Encryption mode"
 msgstr "加密模式"
 
-#: ../lib/network/connection/wireless.pm:442
+#: ../lib/network/connection/wireless.pm:444
 #, c-format
 msgid "Encryption key"
 msgstr "加密密钥"
 
-#: ../lib/network/connection/wireless.pm:444
+#: ../lib/network/connection/wireless.pm:446
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr "将此密钥强制使用为 ASCII 字符串(如 Livebox)"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:453
 #, c-format
 msgid "EAP Login/Username"
 msgstr "EAP 登录/用户名"
 
-#: ../lib/network/connection/wireless.pm:453
+#: ../lib/network/connection/wireless.pm:455
 #, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
@@ -3206,12 +3206,12 @@ msgstr ""
 "用以下格式\n"
 "  域\\用户名"
 
-#: ../lib/network/connection/wireless.pm:456
+#: ../lib/network/connection/wireless.pm:458
 #, c-format
 msgid "EAP Password"
 msgstr "EAP 密码"
 
-#: ../lib/network/connection/wireless.pm:458
+#: ../lib/network/connection/wireless.pm:460
 #, c-format
 msgid ""
 " Password: A string.\n"
@@ -3243,12 +3243,12 @@ msgstr ""
 "模式。\n"
 "  TLS 模式完全基于证书，可能在此指定的用户名和密码无效。"
 
-#: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/connection/wireless.pm:474
 #, c-format
 msgid "EAP client certificate"
 msgstr "EAP 客户证书"
 
-#: ../lib/network/connection/wireless.pm:474
+#: ../lib/network/connection/wireless.pm:476
 #, c-format
 msgid ""
 "The complete path and filename of client certificate. This is\n"
@@ -3260,32 +3260,32 @@ msgstr ""
 "证书可视为用户名/密码组合的代替品。\n"
 " 注意: 其它相关设置显示于高级页面中。"
 
-#: ../lib/network/connection/wireless.pm:478
+#: ../lib/network/connection/wireless.pm:480
 #, c-format
 msgid "Network ID"
 msgstr "网络 ID"
 
-#: ../lib/network/connection/wireless.pm:479
+#: ../lib/network/connection/wireless.pm:481
 #, c-format
 msgid "Operating frequency"
 msgstr "运行频率"
 
-#: ../lib/network/connection/wireless.pm:480
+#: ../lib/network/connection/wireless.pm:482
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "灵敏度阀值"
 
-#: ../lib/network/connection/wireless.pm:481
+#: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "比特率(每秒比特数, b/s)"
 
-#: ../lib/network/connection/wireless.pm:482
+#: ../lib/network/connection/wireless.pm:484
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../lib/network/connection/wireless.pm:483
+#: ../lib/network/connection/wireless.pm:485
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -3304,17 +3304,17 @@ msgstr ""
 "包\n"
 "的大小, 一个等于中止计划的值的大小。您也可以设置这个值为自动、固定或者关闭。"
 
-#: ../lib/network/connection/wireless.pm:490
+#: ../lib/network/connection/wireless.pm:492
 #, c-format
 msgid "Fragmentation"
 msgstr "块"
 
-#: ../lib/network/connection/wireless.pm:491
+#: ../lib/network/connection/wireless.pm:493
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "iwconfig 命令的额外参数"
 
-#: ../lib/network/connection/wireless.pm:492
+#: ../lib/network/connection/wireless.pm:494
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -3330,12 +3330,12 @@ msgstr ""
 "请参看 iwconfig(8) man page 中的更多信息。"
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:499
+#: ../lib/network/connection/wireless.pm:501
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "iwspy 命令的额外参数"
 
-#: ../lib/network/connection/wireless.pm:500
+#: ../lib/network/connection/wireless.pm:502
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -3353,12 +3353,12 @@ msgstr ""
 "\n"
 "请参看 iwpspy(8) man page 中的更多信息。"
 
-#: ../lib/network/connection/wireless.pm:508
+#: ../lib/network/connection/wireless.pm:510
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "iwpriv 命令的额外参数"
 
-#: ../lib/network/connection/wireless.pm:510
+#: ../lib/network/connection/wireless.pm:512
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -3387,95 +3387,95 @@ msgstr ""
 "\n"
 "请参看 iwpriv(8) man page 中的更多信息。"
 
-#: ../lib/network/connection/wireless.pm:521
+#: ../lib/network/connection/wireless.pm:523
 #, c-format
 msgid "EAP Protocol"
 msgstr "EAP 协议"
 
-#: ../lib/network/connection/wireless.pm:522
-#: ../lib/network/connection/wireless.pm:527
+#: ../lib/network/connection/wireless.pm:524
+#: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "Auto Detect"
 msgstr "自动检测"
 
-#: ../lib/network/connection/wireless.pm:522
+#: ../lib/network/connection/wireless.pm:524
 #, c-format
 msgid "WPA2"
 msgstr "WPA2"
 
-#: ../lib/network/connection/wireless.pm:522
+#: ../lib/network/connection/wireless.pm:524
 #, c-format
 msgid "WPA"
 msgstr "WPA"
 
-#: ../lib/network/connection/wireless.pm:524
+#: ../lib/network/connection/wireless.pm:526
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr "推荐使用自动检测，因为它首先尝试 WPA 第2版，失败后再尝试 WPA 第1版"
 
-#: ../lib/network/connection/wireless.pm:526
+#: ../lib/network/connection/wireless.pm:528
 #, c-format
 msgid "EAP Mode"
 msgstr "EAP 模式"
 
-#: ../lib/network/connection/wireless.pm:527
+#: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "PEAP"
 msgstr "PEAP"
 
-#: ../lib/network/connection/wireless.pm:527
+#: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "TTLS"
 msgstr "TTLS"
 
-#: ../lib/network/connection/wireless.pm:527
+#: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "TLS"
 msgstr "TLS"
 
-#: ../lib/network/connection/wireless.pm:527
+#: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "MSCHAPV2"
 msgstr "MSCHAPV2"
 
-#: ../lib/network/connection/wireless.pm:527
+#: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "MD5"
 msgstr "MD5"
 
-#: ../lib/network/connection/wireless.pm:527
+#: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "OTP"
 msgstr "OTP"
 
-#: ../lib/network/connection/wireless.pm:527
+#: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "GTC"
 msgstr "GTC"
 
-#: ../lib/network/connection/wireless.pm:527
+#: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "LEAP"
 msgstr "LEAP"
 
-#: ../lib/network/connection/wireless.pm:527
+#: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "PEAP TTLS"
 msgstr "PEAP TTLS"
 
-#: ../lib/network/connection/wireless.pm:527
+#: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "TTLS TLS"
 msgstr "TTLS TLS"
 
-#: ../lib/network/connection/wireless.pm:529
+#: ../lib/network/connection/wireless.pm:531
 #, c-format
 msgid "EAP key_mgmt"
 msgstr "EAP key_mgmt"
 
-#: ../lib/network/connection/wireless.pm:531
+#: ../lib/network/connection/wireless.pm:533
 #, c-format
 msgid ""
 "list of accepted authenticated key management protocols.\n"
@@ -3485,12 +3485,12 @@ msgstr ""
 "可能的值包括 WPA-EAP、\n"
 "IEEE8021X、无"
 
-#: ../lib/network/connection/wireless.pm:533
+#: ../lib/network/connection/wireless.pm:535
 #, c-format
 msgid "EAP outer identity"
 msgstr "EAP 外部身份"
 
-#: ../lib/network/connection/wireless.pm:535
+#: ../lib/network/connection/wireless.pm:537
 #, c-format
 msgid ""
 "Anonymous identity string for EAP: to be used as the\n"
@@ -3500,12 +3500,12 @@ msgstr ""
 "EAP 的匿名身份字符串: 用于支持不同的隧道身份的 EAP 不\n"
 "加密身份类型，如 TTLS"
 
-#: ../lib/network/connection/wireless.pm:538
+#: ../lib/network/connection/wireless.pm:540
 #, c-format
 msgid "EAP phase2"
 msgstr "EAP phase2"
 
-#: ../lib/network/connection/wireless.pm:540
+#: ../lib/network/connection/wireless.pm:542
 #, c-format
 msgid ""
 "Inner authentication with TLS tunnel parameters.\n"
@@ -3514,12 +3514,12 @@ msgid ""
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:544
+#: ../lib/network/connection/wireless.pm:546
 #, c-format
 msgid "EAP CA certificate"
 msgstr "EAP CA 证书"
 
-#: ../lib/network/connection/wireless.pm:546
+#: ../lib/network/connection/wireless.pm:548
 #, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
@@ -3533,12 +3533,12 @@ msgstr ""
 "如果可能的话，当使用 TLS 或 TTLS 或 PEAP 时总是应该配置可信的\n"
 "CA 证书。"
 
-#: ../lib/network/connection/wireless.pm:551
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid "EAP certificate subject match"
 msgstr "EAP 证书主题匹配"
 
-#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:555
 #, c-format
 msgid ""
 " Substring to be matched against the subject of\n"
@@ -3548,12 +3548,12 @@ msgid ""
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:560
 #, c-format
 msgid "EAP extra directives"
 msgstr "EAP 额外指令"
 
-#: ../lib/network/connection/wireless.pm:560
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
@@ -3571,26 +3571,26 @@ msgid ""
 "\tspecial settings different from the U.I settings."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:580
+#: ../lib/network/connection/wireless.pm:582
 #, c-format
 msgid "An encryption key is required."
 msgstr "需要加密密钥。"
 
-#: ../lib/network/connection/wireless.pm:587
+#: ../lib/network/connection/wireless.pm:589
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
 "hexadecimal characters."
 msgstr "预共享密钥应该由 8 到 63 位 ASCII 字符或者 64 位十六进制字符组成。"
 
-#: ../lib/network/connection/wireless.pm:593
+#: ../lib/network/connection/wireless.pm:595
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
 "characters."
 msgstr "WEP 密钥应该至少由 %d 位 ASCII 字符或 %d 位十六进制字符组成。"
 
-#: ../lib/network/connection/wireless.pm:600
+#: ../lib/network/connection/wireless.pm:602
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -3599,24 +3599,24 @@ msgstr ""
 "频率应该有后缀 k, M 或 G(如“2.46G”代表 2.46 GHz 频率), 或者后带足够"
 "的“0”(零)。"
 
-#: ../lib/network/connection/wireless.pm:606
+#: ../lib/network/connection/wireless.pm:608
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
 "enough '0' (zeroes)."
 msgstr "速度应该有后缀 k, M 或 G(如“11M”代表 11M), 或者后带足够的“0”(零)。"
 
-#: ../lib/network/connection/wireless.pm:618
+#: ../lib/network/connection/wireless.pm:620
 #, c-format
 msgid "Allow access point roaming"
 msgstr "允许访问点漫游"
 
-#: ../lib/network/connection/wireless.pm:739
+#: ../lib/network/connection/wireless.pm:741
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "将无线网络“%s”关联到网卡 %s 上"
 
-#: ../lib/network/connection/wireless.pm:740
+#: ../lib/network/connection/wireless.pm:742
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "网卡 %s 丢失了到无线网络的关联"
@@ -3626,12 +3626,12 @@ msgstr "网卡 %s 丢失了到无线网络的关联"
 msgid "DSL"
 msgstr "DSL"
 
-#: ../lib/network/connection/xdsl.pm:76 ../lib/network/netconnect.pm:765
+#: ../lib/network/connection/xdsl.pm:95 ../lib/network/netconnect.pm:765
 #, c-format
 msgid "Alcatel speedtouch USB modem"
 msgstr "阿尔卡特 Speedtouch USB 调制解调器"
 
-#: ../lib/network/connection/xdsl.pm:104
+#: ../lib/network/connection/xdsl.pm:123
 #, c-format
 msgid ""
 "The ECI Hi-Focus modem cannot be supported due to binary driver distribution "
@@ -3643,7 +3643,7 @@ msgstr ""
 "\n"
 "您可以在此网站: http://eciadsl.flashtux.org/ 找到驱动程序。"
 
-#: ../lib/network/connection/xdsl.pm:164
+#: ../lib/network/connection/xdsl.pm:183
 #, c-format
 msgid ""
 "Modems using Conexant AccessRunner chipsets cannot be supported due to "
@@ -3651,47 +3651,47 @@ msgid ""
 msgstr ""
 "由于二进制固件发行问题，无法支持使用 Conexant AccessRunner 芯片的调制解调器。"
 
-#: ../lib/network/connection/xdsl.pm:184
+#: ../lib/network/connection/xdsl.pm:203
 #, c-format
 msgid "DSL over CAPI"
 msgstr "CAPI 上的 DSL"
 
-#: ../lib/network/connection/xdsl.pm:187
+#: ../lib/network/connection/xdsl.pm:206
 #, c-format
 msgid "Dynamic Host Configuration Protocol (DHCP)"
 msgstr "动态主机配置协议(DHCP)"
 
-#: ../lib/network/connection/xdsl.pm:188
+#: ../lib/network/connection/xdsl.pm:207
 #, c-format
 msgid "Manual TCP/IP configuration"
 msgstr "手工配置 TCP/IP"
 
-#: ../lib/network/connection/xdsl.pm:189
+#: ../lib/network/connection/xdsl.pm:208
 #, c-format
 msgid "Point to Point Tunneling Protocol (PPTP)"
 msgstr "点对点隧道协议(PPTP)"
 
-#: ../lib/network/connection/xdsl.pm:190
+#: ../lib/network/connection/xdsl.pm:209
 #, c-format
 msgid "PPP over Ethernet (PPPoE)"
 msgstr "以太网上的点对点协议(PPPoE)"
 
-#: ../lib/network/connection/xdsl.pm:191
+#: ../lib/network/connection/xdsl.pm:210
 #, c-format
 msgid "PPP over ATM (PPPoA)"
 msgstr "异步传输模式下的点对点协议(PPPoA)"
 
-#: ../lib/network/connection/xdsl.pm:231
+#: ../lib/network/connection/xdsl.pm:250
 #, c-format
 msgid "Virtual Path ID (VPI):"
 msgstr "虚拟路径 ID (VPI):"
 
-#: ../lib/network/connection/xdsl.pm:232
+#: ../lib/network/connection/xdsl.pm:251
 #, c-format
 msgid "Virtual Circuit ID (VCI):"
 msgstr "虚拟电路 ID (VCI):"
 
-#: ../lib/network/connection/xdsl.pm:332
+#: ../lib/network/connection/xdsl.pm:359
 #: ../lib/network/connection_manager.pm:61 ../lib/network/drakvpn.pm:45
 #: ../lib/network/netconnect.pm:134 ../lib/network/thirdparty.pm:123
 #, c-format
@@ -3721,37 +3721,37 @@ msgstr "请输入网络设置"
 msgid "Connecting..."
 msgstr "正在连接..."
 
-#: ../lib/network/connection_manager.pm:219
+#: ../lib/network/connection_manager.pm:223
 #, c-format
 msgid "Disconnecting..."
 msgstr "正在断开连接..."
 
-#: ../lib/network/connection_manager.pm:261
+#: ../lib/network/connection_manager.pm:265
 #, c-format
 msgid "SSID"
 msgstr "SSID"
 
-#: ../lib/network/connection_manager.pm:262
+#: ../lib/network/connection_manager.pm:266
 #, c-format
 msgid "Signal strength"
 msgstr "信号强度"
 
-#: ../lib/network/connection_manager.pm:263
+#: ../lib/network/connection_manager.pm:267
 #, c-format
 msgid "Encryption"
 msgstr "加密"
 
-#: ../lib/network/connection_manager.pm:335 ../lib/network/netconnect.pm:207
+#: ../lib/network/connection_manager.pm:339 ../lib/network/netconnect.pm:207
 #, c-format
 msgid "Scanning for networks..."
 msgstr "正在扫描网络..."
 
-#: ../lib/network/connection_manager.pm:384 ../lib/network/drakroam.pm:116
+#: ../lib/network/connection_manager.pm:388 ../lib/network/drakroam.pm:116
 #, c-format
 msgid "Disconnect"
 msgstr "断开连接"
 
-#: ../lib/network/connection_manager.pm:384 ../lib/network/drakroam.pm:115
+#: ../lib/network/connection_manager.pm:388 ../lib/network/drakroam.pm:115
 #, c-format
 msgid "Connect"
 msgstr "连接"
@@ -3936,12 +3936,12 @@ msgstr "主机名更改为“%s”"
 msgid "Device: "
 msgstr "设备: "
 
-#: ../lib/network/drakroam.pm:114 ../lib/network/netcenter.pm:64
+#: ../lib/network/drakroam.pm:114 ../lib/network/netcenter.pm:66
 #, c-format
 msgid "Configure"
 msgstr "配置"
 
-#: ../lib/network/drakroam.pm:117 ../lib/network/netcenter.pm:69
+#: ../lib/network/drakroam.pm:117 ../lib/network/netcenter.pm:71
 #, c-format
 msgid "Refresh"
 msgstr "刷新"
@@ -4006,7 +4006,7 @@ msgstr "请输入您 VPN 连接的设置"
 msgid "Do you want to start the connection now?"
 msgstr "您现在就想启动连接吗？"
 
-#: ../lib/network/drakvpn.pm:100
+#: ../lib/network/drakvpn.pm:100 ../lib/network/netcenter.pm:218
 #, c-format
 msgid "Connection failed."
 msgstr "连接失败。"
@@ -4026,57 +4026,57 @@ msgstr ""
 "此 VPN 连接可以在网络连接有效时自动启动。\n"
 "如果您需要这么做的话，请重新配置网络连接，然后选择此 VPN 连接。\n"
 
-#: ../lib/network/ifw.pm:129
+#: ../lib/network/ifw.pm:131
 #, c-format
 msgid "Port scanning"
 msgstr "端口扫描"
 
-#: ../lib/network/ifw.pm:130
+#: ../lib/network/ifw.pm:132
 #, c-format
 msgid "Service attack"
 msgstr "服务攻击"
 
-#: ../lib/network/ifw.pm:131
+#: ../lib/network/ifw.pm:133
 #, c-format
 msgid "Password cracking"
 msgstr "密码破解"
 
-#: ../lib/network/ifw.pm:132
+#: ../lib/network/ifw.pm:134
 #, c-format
 msgid "New connection"
 msgstr "新建连接"
 
-#: ../lib/network/ifw.pm:133
+#: ../lib/network/ifw.pm:135
 #, c-format
 msgid "\"%s\" attack"
 msgstr "“%s”攻击"
 
-#: ../lib/network/ifw.pm:135
+#: ../lib/network/ifw.pm:137
 #, c-format
 msgid "A port scanning attack has been attempted by %s."
 msgstr "%s 试图进行端口扫描攻击。"
 
-#: ../lib/network/ifw.pm:136
+#: ../lib/network/ifw.pm:138
 #, c-format
 msgid "The %s service has been attacked by %s."
 msgstr "%s 服务已被 %s 攻击。"
 
-#: ../lib/network/ifw.pm:137
+#: ../lib/network/ifw.pm:139
 #, c-format
 msgid "A password cracking attack has been attempted by %s."
 msgstr "%s 正在尝试密码破解攻击。"
 
-#: ../lib/network/ifw.pm:138
+#: ../lib/network/ifw.pm:140
 #, c-format
 msgid "%s is connecting on the %s service."
 msgstr "%s 正连接到 %s 服务。"
 
-#: ../lib/network/ifw.pm:139
+#: ../lib/network/ifw.pm:141
 #, c-format
 msgid "A \"%s\" attack has been attempted by %s"
 msgstr "%2$s 试图进行“%1$s”攻击"
 
-#: ../lib/network/ifw.pm:148
+#: ../lib/network/ifw.pm:150
 #, c-format
 msgid ""
 "The \"%s\" application is trying to make a service (%s) available to the "
@@ -4084,7 +4084,7 @@ msgid ""
 msgstr "“%s”应用程序试图成为网络上的服务(%s)。"
 
 #. -PO: this should be kept lowercase since the expression is meant to be used between brackets
-#: ../lib/network/ifw.pm:152
+#: ../lib/network/ifw.pm:154
 #, c-format
 msgid "port %d"
 msgstr "端口 %d"
@@ -4161,22 +4161,27 @@ msgstr "安装新驱动程序"
 msgid "Select a device:"
 msgstr "选择设备:"
 
-#: ../lib/network/netcenter.pm:53 ../lib/network/netconnect.pm:210
+#: ../lib/network/netcenter.pm:55 ../lib/network/netconnect.pm:210
 #, c-format
 msgid "Please select your network:"
 msgstr "请选择您的网络："
 
-#: ../lib/network/netcenter.pm:60
+#: ../lib/network/netcenter.pm:62
 #, c-format
 msgid ""
 "_: This is a verb\n"
 "Monitor"
 msgstr "监视"
 
-#: ../lib/network/netcenter.pm:135
+#: ../lib/network/netcenter.pm:145
 #, c-format
 msgid "Network Center"
 msgstr "网络中心"
+
+#: ../lib/network/netcenter.pm:169
+#, fuzzy, c-format
+msgid "Advanced settings"
+msgstr "高级选项"
 
 #: ../lib/network/netconnect.pm:37
 #, c-format
@@ -4795,54 +4800,111 @@ msgstr ""
 "发生了意外错误: \n"
 "%s"
 
-#: ../lib/network/network.pm:442
+#: ../lib/network/network.pm:494
+#, fuzzy, c-format
+msgid "Advanced network settings"
+msgstr "网络设置"
+
+#: ../lib/network/network.pm:495
+#, c-format
+msgid ""
+"Here you can configure advanced network settings. Please note that you have "
+"to reboot the machine for changes to take effect."
+msgstr ""
+
+#: ../lib/network/network.pm:496
+#, fuzzy, c-format
+msgid "TCP/IP settings"
+msgstr "IP 设置"
+
+#: ../lib/network/network.pm:497
+#, fuzzy, c-format
+msgid "Disable IPv6"
+msgstr "禁用"
+
+#: ../lib/network/network.pm:498
+#, c-format
+msgid "Disable TCP Window Scaling"
+msgstr ""
+
+#: ../lib/network/network.pm:499
+#, c-format
+msgid "Disable TCP Timestamps"
+msgstr ""
+
+#: ../lib/network/network.pm:500
+#, c-format
+msgid "Security settings (defined by MSEC policy)"
+msgstr ""
+
+#: ../lib/network/network.pm:501
+#, c-format
+msgid "Disable ICMP echo"
+msgstr ""
+
+#: ../lib/network/network.pm:502
+#, c-format
+msgid "Disable ICMP echo for broadcasting messages"
+msgstr ""
+
+#: ../lib/network/network.pm:503
+#, c-format
+msgid "Disable invalid ICMP error responses"
+msgstr ""
+
+#: ../lib/network/network.pm:504
+#, c-format
+msgid "Log strange packets"
+msgstr ""
+
+#: ../lib/network/network.pm:514
 #, c-format
 msgid "Proxies configuration"
 msgstr "代理服务器配置"
 
-#: ../lib/network/network.pm:443
+#: ../lib/network/network.pm:515
 #, c-format
 msgid ""
 "Here you can set up your proxies configuration (eg: http://"
 "my_caching_server:8080)"
 msgstr "您可以在此处设定您的代理服务器配置(如: http://my_caching_server:8080)"
 
-#: ../lib/network/network.pm:444
+#: ../lib/network/network.pm:516
 #, c-format
 msgid "HTTP proxy"
 msgstr "HTTP 代理服务器"
 
-#: ../lib/network/network.pm:445
+#: ../lib/network/network.pm:517
 #, c-format
 msgid "Use HTTP proxy for HTTPS connections"
 msgstr "HTTPS 连接也使用 HTTP 代理"
 
-#: ../lib/network/network.pm:446
+#: ../lib/network/network.pm:518
 #, c-format
 msgid "HTTPS proxy"
 msgstr "HTTPS 代理服务器"
 
-#: ../lib/network/network.pm:447
+#: ../lib/network/network.pm:519
 #, c-format
 msgid "FTP proxy"
 msgstr "FTP 代理服务器"
 
-#: ../lib/network/network.pm:448
+#: ../lib/network/network.pm:520
 #, c-format
 msgid "No proxy for (comma separated list):"
 msgstr "以下地址不使用代理(用逗号分隔):"
 
-#: ../lib/network/network.pm:453
+#: ../lib/network/network.pm:525
 #, c-format
 msgid "Proxy should be http://..."
 msgstr "代理服务器应该是 http://..."
 
-#: ../lib/network/network.pm:454
+#: ../lib/network/network.pm:526
 #, c-format
 msgid "Proxy should be http://... or https://..."
 msgstr "代理应该是 http://... 或 https://..."
 
-#: ../lib/network/network.pm:455
+#: ../lib/network/network.pm:527
 #, c-format
 msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "URL 应该是以“ftp:”或“http:”开头"
