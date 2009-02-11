@@ -273,10 +273,30 @@ sub rescan() {
 	my $transmit = $monitor->{$intf}{val}[8];
 	my $refr = $monitor->{$intf}{referencer};
 	my $reft = $monitor->{$intf}{referencet};
-	$monitor->{sr} += $recv - $refr;
-	$monitor->{st} += $transmit - $reft;
+	my $diffr = $recv - $refr;
+	my $difft = $transmit - $reft;
 
-	$monitor->{$intf}{recva} += $recv - $refr;
+	# prevent for case 32 bits or 64 bits unsigned value of /proc (if rotate to zero)
+	if ($diffr < 0) { 
+	    if ($refr < 2**32) { # transition (2^32 - 1) to 0
+		$diffr += 2**32 
+		} else { $diffr += 2**64 } # transition (2^64 - 1) to 0
+			# { $diffr = 0; $monitor->{$intf}{totalr} = 0 } # Alternatively, if bug for very big number in perl
+	}; 
+	# prevent for case 32 bits or 64 bits unsigned value of /proc (if rotate to zero)
+	if ($difft < 0) { 
+	    if ($reft < 2**32) { # transition (2^32 - 1) to 0
+		$difft += 2**32 
+		} else { $difft += 2**64 } # transition (2^64 - 1) to 0
+			# { $difft = 0; $monitor->{$intf}{totalt} = 0 } # Alternatively, if bug for very big number in perl
+	}; 
+
+	$monitor->{$intf}{totalr} += $diffr;
+	$monitor->{$intf}{totalt} += $difft;
+	$monitor->{sr} += $diffr;
+	$monitor->{st} += $difft;
+
+	$monitor->{$intf}{recva} += $diffr;
 	$monitor->{$intf}{recvan}++;
 	if ($monitor->{$intf}{recvan} > 9) {
 	    push(@{$monitor->{$intf}{stack_ra}}, $monitor->{$intf}{recva}/10);
@@ -284,12 +304,12 @@ sub rescan() {
 	} else { push(@{$monitor->{$intf}{stack_ra}}, -1) }
 	shift @{$monitor->{$intf}{stack_ra}} if @{$monitor->{$intf}{stack_ra}} > graph_window_width();
 
-	push(@{$monitor->{$intf}{stack_r}}, $recv - $refr);
+	push(@{$monitor->{$intf}{stack_r}}, $diffr);
 	shift @{$monitor->{$intf}{stack_r}} if @{$monitor->{$intf}{stack_r}} > graph_window_width();
-	$monitor->{$intf}{labelr}->set_label(formatXiB($recv - $monitor->{$intf}{initialr}));
+	$monitor->{$intf}{labelr}->set_label(formatXiB($monitor->{$intf}{totalr}));
 	$monitor->{$intf}{referencer} = $recv;
 
-	$monitor->{$intf}{transmita} += $transmit - $reft;
+	$monitor->{$intf}{transmita} += $difft;
 	$monitor->{$intf}{transmitan}++;
 	if ($monitor->{$intf}{transmitan} > 9) {
 	    push(@{$monitor->{$intf}{stack_ta}}, $monitor->{$intf}{transmita}/10);
@@ -297,9 +317,9 @@ sub rescan() {
 	} else { push(@{$monitor->{$intf}{stack_ta}}, -1) }
 	shift @{$monitor->{$intf}{stack_ta}} if @{$monitor->{$intf}{stack_ta}} > graph_window_width();
 
-	push(@{$monitor->{$intf}{stack_t}}, $transmit - $reft);
+	push(@{$monitor->{$intf}{stack_t}}, $difft);
 	shift @{$monitor->{$intf}{stack_t}} if @{$monitor->{$intf}{stack_t}} > graph_window_width();
-	$monitor->{$intf}{labelt}->set_label(formatXiB($transmit - $monitor->{$intf}{initialt}));
+	$monitor->{$intf}{labelt}->set_label(formatXiB($monitor->{$intf}{totalt}));
 	$monitor->{$intf}{referencet} = $transmit;
 
 	draw_monitor($monitor->{$intf}, $intf);
@@ -389,6 +409,8 @@ sub update() {
 	    $default_intf ||= $intf;
 	    $monitor->{$intf}{initialr} = $monitor->{$intf}{val}[0];
 	    $monitor->{$intf}{initialt} = $monitor->{$intf}{val}[8];
+	    $monitor->{$intf}{totalr} = 0;
+	    $monitor->{$intf}{totalt} = 0;
 	    $darea->{$intf} = Gtk2::DrawingArea->new;
 	    $darea->{$intf}->set_events(["pointer_motion_mask"]);
 	    $notebook->append_page(gtkshow(my $page = gtknew('VBox', children => [
