@@ -182,7 +182,7 @@ sub check_address_settings {
         }
         #- test if IP address is already used
         if (find { text2bool($_->{ONBOOT}) && $_->{DEVICE} ne $self->get_interface && $_->{IPADDR} eq $self->{address}{ip_address} } values %{$net->{ifcfg}}) {
-            $self->{address}{error}{message} = N("%s already in use\n", $self->{address}{ip_address});
+            $self->{address}{error}{message} = N("%s is already used by connection that starts on boot. To use this address with this connection, first disable all other devices which use it, or configure them not to start on boot", $self->{address}{ip_address});
             $self->{address}{error}{field} = \$self->{address}{ip_address};
             return 0;
         }
