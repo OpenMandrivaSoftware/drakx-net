@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-tools-2009.1\n"
-"POT-Creation-Date: 2009-02-13 16:26+0100\n"
+"POT-Creation-Date: 2009-02-13 20:39-0200\n"
 "PO-Revision-Date: 2009-02-07 18:35+0100\n"
 "Last-Translator: Lónyai Gergely <aleph@mandriva.org>\n"
 "Language-Team: Hungarian <aleph@mandriva.org>\n"
@@ -85,13 +85,13 @@ msgid "Apply"
 msgstr "Alkalmazás"
 
 #: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
-#: ../bin/draknetprofile:133 ../bin/net_monitor:347
+#: ../bin/draknetprofile:133 ../bin/net_monitor:388
 #, c-format
 msgid "Cancel"
 msgstr "Mégsem"
 
 #: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
-#: ../bin/drakconnect-old:265 ../bin/draknetprofile:135 ../bin/net_monitor:348
+#: ../bin/drakconnect-old:265 ../bin/draknetprofile:135 ../bin/net_monitor:389
 #, c-format
 msgid "Ok"
 msgstr "OK"
@@ -664,7 +664,7 @@ msgstr "Tiltás"
 
 #: ../bin/drakids:85 ../bin/drakids:94 ../bin/drakids:103 ../bin/drakids:114
 #: ../bin/drakids:127 ../bin/drakids:135 ../bin/draknfs:194
-#: ../bin/net_monitor:120
+#: ../bin/net_monitor:122
 #, c-format
 msgid "Close"
 msgstr "Bezárás"
@@ -2192,12 +2192,12 @@ msgstr ""
 "Internetkapcsolat még nem lett beállítva.\n"
 "Használja a \"%s\" funkciót a Mandriva Linux Vezérlőközpontban."
 
-#: ../bin/net_applet:129 ../bin/net_monitor:475
+#: ../bin/net_applet:129 ../bin/net_monitor:519
 #, c-format
 msgid "Connect %s"
 msgstr "Kapcsolódás: %s"
 
-#: ../bin/net_applet:130 ../bin/net_monitor:475
+#: ../bin/net_applet:130 ../bin/net_monitor:519
 #, c-format
 msgid "Disconnect %s"
 msgstr "Lekapcsolódás: %s"
@@ -2242,7 +2242,7 @@ msgstr "Aktív csatolók"
 msgid "Profiles"
 msgstr "Profilok"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:225
+#: ../bin/net_applet:180 ../lib/network/connection.pm:226
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
@@ -2284,27 +2284,32 @@ msgstr "Beállítások"
 msgid "Network Monitoring"
 msgstr "Hálózatfigyelés"
 
-#: ../bin/net_monitor:98
-#, c-format
-msgid "Connection type: "
-msgstr "A csatlakozás típusa: "
+#: ../bin/net_monitor:99
+#, fuzzy, c-format
+msgid "Default connection: "
+msgstr "Kábeles kapcsolat"
 
 #: ../bin/net_monitor:101
+#, c-format
+msgid "Wait please"
+msgstr "Kis türelmet"
+
+#: ../bin/net_monitor:104
 #, c-format
 msgid "Global statistics"
 msgstr "Globális statisztika"
 
-#: ../bin/net_monitor:104
+#: ../bin/net_monitor:107
 #, c-format
 msgid "Instantaneous"
 msgstr "Pillanatnyi"
 
-#: ../bin/net_monitor:104
+#: ../bin/net_monitor:107
 #, c-format
 msgid "Average"
 msgstr "Átlagos"
 
-#: ../bin/net_monitor:105
+#: ../bin/net_monitor:108
 #, c-format
 msgid ""
 "Sending\n"
@@ -2313,12 +2318,12 @@ msgstr ""
 "Küldési\n"
 "sebesség:"
 
-#: ../bin/net_monitor:105 ../bin/net_monitor:106 ../bin/net_monitor:111
+#: ../bin/net_monitor:108 ../bin/net_monitor:109 ../bin/net_monitor:114
 #, c-format
 msgid "unknown"
 msgstr "ismeretlen"
 
-#: ../bin/net_monitor:106
+#: ../bin/net_monitor:109
 #, c-format
 msgid ""
 "Receiving\n"
@@ -2327,56 +2332,49 @@ msgstr ""
 "Fogadási\n"
 "sebesség:"
 
-#: ../bin/net_monitor:110
-#, c-format
-msgid ""
-"Connection\n"
-"time: "
+#: ../bin/net_monitor:113
+#, fuzzy, c-format
+msgid "Connection time: "
 msgstr ""
 "A kapcsolat\n"
 "időtartama: "
 
-#: ../bin/net_monitor:117
+#: ../bin/net_monitor:120
 #, c-format
 msgid "Use same scale for received and transmitted"
 msgstr "Azonos skála használata a fogadási és a küldési adatokhoz"
 
-#: ../bin/net_monitor:119
-#, c-format
-msgid "Wait please"
-msgstr "Kis türelmet"
-
-#: ../bin/net_monitor:136
+#: ../bin/net_monitor:138
 #, c-format
 msgid "Wait please, testing your connection..."
 msgstr "A kapcsolat tesztelése..."
 
-#: ../bin/net_monitor:191 ../bin/net_monitor:204
+#: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Disconnecting from Internet "
 msgstr "Lekapcsolódás az internetről "
 
-#: ../bin/net_monitor:191 ../bin/net_monitor:204
+#: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Connecting to Internet "
 msgstr "Kapcsolódás az internetre "
 
-#: ../bin/net_monitor:235
+#: ../bin/net_monitor:254
 #, c-format
 msgid "Disconnection from Internet failed."
 msgstr "Az internetről való lekapcsolódás nem sikerült."
 
-#: ../bin/net_monitor:236
+#: ../bin/net_monitor:255
 #, c-format
 msgid "Disconnection from Internet complete."
 msgstr "Az internetről való lekapcsolódás megtörtént."
 
-#: ../bin/net_monitor:238
+#: ../bin/net_monitor:257
 #, c-format
 msgid "Connection complete."
 msgstr "A kapcsolat létrejött."
 
-#: ../bin/net_monitor:239
+#: ../bin/net_monitor:258
 #, c-format
 msgid ""
 "Connection failed.\n"
@@ -2385,32 +2383,42 @@ msgstr ""
 "A kapcsolódás nem sikerült.\n"
 "Ellenőrizze a beállításokat a Mandriva Linux Vezérlőközpontban."
 
-#: ../bin/net_monitor:344
+#: ../bin/net_monitor:360
+#, fuzzy, c-format
+msgid "%s (%s)"
+msgstr "DNS: %s"
+
+#: ../bin/net_monitor:385
 #, c-format
 msgid "Color configuration"
 msgstr "Színbeállítás"
 
-#: ../bin/net_monitor:401 ../bin/net_monitor:413
+#: ../bin/net_monitor:444 ../bin/net_monitor:457
 #, c-format
 msgid "sent: "
 msgstr "elküldve: "
 
-#: ../bin/net_monitor:404 ../bin/net_monitor:417
+#: ../bin/net_monitor:447 ../bin/net_monitor:461
 #, c-format
 msgid "received: "
 msgstr "fogadva: "
 
-#: ../bin/net_monitor:407
+#: ../bin/net_monitor:450
 #, c-format
 msgid "average"
 msgstr "átlag"
 
-#: ../bin/net_monitor:410
+#: ../bin/net_monitor:451
+#, c-format
+msgid "Reset counters"
+msgstr ""
+
+#: ../bin/net_monitor:454
 #, c-format
 msgid "Local measure"
 msgstr "Helyi mérés"
 
-#: ../bin/net_monitor:468
+#: ../bin/net_monitor:512
 #, c-format
 msgid ""
 "Warning, another internet connection has been detected, maybe using your "
@@ -2419,17 +2427,17 @@ msgstr ""
 "Figyelmeztetés: Egy másik internetkapcsolat is létezik, esetlegesen a "
 "hálózatot használva."
 
-#: ../bin/net_monitor:472
+#: ../bin/net_monitor:516
 #, c-format
 msgid "Connected"
 msgstr "Csatlakozva"
 
-#: ../bin/net_monitor:472
+#: ../bin/net_monitor:516
 #, c-format
 msgid "Not connected"
 msgstr "Nincs csatlakozva"
 
-#: ../bin/net_monitor:479
+#: ../bin/net_monitor:523
 #, c-format
 msgid "No internet connection configured"
 msgstr "Nincs beállítva internetkapcsolat"
@@ -2439,22 +2447,22 @@ msgstr "Nincs beállítva internetkapcsolat"
 msgid "Unknown connection type"
 msgstr "Ismeretlen típusú kapcsolat"
 
-#: ../lib/network/connection.pm:158
+#: ../lib/network/connection.pm:159
 #, c-format
 msgid "Network access settings"
 msgstr "Hálózati hozzáférési beállítások"
 
-#: ../lib/network/connection.pm:159
+#: ../lib/network/connection.pm:160
 #, c-format
 msgid "Access settings"
 msgstr "Hozzáférési beállítások"
 
-#: ../lib/network/connection.pm:160
+#: ../lib/network/connection.pm:161
 #, c-format
 msgid "Address settings"
 msgstr "Címbeállítások"
 
-#: ../lib/network/connection.pm:174 ../lib/network/connection.pm:194
+#: ../lib/network/connection.pm:175 ../lib/network/connection.pm:195
 #: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:216
 #: ../lib/network/netconnect.pm:473 ../lib/network/netconnect.pm:569
 #: ../lib/network/netconnect.pm:572
@@ -2462,29 +2470,29 @@ msgstr "Címbeállítások"
 msgid "Unlisted - edit manually"
 msgstr "A listában nem szereplő - kézi szerkesztés"
 
-#: ../lib/network/connection.pm:227 ../lib/network/connection/cable.pm:41
+#: ../lib/network/connection.pm:228 ../lib/network/connection/cable.pm:41
 #: ../lib/network/connection/wireless.pm:45 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "Egyik sem"
 
-#: ../lib/network/connection.pm:239
+#: ../lib/network/connection.pm:240
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr "A kapcsolat kezelésének engedélyezése a felhasználók számára"
 
-#: ../lib/network/connection.pm:240
+#: ../lib/network/connection.pm:241
 #, c-format
 msgid "Start the connection at boot"
 msgstr "A kapcsolat elindítása rendszerindításkor"
 
-#: ../lib/network/connection.pm:241
+#: ../lib/network/connection.pm:242
 #, c-format
 msgid "Metric"
 msgstr "Mérték (metric)"
 
-#: ../lib/network/connection.pm:311
+#: ../lib/network/connection.pm:313
 #, c-format
 msgid "Link detected on interface %s"
 msgstr "Kapcsolat észlelve ezen a csatolón: %s"
@@ -2494,7 +2502,7 @@ msgstr "Kapcsolat észlelve ezen a csatolón: %s"
 # report if the link is lost due to some
 # hardware defect or the cable being
 # unplugged.
-#: ../lib/network/connection.pm:312 ../lib/network/connection/ethernet.pm:289
+#: ../lib/network/connection.pm:314 ../lib/network/connection/ethernet.pm:289
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "A kapcsolat megszakadt ezen a csatolón: %s"
@@ -5362,6 +5370,9 @@ msgstr "NAT Mód"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Megadott UDP-port használata"
+
+#~ msgid "Connection type: "
+#~ msgstr "A csatlakozás típusa: "
 
 #~ msgid "%s already in use\n"
 #~ msgstr "%s már használatban van\n"

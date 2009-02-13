@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-tools-gl\n"
-"POT-Creation-Date: 2009-02-13 16:26+0100\n"
+"POT-Creation-Date: 2009-02-13 20:39-0200\n"
 "PO-Revision-Date: 2008-04-13 22:12+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -81,13 +81,13 @@ msgid "Apply"
 msgstr "Aplicar"
 
 #: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
-#: ../bin/draknetprofile:133 ../bin/net_monitor:347
+#: ../bin/draknetprofile:133 ../bin/net_monitor:388
 #, c-format
 msgid "Cancel"
 msgstr "Cancelar"
 
 #: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
-#: ../bin/drakconnect-old:265 ../bin/draknetprofile:135 ../bin/net_monitor:348
+#: ../bin/drakconnect-old:265 ../bin/draknetprofile:135 ../bin/net_monitor:389
 #, c-format
 msgid "Ok"
 msgstr "Aceptar"
@@ -665,7 +665,7 @@ msgstr "Bloquear"
 
 #: ../bin/drakids:85 ../bin/drakids:94 ../bin/drakids:103 ../bin/drakids:114
 #: ../bin/drakids:127 ../bin/drakids:135 ../bin/draknfs:194
-#: ../bin/net_monitor:120
+#: ../bin/net_monitor:122
 #, c-format
 msgid "Close"
 msgstr "Pechar"
@@ -2119,12 +2119,12 @@ msgstr ""
 "Execute o asistente \"%s\" dende o\n"
 "Centro de Control de Mandriva Linux"
 
-#: ../bin/net_applet:129 ../bin/net_monitor:475
+#: ../bin/net_applet:129 ../bin/net_monitor:519
 #, c-format
 msgid "Connect %s"
 msgstr "Conectar %s"
 
-#: ../bin/net_applet:130 ../bin/net_monitor:475
+#: ../bin/net_applet:130 ../bin/net_monitor:519
 #, c-format
 msgid "Disconnect %s"
 msgstr "Desconectar %s"
@@ -2169,7 +2169,7 @@ msgstr "Interfaces activas"
 msgid "Profiles"
 msgstr "Perfís"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:225
+#: ../bin/net_applet:180 ../lib/network/connection.pm:226
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
@@ -2211,27 +2211,32 @@ msgstr "Opcións"
 msgid "Network Monitoring"
 msgstr "Monitorización da Rede"
 
-#: ../bin/net_monitor:98
-#, c-format
-msgid "Connection type: "
-msgstr "Tipo de conexión: "
+#: ../bin/net_monitor:99
+#, fuzzy, c-format
+msgid "Default connection: "
+msgstr "Conexión por cable"
 
 #: ../bin/net_monitor:101
+#, c-format
+msgid "Wait please"
+msgstr "Agarde un chisco"
+
+#: ../bin/net_monitor:104
 #, c-format
 msgid "Global statistics"
 msgstr "Estatísticas globais"
 
-#: ../bin/net_monitor:104
+#: ../bin/net_monitor:107
 #, fuzzy, c-format
 msgid "Instantaneous"
 msgstr "Instantánea"
 
-#: ../bin/net_monitor:104
+#: ../bin/net_monitor:107
 #, c-format
 msgid "Average"
 msgstr "Media"
 
-#: ../bin/net_monitor:105
+#: ../bin/net_monitor:108
 #, c-format
 msgid ""
 "Sending\n"
@@ -2240,12 +2245,12 @@ msgstr ""
 "Enviando\n"
 "velocidade:"
 
-#: ../bin/net_monitor:105 ../bin/net_monitor:106 ../bin/net_monitor:111
+#: ../bin/net_monitor:108 ../bin/net_monitor:109 ../bin/net_monitor:114
 #, c-format
 msgid "unknown"
 msgstr "descoñecido"
 
-#: ../bin/net_monitor:106
+#: ../bin/net_monitor:109
 #, c-format
 msgid ""
 "Receiving\n"
@@ -2254,56 +2259,49 @@ msgstr ""
 "Recibindo\n"
 "velocidade:"
 
-#: ../bin/net_monitor:110
-#, c-format
-msgid ""
-"Connection\n"
-"time: "
+#: ../bin/net_monitor:113
+#, fuzzy, c-format
+msgid "Connection time: "
 msgstr ""
 "Conexión\n"
 "tempo: "
 
-#: ../bin/net_monitor:117
+#: ../bin/net_monitor:120
 #, c-format
 msgid "Use same scale for received and transmitted"
 msgstr "Usar a mesma escala para o recibido e o transmitido"
 
-#: ../bin/net_monitor:119
-#, c-format
-msgid "Wait please"
-msgstr "Agarde un chisco"
-
-#: ../bin/net_monitor:136
+#: ../bin/net_monitor:138
 #, c-format
 msgid "Wait please, testing your connection..."
 msgstr "Agarde, probando a conexión..."
 
-#: ../bin/net_monitor:191 ../bin/net_monitor:204
+#: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Disconnecting from Internet "
 msgstr "Desconectando da Internet "
 
-#: ../bin/net_monitor:191 ../bin/net_monitor:204
+#: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Connecting to Internet "
 msgstr "Conectando á Internet "
 
-#: ../bin/net_monitor:235
+#: ../bin/net_monitor:254
 #, c-format
 msgid "Disconnection from Internet failed."
 msgstr "Fallo ó desconectarse da Internet."
 
-#: ../bin/net_monitor:236
+#: ../bin/net_monitor:255
 #, c-format
 msgid "Disconnection from Internet complete."
 msgstr "Desconexión da Internet completada."
 
-#: ../bin/net_monitor:238
+#: ../bin/net_monitor:257
 #, c-format
 msgid "Connection complete."
 msgstr "Conexión establecida."
 
-#: ../bin/net_monitor:239
+#: ../bin/net_monitor:258
 #, c-format
 msgid ""
 "Connection failed.\n"
@@ -2312,32 +2310,42 @@ msgstr ""
 "Fallo ó conectarse.\n"
 "Verifique a configuración no Centro de Control de Mandriva Linux."
 
-#: ../bin/net_monitor:344
+#: ../bin/net_monitor:360
+#, fuzzy, c-format
+msgid "%s (%s)"
+msgstr "DNS"
+
+#: ../bin/net_monitor:385
 #, c-format
 msgid "Color configuration"
 msgstr "Configuración da cor"
 
-#: ../bin/net_monitor:401 ../bin/net_monitor:413
+#: ../bin/net_monitor:444 ../bin/net_monitor:457
 #, c-format
 msgid "sent: "
 msgstr "enviados: "
 
-#: ../bin/net_monitor:404 ../bin/net_monitor:417
+#: ../bin/net_monitor:447 ../bin/net_monitor:461
 #, c-format
 msgid "received: "
 msgstr "recibidos: "
 
-#: ../bin/net_monitor:407
+#: ../bin/net_monitor:450
 #, c-format
 msgid "average"
 msgstr "media"
 
-#: ../bin/net_monitor:410
+#: ../bin/net_monitor:451
+#, c-format
+msgid "Reset counters"
+msgstr ""
+
+#: ../bin/net_monitor:454
 #, c-format
 msgid "Local measure"
 msgstr "Medida local"
 
-#: ../bin/net_monitor:468
+#: ../bin/net_monitor:512
 #, c-format
 msgid ""
 "Warning, another internet connection has been detected, maybe using your "
@@ -2346,17 +2354,17 @@ msgstr ""
 "Advertencia, detectouse outra conexión á Internet, que pode estar usando a "
 "súa rede"
 
-#: ../bin/net_monitor:472
+#: ../bin/net_monitor:516
 #, c-format
 msgid "Connected"
 msgstr "Conectado"
 
-#: ../bin/net_monitor:472
+#: ../bin/net_monitor:516
 #, c-format
 msgid "Not connected"
 msgstr "Non conectado"
 
-#: ../bin/net_monitor:479
+#: ../bin/net_monitor:523
 #, c-format
 msgid "No internet connection configured"
 msgstr "Non hai conexións á Internet configuradas"
@@ -2366,22 +2374,22 @@ msgstr "Non hai conexións á Internet configuradas"
 msgid "Unknown connection type"
 msgstr "Tipo de conexión descoñecido"
 
-#: ../lib/network/connection.pm:158
+#: ../lib/network/connection.pm:159
 #, c-format
 msgid "Network access settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:159
+#: ../lib/network/connection.pm:160
 #, c-format
 msgid "Access settings"
 msgstr "Preferencias de acceso"
 
-#: ../lib/network/connection.pm:160
+#: ../lib/network/connection.pm:161
 #, c-format
 msgid "Address settings"
 msgstr "Opcións de enderezo"
 
-#: ../lib/network/connection.pm:174 ../lib/network/connection.pm:194
+#: ../lib/network/connection.pm:175 ../lib/network/connection.pm:195
 #: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:216
 #: ../lib/network/netconnect.pm:473 ../lib/network/netconnect.pm:569
 #: ../lib/network/netconnect.pm:572
@@ -2389,34 +2397,34 @@ msgstr "Opcións de enderezo"
 msgid "Unlisted - edit manually"
 msgstr "Non está na lista - editar a man"
 
-#: ../lib/network/connection.pm:227 ../lib/network/connection/cable.pm:41
+#: ../lib/network/connection.pm:228 ../lib/network/connection/cable.pm:41
 #: ../lib/network/connection/wireless.pm:45 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "Ningún"
 
-#: ../lib/network/connection.pm:239
+#: ../lib/network/connection.pm:240
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr "Permitir que os usuarios xestionen a conexión"
 
-#: ../lib/network/connection.pm:240
+#: ../lib/network/connection.pm:241
 #, c-format
 msgid "Start the connection at boot"
 msgstr "Iniciar a conexión ó arrincar"
 
-#: ../lib/network/connection.pm:241
+#: ../lib/network/connection.pm:242
 #, c-format
 msgid "Metric"
 msgstr "Métrico"
 
-#: ../lib/network/connection.pm:311
+#: ../lib/network/connection.pm:313
 #, c-format
 msgid "Link detected on interface %s"
 msgstr "Enlace detectado na interface %s"
 
-#: ../lib/network/connection.pm:312 ../lib/network/connection/ethernet.pm:289
+#: ../lib/network/connection.pm:314 ../lib/network/connection/ethernet.pm:289
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr ""
@@ -5186,6 +5194,9 @@ msgstr "Modo"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Usar porto UDP específico"
+
+#~ msgid "Connection type: "
+#~ msgstr "Tipo de conexión: "
 
 #~ msgid "%s already in use\n"
 #~ msgstr "%s xa se está usando\n"

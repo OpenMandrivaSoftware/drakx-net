@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net HEAD\n"
-"POT-Creation-Date: 2009-02-13 16:26+0100\n"
+"POT-Creation-Date: 2009-02-13 20:39-0200\n"
 "PO-Revision-Date: 2005-03-19 23:18+0600\n"
 "Last-Translator: Samia <mailsamia2001@yahoo.com>\n"
 "Language-Team: Bangla <mdk-translation@bengalinux.org>\n"
@@ -80,13 +80,13 @@ msgid "Apply"
 msgstr "প্রয়োগ"
 
 #: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
-#: ../bin/draknetprofile:133 ../bin/net_monitor:347
+#: ../bin/draknetprofile:133 ../bin/net_monitor:388
 #, c-format
 msgid "Cancel"
 msgstr "বাতিল"
 
 #: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
-#: ../bin/drakconnect-old:265 ../bin/draknetprofile:135 ../bin/net_monitor:348
+#: ../bin/drakconnect-old:265 ../bin/draknetprofile:135 ../bin/net_monitor:389
 #, c-format
 msgid "Ok"
 msgstr "ঠিক আছে"
@@ -660,7 +660,7 @@ msgstr ""
 
 #: ../bin/drakids:85 ../bin/drakids:94 ../bin/drakids:103 ../bin/drakids:114
 #: ../bin/drakids:127 ../bin/drakids:135 ../bin/draknfs:194
-#: ../bin/net_monitor:120
+#: ../bin/net_monitor:122
 #, c-format
 msgid "Close"
 msgstr "বন্ধ"
@@ -2078,12 +2078,12 @@ msgstr ""
 "আপনার সিস্টেমে কোন ইন্টারনেট সংযোগ কনফিগার করা নেই।\n"
 "অনুগ্রহপূর্বক Mandriva Linux নিয়ন্ত্রণকেন্দ্র থেকে \"%s\" চালান।"
 
-#: ../bin/net_applet:129 ../bin/net_monitor:475
+#: ../bin/net_applet:129 ../bin/net_monitor:519
 #, c-format
 msgid "Connect %s"
 msgstr "%s সংযুক্ত করো"
 
-#: ../bin/net_applet:130 ../bin/net_monitor:475
+#: ../bin/net_applet:130 ../bin/net_monitor:519
 #, c-format
 msgid "Disconnect %s"
 msgstr "%s বিচ্ছিন্ন করো"
@@ -2128,7 +2128,7 @@ msgstr ""
 msgid "Profiles"
 msgstr "প্রোফাইলসমূহ"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:225
+#: ../bin/net_applet:180 ../lib/network/connection.pm:226
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, fuzzy, c-format
@@ -2170,27 +2170,32 @@ msgstr "সেটিং"
 msgid "Network Monitoring"
 msgstr "নেটওয়ার্ক পর্যবেক্ষণ"
 
-#: ../bin/net_monitor:98
-#, c-format
-msgid "Connection type: "
-msgstr "সংযোগের ধরন: "
+#: ../bin/net_monitor:99
+#, fuzzy, c-format
+msgid "Default connection: "
+msgstr "কেবল সংযোগ"
 
 #: ../bin/net_monitor:101
+#, c-format
+msgid "Wait please"
+msgstr "অনুগ্রহপূর্বক অপেক্ষা করুন"
+
+#: ../bin/net_monitor:104
 #, c-format
 msgid "Global statistics"
 msgstr "বিশ্বব্যাপী পরিসংখ্যান"
 
-#: ../bin/net_monitor:104
+#: ../bin/net_monitor:107
 #, c-format
 msgid "Instantaneous"
 msgstr "ক্ষণস্থায়ী"
 
-#: ../bin/net_monitor:104
+#: ../bin/net_monitor:107
 #, c-format
 msgid "Average"
 msgstr "মোটামুটি"
 
-#: ../bin/net_monitor:105
+#: ../bin/net_monitor:108
 #, c-format
 msgid ""
 "Sending\n"
@@ -2199,12 +2204,12 @@ msgstr ""
 "প্রদানের\n"
 "গতি"
 
-#: ../bin/net_monitor:105 ../bin/net_monitor:106 ../bin/net_monitor:111
+#: ../bin/net_monitor:108 ../bin/net_monitor:109 ../bin/net_monitor:114
 #, c-format
 msgid "unknown"
 msgstr "অজানা"
 
-#: ../bin/net_monitor:106
+#: ../bin/net_monitor:109
 #, c-format
 msgid ""
 "Receiving\n"
@@ -2213,56 +2218,49 @@ msgstr ""
 "আদানের\n"
 "গতি"
 
-#: ../bin/net_monitor:110
-#, c-format
-msgid ""
-"Connection\n"
-"time: "
+#: ../bin/net_monitor:113
+#, fuzzy, c-format
+msgid "Connection time: "
 msgstr ""
 "সংযোগ\n"
 "সময়:"
 
-#: ../bin/net_monitor:117
+#: ../bin/net_monitor:120
 #, c-format
 msgid "Use same scale for received and transmitted"
 msgstr "গ্রহণ এবং পরিবহনের জন্য একই স্কেল ব্যবহার করুন"
 
-#: ../bin/net_monitor:119
-#, c-format
-msgid "Wait please"
-msgstr "অনুগ্রহপূর্বক অপেক্ষা করুন"
-
-#: ../bin/net_monitor:136
+#: ../bin/net_monitor:138
 #, c-format
 msgid "Wait please, testing your connection..."
 msgstr "অনুগ্রহ করে অপেক্ষা করুন, আপনার সংযোগ পরীক্ষা করা হচ্ছে..."
 
-#: ../bin/net_monitor:191 ../bin/net_monitor:204
+#: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Disconnecting from Internet "
 msgstr "ইন্টারনেট থেকে বিচ্ছন্ন করা হচ্ছে"
 
-#: ../bin/net_monitor:191 ../bin/net_monitor:204
+#: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Connecting to Internet "
 msgstr "ইন্টারনেটে সংযোগ"
 
-#: ../bin/net_monitor:235
+#: ../bin/net_monitor:254
 #, c-format
 msgid "Disconnection from Internet failed."
 msgstr "ইন্টরনেট থেকে বিচ্ছন্ন করা যায়নি।"
 
-#: ../bin/net_monitor:236
+#: ../bin/net_monitor:255
 #, c-format
 msgid "Disconnection from Internet complete."
 msgstr "ইন্টারনেট থেকে বিচ্ছিন্ন করা হয়েছে।"
 
-#: ../bin/net_monitor:238
+#: ../bin/net_monitor:257
 #, c-format
 msgid "Connection complete."
 msgstr "সংযোগ সম্পন্ন হয়েছে।"
 
-#: ../bin/net_monitor:239
+#: ../bin/net_monitor:258
 #, c-format
 msgid ""
 "Connection failed.\n"
@@ -2271,32 +2269,42 @@ msgstr ""
 "কানেকশন হয়নি।\n"
 "ম্যান্ড্রিব -লিনাক্স কন্ট্রোল প্যানেলে আপনার কনফিগারেশন যাচাই করুন।"
 
-#: ../bin/net_monitor:344
+#: ../bin/net_monitor:360
+#, fuzzy, c-format
+msgid "%s (%s)"
+msgstr "DNS"
+
+#: ../bin/net_monitor:385
 #, c-format
 msgid "Color configuration"
 msgstr "কালার কনফিগারেশন"
 
-#: ../bin/net_monitor:401 ../bin/net_monitor:413
+#: ../bin/net_monitor:444 ../bin/net_monitor:457
 #, c-format
 msgid "sent: "
 msgstr "প্রেরণ করা হয়েছে:"
 
-#: ../bin/net_monitor:404 ../bin/net_monitor:417
+#: ../bin/net_monitor:447 ../bin/net_monitor:461
 #, c-format
 msgid "received: "
 msgstr "গ্রহণ করা হয়েছে:"
 
-#: ../bin/net_monitor:407
+#: ../bin/net_monitor:450
 #, c-format
 msgid "average"
 msgstr "মোটামুটি"
 
-#: ../bin/net_monitor:410
+#: ../bin/net_monitor:451
+#, c-format
+msgid "Reset counters"
+msgstr ""
+
+#: ../bin/net_monitor:454
 #, c-format
 msgid "Local measure"
 msgstr "স্থানীয় পরিমাপ"
 
-#: ../bin/net_monitor:468
+#: ../bin/net_monitor:512
 #, c-format
 msgid ""
 "Warning, another internet connection has been detected, maybe using your "
@@ -2304,17 +2312,17 @@ msgid ""
 msgstr ""
 "ঘোষনা, আরেকটি ইন্টারনেট সংযোগ সনাক্ত হয়েছে, হয়তোবা আপনার নেটওয়ার্ক ব্যবহার করছে"
 
-#: ../bin/net_monitor:472
+#: ../bin/net_monitor:516
 #, c-format
 msgid "Connected"
 msgstr "সংযুক্ত"
 
-#: ../bin/net_monitor:472
+#: ../bin/net_monitor:516
 #, c-format
 msgid "Not connected"
 msgstr "সংযোগহীন"
 
-#: ../bin/net_monitor:479
+#: ../bin/net_monitor:523
 #, c-format
 msgid "No internet connection configured"
 msgstr "ইন্টরনেট সংযোগ কনফিগার করা নেই"
@@ -2324,22 +2332,22 @@ msgstr "ইন্টরনেট সংযোগ কনফিগার করা
 msgid "Unknown connection type"
 msgstr "সংযোগের ধরণ অজানা"
 
-#: ../lib/network/connection.pm:158
+#: ../lib/network/connection.pm:159
 #, c-format
 msgid "Network access settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:159
+#: ../lib/network/connection.pm:160
 #, c-format
 msgid "Access settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:160
+#: ../lib/network/connection.pm:161
 #, c-format
 msgid "Address settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:174 ../lib/network/connection.pm:194
+#: ../lib/network/connection.pm:175 ../lib/network/connection.pm:195
 #: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:216
 #: ../lib/network/netconnect.pm:473 ../lib/network/netconnect.pm:569
 #: ../lib/network/netconnect.pm:572
@@ -2347,35 +2355,35 @@ msgstr ""
 msgid "Unlisted - edit manually"
 msgstr "তালিকায় অন্তর্ভুক্ত নেই - নিজে নিজেই সম্পাদন করুন"
 
-#: ../lib/network/connection.pm:227 ../lib/network/connection/cable.pm:41
+#: ../lib/network/connection.pm:228 ../lib/network/connection/cable.pm:41
 #: ../lib/network/connection/wireless.pm:45 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "একটিও না"
 
-#: ../lib/network/connection.pm:239
+#: ../lib/network/connection.pm:240
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr ""
 
-#: ../lib/network/connection.pm:240
+#: ../lib/network/connection.pm:241
 #, c-format
 msgid "Start the connection at boot"
 msgstr ""
 
 # সাম: পরিমাপক বা মেট্রিক (as in metric system)
-#: ../lib/network/connection.pm:241
+#: ../lib/network/connection.pm:242
 #, c-format
 msgid "Metric"
 msgstr "মেট্রিক"
 
-#: ../lib/network/connection.pm:311
+#: ../lib/network/connection.pm:313
 #, fuzzy, c-format
 msgid "Link detected on interface %s"
 msgstr "(%s পোর্টে সনাক্ত হয়েছে)"
 
-#: ../lib/network/connection.pm:312 ../lib/network/connection/ethernet.pm:289
+#: ../lib/network/connection.pm:314 ../lib/network/connection/ethernet.pm:289
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr ""
@@ -5133,6 +5141,9 @@ msgstr "মোড"
 #, c-format
 msgid "Use specific UDP port"
 msgstr ""
+
+#~ msgid "Connection type: "
+#~ msgstr "সংযোগের ধরন: "
 
 #~ msgid "%s already in use\n"
 #~ msgstr "%s ইতিমধ্যেই ব্যবহৃত হচ্ছে\n"
