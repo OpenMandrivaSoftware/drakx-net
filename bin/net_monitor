@@ -94,9 +94,12 @@ gtkadd($window1->{window},
             0, my $notebook = gtknew('Notebook'),
             1, gtknew('VBox', spacing => 5, children => [
                 0, gtknew('Frame', text => N("Settings"), shadow_type => 'etched_out', child => 
-                    gtknew('HBox', border_width => 5, children_tight => [
-                        N("Connection type: "), 
-                        my $label_cnx_type = gtknew('Label', text => "") ]),
+                    gtknew('VBox', border_width => 5, children_tight => [
+                        gtknew('HBox', border_width => 5, children_tight => [
+                            N("Default connection: "),
+                            my $label_cnx_type = gtknew('Label', text => "") ]),
+                    my $button_connect = gtknew('Button', text => N("Wait please"), sensitive => 0, clicked => \&connection),
+                    ]),
                 ),
                 1, gtknew('Frame', text => N("Global statistics"), shadow_type => 'etched_out', child => 
                     gtknew('VBox', border_width => 5, children_tight => [
@@ -116,7 +119,6 @@ gtkadd($window1->{window},
             ]),
         0, gtksignal_connect(gtkset_active(gtknew('CheckButton', text => N("Use same scale for received and transmitted")), $use_same_scale), clicked => sub { $use_same_scale = !$use_same_scale }),
         0, gtknew('HButtonBox', layout => 'edge', children_loose => [
-            my $button_connect = gtknew('Button', text => N("Wait please"), sensitive => 0, clicked => \&connection),
             my $button_close = gtknew('Button', text => N("Close"), clicked => \&main_quit),
             ]),
         0, my $statusbar = Gtk2::Statusbar->new
@@ -355,7 +357,7 @@ sub rescan() {
         $monitor->{sta} = 0;
         $monitor->{nba} = 0;
     }
-    gtkset($label_cnx_type, text => translate($net->{type}));
+    gtkset($label_cnx_type, text => N("%s (%s)", translate($net->{type}), $net->{net_interface}));
     $monitor->{$_} = 0 foreach 'sr', 'st';
     1;
 }
