@@ -146,6 +146,7 @@ sub load_interface_settings {
     $self->{control}{onboot} = $self->get_ifcfg_bool('ONBOOT');
     $self->{control}{userctl} = $self->get_ifcfg_bool('USERCTL');
     $self->{control}{metric} = $self->{ifcfg}{METRIC};
+    $self->{control}{mtu} = $self->{ifcfg}{MTU};
 }
 
 #- override to return 1 if the connection network scan is slow
@@ -249,6 +250,7 @@ sub build_ifcfg_settings {
         ONBOOT => bool2yesno($self->{control}{onboot}),
         USERCTL => bool2yesno($self->{control}{userctl}),
         METRIC => $self->{control}{metric},
+        MTU => $self->{control}{mtu},
         VPN_TYPE => defined $self->{control}{vpn} && $self->{control}{vpn}->get_type,
         VPN_NAME => defined $self->{control}{vpn} && $self->{control}{vpn}->get_name,
         #- FIXME: add MS_DNSx variables if DNS servers are specified
