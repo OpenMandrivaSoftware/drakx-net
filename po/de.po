@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2008-12-04 07:33+0100\n"
 "Last-Translator: Wolfgang Bornath <molch.b@gmail.com>\n"
 "Language-Team: Deutsch <cooker-i18n@mandrivalinux.org>\n"
@@ -2741,8 +2741,11 @@ msgstr "Warnung : IP-Adresse %s ist üblicherweise reserviert !"
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s bereits anderweitig genutzt\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4394,6 +4397,11 @@ msgstr "Wählen Sie die Verbindung, die Sie konfigurieren wollen"
 msgid "Select the network interface to configure:"
 msgstr "Wählen Sie die Netzwerkkarte zum konfigurieren"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5361,3 +5369,6 @@ msgstr "NAT Modus"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Verwende speziellen UDP Port"
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s bereits anderweitig genutzt\n"

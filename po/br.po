@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net 10.2\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2008-03-17 14:51+0100\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
 "Language-Team: Brezhoneg <ofisk@wanadoo.fr>\n"
@@ -2555,8 +2555,11 @@ msgstr "Diwallit : strizh eo ar chomlec'h IP %s boazamant !"
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "implijet eo %s c'hoazh\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4065,6 +4068,11 @@ msgstr "Dibabit an kevreadenn da kefluniañ"
 msgid "Select the network interface to configure:"
 msgstr "Dibabit an etrefas rouedad a kefluniañ :"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -4990,6 +4998,9 @@ msgstr "Mod"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Implijit ur porzh UDP ispisial"
+
+#~ msgid "%s already in use\n"
+#~ msgstr "implijet eo %s c'hoazh\n"
 
 #~ msgid "Draknfs entry"
 #~ msgstr "Bouetadur NFS"

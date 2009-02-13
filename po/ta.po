@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net 1.0\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2002-09-06 00:35+0800\n"
 "Last-Translator: prabu anand <prabu_anand2000@yahoo.com>\n"
 "Language-Team: Tamil <tamilinix@yahoogroups.com>\n"
@@ -2573,7 +2573,10 @@ msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
@@ -4097,6 +4100,11 @@ msgstr "உங்களுக்கு விருப்பமான இணை�
 #, fuzzy, c-format
 msgid "Select the network interface to configure:"
 msgstr "வலையமைப்பு அட்ைடயை தேர்வுச் செய்"
+
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
 
 #: ../lib/network/netconnect.pm:167
 #, c-format

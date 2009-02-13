@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-ja\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2008-03-15 22:00+0900\n"
 "Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 "Language-Team: Japanese <cooker-i18n@mandrivalinux.org>\n"
@@ -2677,8 +2677,11 @@ msgstr "警告: IP アドレス %s は通常保留されています"
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s は既に使用されています\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4254,6 +4257,11 @@ msgstr "設定する接続を選んでください"
 msgid "Select the network interface to configure:"
 msgstr "設定するネットワークインターフェースを選択:"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS: %s"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5212,6 +5220,9 @@ msgstr "NAT モード"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "特定の UDP ポートを使う"
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s は既に使用されています\n"
 
 #~ msgid "Draknfs entry"
 #~ msgstr "Draknfs エントリ"

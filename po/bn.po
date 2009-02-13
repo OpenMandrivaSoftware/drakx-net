@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net HEAD\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2005-03-19 23:18+0600\n"
 "Last-Translator: Samia <mailsamia2001@yahoo.com>\n"
 "Language-Team: Bangla <mdk-translation@bengalinux.org>\n"
@@ -2611,8 +2611,11 @@ msgstr "নির্দেশ : সাধারনত %s IP ঠিকানা�
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s ইতিমধ্যেই ব্যবহৃত হচ্ছে\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4179,6 +4182,11 @@ msgstr "কনফিগারের জন্য আপনার সংযোগ
 msgid "Select the network interface to configure:"
 msgstr "কনফিগার করার জন্য নেটওয়ার্কের ইন্টারফেস পছন্দ করুন:"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5125,6 +5133,9 @@ msgstr "মোড"
 #, c-format
 msgid "Use specific UDP port"
 msgstr ""
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s ইতিমধ্যেই ব্যবহৃত হচ্ছে\n"
 
 #~ msgid "DrakVPN"
 #~ msgstr "DrakVPN"

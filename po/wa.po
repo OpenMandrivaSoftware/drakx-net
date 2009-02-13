@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2006-09-05 23:14+0200\n"
 "Last-Translator: Pablo Saratxaga <pablo@walon.org>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -2640,8 +2640,11 @@ msgstr "Adviertixhmint: l' adresse IP %s est normålmint rsiervêye!"
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s est ddja en alaedje\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4215,6 +4218,11 @@ msgstr "Tchoezixhoz li raloyaedje ki vos voloz apontyî"
 msgid "Select the network interface to configure:"
 msgstr "Tchoezixhoz l' eterface rantoele a-z apontyî"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5174,6 +5182,9 @@ msgstr "Môde"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Eployî pôrt UDP specifike"
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s est ddja en alaedje\n"
 
 #~ msgid "Draknfs entry"
 #~ msgstr "Intrêye Draknfs"

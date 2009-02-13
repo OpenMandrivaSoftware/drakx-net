@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2009-01-27 17:27+0200\n"
 "Last-Translator: Pavel Maryanov <acid_jack@ukr.net>\n"
 "Language-Team: Russian <gnu@mx.ru>\n"
@@ -2708,8 +2708,11 @@ msgstr "Предупреждение: IP-адрес %s обычно зарезе
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s уже используется\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4369,6 +4372,11 @@ msgstr "Выберите соединение, которое вы хотите 
 msgid "Select the network interface to configure:"
 msgstr "Выберите сетевой интерфейс для настройки:"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5325,6 +5333,9 @@ msgstr "Режим NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Использовать определённый порт UDP"
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s уже используется\n"
 
 #~ msgid "Draknfs entry"
 #~ msgstr "Запись Draknfs"

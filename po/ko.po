@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2002-09-09 09:08+0900\n"
 "Last-Translator: Jaegeum Cze <baedaron@hanafos.com>\n"
 "Language-Team: Korean <beadaron@hanafos.com>\n"
@@ -2574,7 +2574,10 @@ msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
@@ -4088,6 +4091,11 @@ msgstr "설정할 연결을 선택하세요."
 #, fuzzy, c-format
 msgid "Select the network interface to configure:"
 msgstr "네트웍 인터페이스를 선택하세요."
+
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
 
 #: ../lib/network/netconnect.pm:167
 #, c-format

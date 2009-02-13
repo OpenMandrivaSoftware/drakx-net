@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-tools-gl\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2008-04-13 22:12+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -2650,8 +2650,11 @@ msgstr "ADVERTENCIA: ¡O enderezo IP %s normalmente está reservado!"
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s xa se está usando\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4217,6 +4220,11 @@ msgstr "Elixa a conexión que desexa configurar"
 msgid "Select the network interface to configure:"
 msgstr "Seleccione a interface de rede a configurar:"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5178,6 +5186,9 @@ msgstr "Modo"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Usar porto UDP específico"
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s xa se está usando\n"
 
 #~ msgid "Draknfs entry"
 #~ msgstr "Entrada de Draknfs"
