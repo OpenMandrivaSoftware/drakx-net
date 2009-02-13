@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net 2007\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2006-09-10 21:48+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: Mandriva Linux i18n Team <cooker-i18n@mandrivalinux.org>\n"
@@ -2639,8 +2639,11 @@ msgstr "警告: IP 地址 %s 通常是被保留的！"
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s 已经被使用了\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4234,6 +4237,11 @@ msgstr "选择您想要配置的连接"
 msgid "Select the network interface to configure:"
 msgstr "选择要配置的网卡: "
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5176,6 +5184,9 @@ msgstr "NAT 模式"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "使用指定的 UDP 端口"
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s 已经被使用了\n"
 
 #~ msgid "Draknfs entry"
 #~ msgstr "Draknfs 项"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mandriva drakx-net.cy\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2008-10-06 19:50+0100\n"
 "Last-Translator: Rhoslyn Prys <post@meddal.com>\n"
 "Language-Team: Cymraeg <post@meddal.com>\n"
@@ -2697,8 +2697,11 @@ msgstr "Rhybudd : cyfeiriad IP %s wedi ei gadw fel rheol !"
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s yn cael ei ddefnyddio eisoes\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4332,6 +4335,11 @@ msgstr "Dewiswch y math o gysylltiad rydych am ei ffurfweddu"
 msgid "Select the network interface to configure:"
 msgstr "Dewis y rhyngwyneb rhwydwaith i'w ffurfweddu:"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5292,6 +5300,9 @@ msgstr "Modd NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Defnyddio porth UDP penodol"
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s yn cael ei ddefnyddio eisoes\n"
 
 #~ msgid "Draknfs entry"
 #~ msgstr "Cofnod Draknfs"

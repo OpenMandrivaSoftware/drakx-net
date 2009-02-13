@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-mk\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2004-11-03 18:47+0100\n"
 "Last-Translator: Зоран Димовски <decata@mt.net.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -2606,8 +2606,11 @@ msgstr "Предупредување: IP адресата %s вообичаен�
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s веќе се користи\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4139,6 +4142,11 @@ msgstr "Избери ја конекцијата која сакате да ја
 msgid "Select the network interface to configure:"
 msgstr "Изберете мрежен интерфејс за конфигурација:"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5070,6 +5078,9 @@ msgstr "Помести"
 #, c-format
 msgid "Use specific UDP port"
 msgstr ""
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s веќе се користи\n"
 
 #~ msgid "DrakVPN"
 #~ msgstr "DrakVPN"

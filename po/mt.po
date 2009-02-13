@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mt\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2004-10-04 18:45+0200\n"
 "Last-Translator: Ramon Casha <ramon.casha@linux.org.mt>\n"
 "Language-Team: Maltese <mt@li.org>\n"
@@ -2603,8 +2603,11 @@ msgstr "Twissija: Indirizz IP %s normalment riservat !"
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s diġà qed jintuża\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4169,6 +4172,11 @@ msgstr "Agħżel liema konnessjoni trid tissettja"
 msgid "Select the network interface to configure:"
 msgstr "Agħżel l-interfaċċja tan-network biex tikkonfigura:"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5111,6 +5119,9 @@ msgstr "Modalità"
 #, c-format
 msgid "Use specific UDP port"
 msgstr ""
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s diġà qed jintuża\n"
 
 #~ msgid "DrakVPN"
 #~ msgstr "DrakVPN"

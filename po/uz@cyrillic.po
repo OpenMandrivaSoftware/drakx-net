@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: uz@cyrillic\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2008-03-28 23:56+0100\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -2571,8 +2571,11 @@ msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s'дан аллақачон фойдаланилмоқда\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4093,6 +4096,11 @@ msgstr "Сиз мосламоқчи бўлган уланишни танланг
 msgid "Select the network interface to configure:"
 msgstr "Мослаш учун тармоқ интерфейсини танланг:"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5019,6 +5027,9 @@ msgstr "Модем"
 #, c-format
 msgid "Use specific UDP port"
 msgstr ""
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s'дан аллақачон фойдаланилмоқда\n"
 
 #~ msgid "Security Policies"
 #~ msgstr "Хавфсизлик қоидалари"

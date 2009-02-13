@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-fi - LE2005 Release\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2008-03-31 17:45+0300\n"
 "Last-Translator: Anssi Hannula <anssi@mandriva.org>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -2608,8 +2608,11 @@ msgstr "Varoitus: IP osoite %s on yleensä varattu !"
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s on jo käytössä\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4175,6 +4178,11 @@ msgstr "Valitse yhteys, jonka haluat asettaa"
 msgid "Select the network interface to configure:"
 msgstr "Valitse asetettava verkkoliitäntä:"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5116,6 +5124,9 @@ msgstr "Tila"
 #, c-format
 msgid "Use specific UDP port"
 msgstr ""
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s on jo käytössä\n"
 
 #~ msgid "DrakVPN"
 #~ msgstr "DrakVPN"

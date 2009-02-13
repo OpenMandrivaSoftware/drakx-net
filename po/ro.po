@@ -31,7 +31,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net 7.1\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2008-12-15 14:29+0100\n"
 "Last-Translator: Florin Cătălin RUSSEN <cfrussen@yahoo.co.uk>\n"
 "Language-Team: Romanian Translators for Free Software <rtfs-project@lists."
@@ -2736,8 +2736,11 @@ msgstr "Atenţie: adresa IP %s este de obicei rezervată!"
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s este deja utilizat\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4389,6 +4392,11 @@ msgstr "Alegeţi conexiunea pe care doriţi să o configuraţi"
 msgid "Select the network interface to configure:"
 msgstr "Alegeţi interfaţa de reţea spre configurare:"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5352,6 +5360,9 @@ msgstr "Mod NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Utilizează un port UDP specific"
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s este deja utilizat\n"
 
 #~ msgid "Draknfs entry"
 #~ msgstr "Intrare Draknfs"

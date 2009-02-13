@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2008-09-21 22:38+0200\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -2701,8 +2701,11 @@ msgstr "Varování: IP adresa %s je obyčejně rezervována!"
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s je již používán\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4343,6 +4346,11 @@ msgstr "Vyberte připojení, které chcete nastavit"
 msgid "Select the network interface to configure:"
 msgstr "Vyberte síťové rozhraní pro nastavení:"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5298,6 +5306,9 @@ msgstr "Režim NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Použít specifický port UDP"
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s je již používán\n"
 
 #~ msgid "Draknfs entry"
 #~ msgstr "Položka Draknfs"

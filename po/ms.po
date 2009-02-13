@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2008-09-08 22:07+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
@@ -2545,9 +2545,12 @@ msgid "Warning: IP address %s is usually reserved!"
 msgstr "Amaran IP!"
 
 #: ../lib/network/connection/ethernet.pm:185
-#, fuzzy, c-format
-msgid "%s already in use\n"
-msgstr "%s telah digunakan\n"
+#, c-format
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, fuzzy, c-format
@@ -4054,6 +4057,11 @@ msgstr "Pilih alatan yang anda hendak guna"
 msgid "Select the network interface to configure:"
 msgstr "Pilih kad yang anda ingin konfigurasikan:"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -4948,6 +4956,10 @@ msgstr "Mod NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr ""
+
+#, fuzzy
+#~ msgid "%s already in use\n"
+#~ msgstr "%s telah digunakan\n"
 
 #, fuzzy
 #~ msgid "Draknfs entry"

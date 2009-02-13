@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sl\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2008-10-06 23:28+0200\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -2697,8 +2697,11 @@ msgstr "Opozorilo: naslov IP %s je običajno rezerviran!"
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s je že uporabljen\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4331,6 +4334,11 @@ msgstr "Izberite vrsto povezave, ki jo želite nastaviti"
 msgid "Select the network interface to configure:"
 msgstr "Izberite kartico, ki jo želite nastaviti"
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5284,6 +5292,9 @@ msgstr "Način NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Uporabi določena vrata UDP"
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s je že uporabljen\n"
 
 #~ msgid "Draknfs entry"
 #~ msgstr "Vnos Draknfs"

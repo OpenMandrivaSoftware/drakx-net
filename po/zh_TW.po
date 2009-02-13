@@ -18,7 +18,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2009-02-05 11:19-0200\n"
+"POT-Creation-Date: 2009-02-13 16:26+0100\n"
 "PO-Revision-Date: 2008-03-30 11:20+0800\n"
 "Last-Translator: Shiva Huang <shivahuang@gmail.com>\n"
 "Language-Team: Traditional Chinese <zh@li.org>\n"
@@ -2606,8 +2606,11 @@ msgstr "警告：IP 位址 %s 通常是保留下來的！"
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
-msgid "%s already in use\n"
-msgstr "%s 已經在使用中了\n"
+msgid ""
+"%s is already used by connection that starts on boot. To use this address "
+"with this connection, first disable all other devices which use it, or "
+"configure them not to start on boot"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -4147,6 +4150,11 @@ msgstr "選擇您要設定的連線項目"
 msgid "Select the network interface to configure:"
 msgstr "選取要設定的網路介面："
 
+#: ../lib/network/netconnect.pm:150
+#, fuzzy, c-format
+msgid "%s: %s"
+msgstr "DNS"
+
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
@@ -5090,6 +5098,9 @@ msgstr "EAP 模式"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "使用指定的 UDP 埠"
+
+#~ msgid "%s already in use\n"
+#~ msgstr "%s 已經在使用中了\n"
 
 #~ msgid "Draknfs entry"
 #~ msgstr "Draknfs 項目"
