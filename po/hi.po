@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-hi\n"
-"POT-Creation-Date: 2009-02-13 16:26+0100\n"
+"POT-Creation-Date: 2009-02-13 20:39-0200\n"
 "PO-Revision-Date: 2004-04-04 21:54+0530\n"
 "Last-Translator: धनञ्जय शर्मा (Dhananjaya Sharma) <dysxhi@yahoo.co.in>\n"
 "Language-Team: हिन्दी (Hindi) <dysxhi@yahoo.co.in>\n"
@@ -78,13 +78,13 @@ msgid "Apply"
 msgstr "प्रयोग करें"
 
 #: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
-#: ../bin/draknetprofile:133 ../bin/net_monitor:347
+#: ../bin/draknetprofile:133 ../bin/net_monitor:388
 #, c-format
 msgid "Cancel"
 msgstr "निरस्त"
 
 #: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
-#: ../bin/drakconnect-old:265 ../bin/draknetprofile:135 ../bin/net_monitor:348
+#: ../bin/drakconnect-old:265 ../bin/draknetprofile:135 ../bin/net_monitor:389
 #, c-format
 msgid "Ok"
 msgstr "ठीक"
@@ -648,7 +648,7 @@ msgstr ""
 
 #: ../bin/drakids:85 ../bin/drakids:94 ../bin/drakids:103 ../bin/drakids:114
 #: ../bin/drakids:127 ../bin/drakids:135 ../bin/draknfs:194
-#: ../bin/net_monitor:120
+#: ../bin/net_monitor:122
 #, c-format
 msgid "Close"
 msgstr "बन्द"
@@ -2062,12 +2062,12 @@ msgstr ""
 "इस इन्टरफ़ेस को अभी तक संरचित नहीं किया गया है ।\n"
 "मैनड्रिव नियंत्रण केन्द्र से \"%s\" सहायक को चलायें"
 
-#: ../bin/net_applet:129 ../bin/net_monitor:475
+#: ../bin/net_applet:129 ../bin/net_monitor:519
 #, c-format
 msgid "Connect %s"
 msgstr "%s को जोड़ें"
 
-#: ../bin/net_applet:130 ../bin/net_monitor:475
+#: ../bin/net_applet:130 ../bin/net_monitor:519
 #, c-format
 msgid "Disconnect %s"
 msgstr "%s से संबंध तोड़ें"
@@ -2112,7 +2112,7 @@ msgstr ""
 msgid "Profiles"
 msgstr "प्रोफ़ाइल्स"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:225
+#: ../bin/net_applet:180 ../lib/network/connection.pm:226
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, fuzzy, c-format
@@ -2154,27 +2154,32 @@ msgstr "समायोजनायें"
 msgid "Network Monitoring"
 msgstr "नेटवर्क मॉनीट्रिंग"
 
-#: ../bin/net_monitor:98
-#, c-format
-msgid "Connection type: "
-msgstr "संबंध प्रकार: "
+#: ../bin/net_monitor:99
+#, fuzzy, c-format
+msgid "Default connection: "
+msgstr "केबल संबंध"
 
 #: ../bin/net_monitor:101
+#, c-format
+msgid "Wait please"
+msgstr "कृपया प्रतीक्षा करें"
+
+#: ../bin/net_monitor:104
 #, c-format
 msgid "Global statistics"
 msgstr "ग्लोबल आकड़ें"
 
-#: ../bin/net_monitor:104
+#: ../bin/net_monitor:107
 #, c-format
 msgid "Instantaneous"
 msgstr "तत्काल"
 
-#: ../bin/net_monitor:104
+#: ../bin/net_monitor:107
 #, c-format
 msgid "Average"
 msgstr "औसतन"
 
-#: ../bin/net_monitor:105
+#: ../bin/net_monitor:108
 #, c-format
 msgid ""
 "Sending\n"
@@ -2183,12 +2188,12 @@ msgstr ""
 "भेजा जा रहा है\n"
 "गति:"
 
-#: ../bin/net_monitor:105 ../bin/net_monitor:106 ../bin/net_monitor:111
+#: ../bin/net_monitor:108 ../bin/net_monitor:109 ../bin/net_monitor:114
 #, c-format
 msgid "unknown"
 msgstr "अज्ञात"
 
-#: ../bin/net_monitor:106
+#: ../bin/net_monitor:109
 #, c-format
 msgid ""
 "Receiving\n"
@@ -2197,56 +2202,49 @@ msgstr ""
 "प्राप्त किया जा रहा है\n"
 "गति:"
 
-#: ../bin/net_monitor:110
-#, c-format
-msgid ""
-"Connection\n"
-"time: "
+#: ../bin/net_monitor:113
+#, fuzzy, c-format
+msgid "Connection time: "
 msgstr ""
 "संबंध\n"
 "समय: "
 
-#: ../bin/net_monitor:117
+#: ../bin/net_monitor:120
 #, c-format
 msgid "Use same scale for received and transmitted"
 msgstr ""
 
-#: ../bin/net_monitor:119
-#, c-format
-msgid "Wait please"
-msgstr "कृपया प्रतीक्षा करें"
-
-#: ../bin/net_monitor:136
+#: ../bin/net_monitor:138
 #, c-format
 msgid "Wait please, testing your connection..."
 msgstr "कृपया प्रतीक्षा करें, आपके संबंध का परीक्षण हो रहा है..."
 
-#: ../bin/net_monitor:191 ../bin/net_monitor:204
+#: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Disconnecting from Internet "
 msgstr "इन्टरनेट से संबंध विच्छेद हो रहा है"
 
-#: ../bin/net_monitor:191 ../bin/net_monitor:204
+#: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Connecting to Internet "
 msgstr "इन्टरनेट से संबंध स्थापित हो रहा है"
 
-#: ../bin/net_monitor:235
+#: ../bin/net_monitor:254
 #, c-format
 msgid "Disconnection from Internet failed."
 msgstr "इन्टरनेट से संबंध-विच्छेद असफ़ल ।"
 
-#: ../bin/net_monitor:236
+#: ../bin/net_monitor:255
 #, c-format
 msgid "Disconnection from Internet complete."
 msgstr "इन्टरनेट से पूर्णताः संबंध तोड़ा गया ।"
 
-#: ../bin/net_monitor:238
+#: ../bin/net_monitor:257
 #, c-format
 msgid "Connection complete."
 msgstr "संबंध सम्पूर्ण ।"
 
-#: ../bin/net_monitor:239
+#: ../bin/net_monitor:258
 #, c-format
 msgid ""
 "Connection failed.\n"
@@ -2255,32 +2253,42 @@ msgstr ""
 "संबंधीकरण की प्रक्रिया असफ़ल हो गई ।\n"
 "मैनड्रिव नियंत्रण केन्द्र में अपनी संरचना को सत्यापित करें ।"
 
-#: ../bin/net_monitor:344
+#: ../bin/net_monitor:360
+#, fuzzy, c-format
+msgid "%s (%s)"
+msgstr "डीएनएस"
+
+#: ../bin/net_monitor:385
 #, c-format
 msgid "Color configuration"
 msgstr "रंग संरचना"
 
-#: ../bin/net_monitor:401 ../bin/net_monitor:413
+#: ../bin/net_monitor:444 ../bin/net_monitor:457
 #, c-format
 msgid "sent: "
 msgstr "भेजना: "
 
-#: ../bin/net_monitor:404 ../bin/net_monitor:417
+#: ../bin/net_monitor:447 ../bin/net_monitor:461
 #, c-format
 msgid "received: "
 msgstr "प्राप्त किया:"
 
-#: ../bin/net_monitor:407
+#: ../bin/net_monitor:450
 #, c-format
 msgid "average"
 msgstr "औसत"
 
-#: ../bin/net_monitor:410
+#: ../bin/net_monitor:451
+#, c-format
+msgid "Reset counters"
+msgstr ""
+
+#: ../bin/net_monitor:454
 #, c-format
 msgid "Local measure"
 msgstr "स्थानीय माप"
 
-#: ../bin/net_monitor:468
+#: ../bin/net_monitor:512
 #, c-format
 msgid ""
 "Warning, another internet connection has been detected, maybe using your "
@@ -2288,17 +2296,17 @@ msgid ""
 msgstr ""
 "चेतावनी, एक अन्य इन्टरनेट संबंध को खोजा गया है, सम्भव है कि आपका नेटवर्क उपयोग कर रहा हो"
 
-#: ../bin/net_monitor:472
+#: ../bin/net_monitor:516
 #, c-format
 msgid "Connected"
 msgstr "जुड़ा हुआ"
 
-#: ../bin/net_monitor:472
+#: ../bin/net_monitor:516
 #, c-format
 msgid "Not connected"
 msgstr "संबंध-विच्छेद है"
 
-#: ../bin/net_monitor:479
+#: ../bin/net_monitor:523
 #, c-format
 msgid "No internet connection configured"
 msgstr "कोई इन्टरनेट संबंध संरचित नहीं है"
@@ -2308,22 +2316,22 @@ msgstr "कोई इन्टरनेट संबंध संरचित �
 msgid "Unknown connection type"
 msgstr "अज्ञात प्रकार का संबध"
 
-#: ../lib/network/connection.pm:158
+#: ../lib/network/connection.pm:159
 #, c-format
 msgid "Network access settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:159
+#: ../lib/network/connection.pm:160
 #, c-format
 msgid "Access settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:160
+#: ../lib/network/connection.pm:161
 #, c-format
 msgid "Address settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:174 ../lib/network/connection.pm:194
+#: ../lib/network/connection.pm:175 ../lib/network/connection.pm:195
 #: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:216
 #: ../lib/network/netconnect.pm:473 ../lib/network/netconnect.pm:569
 #: ../lib/network/netconnect.pm:572
@@ -2331,34 +2339,34 @@ msgstr ""
 msgid "Unlisted - edit manually"
 msgstr "असूचीबद्ध - मैनयूअली संपादन करें"
 
-#: ../lib/network/connection.pm:227 ../lib/network/connection/cable.pm:41
+#: ../lib/network/connection.pm:228 ../lib/network/connection/cable.pm:41
 #: ../lib/network/connection/wireless.pm:45 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "कुछ नहीं"
 
-#: ../lib/network/connection.pm:239
+#: ../lib/network/connection.pm:240
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr ""
 
-#: ../lib/network/connection.pm:240
+#: ../lib/network/connection.pm:241
 #, c-format
 msgid "Start the connection at boot"
 msgstr ""
 
-#: ../lib/network/connection.pm:241
+#: ../lib/network/connection.pm:242
 #, c-format
 msgid "Metric"
 msgstr "मेट्रिक"
 
-#: ../lib/network/connection.pm:311
+#: ../lib/network/connection.pm:313
 #, fuzzy, c-format
 msgid "Link detected on interface %s"
 msgstr "(%s पोर्ट पर पहचाना गया)"
 
-#: ../lib/network/connection.pm:312 ../lib/network/connection/ethernet.pm:289
+#: ../lib/network/connection.pm:314 ../lib/network/connection/ethernet.pm:289
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr ""
@@ -5098,6 +5106,9 @@ msgstr "मोड"
 #, c-format
 msgid "Use specific UDP port"
 msgstr ""
+
+#~ msgid "Connection type: "
+#~ msgstr "संबंध प्रकार: "
 
 #~ msgid "%s already in use\n"
 #~ msgstr "%s पहिले से ही उपयोग में है\n"

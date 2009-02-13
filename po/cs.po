@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
-"POT-Creation-Date: 2009-02-13 16:26+0100\n"
+"POT-Creation-Date: 2009-02-13 20:39-0200\n"
 "PO-Revision-Date: 2008-09-21 22:38+0200\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -83,13 +83,13 @@ msgid "Apply"
 msgstr "Použít"
 
 #: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
-#: ../bin/draknetprofile:133 ../bin/net_monitor:347
+#: ../bin/draknetprofile:133 ../bin/net_monitor:388
 #, c-format
 msgid "Cancel"
 msgstr "Zrušit"
 
 #: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
-#: ../bin/drakconnect-old:265 ../bin/draknetprofile:135 ../bin/net_monitor:348
+#: ../bin/drakconnect-old:265 ../bin/draknetprofile:135 ../bin/net_monitor:389
 #, c-format
 msgid "Ok"
 msgstr "Ok"
@@ -661,7 +661,7 @@ msgstr "Blokovat"
 
 #: ../bin/drakids:85 ../bin/drakids:94 ../bin/drakids:103 ../bin/drakids:114
 #: ../bin/drakids:127 ../bin/drakids:135 ../bin/draknfs:194
-#: ../bin/net_monitor:120
+#: ../bin/net_monitor:122
 #, c-format
 msgid "Close"
 msgstr "Zavřít"
@@ -2172,12 +2172,12 @@ msgstr ""
 "Nemáte nastaveno žádné připojení k internetu.\n"
 "Spusťte průvodce \"%s\" z Ovládacího centra Mandriva Linux"
 
-#: ../bin/net_applet:129 ../bin/net_monitor:475
+#: ../bin/net_applet:129 ../bin/net_monitor:519
 #, c-format
 msgid "Connect %s"
 msgstr "Připojit %s"
 
-#: ../bin/net_applet:130 ../bin/net_monitor:475
+#: ../bin/net_applet:130 ../bin/net_monitor:519
 #, c-format
 msgid "Disconnect %s"
 msgstr "Odpojit %s"
@@ -2222,7 +2222,7 @@ msgstr "Aktivní rozhraní"
 msgid "Profiles"
 msgstr "Profily"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:225
+#: ../bin/net_applet:180 ../lib/network/connection.pm:226
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
@@ -2264,27 +2264,32 @@ msgstr "Nastavení"
 msgid "Network Monitoring"
 msgstr "Sledování sítě"
 
-#: ../bin/net_monitor:98
-#, c-format
-msgid "Connection type: "
-msgstr "Typ připojení: "
+#: ../bin/net_monitor:99
+#, fuzzy, c-format
+msgid "Default connection: "
+msgstr "Kabelové připojení"
 
 #: ../bin/net_monitor:101
+#, c-format
+msgid "Wait please"
+msgstr "Čekejte prosím"
+
+#: ../bin/net_monitor:104
 #, c-format
 msgid "Global statistics"
 msgstr "Globální statistiky"
 
-#: ../bin/net_monitor:104
+#: ../bin/net_monitor:107
 #, c-format
 msgid "Instantaneous"
 msgstr "Okamžitá"
 
-#: ../bin/net_monitor:104
+#: ../bin/net_monitor:107
 #, c-format
 msgid "Average"
 msgstr "Průměrná"
 
-#: ../bin/net_monitor:105
+#: ../bin/net_monitor:108
 #, c-format
 msgid ""
 "Sending\n"
@@ -2293,12 +2298,12 @@ msgstr ""
 "Odchozí\n"
 "rychlost:"
 
-#: ../bin/net_monitor:105 ../bin/net_monitor:106 ../bin/net_monitor:111
+#: ../bin/net_monitor:108 ../bin/net_monitor:109 ../bin/net_monitor:114
 #, c-format
 msgid "unknown"
 msgstr "neznámá"
 
-#: ../bin/net_monitor:106
+#: ../bin/net_monitor:109
 #, c-format
 msgid ""
 "Receiving\n"
@@ -2307,56 +2312,49 @@ msgstr ""
 "Příchozí\n"
 "rychlost:"
 
-#: ../bin/net_monitor:110
-#, c-format
-msgid ""
-"Connection\n"
-"time: "
+#: ../bin/net_monitor:113
+#, fuzzy, c-format
+msgid "Connection time: "
 msgstr ""
 "Doba\n"
 "spojení: "
 
-#: ../bin/net_monitor:117
+#: ../bin/net_monitor:120
 #, c-format
 msgid "Use same scale for received and transmitted"
 msgstr "Použít stejnou stupnici pro příchozí i odchozí"
 
-#: ../bin/net_monitor:119
-#, c-format
-msgid "Wait please"
-msgstr "Čekejte prosím"
-
-#: ../bin/net_monitor:136
+#: ../bin/net_monitor:138
 #, c-format
 msgid "Wait please, testing your connection..."
 msgstr "Čekejte prosím, testuji spojení..."
 
-#: ../bin/net_monitor:191 ../bin/net_monitor:204
+#: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Disconnecting from Internet "
 msgstr "Odpojuji od internetu "
 
-#: ../bin/net_monitor:191 ../bin/net_monitor:204
+#: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Connecting to Internet "
 msgstr "Připojuji k internetu "
 
-#: ../bin/net_monitor:235
+#: ../bin/net_monitor:254
 #, c-format
 msgid "Disconnection from Internet failed."
 msgstr "Odpojení od internetu selhalo."
 
-#: ../bin/net_monitor:236
+#: ../bin/net_monitor:255
 #, c-format
 msgid "Disconnection from Internet complete."
 msgstr "Odpojení od internetu ukončeno."
 
-#: ../bin/net_monitor:238
+#: ../bin/net_monitor:257
 #, c-format
 msgid "Connection complete."
 msgstr "Připojení ukončeno."
 
-#: ../bin/net_monitor:239
+#: ../bin/net_monitor:258
 #, c-format
 msgid ""
 "Connection failed.\n"
@@ -2365,32 +2363,42 @@ msgstr ""
 "Připojení selhalo.\n"
 "Ověřte nastavení v ovládacím centru Mandriva Linux."
 
-#: ../bin/net_monitor:344
+#: ../bin/net_monitor:360
+#, fuzzy, c-format
+msgid "%s (%s)"
+msgstr "DNS"
+
+#: ../bin/net_monitor:385
 #, c-format
 msgid "Color configuration"
 msgstr "Nastavení barev"
 
-#: ../bin/net_monitor:401 ../bin/net_monitor:413
+#: ../bin/net_monitor:444 ../bin/net_monitor:457
 #, c-format
 msgid "sent: "
 msgstr "odesláno: "
 
-#: ../bin/net_monitor:404 ../bin/net_monitor:417
+#: ../bin/net_monitor:447 ../bin/net_monitor:461
 #, c-format
 msgid "received: "
 msgstr "přijato: "
 
-#: ../bin/net_monitor:407
+#: ../bin/net_monitor:450
 #, c-format
 msgid "average"
 msgstr "průměr"
 
-#: ../bin/net_monitor:410
+#: ../bin/net_monitor:451
+#, c-format
+msgid "Reset counters"
+msgstr ""
+
+#: ../bin/net_monitor:454
 #, c-format
 msgid "Local measure"
 msgstr "Lokální měřítko"
 
-#: ../bin/net_monitor:468
+#: ../bin/net_monitor:512
 #, c-format
 msgid ""
 "Warning, another internet connection has been detected, maybe using your "
@@ -2399,17 +2407,17 @@ msgstr ""
 "Varování, bylo detekováno jiné připojení k internetu, zřejmě je použita "
 "lokální síť"
 
-#: ../bin/net_monitor:472
+#: ../bin/net_monitor:516
 #, c-format
 msgid "Connected"
 msgstr "Připojeno"
 
-#: ../bin/net_monitor:472
+#: ../bin/net_monitor:516
 #, c-format
 msgid "Not connected"
 msgstr "Nepřipojeno"
 
-#: ../bin/net_monitor:479
+#: ../bin/net_monitor:523
 #, c-format
 msgid "No internet connection configured"
 msgstr "Žádné připojení k internetu není nastaveno"
@@ -2419,22 +2427,22 @@ msgstr "Žádné připojení k internetu není nastaveno"
 msgid "Unknown connection type"
 msgstr "Neznámý typ spojení"
 
-#: ../lib/network/connection.pm:158
+#: ../lib/network/connection.pm:159
 #, c-format
 msgid "Network access settings"
 msgstr "Nastavení síťového přístupu"
 
-#: ../lib/network/connection.pm:159
+#: ../lib/network/connection.pm:160
 #, c-format
 msgid "Access settings"
 msgstr "Nastavení přístupu"
 
-#: ../lib/network/connection.pm:160
+#: ../lib/network/connection.pm:161
 #, c-format
 msgid "Address settings"
 msgstr "Nastavení adresy"
 
-#: ../lib/network/connection.pm:174 ../lib/network/connection.pm:194
+#: ../lib/network/connection.pm:175 ../lib/network/connection.pm:195
 #: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:216
 #: ../lib/network/netconnect.pm:473 ../lib/network/netconnect.pm:569
 #: ../lib/network/netconnect.pm:572
@@ -2442,34 +2450,34 @@ msgstr "Nastavení adresy"
 msgid "Unlisted - edit manually"
 msgstr "Neuvedeno - upravit ručně"
 
-#: ../lib/network/connection.pm:227 ../lib/network/connection/cable.pm:41
+#: ../lib/network/connection.pm:228 ../lib/network/connection/cable.pm:41
 #: ../lib/network/connection/wireless.pm:45 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "Žádné"
 
-#: ../lib/network/connection.pm:239
+#: ../lib/network/connection.pm:240
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr "Povolit uživatelům spravovat připojení"
 
-#: ../lib/network/connection.pm:240
+#: ../lib/network/connection.pm:241
 #, c-format
 msgid "Start the connection at boot"
 msgstr "Spustit připojení při startu"
 
-#: ../lib/network/connection.pm:241
+#: ../lib/network/connection.pm:242
 #, c-format
 msgid "Metric"
 msgstr "Metrika"
 
-#: ../lib/network/connection.pm:311
+#: ../lib/network/connection.pm:313
 #, c-format
 msgid "Link detected on interface %s"
 msgstr "Zjištěno spojení na rozhraní %s"
 
-#: ../lib/network/connection.pm:312 ../lib/network/connection/ethernet.pm:289
+#: ../lib/network/connection.pm:314 ../lib/network/connection/ethernet.pm:289
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "Ztraceno spojení na rozhraní %s"
@@ -5306,6 +5314,9 @@ msgstr "Režim NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Použít specifický port UDP"
+
+#~ msgid "Connection type: "
+#~ msgstr "Typ připojení: "
 
 #~ msgid "%s already in use\n"
 #~ msgstr "%s je již používán\n"

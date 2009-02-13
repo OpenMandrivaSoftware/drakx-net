@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
-"POT-Creation-Date: 2009-02-13 16:26+0100\n"
+"POT-Creation-Date: 2009-02-13 20:39-0200\n"
 "PO-Revision-Date: 2008-09-21 01:33+0200\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -83,13 +83,13 @@ msgid "Apply"
 msgstr "Anvend"
 
 #: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
-#: ../bin/draknetprofile:133 ../bin/net_monitor:347
+#: ../bin/draknetprofile:133 ../bin/net_monitor:388
 #, c-format
 msgid "Cancel"
 msgstr "Annullér"
 
 #: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
-#: ../bin/drakconnect-old:265 ../bin/draknetprofile:135 ../bin/net_monitor:348
+#: ../bin/drakconnect-old:265 ../bin/draknetprofile:135 ../bin/net_monitor:389
 #, c-format
 msgid "Ok"
 msgstr "O.k."
@@ -661,7 +661,7 @@ msgstr "Blok"
 
 #: ../bin/drakids:85 ../bin/drakids:94 ../bin/drakids:103 ../bin/drakids:114
 #: ../bin/drakids:127 ../bin/drakids:135 ../bin/draknfs:194
-#: ../bin/net_monitor:120
+#: ../bin/net_monitor:122
 #, c-format
 msgid "Close"
 msgstr "Luk"
@@ -2173,12 +2173,12 @@ msgstr ""
 "Du har ikke konfigureret nogen internetforbindelser.\n"
 "Kør '%s'-hjælperen fra Mandriva Linux Kontrolcentret"
 
-#: ../bin/net_applet:129 ../bin/net_monitor:475
+#: ../bin/net_applet:129 ../bin/net_monitor:519
 #, c-format
 msgid "Connect %s"
 msgstr "Tilslut %s"
 
-#: ../bin/net_applet:130 ../bin/net_monitor:475
+#: ../bin/net_applet:130 ../bin/net_monitor:519
 #, c-format
 msgid "Disconnect %s"
 msgstr "Frakobl %s"
@@ -2223,7 +2223,7 @@ msgstr "Aktive grænsesnit"
 msgid "Profiles"
 msgstr "Profiler"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:225
+#: ../bin/net_applet:180 ../lib/network/connection.pm:226
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
@@ -2265,27 +2265,32 @@ msgstr "Indstillinger"
 msgid "Network Monitoring"
 msgstr "Overvågning af netværk"
 
-#: ../bin/net_monitor:98
-#, c-format
-msgid "Connection type: "
-msgstr "Type af forbindelse"
+#: ../bin/net_monitor:99
+#, fuzzy, c-format
+msgid "Default connection: "
+msgstr "Kabelforbindelse"
 
 #: ../bin/net_monitor:101
+#, c-format
+msgid "Wait please"
+msgstr "Vent venligst"
+
+#: ../bin/net_monitor:104
 #, c-format
 msgid "Global statistics"
 msgstr "Overordnet statistik"
 
-#: ../bin/net_monitor:104
+#: ../bin/net_monitor:107
 #, c-format
 msgid "Instantaneous"
 msgstr "Øjeblikkelig"
 
-#: ../bin/net_monitor:104
+#: ../bin/net_monitor:107
 #, c-format
 msgid "Average"
 msgstr "Gennemsnit"
 
-#: ../bin/net_monitor:105
+#: ../bin/net_monitor:108
 #, c-format
 msgid ""
 "Sending\n"
@@ -2294,12 +2299,12 @@ msgstr ""
 "Sende-\n"
 "hastighed:"
 
-#: ../bin/net_monitor:105 ../bin/net_monitor:106 ../bin/net_monitor:111
+#: ../bin/net_monitor:108 ../bin/net_monitor:109 ../bin/net_monitor:114
 #, c-format
 msgid "unknown"
 msgstr "ukendt"
 
-#: ../bin/net_monitor:106
+#: ../bin/net_monitor:109
 #, c-format
 msgid ""
 "Receiving\n"
@@ -2308,56 +2313,49 @@ msgstr ""
 "Modtagelses-\n"
 "hastighed:"
 
-#: ../bin/net_monitor:110
-#, c-format
-msgid ""
-"Connection\n"
-"time: "
+#: ../bin/net_monitor:113
+#, fuzzy, c-format
+msgid "Connection time: "
 msgstr ""
 "Tilslutnings-\n"
 "tid: "
 
-#: ../bin/net_monitor:117
+#: ../bin/net_monitor:120
 #, c-format
 msgid "Use same scale for received and transmitted"
 msgstr "Brug samme skala for modtaget og afsendt"
 
-#: ../bin/net_monitor:119
-#, c-format
-msgid "Wait please"
-msgstr "Vent venligst"
-
-#: ../bin/net_monitor:136
+#: ../bin/net_monitor:138
 #, c-format
 msgid "Wait please, testing your connection..."
 msgstr "Tester din forbindelse, vent venligst..."
 
-#: ../bin/net_monitor:191 ../bin/net_monitor:204
+#: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Disconnecting from Internet "
 msgstr "Afbryder forbindelse til Internettet "
 
-#: ../bin/net_monitor:191 ../bin/net_monitor:204
+#: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Connecting to Internet "
 msgstr "Kobler op til Internettet "
 
-#: ../bin/net_monitor:235
+#: ../bin/net_monitor:254
 #, c-format
 msgid "Disconnection from Internet failed."
 msgstr "Nedkobling fra Internet mislykkedes."
 
-#: ../bin/net_monitor:236
+#: ../bin/net_monitor:255
 #, c-format
 msgid "Disconnection from Internet complete."
 msgstr "Nedkobling fra Internet klar."
 
-#: ../bin/net_monitor:238
+#: ../bin/net_monitor:257
 #, c-format
 msgid "Connection complete."
 msgstr "Opkobling fuldført."
 
-#: ../bin/net_monitor:239
+#: ../bin/net_monitor:258
 #, c-format
 msgid ""
 "Connection failed.\n"
@@ -2366,32 +2364,42 @@ msgstr ""
 "Tilslutning mislykkedes.\n"
 "Kontrollér konfigurationen i Mandrivas kontrolcentral."
 
-#: ../bin/net_monitor:344
+#: ../bin/net_monitor:360
+#, fuzzy, c-format
+msgid "%s (%s)"
+msgstr "DNS"
+
+#: ../bin/net_monitor:385
 #, c-format
 msgid "Color configuration"
 msgstr "Farve-konfiguration"
 
-#: ../bin/net_monitor:401 ../bin/net_monitor:413
+#: ../bin/net_monitor:444 ../bin/net_monitor:457
 #, c-format
 msgid "sent: "
 msgstr "sendt: "
 
-#: ../bin/net_monitor:404 ../bin/net_monitor:417
+#: ../bin/net_monitor:447 ../bin/net_monitor:461
 #, c-format
 msgid "received: "
 msgstr "modtaget: "
 
-#: ../bin/net_monitor:407
+#: ../bin/net_monitor:450
 #, c-format
 msgid "average"
 msgstr "gennemsnit"
 
-#: ../bin/net_monitor:410
+#: ../bin/net_monitor:451
+#, c-format
+msgid "Reset counters"
+msgstr ""
+
+#: ../bin/net_monitor:454
 #, c-format
 msgid "Local measure"
 msgstr "Lokal måling"
 
-#: ../bin/net_monitor:468
+#: ../bin/net_monitor:512
 #, c-format
 msgid ""
 "Warning, another internet connection has been detected, maybe using your "
@@ -2400,17 +2408,17 @@ msgstr ""
 "Advarsel, en anden internetforbindelse er blevet fundet, der måske bruger "
 "dit netværk"
 
-#: ../bin/net_monitor:472
+#: ../bin/net_monitor:516
 #, c-format
 msgid "Connected"
 msgstr "Tilsluttet"
 
-#: ../bin/net_monitor:472
+#: ../bin/net_monitor:516
 #, c-format
 msgid "Not connected"
 msgstr "Ikke tilsluttet"
 
-#: ../bin/net_monitor:479
+#: ../bin/net_monitor:523
 #, c-format
 msgid "No internet connection configured"
 msgstr "Ingen konfiguration af Internetforbindelse"
@@ -2420,22 +2428,22 @@ msgstr "Ingen konfiguration af Internetforbindelse"
 msgid "Unknown connection type"
 msgstr "Ukendt forbindelsestype"
 
-#: ../lib/network/connection.pm:158
+#: ../lib/network/connection.pm:159
 #, c-format
 msgid "Network access settings"
 msgstr "Opsætning for netværksadgang"
 
-#: ../lib/network/connection.pm:159
+#: ../lib/network/connection.pm:160
 #, c-format
 msgid "Access settings"
 msgstr "Adgangsopsætning"
 
-#: ../lib/network/connection.pm:160
+#: ../lib/network/connection.pm:161
 #, c-format
 msgid "Address settings"
 msgstr "Adresse-indstillinger"
 
-#: ../lib/network/connection.pm:174 ../lib/network/connection.pm:194
+#: ../lib/network/connection.pm:175 ../lib/network/connection.pm:195
 #: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:216
 #: ../lib/network/netconnect.pm:473 ../lib/network/netconnect.pm:569
 #: ../lib/network/netconnect.pm:572
@@ -2443,34 +2451,34 @@ msgstr "Adresse-indstillinger"
 msgid "Unlisted - edit manually"
 msgstr "Ikke beskrevet - regigér manuelt"
 
-#: ../lib/network/connection.pm:227 ../lib/network/connection/cable.pm:41
+#: ../lib/network/connection.pm:228 ../lib/network/connection/cable.pm:41
 #: ../lib/network/connection/wireless.pm:45 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "Ingen"
 
-#: ../lib/network/connection.pm:239
+#: ../lib/network/connection.pm:240
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr "Tillad brugere at håndtere opkoblingen"
 
-#: ../lib/network/connection.pm:240
+#: ../lib/network/connection.pm:241
 #, c-format
 msgid "Start the connection at boot"
 msgstr "Start opkoblingen ved opstart"
 
-#: ../lib/network/connection.pm:241
+#: ../lib/network/connection.pm:242
 #, c-format
 msgid "Metric"
 msgstr "Metrisk"
 
-#: ../lib/network/connection.pm:311
+#: ../lib/network/connection.pm:313
 #, c-format
 msgid "Link detected on interface %s"
 msgstr "(Forbindelse opdaget på port %s)"
 
-#: ../lib/network/connection.pm:312 ../lib/network/connection/ethernet.pm:289
+#: ../lib/network/connection.pm:314 ../lib/network/connection/ethernet.pm:289
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "Opkoblingslivstegn mistet på grænseflade %s"
@@ -5312,6 +5320,9 @@ msgstr "NAT-tilstand"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Brug specifik UDP-port"
+
+#~ msgid "Connection type: "
+#~ msgstr "Type af forbindelse"
 
 #~ msgid "%s already in use\n"
 #~ msgstr "%s er allerede i brug\n"
