@@ -112,7 +112,7 @@ sub get_hardware_settings {
 
 sub check_hardware_settings {
     my ($self) = @_;
-    if ($self->{hardware}{pin} !~ /^[0-9]{4}$/) {
+    if ($self->{hardware}{pin} !~ /^[0-9]{4,8}$/) {
         $self->{hardware}{error} = translate($wrong_pin_error);
         return 0;
     }
