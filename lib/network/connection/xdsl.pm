@@ -259,7 +259,7 @@ sub get_peer_default_options {
     qw(lock persist nopcomp noccp novj),
     "kdebug 1",
     "holdoff 4",
-    "maxfail 25";
+    "maxfail 5";
 }
 
 sub build_peer  {
