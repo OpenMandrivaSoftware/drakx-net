@@ -128,6 +128,22 @@ our %data = (
         login => "tre",
         password => "tre",
     },
+    N("Poland") . "|Era GSM" => {
+        apn => "erainternet",
+        login => "erainternet",
+        password => "erainternet",
+    },
+    N("Poland") . "|Orange" => {
+        apn => "internet",
+        login => "internet",
+        password => "internet",
+    },
+    N("Poland") . "|Play" => {
+        apn => "INTERNET",
+    },
+    N("Poland") . "|Plus GSM" => {
+        apn => "internet",
+    },
 );
 
 1;
