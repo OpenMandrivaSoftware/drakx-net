@@ -107,12 +107,12 @@ sub get_networks {
 
 sub get_hardware_settings {
    my ($self) = @_;
-   [ { label => N("PIN number"), val => \$self->{hardware}{pin}, hidden => 1 } ];
+   [ { label => N("PIN number (4 digits)"), val => \$self->{hardware}{pin}, hidden => 1 } ];
 }
 
 sub check_hardware_settings {
     my ($self) = @_;
-    if ($self->{hardware}{pin} !~ /^[0-9]{4,8}$/) {
+    if ($self->{hardware}{pin} !~ /^[0-9]{4}$/) {
         $self->{hardware}{error} = translate($wrong_pin_error);
         return 0;
     }
