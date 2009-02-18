@@ -210,7 +210,7 @@ sub real_main {
                        name => sub { $net->{type}->get_type_name . "\n\n" . N("Please select your network:") },
                        data => sub {
                            [ { type => "list", val => \$connection->{network}, allow_empty_list => 1,
-                               list => [ keys %{$connection->{networks}}, undef ], gtk => { use_scrolling => 1 },
+                               list => [ keys %{$connection->{networks}}, undef ],
                                format => sub { exists $connection->{networks}{$_[0]} ?
                                                  $connection->{networks}{$_[0]}{name} :
                                                  N("Unlisted - edit manually");
