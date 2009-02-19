@@ -493,8 +493,8 @@ sub update_iftab() {
 
 sub update_udev_net_config() {
     my $lib = arch() =~ /x86_64/ ? "lib64" : "lib";
-    my $net_name_helper = "/$lib/udev/net_name_helper";
-    my $udev_net_config = "/etc/udev/rules.d/61-net_config.rules";
+    my $net_name_helper = "/lib/udev/write_net_rules";
+    my $udev_net_config = "/etc/udev/rules.d/70-persistent-net.rules";
     my @old_config = cat_($udev_net_config);
     #- skip aliases and vlan interfaces
     foreach my $intf (grep { network::tools::is_real_interface($_) } detect_devices::get_lan_interfaces()) {
@@ -503,8 +503,11 @@ sub update_udev_net_config() {
         $mac_address =~ /^[0:]+$/ and next;
         #- skip already configured addresses
         any { !/^\s*#/ && /"$mac_address"/ } @old_config and next;
+        my $type = cat_("/sys/class/net/$intf/type") =~ /^\d+$/;
+        local $ENV{MATCHIFTYPE} = $type if $type;
         local $ENV{INTERFACE} = $intf;
-        local $ENV{SUBSYSTEM} = 'net';
+        local $ENV{MATCHADDR} = $mac_address;
+        local $ENV{COMMENT} = "Drakx-net rule for $intf ($mac_address)";
         run_program::rooted($::prefix, $net_name_helper, '>', '/dev/null', $mac_address);
     }
 }
