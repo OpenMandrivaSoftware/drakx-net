@@ -197,12 +197,6 @@ sub main {
                     $cmanager->{parent_box}->hide;
                     return;
                 }
-                #- FIXME: factorize in update_on_status_change() and check why update_networks() calls update_on_status_change()
-                if ($cmanager->{connection}->can('get_networks') && !$cmanager->{connection}->network_scan_is_slow) {
-                    $cmanager->update_networks;
-                } else {
-                    $cmanager->network::connection_manager::update_on_status_change;
-                }
             }
         });
     }
