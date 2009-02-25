@@ -460,6 +460,14 @@ sub setup_dbus_handlers {
                     } else {
                         $cmanager->network::connection_manager::update_on_status_change;
                     }
+                    if ($cmanager->{wait_message}) {
+                        if ($status eq 'interface_up') {
+                            undef $cmanager->{wait_message};
+                        } elsif ($status =~ /_failure$/) {
+                            undef $cmanager->{wait_message};
+                            $cmanager->{in}->ask_warn(N("Error"), join("\n", N("Connection failed."), if_($message, $message)));
+                        }
+                    }
                 }
             }
             if ($msg->get_interface eq 'com.mandriva.monitoring.wireless' && $msg->get_member eq 'Event') {
