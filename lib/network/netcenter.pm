@@ -219,10 +219,9 @@ sub main {
                 }
             }
         });
-        $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
         $dbus->{connection}->add_match("type='signal',interface='com.mandriva.monitoring.wireless'");
-        dbus_object::set_gtk2_watch_helper($dbus);
     }
+    network::connection_manager::setup_dbus_handlers(\@cmanagers, \@connections, undef, $dbus) if $dbus;
 
     undef $wait;
     $w->main;
