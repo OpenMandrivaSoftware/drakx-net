@@ -442,13 +442,14 @@ sub _get_network_event_message {
 sub setup_dbus_handlers {
     my ($cmanagers, $connections, $on_network_event, $dbus) = @_;
     #- FIXME: use network::monitor?
-    $dbus->{connection}->add_filter(sub {
-                                        my ($_con, $msg) = @_;
-                                        my $member = $msg->get_member;
-                                        my $message = get_network_event_message($droam, $member, $msg->get_args_list) or return;
-                                        $droam->{on_network_event}($message) if $droam->{on_network_event};
-                                        $droam->update_networks if $member eq 'status';
-                                    });
+    $dbus->{connection}->add_filter(
+        sub {
+            my ($_con, $msg) = @_;
+            my $member = $msg->get_member;
+            my $message = get_network_event_message($droam, $member, $msg->get_args_list) or return;
+            $droam->{on_network_event}($message) if $droam->{on_network_event};
+            $droam->update_networks if $member eq 'status';
+        });
     $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
     dbus_object::set_gtk2_watch_helper($dbus);
 }
