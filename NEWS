@@ -1,3 +1,13 @@
+0.65:
+- connection manager:
+  o factorize dbus events code
+  o warn on connection failures
+- net_applet:
+  o reload network interfaces list when a new network device appears
+    (if dbus support is enabled)
+- ethernet backend:
+  o correctly write udev rules for network devices
+
 0.64:
 - connection manager:
   o fixed issue with ist of wireless networks not appearing in drakconnect
