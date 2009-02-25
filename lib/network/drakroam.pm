@@ -77,8 +77,6 @@ sub create_drakroam_gui {
         Glib::Timeout->add(20000, sub { $status_bar->remove($status_bar_cid, $m_id); 0 });
     };
 
-    network::connection_manager::setup_dbus_handlers([ $droam ], $droam->{all_connections}, $droam->{on_network_event}, $dbus) if $dbus;
-
     (undef, my $rootwin_height) = gtkroot()->get_size();
     my $scrolled_height = $rootwin_height > 480 ? 300 : 225;
     gtkadd($droam->{gui}{w}{window},
@@ -124,6 +122,8 @@ sub main {
     $droam->set_connection($connection) if $connection;
     update_connections_list($droam);
     update_on_connection_change($droam);
+
+    network::connection_manager::setup_dbus_handlers([ $droam ], $droam->{all_connections}, $droam->{on_network_event}, $dbus) if $dbus;
 
     if ($o_ap && $droam->{connection}) {
         $droam->{connection}{network} = $o_ap;
