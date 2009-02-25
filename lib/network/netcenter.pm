@@ -176,7 +176,6 @@ sub main {
             my ($_con, $msg) = @_;
             if ($msg->get_interface eq 'com.mandriva.network' && $msg->get_member eq 'status') {
                 my ($status, $interface) = $msg->get_args_list;
-                print "got connection status event: $status $interface\n";
                 my $cmanager = find { $_->{connection}->get_interface eq $interface } @cmanagers;
                 if ($status eq "add") {
                     if (!$cmanager) {
