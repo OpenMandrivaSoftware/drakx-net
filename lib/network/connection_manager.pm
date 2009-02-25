@@ -454,7 +454,12 @@ sub setup_dbus_handlers {
                     print "got connection status event: $_status $interface\n";
                     my $cmanager = find { $_->{connection}->get_interface eq $interface } @$cmanagers
                       or return;
-                    $cmanager->update_networks;
+                    #- FIXME: factorize in update_on_status_change() and check why update_networks() calls update_on_status_change()
+                    if ($cmanager->{connection}->can('get_networks') && !$cmanager->{connection}->network_scan_is_slow) {
+                        $cmanager->update_networks;
+                    } else {
+                        $cmanager->network::connection_manager::update_on_status_change;
+                    }
                 }
             }
             if ($msg->get_interface eq 'com.mandriva.monitoring.wireless' && $msg->get_member eq 'Event') {
