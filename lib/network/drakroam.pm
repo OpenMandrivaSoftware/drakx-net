@@ -53,19 +53,6 @@ sub update_on_connection_change {
     $droam->update_networks;
 }
 
-sub get_network_event_message {
-    my ($droam, $member, @args) = @_;
-    #- FIXME: the hostname.d script and s2u use a different D-Bus interface
-    if ($member eq 'hostname') {
-        my ($hostname) = @args;
-        N("Hostname changed to \"%s\"", $hostname);
-    } elsif ($member eq 'status') {
-        my ($status, $interface) = @args;
-        my $event_connection = find { $_->get_interface eq $interface } @{$droam->{all_connections}};
-        $event_connection && $event_connection->get_status_message($status);
-    }
-}
-
 sub create_drakroam_gui {
     my ($droam, $dbus, $title, $icon) = @_;
 
@@ -89,18 +76,8 @@ sub create_drakroam_gui {
         my $m_id = $status_bar->push($status_bar_cid, $message);
         Glib::Timeout->add(20000, sub { $status_bar->remove($status_bar_cid, $m_id); 0 });
     };
-    if ($dbus) {
-        #- FIXME: use network::monitor?
-        $dbus->{connection}->add_filter(sub {
-                                            my ($_con, $msg) = @_;
-                                            my $member = $msg->get_member;
-                                            my $message = get_network_event_message($droam, $member, $msg->get_args_list) or return;
-                                            $droam->{on_network_event}($message) if $droam->{on_network_event};
-                                            $droam->update_networks if $member eq 'status';
-                                        });
-        $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
-        dbus_object::set_gtk2_watch_helper($dbus);
-    }
+
+    network::connection_manager::setup_dbus_handlers([ $droam ], $droam->{all_connections}, $droam->{on_network_event}, $dbus) if $dbus;
 
     (undef, my $rootwin_height) = gtkroot()->get_size();
     my $scrolled_height = $rootwin_height > 480 ? 300 : 225;

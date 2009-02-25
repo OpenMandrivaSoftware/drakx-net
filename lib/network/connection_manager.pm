@@ -425,4 +425,31 @@ sub update_on_status_change {
     }
 }
 
+sub _get_network_event_message {
+    my ($connections, $member, @args) = @_;
+    #- FIXME: the hostname.d script and s2u use a different D-Bus interface
+    if ($member eq 'hostname') {
+        my ($hostname) = @args;
+        N("Hostname changed to \"%s\"", $hostname);
+    } elsif ($member eq 'status') {
+        my ($status, $interface) = @args;
+        my $event_connection = find { $_->get_interface eq $interface } @$connections;
+        $event_connection && $event_connection->get_status_message($status);
+    }
+}
+
+sub setup_dbus_handlers {
+    my ($cmanagers, $connections, $on_network_event, $dbus) = @_;
+    #- FIXME: use network::monitor?
+    $dbus->{connection}->add_filter(sub {
+                                        my ($_con, $msg) = @_;
+                                        my $member = $msg->get_member;
+                                        my $message = get_network_event_message($droam, $member, $msg->get_args_list) or return;
+                                        $droam->{on_network_event}($message) if $droam->{on_network_event};
+                                        $droam->update_networks if $member eq 'status';
+                                    });
+    $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
+    dbus_object::set_gtk2_watch_helper($dbus);
+}
+
 1;
