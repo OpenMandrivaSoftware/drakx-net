@@ -19,7 +19,6 @@ sub build_cmanager {
     my $cmanager = network::connection_manager->new($in, $net, $w, $pixbufs);
     $cmanager->set_connection($connection);
     $cmanager->{gui}{show_unique_network} = $cmanager->{connection}->has_unique_network;
-    $cmanager->{wait_message_timeout} = 20*1000 if ref($connection) eq 'network::connection::wireless' && $net->{monitor};
 
     if ($connection->can('get_networks')) {
         $cmanager->create_networks_list;
