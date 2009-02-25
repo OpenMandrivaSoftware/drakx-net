@@ -190,12 +190,9 @@ sub main {
                         $box->show_all;
                     }
                     $cmanager->{parent_box}->show;
-                    return;
                 }
-                $cmanager or return;
                 if ($status eq "remove") {
-                    $cmanager->{parent_box}->hide;
-                    return;
+                    $cmanager->{parent_box}->hide if $cmanager;
                 }
             }
         });
