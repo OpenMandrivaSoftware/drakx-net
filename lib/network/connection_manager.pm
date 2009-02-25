@@ -448,7 +448,9 @@ sub setup_dbus_handlers {
             my $member = $msg->get_member;
             my $message = _get_network_event_message($connections, $member, $msg->get_args_list);
             $on_network_event->($message) if $on_network_event && $message;
-            $droam->update_networks if $member eq 'status';
+            my $cmanager = find { $_->{connection}->get_interface eq $interface } @$cmanagers
+              or return;
+            $cmanager->update_networks if $member eq 'status';
         });
     $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
     dbus_object::set_gtk2_watch_helper($dbus);
