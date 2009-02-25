@@ -198,6 +198,21 @@ eval {
     network::net_applet::ifw::create();
 } if $dbus;
 
+if ($dbus) {
+    $dbus->{connection}->add_filter(sub {
+        my ($_con, $msg) = @_;
+            if ($msg->get_interface eq 'com.mandriva.network' && $msg->get_member eq 'status') {
+                my ($status, $interface) = $msg->get_args_list;
+                print "got connection status event: $status $interface\n";
+                if ($status eq "add") {
+                    checkNetworkForce();
+                }
+            }
+    });
+    $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
+    dbus_object::set_gtk2_watch_helper($dbus);
+}
+
 $notification_queue = Gtk2::Notify::Queue->new($icon);
 
 $icon->signal_connect(activate => sub {
