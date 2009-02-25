@@ -451,7 +451,7 @@ sub setup_dbus_handlers {
                 $on_network_event->($message) if $on_network_event && $message;
                 if ($member eq 'status') {
                     my ($status, $interface) = $msg->get_args_list;
-                    print "got connection status event: $_status $interface\n";
+                    print "got connection status event: $status $interface\n";
                     my $cmanager = find { $_->{connection}->get_interface eq $interface } @$cmanagers
                       or return;
                     #- FIXME: factorize in update_on_status_change() and check why update_networks() calls update_on_status_change()
