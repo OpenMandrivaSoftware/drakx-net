@@ -446,7 +446,7 @@ sub setup_dbus_handlers {
         sub {
             my ($_con, $msg) = @_;
             my $member = $msg->get_member;
-            my $message = _get_network_event_message($droam, $member, $msg->get_args_list);
+            my $message = _get_network_event_message($connections, $member, $msg->get_args_list);
             $on_network_event->($message) if $on_network_event && $message;
             $droam->update_networks if $member eq 'status';
         });
