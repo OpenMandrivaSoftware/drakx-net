@@ -449,9 +449,12 @@ sub setup_dbus_handlers {
                 my $member = $msg->get_member;
                 my $message = _get_network_event_message($connections, $member, $msg->get_args_list);
                 $on_network_event->($message) if $on_network_event && $message;
-                my $cmanager = find { $_->{connection}->get_interface eq $interface } @$cmanagers
-                  or return;
-                $cmanager->update_networks if $member eq 'status';
+                if ($member eq 'status') {
+                    my ($status, $interface) = $msg->get_args_list;
+                    my $cmanager = find { $_->{connection}->get_interface eq $interface } @$cmanagers
+                      or return;
+                    $cmanager->update_networks;
+                }
             }
             if ($msg->get_interface eq 'com.mandriva.monitoring.wireless' && $msg->get_member eq 'Event') {
                 my ($event, $interface) = $msg->get_args_list;
