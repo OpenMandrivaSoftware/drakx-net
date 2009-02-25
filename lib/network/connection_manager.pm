@@ -38,6 +38,7 @@ sub new {
 sub set_connection {
     my ($cmanager, $connection) = @_;
     $cmanager->{connection} = $connection;
+    $cmanager->{wait_message_timeout} = 20*1000 if ref($connection) eq 'network::connection::wireless' && $cmanager->{net}{monitor};
 }
 
 sub check_setup {
