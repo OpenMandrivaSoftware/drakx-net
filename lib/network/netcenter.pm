@@ -199,8 +199,8 @@ sub main {
                 }
             }
         });
+        network::connection_manager::setup_dbus_handlers(\@cmanagers, \@connections, undef, $dbus);
     }
-    network::connection_manager::setup_dbus_handlers(\@cmanagers, \@connections, undef, $dbus) if $dbus;
 
     undef $wait;
     $w->main;
