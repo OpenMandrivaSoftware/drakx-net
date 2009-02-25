@@ -426,7 +426,7 @@ sub update_on_status_change {
     }
 }
 
-sub _get_network_event_message {
+sub get_network_event_message {
     my ($connections, $member, @args) = @_;
     #- FIXME: the hostname.d script and s2u use a different D-Bus interface
     if ($member eq 'hostname') {
