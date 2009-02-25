@@ -213,7 +213,15 @@ sub start_connection {
     $cmanager->update_on_status_change;
     if ($cmanager->{wait_message_timeout}) {
         $cmanager->{wait_message} = $wait;
-        Glib::Timeout->add($cmanager->{wait_message_timeout}, sub { undef $cmanager->{wait_message} });
+        Glib::Timeout->add($cmanager->{wait_message_timeout},
+			   sub {
+			       if ($cmanager->{wait_message}) {
+				   undef $cmanager->{wait_message};
+				   $cmanager->{in}->ask_warn(N("Error"), N("Connection failed."))
+                                     if !$cmanager->{connection}->get_status;
+			       }
+			       undef;
+			   });
     };
 }
 
