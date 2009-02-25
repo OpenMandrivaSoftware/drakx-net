@@ -453,8 +453,22 @@ sub setup_dbus_handlers {
                   or return;
                 $cmanager->update_networks if $member eq 'status';
             }
+            if ($msg->get_interface eq 'com.mandriva.monitoring.wireless' && $msg->get_member eq 'Event') {
+                my ($event, $interface) = $msg->get_args_list;
+                print "got wireless event: $event $interface\n";
+                my $cmanager = find { $_->{connection}->get_interface eq $interface } @$cmanagers;
+                if ($cmanager && $cmanager->{wait_message}) {
+                    if ($event =~ /CTRL-EVENT-CONNECTED/) {
+                        undef $cmanager->{wait_message};
+                    } elsif ($event =~ /Authentication with (.+?) timed out/) {
+                        undef $cmanager->{wait_message};
+                        $cmanager->{in}->ask_warn(N("Error"), N("Connection failed."));
+                    }
+                }
+            }
         });
     $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
+    $dbus->{connection}->add_match("type='signal',interface='com.mandriva.monitoring.wireless'");
     dbus_object::set_gtk2_watch_helper($dbus);
 }
 
