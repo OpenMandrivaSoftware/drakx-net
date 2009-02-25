@@ -447,7 +447,7 @@ sub setup_dbus_handlers {
             my ($_con, $msg) = @_;
             my $member = $msg->get_member;
             my $message = _get_network_event_message($droam, $member, $msg->get_args_list) or return;
-            $droam->{on_network_event}($message) if $droam->{on_network_event};
+            $on_network_event->($message) if $on_network_event;
             $droam->update_networks if $member eq 'status';
         });
     $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
