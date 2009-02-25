@@ -475,9 +475,8 @@ sub setup_dbus_handlers {
                 print "got wireless event: $event $interface\n";
                 my $cmanager = find { $_->{connection}->get_interface eq $interface } @$cmanagers;
                 if ($cmanager && $cmanager->{wait_message}) {
-                    if ($event =~ /CTRL-EVENT-CONNECTED/) {
-                        undef $cmanager->{wait_message};
-                    } elsif ($event =~ /Authentication with (.+?) timed out/) {
+                    # CTRL-EVENT-CONNECTED does not have to be handled, further status will be handled by interface status code
+                    if ($event =~ /Authentication with (.+?) timed out/) {
                         undef $cmanager->{wait_message};
                         $cmanager->{in}->ask_warn(N("Error"), N("Connection failed."));
                     }
