@@ -18,7 +18,6 @@ sub new {
 			     "com.mandriva.monitoring",
 			     "/com/mandriva/monitoring/ifw",
 			     "com.mandriva.monitoring.ifw");
-    $o->set_gtk2_watch;
     $o;
 }
 
