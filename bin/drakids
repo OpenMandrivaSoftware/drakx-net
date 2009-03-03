@@ -46,6 +46,7 @@ my $w = ugtk2->new($title);
 my $ifw;
 eval {
     my $bus = dbus_object::system_bus();
+    dbus_object::set_gtk2_watch_helper($bus);
     network::ifw::init($bus, sub {
     my ($_con, $msg) = @_;
     my $member = $msg->get_member;
