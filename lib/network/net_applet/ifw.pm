@@ -5,8 +5,8 @@ use network::ifw;
 use ugtk2 qw(:create :helpers :wrappers :dialogs);
 use mygtk2 qw(gtknew gtkset);
 
-sub create() {
-    $network::net_applet::ifw = network::ifw->new($network::net_applet::dbus, sub {
+sub init() {
+    network::ifw::init($network::net_applet::dbus, sub {
         my ($_con, $msg) = @_;
         my $member = $msg->get_member;
         if ($member eq 'Attack') {
@@ -14,12 +14,21 @@ sub create() {
         } elsif ($member eq 'Listen') {
             handle_ifw_listen($msg->get_args_list);
         } elsif ($member eq 'Init') {
-            $network::net_applet::ifw->attach_object;
-            main::checkNetworkForce();
+            create();
         } elsif ($member eq 'AlertAck') {
             $network::net_applet::ifw_alert = 0;
         }
     });
+    create();
+}
+
+sub create() {
+    if ($network::net_applet::ifw) {
+        $network::net_applet::ifw->attach_object;
+        main::checkNetworkForce();
+    } else {
+        $network::net_applet::ifw = eval { network::ifw->new($network::net_applet::dbus) };
+    }
 }
 
 sub enable_ifw_alert() {

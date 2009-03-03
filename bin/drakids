@@ -45,7 +45,8 @@ my $w = ugtk2->new($title);
 
 my $ifw;
 eval {
-  $ifw = network::ifw->new(dbus_object::system_bus(), sub {
+    my $bus = dbus_object::system_bus();
+    network::ifw::init($bus, sub {
     my ($_con, $msg) = @_;
     my $member = $msg->get_member;
     if ($member eq 'Attack') {
@@ -62,6 +63,7 @@ eval {
 	$w->{window}->present;
     }
   });
+  $ifw = network::ifw->new($bus);
 };
 
 if ($@) {

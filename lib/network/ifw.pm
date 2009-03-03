@@ -5,13 +5,15 @@ use common;
 
 our @ISA = qw(dbus_object);
 
-sub new {
-    my ($type, $bus, $filter) = @_;
-
+sub init {
+    my ($bus, $filter) = @_;
     my $con = $bus->{connection};
     $con->add_filter($filter);
     $con->add_match("type='signal',interface='com.mandriva.monitoring.ifw'");
+}
 
+sub new {
+    my ($type, $bus) = @_;
     require dbus_object;
     my $o = dbus_object::new($type,
 			     $bus,

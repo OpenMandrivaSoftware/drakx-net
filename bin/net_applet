@@ -193,11 +193,10 @@ $icon = Gtk2::StatusIcon->new;
 
 eval { $dbus = dbus_object::system_bus() } if !defined($global_settings{NET_APPLET_DBUS}) || text2bool($global_settings{NET_APPLET_DBUS});
 eval { $net->{monitor} = network::monitor->new($dbus) } if $dbus;
-eval {
+if ($dbus) {
     require network::net_applet::ifw;
-    network::net_applet::ifw::create();
-} if $dbus;
-
+    network::net_applet::ifw::init();
+}
 if ($dbus) {
     $dbus->{connection}->add_filter(sub {
         my ($_con, $msg) = @_;
