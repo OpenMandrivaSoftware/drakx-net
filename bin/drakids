@@ -81,7 +81,7 @@ gtkadd($w->{window},
           if_($i_m_ifw2,
             gtknew('Label', text => N("Log")),
             gtknew('VBox', spacing => 5, children => [
-                1, gtknew('ScrolledWindow', width => 600, height => 350, child => $services_log),
+                1, gtknew('ScrolledWindow', width => 600, height => 260, child => $services_log),
                 0, gtknew('HButtonBox', layout => 'edge', children_loose => [
                     gtknew('Button', text => N("Allow"), clicked => sub {}),
                     gtknew('Button', text => N("Block"), clicked => sub {}),
@@ -90,7 +90,7 @@ gtkadd($w->{window},
             ]),
             gtknew('Label', text => N("Allowed services")),
             gtknew('VBox', spacing => 5, children => [
-                1, gtknew('ScrolledWindow', width => 600, height => 350, child => $allowed_services),
+                1, gtknew('ScrolledWindow', width => 600, height => 260, child => $allowed_services),
                 0, gtknew('HButtonBox', layout => 'edge', children_loose => [
                     gtknew('Button', text => N("Remove"), clicked => sub {}),
                     gtknew('Button', text => N("Block"), clicked => sub {}),
@@ -99,7 +99,7 @@ gtkadd($w->{window},
             ]),
             gtknew('Label', text => N("Blocked services")),
             gtknew('VBox', spacing => 5, children => [
-                1, gtknew('ScrolledWindow', width => 600, height => 350, child => $blocked_services),
+                1, gtknew('ScrolledWindow', width => 600, height => 260, child => $blocked_services),
                 0, gtknew('HButtonBox', layout => 'edge', children_loose => [
                     gtknew('Button', text => N("Remove"), clicked => sub {}),
                     gtknew('Button', text => N("Allow"), clicked => sub {}),
@@ -109,7 +109,7 @@ gtkadd($w->{window},
           ),
             gtknew('Label', text => N("Log")),
             gtknew('VBox', spacing => 5, children => [
-                1, gtknew('ScrolledWindow', width => 600, height => 350, child => $loglist),
+                1, gtknew('ScrolledWindow', width => 600, height => 260, child => $loglist),
                 0, gtknew('HButtonBox', layout => 'edge', children_loose => [
                     gtknew('Button', text => N("Clear logs"), clicked => \&clear_log),
                     gtknew('Button', text => N("Blacklist"), clicked => sub { blacklist(get_selected_log_seq()) }),
@@ -119,7 +119,7 @@ gtkadd($w->{window},
             ]),
             gtknew('Label', text => N("Blacklist")),
             gtknew('VBox', spacing => 5, children => [
-                1, gtknew('ScrolledWindow', width => 600, height => 350, child => $blacklist),
+                1, gtknew('ScrolledWindow', width => 600, height => 260, child => $blacklist),
                 0, gtknew('HButtonBox', layout => 'edge', children_loose => [
                     gtknew('Button', text => N("Remove from blacklist"), clicked => sub { unblacklist(get_selected_blacklist()) }),
                     gtknew('Button', text => N("Move to whitelist"), clicked => sub {
@@ -132,7 +132,7 @@ gtkadd($w->{window},
             ]),
             gtknew('Label', text => N("Whitelist")),
             gtknew('VBox', spacing => 5, children => [
-                1, gtknew('ScrolledWindow', width => 600, height => 350, child => $whitelist),
+                1, gtknew('ScrolledWindow', width => 600, height => 260, child => $whitelist),
                 0, gtknew('HButtonBox', layout => 'edge', children_loose => [
                     gtknew('Button', text => N("Remove from whitelist"), clicked => sub { unwhitelist(get_selected_whitelist()) }),
                     gtknew('Button', text => N("Close"), clicked => sub { Gtk2->main_quit })
