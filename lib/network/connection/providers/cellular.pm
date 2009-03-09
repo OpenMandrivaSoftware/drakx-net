@@ -144,6 +144,11 @@ our %data = (
     N("Poland") . "|Plus GSM" => {
         apn => "internet",
     },
+    N("United Kingdom") . "|O2" => {
+        apn => "mobile.o2.co.uk",
+        login => "password",
+        password => "mobileweb",
+    },
 );
 
 1;
