@@ -146,8 +146,8 @@ our %data = (
     },
     N("United Kingdom") . "|O2" => {
         apn => "mobile.o2.co.uk",
-        login => "password",
-        password => "mobileweb",
+        login => "mobileweb",
+        password => "password",
     },
 );
 
