@@ -102,19 +102,20 @@ my $label_and_widgets = sub {
           ]);
 };
 
-my $fdwidget = sub {
-  my ($data) = @_;
-  my $fd = new Gtk2::FileSelection(N("Directory Selection"));
-  $fd->set_modal(1);
-  $fd->signal_connect("destroy", sub { $fd->hide });
-  $fd->ok_button->signal_connect(clicked => sub {
-				   my $file = $fd->get_filename;
-				   -d $file or err_dialog(N("Error"), N("Should be a directory.")) and return;
-				   $data->set_text($file);
-				   $fd->hide;
-				 }, $fd);
-  $fd->cancel_button->signal_connect(clicked => sub { $fd->hide });
-  return $fd;
+sub show_file_dialog {
+    my ($data) = @_;
+    my $file_dlg = gtknew('FileChooserDialog', title => N("Path selection"), action => 'select_folder',
+        modal => 1, transient_for => $dlg);
+    $file_dlg->set_filename($data->get_text);
+    $file_dlg->show;
+    my $answer = $file_dlg->run;
+    if ($answer eq 'ok') {
+        my $file = $file_dlg->get_filename;
+        -d $file or err_dialog(N("Error!"), N("Should be a directory.")) and return;
+        $data->set_text($file);
+    }
+    $file_dlg->hide;
+    $file_dlg->destroy;
 };
 
 sub get_nfs_data() {
@@ -265,9 +266,8 @@ sub add_modify_entry {
   $lsecure->set_popdown_strings(@yesno);
   $lsubtree_check->set_popdown_strings(@yesno);
 
-  my $file_dialog = $fdwidget->($dir);
   my $button = gtknew('Button', text => N("Directory"));
-  $button->signal_connect(clicked => sub { $file_dialog->show });
+  $button->signal_connect(clicked => sub { show_file_dialog($dir); });
 
 # test if modify or add a nfs share
 
