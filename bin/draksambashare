@@ -243,7 +243,7 @@ my $label_and_widgets = sub {
 
 sub show_file_dialog {
     my ($data) = @_;
-    my $file_dlg = gtknew('FileChooserDialog', title => N("Path selection"), action => 'select_folder',
+    my $file_dlg = gtknew('FileChooserDialog', title => N("Directory selection"), action => 'select_folder',
         modal => 1, transient_for => $dlg);
     $file_dlg->set_filename($data->get_text);
     $file_dlg->show;
