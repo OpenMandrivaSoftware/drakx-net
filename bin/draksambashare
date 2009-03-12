@@ -241,19 +241,20 @@ my $label_and_widgets = sub {
           );
 };
 
-my $fdwidget = sub {
-  my ($data) = @_;
-  my $fd = new Gtk2::FileSelection(N("Directory Selection"));
-  $fd->set_modal(1);
-  $fd->signal_connect("destroy", sub { $fd->hide });
-  $fd->ok_button->signal_connect(clicked => sub {
-				   my $file = $fd->get_filename;
-				   -d $file or err_dialog(N("Error!"), N("Should be a directory.")) and return;
-				   $data->set_text($file);
-				   $fd->hide;
-				 }, $fd);
-  $fd->cancel_button->signal_connect(clicked => sub { $fd->hide });
-  return $fd;
+sub show_file_dialog {
+    my ($data) = @_;
+    my $file_dlg = gtknew('FileChooserDialog', title => N("Path selection"), action => 'select_folder',
+        modal => 1, transient_for => $dlg);
+    $file_dlg->set_filename($data->get_text);
+    $file_dlg->show;
+    my $answer = $file_dlg->run;
+    if ($answer eq 'ok') {
+        my $file = $file_dlg->get_filename;
+        -d $file or err_dialog(N("Error!"), N("Should be a directory.")) and return;
+        $data->set_text($file);
+    }
+    $file_dlg->hide;
+    $file_dlg->destroy;
 };
 
 sub get_samba_share() {
@@ -366,9 +367,8 @@ sub printers_section() {
 sub add_entry() {
     my ($addshare_name, $addshare_comment, $addshare_dir);
     $_ = Gtk2::Entry->new foreach $addshare_name, $addshare_comment, $addshare_dir;
-    my $file_dialog = $fdwidget->($addshare_dir, "");
     my $button = Gtk2::Button->new(N("Open"));
-    $button->signal_connect(clicked => sub { $file_dialog->show });
+    $button->signal_connect(clicked => sub { show_file_dialog($addshare_dir); });
 
     my $dialog = _create_dialog(N("DrakSamba add entry"), { transient_for => $::main_window, modal => 1 });
     local $::main_window = $dialog;
@@ -564,9 +564,8 @@ sub modify_printers_entry {
   $create_mode->set_text($printer_list->{data}[$selected][13]);
   $use_client_driver->set_text($printer_list->{data}[$selected][14]);
 
-  my $file_dialog = $fdwidget->($dir, "");
   my $button = Gtk2::Button->new(N("Open"));
-  $button->signal_connect(clicked => sub { $file_dialog->show });
+  $button->signal_connect(clicked => sub { show_file_dialog($dir); });
 
   my $dialog = _create_dialog(N("DrakSamba Printers entry"), { transient_for => $::main_window, modal => 1 });
 
@@ -685,9 +684,8 @@ sub modify_entry {
   $default_case->set_popdown_strings(@default_case);
   $_->set_popdown_strings(@yesno) foreach $browseable, $public, $writable, $hide_dot_files, $preserve_case, $inherit_permissions;
 
-  my $file_dialog = $fdwidget->($dir, "");
   my $button = Gtk2::Button->new(N("Open"));
-  $button->signal_connect(clicked => sub { $file_dialog->show });
+  $button->signal_connect(clicked => sub { show_file_dialog($dir); });
 
   my $w = ugtk2->new(N("DrakSamba entry"));
   $w->{window}->set_modal(1);
