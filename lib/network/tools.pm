@@ -197,6 +197,7 @@ sub get_default_connection {
     my ($net, $o_gw_intf) = @_;
     my $gw_intf = $o_gw_intf || get_default_gateway_interface($net) or return;
     $net->{resolv} = {};
+    require network::network;
     add2hash($net->{resolv}, network::network::read_resolv_conf());
     return $gw_intf, get_interface_status($gw_intf), $net->{resolv}{dnsServer};
 }
