@@ -45,6 +45,12 @@ my @all_servers =
    hide => 1,
   },
   {
+   name => N_("NFS Server"),
+   pkg => 'nfs-utils nfs-utils-clients',
+   ports => '111/tcp 111/udp 2049/tcp 2049/udp 4001/tcp 4001/udp 4002/tcp 4002/udp 4003/tcp 4003/udp 4004/tcp 4004/udp',
+   hide => 1,
+  },
+  {
    name => N_("Windows Files Sharing (SMB)"),
    pkg => 'samba-server',
    ports => '137/tcp 137/udp 138/tcp 138/udp 139/tcp 139/udp 445/tcp 445/udp 1024:1100/tcp 1024:1100/udp',
