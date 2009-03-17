@@ -5,6 +5,7 @@ use diagnostics;
 
 use network::shorewall;
 use common;
+use network::nfs;
 
 my @all_servers =
 (
@@ -47,9 +48,9 @@ my @all_servers =
   {
    name => N_("NFS Server"),
    pkg => 'nfs-utils nfs-utils-clients',
-   ports => '111/tcp 111/udp 2049/tcp 2049/udp 4001/tcp 4001/udp 4002/tcp 4002/udp 4003/tcp 4003/udp 4004/tcp 4004/udp',
+   ports => '111/tcp 111/udp 2049/tcp 2049/udp ' . network::nfs::list_nfs_ports(),
    hide => 1,
-   prepare => sub { prepare_nfs_services(); },
+   prepare => sub { network::nfs::write_nfs_ports(network::nfs::read_nfs_ports()); },
    restart => 'nfs-common nfs-server',
   },
   {
@@ -89,23 +90,6 @@ my @ifw_rules = (
         ifw_rule => 'psd',
     },
 );
-
-sub prepare_nfs_services {
-    # enabling fixed ports for NFS services
-    # nfs-common
-    substInFile {
-        s/^(STATD_OPTIONS)=$/$1="--port 4001"/;
-        s/^(STATD_OPTIONS)="(.*)(--port \d+)(.*)"$/$1="$2--port 4001$4"/;
-        s/^(LOCKD_)(TCP|UDP)(PORT)=.*/$1$2$3=4002/;
-    } "/etc/sysconfig/nfs-common";
-    # nfs-server
-    substInFile {
-        s/^(RPCMOUNTD_OPTIONS)=$/$1="--port 4003"/;
-        s/^(RPCMOUNTD_OPTIONS)="(.*)(--port \d+)(.*)"$/$1="$2--port 4003$4"/;
-        s/^(RPCRQUOTAD_OPTIONS)=$/$1="--port 4004"/;
-        s/^(RPCRQUOTAD_OPTIONS)="(.*)(--port \d+)(.*)"$/$1="$2--port 4004$4"/;
-    } "/etc/sysconfig/nfs-server";
-}
 
 sub port2server {
     my ($port) = @_;
@@ -307,6 +291,9 @@ Please select which network activities should be watched."),
 sub main {
     my ($in, $disabled) = @_;
 
+    use Data::Dumper;
+    print Dumper(@all_servers);
+
     ($disabled, my $servers, my $unlisted, my $log_net_drop) = get_conf($in, $disabled) or return;
 
     ($disabled, $servers, $unlisted, $log_net_drop) = choose_allowed_services($in, $disabled, $servers, $unlisted, $log_net_drop) or return;
@@ -319,6 +306,8 @@ sub main {
     foreach (@$servers) {
         exists $_->{prepare} and $_->{prepare}();
     }
+
+    print Dumper($servers);
 
     my $ports = to_ports($servers, $unlisted);
 
