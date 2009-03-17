@@ -291,9 +291,6 @@ Please select which network activities should be watched."),
 sub main {
     my ($in, $disabled) = @_;
 
-    use Data::Dumper;
-    print Dumper(@all_servers);
-
     ($disabled, my $servers, my $unlisted, my $log_net_drop) = get_conf($in, $disabled) or return;
 
     ($disabled, $servers, $unlisted, $log_net_drop) = choose_allowed_services($in, $disabled, $servers, $unlisted, $log_net_drop) or return;
@@ -306,8 +303,6 @@ sub main {
     foreach (@$servers) {
         exists $_->{prepare} and $_->{prepare}();
     }
-
-    print Dumper($servers);
 
     my $ports = to_ports($servers, $unlisted);
 
