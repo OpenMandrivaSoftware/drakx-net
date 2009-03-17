@@ -86,6 +86,15 @@ $profiles_list->get_selection->signal_connect('changed' => sub {
 
 sub get_selected_profile() {
     my ($index) = $profiles_list->get_selected_indices;
+    if (not $index ) {
+        my $pc = @{$profiles_list->{data}};
+        my $index = 0;
+        for (my $i = 0; $i < $pc; $i++) {
+            if ( $profiles_list->{data}[$i][0] == 1 ) {
+                $index = $i;
+            }
+        }
+    };
     defined $index && $profiles_list->{data}[$index][1];
 }
 
