@@ -49,6 +49,8 @@ my @all_servers =
    pkg => 'nfs-utils nfs-utils-clients',
    ports => '111/tcp 111/udp 2049/tcp 2049/udp 4001/tcp 4001/udp 4002/tcp 4002/udp 4003/tcp 4003/udp 4004/tcp 4004/udp',
    hide => 1,
+   prepare => sub { prepare_nfs_services(); },
+   restart => 'nfs-common nfs-server',
   },
   {
    name => N_("Windows Files Sharing (SMB)"),
@@ -87,6 +89,23 @@ my @ifw_rules = (
         ifw_rule => 'psd',
     },
 );
+
+sub prepare_nfs_services {
+    # enabling fixed ports for NFS services
+    # nfs-common
+    substInFile {
+        s/^(STATD_OPTIONS)=$/$1="--port 4001"/;
+        s/^(STATD_OPTIONS)="(.*)(--port \d+)(.*)"$/$1="$2--port 4001$4"/;
+        s/^(LOCKD_)(TCP|UDP)(PORT)=.*/$1$2$3=4002/;
+    } "/etc/sysconfig/nfs-common";
+    # nfs-server
+    substInFile {
+        s/^(RPCMOUNTD_OPTIONS)=$/$1="--port 4003"/;
+        s/^(RPCMOUNTD_OPTIONS)="(.*)(--port \d+)(.*)"$/$1="$2--port 4003$4"/;
+        s/^(RPCRQUOTAD_OPTIONS)=$/$1="--port 4004"/;
+        s/^(RPCRQUOTAD_OPTIONS)="(.*)(--port \d+)(.*)"$/$1="$2--port 4004$4"/;
+    } "/etc/sysconfig/nfs-server";
+}
 
 sub port2server {
     my ($port) = @_;
@@ -296,12 +315,25 @@ sub main {
         choose_watched_services($in, $servers, $unlisted) or return;
     }
 
+    # preparing services when required
+    foreach (@$servers) {
+        exists $_->{prepare} and $_->{prepare}();
+    }
+
     my $ports = to_ports($servers, $unlisted);
+
     set_ports($in->do_pkgs, $disabled, $ports, $log_net_drop, $in) or return;
 
     # restart mandi
     require services;
     services::is_service_running("mandi") and services::restart("mandi");
+
+    # restarting services if needed
+    foreach my $service (@$servers) {
+        if ($service->{restart}) {
+            services::is_service_running($_) and services::restart($_) foreach split(' ', $service->{restart});
+        }
+    }
 
     ($disabled, $ports);
 }
