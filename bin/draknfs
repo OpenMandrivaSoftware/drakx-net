@@ -34,8 +34,9 @@ use ugtk2 qw(:ask :wrappers :create :dialogs);
 
 my $in = 'interactive'->vnew('su');
 $in->do_pkgs->ensure_is_installed('nfs-utils', '/etc/rc.d/init.d/nfs-server') or exit(1);
-$in->do_pkgs->ensure_is_installed('rpcbind', '/etc/rc.d/init.d/rpcbind') or exit(1);
-$in->do_pkgs->ensure_is_installed('portmap', '/etc/rc.d/init.d/portmap') or exit(1);
+if (!$in->do_pkgs->is_installed("portmap")) {
+    $in->do_pkgs->ensure_is_installed('rpcbind') or exit(1);
+}
 
 use constant COLUMN_DIR => 0;
 use constant COLUMN_ACCESS => 1;
@@ -581,8 +582,11 @@ my $okcancel = create_okcancel({
 			      );
 
 my $wait = $in->wait_message(N("Please wait"), N("Starting the NFS-server"));
-services::enable('portmap');
-services::enable('rpcbind');
+if (services::service_exists("portmap")) {
+    services::enable('portmap');
+} elsif (services::service_exists("rpcbind")) {
+    services::enable('rpcbind');
+}
 services::enable('nfs-server');
 undef $wait;
 
