@@ -1,16 +1,16 @@
 # Icelandic translation of network-tools.po
 # Translation file for Mandriva Linux graphic install, drakx-net
-# Copyright (C) 1999,2003, 2005, 2006, 2007 Free Software Foundation, Inc.
+# Copyright (C) 1999,2003, 2005, 2006, 2007, 2009 Free Software Foundation, Inc.
 # Copyright (C) 1999 Mandriva
 #
 # Jóhann Þorvarðarson <johann.torvardarson@lais.is>, 1999-2000.
 # Þórarinn (Tony) R. Einarsson <thori@mindspring.com>, 1999-2000.
-# Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003, 2005, 2006, 2007.
+# Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003, 2005, 2006, 2007, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: network-tools\n"
 "POT-Creation-Date: 2009-02-13 20:39-0200\n"
-"PO-Revision-Date: 2007-01-18 14:31+0000\n"
+"PO-Revision-Date: 2009-03-18 22:56+0000\n"
 "Last-Translator: Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
 "Language-Team: Icelandic <kde-isl@molar.is>\n"
 "MIME-Version: 1.0\n"
@@ -164,13 +164,13 @@ msgid "DHCP client"
 msgstr "DHCP biðlari"
 
 #: ../bin/drakconnect-old:247
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This interface has not been configured yet.\n"
 "Run the \"%s\" assistant from the Mandriva Linux Control Center"
 msgstr ""
 "Þetta nettengi hefur ekki verið stillt enn.\n"
-"Keyrið \"Bæta við tengingu\" aðstoðarálfinn frá Mandriva Linux stjórnborðinu"
+"Keyrið \"%s\" ráðgjafann frá Mandriva Linux stjórnborðinu"
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:104
 #, c-format
@@ -411,12 +411,12 @@ msgstr "Hámarksleigutími (í sekúndum)"
 #: ../bin/drakgw:266
 #, c-format
 msgid "Proxy caching server (SQUID)"
-msgstr "Vefsels-þjónusta (SQUID)"
+msgstr "Staðgengils-þjónusta (SQUID)"
 
 #: ../bin/drakgw:270
 #, c-format
 msgid "Use this gateway as proxy caching server"
-msgstr "Nota þessa netgátt sem vefsels-þjónustu"
+msgstr "Nota þessa netgátt sem staðgengils-þjónustu"
 
 #: ../bin/drakgw:271
 #, c-format
@@ -431,7 +431,7 @@ msgstr "Sýnilegt vélarnafn"
 #: ../bin/drakgw:273
 #, c-format
 msgid "Proxy port"
-msgstr "Sel-gátt"
+msgstr "Staðgengils-port"
 
 #: ../bin/drakgw:274
 #, c-format
@@ -473,7 +473,7 @@ msgstr ""
 "Allt hefur verið uppsett.\n"
 "Þú getur nú deilt Internet tengingunni með öðrum vélum á staðarnetinu, með "
 "því að nota sjálfvirka netuppsetningu (DHCP) og \n"
-"gagnsæja vefsels-þjónustu (SQUID)."
+"gagnsæja staðgengils-þjónustu (SQUID)."
 
 #: ../bin/drakgw:345
 #, c-format
@@ -711,7 +711,7 @@ msgid "Date"
 msgstr "Dagsetning"
 
 #: ../bin/drakids:254
-#, fuzzy, c-format
+#, c-format
 msgid "Remote host"
 msgstr "Fjarlæg vél"
 
@@ -1153,9 +1153,9 @@ msgid "Please add an NFS share to be able to modify it."
 msgstr "Bættu við NFS miðluðu svæði til að geta stillt það."
 
 #: ../bin/draknfs:354
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced"
-msgstr "Ítarlegri valkostir"
+msgstr "Ítarlegra"
 
 #: ../bin/draknfs:377
 #, c-format
@@ -1250,9 +1250,9 @@ msgid "Manage NFS shares"
 msgstr "Sýsla með NFS skráamiðlun"
 
 #: ../bin/draknfs:582
-#, fuzzy, c-format
+#, c-format
 msgid "Starting the NFS-server"
-msgstr "Endurræsi/Endurstilli NFS miðlara..."
+msgstr "Ræsi NFS miðlara"
 
 #: ../bin/draknfs:590
 #, c-format
@@ -1454,9 +1454,9 @@ msgid "/_Samba Server"
 msgstr "/_Samba Miðlari"
 
 #: ../bin/draksambashare:180
-#, fuzzy, c-format
+#, c-format
 msgid "/_Configure"
-msgstr "Stilla"
+msgstr "/_Stilla"
 
 #: ../bin/draksambashare:184
 #, c-format
@@ -1464,9 +1464,9 @@ msgid "/_Help"
 msgstr "/_Hjálp"
 
 #: ../bin/draksambashare:184
-#, fuzzy, c-format
+#, c-format
 msgid "/_Samba Documentation"
-msgstr "Slitnir-pakkar"
+msgstr "/_Samba handbækur"
 
 #: ../bin/draksambashare:190 ../bin/draksambashare:191
 #, c-format
@@ -1551,8 +1551,7 @@ msgstr "Athugasemd:"
 msgid ""
 "Share with the same name already exist or share name empty, please choose "
 "another name."
-msgstr ""
-"Svæði með sama nafni er þegar til eða nafn svæðis er autt, veldu annað nafn."
+msgstr "Svæði með sama nafni er þegar til eða nafn svæðis er autt, veldu annað nafn."
 
 #: ../bin/draksambashare:400
 #, c-format
@@ -1582,10 +1581,8 @@ msgstr "Bæta við sérstökum miðluðum prentara"
 
 #: ../bin/draksambashare:448
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
-msgstr ""
-"þessi ráðgjafi mun aðstoða þig við að búa til nýjan sérstakan Samba prentara."
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
+msgstr "þessi ráðgjafi mun aðstoða þig við að búa til nýjan sérstakan Samba prentara."
 
 #: ../bin/draksambashare:455
 #, c-format
@@ -1724,8 +1721,7 @@ msgstr "Almennt:"
 
 #: ../bin/draksambashare:797
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 "Aðgangs-maski, 'create mode' og 'directory mask' ættu að vera tala. þ.e. "
 "0755."
@@ -1758,22 +1754,22 @@ msgstr "Lykilorð:"
 #: ../bin/draksambashare:1048
 #, c-format
 msgid "PDC - primary domain controller"
-msgstr ""
+msgstr "PDC - aðal lénstjóri"
 
 #: ../bin/draksambashare:1049
 #, c-format
 msgid "Standalone - standalone server"
-msgstr ""
+msgstr "Sjálfstæður - sjálfstæður miðlari"
 
 #: ../bin/draksambashare:1055
-#, fuzzy, c-format
+#, c-format
 msgid "Samba Wizard"
-msgstr "Samba notendur"
+msgstr "Samba ráðgjafi"
 
 #: ../bin/draksambashare:1058
-#, fuzzy, c-format
+#, c-format
 msgid "Samba server configuration Wizard"
-msgstr "Sýsla með Samba stillingar"
+msgstr "Stillingarráðgjafi fyrir Samba miðlara"
 
 #: ../bin/draksambashare:1058
 #, c-format
@@ -1781,24 +1777,25 @@ msgid ""
 "Samba allows your server to behave as a file and print server for "
 "workstations running non-Linux systems."
 msgstr ""
+"Samba gerir miðlaranum þínum kleyft að virka sem skráa- og prentara-miðlara "
+"fyrir kerfi sem ekki keyra Linux kerfi."
 
 #: ../bin/draksambashare:1074
 #, c-format
 msgid "PDC server: primary domain controller"
-msgstr ""
+msgstr "PDC miðlari: aðal lénstjóri"
 
 #: ../bin/draksambashare:1074
 #, c-format
 msgid ""
 "Server configured as a PDC is responsible for Windows authentication "
 "throughout the domain."
-msgstr ""
+msgstr "Miðlari stilltur sem PDC er ábyrgur fyrir Windows auðkenningu á öllu léninu."
 
 #: ../bin/draksambashare:1074
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
-msgstr ""
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
+msgstr "Stakar miðlarauppsetningar geta notað smbpasswd eða tdbsam lykilorðaforrit"
 
 #: ../bin/draksambashare:1074
 #, c-format
@@ -1810,22 +1807,22 @@ msgstr ""
 #: ../bin/draksambashare:1091
 #, c-format
 msgid "Wins support:"
-msgstr ""
+msgstr "Wins stuðningur:"
 
 #: ../bin/draksambashare:1092
-#, fuzzy, c-format
+#, c-format
 msgid "admin users:"
-msgstr "Kerfisstjórar"
+msgstr "kerfisstjórar:"
 
 #: ../bin/draksambashare:1092
 #, c-format
 msgid "root @adm"
-msgstr ""
+msgstr "root @adm"
 
 #: ../bin/draksambashare:1093
 #, c-format
 msgid "Os level:"
-msgstr ""
+msgstr "OS þrep:"
 
 #: ../bin/draksambashare:1093
 #, c-format
@@ -1836,41 +1833,45 @@ msgid ""
 "that of the operating system on your network with the highest current value. "
 "ie: os level = 34"
 msgstr ""
+"Víðværa breytan \"os level\" stýrir hvaða stýrikerfi Samba þykist vera þegar "
+"fram fer kosning á nafnamiðlara. Ef þú vilt láta Samba vinna kosninguna og "
+"verða aðal-nafnamiðlari, þá getur þú sett þrepið hærra en það stýrikerfi á "
+"netinu sem er með hæsta gildið. t.d: os level = 34"
 
 #: ../bin/draksambashare:1097
 #, c-format
 msgid "The domain is wrong."
-msgstr ""
+msgstr "Lénsnafnið er rangt."
 
 #: ../bin/draksambashare:1104
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup"
-msgstr "Þvinga hóp"
+msgstr "Staðarnetshópur"
 
 #: ../bin/draksambashare:1104
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
-msgstr ""
+msgstr "Samba þarf að vita hvaða Windows staðarnetshóp það mun þjóna."
 
 #: ../bin/draksambashare:1111 ../bin/draksambashare:1178
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup:"
-msgstr "Þvinga hóp"
+msgstr "Staðarnetshópur:"
 
 #: ../bin/draksambashare:1112
-#, fuzzy, c-format
+#, c-format
 msgid "Netbios name:"
-msgstr "Vélarnafn:"
+msgstr "Netbios nafn:"
 
 #: ../bin/draksambashare:1116
 #, c-format
 msgid "The Workgroup is wrong."
-msgstr ""
+msgstr "Staðarnetshópur er rangur."
 
 #: ../bin/draksambashare:1123 ../bin/draksambashare:1133
-#, fuzzy, c-format
+#, c-format
 msgid "Security mode"
-msgstr "Öryggisstefnur"
+msgstr "Öryggisstefna"
 
 #: ../bin/draksambashare:1123
 #, c-format
@@ -1878,11 +1879,13 @@ msgid ""
 "User level: the client sends a session setup request directly following "
 "protocol negotiation. This request provides a username and password."
 msgstr ""
+"Notanda-þrep: biðlarinn sendir beiðni um lotu-tengingu eftir að "
+"samskiptamáti hefst. Þessi aðferð krefst notandanafns og lykilorðs."
 
 #: ../bin/draksambashare:1123
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
+msgstr "Sameignar-þrep: biðlarinn þarfnast auðkenningar fyrir hverja sameign"
 
 #: ../bin/draksambashare:1123
 #, c-format
@@ -1891,75 +1894,78 @@ msgid ""
 "in a central, shared, account repository. The centralized account repository "
 "is shared between domain (security) controllers."
 msgstr ""
+"Léns-þrep: er aðferð til að geyma öll notenda og hóp-auðkenni í miðlægum "
+", miðluðum auðkennagrunni. Þessum miðlæga auðkenna-grunni er deilt með "
+"Léns-stjórn-tölvum."
 
 #: ../bin/draksambashare:1134
-#, fuzzy, c-format
+#, c-format
 msgid "Hosts allow"
-msgstr "Heiti vélar"
+msgstr "Leyfa vélum"
 
 #: ../bin/draksambashare:1139
 #, c-format
 msgid "Server Banner."
-msgstr ""
+msgstr "Auðkenni Miðlara."
 
 #: ../bin/draksambashare:1139
 #, c-format
 msgid ""
 "The banner is the way this server will be described in the Windows "
 "workstations."
-msgstr ""
+msgstr "Auðkennið lýsir hvernig þessum miðlara verður lýst á Windows vinnustöðvum."
 
 #: ../bin/draksambashare:1144
 #, c-format
 msgid "Banner:"
-msgstr ""
+msgstr "Auðkenni:"
 
 #: ../bin/draksambashare:1148
 #, c-format
 msgid "The Server Banner is incorrect."
-msgstr ""
+msgstr "Auðkenni miðlara er ekki rétt."
 
 #: ../bin/draksambashare:1155
-#, fuzzy, c-format
+#, c-format
 msgid "Samba Log"
-msgstr "Samba notendur"
+msgstr "Samba annáll"
 
 #: ../bin/draksambashare:1155
 #, c-format
 msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
 "connects"
-msgstr ""
+msgstr "Annáll: notið skrá.%m til að fá sérstakan annál fyrir hverja vél sem tengist"
 
 #: ../bin/draksambashare:1155
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
-msgstr ""
+msgstr "Annálsþrep: setja annáls (mælsku) þrep (0 <= annálsþrep <= 10)"
 
 #: ../bin/draksambashare:1155
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
+msgstr "Hámarks stærð annáls: setja þak á stærð annála (í Kb)."
 
 #: ../bin/draksambashare:1162 ../bin/draksambashare:1180
-#, fuzzy, c-format
+#, c-format
 msgid "Log file:"
-msgstr "Snið"
+msgstr "Annálaskrá:"
 
 #: ../bin/draksambashare:1163
 #, c-format
 msgid "Max log size:"
-msgstr ""
+msgstr "Hámarksstærð annáls:"
 
 #: ../bin/draksambashare:1164
-#, fuzzy, c-format
+#, c-format
 msgid "Log level:"
-msgstr "Þrep"
+msgstr "Annálsþrep:"
 
 #: ../bin/draksambashare:1169
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
+msgstr "Ráðgjafinn hefur safnað eftirfarandi upplýsingum til að stilla Samba."
 
 #: ../bin/draksambashare:1169
 #, c-format
@@ -1967,6 +1973,8 @@ msgid ""
 "To accept these values, and configure your server, click the Next button or "
 "use the Back button to correct them."
 msgstr ""
+"Til að samþykkja þessi gildi, og setja upp miðlarann, smelltu á \"Næsta\" "
+"hnappinn eða notaðu \"Fyrri\" til að fara til baka og leiðrétta þau."
 
 #: ../bin/draksambashare:1169
 #, c-format
@@ -1974,46 +1982,48 @@ msgid ""
 "If you have previously create some shares, they will appear in this "
 "configuration. Run 'drakwizard sambashare' to manage your shares."
 msgstr ""
+"Ef þú hefur áður búið til miðluð svæði, þá munu þau sjást í þessari "
+"uppsetningu. Keyrðu \"drakwizard sambashare\" til að sýsla með miðluð svæði."
 
 #: ../bin/draksambashare:1177
-#, fuzzy, c-format
+#, c-format
 msgid "Samba type:"
-msgstr "Samba notendur"
+msgstr "Samba tegund:"
 
 #: ../bin/draksambashare:1179
 #, c-format
 msgid "Server banner:"
-msgstr ""
+msgstr "Auðkenni miðlara:"
 
 #: ../bin/draksambashare:1181
 #, c-format
 msgid " "
-msgstr ""
+msgstr " "
 
 #: ../bin/draksambashare:1182
 #, c-format
 msgid "Unix Charset:"
-msgstr ""
+msgstr "UNIX stafasett:"
 
 #: ../bin/draksambashare:1183
 #, c-format
 msgid "Dos Charset:"
-msgstr ""
+msgstr "DOS stafasett:"
 
 #: ../bin/draksambashare:1184
 #, c-format
 msgid "Display Charset:"
-msgstr ""
+msgstr "Birtingarstafasett:"
 
 #: ../bin/draksambashare:1199
-#, fuzzy, c-format
+#, c-format
 msgid "The wizard successfully configured your Samba server."
-msgstr "Ráðgjafinn hefur bætt við Samba prentaramiðlun"
+msgstr "Ráðgjafinn hefur sett upp Samba miðlarann þinn."
 
 #: ../bin/draksambashare:1254
 #, c-format
 msgid "The Samba wizard has unexpectedly failed:"
-msgstr ""
+msgstr "Samba ráðgjafinn skilaði óvænt villu:"
 
 #: ../bin/draksambashare:1268
 #, c-format
@@ -2076,9 +2086,9 @@ msgid "Samba Users"
 msgstr "Samba notendur"
 
 #: ../bin/draksambashare:1457
-#, fuzzy, c-format
+#, c-format
 msgid "Please configure your Samba server"
-msgstr "Mistókst að breyta Samba miðli."
+msgstr "Vinsamlega stilltu Samba miðlara"
 
 #: ../bin/draksambashare:1457
 #, c-format
@@ -2086,6 +2096,8 @@ msgid ""
 "It seems this is the first time you run this tool.\n"
 "A wizard will appear to configure a basic Samba server"
 msgstr ""
+"Það lítur út fyrir að þetta sé í fyrsta sinn er þú keyrir þetta tól.\n"
+"Ráðgjafi mun birtast til að aðstoða þig við að stilla einfaldan Samba miðlara"
 
 #: ../bin/draksambashare:1466
 #, c-format
@@ -2108,9 +2120,9 @@ msgid "Gateway: %s"
 msgstr "Netgátt: %s"
 
 #: ../bin/net_applet:98
-#, fuzzy, c-format
+#, c-format
 msgid "DNS: %s"
-msgstr "DNS"
+msgstr "DNS: %s"
 
 #: ../bin/net_applet:99
 #, c-format
@@ -2128,8 +2140,8 @@ msgid ""
 "You do not have any configured Internet connection.\n"
 "Run the \"%s\" assistant from the Mandriva Linux Control Center"
 msgstr ""
-"Þú hefur ekki skilgreint neina internettengingu.\n"
-"Keyrið \"%s\" aðstoðarálfinn frá Mandriva Linux stjórnborðinu"
+"Þú hefur ekki skilgreint neina Internettengingu.\n"
+"Keyrið \"%s\" ráðgjafann frá Mandriva Linux stjórnborðinu"
 
 #: ../bin/net_applet:129 ../bin/net_monitor:519
 #, c-format
@@ -2224,9 +2236,9 @@ msgid "Network Monitoring"
 msgstr "Neteftirlit"
 
 #: ../bin/net_monitor:99
-#, fuzzy, c-format
+#, c-format
 msgid "Default connection: "
-msgstr "Breiðbands-tenging"
+msgstr "Sjálfgefin tenging: "
 
 #: ../bin/net_monitor:101
 #, c-format
@@ -2272,7 +2284,7 @@ msgstr ""
 "hraði:"
 
 #: ../bin/net_monitor:113
-#, fuzzy, c-format
+#, c-format
 msgid "Connection time: "
 msgstr "Tengitími: "
 
@@ -2294,7 +2306,7 @@ msgstr "Aftengist frá Internetinu "
 #: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Connecting to Internet "
-msgstr "Tengist internetinu "
+msgstr "Tengist Internetinu "
 
 #: ../bin/net_monitor:254
 #, c-format
@@ -2321,9 +2333,9 @@ msgstr ""
 "Athugaðu uppsetninguna í Mandriva Linux stjórnborði."
 
 #: ../bin/net_monitor:360
-#, fuzzy, c-format
+#, c-format
 msgid "%s (%s)"
-msgstr "DNS"
+msgstr "%s (%s)"
 
 #: ../bin/net_monitor:385
 #, c-format
@@ -2348,7 +2360,7 @@ msgstr "meðal"
 #: ../bin/net_monitor:451
 #, c-format
 msgid "Reset counters"
-msgstr ""
+msgstr "Endurstilla teljara"
 
 #: ../bin/net_monitor:454
 #, c-format
@@ -2487,7 +2499,7 @@ msgstr "Blátannarupphringing"
 #: ../lib/network/connection/cellular_card.pm:8
 #, c-format
 msgid "Wrong PIN number format: it should be 4 digits."
-msgstr ""
+msgstr "Rangt snið PIN númers: það ætti að vera 4 tölustafir."
 
 #: ../lib/network/connection/cellular_card.pm:10
 #, c-format
@@ -2550,19 +2562,19 @@ msgid "Ethernet"
 msgstr "Ethernet"
 
 #: ../lib/network/connection/ethernet.pm:12
-#, fuzzy, c-format
+#, c-format
 msgid "Wired (Ethernet)"
-msgstr "Ethernet"
+msgstr "Kapall (Ethernet)"
 
 #: ../lib/network/connection/ethernet.pm:30
-#, fuzzy, c-format
+#, c-format
 msgid "Virtual interface"
-msgstr "Nettengi"
+msgstr "Sýndarnettengi"
 
 #: ../lib/network/connection/ethernet.pm:60
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
-msgstr "Get ekki fundið net-viðmót fyrir valið tæki (nota rekil %s)"
+msgstr "Get ekki fundið net-viðmót fyrir valið tæki (nota rekil %s)."
 
 #: ../lib/network/connection/ethernet.pm:70 ../lib/network/vpn/openvpn.pm:207
 #, c-format
@@ -2668,6 +2680,9 @@ msgid ""
 "with this connection, first disable all other devices which use it, or "
 "configure them not to start on boot"
 msgstr ""
+"%s er þegar notað af tengingu sem er virkuð við ræsingu vélar. Til að nota þetta "
+"vistfang með þessari tengingu, aftengdu fyrst öll tæki sem nota það, "
+"eða stilltu þau þannig að þau séu ekki virkjuð við ræsingu vélar"
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -2855,9 +2870,9 @@ msgstr "Austurríki"
 #: ../lib/network/connection/providers/xdsl.pm:668
 #: ../lib/network/connection/providers/xdsl.pm:787
 #: ../lib/network/connection/providers/xdsl.pm:1258
-#, fuzzy, c-format
+#, c-format
 msgid "Any"
-msgstr "hver sem er"
+msgstr "Hver sem er"
 
 #: ../lib/network/connection/providers/xdsl.pm:114
 #: ../lib/network/connection/providers/xdsl.pm:124
@@ -3115,9 +3130,9 @@ msgid "Wireless"
 msgstr "Þráðlaust"
 
 #: ../lib/network/connection/wireless.pm:13
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless (Wi-Fi)"
-msgstr "Þráðlaust"
+msgstr "Þráðlaust (Wi-Fi)"
 
 #: ../lib/network/connection/wireless.pm:29
 #, c-format
@@ -3135,9 +3150,9 @@ msgid "Restricted WEP"
 msgstr "Lokaðir WEP lyklar"
 
 #: ../lib/network/connection/wireless.pm:48
-#, fuzzy, c-format
+#, c-format
 msgid "WPA/WPA2 Pre-Shared Key"
-msgstr "WPA for-valinn lykill"
+msgstr "WPA/WPA2 for-valinn lykill"
 
 #: ../lib/network/connection/wireless.pm:49
 #, c-format
@@ -3147,14 +3162,14 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:260
 #, c-format
 msgid "Windows driver"
-msgstr ""
+msgstr "Windows rekill"
 
 #: ../lib/network/connection/wireless.pm:346
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
 "switch) first."
-msgstr ""
+msgstr "Þráðlausa netkortið þitt er ekki virkt, vinsamlega virkjaðu nettækið (RF kill switch) fyrst."
 
 #: ../lib/network/connection/wireless.pm:431
 #, c-format
@@ -3175,7 +3190,7 @@ msgstr "Beintengt"
 #: ../lib/network/connection/wireless.pm:437
 #, c-format
 msgid "Managed"
-msgstr "Managed"
+msgstr "Netgátt"
 
 #: ../lib/network/connection/wireless.pm:437
 #, c-format
@@ -3215,12 +3230,12 @@ msgstr "Dulritunarlykill"
 #: ../lib/network/connection/wireless.pm:446
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
-msgstr ""
+msgstr "Þvinga notkun á þessum lykli sem texta streng (ASCII) (t.d. fyrir Livebox)"
 
 #: ../lib/network/connection/wireless.pm:453
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Login/Username"
-msgstr "Netþjónustu-notandanafn"
+msgstr "EAP auðkenni/notandanafn"
 
 #: ../lib/network/connection/wireless.pm:455
 #, c-format
@@ -3229,11 +3244,14 @@ msgid ""
 "need to specify domain then try the untested syntax\n"
 "  DOMAIN\\username"
 msgstr ""
+"Auðkenni eða notandanafn. Sniðið er einfaldur texti.\n"
+"Ef þú þarft að tilgreina lén, reyndu þá að nota\n"
+"  LÉN\\notandi"
 
 #: ../lib/network/connection/wireless.pm:458
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Password"
-msgstr "Lykilorð"
+msgstr "EAP Lykilorð"
 
 #: ../lib/network/connection/wireless.pm:460
 #, c-format
@@ -3255,9 +3273,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:474
-#, fuzzy, c-format
+#, c-format
 msgid "EAP client certificate"
-msgstr "Nafn skírteinis"
+msgstr "EAP skírteini biðlara"
 
 #: ../lib/network/connection/wireless.pm:476
 #, c-format
@@ -3397,47 +3415,47 @@ msgstr ""
 "sjá nánar á man-síðunni fyrir iwpriv(8)."
 
 #: ../lib/network/connection/wireless.pm:523
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Protocol"
-msgstr "Samskiptaregla"
+msgstr "EAP Samskiptaregla"
 
 #: ../lib/network/connection/wireless.pm:524
 #: ../lib/network/connection/wireless.pm:529
-#, fuzzy, c-format
+#, c-format
 msgid "Auto Detect"
 msgstr "Finna sjálfkrafa"
 
 #: ../lib/network/connection/wireless.pm:524
 #, c-format
 msgid "WPA2"
-msgstr ""
+msgstr "WPA2"
 
 #: ../lib/network/connection/wireless.pm:524
-#, fuzzy, c-format
+#, c-format
 msgid "WPA"
-msgstr "PAP"
+msgstr "WPA"
 
 #: ../lib/network/connection/wireless.pm:526
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
-msgstr ""
+msgstr "Mælt er með að nota \"Finna sjálfkrafa\" Því það reynir fyrst WPA útgáfu 2 og til vara WPA útgáfu 1"
 
 #: ../lib/network/connection/wireless.pm:528
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Mode"
-msgstr "Hamur"
+msgstr "EAP Hamur"
 
 #: ../lib/network/connection/wireless.pm:529
-#, fuzzy, c-format
+#, c-format
 msgid "PEAP"
-msgstr "PAP"
+msgstr "PEAP"
 
 #: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "TTLS"
-msgstr ""
+msgstr "TTLS"
 
 #: ../lib/network/connection/wireless.pm:529
 #, c-format
@@ -3445,44 +3463,44 @@ msgid "TLS"
 msgstr "TLS"
 
 #: ../lib/network/connection/wireless.pm:529
-#, fuzzy, c-format
+#, c-format
 msgid "MSCHAPV2"
-msgstr "CHAP"
+msgstr "MSCHAPV2"
 
 #: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "MD5"
-msgstr ""
+msgstr "MD5"
 
 #: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "OTP"
-msgstr ""
+msgstr "OTP"
 
 #: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "GTC"
-msgstr ""
+msgstr "GTC"
 
 #: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "LEAP"
-msgstr ""
+msgstr "LEAP"
 
 #: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "PEAP TTLS"
-msgstr ""
+msgstr "PEAP TTLS"
 
 #: ../lib/network/connection/wireless.pm:529
 #, c-format
 msgid "TTLS TLS"
-msgstr ""
+msgstr "TTLS TLS"
 
 #: ../lib/network/connection/wireless.pm:531
 #, c-format
 msgid "EAP key_mgmt"
-msgstr ""
+msgstr "EAP key_mgmt"
 
 #: ../lib/network/connection/wireless.pm:533
 #, c-format
@@ -3494,7 +3512,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:535
 #, c-format
 msgid "EAP outer identity"
-msgstr ""
+msgstr "EAP ytra auðkenni"
 
 #: ../lib/network/connection/wireless.pm:537
 #, c-format
@@ -3507,7 +3525,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:540
 #, c-format
 msgid "EAP phase2"
-msgstr ""
+msgstr "EAP þrep2"
 
 #: ../lib/network/connection/wireless.pm:542
 #, c-format
@@ -3519,9 +3537,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:546
-#, fuzzy, c-format
+#, c-format
 msgid "EAP CA certificate"
-msgstr "Skírteini"
+msgstr "EAP CA skírteini"
 
 #: ../lib/network/connection/wireless.pm:548
 #, c-format
@@ -3551,7 +3569,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:560
 #, c-format
 msgid "EAP extra directives"
-msgstr ""
+msgstr "EAP auka viðföng"
 
 #: ../lib/network/connection/wireless.pm:562
 #, c-format
@@ -3581,14 +3599,14 @@ msgstr "Þarf að fá dulritunarlykil."
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
 "hexadecimal characters."
-msgstr ""
+msgstr "Forvaldir lyklar ættu að vera á milli 8 og 63 ASCII stafir (enskt stafróf), eða 64 sextándakerfis stafir."
 
 #: ../lib/network/connection/wireless.pm:595
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
 "characters."
-msgstr ""
+msgstr "WEP lykillinn ætti að hafa mest %d ASCII stafi eða %d sextándakerfis-stafi."
 
 #: ../lib/network/connection/wireless.pm:602
 #, c-format
@@ -3651,7 +3669,7 @@ msgstr ""
 msgid ""
 "Modems using Conexant AccessRunner chipsets cannot be supported due to "
 "binary firmware distribution problem."
-msgstr ""
+msgstr "Ekki er hægt að styðja við mótöld sem nota Conexant AccessRunner kubbasettið vegna takmarkana á dreifingu vélbúnaðarforrita."
 
 #: ../lib/network/connection/xdsl.pm:203
 #, c-format
@@ -3708,9 +3726,9 @@ msgstr "Set upp tæki..."
 
 #: ../lib/network/connection_manager.pm:78
 #: ../lib/network/connection_manager.pm:143
-#, fuzzy, c-format
+#, c-format
 msgid "Network settings"
-msgstr "Net-aðgangs-stillingar"
+msgstr "Netstillingar"
 
 #: ../lib/network/connection_manager.pm:79
 #: ../lib/network/connection_manager.pm:144
@@ -3816,7 +3834,7 @@ msgstr "BitTorrent"
 #: ../lib/network/drakfirewall.pm:71
 #, c-format
 msgid "Windows Mobile device synchronization"
-msgstr ""
+msgstr "Samhæfing við Windows Mobile tæki"
 
 #: ../lib/network/drakfirewall.pm:80
 #, c-format
@@ -4073,9 +4091,9 @@ msgid "A password cracking attack has been attempted by %s."
 msgstr "Reynt hefur verið að brjóta upp lykilorð af %s."
 
 #: ../lib/network/ifw.pm:140
-#, fuzzy, c-format
+#, c-format
 msgid "%s is connecting on the %s service."
-msgstr "Aftengist frá Internetinu "
+msgstr "%s er að tengjast við þjónustuna %s."
 
 #: ../lib/network/ifw.pm:141
 #, c-format
@@ -4173,7 +4191,7 @@ msgid "Please select your network:"
 msgstr "Veldu net:"
 
 #: ../lib/network/netcenter.pm:62
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "_: This is a verb\n"
 "Monitor"
@@ -4185,7 +4203,7 @@ msgid "Network Center"
 msgstr "Netstjórnun"
 
 #: ../lib/network/netcenter.pm:169
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced settings"
 msgstr "Ítarlegri valkostir"
 
@@ -4241,9 +4259,9 @@ msgid "Select the network interface to configure:"
 msgstr "Veldu netkort sem á að stilla:"
 
 #: ../lib/network/netconnect.pm:150
-#, fuzzy, c-format
+#, c-format
 msgid "%s: %s"
-msgstr "DNS"
+msgstr "%s: %s"
 
 #: ../lib/network/netconnect.pm:167
 #, c-format
@@ -4794,8 +4812,7 @@ msgstr ""
 #: ../lib/network/netconnect.pm:806
 #, c-format
 msgid "Last but not least you can also type in your DNS server IP addresses."
-msgstr ""
-"Síðast en ekki síst getur þú einnig slegið inn IP-tölu DNS nafnamiðlara."
+msgstr "Síðast en ekki síst getur þú einnig slegið inn IP-tölu DNS nafnamiðlara."
 
 #: ../lib/network/netconnect.pm:807
 #, c-format
@@ -4822,61 +4839,61 @@ msgstr ""
 "%s"
 
 #: ../lib/network/network.pm:494
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced network settings"
-msgstr "Net-aðgangs-stillingar"
+msgstr "Ítarlegri netstillingar"
 
 #: ../lib/network/network.pm:495
 #, c-format
 msgid ""
 "Here you can configure advanced network settings. Please note that you have "
 "to reboot the machine for changes to take effect."
-msgstr ""
+msgstr "Hér getur þú stillt ítarlegri netstillingar. Athugið að þú þarft að endurræsa vélina til að breytingar taki gildi."
 
 #: ../lib/network/network.pm:496
-#, fuzzy, c-format
+#, c-format
 msgid "TCP/IP settings"
-msgstr "IP stillingar"
+msgstr "TCP/IP stillingar"
 
 #: ../lib/network/network.pm:497
-#, fuzzy, c-format
+#, c-format
 msgid "Disable IPv6"
-msgstr "Slökkva"
+msgstr "Aftengja IPv6"
 
 #: ../lib/network/network.pm:498
 #, c-format
 msgid "Disable TCP Window Scaling"
-msgstr ""
+msgstr "Aftenga TCP gluggaskölun"
 
 #: ../lib/network/network.pm:499
 #, c-format
 msgid "Disable TCP Timestamps"
-msgstr ""
+msgstr "Aftenga TCP tímastimpla"
 
 #: ../lib/network/network.pm:500
 #, c-format
 msgid "Security settings (defined by MSEC policy)"
-msgstr ""
+msgstr "Öryggisstillingar (Skilgreindar með MSEC stefnu)"
 
 #: ../lib/network/network.pm:501
 #, c-format
 msgid "Disable ICMP echo"
-msgstr ""
+msgstr "Aftengja ICMP echo"
 
 #: ../lib/network/network.pm:502
 #, c-format
 msgid "Disable ICMP echo for broadcasting messages"
-msgstr ""
+msgstr "Aftengja ICMP echo fyrir útvörpunarskeyti"
 
 #: ../lib/network/network.pm:503
 #, c-format
 msgid "Disable invalid ICMP error responses"
-msgstr ""
+msgstr "Aftengja viðbrögð við ógildum ICMP pökkum"
 
 #: ../lib/network/network.pm:504
 #, c-format
 msgid "Log strange packets"
-msgstr ""
+msgstr "Skrá undarlega pakka"
 
 #: ../lib/network/network.pm:514
 #, c-format
@@ -4893,37 +4910,37 @@ msgstr "Hér getur þú sett upp vefsel (t.d. http://mitt_vef_sel:8080)"
 #: ../lib/network/network.pm:516
 #, c-format
 msgid "HTTP proxy"
-msgstr "HTTP sel"
+msgstr "HTTP staðgengill"
 
 #: ../lib/network/network.pm:517
 #, c-format
 msgid "Use HTTP proxy for HTTPS connections"
-msgstr "Nota HTTP sel fyrir HTTPS tengingar"
+msgstr "Nota HTTP staðgengil fyrir HTTPS tengingar"
 
 #: ../lib/network/network.pm:518
 #, c-format
 msgid "HTTPS proxy"
-msgstr "HTTPS sel"
+msgstr "HTTPS staðgengill"
 
 #: ../lib/network/network.pm:519
 #, c-format
 msgid "FTP proxy"
-msgstr "FTP Sel"
+msgstr "FTP Staðgengill"
 
 #: ../lib/network/network.pm:520
 #, c-format
 msgid "No proxy for (comma separated list):"
-msgstr "Ekkert sel fyrir (aðskildir með kommu):"
+msgstr "Enginn staðgengill fyrir (aðskildir með kommu):"
 
 #: ../lib/network/network.pm:525
 #, c-format
 msgid "Proxy should be http://..."
-msgstr "Sel ætti að vera http://..."
+msgstr "Staðgengill ætti að vera http://..."
 
 #: ../lib/network/network.pm:526
 #, c-format
 msgid "Proxy should be http://... or https://..."
-msgstr "Sel ætti að vera http://... eða https://..."
+msgstr "Staðgengill ætti að vera http://... eða https://..."
 
 #: ../lib/network/network.pm:527
 #, c-format
@@ -4981,12 +4998,9 @@ msgstr "Þarf nokkra pakka (%s) sem eru ekki tiltækir."
 #. -PO: first argument is a list of Mandriva distributions
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
-#, fuzzy, c-format
-msgid ""
-"These packages can be found in %s, or in the official %s package repository."
-msgstr ""
-"Þessa pakka má finna á Mandriva Club síðunum eða í seldum Mandriva "
-"dreifingum."
+#, c-format
+msgid "These packages can be found in %s, or in the official %s package repository."
+msgstr "Þessa pakka má finna á %s eða í opinbera pakkamiðlinum fyrir %s."
 
 #: ../lib/network/thirdparty.pm:154
 #, c-format
@@ -5047,8 +5061,7 @@ msgstr "Settu diskling í drif"
 msgid ""
 "Insert a FAT formatted floppy in drive %s with %s in root directory and "
 "press %s"
-msgstr ""
-"Settu FAT forsniðinn diskling í drif %s með %s í rótarmöppu og ýttu á %s"
+msgstr "Settu FAT forsniðinn diskling í drif %s með %s í rótarmöppu og ýttu á %s"
 
 #: ../lib/network/thirdparty.pm:245
 #, c-format
@@ -5084,7 +5097,7 @@ msgstr "Fastur lykill"
 #: ../lib/network/vpn/openvpn.pm:142
 #, c-format
 msgid "Certificate Authority (CA)"
-msgstr ""
+msgstr "Vottunaraðili (CA)"
 
 #: ../lib/network/vpn/openvpn.pm:148
 #, c-format
@@ -5169,7 +5182,7 @@ msgstr "Ræsi tengingu.."
 #: ../lib/network/vpn/openvpn.pm:380
 #, c-format
 msgid "Please insert your token"
-msgstr ""
+msgstr "Sláðu inn tákn þitt"
 
 #: ../lib/network/vpn/vpnc.pm:9
 #, c-format
@@ -5184,7 +5197,7 @@ msgstr "Hópnafn"
 #: ../lib/network/vpn/vpnc.pm:47
 #, c-format
 msgid "Group secret"
-msgstr ""
+msgstr "Hóplykilorð"
 
 #: ../lib/network/vpn/vpnc.pm:52
 #, c-format
@@ -5192,953 +5205,12 @@ msgid "Username"
 msgstr "Notandanafn"
 
 #: ../lib/network/vpn/vpnc.pm:61
-#, fuzzy, c-format
+#, c-format
 msgid "NAT Mode"
-msgstr "Hamur"
+msgstr "NAT Hamur"
 
 #: ../lib/network/vpn/vpnc.pm:67
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Nota tiltekið UDP port"
 
-#~ msgid "Connection type: "
-#~ msgstr "Tegund tengingar: "
-
-#~ msgid "%s already in use\n"
-#~ msgstr "%s er þegar í notkun\n"
-
-#~ msgid "Draknfs entry"
-#~ msgstr "Draknfs færsla"
-
-#~ msgid "DrakVPN"
-#~ msgstr "DrakVPN"
-
-#~ msgid "The VPN connection is enabled."
-#~ msgstr "VPN tengingin er virk."
-
-#~ msgid ""
-#~ "The setup of a VPN connection has already been done.\n"
-#~ "\n"
-#~ "It's currently enabled.\n"
-#~ "\n"
-#~ "What would you like to do?"
-#~ msgstr ""
-#~ "VPN tengingin hefur þegar verið sett upp.\n"
-#~ "\n"
-#~ "Hún er þegar virk.\n"
-#~ "\n"
-#~ "Hvað viltu gera?"
-
-#~ msgid "disable"
-#~ msgstr "aftengja"
-
-#~ msgid "reconfigure"
-#~ msgstr "endurstilla"
-
-#~ msgid "dismiss"
-#~ msgstr "hætta við"
-
-#~ msgid "Disabling VPN..."
-#~ msgstr "Aftengi VPN..."
-
-#~ msgid "The VPN connection is now disabled."
-#~ msgstr "VPN tenging er nú óvirk."
-
-#~ msgid "VPN connection currently disabled"
-#~ msgstr "VPN tengingin er nú óvirk"
-
-#~ msgid ""
-#~ "The setup of a VPN connection has already been done.\n"
-#~ "\n"
-#~ "It's currently disabled.\n"
-#~ "\n"
-#~ "What would you like to do?"
-#~ msgstr ""
-#~ "VPN tengingin hefur þegar verið sett upp.\n"
-#~ "\n"
-#~ "Hún er nú óvirk.\n"
-#~ "\n"
-#~ "Hvað viltu gera?"
-
-#~ msgid "enable"
-#~ msgstr "virkja"
-
-#~ msgid "Enabling VPN..."
-#~ msgstr "Virkja VPN..."
-
-#~ msgid "The VPN connection is now enabled."
-#~ msgstr "VPN tenging er nú virk."
-
-#~ msgid "Simple VPN setup."
-#~ msgstr "Einföld VPN upsetning."
-
-#~ msgid ""
-#~ "You are about to configure your computer to use a VPN connection.\n"
-#~ "\n"
-#~ "With this feature, computers on your local private network and computers\n"
-#~ "on some other remote private networks, can share resources, through\n"
-#~ "their respective firewalls, over the Internet, in a secure manner. \n"
-#~ "\n"
-#~ "The communication over the Internet is encrypted. The local and remote\n"
-#~ "computers look as if they were on the same network.\n"
-#~ "\n"
-#~ "Make sure you have configured your Network/Internet access using\n"
-#~ "drakconnect before going any further."
-#~ msgstr ""
-#~ "Þú ert um það bil að fara að setja upp tölvuna þína til að nota VPN "
-#~ "tengingu.\n"
-#~ "\n"
-#~ "Með þessari uppsetningu, þá geta tölvur á staðbundnu neti og tölvur á\n"
-#~ "öðrum fjarlægum lokuðum netum, deilt þjónustu gegn um eldveggi\n"
-#~ "yfir Internetið, á öruggan hátt\n"
-#~ "\n"
-#~ "Samskiptin yfir Internetið eru dulrituð. Staðbundnu og fjarlægu vélarnar\n"
-#~ "líta út fyrir að vera á sama neti.\n"
-#~ "\n"
-#~ "Vertu viss um að þú hafir stillt net/Internet aðgang með drakconnect\n"
-#~ "áður en lengra er haldið."
-
-#~ msgid ""
-#~ "VPN connection.\n"
-#~ "\n"
-#~ "This program is based on the following projects:\n"
-#~ " - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
-#~ " - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
-#~ " - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
-#~ " - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
-#~ " - the docs and man pages coming with the %s package\n"
-#~ "\n"
-#~ "Please read AT LEAST the ipsec-howto docs\n"
-#~ "before going any further."
-#~ msgstr ""
-#~ "VPN tenging.\n"
-#~ "\n"
-#~ "Þetta forrit er byggt á eftirfarandi verkefnum:\n"
-#~ " - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
-#~ " - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
-#~ " - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
-#~ " - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
-#~ " - Handbækur og man síður koma með %s pakkunum\n"
-#~ "\n"
-#~ "Vinsamlega lestu AÐ MINNSTA KOSTI ipsec \"hvernig-á-að\" leiðbeiningar\n"
-#~ "áður en lengra er haldið."
-
-#~ msgid "Problems installing package %s"
-#~ msgstr "Vandræði við að setja inn pakka %s"
-
-#~ msgid "Security Policies"
-#~ msgstr "Öryggisstefnur"
-
-#~ msgid "IKE daemon racoon"
-#~ msgstr "IKE daemon racoon"
-
-#~ msgid "Configuration file"
-#~ msgstr "Stillingarskrá"
-
-#~ msgid ""
-#~ "Configuration step!\n"
-#~ "\n"
-#~ "You need to define the Security Policies and then to \n"
-#~ "configure the automatic key exchange (IKE) daemon. \n"
-#~ "The KAME IKE daemon we're using is called 'racoon'.\n"
-#~ "\n"
-#~ "What would you like to configure?\n"
-#~ msgstr ""
-#~ "Stillingaþrep!\n"
-#~ "\n"
-#~ "Þú þarft að skilgreina öryggisstefnu og síðan \n"
-#~ "stilla sjálfvirka lyklamiðlaran - (IKE) þjóninn.\n"
-#~ "KAME IKE þjónustan sem við notum heitir 'racoon'.\n"
-#~ "\n"
-#~ "Hvað vilt þú stilla?\n"
-
-#~ msgid "%s entries"
-#~ msgstr "%s færslur"
-
-#~ msgid ""
-#~ "The %s file contents\n"
-#~ "is divided into sections.\n"
-#~ "\n"
-#~ "You can now:\n"
-#~ "\n"
-#~ "  - display, add, edit, or remove sections, then\n"
-#~ "  - commit the changes\n"
-#~ "\n"
-#~ "What would you like to do?\n"
-#~ msgstr ""
-#~ "Innihald skráarinnar %s\n"
-#~ "er skipt í nokkra hluta.\n"
-#~ "\n"
-#~ "Þú getur nú:\n"
-#~ "\n"
-#~ "   - sýnt, bætt við, sýslað, eða fjarlægt hluta, síðan\n"
-#~ "   - sett inn breytingarnar\n"
-#~ "\n"
-#~ "Hvað vilt þú gera?\n"
-
-#~ msgid ""
-#~ "_:display here is a verb\n"
-#~ "Display"
-#~ msgstr "Sýna"
-
-#~ msgid "Edit"
-#~ msgstr "Sýsl"
-
-#~ msgid "Commit"
-#~ msgstr "Setja inn"
-
-#~ msgid ""
-#~ "_:display here is a verb\n"
-#~ "Display configuration"
-#~ msgstr "Sýna uppsetningu"
-
-#~ msgid ""
-#~ "The %s file does not exist.\n"
-#~ "\n"
-#~ "This must be a new configuration.\n"
-#~ "\n"
-#~ "You'll have to go back and choose 'add'.\n"
-#~ msgstr ""
-#~ "Skráin %s er ekki til.\n"
-#~ "\n"
-#~ "Þetta hlýtur að vera ný uppsetning.\n"
-#~ "\n"
-#~ "Þú verður að fara til baka og velja 'Bæta við'.\n"
-
-#~ msgid ""
-#~ "Add a Security Policy.\n"
-#~ "\n"
-#~ "You can now add a Security Policy.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data.\n"
-#~ msgstr ""
-#~ "Bæta við öryggisstefnu.\n"
-#~ "\n"
-#~ "Þú getur nú bætt við öryggisstefnu.\n"
-#~ "\n"
-#~ "Veldu síðan 'Áfram' til að skrifa gögnin.\n"
-
-#~ msgid "Edit section"
-#~ msgstr "Sýsla með kafla"
-
-#~ msgid ""
-#~ "Your %s file has several sections or connections.\n"
-#~ "\n"
-#~ "You can choose here below the one you want to edit \n"
-#~ "and then click on next.\n"
-#~ msgstr ""
-#~ "%s skráin þín getur innihaldið nokkra kafla eða tengingar.\n"
-#~ "\n"
-#~ "Þú getur valið þann sem þú vilt sýsla með hér að neðan \n"
-#~ "og smellt á 'Næsta'.\n"
-
-#~ msgid "Section names"
-#~ msgstr "Nöfn kafla"
-
-#~ msgid ""
-#~ "Edit a Security Policy.\n"
-#~ "\n"
-#~ "You can now edit a Security Policy.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data.\n"
-#~ msgstr ""
-#~ "Sýsla með öryggisstefnur.\n"
-#~ "\n"
-#~ "Þú getur nú sýslað með öryggisstefnur.\n"
-#~ "\n"
-#~ "Veldu síðan 'Áfram' til að skrifa gögnin.\n"
-
-#~ msgid "Remove section"
-#~ msgstr "Fjarlægja hluta"
-
-#~ msgid ""
-#~ "Your %s file has several sections or connections.\n"
-#~ "\n"
-#~ "You can choose here below the one you want to remove\n"
-#~ "and then click on next.\n"
-#~ msgstr ""
-#~ "Skráin %s hefur marga kafla eða tengingar.\n"
-#~ "\n"
-#~ "Þú getur valið þann sem þú vilt fjarlægja hér að neðan \n"
-#~ "og smella á 'Næst'.\n"
-
-#~ msgid ""
-#~ "The racoon.conf file configuration.\n"
-#~ "\n"
-#~ "The contents of this file is divided into sections.\n"
-#~ "You can now:\n"
-#~ "  - display \t\t (display the file contents)\n"
-#~ "  - add\t\t\t (add one section)\n"
-#~ "  - edit \t\t\t (modify parameters of an existing section)\n"
-#~ "  - remove \t\t (remove an existing section)\n"
-#~ "  - commit \t\t (writes the changes to the real file)"
-#~ msgstr ""
-#~ "Stillingar racoon.conf skráarinnar.\n"
-#~ "\n"
-#~ "Þessi skrá er kaflaskipt.\n"
-#~ "Þú getur nú:\n"
-#~ "  - display \t\t (sýna innihald skráar)\n"
-#~ "  - add\t\t\t (Bæta við kafla)\n"
-#~ "  - edit \t\t\t (breyta viðföngum í kafla)\n"
-#~ "  - remove \t\t (fjarlægja kafla)\n"
-#~ "  - commit \t\t (skrifa breytingar í raunverulega skrá)"
-
-#~ msgid ""
-#~ "The %s file does not exist\n"
-#~ "\n"
-#~ "This must be a new configuration.\n"
-#~ "\n"
-#~ "You'll have to go back and choose configure.\n"
-#~ msgstr ""
-#~ "Skráin %s er ekki til\n"
-#~ "\n"
-#~ "Þetta hlýtur að vera ný uppsetning.\n"
-#~ "\n"
-#~ "Þú verður að fara til baka og velja stillingar.\n"
-
-#~ msgid "racoon.conf entries"
-#~ msgstr "racoon.conf færslur"
-
-#~ msgid ""
-#~ "The 'add' sections step.\n"
-#~ "\n"
-#~ "Here below is the racoon.conf file skeleton:\n"
-#~ "\t'path'\n"
-#~ "\t'remote'\n"
-#~ "\t'sainfo' \n"
-#~ "\n"
-#~ "Choose the section you would like to add.\n"
-#~ msgstr ""
-#~ "'Bæta við' kafla skrefið.\n"
-#~ "\n"
-#~ "Hér er beinagrind af racoon.conf skrá:\n"
-#~ "\t'path'\n"
-#~ "\t'remote'\n"
-#~ "\t'sainfo' \n"
-#~ "\n"
-#~ "Veldu kafla sem þú vilt bæta við.\n"
-
-#~ msgid "path"
-#~ msgstr "slóð"
-
-#~ msgid "remote"
-#~ msgstr "yfir net"
-
-#~ msgid "sainfo"
-#~ msgstr "sainfo"
-
-#~ msgid ""
-#~ "The 'add path' section step.\n"
-#~ "\n"
-#~ "The path sections have to be on top of your racoon.conf file.\n"
-#~ "\n"
-#~ "Put your mouse over the certificate entry to obtain online help."
-#~ msgstr ""
-#~ "'Bæta við slóð' þrepið.\n"
-#~ "\n"
-#~ "Slóðarkaflinn verður að vera efst í racoon.conf skránni.\n"
-#~ "\n"
-#~ "Færðu músabendilinn yfir skírteinis-færsluna til að sækja hjálp."
-
-#~ msgid "path type"
-#~ msgstr "slóðartegund"
-
-#~ msgid ""
-#~ "path include path: specifies a path to include\n"
-#~ "a file. See File Inclusion.\n"
-#~ "\tExample: path include '/etc/racoon'\n"
-#~ "\n"
-#~ "path pre_shared_key file: specifies a file containing\n"
-#~ "pre-shared key(s) for various ID(s). See Pre-shared key File.\n"
-#~ "\tExample: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
-#~ "\n"
-#~ "path certificate path: racoon(8) will search this directory\n"
-#~ "if a certificate or certificate request is received.\n"
-#~ "\tExample: path certificate '/etc/cert' ;\n"
-#~ "\n"
-#~ "File Inclusion: include file \n"
-#~ "other configuration files can be included.\n"
-#~ "\tExample: include \"remote.conf\" ;\n"
-#~ "\n"
-#~ "Pre-shared key File: Pre-shared key file defines a pair\n"
-#~ "of the identifier and the shared secret key which are used at\n"
-#~ "Pre-shared key authentication method in phase 1."
-#~ msgstr ""
-#~ "path include path: tilgreinir slóð til að innifela\n"
-#~ "skrá. Sjá Lesa inn skrá.\n"
-#~ "\tDæmi: path include '/etc/racoon'\n"
-#~ "\n"
-#~ "path pre_shared_key file: skilgreinir skrá sem inniheldur\n"
-#~ "for-deili lykil fyrir ákveðin auðkenni. Sjá Pre-shared key File.\n"
-#~ "\tDæmi: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
-#~ "\n"
-#~ "path certificate path: racoon(8) mun leita í þessari möppu\n"
-#~ "ef skírteini eða beiðni um skírteini er móttekin.\n"
-#~ "\tDæmi: path certificate '/etc/cert' ;\n"
-#~ "\n"
-#~ "Innifela skrá: lesa inn skrá \n"
-#~ "aðrar skilgreiningraskrár geta verið innifaldar.\n"
-#~ "\tDæmi: include \"remote.conf\" ;\n"
-#~ "\n"
-#~ "Pre-shared key File: Fyrirfram deild lykil skrá skilgreinir\n"
-#~ "auðkenni og dulritunarlykil sem eru notaðir í fyrsta hluta\n"
-#~ "For-deili-lykils auðkennisaðferðinni."
-
-#~ msgid "real file"
-#~ msgstr "raunveruleg skrá"
-
-#~ msgid ""
-#~ "Make sure you already have the path sections\n"
-#~ "on the top of your racoon.conf file.\n"
-#~ "\n"
-#~ "You can now choose the remote settings.\n"
-#~ "Choose continue or previous when you are done.\n"
-#~ msgstr ""
-#~ "Vertu viss um að þú hafir þegar slóðarhlutan\n"
-#~ "efst í racoon.conf skránni.\n"
-#~ "\n"
-#~ "Þú getur nú breytt \"remote\" stillingum.\n"
-#~ "Veldu 'Áfram' eða 'Fyrra' þegar þú ert búinn.\n"
-
-#~ msgid ""
-#~ "Make sure you already have the path sections\n"
-#~ "on the top of your %s file.\n"
-#~ "\n"
-#~ "You can now choose the sainfo settings.\n"
-#~ "Choose continue or previous when you are done.\n"
-#~ msgstr ""
-#~ "Vertu viss um að þú sért með slóðarkaflann\n"
-#~ "efst í %s skránni.\n"
-#~ "\n"
-#~ "Þú getur nú valið \"sainfo\" stillingarnar.\n"
-#~ "Veldu 'Áfram' eða 'Fyrri' þegar þú ert búinn.\n"
-
-#~ msgid ""
-#~ "Your %s file has several sections or connections.\n"
-#~ "\n"
-#~ "You can choose here in the list below the one you want\n"
-#~ "to edit and then click on next.\n"
-#~ msgstr ""
-#~ "%s skráin inniheldur nokkra hluta eða tengingar.\n"
-#~ "\n"
-#~ "Þú getur valið hvern af þeim þú vilt sýsla við hér að neðan\n"
-#~ "og smellt á 'Næsta'.\n"
-
-#~ msgid ""
-#~ "Your %s file has several sections.\n"
-#~ "\n"
-#~ "\n"
-#~ "You can now edit the remote section entries.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data.\n"
-#~ msgstr ""
-#~ "Skráin þín %s inniheldur nokkra hluta.\n"
-#~ "\n"
-#~ "\n"
-#~ "Þú getur nú sýslað með færslur í \"remote\" hlutanum.\n"
-#~ "\n"
-#~ "Veldu 'Áfram' þegar þú ert búinn til að skrifa gögnin.\n"
-
-#~ msgid ""
-#~ "Your %s file has several sections.\n"
-#~ "\n"
-#~ "You can now edit the sainfo section entries.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data."
-#~ msgstr ""
-#~ "Skráin þín %s inniheldur nokkra hluta.\n"
-#~ "\n"
-#~ "Þú getur nú sýslað með færslur í \"sainfo\" hlutanum.\n"
-#~ "\n"
-#~ "Veldu 'Áfram' þegar þú ert búinn til að skrifa gögnin."
-
-#~ msgid ""
-#~ "This section has to be on top of your\n"
-#~ "%s file.\n"
-#~ "\n"
-#~ "Make sure all other sections follow these path\n"
-#~ "sections.\n"
-#~ "\n"
-#~ "You can now edit the path entries.\n"
-#~ "\n"
-#~ "Choose continue or previous when you are done.\n"
-#~ msgstr ""
-#~ "Þessi hluti verður að vera efst í þinni\n"
-#~ "%s skrá.\n"
-#~ "\n"
-#~ "Vertu viss um að allir aðrir hlutar séu á eftir\n"
-#~ "þessum slóðarhluta.\n"
-#~ "\n"
-#~ "Þú getur nú sýslað með slóðarfærslurnar.\n"
-#~ "\n"
-#~ "Veldu 'Áfram' eða 'Fyrri' þegar þú ert búinn.\n"
-
-#~ msgid "Congratulations!"
-#~ msgstr "Til hamingju!"
-
-#~ msgid ""
-#~ "Everything has been configured.\n"
-#~ "\n"
-#~ "You may now share resources through the Internet,\n"
-#~ "in a secure way, using a VPN connection.\n"
-#~ "\n"
-#~ "You should make sure that the tunnels shorewall\n"
-#~ "section is configured."
-#~ msgstr ""
-#~ "Allt hefur verið stillt.\n"
-#~ "\n"
-#~ "Þú getur nú miðlað auðlindum þínum um internetið,\n"
-#~ "á öruggan hátt, með VPN tengingu.\n"
-#~ "\n"
-#~ "Þú ættir að staðfesta að shorewall rásir séu opnar\n"
-#~ "og stilltar."
-
-#~ msgid "PFS group"
-#~ msgstr "PFS hópur"
-
-#~ msgid "Lifetime number"
-#~ msgstr "Líftímatala"
-
-#~ msgid "Lifetime unit"
-#~ msgstr "Líftímaeining"
-
-#~ msgid "Encryption algorithm"
-#~ msgstr "Dulritunaralgrím"
-
-#~ msgid "Authentication algorithm"
-#~ msgstr "Auðkennis-algrím"
-
-#~ msgid "Compression algorithm"
-#~ msgstr "Þjöppunar-algrím"
-
-#~ msgid "deflate"
-#~ msgstr "Þjappa"
-
-#~ msgid "Remote"
-#~ msgstr "Fjarlæg vél"
-
-#~ msgid ""
-#~ "remote (address | anonymous) [[port]] { statements }\n"
-#~ "specifies the parameters for IKE phase 1 for each remote node.\n"
-#~ "The default port is 500.  If anonymous is specified, the state-\n"
-#~ "ments apply to all peers which do not match any other remote\n"
-#~ "directive.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "remote anonymous\n"
-#~ "remote ::1 [8000]"
-#~ msgstr ""
-#~ "remote (addressa | anonymous) [[port]] { setningar }\n"
-#~ "tilgreinir gildi fyrsta fasa IKE fyrir hvern fjarpunkt.\n"
-#~ "Sjálfgefið port er 500.  Ef anonymous er tilgreint, þá eiga\n"
-#~ "setningarnar við alla mótaðila sem passa ekki við önnur\n"
-#~ "auðkenni.\n"
-#~ "\n"
-#~ "Dæmi: \n"
-#~ "\n"
-#~ "remote anonymous\n"
-#~ "remote ::1 [8000]"
-
-#~ msgid "Exchange mode"
-#~ msgstr "Samskiptahamur"
-
-#~ msgid ""
-#~ "defines the exchange mode for phase 1 when racoon is the\n"
-#~ "initiator. Also it means the acceptable exchange mode\n"
-#~ "when racoon is responder. More than one mode can be\n"
-#~ "specified by separating them with a comma. All of the\n"
-#~ "modes are acceptable. The first exchange mode is what\n"
-#~ "racoon uses when it is the initiator.\n"
-#~ msgstr ""
-#~ "skilgreinir samskiptaham fyrir fyrsta hluta þegar racoon er\n"
-#~ "frumkvöðull. Það þýðir einnig viðsættanleg samskipti þegar\n"
-#~ "racoon er hlustandi. Tilgreina má fleiri en einn ham með\n"
-#~ "því að aðskilja þá með kommum. Allar tegundir eru leyfilegar\n"
-#~ "Fyrsti samskiptahamurinn er það sem racoon notar þegar\n"
-#~ "hann er frumkvöðull.\n"
-
-#~ msgid "Generate policy"
-#~ msgstr "Búa til stefnu"
-
-#~ msgid "off"
-#~ msgstr "af"
-
-#~ msgid "on"
-#~ msgstr "á"
-
-#~ msgid "Passive"
-#~ msgstr "Hlutlaus"
-
-#~ msgid ""
-#~ "If you do not want to initiate the negotiation, set this\n"
-#~ "to on.  The default value is off.  It is useful for a\n"
-#~ "server."
-#~ msgstr ""
-#~ "Ef þú vilt ekki hefja samninga, krossaðu þá við hér\n"
-#~ "sjálfgefið er slökkt.  þetta er handhægt fyrir miðlara."
-
-#~ msgid "Certificate type"
-#~ msgstr "Tegund skírteinis"
-
-#~ msgid "My certfile"
-#~ msgstr "Mín skírt.-skrá"
-
-#~ msgid "Name of the certificate"
-#~ msgstr "Nafn skírteinis"
-
-#~ msgid "My private key"
-#~ msgstr "Minn einkalykill"
-
-#~ msgid "Name of the private key"
-#~ msgstr "Nafn einkalykils"
-
-#~ msgid "Peers certfile"
-#~ msgstr "Tengi skírt.-skrá"
-
-#~ msgid "Name of the peers certificate"
-#~ msgstr "Nafn skírteinis mótaðila"
-
-#~ msgid "Verify cert"
-#~ msgstr "Staðfesta skírteini"
-
-#~ msgid ""
-#~ "If you do not want to verify the peer's certificate for\n"
-#~ "some reason, set this to off.  The default is on."
-#~ msgstr ""
-#~ "Ef þú vilt ekki staðfesta skírteini mótaðila af einhverri\n"
-#~ "ástæðu, slökktu þá á þessu.  Sjálfgefið er kveikt."
-
-#~ msgid "My identifier"
-#~ msgstr "Auðkenni mitt"
-
-#~ msgid ""
-#~ "specifies the identifier sent to the remote host and the\n"
-#~ "type to use in the phase 1 negotiation.  address, FQDN,\n"
-#~ "user_fqdn, keyid and asn1dn can be used as an idtype.\n"
-#~ "they are used like:\n"
-#~ "\tmy_identifier address [address];\n"
-#~ "\t\tthe type is the IP address.  This is the default\n"
-#~ "\t\ttype if you do not specify an identifier to use.\n"
-#~ "\tmy_identifier user_fqdn string;\n"
-#~ "\t\tthe type is a USER_FQDN (user fully-qualified\n"
-#~ "\t\tdomain name).\n"
-#~ "\tmy_identifier FQDN string;\n"
-#~ "\t\tthe type is a FQDN (fully-qualified domain name).\n"
-#~ "\tmy_identifier keyid file;\n"
-#~ "\t\tthe type is a KEY_ID.\n"
-#~ "\tmy_identifier asn1dn [string];\n"
-#~ "\t\tthe type is an ASN.1 distinguished name.  If\n"
-#~ "\t\tstring is omitted, racoon(8) will get DN from\n"
-#~ "\t\tSubject field in the certificate.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "my_identifier user_fqdn \"myemail@mydomain.com\""
-#~ msgstr ""
-#~ "skilgreinir auðkenni sent til fjarlægrar vélar og tegund\n"
-#~ "sem á að nota í fyrsta hluta samskipta.  address, FQDN,\n"
-#~ "user_fqdn, keyid og asn1dn má nota sem einkenni.\n"
-#~ "þetta er notað líkt og:\n"
-#~ "\tmitt_merki address [addressa];\n"
-#~ "\t\thér er gefin upp IP-addressan.  Þetta er sjálfgefið\n"
-#~ "\t\tauðkenni ef þú gefur ekki upp neitt annað.\n"
-#~ "\tmitt_merki user_fqdn strengur;\n"
-#~ "\t\thér skal gefa upp full-formað lénsnafn notanda\n"
-#~ "\tmitt_merki FQDN strengur;\n"
-#~ "\t\thér skal gefa upp full-formað lénsnafn.\n"
-#~ "\tmitt_merki keyid skrá;\n"
-#~ "\t\thér skal gefa upp lykiltegund (KEY_ID).\n"
-#~ "\tmitt_merki asn1dn [strengur];\n"
-#~ "\t\thér skal gefa upp 'ASN.1 distinguished name'.  Ef\n"
-#~ "\t\tþessu svæði er sleppt, þá leitar racoon(8) að DN\n"
-#~ "\t\tí viðfangs-svæði í skírteini.\n"
-#~ "\n"
-#~ "Dæmi: \n"
-#~ "\n"
-#~ "mitt_merki user_fqdn \"minn_postur@katla.is\""
-
-#~ msgid "Peers identifier"
-#~ msgstr "Auðkenni tengis"
-
-#~ msgid "Proposal"
-#~ msgstr "Tillaga"
-
-#~ msgid ""
-#~ "specify the encryption algorithm used for the\n"
-#~ "phase 1 negotiation. This directive must be defined. \n"
-#~ "algorithm is one of the following: \n"
-#~ "\n"
-#~ "DES, 3DES, blowfish, cast128 for oakley.\n"
-#~ "\n"
-#~ "For other transforms, this statement should not be used."
-#~ msgstr ""
-#~ "gefðu upp dulritunar-algrím sem á að nota fyrir\n"
-#~ "fyrsta stig samskipta. Þetta verður að vera skilgreint.\n"
-#~ "algrímið verður að vera eitt af eftirfarandi: \n"
-#~ "\n"
-#~ "DES, 3DES, blowfish, cast128 fyrir oakley.\n"
-#~ "\n"
-#~ "Fyrir aðrar uppsetningar ætti ekki að nota þessa setningu."
-
-#~ msgid "Hash algorithm"
-#~ msgstr "Hash algrím"
-
-#~ msgid "Authentication method"
-#~ msgstr "Auðkenningarregla"
-
-#~ msgid "DH group"
-#~ msgstr "DH hópur"
-
-#~ msgid "Command"
-#~ msgstr "Skipun"
-
-#~ msgid "Source IP range"
-#~ msgstr "Uppruna IP-svæði"
-
-#~ msgid "Destination IP range"
-#~ msgstr "Áfanga IP-svæði"
-
-#~ msgid "Upper-layer protocol"
-#~ msgstr "Efri samskiptastaðall"
-
-#~ msgid "any"
-#~ msgstr "hver sem er"
-
-#~ msgid "Flag"
-#~ msgstr "Flögg"
-
-#~ msgid "Direction"
-#~ msgstr "Stefna"
-
-#~ msgid "IPsec policy"
-#~ msgstr "IPsec stefna"
-
-#~ msgid "ipsec"
-#~ msgstr "ipsec"
-
-#~ msgid "discard"
-#~ msgstr "henda"
-
-#~ msgid "none"
-#~ msgstr "ekkert"
-
-#~ msgid "Mode"
-#~ msgstr "Hamur"
-
-#~ msgid "tunnel"
-#~ msgstr "rás"
-
-#~ msgid "transport"
-#~ msgstr "flutningsleið"
-
-#~ msgid "Source/destination"
-#~ msgstr "Upphaf/Áfangi"
-
-#~ msgid "Level"
-#~ msgstr "Þrep"
-
-#~ msgid "require"
-#~ msgstr "Þarfnast"
-
-#~ msgid "default"
-#~ msgstr "sjálfgefið"
-
-#~ msgid "use"
-#~ msgstr "nota"
-
-#~ msgid "unique"
-#~ msgstr "einkvæm"
-
-#~ msgid "You need to log out and back in again for changes to take effect"
-#~ msgstr "Þú þarft að skrá þig út og inn aftur til að breytingar taki gildi"
-
-#, fuzzy
-#~ msgid "Process attack"
-#~ msgstr "Ráðist á þjónustu"
-
-#~ msgid "Interactive Firewall: intrusion detected"
-#~ msgstr "Active Firewall: árás skynjuð"
-
-#~ msgid "What do you want to do with this attacker?"
-#~ msgstr "Hvað viltu gera við árásaraðilann?"
-
-#~ msgid "Attack details"
-#~ msgstr "Árásarupplýsingar"
-
-#~ msgid "Attack time: %s"
-#~ msgstr "Árásartími: %s"
-
-#~ msgid "Network interface: %s"
-#~ msgstr "Nettengi: %s"
-
-#~ msgid "Attack type: %s"
-#~ msgstr "Árásartegund: %s"
-
-#~ msgid "Protocol: %s"
-#~ msgstr "Samskiptaregla: %s"
-
-#~ msgid "Attacker IP address: %s"
-#~ msgstr "IP-tala árásartölvu: %s"
-
-#~ msgid "Attacker hostname: %s"
-#~ msgstr "Vélarnafn árásartölvu: %s"
-
-#~ msgid "Service attacked: %s"
-#~ msgstr "Ráðist á þjónustu: %s"
-
-#~ msgid "Port attacked: %s"
-#~ msgstr "Ráðist á gátt: %s"
-
-#~ msgid "Type of ICMP attack: %s"
-#~ msgstr "Tegund af ICMP árás: %s"
-
-#~ msgid "Always blacklist (do not ask again)"
-#~ msgstr "Alltaf svartlista (ekki spyrja aftur)"
-
-#~ msgid "Ignore"
-#~ msgstr "Hunsa"
-
-#~ msgid "Interactive Firewall: new service"
-#~ msgstr "Gagnvirkur eldveggur: ný þjónusta"
-
-#, fuzzy
-#~ msgid "Process connection"
-#~ msgstr "Þráðlaus tenging"
-
-#~ msgid "Do you want to open this service?"
-#~ msgstr "Viltu opna þessa þjónustu?"
-
-#~ msgid "Remember this answer"
-#~ msgstr "Muna þetta svar"
-
-#~ msgid "Use Cisco-UDP encapsulation"
-#~ msgstr "Nota cisco-UDP til að umlykja samskiptareglu"
-
-#~ msgid "Gateway:"
-#~ msgstr "Netgátt:"
-
-#~ msgid "Interface:"
-#~ msgstr "Tengi:"
-
-#~ msgid "Manage connections"
-#~ msgstr "Sýsla með tengingar"
-
-#~ msgid "IP configuration"
-#~ msgstr "IP uppsetning"
-
-#~ msgid "DNS servers"
-#~ msgstr "Nafnamiðlarar (DNS)"
-
-#~ msgid "Search Domain"
-#~ msgstr "Leita í léni"
-
-#~ msgid "static"
-#~ msgstr "föst"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Start at boot"
-#~ msgstr "Ræsa við kerfisræsingu"
-
-#~ msgid "Flow control"
-#~ msgstr "Flæðistýring"
-
-#~ msgid "Line termination"
-#~ msgstr "Endir á línu"
-
-#~ msgid "Modem timeout"
-#~ msgstr "Mótaldstími rennur út"
-
-#~ msgid "Use lock file"
-#~ msgstr "Nota læsiskrá"
-
-#~ msgid "Wait for dialup tone before dialing"
-#~ msgstr "Bíða eftir sóni áður en hringt er"
-
-#~ msgid "Busy wait"
-#~ msgstr "Upptekið-beðið í"
-
-#~ msgid "Modem sound"
-#~ msgstr "Módaldshljóð"
-
-#~ msgid "Vendor"
-#~ msgstr "Framleiðandi"
-
-#~ msgid "Description"
-#~ msgstr "Lýsing"
-
-#~ msgid "Media class"
-#~ msgstr "Flokkur miðils"
-
-#~ msgid "Module name"
-#~ msgstr "Nafn einingar"
-
-#~ msgid "Mac Address"
-#~ msgstr "Mac Adressa"
-
-#~ msgid "Bus"
-#~ msgstr "Braut"
-
-#~ msgid "Location on the bus"
-#~ msgstr "Staðsetning á braut"
-
-#~ msgid "Remove a network interface"
-#~ msgstr "Fjarlægja nettengingu"
-
-#~ msgid "Select the network interface to remove:"
-#~ msgstr "Veldu nettengi sem á að fjarlægja:"
-
-#~ msgid ""
-#~ "An error occurred while deleting the \"%s\" network interface:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Villa kom upp þegar reynt var að eyða nettenginu \"%s\":\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Congratulations, the \"%s\" network interface has been successfully "
-#~ "deleted"
-#~ msgstr "Til hamingju, tekist hefur að fjarlægja nettengið \"%s\""
-
-#~ msgid "Disconnect..."
-#~ msgstr "Aftengja..."
-
-#~ msgid "Connect..."
-#~ msgstr "Tengjast..."
-
-#~ msgid "Internet connection configuration"
-#~ msgstr "Internet uppsetning"
-
-#~ msgid "Host name (optional)"
-#~ msgstr "Vélarnafn (þarf ekki)"
-
-#~ msgid "Third DNS server (optional)"
-#~ msgstr "Þriðji nafnamiðlari (ekki krafist)"
-
-#~ msgid "Internet Connection Configuration"
-#~ msgstr "Internet uppsetning"
-
-#~ msgid "Internet access"
-#~ msgstr "Internetaðgangur"
-
-#~ msgid "Status:"
-#~ msgstr "Staða:"
-
-#~ msgid "Parameters"
-#~ msgstr "Viðföng"
-
-#~ msgid "Attacker"
-#~ msgstr "Árásaraðili"
-
-#~ msgid "Attack type"
-#~ msgstr "Árásartegund"
-
-#~ msgid "Failed to add printers."
-#~ msgstr "Gat ekki bætt við prentara."
-
-#~ msgid "Get Online Help"
-#~ msgstr "Sækja nethjálp"
