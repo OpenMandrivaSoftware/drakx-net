@@ -667,7 +667,7 @@ set SSID=$self->{access}{network}{essid}
 set WPAPSK="$self->{access}{network}{key}"
 set TxRate=0)),
         (map { $_ => $self->{ifcfg}{$_} }
-           qw(WIRELESS_NWID WIRELESS_FREQ WIRELESS_SENS WIRELESS_RATE WIRELESS_RTS WIRELESS_FRAG WIRELESS_IWCONFIG WIRELESS_IWSPY), if_(!$self->need_rt2x00_iwpriv, 'WIRELESS_IWPRIV')),
+           qw(WIRELESS_NWID WIRELESS_FREQ WIRELESS_SENS WIRELESS_RATE WIRELESS_RTS WIRELESS_FRAG WIRELESS_IWCONFIG WIRELESS_IWSPY CRDA_DOMAIN), if_(!$self->need_rt2x00_iwpriv, 'WIRELESS_IWPRIV')),
     };
     $self->SUPER::build_ifcfg_settings($settings);
 }
