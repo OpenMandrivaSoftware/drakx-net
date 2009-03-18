@@ -77,7 +77,7 @@ With that feature, other computers on your local network will be able to use thi
 
 Make sure you have configured your Network/Internet access using drakconnect before going any further.
 
-Note: you need a dedicated Network Adapter to set up a Local Area Network (LAN)."),
+Note: you need a dedicated Network Adapter to set up a Local Area Network (LAN). Please disable Mandriva Firewall for the network adapter connected to your LAN connection before proceeding."),
 	      post => sub {
 		  $gw_enabled = !$shorewall->{disabled} && grep { !/^#/ } cat_($masq_file);
 		  return $gw_enabled ? "ask_reconfigure" : "choose_net_interface";
@@ -138,11 +138,15 @@ What would you like to do?"); #- FIXME : not used for now
 	     one_lan_interface =>
 	     {
 	      name => sub {
-		  N("There is only one configured network adapter on your system:
+		  N("There is only one network adapter on your system configured for LAN connections:
 
 %s
 
-I am about to setup your Local Area Network with that adapter.", format_interfaces($lan_interface_name));
+I am about to setup your Local Area Network with that adapter.
+
+If you have any other adapter connected to Local Area Network,
+disable the firewall protection on it using drakfirewall before
+configuring Internet Connection sharing.", format_interfaces($lan_interface_name));
 	      },
 	      next => "lan_configure",
 	     },
@@ -301,7 +305,9 @@ If you do not know the meaning of an option, simply leave it as it is."),
 
 	     end_no_lan_interface =>
 	     {
-	      name => N("No ethernet network adapter has been detected on your system. Please run the hardware configuration tool."),
+	      name => N("No ethernet network adapter configured for LAN has been detected on your system.
+
+Please run the hardware configuration tool to configure it, and certify that the Mandirva firewall is not enabled for network adapter connected to your LAN network."),
 	      end => 1,
 	     },
 
