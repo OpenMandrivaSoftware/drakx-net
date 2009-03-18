@@ -79,6 +79,9 @@ sub get_zones {
 All interfaces directly connected to Internet should be selected,
 while interfaces connected to a local network may be unselected.
 
+If you intend to use Mandriva Internet Connection sharing,
+unselect interfaces which will be connected to local network.
+
 Which interfaces should be protected?
 "),
     }, [
