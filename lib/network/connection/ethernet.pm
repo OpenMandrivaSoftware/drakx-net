@@ -279,6 +279,8 @@ sub write_settings {
         }
     }
     $self->SUPER::write_settings($o_net, $o_modules_conf);
+    # update udev configuration
+    update_udev_net_config();
 }
 
 sub get_status_message {
