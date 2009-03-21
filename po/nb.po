@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
 "POT-Creation-Date: 2009-02-13 20:39-0200\n"
-"PO-Revision-Date: 2009-03-20 15:38+0100\n"
+"PO-Revision-Date: 2009-03-21 20:26+0100\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -1818,14 +1818,14 @@ msgstr ""
 #: ../bin/draksambashare:1074
 #, c-format
 msgid "Single server installations may use smbpasswd or tdbsam password backends"
-msgstr ""
+msgstr "Enkeltjener installasjoner kan benytte smbpassord eller tdbsam passordbakstykker"
 
 #: ../bin/draksambashare:1074
 #, c-format
 msgid ""
 "Domain master = yes, causes the server to register the NetBIOS name <pdc "
 "name>. This name will be recognized by other servers."
-msgstr ""
+msgstr "Domainmaster = ja, gjør at tjeneren registrerer NetBIOS-navnet <pdc-navn>. Dette navnet vil bli gjenkjent av andre tjenere."
 
 #: ../bin/draksambashare:1091
 #, c-format
@@ -3668,6 +3668,10 @@ msgid ""
 "\tOthers such as key_mgmt, eap maybe used to force\n"
 "\tspecial settings different from the U.I settings."
 msgstr ""
+"Her kan en gi ekstra instillinger for wpa_supplicant<br> The forventede formatet er en strengfelt=verdipar. Flere verdier<br> kan bli spesifisert, separert med #.<br> Noter: direktiver blir gitt usjekket og kan forårsake at wpa<br>-forespørslene feiler uten tilbakemelding. Støttede direktiver blir tatt vare på<br> ved redigering. Støttede direktiver er:<br> \tdisabled, id_str, bssid, priority, auth_alg, eapol, flags,<br> "
+"\tdproactive_key_caching, peerkey, ca_path, private_key,<br> "
+"\tdprivate_key_passwd, dh_file, altsubject_match_phase1,<br> "
+"\tfragment_size og eap_workaround, pairwise, group<br> \tOthers som key_mgmt, eap kan bli brukt for å tvinge<br> \tspecial-instillinger forskjellige fra instillingene i brukergrensesnitet. "
 
 #: ../lib/network/connection/wireless.pm:582
 #, c-format
