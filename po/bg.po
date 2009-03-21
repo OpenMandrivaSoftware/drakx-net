@@ -1,22 +1,24 @@
 # translation of drakx-net-bg.po to Bulgarian
 # Copyright (C) 2000,2003 Free Software Foundation, Inc.
 # Copyright (c) 2000 Mandriva
+#
+#
 # Bozhan Boiadzhiev <bozhan@plov.omega.bg>, 2000.
 # Borislav Aleksandrov <B.Aleksandrov@cnsys.bg>, 2003.
 # Boyan Ivanov <boyan17@bulgaria.com>, 2003.
-#
-#
+# Kolio Kolev <kolio_kolev@biotronica.net>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-bg\n"
 "POT-Creation-Date: 2009-02-13 20:39-0200\n"
-"PO-Revision-Date: 2004-09-15 13:27+0200\n"
-"Last-Translator: Boyan Ivanov <boyan17@bulgaria.com>\n"
-"Language-Team: Bulgarian <dict@linux.zonebg.com>\n"
+"PO-Revision-Date: 2009-03-19 00:24+0200\n"
+"Last-Translator: Kolio Kolev <kolio_kolev@biotronica.net>\n"
+"Language-Team: Mandriva User Group - Bulgaria <mandriva-bg@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.2\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../bin/drakconnect-old:45
 #, c-format
@@ -91,7 +93,7 @@ msgstr "Отказ"
 #: ../bin/drakconnect-old:265 ../bin/draknetprofile:135 ../bin/net_monitor:389
 #, c-format
 msgid "Ok"
-msgstr "Ok"
+msgstr "Да"
 
 #: ../bin/drakconnect-old:113 ../bin/drakgw:345 ../bin/draknfs:582
 #: ../bin/draksambashare:229 ../lib/network/connection_manager.pm:73
@@ -112,15 +114,13 @@ msgstr "Моля изчакайте"
 msgid "Please Wait... Applying the configuration"
 msgstr "Моля, почакайте ... Прилагане на настройките"
 
-#: ../bin/drakconnect-old:141
-#, fuzzy, c-format
+#: ../bin/drakconnect-old:141, c-format
 msgid "Deactivate now"
-msgstr "деактивирай сега"
+msgstr "Деактивирай сега"
 
-#: ../bin/drakconnect-old:141
-#, fuzzy, c-format
+#: ../bin/drakconnect-old:141, c-format
 msgid "Activate now"
-msgstr "активирай сега"
+msgstr "Активирай сега"
 
 #: ../bin/drakconnect-old:175
 #, c-format
@@ -134,7 +134,7 @@ msgstr ""
 #: ../bin/drakconnect-old:189
 #, c-format
 msgid "LAN Configuration"
-msgstr "Настройка на локална мрежа"
+msgstr "Настройка на LAN"
 
 #: ../bin/drakconnect-old:201
 #, c-format
@@ -148,59 +148,56 @@ msgid "Netmask"
 msgstr "Мрежова маска"
 
 #: ../bin/drakconnect-old:210
-#, c-format
+#, fuzzy, c-format
 msgid "Boot Protocol"
-msgstr "Стартиращ протокол"
+msgstr ""
 
 #: ../bin/drakconnect-old:211
-#, c-format
+#, fuzzy, c-format
 msgid "Started on boot"
-msgstr "Пуснат при стартиране"
+msgstr ""
 
 #: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:152
 #, c-format
 msgid "DHCP client"
 msgstr "DHCP клиент"
 
-#: ../bin/drakconnect-old:247
-#, fuzzy, c-format
+#: ../bin/drakconnect-old:247, c-format
+#, fuzzy
 msgid ""
 "This interface has not been configured yet.\n"
 "Run the \"%s\" assistant from the Mandriva Linux Control Center"
 msgstr ""
-"Нямате Internet връзка.\n"
-"Създайте такава, като цъкнете на 'Настрой'"
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:104
 #, c-format
 msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
-msgstr "Настройване на мрежов интервейс (LAN, ISDN, ADSL, ...)"
+msgstr "Настройване на мрежов интерфейс (LAN, ISDN, ADSL, ...)"
 
 #: ../bin/drakconnect-old:273 ../bin/drakconnect-old:305
 #: ../lib/network/drakconnect.pm:16
 #, c-format
 msgid "No IP"
-msgstr ""
+msgstr "Няма IP"
 
 #: ../bin/drakconnect-old:306 ../lib/network/drakconnect.pm:17
 #, c-format
 msgid "No Mask"
-msgstr "Лоша маска"
+msgstr "Няма мрежова маска"
 
 #: ../bin/drakconnect-old:307 ../lib/network/drakconnect.pm:18
 #, c-format
 msgid "up"
-msgstr ""
+msgstr "включен"
 
-#: ../bin/drakconnect-old:307 ../lib/network/drakconnect.pm:18
-#, fuzzy, c-format
+#: ../bin/drakconnect-old:307 ../lib/network/drakconnect.pm:18, c-format
 msgid "down"
-msgstr "готово"
+msgstr "изключен"
 
 #: ../bin/drakgw:71
 #, c-format
 msgid "Internet Connection Sharing"
-msgstr "Споделяне на връзката с Интернет"
+msgstr "Споделяне на Интернет"
 
 #: ../bin/drakgw:75
 #, c-format
@@ -269,7 +266,7 @@ msgstr "Преконфигуриране"
 #: ../bin/drakgw:122
 #, c-format
 msgid "Please select the network interface directly connected to the internet."
-msgstr ""
+msgstr "Моля, изберете мрежов интефейс, който е директно свързан с интернет."
 
 #: ../bin/drakgw:123 ../lib/network/netconnect.pm:360
 #: ../lib/network/netconnect.pm:395
@@ -300,15 +297,13 @@ msgid ""
 msgstr ""
 "Моля изберете кой мрежов адаптер да бъде включен към локалната ви мрежа."
 
-#: ../bin/drakgw:173
-#, fuzzy, c-format
+#: ../bin/drakgw:173, c-format
 msgid "Local Area Network settings"
-msgstr "Адрес на Локална мрежа"
+msgstr "Настройки за Локална мрежа"
 
-#: ../bin/drakgw:176 ../lib/network/vpn/openvpn.pm:227
-#, fuzzy, c-format
+#: ../bin/drakgw:176 ../lib/network/vpn/openvpn.pm:227, c-format
 msgid "Local IP address"
-msgstr "IP адрес"
+msgstr "Локален IP адрес"
 
 #: ../bin/drakgw:178
 #, c-format
@@ -368,7 +363,7 @@ msgstr ""
 #: ../bin/drakgw:205
 #, c-format
 msgid "The DNS Server IP"
-msgstr "DNS сървър IP"
+msgstr "IP адрес на DNS сървър "
 
 #: ../bin/drakgw:232
 #, c-format
@@ -378,66 +373,66 @@ msgid ""
 "Here you can select different options for the DHCP server configuration.\n"
 "If you do not know the meaning of an option, simply leave it as it is."
 msgstr ""
+"Конфигуриране на DHCP.\n"
+"\n"
+"Можете да изберете различни опции за настрийките за DHCP сърър\n"
+"Ако не знаете какво да правите, то просто оставете настрийките по "
+"подразбиране."
 
-#: ../bin/drakgw:239
-#, fuzzy, c-format
+#: ../bin/drakgw:239, c-format
 msgid "Use automatic configuration (DHCP)"
-msgstr "Автоматична реконфигурация"
+msgstr "Автоматична конфигурация (DHCP)"
 
 #: ../bin/drakgw:240
 #, c-format
 msgid "The DHCP start range"
-msgstr ""
+msgstr "Начало на DHCP обхват"
 
 #: ../bin/drakgw:241
 #, c-format
 msgid "The DHCP end range"
-msgstr ""
+msgstr "Край на DHCP обхват"
 
 #: ../bin/drakgw:242
 #, c-format
 msgid "The default lease (in seconds)"
-msgstr ""
+msgstr "Време за ползване по подразбиране (в секунди)"
 
 #: ../bin/drakgw:243
 #, c-format
 msgid "The maximum lease (in seconds)"
-msgstr ""
+msgstr "Максимално време за ползване (в секунди)"
 
 #: ../bin/drakgw:266
 #, c-format
 msgid "Proxy caching server (SQUID)"
-msgstr ""
+msgstr "Кеширащ прокси сървър (SQUID)"
 
 #: ../bin/drakgw:270
 #, c-format
 msgid "Use this gateway as proxy caching server"
-msgstr ""
+msgstr "Използвай този шлюз като кеширащ прокси сървър."
 
 #: ../bin/drakgw:271
 #, c-format
 msgid "Admin mail"
-msgstr ""
+msgstr "еМайл на администратор"
 
-#: ../bin/drakgw:272
-#, fuzzy, c-format
+#: ../bin/drakgw:272, c-format
 msgid "Visible hostname"
-msgstr "Име на отдалечен хост"
+msgstr "(Видимо) име на хост"
 
-#: ../bin/drakgw:273
-#, fuzzy, c-format
+#: ../bin/drakgw:273, c-format
 msgid "Proxy port"
-msgstr "Собственост"
+msgstr "Прокси порт"
 
-#: ../bin/drakgw:274
-#, fuzzy, c-format
+#: ../bin/drakgw:274, c-format
 msgid "Cache size (MB)"
-msgstr "Размер на кеш"
+msgstr "Размер на кеша (МБ)"
 
-#: ../bin/drakgw:293
-#, fuzzy, c-format
+#: ../bin/drakgw:293, c-format
 msgid "Broadcast printer information"
-msgstr "Информацията за твърдия диск"
+msgstr "Broadcast информация за принтер"
 
 #: ../bin/drakgw:304
 #, c-format
@@ -497,27 +492,24 @@ msgstr "Настройка ..."
 #: ../bin/drakgw:366
 #, c-format
 msgid "Configuring firewall..."
-msgstr ""
+msgstr "Настройка на защитна стена ..."
 
 #: ../bin/drakhosts:100
 #, c-format
 msgid "Please add an host to be able to modify it."
-msgstr ""
+msgstr "Позволи добавяне на (име на) хост, който ще се променя."
 
-#: ../bin/drakhosts:110
-#, fuzzy, c-format
+#: ../bin/drakhosts:110, c-format
 msgid "Please modify information"
-msgstr "Подробна информация"
+msgstr "Позволи промена на информация"
 
-#: ../bin/drakhosts:111
-#, fuzzy, c-format
+#: ../bin/drakhosts:111, c-format
 msgid "Please delete information"
-msgstr "Подробна информация"
+msgstr "Позволи изтриване на информация"
 
-#: ../bin/drakhosts:112
-#, fuzzy, c-format
+#: ../bin/drakhosts:112, c-format
 msgid "Please add information"
-msgstr "Подробна информация"
+msgstr "Позволи добавяне на информация"
 
 #: ../bin/drakhosts:116
 #, c-format
@@ -527,19 +519,18 @@ msgstr "Адрес IP:"
 #: ../bin/drakhosts:117
 #, c-format
 msgid "Host name:"
-msgstr "Хост:"
-
-#: ../bin/drakhosts:118
-#, fuzzy, c-format
-msgid "Host Aliases:"
 msgstr "Име на хост:"
+
+#: ../bin/drakhosts:118, c-format
+msgid "Host Aliases:"
+msgstr "Синоним на хост:"
 
 #: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:230
 #: ../bin/draksambashare:251 ../bin/draksambashare:397
 #: ../bin/draksambashare:626 ../bin/draksambashare:793
 #, c-format
 msgid "Error!"
-msgstr "Грешка !"
+msgstr "Грешка!"
 
 #: ../bin/drakhosts:122
 #, c-format
@@ -549,67 +540,64 @@ msgstr "Моля въведете валиден IP адрес."
 #: ../bin/drakhosts:128
 #, c-format
 msgid "Same IP is already in %s file."
-msgstr ""
+msgstr "Някой IP адрес е вече в %s файл."
 
 #: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:212
 #, c-format
 msgid "Host name"
 msgstr "Име на хост:"
 
-#: ../bin/drakhosts:196
-#, fuzzy, c-format
+#: ../bin/drakhosts:196, c-format
 msgid "Host Aliases"
-msgstr "Име на хост:"
+msgstr "Синоним на хост:"
 
-#: ../bin/drakhosts:206 ../bin/drakhosts:236
-#, fuzzy, c-format
+#: ../bin/drakhosts:206 ../bin/drakhosts:236, c-format
 msgid "Manage hosts definitions"
-msgstr "Настройка на връзките"
+msgstr "Настройка на хост имена"
 
 #: ../bin/drakhosts:222 ../bin/drakhosts:249 ../bin/draknfs:367
 #, c-format
 msgid "Modify entry"
-msgstr ""
+msgstr "Промяна на запис"
 
 #: ../bin/drakhosts:241 ../bin/draknfs:595 ../bin/draksambashare:1349
 #: ../bin/draksambashare:1380 ../bin/draksambashare:1411
 #, c-format
 msgid "Add"
-msgstr "Добавя"
+msgstr "Добавяне"
 
-#: ../bin/drakhosts:242
-#, fuzzy, c-format
+#: ../bin/drakhosts:242, c-format
 msgid "Add entry"
-msgstr "Добавяне принтер"
+msgstr "Добавяне на запис"
 
 #: ../bin/drakhosts:245
 #, c-format
 msgid "Failed to add host."
-msgstr ""
+msgstr "Неуспешно добавяне на хост."
 
 #: ../bin/drakhosts:248 ../bin/draknfs:602 ../bin/draksambashare:1306
 #: ../bin/draksambashare:1351 ../bin/draksambashare:1382
 #: ../bin/draksambashare:1419
 #, c-format
 msgid "Modify"
-msgstr "Модифицира"
+msgstr "Промяна"
 
 #: ../bin/drakhosts:252
 #, c-format
 msgid "Failed to Modify host."
-msgstr ""
+msgstr "Неуспешно промяна на хост."
 
 #: ../bin/drakhosts:255 ../bin/drakids:92 ../bin/drakids:101
 #: ../bin/draknfs:609 ../bin/draksambashare:1307 ../bin/draksambashare:1359
 #: ../bin/draksambashare:1390 ../bin/draksambashare:1427
 #, c-format
 msgid "Remove"
-msgstr "Премахва"
+msgstr "Премахване"
 
 #: ../bin/drakhosts:259
 #, c-format
 msgid "Failed to remove host."
-msgstr ""
+msgstr "Неуспешно премахване на хост."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:174
 #: ../bin/net_applet:189 ../lib/network/drakroam.pm:118
@@ -618,40 +606,36 @@ msgstr ""
 msgid "Quit"
 msgstr "Изход"
 
-#: ../bin/drakids:28
-#, fuzzy, c-format
+#: ../bin/drakids:28, c-format
 msgid "Allowed addresses"
-msgstr "Позволява на потребители"
+msgstr "Позволени адреси"
 
 #: ../bin/drakids:40 ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196
 #: ../bin/drakids:221 ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
 #: ../bin/net_applet:132 ../bin/net_applet:278
-#: ../lib/network/drakfirewall.pm:261 ../lib/network/drakfirewall.pm:265
-#, fuzzy, c-format
+#: ../lib/network/drakfirewall.pm:261 ../lib/network/drakfirewall.pm:265, c-format
 msgid "Interactive Firewall"
-msgstr "Защитна стена"
+msgstr "Интерактивна Защитна стена"
 
 #: ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196 ../bin/drakids:221
 #: ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
-#: ../bin/net_applet:278
-#, fuzzy, c-format
+#: ../bin/net_applet:278, c-format
 msgid "Unable to contact daemon"
-msgstr "Не мога да се свръжа с огледален сървър' %s"
+msgstr "Невъзможна е връзка с услуга"
 
 #: ../bin/drakids:79 ../bin/drakids:107
 #, c-format
 msgid "Log"
 msgstr "Журнал"
 
-#: ../bin/drakids:83 ../bin/drakids:102
-#, fuzzy, c-format
+#: ../bin/drakids:83 ../bin/drakids:102, c-format
 msgid "Allow"
-msgstr "Всички"
+msgstr "Позволи"
 
 #: ../bin/drakids:84 ../bin/drakids:93
 #, c-format
 msgid "Block"
-msgstr ""
+msgstr "Блокирай"
 
 #: ../bin/drakids:85 ../bin/drakids:94 ../bin/drakids:103 ../bin/drakids:114
 #: ../bin/drakids:127 ../bin/drakids:135 ../bin/draknfs:194
@@ -660,55 +644,49 @@ msgstr ""
 msgid "Close"
 msgstr "Затвори"
 
-#: ../bin/drakids:88
-#, fuzzy, c-format
+#: ../bin/drakids:88, c-format
 msgid "Allowed services"
-msgstr "Позволява на потребители"
+msgstr "Позволени услуги"
 
-#: ../bin/drakids:97
-#, fuzzy, c-format
+#: ../bin/drakids:97, c-format
 msgid "Blocked services"
-msgstr "Резервно копие на потребителски файлове"
+msgstr "Блокирани услуги"
 
-#: ../bin/drakids:111
-#, fuzzy, c-format
+#: ../bin/drakids:111, c-format
 msgid "Clear logs"
-msgstr "Изчисти всичко"
+msgstr "Изчистване на журнала"
 
 #: ../bin/drakids:112 ../bin/drakids:117
 #, c-format
 msgid "Blacklist"
-msgstr ""
+msgstr "Blacklist"
 
 #: ../bin/drakids:113 ../bin/drakids:130
 #, c-format
 msgid "Whitelist"
-msgstr ""
+msgstr "Whitelist"
 
-#: ../bin/drakids:121
-#, fuzzy, c-format
+#: ../bin/drakids:121, c-format
 msgid "Remove from blacklist"
-msgstr "Премахни от LVM"
+msgstr "Премахни от blacklist"
 
 #: ../bin/drakids:122
 #, c-format
 msgid "Move to whitelist"
-msgstr ""
+msgstr "Премести в whitelist"
 
-#: ../bin/drakids:134
-#, fuzzy, c-format
+#: ../bin/drakids:134, c-format
 msgid "Remove from whitelist"
-msgstr "Премахни от LVM"
+msgstr "Премахни от whitelist"
 
 #: ../bin/drakids:253
 #, c-format
 msgid "Date"
 msgstr "Дата"
 
-#: ../bin/drakids:254
-#, fuzzy, c-format
+#: ../bin/drakids:254, c-format
 msgid "Remote host"
-msgstr "Отдалечен"
+msgstr "Отдалечен компютър"
 
 #: ../bin/drakids:255 ../lib/network/vpn/openvpn.pm:115
 #, c-format
@@ -735,33 +713,29 @@ msgstr "Приложение"
 msgid "Status"
 msgstr "Състояние"
 
-#: ../bin/drakids:292
-#, fuzzy, c-format
+#: ../bin/drakids:292, c-format
 msgid "Allowed"
-msgstr "Всички"
+msgstr "Позволени"
 
 #: ../bin/drakids:293
 #, c-format
 msgid "Blocked"
-msgstr ""
+msgstr "Блокирани"
 
-#: ../bin/drakinvictus:36
-#, fuzzy, c-format
+#: ../bin/drakinvictus:36, c-format
 msgid "Invictus Firewall"
-msgstr "Защитна стена"
+msgstr "Invictus Защитна стена"
 
-#: ../bin/drakinvictus:53
-#, fuzzy, c-format
+#: ../bin/drakinvictus:53, c-format
 msgid "Start as master"
-msgstr "Пуснат при стартиране"
+msgstr "Стартирай като главен"
 
-#: ../bin/drakinvictus:72
-#, fuzzy, c-format
+#: ../bin/drakinvictus:72, c-format
 msgid "A password is required."
-msgstr "Изисква парола"
+msgstr "Изисква се парола."
 
 #: ../bin/drakinvictus:100
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "This tool allows to set up network interfaces failover and firewall "
 "replication."
@@ -808,20 +782,17 @@ msgstr ""
 msgid "Synchronization network interface"
 msgstr "Изберете мрежов интерфейс"
 
-#: ../bin/drakinvictus:132
-#, fuzzy, c-format
+#: ../bin/drakinvictus:132, c-format
 msgid "Connection mark bit"
-msgstr "Връзка"
+msgstr ""
 
-#: ../bin/draknetprofile:37
-#, fuzzy, c-format
+#: ../bin/draknetprofile:37, c-format
 msgid "Network profiles"
-msgstr "Мрежови опции"
+msgstr "Мрежови профили"
 
-#: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#: ../bin/draknetprofile:67, c-format
 msgid "Profile"
-msgstr "Профили"
+msgstr "Профил"
 
 #: ../bin/draknetprofile:126
 #, c-format
@@ -850,7 +821,7 @@ msgstr "Предупреждение"
 #: ../bin/draknetprofile:156
 #, c-format
 msgid "You can not delete the default profile"
-msgstr ""
+msgstr "Не можете да изтриете профила по подразбиране"
 
 #: ../bin/draknetprofile:158
 #, c-format
@@ -863,21 +834,22 @@ msgid ""
 "This tool allows to activate an existing network profile, and to manage "
 "(clone, delete) profiles."
 msgstr ""
+"Този инструмент позволява да се активират съществуващ мрежов профил и да "
+"управлявате (копирате, изтривате) профили."
 
 #: ../bin/draknetprofile:168
 #, c-format
 msgid "To modify a profile, you have to activate it first."
-msgstr ""
+msgstr "За да промените профил, трябва първо да го активирате."
 
 #: ../bin/draknetprofile:171
 #, c-format
 msgid "Activate"
-msgstr "Активира"
+msgstr "Активирай"
 
-#: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#: ../bin/draknetprofile:172, c-format
 msgid "Clone"
-msgstr "Връзка"
+msgstr "Копирай"
 
 #: ../bin/draknetprofile:173
 #, c-format
@@ -926,10 +898,9 @@ msgstr "/_Излиза"
 msgid "<control>Q"
 msgstr "<control>Q"
 
-#: ../bin/draknfs:69 ../bin/draknfs:70 ../bin/draknfs:71
-#, fuzzy, c-format
+#: ../bin/draknfs:69 ../bin/draknfs:70 ../bin/draknfs:71, c-format
 msgid "/_NFS Server"
-msgstr "DNS сървър"
+msgstr ""
 
 #: ../bin/draknfs:70 ../bin/draksambashare:181
 #, c-format
@@ -941,30 +912,28 @@ msgstr ""
 msgid "/R_eload"
 msgstr ""
 
-#: ../bin/draknfs:90
-#, fuzzy, c-format
+#: ../bin/draknfs:90, c-format
 msgid "NFS server"
-msgstr "DNS сървър"
+msgstr "NFS сървър"
 
 #: ../bin/draknfs:90
 #, c-format
 msgid "Restarting/Reloading NFS server..."
-msgstr ""
+msgstr "Рестартиране/презареждане на NFS сървър ..."
 
 #: ../bin/draknfs:91
 #, c-format
 msgid "Error Restarting/Reloading NFS server"
-msgstr ""
+msgstr "Грешка при рестартиране/презареждане на NFS сървър"
 
-#: ../bin/draknfs:107 ../bin/draksambashare:246
-#, fuzzy, c-format
+#: ../bin/draknfs:107 ../bin/draksambashare:246, c-format
 msgid "Directory Selection"
-msgstr "Посока"
+msgstr "Избор на директория"
 
 #: ../bin/draknfs:112 ../bin/draksambashare:251
 #, c-format
 msgid "Should be a directory."
-msgstr "Трябва да е директория"
+msgstr "Трябва да бъде директория."
 
 #: ../bin/draknfs:143
 #, c-format
@@ -1090,17 +1059,16 @@ msgstr "Директория"
 #: ../bin/draknfs:280
 #, c-format
 msgid "Please add an NFS share to be able to modify it."
-msgstr ""
+msgstr "Моля, въведете NFS споделен ресурс за да можете да го променяте."
 
-#: ../bin/draknfs:354
-#, fuzzy, c-format
+#: ../bin/draknfs:354, c-format
 msgid "Advanced"
-msgstr "Допълнителни настройки"
+msgstr "Разширени настройки"
 
 #: ../bin/draknfs:377
 #, c-format
 msgid "NFS directory"
-msgstr ""
+msgstr "NFS директория"
 
 #: ../bin/draknfs:378 ../bin/draksambashare:382 ../bin/draksambashare:589
 #: ../bin/draksambashare:768
@@ -1108,8 +1076,7 @@ msgstr ""
 msgid "Directory:"
 msgstr "Директория:"
 
-#: ../bin/draknfs:379
-#, fuzzy, c-format
+#: ../bin/draknfs:379, c-format
 msgid "Host access"
 msgstr "Име на хост:"
 
@@ -1171,7 +1138,7 @@ msgstr "Общи настройки"
 #: ../bin/draknfs:512
 #, c-format
 msgid "Custom Options"
-msgstr ""
+msgstr "Потребителски настройки"
 
 #: ../bin/draknfs:524 ../bin/draksambashare:397 ../bin/draksambashare:626
 #: ../bin/draksambashare:793
@@ -1393,10 +1360,9 @@ msgstr ""
 msgid "/_Samba Server"
 msgstr "Web Сървър"
 
-#: ../bin/draksambashare:180
-#, fuzzy, c-format
+#: ../bin/draksambashare:180, c-format
 msgid "/_Configure"
-msgstr "Настрока"
+msgstr "Настройка"
 
 #: ../bin/draksambashare:184
 #, c-format
@@ -1431,7 +1397,7 @@ msgstr "Samba Сървър"
 #: ../bin/draksambashare:196
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Copyright (C) %s by Mandriva"
 
 #: ../bin/draksambashare:198
 #, c-format
@@ -2077,30 +2043,27 @@ msgstr "Свързва %s"
 msgid "Disconnect %s"
 msgstr "Разкачва %s"
 
-#: ../bin/net_applet:131
-#, fuzzy, c-format
+#: ../bin/net_applet:131, c-format
 msgid "Monitor Network"
-msgstr "Възстановява през мрежа"
+msgstr "Наблюдение на мрежа"
 
 #: ../bin/net_applet:133
 #, c-format
 msgid "Manage wireless networks"
-msgstr ""
+msgstr "Управление на безжични връзки"
 
-#: ../bin/net_applet:135
-#, fuzzy, c-format
+#: ../bin/net_applet:135, c-format
 msgid "Manage VPN connections"
-msgstr "Настройка на връзките"
+msgstr "Настройка на VPN връзки"
 
 #: ../bin/net_applet:139
 #, c-format
 msgid "Configure Network"
 msgstr "Конфигуриране на мрежа"
 
-#: ../bin/net_applet:141
-#, fuzzy, c-format
+#: ../bin/net_applet:141, c-format
 msgid "Watched interface"
-msgstr "Интерфейс"
+msgstr "Наблюдаван интерфейс"
 
 #: ../bin/net_applet:142 ../bin/net_applet:143 ../bin/net_applet:145
 #, c-format
@@ -2110,7 +2073,7 @@ msgstr "Автоматично засичане"
 #: ../bin/net_applet:150
 #, c-format
 msgid "Active interfaces"
-msgstr ""
+msgstr "Активни интерфейси"
 
 #: ../bin/net_applet:170
 #, c-format
@@ -2119,35 +2082,32 @@ msgstr "Профили"
 
 #: ../bin/net_applet:180 ../lib/network/connection.pm:226
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
-#: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
-#, fuzzy, c-format
+#: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390, c-format
 msgid "VPN connection"
-msgstr "LAN връзка"
+msgstr "VPN връзка"
 
-#: ../bin/net_applet:358
-#, fuzzy, c-format
+#: ../bin/net_applet:358, c-format
 msgid "Network connection"
-msgstr "Мрежови опции"
+msgstr "Мрежова връзка"
 
 #: ../bin/net_applet:442
 #, c-format
 msgid "More networks"
-msgstr ""
+msgstr "Още мрежи"
 
 #: ../bin/net_applet:469
 #, c-format
 msgid "Interactive Firewall automatic mode"
-msgstr ""
+msgstr "Интерактивна Защитна стена - автоматичен режим"
 
 #: ../bin/net_applet:474
 #, c-format
 msgid "Always launch on startup"
 msgstr "Винаги зареждай при стартиране"
 
-#: ../bin/net_applet:479
-#, fuzzy, c-format
+#: ../bin/net_applet:479, c-format
 msgid "Wireless networks"
-msgstr "Безжична връзка"
+msgstr "Безжични мрежи"
 
 #: ../bin/net_applet:486 ../bin/net_monitor:96
 #, c-format
@@ -2157,71 +2117,70 @@ msgstr "Настройки"
 #: ../bin/net_monitor:60 ../bin/net_monitor:65
 #, c-format
 msgid "Network Monitoring"
-msgstr "Мониторинг на мрежата"
+msgstr "Наблюдение на мрежата"
 
-#: ../bin/net_monitor:99
-#, fuzzy, c-format
+#: ../bin/net_monitor:99, c-format
 msgid "Default connection: "
-msgstr "Кабелна връзка"
+msgstr "Връзка по подразбиране:"
 
 #: ../bin/net_monitor:101
 #, c-format
 msgid "Wait please"
-msgstr ""
+msgstr "Моля, изчакайте"
 
-#: ../bin/net_monitor:104
-#, fuzzy, c-format
+#: ../bin/net_monitor:104, c-format
 msgid "Global statistics"
-msgstr "Статистики"
+msgstr "Глобална статистика"
 
 #: ../bin/net_monitor:107
 #, c-format
 msgid "Instantaneous"
-msgstr ""
+msgstr "Моментна"
 
 #: ../bin/net_monitor:107
 #, c-format
 msgid "Average"
-msgstr "Средно"
+msgstr "Средна"
 
-#: ../bin/net_monitor:108
-#, fuzzy, c-format
+#: ../bin/net_monitor:108, c-format
 msgid ""
 "Sending\n"
 "speed:"
-msgstr "Скорост на изпращане:"
+msgstr ""
+"Скорост на \n"
+"изпращане:"
 
 #: ../bin/net_monitor:108 ../bin/net_monitor:109 ../bin/net_monitor:114
 #, c-format
 msgid "unknown"
-msgstr "неизвестен"
+msgstr "неизвестно"
 
-#: ../bin/net_monitor:109
-#, fuzzy, c-format
+#: ../bin/net_monitor:109, c-format
 msgid ""
 "Receiving\n"
 "speed:"
-msgstr "Скорост на получаване:"
+msgstr ""
+"Скорост на \n"
+"получаване:"
 
-#: ../bin/net_monitor:113
-#, fuzzy, c-format
+#: ../bin/net_monitor:113, c-format
 msgid "Connection time: "
-msgstr "Време на връзката: "
+msgstr "Време на свързване: "
 
 #: ../bin/net_monitor:120
 #, c-format
 msgid "Use same scale for received and transmitted"
-msgstr ""
+msgstr "Използвай същата скала за получени и изпратени пакети"
 
 #: ../bin/net_monitor:138
 #, c-format
 msgid "Wait please, testing your connection..."
-msgstr "Почакайте, пробвам вашата връзка..."
+msgstr "Моля изчакайте, проверява се вашата връзка..."
 
 #: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Disconnecting from Internet "
-msgstr "Разкачвам от Интернет "
+msgstr "Прекъсване на връзката към Интернет "
 
 #: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
@@ -2231,12 +2190,12 @@ msgstr "Свързвам към Интернет"
 #: ../bin/net_monitor:254
 #, c-format
 msgid "Disconnection from Internet failed."
-msgstr "Разкачването от Интернет е неуспешно"
+msgstr "Прекъсването на връзката към Интернет е неуспешно."
 
 #: ../bin/net_monitor:255
 #, c-format
 msgid "Disconnection from Internet complete."
-msgstr "Разкачването от Интернет е завършено"
+msgstr "Връзката към Интернет е прекъсната."
 
 #: ../bin/net_monitor:257
 #, c-format
@@ -2250,12 +2209,11 @@ msgid ""
 "Verify your configuration in the Mandriva Linux Control Center."
 msgstr ""
 "Връзката пропадна.\n"
-"Проверете си конфигурацията в Контролен център на Mandriva Linux."
+"Проверете вашите настройки в Mandriva Linux контролен център."
 
-#: ../bin/net_monitor:360
-#, fuzzy, c-format
+#: ../bin/net_monitor:360, c-format
 msgid "%s (%s)"
-msgstr "Домейн"
+msgstr "%s (%s)"
 
 #: ../bin/net_monitor:385
 #, c-format
@@ -2265,12 +2223,12 @@ msgstr "Конфигурация на цвят"
 #: ../bin/net_monitor:444 ../bin/net_monitor:457
 #, c-format
 msgid "sent: "
-msgstr "изпраща: "
+msgstr "изпратени: "
 
 #: ../bin/net_monitor:447 ../bin/net_monitor:461
 #, c-format
 msgid "received: "
-msgstr "получено: "
+msgstr "получени: "
 
 #: ../bin/net_monitor:450
 #, c-format
@@ -2280,7 +2238,7 @@ msgstr "средно"
 #: ../bin/net_monitor:451
 #, c-format
 msgid "Reset counters"
-msgstr ""
+msgstr "Нулиране на броячите"
 
 #: ../bin/net_monitor:454
 #, c-format
@@ -2293,21 +2251,22 @@ msgid ""
 "Warning, another internet connection has been detected, maybe using your "
 "network"
 msgstr ""
+"Внимание, друга връзка за Интернет беше открита, може би ползваща вашата "
+"мрежа"
 
 #: ../bin/net_monitor:516
 #, c-format
 msgid "Connected"
-msgstr "Свързан"
+msgstr "Свързана"
 
 #: ../bin/net_monitor:516
 #, c-format
 msgid "Not connected"
-msgstr "Не свързан"
+msgstr "Не е свързана"
 
-#: ../bin/net_monitor:523
-#, fuzzy, c-format
+#: ../bin/net_monitor:523, c-format
 msgid "No internet connection configured"
-msgstr "Настройка на Интернет връзка"
+msgstr "Не е настроена връзка за Интернет"
 
 #: ../lib/network/connection.pm:16
 #, c-format
@@ -2317,17 +2276,17 @@ msgstr "Неизвестен тип връзка"
 #: ../lib/network/connection.pm:159
 #, c-format
 msgid "Network access settings"
-msgstr ""
+msgstr "Настройки за мрежов достъп"
 
 #: ../lib/network/connection.pm:160
 #, c-format
 msgid "Access settings"
-msgstr ""
+msgstr "Настройки за достъп"
 
 #: ../lib/network/connection.pm:161
 #, c-format
 msgid "Address settings"
-msgstr ""
+msgstr "Настройки за адрес"
 
 #: ../lib/network/connection.pm:175 ../lib/network/connection.pm:195
 #: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:216
@@ -2335,7 +2294,7 @@ msgstr ""
 #: ../lib/network/netconnect.pm:572
 #, c-format
 msgid "Unlisted - edit manually"
-msgstr ""
+msgstr "Липсва в списъка - ръчно въвеждане"
 
 #: ../lib/network/connection.pm:228 ../lib/network/connection/cable.pm:41
 #: ../lib/network/connection/wireless.pm:45 ../lib/network/vpn/openvpn.pm:127
@@ -2347,22 +2306,21 @@ msgstr "Без"
 #: ../lib/network/connection.pm:240
 #, c-format
 msgid "Allow users to manage the connection"
-msgstr ""
+msgstr "Позволи потребителите да управляват връзката"
 
 #: ../lib/network/connection.pm:241
 #, c-format
 msgid "Start the connection at boot"
-msgstr ""
+msgstr "Стартирай връзката при начално зареждане"
 
 #: ../lib/network/connection.pm:242
 #, c-format
 msgid "Metric"
 msgstr "Метрика"
 
-#: ../lib/network/connection.pm:313
-#, fuzzy, c-format
+#: ../lib/network/connection.pm:313, c-format
 msgid "Link detected on interface %s"
-msgstr "засечен на порт %s"
+msgstr ""
 
 #: ../lib/network/connection.pm:314 ../lib/network/connection/ethernet.pm:289
 #, c-format
@@ -2372,15 +2330,14 @@ msgstr ""
 #: ../lib/network/connection/cable.pm:10
 #, c-format
 msgid "Cable"
-msgstr ""
+msgstr "Кабел"
 
-#: ../lib/network/connection/cable.pm:11
-#, fuzzy, c-format
+#: ../lib/network/connection/cable.pm:11, c-format
 msgid "Cable modem"
-msgstr "Модел на карта:"
+msgstr "Кабелен модем"
 
 #: ../lib/network/connection/cable.pm:42
-#, c-format
+#, fuzzy, c-format
 msgid "Use BPALogin (needed for Telstra)"
 msgstr ""
 
@@ -2402,48 +2359,46 @@ msgid "Account Password"
 msgstr "Парола на акаунта"
 
 #: ../lib/network/connection/cellular.pm:66
-#, c-format
+#, fuzzy, c-format
 msgid "Access Point Name"
 msgstr ""
 
 #: ../lib/network/connection/cellular_bluetooth.pm:10
 #, c-format
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: ../lib/network/connection/cellular_bluetooth.pm:11
-#, c-format
+#, fuzzy, c-format
 msgid "Bluetooth Dial Up Networking"
 msgstr ""
 
 #: ../lib/network/connection/cellular_card.pm:8
 #, c-format
 msgid "Wrong PIN number format: it should be 4 digits."
-msgstr ""
+msgstr "Грешен формат за PIN номер: трябва да бъде от четири цифри"
 
 #: ../lib/network/connection/cellular_card.pm:10
 #, c-format
 msgid "GPRS/Edge/3G"
-msgstr ""
+msgstr "GPRS/Edge/3G"
 
 #: ../lib/network/connection/cellular_card.pm:110
 #: ../lib/network/vpn/openvpn.pm:391
 #, c-format
 msgid "PIN number"
-msgstr ""
+msgstr "PIN номер"
 
-#: ../lib/network/connection/cellular_card.pm:186
-#, fuzzy, c-format
+#: ../lib/network/connection/cellular_card.pm:186, c-format
 msgid "Unable to open device %s"
-msgstr "Не мога да направя 'fork': %s"
+msgstr "Не може да се достигне устройство %s"
 
-#: ../lib/network/connection/cellular_card.pm:218
-#, fuzzy, c-format
+#: ../lib/network/connection/cellular_card.pm:218, c-format
 msgid "Please check that your SIM card is inserted."
-msgstr "Моля, изберете порт към който свързан принтера ви."
+msgstr "Моля, проверете дали вашата SIM карта е включена."
 
 #: ../lib/network/connection/cellular_card.pm:229
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "You entered a wrong PIN code.\n"
 "Entering the wrong PIN code multiple times may lock your SIM card!"
@@ -2452,62 +2407,61 @@ msgstr ""
 #: ../lib/network/connection/dvb.pm:9
 #, c-format
 msgid "DVB"
-msgstr ""
+msgstr "DVB"
 
 #: ../lib/network/connection/dvb.pm:10
 #, c-format
 msgid "Satellite (DVB)"
-msgstr ""
+msgstr "Сателит (DVB)"
 
 #: ../lib/network/connection/dvb.pm:53
 #, c-format
 msgid "Adapter card"
-msgstr ""
+msgstr "Адаптерна карта"
 
 #: ../lib/network/connection/dvb.pm:54
-#, c-format
+#, fuzzy, c-format
 msgid "Net demux"
 msgstr ""
 
 #: ../lib/network/connection/dvb.pm:55
 #, c-format
 msgid "PID"
-msgstr "Процес"
+msgstr "PID"
 
 #: ../lib/network/connection/ethernet.pm:11
 #, c-format
 msgid "Ethernet"
-msgstr ""
+msgstr "Локална мрежа (Ethernet)"
 
 #: ../lib/network/connection/ethernet.pm:12
 #, c-format
 msgid "Wired (Ethernet)"
-msgstr ""
+msgstr "Кабел (Ethernet)"
 
-#: ../lib/network/connection/ethernet.pm:30
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:30, c-format
 msgid "Virtual interface"
-msgstr "Мрежов интерфейс"
+msgstr "Виртуален интерфейс"
 
 #: ../lib/network/connection/ethernet.pm:60
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
 msgstr ""
+"Невъзможно е да се открие мрежов интерфейс за избраното устройство "
+"(използван е %s драйвер)."
 
 #: ../lib/network/connection/ethernet.pm:70 ../lib/network/vpn/openvpn.pm:207
 #, c-format
 msgid "Manual configuration"
 msgstr "Ръчна настройка"
 
-#: ../lib/network/connection/ethernet.pm:71
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:71, c-format
 msgid "Automatic IP (BOOTP/DHCP)"
-msgstr "Автоматичен IP адрес"
+msgstr "Автоматичен IP адрес (BOOTP/DHCP)"
 
-#: ../lib/network/connection/ethernet.pm:125
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:125, c-format
 msgid "IP settings"
-msgstr "PLL настройки:"
+msgstr "IP настройки"
 
 #: ../lib/network/connection/ethernet.pm:138
 #, c-format
@@ -2516,63 +2470,59 @@ msgid ""
 "Each item should be entered as an IP address in dotted-decimal\n"
 "notation (for example, 1.2.3.4)."
 msgstr ""
-"Моля, въведете IP настройките за тази машина.\n"
-"Всяко устройство трябва да бъде въведено като IP адрес\n"
-"с точково-десетично означение (например, 1.2.3.4)."
+"Позволи ръчното въвеждане на IP адрес за тази машина.\n"
+"Всяко поле трябва да бъде въведено като IP адрес\n"
+"с точково-десетична нотация (например, 1.2.3.4)."
 
 #: ../lib/network/connection/ethernet.pm:142 ../lib/network/netconnect.pm:646
 #: ../lib/network/vpn/openvpn.pm:212 ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
-msgstr "Gateway"
+msgstr "Шлюз"
 
-#: ../lib/network/connection/ethernet.pm:145
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:145, c-format
 msgid "Get DNS servers from DHCP"
-msgstr "DNS сървър IP"
+msgstr "Получи DNS сървърите от DHCP"
 
-#: ../lib/network/connection/ethernet.pm:147
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:147, c-format
 msgid "DNS server 1"
-msgstr "DNS сървър"
+msgstr "DNS сървър 1"
 
-#: ../lib/network/connection/ethernet.pm:148
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:148, c-format
 msgid "DNS server 2"
-msgstr "DNS сървър"
+msgstr "DNS сървър 2"
 
-#: ../lib/network/connection/ethernet.pm:149
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:149, c-format
 msgid "Search domain"
-msgstr "NIS домейн"
+msgstr "Домейн за търсене"
 
 #: ../lib/network/connection/ethernet.pm:150
 #, c-format
 msgid "By default search domain will be set from the fully-qualified host name"
 msgstr ""
+"По подразбиране, домейнът за търсене ще бъде извлечен от пълното хост име"
 
-#: ../lib/network/connection/ethernet.pm:153
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:153, c-format
 msgid "DHCP timeout (in seconds)"
-msgstr "Timeout на връзката (в сек)"
+msgstr "DHCP таймоут (в секунди)"
 
 #: ../lib/network/connection/ethernet.pm:154
 #, c-format
 msgid "Get YP servers from DHCP"
-msgstr ""
+msgstr "Получи YP сървъри от DHCP"
 
 #: ../lib/network/connection/ethernet.pm:155
 #, c-format
 msgid "Get NTPD servers from DHCP"
-msgstr ""
+msgstr "Получи NTPD сървъри от DHCP"
 
 #: ../lib/network/connection/ethernet.pm:156
 #, c-format
 msgid "DHCP host name"
-msgstr "Име на DHCP хост"
+msgstr "Име на DHCP сървър"
 
 #: ../lib/network/connection/ethernet.pm:158
-#, c-format
+#, fuzzy, c-format
 msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
 msgstr ""
 
@@ -2581,15 +2531,14 @@ msgstr ""
 msgid "IP address should be in format 1.2.3.4"
 msgstr "IP адресът трябва да бъде във формат 1.2.3.4"
 
-#: ../lib/network/connection/ethernet.pm:174
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:174, c-format
 msgid "Netmask should be in format 255.255.224.0"
-msgstr "Gateway адреса трябва да бъде във формат 1.2.3.4"
+msgstr "Мрежовата маска трябва да е във формат 255.255.224.0"
 
 #: ../lib/network/connection/ethernet.pm:179
 #, c-format
 msgid "Warning: IP address %s is usually reserved!"
-msgstr ""
+msgstr "Внимание: IP адрес %s е вече резервиран!"
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
@@ -2602,17 +2551,17 @@ msgstr ""
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
 msgid "Assign host name from DHCP address"
-msgstr "Получаване на име от DHCP адрес"
+msgstr "Получаване на хост име от DHCP"
 
 #: ../lib/network/connection/ethernet.pm:230
 #, c-format
 msgid "Network Hotplugging"
-msgstr "Мрежов Hotplugging"
+msgstr "Конфигуриране при включване (Hotplug)"
 
 #: ../lib/network/connection/ethernet.pm:234
 #, c-format
 msgid "Enable IPv6 to IPv4 tunnel"
-msgstr ""
+msgstr "Позволи IPv6 през IPv4 тунел"
 
 #: ../lib/network/connection/ethernet.pm:288
 #, c-format
@@ -2637,7 +2586,7 @@ msgstr ""
 #: ../lib/network/connection/isdn.pm:8
 #, c-format
 msgid "ISDN"
-msgstr ""
+msgstr "ISDN"
 
 #: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:405
 #, c-format
@@ -2663,7 +2612,7 @@ msgstr "USB"
 #: ../lib/network/connection/pots.pm:10
 #, c-format
 msgid "POTS"
-msgstr ""
+msgstr "POTS"
 
 #. -PO: POTS means "Plain old telephone service"
 #. -PO: remove it if it doesn't have an equivalent in your language
@@ -2671,7 +2620,7 @@ msgstr ""
 #: ../lib/network/connection/pots.pm:16
 #, c-format
 msgid "Analog telephone modem (POTS)"
-msgstr ""
+msgstr "Аналогов телефонен модем (POTS)"
 
 #: ../lib/network/connection/ppp.pm:9 ../lib/network/netconnect.pm:77
 #, c-format
@@ -2787,7 +2736,7 @@ msgstr "Австрия"
 #: ../lib/network/connection/providers/xdsl.pm:1258
 #, c-format
 msgid "Any"
-msgstr ""
+msgstr "Без значение"
 
 #: ../lib/network/connection/providers/xdsl.pm:114
 #: ../lib/network/connection/providers/xdsl.pm:124
@@ -3042,42 +2991,41 @@ msgstr "Англия"
 #: ../lib/network/connection/wireless.pm:12
 #, c-format
 msgid "Wireless"
-msgstr ""
-
-#: ../lib/network/connection/wireless.pm:13
-#, fuzzy, c-format
-msgid "Wireless (Wi-Fi)"
 msgstr "Безжична връзка"
+
+#: ../lib/network/connection/wireless.pm:13, c-format
+msgid "Wireless (Wi-Fi)"
+msgstr "Безжична връзка (Wi-Fi)"
 
 #: ../lib/network/connection/wireless.pm:29
 #, c-format
 msgid "Use a Windows driver (with ndiswrapper)"
-msgstr ""
+msgstr "Използвай драйвер за Windows (с ndiswrapper)"
 
 #: ../lib/network/connection/wireless.pm:46
 #, c-format
 msgid "Open WEP"
-msgstr ""
+msgstr "Open WEP"
 
 #: ../lib/network/connection/wireless.pm:47
 #, c-format
 msgid "Restricted WEP"
-msgstr ""
+msgstr "Restricted WEP"
 
 #: ../lib/network/connection/wireless.pm:48
 #, c-format
 msgid "WPA/WPA2 Pre-Shared Key"
-msgstr ""
+msgstr "WPA/WPA2 Pre-Shared Key"
 
 #: ../lib/network/connection/wireless.pm:49
 #, c-format
 msgid "WPA/WPA2 Enterprise"
-msgstr ""
+msgstr "WPA/WPA2 Enterprise"
 
 #: ../lib/network/connection/wireless.pm:260
 #, c-format
 msgid "Windows driver"
-msgstr ""
+msgstr "Windows драйвер"
 
 #: ../lib/network/connection/wireless.pm:346
 #, c-format
@@ -3085,22 +3033,22 @@ msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
 "switch) first."
 msgstr ""
+"Вашата безжична карата е изключена, моля, включете първо безжичната карта "
+"(от бутона за превключване)"
 
-#: ../lib/network/connection/wireless.pm:431
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:431, c-format
 msgid "Wireless settings"
-msgstr "Безжична връзка"
+msgstr "Настроийка на безжична връзка"
 
 #: ../lib/network/connection/wireless.pm:436
-#: ../lib/network/connection_manager.pm:268
-#, fuzzy, c-format
+#: ../lib/network/connection_manager.pm:268, c-format
 msgid "Operating Mode"
-msgstr "Разширени функиции"
+msgstr "Работен режим"
 
 #: ../lib/network/connection/wireless.pm:437
 #, c-format
 msgid "Ad-hoc"
-msgstr ""
+msgstr "Ad-hoc"
 
 #: ../lib/network/connection/wireless.pm:437
 #, c-format
@@ -3115,7 +3063,7 @@ msgstr "Главен"
 #: ../lib/network/connection/wireless.pm:437
 #, c-format
 msgid "Repeater"
-msgstr "Повтаряем"
+msgstr "Повторител"
 
 #: ../lib/network/connection/wireless.pm:437
 #, c-format
@@ -3130,40 +3078,38 @@ msgstr "Автоматично"
 #: ../lib/network/connection/wireless.pm:440
 #, c-format
 msgid "Network name (ESSID)"
-msgstr ""
+msgstr "Мрежово име (ESSID)"
 
 #: ../lib/network/connection/wireless.pm:442
 #, c-format
 msgid "Encryption mode"
-msgstr ""
+msgstr "Криптиращ протокол"
 
 #: ../lib/network/connection/wireless.pm:444
 #, c-format
 msgid "Encryption key"
-msgstr "Ключ за криптиране"
+msgstr "Криптиращ ключ"
 
 #: ../lib/network/connection/wireless.pm:446
-#, c-format
+#, fuzzy, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:453
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:453, c-format
 msgid "EAP Login/Username"
-msgstr "Име на акаунта (потебителско име)"
+msgstr "EAP вход/потребител"
 
 #: ../lib/network/connection/wireless.pm:455
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
 "need to specify domain then try the untested syntax\n"
 "  DOMAIN\\username"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:458
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:458, c-format
 msgid "EAP Password"
-msgstr "Парола"
+msgstr "EAP парола"
 
 #: ../lib/network/connection/wireless.pm:460
 #, c-format
@@ -3589,68 +3535,61 @@ msgstr ""
 
 #: ../lib/network/connection/xdsl.pm:359
 #: ../lib/network/connection_manager.pm:61 ../lib/network/drakvpn.pm:45
-#: ../lib/network/netconnect.pm:134 ../lib/network/thirdparty.pm:123
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:134 ../lib/network/thirdparty.pm:123, c-format
 msgid "Could not install the packages (%s)!"
-msgstr "Инсталиране на пакета %s"
+msgstr "Не могат да се инсталират пакети (%s)!"
 
 #: ../lib/network/connection_manager.pm:73
-#: ../lib/network/connection_manager.pm:88 ../lib/network/netconnect.pm:185
-#, fuzzy, c-format
+#: ../lib/network/connection_manager.pm:88 ../lib/network/netconnect.pm:185, c-format
 msgid "Configuring device..."
-msgstr "Настройка ..."
+msgstr "Настройка на устройство..."
 
 #: ../lib/network/connection_manager.pm:78
-#: ../lib/network/connection_manager.pm:143
-#, fuzzy, c-format
+#: ../lib/network/connection_manager.pm:143, c-format
 msgid "Network settings"
-msgstr "Адрес на Локална мрежа"
+msgstr "Настройки за мрежа"
 
 #: ../lib/network/connection_manager.pm:79
-#: ../lib/network/connection_manager.pm:144
-#, fuzzy, c-format
+#: ../lib/network/connection_manager.pm:144, c-format
 msgid "Please enter settings for network"
-msgstr "Подробна информация"
+msgstr "Моля, въведете настройки за мрежа"
 
-#: ../lib/network/connection_manager.pm:202
-#, fuzzy, c-format
+#: ../lib/network/connection_manager.pm:202, c-format
 msgid "Connecting..."
 msgstr "Свързване ..."
 
-#: ../lib/network/connection_manager.pm:223
-#, fuzzy, c-format
+#: ../lib/network/connection_manager.pm:223, c-format
 msgid "Disconnecting..."
-msgstr "Отвързване ..."
+msgstr "Прекъсване ..."
 
 #: ../lib/network/connection_manager.pm:265
 #, c-format
 msgid "SSID"
-msgstr ""
+msgstr "SSID"
 
 #: ../lib/network/connection_manager.pm:266
 #, c-format
 msgid "Signal strength"
-msgstr ""
+msgstr "Сила на сигнала"
 
 #: ../lib/network/connection_manager.pm:267
 #, c-format
 msgid "Encryption"
-msgstr "Криптиране"
+msgstr "Криптирана"
 
-#: ../lib/network/connection_manager.pm:339 ../lib/network/netconnect.pm:207
-#, fuzzy, c-format
+#: ../lib/network/connection_manager.pm:339 ../lib/network/netconnect.pm:207, c-format
 msgid "Scanning for networks..."
-msgstr "Стартиране мрежата...."
+msgstr "Сканиране за мрежи...."
 
 #: ../lib/network/connection_manager.pm:388 ../lib/network/drakroam.pm:116
 #, c-format
 msgid "Disconnect"
-msgstr "Разкачване"
+msgstr "Прекъсване"
 
 #: ../lib/network/connection_manager.pm:388 ../lib/network/drakroam.pm:115
 #, c-format
 msgid "Connect"
-msgstr "Връзка"
+msgstr "Свързване"
 
 #: ../lib/network/drakfirewall.pm:12
 #, c-format
@@ -3812,7 +3751,7 @@ msgstr ""
 #: ../lib/network/drakfirewall.pm:268
 #, c-format
 msgid "Use Interactive Firewall"
-msgstr ""
+msgstr "Интерактивна Защитна стена"
 
 #: ../lib/network/drakroam.pm:22
 #, c-format
@@ -3822,7 +3761,7 @@ msgstr "Не беше открито устройство"
 #: ../lib/network/drakroam.pm:61
 #, c-format
 msgid "Hostname changed to \"%s\""
-msgstr ""
+msgstr "Хост името беше променено на \"%s\""
 
 #: ../lib/network/drakroam.pm:110
 #, c-format
@@ -3832,7 +3771,7 @@ msgstr "Устройство: "
 #: ../lib/network/drakroam.pm:114 ../lib/network/netcenter.pm:66
 #, c-format
 msgid "Configure"
-msgstr "Настрока"
+msgstr "Настройка"
 
 #: ../lib/network/drakroam.pm:117 ../lib/network/netcenter.pm:71
 #, c-format
@@ -3844,65 +3783,57 @@ msgstr "Опресни"
 msgid "Wireless connection"
 msgstr "Безжична връзка"
 
-#: ../lib/network/drakvpn.pm:30
-#, fuzzy, c-format
+#: ../lib/network/drakvpn.pm:30, c-format
 msgid "VPN configuration"
-msgstr "CUPS конфигурация"
+msgstr "Настройка на VPN"
 
-#: ../lib/network/drakvpn.pm:34
-#, fuzzy, c-format
+#: ../lib/network/drakvpn.pm:34, c-format
 msgid "Choose the VPN type"
-msgstr "Изберете нова големина"
+msgstr "Изберете вид на VPN"
 
 #: ../lib/network/drakvpn.pm:49
 #, c-format
 msgid "Initializing tools and detecting devices for %s..."
-msgstr ""
+msgstr "Инициализиране на инструменти и засичане на устройства за %s..."
 
-#: ../lib/network/drakvpn.pm:52
-#, fuzzy, c-format
+#: ../lib/network/drakvpn.pm:52, c-format
 msgid "Unable to initialize %s connection type!"
-msgstr "Неизвестен тип връзка"
+msgstr "Невъзможна е да се инициализира типа връзка %s !"
 
 #: ../lib/network/drakvpn.pm:60
 #, c-format
 msgid "Please select an existing VPN connection or enter a new name."
-msgstr ""
+msgstr "Моля, изберете съществуваща VPN връзка или въведете име на нова."
 
-#: ../lib/network/drakvpn.pm:64
-#, fuzzy, c-format
+#: ../lib/network/drakvpn.pm:64, c-format
 msgid "Configure a new connection..."
-msgstr "Изпробване на връзката..."
+msgstr "Настройка на нова връзка..."
 
-#: ../lib/network/drakvpn.pm:66
-#, fuzzy, c-format
+#: ../lib/network/drakvpn.pm:66, c-format
 msgid "New name"
-msgstr "Истинско име"
+msgstr "Ново име"
 
 #: ../lib/network/drakvpn.pm:70
 #, c-format
 msgid "You must select an existing connection or enter a new name."
-msgstr ""
+msgstr "Трябва да изберете съществуваща VPN връзка или въведете име на нова."
 
-#: ../lib/network/drakvpn.pm:81
-#, fuzzy, c-format
+#: ../lib/network/drakvpn.pm:81, c-format
 msgid "Please enter the required key(s)"
-msgstr "Моля въведете WebDAV сървър URL"
+msgstr "Моля, въведете задължителният ключ(ове)"
 
-#: ../lib/network/drakvpn.pm:86
-#, fuzzy, c-format
+#: ../lib/network/drakvpn.pm:86, c-format
 msgid "Please enter the settings of your VPN connection"
-msgstr "Не мога да се свръжа с огледален сървър' %s"
+msgstr "Моля, въведете настройките на вашата VPN връзка"
 
 #: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:297
 #, c-format
 msgid "Do you want to start the connection now?"
-msgstr ""
+msgstr "Искате ли да стартирате връзката веднага?"
 
-#: ../lib/network/drakvpn.pm:100 ../lib/network/netcenter.pm:218
-#, fuzzy, c-format
+#: ../lib/network/drakvpn.pm:100 ../lib/network/netcenter.pm:218, c-format
 msgid "Connection failed."
-msgstr "Име на връзката"
+msgstr "Връзката пропадна."
 
 #: ../lib/network/drakvpn.pm:108
 #, c-format
@@ -3914,6 +3845,12 @@ msgid ""
 "It can be done by reconfiguring the network connection and selecting this "
 "VPN connection.\n"
 msgstr ""
+"VPN връзката вече е конфигурирана.\n"
+"\n"
+"Тази VPN връзка може да бъде стартирана автоматично заедно с мрежовата "
+"връзка.\n"
+"Това може да стане като се реконфигурира мрежовата връзка и се избере тази "
+"VPN връзка.\n"
 
 #: ../lib/network/ifw.pm:131
 #, fuzzy, c-format
@@ -4028,47 +3965,44 @@ msgstr ""
 msgid "Unable to find the ndiswrapper interface!"
 msgstr ""
 
-#: ../lib/network/ndiswrapper.pm:137
-#, fuzzy, c-format
+#: ../lib/network/ndiswrapper.pm:137, c-format
 msgid "Choose an ndiswrapper driver"
-msgstr "Избор на случаен драйвер"
+msgstr "Избор на ndiswrapper драйвер"
 
 #: ../lib/network/ndiswrapper.pm:140
 #, c-format
 msgid "Use the ndiswrapper driver %s"
-msgstr ""
+msgstr "Използване на ndiswrapper драйвер %s"
 
-#: ../lib/network/ndiswrapper.pm:140
-#, fuzzy, c-format
+#: ../lib/network/ndiswrapper.pm:140, c-format
 msgid "Install a new driver"
-msgstr "Инсталиране на системата"
+msgstr "Инсталиране на нов драйвер"
 
 #: ../lib/network/ndiswrapper.pm:151
 #, c-format
 msgid "Select a device:"
-msgstr ""
+msgstr "Изберете устройство:"
 
 #: ../lib/network/netcenter.pm:55 ../lib/network/netconnect.pm:210
 #, c-format
 msgid "Please select your network:"
-msgstr ""
+msgstr "Моля, изберете вашата мрежа:"
 
-#: ../lib/network/netcenter.pm:62
-#, fuzzy, c-format
+#: ../lib/network/netcenter.pm:62, c-format
 msgid ""
 "_: This is a verb\n"
 "Monitor"
-msgstr "Възстановява през мрежа"
+msgstr ""
+"_: This is a verb\n"
+"Monitor"
 
-#: ../lib/network/netcenter.pm:145
-#, fuzzy, c-format
+#: ../lib/network/netcenter.pm:145, c-format
 msgid "Network Center"
-msgstr "Мрежа и Интернет"
+msgstr "Мрежов Център"
 
-#: ../lib/network/netcenter.pm:169
-#, fuzzy, c-format
+#: ../lib/network/netcenter.pm:169, c-format
 msgid "Advanced settings"
-msgstr "Допълнителни настройки"
+msgstr "Разширени настройки"
 
 #: ../lib/network/netconnect.pm:37
 #, c-format
@@ -4076,10 +4010,9 @@ msgid "United States"
 msgstr "САЩ"
 
 #: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:503
-#: ../lib/network/netconnect.pm:517
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:517, c-format
 msgid "Manual choice"
-msgstr "ръчно"
+msgstr "ръчнен избор"
 
 #: ../lib/network/netconnect.pm:60
 #, c-format
@@ -4105,10 +4038,9 @@ msgstr ""
 "Протокол за останалия свят\n"
 " без D-Канал (наета линия)"
 
-#: ../lib/network/netconnect.pm:121
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:121, c-format
 msgid "Network & Internet Configuration"
-msgstr "Настройка на мрежата"
+msgstr "Настройка на мрежи и Интернет"
 
 #: ../lib/network/netconnect.pm:126
 #, c-format
@@ -4116,30 +4048,27 @@ msgid "Choose the connection you want to configure"
 msgstr "Изберете връзката, който искате да използвате"
 
 #: ../lib/network/netconnect.pm:148 ../lib/network/netconnect.pm:358
-#: ../lib/network/netconnect.pm:798
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:798, c-format
 msgid "Select the network interface to configure:"
-msgstr "Изберете мрежов интерфейс"
+msgstr "Изберете мрежов интерфейс:"
 
-#: ../lib/network/netconnect.pm:150
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:150, c-format
 msgid "%s: %s"
-msgstr "Домейн"
+msgstr "%s: %s"
 
 #: ../lib/network/netconnect.pm:167
 #, c-format
 msgid "No device can be found for this connection type."
-msgstr ""
+msgstr "Не може да се открие подходящо устройство за връзка от този тип."
 
-#: ../lib/network/netconnect.pm:176
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:176, c-format
 msgid "Hardware Configuration"
-msgstr "Настройка на мрежата"
+msgstr "Настройка на хадуерни устройства"
 
 #: ../lib/network/netconnect.pm:200
 #, c-format
 msgid "Please select your provider:"
-msgstr ""
+msgstr "Моля, изберете доставчик:"
 
 #: ../lib/network/netconnect.pm:247
 #, c-format
@@ -4147,16 +4076,18 @@ msgid ""
 "Please select your connection protocol.\n"
 "If you do not know it, keep the preselected protocol."
 msgstr ""
+"Моля, изберете протокол за връзка.\n"
+"Ако не го знаете, оставете избрания по подразбиране протокол."
 
 #: ../lib/network/netconnect.pm:291 ../lib/network/netconnect.pm:665
 #, c-format
 msgid "Connection control"
-msgstr ""
+msgstr "Контрол над връзката"
 
 #: ../lib/network/netconnect.pm:304 ../lib/network/netconnect.pm:714
 #, c-format
 msgid "Testing your connection..."
-msgstr "Изпробване на връзката..."
+msgstr "Изпробване на връзката ..."
 
 #: ../lib/network/netconnect.pm:325
 #, c-format
@@ -4183,13 +4114,11 @@ msgstr "Име на доставчика (напр. provider.net)"
 msgid "Provider phone number"
 msgstr "Телефонен номер на доставчика"
 
-#: ../lib/network/netconnect.pm:331
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:331, c-format
 msgid "Provider DNS 1 (optional)"
 msgstr "1-ви DNS на доставчика (по желание)"
 
-#: ../lib/network/netconnect.pm:332
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:332, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "2-ри DNS на доставчика (по желание)"
 
@@ -4241,7 +4170,7 @@ msgstr "Външен ISDN модем"
 #: ../lib/network/netconnect.pm:394
 #, c-format
 msgid "Select a device!"
-msgstr "Изберете устройство !"
+msgstr "Изберете устройство!"
 
 #: ../lib/network/netconnect.pm:403 ../lib/network/netconnect.pm:413
 #: ../lib/network/netconnect.pm:423 ../lib/network/netconnect.pm:456
@@ -4272,7 +4201,7 @@ msgstr ""
 #: ../lib/network/netconnect.pm:418
 #, c-format
 msgid "Continue"
-msgstr "Нататък"
+msgstr "Продължи"
 
 #: ../lib/network/netconnect.pm:418
 #, c-format
@@ -4285,7 +4214,7 @@ msgid "Which of the following is your ISDN card?"
 msgstr "Коя от следните ISDN картати е вашата ?"
 
 #: ../lib/network/netconnect.pm:442
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "A CAPI driver is available for this modem. This CAPI driver can offer more "
 "capabilities than the free driver (like sending faxes). Which driver do you "
@@ -4306,10 +4235,9 @@ msgstr ""
 "Посочете доставчика си.\n"
 " Ако не е в списъка, изберете Unlisted"
 
-#: ../lib/network/netconnect.pm:472 ../lib/network/netconnect.pm:568
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:472 ../lib/network/netconnect.pm:568, c-format
 msgid "Provider:"
-msgstr "Профил: "
+msgstr "Доставчик: "
 
 #: ../lib/network/netconnect.pm:481
 #, c-format
@@ -4320,10 +4248,9 @@ msgstr ""
 "Вашият модем не се поддържа от системата.\n"
 "Погледнете в http://www.linmodems.org"
 
-#: ../lib/network/netconnect.pm:500
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:500, c-format
 msgid "Select the modem to configure:"
-msgstr "Изберете мрежов интерфейс"
+msgstr "Изберете модем, който ще се настройва:"
 
 #: ../lib/network/netconnect.pm:502
 #, c-format
@@ -4521,41 +4448,38 @@ msgstr "ISDN връзка"
 #: ../lib/network/netconnect.pm:775
 #, c-format
 msgid "Modem connection"
-msgstr "Модем"
+msgstr "Модемна връзка"
 
 #: ../lib/network/netconnect.pm:776
 #, c-format
 msgid "DVB connection"
-msgstr ""
+msgstr "DVB връзка"
 
-#: ../lib/network/netconnect.pm:778
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:778, c-format
 msgid "(detected on port %s)"
-msgstr "засечен на порт %s"
+msgstr "(засечен на порт %s)"
 
 #. -PO: here, "(detected)" string will be appended to eg "ADSL connection"
-#: ../lib/network/netconnect.pm:780
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:780, c-format
 msgid "(detected %s)"
-msgstr "засечена %s"
+msgstr "(засечена %s)"
 
-#: ../lib/network/netconnect.pm:780
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:780, c-format
 msgid "(detected)"
-msgstr "засечена "
+msgstr "(засечена)"
 
 #: ../lib/network/netconnect.pm:781
 #, c-format
 msgid "Network Configuration"
-msgstr "Настройка на мрежата"
+msgstr "Настройки на мрежата"
 
-#: ../lib/network/netconnect.pm:782
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:782, c-format
+#, fuzzy
 msgid "Zeroconf hostname resolution"
-msgstr "Име на Zeroconf хост:"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:783
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "If desired, enter a Zeroconf hostname.\n"
 "This is the name your machine will use to advertise any of\n"
@@ -4566,7 +4490,7 @@ msgstr ""
 #: ../lib/network/netconnect.pm:787
 #, c-format
 msgid "Zeroconf Host name"
-msgstr "Име на Zeroconf хост:"
+msgstr "Име на Zeroconf хост"
 
 #: ../lib/network/netconnect.pm:788
 #, c-format
@@ -4748,7 +4672,7 @@ msgstr ""
 #: ../lib/network/network.pm:514
 #, c-format
 msgid "Proxies configuration"
-msgstr "Настройка на proxy"
+msgstr "Настройка на прокси"
 
 #: ../lib/network/network.pm:515
 #, c-format
@@ -4756,46 +4680,46 @@ msgid ""
 "Here you can set up your proxies configuration (eg: http://"
 "my_caching_server:8080)"
 msgstr ""
+"Тук можете да въведете вашите настройки за прокси\n"
+"(формат: http://my_caching_server:8080)"
 
 #: ../lib/network/network.pm:516
 #, c-format
 msgid "HTTP proxy"
-msgstr "HTTP proxy"
+msgstr "HTTP прокси"
 
 #: ../lib/network/network.pm:517
 #, c-format
 msgid "Use HTTP proxy for HTTPS connections"
-msgstr ""
+msgstr "Използвай HTTP прокси за HTTPS сесиите"
 
 #: ../lib/network/network.pm:518
 #, c-format
 msgid "HTTPS proxy"
-msgstr ""
+msgstr "HTTPS прокси"
 
 #: ../lib/network/network.pm:519
 #, c-format
 msgid "FTP proxy"
-msgstr "FTP proxy"
+msgstr "FTP прокси"
 
-#: ../lib/network/network.pm:520
-#, fuzzy, c-format
+#: ../lib/network/network.pm:520, c-format
 msgid "No proxy for (comma separated list):"
-msgstr "%d със запетая разделен низ"
+msgstr "Без прокси за (разделен с точка и запетая списък):"
 
 #: ../lib/network/network.pm:525
 #, c-format
 msgid "Proxy should be http://..."
-msgstr "Proxy-сървъра трябва да е http://..."
+msgstr "Прокси сървъра трябва да е http://..."
 
-#: ../lib/network/network.pm:526
-#, fuzzy, c-format
+#: ../lib/network/network.pm:526, c-format
 msgid "Proxy should be http://... or https://..."
-msgstr "Proxy-сървъра трябва да е http://..."
+msgstr "Прокси сървъра трябва да е http://... или https://..."
 
 #: ../lib/network/network.pm:527
 #, c-format
 msgid "URL should begin with 'ftp:' or 'http:'"
-msgstr "URL трябва да е започва с 'ftp:' или 'http:'"
+msgstr "URL трябва да започва с 'ftp:' или 'http:'"
 
 #: ../lib/network/shorewall.pm:77
 #, c-format
@@ -4811,12 +4735,12 @@ msgstr ""
 #: ../lib/network/shorewall.pm:155
 #, c-format
 msgid "Keep custom rules"
-msgstr ""
+msgstr "Запази потребителски правила"
 
 #: ../lib/network/shorewall.pm:156
 #, c-format
 msgid "Drop custom rules"
-msgstr ""
+msgstr "Изтрий потребителски правила"
 
 #: ../lib/network/shorewall.pm:161
 #, c-format
