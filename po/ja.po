@@ -3,13 +3,13 @@
 # Copyright (C) 2000,2003, 2004, 2006 Free Software Foundation, Inc.
 # YAMAGATA Hiroo <hiyori13@alum.mit.edu>, 2000.
 # UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2003, 2004, 2006.
-# Yukiko Bando <ybando@k6.dion.ne.jp>, 2004-2008.
+# Yukiko Bando <ybando@k6.dion.ne.jp>, 2004-2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-ja\n"
 "POT-Creation-Date: 2009-02-13 20:39-0200\n"
-"PO-Revision-Date: 2008-03-15 22:00+0900\n"
+"PO-Revision-Date: 2009-03-22 21:05+0900\n"
 "Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 "Language-Team: Japanese <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -2242,9 +2242,9 @@ msgid "Network Monitoring"
 msgstr "ネットワークのモニタ"
 
 #: ../bin/net_monitor:99
-#, fuzzy, c-format
+#, c-format
 msgid "Default connection: "
-msgstr "ケーブル接続"
+msgstr "デフォルトの接続: "
 
 #: ../bin/net_monitor:101
 #, c-format
@@ -2290,7 +2290,7 @@ msgstr ""
 "速度:"
 
 #: ../bin/net_monitor:113
-#, fuzzy, c-format
+#, c-format
 msgid "Connection time: "
 msgstr "接続時間: "
 
@@ -2339,9 +2339,9 @@ msgstr ""
 "Mandriva Linux コントロールセンターの設定を確認してください。"
 
 #: ../bin/net_monitor:360
-#, fuzzy, c-format
+#, c-format
 msgid "%s (%s)"
-msgstr "DNS: %s"
+msgstr "%s (%s)"
 
 #: ../bin/net_monitor:385
 #, c-format
@@ -2366,7 +2366,7 @@ msgstr "平均"
 #: ../bin/net_monitor:451
 #, c-format
 msgid "Reset counters"
-msgstr ""
+msgstr "カウンターをリセット"
 
 #: ../bin/net_monitor:454
 #, c-format
@@ -2690,6 +2690,9 @@ msgid ""
 "with this connection, first disable all other devices which use it, or "
 "configure them not to start on boot"
 msgstr ""
+"%s はシステムの起動時に開始する接続によって既に使われています。このアドレスを"
+"この接続に使うには、先にそれを使う他のすべてのデバイスを無効にするか、それら"
+"が起動時に開始しないように設定してください。"
 
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
@@ -3241,7 +3244,7 @@ msgstr "暗号鍵"
 #: ../lib/network/connection/wireless.pm:446
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
-msgstr ""
+msgstr "この鍵を強制的に ASCII 文字列として使う (例えば Livebox 用)"
 
 #: ../lib/network/connection/wireless.pm:453
 #, c-format
@@ -3841,7 +3844,7 @@ msgstr "BitTorrent"
 #: ../lib/network/drakfirewall.pm:71
 #, c-format
 msgid "Windows Mobile device synchronization"
-msgstr ""
+msgstr "Windows 携帯デバイスの同期"
 
 #: ../lib/network/drakfirewall.pm:80
 #, c-format
@@ -4266,9 +4269,9 @@ msgid "Select the network interface to configure:"
 msgstr "設定するネットワークインターフェースを選択:"
 
 #: ../lib/network/netconnect.pm:150
-#, fuzzy, c-format
+#, c-format
 msgid "%s: %s"
-msgstr "DNS: %s"
+msgstr "%s: %s"
 
 #: ../lib/network/netconnect.pm:167
 #, c-format
