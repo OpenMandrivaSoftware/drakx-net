@@ -15,7 +15,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net 0.1\n"
-"POT-Creation-Date: 2009-02-13 20:39-0200\n"
+"POT-Creation-Date: 2009-03-25 15:35-0300\n"
 "PO-Revision-Date: 2006-12-01 08:45+0700\n"
 "Last-Translator: Willy Sudiarto Raharjo <willysr@gmail.com>\n"
 "Language-Team: Indonesia <mdk-id@yahoogroups.com>\n"
@@ -41,7 +41,7 @@ msgstr "Antarmuka"
 msgid "IP address"
 msgstr "Alamat IP"
 
-#: ../bin/drakconnect-old:64 ../bin/drakids:258
+#: ../bin/drakconnect-old:64 ../bin/drakids:261
 #: ../lib/network/netconnect.pm:458
 #, c-format
 msgid "Protocol"
@@ -77,7 +77,7 @@ msgstr "Konfigurasi LAN"
 msgid "Configure Local Area Network..."
 msgstr "Konfigurasikan Local Area Network..."
 
-#: ../bin/drakconnect-old:106 ../bin/draknfs:189 ../bin/net_applet:188
+#: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:188
 #, c-format
 msgid "Help"
 msgstr "Bantuan"
@@ -88,24 +88,26 @@ msgid "Apply"
 msgstr "Terapkan"
 
 #: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
-#: ../bin/draknetprofile:133 ../bin/net_monitor:388
+#: ../bin/draknetprofile:142 ../bin/draknetprofile.orig:142
+#: ../bin/net_monitor:388
 #, c-format
 msgid "Cancel"
 msgstr "Batal"
 
 #: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
-#: ../bin/drakconnect-old:265 ../bin/draknetprofile:135 ../bin/net_monitor:389
+#: ../bin/drakconnect-old:265 ../bin/draknetprofile:144
+#: ../bin/draknetprofile.orig:144 ../bin/net_monitor:389
 #, c-format
 msgid "Ok"
 msgstr "Ok"
 
-#: ../bin/drakconnect-old:113 ../bin/drakgw:345 ../bin/draknfs:582
-#: ../bin/draksambashare:229 ../lib/network/connection_manager.pm:73
-#: ../lib/network/connection_manager.pm:88
-#: ../lib/network/connection_manager.pm:202
-#: ../lib/network/connection_manager.pm:223
-#: ../lib/network/connection_manager.pm:339 ../lib/network/drakvpn.pm:49
-#: ../lib/network/netcenter.pm:143 ../lib/network/netconnect.pm:185
+#: ../bin/drakconnect-old:113 ../bin/drakgw:351 ../bin/draknfs:584
+#: ../bin/draksambashare:229 ../lib/network/connection_manager.pm:74
+#: ../lib/network/connection_manager.pm:89
+#: ../lib/network/connection_manager.pm:203
+#: ../lib/network/connection_manager.pm:232
+#: ../lib/network/connection_manager.pm:348 ../lib/network/drakvpn.pm:49
+#: ../lib/network/netcenter.pm:142 ../lib/network/netconnect.pm:185
 #: ../lib/network/netconnect.pm:207 ../lib/network/netconnect.pm:304
 #: ../lib/network/netconnect.pm:714 ../lib/network/thirdparty.pm:354
 #: ../lib/network/thirdparty.pm:369
@@ -147,7 +149,7 @@ msgstr "Konfigurasi LAN"
 msgid "Adapter %s: %s"
 msgstr "Adapter %s: %s"
 
-#: ../bin/drakconnect-old:209 ../bin/drakgw:177
+#: ../bin/drakconnect-old:209 ../bin/drakgw:181
 #: ../lib/network/connection/ethernet.pm:141
 #, c-format
 msgid "Netmask"
@@ -209,7 +211,7 @@ msgid "Internet Connection Sharing"
 msgstr "Pemakaian Bersama Koneksi Internet"
 
 #: ../bin/drakgw:75
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -219,7 +221,8 @@ msgid ""
 "before going any further.\n"
 "\n"
 "Note: you need a dedicated Network Adapter to set up a Local Area Network "
-"(LAN)."
+"(LAN). Please disable Mandriva Firewall for the network adapter connected to "
+"your LAN connection before proceeding."
 msgstr ""
 "Anda akan mengkonfigurasi komputer Anda untuk berbagi koneksi Internet.\n"
 "Dengan fitur ini, komputer lain pada jaringan lokal dapat memakai koneksi "
@@ -287,20 +290,19 @@ msgstr "Device Net"
 #: ../bin/drakgw:141
 #, c-format
 msgid ""
-"There is only one configured network adapter on your system:\n"
+"There is only one network adapter on your system configured for LAN "
+"connections:\n"
 "\n"
 "%s\n"
 "\n"
-"I am about to setup your Local Area Network with that adapter."
+"I am about to setup your Local Area Network with that adapter.\n"
+"\n"
+"If you have any other adapter connected to Local Area Network,\n"
+"disable the firewall protection on it using drakfirewall before\n"
+"configuring Internet Connection sharing."
 msgstr ""
-"Hanya terdapat satu adapter jaringan yang dikonfigurasikan pada sistem "
-"Anda:\n"
-"\n"
-"%s\n"
-"\n"
-"Saya akan mensetup Local Area Network Anda dengan adapter itu."
 
-#: ../bin/drakgw:152
+#: ../bin/drakgw:156
 #, c-format
 msgid ""
 "Please choose what network adapter will be connected to your Local Area "
@@ -309,77 +311,80 @@ msgstr ""
 "Silakan pilih adapter jaringan yang hendak disambung ke Local Area Network "
 "Anda."
 
-#: ../bin/drakgw:173
+#: ../bin/drakgw:177
 #, c-format
 msgid "Local Area Network settings"
 msgstr "Setting Local Area Network"
 
-#: ../bin/drakgw:176 ../lib/network/vpn/openvpn.pm:227
+#: ../bin/drakgw:180 ../lib/network/vpn/openvpn.pm:227
 #, c-format
 msgid "Local IP address"
 msgstr "Alamat IP lokal"
 
-#: ../bin/drakgw:178
+#: ../bin/drakgw:182
 #, c-format
 msgid "The internal domain name"
 msgstr "Nama domain internal"
 
-#: ../bin/drakgw:184 ../bin/drakhosts:100 ../bin/drakhosts:245
+#: ../bin/drakgw:188 ../bin/drakhosts:100 ../bin/drakhosts:245
 #: ../bin/drakhosts:252 ../bin/drakhosts:259 ../bin/drakinvictus:72
-#: ../bin/draknetprofile:140 ../bin/draknfs:91 ../bin/draknfs:112
-#: ../bin/draknfs:280 ../bin/draknfs:427 ../bin/draknfs:429 ../bin/draknfs:432
-#: ../bin/draknfs:524 ../bin/draknfs:531 ../bin/draknfs:599 ../bin/draknfs:606
-#: ../bin/draknfs:613 ../bin/draksambashare:393 ../bin/draksambashare:400
+#: ../bin/draknetprofile:149 ../bin/draknetprofile.orig:149 ../bin/draknfs:93
+#: ../bin/draknfs:282 ../bin/draknfs:429 ../bin/draknfs:431 ../bin/draknfs:434
+#: ../bin/draknfs:526 ../bin/draknfs:533 ../bin/draknfs:605 ../bin/draknfs:612
+#: ../bin/draknfs:619 ../bin/draksambashare:393 ../bin/draksambashare:400
 #: ../bin/draksambashare:403 ../bin/draksambashare:455
 #: ../bin/draksambashare:479 ../bin/draksambashare:552
-#: ../bin/draksambashare:630 ../bin/draksambashare:697
-#: ../bin/draksambashare:797 ../bin/draksambashare:804
-#: ../bin/draksambashare:943 ../bin/draksambashare:1097
-#: ../bin/draksambashare:1116 ../bin/draksambashare:1148
-#: ../bin/draksambashare:1254 ../bin/draksambashare:1356
-#: ../bin/draksambashare:1365 ../bin/draksambashare:1387
-#: ../bin/draksambashare:1396 ../bin/draksambashare:1415
-#: ../bin/draksambashare:1424 ../bin/draksambashare:1436
+#: ../bin/draksambashare:629 ../bin/draksambashare:695
+#: ../bin/draksambashare:795 ../bin/draksambashare:802
+#: ../bin/draksambashare:941 ../bin/draksambashare:1095
+#: ../bin/draksambashare:1114 ../bin/draksambashare:1146
+#: ../bin/draksambashare:1252 ../bin/draksambashare:1354
+#: ../bin/draksambashare:1363 ../bin/draksambashare:1385
+#: ../bin/draksambashare:1394 ../bin/draksambashare:1413
+#: ../bin/draksambashare:1422 ../bin/draksambashare:1434
 #: ../lib/network/connection/xdsl.pm:359
-#: ../lib/network/connection_manager.pm:61
-#: ../lib/network/connection_manager.pm:67
-#: ../lib/network/connection_manager.pm:83
-#: ../lib/network/connection_manager.pm:91
-#: ../lib/network/connection_manager.pm:173
-#: ../lib/network/connection_manager.pm:177 ../lib/network/drakvpn.pm:45
+#: ../lib/network/connection_manager.pm:62
+#: ../lib/network/connection_manager.pm:68
+#: ../lib/network/connection_manager.pm:84
+#: ../lib/network/connection_manager.pm:92
+#: ../lib/network/connection_manager.pm:174
+#: ../lib/network/connection_manager.pm:178
+#: ../lib/network/connection_manager.pm:220
+#: ../lib/network/connection_manager.pm:476
+#: ../lib/network/connection_manager.pm:489 ../lib/network/drakvpn.pm:45
 #: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
-#: ../lib/network/ndiswrapper.pm:124 ../lib/network/netcenter.pm:218
-#: ../lib/network/netconnect.pm:134 ../lib/network/netconnect.pm:187
-#: ../lib/network/netconnect.pm:233 ../lib/network/netconnect.pm:274
-#: ../lib/network/netconnect.pm:823 ../lib/network/thirdparty.pm:123
-#: ../lib/network/thirdparty.pm:141 ../lib/network/thirdparty.pm:232
-#: ../lib/network/thirdparty.pm:234 ../lib/network/thirdparty.pm:255
+#: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:134
+#: ../lib/network/netconnect.pm:187 ../lib/network/netconnect.pm:233
+#: ../lib/network/netconnect.pm:274 ../lib/network/netconnect.pm:823
+#: ../lib/network/thirdparty.pm:123 ../lib/network/thirdparty.pm:141
+#: ../lib/network/thirdparty.pm:232 ../lib/network/thirdparty.pm:234
+#: ../lib/network/thirdparty.pm:255
 #, c-format
 msgid "Error"
 msgstr "Kesalahan"
 
-#: ../bin/drakgw:184
+#: ../bin/drakgw:188
 #, c-format
 msgid "Potential LAN address conflict found in current config of %s!\n"
 msgstr "Terdapat potensi konflik alamat LAN pada konfigurasi %s!\n"
 
-#: ../bin/drakgw:200
+#: ../bin/drakgw:204
 #, c-format
 msgid "Domain Name Server (DNS) configuration"
 msgstr "Konfigurasi Domain Name Server (DNS)"
 
-#: ../bin/drakgw:204
+#: ../bin/drakgw:208
 #, c-format
 msgid "Use this gateway as domain name server"
 msgstr "Gunakan gateway ini sebagai domain name server"
 
-#: ../bin/drakgw:205
+#: ../bin/drakgw:209
 #, c-format
 msgid "The DNS Server IP"
 msgstr "IP Server DNS"
 
-#: ../bin/drakgw:232
+#: ../bin/drakgw:236
 #, c-format
 msgid ""
 "DHCP Server Configuration.\n"
@@ -392,86 +397,88 @@ msgstr ""
 "Di sini Anda dapat memilih opsi yang berbeda untuk konfigurasi server DHCP.\n"
 "Jika Anda tidak tahu arti sebuah opsi, tinggalkan apa adanya."
 
-#: ../bin/drakgw:239
+#: ../bin/drakgw:243
 #, c-format
 msgid "Use automatic configuration (DHCP)"
 msgstr "Gunakan konfigurasi otomatis (DHCP)"
 
-#: ../bin/drakgw:240
+#: ../bin/drakgw:244
 #, c-format
 msgid "The DHCP start range"
 msgstr "Jangkauan awal DHCP"
 
-#: ../bin/drakgw:241
+#: ../bin/drakgw:245
 #, c-format
 msgid "The DHCP end range"
 msgstr "Jangkauan akhir DHCP"
 
-#: ../bin/drakgw:242
+#: ../bin/drakgw:246
 #, c-format
 msgid "The default lease (in seconds)"
 msgstr "Lama peminjaman standar (dalam detik)"
 
-#: ../bin/drakgw:243
+#: ../bin/drakgw:247
 #, c-format
 msgid "The maximum lease (in seconds)"
 msgstr "Lama peminjaman maksimum (dalam detik)"
 
-#: ../bin/drakgw:266
+#: ../bin/drakgw:270
 #, c-format
 msgid "Proxy caching server (SQUID)"
 msgstr "Server proxy caching (SQUID)"
 
-#: ../bin/drakgw:270
+#: ../bin/drakgw:274
 #, c-format
 msgid "Use this gateway as proxy caching server"
 msgstr "Gunakan gateway ini sebagai server proxy caching"
 
-#: ../bin/drakgw:271
+#: ../bin/drakgw:275
 #, c-format
 msgid "Admin mail"
 msgstr "Email admin"
 
-#: ../bin/drakgw:272
+#: ../bin/drakgw:276
 #, c-format
 msgid "Visible hostname"
 msgstr "Nama host tampak"
 
-#: ../bin/drakgw:273
+#: ../bin/drakgw:277
 #, c-format
 msgid "Proxy port"
 msgstr "Port proxy"
 
-#: ../bin/drakgw:274
+#: ../bin/drakgw:278
 #, c-format
 msgid "Cache size (MB)"
 msgstr "Ukuran cache (MB)"
 
-#: ../bin/drakgw:293
+#: ../bin/drakgw:297
 #, c-format
 msgid "Broadcast printer information"
 msgstr "Informasi broadcast printer"
 
-#: ../bin/drakgw:304
+#: ../bin/drakgw:308
 #, c-format
 msgid ""
-"No ethernet network adapter has been detected on your system. Please run the "
-"hardware configuration tool."
+"No ethernet network adapter configured for LAN has been detected on your "
+"system.\n"
+"\n"
+"Please run the hardware configuration tool to configure it, and certify that "
+"the Mandirva firewall is not enabled for network adapter connected to your "
+"LAN network."
 msgstr ""
-"Tidak ada adapter jaringan ethernet yang terdeteksi pada sistem Anda. "
-"Silahkan jalankan perkakas konfigurasi perangkat keras."
 
-#: ../bin/drakgw:310
+#: ../bin/drakgw:316
 #, c-format
 msgid "Internet Connection Sharing is now enabled."
 msgstr "Berbagi Koneksi Internet sekarang telah aktif."
 
-#: ../bin/drakgw:316
+#: ../bin/drakgw:322
 #, c-format
 msgid "Internet Connection Sharing is now disabled."
 msgstr "Berbagi Koneksi Internet sekarang non-aktif."
 
-#: ../bin/drakgw:322
+#: ../bin/drakgw:328
 #, c-format
 msgid ""
 "Everything has been configured.\n"
@@ -484,17 +491,17 @@ msgstr ""
 "Area Network Anda, dengan menggunakan konfigurasi jaringan\n"
 "otomatis (DHCP) dan server Proxy Cache Transparan (SQUID)."
 
-#: ../bin/drakgw:345
+#: ../bin/drakgw:351
 #, c-format
 msgid "Disabling servers..."
 msgstr "Menon-aktifkan server..."
 
-#: ../bin/drakgw:359
+#: ../bin/drakgw:365
 #, c-format
 msgid "Firewalling configuration detected!"
 msgstr "Konfigurasi firewall terdeteksi!"
 
-#: ../bin/drakgw:360
+#: ../bin/drakgw:366
 #, c-format
 msgid ""
 "Warning! An existing firewalling configuration has been detected. You may "
@@ -503,12 +510,12 @@ msgstr ""
 "Perintatan! Konfigurasi firewall yang sudah ada terdeteksi. Anda perlu "
 "beberapa perbaikan manual setelah installasi."
 
-#: ../bin/drakgw:365
+#: ../bin/drakgw:371
 #, c-format
 msgid "Configuring..."
 msgstr "Mengkonfigurasi..."
 
-#: ../bin/drakgw:366
+#: ../bin/drakgw:372
 #, c-format
 msgid "Configuring firewall..."
 msgstr "Mengkonfigurasi firewall.."
@@ -548,9 +555,10 @@ msgstr "Nama host:"
 msgid "Host Aliases:"
 msgstr "Alias host:"
 
-#: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draksambashare:230
-#: ../bin/draksambashare:251 ../bin/draksambashare:397
-#: ../bin/draksambashare:626 ../bin/draksambashare:793
+#: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draknfs:116
+#: ../bin/draksambashare:230 ../bin/draksambashare:253
+#: ../bin/draksambashare:397 ../bin/draksambashare:625
+#: ../bin/draksambashare:791
 #, c-format
 msgid "Error!"
 msgstr "Kesalahan!"
@@ -580,13 +588,13 @@ msgstr "Alias host"
 msgid "Manage hosts definitions"
 msgstr "Mengelola definisi host"
 
-#: ../bin/drakhosts:222 ../bin/drakhosts:249 ../bin/draknfs:367
+#: ../bin/drakhosts:222 ../bin/drakhosts:249 ../bin/draknfs:369
 #, c-format
 msgid "Modify entry"
 msgstr "Modifikasi daftar"
 
-#: ../bin/drakhosts:241 ../bin/draknfs:595 ../bin/draksambashare:1349
-#: ../bin/draksambashare:1380 ../bin/draksambashare:1411
+#: ../bin/drakhosts:241 ../bin/draknfs:601 ../bin/draksambashare:1347
+#: ../bin/draksambashare:1378 ../bin/draksambashare:1409
 #, c-format
 msgid "Add"
 msgstr "Tambah"
@@ -601,9 +609,9 @@ msgstr "Tambah daftar"
 msgid "Failed to add host."
 msgstr "Gagal menambahkan host."
 
-#: ../bin/drakhosts:248 ../bin/draknfs:602 ../bin/draksambashare:1306
-#: ../bin/draksambashare:1351 ../bin/draksambashare:1382
-#: ../bin/draksambashare:1419
+#: ../bin/drakhosts:248 ../bin/draknfs:608 ../bin/draksambashare:1304
+#: ../bin/draksambashare:1349 ../bin/draksambashare:1380
+#: ../bin/draksambashare:1417
 #, c-format
 msgid "Modify"
 msgstr "Modifikasi"
@@ -613,9 +621,9 @@ msgstr "Modifikasi"
 msgid "Failed to Modify host."
 msgstr "Gagal untuk memodifikasi host."
 
-#: ../bin/drakhosts:255 ../bin/drakids:92 ../bin/drakids:101
-#: ../bin/draknfs:609 ../bin/draksambashare:1307 ../bin/draksambashare:1359
-#: ../bin/draksambashare:1390 ../bin/draksambashare:1427
+#: ../bin/drakhosts:255 ../bin/drakids:95 ../bin/drakids:104
+#: ../bin/draknfs:615 ../bin/draksambashare:1305 ../bin/draksambashare:1357
+#: ../bin/draksambashare:1388 ../bin/draksambashare:1425
 #, c-format
 msgid "Remove"
 msgstr "Hapus"
@@ -625,9 +633,9 @@ msgstr "Hapus"
 msgid "Failed to remove host."
 msgstr "Gagal untuk menghapus host."
 
-#: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:174
-#: ../bin/net_applet:189 ../lib/network/drakroam.pm:118
-#: ../lib/network/netcenter.pm:170
+#: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:183
+#: ../bin/draknetprofile.orig:183 ../bin/net_applet:189
+#: ../lib/network/drakroam.pm:93 ../lib/network/netcenter.pm:169
 #, c-format
 msgid "Quit"
 msgstr "Keluar"
@@ -637,124 +645,124 @@ msgstr "Keluar"
 msgid "Allowed addresses"
 msgstr "Alamat yang diijinkan"
 
-#: ../bin/drakids:40 ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196
-#: ../bin/drakids:221 ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
-#: ../bin/net_applet:132 ../bin/net_applet:278
-#: ../lib/network/drakfirewall.pm:261 ../lib/network/drakfirewall.pm:265
+#: ../bin/drakids:40 ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199
+#: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
+#: ../bin/net_applet:132 ../bin/net_applet:292
+#: ../lib/network/drakfirewall.pm:270 ../lib/network/drakfirewall.pm:274
 #, c-format
 msgid "Interactive Firewall"
 msgstr "Firewall Interaktif"
 
-#: ../bin/drakids:68 ../bin/drakids:187 ../bin/drakids:196 ../bin/drakids:221
-#: ../bin/drakids:230 ../bin/drakids:240 ../bin/drakids:332
-#: ../bin/net_applet:278
+#: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
+#: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
+#: ../bin/net_applet:292
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "Tidak dapat menghubungi daemon"
 
-#: ../bin/drakids:79 ../bin/drakids:107
+#: ../bin/drakids:82 ../bin/drakids:110
 #, c-format
 msgid "Log"
 msgstr "Log"
 
-#: ../bin/drakids:83 ../bin/drakids:102
+#: ../bin/drakids:86 ../bin/drakids:105
 #, c-format
 msgid "Allow"
 msgstr "Ijinkan"
 
-#: ../bin/drakids:84 ../bin/drakids:93
+#: ../bin/drakids:87 ../bin/drakids:96
 #, c-format
 msgid "Block"
 msgstr "Dilarang"
 
-#: ../bin/drakids:85 ../bin/drakids:94 ../bin/drakids:103 ../bin/drakids:114
-#: ../bin/drakids:127 ../bin/drakids:135 ../bin/draknfs:194
+#: ../bin/drakids:88 ../bin/drakids:97 ../bin/drakids:106 ../bin/drakids:117
+#: ../bin/drakids:130 ../bin/drakids:138 ../bin/draknfs:197
 #: ../bin/net_monitor:122
 #, c-format
 msgid "Close"
 msgstr "Tutup"
 
-#: ../bin/drakids:88
+#: ../bin/drakids:91
 #, c-format
 msgid "Allowed services"
 msgstr "Layanan yang diijinkan"
 
-#: ../bin/drakids:97
+#: ../bin/drakids:100
 #, c-format
 msgid "Blocked services"
 msgstr "Layanan yang dilarang"
 
-#: ../bin/drakids:111
+#: ../bin/drakids:114
 #, c-format
 msgid "Clear logs"
 msgstr "Bersihlah log"
 
-#: ../bin/drakids:112 ../bin/drakids:117
+#: ../bin/drakids:115 ../bin/drakids:120
 #, c-format
 msgid "Blacklist"
 msgstr "Daftar Hitam"
 
-#: ../bin/drakids:113 ../bin/drakids:130
+#: ../bin/drakids:116 ../bin/drakids:133
 #, c-format
 msgid "Whitelist"
 msgstr "Daftar putih"
 
-#: ../bin/drakids:121
+#: ../bin/drakids:124
 #, c-format
 msgid "Remove from blacklist"
 msgstr "Hapus dari daftar hitam"
 
-#: ../bin/drakids:122
+#: ../bin/drakids:125
 #, c-format
 msgid "Move to whitelist"
 msgstr "Pindahkan ke daftar putih"
 
-#: ../bin/drakids:134
+#: ../bin/drakids:137
 #, c-format
 msgid "Remove from whitelist"
 msgstr "Hapus dari daftar putih"
 
-#: ../bin/drakids:253
+#: ../bin/drakids:256
 #, c-format
 msgid "Date"
 msgstr "Tanggal"
 
-#: ../bin/drakids:254
+#: ../bin/drakids:257
 #, fuzzy, c-format
 msgid "Remote host"
 msgstr "Remote"
 
-#: ../bin/drakids:255 ../lib/network/vpn/openvpn.pm:115
+#: ../bin/drakids:258 ../lib/network/vpn/openvpn.pm:115
 #, c-format
 msgid "Type"
 msgstr "Tipe"
 
-#: ../bin/drakids:256 ../bin/drakids:289
+#: ../bin/drakids:259 ../bin/drakids:292
 #, c-format
 msgid "Service"
 msgstr "Layanan"
 
-#: ../bin/drakids:257
+#: ../bin/drakids:260
 #, c-format
 msgid "Network interface"
 msgstr "Antarmuka jaringan"
 
-#: ../bin/drakids:288
+#: ../bin/drakids:291
 #, c-format
 msgid "Application"
 msgstr "Aplikasi"
 
-#: ../bin/drakids:290
+#: ../bin/drakids:293
 #, c-format
 msgid "Status"
 msgstr "Status"
 
-#: ../bin/drakids:292
+#: ../bin/drakids:295
 #, c-format
 msgid "Allowed"
 msgstr "Ijinkan"
 
-#: ../bin/drakids:293
+#: ../bin/drakids:296
 #, c-format
 msgid "Blocked"
 msgstr "Dilarang"
@@ -828,22 +836,22 @@ msgstr "Sinkronisasi antarmuka jaringan"
 msgid "Connection mark bit"
 msgstr "Bit penanda koneksi"
 
-#: ../bin/draknetprofile:37
+#: ../bin/draknetprofile:37 ../bin/draknetprofile.orig:37
 #, c-format
 msgid "Network profiles"
 msgstr "Profil jaringan"
 
-#: ../bin/draknetprofile:67
+#: ../bin/draknetprofile:67 ../bin/draknetprofile.orig:67
 #, c-format
 msgid "Profile"
 msgstr "Profil"
 
-#: ../bin/draknetprofile:126
+#: ../bin/draknetprofile:135 ../bin/draknetprofile.orig:135
 #, c-format
 msgid "New profile..."
 msgstr "Profil baru..."
 
-#: ../bin/draknetprofile:129
+#: ../bin/draknetprofile:138 ../bin/draknetprofile.orig:138
 #, c-format
 msgid ""
 "Name of the profile to create (the new profile is created as a copy of the "
@@ -852,29 +860,30 @@ msgstr ""
 "Nama dari profil yang akan dibuat (profil baru akan diciptakan sebagai "
 "salinan dari profil aktual):"
 
-#: ../bin/draknetprofile:140
+#: ../bin/draknetprofile:149 ../bin/draknetprofile.orig:149
 #, c-format
 msgid "The \"%s\" profile already exists!"
 msgstr "Profil \"%s\" sudah ada!"
 
-#: ../bin/draknetprofile:156 ../bin/draknetprofile:158
+#: ../bin/draknetprofile:165 ../bin/draknetprofile:167
+#: ../bin/draknetprofile.orig:165 ../bin/draknetprofile.orig:167
 #: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
 #: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:481
 #, c-format
 msgid "Warning"
 msgstr "Peringatan"
 
-#: ../bin/draknetprofile:156
+#: ../bin/draknetprofile:165 ../bin/draknetprofile.orig:165
 #, c-format
 msgid "You can not delete the default profile"
 msgstr "Anda tidak bisa menghapus profil default"
 
-#: ../bin/draknetprofile:158
+#: ../bin/draknetprofile:167 ../bin/draknetprofile.orig:167
 #, c-format
 msgid "You can not delete the current profile"
 msgstr "Anda tidak bisa menghapus profil aktual"
 
-#: ../bin/draknetprofile:168
+#: ../bin/draknetprofile:177 ../bin/draknetprofile.orig:177
 #, c-format
 msgid ""
 "This tool allows to activate an existing network profile, and to manage "
@@ -883,109 +892,109 @@ msgstr ""
 "Perangkat ini mengijinkan untuk mengaktifkan profil jaringan yang ada, dan "
 "mengelola (klon, hapus) profile."
 
-#: ../bin/draknetprofile:168
+#: ../bin/draknetprofile:177 ../bin/draknetprofile.orig:177
 #, c-format
 msgid "To modify a profile, you have to activate it first."
 msgstr "Untuk memodifikasi sebuah profil, Anda harus mengaktifkannya dahulu."
 
-#: ../bin/draknetprofile:171
+#: ../bin/draknetprofile:180 ../bin/draknetprofile.orig:180
 #, c-format
 msgid "Activate"
 msgstr "Aktifkan"
 
-#: ../bin/draknetprofile:172
+#: ../bin/draknetprofile:181 ../bin/draknetprofile.orig:181
 #, c-format
 msgid "Clone"
 msgstr "Klon"
 
-#: ../bin/draknetprofile:173
+#: ../bin/draknetprofile:182 ../bin/draknetprofile.orig:182
 #, c-format
 msgid "Delete"
 msgstr "Hapus"
 
-#: ../bin/draknfs:47
+#: ../bin/draknfs:49
 #, c-format
 msgid "map root user as anonymous"
 msgstr "petakan pengguna root sebagai anonim"
 
-#: ../bin/draknfs:48
+#: ../bin/draknfs:50
 #, c-format
 msgid "map all users to anonymous user"
 msgstr "petakan semua pengguna pada pengguna anonim"
 
-#: ../bin/draknfs:49
+#: ../bin/draknfs:51
 #, c-format
 msgid "No user UID mapping"
 msgstr "Tidak ada pemetaan ID Pengguna"
 
-#: ../bin/draknfs:50
+#: ../bin/draknfs:52
 #, c-format
 msgid "allow real remote root access"
 msgstr "ijinkan akses remote root"
 
-#: ../bin/draknfs:64 ../bin/draknfs:65 ../bin/draknfs:66
+#: ../bin/draknfs:66 ../bin/draknfs:67 ../bin/draknfs:68
 #: ../bin/draksambashare:175 ../bin/draksambashare:176
 #: ../bin/draksambashare:177
 #, c-format
 msgid "/_File"
 msgstr "/_File"
 
-#: ../bin/draknfs:65 ../bin/draksambashare:176
+#: ../bin/draknfs:67 ../bin/draksambashare:176
 #, c-format
 msgid "/_Write conf"
 msgstr "/_Write conf"
 
-#: ../bin/draknfs:66 ../bin/draksambashare:177
+#: ../bin/draknfs:68 ../bin/draksambashare:177
 #, c-format
 msgid "/_Quit"
 msgstr "/_Keluar"
 
-#: ../bin/draknfs:66 ../bin/draksambashare:177
+#: ../bin/draknfs:68 ../bin/draksambashare:177
 #, c-format
 msgid "<control>Q"
 msgstr "<control>Q"
 
-#: ../bin/draknfs:69 ../bin/draknfs:70 ../bin/draknfs:71
+#: ../bin/draknfs:71 ../bin/draknfs:72 ../bin/draknfs:73
 #, c-format
 msgid "/_NFS Server"
 msgstr "/Server _NFS"
 
-#: ../bin/draknfs:70 ../bin/draksambashare:181
+#: ../bin/draknfs:72 ../bin/draksambashare:181
 #, c-format
 msgid "/_Restart"
 msgstr "/_Restart"
 
-#: ../bin/draknfs:71 ../bin/draksambashare:182
+#: ../bin/draknfs:73 ../bin/draksambashare:182
 #, c-format
 msgid "/R_eload"
 msgstr "/R_eload"
 
-#: ../bin/draknfs:90
+#: ../bin/draknfs:92
 #, c-format
 msgid "NFS server"
 msgstr "server NFS"
 
-#: ../bin/draknfs:90
+#: ../bin/draknfs:92
 #, c-format
 msgid "Restarting/Reloading NFS server..."
 msgstr "Menjalankan ulang/Memuat ulang server NFS..."
 
-#: ../bin/draknfs:91
+#: ../bin/draknfs:93
 #, c-format
 msgid "Error Restarting/Reloading NFS server"
 msgstr "Kesalahan Menjalankan ulang/Memuat ulang server NFS"
 
-#: ../bin/draknfs:107 ../bin/draksambashare:246
-#, c-format
-msgid "Directory Selection"
+#: ../bin/draknfs:109 ../bin/draksambashare:246
+#, fuzzy, c-format
+msgid "Directory selection"
 msgstr "Pemilihan Direktori"
 
-#: ../bin/draknfs:112 ../bin/draksambashare:251
+#: ../bin/draknfs:116 ../bin/draksambashare:253
 #, c-format
 msgid "Should be a directory."
 msgstr "Seharusnya sebuah direktori."
 
-#: ../bin/draknfs:143
+#: ../bin/draknfs:146
 #, c-format
 msgid ""
 "<span weight=\"bold\">NFS clients</span> may be specified in a number of "
@@ -1034,7 +1043,7 @@ msgstr ""
 "bersamaan. sebagai contoh, apakah `/255.255.252.0' atau  `/22'  ditambahkan "
 "hasil pada alamat dasar jaringan.\n"
 
-#: ../bin/draknfs:158
+#: ../bin/draknfs:161
 #, c-format
 msgid ""
 "<span weight=\"bold\">User ID options</span>\n"
@@ -1081,32 +1090,32 @@ msgstr ""
 "<span foreground=\"royalblue3\">anonuid dan anongid:</span> menentukan uid "
 "dan gid dari account anonim secara eksplisit.\n"
 
-#: ../bin/draknfs:174
+#: ../bin/draknfs:177
 #, c-format
 msgid "Synchronous access:"
 msgstr "Akses sinkronous:"
 
-#: ../bin/draknfs:175
+#: ../bin/draknfs:178
 #, c-format
 msgid "Secured Connection:"
 msgstr "Koneksi Aman:"
 
-#: ../bin/draknfs:176
+#: ../bin/draknfs:179
 #, c-format
 msgid "Read-Only share:"
 msgstr "Share Read-Only:"
 
-#: ../bin/draknfs:177
+#: ../bin/draknfs:180
 #, c-format
 msgid "Subtree checking:"
 msgstr ""
 
-#: ../bin/draknfs:179
+#: ../bin/draknfs:182
 #, c-format
 msgid "Advanced Options"
 msgstr "Opsi-opsi Tingkat Lanjut"
 
-#: ../bin/draknfs:180
+#: ../bin/draknfs:183
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> this option requires that requests "
@@ -1117,7 +1126,7 @@ msgstr ""
 "yang berasal dari sebuah port internet kurang dari IPPORT_RESERVED (1024). "
 "Opsi ini aktif secara default."
 
-#: ../bin/draknfs:181
+#: ../bin/draknfs:184
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> allow either only read or both "
@@ -1130,7 +1139,7 @@ msgstr ""
 "mengijinkan sembarang permintaan yang merubah sistem file. Hal ini juga bisa "
 "dilakukan secara eksplisit dengan menggunakan opsi ini."
 
-#: ../bin/draknfs:182
+#: ../bin/draknfs:185
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> disallows the NFS server to "
@@ -1142,7 +1151,7 @@ msgstr ""
 "yang dilakukan oleh permintaan telah disimpan pada penyimpanan yang stabil "
 "(misalnya disk drive)."
 
-#: ../bin/draknfs:183
+#: ../bin/draknfs:186
 #, c-format
 msgid ""
 "<span foreground=\"royalblue3\">%s</span> enable subtree checking which can "
@@ -1150,139 +1159,139 @@ msgid ""
 "exports(5) man page for more details."
 msgstr ""
 
-#: ../bin/draknfs:188 ../bin/draksambashare:624 ../bin/draksambashare:791
+#: ../bin/draknfs:191 ../bin/draksambashare:623 ../bin/draksambashare:789
 #, c-format
 msgid "Information"
 msgstr "Informasi"
 
-#: ../bin/draknfs:269
+#: ../bin/draknfs:271
 #, c-format
 msgid "Directory"
 msgstr "Direktori"
 
-#: ../bin/draknfs:280
+#: ../bin/draknfs:282
 #, c-format
 msgid "Please add an NFS share to be able to modify it."
 msgstr "Harap tambahkan sebuah share NFS agar dapat dimodifikasi."
 
-#: ../bin/draknfs:354
+#: ../bin/draknfs:356
 #, fuzzy, c-format
 msgid "Advanced"
 msgstr "Opsi-opsi Tingkat Lanjut"
 
-#: ../bin/draknfs:377
+#: ../bin/draknfs:379
 #, c-format
 msgid "NFS directory"
 msgstr "Direktori NFS"
 
-#: ../bin/draknfs:378 ../bin/draksambashare:382 ../bin/draksambashare:589
-#: ../bin/draksambashare:768
+#: ../bin/draknfs:380 ../bin/draksambashare:382 ../bin/draksambashare:588
+#: ../bin/draksambashare:766
 #, c-format
 msgid "Directory:"
 msgstr "Direktori:"
 
-#: ../bin/draknfs:379
+#: ../bin/draknfs:381
 #, c-format
 msgid "Host access"
 msgstr "Akses host"
 
-#: ../bin/draknfs:380
+#: ../bin/draknfs:382
 #, c-format
 msgid "Access:"
 msgstr "Akses:"
 
-#: ../bin/draknfs:381
+#: ../bin/draknfs:383
 #, c-format
 msgid "User ID Mapping"
 msgstr "Pemetaan ID Pengguna"
 
-#: ../bin/draknfs:382
+#: ../bin/draknfs:384
 #, c-format
 msgid "User ID:"
 msgstr "ID Pengguna:"
 
-#: ../bin/draknfs:383
+#: ../bin/draknfs:385
 #, c-format
 msgid "Anonymous user ID:"
 msgstr "ID Pengguna Anonim:"
 
-#: ../bin/draknfs:384
+#: ../bin/draknfs:386
 #, c-format
 msgid "Anonymous Group ID:"
 msgstr "ID Grup Anonim:"
 
-#: ../bin/draknfs:427
+#: ../bin/draknfs:429
 #, c-format
 msgid "Please specify a directory to share."
 msgstr "Harap tentukan sebuah direktori untuk share."
 
-#: ../bin/draknfs:429
+#: ../bin/draknfs:431
 #, c-format
 msgid "Can't create this directory."
 msgstr "Tidak bisa membuat direktori ini."
 
-#: ../bin/draknfs:432
+#: ../bin/draknfs:434
 #, c-format
 msgid "You must specify hosts access."
 msgstr "Anda harus menentukan akses host."
 
-#: ../bin/draknfs:512
+#: ../bin/draknfs:514
 #, c-format
 msgid "Share Directory"
 msgstr "Direktori Share"
 
-#: ../bin/draknfs:512
+#: ../bin/draknfs:514
 #, c-format
 msgid "Hosts Wildcard"
 msgstr "Wildcard Host"
 
-#: ../bin/draknfs:512
+#: ../bin/draknfs:514
 #, c-format
 msgid "General Options"
 msgstr "Opsi Umum"
 
-#: ../bin/draknfs:512
+#: ../bin/draknfs:514
 #, c-format
 msgid "Custom Options"
 msgstr "Opsi Kustomisasi"
 
-#: ../bin/draknfs:524 ../bin/draksambashare:397 ../bin/draksambashare:626
-#: ../bin/draksambashare:793
+#: ../bin/draknfs:526 ../bin/draksambashare:397 ../bin/draksambashare:625
+#: ../bin/draksambashare:791
 #, c-format
 msgid "Please enter a directory to share."
 msgstr "Harap masukkan sebuah direktori untuk share."
 
-#: ../bin/draknfs:531
+#: ../bin/draknfs:533
 #, c-format
 msgid "Please use the modify button to set right access."
 msgstr "Harap gunakan tombol modifikasi untuk menentukan hak akses."
 
-#: ../bin/draknfs:546
+#: ../bin/draknfs:548
 #, c-format
 msgid "Manage NFS shares"
 msgstr "Mengelola share NFS"
 
-#: ../bin/draknfs:582
+#: ../bin/draknfs:584
 #, fuzzy, c-format
 msgid "Starting the NFS-server"
 msgstr "Menjalankan ulang/Memuat ulang server NFS..."
 
-#: ../bin/draknfs:590
+#: ../bin/draknfs:596
 #, c-format
 msgid "DrakNFS manage NFS shares"
 msgstr "DrakNFS mengelola share NFS"
 
-#: ../bin/draknfs:599
+#: ../bin/draknfs:605
 #, c-format
 msgid "Failed to add NFS share."
 msgstr "Gagal untuk menambah share NFS."
 
-#: ../bin/draknfs:606
+#: ../bin/draknfs:612
 #, c-format
 msgid "Failed to Modify NFS share."
 msgstr "Gagal untuk memodifikasi share NFS."
 
-#: ../bin/draknfs:613
+#: ../bin/draknfs:619
 #, c-format
 msgid "Failed to remove an NFS share."
 msgstr "Gagal untuk menghapus sebuah share NFS."
@@ -1339,7 +1348,7 @@ msgid "Read list"
 msgstr "Daftar Baca"
 
 #: ../bin/draksambashare:81 ../bin/draksambashare:126
-#: ../bin/draksambashare:603
+#: ../bin/draksambashare:602
 #, c-format
 msgid "Write list"
 msgstr "Daftar tulis"
@@ -1399,7 +1408,7 @@ msgstr "Nama printer"
 msgid "Path"
 msgstr "Path"
 
-#: ../bin/draksambashare:121 ../bin/draksambashare:595
+#: ../bin/draksambashare:121 ../bin/draksambashare:594
 #, c-format
 msgid "Printable"
 msgstr "Dapat dicetak"
@@ -1420,7 +1429,7 @@ msgid "Guest ok"
 msgstr "Tamu ok"
 
 #: ../bin/draksambashare:127 ../bin/draksambashare:168
-#: ../bin/draksambashare:604
+#: ../bin/draksambashare:603
 #, c-format
 msgid "Inherit permissions"
 msgstr "Mewarisi hak akses"
@@ -1532,8 +1541,8 @@ msgstr "Menjalankan ulang/Memuat ulang server Samba..."
 msgid "Error Restarting/Reloading Samba server"
 msgstr "Kesalahan Menjalankan ulang/Memuat ulang server Samba"
 
-#: ../bin/draksambashare:370 ../bin/draksambashare:568
-#: ../bin/draksambashare:689
+#: ../bin/draksambashare:370 ../bin/draksambashare:567
+#: ../bin/draksambashare:687
 #, c-format
 msgid "Open"
 msgstr "Buka"
@@ -1553,8 +1562,8 @@ msgstr "Tambah sebuah share"
 msgid "Name of the share:"
 msgstr "Nama share:"
 
-#: ../bin/draksambashare:381 ../bin/draksambashare:588
-#: ../bin/draksambashare:769
+#: ../bin/draksambashare:381 ../bin/draksambashare:587
+#: ../bin/draksambashare:767
 #, c-format
 msgid "Comment:"
 msgstr "Komentar"
@@ -1573,8 +1582,8 @@ msgstr ""
 msgid "Can't create the directory, please enter a correct path."
 msgstr "Tidak bisa membuat direktori, harap masukkan path yang benar."
 
-#: ../bin/draksambashare:403 ../bin/draksambashare:624
-#: ../bin/draksambashare:791
+#: ../bin/draksambashare:403 ../bin/draksambashare:623
+#: ../bin/draksambashare:789
 #, c-format
 msgid "Please enter a Comment for this share."
 msgstr "Harap masukkan sebuah komentar untuk share ini."
@@ -1612,7 +1621,7 @@ msgstr "Sebuah generator PDF sudah ada."
 msgid "Printers and print$ already exist."
 msgstr "Printer dan print$ sudah ada."
 
-#: ../bin/draksambashare:529 ../bin/draksambashare:1199
+#: ../bin/draksambashare:529 ../bin/draksambashare:1197
 #, c-format
 msgid "Congratulations"
 msgstr "Selamat"
@@ -1629,117 +1638,117 @@ msgstr ""
 "Harap tambahkan atau pilih sebuah share printer Samba agar dapat "
 "dimodifikasi."
 
-#: ../bin/draksambashare:571
+#: ../bin/draksambashare:570
 #, c-format
 msgid "DrakSamba Printers entry"
 msgstr "Daftar Printer DrakSamba"
 
-#: ../bin/draksambashare:584
+#: ../bin/draksambashare:583
 #, c-format
 msgid "Printer share"
 msgstr "Share printer"
 
-#: ../bin/draksambashare:587
+#: ../bin/draksambashare:586
 #, c-format
 msgid "Printer name:"
 msgstr "Nama printer:"
 
-#: ../bin/draksambashare:593 ../bin/draksambashare:774
+#: ../bin/draksambashare:592 ../bin/draksambashare:772
 #, c-format
 msgid "Writable:"
 msgstr "Dapat ditulis:"
 
-#: ../bin/draksambashare:594 ../bin/draksambashare:775
+#: ../bin/draksambashare:593 ../bin/draksambashare:773
 #, c-format
 msgid "Browseable:"
 msgstr "Dapat dijelajahi:"
 
-#: ../bin/draksambashare:599
+#: ../bin/draksambashare:598
 #, c-format
 msgid "Advanced options"
 msgstr "Opsi tingkat lanjut"
 
-#: ../bin/draksambashare:601
+#: ../bin/draksambashare:600
 #, c-format
 msgid "Printer access"
 msgstr "Akses printer"
 
-#: ../bin/draksambashare:605
+#: ../bin/draksambashare:604
 #, c-format
 msgid "Guest ok:"
 msgstr "Tamu ok:"
 
-#: ../bin/draksambashare:606
+#: ../bin/draksambashare:605
 #, c-format
 msgid "Create mode:"
 msgstr "Mode pembuatan:"
 
-#: ../bin/draksambashare:610
+#: ../bin/draksambashare:609
 #, c-format
 msgid "Printer command"
 msgstr "Perintah printer"
 
-#: ../bin/draksambashare:612
+#: ../bin/draksambashare:611
 #, c-format
 msgid "Print command:"
 msgstr "Perintah print:"
 
-#: ../bin/draksambashare:613
+#: ../bin/draksambashare:612
 #, c-format
 msgid "LPQ command:"
 msgstr "Perintah LPQ:"
 
-#: ../bin/draksambashare:614
+#: ../bin/draksambashare:613
 #, c-format
 msgid "Printing:"
 msgstr "Pencetakan:"
 
-#: ../bin/draksambashare:630
+#: ../bin/draksambashare:629
 #, c-format
 msgid "create mode should be numeric. ie: 0755."
 msgstr "mode pembuatan seharusnya numerik. misalnya: 0755."
 
-#: ../bin/draksambashare:692
+#: ../bin/draksambashare:690
 #, c-format
 msgid "DrakSamba entry"
 msgstr "Masukkan DrakSamba"
 
-#: ../bin/draksambashare:697
+#: ../bin/draksambashare:695
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
 msgstr "Harap tambahkan atau pilih sebuah share Samba agar dapat dimodifikasi."
 
-#: ../bin/draksambashare:720
+#: ../bin/draksambashare:718
 #, c-format
 msgid "Samba user access"
 msgstr "Akses pengguna Samba"
 
-#: ../bin/draksambashare:728
+#: ../bin/draksambashare:726
 #, c-format
 msgid "Mask options"
 msgstr "Opsi mask"
 
-#: ../bin/draksambashare:742
+#: ../bin/draksambashare:740
 #, c-format
 msgid "Display options"
 msgstr "Opsi Tampilan"
 
-#: ../bin/draksambashare:764
+#: ../bin/draksambashare:762
 #, c-format
 msgid "Samba share directory"
 msgstr "Direktori share Samba"
 
-#: ../bin/draksambashare:767
+#: ../bin/draksambashare:765
 #, c-format
 msgid "Share name:"
 msgstr "Nama share:"
 
-#: ../bin/draksambashare:773
+#: ../bin/draksambashare:771
 #, c-format
 msgid "Public:"
 msgstr "Publik:"
 
-#: ../bin/draksambashare:797
+#: ../bin/draksambashare:795
 #, c-format
 msgid ""
 "Create mask, create mode and directory mask should be numeric. ie: 0755."
@@ -1747,104 +1756,104 @@ msgstr ""
 "Mask pembuatan, mode pembuatan dan direktori mask harus angka. misalnya: "
 "0755."
 
-#: ../bin/draksambashare:804
+#: ../bin/draksambashare:802
 #, c-format
 msgid "Please create this Samba user: %s"
 msgstr "Harap buat pengguna Samba berikut: %s"
 
-#: ../bin/draksambashare:916
+#: ../bin/draksambashare:914
 #, c-format
 msgid "Add Samba user"
 msgstr "Tambah pengguna Samba"
 
-#: ../bin/draksambashare:931
+#: ../bin/draksambashare:929
 #, c-format
 msgid "User information"
 msgstr "Informasi pengguna"
 
-#: ../bin/draksambashare:933
+#: ../bin/draksambashare:931
 #, c-format
 msgid "User name:"
 msgstr "Nama pengguna:"
 
-#: ../bin/draksambashare:934
+#: ../bin/draksambashare:932
 #, c-format
 msgid "Password:"
 msgstr "Katasandi:"
 
-#: ../bin/draksambashare:1048
+#: ../bin/draksambashare:1046
 #, c-format
 msgid "PDC - primary domain controller"
 msgstr ""
 
-#: ../bin/draksambashare:1049
+#: ../bin/draksambashare:1047
 #, c-format
 msgid "Standalone - standalone server"
 msgstr ""
 
-#: ../bin/draksambashare:1055
+#: ../bin/draksambashare:1053
 #, fuzzy, c-format
 msgid "Samba Wizard"
 msgstr "Pengguna Samba"
 
-#: ../bin/draksambashare:1058
+#: ../bin/draksambashare:1056
 #, fuzzy, c-format
 msgid "Samba server configuration Wizard"
 msgstr "Mengelola konfigurasi Samba"
 
-#: ../bin/draksambashare:1058
+#: ../bin/draksambashare:1056
 #, c-format
 msgid ""
 "Samba allows your server to behave as a file and print server for "
 "workstations running non-Linux systems."
 msgstr ""
 
-#: ../bin/draksambashare:1074
+#: ../bin/draksambashare:1072
 #, c-format
 msgid "PDC server: primary domain controller"
 msgstr ""
 
-#: ../bin/draksambashare:1074
+#: ../bin/draksambashare:1072
 #, c-format
 msgid ""
 "Server configured as a PDC is responsible for Windows authentication "
 "throughout the domain."
 msgstr ""
 
-#: ../bin/draksambashare:1074
+#: ../bin/draksambashare:1072
 #, c-format
 msgid ""
 "Single server installations may use smbpasswd or tdbsam password backends"
 msgstr ""
 
-#: ../bin/draksambashare:1074
+#: ../bin/draksambashare:1072
 #, c-format
 msgid ""
 "Domain master = yes, causes the server to register the NetBIOS name <pdc "
 "name>. This name will be recognized by other servers."
 msgstr ""
 
-#: ../bin/draksambashare:1091
+#: ../bin/draksambashare:1089
 #, c-format
 msgid "Wins support:"
 msgstr ""
 
-#: ../bin/draksambashare:1092
+#: ../bin/draksambashare:1090
 #, fuzzy, c-format
 msgid "admin users:"
 msgstr "Pengguna admin"
 
-#: ../bin/draksambashare:1092
+#: ../bin/draksambashare:1090
 #, c-format
 msgid "root @adm"
 msgstr ""
 
-#: ../bin/draksambashare:1093
+#: ../bin/draksambashare:1091
 #, c-format
 msgid "Os level:"
 msgstr ""
 
-#: ../bin/draksambashare:1093
+#: ../bin/draksambashare:1091
 #, c-format
 msgid ""
 "The global os level option dictates the operating system level at which "
@@ -1854,54 +1863,54 @@ msgid ""
 "ie: os level = 34"
 msgstr ""
 
-#: ../bin/draksambashare:1097
+#: ../bin/draksambashare:1095
 #, c-format
 msgid "The domain is wrong."
 msgstr ""
 
-#: ../bin/draksambashare:1104
+#: ../bin/draksambashare:1102
 #, fuzzy, c-format
 msgid "Workgroup"
 msgstr "Paksa grup"
 
-#: ../bin/draksambashare:1104
+#: ../bin/draksambashare:1102
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
 msgstr ""
 
-#: ../bin/draksambashare:1111 ../bin/draksambashare:1178
+#: ../bin/draksambashare:1109 ../bin/draksambashare:1176
 #, fuzzy, c-format
 msgid "Workgroup:"
 msgstr "Paksa grup"
 
-#: ../bin/draksambashare:1112
+#: ../bin/draksambashare:1110
 #, fuzzy, c-format
 msgid "Netbios name:"
 msgstr "Nama host:"
 
-#: ../bin/draksambashare:1116
+#: ../bin/draksambashare:1114
 #, c-format
 msgid "The Workgroup is wrong."
 msgstr ""
 
-#: ../bin/draksambashare:1123 ../bin/draksambashare:1133
+#: ../bin/draksambashare:1121 ../bin/draksambashare:1131
 #, fuzzy, c-format
 msgid "Security mode"
 msgstr "Aturan Keamanan"
 
-#: ../bin/draksambashare:1123
+#: ../bin/draksambashare:1121
 #, c-format
 msgid ""
 "User level: the client sends a session setup request directly following "
 "protocol negotiation. This request provides a username and password."
 msgstr ""
 
-#: ../bin/draksambashare:1123
+#: ../bin/draksambashare:1121
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
 msgstr ""
 
-#: ../bin/draksambashare:1123
+#: ../bin/draksambashare:1121
 #, c-format
 msgid ""
 "Domain level: provides a mechanism for storing all user and group accounts "
@@ -1909,202 +1918,202 @@ msgid ""
 "is shared between domain (security) controllers."
 msgstr ""
 
-#: ../bin/draksambashare:1134
+#: ../bin/draksambashare:1132
 #, fuzzy, c-format
 msgid "Hosts allow"
 msgstr "Nama Host"
 
-#: ../bin/draksambashare:1139
+#: ../bin/draksambashare:1137
 #, c-format
 msgid "Server Banner."
 msgstr ""
 
-#: ../bin/draksambashare:1139
+#: ../bin/draksambashare:1137
 #, c-format
 msgid ""
 "The banner is the way this server will be described in the Windows "
 "workstations."
 msgstr ""
 
-#: ../bin/draksambashare:1144
+#: ../bin/draksambashare:1142
 #, c-format
 msgid "Banner:"
 msgstr ""
 
-#: ../bin/draksambashare:1148
+#: ../bin/draksambashare:1146
 #, c-format
 msgid "The Server Banner is incorrect."
 msgstr ""
 
-#: ../bin/draksambashare:1155
+#: ../bin/draksambashare:1153
 #, fuzzy, c-format
 msgid "Samba Log"
 msgstr "Pengguna Samba"
 
-#: ../bin/draksambashare:1155
+#: ../bin/draksambashare:1153
 #, c-format
 msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
 "connects"
 msgstr ""
 
-#: ../bin/draksambashare:1155
+#: ../bin/draksambashare:1153
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
 msgstr ""
 
-#: ../bin/draksambashare:1155
+#: ../bin/draksambashare:1153
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
 msgstr ""
 
-#: ../bin/draksambashare:1162 ../bin/draksambashare:1180
+#: ../bin/draksambashare:1160 ../bin/draksambashare:1178
 #, fuzzy, c-format
 msgid "Log file:"
 msgstr "Profil"
 
-#: ../bin/draksambashare:1163
+#: ../bin/draksambashare:1161
 #, c-format
 msgid "Max log size:"
 msgstr ""
 
-#: ../bin/draksambashare:1164
+#: ../bin/draksambashare:1162
 #, fuzzy, c-format
 msgid "Log level:"
 msgstr "Level"
 
-#: ../bin/draksambashare:1169
+#: ../bin/draksambashare:1167
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
 msgstr ""
 
-#: ../bin/draksambashare:1169
+#: ../bin/draksambashare:1167
 #, c-format
 msgid ""
 "To accept these values, and configure your server, click the Next button or "
 "use the Back button to correct them."
 msgstr ""
 
-#: ../bin/draksambashare:1169
+#: ../bin/draksambashare:1167
 #, c-format
 msgid ""
 "If you have previously create some shares, they will appear in this "
 "configuration. Run 'drakwizard sambashare' to manage your shares."
 msgstr ""
 
-#: ../bin/draksambashare:1177
+#: ../bin/draksambashare:1175
 #, fuzzy, c-format
 msgid "Samba type:"
 msgstr "Pengguna Samba"
 
-#: ../bin/draksambashare:1179
+#: ../bin/draksambashare:1177
 #, c-format
 msgid "Server banner:"
 msgstr ""
 
-#: ../bin/draksambashare:1181
+#: ../bin/draksambashare:1179
 #, c-format
 msgid " "
 msgstr ""
 
-#: ../bin/draksambashare:1182
+#: ../bin/draksambashare:1180
 #, c-format
 msgid "Unix Charset:"
 msgstr ""
 
-#: ../bin/draksambashare:1183
+#: ../bin/draksambashare:1181
 #, c-format
 msgid "Dos Charset:"
 msgstr ""
 
-#: ../bin/draksambashare:1184
+#: ../bin/draksambashare:1182
 #, c-format
 msgid "Display Charset:"
 msgstr ""
 
-#: ../bin/draksambashare:1199
+#: ../bin/draksambashare:1197
 #, fuzzy, c-format
 msgid "The wizard successfully configured your Samba server."
 msgstr "Wizard berhasil menambahkan share Samba"
 
-#: ../bin/draksambashare:1254
+#: ../bin/draksambashare:1252
 #, c-format
 msgid "The Samba wizard has unexpectedly failed:"
 msgstr ""
 
-#: ../bin/draksambashare:1268
+#: ../bin/draksambashare:1266
 #, c-format
 msgid "Manage Samba configuration"
 msgstr "Mengelola konfigurasi Samba"
 
-#: ../bin/draksambashare:1356
+#: ../bin/draksambashare:1354
 #, c-format
 msgid "Failed to Modify Samba share."
 msgstr "Gagal untuk memodifikasi share Samba."
 
-#: ../bin/draksambashare:1365
+#: ../bin/draksambashare:1363
 #, c-format
 msgid "Failed to remove a Samba share."
 msgstr "Gagal untuk menghapus sebuah share Samba."
 
-#: ../bin/draksambashare:1372
+#: ../bin/draksambashare:1370
 #, c-format
 msgid "File share"
 msgstr "Share file"
 
-#: ../bin/draksambashare:1387
+#: ../bin/draksambashare:1385
 #, c-format
 msgid "Failed to Modify."
 msgstr "Gagal untuk memodifikasi."
 
-#: ../bin/draksambashare:1396
+#: ../bin/draksambashare:1394
 #, c-format
 msgid "Failed to remove."
 msgstr "Gagal untuk menghapus."
 
-#: ../bin/draksambashare:1403
+#: ../bin/draksambashare:1401
 #, c-format
 msgid "Printers"
 msgstr "Printer"
 
-#: ../bin/draksambashare:1415
+#: ../bin/draksambashare:1413
 #, c-format
 msgid "Failed to add user."
 msgstr "Gagal untuk menambah pengguna."
 
-#: ../bin/draksambashare:1424
+#: ../bin/draksambashare:1422
 #, c-format
 msgid "Failed to change user password."
 msgstr "Gagal untuk mengganti katasandi pengguna."
 
-#: ../bin/draksambashare:1436
+#: ../bin/draksambashare:1434
 #, c-format
 msgid "Failed to delete user."
 msgstr "Gagal untuk menghapus pengguna."
 
-#: ../bin/draksambashare:1441
+#: ../bin/draksambashare:1439
 #, c-format
 msgid "Userdrake"
 msgstr "Userdrake"
 
-#: ../bin/draksambashare:1449
+#: ../bin/draksambashare:1447
 #, c-format
 msgid "Samba Users"
 msgstr "Pengguna Samba"
 
-#: ../bin/draksambashare:1457
+#: ../bin/draksambashare:1455
 #, fuzzy, c-format
 msgid "Please configure your Samba server"
 msgstr "Gagal untuk memodifikasi share Samba."
 
-#: ../bin/draksambashare:1457
+#: ../bin/draksambashare:1455
 #, c-format
 msgid ""
 "It seems this is the first time you run this tool.\n"
 "A wizard will appear to configure a basic Samba server"
 msgstr ""
 
-#: ../bin/draksambashare:1466
+#: ../bin/draksambashare:1464
 #, c-format
 msgid "DrakSamba manage Samba shares"
 msgstr "DrakSamba mengelola share Samba"
@@ -2205,32 +2214,32 @@ msgstr "Profil"
 msgid "VPN connection"
 msgstr "Koneksi VPN"
 
-#: ../bin/net_applet:358
+#: ../bin/net_applet:373
 #, c-format
 msgid "Network connection"
 msgstr "Koneksi jaringan"
 
-#: ../bin/net_applet:442
+#: ../bin/net_applet:457
 #, c-format
 msgid "More networks"
 msgstr "Jaringan lain"
 
-#: ../bin/net_applet:469
+#: ../bin/net_applet:484
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "Mode Firewall Interaktif Otomatis"
 
-#: ../bin/net_applet:474
+#: ../bin/net_applet:489
 #, c-format
 msgid "Always launch on startup"
 msgstr "Selalu jalankan pada pembukaan"
 
-#: ../bin/net_applet:479
+#: ../bin/net_applet:494
 #, c-format
 msgid "Wireless networks"
 msgstr "Jaringan nirkabel"
 
-#: ../bin/net_applet:486 ../bin/net_monitor:96
+#: ../bin/net_applet:501 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Setting"
@@ -2426,7 +2435,7 @@ msgid "Unlisted - edit manually"
 msgstr "Tidak terdaftar - edit manual"
 
 #: ../lib/network/connection.pm:228 ../lib/network/connection/cable.pm:41
-#: ../lib/network/connection/wireless.pm:45 ../lib/network/vpn/openvpn.pm:127
+#: ../lib/network/connection/wireless.pm:48 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
@@ -2447,12 +2456,22 @@ msgstr "Jalankan koneksi saat boot"
 msgid "Metric"
 msgstr "Metrik"
 
-#: ../lib/network/connection.pm:313
+#: ../lib/network/connection.pm:243
+#, c-format
+msgid "MTU"
+msgstr ""
+
+#: ../lib/network/connection.pm:244
+#, c-format
+msgid "Maximum size of network message (MTU). If unsure, left blank."
+msgstr ""
+
+#: ../lib/network/connection.pm:316
 #, c-format
 msgid "Link detected on interface %s"
 msgstr "Link terdeteksi pada antarmuka %s"
 
-#: ../lib/network/connection.pm:314 ../lib/network/connection/ethernet.pm:289
+#: ../lib/network/connection.pm:317 ../lib/network/connection/ethernet.pm:291
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "Jaringan putus pada antarmuka %s"
@@ -2515,22 +2534,21 @@ msgid "GPRS/Edge/3G"
 msgstr "GPRS/Edge/3G"
 
 #: ../lib/network/connection/cellular_card.pm:110
-#: ../lib/network/vpn/openvpn.pm:391
 #, c-format
-msgid "PIN number"
-msgstr "Nomor PIN"
+msgid "PIN number (4 digits). Leave empty if PIN is not required."
+msgstr ""
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
 msgid "Unable to open device %s"
 msgstr "Gagal untuk membuka device %s"
 
-#: ../lib/network/connection/cellular_card.pm:218
+#: ../lib/network/connection/cellular_card.pm:222
 #, c-format
 msgid "Please check that your SIM card is inserted."
 msgstr "Harap pastikan bahwa kartu SIM Anda telah dimasukkan."
 
-#: ../lib/network/connection/cellular_card.pm:229
+#: ../lib/network/connection/cellular_card.pm:233
 #, c-format
 msgid ""
 "You entered a wrong PIN code.\n"
@@ -2706,22 +2724,22 @@ msgstr "Hotplugging Jaringan"
 msgid "Enable IPv6 to IPv4 tunnel"
 msgstr "Aktifkan tunnel IPv6 ke IPv4"
 
-#: ../lib/network/connection/ethernet.pm:288
+#: ../lib/network/connection/ethernet.pm:290
 #, c-format
 msgid "Link beat detected on interface %s"
 msgstr "Link terdeteksi pada antarmuka %s"
 
-#: ../lib/network/connection/ethernet.pm:291
+#: ../lib/network/connection/ethernet.pm:293
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
 msgstr "Meminta alamat jaringan pada antarmuka %s (protokol %s)..."
 
-#: ../lib/network/connection/ethernet.pm:292
+#: ../lib/network/connection/ethernet.pm:294
 #, c-format
 msgid "Got a network address on interface %s (%s protocol)"
 msgstr "Menerima alamat jaringan pada antarmuka %s (protokol %s)"
 
-#: ../lib/network/connection/ethernet.pm:293
+#: ../lib/network/connection/ethernet.pm:295
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
 msgstr "Gagal mendapatkan alamat jaringan pada antarmuka %s (protokol %s)"
@@ -2851,6 +2869,24 @@ msgstr "Jerman"
 #, c-format
 msgid "Italy"
 msgstr "itali"
+
+#: ../lib/network/connection/providers/cellular.pm:131
+#: ../lib/network/connection/providers/cellular.pm:136
+#: ../lib/network/connection/providers/cellular.pm:141
+#: ../lib/network/connection/providers/cellular.pm:144
+#: ../lib/network/connection/providers/xdsl.pm:1001
+#: ../lib/network/connection/providers/xdsl.pm:1011
+#, c-format
+msgid "Poland"
+msgstr "Polandia"
+
+#: ../lib/network/connection/providers/cellular.pm:147
+#: ../lib/network/connection/providers/xdsl.pm:1330
+#: ../lib/network/connection/providers/xdsl.pm:1340
+#: ../lib/network/netconnect.pm:38
+#, c-format
+msgid "United Kingdom"
+msgstr "Inggris"
 
 #: ../lib/network/connection/providers/xdsl.pm:47
 #: ../lib/network/connection/providers/xdsl.pm:57
@@ -3041,12 +3077,6 @@ msgstr "Norwegia"
 msgid "Pakistan"
 msgstr "Pakistan"
 
-#: ../lib/network/connection/providers/xdsl.pm:1001
-#: ../lib/network/connection/providers/xdsl.pm:1011
-#, c-format
-msgid "Poland"
-msgstr "Polandia"
-
 #: ../lib/network/connection/providers/xdsl.pm:1022
 #, c-format
 msgid "Portugal"
@@ -3124,54 +3154,47 @@ msgstr "Turki"
 msgid "United Arab Emirates"
 msgstr "Uni Emirat Arab"
 
-#: ../lib/network/connection/providers/xdsl.pm:1330
-#: ../lib/network/connection/providers/xdsl.pm:1340
-#: ../lib/network/netconnect.pm:38
-#, c-format
-msgid "United Kingdom"
-msgstr "Inggris"
-
-#: ../lib/network/connection/wireless.pm:12
+#: ../lib/network/connection/wireless.pm:15
 #, c-format
 msgid "Wireless"
 msgstr "Nirkabel"
 
-#: ../lib/network/connection/wireless.pm:13
+#: ../lib/network/connection/wireless.pm:16
 #, fuzzy, c-format
 msgid "Wireless (Wi-Fi)"
 msgstr "Nirkabel"
 
-#: ../lib/network/connection/wireless.pm:29
+#: ../lib/network/connection/wireless.pm:32
 #, c-format
 msgid "Use a Windows driver (with ndiswrapper)"
 msgstr "Gunakan driver Windows (dengan ndiswrapper)"
 
-#: ../lib/network/connection/wireless.pm:46
+#: ../lib/network/connection/wireless.pm:49
 #, c-format
 msgid "Open WEP"
 msgstr "WEP Terbuka"
 
-#: ../lib/network/connection/wireless.pm:47
+#: ../lib/network/connection/wireless.pm:50
 #, c-format
 msgid "Restricted WEP"
 msgstr "WEP terbatas"
 
-#: ../lib/network/connection/wireless.pm:48
+#: ../lib/network/connection/wireless.pm:51
 #, fuzzy, c-format
 msgid "WPA/WPA2 Pre-Shared Key"
 msgstr "WPA Dengan Kunci Terbagi"
 
-#: ../lib/network/connection/wireless.pm:49
+#: ../lib/network/connection/wireless.pm:52
 #, c-format
 msgid "WPA/WPA2 Enterprise"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:260
+#: ../lib/network/connection/wireless.pm:271
 #, c-format
 msgid "Windows driver"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:346
+#: ../lib/network/connection/wireless.pm:357
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
@@ -3180,73 +3203,73 @@ msgstr ""
 "Kartu nirkabel Anda dinonaktifkan, harap aktifkan switch nirkabel (switch RF "
 "kill) dahulu."
 
-#: ../lib/network/connection/wireless.pm:431
+#: ../lib/network/connection/wireless.pm:444
 #, c-format
 msgid "Wireless settings"
 msgstr "Setting jaringan nirkabel"
 
-#: ../lib/network/connection/wireless.pm:436
-#: ../lib/network/connection_manager.pm:268
+#: ../lib/network/connection/wireless.pm:449
+#: ../lib/network/connection_manager.pm:277
 #, c-format
 msgid "Operating Mode"
 msgstr "Mode Operasi"
 
-#: ../lib/network/connection/wireless.pm:437
+#: ../lib/network/connection/wireless.pm:450
 #, c-format
 msgid "Ad-hoc"
 msgstr "Ad-hoc"
 
-#: ../lib/network/connection/wireless.pm:437
+#: ../lib/network/connection/wireless.pm:450
 #, c-format
 msgid "Managed"
 msgstr "Terkelola"
 
-#: ../lib/network/connection/wireless.pm:437
+#: ../lib/network/connection/wireless.pm:450
 #, c-format
 msgid "Master"
 msgstr "Master"
 
-#: ../lib/network/connection/wireless.pm:437
+#: ../lib/network/connection/wireless.pm:450
 #, c-format
 msgid "Repeater"
 msgstr "Repeater"
 
-#: ../lib/network/connection/wireless.pm:437
+#: ../lib/network/connection/wireless.pm:450
 #, c-format
 msgid "Secondary"
 msgstr "Kedua"
 
-#: ../lib/network/connection/wireless.pm:437
+#: ../lib/network/connection/wireless.pm:450
 #, c-format
 msgid "Auto"
 msgstr "Automatis"
 
-#: ../lib/network/connection/wireless.pm:440
+#: ../lib/network/connection/wireless.pm:453
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "Nama Jaringan (ESSID)"
 
-#: ../lib/network/connection/wireless.pm:442
+#: ../lib/network/connection/wireless.pm:455
 #, c-format
 msgid "Encryption mode"
 msgstr "Mode enkripsi"
 
-#: ../lib/network/connection/wireless.pm:444
+#: ../lib/network/connection/wireless.pm:457
 #, c-format
 msgid "Encryption key"
 msgstr "Kunci enkripsi"
 
-#: ../lib/network/connection/wireless.pm:446
+#: ../lib/network/connection/wireless.pm:459
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:453
+#: ../lib/network/connection/wireless.pm:466
 #, fuzzy, c-format
 msgid "EAP Login/Username"
 msgstr "Login Account (nama pengguna)"
 
-#: ../lib/network/connection/wireless.pm:455
+#: ../lib/network/connection/wireless.pm:468
 #, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
@@ -3254,12 +3277,12 @@ msgid ""
 "  DOMAIN\\username"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:458
+#: ../lib/network/connection/wireless.pm:471
 #, fuzzy, c-format
 msgid "EAP Password"
 msgstr "Katasandi"
 
-#: ../lib/network/connection/wireless.pm:460
+#: ../lib/network/connection/wireless.pm:473
 #, c-format
 msgid ""
 " Password: A string.\n"
@@ -3278,12 +3301,12 @@ msgid ""
 "the username and password values specified here."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:474
+#: ../lib/network/connection/wireless.pm:487
 #, fuzzy, c-format
 msgid "EAP client certificate"
 msgstr "Nama sertifikat"
 
-#: ../lib/network/connection/wireless.pm:476
+#: ../lib/network/connection/wireless.pm:489
 #, c-format
 msgid ""
 "The complete path and filename of client certificate. This is\n"
@@ -3292,32 +3315,37 @@ msgid ""
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:480
+#: ../lib/network/connection/wireless.pm:493
+#, fuzzy, c-format
+msgid "Wireless regulatory domain"
+msgstr "Jaringan nirkabel"
+
+#: ../lib/network/connection/wireless.pm:495
 #, c-format
 msgid "Network ID"
 msgstr "ID Jaringan"
 
-#: ../lib/network/connection/wireless.pm:481
+#: ../lib/network/connection/wireless.pm:496
 #, c-format
 msgid "Operating frequency"
 msgstr "Frekuensi operasi"
 
-#: ../lib/network/connection/wireless.pm:482
+#: ../lib/network/connection/wireless.pm:497
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "Batas sensitivitas"
 
-#: ../lib/network/connection/wireless.pm:483
+#: ../lib/network/connection/wireless.pm:498
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "Kecepatan (dalam b/s)"
 
-#: ../lib/network/connection/wireless.pm:484
+#: ../lib/network/connection/wireless.pm:499
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../lib/network/connection/wireless.pm:485
+#: ../lib/network/connection/wireless.pm:500
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -3338,17 +3366,17 @@ msgstr ""
 "nilai maksimal paket yang menonaktifkan skema. Anda juga bisa \n"
 "menentukan parameter ini menjadi auto, fixed, atau off."
 
-#: ../lib/network/connection/wireless.pm:492
+#: ../lib/network/connection/wireless.pm:507
 #, c-format
 msgid "Fragmentation"
 msgstr "Fragmentasi"
 
-#: ../lib/network/connection/wireless.pm:493
+#: ../lib/network/connection/wireless.pm:508
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "Argumen tambahan perintah iwconfig"
 
-#: ../lib/network/connection/wireless.pm:494
+#: ../lib/network/connection/wireless.pm:509
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -3364,12 +3392,12 @@ msgstr ""
 "Lihat halaman manual iwconfig(8) untuk informasi lebih lanjut."
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:501
+#: ../lib/network/connection/wireless.pm:516
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "Argumen tambahan perintah iwspy"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:517
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -3389,12 +3417,12 @@ msgstr ""
 "\n"
 "Lihat halaman manual iwpspy(8) untuk informasi lebih lanjut."
 
-#: ../lib/network/connection/wireless.pm:510
+#: ../lib/network/connection/wireless.pm:525
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "Argumen tambahan perintah iwpriv"
 
-#: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -3422,107 +3450,107 @@ msgstr ""
 "\n"
 "Lihat halaman manual iwpriv(8) untuk informasi lebih lanjut."
 
-#: ../lib/network/connection/wireless.pm:523
+#: ../lib/network/connection/wireless.pm:538
 #, fuzzy, c-format
 msgid "EAP Protocol"
 msgstr "Protokol"
 
-#: ../lib/network/connection/wireless.pm:524
-#: ../lib/network/connection/wireless.pm:529
+#: ../lib/network/connection/wireless.pm:539
+#: ../lib/network/connection/wireless.pm:544
 #, fuzzy, c-format
 msgid "Auto Detect"
 msgstr "Deteksi otomatis"
 
-#: ../lib/network/connection/wireless.pm:524
+#: ../lib/network/connection/wireless.pm:539
 #, c-format
 msgid "WPA2"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:524
+#: ../lib/network/connection/wireless.pm:539
 #, fuzzy, c-format
 msgid "WPA"
 msgstr "PAP"
 
-#: ../lib/network/connection/wireless.pm:526
+#: ../lib/network/connection/wireless.pm:541
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:528
+#: ../lib/network/connection/wireless.pm:543
 #, fuzzy, c-format
 msgid "EAP Mode"
 msgstr "Mode"
 
-#: ../lib/network/connection/wireless.pm:529
+#: ../lib/network/connection/wireless.pm:544
 #, fuzzy, c-format
 msgid "PEAP"
 msgstr "PAP"
 
-#: ../lib/network/connection/wireless.pm:529
+#: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "TTLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:529
+#: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "TLS"
 msgstr "TLS"
 
-#: ../lib/network/connection/wireless.pm:529
+#: ../lib/network/connection/wireless.pm:544
 #, fuzzy, c-format
 msgid "MSCHAPV2"
 msgstr "CHAP"
 
-#: ../lib/network/connection/wireless.pm:529
+#: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "MD5"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:529
+#: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "OTP"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:529
+#: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "GTC"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:529
+#: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "LEAP"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:529
+#: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "PEAP TTLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:529
+#: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "TTLS TLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:531
+#: ../lib/network/connection/wireless.pm:546
 #, c-format
 msgid "EAP key_mgmt"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:533
+#: ../lib/network/connection/wireless.pm:548
 #, c-format
 msgid ""
 "list of accepted authenticated key management protocols.\n"
 "possible values are WPA-EAP, IEEE8021X, NONE"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:535
+#: ../lib/network/connection/wireless.pm:550
 #, c-format
 msgid "EAP outer identity"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:537
+#: ../lib/network/connection/wireless.pm:552
 #, c-format
 msgid ""
 "Anonymous identity string for EAP: to be used as the\n"
@@ -3530,12 +3558,12 @@ msgid ""
 "tunnelled identity, e.g., TTLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:540
+#: ../lib/network/connection/wireless.pm:555
 #, c-format
 msgid "EAP phase2"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/connection/wireless.pm:557
 #, c-format
 msgid ""
 "Inner authentication with TLS tunnel parameters.\n"
@@ -3544,12 +3572,12 @@ msgid ""
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:546
+#: ../lib/network/connection/wireless.pm:561
 #, fuzzy, c-format
 msgid "EAP CA certificate"
 msgstr "Sertifikat"
 
-#: ../lib/network/connection/wireless.pm:548
+#: ../lib/network/connection/wireless.pm:563
 #, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
@@ -3559,12 +3587,12 @@ msgid ""
 "when using TLS or TTLS or PEAP."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:568
 #, c-format
 msgid "EAP certificate subject match"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:555
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid ""
 " Substring to be matched against the subject of\n"
@@ -3574,12 +3602,12 @@ msgid ""
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:560
+#: ../lib/network/connection/wireless.pm:575
 #, c-format
 msgid "EAP extra directives"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:577
 #, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
@@ -3597,26 +3625,26 @@ msgid ""
 "\tspecial settings different from the U.I settings."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:582
+#: ../lib/network/connection/wireless.pm:597
 #, c-format
 msgid "An encryption key is required."
 msgstr "Kunci enkripsi diperlukan."
 
-#: ../lib/network/connection/wireless.pm:589
+#: ../lib/network/connection/wireless.pm:604
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
 "hexadecimal characters."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:595
+#: ../lib/network/connection/wireless.pm:610
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
 "characters."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:602
+#: ../lib/network/connection/wireless.pm:617
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -3625,7 +3653,7 @@ msgstr ""
 "Freq harus berakhiran k, M atau G (mis. \"2.46G\" untuk frekuensi 2.46 GHz), "
 "atau tambahkan '0' (nol) secukupnya."
 
-#: ../lib/network/connection/wireless.pm:608
+#: ../lib/network/connection/wireless.pm:623
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
@@ -3634,17 +3662,17 @@ msgstr ""
 "Kecepatan harus berakhiran k, M atau G (mis. \"11M\" untuk 11M), atau "
 "tambahkan '0' (nol) secukupnya."
 
-#: ../lib/network/connection/wireless.pm:620
+#: ../lib/network/connection/wireless.pm:635
 #, c-format
 msgid "Allow access point roaming"
 msgstr "Ijinkan roaming akses point"
 
-#: ../lib/network/connection/wireless.pm:741
+#: ../lib/network/connection/wireless.pm:756
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "Terasosiasi dengan jaringan nirkabel \"%s\" pada antarmuka %s"
 
-#: ../lib/network/connection/wireless.pm:742
+#: ../lib/network/connection/wireless.pm:757
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "Kehilangan asosiasi ke jaringan nirkabel pada antarmuka %s"
@@ -3719,142 +3747,159 @@ msgid "Virtual Circuit ID (VCI):"
 msgstr "Virtual Circuit ID (VCI):"
 
 #: ../lib/network/connection/xdsl.pm:359
-#: ../lib/network/connection_manager.pm:61 ../lib/network/drakvpn.pm:45
+#: ../lib/network/connection_manager.pm:62 ../lib/network/drakvpn.pm:45
 #: ../lib/network/netconnect.pm:134 ../lib/network/thirdparty.pm:123
 #, c-format
 msgid "Could not install the packages (%s)!"
 msgstr "Tidak bisa menginstall paket-paket (%s)!"
 
-#: ../lib/network/connection_manager.pm:73
-#: ../lib/network/connection_manager.pm:88 ../lib/network/netconnect.pm:185
+#: ../lib/network/connection_manager.pm:74
+#: ../lib/network/connection_manager.pm:89 ../lib/network/netconnect.pm:185
 #, c-format
 msgid "Configuring device..."
 msgstr "Mengkonfigurasi divais..."
 
-#: ../lib/network/connection_manager.pm:78
-#: ../lib/network/connection_manager.pm:143
+#: ../lib/network/connection_manager.pm:79
+#: ../lib/network/connection_manager.pm:144
 #, fuzzy, c-format
 msgid "Network settings"
 msgstr "Setting akses jaringan"
 
-#: ../lib/network/connection_manager.pm:79
-#: ../lib/network/connection_manager.pm:144
+#: ../lib/network/connection_manager.pm:80
+#: ../lib/network/connection_manager.pm:145
 #, c-format
 msgid "Please enter settings for network"
 msgstr "Harap masukkan setting untuk jaringan"
 
-#: ../lib/network/connection_manager.pm:202
+#: ../lib/network/connection_manager.pm:203
 #, c-format
 msgid "Connecting..."
 msgstr "Menghubungkan..."
 
-#: ../lib/network/connection_manager.pm:223
+#: ../lib/network/connection_manager.pm:220
+#: ../lib/network/connection_manager.pm:476
+#: ../lib/network/connection_manager.pm:489 ../lib/network/drakvpn.pm:100
+#, c-format
+msgid "Connection failed."
+msgstr "Koneksi gagal."
+
+#: ../lib/network/connection_manager.pm:232
 #, c-format
 msgid "Disconnecting..."
 msgstr "Memutuskan Hubungan..."
 
-#: ../lib/network/connection_manager.pm:265
+#: ../lib/network/connection_manager.pm:274
 #, c-format
 msgid "SSID"
 msgstr "SSID"
 
-#: ../lib/network/connection_manager.pm:266
+#: ../lib/network/connection_manager.pm:275
 #, c-format
 msgid "Signal strength"
 msgstr "Kekuantan sinyal"
 
-#: ../lib/network/connection_manager.pm:267
+#: ../lib/network/connection_manager.pm:276
 #, c-format
 msgid "Encryption"
 msgstr "Enkripsi"
 
-#: ../lib/network/connection_manager.pm:339 ../lib/network/netconnect.pm:207
+#: ../lib/network/connection_manager.pm:348 ../lib/network/netconnect.pm:207
 #, c-format
 msgid "Scanning for networks..."
 msgstr "Mencari jaringan..."
 
-#: ../lib/network/connection_manager.pm:388 ../lib/network/drakroam.pm:116
+#: ../lib/network/connection_manager.pm:397 ../lib/network/drakroam.pm:91
 #, c-format
 msgid "Disconnect"
 msgstr "Putuskan Hubungan"
 
-#: ../lib/network/connection_manager.pm:388 ../lib/network/drakroam.pm:115
+#: ../lib/network/connection_manager.pm:397 ../lib/network/drakroam.pm:90
 #, c-format
 msgid "Connect"
 msgstr "Sambungkan"
 
-#: ../lib/network/drakfirewall.pm:12
+#: ../lib/network/connection_manager.pm:442
+#, c-format
+msgid "Hostname changed to \"%s\""
+msgstr "Nama host diganti ke \"%s\""
+
+#: ../lib/network/drakfirewall.pm:13
 #, c-format
 msgid "Web Server"
 msgstr "Server Web"
 
-#: ../lib/network/drakfirewall.pm:17
+#: ../lib/network/drakfirewall.pm:18
 #, c-format
 msgid "Domain Name Server"
 msgstr "Server Nama Domain"
 
-#: ../lib/network/drakfirewall.pm:22
+#: ../lib/network/drakfirewall.pm:23
 #, c-format
 msgid "SSH server"
 msgstr "Server SSH"
 
-#: ../lib/network/drakfirewall.pm:27
+#: ../lib/network/drakfirewall.pm:28
 #, c-format
 msgid "FTP server"
 msgstr "Server FTP"
 
-#: ../lib/network/drakfirewall.pm:32
+#: ../lib/network/drakfirewall.pm:33
 #, c-format
 msgid "Mail Server"
 msgstr "Server Mail"
 
-#: ../lib/network/drakfirewall.pm:37
+#: ../lib/network/drakfirewall.pm:38
 #, c-format
 msgid "POP and IMAP Server"
 msgstr "Server POP dan IMAP"
 
-#: ../lib/network/drakfirewall.pm:42
+#: ../lib/network/drakfirewall.pm:43
 #, c-format
 msgid "Telnet server"
 msgstr "Server Telnet"
 
-#: ../lib/network/drakfirewall.pm:48
+#: ../lib/network/drakfirewall.pm:49
+#, fuzzy, c-format
+msgid "NFS Server"
+msgstr "/Server _NFS"
+
+#: ../lib/network/drakfirewall.pm:57
 #, c-format
 msgid "Windows Files Sharing (SMB)"
 msgstr "Windows Files Sharing (SMB)"
 
-#: ../lib/network/drakfirewall.pm:54
+#: ../lib/network/drakfirewall.pm:63
 #, c-format
 msgid "CUPS server"
 msgstr "Server CUPS"
 
-#: ../lib/network/drakfirewall.pm:60
+#: ../lib/network/drakfirewall.pm:69
 #, c-format
 msgid "Echo request (ping)"
 msgstr "Permintaan echo (ping)"
 
-#: ../lib/network/drakfirewall.pm:65
+#: ../lib/network/drakfirewall.pm:74
 #, c-format
 msgid "BitTorrent"
 msgstr "BitTorrent"
 
-#: ../lib/network/drakfirewall.pm:71
+#: ../lib/network/drakfirewall.pm:80
 #, c-format
 msgid "Windows Mobile device synchronization"
 msgstr ""
 
-#: ../lib/network/drakfirewall.pm:80
+#: ../lib/network/drakfirewall.pm:89
 #, c-format
 msgid "Port scan detection"
 msgstr "Pendeteksian pelacakan port"
 
-#: ../lib/network/drakfirewall.pm:175 ../lib/network/drakfirewall.pm:181
+#: ../lib/network/drakfirewall.pm:184 ../lib/network/drakfirewall.pm:190
 #: ../lib/network/shorewall.pm:75
 #, c-format
 msgid "Firewall configuration"
 msgstr "Konfigurasi firewall"
 
-#: ../lib/network/drakfirewall.pm:175
+#: ../lib/network/drakfirewall.pm:184
 #, c-format
 msgid ""
 "drakfirewall configurator\n"
@@ -3869,7 +3914,7 @@ msgstr ""
 "Untuk membuat solusi firewall yang lebih baik, cobalah\n"
 "distribusi khusus Mandriva Security Firewall"
 
-#: ../lib/network/drakfirewall.pm:181
+#: ../lib/network/drakfirewall.pm:190
 #, c-format
 msgid ""
 "drakfirewall configurator\n"
@@ -3882,13 +3927,13 @@ msgstr ""
 "Pastikan Anda telah mengkonfigurasikan akses Jaringan/Internet\n"
 "dengan drakconnect sebelum melanjutkan."
 
-#: ../lib/network/drakfirewall.pm:198 ../lib/network/drakfirewall.pm:200
-#: ../lib/network/shorewall.pm:164
+#: ../lib/network/drakfirewall.pm:207 ../lib/network/drakfirewall.pm:209
+#: ../lib/network/shorewall.pm:167
 #, c-format
 msgid "Firewall"
 msgstr "Firewall"
 
-#: ../lib/network/drakfirewall.pm:201
+#: ../lib/network/drakfirewall.pm:210
 #, c-format
 msgid ""
 "You can enter miscellaneous ports. \n"
@@ -3899,7 +3944,7 @@ msgstr ""
 "Contoh valid misalnya: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
 "Lihat pada /etc/services untuk informasinya."
 
-#: ../lib/network/drakfirewall.pm:207
+#: ../lib/network/drakfirewall.pm:216
 #, c-format
 msgid ""
 "Invalid port given: %s.\n"
@@ -3914,27 +3959,27 @@ msgstr ""
 "\n"
 "Anda bisa memberikan jangkauan port (mis: 24300:24350/udp)"
 
-#: ../lib/network/drakfirewall.pm:217
+#: ../lib/network/drakfirewall.pm:226
 #, c-format
 msgid "Which services would you like to allow the Internet to connect to?"
 msgstr "Layanan apa yang akan Anda ijinkan untuk diakses dari Internet?"
 
-#: ../lib/network/drakfirewall.pm:218
+#: ../lib/network/drakfirewall.pm:227
 #, c-format
 msgid "Everything (no firewall)"
 msgstr "Semua (tanpa firewall)"
 
-#: ../lib/network/drakfirewall.pm:220
+#: ../lib/network/drakfirewall.pm:229
 #, c-format
 msgid "Other ports"
 msgstr "Port lain"
 
-#: ../lib/network/drakfirewall.pm:221
+#: ../lib/network/drakfirewall.pm:230
 #, c-format
 msgid "Log firewall messages in system logs"
 msgstr "Catat pesan firewall pada log sistem"
 
-#: ../lib/network/drakfirewall.pm:263
+#: ../lib/network/drakfirewall.pm:272
 #, c-format
 msgid ""
 "You can be warned when someone accesses to a service or tries to intrude "
@@ -3945,7 +3990,7 @@ msgstr ""
 "atau mencoba masuk pada komputer Anda.\n"
 "Harap pilih aktivitas-aktivitas jaringan mana yang akan diawasi."
 
-#: ../lib/network/drakfirewall.pm:268
+#: ../lib/network/drakfirewall.pm:277
 #, c-format
 msgid "Use Interactive Firewall"
 msgstr "Gunakan Firewall Interaktif"
@@ -3955,27 +4000,22 @@ msgstr "Gunakan Firewall Interaktif"
 msgid "No device found"
 msgstr "Tidak ada divais yang ditemukan"
 
-#: ../lib/network/drakroam.pm:61
-#, c-format
-msgid "Hostname changed to \"%s\""
-msgstr "Nama host diganti ke \"%s\""
-
-#: ../lib/network/drakroam.pm:110
+#: ../lib/network/drakroam.pm:85
 #, c-format
 msgid "Device: "
 msgstr "Divais: "
 
-#: ../lib/network/drakroam.pm:114 ../lib/network/netcenter.pm:66
+#: ../lib/network/drakroam.pm:89 ../lib/network/netcenter.pm:65
 #, c-format
 msgid "Configure"
 msgstr "Konfigurasikan"
 
-#: ../lib/network/drakroam.pm:117 ../lib/network/netcenter.pm:71
+#: ../lib/network/drakroam.pm:92 ../lib/network/netcenter.pm:70
 #, c-format
 msgid "Refresh"
 msgstr "Pembaruan"
 
-#: ../lib/network/drakroam.pm:128 ../lib/network/netconnect.pm:771
+#: ../lib/network/drakroam.pm:103 ../lib/network/netconnect.pm:771
 #, c-format
 msgid "Wireless connection"
 msgstr "Konfigurasi jaringan nirkabel"
@@ -4035,11 +4075,6 @@ msgstr "Harap masukkan setting untuk jaringan VPN"
 msgid "Do you want to start the connection now?"
 msgstr "Apakah Anda hendak menjalankan koneksi sekarang?"
 
-#: ../lib/network/drakvpn.pm:100 ../lib/network/netcenter.pm:218
-#, c-format
-msgid "Connection failed."
-msgstr "Koneksi gagal."
-
 #: ../lib/network/drakvpn.pm:108
 #, c-format
 msgid ""
@@ -4056,57 +4091,57 @@ msgstr ""
 "Ini dapat dilakukan dengan mengkonfigurasi ulang koneksi jaringan dan "
 "memilih koneksi VPN ini.\n"
 
-#: ../lib/network/ifw.pm:131
+#: ../lib/network/ifw.pm:132
 #, c-format
 msgid "Port scanning"
 msgstr "Scanning port"
 
-#: ../lib/network/ifw.pm:132
+#: ../lib/network/ifw.pm:133
 #, c-format
 msgid "Service attack"
 msgstr "Penyerangan layanan"
 
-#: ../lib/network/ifw.pm:133
+#: ../lib/network/ifw.pm:134
 #, c-format
 msgid "Password cracking"
 msgstr "Pembobolan katasandi"
 
-#: ../lib/network/ifw.pm:134
+#: ../lib/network/ifw.pm:135
 #, c-format
 msgid "New connection"
 msgstr "Koneksi baru"
 
-#: ../lib/network/ifw.pm:135
+#: ../lib/network/ifw.pm:136
 #, c-format
 msgid "\"%s\" attack"
 msgstr "Serangan \"%s\""
 
-#: ../lib/network/ifw.pm:137
+#: ../lib/network/ifw.pm:138
 #, c-format
 msgid "A port scanning attack has been attempted by %s."
 msgstr "Serangan port scanning telah dicoba oleh %s."
 
-#: ../lib/network/ifw.pm:138
+#: ../lib/network/ifw.pm:139
 #, c-format
 msgid "The %s service has been attacked by %s."
 msgstr "Layanan %s telah diserang oleh %s."
 
-#: ../lib/network/ifw.pm:139
+#: ../lib/network/ifw.pm:140
 #, c-format
 msgid "A password cracking attack has been attempted by %s."
 msgstr "Serangan password cracking telah dicoba oleh %s."
 
-#: ../lib/network/ifw.pm:140
+#: ../lib/network/ifw.pm:141
 #, fuzzy, c-format
 msgid "%s is connecting on the %s service."
 msgstr "Memutuskan hubungan dari Internet "
 
-#: ../lib/network/ifw.pm:141
+#: ../lib/network/ifw.pm:142
 #, c-format
 msgid "A \"%s\" attack has been attempted by %s"
 msgstr "Sebuah serangan \"%s\" telah dicoba oleh %s."
 
-#: ../lib/network/ifw.pm:150
+#: ../lib/network/ifw.pm:151
 #, c-format
 msgid ""
 "The \"%s\" application is trying to make a service (%s) available to the "
@@ -4115,7 +4150,7 @@ msgstr ""
 "Aplikasi \"%s\" mencoba membuat sebuah layanan (%s) tersedia pada jaringan."
 
 #. -PO: this should be kept lowercase since the expression is meant to be used between brackets
-#: ../lib/network/ifw.pm:154
+#: ../lib/network/ifw.pm:155
 #, c-format
 msgid "port %d"
 msgstr "port %d"
@@ -4192,24 +4227,24 @@ msgstr "Install driver baru"
 msgid "Select a device:"
 msgstr "Pilih sebuah divais:"
 
-#: ../lib/network/netcenter.pm:55 ../lib/network/netconnect.pm:210
+#: ../lib/network/netcenter.pm:54 ../lib/network/netconnect.pm:210
 #, c-format
 msgid "Please select your network:"
 msgstr "Harap memilih jaringan Anda:"
 
-#: ../lib/network/netcenter.pm:62
+#: ../lib/network/netcenter.pm:61
 #, fuzzy, c-format
 msgid ""
 "_: This is a verb\n"
 "Monitor"
 msgstr "Memantau Jaringan"
 
-#: ../lib/network/netcenter.pm:145
+#: ../lib/network/netcenter.pm:144
 #, c-format
 msgid "Network Center"
 msgstr "Pusat Jaringan"
 
-#: ../lib/network/netcenter.pm:169
+#: ../lib/network/netcenter.pm:168
 #, fuzzy, c-format
 msgid "Advanced settings"
 msgstr "Opsi-opsi Tingkat Lanjut"
@@ -4959,12 +4994,15 @@ msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "URL harus berawalan 'ftp:' atau  'http:'"
 
 #: ../lib/network/shorewall.pm:77
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
 "All interfaces directly connected to Internet should be selected,\n"
 "while interfaces connected to a local network may be unselected.\n"
+"\n"
+"If you intend to use Mandriva Internet Connection sharing,\n"
+"unselect interfaces which will be connected to local network.\n"
 "\n"
 "Which interfaces should be protected?\n"
 msgstr ""
@@ -4975,17 +5013,17 @@ msgstr ""
 "\n"
 "Antarmuka mana yang harus diproteksi?\n"
 
-#: ../lib/network/shorewall.pm:155
+#: ../lib/network/shorewall.pm:158
 #, c-format
 msgid "Keep custom rules"
 msgstr "Pertahankan aturan kustomisasi"
 
-#: ../lib/network/shorewall.pm:156
+#: ../lib/network/shorewall.pm:159
 #, c-format
 msgid "Drop custom rules"
 msgstr "Hapus aturan kustomisasi"
 
-#: ../lib/network/shorewall.pm:161
+#: ../lib/network/shorewall.pm:164
 #, c-format
 msgid ""
 "Your firewall configuration has been manually edited and contains\n"
@@ -5202,6 +5240,11 @@ msgstr "Menjalankan koneksi..."
 msgid "Please insert your token"
 msgstr "Harap masukkan token Anda"
 
+#: ../lib/network/vpn/openvpn.pm:391
+#, c-format
+msgid "PIN number"
+msgstr "Nomor PIN"
+
 #: ../lib/network/vpn/vpnc.pm:9
 #, c-format
 msgid "Cisco VPN Concentrator"
@@ -5231,6 +5274,27 @@ msgstr "Mode"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Gunakan port UDP spesifik"
+
+#~ msgid ""
+#~ "There is only one configured network adapter on your system:\n"
+#~ "\n"
+#~ "%s\n"
+#~ "\n"
+#~ "I am about to setup your Local Area Network with that adapter."
+#~ msgstr ""
+#~ "Hanya terdapat satu adapter jaringan yang dikonfigurasikan pada sistem "
+#~ "Anda:\n"
+#~ "\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Saya akan mensetup Local Area Network Anda dengan adapter itu."
+
+#~ msgid ""
+#~ "No ethernet network adapter has been detected on your system. Please run "
+#~ "the hardware configuration tool."
+#~ msgstr ""
+#~ "Tidak ada adapter jaringan ethernet yang terdeteksi pada sistem Anda. "
+#~ "Silahkan jalankan perkakas konfigurasi perangkat keras."
 
 #~ msgid "Connection type: "
 #~ msgstr "Tipe koneksi"
