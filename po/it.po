@@ -13,13 +13,13 @@ msgstr ""
 "Project-Id-Version: it\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-25 15:35-0300\n"
-"PO-Revision-Date: 2009-03-24 22:08+0100\n"
+"PO-Revision-Date: 2009-03-25 23:01+0100\n"
 "Last-Translator: Andrea Celli <andrea.celli@libero.it>\n"
-"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language-Team: Italian <timl@freelists.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 0.2\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../bin/drakconnect-old:45
@@ -209,7 +209,7 @@ msgid "Internet Connection Sharing"
 msgstr "Condividere la connessione Internet"
 
 #: ../bin/drakgw:75
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -231,7 +231,8 @@ msgstr ""
 "Internet con drakconnect \n"
 ".\n"
 "Nota: è necessaria una scheda di rete dedicata per realizzare una\n"
-"Rete di Area Locale (LAN)."
+"Rete di Area Locale (LAN). Prima di procedere, ricordati di disattivare Mandriva Firewall per la scheda di rete "
+"collegata alla LAN."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -277,8 +278,7 @@ msgstr "Riconfigura"
 #: ../bin/drakgw:122
 #, c-format
 msgid "Please select the network interface directly connected to the internet."
-msgstr ""
-"Dovresti selezionare l'interfaccia di rete direttamente connessa ad Internet"
+msgstr "Dovresti selezionare l'interfaccia di rete direttamente connessa ad Internet"
 
 #: ../bin/drakgw:123 ../lib/network/netconnect.pm:360
 #: ../lib/network/netconnect.pm:395
@@ -300,14 +300,22 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"C'è un solo dispositivo configurato per connettersi alla LAN:\n"
+" \n"
+"%s\n"
+"\n"
+"Si sta per configurare la rete locale tramite questo dispositivo.\n"
+"\n"
+"Se hai un altro dispositivo collegato alla rete locale, disattiva\n"
+"la protezione firewall nei suoi confronti, utilizzando drakfirewall,\n"
+"prima di configurare la condivisione delle connessioni Internet."
 
 #: ../bin/drakgw:156
 #, c-format
 msgid ""
 "Please choose what network adapter will be connected to your Local Area "
 "Network."
-msgstr ""
-"Per favore scegli quale scheda di rete sarà connessa alla rete locale (LAN)."
+msgstr "Per favore scegli quale scheda di rete sarà connessa alla rete locale (LAN)."
 
 #: ../bin/drakgw:177
 #, c-format
@@ -467,6 +475,11 @@ msgid ""
 "the Mandirva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
+"Non è stato rilevato alcun dispositivo di rete configurato per la LAN.\n"
+"\n"
+"Dovresti configurarne uno con il tool per la configurazione dell'hardware ed "
+"assicurarti che il firewall di Mandriva non sia attiva nei confronti dei  "
+"dispositivi di rete collegati alla LAN."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -987,9 +1000,9 @@ msgid "Error Restarting/Reloading NFS server"
 msgstr "Problemi nel riavviare/ricaricare il server NFS"
 
 #: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#, c-format
 msgid "Directory selection"
-msgstr "Selezione directory"
+msgstr "Scelta directory"
 
 #: ../bin/draknfs:116 ../bin/draksambashare:253
 #, c-format
@@ -1610,8 +1623,7 @@ msgstr "Aggiungi condivisione di una stampante"
 
 #: ../bin/draksambashare:448
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
 msgstr ""
 "Lo scopo di questa procedura è di aiutarti a creare una condivisione per "
 "stampati speciali."
@@ -1721,8 +1733,7 @@ msgstr "Voce di DrakSamba"
 #: ../bin/draksambashare:695
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
-msgstr ""
-"Aggiungi o seleziona una condivisione Samba, prima di tentare di modificarla."
+msgstr "Aggiungi o seleziona una condivisione Samba, prima di tentare di modificarla."
 
 #: ../bin/draksambashare:718
 #, c-format
@@ -1756,8 +1767,7 @@ msgstr "Pubblico:"
 
 #: ../bin/draksambashare:795
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 "I parametri create mask, create mode e directory mask devono essere "
 "numerici. Cioè del tipo: 0755."
@@ -1832,8 +1842,7 @@ msgstr ""
 
 #: ../bin/draksambashare:1072
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
 msgstr ""
 "Le installazioni isolate di server possono i gestori di password smbpasswd o "
 "tdbsam"
@@ -1960,8 +1969,7 @@ msgstr "Banner del server"
 msgid ""
 "The banner is the way this server will be described in the Windows "
 "workstations."
-msgstr ""
-"Il banner è ciò che descrive un server nelle stazioni di lavoro Windows."
+msgstr "Il banner è ciò che descrive un server nelle stazioni di lavoro Windows."
 
 #: ../bin/draksambashare:1142
 #, c-format
@@ -2015,8 +2023,7 @@ msgstr "Livello del log:"
 #: ../bin/draksambashare:1167
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
-"L'assistente ha raccolto questi parametri per la configurazione di Samba."
+msgstr "L'assistente ha raccolto questi parametri per la configurazione di Samba."
 
 #: ../bin/draksambashare:1167
 #, c-format
@@ -2496,12 +2503,12 @@ msgstr "Metrica"
 #: ../lib/network/connection.pm:243
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:244
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr ""
+msgstr "Dimensione massima dei messaggi in rete (MTU). Nel dubbio, lascia in bianco."
 
 #: ../lib/network/connection.pm:316
 #, c-format
@@ -2573,7 +2580,7 @@ msgstr "GPRS/Edge/3G"
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
-msgstr ""
+msgstr "Codice PIN (4 cifre). Lascia in bianco se non è richiesto."
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
@@ -3381,9 +3388,9 @@ msgstr ""
 "Nota: gli altri parametri sono mostrati nella pagina Impostazioni Avanzate."
 
 #: ../lib/network/connection/wireless.pm:493
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless regulatory domain"
-msgstr "Reti wireless"
+msgstr "Dominio regolatore per reti wireless"
 
 #: ../lib/network/connection/wireless.pm:495
 #, c-format
@@ -3973,9 +3980,9 @@ msgid "Telnet server"
 msgstr "Server telnet"
 
 #: ../lib/network/drakfirewall.pm:49
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "/Server _NFS"
+msgstr "Server NFS"
 
 #: ../lib/network/drakfirewall.pm:57
 #, c-format
@@ -4147,8 +4154,7 @@ msgstr "Scegliere il tipo di VPN"
 #: ../lib/network/drakvpn.pm:49
 #, c-format
 msgid "Initializing tools and detecting devices for %s..."
-msgstr ""
-"Inizializzazione degli strumenti e rilevamento delle periferiche per %s..."
+msgstr "Inizializzazione degli strumenti e rilevamento delle periferiche per %s..."
 
 #: ../lib/network/drakvpn.pm:52
 #, c-format
@@ -4293,8 +4299,7 @@ msgstr "IP automatico"
 #: ../lib/network/ndiswrapper.pm:30
 #, c-format
 msgid "No device supporting the %s ndiswrapper driver is present!"
-msgstr ""
-"Non è presente alcun dispositivo che supporti il driver ndiswrapper %s!"
+msgstr "Non è presente alcun dispositivo che supporti il driver ndiswrapper %s!"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -4973,8 +4978,7 @@ msgstr ""
 #: ../lib/network/netconnect.pm:806
 #, c-format
 msgid "Last but not least you can also type in your DNS server IP addresses."
-msgstr ""
-"Per finire, ma è importante, puoi anche inserire i tuoi indirizzi DNS e IP."
+msgstr "Per finire, ma è importante, puoi anche inserire i tuoi indirizzi DNS e IP."
 
 #: ../lib/network/netconnect.pm:807
 #, c-format
@@ -5114,7 +5118,7 @@ msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "L'URL deve cominciare con \"ftp:\" o \"http:\""
 
 #: ../lib/network/shorewall.pm:77
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
@@ -5126,11 +5130,14 @@ msgid ""
 "\n"
 "Which interfaces should be protected?\n"
 msgstr ""
-"Selezionare le interfacce che saranno protette dal firewall.\n"
+"Seleziona le interfacce che saranno protette dal firewall.\n"
 "\n"
 "Andrebbero selezionate tutte le interfacce connesse ad internet,\n"
 "mentre si potrebbero tralasciare quelle connesse ad una rete locale.\n"
 "\n"
+"Se intendi condividere la connessione Internet tramite Mandriva,\n"
+"non selezionare le interfacce collegate alla rete locale.\n"
+"\n "
 "Quali interfacce dovranno essere protette?\n"
 
 #: ../lib/network/shorewall.pm:158
@@ -5170,8 +5177,7 @@ msgstr "Servono alcuni pacchetti (%s) ma non sono disponibili."
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
 #, c-format
-msgid ""
-"These packages can be found in %s, or in the official %s package repository."
+msgid "These packages can be found in %s, or in the official %s package repository."
 msgstr ""
 "Questi pacchetti si trovano nella nel %s o nel repository ufficiale dei "
 "pacchetti %s."
@@ -5414,3 +5420,4 @@ msgstr "Usare una specifica porta UDP"
 #~ msgstr ""
 #~ "Nessuna scheda di rete ethernet è stata rilevata nel tuo sistema. Per "
 #~ "favore lancia l'utilità di configurazione hardware."
+
