@@ -260,11 +260,12 @@ sub build_ifcfg_settings {
 }
 
 sub write_settings {
-    my ($self, $_o_net, $_o_modules_conf) = @_;
+    my ($self, $o_net, $_o_modules_conf) = @_;
     require network::network;
     my $file = network::network::get_ifcfg_file($self->get_interface);
     network::network::write_interface_settings($self->build_ifcfg_settings, $file);
     network::network::write_hostname($self->{address}{hostname}) if $self->{address}{hostname};
+    network::network::write_network_conf($o_net) if $o_net;
     require network::shorewall;
     network::shorewall::update_interfaces_list($self->get_interface);
     network::network::reload_net_applet();
