@@ -107,12 +107,12 @@ sub get_networks {
 
 sub get_hardware_settings {
    my ($self) = @_;
-   [ { label => N("PIN number (4 digits)"), val => \$self->{hardware}{pin}, hidden => 1 } ];
+   [ { label => N("PIN number (4 digits). Leave empty if PIN is not required."), val => \$self->{hardware}{pin}, hidden => 1 } ];
 }
 
 sub check_hardware_settings {
     my ($self) = @_;
-    if ($self->{hardware}{pin} !~ /^[0-9]{4}$/) {
+    if ($self->{hardware}{pin} !~ /(^$|^[0-9]{4}$)/) {
         $self->{hardware}{error} = translate($wrong_pin_error);
         return 0;
     }
@@ -192,7 +192,11 @@ sub check_device {
 
 sub check_hardware {
     my ($self) = @_;
-    to_bool(run_program::rooted($::prefix, 'comgt', '>', '/dev/null', '-d', $self->get_control_device, 'PIN'));
+    if ($self->{hardware}{pin}) {
+        to_bool(run_program::rooted($::prefix, 'comgt', '>', '/dev/null', '-d', $self->get_control_device, 'PIN'));
+    } else {
+        to_bool(run_program::rooted($::prefix, 'comgt', '>', '/dev/null', '-d', $self->get_control_device));
+    }
 }
 
 sub configure_hardware {
