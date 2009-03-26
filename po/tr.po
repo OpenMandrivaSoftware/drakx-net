@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: drakx-net\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-25 15:35-0300\n"
-"PO-Revision-Date: 2009-03-04 07:48+0200\n"
+"PO-Revision-Date: 2009-03-26 02:04+0200\n"
 "Last-Translator: Atilla ÖNTAŞ <atilla_ontas@mandriva.com>\n"
 "Language-Team: Turkish <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -215,7 +215,7 @@ msgid "Internet Connection Sharing"
 msgstr "İnternet Bağlantısı Paylaşımı"
 
 #: ../bin/drakgw:75
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -237,7 +237,9 @@ msgstr ""
 "düzgün bir şekilde yaptığınıza emin olunuz.\n"
 "\n"
 "Not: Yerel ağınızı (LAN) ayarlamak için bu işe özgülenmiş bir ağ "
-"bağdaştırıcısına ihtiyacınız var."
+"bağdaştırıcısına ihtiyacınız var. Lütfen devam etmeden önce LAN bağlantınızı "
+"sağlayan ağ bağdaştırıcınızda etkin olan Mandriva Güvenlik Duvarını devre "
+"dışı bırakın."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -305,6 +307,16 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"LAN bağlantıları için sisteminizde ayarlanmış bir tane ağ bağdaştırıcısı "
+"var:\n"
+"\n"
+"%s\n"
+"\n"
+"Yerel Ağınızı bu bağdaştırıcı ile kuracağım.\n"
+"\n"
+"Yerel Ağınıza bağlı bir başka bağdaştırıcınız varsa,\n"
+"İnternet Bağlantı paylaşımını yapılandırmadan önce\n"
+"drakfirewall kullanarak bağdaştırıcı üzerindeki güvenlik duvarını kaldırın."
 
 #: ../bin/drakgw:156
 #, c-format
@@ -469,6 +481,11 @@ msgid ""
 "the Mandirva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
+"LAN için yapılandırılmış hiç bir bağdaştırıcı bulunamadı.\n"
+"\n"
+"Lütfen onu yapılandırmak için donanım yapılandırma aracını çalıştırın ve LAN "
+"ağınıza bağlı bağdaştırıcıda Mandriva güvenlik duvarının etkin olmadığından "
+"emin olun."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -989,7 +1006,7 @@ msgid "Error Restarting/Reloading NFS server"
 msgstr "NFS sunucusu yeniden başlatılamıyor/yüklenemiyor..."
 
 #: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#, c-format
 msgid "Directory selection"
 msgstr "Dizin Seçimi"
 
@@ -2497,12 +2514,12 @@ msgstr "Metrik"
 #: ../lib/network/connection.pm:243
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:244
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr ""
+msgstr "Ağ iletisinin en fazla boyutu (MTU). Emin değilseniz boş bırakın."
 
 #: ../lib/network/connection.pm:316
 #, c-format
@@ -2574,7 +2591,7 @@ msgstr "GPRS/Edge/3G"
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
-msgstr ""
+msgstr "PIN numarası (4 basamaklı). PIN gerekmiyorsa boş bırakın"
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
@@ -3383,9 +3400,9 @@ msgstr ""
 "Not: ilgili diğer ayarlar Gelişmiş sayfasında gösterilmiştir."
 
 #: ../lib/network/connection/wireless.pm:493
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless regulatory domain"
-msgstr "Kablosuz ağlar"
+msgstr "Kablosuz dolaşım alanı"
 
 #: ../lib/network/connection/wireless.pm:495
 #, c-format
@@ -3698,7 +3715,7 @@ msgid "EAP extra directives"
 msgstr "EAP ek yönergeleri"
 
 #: ../lib/network/connection/wireless.pm:577
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
 "The expected format is a string field=value pair. Multiple values\n"
@@ -3715,9 +3732,18 @@ msgid ""
 "\tspecial settings different from the U.I settings."
 msgstr ""
 "Burada wpa_supplicant' a ek ayarlar uygulayabilirsiniz.\n"
-"Beklenilen biçim sözdizimi alanı=değer ikilisidir. Her karakter\n"
+"Beklenilen biçim söz dizimi alanı=değer ikilisidir. Her karakter\n"
 " # karakteri ile ayrılarak birden fazla değer belirlenebilir. \n"
-"Not: "
+"Not: direktifler denetlenmeden geçer ve wpa dolaşımını başarısızlığa\n"
+"uğratabilirler. Desteklenen direktifler karşılıklı düzenlemeden korunurlar.\n"
+"\n"
+"Desteklenen direktifler:\n"
+"\tdisabled, id_str, bssid, priority, auth_alg, eapol_flags,\n"
+"\tproactive_key_caching, peerkey, ca_path, private_key,\n"
+"\tprivate_key_passwd, dh_file, altsubject_match, phase1,\n"
+"\tfragment_size and eap_workaround, pairwise, group\n"
+"\tOthers such as key_mgmt, eap maybe used to force\n"
+"\tspecial settings different from the U.I settings."
 
 #: ../lib/network/connection/wireless.pm:597
 #, c-format
@@ -3960,9 +3986,9 @@ msgid "Telnet server"
 msgstr "Telnet Sunucusu"
 
 #: ../lib/network/drakfirewall.pm:49
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "/_NFS Sunucusu"
+msgstr "NFS Sunucusu"
 
 #: ../lib/network/drakfirewall.pm:57
 #, c-format
@@ -5096,7 +5122,7 @@ msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "URL 'ftp:' veya 'http:' ile başlamalıdır."
 
 #: ../lib/network/shorewall.pm:77
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
@@ -5110,8 +5136,11 @@ msgid ""
 msgstr ""
 "Lütfen, güvenlik duvarı tarafından korunacak ara birimleri seçin.\n"
 "\n"
-"İnternete doğrudan bağlı ara birimler seçilmelidir; ancak yerel ağa bağlı\n"
+"İnternet'e doğrudan bağlı ara birimler seçilmelidir; ancak yerel ağa bağlı\n"
 "olanlar seçilmeyebilir.\n"
+"\n"
+"Mandriva İnternet Bağlantı paylaşımını kullanmak istiyorsanız,\n"
+"yerel ağa bağlı ara birimleri seçmeyin.\n"
 "\n"
 "Hangi ara birimler korunsun?\n"
 
