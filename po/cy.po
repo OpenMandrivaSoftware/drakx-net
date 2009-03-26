@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mandriva drakx-net.cy\n"
-"POT-Creation-Date: 2009-03-25 15:35-0300\n"
+"POT-Creation-Date: 2009-03-26 20:52-0300\n"
 "PO-Revision-Date: 2008-10-06 19:50+0100\n"
 "Last-Translator: Rhoslyn Prys <post@meddal.com>\n"
 "Language-Team: Cymraeg <post@meddal.com>\n"
@@ -643,7 +643,7 @@ msgstr "Cyfeiriadau caniatawyd"
 #: ../bin/drakids:40 ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
 #: ../bin/net_applet:132 ../bin/net_applet:292
-#: ../lib/network/drakfirewall.pm:270 ../lib/network/drakfirewall.pm:274
+#: ../lib/network/drakfirewall.pm:300 ../lib/network/drakfirewall.pm:304
 #, c-format
 msgid "Interactive Firewall"
 msgstr "Mur Cadarn Rhyngweithiol"
@@ -2233,32 +2233,32 @@ msgstr "Proffeiliau"
 msgid "VPN connection"
 msgstr "Cysylltiad VPN"
 
-#: ../bin/net_applet:373
+#: ../bin/net_applet:372
 #, c-format
 msgid "Network connection"
 msgstr "Cysylltiad rhwydwaith"
 
-#: ../bin/net_applet:457
+#: ../bin/net_applet:459
 #, c-format
 msgid "More networks"
 msgstr "Rhagor o rwydweithiau"
 
-#: ../bin/net_applet:484
+#: ../bin/net_applet:486
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "Modd awtomatig rhyngweithiol Mur Cadarn"
 
-#: ../bin/net_applet:489
+#: ../bin/net_applet:491
 #, c-format
 msgid "Always launch on startup"
 msgstr "Cychwyn wrth gychwyn"
 
-#: ../bin/net_applet:494
+#: ../bin/net_applet:496
 #, c-format
 msgid "Wireless networks"
 msgstr "Rhwydweithiau diwifr"
 
-#: ../bin/net_applet:501 ../bin/net_monitor:96
+#: ../bin/net_applet:503 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Gosodiadau"
@@ -3923,62 +3923,87 @@ msgid "FTP server"
 msgstr "Gweinydd FTP"
 
 #: ../lib/network/drakfirewall.pm:33
+#, fuzzy, c-format
+msgid "DHCP Server"
+msgstr "Gweinydd CUPS"
+
+#: ../lib/network/drakfirewall.pm:39
 #, c-format
 msgid "Mail Server"
 msgstr "Gweinydd E-bost"
 
-#: ../lib/network/drakfirewall.pm:38
+#: ../lib/network/drakfirewall.pm:44
 #, c-format
 msgid "POP and IMAP Server"
 msgstr "Gweinydd POP ac IMAP"
 
-#: ../lib/network/drakfirewall.pm:43
+#: ../lib/network/drakfirewall.pm:49
 #, c-format
 msgid "Telnet server"
 msgstr "Gweinydd Telnet"
 
-#: ../lib/network/drakfirewall.pm:49
+#: ../lib/network/drakfirewall.pm:55
 #, fuzzy, c-format
 msgid "NFS Server"
 msgstr "/_Gweinydd NFSr"
 
-#: ../lib/network/drakfirewall.pm:57
+#: ../lib/network/drakfirewall.pm:63
 #, c-format
 msgid "Windows Files Sharing (SMB)"
 msgstr "Rhannu Ffeiliau Wondows (SMB)"
 
-#: ../lib/network/drakfirewall.pm:63
+#: ../lib/network/drakfirewall.pm:69
+#, c-format
+msgid "Bacula backup"
+msgstr ""
+
+#: ../lib/network/drakfirewall.pm:75
+#, fuzzy, c-format
+msgid "Syslog network logging"
+msgstr "Plygio byw'r Rhwydwaith"
+
+#: ../lib/network/drakfirewall.pm:81
 #, c-format
 msgid "CUPS server"
 msgstr "Gweinydd CUPS"
 
-#: ../lib/network/drakfirewall.pm:69
+#: ../lib/network/drakfirewall.pm:87
+#, fuzzy, c-format
+msgid "MySQL server"
+msgstr "Gweinydd NFS"
+
+#: ../lib/network/drakfirewall.pm:93
+#, fuzzy, c-format
+msgid "PostgreSQL server"
+msgstr "Gweinydd CUPS"
+
+#: ../lib/network/drakfirewall.pm:99
 #, c-format
 msgid "Echo request (ping)"
 msgstr "Cais Echo (ping)"
 
-#: ../lib/network/drakfirewall.pm:74
+#: ../lib/network/drakfirewall.pm:104
 #, c-format
 msgid "BitTorrent"
 msgstr "BitTorrent"
 
-#: ../lib/network/drakfirewall.pm:80
+#: ../lib/network/drakfirewall.pm:110
 #, c-format
 msgid "Windows Mobile device synchronization"
 msgstr "Cydweddu dyfais Windows Mobile"
 
-#: ../lib/network/drakfirewall.pm:89
+#: ../lib/network/drakfirewall.pm:119
 #, c-format
 msgid "Port scan detection"
 msgstr "Canfyddwr sgan porth"
 
-#: ../lib/network/drakfirewall.pm:184 ../lib/network/drakfirewall.pm:190
+#: ../lib/network/drakfirewall.pm:214 ../lib/network/drakfirewall.pm:220
 #: ../lib/network/shorewall.pm:75
 #, c-format
 msgid "Firewall configuration"
 msgstr "Ffurfweddiad mur cadarn"
 
-#: ../lib/network/drakfirewall.pm:184
+#: ../lib/network/drakfirewall.pm:214
 #, c-format
 msgid ""
 "drakfirewall configurator\n"
@@ -3993,7 +4018,7 @@ msgstr ""
 "Mandriva Linux hwn. Am fur gwarchod pwrpasol pwerus, \n"
 "edrychwch ddosbarthiad arbenigol Mandriva Security Firewall."
 
-#: ../lib/network/drakfirewall.pm:190
+#: ../lib/network/drakfirewall.pm:220
 #, c-format
 msgid ""
 "drakfirewall configurator\n"
@@ -4006,13 +4031,13 @@ msgstr ""
 "Gwnewch yn siŵr eich bod wedi ffurfweddu eich mynediad\n"
 "Rhwydwaith/Rhyngrwyd gyda Drakconnect cyn mynd ymhellach."
 
-#: ../lib/network/drakfirewall.pm:207 ../lib/network/drakfirewall.pm:209
+#: ../lib/network/drakfirewall.pm:237 ../lib/network/drakfirewall.pm:239
 #: ../lib/network/shorewall.pm:167
 #, c-format
 msgid "Firewall"
 msgstr "Mur Cadarn"
 
-#: ../lib/network/drakfirewall.pm:210
+#: ../lib/network/drakfirewall.pm:240
 #, c-format
 msgid ""
 "You can enter miscellaneous ports. \n"
@@ -4023,7 +4048,7 @@ msgstr ""
 "Eng. dilys: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
 "Am wybodaeth ewch i /etc/services."
 
-#: ../lib/network/drakfirewall.pm:216
+#: ../lib/network/drakfirewall.pm:246
 #, c-format
 msgid ""
 "Invalid port given: %s.\n"
@@ -4038,27 +4063,27 @@ msgstr ""
 "\n"
 "Cewch hefyd gynnig ystod o byrth (ee: 24300:24350/udp)"
 
-#: ../lib/network/drakfirewall.pm:226
+#: ../lib/network/drakfirewall.pm:256
 #, c-format
 msgid "Which services would you like to allow the Internet to connect to?"
 msgstr "Pa wasanaethau'r hoffech i'r Rhyngrwyd gysylltu â hwy?"
 
-#: ../lib/network/drakfirewall.pm:227
+#: ../lib/network/drakfirewall.pm:257
 #, c-format
 msgid "Everything (no firewall)"
 msgstr "Popeth (dim mur cadarn)"
 
-#: ../lib/network/drakfirewall.pm:229
+#: ../lib/network/drakfirewall.pm:259
 #, c-format
 msgid "Other ports"
 msgstr "Pyrth eraill"
 
-#: ../lib/network/drakfirewall.pm:230
+#: ../lib/network/drakfirewall.pm:260
 #, c-format
 msgid "Log firewall messages in system logs"
 msgstr "Cofnodi negeseuon y mur cadarn yng nghofnodion y system"
 
-#: ../lib/network/drakfirewall.pm:272
+#: ../lib/network/drakfirewall.pm:302
 #, c-format
 msgid ""
 "You can be warned when someone accesses to a service or tries to intrude "
@@ -4069,7 +4094,7 @@ msgstr ""
 "neu i'ch cyfrifiadur.\n"
 "Pennwch pa wasanaeth rhwydwaith dylid ei wylio."
 
-#: ../lib/network/drakfirewall.pm:277
+#: ../lib/network/drakfirewall.pm:307
 #, c-format
 msgid "Use Interactive Firewall"
 msgstr "Defnyddio Mur Cadarn Rhyngweithiol"

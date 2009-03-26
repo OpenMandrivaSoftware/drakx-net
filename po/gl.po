@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-tools-gl\n"
-"POT-Creation-Date: 2009-03-25 15:35-0300\n"
+"POT-Creation-Date: 2009-03-26 20:52-0300\n"
 "PO-Revision-Date: 2008-04-13 22:12+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -645,7 +645,7 @@ msgstr "Enderezos permitidos"
 #: ../bin/drakids:40 ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
 #: ../bin/net_applet:132 ../bin/net_applet:292
-#: ../lib/network/drakfirewall.pm:270 ../lib/network/drakfirewall.pm:274
+#: ../lib/network/drakfirewall.pm:300 ../lib/network/drakfirewall.pm:304
 #, c-format
 msgid "Interactive Firewall"
 msgstr "Cortalumes Interactivo"
@@ -2186,32 +2186,32 @@ msgstr "Perfís"
 msgid "VPN connection"
 msgstr "Conexión VPN"
 
-#: ../bin/net_applet:373
+#: ../bin/net_applet:372
 #, c-format
 msgid "Network connection"
 msgstr "Conexión á rede"
 
-#: ../bin/net_applet:457
+#: ../bin/net_applet:459
 #, c-format
 msgid "More networks"
 msgstr "Máis redes"
 
-#: ../bin/net_applet:484
+#: ../bin/net_applet:486
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "Modo automático do Cortalumes Interactivo"
 
-#: ../bin/net_applet:489
+#: ../bin/net_applet:491
 #, c-format
 msgid "Always launch on startup"
 msgstr "Lanzar sempre ó inicia-lo sistema"
 
-#: ../bin/net_applet:494
+#: ../bin/net_applet:496
 #, c-format
 msgid "Wireless networks"
 msgstr "Redes sen fíos"
 
-#: ../bin/net_applet:501 ../bin/net_monitor:96
+#: ../bin/net_applet:503 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Opcións"
@@ -3812,62 +3812,87 @@ msgid "FTP server"
 msgstr "Servidor FTP"
 
 #: ../lib/network/drakfirewall.pm:33
+#, fuzzy, c-format
+msgid "DHCP Server"
+msgstr "Servidor CUPS"
+
+#: ../lib/network/drakfirewall.pm:39
 #, c-format
 msgid "Mail Server"
 msgstr "Servidor de Correo"
 
-#: ../lib/network/drakfirewall.pm:38
+#: ../lib/network/drakfirewall.pm:44
 #, c-format
 msgid "POP and IMAP Server"
 msgstr "Servidor POP e IMAP"
 
-#: ../lib/network/drakfirewall.pm:43
+#: ../lib/network/drakfirewall.pm:49
 #, c-format
 msgid "Telnet server"
 msgstr "Servidor Telnet"
 
-#: ../lib/network/drakfirewall.pm:49
+#: ../lib/network/drakfirewall.pm:55
 #, fuzzy, c-format
 msgid "NFS Server"
 msgstr "/Servidor _NFS"
 
-#: ../lib/network/drakfirewall.pm:57
+#: ../lib/network/drakfirewall.pm:63
 #, c-format
 msgid "Windows Files Sharing (SMB)"
 msgstr "Compartimento de Ficheiros Windows (SMB)"
 
-#: ../lib/network/drakfirewall.pm:63
+#: ../lib/network/drakfirewall.pm:69
+#, c-format
+msgid "Bacula backup"
+msgstr ""
+
+#: ../lib/network/drakfirewall.pm:75
+#, fuzzy, c-format
+msgid "Syslog network logging"
+msgstr "Conexión en quente da rede"
+
+#: ../lib/network/drakfirewall.pm:81
 #, c-format
 msgid "CUPS server"
 msgstr "Servidor CUPS"
 
-#: ../lib/network/drakfirewall.pm:69
+#: ../lib/network/drakfirewall.pm:87
+#, fuzzy, c-format
+msgid "MySQL server"
+msgstr "Servidor NFS"
+
+#: ../lib/network/drakfirewall.pm:93
+#, fuzzy, c-format
+msgid "PostgreSQL server"
+msgstr "Servidor CUPS"
+
+#: ../lib/network/drakfirewall.pm:99
 #, c-format
 msgid "Echo request (ping)"
 msgstr "Solicitude de eco (ping)"
 
-#: ../lib/network/drakfirewall.pm:74
+#: ../lib/network/drakfirewall.pm:104
 #, c-format
 msgid "BitTorrent"
 msgstr "BitTorrent"
 
-#: ../lib/network/drakfirewall.pm:80
+#: ../lib/network/drakfirewall.pm:110
 #, c-format
 msgid "Windows Mobile device synchronization"
 msgstr ""
 
-#: ../lib/network/drakfirewall.pm:89
+#: ../lib/network/drakfirewall.pm:119
 #, c-format
 msgid "Port scan detection"
 msgstr "Detección de escaneo de portos"
 
-#: ../lib/network/drakfirewall.pm:184 ../lib/network/drakfirewall.pm:190
+#: ../lib/network/drakfirewall.pm:214 ../lib/network/drakfirewall.pm:220
 #: ../lib/network/shorewall.pm:75
 #, c-format
 msgid "Firewall configuration"
 msgstr "Configuración do cortalumes"
 
-#: ../lib/network/drakfirewall.pm:184
+#: ../lib/network/drakfirewall.pm:214
 #, c-format
 msgid ""
 "drakfirewall configurator\n"
@@ -3882,7 +3907,7 @@ msgstr ""
 "Para unha solución potente e dedicada a cortalumes, conte ca\n"
 "distribución especializada Mandriva Security Firewall."
 
-#: ../lib/network/drakfirewall.pm:190
+#: ../lib/network/drakfirewall.pm:220
 #, c-format
 msgid ""
 "drakfirewall configurator\n"
@@ -3895,13 +3920,13 @@ msgstr ""
 "Asegúrese de que xa configurou o seu acceso á Rede/Internet con\n"
 "drakconnect antes de continuar."
 
-#: ../lib/network/drakfirewall.pm:207 ../lib/network/drakfirewall.pm:209
+#: ../lib/network/drakfirewall.pm:237 ../lib/network/drakfirewall.pm:239
 #: ../lib/network/shorewall.pm:167
 #, c-format
 msgid "Firewall"
 msgstr "Cortalumes"
 
-#: ../lib/network/drakfirewall.pm:210
+#: ../lib/network/drakfirewall.pm:240
 #, c-format
 msgid ""
 "You can enter miscellaneous ports. \n"
@@ -3912,7 +3937,7 @@ msgstr ""
 "Exemplos válidos son: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
 "Mire en /etc/services para obter información."
 
-#: ../lib/network/drakfirewall.pm:216
+#: ../lib/network/drakfirewall.pm:246
 #, c-format
 msgid ""
 "Invalid port given: %s.\n"
@@ -3927,27 +3952,27 @@ msgstr ""
 "\n"
 "Tamén pode dar un rango de portos (p.ex: 24300:24350/udp)"
 
-#: ../lib/network/drakfirewall.pm:226
+#: ../lib/network/drakfirewall.pm:256
 #, c-format
 msgid "Which services would you like to allow the Internet to connect to?"
 msgstr "¿A qué servicios desexa deixarlle conectarse á Internet?"
 
-#: ../lib/network/drakfirewall.pm:227
+#: ../lib/network/drakfirewall.pm:257
 #, c-format
 msgid "Everything (no firewall)"
 msgstr "Todos (sen cortalumes)"
 
-#: ../lib/network/drakfirewall.pm:229
+#: ../lib/network/drakfirewall.pm:259
 #, c-format
 msgid "Other ports"
 msgstr "Outros portos"
 
-#: ../lib/network/drakfirewall.pm:230
+#: ../lib/network/drakfirewall.pm:260
 #, c-format
 msgid "Log firewall messages in system logs"
 msgstr "Rexistrar as mensaxes do cortalumes no rexistro do sistema"
 
-#: ../lib/network/drakfirewall.pm:272
+#: ../lib/network/drakfirewall.pm:302
 #, c-format
 msgid ""
 "You can be warned when someone accesses to a service or tries to intrude "
@@ -3958,7 +3983,7 @@ msgstr ""
 "ordenador.\n"
 "Seleccione que actividade de rede debe vixilarse."
 
-#: ../lib/network/drakfirewall.pm:277
+#: ../lib/network/drakfirewall.pm:307
 #, c-format
 msgid "Use Interactive Firewall"
 msgstr "Usar Cortalumes Interactivo"
