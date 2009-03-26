@@ -348,7 +348,6 @@ sub cronNetwork() {
     $timeout = Glib::Timeout->add(2000, sub {
         checkWireless() if !($i++%30);
         checkNetwork();
-        $icon->set_tooltip(get_state_message());
         1;
     });
 }
