@@ -38,8 +38,6 @@ install:
 	install -m644 $(wildcard data/*.desktop) $(DESTDIR)$(desktopdir)
 	install -m644 $(wildcard data/icons/*.png) $(DESTDIR)$(iconsdir)
 	install -m644 $(wildcard data/pixmaps/*.png) $(DESTDIR)$(pixmapsdir)
-	install -m644 config/drakroam.pamd $(DESTDIR)$(pamdir)/drakroam
-	install -m644 config/drakroam.console $(DESTDIR)$(consoleappsdir)/drakroam
 	ln -s consolehelper $(DESTDIR)$(bindir)/drakroam
 	perl -pe 's/\s+--force//g' $(DESTDIR)$(desktopdir)/net_applet.desktop > $(DESTDIR)$(autostartdir)/net_applet.desktop
 	perl -pe 's/.*X-KDE.*\n//;s/\s+--force//g' $(DESTDIR)$(desktopdir)/net_applet.desktop > $(DESTDIR)$(autostartgnomedir)/net_applet.desktop
