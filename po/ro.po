@@ -45,8 +45,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net 7.1\n"
 "POT-Creation-Date: 2009-03-25 15:35-0300\n"
-"PO-Revision-Date: 2009-02-21 00:25+0100\n"
-"Last-Translator: Florin Cătălin RUSSEN <cfrussen@yahoo.co.uk>\n"
+"PO-Revision-Date: 2009-03-26 15:01+0100\n"
+"Last-Translator: Florin Cătălin RUSSEN <frussen@yahoo.co.uk>\n"
 "Language-Team: Mandrivausers.ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -239,7 +239,7 @@ msgid "Internet Connection Sharing"
 msgstr "Partajare de conexiune la Internet"
 
 #: ../bin/drakgw:75
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -260,7 +260,9 @@ msgstr ""
 "Înainte de a continua, asigurați-vă că ați configurat accesul la rețea/"
 "Internet cu ajutorul lui drakconnect.\n"
 "\n"
-"Notă: aveți nevoie de o placă de rețea dedicată pentru rețeaua locală (LAN)."
+"Notă: aveți nevoie de o placă de rețea dedicată pentru rețeaua locală (LAN). "
+"Dezactivați parafocul Mandriva pentru adaptorul conectat la rețeaua locală "
+"înainte de a continua."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -328,6 +330,16 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"În sistem aveți configurat numai un singur adaptor de rețea pentru "
+"conexiunile LAN:\n"
+"\n"
+"%s\n"
+"\n"
+"Rețeaua locală este pe cale de-a fi configurată pe acest adaptor.\n"
+"\n"
+"Dacă dispuneți și de alte adaptoare conectate la rețeaua locală,\n"
+"dezactivați protecția ei de parafoc utilizînd drakfirewall înainte\n"
+"de a configura partajarea conexiunii la Internet."
 
 #: ../bin/drakgw:156
 #, c-format
@@ -493,6 +505,11 @@ msgid ""
 "the Mandirva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
+"Nu s-a detectat nici un adaptor Ethernet de rețea configurat în sistem.\n"
+"\n"
+"Lansați unealta de configurare materială pentru a-l configura, și asigurați-"
+"vă că parafocul Mandiva nu este activat pentru adaptorul conectat la rețeaua "
+"locală."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -1012,7 +1029,7 @@ msgid "Error Restarting/Reloading NFS server"
 msgstr "Eroare la repornirea/reîncărcarea serverului NFS"
 
 #: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#, c-format
 msgid "Directory selection"
 msgstr "Selectare director"
 
@@ -2527,12 +2544,14 @@ msgstr "Metrică"
 #: ../lib/network/connection.pm:243
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:244
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
 msgstr ""
+"Lungimea maximă a unui mesaj de rețea (MTU). Lăsați gol dacă nu sînteți "
+"sigur."
 
 #: ../lib/network/connection.pm:316
 #, c-format
@@ -2604,7 +2623,7 @@ msgstr "GPRS/Edge/3G"
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
-msgstr ""
+msgstr "Codul PIN (4 cifre). Lăsați gol dacă nici un cod PIN nu este cerut."
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
@@ -3412,9 +3431,9 @@ msgstr ""
 " Notă : ceilalți parametri asociați îi găsiți în „Opțiuni avansate”."
 
 #: ../lib/network/connection/wireless.pm:493
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless regulatory domain"
-msgstr "Rețele fără fir"
+msgstr "Domaniul de regularizare pentru rețeaua fără fir"
 
 #: ../lib/network/connection/wireless.pm:495
 #, c-format
@@ -4005,9 +4024,9 @@ msgid "Telnet server"
 msgstr "Server telnet"
 
 #: ../lib/network/drakfirewall.pm:49
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "/Server _NFS"
+msgstr "Server NFS"
 
 #: ../lib/network/drakfirewall.pm:57
 #, c-format
@@ -5147,7 +5166,7 @@ msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "Adresa locației (URL) trebuie să înceapă cu 'http:' sau 'ftp:'"
 
 #: ../lib/network/shorewall.pm:77
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
@@ -5163,6 +5182,9 @@ msgstr ""
 "\n"
 "Ar trebui selecționate toate interfețele conectare la Internet,\n"
 "în timp ce interfețele conectate la rețeaua locală pot să nu fie.\n"
+"\n"
+"Dacă intenționați să utilizați partajarea coneciunii la Internet cu\n"
+"deselectați toate interfețele conectate la rețeaua locală.\n"
 "\n"
 "Ce interfețe ar trebui protejate?\n"
 
