@@ -11,12 +11,12 @@ my @all_servers =
 (
   {
    name => N_("Web Server"),
-   pkg => 'apache apache-mod_perl boa',
+   pkg => 'apache apache-mod_perl boa lighttpd thttpd',
    ports => '80/tcp 443/tcp',
   },
   {
    name => N_("Domain Name Server"),
-   pkg => 'bind',
+   pkg => 'bind dnsmasq mydsn',
    ports => '53/tcp 53/udp',
   },
   {
@@ -30,8 +30,14 @@ my @all_servers =
    ports => '20/tcp 21/tcp',
   },
   {
+   name => N_("DHCP Server"),
+   pkg => 'dhcp-server udhcpd',
+   ports => '67/udp 68/udp',
+   hide => 1,
+  },
+  {
    name => N_("Mail Server"),
-   pkg => 'sendmail postfix qmail',
+   pkg => 'sendmail postfix qmail exim',
    ports => '25/tcp',
   },
   {
@@ -60,9 +66,33 @@ my @all_servers =
    hide => 1,
   },
   {
+   name => N_("Bacula backup"),
+   pkg => 'bacula-fd bacula-sd bacula-dir-common',
+   ports => '9101:9103/tcp',
+   hide => 1,
+  },
+  {
+   name => N_("Syslog network logging"),
+   pkg => 'rsyslog syslog-ng',
+   ports => '514/udp',
+   hide => 1,
+  },
+  {
    name => N_("CUPS server"),
    pkg => 'cups',
    ports => '631/tcp 631/udp',
+   hide => 1,
+  },
+  {
+   name => N_("MySQL server"),
+   pkg => 'mysql',
+   ports => '3306/tcp 3306/udp',
+   hide => 1,
+  },
+  {
+   name => N_("PostgreSQL server"),
+   pkg => 'postgresql8.2 postgresql8.3',
+   ports => '5432/tcp 5432/udp',
    hide => 1,
   },
   {
@@ -74,7 +104,7 @@ my @all_servers =
    name => N_("BitTorrent"),
    ports => '6881:6999/tcp',
    hide => 1,
-   pkg => 'bittorrent deluge ktorrent transmission vuze',
+   pkg => 'bittorrent deluge ktorrent transmission vuze rtorrent ctorrent',
   },
   {
    name => N_("Windows Mobile device synchronization"),
