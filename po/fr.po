@@ -75,7 +75,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
-"POT-Creation-Date: 2009-03-25 15:35-0300\n"
+"POT-Creation-Date: 2009-03-26 20:52-0300\n"
 "PO-Revision-Date: 2009-03-08 11:50+0100\n"
 "Last-Translator: Christophe Berthelé <berthy@mandriva.org>\n"
 "Language-Team: French <cooker-i18n@mandrivalinux.org>\n"
@@ -710,7 +710,7 @@ msgstr "Adresses autorisées"
 #: ../bin/drakids:40 ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
 #: ../bin/net_applet:132 ../bin/net_applet:292
-#: ../lib/network/drakfirewall.pm:270 ../lib/network/drakfirewall.pm:274
+#: ../lib/network/drakfirewall.pm:300 ../lib/network/drakfirewall.pm:304
 #, c-format
 msgid "Interactive Firewall"
 msgstr "Pare-Feu interactif"
@@ -2333,32 +2333,32 @@ msgstr "Profils"
 msgid "VPN connection"
 msgstr "Connexion VPN"
 
-#: ../bin/net_applet:373
+#: ../bin/net_applet:372
 #, c-format
 msgid "Network connection"
 msgstr "Connexion réseau"
 
-#: ../bin/net_applet:457
+#: ../bin/net_applet:459
 #, c-format
 msgid "More networks"
 msgstr "Plus de réseaux"
 
-#: ../bin/net_applet:484
+#: ../bin/net_applet:486
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "Mode automatique du Pare Feu Interactif"
 
-#: ../bin/net_applet:489
+#: ../bin/net_applet:491
 #, c-format
 msgid "Always launch on startup"
 msgstr "Toujours lancer au démarrage"
 
-#: ../bin/net_applet:494
+#: ../bin/net_applet:496
 #, c-format
 msgid "Wireless networks"
 msgstr "Réseaux sans fil"
 
-#: ../bin/net_applet:501 ../bin/net_monitor:96
+#: ../bin/net_applet:503 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Paramètres"
@@ -4042,62 +4042,87 @@ msgid "FTP server"
 msgstr "Serveur FTP"
 
 #: ../lib/network/drakfirewall.pm:33
+#, fuzzy, c-format
+msgid "DHCP Server"
+msgstr "Serveur CUPS"
+
+#: ../lib/network/drakfirewall.pm:39
 #, c-format
 msgid "Mail Server"
 msgstr "Serveur de courrier"
 
-#: ../lib/network/drakfirewall.pm:38
+#: ../lib/network/drakfirewall.pm:44
 #, c-format
 msgid "POP and IMAP Server"
 msgstr "Serveur POP et IMAP"
 
-#: ../lib/network/drakfirewall.pm:43
+#: ../lib/network/drakfirewall.pm:49
 #, c-format
 msgid "Telnet server"
 msgstr "Serveur telnet"
 
-#: ../lib/network/drakfirewall.pm:49
+#: ../lib/network/drakfirewall.pm:55
 #, fuzzy, c-format
 msgid "NFS Server"
 msgstr "/Serveur _NFS"
 
-#: ../lib/network/drakfirewall.pm:57
+#: ../lib/network/drakfirewall.pm:63
 #, c-format
 msgid "Windows Files Sharing (SMB)"
 msgstr "Partage de fichiers Windows (SMB)"
 
-#: ../lib/network/drakfirewall.pm:63
+#: ../lib/network/drakfirewall.pm:69
+#, c-format
+msgid "Bacula backup"
+msgstr ""
+
+#: ../lib/network/drakfirewall.pm:75
+#, fuzzy, c-format
+msgid "Syslog network logging"
+msgstr "Branchement à chaud du réseau"
+
+#: ../lib/network/drakfirewall.pm:81
 #, c-format
 msgid "CUPS server"
 msgstr "Serveur CUPS"
 
-#: ../lib/network/drakfirewall.pm:69
+#: ../lib/network/drakfirewall.pm:87
+#, fuzzy, c-format
+msgid "MySQL server"
+msgstr "Serveur NFS"
+
+#: ../lib/network/drakfirewall.pm:93
+#, fuzzy, c-format
+msgid "PostgreSQL server"
+msgstr "Serveur CUPS"
+
+#: ../lib/network/drakfirewall.pm:99
 #, c-format
 msgid "Echo request (ping)"
 msgstr "Requête d'écho (ping)"
 
-#: ../lib/network/drakfirewall.pm:74
+#: ../lib/network/drakfirewall.pm:104
 #, c-format
 msgid "BitTorrent"
 msgstr "BitTorrent"
 
-#: ../lib/network/drakfirewall.pm:80
+#: ../lib/network/drakfirewall.pm:110
 #, c-format
 msgid "Windows Mobile device synchronization"
 msgstr "Synchronisation de périphérique Windows Mobile"
 
-#: ../lib/network/drakfirewall.pm:89
+#: ../lib/network/drakfirewall.pm:119
 #, c-format
 msgid "Port scan detection"
 msgstr "Détection de balayage de ports"
 
-#: ../lib/network/drakfirewall.pm:184 ../lib/network/drakfirewall.pm:190
+#: ../lib/network/drakfirewall.pm:214 ../lib/network/drakfirewall.pm:220
 #: ../lib/network/shorewall.pm:75
 #, c-format
 msgid "Firewall configuration"
 msgstr "Configuration du pare-feu"
 
-#: ../lib/network/drakfirewall.pm:184
+#: ../lib/network/drakfirewall.pm:214
 #, c-format
 msgid ""
 "drakfirewall configurator\n"
@@ -4113,7 +4138,7 @@ msgstr ""
 "Si vous souhaitez un Pare-Feu dédié plus puissant, tournez-vous plutôt vers\n"
 "la distribution spécialisée « Mandriva Security »."
 
-#: ../lib/network/drakfirewall.pm:190
+#: ../lib/network/drakfirewall.pm:220
 #, c-format
 msgid ""
 "drakfirewall configurator\n"
@@ -4126,13 +4151,13 @@ msgstr ""
 "Assurez-vous d'avoir configuré le réseau et Internet grâce à\n"
 "drakconnect avant d'aller plus loin."
 
-#: ../lib/network/drakfirewall.pm:207 ../lib/network/drakfirewall.pm:209
+#: ../lib/network/drakfirewall.pm:237 ../lib/network/drakfirewall.pm:239
 #: ../lib/network/shorewall.pm:167
 #, c-format
 msgid "Firewall"
 msgstr "Pare Feu"
 
-#: ../lib/network/drakfirewall.pm:210
+#: ../lib/network/drakfirewall.pm:240
 #, c-format
 msgid ""
 "You can enter miscellaneous ports. \n"
@@ -4143,7 +4168,7 @@ msgstr ""
 "Exemples valides : 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
 "Jetez un œil à /etc/services pour plus d'informations."
 
-#: ../lib/network/drakfirewall.pm:216
+#: ../lib/network/drakfirewall.pm:246
 #, c-format
 msgid ""
 "Invalid port given: %s.\n"
@@ -4159,27 +4184,27 @@ msgstr ""
 "Vous pouvez aussi passer un intervalle de ports (par exemple : 24300:24350/"
 "udp)"
 
-#: ../lib/network/drakfirewall.pm:226
+#: ../lib/network/drakfirewall.pm:256
 #, c-format
 msgid "Which services would you like to allow the Internet to connect to?"
 msgstr "Quels services souhaitez-vous laisser accessibles depuis internet ?"
 
-#: ../lib/network/drakfirewall.pm:227
+#: ../lib/network/drakfirewall.pm:257
 #, c-format
 msgid "Everything (no firewall)"
 msgstr "Tout (pas de firewall)"
 
-#: ../lib/network/drakfirewall.pm:229
+#: ../lib/network/drakfirewall.pm:259
 #, c-format
 msgid "Other ports"
 msgstr "Autres ports"
 
-#: ../lib/network/drakfirewall.pm:230
+#: ../lib/network/drakfirewall.pm:260
 #, c-format
 msgid "Log firewall messages in system logs"
 msgstr "Enregistrer les messages du pare-feu dans le journal système"
 
-#: ../lib/network/drakfirewall.pm:272
+#: ../lib/network/drakfirewall.pm:302
 #, c-format
 msgid ""
 "You can be warned when someone accesses to a service or tries to intrude "
@@ -4190,7 +4215,7 @@ msgstr ""
 "s'introduire dans votre système.\n"
 "Veuillez sélectionner les activités réseau que vous souhaitez surveiller."
 
-#: ../lib/network/drakfirewall.pm:277
+#: ../lib/network/drakfirewall.pm:307
 #, c-format
 msgid "Use Interactive Firewall"
 msgstr "Utiliser le Pare Feu Interactif"

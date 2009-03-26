@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2009-03-25 15:35-0300\n"
+"POT-Creation-Date: 2009-03-26 20:52-0300\n"
 "PO-Revision-Date: 2006-09-05 23:14+0200\n"
 "Last-Translator: Pablo Saratxaga <pablo@walon.org>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -646,7 +646,7 @@ msgstr "Permetowès adresses"
 #: ../bin/drakids:40 ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
 #: ../bin/net_applet:132 ../bin/net_applet:292
-#: ../lib/network/drakfirewall.pm:270 ../lib/network/drakfirewall.pm:274
+#: ../lib/network/drakfirewall.pm:300 ../lib/network/drakfirewall.pm:304
 #, c-format
 msgid "Interactive Firewall"
 msgstr "Côpe feu eteractif"
@@ -2176,32 +2176,32 @@ msgstr "Profils"
 msgid "VPN connection"
 msgstr "Raloyaedje VPN"
 
-#: ../bin/net_applet:373
+#: ../bin/net_applet:372
 #, c-format
 msgid "Network connection"
 msgstr "Raloyaedje rantoele"
 
-#: ../bin/net_applet:457
+#: ../bin/net_applet:459
 #, c-format
 msgid "More networks"
 msgstr "Co ds ôtès rantoeles"
 
-#: ../bin/net_applet:484
+#: ../bin/net_applet:486
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "Môde otomatike do côpe-feu eteractif"
 
-#: ../bin/net_applet:489
+#: ../bin/net_applet:491
 #, c-format
 msgid "Always launch on startup"
 msgstr "El fé tofer a l' enondaedje"
 
-#: ../bin/net_applet:494
+#: ../bin/net_applet:496
 #, c-format
 msgid "Wireless networks"
 msgstr "Rantoeles sins fyis"
 
-#: ../bin/net_applet:501 ../bin/net_monitor:96
+#: ../bin/net_applet:503 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Apontiaedjes"
@@ -3803,62 +3803,87 @@ msgid "FTP server"
 msgstr "Sierveu FTP"
 
 #: ../lib/network/drakfirewall.pm:33
+#, fuzzy, c-format
+msgid "DHCP Server"
+msgstr "Sierveu CUPS"
+
+#: ../lib/network/drakfirewall.pm:39
 #, c-format
 msgid "Mail Server"
 msgstr "Sierveu d' emilaedje"
 
-#: ../lib/network/drakfirewall.pm:38
+#: ../lib/network/drakfirewall.pm:44
 #, c-format
 msgid "POP and IMAP Server"
 msgstr "Sierveu POP et IMAP"
 
-#: ../lib/network/drakfirewall.pm:43
+#: ../lib/network/drakfirewall.pm:49
 #, c-format
 msgid "Telnet server"
 msgstr "Sierveu telnet"
 
-#: ../lib/network/drakfirewall.pm:49
+#: ../lib/network/drakfirewall.pm:55
 #, fuzzy, c-format
 msgid "NFS Server"
 msgstr "/Sierveu _NFS"
 
-#: ../lib/network/drakfirewall.pm:57
+#: ../lib/network/drakfirewall.pm:63
 #, c-format
 msgid "Windows Files Sharing (SMB)"
 msgstr "Pårtaedje di fitchîs Windows (SMB)"
 
-#: ../lib/network/drakfirewall.pm:63
+#: ../lib/network/drakfirewall.pm:69
+#, c-format
+msgid "Bacula backup"
+msgstr ""
+
+#: ../lib/network/drakfirewall.pm:75
+#, fuzzy, c-format
+msgid "Syslog network logging"
+msgstr "Tchôcaedje a tchôd del rantoele"
+
+#: ../lib/network/drakfirewall.pm:81
 #, c-format
 msgid "CUPS server"
 msgstr "Sierveu CUPS"
 
-#: ../lib/network/drakfirewall.pm:69
+#: ../lib/network/drakfirewall.pm:87
+#, fuzzy, c-format
+msgid "MySQL server"
+msgstr "Sierveu NFS"
+
+#: ../lib/network/drakfirewall.pm:93
+#, fuzzy, c-format
+msgid "PostgreSQL server"
+msgstr "Sierveu CUPS"
+
+#: ../lib/network/drakfirewall.pm:99
 #, c-format
 msgid "Echo request (ping)"
 msgstr ""
 
-#: ../lib/network/drakfirewall.pm:74
+#: ../lib/network/drakfirewall.pm:104
 #, c-format
 msgid "BitTorrent"
 msgstr "BitTorrent"
 
-#: ../lib/network/drakfirewall.pm:80
+#: ../lib/network/drakfirewall.pm:110
 #, c-format
 msgid "Windows Mobile device synchronization"
 msgstr ""
 
-#: ../lib/network/drakfirewall.pm:89
+#: ../lib/network/drakfirewall.pm:119
 #, c-format
 msgid "Port scan detection"
 msgstr "Deteccion di scanaedjes di pôrts"
 
-#: ../lib/network/drakfirewall.pm:184 ../lib/network/drakfirewall.pm:190
+#: ../lib/network/drakfirewall.pm:214 ../lib/network/drakfirewall.pm:220
 #: ../lib/network/shorewall.pm:75
 #, c-format
 msgid "Firewall configuration"
 msgstr "Apontiaedje do côpe-feu"
 
-#: ../lib/network/drakfirewall.pm:184
+#: ../lib/network/drakfirewall.pm:214
 #, c-format
 msgid ""
 "drakfirewall configurator\n"
@@ -3874,7 +3899,7 @@ msgstr ""
 "Po ene poûxhante solucion di côpe feu, loukîz purade do costé\n"
 "del distribucion Mandriva Security avou on côpe feu di hôte såvrité."
 
-#: ../lib/network/drakfirewall.pm:190
+#: ../lib/network/drakfirewall.pm:220
 #, c-format
 msgid ""
 "drakfirewall configurator\n"
@@ -3887,13 +3912,13 @@ msgstr ""
 "Acertinez vs ki vos avoz bén apontyî vosse rantoele eyet l' accès al\n"
 "daegntoele avou drakconnect divant d' aler pus lon."
 
-#: ../lib/network/drakfirewall.pm:207 ../lib/network/drakfirewall.pm:209
+#: ../lib/network/drakfirewall.pm:237 ../lib/network/drakfirewall.pm:239
 #: ../lib/network/shorewall.pm:167
 #, c-format
 msgid "Firewall"
 msgstr "Côpe feu"
 
-#: ../lib/network/drakfirewall.pm:210
+#: ../lib/network/drakfirewall.pm:240
 #, c-format
 msgid ""
 "You can enter miscellaneous ports. \n"
@@ -3904,7 +3929,7 @@ msgstr ""
 "Des egzimpes valides sont: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
 "Loukîz l' fitchî /etc/services po pus d' informåcions."
 
-#: ../lib/network/drakfirewall.pm:216
+#: ../lib/network/drakfirewall.pm:246
 #, c-format
 msgid ""
 "Invalid port given: %s.\n"
@@ -3919,27 +3944,27 @@ msgstr ""
 "\n"
 "Vos ploz eto dner ene fortchete di pôrts (eg: 24300:24350/udp)"
 
-#: ../lib/network/drakfirewall.pm:226
+#: ../lib/network/drakfirewall.pm:256
 #, c-format
 msgid "Which services would you like to allow the Internet to connect to?"
 msgstr "Ké siervices voloz vs k' i soeye accessibe a pårti del daegntoele?"
 
-#: ../lib/network/drakfirewall.pm:227
+#: ../lib/network/drakfirewall.pm:257
 #, c-format
 msgid "Everything (no firewall)"
 msgstr "Totafwait (nou côpe feu)"
 
-#: ../lib/network/drakfirewall.pm:229
+#: ../lib/network/drakfirewall.pm:259
 #, c-format
 msgid "Other ports"
 msgstr "Ôtes pôrts"
 
-#: ../lib/network/drakfirewall.pm:230
+#: ../lib/network/drakfirewall.pm:260
 #, c-format
 msgid "Log firewall messages in system logs"
 msgstr "Mete les messaedjes do côpe-feu dins les djournås sistinme"
 
-#: ../lib/network/drakfirewall.pm:272
+#: ../lib/network/drakfirewall.pm:302
 #, c-format
 msgid ""
 "You can be warned when someone accesses to a service or tries to intrude "
@@ -3950,7 +3975,7 @@ msgstr ""
 "vosse copiutrece.\n"
 "Tchoezixhoz li sôre d' activité rantoele ki vos vloz corwaitî s' i vs plait."
 
-#: ../lib/network/drakfirewall.pm:277
+#: ../lib/network/drakfirewall.pm:307
 #, c-format
 msgid "Use Interactive Firewall"
 msgstr "Eployî l' côpe feu eteractif"
