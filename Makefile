@@ -38,7 +38,6 @@ install:
 	install -m644 $(wildcard data/*.desktop) $(DESTDIR)$(desktopdir)
 	install -m644 $(wildcard data/icons/*.png) $(DESTDIR)$(iconsdir)
 	install -m644 $(wildcard data/pixmaps/*.png) $(DESTDIR)$(pixmapsdir)
-	ln -s consolehelper $(DESTDIR)$(bindir)/drakroam
 	perl -pe 's/\s+--force//g' $(DESTDIR)$(desktopdir)/net_applet.desktop > $(DESTDIR)$(autostartdir)/net_applet.desktop
 	perl -pe 's/.*X-KDE.*\n//;s/\s+--force//g' $(DESTDIR)$(desktopdir)/net_applet.desktop > $(DESTDIR)$(autostartgnomedir)/net_applet.desktop
 	make -C po install
