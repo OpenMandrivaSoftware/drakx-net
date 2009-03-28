@@ -192,11 +192,7 @@ sub check_device {
 
 sub check_hardware {
     my ($self) = @_;
-    if ($self->{hardware}{pin}) {
-        to_bool(run_program::rooted($::prefix, 'comgt', '>', '/dev/null', '-d', $self->get_control_device, 'PIN'));
-    } else {
-        to_bool(run_program::rooted($::prefix, 'comgt', '>', '/dev/null', '-d', $self->get_control_device));
-    }
+    to_bool(run_program::rooted($::prefix, 'comgt', '>', '/dev/null', '-d', $self->get_control_device, 'PIN'));
 }
 
 sub configure_hardware {
