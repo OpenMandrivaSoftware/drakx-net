@@ -76,7 +76,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "POT-Creation-Date: 2009-03-26 20:52-0300\n"
-"PO-Revision-Date: 2009-03-08 11:50+0100\n"
+"PO-Revision-Date: 2009-03-29 12:06+0200\n"
 "Last-Translator: Christophe Berthelé <berthy@mandriva.org>\n"
 "Language-Team: French <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -272,7 +272,7 @@ msgid "Internet Connection Sharing"
 msgstr "Partage de la connexion internet"
 
 #: ../bin/drakgw:75
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -291,10 +291,11 @@ msgstr ""
 "utiliser la connexion internet de cet ordinateur.\n"
 "\n"
 "Assurez-vous d'avoir configuré votre accès Réseau/Internet grâce à "
-"DrakConnect avant d'aller plus loin.\n"
+"drakconnect avant d'aller plus loin.\n"
 "\n"
 "Veuillez noter que vous avez besoin d'une carte réseau dédiée à votre réseau "
-"local."
+"local (LAN). Veuillez désactiver le pare-feu Mandriva pour l'adaptateur "
+"réseau connecté à votre réseau local avant de continuer."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -362,6 +363,15 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"Il n'y a qu'un adaptateur réseau configuré pour les connexions LAN sur votre "
+"système :\n"
+"\n"
+"%s\n"
+"Cet adaptateur va être utilisé pour configurer votre réseau local.\n"
+"\n"
+"Si vous disposez d'un autre adaptateur connecté à votre réseau local,\n"
+"veuillez désactiver la protection pare-feu en utilisant drakfirewall avant\n"
+"de configurer le partage de connexion Internet."
 
 #: ../bin/drakgw:156
 #, c-format
@@ -529,6 +539,12 @@ msgid ""
 "the Mandirva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
+"Aucun adaptateur réseau configuré pour le LAN n'a été détecté sur votre "
+"système.\n"
+"\n"
+"Veuillez lancer l'outil de détection du matériel pour le configurer et "
+"assurez vous que le pare-feu Mandriva n'est pas activé pour l'adaptateur "
+"réseau connecté à votre réseau local."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -1048,7 +1064,7 @@ msgid "Error Restarting/Reloading NFS server"
 msgstr "Erreur de relance/rechargement du serveur NFS"
 
 #: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#, c-format
 msgid "Directory selection"
 msgstr "Sélection du répertoire"
 
@@ -2577,12 +2593,13 @@ msgstr "Métrique"
 #: ../lib/network/connection.pm:243
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:244
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
 msgstr ""
+"Taille maximale des messages réseau (MTU). En cas de doute, laissez vide."
 
 #: ../lib/network/connection.pm:316
 #, c-format
@@ -2654,7 +2671,7 @@ msgstr "GPRS/Edge/3G"
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
-msgstr ""
+msgstr "Code PIN (4 chiffres). Laissez vide si PIN non requis."
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
@@ -3463,9 +3480,9 @@ msgstr ""
 " Note : les autres paramètres associés sont les Options avancées."
 
 #: ../lib/network/connection/wireless.pm:493
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless regulatory domain"
-msgstr "Réseaux sans fil"
+msgstr "Domaine normatif Réseaux sans fil"
 
 #: ../lib/network/connection/wireless.pm:495
 #, c-format
@@ -4042,9 +4059,9 @@ msgid "FTP server"
 msgstr "Serveur FTP"
 
 #: ../lib/network/drakfirewall.pm:33
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP Server"
-msgstr "Serveur CUPS"
+msgstr "Serveur DHCP"
 
 #: ../lib/network/drakfirewall.pm:39
 #, c-format
@@ -4062,9 +4079,9 @@ msgid "Telnet server"
 msgstr "Serveur telnet"
 
 #: ../lib/network/drakfirewall.pm:55
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "/Serveur _NFS"
+msgstr "Serveur NFS"
 
 #: ../lib/network/drakfirewall.pm:63
 #, c-format
@@ -4074,12 +4091,12 @@ msgstr "Partage de fichiers Windows (SMB)"
 #: ../lib/network/drakfirewall.pm:69
 #, c-format
 msgid "Bacula backup"
-msgstr ""
+msgstr "Sauvegarde Bacula"
 
 #: ../lib/network/drakfirewall.pm:75
-#, fuzzy, c-format
+#, c-format
 msgid "Syslog network logging"
-msgstr "Branchement à chaud du réseau"
+msgstr "Journalisation réseau Syslog"
 
 #: ../lib/network/drakfirewall.pm:81
 #, c-format
@@ -4087,14 +4104,14 @@ msgid "CUPS server"
 msgstr "Serveur CUPS"
 
 #: ../lib/network/drakfirewall.pm:87
-#, fuzzy, c-format
+#, c-format
 msgid "MySQL server"
-msgstr "Serveur NFS"
+msgstr "Serveur MySQL"
 
 #: ../lib/network/drakfirewall.pm:93
-#, fuzzy, c-format
+#, c-format
 msgid "PostgreSQL server"
-msgstr "Serveur CUPS"
+msgstr "Serveur PostgreSQL"
 
 #: ../lib/network/drakfirewall.pm:99
 #, c-format
@@ -5229,7 +5246,7 @@ msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "L'URL doit commencer par « ftp: » ou « http: »"
 
 #: ../lib/network/shorewall.pm:77
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
@@ -5245,6 +5262,9 @@ msgstr ""
 "\n"
 "Toutes les interfaces connectées directement sur Internet devraient être\n"
 "sélectionnées, celles connectées au réseau local peuvent ne pas l'être.\n"
+"\n"
+"Si vous envisagez de partager votre connexion Internet, désélectionnez\n"
+"les interfaces connectées à votre réseau local.\n"
 "\n"
 "Quelle interfaces doivent être protégées ?\n"
 
@@ -5512,23 +5532,3 @@ msgstr "Mode NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Utiliser un port UDP spécifique"
-
-#~ msgid ""
-#~ "There is only one configured network adapter on your system:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "I am about to setup your Local Area Network with that adapter."
-#~ msgstr ""
-#~ "Une seule carte réseau est configurée sur votre système :\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Je vais configurer votre réseau local avec cette carte réseau."
-
-#~ msgid ""
-#~ "No ethernet network adapter has been detected on your system. Please run "
-#~ "the hardware configuration tool."
-#~ msgstr ""
-#~ "Aucune carte réseau n'a été détectée sur votre système. Veuillez utiliser "
-#~ "l'outil de configuration du matériel."
