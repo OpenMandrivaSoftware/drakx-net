@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "POT-Creation-Date: 2009-03-26 20:52-0300\n"
-"PO-Revision-Date: 2009-03-21 18:09+0100\n"
+"PO-Revision-Date: 2009-03-29 17:10+0200\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
@@ -206,7 +206,7 @@ msgid "Internet Connection Sharing"
 msgstr "Deling af internetforbindelse"
 
 #: ../bin/drakgw:75
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -219,15 +219,14 @@ msgid ""
 "(LAN). Please disable Mandriva Firewall for the network adapter connected to "
 "your LAN connection before proceeding."
 msgstr ""
-"Du er ved at konfigurere din maskine til at dele sin internetforbindelse.\n"
+"Du er ved at konfigurere din maskine til at dele dens internetforbindelse.\n"
 "Med denne mulighed vil andre maskiner på dit lokale netværk kunne bruge "
 "internetforbindelsen på denne maskine.\n"
 "\n"
-"Forsikr dig om at du har konfigureret din internetforbindelse med "
+"Forsikr dig om at du har konfigureret din netværks/internetforbindelse med "
 "drakconnect før du går videre.\n"
 "\n"
-"Bemærk: du skal bruge en dediceret netværksadapter, for at lave et lokalt "
-"netværk (LAN)."
+"Bemærk: du skal bruge en netværksadapter afsat kun til dette formål, for at lave et lokalnet (LAN). Deaktivér Mandriva brandmur for netværksadapteren forbundet til dit lokalnet før du går videre."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -294,6 +293,16 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"Der er kun én netværksadapter på dit system som er konfigureret for LAN "
+"forbindelser:\n"
+"\n"
+"%s\n"
+"\n"
+"Jeg er ved at sætte dit lokalnet op med denne adapter.\n"
+"\n"
+"Hvis du har nogen anden adapter forbundet til lokalnettet,\n"
+"så deaktivér brandmursbeskyttelsen på den med drakfirewall før\n"
+"du går videre med konfigurering af deling af Internetforbindelsen."
 
 #: ../bin/drakgw:156
 #, c-format
@@ -460,6 +469,11 @@ msgid ""
 "the Mandirva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
+"Ingen ethernet netværksadapter konfigureret for LAN er blevet fundet på dit "
+"system.\n"
+"\n"
+"Kør konfigurationsværktøjet for udstyr for at konfigurere den, and forsikr dig om at "
+"Mandriva brandmuren ikke er aktiveret for en netværksadapter forbundet til dit lokalnet."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -979,7 +993,7 @@ msgid "Error Restarting/Reloading NFS server"
 msgstr "Fejl ved genstart af NFS-server"
 
 #: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#, c-format
 msgid "Directory selection"
 msgstr "Katalog-valg"
 
@@ -1600,8 +1614,7 @@ msgstr "Tilføj speciel delt Samba-printerressurce"
 
 #: ../bin/draksambashare:448
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
 msgstr ""
 "Målet for denne hjælper er at nemt oprette en speciel delt Samba-"
 "printerressurce."
@@ -1629,8 +1642,7 @@ msgstr "Hjælperen tilføjede Samba printer-delingen"
 #: ../bin/draksambashare:552
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
-msgstr ""
-"Tilføj eller vælg en delt Samba-skriverressurce for at kunne ændre den."
+msgstr "Tilføj eller vælg en delt Samba-skriverressurce for at kunne ændre den."
 
 #: ../bin/draksambashare:570
 #, c-format
@@ -1744,8 +1756,7 @@ msgstr "Offentlig:"
 
 #: ../bin/draksambashare:795
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 "Opretelses-maske, oprettelsesrettigheder og katalogmaske bør være nummerisk. "
 "fx: 0755."
@@ -1820,8 +1831,7 @@ msgstr ""
 
 #: ../bin/draksambashare:1072
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
 msgstr ""
 "Enkelt-server installationer kan bruge smbpasswd eller tdbsam adgangskode-"
 "motorer"
@@ -1983,8 +1993,7 @@ msgstr "Log-niveau: sæt log (udførlighed) niveau (0 <= logniveau <= 10)"
 #: ../bin/draksambashare:1153
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
-"Største logstørrelse: Sæt en grænse for størrelsen på logfilerne (i kB)."
+msgstr "Største logstørrelse: Sæt en grænse for størrelsen på logfilerne (i kB)."
 
 #: ../bin/draksambashare:1160 ../bin/draksambashare:1178
 #, c-format
@@ -2004,8 +2013,7 @@ msgstr "Log-niveau:"
 #: ../bin/draksambashare:1167
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
-"Hjælpeprogrammet indsamlede følgende parametre for opsætningen af Samba."
+msgstr "Hjælpeprogrammet indsamlede følgende parametre for opsætningen af Samba."
 
 #: ../bin/draksambashare:1167
 #, c-format
@@ -2484,12 +2492,12 @@ msgstr "Metrisk"
 #: ../lib/network/connection.pm:243
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:244
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr ""
+msgstr "Maximal størrelse på netværkspakke (MTU). Hvid i tvivl, så lad den være blank"
 
 #: ../lib/network/connection.pm:316
 #, c-format
@@ -2561,7 +2569,7 @@ msgstr "GPRS/Edge/3G"
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
-msgstr ""
+msgstr "PIN nummer (4 cifre). Tom hvis PIN ikke kræves."
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
@@ -2625,8 +2633,7 @@ msgstr "Virtuelt grænsesnit"
 #: ../lib/network/connection/ethernet.pm:60
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
-msgstr ""
-"Kunne ikke finde netværksgrænseflade for den valgte enhed (bruger %s-driver)"
+msgstr "Kunne ikke finde netværksgrænseflade for den valgte enhed (bruger %s-driver)"
 
 #: ../lib/network/connection/ethernet.pm:70 ../lib/network/vpn/openvpn.pm:207
 #, c-format
@@ -2682,8 +2689,7 @@ msgstr "domæne der søges i"
 #: ../lib/network/connection/ethernet.pm:150
 #, c-format
 msgid "By default search domain will be set from the fully-qualified host name"
-msgstr ""
-"Som standard vil søge-domænet blive sat ud fra det fuldt angivne værtsnavn"
+msgstr "Som standard vil søge-domænet blive sat ud fra det fuldt angivne værtsnavn"
 
 #: ../lib/network/connection/ethernet.pm:153
 #, c-format
@@ -3364,9 +3370,9 @@ msgstr ""
 "Bemærk: Andre relevante indstillinger vises på \"Avanceret\"-siden."
 
 #: ../lib/network/connection/wireless.pm:493
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless regulatory domain"
-msgstr "Trådløse netværk"
+msgstr "Trådløst reguleret domæne"
 
 #: ../lib/network/connection/wireless.pm:495
 #, c-format
@@ -3938,9 +3944,9 @@ msgid "FTP server"
 msgstr "FTP-server"
 
 #: ../lib/network/drakfirewall.pm:33
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP Server"
-msgstr "CUPS-server"
+msgstr "DHCP-server"
 
 #: ../lib/network/drakfirewall.pm:39
 #, c-format
@@ -3958,9 +3964,9 @@ msgid "Telnet server"
 msgstr "Telnet-server"
 
 #: ../lib/network/drakfirewall.pm:55
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "/_NFS-server"
+msgstr "NFS-server"
 
 #: ../lib/network/drakfirewall.pm:63
 #, c-format
@@ -3970,12 +3976,12 @@ msgstr "Windows-fildeling (SMB)"
 #: ../lib/network/drakfirewall.pm:69
 #, c-format
 msgid "Bacula backup"
-msgstr ""
+msgstr "Bacula sikkerhedskopi"
 
 #: ../lib/network/drakfirewall.pm:75
-#, fuzzy, c-format
+#, c-format
 msgid "Syslog network logging"
-msgstr "Hotplugging af netværk"
+msgstr "Logning af syslog over netværk"
 
 #: ../lib/network/drakfirewall.pm:81
 #, c-format
@@ -3983,14 +3989,14 @@ msgid "CUPS server"
 msgstr "CUPS-server"
 
 #: ../lib/network/drakfirewall.pm:87
-#, fuzzy, c-format
+#, c-format
 msgid "MySQL server"
-msgstr "NFS-server"
+msgstr "MySQL-server"
 
 #: ../lib/network/drakfirewall.pm:93
-#, fuzzy, c-format
+#, c-format
 msgid "PostgreSQL server"
-msgstr "CUPS-server"
+msgstr "PostgreSQL-server"
 
 #: ../lib/network/drakfirewall.pm:99
 #, c-format
@@ -4162,8 +4168,7 @@ msgstr "Kunne ikke initiere %s-opkoblingstype!"
 #: ../lib/network/drakvpn.pm:60
 #, c-format
 msgid "Please select an existing VPN connection or enter a new name."
-msgstr ""
-"Venligst vælg en eksisterende VPN-opkobling eller indtast et nyt navn. "
+msgstr "Venligst vælg en eksisterende VPN-opkobling eller indtast et nyt navn. "
 
 #: ../lib/network/drakvpn.pm:64
 #, c-format
@@ -4266,8 +4271,7 @@ msgstr "Et angreb på %s er blevet forsøgt af %s"
 msgid ""
 "The \"%s\" application is trying to make a service (%s) available to the "
 "network."
-msgstr ""
-"Programmet '%s' prøver at bruge en tjeneste (%s) tilgængelig for netværket."
+msgstr "Programmet '%s' prøver at bruge en tjeneste (%s) tilgængelig for netværket."
 
 #. -PO: this should be kept lowercase since the expression is meant to be used between brackets
 #: ../lib/network/ifw.pm:155
@@ -5114,7 +5118,7 @@ msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "Url burde begynde med 'ftp:' eller 'http:'"
 
 #: ../lib/network/shorewall.pm:77
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
@@ -5131,6 +5135,9 @@ msgstr ""
 "Alle grænseflader direkte opkoblet til internet bør vælges,\n"
 "mens grænseflader opkoblet til det lokale netværk ikke behøver at blive "
 "valgt.\n"
+"\n"
+"Hvis du planlægger at bruge deling af Mandriva Internet forbindelse,\n"
+"så fravælg grænseflader som skal forbindes til lokalnettet.\n"
 "\n"
 "Hvilke grænseflader ønsker du at beskytte?\n"
 
@@ -5158,8 +5165,7 @@ msgstr ""
 #: ../lib/network/thirdparty.pm:144
 #, c-format
 msgid "Some components (%s) are required but aren't available for %s hardware."
-msgstr ""
-"Nogen komponenter ('%s') behøves, men er ikke tilgængelige for %s-udstyret."
+msgstr "Nogen komponenter ('%s') behøves, men er ikke tilgængelige for %s-udstyret."
 
 #: ../lib/network/thirdparty.pm:145
 #, c-format
@@ -5170,8 +5176,7 @@ msgstr "Nogen pakker (%s) behøves, men er ikke tilgængelige."
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
 #, c-format
-msgid ""
-"These packages can be found in %s, or in the official %s package repository."
+msgid "These packages can be found in %s, or in the official %s package repository."
 msgstr "Disse pakker kan findes på %s eller i det officielle %s pakkelager."
 
 #: ../lib/network/thirdparty.pm:154
@@ -5393,22 +5398,3 @@ msgstr "NAT-tilstand"
 msgid "Use specific UDP port"
 msgstr "Brug specifik UDP-port"
 
-#~ msgid ""
-#~ "There is only one configured network adapter on your system:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "I am about to setup your Local Area Network with that adapter."
-#~ msgstr ""
-#~ "Der er kun én konfigureret netværksadapter i dit system:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Jeg skal til at sætte dit lokalnet på med den adapter."
-
-#~ msgid ""
-#~ "No ethernet network adapter has been detected on your system. Please run "
-#~ "the hardware configuration tool."
-#~ msgstr ""
-#~ "Ingen ethernet netværksadapter er blevet fundet på dit system. Kør "
-#~ "venligst værktøjet til maskinel konfiguration."
