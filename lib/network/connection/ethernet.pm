@@ -207,7 +207,7 @@ sub get_hostname_settings {
     my $auto_hostname = sub { $self->{protocol} eq 'dhcp' && $self->{address}{needhostname} };
     [
         if_($self->{protocol} eq 'dhcp',
-            { text => N("Assign host name from DHCP address"), val => \$self->{address}{needhostname}, type => "bool" },
+            { text => N("Assign host name from DHCP server (or generate a unique one)"), val => \$self->{address}{needhostname}, type => "bool" },
         ),
         { label => N("Host name"), val => \$self->{address}{hostname}, disabled => $auto_hostname },
     ];

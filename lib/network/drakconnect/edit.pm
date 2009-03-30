@@ -200,7 +200,7 @@ sub build_notebook {
                                   gtksignal_connect($gui->{intf}{DHCP_CLIENT} = Gtk2::ComboBox->new_with_strings(\@network::connection::ethernet::dhcp_clients,
                                                                                                                  $intf->{DHCP_CLIENT} || $network::connection::ethernet::dhcp_clients[0]),
                                                     changed => $apply)),
-                          gtksignal_connect($gui->{intf_bool}{NEEDHOSTNAME} = Gtk2::CheckButton->new(N("Assign host name from DHCP address")), toggled => $apply),
+                          gtksignal_connect($gui->{intf_bool}{NEEDHOSTNAME} = Gtk2::CheckButton->new(N("Assign host name from DHCP server (or generate a unique one)")), toggled => $apply),
                           gtkpack__(Gtk2::HBox->new(1,0),
                                     gtknew('Label_Left', text => N("DHCP host name")),
                                     gtksignal_connect($gui->{intf}{DHCP_HOSTNAME} = Gtk2::Entry->new,
