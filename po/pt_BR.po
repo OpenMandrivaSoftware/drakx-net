@@ -304,6 +304,16 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"Há somente uma placa de rede em seu sistema configurada para "
+"conexões LAN:\n"
+"\n"
+"%s\n"
+"\n"
+"Estou para configurar sua Rede Local usando esta placa.\n"
+"\n"
+"Se você tem alguma outra placa conectada na Rede Local,\n"
+"desabilite a proteção do firewall nela usando o drakfirewall antes\n"
+"de configurar o compartilhamento da conexão com a Internet."
 
 #: ../bin/drakgw:156
 #, c-format
@@ -471,6 +481,11 @@ msgid ""
 "the Mandirva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
+"Nenhuma placa de rede configurada para a LAN foi detectada em seu sistema.\n"
+"\n"
+"Favor executar a ferramenta de detecção de hardware para configurar isto," 
+"certifique-se que o Firewall Mandriva esteja desativado para a placa de rede"
+"conectada a LAN."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -989,7 +1004,7 @@ msgid "Error Restarting/Reloading NFS server"
 msgstr "Erro Reiniciando/Recarregando servidor NFS..."
 
 #: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#, c-format
 msgid "Directory selection"
 msgstr "Seleção de Diretório"
 
@@ -2501,12 +2516,12 @@ msgstr "Métrica"
 #: ../lib/network/connection.pm:243
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:244
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr ""
+msgstr "Unidade Máxima de Transmissão (MTU). Na dúvida, deixe em branco."
 
 #: ../lib/network/connection.pm:316
 #, c-format
@@ -2578,7 +2593,7 @@ msgstr "GPRS/Edge/3G"
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
-msgstr ""
+msgstr "Número PIN (4 digitos). Deixe vazio se o PIN não é requerido."
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
@@ -3958,9 +3973,9 @@ msgid "FTP server"
 msgstr "Servidor FTP"
 
 #: ../lib/network/drakfirewall.pm:33
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP Server"
-msgstr "Servidor CUPS"
+msgstr "Servidor DHCP"
 
 #: ../lib/network/drakfirewall.pm:39
 #, c-format
@@ -3978,9 +3993,9 @@ msgid "Telnet server"
 msgstr "Servidor Telnet"
 
 #: ../lib/network/drakfirewall.pm:55
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "/_Servidor NFS"
+msgstr "Servidor NFS"
 
 #: ../lib/network/drakfirewall.pm:63
 #, c-format
@@ -3993,9 +4008,9 @@ msgid "Bacula backup"
 msgstr ""
 
 #: ../lib/network/drakfirewall.pm:75
-#, fuzzy, c-format
+#, c-format
 msgid "Syslog network logging"
-msgstr "Hotplugging de Rede"
+msgstr "Relatório de rede Syslog"
 
 #: ../lib/network/drakfirewall.pm:81
 #, c-format
@@ -4003,14 +4018,14 @@ msgid "CUPS server"
 msgstr "Servidor CUPS"
 
 #: ../lib/network/drakfirewall.pm:87
-#, fuzzy, c-format
+#, c-format
 msgid "MySQL server"
-msgstr "Servidor NFS"
+msgstr "Servidor MySQL"
 
 #: ../lib/network/drakfirewall.pm:93
-#, fuzzy, c-format
+#, c-format
 msgid "PostgreSQL server"
-msgstr "Servidor CUPS"
+msgstr "Servidor PostgreSQL"
 
 #: ../lib/network/drakfirewall.pm:99
 #, c-format
