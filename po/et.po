@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-et\n"
 "POT-Creation-Date: 2009-03-26 20:52-0300\n"
-"PO-Revision-Date: 2009-02-16 12:34+0200\n"
+"PO-Revision-Date: 2009-03-30 15:53+0200\n"
 "Last-Translator: Marek Laane <bald@starman.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -202,7 +202,7 @@ msgid "Internet Connection Sharing"
 msgstr "Internetiühenduse jagamine"
 
 #: ../bin/drakgw:75
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -215,14 +215,15 @@ msgid ""
 "(LAN). Please disable Mandriva Firewall for the network adapter connected to "
 "your LAN connection before proceeding."
 msgstr ""
-"Nüüd on Teil võimalik seadistada oma arvutit Internetiühendust jagama.\n"
+"Nüüd on Teil võimalik seadistada oma arvutit internetiühendust jagama.\n"
 "Selle võimaluse abil saavad teised Teie kohtvõrgu arvutid kasutada selle "
-"masina Internetiühendust.\n"
+"masina internetiühendust.\n"
 "\n"
-"Kontrollige enne jätkamist, et olete seadistanud oma võrgu/Internetiühenduse "
+"Kontrollige enne jätkamist, et olete seadistanud oma võrgu/internetiühenduse "
 "drakconnecti abil.\n"
 "\n"
-"Märkus: kohtvõrgu (LAN) jaoks on vajalik eraldi võrgukaardi olemasolu."
+"Märkus: kohtvõrgu (LAN) jaoks on vajalik eraldi võrgukaardi olemasolu. Palun "
+"lülitage LAN-iga seotud võrgukraadi puhul enne jätkamist välja Mandriva tulemüür."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -268,7 +269,7 @@ msgstr "Uuesti seadistada"
 #: ../bin/drakgw:122
 #, c-format
 msgid "Please select the network interface directly connected to the internet."
-msgstr "Palun valige otse Internetti ühendatud võrguliides."
+msgstr "Palun valige otse internetti ühendatud võrguliides."
 
 #: ../bin/drakgw:123 ../lib/network/netconnect.pm:360
 #: ../lib/network/netconnect.pm:395
@@ -290,6 +291,16 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"Teie süsteemis on kohtvõrgu ühendustele seadistatud ainult üks "
+"võrgukaart:n"
+"\n"
+"%s\n"
+"\n"
+"Kõik on valmis teie kohtvõrgu häälestamiseks seda kaarti kasutama.\n"
+"\n"
+"Kui Teil on veel mõni kohtvõrguga ühendatud kaart, keelake tööriista "
+"drakfirewall abil sellel tulemüüri kasutamine, enne kui asute "
+"internetiühenduse jagamist seadistama."
 
 #: ../bin/drakgw:156
 #, c-format
@@ -454,6 +465,12 @@ msgid ""
 "the Mandirva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
+"Teie süsteemis ei leitud ühtegi kohtvõrgu jaoks seadistatud Etherneti "
+"võrgukaarti.\n"
+"\n"
+"Palun käivitage selle seadistamiseks riistvara seadistuste tööriist ja "
+"kontrollige, et kohtvõrguga ühendatud võrgukaardil poleks sisse lülitatud "
+"Mandriva tulemüür."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -474,7 +491,7 @@ msgid ""
 " a Transparent Proxy Cache server (SQUID)."
 msgstr ""
 "Kõik on seadistatud.\n"
-"Nüüd saate Internetiühendust jagada teistele kohtvõrgu arvutitele, kasutades "
+"Nüüd saate internetiühendust jagada teistele kohtvõrgu arvutitele, kasutades "
 "automaatset võrguseadistust (DHCP) ja läbipaistvat puhverserverit (SQUID)."
 
 #: ../bin/drakgw:351
@@ -593,7 +610,7 @@ msgstr "Kirje lisamine"
 #: ../bin/drakhosts:245
 #, c-format
 msgid "Failed to add host."
-msgstr "Masina lisamine ebaõnnestus."
+msgstr "Masina lisamine nurjus."
 
 #: ../bin/drakhosts:248 ../bin/draknfs:608 ../bin/draksambashare:1304
 #: ../bin/draksambashare:1349 ../bin/draksambashare:1380
@@ -605,7 +622,7 @@ msgstr "Muuda"
 #: ../bin/drakhosts:252
 #, c-format
 msgid "Failed to Modify host."
-msgstr "Masina muutmine ebaõnnestus."
+msgstr "Masina muutmine nurjus."
 
 #: ../bin/drakhosts:255 ../bin/drakids:95 ../bin/drakids:104
 #: ../bin/draknfs:615 ../bin/draksambashare:1305 ../bin/draksambashare:1357
@@ -617,7 +634,7 @@ msgstr "Eemalda"
 #: ../bin/drakhosts:259
 #, c-format
 msgid "Failed to remove host."
-msgstr "Masina eemaldamine ebaõnnestus."
+msgstr "Masina eemaldamine nurjus."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:183
 #: ../bin/draknetprofile.orig:183 ../bin/net_applet:189
@@ -970,7 +987,7 @@ msgid "Error Restarting/Reloading NFS server"
 msgstr "Viga NFS-serveri taaskäivitamisel"
 
 #: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#, c-format
 msgid "Directory selection"
 msgstr "Kataloogi valimine"
 
@@ -1104,7 +1121,7 @@ msgid ""
 "is on by default."
 msgstr ""
 "<span foreground=\"royalblue3\">%s</span> see nõuab, et päringud tuleksid "
-"Internetipordist, mis on väiksem kui IPPORT_RESERVED (1024). Vaikimisi on "
+"internetipordist, mis on väiksem kui IPPORT_RESERVED (1024). Vaikimisi on "
 "sisse lülitatud."
 
 #: ../bin/draknfs:184
@@ -1268,17 +1285,17 @@ msgstr "DrakNFS - NFS-ressursside haldamine"
 #: ../bin/draknfs:605
 #, c-format
 msgid "Failed to add NFS share."
-msgstr "NFS-ressursi lisamine ebaõnnestus."
+msgstr "NFS-ressursi lisamine nurjus."
 
 #: ../bin/draknfs:612
 #, c-format
 msgid "Failed to Modify NFS share."
-msgstr "NFS-ressursi muutmine ebaõnnestus."
+msgstr "NFS-ressursi muutmine nurjus."
 
 #: ../bin/draknfs:619
 #, c-format
 msgid "Failed to remove an NFS share."
-msgstr "NFS-ressursi eemaldamine ebaõnnestus."
+msgstr "NFS-ressursi eemaldamine nurjus."
 
 #: ../bin/draksambashare:65
 #, c-format
@@ -2052,12 +2069,12 @@ msgstr "Samba seadistuste haldamine"
 #: ../bin/draksambashare:1354
 #, c-format
 msgid "Failed to Modify Samba share."
-msgstr "Samba ressursi muutmine ebaõnnestus."
+msgstr "Samba ressursi muutmine nurjus."
 
 #: ../bin/draksambashare:1363
 #, c-format
 msgid "Failed to remove a Samba share."
-msgstr "Samba ressursi eemaldamine ebaõnnestus."
+msgstr "Samba ressursi eemaldamine nurjus."
 
 #: ../bin/draksambashare:1370
 #, c-format
@@ -2067,12 +2084,12 @@ msgstr "Failiressurss"
 #: ../bin/draksambashare:1385
 #, c-format
 msgid "Failed to Modify."
-msgstr "Muutmine ebaõnnestus."
+msgstr "Muutmine nurjus."
 
 #: ../bin/draksambashare:1394
 #, c-format
 msgid "Failed to remove."
-msgstr "Eemaldamine ebaõnnestus."
+msgstr "Eemaldamine nurjus."
 
 #: ../bin/draksambashare:1401
 #, c-format
@@ -2082,17 +2099,17 @@ msgstr "Printerid"
 #: ../bin/draksambashare:1413
 #, c-format
 msgid "Failed to add user."
-msgstr "Kasutaja lisamine ebaõnnestus."
+msgstr "Kasutaja lisamine nurjus."
 
 #: ../bin/draksambashare:1422
 #, c-format
 msgid "Failed to change user password."
-msgstr "Kasutaja parooli muutmine ebaõnnestus."
+msgstr "Kasutaja parooli muutmine nurjus."
 
 #: ../bin/draksambashare:1434
 #, c-format
 msgid "Failed to delete user."
-msgstr "Kasutaja kustutamine ebaõnnestus."
+msgstr "Kasutaja kustutamine nurjus."
 
 #: ../bin/draksambashare:1439
 #, c-format
@@ -2180,7 +2197,7 @@ msgstr "Võrgu jälgimine"
 #: ../bin/net_applet:133
 #, c-format
 msgid "Manage wireless networks"
-msgstr "Traadita ühenduste haldamine"
+msgstr "Juhtmeta ühenduste haldamine"
 
 #: ../bin/net_applet:135
 #, c-format
@@ -2242,7 +2259,7 @@ msgstr "Alati käivitatakse käivitumisel"
 #: ../bin/net_applet:496
 #, c-format
 msgid "Wireless networks"
-msgstr "Traadita võrgud"
+msgstr "Juhtmeta võrgud"
 
 #: ../bin/net_applet:503 ../bin/net_monitor:96
 #, c-format
@@ -2330,7 +2347,7 @@ msgstr "Internetiühenduse loomine "
 #: ../bin/net_monitor:254
 #, c-format
 msgid "Disconnection from Internet failed."
-msgstr "Internetiühenduse katkestamine ebaõnnestus."
+msgstr "Internetiühenduse katkestamine nurjus."
 
 #: ../bin/net_monitor:255
 #, c-format
@@ -2348,7 +2365,7 @@ msgid ""
 "Connection failed.\n"
 "Verify your configuration in the Mandriva Linux Control Center."
 msgstr ""
-"Ühenduse loomine ebaõnnestus.\n"
+"Ühenduse loomine nurjus.\n"
 "Kontrollige palun seadistusi Mandriva Linuxi juhtimiskeskuse abil."
 
 #: ../bin/net_monitor:360
@@ -2392,7 +2409,7 @@ msgid ""
 "Warning, another internet connection has been detected, maybe using your "
 "network"
 msgstr ""
-"Hoiatus, leiti veel üks Internetiühendus, mis võib-olla kasutab Teie võrku"
+"Hoiatus, leiti veel üks internetiühendus, mis võib-olla kasutab Teie võrku"
 
 #: ../bin/net_monitor:516
 #, c-format
@@ -2462,12 +2479,12 @@ msgstr "Meetrika"
 #: ../lib/network/connection.pm:243
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:244
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr ""
+msgstr "Maksimaalne edastusüksus (MTU). Kui te pole kindel, jätke tühjaks."
 
 #: ../lib/network/connection.pm:316
 #, c-format
@@ -2539,12 +2556,12 @@ msgstr "GPRS/Edge/3G"
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
-msgstr ""
+msgstr "PIN-kood (4 arvu). Kui PIN pole vajalik, jätke tühjaks."
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
 msgid "Unable to open device %s"
-msgstr "Seadme %s avamine ebaõnnestus"
+msgstr "Seadme %s avamine nurjus"
 
 #: ../lib/network/connection/cellular_card.pm:222
 #, c-format
@@ -2593,7 +2610,7 @@ msgstr "Ethernet"
 #: ../lib/network/connection/ethernet.pm:12
 #, c-format
 msgid "Wired (Ethernet)"
-msgstr "Traadiga ühendus (Ethernet)"
+msgstr "Juhtmega ühendus (Ethernet)"
 
 #: ../lib/network/connection/ethernet.pm:30
 #, c-format
@@ -2603,7 +2620,7 @@ msgstr "Virtuaalne liides"
 #: ../lib/network/connection/ethernet.pm:60
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
-msgstr "Valitud seadme võrguliidese leidmine (draiveriga %s) ebaõnnestus."
+msgstr "Valitud seadme võrguliidese leidmine (draiveriga %s) nurjus."
 
 #: ../lib/network/connection/ethernet.pm:70 ../lib/network/vpn/openvpn.pm:207
 #, c-format
@@ -2749,7 +2766,7 @@ msgstr "Võrguaadress hangitud liideses %s (%s protokoll)"
 #: ../lib/network/connection/ethernet.pm:295
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
-msgstr "Võrguaadressi hankimine liideses %s (%s protokoll) ebaõnnestus"
+msgstr "Võrguaadressi hankimine liideses %s (%s protokoll) nurjus"
 
 #: ../lib/network/connection/isdn.pm:8
 #, c-format
@@ -3164,12 +3181,12 @@ msgstr "Araabia Ühendemiraadid"
 #: ../lib/network/connection/wireless.pm:15
 #, c-format
 msgid "Wireless"
-msgstr "Traadita ühendus"
+msgstr "Juhtmeta ühendus"
 
 #: ../lib/network/connection/wireless.pm:16
 #, c-format
 msgid "Wireless (Wi-Fi)"
-msgstr "Traadita ühendus (Wifi))"
+msgstr "Juhtmeta ühendus (Wifi))"
 
 #: ../lib/network/connection/wireless.pm:32
 #, c-format
@@ -3207,13 +3224,13 @@ msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
 "switch) first."
 msgstr ""
-"Teie traadita ühenduse kaart on välja lülitatud, palun lülitage see "
+"Teie juhtmeta ühenduse kaart on välja lülitatud, palun lülitage see "
 "kõigepealt sisse (RF kill)."
 
 #: ../lib/network/connection/wireless.pm:444
 #, c-format
 msgid "Wireless settings"
-msgstr "Traadita ühenduse seadistused"
+msgstr "Juhtmeta ühenduse seadistused"
 
 #: ../lib/network/connection/wireless.pm:449
 #: ../lib/network/connection_manager.pm:277
@@ -3344,9 +3361,9 @@ msgstr ""
 " Märkus: täiendavad seadistused leiab muude valikute leheküljel."
 
 #: ../lib/network/connection/wireless.pm:493
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless regulatory domain"
-msgstr "Traadita võrgud"
+msgstr "Juhtmeta side regulatsioonipiirkond"
 
 #: ../lib/network/connection/wireless.pm:495
 #, c-format
@@ -3412,7 +3429,7 @@ msgid ""
 "\n"
 "See iwconfig(8) man page for further information."
 msgstr ""
-"Siin saab seadistada mõningaid traadita võrgu lisaparameetreid:\n"
+"Siin saab seadistada mõningaid juhtmeta võrgu lisaparameetreid:\n"
 "ap, channel, commit, enc, power, retry, sens, txpower (hüüdnimi on juba "
 "määratud masinanimeks).\n"
 "\n"
@@ -3435,7 +3452,7 @@ msgid ""
 "\n"
 "See iwpspy(8) man page for further information."
 msgstr ""
-"Käsku iwspy kasutatakse aadresside nimekirja määramiseks traadita\n"
+"Käsku iwspy kasutatakse aadresside nimekirja määramiseks juhtmeta\n"
 "võrgu kaardil ning kõigi nende kvaliteedi teadaandmiseks.\n"
 "\n"
 "See on sama info, mida pakub /proc/net/wireless:\n"
@@ -3465,7 +3482,7 @@ msgid ""
 "\n"
 "See iwpriv(8) man page for further information."
 msgstr ""
-"iwpriv lubab määrata traadita võrgu liidesele (privaatsed) lisaparameetrid.\n"
+"iwpriv lubab määrata juhtmeta võrgu liidesele (privaatsed) lisaparameetrid.\n"
 "\n"
 "iwpriv tegeleb iga draiveri parameetrite ja seadistustega eraldi (erinevalt\n"
 "iwconfig-ist, mis tegeleb üldiste parameetritega).\n"
@@ -3733,12 +3750,12 @@ msgstr "Tugijaama vahetumise lubamine"
 #: ../lib/network/connection/wireless.pm:756
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
-msgstr "Seotud traadita võrguga \"%s\" liideses %s"
+msgstr "Seotud juhtmeta võrguga \"%s\" liideses %s"
 
 #: ../lib/network/connection/wireless.pm:757
 #, c-format
 msgid "Lost association to wireless network on interface %s"
-msgstr "Kaotatud seos traadita võrguga liideses %s"
+msgstr "Kaotatud seos juhtmeta võrguga liideses %s"
 
 #: ../lib/network/connection/xdsl.pm:8
 #, c-format
@@ -3847,7 +3864,7 @@ msgstr "Ühendumine..."
 #: ../lib/network/connection_manager.pm:489 ../lib/network/drakvpn.pm:100
 #, c-format
 msgid "Connection failed."
-msgstr "Ühendus ebaõnnestus."
+msgstr "Ühendus nurjus."
 
 #: ../lib/network/connection_manager.pm:232
 #, c-format
@@ -3910,9 +3927,9 @@ msgid "FTP server"
 msgstr "FTP-server"
 
 #: ../lib/network/drakfirewall.pm:33
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP Server"
-msgstr "CUPS-server"
+msgstr "DHCP server"
 
 #: ../lib/network/drakfirewall.pm:39
 #, c-format
@@ -3930,9 +3947,9 @@ msgid "Telnet server"
 msgstr "Telneti server"
 
 #: ../lib/network/drakfirewall.pm:55
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "/_NFS-server"
+msgstr "NFS-server"
 
 #: ../lib/network/drakfirewall.pm:63
 #, c-format
@@ -3942,12 +3959,12 @@ msgstr "Windowsi failide jagamine (SMB)"
 #: ../lib/network/drakfirewall.pm:69
 #, c-format
 msgid "Bacula backup"
-msgstr ""
+msgstr "Bacula varundamine"
 
 #: ../lib/network/drakfirewall.pm:75
-#, fuzzy, c-format
+#, c-format
 msgid "Syslog network logging"
-msgstr "Võrgu kohene valmidus (hotplugging)"
+msgstr "Syslogi võrgulogid"
 
 #: ../lib/network/drakfirewall.pm:81
 #, c-format
@@ -3955,14 +3972,14 @@ msgid "CUPS server"
 msgstr "CUPS-server"
 
 #: ../lib/network/drakfirewall.pm:87
-#, fuzzy, c-format
+#, c-format
 msgid "MySQL server"
-msgstr "NFS-server"
+msgstr "MySQL server"
 
 #: ../lib/network/drakfirewall.pm:93
-#, fuzzy, c-format
+#, c-format
 msgid "PostgreSQL server"
-msgstr "CUPS-server"
+msgstr "PostgreSQL server"
 
 #: ../lib/network/drakfirewall.pm:99
 #, c-format
@@ -4001,7 +4018,7 @@ msgid ""
 msgstr ""
 "drakfirewalli seadistaja\n"
 "\n"
-"Selle tööriistaga saate luua lihtsa kaitse Interneti ohtude vastu.\n"
+"Selle tööriistaga saate luua lihtsa kaitse interneti ohtude vastu.\n"
 "Kui vajate võimsat tulemüüri, vaadake palun\n"
 "spetsiaalset Mandriva Security Firewall distributsiooni."
 
@@ -4015,7 +4032,7 @@ msgid ""
 msgstr ""
 "drakfirewalli seadistaja\n"
 "\n"
-"Kontrollige enne jätkamist, et olete seadistanud pääsu võrku/Internetti\n"
+"Kontrollige enne jätkamist, et olete seadistanud pääsu võrku/internetti\n"
 "drakconnecti abil."
 
 #: ../lib/network/drakfirewall.pm:237 ../lib/network/drakfirewall.pm:239
@@ -4053,7 +4070,7 @@ msgstr ""
 #: ../lib/network/drakfirewall.pm:256
 #, c-format
 msgid "Which services would you like to allow the Internet to connect to?"
-msgstr "Milliste teenustega soovite lubada Internetist ühendust võtta?"
+msgstr "Milliste teenustega soovite lubada internetist ühendust võtta?"
 
 #: ../lib/network/drakfirewall.pm:257
 #, c-format
@@ -4109,7 +4126,7 @@ msgstr "Värskenda"
 #: ../lib/network/drakroam.pm:103 ../lib/network/netconnect.pm:771
 #, c-format
 msgid "Wireless connection"
-msgstr "Traadita ühendus"
+msgstr "Juhtmeta ühendus"
 
 #: ../lib/network/drakvpn.pm:30
 #, c-format
@@ -4129,7 +4146,7 @@ msgstr "Tööriistade initsialiseerimine ja seadmete tuvastamine %s jaoks..."
 #: ../lib/network/drakvpn.pm:52
 #, c-format
 msgid "Unable to initialize %s connection type!"
-msgstr "Ühenduse tüübi %s initsialiseerimine ebaõnnestus!"
+msgstr "Ühenduse tüübi %s initsialiseerimine nurjus!"
 
 #: ../lib/network/drakvpn.pm:60
 #, c-format
@@ -4275,7 +4292,7 @@ msgstr "Palun valige Windowsi draiver (.inf-fail)"
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
 msgid "Unable to install the %s ndiswrapper driver!"
-msgstr "%s ndiswrapper-draiveri paigaldamine ebaõnnestus!"
+msgstr "%s ndiswrapper-draiveri paigaldamine nurjus!"
 
 #: ../lib/network/ndiswrapper.pm:103
 #, c-format
@@ -4289,7 +4306,7 @@ msgstr ""
 #: ../lib/network/ndiswrapper.pm:118
 #, c-format
 msgid "Unable to load the ndiswrapper module!"
-msgstr "Ndiswrapper-mooduli laadimine ebaõnnestus!"
+msgstr "Ndiswrapper-mooduli laadimine nurjus!"
 
 #: ../lib/network/ndiswrapper.pm:124
 #, c-format
@@ -4706,12 +4723,12 @@ msgstr "Kuidas soovite ühenduse luua?"
 #: ../lib/network/netconnect.pm:706
 #, c-format
 msgid "Do you want to try to connect to the Internet now?"
-msgstr "Kas soovite oma Internetiühendust proovida?"
+msgstr "Kas soovite oma internetiühendust proovida?"
 
 #: ../lib/network/netconnect.pm:733
 #, c-format
 msgid "The system is now connected to the Internet."
-msgstr "Süsteem on nüüd Internetti ühendatud."
+msgstr "Süsteem on nüüd internetti ühendatud."
 
 #: ../lib/network/netconnect.pm:734
 #, c-format
@@ -4724,7 +4741,7 @@ msgid ""
 "The system does not seem to be connected to the Internet.\n"
 "Try to reconfigure your connection."
 msgstr ""
-"Paistab, et süsteem ei ole Internetti ühendatud.\n"
+"Paistab, et süsteem ei ole internetti ühendatud.\n"
 "Palun seadistage ühendus uuesti."
 
 #: ../lib/network/netconnect.pm:750
@@ -4733,7 +4750,7 @@ msgid ""
 "Congratulations, the network and Internet configuration is finished.\n"
 "\n"
 msgstr ""
-"Õnnitleme, võrk ja Internetiühendus on seadistatud.\n"
+"Õnnitleme, võrk ja internetiühendus on seadistatud.\n"
 "\n"
 
 #: ../lib/network/netconnect.pm:753
@@ -4904,7 +4921,7 @@ msgid ""
 "Choose the one you want to use.\n"
 "\n"
 msgstr ""
-"Olete seadistanud mitu võimalust Internetiga ühendumiseks.\n"
+"Olete seadistanud mitu võimalust internetiga ühendumiseks.\n"
 "Valige palun see, mida soovite kasutada.\n"
 "\n"
 
@@ -5083,7 +5100,7 @@ msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "URL-i alguses peab olema \"ftp:\" või \"http:\""
 
 #: ../lib/network/shorewall.pm:77
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
@@ -5097,8 +5114,11 @@ msgid ""
 msgstr ""
 "Palun valige liidesed, mida tulemüür peab kaitsma.\n"
 "\n"
-"Valida tuleks kõik otse Internetti ühendatud liidesed,\n"
+"Valida tuleks kõik otse internetti ühendatud liidesed,\n"
 "samas kohtvõrgu ühendatud liidesed võib ka valimata jätta.\n"
+"\n"
+"Kui kavatsete kasutada Mandriva internetiühenduse jagamist,\n"
+"ärge valige liideseid, mis ühendatakse kohtvõrku.\n"
 "\n"
 "Milliseid liideseid tuleks kaitsta?\n"
 
@@ -5184,7 +5204,7 @@ msgstr "Palun valige püsivarafail (nt. %s)"
 #: ../lib/network/thirdparty.pm:232
 #, c-format
 msgid "Unable to find \"%s\" on your Windows system!"
-msgstr "\"%s\" leidmine Teie Teie Windowsi süsteemist ebaõnnestus!"
+msgstr "\"%s\" leidmine Teie Teie Windowsi süsteemist nurjus!"
 
 #: ../lib/network/thirdparty.pm:234
 #, c-format
