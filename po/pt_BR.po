@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pt_BR\n"
 "POT-Creation-Date: 2009-03-30 16:28-0300\n"
-"PO-Revision-Date: 2009-02-16 18:33-0300\n"
+"PO-Revision-Date: 2009-03-30 16:44-0300\n"
 "Last-Translator: Sergio Rafael Lemke <sergio@mandriva.com.br>\n"
 "Language-Team: Brazilian Portuguese <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -214,8 +214,7 @@ msgstr "desativo"
 msgid "Internet Connection Sharing"
 msgstr "Compartilhamento da Conexão à Internet"
 
-#: ../bin/drakgw:75
-#, fuzzy, c-format
+#: ../bin/drakgw:75, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -229,14 +228,17 @@ msgid ""
 "your LAN connection before proceeding."
 msgstr ""
 "Você está prestes a configurar o compartilhamento da conexão à Internet do \n"
-"seu computador. Com este recurso, outros computadores da sua rede local "
+"seu computador, com este recurso, outros computadores da sua rede local "
 "serão capazes de usar a conexão à Internet deste computador.\n"
 "\n"
-"Certifique-se, antes de continuar, de ter configurado seu acesso à Rede/"
-"Internet utilizando o drakconnect.\n"
+"Certifique-se, antes de continuar, de ter configurado seu acesso à Internet "
+"utilizando o drakconnect.\n"
 "\n"
-"Nota: você precisa de um Adaptador de Rede dedicado para criar um Rede Local "
-"(LAN)."
+"Nota: você precisa de um Adaptador de Rede dedicado para criar uma Rede "
+"Local "
+"(LAN). Por favor desative o Mandriva Firewall para a placa de rede conectada "
+"a rede "
+"local antes de proseguir."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -2770,10 +2772,9 @@ msgstr ""
 "endereço com esta conexão, primeiro desabilite todos os dispositivos que "
 "usam ele ou configure-o para que não iniciar junto na Inicialização"
 
-#: ../lib/network/connection/ethernet.pm:210
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:210, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
-msgstr "Obter o nome da máquina a partir do endereço DHCP"
+msgstr "Obter nome da máquina a partir do servidor DHCP (ou gerar nome único)"
 
 #: ../lib/network/connection/ethernet.pm:230
 #, c-format
@@ -3399,10 +3400,9 @@ msgstr ""
 "considerada como uma alternativa para o combo usuário/senha.\n"
 " Note: outras configurações relacionadas são mostradas na página Avançada."
 
-#: ../lib/network/connection/wireless.pm:493
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:493, c-format
 msgid "Wireless regulatory domain"
-msgstr "Redes wireless"
+msgstr "Wireless regulatory domain"
 
 #: ../lib/network/connection/wireless.pm:495
 #, c-format
@@ -4004,7 +4004,7 @@ msgstr "Compartilhamento de Arquivos Windows (SMB)"
 #: ../lib/network/drakfirewall.pm:69
 #, c-format
 msgid "Bacula backup"
-msgstr ""
+msgstr "Bacula backup"
 
 #: ../lib/network/drakfirewall.pm:75
 #, c-format
@@ -5150,8 +5150,7 @@ msgstr "O proxy deve ser http://... ou https://..."
 msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "A URL deve começar com 'http:' ou 'ftp:'"
 
-#: ../lib/network/shorewall.pm:77
-#, fuzzy, c-format
+#: ../lib/network/shorewall.pm:77, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
@@ -5165,9 +5164,11 @@ msgid ""
 msgstr ""
 "Por favor selecione as interfaces que serão protegidas pelo firewall.\n"
 "\n"
-"Recomenda-se selecionar todas as interfaces diretamente conectadas à "
-"Internet, sendo que as interfaces conectadas à rede local podem ficar sem "
-"proteção.\n"
+"Recomenda-se selecionar todas as interfaces diretamente conectadas à\n"
+"Internet, as interfaces conectadas à rede local podem ficar sem proteção.\n"
+"\n"
+"Se você for usar o compartilhamento de conexão Mandriva,\n"
+"desmarque as interfaces que serão conectadas a rede local.\n"
 "\n"
 "Quais interfaces devem ser protegidas?\n"
 
