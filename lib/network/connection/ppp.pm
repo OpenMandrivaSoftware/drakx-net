@@ -56,6 +56,8 @@ sub get_options {
 
 sub get_tty_device { "/dev/modem" }
 
+sub get_up_timeout { 20 }
+
 sub build_ifcfg_settings {
     my ($self) = @_;
     my $modemport = $self->get_tty_device;

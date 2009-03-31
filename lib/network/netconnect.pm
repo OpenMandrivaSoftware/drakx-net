@@ -311,7 +311,16 @@ If you do not know it, keep the preselected protocol.") },
                                $connection->connect;
                                #- FIXME: should use network::test for ppp (after future merge with network::connection)
                                #- or start interface synchronously
-                               services::start('network-up') unless $::isInstall;
+                               if (!$::isInstall) {
+                                   services::start('network-up');
+                               } else {
+                                   my $timeout = $connection->get_up_timeout;
+                                   while ($timeout--) {
+                                       my $status = $connection->get_status;
+                                       last if $status;
+                                       sleep 1;
+                                   }
+                               }
                                $success = $connection->get_status();
                                $has_internet = network::tools::connected();
                            }
