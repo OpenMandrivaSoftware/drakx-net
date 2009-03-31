@@ -59,6 +59,7 @@ sub real_main {
       my ($isdn, $isdn_name, $isdn_type, %isdn_cards, @isdn_dial_methods);
       my $my_isdn = join('', N("Manual choice"), " (", N("Internal ISDN card"), ")");
       my $success = 1;
+      my $has_internet = 1;
       my $db_path = "/usr/share/apps/kppp/Provider";
       my (%countries, @isp, $country, $provider, $old_provider);
 
@@ -311,8 +312,8 @@ If you do not know it, keep the preselected protocol.") },
                                #- FIXME: should use network::test for ppp (after future merge with network::connection)
                                #- or start interface synchronously
                                services::start('network-up') unless $::isInstall;
-                               my $up = network::tools::connected();
-                               $success = $up;
+                               $success = $connection->get_status();
+                               $has_internet = network::tools::connected();
                            }
                            "end"; #- handle disconnection in install?
                        },
@@ -749,12 +750,17 @@ Try to reconfigure your connection.");
                    end =>
                    {
                     name => sub {
-                        return $success ? join('', N("Congratulations, the network and Internet configuration is finished.
-
-"), if_($::isStandalone && $in->isa('interactive::gtk'),
-        N("After this is done, we recommend that you restart your X environment to avoid any hostname-related problems."))) :
-          N("Problems occurred during configuration.
-Test your connection via net_monitor or mcc. If your connection does not work, you might want to relaunch the configuration.");
+                        if (!$success) {
+                            return join("\n\n", N("Problems occured during the network connectivity test."),
+                                N("This can be caused by invalid network configuration, or problems with your modem or router."),
+                                N("You might want to relaunch the configuration to verify the connection settings."));
+                        }
+                        if (!$has_internet) {
+                            return join("\n\n", N("Congratulations, the network configuration is finished."), N("However, the Internet connectivity test failed. You should test your connection manually, and verify your Internet modem or router."),
+                                N("If your connection does not work, you might want to relaunch the configuration."));
+                        }
+                        return join("\n\n", N("Congratulations, the network and Internet configuration is finished."), if_($::isStandalone && $in->isa('interactive::gtk'),
+                        N("After this is done, we recommend that you restart your X environment to avoid any hostname-related problems.")));
                     },
                            end => 1,
                    },
