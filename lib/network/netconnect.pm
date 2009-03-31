@@ -759,7 +759,7 @@ Try to reconfigure your connection.");
                             return join("\n\n", N("Congratulations, the network configuration is finished."), N("However, the Internet connectivity test failed. You should test your connection manually, and verify your Internet modem or router."),
                                 N("If your connection does not work, you might want to relaunch the configuration."));
                         }
-                        return join("\n\n", N("Congratulations, the network and Internet configuration is finished."), if_($::isStandalone && $in->isa('interactive::gtk'),
+                        return join("\n\n", N("Congratulations, the network and Internet configuration are finished."), if_($::isStandalone && $in->isa('interactive::gtk'),
                         N("After this is done, we recommend that you restart your X environment to avoid any hostname-related problems.")));
                     },
                            end => 1,
