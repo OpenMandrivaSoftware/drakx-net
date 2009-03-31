@@ -99,6 +99,8 @@ sub get_interface {
 
 sub get_metric { 60 }
 
+sub get_up_timeout { 10 }
+
 sub get_status {
     my ($self) = @_;
     require network::tools;

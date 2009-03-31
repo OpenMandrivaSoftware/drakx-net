@@ -24,6 +24,8 @@ sub get_devices() {
 sub get_metric { 25 }
 sub get_interface() { "ppp0" }
 
+sub get_up_timeout { 20 }
+
 my @non_ppp_protocols = qw(static dhcp);
 sub uses_ppp {
     my ($self) = @_;

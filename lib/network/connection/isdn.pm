@@ -15,6 +15,8 @@ sub get_devices {
 }
 sub get_metric { 30 }
 
+sub get_up_timeout { 20 }
+
 use network::connection::isdn::consts;
 use modules;
 use run_program;
