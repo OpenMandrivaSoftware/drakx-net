@@ -9,14 +9,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "POT-Creation-Date: 2009-04-02 13:30-0300\n"
-"PO-Revision-Date: 2009-03-20 00:48+0100\n"
+"PO-Revision-Date: 2009-04-03 00:40+0200\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #: ../bin/drakconnect-old:45
@@ -206,7 +205,7 @@ msgid "Internet Connection Sharing"
 msgstr "Sdílet internetové připojení"
 
 #: ../bin/drakgw:75
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -228,7 +227,9 @@ msgstr ""
 "Před pokračováním se ujistěte, že jste pomocí aplikace drakconnect nastavili "
 "síťové připojení a připojení k internetu .\n"
 "\n"
-"Pozn.: Pro nastavení lokální sítě (LAN) potřebujete vyhrazený síťový adaptér."
+"Pozn.: Pro nastavení lokální sítě (LAN) potřebujete vyhrazený síťový adaptér. "
+"Před pokračováním prosím vypněte Mandriva firewall pro adaptér připojený do vaší "
+"LAN sítě."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -296,6 +297,16 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"Na vašem systému je pouze jeden síťový adaptér nastavený pro připojení k "
+"LAN:\n"
+"\n"
+"%s\n"
+"\n"
+"Nyní nastavím vaši lokální síť s tímto adaptérem.\n"
+"\n"
+"Pokud máte jakýkoli jiný adaptér připojený k lokální síti,\n"
+"vypněte na něm ochranu firewallem pomocí nástroje drakfirewall\n"
+"před tím, než začnete nastavovat sdílení Internetového připojení."
 
 #: ../bin/drakgw:156
 #, c-format
@@ -460,6 +471,12 @@ msgid ""
 "the Mandriva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
+"Na vašem systému nebyl nalezen žádný ethernetový síťový adaptér nastavený "
+"pro LAN.\n"
+"\n"
+"Spusťte prosím nástroj pro nastavení hardware pro jeho nastavení a ujistěte se, "
+"že na síťovém adaptéru připojeném do lokální sítě není povolena ochrana pomocí "
+"Mandriva firewall."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -979,7 +996,7 @@ msgid "Error Restarting/Reloading NFS server"
 msgstr "Chyba při restartu/znovunačtení NFS serveru"
 
 #: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#, c-format
 msgid "Directory selection"
 msgstr "Výběr adresáře"
 
@@ -1601,8 +1618,7 @@ msgstr "Přidat sdílení speciální tiskárny"
 
 #: ../bin/draksambashare:448
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
 msgstr ""
 "Cílem tohoto průvodce je snadné vytvoření nového sdílení Samba se speciální "
 "tiskárnou."
@@ -1630,8 +1646,7 @@ msgstr "Průvodce úspěšně přidal sdílení Samba"
 #: ../bin/draksambashare:552
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
-msgstr ""
-"Prosím přidejte nebo vyberte sdílení tiskárny Samba, chcete-li jej upravit."
+msgstr "Prosím přidejte nebo vyberte sdílení tiskárny Samba, chcete-li jej upravit."
 
 #: ../bin/draksambashare:570
 #, c-format
@@ -1745,8 +1760,7 @@ msgstr "Veřejné:"
 
 #: ../bin/draksambashare:795
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 "Maska pro vytvoření, režim vytvoření a maska adresáře by měla být "
 "celočíselná, např. 0755."
@@ -1815,13 +1829,11 @@ msgstr "PDC server: primární řadič domény"
 msgid ""
 "Server configured as a PDC is responsible for Windows authentication "
 "throughout the domain."
-msgstr ""
-"Server nastavený jako PDC je odpovědný za ověřování Windows v rámci domény."
+msgstr "Server nastavený jako PDC je odpovědný za ověřování Windows v rámci domény."
 
 #: ../bin/draksambashare:1072
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
 msgstr ""
 "Instalace jednoho serveru mohou použít ověřování hesel pomocí modulů "
 "smbpasswd nebo tdbsam"
@@ -2483,12 +2495,12 @@ msgstr "Metrika"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:246
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr ""
+msgstr "Maximální velikost síṫové zprávy (MTU). Ponechte prázdné, pokud si nejste jisti."
 
 #: ../lib/network/connection.pm:318
 #, c-format
@@ -2560,7 +2572,7 @@ msgstr "GPRS/Edge/3G"
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
-msgstr ""
+msgstr "Číslo PIN (4 číslice). Pokud není požadován PIN, ponechte prázdné."
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
@@ -2624,8 +2636,7 @@ msgstr "Virtuální rozhraní"
 #: ../lib/network/connection/ethernet.pm:60
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
-msgstr ""
-"Pro zvolené zařízení nelze nalézt síťové rozhraní (pomocí ovladače %s)."
+msgstr "Pro zvolené zařízení nelze nalézt síťové rozhraní (pomocí ovladače %s)."
 
 #: ../lib/network/connection/ethernet.pm:70 ../lib/network/vpn/openvpn.pm:207
 #, c-format
@@ -2737,9 +2748,9 @@ msgstr ""
 "startu"
 
 #: ../lib/network/connection/ethernet.pm:210
-#, fuzzy, c-format
+#, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
-msgstr "Přiřadit název počítače ze získané DHCP adresy"
+msgstr "Přiřadit název počítače z DHCP serveru (nebo generovat unikátní)"
 
 #: ../lib/network/connection/ethernet.pm:230
 #, c-format
@@ -3365,9 +3376,9 @@ msgstr ""
 "stránce pro pokročilé."
 
 #: ../lib/network/connection/wireless.pm:493
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless regulatory domain"
-msgstr "Bezdrátové sítě"
+msgstr "Regulační doména bezdrátové sítě"
 
 #: ../lib/network/connection/wireless.pm:495
 #, c-format
@@ -3731,8 +3742,7 @@ msgstr ""
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
 "characters."
-msgstr ""
-"WEP klíč by měl mít nejvýše %d ASCII znaků nebo %d hexadecimálních znaků."
+msgstr "WEP klíč by měl mít nejvýše %d ASCII znaků nebo %d hexadecimálních znaků."
 
 #: ../lib/network/connection/wireless.pm:617
 #, c-format
@@ -3937,9 +3947,9 @@ msgid "FTP server"
 msgstr "Server FTP"
 
 #: ../lib/network/drakfirewall.pm:33
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP Server"
-msgstr "Server CUPS"
+msgstr "Server DHCP"
 
 #: ../lib/network/drakfirewall.pm:39
 #, c-format
@@ -3957,9 +3967,9 @@ msgid "Telnet server"
 msgstr "Server Telnet"
 
 #: ../lib/network/drakfirewall.pm:55
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "/_NFS server"
+msgstr "Server NFS"
 
 #: ../lib/network/drakfirewall.pm:63
 #, c-format
@@ -3969,12 +3979,12 @@ msgstr "Sdílení souborů s Windows (SMB)"
 #: ../lib/network/drakfirewall.pm:69
 #, c-format
 msgid "Bacula backup"
-msgstr ""
+msgstr "Záloha Bacula"
 
 #: ../lib/network/drakfirewall.pm:75
-#, fuzzy, c-format
+#, c-format
 msgid "Syslog network logging"
-msgstr "Rychlé připojení do sítě"
+msgstr "Záznamy o síti v systémových záznamech"
 
 #: ../lib/network/drakfirewall.pm:81
 #, c-format
@@ -3982,14 +3992,14 @@ msgid "CUPS server"
 msgstr "Server CUPS"
 
 #: ../lib/network/drakfirewall.pm:87
-#, fuzzy, c-format
+#, c-format
 msgid "MySQL server"
-msgstr "NFS server"
+msgstr "Server MySQL"
 
 #: ../lib/network/drakfirewall.pm:93
-#, fuzzy, c-format
+#, c-format
 msgid "PostgreSQL server"
-msgstr "Server CUPS"
+msgstr "Server PostgreSQL"
 
 #: ../lib/network/drakfirewall.pm:99
 #, c-format
@@ -4757,12 +4767,9 @@ msgstr ""
 "Pokuste se dané připojení přenastavit."
 
 #: ../lib/network/netconnect.pm:763
-#, fuzzy, c-format
+#, c-format
 msgid "Problems occured during the network connectivity test."
-msgstr ""
-"Vyskytl se problém při restartu sítě: \n"
-"\n"
-"%s"
+msgstr "Při testu spojení na síti se vyskytly problémy."
 
 #: ../lib/network/netconnect.pm:764
 #, c-format
@@ -4770,20 +4777,20 @@ msgid ""
 "This can be caused by invalid network configuration, or problems with your "
 "modem or router."
 msgstr ""
+"To může být způsobeno neplatným nastavením sítě nebo problémy na "
+"vašem modemu nebo směrovači."
 
 #: ../lib/network/netconnect.pm:765
 #, c-format
 msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
-msgstr ""
+msgstr "Můžete zkusit znovu spustit nastavení a ověřit volby pro připojení."
 
 #: ../lib/network/netconnect.pm:768
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network configuration is finished."
-msgstr ""
-"Gratulujeme, konfigurace sítě a internetu je ukončena.\n"
-"\n"
+msgstr "Gratulujeme, nastavení sítě je ukončeno."
 
 #: ../lib/network/netconnect.pm:768
 #, c-format
@@ -4791,23 +4798,21 @@ msgid ""
 "However, the Internet connectivity test failed. You should test your "
 "connection manually, and verify your Internet modem or router."
 msgstr ""
+"Test připojení k Internetu nicméně selhal. Měli byste zkontrolovat vaše "
+"připojení ručně a zkontrolovat váš modem pro připojení k Internetu nebo "
+"směrovač."
 
 #: ../lib/network/netconnect.pm:769
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
-msgstr ""
-"Vyskytl se problém během konfigurace.\n"
-"Otestujte připojení k internetu pomocí net_monitor nebo mcc. Pokud není "
-"spojení funkční, bude potřeba asi znovu načíst konfiguraci."
+msgstr "Pokud vaše připojení nefunguje, zkuste spustit znovu nastavení."
 
 #: ../lib/network/netconnect.pm:771
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
-msgstr ""
-"Gratulujeme, konfigurace sítě a internetu je ukončena.\n"
-"\n"
+msgstr "Gratulujeme, nastavení sítě a Internetu je ukončeno."
 
 #: ../lib/network/netconnect.pm:772
 #, c-format
@@ -5098,8 +5103,7 @@ msgstr "Nastavení proxy"
 msgid ""
 "Here you can set up your proxies configuration (eg: http://"
 "my_caching_server:8080)"
-msgstr ""
-"Zde můžete zadat nastavení vaší proxy (např. http://muj_proxy_server:8080)"
+msgstr "Zde můžete zadat nastavení vaší proxy (např. http://muj_proxy_server:8080)"
 
 #: ../lib/network/network.pm:516
 #, c-format
@@ -5142,7 +5146,7 @@ msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "URL by mělo začínat znaky 'ftp:' nebo 'http:'"
 
 #: ../lib/network/shorewall.pm:77
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
@@ -5158,6 +5162,9 @@ msgstr ""
 "\n"
 "Měla by být vybrána všechna rozhraní připojená přímo k síti Internet.\n"
 "Rozhraní připojená k lokální síti vybrána být nemusí.\n"
+"\n"
+"Pokud hodláte použít sdílení připojení k síti Internet nástrojem společnosti\n"
+"Mandriva, nevybírejte rozhraní připojené k vaší lokální síti.\n"
 "\n"
 "Která rozhraní chcete chránit?\n"
 
@@ -5185,8 +5192,7 @@ msgstr ""
 #: ../lib/network/thirdparty.pm:144
 #, c-format
 msgid "Some components (%s) are required but aren't available for %s hardware."
-msgstr ""
-"Některé komponenty (%s) jsou pro hardware %s nutné, ale nejsou dostupné."
+msgstr "Některé komponenty (%s) jsou pro hardware %s nutné, ale nejsou dostupné."
 
 #: ../lib/network/thirdparty.pm:145
 #, c-format
@@ -5197,10 +5203,8 @@ msgstr "Jsou vyžadovány některé balíčky (%s), ale nejsou k dispozici."
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
 #, c-format
-msgid ""
-"These packages can be found in %s, or in the official %s package repository."
-msgstr ""
-"Tyto balíčky můžete nalézt v %s nebo v oficiálních zdrojích softwaru %s ."
+msgid "These packages can be found in %s, or in the official %s package repository."
+msgstr "Tyto balíčky můžete nalézt v %s nebo v oficiálních zdrojích softwaru %s ."
 
 #: ../lib/network/thirdparty.pm:154
 #, c-format
@@ -5421,22 +5425,3 @@ msgstr "Režim NAT"
 msgid "Use specific UDP port"
 msgstr "Použít specifický port UDP"
 
-#~ msgid ""
-#~ "There is only one configured network adapter on your system:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "I am about to setup your Local Area Network with that adapter."
-#~ msgstr ""
-#~ "Na vašem systému je nastaveno pouze jedno síťové rozhraní:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Na tomto adaptéru bude nastavena lokální síť."
-
-#~ msgid ""
-#~ "No ethernet network adapter has been detected on your system. Please run "
-#~ "the hardware configuration tool."
-#~ msgstr ""
-#~ "Ve vašem počítači nebyl nalezen žádný síťový adaptér. Spusťte prosím "
-#~ "program pro nastavení hardwaru."
