@@ -439,7 +439,7 @@ sub advanced_settings_read {
     my $sysctl = "$::prefix/etc/sysctl.conf";
     my $msecconf = "$::prefix/etc/security/msec/security.conf";
 
-    my $ipv6_disabled = grep { /^install ipv6 \/bin\/true$/ } cat_($modprobe);
+    my $ipv6_disabled = grep { /^options ipv6 disable=1$/ } cat_($modprobe);
     my $disable_window_scaling = grep { /^net\.ipv4\.tcp_window_scaling\s*=\s*0$/ } cat_($sysctl);
     my $disable_tcp_timestamps = grep { /^net\.ipv4\.tcp_timestamps\s*=\s*0$/ } cat_($sysctl);
     my $log_martians = grep { /^net\.ipv4\.conf\.all\.log_martians\s*=\s*1$/ } cat_($sysctl);
@@ -459,12 +459,12 @@ sub advanced_settings_read {
 sub advanced_settings_write {
     my ($u) = @_;
     # ipv6
-    if ($u->{ipv6_disabled}) {
-        my $line = "install ipv6 /bin/true\n";
-        substInFile { s/^install ipv6 .*//; $_ = $line if eof } "$::prefix/etc/modprobe.conf";
-    } else {
-        substInFile { s/^install ipv6 \/bin\/true// } "$::prefix/etc/modprobe.conf";
-    }
+    substInFile {
+        /^(options ipv6 .*|install ipv6 .*|alias net-pf-10 off)/ and $_="";
+        if (eof and $u->{ipv6_disabled}) {
+            $_ .= "options ipv6 disable=1\n";
+        }
+    } "$::prefix/etc/modprobe.conf";
     # sysctl
     substInFile {
         # remove old entries
