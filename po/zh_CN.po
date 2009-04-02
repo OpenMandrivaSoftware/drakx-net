@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net 2007\n"
-"POT-Creation-Date: 2009-03-31 10:42-0300\n"
+"POT-Creation-Date: 2009-04-02 13:30-0300\n"
 "PO-Revision-Date: 2006-09-10 21:48+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: Mandriva Linux i18n Team <cooker-i18n@mandrivalinux.org>\n"
@@ -20,19 +20,19 @@ msgid "Interface"
 msgstr "网卡"
 
 #: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:196
-#: ../lib/network/connection/ethernet.pm:134 ../lib/network/netconnect.pm:617
+#: ../lib/network/connection/ethernet.pm:134 ../lib/network/netconnect.pm:626
 #: ../lib/network/vpn/openvpn.pm:221
 #, c-format
 msgid "IP address"
 msgstr "IP 地址"
 
 #: ../bin/drakconnect-old:64 ../bin/drakids:261
-#: ../lib/network/netconnect.pm:461
+#: ../lib/network/netconnect.pm:470
 #, c-format
 msgid "Protocol"
 msgstr "协议"
 
-#: ../bin/drakconnect-old:64 ../lib/network/netconnect.pm:447
+#: ../bin/drakconnect-old:64 ../lib/network/netconnect.pm:456
 #, c-format
 msgid "Driver"
 msgstr "驱动程序"
@@ -94,7 +94,7 @@ msgstr "确定"
 #: ../lib/network/connection_manager.pm:348 ../lib/network/drakvpn.pm:49
 #: ../lib/network/netcenter.pm:142 ../lib/network/netconnect.pm:186
 #: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
-#: ../lib/network/netconnect.pm:717 ../lib/network/thirdparty.pm:354
+#: ../lib/network/netconnect.pm:726 ../lib/network/thirdparty.pm:354
 #: ../lib/network/thirdparty.pm:369
 #, c-format
 msgid "Please wait"
@@ -262,8 +262,8 @@ msgstr "重新配置"
 msgid "Please select the network interface directly connected to the internet."
 msgstr "请选择直接连接到 Internet 的网卡。"
 
-#: ../bin/drakgw:123 ../lib/network/netconnect.pm:363
-#: ../lib/network/netconnect.pm:398
+#: ../bin/drakgw:123 ../lib/network/netconnect.pm:372
+#: ../lib/network/netconnect.pm:407
 #, c-format
 msgid "Net Device"
 msgstr "网络设备"
@@ -321,7 +321,7 @@ msgstr "内部域名"
 #: ../bin/draksambashare:1363 ../bin/draksambashare:1385
 #: ../bin/draksambashare:1394 ../bin/draksambashare:1413
 #: ../bin/draksambashare:1422 ../bin/draksambashare:1434
-#: ../lib/network/connection/xdsl.pm:359
+#: ../lib/network/connection/xdsl.pm:361
 #: ../lib/network/connection_manager.pm:62
 #: ../lib/network/connection_manager.pm:68
 #: ../lib/network/connection_manager.pm:84
@@ -335,7 +335,7 @@ msgstr "内部域名"
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
 #: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:135
 #: ../lib/network/netconnect.pm:188 ../lib/network/netconnect.pm:234
-#: ../lib/network/netconnect.pm:275 ../lib/network/netconnect.pm:831
+#: ../lib/network/netconnect.pm:275 ../lib/network/netconnect.pm:840
 #: ../lib/network/thirdparty.pm:123 ../lib/network/thirdparty.pm:141
 #: ../lib/network/thirdparty.pm:232 ../lib/network/thirdparty.pm:234
 #: ../lib/network/thirdparty.pm:255
@@ -442,7 +442,7 @@ msgid ""
 "No ethernet network adapter configured for LAN has been detected on your "
 "system.\n"
 "\n"
-"Please run the hardware configuration tool to configure it, and certify that "
+"Please run the hardware configuration tool to configure it, and ensure that "
 "the Mandriva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
@@ -785,7 +785,7 @@ msgstr "虚拟共享地址"
 msgid "Virtual ID"
 msgstr "虚拟 ID"
 
-#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:599
+#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:608
 #: ../lib/network/vpn/vpnc.pm:56
 #, c-format
 msgid "Password"
@@ -841,7 +841,7 @@ msgstr "配置文件“%s”已经存在！"
 #: ../bin/draknetprofile:165 ../bin/draknetprofile:167
 #: ../bin/draknetprofile.orig:165 ../bin/draknetprofile.orig:167
 #: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
-#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:484
+#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:493
 #, c-format
 msgid "Warning"
 msgstr "警告"
@@ -2175,7 +2175,7 @@ msgstr "活动接口"
 msgid "Profiles"
 msgstr "配置文件"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:226
+#: ../bin/net_applet:180 ../lib/network/connection.pm:228
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
@@ -2378,67 +2378,67 @@ msgstr "尚未配置 Internet 连接"
 msgid "Unknown connection type"
 msgstr "未知连接类型"
 
-#: ../lib/network/connection.pm:159
+#: ../lib/network/connection.pm:161
 #, c-format
 msgid "Network access settings"
 msgstr "网络访问设置"
 
-#: ../lib/network/connection.pm:160
+#: ../lib/network/connection.pm:162
 #, c-format
 msgid "Access settings"
 msgstr "访问设置"
 
-#: ../lib/network/connection.pm:161
+#: ../lib/network/connection.pm:163
 #, c-format
 msgid "Address settings"
 msgstr "地址设置"
 
-#: ../lib/network/connection.pm:175 ../lib/network/connection.pm:195
-#: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:217
-#: ../lib/network/netconnect.pm:476 ../lib/network/netconnect.pm:572
-#: ../lib/network/netconnect.pm:575
+#: ../lib/network/connection.pm:177 ../lib/network/connection.pm:197
+#: ../lib/network/connection/isdn.pm:155 ../lib/network/netconnect.pm:217
+#: ../lib/network/netconnect.pm:485 ../lib/network/netconnect.pm:581
+#: ../lib/network/netconnect.pm:584
 #, c-format
 msgid "Unlisted - edit manually"
 msgstr "未列出 - 手动编辑"
 
-#: ../lib/network/connection.pm:228 ../lib/network/connection/cable.pm:41
+#: ../lib/network/connection.pm:230 ../lib/network/connection/cable.pm:41
 #: ../lib/network/connection/wireless.pm:48 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "无"
 
-#: ../lib/network/connection.pm:240
+#: ../lib/network/connection.pm:242
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr "允许用户管理连接"
 
-#: ../lib/network/connection.pm:241
+#: ../lib/network/connection.pm:243
 #, c-format
 msgid "Start the connection at boot"
 msgstr "启动时开启连接"
 
-#: ../lib/network/connection.pm:242
+#: ../lib/network/connection.pm:244
 #, c-format
 msgid "Metric"
 msgstr "度量衡"
 
-#: ../lib/network/connection.pm:243
+#: ../lib/network/connection.pm:245
 #, c-format
 msgid "MTU"
 msgstr ""
 
-#: ../lib/network/connection.pm:244
+#: ../lib/network/connection.pm:246
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
 msgstr ""
 
-#: ../lib/network/connection.pm:316
+#: ../lib/network/connection.pm:318
 #, c-format
 msgid "Link detected on interface %s"
 msgstr "在网卡 %s 检测到链接"
 
-#: ../lib/network/connection.pm:317 ../lib/network/connection/ethernet.pm:291
+#: ../lib/network/connection.pm:319 ../lib/network/connection/ethernet.pm:291
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "网卡 %s 的链接已断"
@@ -2458,19 +2458,19 @@ msgstr "有线调制解调器"
 msgid "Use BPALogin (needed for Telstra)"
 msgstr "使用 BPALogin (Telstra 需要)"
 
-#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:600
+#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:609
 #, c-format
 msgid "Authentication"
 msgstr "身份验证"
 
 #: ../lib/network/connection/cable.pm:47 ../lib/network/connection/ppp.pm:22
-#: ../lib/network/netconnect.pm:339 ../lib/network/vpn/openvpn.pm:393
+#: ../lib/network/netconnect.pm:348 ../lib/network/vpn/openvpn.pm:393
 #, c-format
 msgid "Account Login (user name)"
 msgstr "账户登录(用户名)"
 
 #: ../lib/network/connection/cable.pm:49 ../lib/network/connection/ppp.pm:23
-#: ../lib/network/netconnect.pm:340 ../lib/network/vpn/openvpn.pm:394
+#: ../lib/network/netconnect.pm:349 ../lib/network/vpn/openvpn.pm:394
 #, c-format
 msgid "Account Password"
 msgstr "账户密码"
@@ -2595,7 +2595,7 @@ msgstr ""
 "下列项目要求以句点分隔十进制格式输入的 IP 地址。\n"
 "(例如, 1.2.3.4)"
 
-#: ../lib/network/connection/ethernet.pm:142 ../lib/network/netconnect.pm:649
+#: ../lib/network/connection/ethernet.pm:142 ../lib/network/netconnect.pm:658
 #: ../lib/network/vpn/openvpn.pm:212 ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
@@ -2714,22 +2714,22 @@ msgstr "通过网卡 %s 获得网络地址失败(%s 协议)"
 msgid "ISDN"
 msgstr "ISDN"
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:417
 #, c-format
 msgid "ISA / PCMCIA"
 msgstr "ISA / PCMCIA"
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:417
 #, c-format
 msgid "I do not know"
 msgstr "我不知道"
 
-#: ../lib/network/connection/isdn.pm:197 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:199 ../lib/network/netconnect.pm:417
 #, c-format
 msgid "PCI"
 msgstr "PCI"
 
-#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:200 ../lib/network/netconnect.pm:417
 #, c-format
 msgid "USB"
 msgstr "USB"
@@ -3668,12 +3668,12 @@ msgstr "网卡 %s 丢失了到无线网络的关联"
 msgid "DSL"
 msgstr "DSL"
 
-#: ../lib/network/connection/xdsl.pm:95 ../lib/network/netconnect.pm:773
+#: ../lib/network/connection/xdsl.pm:97 ../lib/network/netconnect.pm:782
 #, c-format
 msgid "Alcatel speedtouch USB modem"
 msgstr "阿尔卡特 Speedtouch USB 调制解调器"
 
-#: ../lib/network/connection/xdsl.pm:123
+#: ../lib/network/connection/xdsl.pm:125
 #, c-format
 msgid ""
 "The ECI Hi-Focus modem cannot be supported due to binary driver distribution "
@@ -3685,7 +3685,7 @@ msgstr ""
 "\n"
 "您可以在此网站: http://eciadsl.flashtux.org/ 找到驱动程序。"
 
-#: ../lib/network/connection/xdsl.pm:183
+#: ../lib/network/connection/xdsl.pm:185
 #, c-format
 msgid ""
 "Modems using Conexant AccessRunner chipsets cannot be supported due to "
@@ -3693,47 +3693,47 @@ msgid ""
 msgstr ""
 "由于二进制固件发行问题，无法支持使用 Conexant AccessRunner 芯片的调制解调器。"
 
-#: ../lib/network/connection/xdsl.pm:203
+#: ../lib/network/connection/xdsl.pm:205
 #, c-format
 msgid "DSL over CAPI"
 msgstr "CAPI 上的 DSL"
 
-#: ../lib/network/connection/xdsl.pm:206
+#: ../lib/network/connection/xdsl.pm:208
 #, c-format
 msgid "Dynamic Host Configuration Protocol (DHCP)"
 msgstr "动态主机配置协议(DHCP)"
 
-#: ../lib/network/connection/xdsl.pm:207
+#: ../lib/network/connection/xdsl.pm:209
 #, c-format
 msgid "Manual TCP/IP configuration"
 msgstr "手工配置 TCP/IP"
 
-#: ../lib/network/connection/xdsl.pm:208
+#: ../lib/network/connection/xdsl.pm:210
 #, c-format
 msgid "Point to Point Tunneling Protocol (PPTP)"
 msgstr "点对点隧道协议(PPTP)"
 
-#: ../lib/network/connection/xdsl.pm:209
+#: ../lib/network/connection/xdsl.pm:211
 #, c-format
 msgid "PPP over Ethernet (PPPoE)"
 msgstr "以太网上的点对点协议(PPPoE)"
 
-#: ../lib/network/connection/xdsl.pm:210
+#: ../lib/network/connection/xdsl.pm:212
 #, c-format
 msgid "PPP over ATM (PPPoA)"
 msgstr "异步传输模式下的点对点协议(PPPoA)"
 
-#: ../lib/network/connection/xdsl.pm:250
+#: ../lib/network/connection/xdsl.pm:252
 #, c-format
 msgid "Virtual Path ID (VPI):"
 msgstr "虚拟路径 ID (VPI):"
 
-#: ../lib/network/connection/xdsl.pm:251
+#: ../lib/network/connection/xdsl.pm:253
 #, c-format
 msgid "Virtual Circuit ID (VCI):"
 msgstr "虚拟电路 ID (VCI):"
 
-#: ../lib/network/connection/xdsl.pm:359
+#: ../lib/network/connection/xdsl.pm:361
 #: ../lib/network/connection_manager.pm:62 ../lib/network/drakvpn.pm:45
 #: ../lib/network/netconnect.pm:135 ../lib/network/thirdparty.pm:123
 #, c-format
@@ -4025,7 +4025,7 @@ msgstr "配置"
 msgid "Refresh"
 msgstr "刷新"
 
-#: ../lib/network/drakroam.pm:103 ../lib/network/netconnect.pm:779
+#: ../lib/network/drakroam.pm:103 ../lib/network/netconnect.pm:788
 #, c-format
 msgid "Wireless connection"
 msgstr "无线连接"
@@ -4164,8 +4164,8 @@ msgid "port %d"
 msgstr "端口 %d"
 
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
-#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:616
-#: ../lib/network/netconnect.pm:633 ../lib/network/netconnect.pm:649
+#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:625
+#: ../lib/network/netconnect.pm:642 ../lib/network/netconnect.pm:658
 #, c-format
 msgid "Manual"
 msgstr "手动"
@@ -4173,10 +4173,10 @@ msgstr "手动"
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
 #: ../lib/network/modem.pm:44 ../lib/network/modem.pm:63
 #: ../lib/network/modem.pm:76 ../lib/network/modem.pm:81
-#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:611
-#: ../lib/network/netconnect.pm:616 ../lib/network/netconnect.pm:628
-#: ../lib/network/netconnect.pm:633 ../lib/network/netconnect.pm:649
-#: ../lib/network/netconnect.pm:651
+#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:620
+#: ../lib/network/netconnect.pm:625 ../lib/network/netconnect.pm:637
+#: ../lib/network/netconnect.pm:642 ../lib/network/netconnect.pm:658
+#: ../lib/network/netconnect.pm:660
 #, c-format
 msgid "Automatic"
 msgstr "自动"
@@ -4262,8 +4262,8 @@ msgstr "高级选项"
 msgid "United States"
 msgstr "美国"
 
-#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:506
-#: ../lib/network/netconnect.pm:520
+#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:515
+#: ../lib/network/netconnect.pm:529
 #, c-format
 msgid "Manual choice"
 msgstr "手动选择"
@@ -4302,8 +4302,8 @@ msgstr "网络和 Internet 配置"
 msgid "Choose the connection you want to configure"
 msgstr "选择您想要配置的连接"
 
-#: ../lib/network/netconnect.pm:149 ../lib/network/netconnect.pm:361
-#: ../lib/network/netconnect.pm:806
+#: ../lib/network/netconnect.pm:149 ../lib/network/netconnect.pm:370
+#: ../lib/network/netconnect.pm:815
 #, c-format
 msgid "Select the network interface to configure:"
 msgstr "选择要配置的网卡: "
@@ -4337,114 +4337,114 @@ msgstr ""
 "请选择您的连接协议。\n"
 "如果您不知道的话，请保持预先选择的协议。"
 
-#: ../lib/network/netconnect.pm:292 ../lib/network/netconnect.pm:668
+#: ../lib/network/netconnect.pm:292 ../lib/network/netconnect.pm:677
 #, c-format
 msgid "Connection control"
 msgstr "连接控制"
 
-#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:717
+#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:726
 #, c-format
 msgid "Testing your connection..."
 msgstr "正在测试您的连接..."
 
-#: ../lib/network/netconnect.pm:328
+#: ../lib/network/netconnect.pm:337
 #, c-format
 msgid "Connection Configuration"
 msgstr "连接配置"
 
-#: ../lib/network/netconnect.pm:328
+#: ../lib/network/netconnect.pm:337
 #, c-format
 msgid "Please fill or check the field below"
 msgstr "请填写或选择下列项目"
 
-#: ../lib/network/netconnect.pm:331
+#: ../lib/network/netconnect.pm:340
 #, c-format
 msgid "Your personal phone number"
 msgstr "您自己的电话号码"
 
-#: ../lib/network/netconnect.pm:332
+#: ../lib/network/netconnect.pm:341
 #, c-format
 msgid "Provider name (ex provider.net)"
 msgstr "服务商名称(如 provider.net)"
 
-#: ../lib/network/netconnect.pm:333
+#: ../lib/network/netconnect.pm:342
 #, c-format
 msgid "Provider phone number"
 msgstr "服务商电话号码"
 
-#: ../lib/network/netconnect.pm:334
+#: ../lib/network/netconnect.pm:343
 #, c-format
 msgid "Provider DNS 1 (optional)"
 msgstr "服务商 DNS 1(可选)"
 
-#: ../lib/network/netconnect.pm:335
+#: ../lib/network/netconnect.pm:344
 #, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "服务商 DNS 2(可选)"
 
-#: ../lib/network/netconnect.pm:336
+#: ../lib/network/netconnect.pm:345
 #, c-format
 msgid "Dialing mode"
 msgstr "拨号模式"
 
-#: ../lib/network/netconnect.pm:337
+#: ../lib/network/netconnect.pm:346
 #, c-format
 msgid "Connection speed"
 msgstr "连接速率"
 
-#: ../lib/network/netconnect.pm:338
+#: ../lib/network/netconnect.pm:347
 #, c-format
 msgid "Connection timeout (in sec)"
 msgstr "连接超时(秒)"
 
-#: ../lib/network/netconnect.pm:341
+#: ../lib/network/netconnect.pm:350
 #, c-format
 msgid "Card IRQ"
 msgstr "网卡的 IRQ"
 
-#: ../lib/network/netconnect.pm:342
+#: ../lib/network/netconnect.pm:351
 #, c-format
 msgid "Card mem (DMA)"
 msgstr "网卡内存(DMA)"
 
-#: ../lib/network/netconnect.pm:343
+#: ../lib/network/netconnect.pm:352
 #, c-format
 msgid "Card IO"
 msgstr "网卡 IO"
 
-#: ../lib/network/netconnect.pm:344
+#: ../lib/network/netconnect.pm:353
 #, c-format
 msgid "Card IO_0"
 msgstr "网卡 IO_0"
 
-#: ../lib/network/netconnect.pm:345
+#: ../lib/network/netconnect.pm:354
 #, c-format
 msgid "Card IO_1"
 msgstr "网卡 IO_1"
 
-#: ../lib/network/netconnect.pm:364 ../lib/network/netconnect.pm:369
+#: ../lib/network/netconnect.pm:373 ../lib/network/netconnect.pm:378
 #, c-format
 msgid "External ISDN modem"
 msgstr "外置 ISDN 调制解调器"
 
-#: ../lib/network/netconnect.pm:397
+#: ../lib/network/netconnect.pm:406
 #, c-format
 msgid "Select a device!"
 msgstr "请选择设备！"
 
-#: ../lib/network/netconnect.pm:406 ../lib/network/netconnect.pm:416
-#: ../lib/network/netconnect.pm:426 ../lib/network/netconnect.pm:459
-#: ../lib/network/netconnect.pm:473
+#: ../lib/network/netconnect.pm:415 ../lib/network/netconnect.pm:425
+#: ../lib/network/netconnect.pm:435 ../lib/network/netconnect.pm:468
+#: ../lib/network/netconnect.pm:482
 #, c-format
 msgid "ISDN Configuration"
 msgstr "ISDN 配置"
 
-#: ../lib/network/netconnect.pm:407
+#: ../lib/network/netconnect.pm:416
 #, c-format
 msgid "What kind of card do you have?"
 msgstr "请问您适配卡的种类?"
 
-#: ../lib/network/netconnect.pm:417
+#: ../lib/network/netconnect.pm:426
 #, c-format
 msgid ""
 "\n"
@@ -4458,22 +4458,22 @@ msgstr ""
 "\n"
 "如果您的卡是 PCMCIA 卡, 您必须知道它的“irq”和“io”。\n"
 
-#: ../lib/network/netconnect.pm:421
+#: ../lib/network/netconnect.pm:430
 #, c-format
 msgid "Continue"
 msgstr "继续"
 
-#: ../lib/network/netconnect.pm:421
+#: ../lib/network/netconnect.pm:430
 #, c-format
 msgid "Abort"
 msgstr "中止"
 
-#: ../lib/network/netconnect.pm:427
+#: ../lib/network/netconnect.pm:436
 #, c-format
 msgid "Which of the following is your ISDN card?"
 msgstr "下列哪个是您的 ISDN 卡?"
 
-#: ../lib/network/netconnect.pm:445
+#: ../lib/network/netconnect.pm:454
 #, c-format
 msgid ""
 "A CAPI driver is available for this modem. This CAPI driver can offer more "
@@ -4483,12 +4483,12 @@ msgstr ""
 "此调制解调器适用 CAPI 驱动程序。此 CAPI 驱动程序比免费驱动程序提供更多的功能"
 "(比如发送传真)。您想要使用哪个驱动程序?"
 
-#: ../lib/network/netconnect.pm:459
+#: ../lib/network/netconnect.pm:468
 #, c-format
 msgid "Which protocol do you want to use?"
 msgstr "您将使用哪种协议?"
 
-#: ../lib/network/netconnect.pm:473
+#: ../lib/network/netconnect.pm:482
 #, c-format
 msgid ""
 "Select your provider.\n"
@@ -4497,12 +4497,12 @@ msgstr ""
 "选择您的提供商。\n"
 "如果该提供商未被列出, 请选择“未列出”。"
 
-#: ../lib/network/netconnect.pm:475 ../lib/network/netconnect.pm:571
+#: ../lib/network/netconnect.pm:484 ../lib/network/netconnect.pm:580
 #, c-format
 msgid "Provider:"
 msgstr "服务商:"
 
-#: ../lib/network/netconnect.pm:484
+#: ../lib/network/netconnect.pm:493
 #, c-format
 msgid ""
 "Your modem is not supported by the system.\n"
@@ -4511,132 +4511,132 @@ msgstr ""
 "您的调制解调器不被系统支持。\n"
 "请看看 http://www.linmodems.org"
 
-#: ../lib/network/netconnect.pm:503
+#: ../lib/network/netconnect.pm:512
 #, c-format
 msgid "Select the modem to configure:"
 msgstr "选择要配置的调制解调器:"
 
-#: ../lib/network/netconnect.pm:505
+#: ../lib/network/netconnect.pm:514
 #, c-format
 msgid "Modem"
 msgstr "调制解调器"
 
-#: ../lib/network/netconnect.pm:540
+#: ../lib/network/netconnect.pm:549
 #, c-format
 msgid "Please choose which serial port your modem is connected to."
 msgstr "请选择您的调制解调器是连接到哪个串行端口。"
 
-#: ../lib/network/netconnect.pm:569
+#: ../lib/network/netconnect.pm:578
 #, c-format
 msgid "Select your provider:"
 msgstr "选择您的服务商:"
 
-#: ../lib/network/netconnect.pm:593
+#: ../lib/network/netconnect.pm:602
 #, c-format
 msgid "Dialup: account options"
 msgstr "拨号: 账户设置"
 
-#: ../lib/network/netconnect.pm:596
+#: ../lib/network/netconnect.pm:605
 #, c-format
 msgid "Connection name"
 msgstr "连接名称"
 
-#: ../lib/network/netconnect.pm:597
+#: ../lib/network/netconnect.pm:606
 #, c-format
 msgid "Phone number"
 msgstr "电话号码"
 
-#: ../lib/network/netconnect.pm:598
+#: ../lib/network/netconnect.pm:607
 #, c-format
 msgid "Login ID"
 msgstr "登录 ID"
 
-#: ../lib/network/netconnect.pm:613 ../lib/network/netconnect.pm:646
+#: ../lib/network/netconnect.pm:622 ../lib/network/netconnect.pm:655
 #, c-format
 msgid "Dialup: IP parameters"
 msgstr "拨号: IP 参数"
 
-#: ../lib/network/netconnect.pm:616
+#: ../lib/network/netconnect.pm:625
 #, c-format
 msgid "IP parameters"
 msgstr "IP 参数"
 
-#: ../lib/network/netconnect.pm:618
+#: ../lib/network/netconnect.pm:627
 #, c-format
 msgid "Subnet mask"
 msgstr "子网掩码"
 
-#: ../lib/network/netconnect.pm:630
+#: ../lib/network/netconnect.pm:639
 #, c-format
 msgid "Dialup: DNS parameters"
 msgstr "拨号: DNS 参数"
 
-#: ../lib/network/netconnect.pm:633
+#: ../lib/network/netconnect.pm:642
 #, c-format
 msgid "DNS"
 msgstr "DNS"
 
-#: ../lib/network/netconnect.pm:634
+#: ../lib/network/netconnect.pm:643
 #, c-format
 msgid "Domain name"
 msgstr "域名"
 
-#: ../lib/network/netconnect.pm:635
+#: ../lib/network/netconnect.pm:644
 #, c-format
 msgid "First DNS Server (optional)"
 msgstr "首选 DNS 服务器(可选)"
 
-#: ../lib/network/netconnect.pm:636
+#: ../lib/network/netconnect.pm:645
 #, c-format
 msgid "Second DNS Server (optional)"
 msgstr "备选 DNS 服务器(可选)"
 
-#: ../lib/network/netconnect.pm:637
+#: ../lib/network/netconnect.pm:646
 #, c-format
 msgid "Set hostname from IP"
 msgstr "由 IP 设置主机名"
 
-#: ../lib/network/netconnect.pm:650
+#: ../lib/network/netconnect.pm:659
 #, c-format
 msgid "Gateway IP address"
 msgstr "网关 IP 地址"
 
-#: ../lib/network/netconnect.pm:683
+#: ../lib/network/netconnect.pm:692
 #, c-format
 msgid "Automatically at boot"
 msgstr "开机时自动启动"
 
-#: ../lib/network/netconnect.pm:685
+#: ../lib/network/netconnect.pm:694
 #, c-format
 msgid "By using Net Applet in the system tray"
 msgstr "使用系统脱盘中的网络小程序"
 
-#: ../lib/network/netconnect.pm:687
+#: ../lib/network/netconnect.pm:696
 #, c-format
 msgid "Manually (the interface would still be activated at boot)"
 msgstr "手动(启动时仍会激活网卡)"
 
-#: ../lib/network/netconnect.pm:696
+#: ../lib/network/netconnect.pm:705
 #, c-format
 msgid "How do you want to dial this connection?"
 msgstr "您想要如何拨打此连接?"
 
-#: ../lib/network/netconnect.pm:709
+#: ../lib/network/netconnect.pm:718
 #, c-format
 msgid "Do you want to try to connect to the Internet now?"
 msgstr "您想要测试连接到 Internet 吗?"
 
-#: ../lib/network/netconnect.pm:736
+#: ../lib/network/netconnect.pm:745
 #, c-format
 msgid "The system is now connected to the Internet."
 msgstr "您的系统现在正连接到 Internet。"
 
-#: ../lib/network/netconnect.pm:737
+#: ../lib/network/netconnect.pm:746
 #, c-format
 msgid "For security reasons, it will be disconnected now."
 msgstr "由于安全原因, 现在将断开连接。"
 
-#: ../lib/network/netconnect.pm:738
+#: ../lib/network/netconnect.pm:747
 #, c-format
 msgid ""
 "The system does not seem to be connected to the Internet.\n"
@@ -4645,7 +4645,7 @@ msgstr ""
 "看来系统没有连接到 Internet。\n"
 "请重新尝试配置您的连接。"
 
-#: ../lib/network/netconnect.pm:754
+#: ../lib/network/netconnect.pm:763
 #, fuzzy, c-format
 msgid "Problems occured during the network connectivity test."
 msgstr ""
@@ -4653,35 +4653,35 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../lib/network/netconnect.pm:755
+#: ../lib/network/netconnect.pm:764
 #, c-format
 msgid ""
 "This can be caused by invalid network configuration, or problems with your "
 "modem or router."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:756
+#: ../lib/network/netconnect.pm:765
 #, c-format
 msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:759
+#: ../lib/network/netconnect.pm:768
 #, fuzzy, c-format
 msgid "Congratulations, the network configuration is finished."
 msgstr ""
 "恭喜, 网络和 Internet 配置完成。\n"
 "\n"
 
-#: ../lib/network/netconnect.pm:759
+#: ../lib/network/netconnect.pm:768
 #, c-format
 msgid ""
 "However, the Internet connectivity test failed. You should test your "
 "connection manually, and verify your Internet modem or router."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:760
+#: ../lib/network/netconnect.pm:769
 #, fuzzy, c-format
 msgid ""
 "If your connection does not work, you might want to relaunch the "
@@ -4691,92 +4691,92 @@ msgstr ""
 "请从网络监视器或者控制中心测试您的连接。如果您的连接不工作, 您可能想要重新配"
 "置。"
 
-#: ../lib/network/netconnect.pm:762
+#: ../lib/network/netconnect.pm:771
 #, fuzzy, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
 msgstr ""
 "恭喜, 网络和 Internet 配置完成。\n"
 "\n"
 
-#: ../lib/network/netconnect.pm:763
+#: ../lib/network/netconnect.pm:772
 #, c-format
 msgid ""
 "After this is done, we recommend that you restart your X environment to "
 "avoid any hostname-related problems."
 msgstr "建议重启动 X 环境以避免任何与主机名有关的问题。"
 
-#: ../lib/network/netconnect.pm:774
+#: ../lib/network/netconnect.pm:783
 #, c-format
 msgid "Sagem USB modem"
 msgstr "Sagem USB 调制解调器"
 
-#: ../lib/network/netconnect.pm:775 ../lib/network/netconnect.pm:776
+#: ../lib/network/netconnect.pm:784 ../lib/network/netconnect.pm:785
 #, c-format
 msgid "Bewan modem"
 msgstr "Bewan 调制解调器"
 
-#: ../lib/network/netconnect.pm:777
+#: ../lib/network/netconnect.pm:786
 #, c-format
 msgid "ECI Hi-Focus modem"
 msgstr "ECI Hi-Focus 调制解调器"
 
-#: ../lib/network/netconnect.pm:778
+#: ../lib/network/netconnect.pm:787
 #, c-format
 msgid "LAN connection"
 msgstr "局域网连接"
 
-#: ../lib/network/netconnect.pm:780
+#: ../lib/network/netconnect.pm:789
 #, c-format
 msgid "ADSL connection"
 msgstr "ADSL 连接"
 
-#: ../lib/network/netconnect.pm:781
+#: ../lib/network/netconnect.pm:790
 #, c-format
 msgid "Cable connection"
 msgstr "有线电缆连接"
 
-#: ../lib/network/netconnect.pm:782
+#: ../lib/network/netconnect.pm:791
 #, c-format
 msgid "ISDN connection"
 msgstr "ISDN 连接"
 
-#: ../lib/network/netconnect.pm:783
+#: ../lib/network/netconnect.pm:792
 #, c-format
 msgid "Modem connection"
 msgstr "调制解调器连接"
 
-#: ../lib/network/netconnect.pm:784
+#: ../lib/network/netconnect.pm:793
 #, c-format
 msgid "DVB connection"
 msgstr "DVB 连接"
 
-#: ../lib/network/netconnect.pm:786
+#: ../lib/network/netconnect.pm:795
 #, c-format
 msgid "(detected on port %s)"
 msgstr "(在端口 %s 检测到)"
 
 #. -PO: here, "(detected)" string will be appended to eg "ADSL connection"
-#: ../lib/network/netconnect.pm:788
+#: ../lib/network/netconnect.pm:797
 #, c-format
 msgid "(detected %s)"
 msgstr "(检测到 %s)"
 
-#: ../lib/network/netconnect.pm:788
+#: ../lib/network/netconnect.pm:797
 #, c-format
 msgid "(detected)"
 msgstr "(检测到)"
 
-#: ../lib/network/netconnect.pm:789
+#: ../lib/network/netconnect.pm:798
 #, c-format
 msgid "Network Configuration"
 msgstr "网络配置"
 
-#: ../lib/network/netconnect.pm:790
+#: ../lib/network/netconnect.pm:799
 #, c-format
 msgid "Zeroconf hostname resolution"
 msgstr "Zeroconf 主机名解析"
 
-#: ../lib/network/netconnect.pm:791
+#: ../lib/network/netconnect.pm:800
 #, c-format
 msgid ""
 "If desired, enter a Zeroconf hostname.\n"
@@ -4788,17 +4788,17 @@ msgstr ""
 "这将被您的计算机用于通知其未被网络管理的共享资源。\n"
 "大多数网络中不需要此设置。"
 
-#: ../lib/network/netconnect.pm:795
+#: ../lib/network/netconnect.pm:804
 #, c-format
 msgid "Zeroconf Host name"
 msgstr "Zeroconf 主机名"
 
-#: ../lib/network/netconnect.pm:796
+#: ../lib/network/netconnect.pm:805
 #, c-format
 msgid "Zeroconf host name must not contain a ."
 msgstr "Zeroconf 主机名不能包含“.”"
 
-#: ../lib/network/netconnect.pm:797
+#: ../lib/network/netconnect.pm:806
 #, c-format
 msgid ""
 "Because you are doing a network installation, your network is already "
@@ -4809,12 +4809,12 @@ msgstr ""
 "由于您正在执行网络安装, 您的网络已经配置好了。\n"
 "单击“确定”保存配置, 或“取消”重新配置网络。\n"
 
-#: ../lib/network/netconnect.pm:800
+#: ../lib/network/netconnect.pm:809
 #, c-format
 msgid "The network needs to be restarted. Do you want to restart it?"
 msgstr "网络需要重新启动。您要重新启动吗?"
 
-#: ../lib/network/netconnect.pm:801
+#: ../lib/network/netconnect.pm:810
 #, c-format
 msgid ""
 "A problem occurred while restarting the network: \n"
@@ -4825,7 +4825,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../lib/network/netconnect.pm:802
+#: ../lib/network/netconnect.pm:811
 #, c-format
 msgid ""
 "We are now going to configure the %s connection.\n"
@@ -4838,12 +4838,12 @@ msgstr ""
 "\n"
 "按“%s”继续。"
 
-#: ../lib/network/netconnect.pm:803
+#: ../lib/network/netconnect.pm:812
 #, c-format
 msgid "Configuration is complete, do you want to apply settings?"
 msgstr "配置完成, 您想要应用设置吗?"
 
-#: ../lib/network/netconnect.pm:804
+#: ../lib/network/netconnect.pm:813
 #, c-format
 msgid ""
 "You have configured multiple ways to connect to the Internet.\n"
@@ -4854,24 +4854,24 @@ msgstr ""
 "选择您要使用的一种。\n"
 "\n"
 
-#: ../lib/network/netconnect.pm:805
+#: ../lib/network/netconnect.pm:814
 #, c-format
 msgid "Internet connection"
 msgstr "Internet 连接"
 
-#: ../lib/network/netconnect.pm:807
+#: ../lib/network/netconnect.pm:816
 #, c-format
 msgid "Configuring network device %s (driver %s)"
 msgstr "配置网络设备 %s(驱动程序 %s)"
 
-#: ../lib/network/netconnect.pm:808
+#: ../lib/network/netconnect.pm:817
 #, c-format
 msgid ""
 "The following protocols can be used to configure a LAN connection. Please "
 "choose the one you want to use."
 msgstr "您可使用下列协议配置局域网连接。请选择您想要使用的协议。"
 
-#: ../lib/network/netconnect.pm:809
+#: ../lib/network/netconnect.pm:818
 #, c-format
 msgid ""
 "Please enter your host name.\n"
@@ -4883,27 +4883,27 @@ msgstr ""
 "您的主机名称必需是个完全限定的名称, 例如“mybox.mylab.myco.com”。\n"
 "如果您有网关的话, 也请输入其 IP 地址。"
 
-#: ../lib/network/netconnect.pm:814
+#: ../lib/network/netconnect.pm:823
 #, c-format
 msgid "Last but not least you can also type in your DNS server IP addresses."
 msgstr "最后, 您还应该至少输入您 DNS 服务器的 IP 地址。"
 
-#: ../lib/network/netconnect.pm:815
+#: ../lib/network/netconnect.pm:824
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
 msgstr "DNS 服务器的格式应该是 1.2.3.4"
 
-#: ../lib/network/netconnect.pm:816
+#: ../lib/network/netconnect.pm:825
 #, c-format
 msgid "Gateway address should be in format 1.2.3.4"
 msgstr "网关地址的格式应该是 1.2.3.4"
 
-#: ../lib/network/netconnect.pm:817
+#: ../lib/network/netconnect.pm:826
 #, c-format
 msgid "Gateway device"
 msgstr "网关设备"
 
-#: ../lib/network/netconnect.pm:831
+#: ../lib/network/netconnect.pm:840
 #, c-format
 msgid ""
 "An unexpected error has happened:\n"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2009-03-31 10:42-0300\n"
+"POT-Creation-Date: 2009-04-02 13:30-0300\n"
 "PO-Revision-Date: 2008-09-08 22:07+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
@@ -24,19 +24,19 @@ msgid "Interface"
 msgstr "Antaramuka"
 
 #: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:196
-#: ../lib/network/connection/ethernet.pm:134 ../lib/network/netconnect.pm:617
+#: ../lib/network/connection/ethernet.pm:134 ../lib/network/netconnect.pm:626
 #: ../lib/network/vpn/openvpn.pm:221
 #, c-format
 msgid "IP address"
 msgstr "Alamat IP"
 
 #: ../bin/drakconnect-old:64 ../bin/drakids:261
-#: ../lib/network/netconnect.pm:461
+#: ../lib/network/netconnect.pm:470
 #, c-format
 msgid "Protocol"
 msgstr "Protokol"
 
-#: ../bin/drakconnect-old:64 ../lib/network/netconnect.pm:447
+#: ../bin/drakconnect-old:64 ../lib/network/netconnect.pm:456
 #, c-format
 msgid "Driver"
 msgstr "Pemacu"
@@ -98,7 +98,7 @@ msgstr "Ok"
 #: ../lib/network/connection_manager.pm:348 ../lib/network/drakvpn.pm:49
 #: ../lib/network/netcenter.pm:142 ../lib/network/netconnect.pm:186
 #: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
-#: ../lib/network/netconnect.pm:717 ../lib/network/thirdparty.pm:354
+#: ../lib/network/netconnect.pm:726 ../lib/network/thirdparty.pm:354
 #: ../lib/network/thirdparty.pm:369
 #, c-format
 msgid "Please wait"
@@ -248,8 +248,8 @@ msgstr "Ulangtetap"
 msgid "Please select the network interface directly connected to the internet."
 msgstr ""
 
-#: ../bin/drakgw:123 ../lib/network/netconnect.pm:363
-#: ../lib/network/netconnect.pm:398
+#: ../bin/drakgw:123 ../lib/network/netconnect.pm:372
+#: ../lib/network/netconnect.pm:407
 #, fuzzy, c-format
 msgid "Net Device"
 msgstr "Peranti Blok"
@@ -307,7 +307,7 @@ msgstr "Nama domain tetamu"
 #: ../bin/draksambashare:1363 ../bin/draksambashare:1385
 #: ../bin/draksambashare:1394 ../bin/draksambashare:1413
 #: ../bin/draksambashare:1422 ../bin/draksambashare:1434
-#: ../lib/network/connection/xdsl.pm:359
+#: ../lib/network/connection/xdsl.pm:361
 #: ../lib/network/connection_manager.pm:62
 #: ../lib/network/connection_manager.pm:68
 #: ../lib/network/connection_manager.pm:84
@@ -321,7 +321,7 @@ msgstr "Nama domain tetamu"
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
 #: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:135
 #: ../lib/network/netconnect.pm:188 ../lib/network/netconnect.pm:234
-#: ../lib/network/netconnect.pm:275 ../lib/network/netconnect.pm:831
+#: ../lib/network/netconnect.pm:275 ../lib/network/netconnect.pm:840
 #: ../lib/network/thirdparty.pm:123 ../lib/network/thirdparty.pm:141
 #: ../lib/network/thirdparty.pm:232 ../lib/network/thirdparty.pm:234
 #: ../lib/network/thirdparty.pm:255
@@ -424,7 +424,7 @@ msgid ""
 "No ethernet network adapter configured for LAN has been detected on your "
 "system.\n"
 "\n"
-"Please run the hardware configuration tool to configure it, and certify that "
+"Please run the hardware configuration tool to configure it, and ensure that "
 "the Mandriva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
@@ -765,7 +765,7 @@ msgstr "Alamat IP Sasaran"
 msgid "Virtual ID"
 msgstr "Id Bina."
 
-#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:599
+#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:608
 #: ../lib/network/vpn/vpnc.pm:56
 #, c-format
 msgid "Password"
@@ -821,7 +821,7 @@ msgstr "Profil \"%s\" telah wujud!"
 #: ../bin/draknetprofile:165 ../bin/draknetprofile:167
 #: ../bin/draknetprofile.orig:165 ../bin/draknetprofile.orig:167
 #: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
-#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:484
+#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:493
 #, c-format
 msgid "Warning"
 msgstr "Amaran"
@@ -2096,7 +2096,7 @@ msgstr "Antara Muka Rangkaian"
 msgid "Profiles"
 msgstr "Profi:"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:226
+#: ../bin/net_applet:180 ../lib/network/connection.pm:228
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, fuzzy, c-format
@@ -2293,67 +2293,67 @@ msgstr "(tiada tetikus dikonfigurasikan)"
 msgid "Unknown connection type"
 msgstr "Jenis perhubungan tidak diketahui"
 
-#: ../lib/network/connection.pm:159
+#: ../lib/network/connection.pm:161
 #, fuzzy, c-format
 msgid "Network access settings"
 msgstr "Tetapan Rangkaian Lain-lain"
 
-#: ../lib/network/connection.pm:160
+#: ../lib/network/connection.pm:162
 #, fuzzy, c-format
 msgid "Access settings"
 msgstr "Tetapan Semasa"
 
-#: ../lib/network/connection.pm:161
+#: ../lib/network/connection.pm:163
 #, fuzzy, c-format
 msgid "Address settings"
 msgstr "Tetapan Semasa"
 
-#: ../lib/network/connection.pm:175 ../lib/network/connection.pm:195
-#: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:217
-#: ../lib/network/netconnect.pm:476 ../lib/network/netconnect.pm:572
-#: ../lib/network/netconnect.pm:575
+#: ../lib/network/connection.pm:177 ../lib/network/connection.pm:197
+#: ../lib/network/connection/isdn.pm:155 ../lib/network/netconnect.pm:217
+#: ../lib/network/netconnect.pm:485 ../lib/network/netconnect.pm:581
+#: ../lib/network/netconnect.pm:584
 #, fuzzy, c-format
 msgid "Unlisted - edit manually"
 msgstr "Sunting Persamaan Latex"
 
-#: ../lib/network/connection.pm:228 ../lib/network/connection/cable.pm:41
+#: ../lib/network/connection.pm:230 ../lib/network/connection/cable.pm:41
 #: ../lib/network/connection/wireless.pm:48 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "Tiada"
 
-#: ../lib/network/connection.pm:240
+#: ../lib/network/connection.pm:242
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr ""
 
-#: ../lib/network/connection.pm:241
+#: ../lib/network/connection.pm:243
 #, c-format
 msgid "Start the connection at boot"
 msgstr ""
 
-#: ../lib/network/connection.pm:242
+#: ../lib/network/connection.pm:244
 #, c-format
 msgid "Metric"
 msgstr "Metrik"
 
-#: ../lib/network/connection.pm:243
+#: ../lib/network/connection.pm:245
 #, c-format
 msgid "MTU"
 msgstr ""
 
-#: ../lib/network/connection.pm:244
+#: ../lib/network/connection.pm:246
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
 msgstr ""
 
-#: ../lib/network/connection.pm:316
+#: ../lib/network/connection.pm:318
 #, fuzzy, c-format
 msgid "Link detected on interface %s"
 msgstr "Semua permintaan pada port:"
 
-#: ../lib/network/connection.pm:317 ../lib/network/connection/ethernet.pm:291
+#: ../lib/network/connection.pm:319 ../lib/network/connection/ethernet.pm:291
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr ""
@@ -2373,19 +2373,19 @@ msgstr "Model Keselamatan:"
 msgid "Use BPALogin (needed for Telstra)"
 msgstr ""
 
-#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:600
+#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:609
 #, c-format
 msgid "Authentication"
 msgstr "Pengesahan"
 
 #: ../lib/network/connection/cable.pm:47 ../lib/network/connection/ppp.pm:22
-#: ../lib/network/netconnect.pm:339 ../lib/network/vpn/openvpn.pm:393
+#: ../lib/network/netconnect.pm:348 ../lib/network/vpn/openvpn.pm:393
 #, fuzzy, c-format
 msgid "Account Login (user name)"
 msgstr "Sila berikan nama pengguna"
 
 #: ../lib/network/connection/cable.pm:49 ../lib/network/connection/ppp.pm:23
-#: ../lib/network/netconnect.pm:340 ../lib/network/vpn/openvpn.pm:394
+#: ../lib/network/netconnect.pm:349 ../lib/network/vpn/openvpn.pm:394
 #, fuzzy, c-format
 msgid "Account Password"
 msgstr "Kata Laluan & Akaun Pengguna"
@@ -2507,7 +2507,7 @@ msgstr ""
 "Sila masukkan konfigurasi IP bagi mesin ini. Setiap item patut dimasukkan "
 "sebagai alamat IP pada notasi desimal-berdot (sebagai contoh, 1.2.3.4)."
 
-#: ../lib/network/connection/ethernet.pm:142 ../lib/network/netconnect.pm:649
+#: ../lib/network/connection/ethernet.pm:142 ../lib/network/netconnect.pm:658
 #: ../lib/network/vpn/openvpn.pm:212 ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
@@ -2626,22 +2626,22 @@ msgstr ""
 msgid "ISDN"
 msgstr "Telefon ISDN"
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:417
 #, c-format
 msgid "ISA / PCMCIA"
 msgstr "ISA / PCMCIA"
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:417
 #, fuzzy, c-format
 msgid "I do not know"
 msgstr "_Jangan Format"
 
-#: ../lib/network/connection/isdn.pm:197 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:199 ../lib/network/netconnect.pm:417
 #, c-format
 msgid "PCI"
 msgstr "PCI"
 
-#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:200 ../lib/network/netconnect.pm:417
 #, c-format
 msgid "USB"
 msgstr "USB"
@@ -3523,12 +3523,12 @@ msgstr ""
 msgid "DSL"
 msgstr "SSL"
 
-#: ../lib/network/connection/xdsl.pm:95 ../lib/network/netconnect.pm:773
+#: ../lib/network/connection/xdsl.pm:97 ../lib/network/netconnect.pm:782
 #, c-format
 msgid "Alcatel speedtouch USB modem"
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:123
+#: ../lib/network/connection/xdsl.pm:125
 #, c-format
 msgid ""
 "The ECI Hi-Focus modem cannot be supported due to binary driver distribution "
@@ -3537,54 +3537,54 @@ msgid ""
 "You can find a driver on http://eciadsl.flashtux.org/"
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:183
+#: ../lib/network/connection/xdsl.pm:185
 #, c-format
 msgid ""
 "Modems using Conexant AccessRunner chipsets cannot be supported due to "
 "binary firmware distribution problem."
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:203
+#: ../lib/network/connection/xdsl.pm:205
 #, fuzzy, c-format
 msgid "DSL over CAPI"
 msgstr "Tetikus diatas ikan"
 
-#: ../lib/network/connection/xdsl.pm:206
+#: ../lib/network/connection/xdsl.pm:208
 #, fuzzy, c-format
 msgid "Dynamic Host Configuration Protocol (DHCP)"
 msgstr "Guna tetapan IP _dinamik (DHCP)"
 
-#: ../lib/network/connection/xdsl.pm:207
+#: ../lib/network/connection/xdsl.pm:209
 #, fuzzy, c-format
 msgid "Manual TCP/IP configuration"
 msgstr "Tetapan TCP/IP Manual"
 
-#: ../lib/network/connection/xdsl.pm:208
+#: ../lib/network/connection/xdsl.pm:210
 #, c-format
 msgid "Point to Point Tunneling Protocol (PPTP)"
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:209
+#: ../lib/network/connection/xdsl.pm:211
 #, c-format
 msgid "PPP over Ethernet (PPPoE)"
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:210
+#: ../lib/network/connection/xdsl.pm:212
 #, c-format
 msgid "PPP over ATM (PPPoA)"
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:250
+#: ../lib/network/connection/xdsl.pm:252
 #, c-format
 msgid "Virtual Path ID (VPI):"
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:251
+#: ../lib/network/connection/xdsl.pm:253
 #, c-format
 msgid "Virtual Circuit ID (VCI):"
 msgstr ""
 
-#: ../lib/network/connection/xdsl.pm:359
+#: ../lib/network/connection/xdsl.pm:361
 #: ../lib/network/connection_manager.pm:62 ../lib/network/drakvpn.pm:45
 #: ../lib/network/netconnect.pm:135 ../lib/network/thirdparty.pm:123
 #, fuzzy, c-format
@@ -3858,7 +3858,7 @@ msgstr "Buat konfigurasi"
 msgid "Refresh"
 msgstr "Segarkan"
 
-#: ../lib/network/drakroam.pm:103 ../lib/network/netconnect.pm:779
+#: ../lib/network/drakroam.pm:103 ../lib/network/netconnect.pm:788
 #, fuzzy, c-format
 msgid "Wireless connection"
 msgstr "Sambungan Gagal"
@@ -3993,8 +3993,8 @@ msgid "port %d"
 msgstr "Port"
 
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
-#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:616
-#: ../lib/network/netconnect.pm:633 ../lib/network/netconnect.pm:649
+#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:625
+#: ../lib/network/netconnect.pm:642 ../lib/network/netconnect.pm:658
 #, c-format
 msgid "Manual"
 msgstr "Manual"
@@ -4002,10 +4002,10 @@ msgstr "Manual"
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
 #: ../lib/network/modem.pm:44 ../lib/network/modem.pm:63
 #: ../lib/network/modem.pm:76 ../lib/network/modem.pm:81
-#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:611
-#: ../lib/network/netconnect.pm:616 ../lib/network/netconnect.pm:628
-#: ../lib/network/netconnect.pm:633 ../lib/network/netconnect.pm:649
-#: ../lib/network/netconnect.pm:651
+#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:620
+#: ../lib/network/netconnect.pm:625 ../lib/network/netconnect.pm:637
+#: ../lib/network/netconnect.pm:642 ../lib/network/netconnect.pm:658
+#: ../lib/network/netconnect.pm:660
 #, c-format
 msgid "Automatic"
 msgstr "Automatik"
@@ -4089,8 +4089,8 @@ msgstr "Pilihan Storan Lanjutan"
 msgid "United States"
 msgstr "Amerika Syarikat"
 
-#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:506
-#: ../lib/network/netconnect.pm:520
+#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:515
+#: ../lib/network/netconnect.pm:529
 #, fuzzy, c-format
 msgid "Manual choice"
 msgstr "Pilihan pakej"
@@ -4127,8 +4127,8 @@ msgstr "Konfigurasi Rangkaian bagi %s"
 msgid "Choose the connection you want to configure"
 msgstr "Pilih alatan yang anda hendak guna"
 
-#: ../lib/network/netconnect.pm:149 ../lib/network/netconnect.pm:361
-#: ../lib/network/netconnect.pm:806
+#: ../lib/network/netconnect.pm:149 ../lib/network/netconnect.pm:370
+#: ../lib/network/netconnect.pm:815
 #, fuzzy, c-format
 msgid "Select the network interface to configure:"
 msgstr "Pilih kad yang anda ingin konfigurasikan:"
@@ -4160,114 +4160,114 @@ msgid ""
 "If you do not know it, keep the preselected protocol."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:292 ../lib/network/netconnect.pm:668
+#: ../lib/network/netconnect.pm:292 ../lib/network/netconnect.pm:677
 #, fuzzy, c-format
 msgid "Connection control"
 msgstr "Pusat Kawalan"
 
-#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:717
+#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:726
 #, fuzzy, c-format
 msgid "Testing your connection..."
 msgstr "Perkongsian sambungan Internet"
 
-#: ../lib/network/netconnect.pm:328
+#: ../lib/network/netconnect.pm:337
 #, fuzzy, c-format
 msgid "Connection Configuration"
 msgstr "Tetapan KFish"
 
-#: ../lib/network/netconnect.pm:328
+#: ../lib/network/netconnect.pm:337
 #, c-format
 msgid "Please fill or check the field below"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:331
+#: ../lib/network/netconnect.pm:340
 #, fuzzy, c-format
 msgid "Your personal phone number"
 msgstr "Nombor panggilan untuk difakskan"
 
-#: ../lib/network/netconnect.pm:332
+#: ../lib/network/netconnect.pm:341
 #, fuzzy, c-format
 msgid "Provider name (ex provider.net)"
 msgstr "Masukkan nama penyedia untuk akaun ini."
 
-#: ../lib/network/netconnect.pm:333
+#: ../lib/network/netconnect.pm:342
 #, fuzzy, c-format
 msgid "Provider phone number"
 msgstr "Ubah jumlah lajur"
 
-#: ../lib/network/netconnect.pm:334
+#: ../lib/network/netconnect.pm:343
 #, fuzzy, c-format
 msgid "Provider DNS 1 (optional)"
 msgstr "Pelayan Nama DNS"
 
-#: ../lib/network/netconnect.pm:335
+#: ../lib/network/netconnect.pm:344
 #, fuzzy, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "Pelayan Nama DNS"
 
-#: ../lib/network/netconnect.pm:336
+#: ../lib/network/netconnect.pm:345
 #, fuzzy, c-format
 msgid "Dialing mode"
 msgstr "M-x nxml-mode"
 
-#: ../lib/network/netconnect.pm:337
+#: ../lib/network/netconnect.pm:346
 #, fuzzy, c-format
 msgid "Connection speed"
 msgstr "Muatturun `%s', kelajuan:%s"
 
-#: ../lib/network/netconnect.pm:338
+#: ../lib/network/netconnect.pm:347
 #, fuzzy, c-format
 msgid "Connection timeout (in sec)"
 msgstr "tetap masatamat dalam saat"
 
-#: ../lib/network/netconnect.pm:341
+#: ../lib/network/netconnect.pm:350
 #, fuzzy, c-format
 msgid "Card IRQ"
 msgstr "Permainan Kad"
 
-#: ../lib/network/netconnect.pm:342
+#: ../lib/network/netconnect.pm:351
 #, fuzzy, c-format
 msgid "Card mem (DMA)"
 msgstr "Kad Elektronik Perniagaan"
 
-#: ../lib/network/netconnect.pm:343
+#: ../lib/network/netconnect.pm:352
 #, fuzzy, c-format
 msgid "Card IO"
 msgstr "Port IO"
 
-#: ../lib/network/netconnect.pm:344
+#: ../lib/network/netconnect.pm:353
 #, fuzzy, c-format
 msgid "Card IO_0"
 msgstr "Port IO"
 
-#: ../lib/network/netconnect.pm:345
+#: ../lib/network/netconnect.pm:354
 #, fuzzy, c-format
 msgid "Card IO_1"
 msgstr "Port IO"
 
-#: ../lib/network/netconnect.pm:364 ../lib/network/netconnect.pm:369
+#: ../lib/network/netconnect.pm:373 ../lib/network/netconnect.pm:378
 #, fuzzy, c-format
 msgid "External ISDN modem"
 msgstr "Tetapan Dialup Modem"
 
-#: ../lib/network/netconnect.pm:397
+#: ../lib/network/netconnect.pm:406
 #, fuzzy, c-format
 msgid "Select a device!"
 msgstr "Peranti Blok"
 
-#: ../lib/network/netconnect.pm:406 ../lib/network/netconnect.pm:416
-#: ../lib/network/netconnect.pm:426 ../lib/network/netconnect.pm:459
-#: ../lib/network/netconnect.pm:473
+#: ../lib/network/netconnect.pm:415 ../lib/network/netconnect.pm:425
+#: ../lib/network/netconnect.pm:435 ../lib/network/netconnect.pm:468
+#: ../lib/network/netconnect.pm:482
 #, fuzzy, c-format
 msgid "ISDN Configuration"
 msgstr "Tetapan KFish"
 
-#: ../lib/network/netconnect.pm:407
+#: ../lib/network/netconnect.pm:416
 #, fuzzy, c-format
 msgid "What kind of card do you have?"
 msgstr "Apa jenis papan kekunci yang anda ada?"
 
-#: ../lib/network/netconnect.pm:417
+#: ../lib/network/netconnect.pm:426
 #, fuzzy, c-format
 msgid ""
 "\n"
@@ -4277,22 +4277,22 @@ msgid ""
 "card.\n"
 msgstr "on dan"
 
-#: ../lib/network/netconnect.pm:421
+#: ../lib/network/netconnect.pm:430
 #, c-format
 msgid "Continue"
 msgstr "Teruskan"
 
-#: ../lib/network/netconnect.pm:421
+#: ../lib/network/netconnect.pm:430
 #, c-format
 msgid "Abort"
 msgstr "Batal"
 
-#: ../lib/network/netconnect.pm:427
+#: ../lib/network/netconnect.pm:436
 #, c-format
 msgid "Which of the following is your ISDN card?"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:445
+#: ../lib/network/netconnect.pm:454
 #, c-format
 msgid ""
 "A CAPI driver is available for this modem. This CAPI driver can offer more "
@@ -4300,284 +4300,284 @@ msgid ""
 "want to use?"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:459
+#: ../lib/network/netconnect.pm:468
 #, fuzzy, c-format
 msgid "Which protocol do you want to use?"
 msgstr "Tetapan Xorg mana yang anda hendak?"
 
-#: ../lib/network/netconnect.pm:473
+#: ../lib/network/netconnect.pm:482
 #, c-format
 msgid ""
 "Select your provider.\n"
 "If it is not listed, choose Unlisted."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:475 ../lib/network/netconnect.pm:571
+#: ../lib/network/netconnect.pm:484 ../lib/network/netconnect.pm:580
 #, fuzzy, c-format
 msgid "Provider:"
 msgstr "Nama penyedia:"
 
-#: ../lib/network/netconnect.pm:484
+#: ../lib/network/netconnect.pm:493
 #, c-format
 msgid ""
 "Your modem is not supported by the system.\n"
 "Take a look at http://www.linmodems.org"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:503
+#: ../lib/network/netconnect.pm:512
 #, fuzzy, c-format
 msgid "Select the modem to configure:"
 msgstr "Pilih Pemacu Peranti untuk Dimuatkan"
 
-#: ../lib/network/netconnect.pm:505
+#: ../lib/network/netconnect.pm:514
 #, c-format
 msgid "Modem"
 msgstr "Modem"
 
-#: ../lib/network/netconnect.pm:540
+#: ../lib/network/netconnect.pm:549
 #, fuzzy, c-format
 msgid "Please choose which serial port your modem is connected to."
 msgstr "bersiri."
 
-#: ../lib/network/netconnect.pm:569
+#: ../lib/network/netconnect.pm:578
 #, fuzzy, c-format
 msgid "Select your provider:"
 msgstr "Pilih aplikasi default anda"
 
-#: ../lib/network/netconnect.pm:593
+#: ../lib/network/netconnect.pm:602
 #, fuzzy, c-format
 msgid "Dialup: account options"
 msgstr "Pilihan Dua-Arah"
 
-#: ../lib/network/netconnect.pm:596
+#: ../lib/network/netconnect.pm:605
 #, fuzzy, c-format
 msgid "Connection name"
 msgstr "Nama Medan"
 
-#: ../lib/network/netconnect.pm:597
+#: ../lib/network/netconnect.pm:606
 #, fuzzy, c-format
 msgid "Phone number"
 msgstr "Jumlah Lajur"
 
-#: ../lib/network/netconnect.pm:598
+#: ../lib/network/netconnect.pm:607
 #, fuzzy, c-format
 msgid "Login ID"
 msgstr "Id Bina."
 
-#: ../lib/network/netconnect.pm:613 ../lib/network/netconnect.pm:646
+#: ../lib/network/netconnect.pm:622 ../lib/network/netconnect.pm:655
 #, fuzzy, c-format
 msgid "Dialup: IP parameters"
 msgstr "Tetapkan parameter iSCSI"
 
-#: ../lib/network/netconnect.pm:616
+#: ../lib/network/netconnect.pm:625
 #, fuzzy, c-format
 msgid "IP parameters"
 msgstr "Parameter Tambahan"
 
-#: ../lib/network/netconnect.pm:618
+#: ../lib/network/netconnect.pm:627
 #, fuzzy, c-format
 msgid "Subnet mask"
 msgstr "Topengan Subnet:"
 
-#: ../lib/network/netconnect.pm:630
+#: ../lib/network/netconnect.pm:639
 #, fuzzy, c-format
 msgid "Dialup: DNS parameters"
 msgstr "Tetapkan parameter iSCSI"
 
-#: ../lib/network/netconnect.pm:633
+#: ../lib/network/netconnect.pm:642
 #, c-format
 msgid "DNS"
 msgstr "DNS"
 
-#: ../lib/network/netconnect.pm:634
+#: ../lib/network/netconnect.pm:643
 #, fuzzy, c-format
 msgid "Domain name"
 msgstr "Nama Domain:"
 
-#: ../lib/network/netconnect.pm:635
+#: ../lib/network/netconnect.pm:644
 #, fuzzy, c-format
 msgid "First DNS Server (optional)"
 msgstr "Alamat IP pelayan DNS induk:"
 
-#: ../lib/network/netconnect.pm:636
+#: ../lib/network/netconnect.pm:645
 #, fuzzy, c-format
 msgid "Second DNS Server (optional)"
 msgstr "Alamat IP pelayan DNS induk:"
 
-#: ../lib/network/netconnect.pm:637
+#: ../lib/network/netconnect.pm:646
 #, fuzzy, c-format
 msgid "Set hostname from IP"
 msgstr "Namahos atau Alamat IP/Subnet:"
 
-#: ../lib/network/netconnect.pm:650
+#: ../lib/network/netconnect.pm:659
 #, fuzzy, c-format
 msgid "Gateway IP address"
 msgstr "Alamat IP gateway:"
 
-#: ../lib/network/netconnect.pm:683
+#: ../lib/network/netconnect.pm:692
 #, fuzzy, c-format
 msgid "Automatically at boot"
 msgstr "Boot Microsoft Windows"
 
-#: ../lib/network/netconnect.pm:685
+#: ../lib/network/netconnect.pm:694
 #, c-format
 msgid "By using Net Applet in the system tray"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:687
+#: ../lib/network/netconnect.pm:696
 #, c-format
 msgid "Manually (the interface would still be activated at boot)"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:696
+#: ../lib/network/netconnect.pm:705
 #, fuzzy, c-format
 msgid "How do you want to dial this connection?"
 msgstr "mula?"
 
-#: ../lib/network/netconnect.pm:709
+#: ../lib/network/netconnect.pm:718
 #, fuzzy, c-format
 msgid "Do you want to try to connect to the Internet now?"
 msgstr "Internet?"
 
-#: ../lib/network/netconnect.pm:736
+#: ../lib/network/netconnect.pm:745
 #, fuzzy, c-format
 msgid "The system is now connected to the Internet."
 msgstr "Internet."
 
-#: ../lib/network/netconnect.pm:737
+#: ../lib/network/netconnect.pm:746
 #, c-format
 msgid "For security reasons, it will be disconnected now."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:738
+#: ../lib/network/netconnect.pm:747
 #, fuzzy, c-format
 msgid ""
 "The system does not seem to be connected to the Internet.\n"
 "Try to reconfigure your connection."
 msgstr "Internet."
 
-#: ../lib/network/netconnect.pm:754
+#: ../lib/network/netconnect.pm:763
 #, fuzzy, c-format
 msgid "Problems occured during the network connectivity test."
 msgstr "A"
 
-#: ../lib/network/netconnect.pm:755
+#: ../lib/network/netconnect.pm:764
 #, c-format
 msgid ""
 "This can be caused by invalid network configuration, or problems with your "
 "modem or router."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:756
+#: ../lib/network/netconnect.pm:765
 #, c-format
 msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:759
+#: ../lib/network/netconnect.pm:768
 #, fuzzy, c-format
 msgid "Congratulations, the network configuration is finished."
 msgstr "Tahniah dan Internet"
 
-#: ../lib/network/netconnect.pm:759
+#: ../lib/network/netconnect.pm:768
 #, c-format
 msgid ""
 "However, the Internet connectivity test failed. You should test your "
 "connection manually, and verify your Internet modem or router."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:760
+#: ../lib/network/netconnect.pm:769
 #, c-format
 msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:762
+#: ../lib/network/netconnect.pm:771
 #, fuzzy, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
 msgstr "Tahniah dan Internet"
 
-#: ../lib/network/netconnect.pm:763
+#: ../lib/network/netconnect.pm:772
 #, fuzzy, c-format
 msgid ""
 "After this is done, we recommend that you restart your X environment to "
 "avoid any hostname-related problems."
 msgstr "siap ulanghidup."
 
-#: ../lib/network/netconnect.pm:774
+#: ../lib/network/netconnect.pm:783
 #, fuzzy, c-format
 msgid "Sagem USB modem"
 msgstr "Hubungkan sistem fail USB"
 
-#: ../lib/network/netconnect.pm:775 ../lib/network/netconnect.pm:776
+#: ../lib/network/netconnect.pm:784 ../lib/network/netconnect.pm:785
 #, fuzzy, c-format
 msgid "Bewan modem"
 msgstr "Rentetan init Modem"
 
-#: ../lib/network/netconnect.pm:777
+#: ../lib/network/netconnect.pm:786
 #, c-format
 msgid "ECI Hi-Focus modem"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:778
+#: ../lib/network/netconnect.pm:787
 #, fuzzy, c-format
 msgid "LAN connection"
 msgstr "Sambungan Gagal"
 
-#: ../lib/network/netconnect.pm:780
+#: ../lib/network/netconnect.pm:789
 #, fuzzy, c-format
 msgid "ADSL connection"
 msgstr "Sambungan Gagal"
 
-#: ../lib/network/netconnect.pm:781
+#: ../lib/network/netconnect.pm:790
 #, fuzzy, c-format
 msgid "Cable connection"
 msgstr "Sambungan Gagal"
 
-#: ../lib/network/netconnect.pm:782
+#: ../lib/network/netconnect.pm:791
 #, fuzzy, c-format
 msgid "ISDN connection"
 msgstr "Sambungan Gagal"
 
-#: ../lib/network/netconnect.pm:783
+#: ../lib/network/netconnect.pm:792
 #, fuzzy, c-format
 msgid "Modem connection"
 msgstr "Sambungan Gagal"
 
-#: ../lib/network/netconnect.pm:784
+#: ../lib/network/netconnect.pm:793
 #, fuzzy, c-format
 msgid "DVB connection"
 msgstr "Sambungan Gagal"
 
-#: ../lib/network/netconnect.pm:786
+#: ../lib/network/netconnect.pm:795
 #, fuzzy, c-format
 msgid "(detected on port %s)"
 msgstr "Maklumat port IO"
 
 #. -PO: here, "(detected)" string will be appended to eg "ADSL connection"
-#: ../lib/network/netconnect.pm:788
+#: ../lib/network/netconnect.pm:797
 #, fuzzy, c-format
 msgid "(detected %s)"
 msgstr "Dikesan Automatik"
 
-#: ../lib/network/netconnect.pm:788
+#: ../lib/network/netconnect.pm:797
 #, fuzzy, c-format
 msgid "(detected)"
 msgstr "Dikesan Automatik"
 
-#: ../lib/network/netconnect.pm:789
+#: ../lib/network/netconnect.pm:798
 #, fuzzy, c-format
 msgid "Network Configuration"
 msgstr "Konfigurasi Rangkaian"
 
-#: ../lib/network/netconnect.pm:790
+#: ../lib/network/netconnect.pm:799
 #, fuzzy, c-format
 msgid "Zeroconf hostname resolution"
 msgstr "hidupkan wins untuk resolusi namahos"
 
-#: ../lib/network/netconnect.pm:791
+#: ../lib/network/netconnect.pm:800
 #, c-format
 msgid ""
 "If desired, enter a Zeroconf hostname.\n"
@@ -4586,17 +4586,17 @@ msgid ""
 "It is not necessary on most networks."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:795
+#: ../lib/network/netconnect.pm:804
 #, fuzzy, c-format
 msgid "Zeroconf Host name"
 msgstr "Menentukan nama hos dan domain..."
 
-#: ../lib/network/netconnect.pm:796
+#: ../lib/network/netconnect.pm:805
 #, c-format
 msgid "Zeroconf host name must not contain a ."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:797
+#: ../lib/network/netconnect.pm:806
 #, fuzzy, c-format
 msgid ""
 "Because you are doing a network installation, your network is already "
@@ -4605,12 +4605,12 @@ msgid ""
 "Internet & Network connection.\n"
 msgstr "on Ok Internet Rangkaian"
 
-#: ../lib/network/netconnect.pm:800
+#: ../lib/network/netconnect.pm:809
 #, fuzzy, c-format
 msgid "The network needs to be restarted. Do you want to restart it?"
 msgstr "ulanghidup?"
 
-#: ../lib/network/netconnect.pm:801
+#: ../lib/network/netconnect.pm:810
 #, fuzzy, c-format
 msgid ""
 "A problem occurred while restarting the network: \n"
@@ -4618,7 +4618,7 @@ msgid ""
 "%s"
 msgstr "A"
 
-#: ../lib/network/netconnect.pm:802
+#: ../lib/network/netconnect.pm:811
 #, c-format
 msgid ""
 "We are now going to configure the %s connection.\n"
@@ -4627,12 +4627,12 @@ msgid ""
 "Press \"%s\" to continue."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:803
+#: ../lib/network/netconnect.pm:812
 #, fuzzy, c-format
 msgid "Configuration is complete, do you want to apply settings?"
 msgstr "Konfigurasikan?"
 
-#: ../lib/network/netconnect.pm:804
+#: ../lib/network/netconnect.pm:813
 #, fuzzy, c-format
 msgid ""
 "You have configured multiple ways to connect to the Internet.\n"
@@ -4640,24 +4640,24 @@ msgid ""
 "\n"
 msgstr "Internet"
 
-#: ../lib/network/netconnect.pm:805
+#: ../lib/network/netconnect.pm:814
 #, fuzzy, c-format
 msgid "Internet connection"
 msgstr "Perkongsian sambungan Internet"
 
-#: ../lib/network/netconnect.pm:807
+#: ../lib/network/netconnect.pm:816
 #, fuzzy, c-format
 msgid "Configuring network device %s (driver %s)"
 msgstr "Pilih Pemacu Peranti untuk Dimuatkan"
 
-#: ../lib/network/netconnect.pm:808
+#: ../lib/network/netconnect.pm:817
 #, c-format
 msgid ""
 "The following protocols can be used to configure a LAN connection. Please "
 "choose the one you want to use."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:809
+#: ../lib/network/netconnect.pm:818
 #, fuzzy, c-format
 msgid ""
 "Please enter your host name.\n"
@@ -4666,27 +4666,27 @@ msgid ""
 "You may also enter the IP address of the gateway if you have one."
 msgstr "IP."
 
-#: ../lib/network/netconnect.pm:814
+#: ../lib/network/netconnect.pm:823
 #, c-format
 msgid "Last but not least you can also type in your DNS server IP addresses."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:815
+#: ../lib/network/netconnect.pm:824
 #, fuzzy, c-format
 msgid "DNS server address should be in format 1.2.3.4"
 msgstr "dalam"
 
-#: ../lib/network/netconnect.pm:816
+#: ../lib/network/netconnect.pm:825
 #, fuzzy, c-format
 msgid "Gateway address should be in format 1.2.3.4"
 msgstr "Gateway dalam"
 
-#: ../lib/network/netconnect.pm:817
+#: ../lib/network/netconnect.pm:826
 #, c-format
 msgid "Gateway device"
 msgstr "Peranti gateway"
 
-#: ../lib/network/netconnect.pm:831
+#: ../lib/network/netconnect.pm:840
 #, fuzzy, c-format
 msgid ""
 "An unexpected error has happened:\n"

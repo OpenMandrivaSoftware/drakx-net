@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-el\n"
-"POT-Creation-Date: 2009-03-31 10:42-0300\n"
+"POT-Creation-Date: 2009-04-02 13:30-0300\n"
 "PO-Revision-Date: 2009-03-28 06:49+0200\n"
 "Last-Translator: nikos papadopoulos <231036448@freemail.gr>\n"
 "Language-Team: Greek <i18ngr@lists.hellug.gr  >\n"
@@ -35,19 +35,19 @@ msgid "Interface"
 msgstr "Διεπαφή"
 
 #: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:196
-#: ../lib/network/connection/ethernet.pm:134 ../lib/network/netconnect.pm:617
+#: ../lib/network/connection/ethernet.pm:134 ../lib/network/netconnect.pm:626
 #: ../lib/network/vpn/openvpn.pm:221
 #, c-format
 msgid "IP address"
 msgstr "Διεύθυνση IP"
 
 #: ../bin/drakconnect-old:64 ../bin/drakids:261
-#: ../lib/network/netconnect.pm:461
+#: ../lib/network/netconnect.pm:470
 #, c-format
 msgid "Protocol"
 msgstr "Πρωτόκολλο"
 
-#: ../bin/drakconnect-old:64 ../lib/network/netconnect.pm:447
+#: ../bin/drakconnect-old:64 ../lib/network/netconnect.pm:456
 #, c-format
 msgid "Driver"
 msgstr "Οδηγός"
@@ -109,7 +109,7 @@ msgstr "Εντάξει"
 #: ../lib/network/connection_manager.pm:348 ../lib/network/drakvpn.pm:49
 #: ../lib/network/netcenter.pm:142 ../lib/network/netconnect.pm:186
 #: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
-#: ../lib/network/netconnect.pm:717 ../lib/network/thirdparty.pm:354
+#: ../lib/network/netconnect.pm:726 ../lib/network/thirdparty.pm:354
 #: ../lib/network/thirdparty.pm:369
 #, c-format
 msgid "Please wait"
@@ -285,8 +285,8 @@ msgstr ""
 "Παρακαλώ επιλέξτε την διεπαφή διασύνδεσης που είναι συνδεδεμένη με το "
 "Internet."
 
-#: ../bin/drakgw:123 ../lib/network/netconnect.pm:363
-#: ../lib/network/netconnect.pm:398
+#: ../bin/drakgw:123 ../lib/network/netconnect.pm:372
+#: ../lib/network/netconnect.pm:407
 #, c-format
 msgid "Net Device"
 msgstr "Συσκευή Δικτύου"
@@ -356,7 +356,7 @@ msgstr "Το εσωτερικό όνομα τομέα"
 #: ../bin/draksambashare:1363 ../bin/draksambashare:1385
 #: ../bin/draksambashare:1394 ../bin/draksambashare:1413
 #: ../bin/draksambashare:1422 ../bin/draksambashare:1434
-#: ../lib/network/connection/xdsl.pm:359
+#: ../lib/network/connection/xdsl.pm:361
 #: ../lib/network/connection_manager.pm:62
 #: ../lib/network/connection_manager.pm:68
 #: ../lib/network/connection_manager.pm:84
@@ -370,7 +370,7 @@ msgstr "Το εσωτερικό όνομα τομέα"
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
 #: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:135
 #: ../lib/network/netconnect.pm:188 ../lib/network/netconnect.pm:234
-#: ../lib/network/netconnect.pm:275 ../lib/network/netconnect.pm:831
+#: ../lib/network/netconnect.pm:275 ../lib/network/netconnect.pm:840
 #: ../lib/network/thirdparty.pm:123 ../lib/network/thirdparty.pm:141
 #: ../lib/network/thirdparty.pm:232 ../lib/network/thirdparty.pm:234
 #: ../lib/network/thirdparty.pm:255
@@ -474,12 +474,12 @@ msgid "Broadcast printer information"
 msgstr "Μετάδοση πληροφοριών εκτυπωτή"
 
 #: ../bin/drakgw:308
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "No ethernet network adapter configured for LAN has been detected on your "
 "system.\n"
 "\n"
-"Please run the hardware configuration tool to configure it, and certify that "
+"Please run the hardware configuration tool to configure it, and ensure that "
 "the Mandriva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
@@ -834,7 +834,7 @@ msgstr "Εικονική διεύθυνση κοινόχρηστων πόρων"
 msgid "Virtual ID"
 msgstr "Εικονικό ID..."
 
-#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:599
+#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:608
 #: ../lib/network/vpn/vpnc.pm:56
 #, c-format
 msgid "Password"
@@ -890,7 +890,7 @@ msgstr "Το  προφίλ  \"%s\" υπάρχει ήδη!"
 #: ../bin/draknetprofile:165 ../bin/draknetprofile:167
 #: ../bin/draknetprofile.orig:165 ../bin/draknetprofile.orig:167
 #: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
-#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:484
+#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:493
 #, c-format
 msgid "Warning"
 msgstr "Προσοχή"
@@ -2279,7 +2279,7 @@ msgstr "Ενεργοποιημένες διεπαφές"
 msgid "Profiles"
 msgstr "Προφίλ"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:226
+#: ../bin/net_applet:180 ../lib/network/connection.pm:228
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
@@ -2484,69 +2484,69 @@ msgstr "Δεν έχει διαμορφωθεί καμία σύνδεση δικ�
 msgid "Unknown connection type"
 msgstr "Άγνωστος τύπος σύνδεσης"
 
-#: ../lib/network/connection.pm:159
+#: ../lib/network/connection.pm:161
 #, c-format
 msgid "Network access settings"
 msgstr "Ρυθμίσεις πρόσβασης δικτύου"
 
-#: ../lib/network/connection.pm:160
+#: ../lib/network/connection.pm:162
 #, c-format
 msgid "Access settings"
 msgstr "Ρυθμίσεις πρόσβασης"
 
-#: ../lib/network/connection.pm:161
+#: ../lib/network/connection.pm:163
 #, c-format
 msgid "Address settings"
 msgstr "Ρυθμίσεις διεύθυνσης"
 
-#: ../lib/network/connection.pm:175 ../lib/network/connection.pm:195
-#: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:217
-#: ../lib/network/netconnect.pm:476 ../lib/network/netconnect.pm:572
-#: ../lib/network/netconnect.pm:575
+#: ../lib/network/connection.pm:177 ../lib/network/connection.pm:197
+#: ../lib/network/connection/isdn.pm:155 ../lib/network/netconnect.pm:217
+#: ../lib/network/netconnect.pm:485 ../lib/network/netconnect.pm:581
+#: ../lib/network/netconnect.pm:584
 #, c-format
 msgid "Unlisted - edit manually"
 msgstr "Δεν είναι καταχωρημένο - διορθώστε το χειροκίνητα"
 
-#: ../lib/network/connection.pm:228 ../lib/network/connection/cable.pm:41
+#: ../lib/network/connection.pm:230 ../lib/network/connection/cable.pm:41
 #: ../lib/network/connection/wireless.pm:48 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "Κανένας"
 
-#: ../lib/network/connection.pm:240
+#: ../lib/network/connection.pm:242
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr "Επιτρέπει στους χρήστες να διαχειρίζονται την σύνδεση"
 
-#: ../lib/network/connection.pm:241
+#: ../lib/network/connection.pm:243
 #, c-format
 msgid "Start the connection at boot"
 msgstr "Ξεκινήστε την σύνδεση κατά τη διάρκεια της εκκίνησης"
 
-#: ../lib/network/connection.pm:242
+#: ../lib/network/connection.pm:244
 #, c-format
 msgid "Metric"
 msgstr "Μετρικό"
 
-#: ../lib/network/connection.pm:243
+#: ../lib/network/connection.pm:245
 #, c-format
 msgid "MTU"
 msgstr "MTU"
 
-#: ../lib/network/connection.pm:244
+#: ../lib/network/connection.pm:246
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
 msgstr ""
 "Το μέγιστο μέγεθος των μηνυμάτων του δικτύου (MTU). Αν δεν είσαι σίγουρος, "
 "άφησέ το κενό."
 
-#: ../lib/network/connection.pm:316
+#: ../lib/network/connection.pm:318
 #, c-format
 msgid "Link detected on interface %s"
 msgstr "Ανιχνεύθηκε σύνδεση στην διεπαφή %s"
 
-#: ../lib/network/connection.pm:317 ../lib/network/connection/ethernet.pm:291
+#: ../lib/network/connection.pm:319 ../lib/network/connection/ethernet.pm:291
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "Χάθηκε η σύνδεση στην διεπαφή %s"
@@ -2566,19 +2566,19 @@ msgstr "Καλωδιακό μόντεμ"
 msgid "Use BPALogin (needed for Telstra)"
 msgstr "Χρήση του BPALogin (απαραίτητο για το Teista)"
 
-#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:600
+#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:609
 #, c-format
 msgid "Authentication"
 msgstr "Πιστοποίηση"
 
 #: ../lib/network/connection/cable.pm:47 ../lib/network/connection/ppp.pm:22
-#: ../lib/network/netconnect.pm:339 ../lib/network/vpn/openvpn.pm:393
+#: ../lib/network/netconnect.pm:348 ../lib/network/vpn/openvpn.pm:393
 #, c-format
 msgid "Account Login (user name)"
 msgstr "Λογαριασμός Σύνδεσης (όνομα χρήστη)"
 
 #: ../lib/network/connection/cable.pm:49 ../lib/network/connection/ppp.pm:23
-#: ../lib/network/netconnect.pm:340 ../lib/network/vpn/openvpn.pm:394
+#: ../lib/network/netconnect.pm:349 ../lib/network/vpn/openvpn.pm:394
 #, c-format
 msgid "Account Password"
 msgstr "Κωδικός Πρόσβασης"
@@ -2706,7 +2706,7 @@ msgstr ""
 "Κάθε στοιχείο πρέπει να εισαχθεί ως IP διεύθυνση με αριθμούς\n"
 "χωρισμένους με τελείες (παράδειγμα: 1.2.3.4)."
 
-#: ../lib/network/connection/ethernet.pm:142 ../lib/network/netconnect.pm:649
+#: ../lib/network/connection/ethernet.pm:142 ../lib/network/netconnect.pm:658
 #: ../lib/network/vpn/openvpn.pm:212 ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
@@ -2831,22 +2831,22 @@ msgstr "Αδύνατη η λήψη διεύθυνσης δικτύου για τ
 msgid "ISDN"
 msgstr "ISDN"
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:417
 #, c-format
 msgid "ISA / PCMCIA"
 msgstr "ISA / PCMCIA"
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:417
 #, c-format
 msgid "I do not know"
 msgstr "Δεν ξέρω"
 
-#: ../lib/network/connection/isdn.pm:197 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:199 ../lib/network/netconnect.pm:417
 #, c-format
 msgid "PCI"
 msgstr "PCI"
 
-#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:200 ../lib/network/netconnect.pm:417
 #, c-format
 msgid "USB"
 msgstr "USB"
@@ -3843,12 +3843,12 @@ msgstr "Χάθηκε η σύνδεση στο ασύρματο δίκτυο στ
 msgid "DSL"
 msgstr "DSL"
 
-#: ../lib/network/connection/xdsl.pm:95 ../lib/network/netconnect.pm:773
+#: ../lib/network/connection/xdsl.pm:97 ../lib/network/netconnect.pm:782
 #, c-format
 msgid "Alcatel speedtouch USB modem"
 msgstr "Alcatel speedtouch USB modem"
 
-#: ../lib/network/connection/xdsl.pm:123
+#: ../lib/network/connection/xdsl.pm:125
 #, c-format
 msgid ""
 "The ECI Hi-Focus modem cannot be supported due to binary driver distribution "
@@ -3861,7 +3861,7 @@ msgstr ""
 "\n"
 "Μπορείτε να βρείτε τον οδηγό συσκευής στο http://eciadsl.flashtux.org/"
 
-#: ../lib/network/connection/xdsl.pm:183
+#: ../lib/network/connection/xdsl.pm:185
 #, c-format
 msgid ""
 "Modems using Conexant AccessRunner chipsets cannot be supported due to "
@@ -3870,47 +3870,47 @@ msgstr ""
 "Τα modems που χρησιμοποιούν Conexant AccessRunner chipsets δεν "
 "υποστηρίζονται εξαιτίας προβλημάτων στην αναδιανομή του binary firmware. "
 
-#: ../lib/network/connection/xdsl.pm:203
+#: ../lib/network/connection/xdsl.pm:205
 #, c-format
 msgid "DSL over CAPI"
 msgstr "DSL σε CAPI"
 
-#: ../lib/network/connection/xdsl.pm:206
+#: ../lib/network/connection/xdsl.pm:208
 #, c-format
 msgid "Dynamic Host Configuration Protocol (DHCP)"
 msgstr "Πρωτόκολλο Δυναμικής Διαμόρφωσης του Host (DHCP)"
 
-#: ../lib/network/connection/xdsl.pm:207
+#: ../lib/network/connection/xdsl.pm:209
 #, c-format
 msgid "Manual TCP/IP configuration"
 msgstr "Χειροκίνητη ρύθμιση TCP/IP"
 
-#: ../lib/network/connection/xdsl.pm:208
+#: ../lib/network/connection/xdsl.pm:210
 #, c-format
 msgid "Point to Point Tunneling Protocol (PPTP)"
 msgstr "Πρωτόκολλο του Tunnel Point to Point (PPTP)"
 
-#: ../lib/network/connection/xdsl.pm:209
+#: ../lib/network/connection/xdsl.pm:211
 #, c-format
 msgid "PPP over Ethernet (PPPoE)"
 msgstr "PPP σε Ethernet (PPPoE)"
 
-#: ../lib/network/connection/xdsl.pm:210
+#: ../lib/network/connection/xdsl.pm:212
 #, c-format
 msgid "PPP over ATM (PPPoA)"
 msgstr "PPP σε ATM (PPPoA)"
 
-#: ../lib/network/connection/xdsl.pm:250
+#: ../lib/network/connection/xdsl.pm:252
 #, c-format
 msgid "Virtual Path ID (VPI):"
 msgstr "Virtual Path ID (VPI):"
 
-#: ../lib/network/connection/xdsl.pm:251
+#: ../lib/network/connection/xdsl.pm:253
 #, c-format
 msgid "Virtual Circuit ID (VCI):"
 msgstr "Virtual Circuit ID (VCI):"
 
-#: ../lib/network/connection/xdsl.pm:359
+#: ../lib/network/connection/xdsl.pm:361
 #: ../lib/network/connection_manager.pm:62 ../lib/network/drakvpn.pm:45
 #: ../lib/network/netconnect.pm:135 ../lib/network/thirdparty.pm:123
 #, c-format
@@ -4210,7 +4210,7 @@ msgstr "Ρύθμιση"
 msgid "Refresh"
 msgstr "Ανανέωση"
 
-#: ../lib/network/drakroam.pm:103 ../lib/network/netconnect.pm:779
+#: ../lib/network/drakroam.pm:103 ../lib/network/netconnect.pm:788
 #, c-format
 msgid "Wireless connection"
 msgstr "Ασύρματη σύνδεση"
@@ -4353,8 +4353,8 @@ msgid "port %d"
 msgstr "θύρα %d"
 
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
-#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:616
-#: ../lib/network/netconnect.pm:633 ../lib/network/netconnect.pm:649
+#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:625
+#: ../lib/network/netconnect.pm:642 ../lib/network/netconnect.pm:658
 #, c-format
 msgid "Manual"
 msgstr "Χειρωνακτική"
@@ -4362,10 +4362,10 @@ msgstr "Χειρωνακτική"
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
 #: ../lib/network/modem.pm:44 ../lib/network/modem.pm:63
 #: ../lib/network/modem.pm:76 ../lib/network/modem.pm:81
-#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:611
-#: ../lib/network/netconnect.pm:616 ../lib/network/netconnect.pm:628
-#: ../lib/network/netconnect.pm:633 ../lib/network/netconnect.pm:649
-#: ../lib/network/netconnect.pm:651
+#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:620
+#: ../lib/network/netconnect.pm:625 ../lib/network/netconnect.pm:637
+#: ../lib/network/netconnect.pm:642 ../lib/network/netconnect.pm:658
+#: ../lib/network/netconnect.pm:660
 #, c-format
 msgid "Automatic"
 msgstr "Αυτόματο"
@@ -4451,8 +4451,8 @@ msgstr "Προχωρημένες ρυθμίσεις"
 msgid "United States"
 msgstr "Η.Π.Α."
 
-#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:506
-#: ../lib/network/netconnect.pm:520
+#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:515
+#: ../lib/network/netconnect.pm:529
 #, c-format
 msgid "Manual choice"
 msgstr "Επιλέξτε χειροκίνητα"
@@ -4491,8 +4491,8 @@ msgstr "Ρύθμιση Σύνδεσης Δικτύου κ' Διαδικτύου"
 msgid "Choose the connection you want to configure"
 msgstr "Επιλέξτε τη σύνδεση που θέλετε να ρυθμίσετε"
 
-#: ../lib/network/netconnect.pm:149 ../lib/network/netconnect.pm:361
-#: ../lib/network/netconnect.pm:806
+#: ../lib/network/netconnect.pm:149 ../lib/network/netconnect.pm:370
+#: ../lib/network/netconnect.pm:815
 #, c-format
 msgid "Select the network interface to configure:"
 msgstr "Επιλέξτε την διεπαφή δικτύου για διαμόρφωση:"
@@ -4526,114 +4526,114 @@ msgstr ""
 "Παρακαλώ επιλέξτε το πρωτόκολλο σύνδεσης.\n"
 "Εάν δεν το γνωρίζετε, κρατήστε το πρωτόκολλο που προεπιλέγη."
 
-#: ../lib/network/netconnect.pm:292 ../lib/network/netconnect.pm:668
+#: ../lib/network/netconnect.pm:292 ../lib/network/netconnect.pm:677
 #, c-format
 msgid "Connection control"
 msgstr "Έλεγχος της σύνδεσης"
 
-#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:717
+#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:726
 #, c-format
 msgid "Testing your connection..."
 msgstr "Δοκιμή σύνδεσης... "
 
-#: ../lib/network/netconnect.pm:328
+#: ../lib/network/netconnect.pm:337
 #, c-format
 msgid "Connection Configuration"
 msgstr "Ρυθμίσεις σύνδεσης"
 
-#: ../lib/network/netconnect.pm:328
+#: ../lib/network/netconnect.pm:337
 #, c-format
 msgid "Please fill or check the field below"
 msgstr "Παρακαλώ ελέγξτε ή συμπληρώστε το παρακάτω πεδίο"
 
-#: ../lib/network/netconnect.pm:331
+#: ../lib/network/netconnect.pm:340
 #, c-format
 msgid "Your personal phone number"
 msgstr "Προσωπικός αριθμός τηλεφώνου"
 
-#: ../lib/network/netconnect.pm:332
+#: ../lib/network/netconnect.pm:341
 #, c-format
 msgid "Provider name (ex provider.net)"
 msgstr "Όνομα παροχέα (π.χ. provider.net)"
 
-#: ../lib/network/netconnect.pm:333
+#: ../lib/network/netconnect.pm:342
 #, c-format
 msgid "Provider phone number"
 msgstr "Αριθμός τηλεφώνου παροχέα"
 
-#: ../lib/network/netconnect.pm:334
+#: ../lib/network/netconnect.pm:343
 #, c-format
 msgid "Provider DNS 1 (optional)"
 msgstr "Πρώτο DNS του παροχέα (προαιρετικό)"
 
-#: ../lib/network/netconnect.pm:335
+#: ../lib/network/netconnect.pm:344
 #, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "Δεύτερο DNS του παροχέα (προαιρετικό)"
 
-#: ../lib/network/netconnect.pm:336
+#: ../lib/network/netconnect.pm:345
 #, c-format
 msgid "Dialing mode"
 msgstr "Τρόπος κλήσης"
 
-#: ../lib/network/netconnect.pm:337
+#: ../lib/network/netconnect.pm:346
 #, c-format
 msgid "Connection speed"
 msgstr "Ταχύτητα σύνδεσης"
 
-#: ../lib/network/netconnect.pm:338
+#: ../lib/network/netconnect.pm:347
 #, c-format
 msgid "Connection timeout (in sec)"
 msgstr "Χρόνος εκτός σύνδεσης (σε δεύτερα)"
 
-#: ../lib/network/netconnect.pm:341
+#: ../lib/network/netconnect.pm:350
 #, c-format
 msgid "Card IRQ"
 msgstr "IRQ κάρτας"
 
-#: ../lib/network/netconnect.pm:342
+#: ../lib/network/netconnect.pm:351
 #, c-format
 msgid "Card mem (DMA)"
 msgstr "DMA κάρτας"
 
-#: ../lib/network/netconnect.pm:343
+#: ../lib/network/netconnect.pm:352
 #, c-format
 msgid "Card IO"
 msgstr "IO κάρτας"
 
-#: ../lib/network/netconnect.pm:344
+#: ../lib/network/netconnect.pm:353
 #, c-format
 msgid "Card IO_0"
 msgstr "IO_0 κάρτας"
 
-#: ../lib/network/netconnect.pm:345
+#: ../lib/network/netconnect.pm:354
 #, c-format
 msgid "Card IO_1"
 msgstr "IO_1 κάρτας"
 
-#: ../lib/network/netconnect.pm:364 ../lib/network/netconnect.pm:369
+#: ../lib/network/netconnect.pm:373 ../lib/network/netconnect.pm:378
 #, c-format
 msgid "External ISDN modem"
 msgstr "Εξωτερικό ISDN modem"
 
-#: ../lib/network/netconnect.pm:397
+#: ../lib/network/netconnect.pm:406
 #, c-format
 msgid "Select a device!"
 msgstr "Επιλέξτε μια συσκευή !"
 
-#: ../lib/network/netconnect.pm:406 ../lib/network/netconnect.pm:416
-#: ../lib/network/netconnect.pm:426 ../lib/network/netconnect.pm:459
-#: ../lib/network/netconnect.pm:473
+#: ../lib/network/netconnect.pm:415 ../lib/network/netconnect.pm:425
+#: ../lib/network/netconnect.pm:435 ../lib/network/netconnect.pm:468
+#: ../lib/network/netconnect.pm:482
 #, c-format
 msgid "ISDN Configuration"
 msgstr "Ρυθμίσεις ISDN"
 
-#: ../lib/network/netconnect.pm:407
+#: ../lib/network/netconnect.pm:416
 #, c-format
 msgid "What kind of card do you have?"
 msgstr "Τι είδους κάρτας έχετε;"
 
-#: ../lib/network/netconnect.pm:417
+#: ../lib/network/netconnect.pm:426
 #, c-format
 msgid ""
 "\n"
@@ -4647,22 +4647,22 @@ msgstr ""
 "\n"
 "Εάν έχετε PCMCIA κάρτα, πρέπει να ξέρετε το irq και το io της κάρτας σας.\n"
 
-#: ../lib/network/netconnect.pm:421
+#: ../lib/network/netconnect.pm:430
 #, c-format
 msgid "Continue"
 msgstr "Συνέχεια"
 
-#: ../lib/network/netconnect.pm:421
+#: ../lib/network/netconnect.pm:430
 #, c-format
 msgid "Abort"
 msgstr "Ακύρωση"
 
-#: ../lib/network/netconnect.pm:427
+#: ../lib/network/netconnect.pm:436
 #, c-format
 msgid "Which of the following is your ISDN card?"
 msgstr "Ποια από τις παρακάτω κάρτες ISDN είναι η δικιά σας;"
 
-#: ../lib/network/netconnect.pm:445
+#: ../lib/network/netconnect.pm:454
 #, c-format
 msgid ""
 "A CAPI driver is available for this modem. This CAPI driver can offer more "
@@ -4673,12 +4673,12 @@ msgstr ""
 "προσφέρει περισσότερες λειτουργίες απ' ότι ο ελεύθερος οδηγός (όπως να "
 "στέλνει φαξ). Ποιόν οδηγό θέλετε να χρησιμοποιήσετε;"
 
-#: ../lib/network/netconnect.pm:459
+#: ../lib/network/netconnect.pm:468
 #, c-format
 msgid "Which protocol do you want to use?"
 msgstr "Ποιο πρωτόκολλο θέλετε να χρησιμοποιήσετε;"
 
-#: ../lib/network/netconnect.pm:473
+#: ../lib/network/netconnect.pm:482
 #, c-format
 msgid ""
 "Select your provider.\n"
@@ -4687,12 +4687,12 @@ msgstr ""
 "Επιλέξτε τον παροχέα σας\n"
 " Εάν δεν είναι στον κατάλογο, επιλέξτε Unlisted"
 
-#: ../lib/network/netconnect.pm:475 ../lib/network/netconnect.pm:571
+#: ../lib/network/netconnect.pm:484 ../lib/network/netconnect.pm:580
 #, c-format
 msgid "Provider:"
 msgstr "Πάροχος:"
 
-#: ../lib/network/netconnect.pm:484
+#: ../lib/network/netconnect.pm:493
 #, c-format
 msgid ""
 "Your modem is not supported by the system.\n"
@@ -4701,132 +4701,132 @@ msgstr ""
 "Το μόντεμ σας δεν υποστηρίζεται από το σύστημα.\n"
 "Ρίξτε μια ματιά στο http://www.linmodems.org"
 
-#: ../lib/network/netconnect.pm:503
+#: ../lib/network/netconnect.pm:512
 #, c-format
 msgid "Select the modem to configure:"
 msgstr "Επιλέξτε το modem για διαμόρφωση:"
 
-#: ../lib/network/netconnect.pm:505
+#: ../lib/network/netconnect.pm:514
 #, c-format
 msgid "Modem"
 msgstr "Μόντεμ"
 
-#: ../lib/network/netconnect.pm:540
+#: ../lib/network/netconnect.pm:549
 #, c-format
 msgid "Please choose which serial port your modem is connected to."
 msgstr "Σε ποια σειριακή πόρτα είναι συνδεδεμένο το μόντεμ σας;"
 
-#: ../lib/network/netconnect.pm:569
+#: ../lib/network/netconnect.pm:578
 #, c-format
 msgid "Select your provider:"
 msgstr "Επιλέξτε τον παροχέα σας:"
 
-#: ../lib/network/netconnect.pm:593
+#: ../lib/network/netconnect.pm:602
 #, c-format
 msgid "Dialup: account options"
 msgstr "Κλήση: επιλογές λογαριασμού"
 
-#: ../lib/network/netconnect.pm:596
+#: ../lib/network/netconnect.pm:605
 #, c-format
 msgid "Connection name"
 msgstr "Όνομα σύνδεσης"
 
-#: ../lib/network/netconnect.pm:597
+#: ../lib/network/netconnect.pm:606
 #, c-format
 msgid "Phone number"
 msgstr "Αριθμός τηλεφώνου"
 
-#: ../lib/network/netconnect.pm:598
+#: ../lib/network/netconnect.pm:607
 #, c-format
 msgid "Login ID"
 msgstr "'Όνομα Χρήστη"
 
-#: ../lib/network/netconnect.pm:613 ../lib/network/netconnect.pm:646
+#: ../lib/network/netconnect.pm:622 ../lib/network/netconnect.pm:655
 #, c-format
 msgid "Dialup: IP parameters"
 msgstr "Κλήση: παράμετροι IP"
 
-#: ../lib/network/netconnect.pm:616
+#: ../lib/network/netconnect.pm:625
 #, c-format
 msgid "IP parameters"
 msgstr "Παράμετροι IP"
 
-#: ../lib/network/netconnect.pm:618
+#: ../lib/network/netconnect.pm:627
 #, c-format
 msgid "Subnet mask"
 msgstr "Μάσκα του υπό-δικτύου"
 
-#: ../lib/network/netconnect.pm:630
+#: ../lib/network/netconnect.pm:639
 #, c-format
 msgid "Dialup: DNS parameters"
 msgstr "Κλήση: Παράμετροι DNS"
 
-#: ../lib/network/netconnect.pm:633
+#: ../lib/network/netconnect.pm:642
 #, c-format
 msgid "DNS"
 msgstr "DNS"
 
-#: ../lib/network/netconnect.pm:634
+#: ../lib/network/netconnect.pm:643
 #, c-format
 msgid "Domain name"
 msgstr "Όνομα Τομέα"
 
-#: ../lib/network/netconnect.pm:635
+#: ../lib/network/netconnect.pm:644
 #, c-format
 msgid "First DNS Server (optional)"
 msgstr "Πρώτος εξυπηρετητής DNS (προαιρετικό)"
 
-#: ../lib/network/netconnect.pm:636
+#: ../lib/network/netconnect.pm:645
 #, c-format
 msgid "Second DNS Server (optional)"
 msgstr "Δεύτερος εξυπηρετητής DNS (προαιρετικό)"
 
-#: ../lib/network/netconnect.pm:637
+#: ../lib/network/netconnect.pm:646
 #, c-format
 msgid "Set hostname from IP"
 msgstr "Επεξεργαστείτε το hostname από την διεύθυνση IP"
 
-#: ../lib/network/netconnect.pm:650
+#: ../lib/network/netconnect.pm:659
 #, c-format
 msgid "Gateway IP address"
 msgstr "Πύλη διεύθυνσης IP"
 
-#: ../lib/network/netconnect.pm:683
+#: ../lib/network/netconnect.pm:692
 #, c-format
 msgid "Automatically at boot"
 msgstr "Αυτόματα κατά την εκκίνηση του συστήματος"
 
-#: ../lib/network/netconnect.pm:685
+#: ../lib/network/netconnect.pm:694
 #, c-format
 msgid "By using Net Applet in the system tray"
 msgstr "Με την χρήση Net Applet στο πλαίσιο συστήματος (system tray)"
 
-#: ../lib/network/netconnect.pm:687
+#: ../lib/network/netconnect.pm:696
 #, c-format
 msgid "Manually (the interface would still be activated at boot)"
 msgstr "Χειροκίνητα (Η διεπαφή θα είναι ενεργοποιημένη στην εκκίνηση)"
 
-#: ../lib/network/netconnect.pm:696
+#: ../lib/network/netconnect.pm:705
 #, c-format
 msgid "How do you want to dial this connection?"
 msgstr "Πώς θέλεις να καλέσεις αυτή τη σύνδεση;"
 
-#: ../lib/network/netconnect.pm:709
+#: ../lib/network/netconnect.pm:718
 #, c-format
 msgid "Do you want to try to connect to the Internet now?"
 msgstr "Θέλετε να δοκιμάσετε να συνδεθείτε στο Διαδίκτυο τώρα;"
 
-#: ../lib/network/netconnect.pm:736
+#: ../lib/network/netconnect.pm:745
 #, c-format
 msgid "The system is now connected to the Internet."
 msgstr "Το σύστημα είναι τώρα συνδεμένο στο Διαδίκτυο."
 
-#: ../lib/network/netconnect.pm:737
+#: ../lib/network/netconnect.pm:746
 #, c-format
 msgid "For security reasons, it will be disconnected now."
 msgstr "Για λόγους ασφαλείας, θα αποσυνδεθείτε τώρα."
 
-#: ../lib/network/netconnect.pm:738
+#: ../lib/network/netconnect.pm:747
 #, c-format
 msgid ""
 "The system does not seem to be connected to the Internet.\n"
@@ -4835,7 +4835,7 @@ msgstr ""
 "Το σύστημα φαίνεται να μην είναι συνδεμένο στο Διαδίκτυο\n"
 "Προσπαθήστε να ξαναρυθμίσετε τη σύνδεσή σας."
 
-#: ../lib/network/netconnect.pm:754
+#: ../lib/network/netconnect.pm:763
 #, fuzzy, c-format
 msgid "Problems occured during the network connectivity test."
 msgstr ""
@@ -4843,35 +4843,35 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../lib/network/netconnect.pm:755
+#: ../lib/network/netconnect.pm:764
 #, c-format
 msgid ""
 "This can be caused by invalid network configuration, or problems with your "
 "modem or router."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:756
+#: ../lib/network/netconnect.pm:765
 #, c-format
 msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:759
+#: ../lib/network/netconnect.pm:768
 #, fuzzy, c-format
 msgid "Congratulations, the network configuration is finished."
 msgstr ""
 "Συγχαρητήρια, η ρύθμιση του δικτύου και του διαδικτύου τελείωσε.\n"
 "\n"
 
-#: ../lib/network/netconnect.pm:759
+#: ../lib/network/netconnect.pm:768
 #, c-format
 msgid ""
 "However, the Internet connectivity test failed. You should test your "
 "connection manually, and verify your Internet modem or router."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:760
+#: ../lib/network/netconnect.pm:769
 #, fuzzy, c-format
 msgid ""
 "If your connection does not work, you might want to relaunch the "
@@ -4881,14 +4881,14 @@ msgstr ""
 "Δοκιμάστε τη σύνδεση με το net_monitor ή το mcc. Αν δεν λειτουργήσει η "
 "σύνδεση, τότε θα πρέπει να εκκινήσετε ξανά τη ρύθμιση."
 
-#: ../lib/network/netconnect.pm:762
+#: ../lib/network/netconnect.pm:771
 #, fuzzy, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
 msgstr ""
 "Συγχαρητήρια, η ρύθμιση του δικτύου και του διαδικτύου τελείωσε.\n"
 "\n"
 
-#: ../lib/network/netconnect.pm:763
+#: ../lib/network/netconnect.pm:772
 #, c-format
 msgid ""
 "After this is done, we recommend that you restart your X environment to "
@@ -4897,78 +4897,78 @@ msgstr ""
 "Αφού γίνει αυτό, προτείνουμε να επανεκκινήσετε το Χ περιβάλλον για να "
 "αποφύγετε τα προβλήματα αλλαγής δικτυακού ονόματος."
 
-#: ../lib/network/netconnect.pm:774
+#: ../lib/network/netconnect.pm:783
 #, c-format
 msgid "Sagem USB modem"
 msgstr "Μόντεμ USB Sagem"
 
-#: ../lib/network/netconnect.pm:775 ../lib/network/netconnect.pm:776
+#: ../lib/network/netconnect.pm:784 ../lib/network/netconnect.pm:785
 #, c-format
 msgid "Bewan modem"
 msgstr "Μόντεμ Bewan"
 
-#: ../lib/network/netconnect.pm:777
+#: ../lib/network/netconnect.pm:786
 #, c-format
 msgid "ECI Hi-Focus modem"
 msgstr "ECI Hi-Focus modem"
 
-#: ../lib/network/netconnect.pm:778
+#: ../lib/network/netconnect.pm:787
 #, c-format
 msgid "LAN connection"
 msgstr "Σύνδεση LAN"
 
-#: ../lib/network/netconnect.pm:780
+#: ../lib/network/netconnect.pm:789
 #, c-format
 msgid "ADSL connection"
 msgstr "Σύνδεση ADSL"
 
-#: ../lib/network/netconnect.pm:781
+#: ../lib/network/netconnect.pm:790
 #, c-format
 msgid "Cable connection"
 msgstr "Καλωδιακή σύνδεση"
 
-#: ../lib/network/netconnect.pm:782
+#: ../lib/network/netconnect.pm:791
 #, c-format
 msgid "ISDN connection"
 msgstr "Σύνδεση ISDN"
 
-#: ../lib/network/netconnect.pm:783
+#: ../lib/network/netconnect.pm:792
 #, c-format
 msgid "Modem connection"
 msgstr "Σύνδεση μόντεμ"
 
-#: ../lib/network/netconnect.pm:784
+#: ../lib/network/netconnect.pm:793
 #, c-format
 msgid "DVB connection"
 msgstr "Σύνδεση DVB"
 
-#: ../lib/network/netconnect.pm:786
+#: ../lib/network/netconnect.pm:795
 #, c-format
 msgid "(detected on port %s)"
 msgstr "(βρέθηκε στη θύρα %s)"
 
 #. -PO: here, "(detected)" string will be appended to eg "ADSL connection"
-#: ../lib/network/netconnect.pm:788
+#: ../lib/network/netconnect.pm:797
 #, c-format
 msgid "(detected %s)"
 msgstr "(βρέθηκε %s)"
 
-#: ../lib/network/netconnect.pm:788
+#: ../lib/network/netconnect.pm:797
 #, c-format
 msgid "(detected)"
 msgstr "(βρέθηκε)"
 
-#: ../lib/network/netconnect.pm:789
+#: ../lib/network/netconnect.pm:798
 #, c-format
 msgid "Network Configuration"
 msgstr "Ρυθμίσεις δικτύου"
 
-#: ../lib/network/netconnect.pm:790
+#: ../lib/network/netconnect.pm:799
 #, c-format
 msgid "Zeroconf hostname resolution"
 msgstr "Ανάλυση του hostname του Zeroconf"
 
-#: ../lib/network/netconnect.pm:791
+#: ../lib/network/netconnect.pm:800
 #, c-format
 msgid ""
 "If desired, enter a Zeroconf hostname.\n"
@@ -4982,17 +4982,17 @@ msgstr ""
 "δίκτυο.\n"
 "Για τα περισσότερα δίκτυα δεν είναι απαραίτητο. "
 
-#: ../lib/network/netconnect.pm:795
+#: ../lib/network/netconnect.pm:804
 #, c-format
 msgid "Zeroconf Host name"
 msgstr "Δικτυακό Όνομα Zeroconf"
 
-#: ../lib/network/netconnect.pm:796
+#: ../lib/network/netconnect.pm:805
 #, c-format
 msgid "Zeroconf host name must not contain a ."
 msgstr "Το όνομα του host Zeroconf δεν πρέπει να περιέχει \".\""
 
-#: ../lib/network/netconnect.pm:797
+#: ../lib/network/netconnect.pm:806
 #, c-format
 msgid ""
 "Because you are doing a network installation, your network is already "
@@ -5004,12 +5004,12 @@ msgstr ""
 "Κάντε κλικ στο Εντάξει για να διατηρήσετε τις ρυθμίσεις σας, ή άκυρο για να "
 "ξαναρυθμίσετε τη σύνδεση στο Διαδίκτυο.\n"
 
-#: ../lib/network/netconnect.pm:800
+#: ../lib/network/netconnect.pm:809
 #, c-format
 msgid "The network needs to be restarted. Do you want to restart it?"
 msgstr "Το δίκτυο πρέπει να επανεκκινηθεί, Θέλετε να το επανεκκινήσετε ;"
 
-#: ../lib/network/netconnect.pm:801
+#: ../lib/network/netconnect.pm:810
 #, c-format
 msgid ""
 "A problem occurred while restarting the network: \n"
@@ -5020,7 +5020,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../lib/network/netconnect.pm:802
+#: ../lib/network/netconnect.pm:811
 #, c-format
 msgid ""
 "We are now going to configure the %s connection.\n"
@@ -5033,12 +5033,12 @@ msgstr ""
 "\n"
 "Πίεσε το \"%s\" για να συνεχίσεις."
 
-#: ../lib/network/netconnect.pm:803
+#: ../lib/network/netconnect.pm:812
 #, c-format
 msgid "Configuration is complete, do you want to apply settings?"
 msgstr "Η προσαρμογή τελείωσε, θέλεις να εφαρμοστούν οι ρυθμίσεις;"
 
-#: ../lib/network/netconnect.pm:804
+#: ../lib/network/netconnect.pm:813
 #, c-format
 msgid ""
 "You have configured multiple ways to connect to the Internet.\n"
@@ -5049,17 +5049,17 @@ msgstr ""
 "Επιλέξτε αυτόν που θέλετε να χρησιμοποιήσετε.\n"
 "\n"
 
-#: ../lib/network/netconnect.pm:805
+#: ../lib/network/netconnect.pm:814
 #, c-format
 msgid "Internet connection"
 msgstr "Σύνδεση Διαδικτύου"
 
-#: ../lib/network/netconnect.pm:807
+#: ../lib/network/netconnect.pm:816
 #, c-format
 msgid "Configuring network device %s (driver %s)"
 msgstr "Ρύθμιση της συσκευής δικτύου %s (οδηγός %s)"
 
-#: ../lib/network/netconnect.pm:808
+#: ../lib/network/netconnect.pm:817
 #, c-format
 msgid ""
 "The following protocols can be used to configure a LAN connection. Please "
@@ -5068,7 +5068,7 @@ msgstr ""
 "Τα ακόλουθα πρωτόκολλα μπορούν να χρησιμοποιηθούν για την διαμόρφωση μιας "
 "σύνδεσης LAN. Παρακαλώ επιλέξτε αυτό που θα χρησιμοποιήσετε."
 
-#: ../lib/network/netconnect.pm:809
+#: ../lib/network/netconnect.pm:818
 #, c-format
 msgid ""
 "Please enter your host name.\n"
@@ -5081,28 +5081,28 @@ msgstr ""
 "όπως π.χ. ``mybox.mylab.myco.com''.\n"
 "Μπορείτε επίσης να εισάγετε και την διεύθυνση IP της πύλης δικτύου"
 
-#: ../lib/network/netconnect.pm:814
+#: ../lib/network/netconnect.pm:823
 #, c-format
 msgid "Last but not least you can also type in your DNS server IP addresses."
 msgstr ""
 "Τέλος μπορείτε επίσης να εισάγετε τις διευθύνσεις σας IP του DNS server."
 
-#: ../lib/network/netconnect.pm:815
+#: ../lib/network/netconnect.pm:824
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
 msgstr "Η IP διεύθυνση DNS πρέπει να είναι της μορφής 1.2.3.4"
 
-#: ../lib/network/netconnect.pm:816
+#: ../lib/network/netconnect.pm:825
 #, c-format
 msgid "Gateway address should be in format 1.2.3.4"
 msgstr "Η IP διεύθυνση της πύλης πρέπει να είναι της μορφής 1.2.3.4"
 
-#: ../lib/network/netconnect.pm:817
+#: ../lib/network/netconnect.pm:826
 #, c-format
 msgid "Gateway device"
 msgstr "Συσκευή πύλης"
 
-#: ../lib/network/netconnect.pm:831
+#: ../lib/network/netconnect.pm:840
 #, c-format
 msgid ""
 "An unexpected error has happened:\n"

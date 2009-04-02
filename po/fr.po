@@ -75,7 +75,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
-"POT-Creation-Date: 2009-03-31 10:42-0300\n"
+"POT-Creation-Date: 2009-04-02 13:30-0300\n"
 "PO-Revision-Date: 2009-03-29 12:06+0200\n"
 "Last-Translator: Christophe Berthelé <berthy@mandriva.org>\n"
 "Language-Team: French <cooker-i18n@mandrivalinux.org>\n"
@@ -96,19 +96,19 @@ msgid "Interface"
 msgstr "Interface"
 
 #: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:196
-#: ../lib/network/connection/ethernet.pm:134 ../lib/network/netconnect.pm:617
+#: ../lib/network/connection/ethernet.pm:134 ../lib/network/netconnect.pm:626
 #: ../lib/network/vpn/openvpn.pm:221
 #, c-format
 msgid "IP address"
 msgstr "Adresse IP"
 
 #: ../bin/drakconnect-old:64 ../bin/drakids:261
-#: ../lib/network/netconnect.pm:461
+#: ../lib/network/netconnect.pm:470
 #, c-format
 msgid "Protocol"
 msgstr "Protocole"
 
-#: ../bin/drakconnect-old:64 ../lib/network/netconnect.pm:447
+#: ../bin/drakconnect-old:64 ../lib/network/netconnect.pm:456
 #, c-format
 msgid "Driver"
 msgstr "Pilote"
@@ -170,7 +170,7 @@ msgstr "Ok"
 #: ../lib/network/connection_manager.pm:348 ../lib/network/drakvpn.pm:49
 #: ../lib/network/netcenter.pm:142 ../lib/network/netconnect.pm:186
 #: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
-#: ../lib/network/netconnect.pm:717 ../lib/network/thirdparty.pm:354
+#: ../lib/network/netconnect.pm:726 ../lib/network/thirdparty.pm:354
 #: ../lib/network/thirdparty.pm:369
 #, c-format
 msgid "Please wait"
@@ -343,8 +343,8 @@ msgstr "Reconfigurer"
 msgid "Please select the network interface directly connected to the internet."
 msgstr "Veuillez indiquer l'interface réseau directement connectée à Internet."
 
-#: ../bin/drakgw:123 ../lib/network/netconnect.pm:363
-#: ../lib/network/netconnect.pm:398
+#: ../bin/drakgw:123 ../lib/network/netconnect.pm:372
+#: ../lib/network/netconnect.pm:407
 #, c-format
 msgid "Net Device"
 msgstr "Périphérique réseau"
@@ -412,7 +412,7 @@ msgstr "Le nom de domaine interne"
 #: ../bin/draksambashare:1363 ../bin/draksambashare:1385
 #: ../bin/draksambashare:1394 ../bin/draksambashare:1413
 #: ../bin/draksambashare:1422 ../bin/draksambashare:1434
-#: ../lib/network/connection/xdsl.pm:359
+#: ../lib/network/connection/xdsl.pm:361
 #: ../lib/network/connection_manager.pm:62
 #: ../lib/network/connection_manager.pm:68
 #: ../lib/network/connection_manager.pm:84
@@ -426,7 +426,7 @@ msgstr "Le nom de domaine interne"
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
 #: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:135
 #: ../lib/network/netconnect.pm:188 ../lib/network/netconnect.pm:234
-#: ../lib/network/netconnect.pm:275 ../lib/network/netconnect.pm:831
+#: ../lib/network/netconnect.pm:275 ../lib/network/netconnect.pm:840
 #: ../lib/network/thirdparty.pm:123 ../lib/network/thirdparty.pm:141
 #: ../lib/network/thirdparty.pm:232 ../lib/network/thirdparty.pm:234
 #: ../lib/network/thirdparty.pm:255
@@ -530,12 +530,12 @@ msgid "Broadcast printer information"
 msgstr "Diffuser les informations de l'imprimante"
 
 #: ../bin/drakgw:308
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "No ethernet network adapter configured for LAN has been detected on your "
 "system.\n"
 "\n"
-"Please run the hardware configuration tool to configure it, and certify that "
+"Please run the hardware configuration tool to configure it, and ensure that "
 "the Mandriva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
@@ -889,7 +889,7 @@ msgstr "Adresse virtuelle partagée"
 msgid "Virtual ID"
 msgstr "ID virtuel"
 
-#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:599
+#: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:608
 #: ../lib/network/vpn/vpnc.pm:56
 #, c-format
 msgid "Password"
@@ -947,7 +947,7 @@ msgstr "Le profil « %s » existe déjà !"
 #: ../bin/draknetprofile:165 ../bin/draknetprofile:167
 #: ../bin/draknetprofile.orig:165 ../bin/draknetprofile.orig:167
 #: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
-#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:484
+#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:493
 #, c-format
 msgid "Warning"
 msgstr "Attention"
@@ -2342,7 +2342,7 @@ msgstr "Interfaces actives"
 msgid "Profiles"
 msgstr "Profils"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:226
+#: ../bin/net_applet:180 ../lib/network/connection.pm:228
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
@@ -2545,68 +2545,68 @@ msgstr "Aucune connexion Internet n'a été configurée"
 msgid "Unknown connection type"
 msgstr "Type de connexion inconnu"
 
-#: ../lib/network/connection.pm:159
+#: ../lib/network/connection.pm:161
 #, c-format
 msgid "Network access settings"
 msgstr "Paramètres de l'accès réseau"
 
-#: ../lib/network/connection.pm:160
+#: ../lib/network/connection.pm:162
 #, c-format
 msgid "Access settings"
 msgstr "Paramètres d'accès"
 
-#: ../lib/network/connection.pm:161
+#: ../lib/network/connection.pm:163
 #, c-format
 msgid "Address settings"
 msgstr "Paramètres de l'adresse"
 
-#: ../lib/network/connection.pm:175 ../lib/network/connection.pm:195
-#: ../lib/network/connection/isdn.pm:153 ../lib/network/netconnect.pm:217
-#: ../lib/network/netconnect.pm:476 ../lib/network/netconnect.pm:572
-#: ../lib/network/netconnect.pm:575
+#: ../lib/network/connection.pm:177 ../lib/network/connection.pm:197
+#: ../lib/network/connection/isdn.pm:155 ../lib/network/netconnect.pm:217
+#: ../lib/network/netconnect.pm:485 ../lib/network/netconnect.pm:581
+#: ../lib/network/netconnect.pm:584
 #, c-format
 msgid "Unlisted - edit manually"
 msgstr "Non listé - éditer manuellement"
 
-#: ../lib/network/connection.pm:228 ../lib/network/connection/cable.pm:41
+#: ../lib/network/connection.pm:230 ../lib/network/connection/cable.pm:41
 #: ../lib/network/connection/wireless.pm:48 ../lib/network/vpn/openvpn.pm:127
 #: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
 #, c-format
 msgid "None"
 msgstr "Aucun"
 
-#: ../lib/network/connection.pm:240
+#: ../lib/network/connection.pm:242
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr "Autoriser les utilisateurs à gérer la connexion"
 
-#: ../lib/network/connection.pm:241
+#: ../lib/network/connection.pm:243
 #, c-format
 msgid "Start the connection at boot"
 msgstr "Lancer la connexion au démarrage"
 
-#: ../lib/network/connection.pm:242
+#: ../lib/network/connection.pm:244
 #, c-format
 msgid "Metric"
 msgstr "Métrique"
 
-#: ../lib/network/connection.pm:243
+#: ../lib/network/connection.pm:245
 #, c-format
 msgid "MTU"
 msgstr "MTU"
 
-#: ../lib/network/connection.pm:244
+#: ../lib/network/connection.pm:246
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
 msgstr ""
 "Taille maximale des messages réseau (MTU). En cas de doute, laissez vide."
 
-#: ../lib/network/connection.pm:316
+#: ../lib/network/connection.pm:318
 #, c-format
 msgid "Link detected on interface %s"
 msgstr "Liaison détectée sur l'interface %s"
 
-#: ../lib/network/connection.pm:317 ../lib/network/connection/ethernet.pm:291
+#: ../lib/network/connection.pm:319 ../lib/network/connection/ethernet.pm:291
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "Liaison perdue sur l'interface %s"
@@ -2626,19 +2626,19 @@ msgstr "Modem cable"
 msgid "Use BPALogin (needed for Telstra)"
 msgstr "Utiliser BPALogin (nécessaire pour Telstra)"
 
-#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:600
+#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:609
 #, c-format
 msgid "Authentication"
 msgstr "Authentification"
 
 #: ../lib/network/connection/cable.pm:47 ../lib/network/connection/ppp.pm:22
-#: ../lib/network/netconnect.pm:339 ../lib/network/vpn/openvpn.pm:393
+#: ../lib/network/netconnect.pm:348 ../lib/network/vpn/openvpn.pm:393
 #, c-format
 msgid "Account Login (user name)"
 msgstr "Nom d'utilisateur du compte"
 
 #: ../lib/network/connection/cable.pm:49 ../lib/network/connection/ppp.pm:23
-#: ../lib/network/netconnect.pm:340 ../lib/network/vpn/openvpn.pm:394
+#: ../lib/network/netconnect.pm:349 ../lib/network/vpn/openvpn.pm:394
 #, c-format
 msgid "Account Password"
 msgstr "Mot de passe du compte"
@@ -2765,7 +2765,7 @@ msgstr ""
 "Chaque champ doit être rempli avec une adresse IP en notation\n"
 "décimale pointée (par exemple, 1.2.3.4)."
 
-#: ../lib/network/connection/ethernet.pm:142 ../lib/network/netconnect.pm:649
+#: ../lib/network/connection/ethernet.pm:142 ../lib/network/netconnect.pm:658
 #: ../lib/network/vpn/openvpn.pm:212 ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
@@ -2891,22 +2891,22 @@ msgstr ""
 msgid "ISDN"
 msgstr "RNIS"
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:417
 #, c-format
 msgid "ISA / PCMCIA"
 msgstr "ISA / PCMCIA"
 
-#: ../lib/network/connection/isdn.pm:196 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:417
 #, c-format
 msgid "I do not know"
 msgstr "Je ne sais pas"
 
-#: ../lib/network/connection/isdn.pm:197 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:199 ../lib/network/netconnect.pm:417
 #, c-format
 msgid "PCI"
 msgstr "PCI"
 
-#: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:408
+#: ../lib/network/connection/isdn.pm:200 ../lib/network/netconnect.pm:417
 #, c-format
 msgid "USB"
 msgstr "USB"
@@ -3894,12 +3894,12 @@ msgstr "Association perdue avec le réseau sans fil sur l'interface %s"
 msgid "DSL"
 msgstr "ADSL"
 
-#: ../lib/network/connection/xdsl.pm:95 ../lib/network/netconnect.pm:773
+#: ../lib/network/connection/xdsl.pm:97 ../lib/network/netconnect.pm:782
 #, c-format
 msgid "Alcatel speedtouch USB modem"
 msgstr "Modem USB Alcatel Speedtouch"
 
-#: ../lib/network/connection/xdsl.pm:123
+#: ../lib/network/connection/xdsl.pm:125
 #, c-format
 msgid ""
 "The ECI Hi-Focus modem cannot be supported due to binary driver distribution "
@@ -3912,7 +3912,7 @@ msgstr ""
 "\n"
 "Vous pouvez trouver un pilote sur http://eciadsl.flashtux.org/"
 
-#: ../lib/network/connection/xdsl.pm:183
+#: ../lib/network/connection/xdsl.pm:185
 #, c-format
 msgid ""
 "Modems using Conexant AccessRunner chipsets cannot be supported due to "
@@ -3921,47 +3921,47 @@ msgstr ""
 "Les modems utilisant les puces Conexant AccessRunner ne peuvent pas être "
 "pris en charge à cause d'un problème de distribution du micro-code binaire."
 
-#: ../lib/network/connection/xdsl.pm:203
+#: ../lib/network/connection/xdsl.pm:205
 #, c-format
 msgid "DSL over CAPI"
 msgstr "ADSL via CAPI"
 
-#: ../lib/network/connection/xdsl.pm:206
+#: ../lib/network/connection/xdsl.pm:208
 #, c-format
 msgid "Dynamic Host Configuration Protocol (DHCP)"
 msgstr "Protocole de Configuration Dynamique du Hôte (DHCP)"
 
-#: ../lib/network/connection/xdsl.pm:207
+#: ../lib/network/connection/xdsl.pm:209
 #, c-format
 msgid "Manual TCP/IP configuration"
 msgstr "Configuration TCP/IP manuelle"
 
-#: ../lib/network/connection/xdsl.pm:208
+#: ../lib/network/connection/xdsl.pm:210
 #, c-format
 msgid "Point to Point Tunneling Protocol (PPTP)"
 msgstr "Protocole de Tunnel Point à Point (PPTP)"
 
-#: ../lib/network/connection/xdsl.pm:209
+#: ../lib/network/connection/xdsl.pm:211
 #, c-format
 msgid "PPP over Ethernet (PPPoE)"
 msgstr "PPP sur ethernet (PPPoE)"
 
-#: ../lib/network/connection/xdsl.pm:210
+#: ../lib/network/connection/xdsl.pm:212
 #, c-format
 msgid "PPP over ATM (PPPoA)"
 msgstr "PPP sur ATM (PPPoA)"
 
-#: ../lib/network/connection/xdsl.pm:250
+#: ../lib/network/connection/xdsl.pm:252
 #, c-format
 msgid "Virtual Path ID (VPI):"
 msgstr "Identifiant de Chemin Virtuel (VPI) :"
 
-#: ../lib/network/connection/xdsl.pm:251
+#: ../lib/network/connection/xdsl.pm:253
 #, c-format
 msgid "Virtual Circuit ID (VCI):"
 msgstr "Identifiant de Circuit Virtuel (VCI) :"
 
-#: ../lib/network/connection/xdsl.pm:359
+#: ../lib/network/connection/xdsl.pm:361
 #: ../lib/network/connection_manager.pm:62 ../lib/network/drakvpn.pm:45
 #: ../lib/network/netconnect.pm:135 ../lib/network/thirdparty.pm:123
 #, c-format
@@ -4257,7 +4257,7 @@ msgstr "Configurer"
 msgid "Refresh"
 msgstr "Rafraîchir"
 
-#: ../lib/network/drakroam.pm:103 ../lib/network/netconnect.pm:779
+#: ../lib/network/drakroam.pm:103 ../lib/network/netconnect.pm:788
 #, c-format
 msgid "Wireless connection"
 msgstr "Connexion sans fil"
@@ -4402,8 +4402,8 @@ msgid "port %d"
 msgstr "port %d"
 
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
-#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:616
-#: ../lib/network/netconnect.pm:633 ../lib/network/netconnect.pm:649
+#: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:625
+#: ../lib/network/netconnect.pm:642 ../lib/network/netconnect.pm:658
 #, c-format
 msgid "Manual"
 msgstr "Manuelle"
@@ -4411,10 +4411,10 @@ msgstr "Manuelle"
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
 #: ../lib/network/modem.pm:44 ../lib/network/modem.pm:63
 #: ../lib/network/modem.pm:76 ../lib/network/modem.pm:81
-#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:611
-#: ../lib/network/netconnect.pm:616 ../lib/network/netconnect.pm:628
-#: ../lib/network/netconnect.pm:633 ../lib/network/netconnect.pm:649
-#: ../lib/network/netconnect.pm:651
+#: ../lib/network/modem.pm:110 ../lib/network/netconnect.pm:620
+#: ../lib/network/netconnect.pm:625 ../lib/network/netconnect.pm:637
+#: ../lib/network/netconnect.pm:642 ../lib/network/netconnect.pm:658
+#: ../lib/network/netconnect.pm:660
 #, c-format
 msgid "Automatic"
 msgstr "Automatique"
@@ -4500,8 +4500,8 @@ msgstr "Paramètres avancés"
 msgid "United States"
 msgstr "États-Unis"
 
-#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:506
-#: ../lib/network/netconnect.pm:520
+#: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:515
+#: ../lib/network/netconnect.pm:529
 #, c-format
 msgid "Manual choice"
 msgstr "Choix manuel"
@@ -4540,8 +4540,8 @@ msgstr "Configuration réseau & Internet"
 msgid "Choose the connection you want to configure"
 msgstr "Choisissez la connexion que vous voulez configurer"
 
-#: ../lib/network/netconnect.pm:149 ../lib/network/netconnect.pm:361
-#: ../lib/network/netconnect.pm:806
+#: ../lib/network/netconnect.pm:149 ../lib/network/netconnect.pm:370
+#: ../lib/network/netconnect.pm:815
 #, c-format
 msgid "Select the network interface to configure:"
 msgstr "Choisissez l'interface réseau à configurer :"
@@ -4575,114 +4575,114 @@ msgstr ""
 "Veuillez sélectionner le protocole de connexion.\n"
 "Si vous l'ignorez, conservez le protocole sélectionné."
 
-#: ../lib/network/netconnect.pm:292 ../lib/network/netconnect.pm:668
+#: ../lib/network/netconnect.pm:292 ../lib/network/netconnect.pm:677
 #, c-format
 msgid "Connection control"
 msgstr "Contrôle de la connexion"
 
-#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:717
+#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:726
 #, c-format
 msgid "Testing your connection..."
 msgstr "Test de votre connexion..."
 
-#: ../lib/network/netconnect.pm:328
+#: ../lib/network/netconnect.pm:337
 #, c-format
 msgid "Connection Configuration"
 msgstr "Configuration de la connexion"
 
-#: ../lib/network/netconnect.pm:328
+#: ../lib/network/netconnect.pm:337
 #, c-format
 msgid "Please fill or check the field below"
 msgstr "Veuillez compléter ou vérifier les champs ci-dessous"
 
-#: ../lib/network/netconnect.pm:331
+#: ../lib/network/netconnect.pm:340
 #, c-format
 msgid "Your personal phone number"
 msgstr "Votre numéro de téléphone personnel"
 
-#: ../lib/network/netconnect.pm:332
+#: ../lib/network/netconnect.pm:341
 #, c-format
 msgid "Provider name (ex provider.net)"
 msgstr "Fournisseur d'accès (ex. : fournisseur.fr)"
 
-#: ../lib/network/netconnect.pm:333
+#: ../lib/network/netconnect.pm:342
 #, c-format
 msgid "Provider phone number"
 msgstr "Numéro de téléphone pour l'accès"
 
-#: ../lib/network/netconnect.pm:334
+#: ../lib/network/netconnect.pm:343
 #, c-format
 msgid "Provider DNS 1 (optional)"
 msgstr "1er DNS du fournisseur (optionnel)"
 
-#: ../lib/network/netconnect.pm:335
+#: ../lib/network/netconnect.pm:344
 #, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "2ème DNS du fournisseur (optionnel)"
 
-#: ../lib/network/netconnect.pm:336
+#: ../lib/network/netconnect.pm:345
 #, c-format
 msgid "Dialing mode"
 msgstr "Numérotation"
 
-#: ../lib/network/netconnect.pm:337
+#: ../lib/network/netconnect.pm:346
 #, c-format
 msgid "Connection speed"
 msgstr "Vitesse de connexion"
 
-#: ../lib/network/netconnect.pm:338
+#: ../lib/network/netconnect.pm:347
 #, c-format
 msgid "Connection timeout (in sec)"
 msgstr "Temps maxi pour établir la connexion (en sec.)"
 
-#: ../lib/network/netconnect.pm:341
+#: ../lib/network/netconnect.pm:350
 #, c-format
 msgid "Card IRQ"
 msgstr "n° IRQ de la carte"
 
-#: ../lib/network/netconnect.pm:342
+#: ../lib/network/netconnect.pm:351
 #, c-format
 msgid "Card mem (DMA)"
 msgstr "Plage mémoire (DMA)"
 
-#: ../lib/network/netconnect.pm:343
+#: ../lib/network/netconnect.pm:352
 #, c-format
 msgid "Card IO"
 msgstr "E/S de la carte"
 
-#: ../lib/network/netconnect.pm:344
+#: ../lib/network/netconnect.pm:353
 #, c-format
 msgid "Card IO_0"
 msgstr "E/S_0 de la carte"
 
-#: ../lib/network/netconnect.pm:345
+#: ../lib/network/netconnect.pm:354
 #, c-format
 msgid "Card IO_1"
 msgstr "E/S_1 de la carte"
 
-#: ../lib/network/netconnect.pm:364 ../lib/network/netconnect.pm:369
+#: ../lib/network/netconnect.pm:373 ../lib/network/netconnect.pm:378
 #, c-format
 msgid "External ISDN modem"
 msgstr "Modem RNIS/ISDN externe"
 
-#: ../lib/network/netconnect.pm:397
+#: ../lib/network/netconnect.pm:406
 #, c-format
 msgid "Select a device!"
 msgstr "Sélectionnez un périphérique !"
 
-#: ../lib/network/netconnect.pm:406 ../lib/network/netconnect.pm:416
-#: ../lib/network/netconnect.pm:426 ../lib/network/netconnect.pm:459
-#: ../lib/network/netconnect.pm:473
+#: ../lib/network/netconnect.pm:415 ../lib/network/netconnect.pm:425
+#: ../lib/network/netconnect.pm:435 ../lib/network/netconnect.pm:468
+#: ../lib/network/netconnect.pm:482
 #, c-format
 msgid "ISDN Configuration"
 msgstr "Configuration RNIS (ISDN)"
 
-#: ../lib/network/netconnect.pm:407
+#: ../lib/network/netconnect.pm:416
 #, c-format
 msgid "What kind of card do you have?"
 msgstr "Quel type de carte possédez-vous ?"
 
-#: ../lib/network/netconnect.pm:417
+#: ../lib/network/netconnect.pm:426
 #, c-format
 msgid ""
 "\n"
@@ -4698,22 +4698,22 @@ msgstr ""
 "Si vous possédez une carte PCMCIA, vous avez besoin de connaître\n"
 "les réglages « IRQ » et « IO » de votre carte.\n"
 
-#: ../lib/network/netconnect.pm:421
+#: ../lib/network/netconnect.pm:430
 #, c-format
 msgid "Continue"
 msgstr "Continuer"
 
-#: ../lib/network/netconnect.pm:421
+#: ../lib/network/netconnect.pm:430
 #, c-format
 msgid "Abort"
 msgstr "Arrêter"
 
-#: ../lib/network/netconnect.pm:427
+#: ../lib/network/netconnect.pm:436
 #, c-format
 msgid "Which of the following is your ISDN card?"
 msgstr "Parmi les choix suivants, lequel correspond à votre carte RNIS/ISDN ?"
 
-#: ../lib/network/netconnect.pm:445
+#: ../lib/network/netconnect.pm:454
 #, c-format
 msgid ""
 "A CAPI driver is available for this modem. This CAPI driver can offer more "
@@ -4724,12 +4724,12 @@ msgstr ""
 "de possibilités que le pilote libre (tel qu'envoyer des fax). Quel pilote "
 "voulez-vous utiliser ?"
 
-#: ../lib/network/netconnect.pm:459
+#: ../lib/network/netconnect.pm:468
 #, c-format
 msgid "Which protocol do you want to use?"
 msgstr "Quel protocole désirez-vous utiliser ?"
 
-#: ../lib/network/netconnect.pm:473
+#: ../lib/network/netconnect.pm:482
 #, c-format
 msgid ""
 "Select your provider.\n"
@@ -4738,12 +4738,12 @@ msgstr ""
 "Veuillez choisir votre fournisseur d'accès.\n"
 "S'il ne figure pas dans la liste, choisissez « Non listé »."
 
-#: ../lib/network/netconnect.pm:475 ../lib/network/netconnect.pm:571
+#: ../lib/network/netconnect.pm:484 ../lib/network/netconnect.pm:580
 #, c-format
 msgid "Provider:"
 msgstr "Fournisseur d'accès :"
 
-#: ../lib/network/netconnect.pm:484
+#: ../lib/network/netconnect.pm:493
 #, c-format
 msgid ""
 "Your modem is not supported by the system.\n"
@@ -4752,132 +4752,132 @@ msgstr ""
 "Votre modem n'est pas supporté par le système.\n"
 "Veuillez consulter http://www.linmodems.org"
 
-#: ../lib/network/netconnect.pm:503
+#: ../lib/network/netconnect.pm:512
 #, c-format
 msgid "Select the modem to configure:"
 msgstr "Choisissez le modem à configurer :"
 
-#: ../lib/network/netconnect.pm:505
+#: ../lib/network/netconnect.pm:514
 #, c-format
 msgid "Modem"
 msgstr "Modem"
 
-#: ../lib/network/netconnect.pm:540
+#: ../lib/network/netconnect.pm:549
 #, c-format
 msgid "Please choose which serial port your modem is connected to."
 msgstr "Veuillez choisir le port série sur lequel votre modem est connecté."
 
-#: ../lib/network/netconnect.pm:569
+#: ../lib/network/netconnect.pm:578
 #, c-format
 msgid "Select your provider:"
 msgstr "Choisissez votre fournisseur d'accès :"
 
-#: ../lib/network/netconnect.pm:593
+#: ../lib/network/netconnect.pm:602
 #, c-format
 msgid "Dialup: account options"
 msgstr "Appel : Options du compte"
 
-#: ../lib/network/netconnect.pm:596
+#: ../lib/network/netconnect.pm:605
 #, c-format
 msgid "Connection name"
 msgstr "Nom de la connexion"
 
-#: ../lib/network/netconnect.pm:597
+#: ../lib/network/netconnect.pm:606
 #, c-format
 msgid "Phone number"
 msgstr "Numéro de téléphone"
 
-#: ../lib/network/netconnect.pm:598
+#: ../lib/network/netconnect.pm:607
 #, c-format
 msgid "Login ID"
 msgstr "Identifiant de connexion"
 
-#: ../lib/network/netconnect.pm:613 ../lib/network/netconnect.pm:646
+#: ../lib/network/netconnect.pm:622 ../lib/network/netconnect.pm:655
 #, c-format
 msgid "Dialup: IP parameters"
 msgstr "Appel : Paramètres IP"
 
-#: ../lib/network/netconnect.pm:616
+#: ../lib/network/netconnect.pm:625
 #, c-format
 msgid "IP parameters"
 msgstr "Paramètres IP"
 
-#: ../lib/network/netconnect.pm:618
+#: ../lib/network/netconnect.pm:627
 #, c-format
 msgid "Subnet mask"
 msgstr "Masque de sous-réseau"
 
-#: ../lib/network/netconnect.pm:630
+#: ../lib/network/netconnect.pm:639
 #, c-format
 msgid "Dialup: DNS parameters"
 msgstr "Appel : Paramètres DNS"
 
-#: ../lib/network/netconnect.pm:633
+#: ../lib/network/netconnect.pm:642
 #, c-format
 msgid "DNS"
 msgstr "DNS"
 
-#: ../lib/network/netconnect.pm:634
+#: ../lib/network/netconnect.pm:643
 #, c-format
 msgid "Domain name"
 msgstr "Nom de domaine"
 
-#: ../lib/network/netconnect.pm:635
+#: ../lib/network/netconnect.pm:644
 #, c-format
 msgid "First DNS Server (optional)"
 msgstr "Serveur DNS principal (optionnel)"
 
-#: ../lib/network/netconnect.pm:636
+#: ../lib/network/netconnect.pm:645
 #, c-format
 msgid "Second DNS Server (optional)"
 msgstr "Serveur DNS secondaire (optionnel)"
 
-#: ../lib/network/netconnect.pm:637
+#: ../lib/network/netconnect.pm:646
 #, c-format
 msgid "Set hostname from IP"
 msgstr "Modifier le nom d'hôte à partir de l'adresse IP"
 
-#: ../lib/network/netconnect.pm:650
+#: ../lib/network/netconnect.pm:659
 #, c-format
 msgid "Gateway IP address"
 msgstr "Adresse IP de la passerelle"
 
-#: ../lib/network/netconnect.pm:683
+#: ../lib/network/netconnect.pm:692
 #, c-format
 msgid "Automatically at boot"
 msgstr "Automatiquement au démarrage"
 
-#: ../lib/network/netconnect.pm:685
+#: ../lib/network/netconnect.pm:694
 #, c-format
 msgid "By using Net Applet in the system tray"
 msgstr "En utilisant l'appliquette Réseau dans la boîte à miniatures"
 
-#: ../lib/network/netconnect.pm:687
+#: ../lib/network/netconnect.pm:696
 #, c-format
 msgid "Manually (the interface would still be activated at boot)"
 msgstr "Manuellement (L'interface sera activée au démarrage)"
 
-#: ../lib/network/netconnect.pm:696
+#: ../lib/network/netconnect.pm:705
 #, c-format
 msgid "How do you want to dial this connection?"
 msgstr "Comment désirez-vous activer cette connexion ?"
 
-#: ../lib/network/netconnect.pm:709
+#: ../lib/network/netconnect.pm:718
 #, c-format
 msgid "Do you want to try to connect to the Internet now?"
 msgstr "Souhaitez-vous vous connecter à Internet maintenant ?"
 
-#: ../lib/network/netconnect.pm:736
+#: ../lib/network/netconnect.pm:745
 #, c-format
 msgid "The system is now connected to the Internet."
 msgstr "Le système est à présent connecté à Internet."
 
-#: ../lib/network/netconnect.pm:737
+#: ../lib/network/netconnect.pm:746
 #, c-format
 msgid "For security reasons, it will be disconnected now."
 msgstr "Pour des raisons de sécurité, il va être déconnecté maintenant."
 
-#: ../lib/network/netconnect.pm:738
+#: ../lib/network/netconnect.pm:747
 #, c-format
 msgid ""
 "The system does not seem to be connected to the Internet.\n"
@@ -4886,7 +4886,7 @@ msgstr ""
 "Le système ne semble pas connecté à Internet.\n"
 "Essayez de reconfigurer votre connexion."
 
-#: ../lib/network/netconnect.pm:754
+#: ../lib/network/netconnect.pm:763
 #, fuzzy, c-format
 msgid "Problems occured during the network connectivity test."
 msgstr ""
@@ -4894,33 +4894,33 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../lib/network/netconnect.pm:755
+#: ../lib/network/netconnect.pm:764
 #, c-format
 msgid ""
 "This can be caused by invalid network configuration, or problems with your "
 "modem or router."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:756
+#: ../lib/network/netconnect.pm:765
 #, c-format
 msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:759
+#: ../lib/network/netconnect.pm:768
 #, fuzzy, c-format
 msgid "Congratulations, the network configuration is finished."
 msgstr "Félicitations, la configuration internet et réseau est terminée.\n"
 
-#: ../lib/network/netconnect.pm:759
+#: ../lib/network/netconnect.pm:768
 #, c-format
 msgid ""
 "However, the Internet connectivity test failed. You should test your "
 "connection manually, and verify your Internet modem or router."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:760
+#: ../lib/network/netconnect.pm:769
 #, fuzzy, c-format
 msgid ""
 "If your connection does not work, you might want to relaunch the "
@@ -4931,12 +4931,12 @@ msgstr ""
 "section « réseau ») ou la commande « net_monitor ». Si votre connexion ne "
 "fonctionne pas, vous pouvez essayer de relancer la configuration."
 
-#: ../lib/network/netconnect.pm:762
+#: ../lib/network/netconnect.pm:771
 #, fuzzy, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
 msgstr "Félicitations, la configuration internet et réseau est terminée.\n"
 
-#: ../lib/network/netconnect.pm:763
+#: ../lib/network/netconnect.pm:772
 #, c-format
 msgid ""
 "After this is done, we recommend that you restart your X environment to "
@@ -4945,78 +4945,78 @@ msgstr ""
 "Une fois terminé, il est recommandé de redémarrer votre interface graphique, "
 "afin d'éviter les problèmes liés au changement de nom d'hôte de la machine."
 
-#: ../lib/network/netconnect.pm:774
+#: ../lib/network/netconnect.pm:783
 #, c-format
 msgid "Sagem USB modem"
 msgstr "Modem USB Sagem"
 
-#: ../lib/network/netconnect.pm:775 ../lib/network/netconnect.pm:776
+#: ../lib/network/netconnect.pm:784 ../lib/network/netconnect.pm:785
 #, c-format
 msgid "Bewan modem"
 msgstr "Modem Bewan"
 
-#: ../lib/network/netconnect.pm:777
+#: ../lib/network/netconnect.pm:786
 #, c-format
 msgid "ECI Hi-Focus modem"
 msgstr "Modem ECI Hi-Focus"
 
-#: ../lib/network/netconnect.pm:778
+#: ../lib/network/netconnect.pm:787
 #, c-format
 msgid "LAN connection"
 msgstr "Connexion à travers un réseau local (LAN)"
 
-#: ../lib/network/netconnect.pm:780
+#: ../lib/network/netconnect.pm:789
 #, c-format
 msgid "ADSL connection"
 msgstr "Connexion par ADSL"
 
-#: ../lib/network/netconnect.pm:781
+#: ../lib/network/netconnect.pm:790
 #, c-format
 msgid "Cable connection"
 msgstr "Connexion par câble"
 
-#: ../lib/network/netconnect.pm:782
+#: ../lib/network/netconnect.pm:791
 #, c-format
 msgid "ISDN connection"
 msgstr "Connexion par RNIS/ISDN"
 
-#: ../lib/network/netconnect.pm:783
+#: ../lib/network/netconnect.pm:792
 #, c-format
 msgid "Modem connection"
 msgstr "Connexion par modem"
 
-#: ../lib/network/netconnect.pm:784
+#: ../lib/network/netconnect.pm:793
 #, c-format
 msgid "DVB connection"
 msgstr "Connexion DVB"
 
-#: ../lib/network/netconnect.pm:786
+#: ../lib/network/netconnect.pm:795
 #, c-format
 msgid "(detected on port %s)"
 msgstr "(détecté sur le port %s)"
 
 #. -PO: here, "(detected)" string will be appended to eg "ADSL connection"
-#: ../lib/network/netconnect.pm:788
+#: ../lib/network/netconnect.pm:797
 #, c-format
 msgid "(detected %s)"
 msgstr "(détecté %s)"
 
-#: ../lib/network/netconnect.pm:788
+#: ../lib/network/netconnect.pm:797
 #, c-format
 msgid "(detected)"
 msgstr "(détecté)"
 
-#: ../lib/network/netconnect.pm:789
+#: ../lib/network/netconnect.pm:798
 #, c-format
 msgid "Network Configuration"
 msgstr "Configuration du réseau"
 
-#: ../lib/network/netconnect.pm:790
+#: ../lib/network/netconnect.pm:799
 #, c-format
 msgid "Zeroconf hostname resolution"
 msgstr "Résolution du nom d'hôte ZeroConf"
 
-#: ../lib/network/netconnect.pm:791
+#: ../lib/network/netconnect.pm:800
 #, c-format
 msgid ""
 "If desired, enter a Zeroconf hostname.\n"
@@ -5029,17 +5029,17 @@ msgstr ""
 "ressources partagées qui ne sont pas gérées par un serveur sur le réseau.\n"
 "Ce n'est pas nécessaire pour la plupart des réseaux."
 
-#: ../lib/network/netconnect.pm:795
+#: ../lib/network/netconnect.pm:804
 #, c-format
 msgid "Zeroconf Host name"
 msgstr "Nom d'hôte ZeroConf"
 
-#: ../lib/network/netconnect.pm:796
+#: ../lib/network/netconnect.pm:805
 #, c-format
 msgid "Zeroconf host name must not contain a ."
 msgstr "Le nom d'hôte zeroconf ne doit pas contenir de point."
 
-#: ../lib/network/netconnect.pm:797
+#: ../lib/network/netconnect.pm:806
 #, c-format
 msgid ""
 "Because you are doing a network installation, your network is already "
@@ -5052,12 +5052,12 @@ msgstr ""
 "Cliquez sur <Ok> pour conserver votre configuration,\n"
 "ou sur <Annuler> pour reconfigurer votre connexion internet et réseau.\n"
 
-#: ../lib/network/netconnect.pm:800
+#: ../lib/network/netconnect.pm:809
 #, c-format
 msgid "The network needs to be restarted. Do you want to restart it?"
 msgstr "Le réseau doit être redémarré. Souhaitez-vous le redémarrer ?"
 
-#: ../lib/network/netconnect.pm:801
+#: ../lib/network/netconnect.pm:810
 #, c-format
 msgid ""
 "A problem occurred while restarting the network: \n"
@@ -5068,7 +5068,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../lib/network/netconnect.pm:802
+#: ../lib/network/netconnect.pm:811
 #, c-format
 msgid ""
 "We are now going to configure the %s connection.\n"
@@ -5081,12 +5081,12 @@ msgstr ""
 "\n"
 "Cliquez sur « %s » pour continuer."
 
-#: ../lib/network/netconnect.pm:803
+#: ../lib/network/netconnect.pm:812
 #, c-format
 msgid "Configuration is complete, do you want to apply settings?"
 msgstr "La configuration est achevée, voulez-vous appliquer les changements ?"
 
-#: ../lib/network/netconnect.pm:804
+#: ../lib/network/netconnect.pm:813
 #, c-format
 msgid ""
 "You have configured multiple ways to connect to the Internet.\n"
@@ -5097,17 +5097,17 @@ msgstr ""
 "Choisissez celui que vous voulez utiliser.\n"
 "\n"
 
-#: ../lib/network/netconnect.pm:805
+#: ../lib/network/netconnect.pm:814
 #, c-format
 msgid "Internet connection"
 msgstr "Connexion internet"
 
-#: ../lib/network/netconnect.pm:807
+#: ../lib/network/netconnect.pm:816
 #, c-format
 msgid "Configuring network device %s (driver %s)"
 msgstr "Configuration du périphérique réseau %s (pilote %s)"
 
-#: ../lib/network/netconnect.pm:808
+#: ../lib/network/netconnect.pm:817
 #, c-format
 msgid ""
 "The following protocols can be used to configure a LAN connection. Please "
@@ -5117,7 +5117,7 @@ msgstr ""
 "LAN.\n"
 "Veuillez sélectionner celui que vous désirez utiliser."
 
-#: ../lib/network/netconnect.pm:809
+#: ../lib/network/netconnect.pm:818
 #, c-format
 msgid ""
 "Please enter your host name.\n"
@@ -5131,30 +5131,30 @@ msgstr ""
 "Vous pouvez également indiquer l'adresse IP de la passerelle si votre réseau "
 "local en possède une."
 
-#: ../lib/network/netconnect.pm:814
+#: ../lib/network/netconnect.pm:823
 #, c-format
 msgid "Last but not least you can also type in your DNS server IP addresses."
 msgstr ""
 "Enfin, vous pouvez également entrer les adresses IP de vos serveurs DNS."
 
-#: ../lib/network/netconnect.pm:815
+#: ../lib/network/netconnect.pm:824
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
 msgstr "L'adresse du DNS doit ressembler à quelque chose comme « 192.168.1.20 »"
 
-#: ../lib/network/netconnect.pm:816
+#: ../lib/network/netconnect.pm:825
 #, c-format
 msgid "Gateway address should be in format 1.2.3.4"
 msgstr ""
 "L'adresse de la passerelle doit ressembler à quelque chose comme "
 "« 192.168.1.20 »"
 
-#: ../lib/network/netconnect.pm:817
+#: ../lib/network/netconnect.pm:826
 #, c-format
 msgid "Gateway device"
 msgstr "Périphérique passerelle"
 
-#: ../lib/network/netconnect.pm:831
+#: ../lib/network/netconnect.pm:840
 #, c-format
 msgid ""
 "An unexpected error has happened:\n"
