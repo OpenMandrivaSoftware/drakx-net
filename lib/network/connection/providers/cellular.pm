@@ -12,6 +12,27 @@ use utf8;
 # http://computer.cocus.co.il/Setup/V3X/MPT/Addons/GPRSope.inf
 
 our %data = (
+    N("Estonia") . "|Bravocom" => {
+        apn => "internet",
+    },
+    N("Estonia") . "|Elisa" => {
+        apn => "internet",
+    },
+    N("Estonia") . "|EMT" => {
+        apn => "internet.emt.ee",
+    },
+    N("Estonia") . "|Simpel/POP!" => {
+        apn => "internet2.emt.ee",
+    },
+    N("Estonia") . "|Tele2" => {
+        apn => "internet.tele2.ee",
+    },
+    N("Estonia") . "|TeleYks" => {
+        apn => "internet",
+    },
+    N("Estonia") . "|Zorro" => {
+        apn => "internet",
+    },
     # http://www.cubio.fi/fi/cubio_gsm/mms_ja_gprs_asetukset
     N("Finland") . "|Cubio" => {
         apn => "internet.cubio.net",
