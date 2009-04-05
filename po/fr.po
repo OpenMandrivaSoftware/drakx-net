@@ -76,7 +76,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "POT-Creation-Date: 2009-04-02 13:30-0300\n"
-"PO-Revision-Date: 2009-03-29 12:06+0200\n"
+"PO-Revision-Date: 2009-04-05 18:41+0200\n"
 "Last-Translator: Christophe Berthelé <berthy@mandriva.org>\n"
 "Language-Team: French <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -530,7 +530,7 @@ msgid "Broadcast printer information"
 msgstr "Diffuser les informations de l'imprimante"
 
 #: ../bin/drakgw:308
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "No ethernet network adapter configured for LAN has been detected on your "
 "system.\n"
@@ -542,7 +542,7 @@ msgstr ""
 "Aucun adaptateur réseau configuré pour le LAN n'a été détecté sur votre "
 "système.\n"
 "\n"
-"Veuillez lancer l'outil de détection du matériel pour le configurer et "
+"Veuillez lancer l'outil de configuration du matériel pour le configurer et "
 "assurez vous que le pare-feu Mandriva n'est pas activé pour l'adaptateur "
 "réseau connecté à votre réseau local."
 
@@ -2851,9 +2851,10 @@ msgstr ""
 "périphériques qui l'utilisent ou bien ne pas les activer au démarrage"
 
 #: ../lib/network/connection/ethernet.pm:210
-#, fuzzy, c-format
+#, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
-msgstr "Affecter le nom d'hôte à partir de l'adresse DHCP"
+msgstr ""
+"Affecter le nom d'hôte venant du serveur DHCP (ou en générer un unique)"
 
 #: ../lib/network/connection/ethernet.pm:230
 #, c-format
@@ -4887,12 +4888,9 @@ msgstr ""
 "Essayez de reconfigurer votre connexion."
 
 #: ../lib/network/netconnect.pm:763
-#, fuzzy, c-format
+#, c-format
 msgid "Problems occured during the network connectivity test."
-msgstr ""
-"Un problème est survenu pendant le redémarrage du réseau : \n"
-"\n"
-"%s"
+msgstr "Des problèmes se sont produits pendant le test de connexion réseau."
 
 #: ../lib/network/netconnect.pm:764
 #, c-format
@@ -4900,6 +4898,8 @@ msgid ""
 "This can be caused by invalid network configuration, or problems with your "
 "modem or router."
 msgstr ""
+"Ceci est peut-être causé par une configuration réseau incorrecte, ou un "
+"problème avec votre modem ou votre routeur."
 
 #: ../lib/network/netconnect.pm:765
 #, c-format
@@ -4907,11 +4907,13 @@ msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
 msgstr ""
+"Vous pouvez essayer de relancer la configuration pour vérifier les "
+"paramètres de connexion."
 
 #: ../lib/network/netconnect.pm:768
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network configuration is finished."
-msgstr "Félicitations, la configuration internet et réseau est terminée.\n"
+msgstr "Félicitations, la configuration du réseau est terminée."
 
 #: ../lib/network/netconnect.pm:768
 #, c-format
@@ -4919,22 +4921,22 @@ msgid ""
 "However, the Internet connectivity test failed. You should test your "
 "connection manually, and verify your Internet modem or router."
 msgstr ""
+"Cependant, le test de connexion Internet a échoué. Vous devriez tester votre "
+"connexion manuellement et vérifier votre modem ou votre routeur."
 
 #: ../lib/network/netconnect.pm:769
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
 msgstr ""
-"Des problèmes sont apparus pendant la configuration.\n"
-"Testez votre connexion avec le « Centre de Contrôle Mandriva Linux » (dans la "
-"section « réseau ») ou la commande « net_monitor ». Si votre connexion ne "
-"fonctionne pas, vous pouvez essayer de relancer la configuration."
+"Si votre connexion ne fonctionne pas, vous pouvez essayer de relancer la "
+"configuration."
 
 #: ../lib/network/netconnect.pm:771
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
-msgstr "Félicitations, la configuration internet et réseau est terminée.\n"
+msgstr "Félicitations, la configuration Internet et réseau est terminée."
 
 #: ../lib/network/netconnect.pm:772
 #, c-format
