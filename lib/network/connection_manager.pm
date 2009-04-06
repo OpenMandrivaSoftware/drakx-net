@@ -168,6 +168,9 @@ sub configure_connection {
                        $cmanager->{connection}->can('get_network_control_settings') ? (
                          @{$cmanager->{connection}->get_network_control_settings}
                        ) : (),
+                       $cmanager->{connection}->can('get_control_settings') ? (
+                         @{$cmanager->{connection}->get_control_settings}
+                       ) : (),
                    ],
                ) or return;
         if ($cmanager->{connection}->can('check_network_access_settings') && !$cmanager->{connection}->check_network_access_settings) {
