@@ -1,21 +1,22 @@
 # translation of network-tools to Nederlands
 # Copyright (C) 2000, 2005, 2006, 2008 Free Software Foundation, Inc.
 # Copyright (c) 2000 Mandriva
+#
 # Niels Gras <niels.gras@wanadoo.nl>, 2000.
 # Jeroen ten Berge <j.ten.berge@twinbit.nl>, 2002.
-# Reinout van Schouwen <reinouts@gnome.org>, 2002-2008.
+# Reinout van Schouwen <reinout@gmail.com>, 2002-2009.
 # Peter Bosch <peter.bosch@hccnet.nl>, 2002.
 # Rob Teng <mandrake.tips@free.fr>, 2005.
 # Arno Fleming, 2006.
-# C. Verschuuren <c.verschuuren AT gmail DOT com>, 2008
-#
+# C. Verschuuren <c.verschuuren AT gmail DOT com>, 2008, 2009.
+# aapgorilla <godutchnow@gmail.com>, 2009
 msgid ""
 msgstr ""
 "Project-Id-Version: network-tools\n"
 "POT-Creation-Date: 2009-04-02 13:30-0300\n"
-"PO-Revision-Date: 2008-09-20 18:43+0200\n"
-"Last-Translator:  <c.verschuuren AT gmail DOT com>\n"
-"Language-Team: Nederlands\n"
+"PO-Revision-Date: 2009-04-07 00:19+0200\n"
+"Last-Translator: Reinout van Schouwen <reinout@gmail.com>\n"
+"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -207,8 +208,7 @@ msgstr "down"
 msgid "Internet Connection Sharing"
 msgstr "Internetverbinding delen"
 
-#: ../bin/drakgw:75
-#, fuzzy, c-format
+#: ../bin/drakgw:75, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -221,15 +221,16 @@ msgid ""
 "(LAN). Please disable Mandriva Firewall for the network adapter connected to "
 "your LAN connection before proceeding."
 msgstr ""
-"U staat op het punt om uw computer te configureren om zijn Internet-\n"
-"verbinding te delen. Met deze functie zullen andere computers op uw\n"
+"U staat op het punt om de internetverbinding van de computer te delen.\n Via "
+"deze functie zullen andere computers op uw "
 "netwerk in staat zijn de internetverbinding van deze computer te gebruiken.\n"
 "\n"
-"Vergewis uzelf ervan dat u uw netwerk-/internetverbinding hebt "
-"geconfigureerd met gebruikmaking van drakconnect voordat u verder gaat.\n"
+"Wees er zeker van dat uw netwerk-/internetverbinding is geconfigureerd via "
+"drakconnect voordat u verder gaat.\n"
 "\n"
-"Opmerking: u heeft een specifiek hiervoor bestemde netwerk-adapter nodig\n"
-"om een Local Area Network (LAN) op te zetten."
+"Opmerking: u heeft een specifiek hiervoor bestemde netwerkadapter nodig om "
+"een Local Area Network (LAN) op te zetten. Zet voordat u verder gaat eerst "
+"de Mandriva Firewall uit voor de netwerkadapter verbonden met het LAN."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -299,6 +300,17 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"Slechts een netwerkadapter is op het systeem geconfigureerd voor "
+"LAN-verbindingen:\n"
+"\n"
+"%s\n"
+"\n"
+"Ik sta op het punt om het Local Area Network te configureren met deze "
+"adapter.\n"
+"\n"
+"Als u nog een andere adapter verbonden heeft met het Local Area Network,\n"
+"schakel dan de firewall voor deze adapter uit via drakfirewall voor het\n"
+"configureren van Internetverbinding delen."
 
 #: ../bin/drakgw:156
 #, c-format
@@ -467,6 +479,12 @@ msgid ""
 "the Mandriva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
+"Geen voor LAN geconfigureerde ethernet-netwerkadapter is gevonden op uw "
+"systeem.\n"
+"\n"
+"Start het apparatuurconfiguratieprogramma om het te configureren en wees er "
+"zeker van dat de Mandriva firewall niet is ingeschakeld voor de netwerk-"
+"adapter verbonden met het LAN-netwerk."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -985,10 +1003,9 @@ msgstr "NFS server herstarten"
 msgid "Error Restarting/Reloading NFS server"
 msgstr "Herstarten NFS server mislukt"
 
-#: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#: ../bin/draknfs:109 ../bin/draksambashare:246, c-format
 msgid "Directory selection"
-msgstr "Map keuze"
+msgstr "Mapselectie"
 
 #: ../bin/draknfs:116 ../bin/draksambashare:253
 #, c-format
@@ -1178,10 +1195,9 @@ msgstr "Map"
 msgid "Please add an NFS share to be able to modify it."
 msgstr "Voeg een NFS gedeelde map toe om hem te kunnen wijzigen."
 
-#: ../bin/draknfs:356
-#, fuzzy, c-format
+#: ../bin/draknfs:356, c-format
 msgid "Advanced"
-msgstr "Geavanceerde opties"
+msgstr "Geavanceerd"
 
 #: ../bin/draknfs:379
 #, c-format
@@ -2183,10 +2199,9 @@ msgstr "IP-adres: %s"
 msgid "Gateway: %s"
 msgstr "Gateway: %s"
 
-#: ../bin/net_applet:98
-#, fuzzy, c-format
+#: ../bin/net_applet:98, c-format
 msgid "DNS: %s"
-msgstr "DNS"
+msgstr "DNS: %s"
 
 #: ../bin/net_applet:99
 #, c-format
@@ -2299,10 +2314,9 @@ msgstr "Instellingen"
 msgid "Network Monitoring"
 msgstr "Netwerkobservatie"
 
-#: ../bin/net_monitor:99
-#, fuzzy, c-format
+#: ../bin/net_monitor:99, c-format
 msgid "Default connection: "
-msgstr "Kabelverbinding"
+msgstr "Standaardverbinding:"
 
 #: ../bin/net_monitor:101
 #, c-format
@@ -2347,12 +2361,9 @@ msgstr ""
 "Ontvangst\n"
 "snelheid:"
 
-#: ../bin/net_monitor:113
-#, fuzzy, c-format
+#: ../bin/net_monitor:113, c-format
 msgid "Connection time: "
-msgstr ""
-"Verbindings-\n"
-"tijd: "
+msgstr "Verbindingstijd: "
 
 #: ../bin/net_monitor:120
 #, c-format
@@ -2398,10 +2409,9 @@ msgstr ""
 "Verbinding mislukt.\n"
 "Controleer uw configuratie in het Mandriva Linux Configuratiecentrum."
 
-#: ../bin/net_monitor:360
-#, fuzzy, c-format
+#: ../bin/net_monitor:360, c-format
 msgid "%s (%s)"
-msgstr "DNS"
+msgstr "%s (%s)"
 
 #: ../bin/net_monitor:385
 #, c-format
@@ -2426,7 +2436,7 @@ msgstr "gemiddelde"
 #: ../bin/net_monitor:451
 #, c-format
 msgid "Reset counters"
-msgstr ""
+msgstr "Tellers herinitialiseren"
 
 #: ../bin/net_monitor:454
 #, c-format
@@ -2510,12 +2520,12 @@ msgstr "Metrisch"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:246
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr ""
+msgstr "Maximum grootte van netwerkberichten (MTU). Indien u het niet zeker weet, open laten."
 
 #: ../lib/network/connection.pm:318
 #, c-format
@@ -2587,7 +2597,7 @@ msgstr "GPRS / Edge / 3G"
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
-msgstr ""
+msgstr "PIN code (4 cijfers). Open laten als er geen PIN-code noodzakelijk is."
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
@@ -2638,10 +2648,9 @@ msgstr "PID "
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: ../lib/network/connection/ethernet.pm:12
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:12, c-format
 msgid "Wired (Ethernet)"
-msgstr "Ethernet"
+msgstr "Bekabeld (Ethernet)"
 
 #: ../lib/network/connection/ethernet.pm:30
 #, c-format
@@ -2761,11 +2770,15 @@ msgid ""
 "with this connection, first disable all other devices which use it, or "
 "configure them not to start on boot"
 msgstr ""
+"%s wordt al gebruikt door de verbinding die gemaakt wordt bij het opstarten. Schakel "
+"eerst alle andere apparaten die hem gebruiken uit of configureer ze om niet "
+"te starten bij de systeemstart om dit adres met deze verbinding te kunnen "
+"gebuiken."
 
-#: ../lib/network/connection/ethernet.pm:210
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:210, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
-msgstr "Hostnaam toewijzen vanaf DHCP-adres"
+msgstr ""
+"Hostnaam laten toekennen door DHCP-server (of genereer een unieke hostnaam)"
 
 #: ../lib/network/connection/ethernet.pm:230
 #, c-format
@@ -3212,10 +3225,9 @@ msgstr "Verenigde Arabische Emiraten"
 msgid "Wireless"
 msgstr "Draadloos"
 
-#: ../lib/network/connection/wireless.pm:16
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:16, c-format
 msgid "Wireless (Wi-Fi)"
-msgstr "Draadloos"
+msgstr "Draadloos (Wi-Fi)"
 
 #: ../lib/network/connection/wireless.pm:32
 #, c-format
@@ -3397,10 +3409,9 @@ msgstr ""
 "Noot: andere gerelateerd instellingen vindt u op het blad voor geavanceerde "
 "instellingen."
 
-#: ../lib/network/connection/wireless.pm:493
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:493, c-format
 msgid "Wireless regulatory domain"
-msgstr "Draadloze verbindingen"
+msgstr "Draadloos regulatoir domein"
 
 #: ../lib/network/connection/wireless.pm:495
 #, c-format
@@ -3978,10 +3989,9 @@ msgstr "SSH-server"
 msgid "FTP server"
 msgstr "FTP-server"
 
-#: ../lib/network/drakfirewall.pm:33
-#, fuzzy, c-format
+#: ../lib/network/drakfirewall.pm:33, c-format
 msgid "DHCP Server"
-msgstr "CUPS-server"
+msgstr "DHCP-server"
 
 #: ../lib/network/drakfirewall.pm:39
 #, c-format
@@ -3998,10 +4008,9 @@ msgstr "POP- en IMAP-server"
 msgid "Telnet server"
 msgstr "Telnet-server"
 
-#: ../lib/network/drakfirewall.pm:55
-#, fuzzy, c-format
+#: ../lib/network/drakfirewall.pm:55, c-format
 msgid "NFS Server"
-msgstr "/_NFS Server"
+msgstr "NFS-server"
 
 #: ../lib/network/drakfirewall.pm:63
 #, c-format
@@ -4011,27 +4020,24 @@ msgstr "Windows bestandsdeling (SMB)"
 #: ../lib/network/drakfirewall.pm:69
 #, c-format
 msgid "Bacula backup"
-msgstr ""
+msgstr "Bacula backup"
 
-#: ../lib/network/drakfirewall.pm:75
-#, fuzzy, c-format
+#: ../lib/network/drakfirewall.pm:75, c-format
 msgid "Syslog network logging"
-msgstr "\"Hot\"-aansluiten van netwerk"
+msgstr "Netwerk loggen via syslog"
 
 #: ../lib/network/drakfirewall.pm:81
 #, c-format
 msgid "CUPS server"
 msgstr "CUPS-server"
 
-#: ../lib/network/drakfirewall.pm:87
-#, fuzzy, c-format
+#: ../lib/network/drakfirewall.pm:87, c-format
 msgid "MySQL server"
-msgstr "NFS server "
+msgstr "MySQL-server"
 
-#: ../lib/network/drakfirewall.pm:93
-#, fuzzy, c-format
+#: ../lib/network/drakfirewall.pm:93, c-format
 msgid "PostgreSQL server"
-msgstr "CUPS-server"
+msgstr "PostgreSQL-server"
 
 #: ../lib/network/drakfirewall.pm:99
 #, c-format
@@ -4407,10 +4413,9 @@ msgstr "Observatie"
 msgid "Network Center"
 msgstr "Netwerkcentrum"
 
-#: ../lib/network/netcenter.pm:168
-#, fuzzy, c-format
+#: ../lib/network/netcenter.pm:168, c-format
 msgid "Advanced settings"
-msgstr "Geavanceerde opties"
+msgstr "Geavanceerde instellingen"
 
 #: ../lib/network/netconnect.pm:37
 #, c-format
@@ -4463,10 +4468,9 @@ msgstr "Selecteer de verbinding die u wenst in te stellen"
 msgid "Select the network interface to configure:"
 msgstr "Selecteer de in te stellen netwerkinterface:"
 
-#: ../lib/network/netconnect.pm:151
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:151, c-format
 msgid "%s: %s"
-msgstr "DNS"
+msgstr "%s: %s"
 
 #: ../lib/network/netconnect.pm:168
 #, c-format
@@ -4802,13 +4806,9 @@ msgstr ""
 "Het lijkt erop dat dit systeem niet aangesloten is op\n"
 "het internet. Probeer uw verbinding opnieuw in te stellen."
 
-#: ../lib/network/netconnect.pm:763
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:763, c-format
 msgid "Problems occured during the network connectivity test."
-msgstr ""
-"Een probleem deed zich voor bij het herstarten van het netwerk:\n"
-"\n"
-"%s"
+msgstr "Er hebben zich problemen voorgedaan tijdens de netwerkverbindingstest."
 
 #: ../lib/network/netconnect.pm:764
 #, c-format
@@ -4816,6 +4816,8 @@ msgid ""
 "This can be caused by invalid network configuration, or problems with your "
 "modem or router."
 msgstr ""
+"Dit kan worden veroorzaakt door een onjuiste netwerkconfiguratie of "
+"problemen met de modem of router."
 
 #: ../lib/network/netconnect.pm:765
 #, c-format
@@ -4823,13 +4825,12 @@ msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
 msgstr ""
+"U zou de configuratie kunnen herstarten om de verbindingsinstellingen te "
+"controleren."
 
-#: ../lib/network/netconnect.pm:768
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:768, c-format
 msgid "Congratulations, the network configuration is finished."
-msgstr ""
-"Gefeliciteerd, de netwerk- en internetconfiguratie is af.\n"
-"\n"
+msgstr "Gefeliciteerd, de netwerkconfiguratie is voltooid."
 
 #: ../lib/network/netconnect.pm:768
 #, c-format
@@ -4837,23 +4838,21 @@ msgid ""
 "However, the Internet connectivity test failed. You should test your "
 "connection manually, and verify your Internet modem or router."
 msgstr ""
+"Echter, de internetverbindingstest is niet gelukt. U dient de verbinding "
+"handmatig te testen en de modem of router controleren. Het kan raadzaam zijn "
+"deze eerst te herstarten."
 
-#: ../lib/network/netconnect.pm:769
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:769, c-format
 msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
 msgstr ""
-"Er zijn problemen opgetreden tijdens de configuratie.\n"
-"Test uw verbinding via net_monitor of mcc. Indien uw verbinding niet werkt, "
-"kunt u proberen de configuratie opnieuw op te starten."
+"Als uw verbinding niet functioneert, is het wellicht raadzaam om de "
+"configuratie nogmaals te doorlopen."
 
-#: ../lib/network/netconnect.pm:771
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:771, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
-msgstr ""
-"Gefeliciteerd, de netwerk- en internetconfiguratie is af.\n"
-"\n"
+msgstr "Gefeliciteerd, de netwerk- en internetconfiguratie is voltooid."
 
 #: ../lib/network/netconnect.pm:772
 #, c-format
@@ -5076,10 +5075,9 @@ msgstr ""
 "Een onverwachte fout is opgetreden:\n"
 "%s"
 
-#: ../lib/network/network.pm:494
-#, fuzzy, c-format
+#: ../lib/network/network.pm:494, c-format
 msgid "Advanced network settings"
-msgstr "Netwerkinstellingen"
+msgstr "Geavanceerde netwerkinstellingen"
 
 #: ../lib/network/network.pm:495
 #, c-format
@@ -5087,51 +5085,51 @@ msgid ""
 "Here you can configure advanced network settings. Please note that you have "
 "to reboot the machine for changes to take effect."
 msgstr ""
+"Hier kunt u geavanceerde netwerkinstellingen maken. De computer moet "
+"herstart worden voordat de veranderingen effectief worden."
 
-#: ../lib/network/network.pm:496
-#, fuzzy, c-format
+#: ../lib/network/network.pm:496, c-format
 msgid "TCP/IP settings"
-msgstr "IP-instellingen"
+msgstr "TCP/IP-instellingen"
 
-#: ../lib/network/network.pm:497
-#, fuzzy, c-format
+#: ../lib/network/network.pm:497, c-format
 msgid "Disable IPv6"
-msgstr "Uitschakelen"
+msgstr "IPv6 uitschakelen"
 
 #: ../lib/network/network.pm:498
 #, c-format
 msgid "Disable TCP Window Scaling"
-msgstr ""
+msgstr "TCP Window Scaling uitschakelen"
 
 #: ../lib/network/network.pm:499
 #, c-format
 msgid "Disable TCP Timestamps"
-msgstr ""
+msgstr "TCP Timestamps uitschakelen"
 
 #: ../lib/network/network.pm:500
 #, c-format
 msgid "Security settings (defined by MSEC policy)"
-msgstr ""
+msgstr "Beveiligingsinstellingen (gedefineerd door MSEC beleid)"
 
 #: ../lib/network/network.pm:501
 #, c-format
 msgid "Disable ICMP echo"
-msgstr ""
+msgstr "ICMP echo uitschakelen"
 
 #: ../lib/network/network.pm:502
 #, c-format
 msgid "Disable ICMP echo for broadcasting messages"
-msgstr ""
+msgstr "ICMP echo for broadcast messages berichten uitschakelen"
 
 #: ../lib/network/network.pm:503
 #, c-format
 msgid "Disable invalid ICMP error responses"
-msgstr ""
+msgstr "Ongeldige ICMP foutmeldingen uitschakelen"
 
 #: ../lib/network/network.pm:504
 #, c-format
 msgid "Log strange packets"
-msgstr ""
+msgstr "Vreemde pakketten loggen"
 
 #: ../lib/network/network.pm:514
 #, c-format
@@ -5187,8 +5185,7 @@ msgstr "Proxy moet http://... of https://... zijn"
 msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "URL moet beginnen met 'ftp:' of 'http:'"
 
-#: ../lib/network/shorewall.pm:77
-#, fuzzy, c-format
+#: ../lib/network/shorewall.pm:77, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
@@ -5200,11 +5197,13 @@ msgid ""
 "\n"
 "Which interfaces should be protected?\n"
 msgstr ""
-"Selecteer de interfaces die beschermd worden door de firewall.\n"
+"Selecteer de interfaces die beschermd moeten worden door de firewall.\n"
 "\n"
-"Alle draadloze aansluitingen, en aansluitingen met Internet dienen "
-"geselecteerd te worden, \n"
-"terwijl verbindingen met locale netwerken onbeschermd mogen blijven.\n"
+"Alle adapters direct verbonden met het internet moeten worden geselecteerd "
+"dienen, adapters verbonden met een lokaal netwerk hoeven niet geselecteerd te worden."
+"\n"
+"Als u van plan bent om Mandriva Internetverbinding delen te gebruiken, \n"
+"deselecteer dan de interfaces die verbonden worden met het lokale netwerk.\n"
 "\n"
 "Welke interfaces moeten worden beveiligd?\n"
 
