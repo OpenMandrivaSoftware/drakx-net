@@ -320,8 +320,6 @@ If you do not know it, keep the preselected protocol.") },
                                        last if $status;
                                        sleep 1;
                                    }
-                                   # workaround missing resolvconf
-                                   -f "/etc/resolv.conf" or cp_f("$::prefix/etc/resolv.conf", "/etc/resolv.conf");
                                }
                                $success = $connection->get_status();
                                $has_internet = network::tools::connected();
