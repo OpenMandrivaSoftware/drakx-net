@@ -496,7 +496,7 @@ sub update_iftab() {
 sub update_udev_net_config() {
     my $lib = arch() =~ /x86_64/ ? "lib64" : "lib";
     my $net_name_helper = "/lib/udev/write_net_rules";
-    my $udev_net_config = "/etc/udev/rules.d/70-persistent-net.rules";
+    my $udev_net_config = "$::prefix/etc/udev/rules.d/70-persistent-net.rules";
     my @old_config = cat_($udev_net_config);
     #- skip aliases and vlan interfaces
     foreach my $intf (grep { network::tools::is_real_interface($_) } detect_devices::get_lan_interfaces()) {
