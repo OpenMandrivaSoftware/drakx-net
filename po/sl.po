@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sl\n"
 "POT-Creation-Date: 2009-04-02 13:30-0300\n"
-"PO-Revision-Date: 2009-02-14 00:14+0100\n"
+"PO-Revision-Date: 2009-04-10 22:49+0200\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "MIME-Version: 1.0\n"
@@ -209,7 +209,7 @@ msgid "Internet Connection Sharing"
 msgstr "Deljenje Internetne Povezave"
 
 #: ../bin/drakgw:75
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -222,16 +222,12 @@ msgid ""
 "(LAN). Please disable Mandriva Firewall for the network adapter connected to "
 "your LAN connection before proceeding."
 msgstr ""
-"Prišli ste do nastavitev za skupno rabo internetne povezave na tem "
-"računalniku.\n"
-"S to zmožnostjo bodo lahko drugi računalniki v vašem krajevnem omrežju "
-"uporabljali internetno povezavo tega računalnika.\n"
+"Prišli ste do nastavitev za souporabo internetne povezave na tem računalniku.\n"
+"S to zmožnostjo bodo lahko drugi računalniki v vašem krajevnem omrežju uporabljali internetno povezavo tega računalnika.\n"
 "\n"
-"Preden nadaljujete, se prepričajte, da ste že nastavili mrežni oziroma "
-"internetni dostop z uporabo drakconnect.\n"
+"Preden nadaljujete, se prepričajte, da ste že nastavili mrežni oziroma internetni dostop z uporabo programa drakconnect.\n"
 "\n"
-"Opomba: da lahko nastavite krajevno omrežje (LAN), potrebujete za to svoj "
-"mrežni vmesnik."
+"Opomba: Da lahko nastavite krajevno omrežje (LAN), potrebujete za to svoj omrežni vmesnik. Preden nadaljujete, za omrežni vmesnik povezan v krajevno omrežje onemogočite požarni zid."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -300,6 +296,15 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"Za povezave LAN je na sistemu nastavljen samo en omrežni vmesnik:\n"
+"\n"
+"%s\n"
+"\n"
+"Sedaj bo za krajevno omrežje LAN uporabljen ta vmesnik.\n"
+"\n"
+"Če imate v krajevno omrežje povezan še kak drug vmesnik, na njem\n"
+"s pomočjo programa drakfirewall onemogočite varovanje s požarnim\n"
+"zidom. Šele nato nastavite souporabo internetne povezave."
 
 #: ../bin/drakgw:156
 #, c-format
@@ -467,6 +472,9 @@ msgid ""
 "the Mandriva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
+"Na računalniku ni bil zaznan noben omrežni vmesnik, nastavljen za krajevno omrežje\n"
+"\n"
+"Zaženite orodje za nastavljanje strojne opreme in nastavite vmesnik. Prepričajte se, da za omrežni vmesnik, ki je povezan v krajevno omrežje LAN, ni omgočen požarni zid."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -986,7 +994,7 @@ msgid "Error Restarting/Reloading NFS server"
 msgstr "Napaka pri ponovnem zaganjanju/nalaganju strežnika NFS"
 
 #: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#, c-format
 msgid "Directory selection"
 msgstr "Izbira map"
 
@@ -2478,12 +2486,12 @@ msgstr "Metrika"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:246
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr ""
+msgstr "Največja velikost omrežnega sporočila. Če niste prepričani, pustite prazno."
 
 #: ../lib/network/connection.pm:318
 #, c-format
@@ -2555,7 +2563,7 @@ msgstr "GPRS/Edge/3G"
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
-msgstr ""
+msgstr "Številka PIN (4 števke). Če ni potrebna, pustite prazno."
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
@@ -2732,9 +2740,9 @@ msgstr ""
 "ga uporabljajo, ali pa napravam onemogočiti povezoavanje ob zagonu."
 
 #: ../lib/network/connection/ethernet.pm:210
-#, fuzzy, c-format
+#, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
-msgstr "Pridobi ime gostitelja prek naslova DHCP"
+msgstr "Ime gostitelja pridobi s strežnika DHCP (ali ustvari edinstvenega)"
 
 #: ../lib/network/connection/ethernet.pm:230
 #, c-format
@@ -3361,9 +3369,9 @@ msgstr ""
 " Opomba: ostale nastavitve so na zavihku Napredno."
 
 #: ../lib/network/connection/wireless.pm:493
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless regulatory domain"
-msgstr "Brezžična omrežja"
+msgstr "Regulatorna domena za brezžično omrežje"
 
 #: ../lib/network/connection/wireless.pm:495
 #, c-format
@@ -3924,9 +3932,9 @@ msgid "FTP server"
 msgstr "FTP strežnik"
 
 #: ../lib/network/drakfirewall.pm:33
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP Server"
-msgstr "CUPS strežnik"
+msgstr "Strežnik DHCP"
 
 #: ../lib/network/drakfirewall.pm:39
 #, c-format
@@ -3944,9 +3952,9 @@ msgid "Telnet server"
 msgstr "Telnet strežnik"
 
 #: ../lib/network/drakfirewall.pm:55
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "/_Strežnik NFS "
+msgstr "Strežnik NFS"
 
 #: ../lib/network/drakfirewall.pm:63
 #, c-format
@@ -3956,12 +3964,12 @@ msgstr "Deljenje datotek za Windows (SMB)"
 #: ../lib/network/drakfirewall.pm:69
 #, c-format
 msgid "Bacula backup"
-msgstr ""
+msgstr "Varnostno kopiranje Bacula"
 
 #: ../lib/network/drakfirewall.pm:75
-#, fuzzy, c-format
+#, c-format
 msgid "Syslog network logging"
-msgstr "Samodejna vključitev omrežja (hotplugging)"
+msgstr "Beleženje v sistemski dnevnik"
 
 #: ../lib/network/drakfirewall.pm:81
 #, c-format
@@ -3969,14 +3977,14 @@ msgid "CUPS server"
 msgstr "CUPS strežnik"
 
 #: ../lib/network/drakfirewall.pm:87
-#, fuzzy, c-format
+#, c-format
 msgid "MySQL server"
-msgstr "Strežnik NFS"
+msgstr "Strežnik MySQL"
 
 #: ../lib/network/drakfirewall.pm:93
-#, fuzzy, c-format
+#, c-format
 msgid "PostgreSQL server"
-msgstr "CUPS strežnik"
+msgstr "Strežnik PostgreSQL"
 
 #: ../lib/network/drakfirewall.pm:99
 #, c-format
@@ -4744,57 +4752,47 @@ msgstr ""
 "Poskusite ponovno nastaviti povezavo."
 
 #: ../lib/network/netconnect.pm:763
-#, fuzzy, c-format
+#, c-format
 msgid "Problems occured during the network connectivity test."
-msgstr ""
-"Med ponovnim zagonom omrežja se je pojavila težava: \n"
-"\n"
-"%s"
+msgstr "Med preizkušanjem omrežne povezave je prišlo do težav."
 
 #: ../lib/network/netconnect.pm:764
 #, c-format
 msgid ""
 "This can be caused by invalid network configuration, or problems with your "
 "modem or router."
-msgstr ""
+msgstr "Vzrok je lahko napačna nastavitev omrežja, ali pa težave z modemom ali usmerjevalnikom."
 
 #: ../lib/network/netconnect.pm:765
 #, c-format
 msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
-msgstr ""
+msgstr "Da preverite nastavitve povezave, lahko znova zaženete nastavitveno orodje."
 
 #: ../lib/network/netconnect.pm:768
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network configuration is finished."
-msgstr ""
-"Čestitamo, uspešno ste nastavili omrežje in internet.\n"
-"\n"
+msgstr "Čestitamo, uspešno ste zaključili nastavitev omrežja."
 
 #: ../lib/network/netconnect.pm:768
 #, c-format
 msgid ""
 "However, the Internet connectivity test failed. You should test your "
 "connection manually, and verify your Internet modem or router."
-msgstr ""
+msgstr "Vendar pa preizkus povezave v internet ni uspel. Povezavo preverite ročno in preverite tudi modem ali usmerjevalnik."
 
 #: ../lib/network/netconnect.pm:769
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
-msgstr ""
-"Med nastavljanjem se je pojavila napaka.\n"
-"Preizkusite povezavo v Mandriva Linux nadzornem središču. Če povezava ne "
-"deluje, ponovno zaženite nastavitve."
+msgstr "Če povezava ne deluje, ponovno zaženite nastavitveno orodje."
 
 #: ../lib/network/netconnect.pm:771
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
-msgstr ""
-"Čestitamo, uspešno ste nastavili omrežje in internet.\n"
-"\n"
+msgstr "Čestitamo, uspešno ste zaključili nastavitev omrežja in interneta."
 
 #: ../lib/network/netconnect.pm:772
 #, c-format
@@ -5128,7 +5126,7 @@ msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "URL se mora začeti s 'ftp:' ali s 'http:'"
 
 #: ../lib/network/shorewall.pm:77
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
@@ -5142,9 +5140,13 @@ msgid ""
 msgstr ""
 "Izberite vmesnike, ki naj bodo zaščiteni s požarnim zidom.\n"
 "\n"
-"Priporočamo, da izberete vmesnike, povezane z internetom in izločite "
-"vmesnike, povezane s krajevnim omrežjem.\n"
+"Priporočamo, da izberete vmesnike, povezane neposredno v internet in\n"
+"ne izberete vmesnikov, povezanih v krajevno omrežje.\n"
 "\n"
+"Če nameravate uporabljati souporabo internetne povezave, ne izberite\n"
+"vmesnikov, ki bodo povezani v krajevno omrežje.\n"
+"\n"
+"Kateri vmesniki naj bodo zaščiteni?\n"
 
 #: ../lib/network/shorewall.pm:158
 #, c-format
