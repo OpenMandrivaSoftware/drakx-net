@@ -1,4 +1,3 @@
-# translation of de.po to Deutsch
 # translation of de.po to
 # german translation of the MandrivaInstaller.
 # Copyright (C) 2000-2003 Mandriva S.A.
@@ -20,14 +19,15 @@
 # Oliver Burger <oliver@mandrivauser.de>, 2008.
 # Wolfgang Bornath <wolfgang@mandrivauser.de>, 2008.
 # Wolfgang Bornath <molch.b@gmail.com>, 2008.
+# Thorsten van Lil <tvl83@gmx.de>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-02 13:30-0300\n"
-"PO-Revision-Date: 2008-12-04 07:33+0100\n"
-"Last-Translator: Wolfgang Bornath <molch.b@gmail.com>\n"
-"Language-Team: Deutsch <cooker-i18n@mandrivalinux.org>\n"
+"PO-Revision-Date: 2009-04-10 15:42+0200\n"
+"Last-Translator: Thorsten van Lil <tvl83@gmx.de>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -222,7 +222,7 @@ msgid "Internet Connection Sharing"
 msgstr "Teilen der Internet-Verbindung"
 
 #: ../bin/drakgw:75
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -235,13 +235,14 @@ msgid ""
 "(LAN). Please disable Mandriva Firewall for the network adapter connected to "
 "your LAN connection before proceeding."
 msgstr ""
-"Sie sind dabei, Ihren Rechner zu konfigurieren, dass er die eingerichtete \n"
-"Internetverbindung mit einem lokalen Netzwerk teilt.\n"
+"Sie sind dabei, Ihren Rechner so zu konfigurieren, dass er die eingerichtete \n"
+"Internetverbindung mit anderen Computern in Ihrem lokalen Netzwerk teilt.\n"
 "\n"
 "Stellen Sie sicher, dass Sie Ihre Netzwerk-/Internetverbindung\n"
 "mit DrakConnect eingerichtet haben, bevor Sie fortfahren.\n"
+"\n"
 "Anmerkung: Sie benötigen eine Netzwerkkarte, mit deren Hilfe Sie ein \n"
-"lokales Netz (LAN) aufsetzen können."
+"lokales Netz (LAN) aufsetzen können. Bitte deaktivieren sie die Mandriva Firewall für die Netzwerkkarte die mit dem LAN verbunden ist, bevor sie fortfahren."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -312,6 +313,15 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"Es ist nur eine Netzwerkkarte in ihrem System für LAN Verbindungen eingerichtet:\\ "
+"\n"
+"%s\n"
+"\n"
+"Ich werden Ihr lokalen Netzwerk (LAN)  mit diesem Gerät aufsetzten.\n"
+"\n"
+"Falls Sie weitere Geräte mit dem LAN verbunden sind, deaktivieren\n"
+"Sie den Firewall-Schutz von diesem mithilfe von drakfirewall bevor\n"
+"Sie mit der Konfiguration zum Teilen der Internetverbindung fortfahren."
 
 #: ../bin/drakgw:156
 #, c-format
@@ -482,6 +492,10 @@ msgid ""
 "the Mandriva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
+"Keine für ein LAN konfigurierte Netzwerkkarte wurde in Ihrem System gefunden.\n"
+"\n"
+"Starten Sie bitte das Hardware Konfigurations Tool um sie zu konfigurieren und stellen "
+"Sie sicher, dass die Mandriva Firewall für die Karte welche mit dem LAN verbunden ist nicht aktiviert ist."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -810,8 +824,7 @@ msgstr ""
 #: ../bin/drakinvictus:102
 #, c-format
 msgid "Network redundancy (leave empty if interface is not used)"
-msgstr ""
-"Netzwerkredundanz (wenn das Interface nicht verwendet wird, leer lassen)"
+msgstr "Netzwerkredundanz (wenn das Interface nicht verwendet wird, leer lassen)"
 
 #: ../bin/drakinvictus:105
 #, c-format
@@ -1286,8 +1299,7 @@ msgstr "Bitte geben Sie ein Verzeichnis zur Freigabe an."
 #: ../bin/draknfs:533
 #, c-format
 msgid "Please use the modify button to set right access."
-msgstr ""
-"Bitte verwenden Sie den Ändern-Knopf, um den richtigen Zugriff einzustellen."
+msgstr "Bitte verwenden Sie den Ändern-Knopf, um den richtigen Zugriff einzustellen."
 
 #: ../bin/draknfs:548
 #, c-format
@@ -1632,8 +1644,7 @@ msgstr "Füge spezielle Druckerfreigabe hinzu"
 
 #: ../bin/draksambashare:448
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
 msgstr ""
 "Ziel dieses Assistenten ist es, eine neue spezielle Samba-Druckerfreigabe "
 "einfach zu erzeugen."
@@ -1779,8 +1790,7 @@ msgstr "Öffentlich :"
 
 #: ../bin/draksambashare:795
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 "Erzeugungsmaske, Erzeugungsmodus und Verzeichnismaske müssen numerisch sein "
 "(z.B. 0755)."
@@ -1855,8 +1865,7 @@ msgstr ""
 
 #: ../bin/draksambashare:1072
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
 msgstr ""
 "Einzelserver-Installationen können smbpasswd oder tdbsam Passwort-Backends "
 "nutzen"
@@ -1953,8 +1962,7 @@ msgstr ""
 #: ../bin/draksambashare:1121
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
-"Share Level: der Client authentifiziert sich selbst für jedes einzelne Share"
+msgstr "Share Level: der Client authentifiziert sich selbst für jedes einzelne Share"
 
 #: ../bin/draksambashare:1121
 #, c-format
@@ -1983,8 +1991,7 @@ msgstr "Server Banner."
 msgid ""
 "The banner is the way this server will be described in the Windows "
 "workstations."
-msgstr ""
-"Das Banner ist die Beschreibung dieses Servers auf den Windows-Workstations."
+msgstr "Das Banner ist die Beschreibung dieses Servers auf den Windows-Workstations."
 
 #: ../bin/draksambashare:1142
 #, c-format
@@ -2018,8 +2025,7 @@ msgstr "Logstufe: Setze den Ausführlichkeitsgrad des Logs (0<= Logstufe <=10)"
 #: ../bin/draksambashare:1153
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
-"Max. Loggröße: Setze eine ober Schranke für die Größe der Logfiles (in Kb)."
+msgstr "Max. Loggröße: Setze eine ober Schranke für die Größe der Logfiles (in Kb)."
 
 #: ../bin/draksambashare:1160 ../bin/draksambashare:1178
 #, c-format
@@ -2195,9 +2201,9 @@ msgid "Gateway: %s"
 msgstr "Gateway: %s"
 
 #: ../bin/net_applet:98
-#, fuzzy, c-format
+#, c-format
 msgid "DNS: %s"
-msgstr "DNS"
+msgstr "DNS: %s"
 
 #: ../bin/net_applet:99
 #, c-format
@@ -2311,9 +2317,9 @@ msgid "Network Monitoring"
 msgstr "Netzwerküberwachung"
 
 #: ../bin/net_monitor:99
-#, fuzzy, c-format
+#, c-format
 msgid "Default connection: "
-msgstr "Kabel-Verbindung"
+msgstr "Standard Verbindung: "
 
 #: ../bin/net_monitor:101
 #, c-format
@@ -2359,11 +2365,12 @@ msgstr ""
 "windigkeit:"
 
 #: ../bin/net_monitor:113
-#, fuzzy, c-format
+#, c-format
+#, fuzzy
 msgid "Connection time: "
 msgstr ""
 "Verbindungs-\n"
-"Zeit: "
+"Dauer: "
 
 #: ../bin/net_monitor:120
 #, c-format
@@ -2410,9 +2417,9 @@ msgstr ""
 "Überprüfen Sie Ihre Konfiguration im Mandriva Linux Kontrollzentrum."
 
 #: ../bin/net_monitor:360
-#, fuzzy, c-format
+#, c-format
 msgid "%s (%s)"
-msgstr "DNS"
+msgstr "%s (%s)"
 
 #: ../bin/net_monitor:385
 #, c-format
@@ -2436,8 +2443,9 @@ msgstr "Durchschnitt"
 
 #: ../bin/net_monitor:451
 #, c-format
+#, fuzzy
 msgid "Reset counters"
-msgstr ""
+msgstr "Zähler zurücksetzten"
 
 #: ../bin/net_monitor:454
 #, c-format
@@ -2521,12 +2529,15 @@ msgstr "Metrisch"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:246
 #, c-format
+#, fuzzy
 msgid "Maximum size of network message (MTU). If unsure, left blank."
 msgstr ""
+"Maximale Größe von Netzwerk Nachrichten (MTU). Falls Sie unsicher sind, \n"
+"lassen Sie es offen."
 
 #: ../lib/network/connection.pm:318
 #, c-format
@@ -2597,8 +2608,11 @@ msgstr "GPRS/Edge/3G"
 
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
+#, fuzzy
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
 msgstr ""
+"PIN Nummer (4 Zeichen). Lassen Sie das Feld frei, wenn \n"
+"keine PIN verlangt wird."
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
@@ -2773,6 +2787,9 @@ msgid ""
 "with this connection, first disable all other devices which use it, or "
 "configure them not to start on boot"
 msgstr ""
+"%s wird bereits von der Verbindung welche beim Booten gestartet wurde genutzt. "
+"Um diese Adresse mit dieser Verbindung zu nutzen, müssen Sie zuerst alle anderen "
+"Geräte abschalten, die sie nutze"
 
 #: ../lib/network/connection/ethernet.pm:210
 #, fuzzy, c-format
@@ -2797,8 +2814,7 @@ msgstr "Link auf Interface %s erkannt"
 #: ../lib/network/connection/ethernet.pm:293
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
-msgstr ""
-"Fordere eine Netzwerkadresse auf dem Interface %s ( %s Protokoll) an ..."
+msgstr "Fordere eine Netzwerkadresse auf dem Interface %s ( %s Protokoll) an ..."
 
 #: ../lib/network/connection/ethernet.pm:294
 #, c-format
@@ -3978,9 +3994,9 @@ msgid "FTP server"
 msgstr "FTP-Server"
 
 #: ../lib/network/drakfirewall.pm:33
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP Server"
-msgstr "CUPS-Server"
+msgstr "DHCP Server"
 
 #: ../lib/network/drakfirewall.pm:39
 #, c-format
@@ -3998,9 +4014,9 @@ msgid "Telnet server"
 msgstr "Telnet-Server"
 
 #: ../lib/network/drakfirewall.pm:55
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "/_NFS Server"
+msgstr "NFS Server"
 
 #: ../lib/network/drakfirewall.pm:63
 #, c-format
@@ -4010,7 +4026,7 @@ msgstr "Windows-Dateifreigabe (SMB)"
 #: ../lib/network/drakfirewall.pm:69
 #, c-format
 msgid "Bacula backup"
-msgstr ""
+msgstr "Bacula Backup"
 
 #: ../lib/network/drakfirewall.pm:75
 #, fuzzy, c-format
@@ -4023,14 +4039,14 @@ msgid "CUPS server"
 msgstr "CUPS-Server"
 
 #: ../lib/network/drakfirewall.pm:87
-#, fuzzy, c-format
+#, c-format
 msgid "MySQL server"
-msgstr "NFS-Server"
+msgstr "MySQL Server"
 
 #: ../lib/network/drakfirewall.pm:93
-#, fuzzy, c-format
+#, c-format
 msgid "PostgreSQL server"
-msgstr "CUPS-Server"
+msgstr "PostgreSQL Server"
 
 #: ../lib/network/drakfirewall.pm:99
 #, c-format
@@ -4411,9 +4427,9 @@ msgid "Network Center"
 msgstr "Netzwerk Center"
 
 #: ../lib/network/netcenter.pm:168
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced settings"
-msgstr "Fortgeschrittene Optionen"
+msgstr "Erweiterte Einstellungen"
 
 #: ../lib/network/netconnect.pm:37
 #, c-format
@@ -4467,9 +4483,9 @@ msgid "Select the network interface to configure:"
 msgstr "Wählen Sie die Netzwerkkarte zum konfigurieren"
 
 #: ../lib/network/netconnect.pm:151
-#, fuzzy, c-format
+#, c-format
 msgid "%s: %s"
-msgstr "DNS"
+msgstr "%s: %s"
 
 #: ../lib/network/netconnect.pm:168
 #, c-format
@@ -4810,19 +4826,16 @@ msgstr ""
 "Versuchen Sie noch einmal Ihre Verbindung zu konfigurieren."
 
 #: ../lib/network/netconnect.pm:763
-#, fuzzy, c-format
+#, c-format
 msgid "Problems occured during the network connectivity test."
-msgstr ""
-"Beim Neustart des Netzwerks trat ein Fehler auf: \n"
-"\n"
-"%s"
+msgstr "Beim Verbindungstest des Netzwerkes trat ein Fehler auf."
 
 #: ../lib/network/netconnect.pm:764
 #, c-format
 msgid ""
 "This can be caused by invalid network configuration, or problems with your "
 "modem or router."
-msgstr ""
+msgstr "Das kann durch ungültige Netzertkkonfigurationen oder durch Probleme mit Ihrem Modem bzw. Router verursacht werden"
 
 #: ../lib/network/netconnect.pm:765
 #, c-format
@@ -4830,13 +4843,13 @@ msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
 msgstr ""
+"Sie sollten vielleicht die Konfiguration erneut starten um die Verbindungseinstellungen "
+"zu überprüfen."
 
 #: ../lib/network/netconnect.pm:768
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network configuration is finished."
-msgstr ""
-"Herzlichen Glückwunsch, die Netzwerk-/Internet-Einrichtung ist beendet.\n"
-"\n"
+msgstr "Herzlichen Glückwunsch, die Netzwerkeinrichtung ist beendet."
 
 #: ../lib/network/netconnect.pm:768
 #, c-format
@@ -4844,24 +4857,22 @@ msgid ""
 "However, the Internet connectivity test failed. You should test your "
 "connection manually, and verify your Internet modem or router."
 msgstr ""
+"Der Verbindungstest mit dem Internet schlug jedoch fehl. Sie sollten Ihre "
+"Verbindung und Ihr Moden bzw. Router manuell prüfen."
 
 #: ../lib/network/netconnect.pm:769
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
 msgstr ""
-"Während der Konfiguration traten Fehler auf.\n"
-"Kontrollieren Sie Ihre Verbindung mit „net_monitor“ oder dem Mandriva "
-"Kontrollzentrum. Falls die Verbindung nicht funktioniert, sollten Sie erneut "
-"die Konfiguration starten."
+"Falls die Verbindung nicht funktioniert, sollten Sie "
+"die Konfiguration  erneut starten."
 
 #: ../lib/network/netconnect.pm:771
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
-msgstr ""
-"Herzlichen Glückwunsch, die Netzwerk-/Internet-Einrichtung ist beendet.\n"
-"\n"
+msgstr "Herzlichen Glückwunsch, die Netzwerk-/Internet-Einrichtung ist beendet."
 
 #: ../lib/network/netconnect.pm:772
 #, c-format
@@ -5065,8 +5076,7 @@ msgstr "Zuguterletzt kann die DNS Server IP Adresse eingegeben werden."
 #: ../lib/network/netconnect.pm:824
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
-msgstr ""
-"Die IP-Adresse des DNS-Servers sollte etwa die Form „192.168.1.42“ haben!"
+msgstr "Die IP-Adresse des DNS-Servers sollte etwa die Form „192.168.1.42“ haben!"
 
 #: ../lib/network/netconnect.pm:825
 #, c-format
@@ -5086,46 +5096,46 @@ msgid ""
 msgstr "Ein unerwarteter Fehler ist aufgetreten:/n %s"
 
 #: ../lib/network/network.pm:494
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced network settings"
-msgstr "Netzwerk Einstellungen"
+msgstr "Erweiterte Netzwerk Einstellungen"
 
 #: ../lib/network/network.pm:495
 #, c-format
 msgid ""
 "Here you can configure advanced network settings. Please note that you have "
 "to reboot the machine for changes to take effect."
-msgstr ""
+msgstr "Hier können Sie erweitere Netzwerkeinstellungen konfigurieren. Bitte beachten Sie, dass Sie den Computer neustarten müssen um die Änderungen zu übernehmen."
 
 #: ../lib/network/network.pm:496
-#, fuzzy, c-format
+#, c-format
 msgid "TCP/IP settings"
-msgstr "IP-Einstellung"
+msgstr "TCP/IP Einstellungen"
 
 #: ../lib/network/network.pm:497
-#, fuzzy, c-format
+#, c-format
 msgid "Disable IPv6"
-msgstr "Deaktivieren"
+msgstr "IPv6 abschalten"
 
 #: ../lib/network/network.pm:498
 #, c-format
 msgid "Disable TCP Window Scaling"
-msgstr ""
+msgstr "TCP Window Scaling abschalten"
 
 #: ../lib/network/network.pm:499
 #, c-format
 msgid "Disable TCP Timestamps"
-msgstr ""
+msgstr "TCP Timestamps abschalten"
 
 #: ../lib/network/network.pm:500
 #, c-format
 msgid "Security settings (defined by MSEC policy)"
-msgstr ""
+msgstr "Sicherheitseinstellungen (durch die MSEC Regeln definiert)"
 
 #: ../lib/network/network.pm:501
 #, c-format
 msgid "Disable ICMP echo"
-msgstr ""
+msgstr "ICMP Echo abschalten"
 
 #: ../lib/network/network.pm:502
 #, c-format
@@ -5197,7 +5207,7 @@ msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "Die URL muss mit „http://“ oder „ftp://“ beginnen"
 
 #: ../lib/network/shorewall.pm:77
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
@@ -5209,15 +5219,15 @@ msgid ""
 "\n"
 "Which interfaces should be protected?\n"
 msgstr ""
-"Bitte wählen Sie die Interfaces aus, welches durch die Firewall geschützt "
+"Bitte wählen Sie die Schnittstellen aus, welche durch die Firewall geschützt "
 "werden sollen.\n"
 "\n"
-"Alle Interfaces, welche eine Verbindung mit dem Internet haben, sollen "
+"Alle Schnittstellen mit einer direkte Verbindung zum Internet, sollten "
 "ausgewählt werden,\n"
-"Interfaces welche eine Verbindung in das Lokalenetz haben können abgewählt "
-"werden.\n"
+"während Schnittstellen mit einer Verbindung zum lokalen Netzwerk abgewählt werden "
+"können\n"
 "\n"
-"Welche Interfaces sollen geschützt werden?\n"
+"Welche Schnittstellen sollen geschützt werden?\n"
 
 #: ../lib/network/shorewall.pm:158
 #, c-format
@@ -5256,10 +5266,8 @@ msgstr "Einige Pakete (%s) werden benötigt, sind jedoch nicht verfügbar."
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
 #, c-format
-msgid ""
-"These packages can be found in %s, or in the official %s package repository."
-msgstr ""
-"Diese Pakete befinden sich in den Versionen %s oder in der %s Paketquelle."
+msgid "These packages can be found in %s, or in the official %s package repository."
+msgstr "Diese Pakete befinden sich in den Versionen %s oder in der %s Paketquelle."
 
 #: ../lib/network/thirdparty.pm:154
 #, c-format
@@ -5480,28 +5488,3 @@ msgstr "NAT Modus"
 msgid "Use specific UDP port"
 msgstr "Verwende speziellen UDP Port"
 
-#~ msgid ""
-#~ "There is only one configured network adapter on your system:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "I am about to setup your Local Area Network with that adapter."
-#~ msgstr ""
-#~ "Sie haben nur eine konfiguriertes Netzwerkgerät an Ihrem Rechner:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Ich setze ihr lokales Netz damit auf."
-
-#~ msgid ""
-#~ "No ethernet network adapter has been detected on your system. Please run "
-#~ "the hardware configuration tool."
-#~ msgstr ""
-#~ "Ihr Rechner hat keine konfigurierte Netzwerkkarte. Bitte verwenden Sie "
-#~ "erst HardDrake, bevor Sie weiter machen."
-
-#~ msgid "Connection type: "
-#~ msgstr "Verbindungstyp: "
-
-#~ msgid "%s already in use\n"
-#~ msgstr "%s bereits anderweitig genutzt\n"
