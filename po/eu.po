@@ -8,13 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
 "POT-Creation-Date: 2009-04-02 13:30-0300\n"
-"PO-Revision-Date: 2009-03-01 21:05+0100\n"
+"PO-Revision-Date: 2009-04-14 23:35+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
-"Language-Team: Basque <kde-i18n-doc@lists.kde.org>\n"
+"Language-Team: Basque <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.2\n"
+"X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ../bin/drakconnect-old:45
@@ -203,8 +203,7 @@ msgstr "behera"
 msgid "Internet Connection Sharing"
 msgstr "Interneteko konexioa partekatzea"
 
-#: ../bin/drakgw:75
-#, fuzzy, c-format
+#: ../bin/drakgw:75, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -217,15 +216,16 @@ msgid ""
 "(LAN). Please disable Mandriva Firewall for the network adapter connected to "
 "your LAN connection before proceeding."
 msgstr ""
-"Ordenagailua Interneteko konexioa partekatzeko konfiguratzera zoaz.\n"
-"Eginbide horrekin, sare lokaleko ordenagailuek zure ordenagailuko "
-"Interneteko konexioa erabili ahal izango dute.\n"
+"Konputagailua Interneteko konexioa partekatzeko konfiguratzera zoaz.\n"
+"Ezaugarri horrekin, zure bertako sareko beste konputagailuak zure "
+"konputagailuaren Interneteko konexioa erabili ahal izango dute.\n"
 "\n"
-"Aurrera jarraitu arretik, egiaztatu Sareko/Interneteko sarbidea drakconnect-"
-"ekin konfiguratu duzula.\n"
+"Aurrera jarraitu aurretik, egiaztatu Sareko/Interneteko sarbidea drakconnect"
+"erabiliz konfiguratu duzula.\n"
 "\n"
-"Oharra: Sare-moldagailu dedikatu bat behar duzu sare lokala (LAN) "
-"konfiguratzeko."
+"Oharra: Sare-moldagailu dedikatu bat behar duzu bertako sare (LAN) "
+"bat ezartzeko. Jarraitu aurretik ezgaitu Mandriva suhesia zure LAN-era "
+"konektatutako sare moldagailuarentzako."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -977,10 +977,9 @@ msgstr "NFS zerbitzaria Berrabiatzen/Birzamatzen..."
 msgid "Error Restarting/Reloading NFS server"
 msgstr "Akatsa NFS zerbitzaria Berrabiaraztean/Birzamatzean"
 
-#: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#: ../bin/draknfs:109 ../bin/draksambashare:246, c-format
 msgid "Directory selection"
-msgstr "Direktorio Aukeraketa"
+msgstr "Direktorio hautaketa"
 
 #: ../bin/draknfs:116 ../bin/draksambashare:253
 #, c-format
@@ -2488,12 +2487,12 @@ msgstr "Metrika"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:246
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr ""
+msgstr "Sareko mezuaren neurri handiena (MTU). Ez badakizu, hutsik utzi."
 
 #: ../lib/network/connection.pm:318
 #, c-format
@@ -2565,7 +2564,7 @@ msgstr "GPRS/Edge/3G"
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
-msgstr ""
+msgstr "PIN zenbakia (4 digito). Utzi hutsik PIN beharrezko ez bada."
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
@@ -2743,10 +2742,9 @@ msgstr ""
 "lotura honekin erabiltzeko, lehenengo ezgaitu bera erabiltzen duten "
 "gainontzeko gailu guztiak, edo abioan hasi ez daitezen konfiguratu itzazu."
 
-#: ../lib/network/connection/ethernet.pm:210
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:210, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
-msgstr "Esleitu ostalari-izena DHCP helbidetik"
+msgstr "Esleitu ostalari izena DHCP zerbitzaritik (edo sortu bakarra den bat)"
 
 #: ../lib/network/connection/ethernet.pm:230
 #, c-format
@@ -3944,10 +3942,9 @@ msgstr "SSH zerbitzaria"
 msgid "FTP server"
 msgstr "FTP zerbitzaria"
 
-#: ../lib/network/drakfirewall.pm:33
-#, fuzzy, c-format
+#: ../lib/network/drakfirewall.pm:33, c-format
 msgid "DHCP Server"
-msgstr "CUPS zerbitzaria"
+msgstr "DHCP zerbitzaria"
 
 #: ../lib/network/drakfirewall.pm:39
 #, c-format
@@ -3964,10 +3961,9 @@ msgstr "POP eta IMAP zerbitzaria"
 msgid "Telnet server"
 msgstr "Telnet zerbitzaria"
 
-#: ../lib/network/drakfirewall.pm:55
-#, fuzzy, c-format
+#: ../lib/network/drakfirewall.pm:55, c-format
 msgid "NFS Server"
-msgstr "/_NFS zerbitzaria"
+msgstr "NFS zerbitzaria"
 
 #: ../lib/network/drakfirewall.pm:63
 #, c-format
@@ -3977,7 +3973,7 @@ msgstr "Windows Fitxategi Partekatzea (SMB)"
 #: ../lib/network/drakfirewall.pm:69
 #, c-format
 msgid "Bacula backup"
-msgstr ""
+msgstr "Bakula babes-kopia"
 
 #: ../lib/network/drakfirewall.pm:75
 #, fuzzy, c-format
@@ -3989,15 +3985,13 @@ msgstr "Sareko Hotplugging-a"
 msgid "CUPS server"
 msgstr "CUPS zerbitzaria"
 
-#: ../lib/network/drakfirewall.pm:87
-#, fuzzy, c-format
+#: ../lib/network/drakfirewall.pm:87, c-format
 msgid "MySQL server"
-msgstr "NFS zerbitzaria"
+msgstr "MySQL zerbitzaria"
 
-#: ../lib/network/drakfirewall.pm:93
-#, fuzzy, c-format
+#: ../lib/network/drakfirewall.pm:93, c-format
 msgid "PostgreSQL server"
-msgstr "CUPS zerbitzaria"
+msgstr "PostgreSQL zerbitzaria"
 
 #: ../lib/network/drakfirewall.pm:99
 #, c-format
@@ -4766,13 +4760,9 @@ msgstr ""
 "Badirudi sistema ez dagoela Internetera konektatuta.\n"
 "Saiatu konexioa birkonfiguratzen."
 
-#: ../lib/network/netconnect.pm:763
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:763, c-format
 msgid "Problems occured during the network connectivity test."
-msgstr ""
-"Arazo bat izan da sarea berrabiaraztean: \n"
-"\n"
-"%s"
+msgstr "Arazoak gertatu dira sare konektibitate frogak egiterakoan."
 
 #: ../lib/network/netconnect.pm:764
 #, c-format
@@ -4780,6 +4770,8 @@ msgid ""
 "This can be caused by invalid network configuration, or problems with your "
 "modem or router."
 msgstr ""
+"Sareko konfiguraketa baliogabea, edo zure modem edo routerrarekin "
+"arazoak izateagatik sortu daitezke."
 
 #: ../lib/network/netconnect.pm:765
 #, c-format
@@ -4788,12 +4780,9 @@ msgid ""
 "settings."
 msgstr ""
 
-#: ../lib/network/netconnect.pm:768
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:768, c-format
 msgid "Congratulations, the network configuration is finished."
-msgstr ""
-"Sarearen eta Interneten konfigurazioa amaitu da.\n"
-"\n"
+msgstr "Zorionak, sare konfiguraketa amaitu da."
 
 #: ../lib/network/netconnect.pm:768
 #, c-format
@@ -4801,6 +4790,8 @@ msgid ""
 "However, the Internet connectivity test failed. You should test your "
 "connection manually, and verify your Internet modem or router."
 msgstr ""
+"Hala ere, Internet konektibitate probek huts egin dute. Zure lotura eskuz "
+"probatu behar zenuke, eta zure Internet modem edo routerra egiaztatu."
 
 #: ../lib/network/netconnect.pm:769
 #, fuzzy, c-format
@@ -4812,12 +4803,9 @@ msgstr ""
 "Probatu konexioak net_monitor edo mcc bitartez. Konexioa ez badabil,"
 "beharbada konfigurazioa berriro abiarazi beharko duzu."
 
-#: ../lib/network/netconnect.pm:771
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:771, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
-msgstr ""
-"Sarearen eta Interneten konfigurazioa amaitu da.\n"
-"\n"
+msgstr "Zorionak, sare eta Internet konfiguraketa amaitu da."
 
 #: ../lib/network/netconnect.pm:772
 #, c-format
