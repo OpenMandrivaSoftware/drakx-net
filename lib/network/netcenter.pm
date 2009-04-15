@@ -129,10 +129,11 @@ sub get_connections() {
 }
 
 sub advanced_settings {
-	my ($in) = @_;
+	my ($in, $net) = @_;
 	my $u = network::network::advanced_settings_read();
-	if (network::network::advanced_choose($in, $u)) {
+	if (network::network::advanced_choose($in, $net, $u)) {
 		network::network::advanced_settings_write($u);
+        network::network::write_network_conf($net);
 	}
 }
 
@@ -165,7 +166,7 @@ sub main {
                map_index { build_cmanager_box($_, $::i == 0) } @cmanagers,
            ])),
            0, gtknew('HButtonBox', spacing => 6, layout => 'end', children_loose => [
-               gtknew('Button', text => N("Advanced settings"), clicked => sub { advanced_settings($in) }),
+               gtknew('Button', text => N("Advanced settings"), clicked => sub { advanced_settings($in, $net) }),
                gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit }),
            ]),
        ]),

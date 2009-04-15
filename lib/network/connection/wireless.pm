@@ -5,9 +5,7 @@ use base qw(network::connection::ethernet);
 use strict;
 use common;
 use log;
-
-# list of CRDA domains
-our @crda_domains = qw(AE AL AM AN AR AT AU AZ BA BE BG BH BL BN BO BR BY BZ CA CH CL CN CO CR CS CY CZ DE DK DO DZ EC EE EG ES FI FR GB GE GR GT HK HN HR HU ID IE IL IN IR IS IT JM JO JP KP KR KW KZ LB LI LK LT LU LV MA MC MK MO MT MX MY NL NO NP NZ OM PA PE PG PH PK PL PR PT QA RO RU SA SE SG SI SK SV SY TH TN TR TT TW UA US UY UZ VE VN YE ZA ZW);
+use network::network;
 
 #- class attributes:
 #-   network: ID of the selected network
@@ -363,8 +361,8 @@ sub check_device {
 sub load_interface_settings {
     my ($self) = @_;
     $self->SUPER::load_interface_settings;
-    # by default, use US regulatory domain for wireless networks
-    $self->{ifcfg}{CRDA_DOMAIN} ||= "US";
+    require network::network;
+    $self->{ifcfg}{CRDA_DOMAIN} ||= network::network::detect_crda_domain();
 }
 
 sub get_networks {
@@ -491,7 +489,7 @@ only used for EAP certificate based authentication. It could be
 considered as the alternative to username/password combo.
  Note: other related settings are shown on the Advanced page.")  },
         { label => N("Wireless regulatory domain"), val => \$self->{ifcfg}{CRDA_DOMAIN},
-            list => \@crda_domains, sort => 1, advanced => 1, },
+            list => \@network::network::crda_domains, sort => 1, advanced => 1, },
         { label => N("Network ID"), val => \$self->{ifcfg}{WIRELESS_NWID}, advanced => 1 },
         { label => N("Operating frequency"), val => \$self->{ifcfg}{WIRELESS_FREQ}, advanced => 1 },
         { label => N("Sensitivity threshold"), val => \$self->{ifcfg}{WIRELESS_SENS}, advanced => 1 },

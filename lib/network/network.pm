@@ -6,6 +6,7 @@ package network::network; # $Id$wir
 
 use strict;
 
+use lang;
 use Socket;
 use common;
 use run_program;
@@ -18,6 +19,8 @@ my $resolv_file = "/etc/resolv.conf";
 my $tmdns_file = "/etc/tmdns.conf";
 our $wireless_d = "/etc/sysconfig/network-scripts/wireless.d";
 
+# list of CRDA domains
+our @crda_domains = qw(AE AL AM AN AR AT AU AZ BA BE BG BH BL BN BO BR BY BZ CA CH CL CN CO CR CS CY CZ DE DK DO DZ EC EE EG ES FI FR GB GE GR GT HK HN HR HU ID IE IL IN IR IS IT JM JO JP KP KR KW KZ LB LI LK LT LU LV MA MC MK MO MT MX MY NL NO NP NZ OM PA PE PG PH PK PL PR PT QA RO RU SA SE SG SI SK SV SY TH TN TR TT TW UA US UY UZ VE VN YE ZA ZW);
 
 @ISA = qw(Exporter);
 @EXPORT = qw(addDefaultRoute dns dnsServers gateway guessHostname is_ip is_ip_forbidden masked_ip netmask resolv);
@@ -103,7 +106,7 @@ sub write_network_conf {
     }
     $net->{network}{NETWORKING} = 'yes';
 
-    setVarsInSh($::prefix . $network_file, $net->{network}, qw(HOSTNAME NETWORKING GATEWAY GATEWAYDEV NISDOMAIN FORWARD_IPV4 NETWORKING_IPV6 IPV6_DEFAULTDEV));
+    setVarsInSh($::prefix . $network_file, $net->{network}, qw(HOSTNAME NETWORKING GATEWAY GATEWAYDEV NISDOMAIN FORWARD_IPV4 NETWORKING_IPV6 IPV6_DEFAULTDEV CRDA_DOMAIN));
 }
 
 sub write_zeroconf {
@@ -488,12 +491,14 @@ sub advanced_settings_write {
 }
 
 sub advanced_choose {
-    my ($in, $u) = @_;
+    my ($in, $net, $u) = @_;
 
     my $use_http_for_https = $u->{https_proxy} eq $u->{http_proxy};
     $in->ask_from(N("Advanced network settings"),
        N("Here you can configure advanced network settings. Please note that you have to reboot the machine for changes to take effect."),
-       [ { label => "<b>".N("TCP/IP settings")."</b>"},
+       [
+         { label => N("Wireless regulatory domain"), val => \$net->{network}{CRDA_DOMAIN}, sort => 1, list => \@crda_domains },
+         { label => "<b>".N("TCP/IP settings")."</b>"},
          { text => N("Disable IPv6"), val => \$u->{ipv6_disabled}, type => "bool" },
          { text => N("Disable TCP Window Scaling"), val => \$u->{disable_window_scaling}, type => "bool"},
          { text => N("Disable TCP Timestamps"), val => \$u->{disable_tcp_timestamps}, type => "bool"},
@@ -682,6 +687,20 @@ sub proxy_configure {
     proxy_configure_mozilla_firefox($proxy);
 }
 
+sub detect_crda_domain {
+    my $crda = { getVarsFromSh($::prefix . $network_file) }->{CRDA_DOMAIN};
+    if (!$crda) {
+        my $locale = lang::read($>);
+        my $country = $locale->{country};
+        if (grep($country, @crda_domains)) {
+            $crda = $country;
+        } else {
+            $crda = "US";
+        }
+    }
+    $crda;
+}
+
 sub read_net_conf {
     my ($net) = @_;
     add2hash($net->{network} ||= {}, read_conf($::prefix . $network_file));
@@ -701,6 +720,8 @@ sub read_net_conf {
     foreach (all($::prefix . $wireless_d)) {
         $net->{wireless}{$_} = { getVarsFromSh($::prefix . $wireless_d . '/' . $_) };
     }
+    # detect default CRDA_DOMAIN
+    $net->{network}{CRDA_DOMAIN} ||= detect_crda_domain();
     netprofile_read($net);
     if (my $default_intf = network::tools::get_default_gateway_interface($net)) {
 	$net->{net_interface} = $default_intf;
