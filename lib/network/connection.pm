@@ -267,7 +267,7 @@ sub write_settings {
     my $file = network::network::get_ifcfg_file($self->get_interface);
     network::network::write_interface_settings($self->build_ifcfg_settings, $file);
     if ($self->{address}{hostname}) {
-            $o_net->{network}{HOSTNAME} = $self->{address}{hostname};
+            $o_net->{network}{HOSTNAME} = $self->{address}{hostname} if $o_net;
             network::network::write_hostname($self->{address}{hostname});
     }
     network::network::write_network_conf($o_net) if $o_net;
