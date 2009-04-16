@@ -20,8 +20,7 @@ sub get_devices {
     my @wireless = grep { detect_devices::is_wireless_interface($_) } detect_devices::get_lan_interfaces();
     my @all_devices = (@devices, network::connection::ethernet::get_unlisted_devices(\@wireless, \@devices));
     foreach (@all_devices) {
-        my $interface = $_->{interface} or network::connection::ethernet::device_to_interface($_);
-        next unless $interface;
+        my $interface = $_->{interface} || network::connection::ethernet::device_to_interface($_) or next;
         my $driver = network::connection::ethernet::interface_to_driver($interface) or next;
         $_->{driver} = $driver if $driver;
     }
