@@ -12,6 +12,11 @@ use utf8;
 # http://computer.cocus.co.il/Setup/V3X/MPT/Addons/GPRSope.inf
 
 our %data = (
+    N("Brazil") . "|Vivo" => {
+        apn => "zap.vivo.com.br",
+        login => "vivo",
+        password => "vivo",
+    },
     N("Estonia") . "|Bravocom" => {
         apn => "internet",
     },
