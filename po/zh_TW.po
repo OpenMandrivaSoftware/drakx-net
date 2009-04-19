@@ -1212,7 +1212,7 @@ msgstr "管理 NFS 共享"
 #: ../bin/draknfs:584
 #, c-format
 msgid "Starting the NFS-server"
-msgstr "正在啟動 NFS 伺服器..."
+msgstr "正在啟動/載入 NFS 伺服器..."
 
 #: ../bin/draknfs:596
 #, c-format
@@ -1840,7 +1840,7 @@ msgstr ""
 #: ../bin/draksambashare:1121
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
+msgstr "分享等級"
 
 #: ../bin/draksambashare:1121
 #, c-format
@@ -2071,7 +2071,7 @@ msgstr "閘道器：%s"
 #: ../bin/net_applet:98
 #, c-format
 msgid "DNS: %s"
-msgstr "DNS：%s"
+msgstr "DNS: %s"
 
 #: ../bin/net_applet:99
 #, c-format
@@ -2187,7 +2187,7 @@ msgstr "網路監控"
 #: ../bin/net_monitor:99
 #, c-format
 msgid "Default connection: "
-msgstr "預設連線方式："
+msgstr "預設連線方式:"
 
 #: ../bin/net_monitor:101
 #, c-format
@@ -2391,12 +2391,12 @@ msgstr "公制"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "MTU"
-msgstr "MTU"
+msgstr ""
 
 #: ../lib/network/connection.pm:246
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr "網路訊息的最大傳輸單位 (MTU)。如果不確定，請留空白。"
+msgstr ""
 
 #: ../lib/network/connection.pm:318
 #, c-format
@@ -2458,7 +2458,7 @@ msgstr "藍芽撥號網路"
 #: ../lib/network/connection/cellular_card.pm:8
 #, c-format
 msgid "Wrong PIN number format: it should be 4 digits."
-msgstr "錯誤的 PIN 碼格式：應該是四位數字。"
+msgstr "錯誤的 PIN 碼格式：應該是四個數字。"
 
 #: ../lib/network/connection/cellular_card.pm:10
 #, c-format
@@ -2468,7 +2468,7 @@ msgstr "GPRS/Edge/3G"
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
-msgstr "PIN 碼 (四位數字)。如果不需要 PIN 碼請留空。"
+msgstr ""
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
@@ -2522,7 +2522,7 @@ msgstr "乙太網路 (Ethernet)"
 #: ../lib/network/connection/ethernet.pm:12
 #, c-format
 msgid "Wired (Ethernet)"
-msgstr "有線網路 (Ethernet)"
+msgstr "有線乙太網路"
 
 #: ../lib/network/connection/ethernet.pm:30
 #, c-format
@@ -2642,7 +2642,7 @@ msgstr ""
 #: ../lib/network/connection/ethernet.pm:210
 #, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
-msgstr "由 DHCP 位址指派主機名稱 (或產生一個唯一的)"
+msgstr "由 DHCP 伺服器指派主機名稱"
 
 #: ../lib/network/connection/ethernet.pm:230
 #, c-format
@@ -3092,7 +3092,7 @@ msgstr "無線"
 #: ../lib/network/connection/wireless.pm:16
 #, c-format
 msgid "Wireless (Wi-Fi)"
-msgstr "無線網路 (Wi-Fi)"
+msgstr "Wi-Fi無線網路"
 
 #: ../lib/network/connection/wireless.pm:32
 #, c-format
@@ -3190,7 +3190,7 @@ msgstr "加密金鑰"
 #: ../lib/network/connection/wireless.pm:459
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
-msgstr "將此金鑰強制視為 ASCII 字串使用 (為了給 Livebox 使用)"
+msgstr "將此金鑰強制視為 ASCII 字串使用（為了給 Livebox 使用）"
 
 #: ../lib/network/connection/wireless.pm:466
 #, c-format
@@ -3602,7 +3602,8 @@ msgstr ""
 msgid ""
 "Modems using Conexant AccessRunner chipsets cannot be supported due to "
 "binary firmware distribution problem."
-msgstr "由於軔體散佈權利問題，使用 Conexant AccessRunner 晶片組的數據機無法獲得支援。"
+msgstr ""
+"由於軔體散佈權利問題，使用 Conexant AccessRunner 晶片組的數據機無法獲得支援。"
 
 #: ../lib/network/connection/xdsl.pm:205
 #, c-format
@@ -3742,9 +3743,9 @@ msgid "FTP server"
 msgstr "FTP 伺服器"
 
 #: ../lib/network/drakfirewall.pm:33
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP Server"
-msgstr "CUPS 伺服器"
+msgstr "DHCP伺服器"
 
 #: ../lib/network/drakfirewall.pm:39
 #, c-format
@@ -3762,9 +3763,9 @@ msgid "Telnet server"
 msgstr "Telnet 伺服器"
 
 #: ../lib/network/drakfirewall.pm:55
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "/NFS 伺服器 (_N)"
+msgstr "NFS伺服器"
 
 #: ../lib/network/drakfirewall.pm:63
 #, c-format
@@ -3787,14 +3788,14 @@ msgid "CUPS server"
 msgstr "CUPS 伺服器"
 
 #: ../lib/network/drakfirewall.pm:87
-#, fuzzy, c-format
+#, c-format
 msgid "MySQL server"
-msgstr "NFS 伺服器"
+msgstr "MySQL伺服器"
 
 #: ../lib/network/drakfirewall.pm:93
-#, fuzzy, c-format
+#, c-format
 msgid "PostgreSQL server"
-msgstr "CUPS 伺服器"
+msgstr "PostgreSQL 伺服器"
 
 #: ../lib/network/drakfirewall.pm:99
 #, c-format
@@ -4222,7 +4223,7 @@ msgstr "選取要設定的網路介面："
 #: ../lib/network/netconnect.pm:151
 #, c-format
 msgid "%s: %s"
-msgstr "%s：%s"
+msgstr "%s: %s"
 
 #: ../lib/network/netconnect.pm:168
 #, c-format
@@ -4579,11 +4580,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/netconnect.pm:768
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network configuration is finished."
-msgstr ""
-"恭喜！網路與網際網路組態已經設定完成了。\n"
-"\n"
+msgstr "恭喜，網路設定已經完成了。"
 
 #: ../lib/network/netconnect.pm:768
 #, c-format
@@ -4603,11 +4602,9 @@ msgstr ""
 "許需要重新進行設定。"
 
 #: ../lib/network/netconnect.pm:771
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
-msgstr ""
-"恭喜！網路與網際網路組態已經設定完成了。\n"
-"\n"
+msgstr "恭喜！網路與網際網路設定已經完成了。"
 
 #: ../lib/network/netconnect.pm:772
 #, c-format
@@ -4835,7 +4832,8 @@ msgstr "進階網路設定"
 msgid ""
 "Here you can configure advanced network settings. Please note that you have "
 "to reboot the machine for changes to take effect."
-msgstr "您可以在此設定網路的進階設定。請注意您需要重新啟動您的電腦使新的設定生效。"
+msgstr ""
+"您可以在此設定網路的進階設定。請注意您需要重新啟動您的電腦使新的設定生效。"
 
 #: ../lib/network/network.pm:496
 #, c-format
@@ -4865,7 +4863,7 @@ msgstr ""
 #: ../lib/network/network.pm:501
 #, c-format
 msgid "Disable ICMP echo"
-msgstr "關閉 ICMP 回應"
+msgstr ""
 
 #: ../lib/network/network.pm:502
 #, c-format
@@ -4935,7 +4933,7 @@ msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "URL 應該是以 'ftp:' 或 'http:' 開頭"
 
 #: ../lib/network/shorewall.pm:77
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
@@ -4948,11 +4946,14 @@ msgid ""
 "Which interfaces should be protected?\n"
 msgstr ""
 "請選取要用防火牆保護的界面。\n"
-"\n"
-"所有直接連結到網際網路的界面都應該要選取，\n"
-"而連結到本地端網路的界面則可以不要選取。\n"
-"\n"
-"哪些界面應該要被保護呢？\n"
+" \n"
+" 所有直接連結到網際網路的界面都應該要選取，\n"
+" 而連結到本地端網路的界面則可以不要選取。\n"
+" \n"
+" 如果您想要使用 Mandriva Internet Connection 分享連線，\n"
+" 請不要選取連結到區域網路的網路介面。 \n"
+" \n"
+" 哪些界面應該要被保護呢？\n"
 
 #: ../lib/network/shorewall.pm:158
 #, c-format
@@ -4990,7 +4991,7 @@ msgstr "需要某些套件 (%s) 卻無法使用。"
 #, c-format
 msgid ""
 "These packages can be found in %s, or in the official %s package repository."
-msgstr "這些套件無法在 %s 或 官方的 %s 套件庫中找到。"
+msgstr "這些套件無法在 %s 或 官方 %s 套件庫中找到。"
 
 #: ../lib/network/thirdparty.pm:154
 #, c-format
@@ -5208,21 +5209,3 @@ msgstr "NAT 模式"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "使用指定的 UDP 埠"
-
-#~ msgid ""
-#~ "There is only one configured network adapter on your system:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "I am about to setup your Local Area Network with that adapter."
-#~ msgstr ""
-#~ "您的系統目前只有一張已經設定好的網路卡：\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "現在要進行這張網路卡與區域網路的連線組態設定。"
-
-#~ msgid ""
-#~ "No ethernet network adapter has been detected on your system. Please run "
-#~ "the hardware configuration tool."
-#~ msgstr "您系統偵測不到有網路卡的存在，請重新執行硬體設定工具。"
