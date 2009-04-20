@@ -309,6 +309,7 @@ If you do not know it, keep the preselected protocol.") },
                            if ($answer) {
                                $connection->disconnect;
                                $connection->connect;
+                               # TODO: we should have some graphical notification for these tests
                                #- FIXME: should use network::test for ppp (after future merge with network::connection)
                                #- or start interface synchronously
                                if (!$::isInstall) {
@@ -322,7 +323,13 @@ If you do not know it, keep the preselected protocol.") },
                                    }
                                }
                                $success = $connection->get_status();
-                               $has_internet = network::tools::connected();
+                               # try to resolve the network address for some time
+                               my $timeout = 3;
+                               while ($timeout--) {
+                                   $has_internet = network::tools::connected();
+                                   last if $has_internet;
+                                   sleep 1;
+                               }
                            }
                            "end"; #- handle disconnection in install?
                        },
