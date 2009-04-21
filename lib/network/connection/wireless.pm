@@ -361,8 +361,6 @@ sub check_device {
 sub load_interface_settings {
     my ($self) = @_;
     $self->SUPER::load_interface_settings;
-    require network::network;
-    $self->{ifcfg}{CRDA_DOMAIN} ||= network::network::detect_crda_domain();
 }
 
 sub get_networks {
@@ -488,8 +486,6 @@ the username and password values specified here.") },
 only used for EAP certificate based authentication. It could be
 considered as the alternative to username/password combo.
  Note: other related settings are shown on the Advanced page.")  },
-        { label => N("Wireless regulatory domain"), val => \$self->{ifcfg}{CRDA_DOMAIN},
-            list => \@network::network::crda_domains, sort => 1, advanced => 1, },
         { label => N("Network ID"), val => \$self->{ifcfg}{WIRELESS_NWID}, advanced => 1 },
         { label => N("Operating frequency"), val => \$self->{ifcfg}{WIRELESS_FREQ}, advanced => 1 },
         { label => N("Sensitivity threshold"), val => \$self->{ifcfg}{WIRELESS_SENS}, advanced => 1 },
@@ -672,7 +668,7 @@ set SSID=$self->{access}{network}{essid}
 set WPAPSK="$self->{access}{network}{key}"
 set TxRate=0)),
         (map { $_ => $self->{ifcfg}{$_} }
-           qw(WIRELESS_NWID WIRELESS_FREQ WIRELESS_SENS WIRELESS_RATE WIRELESS_RTS WIRELESS_FRAG WIRELESS_IWCONFIG WIRELESS_IWSPY CRDA_DOMAIN), if_(!$self->need_rt2x00_iwpriv, 'WIRELESS_IWPRIV')),
+           qw(WIRELESS_NWID WIRELESS_FREQ WIRELESS_SENS WIRELESS_RATE WIRELESS_RTS WIRELESS_FRAG WIRELESS_IWCONFIG WIRELESS_IWSPY), if_(!$self->need_rt2x00_iwpriv, 'WIRELESS_IWPRIV')),
     };
     $self->SUPER::build_ifcfg_settings($settings);
 }
