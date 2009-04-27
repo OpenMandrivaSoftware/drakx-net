@@ -9,17 +9,19 @@
 # Esa Linna <denzo@mbnet.fi>, 2004.
 # Thomas Backlund <tmb@mandrake.org>, 2002, 2003, 2004, 2005.
 # Anssi Hannula <anssi@mandriva.org>, 2008.
+# Jani Välimaa <jani.valimaa@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: drakx-net-fi - LE2005 Release\n"
+"Project-Id-Version: drakx-net-fi\n"
 "POT-Creation-Date: 2009-04-02 13:30-0300\n"
-"PO-Revision-Date: 2008-03-31 17:45+0300\n"
-"Last-Translator: Anssi Hannula <anssi@mandriva.org>\n"
-"Language-Team: Finnish <fi@li.org>\n"
+"PO-Revision-Date: 2009-04-27 16:23+0300\n"
+"Last-Translator: Jani Välimaa <jani.valimaa@gmail.com>\n"
+"Language-Team: Finnish <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../bin/drakconnect-old:45
 #, c-format
@@ -57,12 +59,12 @@ msgstr "Tila"
 #: ../bin/drakconnect-old:79
 #, c-format
 msgid "Hostname: "
-msgstr "Konenimi: "
+msgstr "Verkkonimi: "
 
 #: ../bin/drakconnect-old:81
 #, c-format
 msgid "Configure hostname..."
-msgstr "Aseta konenimi..."
+msgstr "Aseta verkkonimi..."
 
 #: ../bin/drakconnect-old:95 ../bin/drakconnect-old:171
 #, c-format
@@ -72,7 +74,7 @@ msgstr "Lähiverkon asetukset"
 #: ../bin/drakconnect-old:100
 #, c-format
 msgid "Configure Local Area Network..."
-msgstr "Aseta paikallisverkko..."
+msgstr "Aseta lähiverkko..."
 
 #: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:188
 #, c-format
@@ -120,12 +122,12 @@ msgstr "Odota hetki... Otetaan asetukset käyttöön"
 #: ../bin/drakconnect-old:141
 #, c-format
 msgid "Deactivate now"
-msgstr "Deaktivoi nyt"
+msgstr "Poista käytöstä"
 
 #: ../bin/drakconnect-old:141
 #, c-format
 msgid "Activate now"
-msgstr "Aktivoi nyt"
+msgstr "Ota käyttöön"
 
 #: ../bin/drakconnect-old:175
 #, c-format
@@ -133,8 +135,8 @@ msgid ""
 "You do not have any configured interface.\n"
 "Configure them first by clicking on 'Configure'"
 msgstr ""
-"Sinulla ei ole ainoatakaan asetettua liitäntää.\n"
-"Aseta ne ensin klikkaamalla 'Aseta'"
+"Yhtään liitäntää ei ole asetettu.\n"
+"Aseta jokin liitäntä napsauttamalla \"Aseta\""
 
 #: ../bin/drakconnect-old:189
 #, c-format
@@ -144,7 +146,7 @@ msgstr "Lähiverkon asetukset"
 #: ../bin/drakconnect-old:201
 #, c-format
 msgid "Adapter %s: %s"
-msgstr "Laite %s: %s"
+msgstr "Sovitin %s: %s"
 
 #: ../bin/drakconnect-old:209 ../bin/drakgw:181
 #: ../lib/network/connection/ethernet.pm:141
@@ -173,42 +175,41 @@ msgid ""
 "This interface has not been configured yet.\n"
 "Run the \"%s\" assistant from the Mandriva Linux Control Center"
 msgstr ""
-"Tätä liitäntää ei ole vielä asetettu.\n"
-"Suorita \"%s\"-avustaja Mandriva Linux Ohjauskeskuksesta"
+"Liitäntää ei ole vielä asetettu.\n"
+"Suorita \"%s\"-avustaja Mandriva Linuxin Ohjauskeskuksesta"
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:104
 #, c-format
 msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
-msgstr "Aseta uusi verkkoliityntä (LAN, ISDN, ADSL, ...)"
+msgstr "Aseta uusi verkkoliitäntä"
 
 #: ../bin/drakconnect-old:273 ../bin/drakconnect-old:305
 #: ../lib/network/drakconnect.pm:16
 #, c-format
 msgid "No IP"
-msgstr "Ei IP"
+msgstr "Ei IP-osoitetta"
 
 #: ../bin/drakconnect-old:306 ../lib/network/drakconnect.pm:17
 #, c-format
 msgid "No Mask"
-msgstr "Ei aliverkkoa"
+msgstr "Ei verkkopeitettä"
 
 #: ../bin/drakconnect-old:307 ../lib/network/drakconnect.pm:18
 #, c-format
 msgid "up"
-msgstr "päällä"
+msgstr "käytössä"
 
 #: ../bin/drakconnect-old:307 ../lib/network/drakconnect.pm:18
 #, c-format
 msgid "down"
-msgstr "pois päältä"
+msgstr "ei käytössä"
 
 #: ../bin/drakgw:71
 #, c-format
 msgid "Internet Connection Sharing"
-msgstr "Internetyhteyden jakaminen"
+msgstr "Internet-yhteyden jakaminen"
 
-#: ../bin/drakgw:75
-#, fuzzy, c-format
+#: ../bin/drakgw:75, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -221,15 +222,15 @@ msgid ""
 "(LAN). Please disable Mandriva Firewall for the network adapter connected to "
 "your LAN connection before proceeding."
 msgstr ""
-"Olet asettamassa tietokoneesi jakamaan Internetyhteyden muiden koneiden "
-"kanssa.\n"
-"Käyttäen tätä ominaisuutta muut paikallisverkossa olevat tietokoneet voivat "
-"käyttää tämän tietokoneen Internetyhteyttä.\n"
+"Tietokonetta ollaan asettamassa jakamaan Internet-yhteys.\n"
+"Muut paikallisverkossa olevat tietokoneet voivat käyttää sen jälkeen "
+"tämän tietokoneen Internet-yhteyttä.\n"
 "\n"
-"Varmista että olet määrittänyt verkkosi/Internetyhteytesi käyttämällä "
-"drakconnectia ennen kuin jatkat.\n"
+"Varmista ennen jatkamista, että verkko tai Internet-yhteys on asetettu "
+"työkalulla drakconnect.\n"
 "\n"
-"Huomaa: tarvitset erillisen verkkokortin pystyttääksesi oman paikallisverkon."
+"HUOM! Paikallisverkkoa varten tarvitaan erillinen verkkokortti ja palomuuri "
+"tulee poistaa käytöstä erilliseltä verkkokortilta."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -239,10 +240,10 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
-"Internetyhteyden jakaminen on jo asetettu.\n"
-"Sen nykyinen tila on: käytössä.\n"
+"Internet-yhteyden jakaminen on jo asetettu\n"
+"ja se on käytössä.\n"
 "\n"
-"Mitä haluat tehdä?"
+"Mitä tehdään?"
 
 #: ../bin/drakgw:95
 #, c-format
@@ -252,10 +253,10 @@ msgid ""
 "\n"
 "What would you like to do?"
 msgstr ""
-"Internetyhteyden jakaminen on jo asetettu.\n"
-"Sen nykyinen tila on: ei käytössä\n"
+"Internet-yhteyden jakaminen on jo asetettu,\n"
+"mutta se ei ole käytössä.\n"
 "\n"
-"Mitä haluat tehdä?"
+"Mitä tehdään?"
 
 #: ../bin/drakgw:101
 #, c-format
@@ -275,13 +276,13 @@ msgstr "Aseta uudelleen"
 #: ../bin/drakgw:122
 #, c-format
 msgid "Please select the network interface directly connected to the internet."
-msgstr "Valitse verkkoliitäntä, joka on suoraan internetiin suoraan."
+msgstr "Valitse Internetiin yhteydessä oleva verkkoliitäntä."
 
 #: ../bin/drakgw:123 ../lib/network/netconnect.pm:372
 #: ../lib/network/netconnect.pm:407
 #, c-format
 msgid "Net Device"
-msgstr "Verkkolaite"
+msgstr "Verkkoliitäntä"
 
 #: ../bin/drakgw:141
 #, c-format
@@ -297,18 +298,28 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"Järjestelmässä on vain yksi verkkoliitäntä, joka on asetettu "
+"lähiverkkoyhteyksille:\n"
+"\n"
+"%s\n"
+"\n"
+"Asetetaan lähiverkko käyttämään tätä verkkoliitäntää.\n"
+"\n"
+"Jos järjestelmässä on muita lähiverkkoon kytkettyjä liitäntöjä,\n"
+"poista liitännän palomuuri käytöstä, työkalulla drakfirewall,\n"
+"ennen Internet-yhteyden jakamisen asettamista."
 
 #: ../bin/drakgw:156
 #, c-format
 msgid ""
 "Please choose what network adapter will be connected to your Local Area "
 "Network."
-msgstr "Valitse verkkokortti, joka on kytketty paikallisverkkoon."
+msgstr "Valitse lähiverkkoon kytketty verkkoliitäntä."
 
 #: ../bin/drakgw:177
 #, c-format
 msgid "Local Area Network settings"
-msgstr "Paikallisverkkon asetukset"
+msgstr "Lähiverkon asetukset"
 
 #: ../bin/drakgw:180 ../lib/network/vpn/openvpn.pm:227
 #, c-format
@@ -372,12 +383,12 @@ msgstr "Nimipalvelinasetukset (DNS)"
 #: ../bin/drakgw:208
 #, c-format
 msgid "Use this gateway as domain name server"
-msgstr "Käytä tätä yhdyskäytävää nimipalvelimena"
+msgstr "Käytä yhdyskäytävää myös nimipalvelimena"
 
 #: ../bin/drakgw:209
 #, c-format
 msgid "The DNS Server IP"
-msgstr "DNS-palvelimen IP-osoite"
+msgstr "Nimipalvelimen IP-osoite"
 
 #: ../bin/drakgw:236
 #, c-format
@@ -390,7 +401,7 @@ msgstr ""
 "DHCP-palvelimen asetukset.\n"
 "\n"
 "Täällä voit muuttaa DHCP-palvelimen asetuksia.\n"
-"Jos et tiedä jonkun option tarkoitusta, jätä se oletusarvoonsa."
+"Jos et tiedä jonkun asetuksen tarkoitusta, jätä se oletusarvoonsa."
 
 #: ../bin/drakgw:243
 #, c-format
@@ -400,32 +411,32 @@ msgstr "Käytä automaattisia asetuksia (DHCP)"
 #: ../bin/drakgw:244
 #, c-format
 msgid "The DHCP start range"
-msgstr "DHCP:n alueen alku"
+msgstr "DHCP-osoiteavaruuden alku"
 
 #: ../bin/drakgw:245
 #, c-format
 msgid "The DHCP end range"
-msgstr "DHCP:n alueen loppu"
+msgstr "DHCP-osoiteavaruuden loppu"
 
 #: ../bin/drakgw:246
 #, c-format
 msgid "The default lease (in seconds)"
-msgstr "Vakio käyttöaika (sekunneissa)"
+msgstr "Osoitteen oletusvoimassaoloaika (sekuntia)"
 
 #: ../bin/drakgw:247
 #, c-format
 msgid "The maximum lease (in seconds)"
-msgstr "Maksimi käyttöaika (sekunneissa)"
+msgstr "Maksimi voimassaoloaika (sekuntia)"
 
 #: ../bin/drakgw:270
 #, c-format
 msgid "Proxy caching server (SQUID)"
-msgstr "Välitysvälimuistipalvelin (SQUID)"
+msgstr "Välityspalvelin (SQUID)"
 
 #: ../bin/drakgw:274
 #, c-format
 msgid "Use this gateway as proxy caching server"
-msgstr "Käytä tätä yhdyskäytävää välitysvälimuistipalvelimena"
+msgstr "Käytä yhdyskäytävää myös välityspalvelimena"
 
 #: ../bin/drakgw:275
 #, c-format
@@ -435,7 +446,7 @@ msgstr "Ylläpitäjän sähköpostiosoite"
 #: ../bin/drakgw:276
 #, c-format
 msgid "Visible hostname"
-msgstr "Näkyvä konenimi"
+msgstr "Näkyvä verkkonimi"
 
 #: ../bin/drakgw:277
 #, c-format
@@ -462,16 +473,21 @@ msgid ""
 "the Mandriva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
+"Järjestelmässä ei havaittu yhtään lähiverkkokäyttöön asetettua "
+"verkkoliitäntää.\n"
+"\n"
+"Suorita laitteiston asetustyökalu verkkoliitännän asettamiseksi ja varmista, "
+"että palomuuri ei ole käytössä tälle verkkoliitännälle."
 
 #: ../bin/drakgw:316
 #, c-format
 msgid "Internet Connection Sharing is now enabled."
-msgstr "Internetyhteyden jakaminen on nyt käytössä."
+msgstr "Internet-yhteyden jakaminen on nyt käytössä."
 
 #: ../bin/drakgw:322
 #, c-format
 msgid "Internet Connection Sharing is now disabled."
-msgstr "Internetyhteyden jakaminen ei ole enää käytössä."
+msgstr "Internet-yhteyden jakaminen poistettiin käytöstä."
 
 #: ../bin/drakgw:328
 #, c-format
@@ -482,14 +498,14 @@ msgid ""
 " a Transparent Proxy Cache server (SQUID)."
 msgstr ""
 "Kaikki on asetettu.\n"
-"Voit nyt jakaa Internetyhteyden muiden lähiverkon koneiden kanssa "
-"käyttämällä automaattista\n"
-" lähiverkon määrittelyä (DHCP) ja läpinäkyvää välimuistipalvelinta (SQUID)."
+"Internet-yhteys voidaan nyt jakaa muiden lähiverkon koneiden kesken "
+"käyttämällä automaattista IP-osoitteen hakua (DHCP) ja läpinäkyvää "
+"välityspalvelinta (SQUID)."
 
 #: ../bin/drakgw:351
 #, c-format
 msgid "Disabling servers..."
-msgstr "Poistan palvelut käytöstä..."
+msgstr "Poistetaan palvelut käytöstä..."
 
 #: ../bin/drakgw:365
 #, c-format
@@ -502,8 +518,8 @@ msgid ""
 "Warning! An existing firewalling configuration has been detected. You may "
 "need some manual fixes after installation."
 msgstr ""
-"Varoitus! Olemassa oleva palomuuri löydetty. Tarvitset mahdollisesti käsin "
-"tehtäviä korjauksia asennuksen jälkeen."
+"Varoitus! Löydettiin olemassa oleva palomuuri, asennuksen jälkeen voidaan "
+"joutua suorittamaan korjauksia käsin."
 
 #: ../bin/drakgw:371
 #, c-format
@@ -518,7 +534,7 @@ msgstr "Asetetaan palomuuri..."
 #: ../bin/drakhosts:100
 #, c-format
 msgid "Please add an host to be able to modify it."
-msgstr "Lisää verkko-osoite ennen sen muokkaamista."
+msgstr "Lisää verkkonimi ennen sen muokkaamista."
 
 #: ../bin/drakhosts:110
 #, c-format
@@ -543,12 +559,12 @@ msgstr "IP-osoite:"
 #: ../bin/drakhosts:117
 #, c-format
 msgid "Host name:"
-msgstr "Palvelimen osoite:"
+msgstr "Verkkonimi:"
 
 #: ../bin/drakhosts:118
 #, c-format
 msgid "Host Aliases:"
-msgstr "Osoite-aliakset:"
+msgstr "Muut verkkonimet:"
 
 #: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draknfs:116
 #: ../bin/draksambashare:230 ../bin/draksambashare:253
@@ -561,27 +577,27 @@ msgstr "Virhe!"
 #: ../bin/drakhosts:122
 #, c-format
 msgid "Please enter a valid IP address."
-msgstr "Ole hyvä ja syötä pätevän IP-osoitteen."
+msgstr "Syötä kelvollinen IP-osoite."
 
 #: ../bin/drakhosts:128
 #, c-format
 msgid "Same IP is already in %s file."
-msgstr "Sama IP on jo %s-tiedostossa."
+msgstr "IP-osoite löytyy jo tiedostosta %s."
 
 #: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:212
 #, c-format
 msgid "Host name"
-msgstr "Konenimi"
+msgstr "Verkkonimi"
 
 #: ../bin/drakhosts:196
 #, c-format
 msgid "Host Aliases"
-msgstr "Osoite-aliakset"
+msgstr "Muut verkkonimet"
 
 #: ../bin/drakhosts:206 ../bin/drakhosts:236
 #, c-format
 msgid "Manage hosts definitions"
-msgstr "Hallitse koneiden määritykset"
+msgstr "Hallitse verkkonimiä"
 
 #: ../bin/drakhosts:222 ../bin/drakhosts:249 ../bin/draknfs:369
 #, c-format
@@ -697,27 +713,27 @@ msgstr "Tyhjennä lokitiedostot"
 #: ../bin/drakids:115 ../bin/drakids:120
 #, c-format
 msgid "Blacklist"
-msgstr "Kielletty lista"
+msgstr "Kiellettyjen lista"
 
 #: ../bin/drakids:116 ../bin/drakids:133
 #, c-format
 msgid "Whitelist"
-msgstr "Sallittu lista"
+msgstr "Sallittujen lista"
 
 #: ../bin/drakids:124
 #, c-format
 msgid "Remove from blacklist"
-msgstr "Poista kieltolistalta"
+msgstr "Poista kiellettyjen listalta"
 
 #: ../bin/drakids:125
 #, c-format
 msgid "Move to whitelist"
-msgstr "Siirrä sallittuihin"
+msgstr "Siirrä sallittujen listalle"
 
 #: ../bin/drakids:137
 #, c-format
 msgid "Remove from whitelist"
-msgstr "Poista sallituista"
+msgstr "Poista sallittujen listalta"
 
 #: ../bin/drakids:256
 #, c-format
@@ -762,12 +778,12 @@ msgstr "Sallittu"
 #: ../bin/drakids:296
 #, c-format
 msgid "Blocked"
-msgstr "Estetty"
+msgstr "Kielletty"
 
 #: ../bin/drakinvictus:36
 #, c-format
 msgid "Invictus Firewall"
-msgstr "Invictus -palomuuri"
+msgstr "Invictus-palomuuri"
 
 #: ../bin/drakinvictus:53
 #, c-format
@@ -777,7 +793,7 @@ msgstr "Käynnistä isäntänä (master)"
 #: ../bin/drakinvictus:72
 #, c-format
 msgid "A password is required."
-msgstr "Salasana tarvitaan."
+msgstr "Vaaditaan salasana."
 
 #: ../bin/drakinvictus:100
 #, c-format
@@ -827,7 +843,7 @@ msgstr "Synkronoi palomuurin conntrack-taulut"
 #: ../bin/drakinvictus:123
 #, c-format
 msgid "Synchronization network interface"
-msgstr "Synkronoinnin verkkoliitäntä"
+msgstr "Synkronointiin käytettävä verkkoliitäntä"
 
 #: ../bin/drakinvictus:132
 #, c-format
@@ -855,7 +871,8 @@ msgid ""
 "Name of the profile to create (the new profile is created as a copy of the "
 "current one):"
 msgstr ""
-"Luotavan profiilin nimi (käytössä oleva kopiodaan uudeksi profiiliksi):"
+"Uuden profiilin nimi (käytössä oleva profiilia käytetään uuden profiilin "
+"pohjana):"
 
 #: ../bin/draknetprofile:149 ../bin/draknetprofile.orig:149
 #, c-format
@@ -873,12 +890,12 @@ msgstr "Varoitus"
 #: ../bin/draknetprofile:165 ../bin/draknetprofile.orig:165
 #, c-format
 msgid "You can not delete the default profile"
-msgstr "Et voi poistaa oletusprofiilia"
+msgstr "Oletusprofiilia ei voi poistaa"
 
 #: ../bin/draknetprofile:167 ../bin/draknetprofile.orig:167
 #, c-format
 msgid "You can not delete the current profile"
-msgstr "Et voi poistaa käytössä olevaa profiilia"
+msgstr "Käytössä olevaa profiilia ei voida poistaa"
 
 #: ../bin/draknetprofile:177 ../bin/draknetprofile.orig:177
 #, c-format
@@ -886,13 +903,13 @@ msgid ""
 "This tool allows to activate an existing network profile, and to manage "
 "(clone, delete) profiles."
 msgstr ""
-"Tällä työkalulla voit aktivoida olemassaolevan verkkoprofiilin ja hallita "
+"Tällä työkalulla voidaan aktivoida olemassa oleva verkkoprofiili ja hallita "
 "profiileja."
 
 #: ../bin/draknetprofile:177 ../bin/draknetprofile.orig:177
 #, c-format
 msgid "To modify a profile, you have to activate it first."
-msgstr "Profiilin muokkaamiseksi aktivoi se ensin."
+msgstr "Ota profiili käyttöön ennen muokkaamista."
 
 #: ../bin/draknetprofile:180 ../bin/draknetprofile.orig:180
 #, c-format
@@ -912,22 +929,22 @@ msgstr "Poista"
 #: ../bin/draknfs:49
 #, c-format
 msgid "map root user as anonymous"
-msgstr "kartoita pääkäyttäjä anonymous-käyttäjäksi"
+msgstr "merkitse pääkäyttäjä anonymous-käyttäjäksi"
 
 #: ../bin/draknfs:50
 #, c-format
 msgid "map all users to anonymous user"
-msgstr "kartoita kaikki käyttäjät anonymous-käyttäjäksi"
+msgstr "merkitse kaikki käyttäjät anonymous-käyttäjäksi"
 
 #: ../bin/draknfs:51
 #, c-format
 msgid "No user UID mapping"
-msgstr "Ei käyttäjä-ID -kartoitusta"
+msgstr "Ei UID-merkintöjä"
 
 #: ../bin/draknfs:52
 #, c-format
 msgid "allow real remote root access"
-msgstr "salli oikea etäpääkäyttäjä-pääsy (remote root access)"
+msgstr "salli etäyhteydet pääkäyttäjältä"
 
 #: ../bin/draknfs:66 ../bin/draknfs:67 ../bin/draknfs:68
 #: ../bin/draksambashare:175 ../bin/draksambashare:176
@@ -974,15 +991,15 @@ msgstr "NFS-palvelin"
 #: ../bin/draknfs:92
 #, c-format
 msgid "Restarting/Reloading NFS server..."
-msgstr "Uudelleenkäynnistetään/ladataan NFS-palvelin..."
+msgstr "Ladataan tai käynnistetään NFS-palvelin uudelleen..."
 
 #: ../bin/draknfs:93
 #, c-format
 msgid "Error Restarting/Reloading NFS server"
-msgstr "Virhe NFS-palvelinta uudelleenkäynnistettäessä/ladattaessa"
+msgstr "Virhe ladattaessa tai käynnistettäessä NFS-palvelinta uudelleen"
 
 #: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#, c-format
 msgid "Directory selection"
 msgstr "Hakemiston valinta"
 
@@ -1017,6 +1034,25 @@ msgid ""
 "either `/255.255.252.0' or  `/22'  appended to the network base address "
 "result.\n"
 msgstr ""
+"<span weight=\"bold\">NFS-asiakkaat</span> voidaan määritellä usealla "
+"tavalla:\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">Yksittäinen:</span> Verkkonimi, täydellinen "
+"verkko-osoite tai IP-osoite\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">Ryhmä:</span> NIS-ryhmä @ryhmä.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">Maski:</span> Koneiden nimet voi sisältää "
+"jokerimerkit * tai ?. Esim. *.cs.foo.edu täsmää kaikkiin verkkoalueen cs.foo."
+"edu koneisiin.\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">Aliverkko:</span> Hakemistoja voidaan jakaa "
+"samanaikaisesti kaikille (ali)verkon koneille. Esim. lisäämällä verkon "
+"osoitteen perään \"/255.255.255.0\" tai \"/24\".\n"
 
 #: ../bin/draknfs:161
 #, c-format
@@ -1043,31 +1079,53 @@ msgid ""
 "<span foreground=\"royalblue3\">anonuid and anongid:</span> explicitly set "
 "the uid and gid of the anonymous account.\n"
 msgstr ""
+"<span weight=\"bold\">UID-valinnat</span>\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">merkitse pääkäyttäjä anonymous-käyttäjäksi:</"
+"span> merkitsee pyynnöt käyttäjältä/ryhmältä 0 anonymous-käyttäjäksi "
+"(root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">salli etäyhteydet pääkäyttäjältä:</span> "
+"sallii pyynnöt käyttäjältä/ryhmältä 0. Asetus on hyödyllinen varsinkin "
+"käytettäessä levytöntä asiakasta (no_root_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">merkitse kaikki käyttäjät anonymous-"
+"käyttäjäksi:</span> merkitsee kaikki käyttäjät/ryhmät anonymous-käyttäjäksi. "
+"Hyödyllinen NFS-jakoina käytetyille FTP-hakemistoille, uutisjonohakemistolle "
+"yms. (all_squash, asetuksen vastakohta on oletuksena käytössä oleva "
+"no_all_squash).\n"
+"\n"
+"\n"
+"<span foreground=\"royalblue3\">anonuid ja anongid:</span> aseta anonymous-"
+"käyttäjän UID ja GID.\n"
 
 #: ../bin/draknfs:177
 #, c-format
 msgid "Synchronous access:"
-msgstr ""
+msgstr "Samanaikainen pääsy:"
 
 #: ../bin/draknfs:178
-#, fuzzy, c-format
+#, c-format
 msgid "Secured Connection:"
-msgstr "Internetyhteys"
+msgstr "Salattu yhteys:"
 
 #: ../bin/draknfs:179
 #, c-format
 msgid "Read-Only share:"
-msgstr ""
+msgstr "Vain luku -jako"
 
 #: ../bin/draknfs:180
 #, c-format
 msgid "Subtree checking:"
-msgstr ""
+msgstr "Jaon tarkistus:"
 
 #: ../bin/draknfs:182
 #, c-format
 msgid "Advanced Options"
-msgstr ""
+msgstr "Lisäasetukset"
 
 #: ../bin/draknfs:183
 #, c-format
@@ -1076,6 +1134,8 @@ msgid ""
 "originate on an internet port less than IPPORT_RESERVED (1024). This option "
 "is on by default."
 msgstr ""
+"Asetus<span foreground=\"royalblue3\">%s</span> vaatii, että pyynnöt ovat "
+"peräisin portista, joka on pienempi kuin 1024. Asetus on oletuksena käytössä."
 
 #: ../bin/draknfs:184
 #, c-format
@@ -1085,6 +1145,9 @@ msgid ""
 "request which changes the filesystem. This can also be made explicit by "
 "using this option."
 msgstr ""
+"Asetus <span foreground=\"royalblue3\">%s</span> sallii NFS-jaon luku- tai "
+"luku- ja kirjoituspyynnöt. Oletuksena kielletään kaikki pyynnöt, jotka "
+"muuttavat tiedostojärjestelmää. Asetuksella voidaan myös pakottaa valinta."
 
 #: ../bin/draknfs:185
 #, c-format
@@ -1093,6 +1156,9 @@ msgid ""
 "violate the NFS protocol and to reply to requests before any changes made by "
 "these requests have been committed to stable storage (e.g. disc drive)."
 msgstr ""
+"Asetus <span foreground=\"royalblue3\">%s</span> estää NFS-palvelimen "
+"rikkomasta NFS-protokollaa ja vastaamasta pyyntöihin ennen kuin pyyntöjen "
+"pyytämät muutokset on suoritettu NFS-jaolle (levylle)."
 
 #: ../bin/draknfs:186
 #, c-format
@@ -1101,6 +1167,9 @@ msgid ""
 "help improve security in some cases, but can decrease reliability. See "
 "exports(5) man page for more details."
 msgstr ""
+"Asetus <span foreground=\"royalblue3\">%s</span> ottaa jakojen tarkistuksen "
+"käyttöön. Asetus parantaa tietoturvaa, mutta voi heikentää suorituskykyä. "
+"Katso lisätietoja komennolla \"man exports\"."
 
 #: ../bin/draknfs:191 ../bin/draksambashare:623 ../bin/draksambashare:789
 #, c-format
@@ -1110,22 +1179,22 @@ msgstr "Tiedot"
 #: ../bin/draknfs:271
 #, c-format
 msgid "Directory"
-msgstr "Kansio"
+msgstr "Hakemisto"
 
 #: ../bin/draknfs:282
 #, c-format
 msgid "Please add an NFS share to be able to modify it."
-msgstr ""
+msgstr "Lisää NFS-jako ennen muokkaamista."
 
 #: ../bin/draknfs:356
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced"
 msgstr "Lisäasetukset"
 
 #: ../bin/draknfs:379
 #, c-format
 msgid "NFS directory"
-msgstr ""
+msgstr "NFS-hakemisto"
 
 #: ../bin/draknfs:380 ../bin/draksambashare:382 ../bin/draksambashare:588
 #: ../bin/draksambashare:766
@@ -1133,55 +1202,54 @@ msgstr ""
 msgid "Directory:"
 msgstr "Hakemisto:"
 
-#: ../bin/draknfs:381
-#, fuzzy, c-format
+#: ../bin/draknfs:381, c-format
 msgid "Host access"
-msgstr "Konenimi"
+msgstr "Sallitut koneet"
 
 #: ../bin/draknfs:382
-#, c-format
+#, fuzzy, c-format
 msgid "Access:"
 msgstr "Yksityisyys:"
 
 #: ../bin/draknfs:383
 #, c-format
 msgid "User ID Mapping"
-msgstr ""
+msgstr "UID-merkintä"
 
 #: ../bin/draknfs:384
 #, c-format
 msgid "User ID:"
-msgstr "Käyttäjätunnus:"
+msgstr "UID:"
 
 #: ../bin/draknfs:385
 #, c-format
 msgid "Anonymous user ID:"
-msgstr ""
+msgstr "Anonymous-käyttäjän UID:"
 
 #: ../bin/draknfs:386
 #, c-format
 msgid "Anonymous Group ID:"
-msgstr ""
+msgstr "Anonymous-käyttäjän GID:"
 
 #: ../bin/draknfs:429
-#, fuzzy, c-format
+#, c-format
 msgid "Please specify a directory to share."
-msgstr "Syötä tälle kortille käytettävät langattoman verkon asetukset:"
+msgstr "Valitse jaettava hakemisto."
 
 #: ../bin/draknfs:431
 #, c-format
 msgid "Can't create this directory."
-msgstr ""
+msgstr "Hakemistoa ei voi luoda."
 
 #: ../bin/draknfs:434
 #, c-format
 msgid "You must specify hosts access."
-msgstr ""
+msgstr "Sallitut koneet täytyy määritellä."
 
 #: ../bin/draknfs:514
 #, c-format
 msgid "Share Directory"
-msgstr "Jaettava kansio"
+msgstr "Jaettava hakemisto"
 
 #: ../bin/draknfs:514
 #, c-format
@@ -1196,48 +1264,47 @@ msgstr "Yleiset asetukset"
 #: ../bin/draknfs:514
 #, c-format
 msgid "Custom Options"
-msgstr "Omat asetukset"
+msgstr "Mukautetut asetukset"
 
 #: ../bin/draknfs:526 ../bin/draksambashare:397 ../bin/draksambashare:625
 #: ../bin/draksambashare:791
 #, c-format
 msgid "Please enter a directory to share."
-msgstr ""
+msgstr "Valitse jaettava hakemisto."
 
-#: ../bin/draknfs:533
-#, c-format
+#: ../bin/draknfs:533, c-format
 msgid "Please use the modify button to set right access."
-msgstr ""
+msgstr "Napsauta painiketta \"Muokkaa\" muokataksesi pääsyoikeuksia."
 
 #: ../bin/draknfs:548
 #, c-format
 msgid "Manage NFS shares"
-msgstr "Hallitse NFS jaot"
+msgstr "Hallitse NFS-jakoja"
 
 #: ../bin/draknfs:584
-#, fuzzy, c-format
+#, c-format
 msgid "Starting the NFS-server"
-msgstr "Uudelleenkäynnistetään/ladataan NFS-palvelin..."
+msgstr "Käynnistetään NFS-palvelin"
 
 #: ../bin/draknfs:596
 #, c-format
 msgid "DrakNFS manage NFS shares"
-msgstr ""
+msgstr "DrakNFS NFS-jakojen hallintatyökalu"
 
 #: ../bin/draknfs:605
 #, c-format
 msgid "Failed to add NFS share."
-msgstr ""
+msgstr "NFS-jaon lisääminen epäonnistui."
 
 #: ../bin/draknfs:612
 #, c-format
 msgid "Failed to Modify NFS share."
-msgstr ""
+msgstr "NFS-jaon muokkaaminen epäonnistui."
 
 #: ../bin/draknfs:619
 #, c-format
 msgid "Failed to remove an NFS share."
-msgstr ""
+msgstr "NFS-jaon poistaminen epäonnistui."
 
 #: ../bin/draksambashare:65
 #, c-format
@@ -1250,9 +1317,9 @@ msgid "Share name"
 msgstr "Jakonimi"
 
 #: ../bin/draksambashare:73 ../bin/draksambashare:101
-#, fuzzy, c-format
+#, c-format
 msgid "Share directory"
-msgstr "Hakemisto ei ole olemassa"
+msgstr "Jaettava hakemisto"
 
 #: ../bin/draksambashare:74 ../bin/draksambashare:102
 #: ../bin/draksambashare:119
@@ -1261,9 +1328,9 @@ msgid "Comment"
 msgstr "Kommentti"
 
 #: ../bin/draksambashare:75 ../bin/draksambashare:120
-#, fuzzy, c-format
+#, c-format
 msgid "Browseable"
-msgstr "Selaa"
+msgstr "Selattavissa"
 
 #: ../bin/draksambashare:76
 #, c-format
@@ -1276,45 +1343,45 @@ msgid "Writable"
 msgstr "Kirjoitettavissa"
 
 #: ../bin/draksambashare:78 ../bin/draksambashare:166
-#, fuzzy, c-format
+#, c-format
 msgid "Create mask"
-msgstr "Luo"
+msgstr "Luontimaski"
 
 #: ../bin/draksambashare:79 ../bin/draksambashare:167
-#, fuzzy, c-format
+#, c-format
 msgid "Directory mask"
-msgstr "Varmistuksien hakemisto"
+msgstr "Hakemistomaski"
 
 #: ../bin/draksambashare:80
 #, fuzzy, c-format
 msgid "Read list"
-msgstr "Vain luku"
+msgstr "Lukulista"
 
 #: ../bin/draksambashare:81 ../bin/draksambashare:126
 #: ../bin/draksambashare:602
 #, fuzzy, c-format
 msgid "Write list"
-msgstr "Kirjoita"
+msgstr "Kirjoituslista"
 
 #: ../bin/draksambashare:82 ../bin/draksambashare:158
-#, fuzzy, c-format
+#, c-format
 msgid "Admin users"
-msgstr "Lisää käyttäjä"
+msgstr "Pääkäyttäjät"
 
 #: ../bin/draksambashare:83 ../bin/draksambashare:159
-#, fuzzy, c-format
+#, c-format
 msgid "Valid users"
-msgstr "Lisää käyttäjä"
+msgstr "Sallitut käyttäjät"
 
 #: ../bin/draksambashare:84
-#, fuzzy, c-format
+#, c-format
 msgid "Inherit Permissions"
-msgstr "Oikeudet"
+msgstr "Periytyvät oikeudet"
 
 #: ../bin/draksambashare:85 ../bin/draksambashare:160
-#, fuzzy, c-format
+#, c-format
 msgid "Hide dot files"
-msgstr "Piilota tiedostot"
+msgstr "Piilota piilotiedostot"
 
 #: ../bin/draksambashare:86 ../bin/draksambashare:161
 #, c-format
@@ -1322,29 +1389,29 @@ msgid "Hide files"
 msgstr "Piilota tiedostot"
 
 #: ../bin/draksambashare:87 ../bin/draksambashare:165
-#, fuzzy, c-format
+#, c-format
 msgid "Preserve case"
-msgstr "Ominaisuudet"
+msgstr "Säilytä kirjasintaso"
 
 #: ../bin/draksambashare:88
-#, fuzzy, c-format
+#, c-format
 msgid "Force create mode"
-msgstr "Tulostimesi malli "
+msgstr "Pakota tiedoston luontioikeudet"
 
 #: ../bin/draksambashare:89
-#, fuzzy, c-format
+#, c-format
 msgid "Force group"
-msgstr "PFS ryhmä"
+msgstr "Pakota ryhmä"
 
 #: ../bin/draksambashare:90 ../bin/draksambashare:164
-#, fuzzy, c-format
+#, c-format
 msgid "Default case"
-msgstr "Oletuskäyttäjä"
+msgstr "Oletus kirjasintaso"
 
 #: ../bin/draksambashare:117
 #, c-format
 msgid "Printer name"
-msgstr "Tulostimen nimi:"
+msgstr "Tulostimen nimi"
 
 #: ../bin/draksambashare:118
 #, c-format
@@ -1354,28 +1421,28 @@ msgstr "Polku"
 #: ../bin/draksambashare:121 ../bin/draksambashare:594
 #, c-format
 msgid "Printable"
-msgstr "Tulostettava"
+msgstr "Tulostettavissa"
 
 #: ../bin/draksambashare:122
-#, fuzzy, c-format
+#, c-format
 msgid "Print Command"
-msgstr "Komento"
+msgstr "Tulostuskomento"
 
 #: ../bin/draksambashare:123
-#, fuzzy, c-format
+#, c-format
 msgid "LPQ command"
-msgstr "Komento"
+msgstr "LPQ-komento"
 
 #: ../bin/draksambashare:124
 #, c-format
 msgid "Guest ok"
-msgstr ""
+msgstr "Salli Vieras"
 
 #: ../bin/draksambashare:127 ../bin/draksambashare:168
 #: ../bin/draksambashare:603
-#, fuzzy, c-format
+#, c-format
 msgid "Inherit permissions"
-msgstr "Oikeudet"
+msgstr "Periytä oikeudet"
 
 #: ../bin/draksambashare:128
 #, c-format
@@ -1383,45 +1450,45 @@ msgid "Printing"
 msgstr "Tulostus"
 
 #: ../bin/draksambashare:129
-#, fuzzy, c-format
+#, c-format
 msgid "Create mode"
-msgstr "Kortin malli:"
+msgstr "Luontioikeudet"
 
 #: ../bin/draksambashare:130
-#, fuzzy, c-format
+#, c-format
 msgid "Use client driver"
-msgstr "Telnet-palvelin"
+msgstr "Käytä asiakaskoneen ajuria"
 
 #: ../bin/draksambashare:156
 #, fuzzy, c-format
 msgid "Read List"
-msgstr "Poista lista"
+msgstr "Lukulista"
 
 #: ../bin/draksambashare:157
 #, fuzzy, c-format
 msgid "Write List"
-msgstr "Kirjoita"
+msgstr "Kirjoituslista"
 
 #: ../bin/draksambashare:162
-#, fuzzy, c-format
+#, c-format
 msgid "Force Group"
-msgstr "Ryhmä"
+msgstr "Pakota ryhmä"
 
 #: ../bin/draksambashare:163
 #, c-format
 msgid "Force create group"
-msgstr ""
+msgstr "Pakota luotavan tiedoston/hakemiston ryhmä"
 
 #: ../bin/draksambashare:179 ../bin/draksambashare:180
 #: ../bin/draksambashare:181 ../bin/draksambashare:182
-#, fuzzy, c-format
+#, c-format
 msgid "/_Samba Server"
-msgstr "WWW-palvelin"
+msgstr "/_Samba-palvelin"
 
 #: ../bin/draksambashare:180
-#, fuzzy, c-format
+#, c-format
 msgid "/_Configure"
-msgstr "Aseta"
+msgstr "/_Aseta"
 
 #: ../bin/draksambashare:184
 #, c-format
@@ -1429,9 +1496,9 @@ msgid "/_Help"
 msgstr "/O_hje"
 
 #: ../bin/draksambashare:184
-#, fuzzy, c-format
+#, c-format
 msgid "/_Samba Documentation"
-msgstr "Pirstoutuminen"
+msgstr "/_Samba dokumentaatio"
 
 #: ../bin/draksambashare:190 ../bin/draksambashare:191
 #, c-format
@@ -1449,9 +1516,9 @@ msgid "/_About..."
 msgstr "/_Tietoja..."
 
 #: ../bin/draksambashare:194
-#, fuzzy, c-format
+#, c-format
 msgid "Draksambashare"
-msgstr "Samba-palvelin"
+msgstr "Draksambashare"
 
 #: ../bin/draksambashare:196
 #, c-format
@@ -1461,7 +1528,7 @@ msgstr "Copyright (C) %s, Mandriva"
 #: ../bin/draksambashare:198
 #, c-format
 msgid "This is a simple tool to easily manage Samba configuration."
-msgstr ""
+msgstr "Yksinkertainen työkalu Samba-jakojen hallintaan."
 
 #: ../bin/draksambashare:200
 #, c-format
@@ -1472,17 +1539,19 @@ msgstr "Mandriva Linux"
 #: ../bin/draksambashare:205
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
-msgstr "Thomas Backlund <tmb@mandrake.org>\n"
+msgstr ""
+"Thomas Backlund <tmb@mandrake.org>\n"
+"Jani Välimaa <jani.valimaa@gmail.com>\n"
 
 #: ../bin/draksambashare:229
 #, c-format
 msgid "Restarting/Reloading Samba server..."
-msgstr ""
+msgstr "Ladataan tai käynnistetään Samba-palvelinta uudelleen..."
 
 #: ../bin/draksambashare:230
 #, c-format
 msgid "Error Restarting/Reloading Samba server"
-msgstr ""
+msgstr "Virhe käynnistettäessä tai ladattaessa Samba-palvelinta uudelleen"
 
 #: ../bin/draksambashare:370 ../bin/draksambashare:567
 #: ../bin/draksambashare:687
@@ -1491,19 +1560,19 @@ msgid "Open"
 msgstr "Avaa"
 
 #: ../bin/draksambashare:373
-#, fuzzy, c-format
+#, c-format
 msgid "DrakSamba add entry"
-msgstr "Samba-palvelin"
+msgstr "DrakSamba lisää tietue"
 
 #: ../bin/draksambashare:377
-#, fuzzy, c-format
+#, c-format
 msgid "Add a share"
-msgstr "Samba-palvelin"
+msgstr "Lisää jako"
 
 #: ../bin/draksambashare:380
-#, fuzzy, c-format
+#, c-format
 msgid "Name of the share:"
-msgstr "Sertifikaatin nimi"
+msgstr "Jaon nimi:"
 
 #: ../bin/draksambashare:381 ../bin/draksambashare:587
 #: ../bin/draksambashare:767
@@ -1516,49 +1585,49 @@ msgstr "Kommentti:"
 msgid ""
 "Share with the same name already exist or share name empty, please choose "
 "another name."
-msgstr ""
+msgstr "Jaon nimi on jo olemassa tai se on tyhjä. Valitse toinen nimi."
 
 #: ../bin/draksambashare:400
 #, c-format
 msgid "Can't create the directory, please enter a correct path."
-msgstr ""
+msgstr "Hakemistoa ei voi luoda, tarkista hakemiston polku."
 
 #: ../bin/draksambashare:403 ../bin/draksambashare:623
 #: ../bin/draksambashare:789
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter a Comment for this share."
-msgstr "Syötä tälle kortille käytettävät langattoman verkon asetukset:"
+msgstr "Syötä jaon kommentti."
 
 #: ../bin/draksambashare:440
 #, c-format
 msgid "pdf-gen - a PDF generator"
-msgstr ""
+msgstr "pdf-gen - PDF-luontityökalu"
 
 #: ../bin/draksambashare:441
 #, c-format
 msgid "printers - all printers available"
-msgstr ""
+msgstr "tulostimet - kaikki käytettävät tulostimet"
 
 #: ../bin/draksambashare:445
 #, c-format
 msgid "Add Special Printer share"
-msgstr ""
+msgstr "Lisää tulostinjako"
 
 #: ../bin/draksambashare:448
 #, c-format
 msgid ""
 "Goal of this wizard is to easily create a new special printer Samba share."
-msgstr ""
+msgstr "Velhon päämäärä on lisätä helposti Samban tulostinjako."
 
 #: ../bin/draksambashare:455
-#, fuzzy, c-format
+#, c-format
 msgid "A PDF generator already exists."
-msgstr "Profiili \"%s\" on jo olemassa!"
+msgstr "PDF-luontityökalu on jo olemassa."
 
 #: ../bin/draksambashare:479
-#, fuzzy, c-format
+#, c-format
 msgid "Printers and print$ already exist."
-msgstr "Profiili \"%s\" on jo olemassa!"
+msgstr "Tulostimet ja print$ on jo olemassa."
 
 #: ../bin/draksambashare:529 ../bin/draksambashare:1197
 #, c-format
@@ -1568,22 +1637,22 @@ msgstr "Onnittelut"
 #: ../bin/draksambashare:530
 #, c-format
 msgid "The wizard successfully added the printer Samba share"
-msgstr ""
+msgstr "Velho lisäsi Samban tulostinjaon onnistuneesti."
 
 #: ../bin/draksambashare:552
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
-msgstr ""
+msgstr "Lisää tai valitse Samban tulostinjako ennen muokkaamista."
 
 #: ../bin/draksambashare:570
 #, c-format
 msgid "DrakSamba Printers entry"
-msgstr ""
+msgstr "DrakSamba tulostimet"
 
 #: ../bin/draksambashare:583
 #, c-format
 msgid "Printer share"
-msgstr ""
+msgstr "Tulostinjako"
 
 #: ../bin/draksambashare:586
 #, c-format
@@ -1596,9 +1665,9 @@ msgid "Writable:"
 msgstr "Kirjoitettavissa :"
 
 #: ../bin/draksambashare:593 ../bin/draksambashare:773
-#, fuzzy, c-format
+#, c-format
 msgid "Browseable:"
-msgstr "Selaa"
+msgstr "Selattavissa:"
 
 #: ../bin/draksambashare:598
 #, c-format
@@ -1606,24 +1675,24 @@ msgid "Advanced options"
 msgstr "Lisäasetukset"
 
 #: ../bin/draksambashare:600
-#, fuzzy, c-format
+#, c-format
 msgid "Printer access"
-msgstr "Internetyhteys"
+msgstr "Pääsyoikeudet"
 
 #: ../bin/draksambashare:604
 #, c-format
 msgid "Guest ok:"
-msgstr ""
+msgstr "Salli Vieras:"
 
 #: ../bin/draksambashare:605
-#, fuzzy, c-format
+#, c-format
 msgid "Create mode:"
-msgstr "Kortin malli:"
+msgstr "Luontioikeudet:"
 
 #: ../bin/draksambashare:609
 #, c-format
 msgid "Printer command"
-msgstr ""
+msgstr "Tulostinkomento"
 
 #: ../bin/draksambashare:611
 #, c-format
@@ -1631,9 +1700,9 @@ msgid "Print command:"
 msgstr "Tulostuskomento:"
 
 #: ../bin/draksambashare:612
-#, fuzzy, c-format
+#, c-format
 msgid "LPQ command:"
-msgstr "Komento"
+msgstr "LPQ-komento:"
 
 #: ../bin/draksambashare:613
 #, c-format
@@ -1643,27 +1712,27 @@ msgstr "Tulostaminen:"
 #: ../bin/draksambashare:629
 #, c-format
 msgid "create mode should be numeric. ie: 0755."
-msgstr ""
+msgstr "Luontioikeuksien tulee olla numeerinen. Esim. 0755."
 
 #: ../bin/draksambashare:690
 #, c-format
 msgid "DrakSamba entry"
-msgstr ""
+msgstr "DrakSamba jaot"
 
 #: ../bin/draksambashare:695
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
-msgstr ""
+msgstr "Lisää tai valitse Samban jako ennen muokkaamista."
 
 #: ../bin/draksambashare:718
-#, fuzzy, c-format
+#, c-format
 msgid "Samba user access"
-msgstr "Samba-palvelin"
+msgstr "Samban käyttöoikeudet"
 
 #: ../bin/draksambashare:726
-#, fuzzy, c-format
+#, c-format
 msgid "Mask options"
-msgstr "Perusoptiot"
+msgstr "Maskin asetukset"
 
 #: ../bin/draksambashare:740
 #, c-format
@@ -1671,40 +1740,42 @@ msgid "Display options"
 msgstr "Näyttöasetukset:"
 
 #: ../bin/draksambashare:762
-#, fuzzy, c-format
+#, c-format
 msgid "Samba share directory"
-msgstr "Hakemisto ei ole olemassa"
+msgstr "Samban jakohakemisto"
 
 #: ../bin/draksambashare:765
 #, c-format
 msgid "Share name:"
-msgstr "Jakonimi :"
+msgstr "Jakonimi:"
 
 #: ../bin/draksambashare:771
 #, c-format
 msgid "Public:"
-msgstr "Julkinen :"
+msgstr "Julkinen:"
 
 #: ../bin/draksambashare:795
 #, c-format
 msgid ""
 "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
+"Tiedostojen ja hakemistojen luontioikeuksien tulee olla numeerinen. Esim. "
+"0755."
 
 #: ../bin/draksambashare:802
 #, c-format
 msgid "Please create this Samba user: %s"
-msgstr ""
+msgstr "Luo Samba-käyttäjä: %s"
 
 #: ../bin/draksambashare:914
 #, c-format
 msgid "Add Samba user"
-msgstr ""
+msgstr "Lisää Samba-käyttäjä"
 
 #: ../bin/draksambashare:929
-#, fuzzy, c-format
+#, c-format
 msgid "User information"
-msgstr "Käytä Windows osiotani"
+msgstr "Käyttäjän tiedot"
 
 #: ../bin/draksambashare:931
 #, c-format
@@ -1719,34 +1790,34 @@ msgstr "Salasana:"
 #: ../bin/draksambashare:1046
 #, c-format
 msgid "PDC - primary domain controller"
-msgstr ""
+msgstr "PDC - ensisijainen toimialueen ohjain"
 
 #: ../bin/draksambashare:1047
 #, c-format
 msgid "Standalone - standalone server"
-msgstr ""
+msgstr "Standalone - erillinen palvelin"
 
 #: ../bin/draksambashare:1053
 #, c-format
 msgid "Samba Wizard"
-msgstr ""
+msgstr "Samban asetusvelho"
 
 #: ../bin/draksambashare:1056
-#, fuzzy, c-format
+#, c-format
 msgid "Samba server configuration Wizard"
-msgstr "Hallitse Samba asetukset"
+msgstr "Samba-palvelimen asetusvelho"
 
 #: ../bin/draksambashare:1056
 #, c-format
 msgid ""
 "Samba allows your server to behave as a file and print server for "
 "workstations running non-Linux systems."
-msgstr ""
+msgstr "Samba sallii palvelimen toimia tiedosto- ja tulostuspalvelimena."
 
 #: ../bin/draksambashare:1072
 #, c-format
 msgid "PDC server: primary domain controller"
-msgstr ""
+msgstr "PDC server: ensisijainen toimialueen ohjain"
 
 #: ../bin/draksambashare:1072
 #, c-format
@@ -1754,12 +1825,14 @@ msgid ""
 "Server configured as a PDC is responsible for Windows authentication "
 "throughout the domain."
 msgstr ""
+"Ensisijaiseksi toimialueen ohjauskoneeksi määritelty palvelin vastaa "
+"toimialueen tunnistautumisista."
 
 #: ../bin/draksambashare:1072
 #, c-format
 msgid ""
 "Single server installations may use smbpasswd or tdbsam password backends"
-msgstr ""
+msgstr "Yksittäinen palvelin voi käyttää smbpasswd- tai tdbsam-taustaosia"
 
 #: ../bin/draksambashare:1072
 #, c-format
@@ -1767,26 +1840,28 @@ msgid ""
 "Domain master = yes, causes the server to register the NetBIOS name <pdc "
 "name>. This name will be recognized by other servers."
 msgstr ""
+"Domain master = yes rekisteröi palvelimen NetBIOS-nimen <pdc name>. Muut "
+"palvelimet tunnistavat tämän nimen."
 
 #: ../bin/draksambashare:1089
 #, c-format
 msgid "Wins support:"
-msgstr ""
+msgstr "Wins-tuki:"
 
 #: ../bin/draksambashare:1090
-#, fuzzy, c-format
+#, c-format
 msgid "admin users:"
-msgstr "Lisää käyttäjä"
+msgstr "pääkäyttäjät:"
 
 #: ../bin/draksambashare:1090
 #, c-format
 msgid "root @adm"
-msgstr ""
+msgstr "root @adm"
 
 #: ../bin/draksambashare:1091
 #, c-format
 msgid "Os level:"
-msgstr ""
+msgstr "Os-taso:"
 
 #: ../bin/draksambashare:1091
 #, c-format
@@ -1801,37 +1876,37 @@ msgstr ""
 #: ../bin/draksambashare:1095
 #, c-format
 msgid "The domain is wrong."
-msgstr ""
+msgstr "Toimialue on väärä."
 
 #: ../bin/draksambashare:1102
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup"
-msgstr "PFS ryhmä"
+msgstr "Työryhmä"
 
 #: ../bin/draksambashare:1102
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
-msgstr ""
+msgstr "Samban tarvitsee tietää Windows-työryhmä, jota se palvelee."
 
 #: ../bin/draksambashare:1109 ../bin/draksambashare:1176
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup:"
-msgstr "PFS ryhmä"
+msgstr "Työryhmä:"
 
 #: ../bin/draksambashare:1110
-#, fuzzy, c-format
+#, c-format
 msgid "Netbios name:"
-msgstr "Palvelimen osoite:"
+msgstr "NetBIOS-nimi:"
 
 #: ../bin/draksambashare:1114
 #, c-format
 msgid "The Workgroup is wrong."
-msgstr ""
+msgstr "Työryhmä on väärä."
 
 #: ../bin/draksambashare:1121 ../bin/draksambashare:1131
-#, fuzzy, c-format
+#, c-format
 msgid "Security mode"
-msgstr "Tulostimesi malli "
+msgstr "Turvallisuustaso"
 
 #: ../bin/draksambashare:1121
 #, c-format
@@ -1839,11 +1914,13 @@ msgid ""
 "User level: the client sends a session setup request directly following "
 "protocol negotiation. This request provides a username and password."
 msgstr ""
+"Käyttäjätaso: Asiakas lähettää istunnon asetuspyynnön suoraan käyttämällä "
+"protokollan neuvottelua. Pyyntö sisältää käyttäjätunnuksen ja salasanan."
 
 #: ../bin/draksambashare:1121
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
+msgstr "Jakotaso: Asiakas tunnistautuu jokaiseen jakoon erikseen."
 
 #: ../bin/draksambashare:1121
 #, c-format
@@ -1852,38 +1929,41 @@ msgid ""
 "in a central, shared, account repository. The centralized account repository "
 "is shared between domain (security) controllers."
 msgstr ""
+"Toimialuetaso: Tarjoaa mekanismin kaikkien käyttäjien ja ryhmien "
+"tallentamisen keskitetysti jaettuun tietokantaan. Keskitetty tietokanta on "
+"jaettu toimialueen (turvallisuus)ohjainkoneiden kesken."
 
 #: ../bin/draksambashare:1132
-#, fuzzy, c-format
+#, c-format
 msgid "Hosts allow"
-msgstr "Konenimi"
+msgstr "Sallitut koneet"
 
 #: ../bin/draksambashare:1137
 #, c-format
 msgid "Server Banner."
-msgstr ""
+msgstr "Palvelimen mainos."
 
 #: ../bin/draksambashare:1137
 #, c-format
 msgid ""
 "The banner is the way this server will be described in the Windows "
 "workstations."
-msgstr ""
+msgstr "Mainos on tapa, jolla palvelin kuvataan Windows-työasemissa."
 
 #: ../bin/draksambashare:1142
 #, c-format
 msgid "Banner:"
-msgstr ""
+msgstr "Mainos:"
 
 #: ../bin/draksambashare:1146
 #, c-format
 msgid "The Server Banner is incorrect."
-msgstr ""
+msgstr "Palvelimen mainos on virheellinen."
 
 #: ../bin/draksambashare:1153
 #, c-format
 msgid "Samba Log"
-msgstr ""
+msgstr "Samba loki"
 
 #: ../bin/draksambashare:1153
 #, c-format
@@ -1891,36 +1971,38 @@ msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
 "connects"
 msgstr ""
+"Lokitiedosto: lokitiedosto tiedosto.%m pitää erikseen lokia jokaisesta "
+"koneesta, joka ottaa yhteyttä"
 
 #: ../bin/draksambashare:1153
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
-msgstr ""
+msgstr "Lokitaso: lokitiedostojen yksityiskohtaisuus (arvo 1-10)"
 
 #: ../bin/draksambashare:1153
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
+msgstr "Lokin suurin koko: lokitiedoston suurin mahdollinen koko (kt)."
 
 #: ../bin/draksambashare:1160 ../bin/draksambashare:1178
-#, fuzzy, c-format
+#, c-format
 msgid "Log file:"
-msgstr "Profiilit"
+msgstr "Lokitiedosto:"
 
 #: ../bin/draksambashare:1161
 #, c-format
 msgid "Max log size:"
-msgstr ""
+msgstr "Lokin suurin koko:"
 
 #: ../bin/draksambashare:1162
-#, fuzzy, c-format
+#, c-format
 msgid "Log level:"
-msgstr "Taso"
+msgstr "Lokitaso:"
 
 #: ../bin/draksambashare:1167
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
+msgstr "Velho keräsi seuraavat Samban asettamiseen tarvittavat tiedot."
 
 #: ../bin/draksambashare:1167
 #, c-format
@@ -1928,6 +2010,8 @@ msgid ""
 "To accept these values, and configure your server, click the Next button or "
 "use the Back button to correct them."
 msgstr ""
+"Hyväksy asetukset ja aseta palvelin napsauttamalla \"Seuraava\" tai korjaa "
+"asetukset napsauttamalla \"Edellinen\"."
 
 #: ../bin/draksambashare:1167
 #, c-format
@@ -1935,76 +2019,78 @@ msgid ""
 "If you have previously create some shares, they will appear in this "
 "configuration. Run 'drakwizard sambashare' to manage your shares."
 msgstr ""
+"Jos aiemmin on jo luotu Samba-jakoja, otetaan ne käyttöön. Hallitse jakoja "
+"suorittamalla \"drakwizard sambashare\" ."
 
 #: ../bin/draksambashare:1175
 #, c-format
 msgid "Samba type:"
-msgstr ""
+msgstr "Palvelimen tyyppi:"
 
 #: ../bin/draksambashare:1177
 #, c-format
 msgid "Server banner:"
-msgstr ""
+msgstr "Palvelimen mainos:"
 
 #: ../bin/draksambashare:1179
 #, c-format
 msgid " "
-msgstr ""
+msgstr " "
 
 #: ../bin/draksambashare:1180
 #, c-format
 msgid "Unix Charset:"
-msgstr ""
+msgstr "Unix-merkistö:"
 
 #: ../bin/draksambashare:1181
 #, c-format
 msgid "Dos Charset:"
-msgstr ""
+msgstr "Dos-merkistö:"
 
 #: ../bin/draksambashare:1182
 #, c-format
 msgid "Display Charset:"
-msgstr ""
+msgstr "Näyttömerkistö:"
 
 #: ../bin/draksambashare:1197
 #, c-format
 msgid "The wizard successfully configured your Samba server."
-msgstr ""
+msgstr "Velho asetti Samba-palvelimen onnistuneesti."
 
 #: ../bin/draksambashare:1252
 #, c-format
 msgid "The Samba wizard has unexpectedly failed:"
-msgstr ""
+msgstr "Samban asetusvelho epäonnistui odottamattomasti:"
 
 #: ../bin/draksambashare:1266
 #, c-format
 msgid "Manage Samba configuration"
-msgstr "Hallitse Samba asetukset"
+msgstr "Hallitse Samban asetuksia"
 
 #: ../bin/draksambashare:1354
 #, c-format
 msgid "Failed to Modify Samba share."
-msgstr ""
+msgstr "Samba-jaon muokkaaminen epäonnistui."
 
 #: ../bin/draksambashare:1363
 #, c-format
 msgid "Failed to remove a Samba share."
-msgstr ""
+msgstr "Samba-jaon poistaminen epäonnistui."
 
 #: ../bin/draksambashare:1370
 #, c-format
 msgid "File share"
-msgstr ""
+msgstr "Tiedostojako"
 
 #: ../bin/draksambashare:1385
 #, c-format
 msgid "Failed to Modify."
-msgstr ""
+msgstr "Muokkaus epäonnistui."
 
 #: ../bin/draksambashare:1394
 #, c-format
 msgid "Failed to remove."
-msgstr ""
+msgstr "Poistaminen epäonnistui."
 
 #: ../bin/draksambashare:1401
 #, c-format
@@ -2014,17 +2100,17 @@ msgstr "Tulostimet"
 #: ../bin/draksambashare:1413
 #, c-format
 msgid "Failed to add user."
-msgstr ""
+msgstr "Käyttäjän lisääminen epäonnistui."
 
 #: ../bin/draksambashare:1422
 #, c-format
 msgid "Failed to change user password."
-msgstr ""
+msgstr "Käyttäjän salasanan muuttaminen epäonnistui."
 
 #: ../bin/draksambashare:1434
 #, c-format
 msgid "Failed to delete user."
-msgstr ""
+msgstr "Käyttäjän poistaminen epäonnistui."
 
 #: ../bin/draksambashare:1439
 #, c-format
@@ -2034,12 +2120,12 @@ msgstr "Userdrake"
 #: ../bin/draksambashare:1447
 #, c-format
 msgid "Samba Users"
-msgstr ""
+msgstr "Samba-käyttäjät"
 
 #: ../bin/draksambashare:1455
 #, c-format
 msgid "Please configure your Samba server"
-msgstr ""
+msgstr "Aseta Samba-palvelin"
 
 #: ../bin/draksambashare:1455
 #, c-format
@@ -2047,41 +2133,43 @@ msgid ""
 "It seems this is the first time you run this tool.\n"
 "A wizard will appear to configure a basic Samba server"
 msgstr ""
+"Näyttää, että työkalu käynnistettiin ensimmäisen kerran.\n"
+"Velho käynnistyy asettamaan Samba-palvelimen perusasetuksilla"
 
 #: ../bin/draksambashare:1464
 #, c-format
 msgid "DrakSamba manage Samba shares"
-msgstr ""
+msgstr "DrakSamba Samba-jakojen hallintatyökalu"
 
 #: ../bin/net_applet:95
-#, fuzzy, c-format
+#, c-format
 msgid "Network is up on interface %s."
-msgstr "Verkko on käytössä liitännässä %s"
+msgstr "Verkko käytössä liitännässä %s"
 
 #: ../bin/net_applet:96
-#, fuzzy, c-format
+#, c-format
 msgid "IP address: %s"
-msgstr "IP-osoite:"
+msgstr "IP-osoite: %s"
 
 #: ../bin/net_applet:97
-#, fuzzy, c-format
+#, c-format
 msgid "Gateway: %s"
-msgstr "Yhdyskäytävä:"
+msgstr "Yhdyskäytävä: %s"
 
 #: ../bin/net_applet:98
-#, fuzzy, c-format
+#, c-format
 msgid "DNS: %s"
-msgstr "DNS"
+msgstr "DNS: %s"
 
 #: ../bin/net_applet:99
 #, c-format
 msgid "Connected to %s (link level: %d %%)"
-msgstr ""
+msgstr "Yhdistetty verkkoon %s (signaalin taso %d %%)"
 
 #: ../bin/net_applet:101
-#, fuzzy, c-format
+#, c-format
 msgid "Network is down on interface %s."
-msgstr "Verkko on käytössä liitännässä %s"
+msgstr "Verkko ei ole käytössä liitännässä %s"
 
 #: ../bin/net_applet:103
 #, c-format
@@ -2089,8 +2177,9 @@ msgid ""
 "You do not have any configured Internet connection.\n"
 "Run the \"%s\" assistant from the Mandriva Linux Control Center"
 msgstr ""
-"Tätä liitäntää ei ole vielä asetettu.\n"
-"Suorita Mandriva Linux Ohjauskeskuksesta \"%s\"."
+"Yhtään verkkoliitäntää ei ole vielä asetettu.\n"
+"Suorita Mandriva Linuxin Ohjauskeskuksesta\n"
+"työkalu \"%s\"."
 
 #: ../bin/net_applet:129 ../bin/net_monitor:519
 #, c-format
@@ -2110,12 +2199,12 @@ msgstr "Valvo verkkoa"
 #: ../bin/net_applet:133
 #, c-format
 msgid "Manage wireless networks"
-msgstr ""
+msgstr "Hallitse langattomia verkkoja"
 
 #: ../bin/net_applet:135
-#, fuzzy, c-format
+#, c-format
 msgid "Manage VPN connections"
-msgstr "Yhteyksien hallinta"
+msgstr "Hallitse VPN-yhteyksiä"
 
 #: ../bin/net_applet:139
 #, c-format
@@ -2130,12 +2219,12 @@ msgstr "Seurattu liitäntä"
 #: ../bin/net_applet:142 ../bin/net_applet:143 ../bin/net_applet:145
 #, c-format
 msgid "Auto-detect"
-msgstr "Automaattinen tunnistaminen"
+msgstr "Automaattinen"
 
 #: ../bin/net_applet:150
 #, c-format
 msgid "Active interfaces"
-msgstr ""
+msgstr "Aktiiviset liitännät"
 
 #: ../bin/net_applet:170
 #, c-format
@@ -2145,34 +2234,34 @@ msgstr "Profiilit"
 #: ../bin/net_applet:180 ../lib/network/connection.pm:228
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
-#, fuzzy, c-format
+#, c-format
 msgid "VPN connection"
-msgstr "Lähiverkko"
+msgstr "VPN-yhteys"
 
 #: ../bin/net_applet:372
-#, fuzzy, c-format
+#, c-format
 msgid "Network connection"
-msgstr "Verkko-optiot"
+msgstr "Verkkoliitäntä"
 
 #: ../bin/net_applet:459
 #, c-format
 msgid "More networks"
-msgstr ""
+msgstr "Lisää verkkoja"
 
 #: ../bin/net_applet:486
 #, c-format
 msgid "Interactive Firewall automatic mode"
-msgstr ""
+msgstr "Interaktiivisen palomuurin automaattinen tila"
 
 #: ../bin/net_applet:491
 #, c-format
 msgid "Always launch on startup"
-msgstr "Käynnistyksen yhteydessä"
+msgstr "Käynnistä automaattisesti"
 
 #: ../bin/net_applet:496
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless networks"
-msgstr "Langaton yhteys"
+msgstr "Langattomat verkot"
 
 #: ../bin/net_applet:503 ../bin/net_monitor:96
 #, c-format
@@ -2182,12 +2271,12 @@ msgstr "Asetukset"
 #: ../bin/net_monitor:60 ../bin/net_monitor:65
 #, c-format
 msgid "Network Monitoring"
-msgstr "Verkon valvonta"
+msgstr "Verkonvalvonta"
 
 #: ../bin/net_monitor:99
-#, fuzzy, c-format
+#, c-format
 msgid "Default connection: "
-msgstr "Kaapeliyhteys"
+msgstr "Oletusyhteys: "
 
 #: ../bin/net_monitor:101
 #, c-format
@@ -2215,7 +2304,7 @@ msgid ""
 "Sending\n"
 "speed:"
 msgstr ""
-"Lähetys\n"
+"Lähetys-\n"
 "nopeus:"
 
 #: ../bin/net_monitor:108 ../bin/net_monitor:109 ../bin/net_monitor:114
@@ -2229,15 +2318,13 @@ msgid ""
 "Receiving\n"
 "speed:"
 msgstr ""
-"Vastaanotto\n"
-"nopeus:"
+"Vastaan-\n"
+"ottonopeus:"
 
 #: ../bin/net_monitor:113
-#, fuzzy, c-format
+#, c-format
 msgid "Connection time: "
-msgstr ""
-"Yhteys\n"
-"aika: "
+msgstr "Yhteysaika: "
 
 #: ../bin/net_monitor:120
 #, c-format
@@ -2247,27 +2334,27 @@ msgstr "Käytä samaa mittakaavaa lähetetylle ja vastaanotetulle liikenteelle"
 #: ../bin/net_monitor:138
 #, c-format
 msgid "Wait please, testing your connection..."
-msgstr "Odota, testataan yhteyttäsi..."
+msgstr "Odota, testataan yhteyttä..."
 
 #: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Disconnecting from Internet "
-msgstr "Katkaisen Internetyhteyden "
+msgstr "Katkaistaan Internet-yhteys "
 
 #: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Connecting to Internet "
-msgstr "Avaan Internetyhteyden "
+msgstr "Avataan Internet-yhteys "
 
 #: ../bin/net_monitor:254
 #, c-format
 msgid "Disconnection from Internet failed."
-msgstr "Internetyhteyden katkaiseminen epäonnistui."
+msgstr "Internet-yhteyden katkaiseminen epäonnistui."
 
 #: ../bin/net_monitor:255
 #, c-format
 msgid "Disconnection from Internet complete."
-msgstr "Internetyhteyden katkaiseminen valmis."
+msgstr "Internet-yhteyden katkaiseminen onnistui."
 
 #: ../bin/net_monitor:257
 #, c-format
@@ -2281,12 +2368,12 @@ msgid ""
 "Verify your configuration in the Mandriva Linux Control Center."
 msgstr ""
 "Yhteys epäonnistui.\n"
-"Tarkista asetukset Mandriva Linux Ohjauskeskuksessa."
+"Tarkista asetukset Mandriva Linuxin Ohjauskeskuksesta."
 
 #: ../bin/net_monitor:360
-#, fuzzy, c-format
+#, c-format
 msgid "%s (%s)"
-msgstr "DNS"
+msgstr "%s (%s)"
 
 #: ../bin/net_monitor:385
 #, c-format
@@ -2296,27 +2383,26 @@ msgstr "Väriasetukset"
 #: ../bin/net_monitor:444 ../bin/net_monitor:457
 #, c-format
 msgid "sent: "
-msgstr "lähetetty: "
+msgstr "Lähetetty: "
 
 #: ../bin/net_monitor:447 ../bin/net_monitor:461
 #, c-format
 msgid "received: "
-msgstr "vastaanotettu: "
+msgstr "Vastaanotettu: "
 
 #: ../bin/net_monitor:450
 #, c-format
 msgid "average"
-msgstr "keskiarvo"
+msgstr "Keskiarvo"
 
 #: ../bin/net_monitor:451
 #, c-format
 msgid "Reset counters"
-msgstr ""
+msgstr "Nollaa laskurit"
 
-#: ../bin/net_monitor:454
-#, c-format
+#: ../bin/net_monitor:454, c-format
 msgid "Local measure"
-msgstr "Paikallinen mitta"
+msgstr "Hetkellinen arvo"
 
 #: ../bin/net_monitor:512
 #, c-format
@@ -2324,8 +2410,8 @@ msgid ""
 "Warning, another internet connection has been detected, maybe using your "
 "network"
 msgstr ""
-"Varoitus, toinen Internetyhteys on havaittu, mahdollisesti käyttäen sinun "
-"verkkoasi"
+"Varoitus! Toinen, mahdollisesti sinun verkkoa käyttävä, Internet-yhteys on "
+"havaittu"
 
 #: ../bin/net_monitor:516
 #, c-format
@@ -2340,27 +2426,27 @@ msgstr "Ei yhteyttä"
 #: ../bin/net_monitor:523
 #, c-format
 msgid "No internet connection configured"
-msgstr "Ei asetettua Internetyhteyttä"
+msgstr "Ei asetettua Internet-yhteyttä"
 
 #: ../lib/network/connection.pm:16
 #, c-format
 msgid "Unknown connection type"
-msgstr "Tuntematon yhteyden tyyppi"
+msgstr "Tuntematon yhteys"
 
 #: ../lib/network/connection.pm:161
 #, c-format
 msgid "Network access settings"
-msgstr ""
+msgstr "Verkkoyhteysasetukset"
 
 #: ../lib/network/connection.pm:162
 #, c-format
 msgid "Access settings"
-msgstr ""
+msgstr "Yhteysasetukset"
 
 #: ../lib/network/connection.pm:163
 #, c-format
 msgid "Address settings"
-msgstr ""
+msgstr "Osoiteasetukset"
 
 #: ../lib/network/connection.pm:177 ../lib/network/connection.pm:197
 #: ../lib/network/connection/isdn.pm:155 ../lib/network/netconnect.pm:217
@@ -2368,7 +2454,7 @@ msgstr ""
 #: ../lib/network/netconnect.pm:584
 #, c-format
 msgid "Unlisted - edit manually"
-msgstr "Ei listattu - muokkaa manuaalisesti"
+msgstr "Ei listattu - muokkaa käsin"
 
 #: ../lib/network/connection.pm:230 ../lib/network/connection/cable.pm:41
 #: ../lib/network/connection/wireless.pm:48 ../lib/network/vpn/openvpn.pm:127
@@ -2380,12 +2466,12 @@ msgstr "Ei mitään"
 #: ../lib/network/connection.pm:242
 #, c-format
 msgid "Allow users to manage the connection"
-msgstr ""
+msgstr "Salli käyttäjien hallita yhteyttä"
 
 #: ../lib/network/connection.pm:243
 #, c-format
 msgid "Start the connection at boot"
-msgstr ""
+msgstr "Käynnistä yhteys koneen käynnistyessä"
 
 #: ../lib/network/connection.pm:244
 #, c-format
@@ -2395,37 +2481,37 @@ msgstr "Metric"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:246
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr ""
+msgstr "Paketin suurin MTU-arvo. Jätä tyhjäksi, jos olet epävarma."
 
 #: ../lib/network/connection.pm:318
-#, fuzzy, c-format
+#, c-format
 msgid "Link detected on interface %s"
-msgstr "(löydetty portista %s)"
+msgstr "Yhteys havaittu liitännässä %s"
 
 #: ../lib/network/connection.pm:319 ../lib/network/connection/ethernet.pm:291
 #, c-format
 msgid "Link beat lost on interface %s"
-msgstr ""
+msgstr "Yhteys katkesi liitännässä %s"
 
 #: ../lib/network/connection/cable.pm:10
 #, c-format
 msgid "Cable"
-msgstr ""
+msgstr "Kaapeli"
 
 #: ../lib/network/connection/cable.pm:11
-#, fuzzy, c-format
+#, c-format
 msgid "Cable modem"
-msgstr "Kortin malli:"
+msgstr "Kaapelimodeemi"
 
 #: ../lib/network/connection/cable.pm:42
 #, c-format
 msgid "Use BPALogin (needed for Telstra)"
-msgstr "Käytä BPALogin (tarvitaan Telstralle)"
+msgstr "Käytä BPALogin:a (tarvitaan Telstralle)"
 
 #: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:609
 #, c-format
@@ -2447,44 +2533,42 @@ msgstr "Salasana"
 #: ../lib/network/connection/cellular.pm:66
 #, c-format
 msgid "Access Point Name"
-msgstr ""
+msgstr "AP:n nimi"
 
 #: ../lib/network/connection/cellular_bluetooth.pm:10
 #, c-format
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: ../lib/network/connection/cellular_bluetooth.pm:11
 #, c-format
 msgid "Bluetooth Dial Up Networking"
-msgstr ""
+msgstr "Bluetooth-modeemi"
 
 #: ../lib/network/connection/cellular_card.pm:8
 #, c-format
 msgid "Wrong PIN number format: it should be 4 digits."
-msgstr ""
+msgstr "Virheellinen PIN-koodin muoto, koodin tulisi olla 4 numeroa."
 
 #: ../lib/network/connection/cellular_card.pm:10
 #, c-format
 msgid "GPRS/Edge/3G"
-msgstr ""
+msgstr "GPRS / Edge / 3G"
 
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
-msgstr ""
+msgstr "PIN-koodi. Jätä tyhjäksi, jos PIN-koodia ei tarvita."
 
 #: ../lib/network/connection/cellular_card.pm:186
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to open device %s"
-msgstr "Prosessia ei voitu haaroittaa: %s"
+msgstr "Laitetta %s ei voitu avata"
 
 #: ../lib/network/connection/cellular_card.pm:218
-#, fuzzy, c-format
+#, c-format
 msgid "Please check that your SIM card is inserted."
-msgstr ""
-"\n"
-"Valitse kaikki valitsimet jotka tarvitset.\n"
+msgstr "Tarkista, että SIM-kortti on paikallaan."
 
 #: ../lib/network/connection/cellular_card.pm:229
 #, c-format
@@ -2492,26 +2576,28 @@ msgid ""
 "You entered a wrong PIN code.\n"
 "Entering the wrong PIN code multiple times may lock your SIM card!"
 msgstr ""
+"Virheellinen PIN-koodi.\n"
+"Virheellisen PIN-koodin syöttäminen liian monta kertaa voi lukita SIM-kortin!"
 
 #: ../lib/network/connection/dvb.pm:9
 #, c-format
 msgid "DVB"
-msgstr ""
+msgstr "DVB"
 
 #: ../lib/network/connection/dvb.pm:10
 #, c-format
 msgid "Satellite (DVB)"
-msgstr ""
+msgstr "Satelliitti (DVB)"
 
 #: ../lib/network/connection/dvb.pm:53
 #, c-format
 msgid "Adapter card"
-msgstr ""
+msgstr "Verkkoadapteri"
 
 #: ../lib/network/connection/dvb.pm:54
 #, c-format
 msgid "Net demux"
-msgstr ""
+msgstr "Verkon demux"
 
 #: ../lib/network/connection/dvb.pm:55
 #, c-format
@@ -2521,22 +2607,22 @@ msgstr "PID"
 #: ../lib/network/connection/ethernet.pm:11
 #, c-format
 msgid "Ethernet"
-msgstr ""
+msgstr "Ethernet"
 
 #: ../lib/network/connection/ethernet.pm:12
 #, c-format
 msgid "Wired (Ethernet)"
-msgstr ""
+msgstr "Ethernet"
 
 #: ../lib/network/connection/ethernet.pm:30
-#, fuzzy, c-format
+#, c-format
 msgid "Virtual interface"
-msgstr "Verkkoliitäntä"
+msgstr "Virtuaaliliitäntä"
 
 #: ../lib/network/connection/ethernet.pm:60
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
-msgstr ""
+msgstr "Valittua verkkoliitäntää ei löytynyt käyttämällä ajuria %s"
 
 #: ../lib/network/connection/ethernet.pm:70 ../lib/network/vpn/openvpn.pm:207
 #, c-format
@@ -2549,9 +2635,9 @@ msgid "Automatic IP (BOOTP/DHCP)"
 msgstr "Automaattinen IP (BOOTP/DHCP)"
 
 #: ../lib/network/connection/ethernet.pm:125
-#, fuzzy, c-format
+#, c-format
 msgid "IP settings"
-msgstr "PLL asetus:"
+msgstr "IP-asetukset"
 
 #: ../lib/network/connection/ethernet.pm:138
 #, c-format
@@ -2572,7 +2658,7 @@ msgstr "Yhdyskäytävä"
 #: ../lib/network/connection/ethernet.pm:145
 #, c-format
 msgid "Get DNS servers from DHCP"
-msgstr "Hae DNS-palvelimen IP-osoite DHCP kautta"
+msgstr "Hae nimipalvelimet DHCP-palvelimelta"
 
 #: ../lib/network/connection/ethernet.pm:147
 #, c-format
@@ -2592,32 +2678,34 @@ msgstr "Etsi verkkoalueelta"
 #: ../lib/network/connection/ethernet.pm:150
 #, c-format
 msgid "By default search domain will be set from the fully-qualified host name"
-msgstr "Oletuksena etsittävä verkkoalue asetetaan täyden konenimen perusteella"
+msgstr ""
+"Oletuksena etsittävä verkkoalue asetetaan täydellisen verkkotunnuksen "
+"perusteella"
 
 #: ../lib/network/connection/ethernet.pm:153
 #, c-format
 msgid "DHCP timeout (in seconds)"
-msgstr "DHCP aikakatkaisu (sekunneissa)"
+msgstr "DHCP:n aikakatkaisu (sekuntia)"
 
 #: ../lib/network/connection/ethernet.pm:154
 #, c-format
 msgid "Get YP servers from DHCP"
-msgstr "Hae YP palvelimet DHCP kautta"
+msgstr "Hae YP-palvelimet DHCP-palvelimelta"
 
 #: ../lib/network/connection/ethernet.pm:155
 #, c-format
 msgid "Get NTPD servers from DHCP"
-msgstr "Hae NTPD palvelimet DHCP kautta"
+msgstr "Hae aikapalvelimet DHCP-palvelimelta"
 
 #: ../lib/network/connection/ethernet.pm:156
 #, c-format
 msgid "DHCP host name"
-msgstr "DHCP konenimi"
+msgstr "DHCP-verkkonimi"
 
 #: ../lib/network/connection/ethernet.pm:158
 #, c-format
 msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
-msgstr ""
+msgstr "Älä käytä Zeroconf-varmistusta (169.254.0.0-verkkoa)"
 
 #: ../lib/network/connection/ethernet.pm:169
 #, c-format
@@ -2627,12 +2715,12 @@ msgstr "IP-osoitteen tulee olla muotoa 1.2.3.4"
 #: ../lib/network/connection/ethernet.pm:174
 #, c-format
 msgid "Netmask should be in format 255.255.224.0"
-msgstr "Yhdyskäytävän osoite pitää olla muotoa 255.255.224.0"
+msgstr "Verkon peitteen tulee olla muotoa 255.255.224.0"
 
 #: ../lib/network/connection/ethernet.pm:179
 #, c-format
 msgid "Warning: IP address %s is usually reserved!"
-msgstr "Varoitus: IP osoite %s on yleensä varattu !"
+msgstr "Varoitus: IP-osoite %s on yleensä varattu!"
 
 #: ../lib/network/connection/ethernet.pm:185
 #, c-format
@@ -2641,11 +2729,15 @@ msgid ""
 "with this connection, first disable all other devices which use it, or "
 "configure them not to start on boot"
 msgstr ""
+"Osoite %s on jo käytössä yhteydellä, joka käynnistyy tietokoneen "
+"käynnistyessä. Käyttääksesi osoitetta tämän yhteyden kanssa, poista käytöstä "
+"kaikki laitteet, jotka käyttävä sitä tai ota niiden automaattinen "
+"käynnistyminen pois käytöstä."
 
 #: ../lib/network/connection/ethernet.pm:210
-#, fuzzy, c-format
+#, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
-msgstr "Määritä konenimi DHCP-osoitteesta"
+msgstr "Määritä verkkonimi DHCP-palvelimen avulla (tai luo ainutlaatuinen)"
 
 #: ../lib/network/connection/ethernet.pm:230
 #, c-format
@@ -2655,32 +2747,32 @@ msgstr "Verkon pikakytkentä (Hotplugging)"
 #: ../lib/network/connection/ethernet.pm:234
 #, c-format
 msgid "Enable IPv6 to IPv4 tunnel"
-msgstr ""
+msgstr "Ota käyttöön IPv6-to-IPv4 -tunneli"
 
 #: ../lib/network/connection/ethernet.pm:290
 #, c-format
 msgid "Link beat detected on interface %s"
-msgstr ""
+msgstr "Yhteys havaittu liitännässä %s"
 
 #: ../lib/network/connection/ethernet.pm:293
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
-msgstr ""
+msgstr "Pyydetään verkko-osoitetta liitännälle %s (%s-protokollalla)..."
 
 #: ../lib/network/connection/ethernet.pm:294
 #, c-format
 msgid "Got a network address on interface %s (%s protocol)"
-msgstr ""
+msgstr "Liitäntä %s sai verkko-osoitteen (%s-protokollan avulla)"
 
 #: ../lib/network/connection/ethernet.pm:295
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
-msgstr ""
+msgstr "Liitännälle %s ei löytynyt verkko-osoitetta (%s-protokollan avulla)"
 
 #: ../lib/network/connection/isdn.pm:8
 #, c-format
 msgid "ISDN"
-msgstr ""
+msgstr "ISDN"
 
 #: ../lib/network/connection/isdn.pm:198 ../lib/network/netconnect.pm:417
 #, c-format
@@ -2706,7 +2798,7 @@ msgstr "USB"
 #: ../lib/network/connection/pots.pm:10
 #, c-format
 msgid "POTS"
-msgstr ""
+msgstr "Modeemi"
 
 #. -PO: POTS means "Plain old telephone service"
 #. -PO: remove it if it doesn't have an equivalent in your language
@@ -2714,7 +2806,7 @@ msgstr ""
 #: ../lib/network/connection/pots.pm:16
 #, c-format
 msgid "Analog telephone modem (POTS)"
-msgstr ""
+msgstr "Analoginen modeemi"
 
 #: ../lib/network/connection/ppp.pm:9 ../lib/network/netconnect.pm:78
 #, c-format
@@ -2848,7 +2940,7 @@ msgstr "Itävalta"
 #: ../lib/network/connection/providers/xdsl.pm:1258
 #, c-format
 msgid "Any"
-msgstr ""
+msgstr "Mikä tahansa"
 
 #: ../lib/network/connection/providers/xdsl.pm:114
 #: ../lib/network/connection/providers/xdsl.pm:124
@@ -2983,7 +3075,7 @@ msgstr "Mauritius"
 #: ../lib/network/connection/providers/xdsl.pm:900
 #, c-format
 msgid "Morocco"
-msgstr "Marocco"
+msgstr "Marokko"
 
 #: ../lib/network/connection/providers/xdsl.pm:910
 #: ../lib/network/connection/providers/xdsl.pm:919
@@ -3093,39 +3185,39 @@ msgid "Wireless"
 msgstr "Langaton"
 
 #: ../lib/network/connection/wireless.pm:16
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless (Wi-Fi)"
-msgstr "Langaton"
+msgstr "WLAN"
 
 #: ../lib/network/connection/wireless.pm:32
 #, c-format
 msgid "Use a Windows driver (with ndiswrapper)"
-msgstr "Käytä Windows ajuria (ndiswrapperin kanssa)"
+msgstr "Käytä Windows-ajuria (ndiswrapperin avulla)"
 
 #: ../lib/network/connection/wireless.pm:49
 #, c-format
 msgid "Open WEP"
-msgstr ""
+msgstr "WEP (avoin)"
 
 #: ../lib/network/connection/wireless.pm:50
 #, c-format
 msgid "Restricted WEP"
-msgstr ""
+msgstr "WEP (rajoitettu)"
 
 #: ../lib/network/connection/wireless.pm:51
 #, c-format
 msgid "WPA/WPA2 Pre-Shared Key"
-msgstr ""
+msgstr "WPA / WPA2 PSK"
 
 #: ../lib/network/connection/wireless.pm:52
 #, c-format
 msgid "WPA/WPA2 Enterprise"
-msgstr ""
+msgstr "WPA / WPA2 Enterprise"
 
 #: ../lib/network/connection/wireless.pm:271
 #, c-format
 msgid "Windows driver"
-msgstr ""
+msgstr "Windows-ajuri"
 
 #: ../lib/network/connection/wireless.pm:357
 #, c-format
@@ -3133,11 +3225,13 @@ msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
 "switch) first."
 msgstr ""
+"Langaton verkkokortti on poistettu käytöstä, kortti tulee ottaa käyttöön "
+"ensin."
 
 #: ../lib/network/connection/wireless.pm:444
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless settings"
-msgstr "Langaton yhteys"
+msgstr "Langattoman verkon asetukset"
 
 #: ../lib/network/connection/wireless.pm:449
 #: ../lib/network/connection_manager.pm:277
@@ -3184,7 +3278,7 @@ msgstr "Verkon nimi (ESSID)"
 #: ../lib/network/connection/wireless.pm:455
 #, c-format
 msgid "Encryption mode"
-msgstr ""
+msgstr "Salaustapa"
 
 #: ../lib/network/connection/wireless.pm:457
 #, c-format
@@ -3194,12 +3288,12 @@ msgstr "Salausavain"
 #: ../lib/network/connection/wireless.pm:459
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
-msgstr ""
+msgstr "Pakota avaimen käyttö ASCII-merkkijonona (esim. Liveboxille)"
 
 #: ../lib/network/connection/wireless.pm:466
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Login/Username"
-msgstr "Käyttäjätunnus (käyttäjän nimi)"
+msgstr "EAP-käyttäjätunnus"
 
 #: ../lib/network/connection/wireless.pm:468
 #, c-format
@@ -3208,14 +3302,16 @@ msgid ""
 "need to specify domain then try the untested syntax\n"
 "  DOMAIN\\username"
 msgstr ""
+"Kirjautumistunnus tai käyttäjätunnus tekstimuodossa.\n"
+"Jos toimialue täytyy määritellä, kokeile testaamatonta muotoa\n"
+"  TOIMIALUE\\käyttäjätunnus"
 
 #: ../lib/network/connection/wireless.pm:471
-#, fuzzy, c-format
-msgid "EAP Password"
-msgstr "Salasana"
-
-#: ../lib/network/connection/wireless.pm:473
 #, c-format
+msgid "EAP Password"
+msgstr "EAP-salasana"
+
+#: ../lib/network/connection/wireless.pm:473, c-format
 msgid ""
 " Password: A string.\n"
 "Note that this is not the same thing as a psk.\n"
@@ -3232,11 +3328,25 @@ msgid ""
 "  TLS mode is completely certificate based and may ignore\n"
 "the username and password values specified here."
 msgstr ""
+" Salasana: Merkkijono.\n"
+"Huomaa, että kyseessä ei ole PSK.\n"
+"____________________________________________________\n"
+"LISÄTIETOJA:\n"
+"Lisäasetuksista voidaan valita käytettävä EAP-tunnistustapa.\n"
+"\n"
+"- Automaattinen: Kaikkia mahdollisia tapoja kokeillaan.\n"
+"  Jos automaattinen tunnistaminen epäonnistuu,\n"
+"  kokeile PEAP TTLS -yhdistelmää.\n"
+"\n"
+"HUOM! Asetukset MD5, MSCHAPV2, OTP ja GTC sisältävät\n"
+"automaattisesti PEAP- ja TLS-tunnistustavat. TLS on täysin\n"
+"sertifikaattipohjainen ja ohittaa mahdollisesti käyttäjätunnus-\n"
+"ja salasana-asetukset."
 
 #: ../lib/network/connection/wireless.pm:487
 #, c-format
 msgid "EAP client certificate"
-msgstr ""
+msgstr "EAP-asiakassertifikaatti"
 
 #: ../lib/network/connection/wireless.pm:489
 #, c-format
@@ -3246,16 +3356,23 @@ msgid ""
 "considered as the alternative to username/password combo.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
+"Asiakassertifikaatin täydellinen polku ja tiedostonimi.\n"
+"Asetusta käytetään vain EAP:n sertifikaattipohjaiseen\n"
+"tunnistautumiseen. Mahdollinen vaihtoehto käyttäjä-\n"
+"tunnukselle ja salasanalle.\n"
+"\n"
+"HUOM! Muut tähän asetukseen liittyvät asetukset löytyvät\n"
+"lisäasetuksista."
 
 #: ../lib/network/connection/wireless.pm:493
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless regulatory domain"
-msgstr "Langaton yhteys"
+msgstr "Langattoman verkon regulatiivinen toimialue"
 
 #: ../lib/network/connection/wireless.pm:495
 #, c-format
 msgid "Network ID"
-msgstr "Network ID"
+msgstr "Verkon tunnus"
 
 #: ../lib/network/connection/wireless.pm:496
 #, c-format
@@ -3270,7 +3387,7 @@ msgstr "Herkkyyskynnys"
 #: ../lib/network/connection/wireless.pm:498
 #, c-format
 msgid "Bitrate (in b/s)"
-msgstr "Bittivirta (b/s)"
+msgstr "Siirtonopeus (bit/s)"
 
 #: ../lib/network/connection/wireless.pm:499
 #, c-format
@@ -3290,13 +3407,12 @@ msgid ""
 "fixed\n"
 "or off."
 msgstr ""
-"RTS/CTS lisää kättelyn ennen jokaista siirrettyä pakettia kanavan puhtauden\n"
-"varmistamiseksi. Tämä lisää ylimääräistä kuormitusta, mutta parantaa "
-"nopeutta\n"
-"piilotettujen solmujen tai useiden aktiivisten solmujen tapauksessa. Tämä\n"
-"parametri asettaa pienimmän RTS-paketin koon yhtä suureksi kuin "
-"maksimikoko.\n"
-"Voit asettaa tämän parametrin myös arvoon auto (automaattinen), fixed\n"
+"RTS/CTS lisää kättelyn ennen jokaista siirrettyä pakettia kanavan\n"
+"puhtauden varmistamiseksi. Tämä lisää ylimääräistä kuormitusta,\n"
+"mutta parantaa nopeutta piilotettujen tai useiden aktiivisten\n"
+"tukiasemien tapauksessa. Tämä parametri asettaa pienimmän\n"
+"RTS-paketin koon yhtä suureksi kuin maksimikoko.\n"
+"Parametri voidaan asettaa myös arvoon auto (automaattinen), fixed\n"
 "(kiinteä) tai off (pois käytöstä)."
 
 #: ../lib/network/connection/wireless.pm:507
@@ -3307,7 +3423,7 @@ msgstr "Pirstoutuminen"
 #: ../lib/network/connection/wireless.pm:508
 #, c-format
 msgid "iwconfig command extra arguments"
-msgstr "Komennon iwconfig ylimääräiset parametrit"
+msgstr "Komennon iwconfig ylimääräiset argumentit"
 
 #: ../lib/network/connection/wireless.pm:509
 #, c-format
@@ -3318,17 +3434,17 @@ msgid ""
 "\n"
 "See iwconfig(8) man page for further information."
 msgstr ""
-"Tähän voit lisätä joitakin ylimääräisiä langattoman verkon asetuksia, kuten\n"
+"Tähän voidaan lisätä ylimääräisiä langattoman verkon asetuksia, kuten\n"
 "ap, channel, commit, enc, power, retry, sens, txpower (nick on jo asetettu\n"
-"samaksi kuin konenimi).\n"
+"samaksi kuin verkkonimi).\n"
 "\n"
-"Katso lisätietoja iwpconfig(8) manuaalisivulta."
+"Katso lisätietoja komennolla \"man iwconfig\"."
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
 #: ../lib/network/connection/wireless.pm:516
 #, c-format
 msgid "iwspy command extra arguments"
-msgstr "Komennon iwspy ylimääräiset parametrit"
+msgstr "Komennon iwspy ylimääräiset argumentit"
 
 #: ../lib/network/connection/wireless.pm:517
 #, c-format
@@ -3341,18 +3457,18 @@ msgid ""
 "\n"
 "See iwpspy(8) man page for further information."
 msgstr ""
-"iwspy käytetään asettamaan lista osoitteita langattomaan verkkoliitäntään\n"
-"ja tarkistamaan jokaisesta yhteyden laatu.\n"
+"Komentoa iwspy käytetään asettamaan lista osoitteita langattomaan\n"
+"verkkoliitäntään ja tarkistamaan jokaisesta yhteyden laatu.\n"
 "\n"
-"Nämä tiedot ovat samat jotka löytyvät /proc/net/wireless:\n"
+"Nämä tiedot ovat samat, jotka löytyvät tiedostosta /proc/net/wireless :\n"
 "yhteyden laatu, signaalin voimakkuus ja kohinataso.\n"
 "\n"
-"Katso lisätietoja iwpspy(8) manuaalissivulta."
+"Katso lisätietoja komennolla \"man iwpspy\"."
 
 #: ../lib/network/connection/wireless.pm:525
 #, c-format
 msgid "iwpriv command extra arguments"
-msgstr "Komennon iwpriv ylimääräiset parametrit"
+msgstr "Komennon iwpriv ylimääräiset argumentit"
 
 #: ../lib/network/connection/wireless.pm:527
 #, c-format
@@ -3380,28 +3496,28 @@ msgstr ""
 "Teoriassa kunkin laiteajurin dokumentaation tulisi kertoa kuinka käyttää\n"
 "liitäntäkohtaisia komentoja ja niiden vaikutukset.\n"
 "\n"
-"Katso lisätietoja iwpriv(8) manuaalisivulta"
+"Katso lisätietoja komennolla \"man iwpriv\"."
 
 #: ../lib/network/connection/wireless.pm:538
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Protocol"
-msgstr "Protokolla"
+msgstr "EAP-protokolla"
 
 #: ../lib/network/connection/wireless.pm:539
 #: ../lib/network/connection/wireless.pm:544
-#, fuzzy, c-format
+#, c-format
 msgid "Auto Detect"
 msgstr "Automaattinen tunnistaminen"
 
 #: ../lib/network/connection/wireless.pm:539
 #, c-format
 msgid "WPA2"
-msgstr ""
+msgstr "WPA2"
 
 #: ../lib/network/connection/wireless.pm:539
-#, fuzzy, c-format
+#, c-format
 msgid "WPA"
-msgstr "PAP"
+msgstr "WPA"
 
 #: ../lib/network/connection/wireless.pm:541
 #, c-format
@@ -3409,21 +3525,23 @@ msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr ""
+"Automaattinen tunnistaminen on suositeltua; ensin kokeillaan\n"
+"WPA2:ta ja tämän jälkeen WPA:ta."
 
 #: ../lib/network/connection/wireless.pm:543
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Mode"
-msgstr "Tila"
+msgstr "EAP-tila"
 
 #: ../lib/network/connection/wireless.pm:544
-#, fuzzy, c-format
+#, c-format
 msgid "PEAP"
-msgstr "PAP"
+msgstr "PEAP"
 
 #: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "TTLS"
-msgstr ""
+msgstr "TTLS"
 
 #: ../lib/network/connection/wireless.pm:544
 #, c-format
@@ -3431,44 +3549,44 @@ msgid "TLS"
 msgstr "TLS"
 
 #: ../lib/network/connection/wireless.pm:544
-#, fuzzy, c-format
+#, c-format
 msgid "MSCHAPV2"
-msgstr "CHAP"
+msgstr "MSCHAPV2"
 
 #: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "MD5"
-msgstr ""
+msgstr "MD5"
 
 #: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "OTP"
-msgstr ""
+msgstr "OTP"
 
 #: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "GTC"
-msgstr ""
+msgstr "GTC"
 
 #: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "LEAP"
-msgstr ""
+msgstr "LEAP"
 
 #: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "PEAP TTLS"
-msgstr ""
+msgstr "PEAP TTLS"
 
 #: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid "TTLS TLS"
-msgstr ""
+msgstr "TTLS TLS"
 
 #: ../lib/network/connection/wireless.pm:546
 #, c-format
 msgid "EAP key_mgmt"
-msgstr ""
+msgstr "EAP-avaimenhallinta"
 
 #: ../lib/network/connection/wireless.pm:548
 #, c-format
@@ -3476,6 +3594,8 @@ msgid ""
 "list of accepted authenticated key management protocols.\n"
 "possible values are WPA-EAP, IEEE8021X, NONE"
 msgstr ""
+"Lista hyväksytyistä avaimenhallintaprotokollista.\n"
+"Mahdolliset arvot: WPA-EAP, IEEE8021X, NONE"
 
 #: ../lib/network/connection/wireless.pm:550
 #, c-format
@@ -3507,10 +3627,10 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:561
 #, c-format
 msgid "EAP CA certificate"
-msgstr ""
+msgstr "EAP CA-sertifikaatti"
 
 #: ../lib/network/connection/wireless.pm:563
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
 "can have one or more trusted CA certificates. If ca_cert are not\n"
@@ -3518,6 +3638,8 @@ msgid ""
 "a trusted CA certificate should always be configured\n"
 "when using TLS or TTLS or PEAP."
 msgstr ""
+"CA-sertifikaatin täydellinen polku ja tiedostonimi.\n"
+"Tiedostossa voi olla yksi tai useampia sertifikaatteja.\n"
 
 #: ../lib/network/connection/wireless.pm:568
 #, c-format
@@ -3560,14 +3682,14 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:597
 #, c-format
 msgid "An encryption key is required."
-msgstr ""
+msgstr "Salausavain vaaditaan."
 
 #: ../lib/network/connection/wireless.pm:604
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
 "hexadecimal characters."
-msgstr ""
+msgstr "Salausavaimessa tulisi olla 8-63 ASCII-merkkiä tai 64 heksadesimaalia."
 
 #: ../lib/network/connection/wireless.pm:610
 #, c-format
@@ -3575,6 +3697,7 @@ msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
 "characters."
 msgstr ""
+"WEP-avaimessa tulisi olla enintään %d ASCII-merkkiä tai %d heksadesimaalia."
 
 #: ../lib/network/connection/wireless.pm:617
 #, c-format
@@ -3582,9 +3705,8 @@ msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
 "frequency), or add enough '0' (zeroes)."
 msgstr ""
-"Taajuuden pitäisi loppua päätteeseen k, M tai G (esim. \"2.46G\" jos "
-"taajuus\n"
-"on 2.46 GHz) tai sinun pitää lisätä riittävästi '0' (nollia) loppuun."
+"Taajuuden tulisi loppua päätteeseen k, M tai G (esim. \"2.46G\" jos taajuus "
+"on 2.46 GHz) tai loppuun tulee lisätä tarpeeksi nollia."
 
 #: ../lib/network/connection/wireless.pm:623
 #, c-format
@@ -3592,33 +3714,33 @@ msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
 "enough '0' (zeroes)."
 msgstr ""
-"Nopeuden pitäisi loppua päätteeseen k, M tai G (esim. \"11M\" jos nopeus\n"
-"on 11M) tai sinun pitää lisätä riittävästi '0' (nollia) loppuun."
+"Nopeuden tulisi loppua päätteeseen k, M tai G (esim. \"11M\" jos nopeus on "
+"11M) tai tai loppuun tulee lisätä tarpeeksi nollia."
 
 #: ../lib/network/connection/wireless.pm:635
 #, c-format
 msgid "Allow access point roaming"
-msgstr ""
+msgstr "Salli tukiaseman vaihtaminen"
 
 #: ../lib/network/connection/wireless.pm:756
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
-msgstr ""
+msgstr "Yhdistettiin langattomaan verkkoon %s liitännässä %s"
 
 #: ../lib/network/connection/wireless.pm:757
 #, c-format
 msgid "Lost association to wireless network on interface %s"
-msgstr ""
+msgstr "Yhteys katkesi langattomaan verkkoon liitännässä %s"
 
 #: ../lib/network/connection/xdsl.pm:8
-#, fuzzy, c-format
+#, c-format
 msgid "DSL"
-msgstr "SSL"
+msgstr "DSL"
 
 #: ../lib/network/connection/xdsl.pm:97 ../lib/network/netconnect.pm:782
 #, c-format
 msgid "Alcatel speedtouch USB modem"
-msgstr "Alcatel Speedtouch USB modeemi"
+msgstr "Alcatel Speedtouch USB-modeemi"
 
 #: ../lib/network/connection/xdsl.pm:125
 #, c-format
@@ -3628,10 +3750,10 @@ msgid ""
 "\n"
 "You can find a driver on http://eciadsl.flashtux.org/"
 msgstr ""
-"ECI Hi-Focus modeemia ei voida tukea johtuen binääriajurin toimitukseen "
+"ECI Hi-Focus -modeemia ei voida tukea johtuen binääriajurin jakeluun "
 "liittyvistä ongelmista.\n"
 "\n"
-"Löydät ajurin osoitteesta http://eciadsl.flashtux.org/"
+"Ajuri löytyy osoitteesta http://eciadsl.flashtux.org/"
 
 #: ../lib/network/connection/xdsl.pm:185
 #, c-format
@@ -3639,6 +3761,8 @@ msgid ""
 "Modems using Conexant AccessRunner chipsets cannot be supported due to "
 "binary firmware distribution problem."
 msgstr ""
+"Conexant AccesRunner piirisarjaa käyttäviä modeemeita ei tueta "
+"binääriajurien jakeluongelmien vuoksi."
 
 #: ../lib/network/connection/xdsl.pm:205
 #, c-format
@@ -3673,19 +3797,19 @@ msgstr "PPP over ATM (PPPoA)"
 #: ../lib/network/connection/xdsl.pm:252
 #, c-format
 msgid "Virtual Path ID (VPI):"
-msgstr "Virtuaalihakemisto ID (VPI):"
+msgstr "VPI-arvo:"
 
 #: ../lib/network/connection/xdsl.pm:253
 #, c-format
 msgid "Virtual Circuit ID (VCI):"
-msgstr "Virtuaalipiiri ID (VCI):"
+msgstr "VCI-arvo:"
 
 #: ../lib/network/connection/xdsl.pm:361
 #: ../lib/network/connection_manager.pm:62 ../lib/network/drakvpn.pm:45
 #: ../lib/network/netconnect.pm:135 ../lib/network/thirdparty.pm:123
-#, fuzzy, c-format
+#, c-format
 msgid "Could not install the packages (%s)!"
-msgstr "%s paketteja ei voitu asentaa!"
+msgstr "Paketteja (%s) ei voitu asentaa!"
 
 #: ../lib/network/connection_manager.pm:74
 #: ../lib/network/connection_manager.pm:89 ../lib/network/netconnect.pm:186
@@ -3695,42 +3819,42 @@ msgstr "Asetetaan laitetta..."
 
 #: ../lib/network/connection_manager.pm:79
 #: ../lib/network/connection_manager.pm:144
-#, fuzzy, c-format
+#, c-format
 msgid "Network settings"
-msgstr "Paikallisverkko-osoite"
+msgstr "Verkkoasetukset"
 
 #: ../lib/network/connection_manager.pm:80
 #: ../lib/network/connection_manager.pm:145
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter settings for network"
-msgstr "Yksityiskohtaiset tiedot"
+msgstr "Aseta verkkoasetukset"
 
 #: ../lib/network/connection_manager.pm:203
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting..."
-msgstr "Yhdistä..."
+msgstr "Yhdistetään..."
 
 #: ../lib/network/connection_manager.pm:220
 #: ../lib/network/connection_manager.pm:476
 #: ../lib/network/connection_manager.pm:489 ../lib/network/drakvpn.pm:100
-#, fuzzy, c-format
+#, c-format
 msgid "Connection failed."
-msgstr "Yhteyden nimi"
+msgstr "Yhdistäminen epäonnistui."
 
 #: ../lib/network/connection_manager.pm:232
-#, fuzzy, c-format
+#, c-format
 msgid "Disconnecting..."
-msgstr "Katkaise yhteys..."
+msgstr "Katkaistaan yhteyttä..."
 
 #: ../lib/network/connection_manager.pm:274
 #, c-format
 msgid "SSID"
-msgstr ""
+msgstr "Langattoman verkon tunnus (SSID)"
 
 #: ../lib/network/connection_manager.pm:275
 #, c-format
 msgid "Signal strength"
-msgstr "Signaalin voimakkuus: "
+msgstr "Signaalin voimakkuus"
 
 #: ../lib/network/connection_manager.pm:276
 #, c-format
@@ -3738,9 +3862,9 @@ msgid "Encryption"
 msgstr "Salaus"
 
 #: ../lib/network/connection_manager.pm:348 ../lib/network/netconnect.pm:208
-#, fuzzy, c-format
+#, c-format
 msgid "Scanning for networks..."
-msgstr "Tutkitaan verkkoa..."
+msgstr "Etsitään verkkoja..."
 
 #: ../lib/network/connection_manager.pm:397 ../lib/network/drakroam.pm:91
 #, c-format
@@ -3755,7 +3879,7 @@ msgstr "Yhdistä"
 #: ../lib/network/connection_manager.pm:442
 #, c-format
 msgid "Hostname changed to \"%s\""
-msgstr ""
+msgstr "Uusi verkkonimi: %s"
 
 #: ../lib/network/drakfirewall.pm:13
 #, c-format
@@ -3765,7 +3889,7 @@ msgstr "WWW-palvelin"
 #: ../lib/network/drakfirewall.pm:18
 #, c-format
 msgid "Domain Name Server"
-msgstr "Verkkoalueen nimipalvelin (DNS)"
+msgstr "Nimipalvelin"
 
 #: ../lib/network/drakfirewall.pm:23
 #, c-format
@@ -3778,9 +3902,9 @@ msgid "FTP server"
 msgstr "FTP-palvelin"
 
 #: ../lib/network/drakfirewall.pm:33
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP Server"
-msgstr "CUPS-palvelin"
+msgstr "DHCP-palvelin"
 
 #: ../lib/network/drakfirewall.pm:39
 #, c-format
@@ -3798,24 +3922,24 @@ msgid "Telnet server"
 msgstr "Telnet-palvelin"
 
 #: ../lib/network/drakfirewall.pm:55
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "/_NFS-palvelin"
+msgstr "NFS-palvelin"
 
 #: ../lib/network/drakfirewall.pm:63
 #, c-format
 msgid "Windows Files Sharing (SMB)"
-msgstr "Windows tiedostojako (SMB)"
+msgstr "Windowsin tiedostojen jako (SMB)"
 
 #: ../lib/network/drakfirewall.pm:69
 #, c-format
 msgid "Bacula backup"
-msgstr ""
+msgstr "Bacula varmuuskopiot"
 
 #: ../lib/network/drakfirewall.pm:75
-#, fuzzy, c-format
+#, c-format
 msgid "Syslog network logging"
-msgstr "Verkon pikakytkentä (Hotplugging)"
+msgstr "Syslog verkkolokit"
 
 #: ../lib/network/drakfirewall.pm:81
 #, c-format
@@ -3823,19 +3947,19 @@ msgid "CUPS server"
 msgstr "CUPS-palvelin"
 
 #: ../lib/network/drakfirewall.pm:87
-#, fuzzy, c-format
+#, c-format
 msgid "MySQL server"
-msgstr "NFS-palvelin"
+msgstr "MySQL-tietokantapalvelin"
 
 #: ../lib/network/drakfirewall.pm:93
-#, fuzzy, c-format
+#, c-format
 msgid "PostgreSQL server"
-msgstr "CUPS-palvelin"
+msgstr "PostgreSQL-tietokantapalvelin"
 
 #: ../lib/network/drakfirewall.pm:99
 #, c-format
 msgid "Echo request (ping)"
-msgstr "Kaiutuspyyntö (ping)"
+msgstr "Ping"
 
 #: ../lib/network/drakfirewall.pm:104
 #, c-format
@@ -3845,18 +3969,18 @@ msgstr "BitTorrent"
 #: ../lib/network/drakfirewall.pm:110
 #, c-format
 msgid "Windows Mobile device synchronization"
-msgstr ""
+msgstr "Windows Mobile -laitteen synkronointi"
 
 #: ../lib/network/drakfirewall.pm:119
 #, c-format
 msgid "Port scan detection"
-msgstr ""
+msgstr "Porttiskannauksen tunnistus"
 
 #: ../lib/network/drakfirewall.pm:214 ../lib/network/drakfirewall.pm:220
 #: ../lib/network/shorewall.pm:75
-#, fuzzy, c-format
+#, c-format
 msgid "Firewall configuration"
-msgstr "Manuaalinen asettaminen"
+msgstr "Palomuurin asetukset"
 
 #: ../lib/network/drakfirewall.pm:214
 #, c-format
@@ -3869,9 +3993,9 @@ msgid ""
 msgstr ""
 "drakfirewall asetustyökalu\n"
 "\n"
-"Tämä asettaa henkilökohtaisen palomuurin tähän Mandriva Linux koneeseen.\n"
-"Jos haluat vahvan omistetun palomuuriratkaisun, tutustu räätälöityyn\n"
-"Mandriva Security Firewall -jakeluun."
+"Tämä työkalu asettaa henkilökohtaisen palomuurin tähän Mandriva\n"
+"Linux koneeseen. Jos halutaan vahva ja omistettu palomuuriratkaisu,\n"
+"tutustu räätälöityyn Mandriva Security Firewall -jakeluun."
 
 #: ../lib/network/drakfirewall.pm:220
 #, c-format
@@ -3883,8 +4007,8 @@ msgid ""
 msgstr ""
 "drakfirewall asetustyökalu\n"
 "\n"
-"Varmista että olet määrittänyt verkko-/Internetyhteytesi käyttämällä\n"
-"drakconnectia ennen kuin jatkat."
+"Varmista, että verkkoyhteys on määritelty työkalun drakconnect\n"
+"avulla ennen jatkamista."
 
 #: ../lib/network/drakfirewall.pm:237 ../lib/network/drakfirewall.pm:239
 #: ../lib/network/shorewall.pm:167
@@ -3899,9 +4023,10 @@ msgid ""
 "Valid examples are: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
 "Have a look at /etc/services for information."
 msgstr ""
-"Voit syöttää sekalaisia portteja.\n"
+"Sekalaisia portteja voidaan syöttää.\n"
+"\n"
 "Toimivia esimerkkejä ovat: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
-"Katso /etc/services saadaksesi lisätietoa."
+"Katso lisätietoja tiedostosta /etc/services."
 
 #: ../lib/network/drakfirewall.pm:246
 #, c-format
@@ -3916,17 +4041,17 @@ msgstr ""
 "Oikea muoto on \"portti/tcp\" tai \"portti/udp\",\n"
 "jossa portti on 1 ja 65535 väliltä.\n"
 "\n"
-"Voit myös antaa porttialueen (esim. 24300:24350/udp)"
+"Myös porttialue voidaan antaa (esim. 24300:24350/udp)"
 
 #: ../lib/network/drakfirewall.pm:256
 #, c-format
 msgid "Which services would you like to allow the Internet to connect to?"
-msgstr "Mitkä palvelut haluat olevan käytettävissä Internetistä?"
+msgstr "Mihin palveluihin sallitaan yhteydet Internetistä?"
 
 #: ../lib/network/drakfirewall.pm:257
 #, c-format
 msgid "Everything (no firewall)"
-msgstr "Kaikki (ei palomuuria)"
+msgstr "Kaikkiin (ei palomuuria)"
 
 #: ../lib/network/drakfirewall.pm:259
 #, c-format
@@ -3936,7 +4061,7 @@ msgstr "Muut portit"
 #: ../lib/network/drakfirewall.pm:260
 #, c-format
 msgid "Log firewall messages in system logs"
-msgstr ""
+msgstr "Kirjaa palomuurin viestit ylös järjestelmälokiin"
 
 #: ../lib/network/drakfirewall.pm:302
 #, c-format
@@ -3945,21 +4070,24 @@ msgid ""
 "into your computer.\n"
 "Please select which network activities should be watched."
 msgstr ""
+"Varoitus voidaan näyttää, jos palveluihin otetaan yhteyttä tai "
+"järjestelmään yritetään tunkeutua.\n"
+"Valitse tarkkailtavat toiminnot."
 
 #: ../lib/network/drakfirewall.pm:307
 #, c-format
 msgid "Use Interactive Firewall"
-msgstr ""
+msgstr "Käytä interaktiivista palomuuria"
 
 #: ../lib/network/drakroam.pm:22
 #, c-format
 msgid "No device found"
-msgstr "Laitetta ei löydetty"
+msgstr "Laitetta ei löytynyt"
 
 #: ../lib/network/drakroam.pm:85
 #, c-format
 msgid "Device: "
-msgstr "Laite:   "
+msgstr "Laite: "
 
 #: ../lib/network/drakroam.pm:89 ../lib/network/netcenter.pm:65
 #, c-format
@@ -3979,57 +4107,57 @@ msgstr "Langaton yhteys"
 #: ../lib/network/drakvpn.pm:30
 #, c-format
 msgid "VPN configuration"
-msgstr "VPN asetukset"
+msgstr "VPN-asetukset"
 
 #: ../lib/network/drakvpn.pm:34
-#, fuzzy, c-format
+#, c-format
 msgid "Choose the VPN type"
-msgstr "Valitse uusi koko"
+msgstr "Valitse VPN-yhteyden tyyppi"
 
 #: ../lib/network/drakvpn.pm:49
 #, c-format
 msgid "Initializing tools and detecting devices for %s..."
-msgstr ""
+msgstr "Käynnistetään työkaluja ja tunnistetaan laitteita %s-yhteydelle..."
 
 #: ../lib/network/drakvpn.pm:52
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize %s connection type!"
-msgstr "Tuntematon yhteyden tyyppi"
+msgstr "%s-yhteyttä ei voida alustaa!"
 
 #: ../lib/network/drakvpn.pm:60
 #, c-format
 msgid "Please select an existing VPN connection or enter a new name."
-msgstr ""
+msgstr "Valitse olemassa oleva VPN-yhteys tai syötä uuden yhteyden nimi."
 
 #: ../lib/network/drakvpn.pm:64
-#, fuzzy, c-format
+#, c-format
 msgid "Configure a new connection..."
-msgstr "Testataan yhteyttäsi..."
+msgstr "Uusi yhteys..."
 
 #: ../lib/network/drakvpn.pm:66
-#, fuzzy, c-format
+#, c-format
 msgid "New name"
-msgstr "Oikea nimi"
+msgstr "Uuden yhteyden nimi"
 
 #: ../lib/network/drakvpn.pm:70
 #, c-format
 msgid "You must select an existing connection or enter a new name."
-msgstr ""
+msgstr "Olemassa oleva yhteys tulee valita tai uuden nimi syöttää."
 
 #: ../lib/network/drakvpn.pm:81
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter the required key(s)"
-msgstr "Anna WebDAV palvelimen osoite (URL)"
+msgstr "Anna tarvittavat avaimet"
 
 #: ../lib/network/drakvpn.pm:86
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter the settings of your VPN connection"
-msgstr "Yhteyttä peilipalvelimeen %s ei voitu muodostaa"
+msgstr "Anna VPN-yhteyden asetukset"
 
 #: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:298
 #, c-format
 msgid "Do you want to start the connection now?"
-msgstr ""
+msgstr "Käynnistetäänkö yhteys?"
 
 #: ../lib/network/drakvpn.pm:108
 #, c-format
@@ -4041,21 +4169,27 @@ msgid ""
 "It can be done by reconfiguring the network connection and selecting this "
 "VPN connection.\n"
 msgstr ""
+"VPN-yhteys on asetettu.\n"
+"\n"
+"VPN-yhteys voidaan käynnistää automaattisesti yhdessä verkkoliitännän "
+"kanssa.\n"
+"Asetus voidaan tehdä asettamalla verkkoliitäntä uudelleen ja valitsemalla "
+"asetettu VPN-yhteys.\n"
 
 #: ../lib/network/ifw.pm:132
-#, fuzzy, c-format
+#, c-format
 msgid "Port scanning"
-msgstr "Ei jaettu"
+msgstr "Porttiskannaus"
 
 #: ../lib/network/ifw.pm:133
-#, fuzzy, c-format
+#, c-format
 msgid "Service attack"
-msgstr "Hyökätty palvelu: %s"
+msgstr "Palveluhyökkäys"
 
 #: ../lib/network/ifw.pm:134
-#, fuzzy, c-format
+#, c-format
 msgid "Password cracking"
-msgstr "Salasana (uudelleen)"
+msgstr "Salasanan murtoyritys"
 
 #: ../lib/network/ifw.pm:135
 #, c-format
@@ -4065,45 +4199,45 @@ msgstr "Uusi yhteys"
 #: ../lib/network/ifw.pm:136
 #, c-format
 msgid "\"%s\" attack"
-msgstr ""
+msgstr "%s-hyökkäys"
 
 #: ../lib/network/ifw.pm:138
 #, c-format
 msgid "A port scanning attack has been attempted by %s."
-msgstr "Porttiskannausta on yritetty kohteesta %s."
+msgstr "Porttiskannausta yritettiin osoitteesta %s."
 
 #: ../lib/network/ifw.pm:139
 #, c-format
 msgid "The %s service has been attacked by %s."
-msgstr "Palveluun %s on hyökätty kohteesta %s."
+msgstr "Palveluun %s hyökättiin osoitteesta %s."
 
 #: ../lib/network/ifw.pm:140
 #, c-format
 msgid "A password cracking attack has been attempted by %s."
-msgstr "Salasanan murtoyritystä on yritetty kohteesta %s."
+msgstr "Salasanan murtoyritystä yritettiin osoitteesta %s."
 
 #: ../lib/network/ifw.pm:141
-#, fuzzy, c-format
+#, c-format
 msgid "%s is connecting on the %s service."
-msgstr "Katkaisen Internetyhteyden "
+msgstr "%s ottaa yhteyttä palveluun %s."
 
 #: ../lib/network/ifw.pm:142
-#, fuzzy, c-format
+#, c-format
 msgid "A \"%s\" attack has been attempted by %s"
-msgstr "Porttiskannausta on yritetty kohteesta %s."
+msgstr "%s-hyökkäystä yritettiin osoitteesta %s"
 
 #: ../lib/network/ifw.pm:151
 #, c-format
 msgid ""
 "The \"%s\" application is trying to make a service (%s) available to the "
 "network."
-msgstr ""
+msgstr "Sovellus %s yrittää avata palvelua (%s) saataville verkkoon."
 
 #. -PO: this should be kept lowercase since the expression is meant to be used between brackets
 #: ../lib/network/ifw.pm:155
-#, fuzzy, c-format
+#, c-format
 msgid "port %d"
-msgstr "Raportti"
+msgstr "portti %d"
 
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
 #: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:625
@@ -4126,17 +4260,17 @@ msgstr "Automaattinen"
 #: ../lib/network/ndiswrapper.pm:30
 #, c-format
 msgid "No device supporting the %s ndiswrapper driver is present!"
-msgstr ""
+msgstr "%s ndiswrapper-ajuria tukevia laitteita ei löytynyt!"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
 msgid "Please select the Windows driver (.inf file)"
-msgstr "Ole hyvä ja valitse Windows ajuri (.inf tiedosto)"
+msgstr "Valitse Windows-ajuri (.inf-tiedosto)"
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
 msgid "Unable to install the %s ndiswrapper driver!"
-msgstr ""
+msgstr "%s ndiswrapper-ajuria ei voitu asentaa!"
 
 #: ../lib/network/ndiswrapper.pm:103
 #, c-format
@@ -4144,26 +4278,28 @@ msgid ""
 "The selected device has already been configured with the %s driver.\n"
 "Do you really want to use a ndiswrapper driver?"
 msgstr ""
+"Valittu laite on jo määritelty käyttämään ajuria %s.\n"
+"Haluatko varmasti käyttää ndiswrapperia?"
 
 #: ../lib/network/ndiswrapper.pm:118
 #, c-format
 msgid "Unable to load the ndiswrapper module!"
-msgstr ""
+msgstr "Ndiswrapper-moduulin lataaminen epäonnistui!"
 
 #: ../lib/network/ndiswrapper.pm:124
 #, c-format
 msgid "Unable to find the ndiswrapper interface!"
-msgstr ""
+msgstr "Ndiswrapper-liitäntää ei löytynyt!"
 
 #: ../lib/network/ndiswrapper.pm:137
 #, c-format
 msgid "Choose an ndiswrapper driver"
-msgstr "Ndiswrapperin ajurin valinta"
+msgstr "Valitse ndiswrapper-ajuri"
 
 #: ../lib/network/ndiswrapper.pm:140
 #, c-format
 msgid "Use the ndiswrapper driver %s"
-msgstr ""
+msgstr "Käytä %s ndiswrapper-ajuria"
 
 #: ../lib/network/ndiswrapper.pm:140
 #, c-format
@@ -4173,19 +4309,19 @@ msgstr "Asenna uusi ajuri"
 #: ../lib/network/ndiswrapper.pm:151
 #, c-format
 msgid "Select a device:"
-msgstr ""
+msgstr "Valitse laite:"
 
 #: ../lib/network/netcenter.pm:54 ../lib/network/netconnect.pm:211
 #, c-format
 msgid "Please select your network:"
-msgstr ""
+msgstr "Valitse verkko:"
 
 #: ../lib/network/netcenter.pm:61
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "_: This is a verb\n"
 "Monitor"
-msgstr "Valvo verkkoa"
+msgstr "Valvo"
 
 #: ../lib/network/netcenter.pm:144
 #, c-format
@@ -4193,7 +4329,7 @@ msgid "Network Center"
 msgstr "Verkkokeskus"
 
 #: ../lib/network/netcenter.pm:168
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced settings"
 msgstr "Lisäasetukset"
 
@@ -4235,12 +4371,12 @@ msgstr ""
 #: ../lib/network/netconnect.pm:122
 #, c-format
 msgid "Network & Internet Configuration"
-msgstr "Verkko- & Internetasetukset"
+msgstr "Verkko- ja Internet-asetukset"
 
 #: ../lib/network/netconnect.pm:127
 #, c-format
 msgid "Choose the connection you want to configure"
-msgstr "Valitse yhteys, jonka haluat asettaa"
+msgstr "Valitse asetettava yhteys"
 
 #: ../lib/network/netconnect.pm:149 ../lib/network/netconnect.pm:370
 #: ../lib/network/netconnect.pm:815
@@ -4249,24 +4385,24 @@ msgid "Select the network interface to configure:"
 msgstr "Valitse asetettava verkkoliitäntä:"
 
 #: ../lib/network/netconnect.pm:151
-#, fuzzy, c-format
+#, c-format
 msgid "%s: %s"
-msgstr "DNS"
+msgstr "%s: %s"
 
 #: ../lib/network/netconnect.pm:168
 #, c-format
 msgid "No device can be found for this connection type."
-msgstr ""
+msgstr "Yhtään laitetta ei löytynyt valitulle yhteystyypille."
 
 #: ../lib/network/netconnect.pm:177
-#, fuzzy, c-format
+#, c-format
 msgid "Hardware Configuration"
-msgstr "Verkon asetukset"
+msgstr "Laitteistoasetukset"
 
 #: ../lib/network/netconnect.pm:201
 #, c-format
 msgid "Please select your provider:"
-msgstr ""
+msgstr "Valitse palveluntarjoaja:"
 
 #: ../lib/network/netconnect.pm:248
 #, c-format
@@ -4274,21 +4410,23 @@ msgid ""
 "Please select your connection protocol.\n"
 "If you do not know it, keep the preselected protocol."
 msgstr ""
+"Valitse yhteyden protokolla.\n"
+"Jos et tiedä, valitse oletusasetus."
 
 #: ../lib/network/netconnect.pm:292 ../lib/network/netconnect.pm:677
 #, c-format
 msgid "Connection control"
-msgstr ""
+msgstr "Yhteyden hallinta"
 
 #: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:726
 #, c-format
 msgid "Testing your connection..."
-msgstr "Testataan yhteyttäsi..."
+msgstr "Testataan yhteyttä..."
 
 #: ../lib/network/netconnect.pm:337
 #, c-format
 msgid "Connection Configuration"
-msgstr "Yhteyden asetus"
+msgstr "Yhteyden asetukset"
 
 #: ../lib/network/netconnect.pm:337
 #, c-format
@@ -4298,12 +4436,12 @@ msgstr "Täytä tai tarkista alla olevat kentät."
 #: ../lib/network/netconnect.pm:340
 #, c-format
 msgid "Your personal phone number"
-msgstr "Henkilökohtainen puhelinnumerosi"
+msgstr "Henkilökohtainen puhelinnumero"
 
 #: ../lib/network/netconnect.pm:341
 #, c-format
 msgid "Provider name (ex provider.net)"
-msgstr "Palveluntarjoajan nimi (esim.: tarjoaja.fi)"
+msgstr "Palveluntarjoajan nimi (esim. tarjoaja.fi)"
 
 #: ../lib/network/netconnect.pm:342
 #, c-format
@@ -4313,12 +4451,12 @@ msgstr "Palveluntarjoajan puhelinnumero"
 #: ../lib/network/netconnect.pm:343
 #, c-format
 msgid "Provider DNS 1 (optional)"
-msgstr "Palveluntarjoajan dns 1 (vapaaehtoinen)"
+msgstr "Palveluntarjoajan nimipalvelin 1 (vapaaehtoinen)"
 
 #: ../lib/network/netconnect.pm:344
 #, c-format
 msgid "Provider DNS 2 (optional)"
-msgstr "Palveluntarjoajan dns 2 (vapaaehtoinen)"
+msgstr "Palveluntarjoajan nimipalvelin 2 (vapaaehtoinen)"
 
 #: ../lib/network/netconnect.pm:345
 #, c-format
@@ -4333,7 +4471,7 @@ msgstr "Yhteyden nopeus"
 #: ../lib/network/netconnect.pm:347
 #, c-format
 msgid "Connection timeout (in sec)"
-msgstr "Yhteyden aikakatkaisu (sekunneissa)"
+msgstr "Yhteyden aikakatkaisu (sekuntia)"
 
 #: ../lib/network/netconnect.pm:350
 #, c-format
@@ -4375,7 +4513,7 @@ msgstr "Valitse laite!"
 #: ../lib/network/netconnect.pm:482
 #, c-format
 msgid "ISDN Configuration"
-msgstr "ISDN asetus"
+msgstr "ISDN-asetukset"
 
 #: ../lib/network/netconnect.pm:416
 #, c-format
@@ -4392,10 +4530,9 @@ msgid ""
 "card.\n"
 msgstr ""
 "\n"
-"Jos sinulla on ISA-kortti, seuraavien arvojen pitäisi olla oikeat.\n"
+"Jos käytössä on ISA-kortti, seuraavien arvojen pitäisi olla oikeat.\n"
 "\n"
-"Jos sinulla on PCMCIA-kortti sinun täytyy tietää korttisi \"IRQ\" ja \"I/O"
-"\".\n"
+"Jos käytössä on PCMCIA-kortti, täytyy kortin IRQ- ja I/O-arvot tietää.\n"
 
 #: ../lib/network/netconnect.pm:430
 #, c-format
@@ -4405,12 +4542,12 @@ msgstr "Jatka"
 #: ../lib/network/netconnect.pm:430
 #, c-format
 msgid "Abort"
-msgstr "Hylkää"
+msgstr "Keskeytä"
 
 #: ../lib/network/netconnect.pm:436
 #, c-format
 msgid "Which of the following is your ISDN card?"
-msgstr "Mikä näistä on ISDN-korttisi?"
+msgstr "Valitse seuraavista käytettävä ISDN-kortti"
 
 #: ../lib/network/netconnect.pm:454
 #, c-format
@@ -4419,14 +4556,14 @@ msgid ""
 "capabilities than the free driver (like sending faxes). Which driver do you "
 "want to use?"
 msgstr ""
-"CAPI ajuri tälle modeemille on saatavilla. Tämä CAPI ajuri voi tarjota "
-"enemmän ominaisuuksia kuin vapaa ajuri (esimerkiksi lähettää fakseja). Kumpi "
-"ajureista haluat käyttää?"
+"Modeemille on saatavilla CAPI-ajuri. CAPI-ajuri voi tarjota enemmän "
+"ominaisuuksia, kuin vapaa ajuri (esim. mahdollisuuden lähettää fakseja). "
+"Kumpaa ajuria käytetään?"
 
 #: ../lib/network/netconnect.pm:468
 #, c-format
 msgid "Which protocol do you want to use?"
-msgstr "Mitä protokollaa haluat käyttää?"
+msgstr "Mitä protokollaa käytetään?"
 
 #: ../lib/network/netconnect.pm:482
 #, c-format
@@ -4434,13 +4571,14 @@ msgid ""
 "Select your provider.\n"
 "If it is not listed, choose Unlisted."
 msgstr ""
-"Valitse palveluntarjoajasi.\n"
-"Jos se ei ole listassa, valitse `Ei listattu'"
+"Valitse palveluntarjoaja.\n"
+"Jos palveluntarjoajaa ei löydy,\n"
+"valitse \"Ei listattu\"."
 
 #: ../lib/network/netconnect.pm:484 ../lib/network/netconnect.pm:580
 #, c-format
 msgid "Provider:"
-msgstr "Yhteydentarjoaja:"
+msgstr "Palveluntarjoaja:"
 
 #: ../lib/network/netconnect.pm:493
 #, c-format
@@ -4448,8 +4586,8 @@ msgid ""
 "Your modem is not supported by the system.\n"
 "Take a look at http://www.linmodems.org"
 msgstr ""
-"Modeemiasi ei tueta tässä järjestelmässä.\n"
-"Katso osoitteesta http://www.linmodems.org/"
+"Järjestelmä ei tue käytettyä modeemia.\n"
+"Katso lisätietoja osoitteesta http://www.linmodems.org/"
 
 #: ../lib/network/netconnect.pm:512
 #, c-format
@@ -4464,12 +4602,12 @@ msgstr "Modeemi"
 #: ../lib/network/netconnect.pm:549
 #, c-format
 msgid "Please choose which serial port your modem is connected to."
-msgstr "Valitse sarjaportti, johon modeemisi on kytketty."
+msgstr "Valitse sarjaportti, johon modeemi on kytketty."
 
 #: ../lib/network/netconnect.pm:578
 #, c-format
 msgid "Select your provider:"
-msgstr "Valitse yhteydentarjoajasi:"
+msgstr "Valitse palveluntarjoaja:"
 
 #: ../lib/network/netconnect.pm:602
 #, c-format
@@ -4524,17 +4662,17 @@ msgstr "Verkkoalueen nimi"
 #: ../lib/network/netconnect.pm:644
 #, c-format
 msgid "First DNS Server (optional)"
-msgstr "Ensimmäinen nimipalvelin (ei pakollinen)"
+msgstr "Ensisijainen nimipalvelin (valinnainen)"
 
 #: ../lib/network/netconnect.pm:645
 #, c-format
 msgid "Second DNS Server (optional)"
-msgstr "Toinen nimipalvelin (ei pakollinen)"
+msgstr "Toissijainen nimipalvelin (valinnainen)"
 
 #: ../lib/network/netconnect.pm:646
 #, c-format
 msgid "Set hostname from IP"
-msgstr "Aseta konenimi IP-osoitteen mukaan"
+msgstr "Aseta verkkonimi IP-osoitteen mukaan"
 
 #: ../lib/network/netconnect.pm:659
 #, c-format
@@ -4544,27 +4682,28 @@ msgstr "Yhdyskäytävän IP-osoite"
 #: ../lib/network/netconnect.pm:692
 #, c-format
 msgid "Automatically at boot"
-msgstr "Automaattisesti koneen käynnistyksen yhteydessä"
+msgstr "Käynnistä yhteys automaattisesti koneen käynnistyessä"
 
 #: ../lib/network/netconnect.pm:694
 #, c-format
 msgid "By using Net Applet in the system tray"
-msgstr "Käyttämällä järjestelmätarjottimen Verkkosovelmaa"
+msgstr "Käynnistä käyttämällä ilmoitusalueen verkkosovelmaa"
 
 #: ../lib/network/netconnect.pm:696
 #, c-format
 msgid "Manually (the interface would still be activated at boot)"
-msgstr "Manuaalisesti (liitäntä kuitenkin aktivoidaan koneen käynnistyessä)"
+msgstr ""
+"Käynnistä manuaalisesti (liitäntä kuitenkin aktivoidaan koneen käynnistyessä)"
 
 #: ../lib/network/netconnect.pm:705
 #, c-format
 msgid "How do you want to dial this connection?"
-msgstr "Miten haluat soittaa tähän yhteyteen?"
+msgstr "Miten yhteys muodostetaan?"
 
 #: ../lib/network/netconnect.pm:718
 #, c-format
 msgid "Do you want to try to connect to the Internet now?"
-msgstr "Haluatko kokeilla Internetyhteyttä nyt?"
+msgstr "Kokeillaanko Internet-yhteyttä?"
 
 #: ../lib/network/netconnect.pm:745
 #, c-format
@@ -4574,7 +4713,7 @@ msgstr "Järjestelmä on nyt yhdistetty Internetiin."
 #: ../lib/network/netconnect.pm:746
 #, c-format
 msgid "For security reasons, it will be disconnected now."
-msgstr "Turvallisuussyistä yhteys suljetaan nyt."
+msgstr "Turvallisuussyistä yhteys suljetaan."
 
 #: ../lib/network/netconnect.pm:747
 #, c-format
@@ -4586,12 +4725,9 @@ msgstr ""
 "Kokeile muuttaa Internet-asetuksia."
 
 #: ../lib/network/netconnect.pm:763
-#, fuzzy, c-format
+#, c-format
 msgid "Problems occured during the network connectivity test."
-msgstr ""
-"Ongelma käynnistettäessä verkkoa uudelleen: \n"
-"\n"
-"%s"
+msgstr "Ilmeni ongelmia suoritettaessa yhteyden liitettävyystestiä."
 
 #: ../lib/network/netconnect.pm:764
 #, c-format
@@ -4599,6 +4735,8 @@ msgid ""
 "This can be caused by invalid network configuration, or problems with your "
 "modem or router."
 msgstr ""
+"Ongelman voi aiheuttaa virheelliset verkkoasetukset tai ongelmat modeemissa "
+"tai reitittimestä."
 
 #: ../lib/network/netconnect.pm:765
 #, c-format
@@ -4606,13 +4744,13 @@ msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
 msgstr ""
+"Haluat ehkä käynnistää asetustyökalun uudelleen varmistaaksesi "
+"yhteysasetukset."
 
 #: ../lib/network/netconnect.pm:768
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network configuration is finished."
-msgstr ""
-"Onnittelut, verkko- ja Internetyhteyksien asetus on valmis.\n"
-"\n"
+msgstr "Onnittelut! Verkko- ja Internet-yhteyksien asettaminen on valmis."
 
 #: ../lib/network/netconnect.pm:768
 #, c-format
@@ -4620,23 +4758,20 @@ msgid ""
 "However, the Internet connectivity test failed. You should test your "
 "connection manually, and verify your Internet modem or router."
 msgstr ""
+"Internetin liitettävyystesti kuitenkin epäonnistui. Sinun tulisi testata "
+"yhteys, modeemi ja reititin manuaalisesti."
 
 #: ../lib/network/netconnect.pm:769
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
-msgstr ""
-"Asettamisen aikana ilmeni ongelmia.\n"
-"Testaa yhteytesi net_monitor- tai mcc-työkalulla. Jos yhteytesi ei toimi, "
-"voit käynnistää asetustyökalun uudelleen"
+msgstr "Jos yhteys ei toimi, haluat ehkä käynnistää asetustyökalun uudelleen."
 
 #: ../lib/network/netconnect.pm:771
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
-msgstr ""
-"Onnittelut, verkko- ja Internetyhteyksien asetus on valmis.\n"
-"\n"
+msgstr "Onnittelut! Verkko- ja Internet-yhteyksien asettaminen on valmis."
 
 #: ../lib/network/netconnect.pm:772
 #, c-format
@@ -4644,23 +4779,23 @@ msgid ""
 "After this is done, we recommend that you restart your X environment to "
 "avoid any hostname-related problems."
 msgstr ""
-"Kun tämä on tehty, suosittelemme käynnistämään X-ympäristön\n"
-"uudelleen välttääksesi järjestelmän nimen vaihdoksesta koituvat ongelmat."
+"Kun tämä on tehty, suosittelemme käynnistämään X-ympäristön uudelleen "
+"järjestelmän nimen vaihdoksesta koituvien ongelmien välttämiseksi."
 
 #: ../lib/network/netconnect.pm:783
 #, c-format
 msgid "Sagem USB modem"
-msgstr "Sagem USB modeemi"
+msgstr "Sagem USB-modeemi"
 
 #: ../lib/network/netconnect.pm:784 ../lib/network/netconnect.pm:785
 #, c-format
 msgid "Bewan modem"
-msgstr "Bewan modeemi"
+msgstr "Bewan-modeemi"
 
 #: ../lib/network/netconnect.pm:786
 #, c-format
 msgid "ECI Hi-Focus modem"
-msgstr "ECI Hi-Focus modeemi"
+msgstr "ECI Hi-Focus -modeemi"
 
 #: ../lib/network/netconnect.pm:787
 #, c-format
@@ -4690,7 +4825,7 @@ msgstr "Modeemiyhteys"
 #: ../lib/network/netconnect.pm:793
 #, c-format
 msgid "DVB connection"
-msgstr ""
+msgstr "DVB-yhteys"
 
 #: ../lib/network/netconnect.pm:795
 #, c-format
@@ -4701,22 +4836,22 @@ msgstr "(löydetty portista %s)"
 #: ../lib/network/netconnect.pm:797
 #, c-format
 msgid "(detected %s)"
-msgstr "(löydetty %s)"
+msgstr "(löydettiin %s)"
 
 #: ../lib/network/netconnect.pm:797
 #, c-format
 msgid "(detected)"
-msgstr "(löydetty)"
+msgstr "(löydettiin)"
 
 #: ../lib/network/netconnect.pm:798
 #, c-format
 msgid "Network Configuration"
-msgstr "Verkon asetukset"
+msgstr "Verkkoasetukset"
 
 #: ../lib/network/netconnect.pm:799
 #, c-format
 msgid "Zeroconf hostname resolution"
-msgstr "Zeroconf konenimen valinta"
+msgstr "Zeroconf-verkkonimien selvitys"
 
 #: ../lib/network/netconnect.pm:800
 #, c-format
@@ -4726,19 +4861,19 @@ msgid ""
 "its shared resources that are not managed by the network.\n"
 "It is not necessary on most networks."
 msgstr ""
-"Voit halutessasi syöttää Zeroconf-konenimen.\n"
+"Haluttaessa voidaan syöttää Zeroconf-verkkonimi.\n"
 "Tätä nimeä käytetään jaettaessa resursseja, joita ei hallita\n"
 "verkossa. Useimmissa verkoissa tämä asetus on tarpeeton."
 
 #: ../lib/network/netconnect.pm:804
 #, c-format
 msgid "Zeroconf Host name"
-msgstr "Zeroconf konenimi"
+msgstr "Zeroconf-verkkonimi"
 
 #: ../lib/network/netconnect.pm:805
 #, c-format
 msgid "Zeroconf host name must not contain a ."
-msgstr "Zeroconf konenimi ei saa sisältää . (pistettä)"
+msgstr "Zeroconf-verkkonimi ei saa sisältää pistettä."
 
 #: ../lib/network/netconnect.pm:806
 #, c-format
@@ -4748,15 +4883,15 @@ msgid ""
 "Click on Ok to keep your configuration, or cancel to reconfigure your "
 "Internet & Network connection.\n"
 msgstr ""
-"Koska asennat käyttöjärjestelmää verkon yli, verkon asetukset on jo "
+"Käyttöjärjestelmää asennetaan verkon yli, verkon asetukset on jo "
 "määritelty.\n"
-"Klikkaa OK säilyttääksesi nykyiset asetukset tai peruuta asettaaksesi "
-"Internet- ja verkkoasetukset uudelleen.\n"
+"Napsauta \"OK\" säilyttääksesi nykyiset asetukset tai \"Peruuta\" "
+"asettaaksesi Internet- ja verkkoasetukset uudelleen.\n"
 
 #: ../lib/network/netconnect.pm:809
 #, c-format
 msgid "The network needs to be restarted. Do you want to restart it?"
-msgstr "Verkko pitää käynnistää uudelleen. Haluatko tehdä sen nyt ?"
+msgstr "Verkko pitää käynnistää uudelleen. Käynnistetäänkö verkko uudelleen?"
 
 #: ../lib/network/netconnect.pm:810
 #, c-format
@@ -4777,15 +4912,15 @@ msgid ""
 "\n"
 "Press \"%s\" to continue."
 msgstr ""
-"Asetamme seuraavaksi %s yhteyden.\n"
+"Asetetaan seuraavaksi yhteys %s.\n"
 "\n"
 "\n"
-"Paina \"%s\" jatkaaksesi."
+"Napsauta \"%s\" jatkaaksesi."
 
 #: ../lib/network/netconnect.pm:812
 #, c-format
 msgid "Configuration is complete, do you want to apply settings?"
-msgstr "Asetukset ovat tehty, haluatko ottaa ne käyttöön?"
+msgstr "Asetukset ovat valmiita. Otetaanko asetukset käyttöön?"
 
 #: ../lib/network/netconnect.pm:813
 #, c-format
@@ -4794,19 +4929,19 @@ msgid ""
 "Choose the one you want to use.\n"
 "\n"
 msgstr ""
-"Olet asettanut useita eri tapoja ottaa yhteys Internetiin.\n"
-"Valitse se, jota haluat käyttää.\n"
+"Useita eri tapoja ottaa yhteys Internetiin on asetettu.\n"
+"Valitse käytettävä tapa.\n"
 "\n"
 
 #: ../lib/network/netconnect.pm:814
 #, c-format
 msgid "Internet connection"
-msgstr "Internetyhteys"
+msgstr "Internet-yhteys"
 
 #: ../lib/network/netconnect.pm:816
 #, c-format
 msgid "Configuring network device %s (driver %s)"
-msgstr "Asetetaan verkkolaitetta %s (ajuri %s)"
+msgstr "Asetetaan verkkoliitäntää %s (ajuri %s)"
 
 #: ../lib/network/netconnect.pm:817
 #, c-format
@@ -4814,8 +4949,8 @@ msgid ""
 "The following protocols can be used to configure a LAN connection. Please "
 "choose the one you want to use."
 msgstr ""
-"Seuraavia protokollia voidaan käyttää LAN-yhteyden asettamiseen. Ole hyvä ja "
-"valitse se jota haluat käyttää."
+"Seuraavia protokollia voidaan käyttää lähiverkkoyhteyden asettamiseen. "
+"Valitse käytettävä protokolla."
 
 #: ../lib/network/netconnect.pm:818
 #, c-format
@@ -4825,21 +4960,21 @@ msgid ""
 "such as ``mybox.mylab.myco.com''.\n"
 "You may also enter the IP address of the gateway if you have one."
 msgstr ""
-"Syötä koneesi nimi.\n"
-"Koneesi nimen pitäisi olla täydellinen, kuten ``minunkone.yritys.fi''.\n"
-"Voit antaa myös yhdyskäytävän IP-osoitteen jos sinulla on sellainen."
+"Syötä koneen nimi (verkkonimi).\n"
+"Koneen nimen tulisi olla täydellinen verkkotunnus\n"
+"(esim. minunkone.minunverkko.com).\n"
+"Myös yhdyskäytävän IP-osoite voidaan antaa."
 
 #: ../lib/network/netconnect.pm:823
 #, c-format
 msgid "Last but not least you can also type in your DNS server IP addresses."
 msgstr ""
-"Viimeisimpänä mutta ei vähäisimpänä voit myös kirjoittaa DNS-palvelimesi IP-"
-"osoitteet."
+"Viimeisimpänä, mutta ei vähäisimpänä, voidaan antaa nimipalvelimen IP-osoite."
 
 #: ../lib/network/netconnect.pm:824
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
-msgstr "DNS palvelimen osoite pitää olla muotoa 1.2.3.4"
+msgstr "Nimipalvelimen osoite pitää olla muotoa 1.2.3.4"
 
 #: ../lib/network/netconnect.pm:825
 #, c-format
@@ -4861,9 +4996,9 @@ msgstr ""
 "%s"
 
 #: ../lib/network/network.pm:494
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced network settings"
-msgstr "Paikallisverkko-osoite"
+msgstr "Verkon lisäasetukset"
 
 #: ../lib/network/network.pm:495
 #, c-format
@@ -4871,56 +5006,55 @@ msgid ""
 "Here you can configure advanced network settings. Please note that you have "
 "to reboot the machine for changes to take effect."
 msgstr ""
+"Verkon lisäasetukset. Huomaa, että tietokone tulee käynnistää "
+"uudelleen asetuksien tulemiseksi voimaan."
 
 #: ../lib/network/network.pm:496
-#, fuzzy, c-format
+#, c-format
 msgid "TCP/IP settings"
-msgstr "PLL asetus:"
+msgstr "TCP/IP-asetukset"
 
 #: ../lib/network/network.pm:497
-#, fuzzy, c-format
+#, c-format
 msgid "Disable IPv6"
-msgstr "Poista käytöstä"
+msgstr "Poista IPv6 käytöstä"
 
 #: ../lib/network/network.pm:498
 #, c-format
 msgid "Disable TCP Window Scaling"
-msgstr ""
+msgstr "Poista \"TCP Window Scaling\" käytöstä"
 
 #: ../lib/network/network.pm:499
 #, c-format
 msgid "Disable TCP Timestamps"
-msgstr ""
+msgstr "Poista \"TCP Timestamps\" käytöstä"
 
 #: ../lib/network/network.pm:500
 #, c-format
 msgid "Security settings (defined by MSEC policy)"
-msgstr ""
+msgstr "Turvallisuusasetukset (MSECin määrittelemät)"
 
-#: ../lib/network/network.pm:501
-#, c-format
+#: ../lib/network/network.pm:501, c-format
 msgid "Disable ICMP echo"
-msgstr ""
+msgstr "Älä vastaa Ping-viesteihin"
 
-#: ../lib/network/network.pm:502
-#, c-format
+#: ../lib/network/network.pm:502, c-format
 msgid "Disable ICMP echo for broadcasting messages"
-msgstr ""
+msgstr "Älä vastaa yleislähetysosoitteeseen lähetettyihin Ping-viesteihin"
 
-#: ../lib/network/network.pm:503
-#, c-format
+#: ../lib/network/network.pm:503, c-format
 msgid "Disable invalid ICMP error responses"
-msgstr ""
+msgstr "Älä vastaa virheellisiin Ping-viesteihin"
 
 #: ../lib/network/network.pm:504
 #, c-format
 msgid "Log strange packets"
-msgstr ""
+msgstr "Kirjaa oudot paketit ylös"
 
 #: ../lib/network/network.pm:514
 #, c-format
 msgid "Proxies configuration"
-msgstr "Välityspalvelimien asettaminen"
+msgstr "Välityspalvelimien asetukset"
 
 #: ../lib/network/network.pm:515
 #, c-format
@@ -4928,6 +5062,8 @@ msgid ""
 "Here you can set up your proxies configuration (eg: http://"
 "my_caching_server:8080)"
 msgstr ""
+"Määrittele mahdolliset välityspalvelimet\n"
+"(esim. http://www.proxy.com:8080)."
 
 #: ../lib/network/network.pm:516
 #, c-format
@@ -4937,37 +5073,38 @@ msgstr "HTTP-välityspalvelin:"
 #: ../lib/network/network.pm:517
 #, c-format
 msgid "Use HTTP proxy for HTTPS connections"
-msgstr ""
+msgstr "Käytä HTTP-välityspalvelinta HTTPS-yhteyksille"
 
 #: ../lib/network/network.pm:518
 #, c-format
 msgid "HTTPS proxy"
-msgstr ""
+msgstr "HTTPS-välityspalvelin"
 
 #: ../lib/network/network.pm:519
 #, c-format
 msgid "FTP proxy"
-msgstr "FTP-välityspalvelin:"
+msgstr "FTP-välityspalvelin"
 
 #: ../lib/network/network.pm:520
-#, fuzzy, c-format
+#, c-format
 msgid "No proxy for (comma separated list):"
-msgstr "%d pilkulla erotettuja merkkijonoja"
+msgstr "Ei välityspalvelinta (pilkuilla erotetuille) osoitteille:"
 
 #: ../lib/network/network.pm:525
 #, c-format
 msgid "Proxy should be http://..."
-msgstr "Välityspalvelimen tulee olla muotoa http://..."
+msgstr "Välityspalvelimen osoitteen tulee alkaa etuliitteellä http://..."
 
 #: ../lib/network/network.pm:526
-#, fuzzy, c-format
+#, c-format
 msgid "Proxy should be http://... or https://..."
-msgstr "Välityspalvelimen tulee olla muotoa http://..."
+msgstr ""
+"Välityspalvelimen osoitteen tulee alkaa etuliitteellä http:// tai https://..."
 
 #: ../lib/network/network.pm:527
 #, c-format
 msgid "URL should begin with 'ftp:' or 'http:'"
-msgstr "Web-osoitteen tulee alkaa etuliitteellä 'ftp:' tai 'http:'"
+msgstr "Internet-osoitteen tulee alkaa etuliitteellä ftp:// tai http://"
 
 #: ../lib/network/shorewall.pm:77
 #, c-format
@@ -4982,16 +5119,27 @@ msgid ""
 "\n"
 "Which interfaces should be protected?\n"
 msgstr ""
+"Valitse liitännät, jotka suojataan palomuurilla.\n"
+"\n"
+"Kaikki suoraan Internetiin liitetyt liitännät tulisi\n"
+"valita, kun taas lähiverkkoon kytketyt liitännät\n"
+"voidaan jättää valitsematta.\n"
+"\n"
+"Jos aikomuksena on käyttää Mandrivan\n"
+"Internet-yhteyden jakamista, jätä valitsematta\n"
+"lähiverkkoon kytkettäväksi aiotut liitännät.\n"
+"\n"
+"Mitkä liitännät suojataan?\n"
 
 #: ../lib/network/shorewall.pm:158
 #, c-format
 msgid "Keep custom rules"
-msgstr ""
+msgstr "Säilytä mukautetut säännöt"
 
 #: ../lib/network/shorewall.pm:159
 #, c-format
 msgid "Drop custom rules"
-msgstr ""
+msgstr "Poista mukautetut säännöt"
 
 #: ../lib/network/shorewall.pm:164
 #, c-format
@@ -5000,6 +5148,9 @@ msgid ""
 "rules that may conflict with the configuration that has just been set up.\n"
 "What do you want to do?"
 msgstr ""
+"Palomuurin asetuksia on muutettu manuaalisesti ja asetukset\n"
+"sisältävät sääntöjä, jotka voivat olla ristiriidassa juuri asetettujen\n"
+"sääntöjen kanssa. Mitä tehdään?"
 
 #: ../lib/network/thirdparty.pm:144
 #, c-format
@@ -5009,7 +5160,7 @@ msgstr ""
 #: ../lib/network/thirdparty.pm:145
 #, c-format
 msgid "Some packages (%s) are required but aren't available."
-msgstr ""
+msgstr "Vaadittuja paketteja (%s) ei ole saatavilla."
 
 #. -PO: first argument is a list of Mandriva distributions
 #. -PO: second argument is a package media name
@@ -5017,12 +5168,12 @@ msgstr ""
 #, c-format
 msgid ""
 "These packages can be found in %s, or in the official %s package repository."
-msgstr ""
+msgstr "Paketit löytyvät jakelusta %s tai viralliselta asennuslähteeltä %s."
 
 #: ../lib/network/thirdparty.pm:154
 #, c-format
 msgid "The following component is missing: %s"
-msgstr ""
+msgstr "Seuraava komponentti uupuu: %s"
 
 #: ../lib/network/thirdparty.pm:156
 #, c-format
@@ -5030,21 +5181,23 @@ msgid ""
 "The required files can also be installed from this URL:\n"
 "%s"
 msgstr ""
+"Vaaditut tiedostot löytyvät myös osoitteesta:\n"
+"%s"
 
 #: ../lib/network/thirdparty.pm:192
 #, c-format
 msgid "Firmware files are required for this device."
-msgstr ""
+msgstr "Laite tarvitsee erillisen laiteohjelmiston."
 
 #: ../lib/network/thirdparty.pm:195 ../lib/network/thirdparty.pm:200
 #, c-format
 msgid "Use a floppy"
-msgstr "Käytä levykettä"
+msgstr "Etsi levykkeeltä"
 
 #: ../lib/network/thirdparty.pm:196 ../lib/network/thirdparty.pm:203
 #, c-format
 msgid "Use my Windows partition"
-msgstr "Käytä Windows osiotani"
+msgstr "Etsi Windows-osiolta"
 
 #: ../lib/network/thirdparty.pm:197
 #, c-format
@@ -5052,24 +5205,24 @@ msgid "Select file"
 msgstr "Valitse tiedosto"
 
 #: ../lib/network/thirdparty.pm:208
-#, fuzzy, c-format
+#, c-format
 msgid "Please select the firmware file (for example: %s)"
-msgstr "Ole hyvä ja valitse Windows ajuri (.inf tiedosto)"
+msgstr "Valitse laiteohjelmistotiedosto (esim. %s)"
 
 #: ../lib/network/thirdparty.pm:232
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to find \"%s\" on your Windows system!"
-msgstr "Poista järjestelmässäsi olevia kirjasimia"
+msgstr "Windows-järjestelmästä ei löytynyt tiedostoa %s."
 
 #: ../lib/network/thirdparty.pm:234
 #, c-format
 msgid "No Windows system has been detected!"
-msgstr ""
+msgstr "Windows-järjestelmää ei löytynyt!"
 
 #: ../lib/network/thirdparty.pm:244
 #, c-format
 msgid "Insert floppy"
-msgstr "Aseta levyke "
+msgstr "Aseta levyke"
 
 #: ../lib/network/thirdparty.pm:245
 #, c-format
@@ -5077,8 +5230,8 @@ msgid ""
 "Insert a FAT formatted floppy in drive %s with %s in root directory and "
 "press %s"
 msgstr ""
-"Aseta tyhjä FAT-alustettu levyke asemaan %s jossa %s on juurihakemistossa ja "
-"paina %s"
+"Aseta tyhjä FAT-alustettu levyke asemaan %s, jossa %s on juurihakemistossa "
+"ja paina %s"
 
 #: ../lib/network/thirdparty.pm:245
 #, c-format
@@ -5093,33 +5246,33 @@ msgstr "Levykkeen käyttövirhe, ei voida liittää %s"
 #: ../lib/network/thirdparty.pm:354
 #, c-format
 msgid "Looking for required software and drivers..."
-msgstr ""
+msgstr "Etsitään tarvittavia ohjelmia ja ajureita..."
 
 #: ../lib/network/thirdparty.pm:369
-#, fuzzy, c-format
+#, c-format
 msgid "Please wait, running device configuration commands..."
-msgstr "Odota hetki, tunnistetaan ja asetetaan laitteistoa..."
+msgstr "Odota hetki, suoritetaan laitteen asetuskomentoja..."
 
 #: ../lib/network/vpn/openvpn.pm:107
 #, c-format
 msgid "X509 Public Key Infrastructure"
-msgstr ""
+msgstr "X.509 julkiset varmenteet"
 
 #: ../lib/network/vpn/openvpn.pm:108
 #, c-format
 msgid "Static Key"
-msgstr ""
+msgstr "Staattinen avain"
 
 #. -PO: please don't translate the CA acronym
 #: ../lib/network/vpn/openvpn.pm:142
 #, c-format
 msgid "Certificate Authority (CA)"
-msgstr ""
+msgstr "Varmentaja (CA)"
 
 #: ../lib/network/vpn/openvpn.pm:148
 #, c-format
 msgid "Certificate"
-msgstr ""
+msgstr "Sertifikaatti"
 
 #: ../lib/network/vpn/openvpn.pm:154
 #, c-format
@@ -5127,29 +5280,29 @@ msgid "Key"
 msgstr "Avain"
 
 #: ../lib/network/vpn/openvpn.pm:160
-#, fuzzy, c-format
+#, c-format
 msgid "TLS control channel key"
-msgstr "Vasen Control-näppäin"
+msgstr "TLS-ohjauskanavan avain"
 
 #: ../lib/network/vpn/openvpn.pm:167
 #, c-format
 msgid "Key direction"
-msgstr ""
+msgstr "Avaimen suunta"
 
 #: ../lib/network/vpn/openvpn.pm:175
-#, fuzzy, c-format
+#, c-format
 msgid "Authenticate using username and password"
-msgstr "Ei voida kirjautua sisään käyttäjätunnuksella: %s (väärä salasana?)"
+msgstr "Tunnistaudu käyttäjätunnuksella ja salasanalla"
 
 #: ../lib/network/vpn/openvpn.pm:181
 #, c-format
 msgid "Check server certificate"
-msgstr ""
+msgstr "Tarkista palvelimen sertifikaatti"
 
 #: ../lib/network/vpn/openvpn.pm:187
-#, fuzzy, c-format
+#, c-format
 msgid "Cipher algorithm"
-msgstr "salausalgoritmi"
+msgstr "Salausalgoritmi"
 
 #: ../lib/network/vpn/openvpn.pm:191
 #, c-format
@@ -5159,42 +5312,42 @@ msgstr "Oletus"
 #: ../lib/network/vpn/openvpn.pm:195
 #, c-format
 msgid "Size of cipher key"
-msgstr ""
+msgstr "Salausavaimen koko"
 
 #: ../lib/network/vpn/openvpn.pm:206
-#, fuzzy, c-format
+#, c-format
 msgid "Get from server"
-msgstr "Telnet-palvelin"
+msgstr "Hae palvelimelta"
 
 #: ../lib/network/vpn/openvpn.pm:216
-#, fuzzy, c-format
+#, c-format
 msgid "Gateway port"
-msgstr "Yhdyskäytävä"
+msgstr "Yhdyskäytävän portti"
 
 #: ../lib/network/vpn/openvpn.pm:232
-#, fuzzy, c-format
+#, c-format
 msgid "Remote IP address"
 msgstr "Yhdyskäytävän IP-osoite"
 
 #: ../lib/network/vpn/openvpn.pm:237
-#, fuzzy, c-format
+#, c-format
 msgid "Use TCP protocol"
-msgstr "Protokolla"
+msgstr "Käytä TCP-protokollaa"
 
 #: ../lib/network/vpn/openvpn.pm:243
 #, c-format
 msgid "Virtual network device type"
-msgstr ""
+msgstr "Virtuaaliverkkoliitännän tyyppi"
 
 #: ../lib/network/vpn/openvpn.pm:250
 #, c-format
 msgid "Virtual network device number (optional)"
-msgstr ""
+msgstr "Virtuaaliverkkoliitännän numero (valinnainen)"
 
 #: ../lib/network/vpn/openvpn.pm:365
 #, c-format
 msgid "Starting connection.."
-msgstr ""
+msgstr "Käynnistetään yhteyttä.."
 
 #: ../lib/network/vpn/openvpn.pm:380
 #, c-format
@@ -5204,22 +5357,22 @@ msgstr ""
 #: ../lib/network/vpn/openvpn.pm:391
 #, c-format
 msgid "PIN number"
-msgstr ""
+msgstr "PIN-koodi"
 
 #: ../lib/network/vpn/vpnc.pm:9
 #, c-format
 msgid "Cisco VPN Concentrator"
-msgstr ""
+msgstr "Cisco VPN-keskitin"
 
 #: ../lib/network/vpn/vpnc.pm:43
-#, fuzzy, c-format
+#, c-format
 msgid "Group name"
-msgstr "Ryhmä-ID"
+msgstr "Ryhmän nimi"
 
 #: ../lib/network/vpn/vpnc.pm:47
 #, c-format
 msgid "Group secret"
-msgstr ""
+msgstr "Ryhmän salasana"
 
 #: ../lib/network/vpn/vpnc.pm:52
 #, c-format
@@ -5227,14 +5380,14 @@ msgid "Username"
 msgstr "Käyttäjätunnus"
 
 #: ../lib/network/vpn/vpnc.pm:61
-#, fuzzy, c-format
+#, c-format
 msgid "NAT Mode"
-msgstr "Tila"
+msgstr "NAT-tila"
 
 #: ../lib/network/vpn/vpnc.pm:67
 #, c-format
 msgid "Use specific UDP port"
-msgstr ""
+msgstr "Käytä määriteltyä UDP-porttia"
 
 #~ msgid ""
 #~ "There is only one configured network adapter on your system:\n"
