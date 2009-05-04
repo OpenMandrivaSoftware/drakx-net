@@ -101,6 +101,12 @@ my @all_servers =
    force_default_selection => 0,
   },
   {
+   name => N_("AVAHI and mDNS"),
+   ports => '5353/udp',
+   hide => 1,
+   pkg => 'avahi',
+  },
+  {
    name => N_("BitTorrent"),
    ports => '6881:6999/tcp',
    hide => 1,
