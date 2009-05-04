@@ -175,6 +175,9 @@ our %data = (
         login => "mobileweb",
         password => "password",
     },
+    N("United States") . "|Cingular" => {
+        apn => "isp.cingular",
+    },
 );
 
 1;
