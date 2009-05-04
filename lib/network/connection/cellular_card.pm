@@ -15,7 +15,8 @@ sub get_devices() {
        my @serial = grep { $_->{description} =~ /GPRS|EDGE|3G|UMTS|H.DPA|CDMA/i } detect_devices::matching_driver('serial_cs', 'usbserial', @maybe_usbserial_modules);
        member($_->{driver}, @maybe_usbserial_modules) and $_->{driver} = 'usbserial' foreach @serial;
        #- cdc_acm can not be listed directly in network/cellular, it is already in network/isdn
-       @serial, detect_devices::probe_category('network/cellular'), detect_devices::matching_driver('cdc_acm');
+       #- sierra wireless is also not detected as a 3G card
+       @serial, detect_devices::probe_category('network/cellular'), detect_devices::matching_driver('cdc_acm', 'sierra');
 }
 sub get_metric { 40 }
 
