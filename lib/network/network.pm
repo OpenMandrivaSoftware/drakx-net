@@ -191,6 +191,7 @@ sub write_interface_settings {
                 qw(MRU REMIP PPPOPTIONS HARDFLOWCTL DEFABORT RETRYTIMEOUT PAPNAME LINESPEED MODEMPORT DEBUG ESCAPECHARS INITSTRING),
                 qw(DISCONNECTTIMEOUT PERSIST DEFROUTE),
                 qw(VPN_NAME VPN_TYPE),
+                qw(ACCOUNTING),
                 qw(CELLULAR_CID),
                 if_($intf->{BOOTPROTO} eq "dhcp", qw(DHCP_CLIENT DHCP_HOSTNAME NEEDHOSTNAME PEERDNS PEERYP PEERNTPD DHCP_TIMEOUT)),
                 if_($intf->{DEVICE} =~ /^ippp\d+$/, qw(DIAL_ON_IFUP))
