@@ -449,7 +449,7 @@ sub advanced_settings_read {
     my $log_martians = grep { /^net\.ipv4\.conf\.all\.log_martians\s*=\s*1$/ } cat_($sysctl);
     my $disable_icmp = grep { /^net\.ipv4\.icmp_echo_ignore_all\s*=\s*1$/ } cat_($sysctl);
     my $disable_icmp_broadcasts = grep { /^net\.ipv4\.icmp_echo_ignore_broadcasts\s*=\s*1$/ } cat_($sysctl);
-    my $disable_bogus_error_responses = grep { /^net\.ipv4\.ignore_bogus_error_responses\s*=\s*1$/ } cat_($sysctl);
+    my $disable_bogus_error_responses = grep { /^net\.ipv4\.icmp_ignore_bogus_error_responses\s*=\s*1$/ } cat_($sysctl);
     my $msec = grep { /^BASE_LEVEL=/ } cat_($msecconf);
 
     { ipv6_disabled => $ipv6_disabled, disable_window_scaling => $disable_window_scaling,
@@ -472,7 +472,7 @@ sub advanced_settings_write {
     # sysctl
     substInFile {
         # remove old entries
-        /^net\.ipv4\.(tcp_window_scaling|tcp_timestamps|conf\.all\.log_martians|icmp_echo_ignore_all|icmp_echo_ignore_broadcasts|ignore_bogus_error_responses).*/ and $_="";
+        /^net\.ipv4\.(tcp_window_scaling|tcp_timestamps|conf\.all\.log_martians|icmp_echo_ignore_all|icmp_echo_ignore_broadcasts|icmp_ignore_bogus_error_responses).*/ and $_="";
         if (eof) {
             # add new values
             my $window_scaling = ($u->{disable_window_scaling}) ? "0" : "1";
@@ -486,7 +486,7 @@ sub advanced_settings_write {
             $_ .= "net.ipv4.conf.all.log_martians=$log_martians\n";
             $_ .= "net.ipv4.icmp_echo_ignore_all=$disable_icmp\n";
             $_ .= "net.ipv4.icmp_echo_ignore_broadcasts=$disable_icmp_broadcasts\n";
-            $_ .= "net.ipv4.ignore_bogus_error_responses=$disable_bogus_error_responses\n";
+            $_ .= "net.ipv4.icmp_ignore_bogus_error_responses=$disable_bogus_error_responses\n";
         }
     } "$::prefix/etc/sysctl.conf";
 }
