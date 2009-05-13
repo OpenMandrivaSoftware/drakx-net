@@ -7,12 +7,13 @@
 # Pablo Saratxaga <pablo@mandriva.com>, 2004, 2006.
 # Jaime Crespo <505201@unizar.es>, 2004, 2005.
 # José Manuel Pérez <jmprodu@hotmail.com>, 2005.
+# Andre Paulo Machado <andre@mandriva.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: es\n"
+"Project-Id-Version: network-tools_es\n"
 "POT-Creation-Date: 2009-04-02 13:30-0300\n"
-"PO-Revision-Date: 2008-09-23 10:50-0300\n"
-"Last-Translator: Fabián Mandelbaum <fmandelbaum@gmail.com>\n"
+"PO-Revision-Date: 2009-05-12 19:39-0300\n"
+"Last-Translator: Andre Paulo Machado <andre@mandriva.com>\n"
 "Language-Team: Español <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -207,7 +208,7 @@ msgid "Internet Connection Sharing"
 msgstr "Compartir la conexión a Internet"
 
 #: ../bin/drakgw:75
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -222,14 +223,15 @@ msgid ""
 msgstr ""
 "Está a punto de configurar su computadora para compartir la conexión a "
 "Internet.\n"
-"Con esta característica, otras computadoras de su red local podrán usar la "
+"Con este recurso, otras computadoras de su red local podrán utilizar la "
 "conexión a Internet de esta computadora.\n"
 "\n"
 "Debe asegurarse que ha configurado su acceso a la Red/Internet utilizando "
 "drakconnect antes de proceder.\n"
 "\n"
-"Nota: necesita un adaptador de red dedicado para configurar una red de área "
-"local (LAN)."
+"Nota: necesita de un Adaptador de Red dedicado para configurar una Red de Área "
+"Local (LAN). En primero, desactive el Mandriva Firewall para la tarjeta de red "
+"conectada en su red local."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -985,9 +987,9 @@ msgid "Error Restarting/Reloading NFS server"
 msgstr "Error al reiniciar/recargar el servidor NFS"
 
 #: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#, c-format
 msgid "Directory selection"
-msgstr "Selección del directorio"
+msgstr "Selección de directorio"
 
 #: ../bin/draknfs:116 ../bin/draksambashare:253
 #, c-format
@@ -1179,9 +1181,9 @@ msgid "Please add an NFS share to be able to modify it."
 msgstr "Por favor, añada un recurso compartido NFS para poder modificarlo."
 
 #: ../bin/draknfs:356
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced"
-msgstr "Opciones avanzadas"
+msgstr "Avanzado"
 
 #: ../bin/draknfs:379
 #, c-format
@@ -1268,8 +1270,7 @@ msgstr "Por favor, ingrese un directorio a compartir."
 #: ../bin/draknfs:533
 #, c-format
 msgid "Please use the modify button to set right access."
-msgstr ""
-"Por favor, use el botón Modificar para configurar los permisos de acceso."
+msgstr "Por favor, use el botón Modificar para configurar los permisos de acceso."
 
 #: ../bin/draknfs:548
 #, c-format
@@ -1615,8 +1616,7 @@ msgstr "Añadir una impresora compartida especial"
 
 #: ../bin/draksambashare:448
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
 msgstr ""
 "El objetivo de este asistente es crear fácilmente una nueva impresora "
 "compartida especial Samba."
@@ -1762,8 +1762,7 @@ msgstr "Público:"
 
 #: ../bin/draksambashare:795
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 "Las máscaras de creación, de directorio, y el modo de creación, deben ser "
 "valores numéricos. ej: 0755."
@@ -1838,8 +1837,7 @@ msgstr ""
 
 #: ../bin/draksambashare:1072
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
 msgstr ""
 "Las instalaciones de servidor único pueden usar smbpasswd o tdbsam como "
 "«motor» para las contraseñas."
@@ -1901,8 +1899,7 @@ msgstr "Grupo de trabajo"
 #: ../bin/draksambashare:1102
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
-msgstr ""
-"Samba necesita saber el Grupo de trabajo de Windows al que va a servir."
+msgstr "Samba necesita saber el Grupo de trabajo de Windows al que va a servir."
 
 #: ../bin/draksambashare:1109 ../bin/draksambashare:1176
 #, c-format
@@ -2028,8 +2025,7 @@ msgstr "Nivel de registro"
 #: ../bin/draksambashare:1167
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
-"El asistente recolectó los parámetros siguientes para configurar a Samba."
+msgstr "El asistente recolectó los parámetros siguientes para configurar a Samba."
 
 #: ../bin/draksambashare:1167
 #, c-format
@@ -2185,9 +2181,9 @@ msgid "Gateway: %s"
 msgstr "Pasarela: %s"
 
 #: ../bin/net_applet:98
-#, fuzzy, c-format
+#, c-format
 msgid "DNS: %s"
-msgstr "DNS"
+msgstr "DNS: %s"
 
 # TODO: ¿cómo traducir "link level" ?
 #: ../bin/net_applet:99
@@ -2302,9 +2298,9 @@ msgid "Network Monitoring"
 msgstr "Supervisión de la red"
 
 #: ../bin/net_monitor:99
-#, fuzzy, c-format
+#, c-format
 msgid "Default connection: "
-msgstr "Conexión por cable"
+msgstr "Conexión estándar: "
 
 #: ../bin/net_monitor:101
 #, c-format
@@ -2350,11 +2346,9 @@ msgstr ""
 "de recepción:"
 
 #: ../bin/net_monitor:113
-#, fuzzy, c-format
+#, c-format
 msgid "Connection time: "
-msgstr ""
-"Tiempo\n"
-"de conexión: "
+msgstr "Tiempo de conexión: "
 
 #: ../bin/net_monitor:120
 #, c-format
@@ -2401,9 +2395,9 @@ msgstr ""
 "Verifique su configuración en el Centro de Control de Mandriva Linux."
 
 #: ../bin/net_monitor:360
-#, fuzzy, c-format
+#, c-format
 msgid "%s (%s)"
-msgstr "DNS"
+msgstr "%s (%s)"
 
 #: ../bin/net_monitor:385
 #, c-format
@@ -2642,9 +2636,9 @@ msgid "Ethernet"
 msgstr "Ethernet"
 
 #: ../lib/network/connection/ethernet.pm:12
-#, fuzzy, c-format
+#, c-format
 msgid "Wired (Ethernet)"
-msgstr "Ethernet"
+msgstr "a Cable (Ethernet)"
 
 #: ../lib/network/connection/ethernet.pm:30
 #, c-format
@@ -2750,8 +2744,7 @@ msgstr "Las direcciones IP deben estar en el formato 1.2.3.4"
 #: ../lib/network/connection/ethernet.pm:174
 #, c-format
 msgid "Netmask should be in format 255.255.224.0"
-msgstr ""
-"La dirección de la máscara de red debería estar en formato 255.255.224.0"
+msgstr "La dirección de la máscara de red debería estar en formato 255.255.224.0"
 
 #: ../lib/network/connection/ethernet.pm:179
 #, c-format
@@ -2767,9 +2760,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:210
-#, fuzzy, c-format
+#, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
-msgstr "Asignar nombre del equipo desde dirección DHCP"
+msgstr "Obtener nombre del equipo desde servidor DHCP (o generar nombre único)"
 
 #: ../lib/network/connection/ethernet.pm:230
 #, c-format
@@ -2799,8 +2792,7 @@ msgstr "Se obtuvo dirección de red para la interfaz %s (protocolo %s)"
 #: ../lib/network/connection/ethernet.pm:295
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
-msgstr ""
-"Fallo al obtener una dirección de red para la interfaz %s (protcolo %s)"
+msgstr "Fallo al obtener una dirección de red para la interfaz %s (protcolo %s)"
 
 #: ../lib/network/connection/isdn.pm:8
 #, c-format
@@ -3218,9 +3210,9 @@ msgid "Wireless"
 msgstr "Inalámbrica"
 
 #: ../lib/network/connection/wireless.pm:16
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless (Wi-Fi)"
-msgstr "Inalámbrica"
+msgstr "Inalámbrica (Wi-Fi)"
 
 #: ../lib/network/connection/wireless.pm:32
 #, c-format
@@ -3975,9 +3967,9 @@ msgid "FTP server"
 msgstr "Servidor FTP"
 
 #: ../lib/network/drakfirewall.pm:33
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP Server"
-msgstr "Servidor CUPS"
+msgstr "Servidor DHCP"
 
 #: ../lib/network/drakfirewall.pm:39
 #, c-format
@@ -3995,9 +3987,9 @@ msgid "Telnet server"
 msgstr "Servidor Telnet"
 
 #: ../lib/network/drakfirewall.pm:55
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "/Servidor _NFS"
+msgstr "Servidor NFS"
 
 #: ../lib/network/drakfirewall.pm:63
 #, c-format
@@ -4020,14 +4012,14 @@ msgid "CUPS server"
 msgstr "Servidor CUPS"
 
 #: ../lib/network/drakfirewall.pm:87
-#, fuzzy, c-format
+#, c-format
 msgid "MySQL server"
-msgstr "Servidor NFS"
+msgstr "Servidor MySQL"
 
 #: ../lib/network/drakfirewall.pm:93
-#, fuzzy, c-format
+#, c-format
 msgid "PostgreSQL server"
-msgstr "Servidor CUPS"
+msgstr "Servidor PostgreSQL"
 
 #: ../lib/network/drakfirewall.pm:99
 #, c-format
@@ -4134,8 +4126,7 @@ msgstr "Otros puertos"
 #: ../lib/network/drakfirewall.pm:260
 #, c-format
 msgid "Log firewall messages in system logs"
-msgstr ""
-"Guardar los mensajes del cortafuegos en los archivos de registro del sistema"
+msgstr "Guardar los mensajes del cortafuegos en los archivos de registro del sistema"
 
 #: ../lib/network/drakfirewall.pm:302
 #, c-format
@@ -4201,8 +4192,7 @@ msgstr "¡No se puede inicializar tipo de conexión %s!"
 #: ../lib/network/drakvpn.pm:60
 #, c-format
 msgid "Please select an existing VPN connection or enter a new name."
-msgstr ""
-"Por favor, seleccione una conexión VPN existente o ingrese un nombre nuevo."
+msgstr "Por favor, seleccione una conexión VPN existente o ingrese un nombre nuevo."
 
 #: ../lib/network/drakvpn.pm:64
 #, c-format
@@ -4336,8 +4326,7 @@ msgstr "Automático"
 #: ../lib/network/ndiswrapper.pm:30
 #, c-format
 msgid "No device supporting the %s ndiswrapper driver is present!"
-msgstr ""
-"¡No está presente un dispositivo que soporte el controlador ndiswrapper %s!"
+msgstr "¡No está presente un dispositivo que soporte el controlador ndiswrapper %s!"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -4406,7 +4395,7 @@ msgid "Network Center"
 msgstr "Centro de red"
 
 #: ../lib/network/netcenter.pm:168
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced settings"
 msgstr "Opciones avanzadas"
 
@@ -4462,9 +4451,9 @@ msgid "Select the network interface to configure:"
 msgstr "Seleccione la interfaz de red a configurar:"
 
 #: ../lib/network/netconnect.pm:151
-#, fuzzy, c-format
+#, c-format
 msgid "%s: %s"
-msgstr "DNS"
+msgstr "%s: %s"
 
 #: ../lib/network/netconnect.pm:168
 #, c-format
@@ -4801,12 +4790,9 @@ msgstr ""
 "Intente volver a configurar su conexión."
 
 #: ../lib/network/netconnect.pm:763
-#, fuzzy, c-format
+#, c-format
 msgid "Problems occured during the network connectivity test."
-msgstr ""
-"Ocurrió un problema mientras se reiniciaba la red: \n"
-"\n"
-"%s"
+msgstr "Ocurrió un problema mientras testaba la conección de red"
 
 #: ../lib/network/netconnect.pm:764
 #, c-format
@@ -4823,11 +4809,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/netconnect.pm:768
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network configuration is finished."
-msgstr ""
-"Felicidades, la configuración de la red y de la Internet ha terminado.\n"
-"\n"
+msgstr "Felicitaciones, la configuración de la red terminó."
 
 #: ../lib/network/netconnect.pm:768
 #, c-format
@@ -4847,11 +4831,9 @@ msgstr ""
 "puede que desee volver a iniciar la configuración."
 
 #: ../lib/network/netconnect.pm:771
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
-msgstr ""
-"Felicidades, la configuración de la red y de la Internet ha terminado.\n"
-"\n"
+msgstr "Felicitaciones, la configuración de la red y de Internet terminó"
 
 #: ../lib/network/netconnect.pm:772
 #, c-format
@@ -5079,9 +5061,9 @@ msgstr ""
 "%s"
 
 #: ../lib/network/network.pm:494
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced network settings"
-msgstr "Ajustes de red"
+msgstr "Configuraciones avazadas de red"
 
 #: ../lib/network/network.pm:495
 #, c-format
@@ -5091,14 +5073,14 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/network.pm:496
-#, fuzzy, c-format
+#, c-format
 msgid "TCP/IP settings"
-msgstr "Configuración IP"
+msgstr "Configuraciones TCP/IP"
 
 #: ../lib/network/network.pm:497
-#, fuzzy, c-format
+#, c-format
 msgid "Disable IPv6"
-msgstr "Desactivar"
+msgstr "Desactivar IPv6"
 
 #: ../lib/network/network.pm:498
 #, c-format
@@ -5246,8 +5228,7 @@ msgstr "Se necesitan algunos paquetes (%s), pero no están disponibles."
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
 #, c-format
-msgid ""
-"These packages can be found in %s, or in the official %s package repository."
+msgid "These packages can be found in %s, or in the official %s package repository."
 msgstr ""
 "Estos paquetes se encuentran en %s, o en el repositorio oficial de paquetes %"
 "s."
@@ -5333,8 +5314,7 @@ msgstr "Buscando software y controladores necesarios..."
 #: ../lib/network/thirdparty.pm:369
 #, c-format
 msgid "Please wait, running device configuration commands..."
-msgstr ""
-"Por favor espere, ejecutando comandos de configuración de dispositivos..."
+msgstr "Por favor espere, ejecutando comandos de configuración de dispositivos..."
 
 #: ../lib/network/vpn/openvpn.pm:107
 #, c-format
@@ -5472,1248 +5452,3 @@ msgstr "Modo NAT"
 msgid "Use specific UDP port"
 msgstr "Usar puerto UDP específico"
 
-#~ msgid ""
-#~ "There is only one configured network adapter on your system:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "I am about to setup your Local Area Network with that adapter."
-#~ msgstr ""
-#~ "Sólo hay un adaptador de red configurado en su sistema:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Se va a configurar su red de área local con ese adaptador."
-
-#~ msgid ""
-#~ "No ethernet network adapter has been detected on your system. Please run "
-#~ "the hardware configuration tool."
-#~ msgstr ""
-#~ "No se ha detectado adaptador de red Ethernet en su sistema. Por favor, "
-#~ "ejecute la herramienta de configuración del hardware."
-
-#~ msgid "Connection type: "
-#~ msgstr "Tipo de conexión: "
-
-#~ msgid "%s already in use\n"
-#~ msgstr "%s ya está en uso\n"
-
-#~ msgid "Draknfs entry"
-#~ msgstr "Entrada Draknfs"
-
-#~ msgid "DrakVPN"
-#~ msgstr "DrakVPN"
-
-#~ msgid "The VPN connection is enabled."
-#~ msgstr "La conexión VPN está habilitada."
-
-#~ msgid ""
-#~ "The setup of a VPN connection has already been done.\n"
-#~ "\n"
-#~ "It's currently enabled.\n"
-#~ "\n"
-#~ "What would you like to do?"
-#~ msgstr ""
-#~ "Ya se configuró una conexión VPN.\n"
-#~ "\n"
-#~ "En este momento está habilitada.\n"
-#~ "\n"
-#~ "¿Que desea hacer?"
-
-#~ msgid "disable"
-#~ msgstr "deshabilitar"
-
-#~ msgid "reconfigure"
-#~ msgstr "volver a configurar"
-
-#~ msgid "dismiss"
-#~ msgstr "salir"
-
-#~ msgid "Disabling VPN..."
-#~ msgstr "Deshabilitando VPN..."
-
-#~ msgid "The VPN connection is now disabled."
-#~ msgstr "La conexión VPN ahora está deshabilitada."
-
-#~ msgid "VPN connection currently disabled"
-#~ msgstr "Conexión VPN deshabilitada"
-
-#~ msgid ""
-#~ "The setup of a VPN connection has already been done.\n"
-#~ "\n"
-#~ "It's currently disabled.\n"
-#~ "\n"
-#~ "What would you like to do?"
-#~ msgstr ""
-#~ "Ya se configuró una conexión VPN.\n"
-#~ "\n"
-#~ "En este momento está deshabilitada.\n"
-#~ "\n"
-#~ "¿Qué desearía hacer?"
-
-#~ msgid "enable"
-#~ msgstr "habilitar"
-
-#~ msgid "Enabling VPN..."
-#~ msgstr "Habilitando VPN..."
-
-#~ msgid "The VPN connection is now enabled."
-#~ msgstr "La conexión VPN ahora está habilitada."
-
-#~ msgid "Simple VPN setup."
-#~ msgstr "Configuración de VPN simple."
-
-#~ msgid ""
-#~ "You are about to configure your computer to use a VPN connection.\n"
-#~ "\n"
-#~ "With this feature, computers on your local private network and computers\n"
-#~ "on some other remote private networks, can share resources, through\n"
-#~ "their respective firewalls, over the Internet, in a secure manner. \n"
-#~ "\n"
-#~ "The communication over the Internet is encrypted. The local and remote\n"
-#~ "computers look as if they were on the same network.\n"
-#~ "\n"
-#~ "Make sure you have configured your Network/Internet access using\n"
-#~ "drakconnect before going any further."
-#~ msgstr ""
-#~ "Está a punto de configurar su computadora para utilizar una conexión "
-#~ "VPN.\n"
-#~ "\n"
-#~ "Con esta característica, las computadoras de su red privada local y las "
-#~ "computadoras\n"
-#~ "en otras redes privadas remotas pueden compartir recursos, a través de "
-#~ "sus respectivos cortafuegos, por medio de la Internet, de manera "
-#~ "segura. \n"
-#~ "\n"
-#~ "La comunicación por Internet está cifrada. Las computadoras locales y "
-#~ "remotas\n"
-#~ "lucen como si estuviesen en la misma red.\n"
-#~ "\n"
-#~ "Asegúrese de haber configurado el acceso a la Red/Internet utilizando\n"
-#~ "drakconnect antes de proceder."
-
-#~ msgid ""
-#~ "VPN connection.\n"
-#~ "\n"
-#~ "This program is based on the following projects:\n"
-#~ " - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
-#~ " - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
-#~ " - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
-#~ " - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
-#~ " - the docs and man pages coming with the %s package\n"
-#~ "\n"
-#~ "Please read AT LEAST the ipsec-howto docs\n"
-#~ "before going any further."
-#~ msgstr ""
-#~ "Conexión VPN.\n"
-#~ "\n"
-#~ "Este programa está basado en los proyectos siguentes:\n"
-#~ " - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
-#~ " - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
-#~ " - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
-#~ " - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
-#~ " - los documentos y páginas man que vienen con el paquete %s\n"
-#~ "\n"
-#~ "Por favor, lea COMO MÍNIMO los documentos ipsec-howto\n"
-#~ "antes de proceder."
-
-#~ msgid "Problems installing package %s"
-#~ msgstr "Problemas instalando el paquete %s"
-
-#~ msgid "Security Policies"
-#~ msgstr "Políticas de seguridad"
-
-#~ msgid "IKE daemon racoon"
-#~ msgstr "Demonio IKE racoon"
-
-#~ msgid "Configuration file"
-#~ msgstr "Archivo de configuración"
-
-#~ msgid ""
-#~ "Configuration step!\n"
-#~ "\n"
-#~ "You need to define the Security Policies and then to \n"
-#~ "configure the automatic key exchange (IKE) daemon. \n"
-#~ "The KAME IKE daemon we're using is called 'racoon'.\n"
-#~ "\n"
-#~ "What would you like to configure?\n"
-#~ msgstr ""
-#~ "Paso de configuración\n"
-#~ "\n"
-#~ "Debe definir las Políticas de seguridad y luego \n"
-#~ "configurar el demonio de intercambio automático de claves (IKE). \n"
-#~ "El demonio IKE que estamos usando se denomina 'racoon'.\n"
-#~ "\n"
-#~ "¿Qué desea configurar?\n"
-
-#~ msgid "%s entries"
-#~ msgstr "%s entradas"
-
-#~ msgid ""
-#~ "The %s file contents\n"
-#~ "is divided into sections.\n"
-#~ "\n"
-#~ "You can now:\n"
-#~ "\n"
-#~ "  - display, add, edit, or remove sections, then\n"
-#~ "  - commit the changes\n"
-#~ "\n"
-#~ "What would you like to do?\n"
-#~ msgstr ""
-#~ "El contenido del archivo %s\n"
-#~ "se divide en secciones.\n"
-#~ "\n"
-#~ "Ahora puede:\n"
-#~ "\n"
-#~ "  - mostrar, añadir, editar o quitar secciones, y luego\n"
-#~ "  - enviar los cambios\n"
-#~ "\n"
-#~ "¿Qué desea hacer?\n"
-
-#~ msgid ""
-#~ "_:display here is a verb\n"
-#~ "Display"
-#~ msgstr "Mostrar"
-
-#~ msgid "Edit"
-#~ msgstr "Editar"
-
-#~ msgid "Commit"
-#~ msgstr "Enviar"
-
-#~ msgid ""
-#~ "_:display here is a verb\n"
-#~ "Display configuration"
-#~ msgstr "Mostrar la configuración"
-
-#~ msgid ""
-#~ "The %s file does not exist.\n"
-#~ "\n"
-#~ "This must be a new configuration.\n"
-#~ "\n"
-#~ "You'll have to go back and choose 'add'.\n"
-#~ msgstr ""
-#~ "El archivo %s no existe.\n"
-#~ "\n"
-#~ "Esta debe ser una configuración nueva.\n"
-#~ "\n"
-#~ "Tiene que regresar y elegir 'añadir'.\n"
-
-#~ msgid ""
-#~ "Add a Security Policy.\n"
-#~ "\n"
-#~ "You can now add a Security Policy.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data.\n"
-#~ msgstr ""
-#~ "Añadir una Política de seguridad.\n"
-#~ "\n"
-#~ "Ahora puede añadir una Política de seguridad.\n"
-#~ "\n"
-#~ "Elija continuar cuando haya finalizado de ingresar los datos.\n"
-
-#~ msgid "Edit section"
-#~ msgstr "Editar sección"
-
-#~ msgid ""
-#~ "Your %s file has several sections or connections.\n"
-#~ "\n"
-#~ "You can choose here below the one you want to edit \n"
-#~ "and then click on next.\n"
-#~ msgstr ""
-#~ "Su archivo %s tiene varias secciones o conexiones.\n"
-#~ "\n"
-#~ "Aquí abajo puede elegir la que desea editar y luego \n"
-#~ "hacer clic en Siguiente.\n"
-
-#~ msgid "Section names"
-#~ msgstr "Nombres de sección"
-
-#~ msgid ""
-#~ "Edit a Security Policy.\n"
-#~ "\n"
-#~ "You can now edit a Security Policy.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data.\n"
-#~ msgstr ""
-#~ "Editar una Política de seguridad.\n"
-#~ "\n"
-#~ "Ahora puede editar una Política de seguridad.\n"
-#~ "\n"
-#~ "Elija Continuar cuando haya finalizado de ingresar los datos.\n"
-
-#~ msgid "Remove section"
-#~ msgstr "Quitar sección"
-
-#~ msgid ""
-#~ "Your %s file has several sections or connections.\n"
-#~ "\n"
-#~ "You can choose here below the one you want to remove\n"
-#~ "and then click on next.\n"
-#~ msgstr ""
-#~ "Su archivo %s tiene varias secciones o conexiones.\n"
-#~ "\n"
-#~ "Aquí abajo puede elegir la que desea quitar y luego\n"
-#~ "hacer clic en Siguiente.\n"
-
-#~ msgid ""
-#~ "The racoon.conf file configuration.\n"
-#~ "\n"
-#~ "The contents of this file is divided into sections.\n"
-#~ "You can now:\n"
-#~ "  - display \t\t (display the file contents)\n"
-#~ "  - add\t\t\t (add one section)\n"
-#~ "  - edit \t\t\t (modify parameters of an existing section)\n"
-#~ "  - remove \t\t (remove an existing section)\n"
-#~ "  - commit \t\t (writes the changes to the real file)"
-#~ msgstr ""
-#~ "El archivo de configuración racoon.conf.\n"
-#~ "\n"
-#~ "El contenido de este archivo está dividido en secciones.\n"
-#~ "Ahora puede:\n"
-#~ "  - mostrar \t\t (muestra el contenido del archivo)\n"
-#~ "  - añadir\t\t\t (añade una sección)\n"
-#~ "  - editar \t\t\t (modificar una sección existente)\n"
-#~ "  - quitar \t\t (quitar una sección existente)\n"
-#~ "  - enviar \t\t (escribir los cambios en el archivo)"
-
-#~ msgid ""
-#~ "The %s file does not exist\n"
-#~ "\n"
-#~ "This must be a new configuration.\n"
-#~ "\n"
-#~ "You'll have to go back and choose configure.\n"
-#~ msgstr ""
-#~ "El archivo %s no existe\n"
-#~ "\n"
-#~ "Esta debe ser una configuración nueva.\n"
-#~ "\n"
-#~ "Debe regresar y elegir Configurar.\n"
-
-#~ msgid "racoon.conf entries"
-#~ msgstr "entradas de racoon.conf"
-
-#~ msgid ""
-#~ "The 'add' sections step.\n"
-#~ "\n"
-#~ "Here below is the racoon.conf file skeleton:\n"
-#~ "\t'path'\n"
-#~ "\t'remote'\n"
-#~ "\t'sainfo' \n"
-#~ "\n"
-#~ "Choose the section you would like to add.\n"
-#~ msgstr ""
-#~ "El paso 'añadir' secciones.\n"
-#~ "\n"
-#~ "Aquí abajo tiene el esqueleto del archivo racoon.conf:\n"
-#~ "\t'path'\n"
-#~ "\t'remote'\n"
-#~ "\t'sainfo' \n"
-#~ "\n"
-#~ "Elija la sección que desea añadir.\n"
-
-#~ msgid "path"
-#~ msgstr "path"
-
-#~ msgid "remote"
-#~ msgstr "remote"
-
-#~ msgid "sainfo"
-#~ msgstr "sainfo"
-
-#~ msgid ""
-#~ "The 'add path' section step.\n"
-#~ "\n"
-#~ "The path sections have to be on top of your racoon.conf file.\n"
-#~ "\n"
-#~ "Put your mouse over the certificate entry to obtain online help."
-#~ msgstr ""
-#~ "El paso 'añadir path'.\n"
-#~ "\n"
-#~ "Las secciones path tienen que estar en la parte superior de su archivo "
-#~ "racoon.conf.\n"
-#~ "\n"
-#~ "Ponga el ratón sobre la entrada del certificado para recibir ayuda en "
-#~ "línea."
-
-#~ msgid "path type"
-#~ msgstr "path_type"
-
-#~ msgid ""
-#~ "path include path: specifies a path to include\n"
-#~ "a file. See File Inclusion.\n"
-#~ "\tExample: path include '/etc/racoon'\n"
-#~ "\n"
-#~ "path pre_shared_key file: specifies a file containing\n"
-#~ "pre-shared key(s) for various ID(s). See Pre-shared key File.\n"
-#~ "\tExample: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
-#~ "\n"
-#~ "path certificate path: racoon(8) will search this directory\n"
-#~ "if a certificate or certificate request is received.\n"
-#~ "\tExample: path certificate '/etc/cert' ;\n"
-#~ "\n"
-#~ "File Inclusion: include file \n"
-#~ "other configuration files can be included.\n"
-#~ "\tExample: include \"remote.conf\" ;\n"
-#~ "\n"
-#~ "Pre-shared key File: Pre-shared key file defines a pair\n"
-#~ "of the identifier and the shared secret key which are used at\n"
-#~ "Pre-shared key authentication method in phase 1."
-#~ msgstr ""
-#~ "path include ruta: especifica una ruta para incluir un archivo. Consulte "
-#~ "\"Inclusión de archivos\".\n"
-#~ "\tEjemplo: path include '/etc/racoon'\n"
-#~ "\n"
-#~ "path pre_shared_key archivo: especifica un archivo que contiene\n"
-#~ "claves pre-compartidas para varios ID. Consulte \"Archivo de claves pre-"
-#~ "compartidas\".\n"
-#~ "\tEjemplo: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
-#~ "\n"
-#~ "path certificate ruta: racoon(8) buscará este directorio\n"
-#~ "si se recibe un certificado o un pedido de certificado.\n"
-#~ "\tEjemplo: path certificate '/etc/cert' ;\n"
-#~ "\n"
-#~ "Inclusión de archivos: include archivo \n"
-#~ "Se puede incluir otros archivos de configuración.\n"
-#~ "\tEjemplo: include \"remote.conf\" ;\n"
-#~ "\n"
-#~ "Archivo de claves pre-compartidas: Este archivo define un par\n"
-#~ "de claves del identificador y de la clave secreta compartida que se "
-#~ "utilizan\n"
-#~ "en la fase 1 del método de autenticación de clave pre-compartida."
-
-#~ msgid "real file"
-#~ msgstr "archivo real"
-
-#~ msgid ""
-#~ "Make sure you already have the path sections\n"
-#~ "on the top of your racoon.conf file.\n"
-#~ "\n"
-#~ "You can now choose the remote settings.\n"
-#~ "Choose continue or previous when you are done.\n"
-#~ msgstr ""
-#~ "Debe asegurarse que ya tiene las secciones path\n"
-#~ "al comienzo de su archivo racoon.conf.\n"
-#~ "\n"
-#~ "Ahora puede elegir los ajustes remotos.\n"
-#~ "Elija Continuar o Anterior cuando esté listo.\n"
-
-#~ msgid ""
-#~ "Make sure you already have the path sections\n"
-#~ "on the top of your %s file.\n"
-#~ "\n"
-#~ "You can now choose the sainfo settings.\n"
-#~ "Choose continue or previous when you are done.\n"
-#~ msgstr ""
-#~ "Debe asegurarse que ya tiene las secciones path\n"
-#~ "al comienzo de su archivo %s.\n"
-#~ "\n"
-#~ "Ahora puede elegir los ajustes sainfo.\n"
-#~ "Elija Continuar o Anterior cuando esté listo.\n"
-
-#~ msgid ""
-#~ "Your %s file has several sections or connections.\n"
-#~ "\n"
-#~ "You can choose here in the list below the one you want\n"
-#~ "to edit and then click on next.\n"
-#~ msgstr ""
-#~ "Su archivo %s tiene varias secciones o conexiones.\n"
-#~ "\n"
-#~ "En la lista de aquí abajo puede elegir la que desea\n"
-#~ "editar y luego hacer clic en Siguiente.\n"
-
-#~ msgid ""
-#~ "Your %s file has several sections.\n"
-#~ "\n"
-#~ "\n"
-#~ "You can now edit the remote section entries.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data.\n"
-#~ msgstr ""
-#~ "Su archivo %s tiene varias secciones.\n"
-#~ "\n"
-#~ "\n"
-#~ "Ahora puede editar las entradas de las secciones remote.\n"
-#~ "\n"
-#~ "Elija Continuar cuando haya finalizado de ingresar los datos.\n"
-
-#~ msgid ""
-#~ "Your %s file has several sections.\n"
-#~ "\n"
-#~ "You can now edit the sainfo section entries.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data."
-#~ msgstr ""
-#~ "Su archivo %s tiene varias secciones.\n"
-#~ "\n"
-#~ "Ahora puede editar las entradas de la sección sainfo.\n"
-#~ "\n"
-#~ "Elija Continuar cuando haya finalizado de ingresar los datos."
-
-#~ msgid ""
-#~ "This section has to be on top of your\n"
-#~ "%s file.\n"
-#~ "\n"
-#~ "Make sure all other sections follow these path\n"
-#~ "sections.\n"
-#~ "\n"
-#~ "You can now edit the path entries.\n"
-#~ "\n"
-#~ "Choose continue or previous when you are done.\n"
-#~ msgstr ""
-#~ "Esta sección debe estar al comienzo de su archivo\n"
-#~ "%s.\n"
-#~ "\n"
-#~ "Debe asegurarse que todas las demás secciones estén después de estas "
-#~ "secciones\n"
-#~ "path.\n"
-#~ "\n"
-#~ "Ahora puede editar las entradas path.\n"
-#~ "\n"
-#~ "Elija Continuar o Anterior cuando esté listo.\n"
-
-#~ msgid "path_type"
-#~ msgstr "path_type"
-
-#~ msgid "Congratulations!"
-#~ msgstr "¡Felicidades!"
-
-#~ msgid ""
-#~ "Everything has been configured.\n"
-#~ "\n"
-#~ "You may now share resources through the Internet,\n"
-#~ "in a secure way, using a VPN connection.\n"
-#~ "\n"
-#~ "You should make sure that the tunnels shorewall\n"
-#~ "section is configured."
-#~ msgstr ""
-#~ "Ya se ha configurado todo.\n"
-#~ "\n"
-#~ "Ahora puede compartir sus recursos a través de la Internet,\n"
-#~ "de manera segura, usando una conexión VPN.\n"
-#~ "\n"
-#~ "Debería asegurarse que la sección de túneles en shorewall\n"
-#~ "está configurada."
-
-#~ msgid "Sainfo source address"
-#~ msgstr "Dirección origen sainfo"
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.209 is the source address\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.1.0/24 is the source address"
-#~ msgstr ""
-#~ "sainfo (id_origen id_destino | anonymous) { declaraciones }\n"
-#~ "define los parámetros de la fase 2 de IKE\n"
-#~ "(Establecimiento IPsec-SA).\n"
-#~ "\n"
-#~ "id_origen y id_destino se construyen así:\n"
-#~ "\n"
-#~ "\taddress dirección [/ prefjo] [[puerto]] proto_ul\n"
-#~ "\n"
-#~ "Ejemplos: \n"
-#~ "\n"
-#~ "sainfo anonymous (acepta conexiones desde cualquier lugar)\n"
-#~ "\tdeje esta entrada en blanco si desea acceso anónimo\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.209 es la dirección de origen\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.1.0/24 es la dirección de origen"
-
-#~ msgid "Sainfo source protocol"
-#~ msgstr "Protocolo de origen sainfo"
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tthe first 'any' allows any protocol for the source"
-#~ msgstr ""
-#~ "sainfo (id_origen id_destino | anonymous) { declaraciones }\n"
-#~ "define los parámetros de la fase 2 de IKE\n"
-#~ "(Establecimiento IPsec-SA).\n"
-#~ "\n"
-#~ "id_origen y id_destino se construyen así:\n"
-#~ "\n"
-#~ "\taddress dirección [/ prefjo] [[puerto]] proto_ul\n"
-#~ "\n"
-#~ "Ejemplos: \n"
-#~ "\n"
-#~ "sainfo anonymous (acepta conexiones desde cualquier lugar)\n"
-#~ "\tdeje esta entrada en blanco si desea acceso anónimo\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tel primer 'any' permite cualquier protocolo para el origen"
-
-#~ msgid "Sainfo destination address"
-#~ msgstr "Dirección de destino sainfo"
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.218 is the destination address\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.2.0/24 is the destination address"
-#~ msgstr ""
-#~ "sainfo (id_origen id_destino | anonymous) { declaraciones }\n"
-#~ "define los parámetros de la fase 2 de IKE\n"
-#~ "(Establecimiento IPsec-SA).\n"
-#~ "\n"
-#~ "id_origen y id_destino se construyen así:\n"
-#~ "\n"
-#~ "\taddress dirección [/ prefjo] [[puerto]] proto_ul\n"
-#~ "\n"
-#~ "Ejemplos: \n"
-#~ "\n"
-#~ "sainfo anonymous (acepta conexiones desde cualquier lugar)\n"
-#~ "\tdeje esta entrada en blanco si desea acceso anónimo\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.218 es la dirección de destino\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.2.0/24 es la dirección de destino"
-
-#~ msgid "Sainfo destination protocol"
-#~ msgstr "Protocolo de destino sainfo"
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tthe last 'any' allows any protocol for the destination"
-#~ msgstr ""
-#~ "sainfo (id_origen id_destino | anonymous) { declaraciones }\n"
-#~ "define los parámetros de la fase 2 de IKE\n"
-#~ "(Establecimiento IPsec-SA).\n"
-#~ "\n"
-#~ "id_origen y id_destino se construyen así:\n"
-#~ "\n"
-#~ "\taddress dirección [/ prefjo] [[puerto]] proto_ul\n"
-#~ "\n"
-#~ "Ejemplos: \n"
-#~ "\n"
-#~ "sainfo anonymous (acepta conexiones desde cualquier lugar)\n"
-#~ "\tdeje esta entrada en blanco si desea acceso anónimo\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tel último 'any' permite cualquier protocolo para el destino"
-
-#~ msgid "PFS group"
-#~ msgstr "Grupo PFS"
-
-#~ msgid ""
-#~ "define the group of Diffie-Hellman exponentiations.\n"
-#~ "If you do not require PFS then you can omit this directive.\n"
-#~ "Any proposal will be accepted if you do not specify one.\n"
-#~ "group is one of the following: modp768, modp1024, modp1536.\n"
-#~ "Or you can define 1, 2, or 5 as the DH group number."
-#~ msgstr ""
-#~ "Definir el grupo de exponenciaciones Diffie-Hellman.\n"
-#~ "Si no requiere PFS entonces puede omitir esta directiva.\n"
-#~ "Se aceptará cualquier propuesta si no especifica una.\n"
-#~ "Grupo es uno de los siguientes: modp768, modp1024, modp1536.\n"
-#~ "O puede definir 1, 2, o 5 como el número de grupo DH."
-
-#~ msgid "Lifetime number"
-#~ msgstr "Número de tiempo de vida"
-
-#~ msgid ""
-#~ "define a lifetime of a certain time which will be pro-\n"
-#~ "posed in the phase 1 negotiations.  Any proposal will be\n"
-#~ "accepted, and the attribute(s) will not be proposed to\n"
-#~ "the peer if you do not specify it(them).  They can be\n"
-#~ "individually specified in each proposal.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "So, here, the lifetime numbers are 1, 1, 30, 30, 60 and 12.\n"
-#~ msgstr ""
-#~ "Define un tiempo de vida de cierto tiempo que se\n"
-#~ "propone en la fase 1 de las negociaciones. Cualquier propuesta\n"
-#~ "se aceptará, y los atributos no se propondrán al\n"
-#~ "par si no los especifica. Se pueden especificar de manera individual en "
-#~ "cada propuesta.\n"
-#~ "\n"
-#~ "Ejemplos: \n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "Entonces, aquí los números de tiempo de vida son 1, 1, 30, 30, 60 and "
-#~ "12.\n"
-
-#~ msgid "Lifetime unit"
-#~ msgstr "Unidad de tiempo de vida"
-
-#~ msgid ""
-#~ "define a lifetime of a certain time which will be pro-\n"
-#~ "posed in the phase 1 negotiations.  Any proposal will be\n"
-#~ "accepted, and the attribute(s) will not be proposed to\n"
-#~ "the peer if you do not specify it(them).  They can be\n"
-#~ "individually specified in each proposal.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "So, here, the lifetime units are 'min', 'min', 'sec', 'sec', 'sec' and "
-#~ "'hour'.\n"
-#~ msgstr ""
-#~ "Define un tiempo de vida de cierto tiempo que se\n"
-#~ "propone en la fase 1 de las negociaciones. Cualquier propuesta\n"
-#~ "se aceptará, y los atributos no se propondrán al\n"
-#~ "par si no los especifica. Se pueden especificar de manera individual en "
-#~ "cada propuesta.\n"
-#~ "\n"
-#~ "Ejemplos: \n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "Entonces, aquí las unidades de tiempo de vida son 'min', 'min', sec', "
-#~ "'sec', 'sec', y 'hour'.\n"
-
-#~ msgid "Encryption algorithm"
-#~ msgstr "Algoritmo de cifrado"
-
-#~ msgid "Authentication algorithm"
-#~ msgstr "Algoritmo de autenticación"
-
-#~ msgid "Compression algorithm"
-#~ msgstr "Algoritmo de compresión"
-
-#~ msgid "deflate"
-#~ msgstr "desinflar"
-
-#~ msgid "Remote"
-#~ msgstr "Remoto"
-
-#~ msgid ""
-#~ "remote (address | anonymous) [[port]] { statements }\n"
-#~ "specifies the parameters for IKE phase 1 for each remote node.\n"
-#~ "The default port is 500.  If anonymous is specified, the state-\n"
-#~ "ments apply to all peers which do not match any other remote\n"
-#~ "directive.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "remote anonymous\n"
-#~ "remote ::1 [8000]"
-#~ msgstr ""
-#~ "remote (dirección | anonymous) [[puerto]] { declaraciones }\n"
-#~ "Especifica los parámetros para la fase 1 de IKE para cada nodo remoto.\n"
-#~ "El puerto predeterminado es 500. Si se especifica 'anonymous', las "
-#~ "declaraciones\n"
-#~ "se aplican a todos los pares que no coincidan con otra\n"
-#~ "directiva remote.\n"
-#~ "\n"
-#~ "Ejemplos: \n"
-#~ "\n"
-#~ "remote anonymous\n"
-#~ "remote ::1 [8000]"
-
-#~ msgid "Exchange mode"
-#~ msgstr "Modo de intercambio"
-
-#~ msgid ""
-#~ "defines the exchange mode for phase 1 when racoon is the\n"
-#~ "initiator. Also it means the acceptable exchange mode\n"
-#~ "when racoon is responder. More than one mode can be\n"
-#~ "specified by separating them with a comma. All of the\n"
-#~ "modes are acceptable. The first exchange mode is what\n"
-#~ "racoon uses when it is the initiator.\n"
-#~ msgstr ""
-#~ "Define el modo de intercambio para la fase 1 cuando racoon es quien\n"
-#~ "inicia la negociación. También significa el modo de intercambio\n"
-#~ "aceptable cuando racoon responde. Se pueden especificar varios modos\n"
-#~ "separándolos por comas. Se aceptan todos los modos\n"
-#~ "El primer modo de intercambio es el que\n"
-#~ "utiliza racoon cuando es quien inicia la negociación.\n"
-
-#~ msgid "Generate policy"
-#~ msgstr "Generar política"
-
-#~ msgid "off"
-#~ msgstr "off"
-
-#~ msgid "on"
-#~ msgstr "on"
-
-#~ msgid ""
-#~ "This directive is for the responder.  Therefore you\n"
-#~ "should set passive on in order that racoon(8) only\n"
-#~ "becomes a responder.  If the responder does not have any\n"
-#~ "policy in SPD during phase 2 negotiation, and the direc-\n"
-#~ "tive is set on, then racoon(8) will choose the first pro-\n"
-#~ "posal in the SA payload from the initiator, and generate\n"
-#~ "policy entries from the proposal.  It is useful to nego-\n"
-#~ "tiate with the client which is allocated IP address\n"
-#~ "dynamically.  Note that inappropriate policy might be\n"
-#~ "installed into the responder's SPD by the initiator.  So\n"
-#~ "that other communication might fail if such policies\n"
-#~ "installed due to some policy mismatches between the ini-\n"
-#~ "tiator and the responder.  This directive is ignored in\n"
-#~ "the initiator case.  The default value is off."
-#~ msgstr ""
-#~ "Esta directiva es para quien responde. Por lo tanto,\n"
-#~ "debería ponerlo en passive on para que racoon(8) sólo\n"
-#~ "sea un receptor. Si el receptor no tiene una\n"
-#~ "poĺitica en SPD durante la fase 2, y la directiva\n"
-#~ "está puesta en on, entonces racoon(8) va a elegir la primer\n"
-#~ "propuesta en la carga SA del iniciador, y generar entradas de\n"
-#~ "políticas a partir de la propuesta. Es útil para\n"
-#~ "negociar con los clientes con direcciones IP dinámicas.\n"
-#~ "Note que puede haber una política no apropiada\n"
-#~ "instalada por el iniciador en el SPD del receptor. Entonces\n"
-#~ "otras comunicaciones pueden fallar si tales políticas\n"
-#~ "se instalan debido a inconsistencias entre el\n"
-#~ "iniciador y el receptor. En caso del iniciador\n"
-#~ "esta directiva se ignora. El valor predeterminado es \"off\"."
-
-#~ msgid "Passive"
-#~ msgstr "Pasivo"
-
-#~ msgid ""
-#~ "If you do not want to initiate the negotiation, set this\n"
-#~ "to on.  The default value is off.  It is useful for a\n"
-#~ "server."
-#~ msgstr ""
-#~ "Si no desea iniciar la negociación, ponga esto en \"on\". El valor "
-#~ "predeterminado es \"off\". Es útil para un servidor."
-
-#~ msgid "Certificate type"
-#~ msgstr "Tipo de certificado"
-
-#~ msgid "My certfile"
-#~ msgstr "Mi certfile"
-
-#~ msgid "Name of the certificate"
-#~ msgstr "Nombre del certificado"
-
-#~ msgid "My private key"
-#~ msgstr "Mi clave privada"
-
-#~ msgid "Name of the private key"
-#~ msgstr "Nombre de la clave privada"
-
-#~ msgid "Peers certfile"
-#~ msgstr "certfile de Pares"
-
-#~ msgid "Name of the peers certificate"
-#~ msgstr "Nombre del certfile de los pares"
-
-#~ msgid "Verify cert"
-#~ msgstr "Verificar cert."
-
-#~ msgid ""
-#~ "If you do not want to verify the peer's certificate for\n"
-#~ "some reason, set this to off.  The default is on."
-#~ msgstr ""
-#~ "Si no desea verificar el certificado de los pares por algún motivo, deje "
-#~ "esto en \"off\". Lo predeterminado es \"on\"."
-
-#~ msgid "My identifier"
-#~ msgstr "Mi identificador"
-
-#~ msgid ""
-#~ "specifies the identifier sent to the remote host and the\n"
-#~ "type to use in the phase 1 negotiation.  address, FQDN,\n"
-#~ "user_fqdn, keyid and asn1dn can be used as an idtype.\n"
-#~ "they are used like:\n"
-#~ "\tmy_identifier address [address];\n"
-#~ "\t\tthe type is the IP address.  This is the default\n"
-#~ "\t\ttype if you do not specify an identifier to use.\n"
-#~ "\tmy_identifier user_fqdn string;\n"
-#~ "\t\tthe type is a USER_FQDN (user fully-qualified\n"
-#~ "\t\tdomain name).\n"
-#~ "\tmy_identifier FQDN string;\n"
-#~ "\t\tthe type is a FQDN (fully-qualified domain name).\n"
-#~ "\tmy_identifier keyid file;\n"
-#~ "\t\tthe type is a KEY_ID.\n"
-#~ "\tmy_identifier asn1dn [string];\n"
-#~ "\t\tthe type is an ASN.1 distinguished name.  If\n"
-#~ "\t\tstring is omitted, racoon(8) will get DN from\n"
-#~ "\t\tSubject field in the certificate.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "my_identifier user_fqdn \"myemail@mydomain.com\""
-#~ msgstr ""
-#~ "Especifica el identificador que se envía al equipo remoto y el tipo a "
-#~ "usar en la fase 1. address, FQDN,\n"
-#~ "user_fqdn, keyid y asn1dn se pueden usar como idtype.\n"
-#~ "Se usan así:\n"
-#~ "\tmy_identifier address [dirección];\n"
-#~ "\t\tel tipo es la dirección IP. Tipo predeterminado\n"
-#~ "\t\tsi no especifica un identificador a usar.\n"
-#~ "\tmy_identifier user_fqdn cadena;\n"
-#~ "\t\tel tipo es un USER_FQDN (nombre de dominio completamente calificado\n"
-#~ "\t\tde usuario).\n"
-#~ "\tmy_identifier FQDN cadena;\n"
-#~ "\t\tel tipo es un FQDN (nombre de dominio completamente calificado).\n"
-#~ "\tmy_identifier keyid archivo;\n"
-#~ "\t\tel tipo es un KEY_ID.\n"
-#~ "\tmy_identifier asn1dn [cadena];\n"
-#~ "\t\tel tipo es un nombre distinguido ASN.1. Si se\n"
-#~ "omite la cadena, racoon(8) obtendrá el DN\n"
-#~ "\t\ta partir del campo Subject en el certificado.\n"
-#~ "\n"
-#~ "Ejemplos: \n"
-#~ "\n"
-#~ "my_identifier user_fqdn \"micorreo@midominio.com\""
-
-#~ msgid "Peers identifier"
-#~ msgstr "Identificador de pares"
-
-#~ msgid "Proposal"
-#~ msgstr "Propuesta"
-
-#~ msgid ""
-#~ "specify the encryption algorithm used for the\n"
-#~ "phase 1 negotiation. This directive must be defined. \n"
-#~ "algorithm is one of the following: \n"
-#~ "\n"
-#~ "DES, 3DES, blowfish, cast128 for oakley.\n"
-#~ "\n"
-#~ "For other transforms, this statement should not be used."
-#~ msgstr ""
-#~ "Especifica el algoritmo de cifrado utilizado para la\n"
-#~ "fase 1. Se debe definir esta directiva.\n"
-#~ "El algoritmo es uno de los siguientes: \n"
-#~ "\n"
-#~ "DES, 3DES, blowfish, cast128 for oakley.\n"
-#~ "\n"
-#~ "Para otras transformaciones, no se debe usar esta declaración."
-
-#~ msgid "Hash algorithm"
-#~ msgstr "Algoritmo de hash"
-
-#~ msgid "Authentication method"
-#~ msgstr "Método de autenticación"
-
-#~ msgid "DH group"
-#~ msgstr "Grupo DH"
-
-#~ msgid "Command"
-#~ msgstr "Comando"
-
-#~ msgid "Source IP range"
-#~ msgstr "Rango de IP de origen"
-
-#~ msgid "Destination IP range"
-#~ msgstr "Rango de IP de destino"
-
-#~ msgid "Upper-layer protocol"
-#~ msgstr "Protocolo de capa superior"
-
-#~ msgid "any"
-#~ msgstr "cualquiera"
-
-#~ msgid "Flag"
-#~ msgstr "Bandera"
-
-#~ msgid "Direction"
-#~ msgstr "Dirección"
-
-#~ msgid "IPsec policy"
-#~ msgstr "Política IPsec"
-
-#~ msgid "ipsec"
-#~ msgstr "ipsec"
-
-#~ msgid "discard"
-#~ msgstr "descartar"
-
-#~ msgid "none"
-#~ msgstr "ninguno"
-
-#~ msgid "Mode"
-#~ msgstr "Modo"
-
-#~ msgid "tunnel"
-#~ msgstr "túnel"
-
-#~ msgid "transport"
-#~ msgstr "transporte"
-
-#~ msgid "Source/destination"
-#~ msgstr "Origen/destino"
-
-#~ msgid "Level"
-#~ msgstr "Nivel"
-
-#~ msgid "require"
-#~ msgstr "requerir"
-
-#~ msgid "default"
-#~ msgstr "predeterminada"
-
-#~ msgid "use"
-#~ msgstr "usar"
-
-#~ msgid "unique"
-#~ msgstr "única"
-
-#~ msgid "You need to log out and back in again for changes to take effect"
-#~ msgstr ""
-#~ "Debe desconectarse y volver a conectarse para que los cambios tengan "
-#~ "efecto"
-
-#~ msgid "Process attack"
-#~ msgstr "Procesar ataque"
-
-#~ msgid "Interactive Firewall: intrusion detected"
-#~ msgstr "Cortafuegos interactivo: intrusión detectada"
-
-#~ msgid "What do you want to do with this attacker?"
-#~ msgstr "¿Qué desea hacer con este atacante?"
-
-#~ msgid "Attack details"
-#~ msgstr "Detalles del ataque"
-
-#~ msgid "Attack time: %s"
-#~ msgstr "Fecha y hora del ataque: %s"
-
-#~ msgid "Network interface: %s"
-#~ msgstr "Interfaz de red: %s"
-
-#~ msgid "Attack type: %s"
-#~ msgstr "Tipo de ataque: %s"
-
-#~ msgid "Protocol: %s"
-#~ msgstr "Protocolo: %s"
-
-#~ msgid "Attacker IP address: %s"
-#~ msgstr "Dirección IP del atacante: %s"
-
-#~ msgid "Attacker hostname: %s"
-#~ msgstr "Nombre de equipo del atacante: %s"
-
-#~ msgid "Service attacked: %s"
-#~ msgstr "Servicio atacado: %s"
-
-#~ msgid "Port attacked: %s"
-#~ msgstr "Puerto atacado: %s"
-
-#~ msgid "Type of ICMP attack: %s"
-#~ msgstr "Tipo de ataque ICMP: %s"
-
-#~ msgid "Always blacklist (do not ask again)"
-#~ msgstr "Siempre añadir a la lista negra (no volver a preguntar)"
-
-#~ msgid "Ignore"
-#~ msgstr "Ignorar"
-
-#~ msgid "Interactive Firewall: new service"
-#~ msgstr "Cortafuegos interactivo: nuevo servicio"
-
-#~ msgid "Process connection"
-#~ msgstr "Procesar conexión"
-
-#~ msgid "Do you want to open this service?"
-#~ msgstr "¿Desea abrir este servicio?"
-
-#~ msgid "Remember this answer"
-#~ msgstr "Recordar esta respuesta"
-
-#~ msgid "Use Cisco-UDP encapsulation"
-#~ msgstr "Usar encaspulado Cisco UDP"
-
-#~ msgid "Gateway:"
-#~ msgstr "Pasarela:"
-
-#~ msgid "Interface:"
-#~ msgstr "Interfaz:"
-
-#~ msgid "Manage connections"
-#~ msgstr "Administrar conexiones"
-
-#~ msgid "IP configuration"
-#~ msgstr "Configuración IP"
-
-#~ msgid "DNS servers"
-#~ msgstr "Servidores DNS"
-
-#~ msgid "Search Domain"
-#~ msgstr "Dominio de búsqueda"
-
-#~ msgid "static"
-#~ msgstr "estática"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Start at boot"
-#~ msgstr "Iniciar al arrancar"
-
-#~ msgid "Flow control"
-#~ msgstr "Control de flujo"
-
-#~ msgid "Line termination"
-#~ msgstr "Terminación de línea"
-
-#~ msgid "Modem timeout"
-#~ msgstr "Tiempo de espera del módem"
-
-#~ msgid "Use lock file"
-#~ msgstr "Usar archivo de traba"
-
-#~ msgid "Wait for dialup tone before dialing"
-#~ msgstr "Esperar el tono de discado antes de discar"
-
-#~ msgid "Busy wait"
-#~ msgstr "Espera activa"
-
-#~ msgid "Modem sound"
-#~ msgstr "Sonido del módem"
-
-#~ msgid "Vendor"
-#~ msgstr "Fabricante"
-
-#~ msgid "Description"
-#~ msgstr "Descripción"
-
-#~ msgid "Media class"
-#~ msgstr "Clase de soporte"
-
-#~ msgid "Module name"
-#~ msgstr "Nombre del módulo"
-
-#~ msgid "Mac Address"
-#~ msgstr "Dirección MAC"
-
-#~ msgid "Bus"
-#~ msgstr "Bus"
-
-#~ msgid "Location on the bus"
-#~ msgstr "Ubicación en el bus"
-
-#~ msgid "Remove a network interface"
-#~ msgstr "Quitar una interfaz de red"
-
-#~ msgid "Select the network interface to remove:"
-#~ msgstr "Seleccione la interfaz de red a quitar:"
-
-#~ msgid ""
-#~ "An error occurred while deleting the \"%s\" network interface:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Ocurrió un error mientras se quitaba la interfaz de red \"%s\":\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Congratulations, the \"%s\" network interface has been successfully "
-#~ "deleted"
-#~ msgstr ""
-#~ "Felicidades, se ha quitado satisfactoriamente la interfaz de red \"%s\"."
-
-#~ msgid "Disconnect..."
-#~ msgstr "Desconectar..."
-
-#~ msgid "Connect..."
-#~ msgstr "Conectar..."
-
-#~ msgid "Internet connection configuration"
-#~ msgstr "Configuración de la conexión a Internet"
-
-#~ msgid "Host name (optional)"
-#~ msgstr "Nombre del equipo (opcional)"
-
-#~ msgid "Third DNS server (optional)"
-#~ msgstr "Tercer servidor DNS (opcional)"
-
-#~ msgid "Internet Connection Configuration"
-#~ msgstr "Configuración de la conexión a Internet"
-
-#~ msgid "Internet access"
-#~ msgstr "Acceso a Internet"
-
-#~ msgid "Status:"
-#~ msgstr "Estado:"
-
-#~ msgid "Parameters"
-#~ msgstr "Parámetros"
-
-#~ msgid "Attacker"
-#~ msgstr "Atacante"
-
-#~ msgid "Attack type"
-#~ msgstr "Tipo de ataque"
-
-#~ msgid "Failed to add printers."
-#~ msgstr "Fallo al agregar impresoras."
