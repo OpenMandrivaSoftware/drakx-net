@@ -361,6 +361,7 @@ sub check_device {
 sub load_interface_settings {
     my ($self) = @_;
     $self->SUPER::load_interface_settings;
+    $self->{hide_passwords} = 1;
 }
 
 sub get_networks {
@@ -451,7 +452,10 @@ sub get_network_access_settings {
         { label => N("Encryption mode"), val => \$self->{access}{network}{encryption}, list => [ keys %wireless_enc_modes ],
           sort => 1, format => sub { translate($wireless_enc_modes{$_[0]}) } },
         { label => N("Encryption key"), val => \$self->{access}{network}{key},
+          hidden => sub { $self->{hide_passwords} },
           disabled => sub { member($self->{access}{network}{encryption}, qw(none wpa-eap)) } },
+        { text => N("Hide password"),
+          type => "bool", val => \$self->{hide_passwords} },
         { text => N("Force using this key as ASCII string (e.g. for Livebox)"),
           type => "bool", val => \$self->{access}{network}{force_ascii_key},
           disabled => sub {
@@ -465,6 +469,7 @@ sub get_network_access_settings {
 need to specify domain then try the untested syntax
   DOMAIN\\username") },
         { label => N("EAP Password"), val => \$self->{access}{network}{eap_password},
+          hidden => sub { $self->{hide_passwords} },
           disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
 	  help => N(" Password: A string.
 Note that this is not the same thing as a psk.
