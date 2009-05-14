@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-fi\n"
 "POT-Creation-Date: 2009-04-02 13:30-0300\n"
-"PO-Revision-Date: 2009-04-27 16:23+0300\n"
+"PO-Revision-Date: 2009-05-15 01:55+0300\n"
 "Last-Translator: Jani Välimaa <jani.valimaa@gmail.com>\n"
 "Language-Team: Finnish <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -1206,10 +1206,9 @@ msgstr "Hakemisto:"
 msgid "Host access"
 msgstr "Sallitut koneet"
 
-#: ../bin/draknfs:382
-#, fuzzy, c-format
+#: ../bin/draknfs:382, c-format
 msgid "Access:"
-msgstr "Yksityisyys:"
+msgstr "Pääsyoikeudet:"
 
 #: ../bin/draknfs:383
 #, c-format
@@ -1251,10 +1250,11 @@ msgstr "Sallitut koneet täytyy määritellä."
 msgid "Share Directory"
 msgstr "Jaettava hakemisto"
 
+# Vaatii tarkistusta
 #: ../bin/draknfs:514
 #, c-format
 msgid "Hosts Wildcard"
-msgstr ""
+msgstr "Jokerimerkityt koneet"
 
 #: ../bin/draknfs:514
 #, c-format
@@ -1352,16 +1352,14 @@ msgstr "Luontimaski"
 msgid "Directory mask"
 msgstr "Hakemistomaski"
 
-#: ../bin/draksambashare:80
-#, fuzzy, c-format
+#: ../bin/draksambashare:80, c-format
 msgid "Read list"
-msgstr "Lukulista"
+msgstr "Lukuoikeudet"
 
 #: ../bin/draksambashare:81 ../bin/draksambashare:126
-#: ../bin/draksambashare:602
-#, fuzzy, c-format
+#: ../bin/draksambashare:602, c-format
 msgid "Write list"
-msgstr "Kirjoituslista"
+msgstr "Kirjoitusoikeudet"
 
 #: ../bin/draksambashare:82 ../bin/draksambashare:158
 #, c-format
@@ -1459,15 +1457,13 @@ msgstr "Luontioikeudet"
 msgid "Use client driver"
 msgstr "Käytä asiakaskoneen ajuria"
 
-#: ../bin/draksambashare:156
-#, fuzzy, c-format
+#: ../bin/draksambashare:156, c-format
 msgid "Read List"
-msgstr "Lukulista"
+msgstr "Lukuoikeudet"
 
-#: ../bin/draksambashare:157
-#, fuzzy, c-format
+#: ../bin/draksambashare:157, c-format
 msgid "Write List"
-msgstr "Kirjoituslista"
+msgstr "Kirjoitusoikeudet"
 
 #: ../bin/draksambashare:162
 #, c-format
@@ -1872,6 +1868,11 @@ msgid ""
 "that of the operating system on your network with the highest current value. "
 "ie: os level = 34"
 msgstr ""
+"Järjestelmänlaajuinen OS-tasoasetus määrittelee käyttöjärjestelmän tason, "
+"joksi Samba tekeytyy ohjauskoneen valinnan aikana. Jos Samban halutaan "
+"voittavan valinta ja tulevan ohjauskoneeksi, voidaan arvoksi antaa suurempi "
+"kuin suurimman verkossa tällä hetkellä olevan koneen arvo on. "
+"Esim: os level = 34"
 
 #: ../bin/draksambashare:1095
 #, c-format
@@ -3600,7 +3601,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:550
 #, c-format
 msgid "EAP outer identity"
-msgstr ""
+msgstr "EAP:n ulompi identiteetti"
 
 #: ../lib/network/connection/wireless.pm:552
 #, c-format
@@ -3609,11 +3610,14 @@ msgid ""
 "unencrypted identity with EAP types that support different\n"
 "tunnelled identity, e.g., TTLS"
 msgstr ""
+"EAP:n anonyymi identiteetti: käytetään salaamattomana\n"
+"identiteettinä EAP-tyyppien kanssa, jotka tukevat erilaisia\n"
+"tunneloituja identiteettejä, esim. TTLS"
 
 #: ../lib/network/connection/wireless.pm:555
 #, c-format
 msgid "EAP phase2"
-msgstr ""
+msgstr "EAP-vaihe 2"
 
 #: ../lib/network/connection/wireless.pm:557
 #, c-format
@@ -3623,14 +3627,17 @@ msgid ""
 "auth=MSCHAPV2 for PEAP or\n"
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
+"Sisempi tunnistautuminen TLS-tunnelin parametrien kera.\n"
+"Arvo on merkkijono muotoa kenttä=arvo, esim:\n"
+"auth=MSCHAPV2 (PEAP:lle) tai\n"
+"autheap=MSCHAPV2 autheap=MD5 (TTLS:lle)"
 
 #: ../lib/network/connection/wireless.pm:561
 #, c-format
 msgid "EAP CA certificate"
 msgstr "EAP CA-sertifikaatti"
 
-#: ../lib/network/connection/wireless.pm:563
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:563, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
 "can have one or more trusted CA certificates. If ca_cert are not\n"
@@ -3640,11 +3647,15 @@ msgid ""
 msgstr ""
 "CA-sertifikaatin täydellinen polku ja tiedostonimi.\n"
 "Tiedostossa voi olla yksi tai useampia sertifikaatteja.\n"
+"Jos ca_cert:ia ei ole sisällytetty, palvelimen sertifikaattia\n"
+"ei varmisteta. Jos mahdollista, luotetut CA-sertifikaatit\n"
+"tulisi aina määritellä käytettäessä TLS:ää, TTLS:ää tai\n"
+"PEAP:ia."
 
 #: ../lib/network/connection/wireless.pm:568
 #, c-format
 msgid "EAP certificate subject match"
-msgstr ""
+msgstr "EAP-sertifikaatin tietojen täsmäys"
 
 #: ../lib/network/connection/wireless.pm:570
 #, c-format
@@ -3655,11 +3666,16 @@ msgid ""
 "string in the subject.  The subject string is in following format:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
+" Aliavaimien täytyy täsmätä tunnistautumispalvelimen\n"
+"sertifikaatin tietoihin. Jos merkkijono on määritelty,\n"
+"palvelimen sertifikaatti hyväksytään vain, jos se\n"
+"sisältää määritellyt merkkijonot. Merkkijono on muotoa:\n"
+"/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
 #: ../lib/network/connection/wireless.pm:575
 #, c-format
 msgid "EAP extra directives"
-msgstr ""
+msgstr "EAP:n lisätoimintaohjeet"
 
 #: ../lib/network/connection/wireless.pm:577
 #, c-format
@@ -3678,6 +3694,20 @@ msgid ""
 "\tOthers such as key_mgmt, eap maybe used to force\n"
 "\tspecial settings different from the U.I settings."
 msgstr ""
+"Tässä voidaan määritellä wpa_supplicant:lle välitettävät\n"
+"lisäasetukset. Asetuksien muoto on asetus=arvo. Useita\n"
+"arvoja voidaan määritellä erittelemällä arvot #-merkillä.\n"
+"HUOM! Lisäasetukset välitetään tarkistamatta ja ne voivat\n"
+"aiheuttaa WPA-neuvottelun epäonnistumisen huomaamatta.\n"
+"Tuettuja lisäasetukset suojataan muutoksilta muokkauksien\n"
+"välissä.\n"
+"Tuetut lisäasetukset:\n"
+"\tdisabled, id_str, bssid, priority, auth_alg, eapol_flags,\n"
+"\tproactive_key_caching, peerkey, ca_path, private_key,\n"
+"\tprivate_key_passwd, dh_file, altsubject_match, phase1,\n"
+"\tfragment_size and eap_workaround, pairwise, group\n"
+"\tOthers such as key_mgmt, eap maybe used to force\n"
+"\tspecial settings different from the U.I settings."
 
 #: ../lib/network/connection/wireless.pm:597
 #, c-format
@@ -5156,6 +5186,8 @@ msgstr ""
 #, c-format
 msgid "Some components (%s) are required but aren't available for %s hardware."
 msgstr ""
+"Joitakin komponentteja (%s) vaaditaan, mutta eivät ole saatavilla "
+"laitteistolle %s."
 
 #: ../lib/network/thirdparty.pm:145
 #, c-format
@@ -5352,7 +5384,7 @@ msgstr "Käynnistetään yhteyttä.."
 #: ../lib/network/vpn/openvpn.pm:380
 #, c-format
 msgid "Please insert your token"
-msgstr ""
+msgstr "Anna tunniste"
 
 #: ../lib/network/vpn/openvpn.pm:391
 #, c-format
