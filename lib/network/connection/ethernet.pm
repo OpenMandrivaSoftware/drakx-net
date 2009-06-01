@@ -76,7 +76,11 @@ sub load_interface_settings {
     my ($self) = @_;
 
     $self->network::connection::load_interface_settings;
+    $self->map_ifcfg2config_settings;
+}
 
+sub map_ifcfg2config_settings {
+    my ($self) = @_;
     $self->{protocol} = $self->{ifcfg}{BOOTPROTO};
 
     $self->{address}{needhostname} = $self->get_ifcfg_bool('NEEDHOSTNAME');

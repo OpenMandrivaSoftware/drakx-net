@@ -360,8 +360,15 @@ sub check_device {
 
 sub load_interface_settings {
     my ($self) = @_;
-    $self->SUPER::load_interface_settings;
+    $self->network::connection::load_interface_settings;
     $self->{hide_passwords} = 1;
+    # override ifcfg with network-specific settings if available
+    my $network = $self->get_selected_network;
+    $self->{ifcfg}= $network ?
+      get_network_ifcfg($network->{ap}) || get_network_ifcfg($network->{essid}) :
+      $self->{ifcfg};
+
+    $self->SUPER::map_ifcfg2config_settings;
 }
 
 sub get_networks {
@@ -401,11 +408,8 @@ sub get_network_ifcfg {
 sub guess_network_access_settings {
     my ($self) = @_;
 
-    my $ifcfg;
     my $network = $self->get_selected_network;
-    $ifcfg = $network ?
-      get_network_ifcfg($network->{ap}) || get_network_ifcfg($network->{essid}) :
-      $self->{ifcfg};
+    my $ifcfg = $self->{ifcfg};
     $ifcfg ||= {};
 
     $self->{access}{network}{bssid} = $network && $network->{hidden} && $network->{ap};
