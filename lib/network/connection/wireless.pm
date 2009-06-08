@@ -450,12 +450,10 @@ sub get_network_access_settings {
         { label => N("Operating Mode"), val => \$self->{access}{network}{mode},
           list => [ N_("Ad-hoc"), N_("Managed"), N_("Master"), N_("Repeater"), N_("Secondary"), N_("Auto") ],
           format => \&translate,
-          advanced => 1,
         },
         { label => N("Network name (ESSID)"), val => \$self->{access}{network}{essid},
           disabled => sub { my $network = $self->get_selected_network; $network && $network->{essid} } },
         { label => N("Encryption mode"), val => \$self->{access}{network}{encryption}, list => [ keys %wireless_enc_modes ],
-          advanced => 1,
           sort => 1, format => sub { translate($wireless_enc_modes{$_[0]}) } },
         { label => N("Encryption key"), val => \$self->{access}{network}{key},
           hidden => sub { $self->{hide_passwords} },
@@ -464,21 +462,18 @@ sub get_network_access_settings {
           type => "bool", val => \$self->{hide_passwords} },
         { text => N("Force using this key as ASCII string (e.g. for Livebox)"),
           type => "bool", val => \$self->{access}{network}{force_ascii_key},
-          advanced => 1,
           disabled => sub {
               #- only for WEP keys looking like hexadecimal
               !member($self->{access}{network}{encryption}, qw(open restricted)) ||
               !get_hex_key($self->{access}{network}{key});
           } },
         { label => N("EAP Login/Username"), val => \$self->{access}{network}{eap_identity},
-          advanced => 1,
           disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
 	  help => N("The login or username. Format is plain text. If you
 need to specify domain then try the untested syntax
   DOMAIN\\username") },
         { label => N("EAP Password"), val => \$self->{access}{network}{eap_password},
           hidden => sub { $self->{hide_passwords} },
-          advanced => 1,
           disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
 	  help => N(" Password: A string.
 Note that this is not the same thing as a psk.
@@ -495,7 +490,6 @@ automatically PEAP and TTLS modes.
   TLS mode is completely certificate based and may ignore
 the username and password values specified here.") },
         { label => N("EAP client certificate"), val => \$self->{access}{network}{eap_client_cert},
-          advanced => 1,
           disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
           help => N("The complete path and filename of client certificate. This is
 only used for EAP certificate based authentication. It could be
