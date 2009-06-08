@@ -33,7 +33,7 @@ sub get_devices {
 
 sub ask_driver {
     my ($in) = @_;
-    if (my $inf_file = $in->ask_file(N("Please select the Windows driver (.inf file)"), "/media")) {
+    if (my $inf_file = $in->ask_file(N("Please select the Windows driver (.inf file)"), $::prefix . "/media")) {
         my $driver = basename(lc($inf_file));
         $driver =~ s/\.inf$//;
 
