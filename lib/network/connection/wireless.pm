@@ -930,8 +930,8 @@ sub wpa_supplicant_read_conf() {
     foreach (cat_($::prefix . $wpa_supplicant_conf)) {
         if ($network) {
             #- in a "network = {}" block
-            # value is either the string with "quotes" - or a non-whitespace containing string
-            if (/^\s*(\w+)=\s*(?|([^"]\S*)|("[^"]*")).*$/) {
+            # value is either the string with "quotes" - or a full-length string
+            if (/^\s*(\w+)=\s*(?|([^"].*)|("[^"]*")).*$/) {
                 $network->{$1} = $2;
             } elsif (/^\}/) {
                 #- end of network block
