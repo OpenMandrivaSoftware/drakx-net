@@ -687,7 +687,6 @@ sub add_network_to_wpa_supplicant {
         wpa_supplicant_add_eap_network($self->{access}{network});
     } else {
         wpa_supplicant_add_network($self->{access}{network});
-#        wpa_supplicant_add_network($self->{access}{network}{essid}, $self->{access}{network}{bssid}, $self->{access}{network}{encryption}, $self->{access}{network}{key}, $self->{access}{network}{force_ascii_key}, $self->{access}{network}{mode});
     }
     #- this should be handled by the monitoring daemon instead
     run_program::run('/usr/sbin/wpa_cli', 'reconfigure');
