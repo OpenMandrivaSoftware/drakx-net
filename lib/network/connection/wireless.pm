@@ -575,8 +575,7 @@ the authentication server certificate. If this string is set,
 the server sertificate is only accepted if it contains this
 string in the subject.  The subject string is in following format:
 /C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as\@example.com") },
-        { label => N("EAP extra directives"), val => \$self->{access}{network}{eapextra}, advanced => 1,
-          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
+        { label => N("Extra directives"), val => \$self->{access}{network}{extra}, advanced => 1,
           help => N("Here one can pass extra settings to wpa_supplicant
 The expected format is a string field=value pair. Multiple values
 maybe specified, separating each value with the # character.
@@ -687,7 +686,8 @@ sub add_network_to_wpa_supplicant {
     if ($self->{access}{network}{encryption} eq 'wpa-eap') {
         wpa_supplicant_add_eap_network($self->{access}{network});
     } else {
-        wpa_supplicant_add_network($self->{access}{network}{essid}, $self->{access}{network}{bssid}, $self->{access}{network}{encryption}, $self->{access}{network}{key}, $self->{access}{network}{force_ascii_key}, $self->{access}{network}{mode});
+        wpa_supplicant_add_network($self->{access}{network});
+#        wpa_supplicant_add_network($self->{access}{network}{essid}, $self->{access}{network}{bssid}, $self->{access}{network}{encryption}, $self->{access}{network}{key}, $self->{access}{network}{force_ascii_key}, $self->{access}{network}{mode});
     }
     #- this should be handled by the monitoring daemon instead
     run_program::run('/usr/sbin/wpa_cli', 'reconfigure');
@@ -888,8 +888,17 @@ sub wpa_supplicant_get_driver {
 }
 
 sub wpa_supplicant_add_network {
-    my ($essid, $bssid, $enc_mode, $key, $force_ascii, $mode) = @_;
+    my ($ui_input) = @_;
     my $conf = wpa_supplicant_read_conf();
+
+    # use shorter variables
+    my $essid = $ui_input->{essid};
+    my $bssid = $ui_input->{bssid};
+    my $enc_mode = $ui_input->{encryption};
+    my $key = $ui_input->{key};
+    my $force_ascii = $ui_input->{force_ascii_key};
+    my $mode = $ui_input->{mode};
+
     my $network = {
         ssid => qq("$essid"),
         scan_ssid => to_bool($bssid), #- hidden or non-broadcasted SSIDs
@@ -910,6 +919,9 @@ sub wpa_supplicant_add_network {
             });
         }
     }
+
+    #- handle extra variables as final overides
+    handle_extra_params($network, $ui_input->{extra});
 
     @$conf = difference2($conf, [ wpa_supplicant_find_similar($conf, $network) ]);
     push @$conf, $network;
@@ -1018,16 +1030,16 @@ sub wpa_supplicant_load_eap_settings {
     my $conf = wpa_supplicant_read_conf();
     foreach my $old_net (@$conf) {
 	if ($old_net->{ssid} eq $network->{essid} || $old_net->{ssid} eq $quoted_essid) {
-            $network->{eapextra} = '';
+            $network->{extra} = '';
             foreach my $eap_var (keys %eap_vars) {
                 next if $eap_var eq 'ssid';
                 my $ui_var = join('_', "eap", $eap_var);
                 if (defined $old_net->{$eap_var}) {
                     if ($eap_vars{$eap_var} == 0) {
-                        if ($network->{eapextra} eq "") {
-                            $network->{eapextra} = "$eap_var=$old_net->{$eap_var}";
+                        if ($network->{extra} eq "") {
+                            $network->{extra} = "$eap_var=$old_net->{$eap_var}";
                         } else {
-                            $network->{eapextra} = join('#', $network->{eapextra}, "$eap_var=$old_net->{$eap_var}");
+                            $network->{extra} = join('#', $network->{extra}, "$eap_var=$old_net->{$eap_var}");
                         }
                     } else {
                         $network->{$ui_var} = $old_net->{$eap_var};
@@ -1045,6 +1057,17 @@ sub wpa_supplicant_load_eap_settings {
     }
 }
 
+sub handle_extra_params {
+    my ($network, $extra) = @_;
+    #- handle extra variables as final overides
+    if (defined $extra && $extra ne "") {
+        #- FIXME: should split it on what the # sign?
+        foreach my $extra_var (split('#', $extra)) {
+            my ($key, $val) = split('=', $extra_var, 2);
+            $network->{$key} = $val;
+        }
+    }
+}
 sub wpa_supplicant_add_eap_network {
     my ($ui_input) = @_;
 
@@ -1080,14 +1103,9 @@ sub wpa_supplicant_add_eap_network {
             $network->{$eap_var} = $eap_vars{$eap_var} == 2 ? qq("$ui_input->{$key}") : $ui_input->{$key};
         }
     }
-    #- handle eapextra as final overides
-    if (defined $ui_input->{eapextra} && $ui_input->{eapextra} ne "") {
-        #- FIXME: should split it on what the # sign?
-        foreach my $eap_var (split('#', $ui_input->{eapextra})) {
-            my ($key, $val) = split('=', $eap_var, 2);
-            $network->{$key} = $val;
-        }
-    }
+    #- handle extra variables as final overides
+    handle_extra_params($network, $ui_input->{extra});
+
     $network->{mode} = to_bool($ui_input->{mode} eq 'Ad-Hoc');
 
     @$conf = difference2($conf, [ wpa_supplicant_find_similar($conf, $network) ]);
