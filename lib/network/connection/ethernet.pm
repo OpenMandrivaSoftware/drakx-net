@@ -185,8 +185,12 @@ sub check_address_settings {
             return 0;
         }
         #- test if IP address is already used
-        if (find { text2bool($_->{ONBOOT}) && $_->{DEVICE} ne $self->get_interface && $_->{IPADDR} eq $self->{address}{ip_address} } values %{$net->{ifcfg}}) {
-            $self->{address}{error}{message} = N("%s is already used by connection that starts on boot. To use this address with this connection, first disable all other devices which use it, or configure them not to start on boot", $self->{address}{ip_address});
+        if (my $conflict = find_index { text2bool($_->{ONBOOT}) && $_->{DEVICE} ne $self->get_interface && $_->{IPADDR} eq $self->{address}{ip_address} } values %{$net->{ifcfg}} ) {
+            # find out what connection we are conflicting with
+            my @conflicting_conn = values %{$net->{ifcfg}};
+            my $conflict_device = @conflicting_conn[$conflict]->{DEVICE};
+
+            $self->{address}{error}{message} = N("%s is already used by connection that starts on boot (%s). To use this address with this connection, first disable all other devices which use it, or configure them not to start on boot", $self->{address}{ip_address}, $conflict_device);
             $self->{address}{error}{field} = \$self->{address}{ip_address};
             return 0;
         }
