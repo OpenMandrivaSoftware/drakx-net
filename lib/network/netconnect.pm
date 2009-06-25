@@ -265,8 +265,8 @@ If you do not know it, keep the preselected protocol.") },
                        pre => sub {
                            $address_settings = $connection->can('get_address_settings') && $connection->get_address_settings;
                            $connection->guess_address_settings if $connection->can('guess_address_settings');
-                           $hostname_settings = $connection->can('get_hostname_settings') && $connection->get_hostname_settings;
                            $connection->guess_hostname_settings if $connection->can('guess_hostname_settings');
+                           $hostname_settings = $connection->can('get_hostname_settings') && $connection->get_hostname_settings;
                        },
                        name => sub { $net->{type}->get_type_name . "\n\n" . $connection->get_address_settings_label },
                        data => sub { [ @$address_settings, @$hostname_settings ] },

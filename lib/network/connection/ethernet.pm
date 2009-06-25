@@ -209,6 +209,8 @@ sub guess_hostname_settings {
 sub get_hostname_settings {
     my ($self) = @_;
     my $auto_hostname = sub { $self->{protocol} eq 'dhcp' && $self->{address}{needhostname} };
+    # configure the default hostname so the hostname setting should be more obvious to the users
+    $self->{address}{hostname} = 'localhost.localdomain' unless $self->{address}{hostname};
     [
         if_($self->{protocol} eq 'dhcp',
             { text => N("Assign host name from DHCP server (or generate a unique one)"), val => \$self->{address}{needhostname}, type => "bool" },
