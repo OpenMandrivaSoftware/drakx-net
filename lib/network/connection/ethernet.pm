@@ -213,9 +213,11 @@ sub get_hostname_settings {
     $self->{address}{hostname} = 'localhost.localdomain' unless $self->{address}{hostname};
     [
         if_($self->{protocol} eq 'dhcp',
-            { text => N("Assign host name from DHCP server (or generate a unique one)"), val => \$self->{address}{needhostname}, type => "bool" },
+            { text => N("Assign host name from DHCP server (or generate a unique one)"), val => \$self->{address}{needhostname}, type => "bool",
+            help => N("This will allow the server to attribute a name for this machine. If the server does not provides a valid host name, it will be generated automatically.")},
         ),
-        { label => N("Host name"), val => \$self->{address}{hostname}, disabled => $auto_hostname },
+        { label => N("Host name"), val => \$self->{address}{hostname}, disabled => $auto_hostname,
+        help => N("You should define the hostname of this machine, which will identify this PC. Note that this hostname will be shared among all network connections. If left blank, 'localhost.localdomain' will be used.")},
     ];
 }
 
