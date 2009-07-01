@@ -556,8 +556,8 @@ Take a look at http://www.linmodems.org"),
                     name => N("Please choose which serial port your modem is connected to."),
                     if_(!$::isInstall, interactive_help_id => 'selectSerialPort'),
                     data => sub {
-                        [ { val => \$modem->{device}, format => \&mouse::serial_port2text, type => "list",
-                            list => [ grep { $_ ne $mouse->{device} } (mouse::serial_ports(), glob_("/dev/ttyUSB*"), grep { -e $_ } '/dev/modem', '/dev/ttySL0', '/dev/ttyS14',) ] } ];
+                        [ { val => \$modem->{device}, format => \&detect_devices::serialPort2text, type => "list",
+                            list => [ grep { $_ ne $mouse->{device} } (detect_devices::serialPorts(), glob_("/dev/ttyUSB*"), grep { -e $_ } '/dev/modem', '/dev/ttySL0', '/dev/ttyS14',) ] } ];
                         },
                     post => sub {
                         return 'ppp_provider';
