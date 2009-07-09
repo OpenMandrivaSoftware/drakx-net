@@ -909,7 +909,7 @@ sub wpa_supplicant_add_network {
         $network->{psk} = convert_psk_key_for_wpa_supplicant($key);
     } else {
         $network->{key_mgmt} = 'NONE';
-        $network->{mode} = to_bool($mode eq 'Ad-Hoc');
+        $network->{mode} = to_bool($mode eq 'Ad-hoc');
         if (member($enc_mode, qw(open restricted))) {
             put_in_hash($network, {
                 wep_key0 => convert_wep_key_for_wpa_supplicant($key, $force_ascii),
@@ -1105,7 +1105,7 @@ sub wpa_supplicant_add_eap_network {
     #- handle extra variables as final overides
     handle_extra_params($network, $ui_input->{extra});
 
-    $network->{mode} = to_bool($ui_input->{mode} eq 'Ad-Hoc');
+    $network->{mode} = to_bool($ui_input->{mode} eq 'Ad-hoc');
 
     @$conf = difference2($conf, [ wpa_supplicant_find_similar($conf, $network) ]);
     push @$conf, $network;
