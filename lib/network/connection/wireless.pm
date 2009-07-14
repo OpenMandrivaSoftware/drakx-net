@@ -656,6 +656,10 @@ sub install_packages {
 
 sub build_ifcfg_settings {
     my ($self) = @_;
+
+    # if we are not using WEP, the key is always ASCII (#52128)
+    $self->{access}{network}{force_ascii_key} = 1 unless member($self->{access}{network}{encryption}, qw(open restricted));
+
     my $settings = {
         WIRELESS_MODE => $self->{access}{network}{mode},
         if_($self->need_wpa_supplicant,
