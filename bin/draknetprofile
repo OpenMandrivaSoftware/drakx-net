@@ -193,6 +193,7 @@ gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
            $::isEmbedded ? () : (0, Gtk2::Banner->new('draknetprofile', $title)),
            0, gtknew('WrappedLabel', text => N("This tool allows to control network profiles.")),
+           0, gtknew('WrappedLabel', text => N("Select the netprofile modules:")),
            1, gtknew('ScrolledWindow', width => 300, height => 150, child => $modules_list),
            0, gtknew('WrappedLabel', text => N("Select a network profile:")),
            1, gtknew('ScrolledWindow', width => 300, height => 150, child => $profiles_list),
