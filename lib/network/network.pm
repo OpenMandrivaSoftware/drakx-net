@@ -395,6 +395,34 @@ sub gateway {
     join(".", @masked);
 }
 
+sub netprofile_modules() {
+    my @m = split('\n', `/sbin/netprofile modules`);
+    my @modules = ();
+
+    foreach my $module (@m) {
+        my @params = split('\t', $module);
+        my $vals = {
+                module => @params[0],
+                enabled => @params[1] == '+' ? 1 : 0,
+                name => @params[2],
+                description => @params[3],
+            };
+        push(@modules, $vals);
+    }
+    @modules;
+}
+
+sub netprofile_module_enable {
+    my ($module) = @_;
+    system('/sbin/netprofile', 'module_enable', $module);
+    log::explanations(qq(Enabling netprofile module $module));
+}
+
+sub netprofile_module_disable {
+    my ($module) = @_;
+    system('/sbin/netprofile', 'module_disable', $module);
+    log::explanations(qq(Disabling netprofile module $module));
+}
 
 sub netprofile_set {
     my ($net, $profile) = @_;
