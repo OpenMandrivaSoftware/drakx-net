@@ -403,7 +403,7 @@ sub netprofile_modules() {
         my @params = split('\t', $module);
         my $vals = {
                 module => @params[0],
-                enabled => @params[1] == '+' ? 1 : 0,
+                enabled => @params[1] eq '+' ? 1 : 0,
                 name => @params[2],
                 description => @params[3],
             };
