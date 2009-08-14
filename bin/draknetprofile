@@ -30,7 +30,7 @@ use common;
 use network::network;
 use mygtk2;
 use Gtk2::SimpleList;
-use ugtk2 qw(:create :helpers :wrappers :dialogs);
+use ugtk2 qw(:create :helpers :wrappers :dialogs :ask);
 use POSIX ();
 
 $ugtk2::wm_icon = 'draknetprofile-16';
@@ -63,19 +63,9 @@ Gtk2::SimpleList->add_column_type(
 );
 
 my $profiles_list = Gtk2::SimpleList->new(
-    "" => 'radio',
+    "" => 'hidden',
     N("Profile") => 'text',
 );
-
-my @r = $profiles_list->get_column(0)->get_cell_renderers;
-$r[0]->signal_connect('toggled' => sub {
-                          my ($_renderer, $row, $_col) = @_;
-                          if ($profiles_list->{data}[$row][0]) {
-                              set_profile($profiles_list->{data}[$row][1]);
-                          } else {
-                              $profiles_list->{data}[$row][0] = 'active';
-                          }
-                      });
 
 $profiles_list->get_selection->signal_connect('changed' => sub {
                                                   if ($profiles_list->sensitive) {
@@ -99,11 +89,10 @@ sub get_selected_profile() {
 }
 
 sub update_profiles() {
-    my $previous_profile = get_selected_profile();
     network::network::netprofile_read($net);
     @profiles = network::network::netprofile_list();
     @{$profiles_list->{data}} = map { [ $_ eq $net->{PROFILE}, $_  ] } @profiles;
-    my $index = eval { find_index { $_ eq $previous_profile } @profiles };
+    my $index = eval { find_index { $_ eq $net->{PROFILE} } @profiles };
     $profiles_list->select($index) if defined $index;
 }
 
@@ -135,7 +124,7 @@ sub clone_profile() {
     my $dialog = _create_dialog(N("New profile..."));
     my $entry_dialog = Gtk2::Entry->new;
     gtkpack($dialog->vbox,
-            Gtk2::WrappedLabel->new(N("Name of the profile to create (the new profile is created as a copy of the current one):")),
+            Gtk2::WrappedLabel->new(N("Name of new profile to create (the new profile initially will be created with base on current settings):")),
             $entry_dialog,
         );
     gtkpack($dialog->action_area,
@@ -150,7 +139,7 @@ sub clone_profile() {
                                       return 1;
                                   }
                                   $dialog->destroy;
-                                  network::network::netprofile_clone($source_profile, $dest_profile);
+                                  network::network::netprofile_set($net, $dest_profile);
                                   update_profiles();
                               }),
         );
@@ -162,13 +151,14 @@ sub clone_profile() {
 sub delete_selected_profile() {
     my $profile = get_selected_profile();
     if ($profile eq $default_profile) {
-        warn_dialog(N("Warning"), N("You can not delete the default profile"));
+        my $ret = warn_dialog(N("Warning"), N("Are you sure you want to delete the default profile?"));
+        return if not $ret;
     } elsif ($profile eq $net->{PROFILE}) {
-        warn_dialog(N("Warning"), N("You can not delete the current profile"));
-    } else {
-        network::network::netprofile_delete($profile);
-        update_profiles();
+        err_dialog(N("Error"), N("You can not delete the current profile. Please switch to a different profile first."));
+        return;
     }
+    network::network::netprofile_delete($profile);
+    update_profiles();
 }
 
 gtkadd($w->{window},
@@ -178,7 +168,7 @@ gtkadd($w->{window},
            1, gtknew('ScrolledWindow', width => 300, height => 150, child => $profiles_list),
            0, gtknew('HButtonBox', children_loose => [
                $buttons{activate} = gtknew('Button', text => N("Activate"), clicked => \&set_selected_profile, sensitive => 0),
-               $buttons{clone} = gtknew('Button', text => N("Clone"), clicked => \&clone_profile, sensitive => 0),
+               $buttons{clone} = gtknew('Button', text => N("New"), clicked => \&clone_profile, sensitive => 0),
                $buttons{delete} = gtknew('Button', text => N("Delete"), clicked => \&delete_selected_profile, sensitive => 0),
                gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit }),
            ]),
