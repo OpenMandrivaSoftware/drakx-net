@@ -62,6 +62,23 @@ Gtk2::SimpleList->add_column_type(
     attr     => 'active',
 );
 
+my $modules_list = Gtk2::SimpleList->new(
+    N("Module") => 'hidden',
+    N("Enabled") => 'bool',
+    N("Description") => 'text',
+);
+
+my @r = $modules_list->get_column(0)->get_cell_renderers;
+$r[0]->signal_connect('toggled' => sub {
+                          my ($_renderer, $row, $_col) = @_;
+                          if ($modules_list->{data}[$row][1]) {
+                              network::network::netprofile_module_enable($modules_list->{data}[$row][0]);
+                          } else {
+                              network::network::netprofile_module_disable($modules_list->{data}[$row][0]);
+                          }
+                      });
+
+
 my $profiles_list = Gtk2::SimpleList->new(
     "" => 'hidden',
     N("Profile") => 'text',
@@ -73,6 +90,17 @@ $profiles_list->get_selection->signal_connect('changed' => sub {
                                                       $_->set_sensitive(defined $index) foreach values %buttons;
                                                   }
                                               });
+
+sub load_netprofile_modules() {
+    my @modules = network::network::netprofile_modules();
+    foreach (@modules) {
+        push @{$modules_list->{data}}, [
+            $_->{module},
+            $_->{enabled},
+            $_->{description},
+            ];
+    }
+}
 
 sub get_selected_profile() {
     my ($index) = $profiles_list->get_selected_indices;
@@ -164,7 +192,9 @@ sub delete_selected_profile() {
 gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
            $::isEmbedded ? () : (0, Gtk2::Banner->new('draknetprofile', $title)),
-           0, gtknew('WrappedLabel', text => N("This tool allows to activate an existing network profile, and to manage (clone, delete) profiles.") . "\n\n" . N("To modify a profile, you have to activate it first.")),
+           0, gtknew('WrappedLabel', text => N("This tool allows to control network profiles.")),
+           1, gtknew('ScrolledWindow', width => 300, height => 150, child => $modules_list),
+           0, gtknew('WrappedLabel', text => N("Select a network profile:")),
            1, gtknew('ScrolledWindow', width => 300, height => 150, child => $profiles_list),
            0, gtknew('HButtonBox', children_loose => [
                $buttons{activate} = gtknew('Button', text => N("Activate"), clicked => \&set_selected_profile, sensitive => 0),
@@ -175,5 +205,6 @@ gtkadd($w->{window},
        ]),
    );
 
+load_netprofile_modules();
 update_profiles();
 $w->main;
