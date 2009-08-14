@@ -399,33 +399,15 @@ sub gateway {
 sub netprofile_set {
     my ($net, $profile) = @_;
     $net->{PROFILE} = $profile;
-    system('/sbin/set-netprofile', $net->{PROFILE});
+    system('/sbin/netprofile', 'switch', $net->{PROFILE});
     log::explanations(qq(Switching to "$net->{PROFILE}" profile));
-}
-
-sub netprofile_save {
-    my ($net) = @_;
-    system('/sbin/save-netprofile', $net->{PROFILE});
-    log::explanations(qq(Saving "$net->{PROFILE}" profile));
 }
 
 sub netprofile_delete {
     my ($profile) = @_;
-    return if !$profile || $profile eq "default";
-    rm_rf("$::prefix/etc/netprofile/profiles/$profile");
+    return if !$profile;
+    system('/sbin/netprofile', 'delete', $profile);
     log::explanations(qq(Deleting "$profile" profile));
-}
-
-sub netprofile_clone {
-    my ($source_profile, $dest_profile) = @_;
-    return if !$dest_profile || $dest_profile eq "default" || member($dest_profile, netprofile_list());
-    system('/sbin/clone-netprofile', $source_profile, $dest_profile);
-    log::explanations(qq("Creating "$dest_profile" profile));
-}
-
-sub netprofile_add {
-    my ($net, $profile) = @_;
-    netprofile_clone($net->{PROFILE}, $profile);
 }
 
 sub netprofile_list() {
@@ -434,8 +416,9 @@ sub netprofile_list() {
 
 sub netprofile_read {
     my ($net) = @_;
-    my $config = { getVarsFromSh("$::prefix/etc/netprofile/current") };
-    $net->{PROFILE} = $config->{PROFILE} || 'default';
+    my $profile = cat_("$::prefix/etc/netprofile/current");
+    chomp $profile if $profile;
+    $net->{PROFILE} = $profile || 'default';
 }
 
 sub advanced_settings_read {
