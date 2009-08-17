@@ -265,7 +265,7 @@ You can also give a range of ports (eg: 24300:24350/udp)", $invalid_port));
 		   } },
 		  [
 		   { label => N("Which services would you like to allow the Internet to connect to?"), title => 1 },
-		   if_($net->{PROFILE}, { label => N("Those settings will be saved for the network profile <b>%s</b>", $net->{PROFILE}) }),
+		   if_($net->{PROFILE} && network::network::netprofile_count() > 0, { label => N("Those settings will be saved for the network profile <b>%s</b>", $net->{PROFILE}) }),
 		   { text => N("Everything (no firewall)"), val => \$disabled, type => 'bool' },
 		   (map { { text => translate($_->{name}), val => \$_->{on}, type => 'bool', disabled => sub { $disabled } } } @l),
 		   { label => N("Other ports"), val => \$unlisted, advanced => 1, disabled => sub { $disabled } },
