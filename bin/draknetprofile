@@ -152,7 +152,7 @@ sub clone_profile() {
     my $dialog = _create_dialog(N("New profile..."));
     my $entry_dialog = Gtk2::Entry->new;
     gtkpack($dialog->vbox,
-            Gtk2::WrappedLabel->new(N("Please specify the name of new network profile to create (e.g., work, home, roaming, ..). This new profile initially will be created with base on current settings, and you'll be able to configure your system configuration as usual afterwards.")),
+            Gtk2::WrappedLabel->new(N("Please specify the name of the new network profile to be created (e.g., work, home, roaming, ..). This new profile will be created based on current settings, and you'll be able to configure your system configuration as usual afterwards.")),
             $entry_dialog,
         );
     gtkpack($dialog->action_area,
@@ -193,7 +193,7 @@ sub delete_selected_profile() {
 gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
            $::isEmbedded ? () : (0, Gtk2::Banner->new('draknetprofile', $title)),
-           0, gtknew('WrappedLabel', text => N("This tool allows to control network profiles.")),
+           0, gtknew('WrappedLabel', text => N("This tool allows you to control network profiles.")),
            0, gtknew('WrappedLabel', text => N("Select the netprofile modules:")),
            1, gtknew('ScrolledWindow', width => 300, height => 150, child => $modules_list),
            0, gtknew('WrappedLabel', text => N("Select a network profile:")),
