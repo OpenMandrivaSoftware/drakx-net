@@ -161,6 +161,7 @@ sub main {
     gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
            $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
+           if_($net->{PROFILE} && network::network::netprofile_count() > 0, 0, gtknew('Label', text_markup => N("You are currently using the network profile <b>%s</b>", $net->{PROFILE})) ),
            1, gtknew('ScrolledWindow', width => 600, height => $scrolled_height, shadow_type => 'none',
                      child => $managers_box = gtknew('VBox', spacing => 5, children_tight => [
                map_index { build_cmanager_box($_, $::i == 0) } @cmanagers,
