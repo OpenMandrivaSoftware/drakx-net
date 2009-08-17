@@ -189,7 +189,7 @@ sub check_address_settings {
             # find out what connection we are conflicting with
             my $conflict_device = $conflict->{DEVICE};
 
-            $self->{address}{error}{message} = N("%s is already used by connection that starts on boot (%s). To use this address with this connection, first disable all other devices which use it, or configure them not to start on boot", $self->{address}{ip_address}, $conflict_device);
+            $self->{address}{error}{message} = N("%s is already used by a connection that starts on boot (%s). To use this address with this connection, first disable all other devices which use it, or configure them not to start at boot", $self->{address}{ip_address}, $conflict_device);
             $self->{address}{error}{field} = \$self->{address}{ip_address};
             return 0;
         }
@@ -220,7 +220,7 @@ sub get_hostname_settings {
             help => N("This will allow the server to attribute a name for this machine. If the server does not provides a valid host name, it will be generated automatically.")},
         ),
         { label => N("Host name"), val => \$self->{address}{hostname}, disabled => $auto_hostname,
-        help => N("You should define the hostname of this machine, which will identify this PC. Note that this hostname will be shared among all network connections. If left blank, 'localhost.localdomain' will be used.")},
+        help => N("You should define a hostname for this machine, which will identify this PC. Note that this hostname will be shared among all network connections.  If left blank, 'localhost.localdomain' will be used.")},
     ];
 }
 
