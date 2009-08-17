@@ -19,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pt_BR\n"
 "POT-Creation-Date: 2009-08-17 14:22-0300\n"
-"PO-Revision-Date: 2009-04-01 12:17-0300\n"
-"Last-Translator: Sergio Rafael Lemke <sergio@mandriva.com.br>\n"
-"Language-Team: Brazilian Portuguese <cooker-i18n@mandrivalinux.org>\n"
+"PO-Revision-Date: 2009-08-17 18:01-0300\n"
+"Last-Translator: \n"
+"Language-Team: Brazilian Portuguese <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -859,20 +859,17 @@ msgstr "Bit Marcador da Conexão"
 msgid "Network profiles"
 msgstr "Perfis de rede"
 
-#: ../bin/draknetprofile:66
-#, fuzzy, c-format
+#: ../bin/draknetprofile:66, c-format
 msgid "Module"
-msgstr "Modem"
+msgstr "Modulo"
 
-#: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#: ../bin/draknetprofile:67, c-format
 msgid "Enabled"
-msgstr "Habilitar"
+msgstr "Habilitado"
 
-#: ../bin/draknetprofile:68
-#, fuzzy, c-format
+#: ../bin/draknetprofile:68, c-format
 msgid "Description"
-msgstr "Criptografia"
+msgstr "Descrição"
 
 #: ../bin/draknetprofile:84
 #, c-format
@@ -892,16 +889,20 @@ msgid ""
 "settings, and you'll be able to configure your system configuration as usual "
 "afterwards."
 msgstr ""
+"Por Favor especifique um nome para o novo perfil de rede a ser criado (ex: "
+"casa, "
+"trabalho, viagem,...). Este novo perfil será criado a partir das "
+"configurações atuais, "
+"depois você poderá configurar o sistema como usualmente. "
 
 #: ../bin/draknetprofile:166
 #, c-format
 msgid "The \"%s\" profile already exists!"
 msgstr "O perfil \"%s\" já existe!"
 
-#: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#: ../bin/draknetprofile:172, c-format
 msgid "New profile created"
-msgstr "Novo perfil..."
+msgstr "Novo perfil criado"
 
 #: ../bin/draknetprofile:172
 #, c-format
@@ -910,6 +911,11 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
+"Você agora está usando o perfil %s. Você agora pode configurar o sistema "
+"como "
+"usualmente e todas as suas configurações de rede, a partir de agora, serão "
+"salvas "
+"neste perfil."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -918,32 +924,29 @@ msgstr ""
 msgid "Warning"
 msgstr "Aviso"
 
-#: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#: ../bin/draknetprofile:183, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "Você não pode apagar o perfil padrão"
+msgstr "Você tem certeza que deseja apagar o perfil padrão ?"
 
-#: ../bin/draknetprofile:186
-#, fuzzy, c-format
+#: ../bin/draknetprofile:186, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
-msgstr "Você não pode remover o perfil atual"
+msgstr ""
+"Você não pode remover o perfil atual. Altere para um perfil diferente antes."
 
 #: ../bin/draknetprofile:196
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "Esta ferramenta permite controlar perfis de rede."
 
-#: ../bin/draknetprofile:197
-#, fuzzy, c-format
+#: ../bin/draknetprofile:197, c-format
 msgid "Select the netprofile modules:"
-msgstr "Selecione o modem para configurar:"
+msgstr "Selecione os módulos do netprofile:"
 
-#: ../bin/draknetprofile:199
-#, fuzzy, c-format
+#: ../bin/draknetprofile:199, c-format
 msgid "Select a network profile:"
-msgstr "Selecione o seu provedor:"
+msgstr "Selecione o perfil de rede:"
 
 #: ../bin/draknetprofile:202
 #, c-format
@@ -953,7 +956,7 @@ msgstr "Ativar"
 #: ../bin/draknetprofile:203
 #, c-format
 msgid "New"
-msgstr ""
+msgstr "Novo"
 
 #: ../bin/draknetprofile:204
 #, c-format
@@ -2540,7 +2543,7 @@ msgstr "Iniciar a Conexão no Boot"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "Enable traffic accounting"
-msgstr ""
+msgstr "Habilitar contagem de tráfego"
 
 #: ../lib/network/connection.pm:246
 #, c-format
@@ -2794,16 +2797,15 @@ msgstr "A máscara de rede deve estar no formato 255.255.224.0"
 msgid "Warning: IP address %s is usually reserved!"
 msgstr "Aviso: O endereço IP %s geralmente é reservado!"
 
-#: ../lib/network/connection/ethernet.pm:192
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:192, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
-"%s já é usado pela conexão que se inicia na Inicialização. Para usar este "
+"%s já é usado por uma conexão que carrega na Inicialização. Para usar este "
 "endereço com esta conexão, primeiro desabilite todos os dispositivos que "
-"usam ele ou configure-o para que não iniciar junto na Inicialização"
+"usam ele ou configure-os para que não carreguem na inicialização."
 
 #: ../lib/network/connection/ethernet.pm:219
 #, c-format
@@ -2817,6 +2819,9 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
+"Isto permite ao servidor atribuir um nome a esta máquina. Se o "
+"servidor não fornecer um nome de host válido, ele será gerado "
+"automaticamente."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2825,6 +2830,9 @@ msgid ""
 "Note that this hostname will be shared among all network connections.  If "
 "left blank, 'localhost.localdomain' will be used."
 msgstr ""
+"Você deve atribuir um hostname a está máquina, para que seja identificada. "
+"Note que esse hostname será dividido entre todas as conexões de rede. Se "
+"deixar em branco 'localhost.localdomain' será usado."
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -2939,7 +2947,7 @@ msgstr "Brasil"
 #: ../lib/network/connection/providers/cellular.pm:38
 #, c-format
 msgid "Estonia"
-msgstr ""
+msgstr "Estonia"
 
 #: ../lib/network/connection/providers/cellular.pm:42
 #: ../lib/network/connection/providers/cellular.pm:46
@@ -3390,10 +3398,9 @@ msgstr "Modo de criptografia"
 msgid "Encryption key"
 msgstr "Chave criptográfica"
 
-#: ../lib/network/connection/wireless.pm:461
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:461, c-format
 msgid "Hide password"
-msgstr "Senha"
+msgstr "Esconder Senha"
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
@@ -3779,10 +3786,9 @@ msgstr ""
 "subject.  A string subject tem o seguinte formato:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
-#: ../lib/network/connection/wireless.pm:578
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:578, c-format
 msgid "Extra directives"
-msgstr "Diretivas extras EAP"
+msgstr "Diretivas extras"
 
 #: ../lib/network/connection/wireless.pm:579
 #, c-format
@@ -4103,7 +4109,7 @@ msgstr "Requisição de eco (ping)"
 #: ../lib/network/drakfirewall.pm:105
 #, c-format
 msgid "AVAHI and mDNS"
-msgstr ""
+msgstr "AVAHI e mDNS"
 
 #: ../lib/network/drakfirewall.pm:111
 #, c-format
@@ -4195,7 +4201,7 @@ msgstr "Para quais serviços você quer permitir conexões vindas da Internet?"
 #: ../lib/network/network.pm:540
 #, c-format
 msgid "Those settings will be saved for the network profile <b>%s</b>"
-msgstr ""
+msgstr "Estas configurações serão salvas no perfil de rede <b>%s</b>"
 
 #: ../lib/network/drakfirewall.pm:269
 #, c-format
@@ -4412,10 +4418,9 @@ msgstr "Automático"
 msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "Sem suporte ao dispositivo %s: o driver ndiswrapper não está presente!"
 
-#: ../lib/network/ndiswrapper.pm:36
-#, fuzzy, c-format
+#: ../lib/network/ndiswrapper.pm:36, c-format
 msgid "Please select the correct driver"
-msgstr "Selecione o seu provedor:"
+msgstr "Favor selecionar o driver correto"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -4424,6 +4429,9 @@ msgid ""
 "driver file (.dll or .o files). Note that only drivers up to Windows XP are "
 "supported."
 msgstr ""
+"Por favor selecione o arquivo de descrição do driver para Windows (.inf), ou "
+"arquivo de driver correspondente (arquivos .dll ou .o). Note que somente "
+"drivers acima do Windows XP são suportados."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -4489,7 +4497,7 @@ msgstr "Centro de Rede"
 #: ../lib/network/netcenter.pm:164
 #, c-format
 msgid "You are currently using the network profile <b>%s</b>"
-msgstr ""
+msgstr "Você está usando atualmente o perfil de rede <b>%s</b>"
 
 #: ../lib/network/netcenter.pm:170
 #, c-format
