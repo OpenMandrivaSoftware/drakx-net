@@ -124,7 +124,7 @@ sub real_main {
                    welcome => {
                     pre => sub { undef $net->{type} },
                     if_(!$::isInstall, no_back => 1),
-                    name => N("Choose the connection you want to configure" .  if_($net->{PROFILE} && network::network::netprofile_count() > 0, "\n".N("Those settings will be saved for the network profile <b>%s</b>", $net->{PROFILE}) ) ),
+                    name => N("Choose the connection you want to configure") .  if_($net->{PROFILE} && network::network::netprofile_count() > 0, "\n".N("Those settings will be saved for the network profile <b>%s</b>", $net->{PROFILE}) ),
                     if_(!$::isInstall, interactive_help_id => 'configureNetwork'),
                     data => [ { list => [ network::connection::get_types ],
                                 type => 'list', val => \$net->{type}, format => sub { $_[0] && $_[0]->get_type_description },
