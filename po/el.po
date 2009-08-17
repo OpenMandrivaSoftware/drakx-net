@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-el\n"
 "POT-Creation-Date: 2009-08-17 12:41-0300\n"
-"PO-Revision-Date: 2009-06-08 16:42+0200\n"
+"PO-Revision-Date: 2009-08-17 18:50+0200\n"
 "Last-Translator: Glentadakis Dimitrios <dglent@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -863,20 +863,17 @@ msgstr "Mark bit της σύνδεσης"
 msgid "Network profiles"
 msgstr "Προφίλ δικτύου"
 
-#: ../bin/draknetprofile:66
-#, fuzzy, c-format
+#: ../bin/draknetprofile:66, c-format
 msgid "Module"
-msgstr "Μόντεμ"
+msgstr "Άρθρωμα"
 
-#: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#: ../bin/draknetprofile:67, c-format
 msgid "Enabled"
-msgstr "Ενεργοποίηση"
+msgstr "Ενεργοποιημένο"
 
-#: ../bin/draknetprofile:68
-#, fuzzy, c-format
+#: ../bin/draknetprofile:68, c-format
 msgid "Description"
-msgstr "Κρυπτογράφηση"
+msgstr "Περιγραφή"
 
 #: ../bin/draknetprofile:84
 #, c-format
@@ -896,16 +893,21 @@ msgid ""
 "settings, and you'll be able to configure your system configuration as usual "
 "afterwards."
 msgstr ""
+"Παρακαλώ καθορίστε το όνομα του νέου προφίλ δικτύου που θα δημιουργηθεί (πχ. "
+"εργασία, σπίτι, περιαγωγή, ..). Αυτό το νέο προφίλ θα δημιουργηθεί βασισμένο "
+"στις "
+"τρέχουσες ρυθμίσεις, και θα έχετε την δυνατότητα να ρυθμίσετε την διαμόρφωση "
+"του συστήματός σας "
+"ως συνήθως μετέπειτα."
 
 #: ../bin/draknetprofile:166
 #, c-format
 msgid "The \"%s\" profile already exists!"
 msgstr "Το  προφίλ  \"%s\" υπάρχει ήδη!"
 
-#: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#: ../bin/draknetprofile:172, c-format
 msgid "New profile created"
-msgstr "Νέο Προφίλ..."
+msgstr "Δημιουργήθηκε νέο προφίλ"
 
 #: ../bin/draknetprofile:172
 #, c-format
@@ -914,6 +916,10 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
+"Χρησιμοποιείτε τώρα το προφίλ δικτύου %s. Μπορείτε να ρυθμίσετε το σύστημά "
+"σας ως συνήθως, "
+"και όλες οι ρυθμίσεις του δικτύου σας στο εξής θα αποθηκεύονται σε αυτό το "
+"προφίλ."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -922,32 +928,30 @@ msgstr ""
 msgid "Warning"
 msgstr "Προσοχή"
 
-#: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#: ../bin/draknetprofile:183, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "Δεν μπορείτε να διαγράψετε το προεπιλεγμένο προφίλ"
+msgstr "Είστε σίγουροι ότι επιθυμείτε την διαγραφή του προεπιλεγμένου προφίλ;"
 
-#: ../bin/draknetprofile:186
-#, fuzzy, c-format
+#: ../bin/draknetprofile:186, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
-msgstr "Δεν μπορείτε να διαγράψετε το τρέχον προφίλ"
+msgstr ""
+"Δεν μπορείτε να διαγράψετε το τρέχον προφίλ. Παρακαλώ αλλάξτε με άλλο προφίλ "
+"πρώτα."
 
 #: ../bin/draknetprofile:196
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "Αυτό το εργαλείο σας επιτρέπει τον έλεγχο των προφίλ δικτύου"
 
-#: ../bin/draknetprofile:197
-#, fuzzy, c-format
+#: ../bin/draknetprofile:197, c-format
 msgid "Select the netprofile modules:"
-msgstr "Επιλέξτε το modem για διαμόρφωση:"
+msgstr "Επιλέξτε τα αρθρώματα του netprofile"
 
-#: ../bin/draknetprofile:199
-#, fuzzy, c-format
+#: ../bin/draknetprofile:199, c-format
 msgid "Select a network profile:"
-msgstr "Επιλέξτε τον παροχέα σας:"
+msgstr "Επιλέξτε ένα προφίλ δικτύου:"
 
 #: ../bin/draknetprofile:202
 #, c-format
@@ -957,7 +961,7 @@ msgstr "Ενεργοποίηση"
 #: ../bin/draknetprofile:203
 #, c-format
 msgid "New"
-msgstr ""
+msgstr "Νέο"
 
 #: ../bin/draknetprofile:204
 #, c-format
@@ -2554,10 +2558,9 @@ msgstr "Επιτρέπει στους χρήστες να διαχειρίζον
 msgid "Start the connection at boot"
 msgstr "Ξεκινήστε την σύνδεση κατά τη διάρκεια της εκκίνησης"
 
-#: ../lib/network/connection.pm:245
-#, fuzzy, c-format
+#: ../lib/network/connection.pm:245, c-format
 msgid "Account network traffic"
-msgstr "Συγχρονισμός διεπαφής δικτύου"
+msgstr "Λογαριασμός κίνησης δικτύου"
 
 #: ../lib/network/connection.pm:246
 #, c-format
@@ -2814,16 +2817,16 @@ msgstr "Η μάσκα δικτύου πρέπει να είναι στη μορ�
 msgid "Warning: IP address %s is usually reserved!"
 msgstr "Προσοχή : η διεύθυνση IP %s ήδη χρησιμοποιείται !"
 
-#: ../lib/network/connection/ethernet.pm:192
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:192, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
-"%s χρησιμοποιείται ήδη από σύνδεση ενεργοποιημένη στην εκκίνηση. Για να "
+"%s χρησιμοποιείται ήδη από μια σύνδεση ενεργοποιημένη στην εκκίνηση (%s). "
+"Για να "
 "χρησιμοποιήσετε αυτή τη διεύθυνση με αυτή τη σύνδεση, πρώτα απενεργοποιήστε "
-"όλες τις υπόλοιπες συσκευές που το χρησιμοποιούν, ή ρυθμίστε τες να μην "
+"όλες τις υπόλοιπες συσκευές που την χρησιμοποιούν, ή ρυθμίστε τες να μην "
 "ξεκινούν κατά την εκκίνηση"
 
 #: ../lib/network/connection/ethernet.pm:219
@@ -2839,6 +2842,10 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
+"Αυτό θα επιτρέψει στον εξυπηρετητή να αποδώσει ένα όνομα για αυτό το "
+"μηχάνημα. "
+"Αν ο εξυπηρετητής δεν παρέχει ένα έγκυρο όνομα υπολογιστή, αυτό "
+"θα δημιουργηθεί αυτόματα."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2847,6 +2854,11 @@ msgid ""
 "Note that this hostname will be shared among all network connections.  If "
 "left blank, 'localhost.localdomain' will be used."
 msgstr ""
+"Θα πρέπει να ορίσετε ένα όνομα υπολογιστή γι' αυτό το μηχάνημα, το οποίο θα "
+"είναι και "
+"το αναγνωριστικό αυτού του PC. Σημειώστε ότι αυτό το όνομα υπολογιστή θα "
+"ισχύει για όλες τις συνδέσεις. "
+"Αν το αφήσετε κενό, θα χρησιμοποιηθεί το «localhost.localdomain»"
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -2960,7 +2972,7 @@ msgstr "Βραζιλία"
 #: ../lib/network/connection/providers/cellular.pm:38
 #, c-format
 msgid "Estonia"
-msgstr ""
+msgstr "Εσθονία"
 
 #: ../lib/network/connection/providers/cellular.pm:42
 #: ../lib/network/connection/providers/cellular.pm:46
@@ -3411,10 +3423,9 @@ msgstr "Λειτουργία κρυπτογράφησης"
 msgid "Encryption key"
 msgstr "Κλειδί κρυπτογράφησης"
 
-#: ../lib/network/connection/wireless.pm:461
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:461, c-format
 msgid "Hide password"
-msgstr "Κωδικός Πρόσβασης"
+msgstr "Απόκρυψη κωδικού"
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
@@ -3814,10 +3825,9 @@ msgstr ""
 "αυτό το string στο θέμα του. Η μορφή του θέματος είναι η εξής :\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
-#: ../lib/network/connection/wireless.pm:578
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:578, c-format
 msgid "Extra directives"
-msgstr "Επιπλέον οδηγίες EAP"
+msgstr "Επιπλέον οδηγίες"
 
 #: ../lib/network/connection/wireless.pm:579
 #, c-format
@@ -4140,7 +4150,7 @@ msgstr "Echo request (ping)"
 #: ../lib/network/drakfirewall.pm:105
 #, c-format
 msgid "AVAHI and mDNS"
-msgstr ""
+msgstr "AVAHI και mDNS"
 
 #: ../lib/network/drakfirewall.pm:111
 #, c-format
@@ -4235,7 +4245,7 @@ msgstr "Ποιες υπηρεσίες θέλετε να επιτρέπονται
 #: ../lib/network/network.pm:540
 #, c-format
 msgid "Those settings will be saved for the network profile <b>%s</b>"
-msgstr ""
+msgstr "Αυτές οι ρυθμίσεις θα αποθηκευτούν για το προφίλ δικτύου <b>%s</b>"
 
 #: ../lib/network/drakfirewall.pm:269
 #, c-format
@@ -4456,10 +4466,9 @@ msgstr "Αυτόματο"
 msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "Δεν βρέθηκε συσκευή που να υποστηρίζει τον %s οδηγό ndiswrapper!"
 
-#: ../lib/network/ndiswrapper.pm:36
-#, fuzzy, c-format
+#: ../lib/network/ndiswrapper.pm:36, c-format
 msgid "Please select the correct driver"
-msgstr "Παρακαλώ επιλέξτε τον παροχέα σας:"
+msgstr "Παρακαλώ επιλέξτε το σωστό οδηγό."
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -4468,6 +4477,9 @@ msgid ""
 "driver file (.dll or .o files). Note that only drivers up to Windows XP are "
 "supported."
 msgstr ""
+"Παρακαλώ επιλέξτε το αρχείο .inf του οδηγού Windows, ή το κατάλληλο αρχείο "
+"οδηγού .dll ή .o . "
+"Σημειώστε ότι μόνο οι οδηγοί μέχρι τα Windows XP υποστηρίζονται."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -4533,7 +4545,7 @@ msgstr "Κέντρο Δικτύου"
 #: ../lib/network/netcenter.pm:164
 #, c-format
 msgid "You are currently using the network profile <b>%s</b>"
-msgstr ""
+msgstr "Χρησιμοποιείτε αυτή τη στιγμή το προφίλ δικτύου <b>%s</b>"
 
 #: ../lib/network/netcenter.pm:170
 #, c-format
