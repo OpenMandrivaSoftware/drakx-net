@@ -532,9 +532,12 @@ sub advanced_choose {
 sub miscellaneous_choose {
     my ($in, $u) = @_;
 
+    my $net = {};
+    netprofile_read($net);
+
     my $use_http_for_https = $u->{https_proxy} eq $u->{http_proxy};
     $in->ask_from(N("Proxies configuration"),
-       N("Here you can set up your proxies configuration (eg: http://my_caching_server:8080)"),
+       N("Here you can set up your proxies configuration (eg: http://my_caching_server:8080)") .  if_($net->{PROFILE} && netprofile_count() > 0, "\n".N("Those settings will be saved for the network profile <b>%s</b>", $net->{PROFILE})),
        [ { label => N("HTTP proxy"), val => \$u->{http_proxy} },
          { text => N("Use HTTP proxy for HTTPS connections"), val => \$use_http_for_https, type => "bool" },
          { label => N("HTTPS proxy"), val => \$u->{https_proxy}, disabled => sub { $use_http_for_https } },
