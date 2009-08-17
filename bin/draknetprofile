@@ -152,7 +152,7 @@ sub clone_profile() {
     my $dialog = _create_dialog(N("New profile..."));
     my $entry_dialog = Gtk2::Entry->new;
     gtkpack($dialog->vbox,
-            Gtk2::WrappedLabel->new(N("Name of new profile to create (the new profile initially will be created with base on current settings):")),
+            Gtk2::WrappedLabel->new(N("Please specify the name of new network profile to create (e.g., work, home, roaming, ..). This new profile initially will be created with base on current settings, and you'll be able to configure your system configuration as usual afterwards.")),
             $entry_dialog,
         );
     gtkpack($dialog->action_area,
@@ -169,6 +169,7 @@ sub clone_profile() {
                                   $dialog->destroy;
                                   network::network::netprofile_set($net, $dest_profile);
                                   update_profiles();
+                                  info_dialog(N("New profile created"), N("You are now using network profile %s. You can configure your system as usual, and all your network settings from now on will be saved into this profile.", $dest_profile));
                               }),
         );
     $bok->can_default(1);
