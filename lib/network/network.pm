@@ -442,6 +442,11 @@ sub netprofile_list() {
     map { if_(m!([^/]*)/$!, $1) } glob("$::prefix/etc/netprofile/profiles/*/");
 }
 
+sub netprofile_count() {
+    my @profiles = netprofile_list();
+    return $#profiles;
+}
+
 sub netprofile_read {
     my ($net) = @_;
     my $profile = cat_("$::prefix/etc/netprofile/current");
