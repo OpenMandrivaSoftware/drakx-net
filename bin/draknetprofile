@@ -190,14 +190,28 @@ sub delete_selected_profile() {
     update_profiles();
 }
 
+# create advanced view to configure modules
+my $expander = Gtk2::Expander->new(N("Advanced"));
+$expander->add(gtkpack_(Gtk2::VBox->new,
+        0, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 1),
+            0, gtkpack_(gtkset_border_width(Gtk2::VBox->new, 0),
+               0, gtknew('WrappedLabel', text => N("Select the netprofile modules:")),
+               0, gtknew('ScrolledWindow', width => 300, height => 150, child => $modules_list),
+           ),
+       ),
+       ),
+   );
+$expander->show_all;
+
+#$expander->signal_connect(activate => sub { $w->shrink_topwindow; });
+
 gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
            $::isEmbedded ? () : (0, Gtk2::Banner->new('draknetprofile', $title)),
            0, gtknew('WrappedLabel', text => N("This tool allows you to control network profiles.")),
-           0, gtknew('WrappedLabel', text => N("Select the netprofile modules:")),
-           1, gtknew('ScrolledWindow', width => 300, height => 150, child => $modules_list),
            0, gtknew('WrappedLabel', text => N("Select a network profile:")),
            1, gtknew('ScrolledWindow', width => 300, height => 150, child => $profiles_list),
+           0, $expander,
            0, gtknew('HButtonBox', children_loose => [
                $buttons{activate} = gtknew('Button', text => N("Activate"), clicked => \&set_selected_profile, sensitive => 0),
                $buttons{clone} = gtknew('Button', text => N("New"), clicked => \&clone_profile, sensitive => 0),
