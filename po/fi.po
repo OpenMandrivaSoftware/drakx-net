@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-fi\n"
-"POT-Creation-Date: 2009-08-17 14:22-0300\n"
+"POT-Creation-Date: 2009-08-18 09:44-0300\n"
 "PO-Revision-Date: 2009-08-18 12:48+0300\n"
 "Last-Translator: Jani Välimaa <wally@mandriva.org>\n"
 "Language-Team: Finnish <cooker-i18n@mandrivalinux.org>\n"
@@ -644,7 +644,7 @@ msgstr "Poista"
 msgid "Failed to remove host."
 msgstr "Verkkonimeä ei voitu poistaa."
 
-#: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:205
+#: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:219
 #: ../bin/net_applet:189 ../lib/network/drakroam.pm:93
 #: ../lib/network/netcenter.pm:171
 #, c-format
@@ -855,11 +855,13 @@ msgstr "Yhteyden merkintäbitti"
 msgid "Network profiles"
 msgstr "Verkkoprofiilit"
 
-#: ../bin/draknetprofile:66, c-format
+#: ../bin/draknetprofile:66
+#, c-format
 msgid "Module"
 msgstr "Moduuli"
 
-#: ../bin/draknetprofile:67, c-format
+#: ../bin/draknetprofile:67
+#, c-format
 msgid "Enabled"
 msgstr "Käytössä"
 
@@ -887,15 +889,16 @@ msgid ""
 "afterwards."
 msgstr ""
 "Anna luotavan verkkoprofiilin nimi (esim. koti, työ, julkinen). Uusi "
-"profiili luodaan käyttäen nykyisiä asetuksia. Järjestelmän asetukset "
-"voidaan määritellä normaaliin tapaan jälkikäteen."
+"profiili luodaan käyttäen nykyisiä asetuksia. Järjestelmän asetukset voidaan "
+"määritellä normaaliin tapaan jälkikäteen."
 
 #: ../bin/draknetprofile:166
 #, c-format
 msgid "The \"%s\" profile already exists!"
 msgstr "Profiili \"%s\" on jo olemassa!"
 
-#: ../bin/draknetprofile:172, c-format
+#: ../bin/draknetprofile:172
+#, c-format
 msgid "New profile created"
 msgstr "Luotiin uusi profiili"
 
@@ -906,9 +909,8 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
-"Käytössä on verkkoprofiili %s. Järjestelmän asetukset voidaan "
-"määritellä normaalisti, kaikki verkkoasetukset tallentuvat "
-"profiiliin."
+"Käytössä on verkkoprofiili %s. Järjestelmän asetukset voidaan määritellä "
+"normaalisti, kaikki verkkoasetukset tallentuvat profiiliin."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -917,11 +919,13 @@ msgstr ""
 msgid "Warning"
 msgstr "Varoitus"
 
-#: ../bin/draknetprofile:183, c-format
+#: ../bin/draknetprofile:183
+#, c-format
 msgid "Are you sure you want to delete the default profile?"
 msgstr "Haluatko varmasti poistaa oletusprofiilin?"
 
-#: ../bin/draknetprofile:186, c-format
+#: ../bin/draknetprofile:186
+#, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
@@ -929,30 +933,37 @@ msgstr ""
 "Käytössä olevaa profiilia ei voida poistaa. Valitse ensin toinen profiili "
 "käyttöön."
 
-#: ../bin/draknetprofile:196
+#: ../bin/draknetprofile:194 ../bin/draknfs:356
+#, c-format
+msgid "Advanced"
+msgstr "Lisäasetukset"
+
+#: ../bin/draknetprofile:198
+#, c-format
+msgid "Select the netprofile modules:"
+msgstr "Valitse käytettävät moduulit:"
+
+#: ../bin/draknetprofile:211
 #, c-format
 msgid "This tool allows you to control network profiles."
 msgstr "Tämä työkalu mahdollistaa verkkoprofiilien hallitsemisen."
 
-#: ../bin/draknetprofile:197, c-format
-msgid "Select the netprofile modules:"
-msgstr "Valitse käytettävät moduulit:"
-
-#: ../bin/draknetprofile:199, c-format
+#: ../bin/draknetprofile:212
+#, c-format
 msgid "Select a network profile:"
 msgstr "Valitse verkkoprofiili:"
 
-#: ../bin/draknetprofile:202
+#: ../bin/draknetprofile:216
 #, c-format
 msgid "Activate"
 msgstr "Ota käyttöön"
 
-#: ../bin/draknetprofile:203
+#: ../bin/draknetprofile:217
 #, c-format
 msgid "New"
 msgstr "Uusi"
 
-#: ../bin/draknetprofile:204
+#: ../bin/draknetprofile:218
 #, c-format
 msgid "Delete"
 msgstr "Poista"
@@ -1216,11 +1227,6 @@ msgstr "Hakemisto"
 #, c-format
 msgid "Please add an NFS share to be able to modify it."
 msgstr "Lisää NFS-jako ennen muokkaamista."
-
-#: ../bin/draknfs:356
-#, c-format
-msgid "Advanced"
-msgstr "Lisäasetukset"
 
 #: ../bin/draknfs:379
 #, c-format
@@ -2767,15 +2773,16 @@ msgstr "Verkon peitteen tulee olla muotoa 255.255.224.0"
 msgid "Warning: IP address %s is usually reserved!"
 msgstr "Varoitus: IP-osoite %s on yleensä varattu!"
 
-#: ../lib/network/connection/ethernet.pm:192, c-format
+#: ../lib/network/connection/ethernet.pm:192
+#, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
 "Osoite %s on jo käytössä yhteydellä (%s), joka käynnistyy tietokoneen "
-"käynnistyessä. Käyttääksesi osoitetta tämän yhteyden kanssa, poista "
-"käytöstä kaikki osoitetta käyttävät laitteet tai ota niiden automaattinen "
+"käynnistyessä. Käyttääksesi osoitetta tämän yhteyden kanssa, poista käytöstä "
+"kaikki osoitetta käyttävät laitteet tai ota niiden automaattinen "
 "käynnistyminen pois käytöstä."
 
 #: ../lib/network/connection/ethernet.pm:219
@@ -2790,9 +2797,8 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
-"Tämä mahdollistaa palvelimen määrittelemän verkkonimen. Jos "
-"palvelin ei määritä kunnollista verkkonimeä, verkkonimi luodaan "
-"automaattisesti."
+"Tämä mahdollistaa palvelimen määrittelemän verkkonimen. Jos palvelin ei "
+"määritä kunnollista verkkonimeä, verkkonimi luodaan automaattisesti."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2802,8 +2808,8 @@ msgid ""
 "left blank, 'localhost.localdomain' will be used."
 msgstr ""
 "Tietokoneelle tulisi antaa verkkonimi, joka yksilöi tietokoneen. Huomaa, "
-"että verkkonimeä käytetään kaikkien verkkoyhteksien kanssa. Jos "
-"verkkonimeä ei anneta, käytetään oletusarvoa (localhost.localdomain)."
+"että verkkonimeä käytetään kaikkien verkkoyhteksien kanssa. Jos verkkonimeä "
+"ei anneta, käytetään oletusarvoa (localhost.localdomain)."
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -3369,7 +3375,8 @@ msgstr "Salaustapa"
 msgid "Encryption key"
 msgstr "Salausavain"
 
-#: ../lib/network/connection/wireless.pm:461, c-format
+#: ../lib/network/connection/wireless.pm:461
+#, c-format
 msgid "Hide password"
 msgstr "Piilota salasana"
 
@@ -3756,7 +3763,8 @@ msgstr ""
 "sisältää määritellyt merkkijonot. Merkkijono on muotoa:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
-#: ../lib/network/connection/wireless.pm:578, c-format
+#: ../lib/network/connection/wireless.pm:578
+#, c-format
 msgid "Extra directives"
 msgstr "Lisätoimintaohjeet"
 
@@ -4386,7 +4394,8 @@ msgstr "Automaattinen"
 msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "%s ndiswrapper-ajuria tukevia laitteita ei löytynyt!"
 
-#: ../lib/network/ndiswrapper.pm:36, c-format
+#: ../lib/network/ndiswrapper.pm:36
+#, c-format
 msgid "Please select the correct driver"
 msgstr "Valitse oikea ajuri"
 
@@ -4397,9 +4406,9 @@ msgid ""
 "driver file (.dll or .o files). Note that only drivers up to Windows XP are "
 "supported."
 msgstr ""
-"Valitse Windows-ajurin kuvaustiedosto (.inf) tai vastaava ajuritiedosto "
-"(.dll tai .o). Huomaa, että tuettuja ajuriversioita ovat vain Windows XP "
-"tai vanhemmat."
+"Valitse Windows-ajurin kuvaustiedosto (.inf) tai vastaava ajuritiedosto (."
+"dll tai .o). Huomaa, että tuettuja ajuriversioita ovat vain Windows XP tai "
+"vanhemmat."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format

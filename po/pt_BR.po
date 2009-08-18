@@ -18,7 +18,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pt_BR\n"
-"POT-Creation-Date: 2009-08-17 14:22-0300\n"
+"POT-Creation-Date: 2009-08-18 09:44-0300\n"
 "PO-Revision-Date: 2009-08-17 18:01-0300\n"
 "Last-Translator: \n"
 "Language-Team: Brazilian Portuguese <kde-i18n-doc@kde.org>\n"
@@ -650,7 +650,7 @@ msgstr "Remover"
 msgid "Failed to remove host."
 msgstr "Falha ao remover host."
 
-#: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:205
+#: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:219
 #: ../bin/net_applet:189 ../lib/network/drakroam.pm:93
 #: ../lib/network/netcenter.pm:171
 #, c-format
@@ -859,15 +859,18 @@ msgstr "Bit Marcador da Conexão"
 msgid "Network profiles"
 msgstr "Perfis de rede"
 
-#: ../bin/draknetprofile:66, c-format
+#: ../bin/draknetprofile:66
+#, c-format
 msgid "Module"
 msgstr "Modulo"
 
-#: ../bin/draknetprofile:67, c-format
+#: ../bin/draknetprofile:67
+#, c-format
 msgid "Enabled"
 msgstr "Habilitado"
 
-#: ../bin/draknetprofile:68, c-format
+#: ../bin/draknetprofile:68
+#, c-format
 msgid "Description"
 msgstr "Descrição"
 
@@ -890,17 +893,17 @@ msgid ""
 "afterwards."
 msgstr ""
 "Por Favor especifique um nome para o novo perfil de rede a ser criado (ex: "
-"casa, "
-"trabalho, viagem,...). Este novo perfil será criado a partir das "
-"configurações atuais, "
-"depois você poderá configurar o sistema como usualmente. "
+"casa, trabalho, viagem,...). Este novo perfil será criado a partir das "
+"configurações atuais, depois você poderá configurar o sistema como "
+"usualmente. "
 
 #: ../bin/draknetprofile:166
 #, c-format
 msgid "The \"%s\" profile already exists!"
 msgstr "O perfil \"%s\" já existe!"
 
-#: ../bin/draknetprofile:172, c-format
+#: ../bin/draknetprofile:172
+#, c-format
 msgid "New profile created"
 msgstr "Novo perfil criado"
 
@@ -912,10 +915,8 @@ msgid ""
 "profile."
 msgstr ""
 "Você agora está usando o perfil %s. Você agora pode configurar o sistema "
-"como "
-"usualmente e todas as suas configurações de rede, a partir de agora, serão "
-"salvas "
-"neste perfil."
+"como usualmente e todas as suas configurações de rede, a partir de agora, "
+"serão salvas neste perfil."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -924,41 +925,50 @@ msgstr ""
 msgid "Warning"
 msgstr "Aviso"
 
-#: ../bin/draknetprofile:183, c-format
+#: ../bin/draknetprofile:183
+#, c-format
 msgid "Are you sure you want to delete the default profile?"
 msgstr "Você tem certeza que deseja apagar o perfil padrão ?"
 
-#: ../bin/draknetprofile:186, c-format
+#: ../bin/draknetprofile:186
+#, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
 msgstr ""
 "Você não pode remover o perfil atual. Altere para um perfil diferente antes."
 
-#: ../bin/draknetprofile:196
+#: ../bin/draknetprofile:194 ../bin/draknfs:356
+#, c-format
+msgid "Advanced"
+msgstr "Avançado"
+
+#: ../bin/draknetprofile:198
+#, c-format
+msgid "Select the netprofile modules:"
+msgstr "Selecione os módulos do netprofile:"
+
+#: ../bin/draknetprofile:211
 #, c-format
 msgid "This tool allows you to control network profiles."
 msgstr "Esta ferramenta permite controlar perfis de rede."
 
-#: ../bin/draknetprofile:197, c-format
-msgid "Select the netprofile modules:"
-msgstr "Selecione os módulos do netprofile:"
-
-#: ../bin/draknetprofile:199, c-format
+#: ../bin/draknetprofile:212
+#, c-format
 msgid "Select a network profile:"
 msgstr "Selecione o perfil de rede:"
 
-#: ../bin/draknetprofile:202
+#: ../bin/draknetprofile:216
 #, c-format
 msgid "Activate"
 msgstr "Ativar"
 
-#: ../bin/draknetprofile:203
+#: ../bin/draknetprofile:217
 #, c-format
 msgid "New"
 msgstr "Novo"
 
-#: ../bin/draknetprofile:204
+#: ../bin/draknetprofile:218
 #, c-format
 msgid "Delete"
 msgstr "Remover"
@@ -1226,11 +1236,6 @@ msgstr "Diretório"
 #, c-format
 msgid "Please add an NFS share to be able to modify it."
 msgstr "Favor adicionar um compartilhamento NFS para poder modificá-lo."
-
-#: ../bin/draknfs:356
-#, c-format
-msgid "Advanced"
-msgstr "Avançado"
 
 #: ../bin/draknfs:379
 #, c-format
@@ -2797,7 +2802,8 @@ msgstr "A máscara de rede deve estar no formato 255.255.224.0"
 msgid "Warning: IP address %s is usually reserved!"
 msgstr "Aviso: O endereço IP %s geralmente é reservado!"
 
-#: ../lib/network/connection/ethernet.pm:192, c-format
+#: ../lib/network/connection/ethernet.pm:192
+#, fuzzy, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
 "address with this connection, first disable all other devices which use it, "
@@ -2819,9 +2825,8 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
-"Isto permite ao servidor atribuir um nome a esta máquina. Se o "
-"servidor não fornecer um nome de host válido, ele será gerado "
-"automaticamente."
+"Isto permite ao servidor atribuir um nome a esta máquina. Se o servidor não "
+"fornecer um nome de host válido, ele será gerado automaticamente."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -3398,7 +3403,8 @@ msgstr "Modo de criptografia"
 msgid "Encryption key"
 msgstr "Chave criptográfica"
 
-#: ../lib/network/connection/wireless.pm:461, c-format
+#: ../lib/network/connection/wireless.pm:461
+#, c-format
 msgid "Hide password"
 msgstr "Esconder Senha"
 
@@ -3786,7 +3792,8 @@ msgstr ""
 "subject.  A string subject tem o seguinte formato:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
-#: ../lib/network/connection/wireless.pm:578, c-format
+#: ../lib/network/connection/wireless.pm:578
+#, c-format
 msgid "Extra directives"
 msgstr "Diretivas extras"
 
@@ -4418,7 +4425,8 @@ msgstr "Automático"
 msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "Sem suporte ao dispositivo %s: o driver ndiswrapper não está presente!"
 
-#: ../lib/network/ndiswrapper.pm:36, c-format
+#: ../lib/network/ndiswrapper.pm:36
+#, c-format
 msgid "Please select the correct driver"
 msgstr "Favor selecionar o driver correto"
 
