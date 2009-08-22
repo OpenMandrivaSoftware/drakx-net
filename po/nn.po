@@ -7,13 +7,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-tools\n"
 "POT-Creation-Date: 2009-08-18 09:44-0300\n"
-"PO-Revision-Date: 2009-04-06 21:21+0200\n"
+"PO-Revision-Date: 2009-08-22 11:40+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.3\n"
+"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../bin/drakconnect-old:45
@@ -844,14 +844,14 @@ msgid "Network profiles"
 msgstr "Nettverksprofilar"
 
 #: ../bin/draknetprofile:66
-#, fuzzy, c-format
+#, c-format
 msgid "Module"
-msgstr "Modus"
+msgstr "Modul"
 
 #: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#, c-format
 msgid "Enabled"
-msgstr "Bruk"
+msgstr "I bruk"
 
 #: ../bin/draknetprofile:68
 #, c-format
@@ -876,6 +876,9 @@ msgid ""
 "settings, and you'll be able to configure your system configuration as usual "
 "afterwards."
 msgstr ""
+"Skriv inn namnet på den nye nettverksprofilen (for eksempel «heime», «arbeid» "
+"eller «mobil»). Denne nye profilen vert basert på dei gjeldande "
+"innstillingane, og du kan setja opp systemet som vanleg etterpå."
 
 #: ../bin/draknetprofile:166
 #, c-format
@@ -883,9 +886,9 @@ msgid "The \"%s\" profile already exists!"
 msgstr "Profilen «%s» finst allereie."
 
 #: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#, c-format
 msgid "New profile created"
-msgstr "Ny profil ..."
+msgstr "Ny profil laga"
 
 #: ../bin/draknetprofile:172
 #, c-format
@@ -894,6 +897,8 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
+"Du brukar no nettverksprofilen «%s». Du kan setja opp systemet som vanleg, og "
+"alle nettverksinnstillingane vert frå no av lagra til denne profilen."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -903,16 +908,18 @@ msgid "Warning"
 msgstr "Åtvaring"
 
 #: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "Du kan ikkje sletta standardprofilen"
+msgstr "Er du sikker på at du vil sletta standardprofilen?"
 
 #: ../bin/draknetprofile:186
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
-msgstr "Du kan ikkje sletta gjeldande profil"
+msgstr ""
+"Du kan ikkje sletta profilen du brukar no; du må byta til ein annan profil "
+"først."
 
 #: ../bin/draknetprofile:194 ../bin/draknfs:356
 #, c-format
@@ -920,19 +927,19 @@ msgid "Advanced"
 msgstr "Avansert"
 
 #: ../bin/draknetprofile:198
-#, fuzzy, c-format
+#, c-format
 msgid "Select the netprofile modules:"
-msgstr "Vel nettverksgrensesnittet du vil fjerna:"
+msgstr "Vel netprofile-modulane:"
 
 #: ../bin/draknetprofile:211
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "Her kan du setja opp ulike nettverksprofilar."
 
 #: ../bin/draknetprofile:212
-#, fuzzy, c-format
+#, c-format
 msgid "Select a network profile:"
-msgstr "Vel leverandør:"
+msgstr "Vel nettverksprofil:"
 
 #: ../bin/draknetprofile:216
 #, c-format
@@ -942,7 +949,7 @@ msgstr "Set i bruk"
 #: ../bin/draknetprofile:217
 #, c-format
 msgid "New"
-msgstr ""
+msgstr "Ny"
 
 #: ../bin/draknetprofile:218
 #, c-format
@@ -1075,7 +1082,7 @@ msgstr ""
 "\n"
 "\n"
 "<span foreground=\"royalblue3\">IP-nettverk:</span> Du kan òg eksportera "
-"mapper til alle verter på eit IP-nettverk samtidig. Eksempel er "
+"mapper til alle vertane på eit IP-nettverk samtidig. Eksempel er "
 "«/255.255.252.0» eller «/22» lagt til grunnadressa til nettverket.\n"
 
 #: ../bin/draknfs:161
@@ -2511,7 +2518,7 @@ msgstr "Start sambandet ved oppstart"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "Enable traffic accounting"
-msgstr ""
+msgstr "Loggfør trafikk"
 
 #: ../lib/network/connection.pm:246
 #, c-format
@@ -2765,15 +2772,15 @@ msgid "Warning: IP address %s is usually reserved!"
 msgstr "Åtvaring: IP-adressa «%s» er vanlegvis reservert."
 
 #: ../lib/network/connection/ethernet.pm:192
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
-"«%s» er alt i bruk av eit samband som vert starta ved oppstart. For å bruka "
-"denne adressa med dette sambandet, må du først slå av alle andre einingar "
-"som brukar det, eller setja dei opp til å ikkje starta ved oppstart."
+"«%s» er alt i bruk av eit samband som vert starta ved oppstart (%s). For å "
+"bruka denne adressa med dette sambandet, må du først slå av alle andre "
+"einingar som brukar det, eller setja dei opp til å ikkje starta ved oppstart."
 
 #: ../lib/network/connection/ethernet.pm:219
 #, c-format
@@ -2787,6 +2794,8 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
+"Dette lèt tenaren gje bruka eit namn på denne maskina. Viss tenaren ikkje "
+"oppgjev eit gyldig vertsnamn, vert det laga automatisk."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2795,6 +2804,10 @@ msgid ""
 "Note that this hostname will be shared among all network connections.  If "
 "left blank, 'localhost.localdomain' will be used."
 msgstr ""
+"Du bør definera eit vertsnamn for dette maskina, som vert brukt til å "
+"identifisera ho. Merk at dette vertsnamnet vert delt mellom alle "
+"nettverkssambanda. Viss du lèt feltet stå tomt, vert «localhost.localdomain» "
+"brukt."
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -2908,7 +2921,7 @@ msgstr "Brasil"
 #: ../lib/network/connection/providers/cellular.pm:38
 #, c-format
 msgid "Estonia"
-msgstr ""
+msgstr "Estland"
 
 #: ../lib/network/connection/providers/cellular.pm:42
 #: ../lib/network/connection/providers/cellular.pm:46
@@ -3359,9 +3372,9 @@ msgid "Encryption key"
 msgstr "Krypteringsnøkkel"
 
 #: ../lib/network/connection/wireless.pm:461
-#, fuzzy, c-format
+#, c-format
 msgid "Hide password"
-msgstr "Passord"
+msgstr "Gøym passordet"
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
@@ -3749,9 +3762,9 @@ msgstr ""
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
 #: ../lib/network/connection/wireless.pm:578
-#, fuzzy, c-format
+#, c-format
 msgid "Extra directives"
-msgstr "EAP-ekstradirektiv"
+msgstr "Ekstradirektiv"
 
 #: ../lib/network/connection/wireless.pm:579
 #, c-format
@@ -4069,7 +4082,7 @@ msgstr "Ekkoførespurnad (ping)"
 #: ../lib/network/drakfirewall.pm:105
 #, c-format
 msgid "AVAHI and mDNS"
-msgstr ""
+msgstr "Avahi og mDNS"
 
 #: ../lib/network/drakfirewall.pm:111
 #, c-format
@@ -4160,7 +4173,7 @@ msgstr "Kva tenester vil du la andre på Internett kopla seg til?"
 #: ../lib/network/network.pm:540
 #, c-format
 msgid "Those settings will be saved for the network profile <b>%s</b>"
-msgstr ""
+msgstr "Desse innstillingane vert brukte for nettverksprofilen <b>%s</b>."
 
 #: ../lib/network/drakfirewall.pm:269
 #, c-format
@@ -4377,9 +4390,9 @@ msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "Har ingen einingar som støttar ndiswrapper-drivaren til «%s»."
 
 #: ../lib/network/ndiswrapper.pm:36
-#, fuzzy, c-format
+#, c-format
 msgid "Please select the correct driver"
-msgstr "Vel leverandør:"
+msgstr "Vel den rette drivaren"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -4388,6 +4401,8 @@ msgid ""
 "driver file (.dll or .o files). Note that only drivers up to Windows XP are "
 "supported."
 msgstr ""
+"Vel Windows-drivarskildringsfila (.inf-fila) eller den tilhøyrande driver-"
+"fila (.dll eller .o). Merk at berre drivarar opp til Windows XP er støtta."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -4453,7 +4468,7 @@ msgstr "Nettverkssenter"
 #: ../lib/network/netcenter.pm:164
 #, c-format
 msgid "You are currently using the network profile <b>%s</b>"
-msgstr ""
+msgstr "Du brukar no nettverksprofilen <b>%s</b>"
 
 #: ../lib/network/netcenter.pm:170
 #, c-format
@@ -5517,10 +5532,6 @@ msgstr "NAT-modus"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Bruk vald UDP-port"
-
-#, fuzzy
-#~ msgid "Account network traffic"
-#~ msgstr "Synkroniser nettverksgrensesnitt"
 
 #~ msgid ""
 #~ "Name of the profile to create (the new profile is created as a copy of "
