@@ -363,3 +363,5 @@ sub main {
 
     ($disabled, $ports);
 }
+
+1;
