@@ -102,10 +102,9 @@ my @all_servers =
    force_default_selection => 0,
   },
   {
-   name => N_("AVAHI and mDNS"),
-   ports => '5353/udp',
-   hide => 1,
-   pkg => 'avahi',
+   name => N_("Network services autodiscovery (zeroconf and slp)"),
+   ports => '5353/udp 427/udp',
+   pkg => 'avahi cups openslp',
   },
   {
    name => N_("BitTorrent"),
