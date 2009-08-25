@@ -13,6 +13,7 @@ use run_program;
 use network::tools;
 use vars qw(@ISA @EXPORT);
 use log;
+use Encode qw(encode decode);
 
 our $network_file = "/etc/sysconfig/network";
 my $resolv_file = "/etc/resolv.conf";
@@ -439,7 +440,7 @@ sub netprofile_delete {
 }
 
 sub netprofile_list() {
-    map { if_(m!([^/]*)/$!, $1) } glob("$::prefix/etc/netprofile/profiles/*/");
+    map { if_(m!([^/]*)/$!, decode("utf8", $1)) } glob("$::prefix/etc/netprofile/profiles/*/");
 }
 
 sub netprofile_count() {
