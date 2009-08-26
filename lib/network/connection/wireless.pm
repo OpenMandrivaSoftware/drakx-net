@@ -304,6 +304,17 @@ my @thirdparty_settings = (
     },
 
     {
+        name => 'rt3090',
+        matching => 'rt3090sta',
+        description => 'Ralink RT3090 WiFi',
+        kernel_module => 1,
+        firmware => {
+            url => 'http://www.ralinktech.com/',
+            test_file => 'rt3090.bin',
+        },
+    },
+
+    {
         name => 'rtl8187se',
         matching => 'r8180',
         description => 'Realtek RTL8180 / RTL8185 WiFi',
