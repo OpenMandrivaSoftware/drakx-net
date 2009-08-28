@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-fi\n"
 "POT-Creation-Date: 2009-08-24 11:11-0300\n"
-"PO-Revision-Date: 2009-08-18 12:48+0300\n"
+"PO-Revision-Date: 2009-08-28 12:00+0300\n"
 "Last-Translator: Jani Välimaa <wally@mandriva.org>\n"
 "Language-Team: Finnish <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr ""
 #: ../bin/drakconnect-old:45
 #, c-format
 msgid "Network configuration (%d adapters)"
-msgstr "Verkon asetukset (%d-sovittimille)"
+msgstr "Verkkoasetukset (%d sovitinta)"
 
 #: ../bin/drakconnect-old:64 ../bin/drakinvictus:105
 #, c-format
@@ -1581,17 +1581,17 @@ msgstr "Mandriva Linux"
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 "Thomas Backlund <tmb@mandrake.org>\n"
-"Jani Välimaa <jani.valimaa@gmail.com>\n"
+"Jani Välimaa <wally@mandriva.org>\n"
 
 #: ../bin/draksambashare:229
 #, c-format
 msgid "Restarting/Reloading Samba server..."
-msgstr "Ladataan tai käynnistetään Samba-palvelinta uudelleen..."
+msgstr "Ladataan tai käynnistetään Samba-palvelin uudelleen..."
 
 #: ../bin/draksambashare:230
 #, c-format
 msgid "Error Restarting/Reloading Samba server"
-msgstr "Virhe käynnistettäessä tai ladattaessa Samba-palvelinta uudelleen"
+msgstr "Virhe käynnistettäessä tai ladattaessa Samba-palvelin uudelleen"
 
 #: ../bin/draksambashare:370 ../bin/draksambashare:567
 #: ../bin/draksambashare:687
@@ -1636,7 +1636,7 @@ msgstr "Hakemistoa ei voi luoda, tarkista hakemiston polku."
 #: ../bin/draksambashare:789
 #, c-format
 msgid "Please enter a Comment for this share."
-msgstr "Syötä jaon kommentti."
+msgstr "Anna jaolle kommentti."
 
 #: ../bin/draksambashare:440
 #, c-format
@@ -1702,7 +1702,7 @@ msgstr "Tulostimen nimi:"
 #: ../bin/draksambashare:592 ../bin/draksambashare:772
 #, c-format
 msgid "Writable:"
-msgstr "Kirjoitettavissa :"
+msgstr "Kirjoitettavissa:"
 
 #: ../bin/draksambashare:593 ../bin/draksambashare:773
 #, c-format
@@ -1732,7 +1732,7 @@ msgstr "Luontioikeudet:"
 #: ../bin/draksambashare:609
 #, c-format
 msgid "Printer command"
-msgstr "Tulostinkomento"
+msgstr "Tulostuskomennot"
 
 #: ../bin/draksambashare:611
 #, c-format
@@ -4085,7 +4085,7 @@ msgstr "Ping"
 #: ../lib/network/drakfirewall.pm:105
 #, c-format
 msgid "Network services autodiscovery (zeroconf and slp)"
-msgstr ""
+msgstr "Verkkopalveluiden automaattinen etsintä (zeroconf ja slp)"
 
 #: ../lib/network/drakfirewall.pm:110
 #, c-format
@@ -4106,7 +4106,7 @@ msgstr "Porttiskannauksen tunnistus"
 #: ../lib/network/shorewall.pm:75
 #, c-format
 msgid "Firewall configuration"
-msgstr "Palomuurin asetukset"
+msgstr "Palomuuriasetukset"
 
 #: ../lib/network/drakfirewall.pm:224
 #, c-format
@@ -4119,8 +4119,8 @@ msgid ""
 msgstr ""
 "drakfirewall asetustyökalu\n"
 "\n"
-"Tämä työkalu asettaa henkilökohtaisen palomuurin tähän Mandriva\n"
-"Linux koneeseen. Jos halutaan vahva ja omistettu palomuuriratkaisu,\n"
+"Tämä työkalu asettaa henkilökohtaisen palomuurin Mandriva\n"
+"Linuxille. Jos halutaan tehokas ja erityinen palomuuriratkaisu,\n"
 "tutustu räätälöityyn Mandriva Security Firewall -jakeluun."
 
 #: ../lib/network/drakfirewall.pm:230
@@ -4151,7 +4151,7 @@ msgid ""
 msgstr ""
 "Sekalaisia portteja voidaan syöttää.\n"
 "\n"
-"Toimivia esimerkkejä ovat: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
+"Toimivia esimerkkejä: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
 "Katso lisätietoja tiedostosta /etc/services."
 
 #: ../lib/network/drakfirewall.pm:256
@@ -4163,16 +4163,16 @@ msgid ""
 "\n"
 "You can also give a range of ports (eg: 24300:24350/udp)"
 msgstr ""
-"Virheellinen portti annettu: %s.\n"
+"Syötettiin virheellinen portti: %s.\n"
 "Oikea muoto on \"portti/tcp\" tai \"portti/udp\",\n"
-"jossa portti on 1 ja 65535 väliltä.\n"
+"jossa portti on numero 1-65535.\n"
 "\n"
-"Myös porttialue voidaan antaa (esim. 24300:24350/udp)"
+"Myös porttialue voidaan antaa (esim. 24300:24350/udp)."
 
 #: ../lib/network/drakfirewall.pm:266
 #, c-format
 msgid "Which services would you like to allow the Internet to connect to?"
-msgstr "Mihin palveluihin sallitaan yhteydet Internetistä?"
+msgstr "Palvelut, joihin sallitaan yhteydet Internetistä?"
 
 #: ../lib/network/drakfirewall.pm:267 ../lib/network/netconnect.pm:127
 #: ../lib/network/network.pm:540
@@ -4183,7 +4183,7 @@ msgstr "Asetukset tallennetaan verkkoprofiiliin <b>%s</b>"
 #: ../lib/network/drakfirewall.pm:268
 #, c-format
 msgid "Everything (no firewall)"
-msgstr "Kaikkiin (ei palomuuria)"
+msgstr "Kaikki (ei palomuuria)"
 
 #: ../lib/network/drakfirewall.pm:270
 #, c-format
