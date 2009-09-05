@@ -1,20 +1,20 @@
-# translation of drakx-net.po to Euskara
+# translation of drakX-net.po to Euskara
 # EUSKARA: Mandriva Linux translation.
-# Copyright (C) 2002,2003, 2004, 2005, 2007, 2008 Free Software Foundation, Inc.
+# Copyright (C) 2002,2003, 2004, 2005, 2007, 2008, 2009 Free Software Foundation, Inc.
 #
 # Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2001-2002,2003,2004, 2005, 2007, 2008, 2009.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2004.
 msgid ""
 msgstr ""
-"Project-Id-Version: drakx-net\n"
+"Project-Id-Version: drakX-net\n"
 "POT-Creation-Date: 2009-08-24 11:11-0300\n"
-"PO-Revision-Date: 2009-04-14 23:35+0200\n"
+"PO-Revision-Date: 2009-09-05 21:35+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
-"Language-Team: Basque <kde-i18n-doc@kde.org>\n"
+"Language-Team: Euskara <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.3\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ../bin/drakconnect-old:45
@@ -292,6 +292,16 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"Sare moldagailu bakarra dago zure sisteman LAN loturarako "
+"konfiguratuta:\n"
+"\n"
+"%s\n"
+"\n"
+"Zure Bertako Eremuko Sarea (LAN) moldagailu horrekin ezartzera doa.\n"
+"\n"
+"Beste edozein moldagailu Bertako Eremuko Sarera lotuta badaukazu,\n"
+"ezgaitu bere suhesi babesa drakfirewall erabiliz interneteko\n"
+"lotura partekatzea konfiguratu aurretik."
 
 #: ../bin/drakgw:156
 #, c-format
@@ -458,6 +468,12 @@ msgid ""
 "the Mandriva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
+"Zure sisteman ez da aurkitu LAN-erako konfiguratuta dagoen ethernet sare "
+"moldagailurik.\n"
+"\n"
+"Mesedez exekutatu hardwarea konfiguratzeko tresna hura konfiguratzeko, "
+"eta ziurta ezazu Mandrivaren suhesia ez dagoela gaituta zure LAN sarera "
+"lotutako sare moldagailuan."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -834,19 +850,19 @@ msgid "Network profiles"
 msgstr "Sare profilak"
 
 #: ../bin/draknetprofile:66
-#, fuzzy, c-format
+#, c-format
 msgid "Module"
-msgstr "Modema"
+msgstr "Modulua"
 
 #: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#, c-format
 msgid "Enabled"
-msgstr "Gaitu"
+msgstr "Gaituta"
 
 #: ../bin/draknetprofile:68
-#, fuzzy, c-format
+#, c-format
 msgid "Description"
-msgstr "Zifraketa"
+msgstr "Deskribapena"
 
 #: ../bin/draknetprofile:84
 #, c-format
@@ -866,6 +882,10 @@ msgid ""
 "settings, and you'll be able to configure your system configuration as usual "
 "afterwards."
 msgstr ""
+"Mesedez, zehaztu sortu behar den sare profil berriaren izena (adib lana, "
+"etxea, ibiltaria, ...). Profil berri hau uneko ezarpenak oinarri hartuta "
+"sortuko da, eta ondoren zure sistemaren konfiguraketa ohiko moduan "
+"konfiguratu ahal izango duzu."
 
 #: ../bin/draknetprofile:166
 #, c-format
@@ -873,9 +893,9 @@ msgid "The \"%s\" profile already exists!"
 msgstr "\"%s\" profila badago lehendik!"
 
 #: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#, c-format
 msgid "New profile created"
-msgstr "Profil berria..."
+msgstr "Profil berria sortuta"
 
 #: ../bin/draknetprofile:172
 #, c-format
@@ -884,6 +904,9 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
+"Orain %s sare profila erabiltzen ari zara. Zure sistema ohiko moduan "
+"konfiguratu dezakezu, eta hemendik aurrerako zure sare ezarpen guztiak "
+"profil honetan gordeko dira."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -893,16 +916,18 @@ msgid "Warning"
 msgstr "Kontuz"
 
 #: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "Ezin duzu profil lehenetsia ezabatu"
+msgstr "Ziur zaude profil lehenetsia ezabatu nahi duzula?"
 
 #: ../bin/draknetprofile:186
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
-msgstr "Ezin duzu uneko profila ezabatu"
+msgstr ""
+"Ezin duzu uneko profila ezabatu. Aurrena beste profil batera aldatu beharko "
+"duzu."
 
 #: ../bin/draknetprofile:194 ../bin/draknfs:356
 #, c-format
@@ -910,19 +935,19 @@ msgid "Advanced"
 msgstr "Aurreratua"
 
 #: ../bin/draknetprofile:198
-#, fuzzy, c-format
+#, c-format
 msgid "Select the netprofile modules:"
-msgstr "Hautatu konfiguratu behar den modema:"
+msgstr "Hautatu netprofile moduluak:"
 
 #: ../bin/draknetprofile:211
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "Tresna honek sare profilak kontrolatzen utziko dizu."
 
 #: ../bin/draknetprofile:212
-#, fuzzy, c-format
+#, c-format
 msgid "Select a network profile:"
-msgstr "Hautatu zure hornitzailea:"
+msgstr "Hautatu sare profil bat:"
 
 #: ../bin/draknetprofile:216
 #, c-format
@@ -932,7 +957,7 @@ msgstr "Aktibatu"
 #: ../bin/draknetprofile:217
 #, c-format
 msgid "New"
-msgstr ""
+msgstr "Berria"
 
 #: ../bin/draknetprofile:218
 #, c-format
@@ -1628,8 +1653,7 @@ msgstr "Erantsi Inprimagailu Berezia partekatzea"
 
 #: ../bin/draksambashare:448
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
 msgstr ""
 "Morroi honen helburua Samba inprimagailu berezi partekatze bat era errazean "
 "sortzea da."
@@ -1739,8 +1763,7 @@ msgstr "DrakSamba sarrera"
 #: ../bin/draksambashare:695
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
-msgstr ""
-"Mesedez erantsi edo aukeratu Samba partekatze bat hura aldatu ahal izateko."
+msgstr "Mesedez erantsi edo aukeratu Samba partekatze bat hura aldatu ahal izateko."
 
 #: ../bin/draksambashare:718
 #, c-format
@@ -1774,8 +1797,7 @@ msgstr "Publikoa:"
 
 #: ../bin/draksambashare:795
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 "Sortu maskara, sortu modua eta direktorio maskara zenbakizkoak izan behar "
 "dira. adib: 0755."
@@ -1850,8 +1872,7 @@ msgstr ""
 
 #: ../bin/draksambashare:1072
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
 msgstr ""
 "Zerbitzari bakarreko instalazioek smbpasswd edo tdbsam pasahitz sistemak "
 "erabili ditzakete"
@@ -1948,8 +1969,7 @@ msgstr ""
 #: ../bin/draksambashare:1121
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
-"Partekatze maila: bezeroa partekatutako baliabide bakoitzera egiaztatzen da"
+msgstr "Partekatze maila: bezeroa partekatutako baliabide bakoitzera egiaztatzen da"
 
 #: ../bin/draksambashare:1121
 #, c-format
@@ -2512,7 +2532,7 @@ msgstr "Lotura abioan abiarazi"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "Enable traffic accounting"
-msgstr ""
+msgstr "Gaitu trafikoaren kontabilitatea"
 
 #: ../lib/network/connection.pm:246
 #, c-format
@@ -2767,15 +2787,15 @@ msgid "Warning: IP address %s is usually reserved!"
 msgstr "Abisua: %s IP helbidea erreserbatua izaten da!"
 
 #: ../lib/network/connection/ethernet.pm:192
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
-"%s dagoeneko erabilita dago abioan hasten den loturarekin. Helbide hau "
-"lotura honekin erabiltzeko, lehenengo ezgaitu bera erabiltzen duten "
-"gainontzeko gailu guztiak, edo abioan hasi ez daitezen konfiguratu itzazu."
+"%s erabilita dago abioan hasten den lotura batekin (%s). Helbide hau "
+"lotura honekin erabiltzeko, ezgaitu lehenengo bera erabiltzen duten "
+"gainontzeko gailu guztiak, edo konfiguratu itzazu abioan ez hasteko"
 
 #: ../lib/network/connection/ethernet.pm:219
 #, c-format
@@ -2789,6 +2809,9 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
+"Honek zerbitzariari makinarentzako izen bat ematea ahalbidetuko dio. "
+"Zerbitzariak ostalari izen balioduna hornitzen ez badu, automatikoki "
+"sortuko da."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2797,6 +2820,10 @@ msgid ""
 "Note that this hostname will be shared among all network connections.  If "
 "left blank, 'localhost.localdomain' will be used."
 msgstr ""
+"Makina honentzako ostalari izen bat zehaztu behar zenuke, PC hau "
+"identifikatzeko. Ohartu ostalari izen hau sare lotura guztien artean "
+"partekatuko dela. Hutsik utzi ezkero, 'localhost.localdomain' erabiliko "
+"da."
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -2910,7 +2937,7 @@ msgstr "Brasil"
 #: ../lib/network/connection/providers/cellular.pm:38
 #, c-format
 msgid "Estonia"
-msgstr ""
+msgstr "Estonia"
 
 #: ../lib/network/connection/providers/cellular.pm:42
 #: ../lib/network/connection/providers/cellular.pm:46
@@ -3362,15 +3389,14 @@ msgid "Encryption key"
 msgstr "Enkriptatze-gakoa"
 
 #: ../lib/network/connection/wireless.pm:461
-#, fuzzy, c-format
+#, c-format
 msgid "Hide password"
-msgstr "Pasahitza"
+msgstr "Pasahitza ezkutatu"
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
-msgstr ""
-"Gako hau ASCII testu lerro bezala erabili dadin behartu (adib Livebox-ekin)"
+msgstr "Gako hau ASCII testu lerro bezala erabili dadin behartu (adib Livebox-ekin)"
 
 #: ../lib/network/connection/wireless.pm:470
 #, c-format
@@ -3752,9 +3778,9 @@ msgstr ""
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
 #: ../lib/network/connection/wireless.pm:578
-#, fuzzy, c-format
+#, c-format
 msgid "Extra directives"
-msgstr "EAP zuzentarau gehigarriak"
+msgstr "Zuzentarau gehigarriak"
 
 #: ../lib/network/connection/wireless.pm:579
 #, c-format
@@ -4048,9 +4074,9 @@ msgid "Bacula backup"
 msgstr "Bakula babes-kopia"
 
 #: ../lib/network/drakfirewall.pm:76
-#, fuzzy, c-format
+#, c-format
 msgid "Syslog network logging"
-msgstr "Sareko Hotplugging-a"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:82
 #, c-format
@@ -4075,7 +4101,7 @@ msgstr "Oihartzun-eskaera (ping):"
 #: ../lib/network/drakfirewall.pm:105
 #, c-format
 msgid "Network services autodiscovery (zeroconf and slp)"
-msgstr ""
+msgstr "Sare zerbitzuen aurkitze automatikoa (zeroconf eta slp)"
 
 #: ../lib/network/drakfirewall.pm:110
 #, c-format
@@ -4167,7 +4193,7 @@ msgstr "Zein zerbitzutara konektatu nahi duzu Internet bidez?"
 #: ../lib/network/network.pm:540
 #, c-format
 msgid "Those settings will be saved for the network profile <b>%s</b>"
-msgstr ""
+msgstr "Ezarpen horiek  <b>%s</b> sare profilerako erabiliko dira"
 
 #: ../lib/network/drakfirewall.pm:268
 #, c-format
@@ -4248,8 +4274,7 @@ msgstr "Ezin da %s lotura mota hasieratu!"
 #: ../lib/network/drakvpn.pm:60
 #, c-format
 msgid "Please select an existing VPN connection or enter a new name."
-msgstr ""
-"Mesedez hautatu sortuta dagoen VPN lotura bat edo sartu izen berri bat."
+msgstr "Mesedez hautatu sortuta dagoen VPN lotura bat edo sartu izen berri bat."
 
 #: ../lib/network/drakvpn.pm:64
 #, c-format
@@ -4385,9 +4410,9 @@ msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "Ez dago %s ndiswrapper gidaria onartzen duen gailurik instalatuta!"
 
 #: ../lib/network/ndiswrapper.pm:36
-#, fuzzy, c-format
+#, c-format
 msgid "Please select the correct driver"
-msgstr "Mesedez aukeratu zure hornitzailea:"
+msgstr "Mesedez aukeratu gidari zuzena"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -4396,6 +4421,9 @@ msgid ""
 "driver file (.dll or .o files). Note that only drivers up to Windows XP are "
 "supported."
 msgstr ""
+"Hautatu Windows gidariaren deskribapen fitxategia (.inf), edo dagokion "
+"gidari fitxategia (.dll edo .o fitxategiak). Windows XP arteko gidariak "
+"bakarrik onartzen dira."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -4461,7 +4489,7 @@ msgstr "Sare gunea"
 #: ../lib/network/netcenter.pm:164
 #, c-format
 msgid "You are currently using the network profile <b>%s</b>"
-msgstr ""
+msgstr "Une honetan <b>%s</b> sare profila erabiltzen ari zara"
 
 #: ../lib/network/netcenter.pm:170
 #, c-format
@@ -4873,6 +4901,8 @@ msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
 msgstr ""
+"Konfiguraketa berrabiarazten saiatu zaitezke loturaren "
+"ezarpenak egiaztatzeko."
 
 #: ../lib/network/netconnect.pm:775
 #, c-format
@@ -4889,14 +4919,13 @@ msgstr ""
 "probatu behar zenuke, eta zure Internet modem edo routerra egiaztatu."
 
 #: ../lib/network/netconnect.pm:776
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
 msgstr ""
-"Arazoak izan dira konfigurazioan.\n"
-"Probatu konexioak net_monitor edo mcc bitartez. Konexioa ez badabil,"
-"beharbada konfigurazioa berriro abiarazi beharko duzu."
+"Zure loturak huts egiten badu, konfiguraketa berrabiarazten saiatu "
+"zaitezke."
 
 #: ../lib/network/netconnect.pm:778
 #, c-format
@@ -5139,9 +5168,9 @@ msgstr ""
 "berrabiatu behar duzula aldaketak gauzatu daitezen."
 
 #: ../lib/network/network.pm:517
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless regulatory domain"
-msgstr "Hari gabeko sareak"
+msgstr "Hari gabeko domeinu arautzailea"
 
 #: ../lib/network/network.pm:518
 #, c-format
@@ -5243,7 +5272,7 @@ msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "URLaren hasieran 'ftp:' edo 'http:' jarri behar du"
 
 #: ../lib/network/shorewall.pm:77
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
@@ -5258,7 +5287,10 @@ msgstr ""
 "Mesedez aukeratu suhesiak babestuko dituen interfazeak.\n"
 "\n"
 "Internetera zuzenean lotutako interfaze guztiak aukeratu beharko\n"
-"lirateke, bertako sarera lotutakoak berriz ez lirateke hautatu beharko.\n"
+"lirateke, bertako sarera lotutakoak berriz hautatu gabe utzi daitezke.\n"
+"\n"
+"Mandrivaren Internet Lotura Partekatu erabili nahi baduzu,\n"
+"zure bertako sarera lotuko diren interfazeak hautatu gabe utzi.\n"
 "\n"
 "Zein interfaze babestu beharko lirateke?\n"
 
@@ -5299,10 +5331,8 @@ msgstr "Pakete batzuk (%s) behar dira baino ezin dira eskuratu."
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
 #, c-format
-msgid ""
-"These packages can be found in %s, or in the official %s package repository."
-msgstr ""
-"Pakete hauek %s-n aurkitu daitezke, edo %s pakete gordetegi ofizialean."
+msgid "These packages can be found in %s, or in the official %s package repository."
+msgstr "Pakete hauek %s-n aurkitu daitezke, edo %s pakete gordetegi ofizialean."
 
 #: ../lib/network/thirdparty.pm:154
 #, c-format
@@ -5523,55 +5553,3 @@ msgstr "NAT Modua"
 msgid "Use specific UDP port"
 msgstr "Erabili UDP ataka zehatza"
 
-#, fuzzy
-#~ msgid "Account network traffic"
-#~ msgstr "Sare interfaze sinkronizaketa"
-
-#~ msgid ""
-#~ "Name of the profile to create (the new profile is created as a copy of "
-#~ "the current one):"
-#~ msgstr ""
-#~ "Sortu beharreko profilaren izena (profil berria unekoaren kopia gisa "
-#~ "sortuko da) :"
-
-#~ msgid ""
-#~ "This tool allows to activate an existing network profile, and to manage "
-#~ "(clone, delete) profiles."
-#~ msgstr ""
-#~ "Tresna honek sortuta dagoen sare profil bat aktibatzea ahalbidetzen dizu, "
-#~ "eta profilak kudeatzea (klonatu, ezabatu)."
-
-#~ msgid "To modify a profile, you have to activate it first."
-#~ msgstr "Profil bat aldatzeko, aurrena aktibatu egin behar duzu."
-
-#~ msgid "Clone"
-#~ msgstr "Klonatu"
-
-#~ msgid "Please select the Windows driver (.inf file)"
-#~ msgstr "Mesedez aukeratu Windows gidaria (.inf fitxategia)"
-
-#~ msgid ""
-#~ "There is only one configured network adapter on your system:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "I am about to setup your Local Area Network with that adapter."
-#~ msgstr ""
-#~ "Sare-moldagailu konfiguratu bakarra dago zure sisteman:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Zure sare lokala moldagailu horrekin konfiguratzera noa."
-
-#~ msgid ""
-#~ "No ethernet network adapter has been detected on your system. Please run "
-#~ "the hardware configuration tool."
-#~ msgstr ""
-#~ "Zure sisteman ez da ethernet sare-moldagailurik detektatu. Exekutatu "
-#~ "hardwarea konfiguratzeko tresna."
-
-#~ msgid "Connection type: "
-#~ msgstr "Konexio-mota: "
-
-#~ msgid "%s already in use\n"
-#~ msgstr "%s lehendik ari da erabiltzen\n"
