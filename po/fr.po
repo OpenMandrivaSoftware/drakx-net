@@ -76,7 +76,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "POT-Creation-Date: 2009-08-24 11:11-0300\n"
-"PO-Revision-Date: 2009-08-17 17:20+0200\n"
+"PO-Revision-Date: 2009-09-06 11:05+0200\n"
 "Last-Translator: Christophe Berthelé <berthy@mandriva.org>\n"
 "Language-Team: French <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -951,6 +951,10 @@ msgid ""
 "settings, and you'll be able to configure your system configuration as usual "
 "afterwards."
 msgstr ""
+"Veuillez préciser le nom du nouveau profil réseau à créer (ex. travail, "
+"maison, itinérant,...). Ce nouveau profil s'appuiera sur les paramètres "
+"actuels et vous pourrez ensuite configurer votre système comme vous le "
+"faites habituellement."
 
 #: ../bin/draknetprofile:166
 #, c-format
@@ -969,6 +973,9 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
+"Vous utilisez désormais le profil réseau %s. Vous pouvez configurer votre "
+"système comme d'habitude et tous vos paramètres réseau modifiés seront "
+"conservés dans ce profil."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -978,16 +985,18 @@ msgid "Warning"
 msgstr "Attention"
 
 #: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "Vous ne pouvez pas effacer le profil par défaut"
+msgstr "Êtes vous sûr de vouloir effacer le profil par défaut ?"
 
 #: ../bin/draknetprofile:186
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
-msgstr "Vous ne pouvez pas effacer le profil courant"
+msgstr ""
+"Vous ne pouvez pas effacer le profil courant. Veuillez basculer sur un "
+"profil différent auparavant."
 
 #: ../bin/draknetprofile:194 ../bin/draknfs:356
 #, c-format
@@ -995,14 +1004,14 @@ msgid "Advanced"
 msgstr "Avancé"
 
 #: ../bin/draknetprofile:198
-#, fuzzy, c-format
+#, c-format
 msgid "Select the netprofile modules:"
-msgstr "Choisissez le modem à configurer :"
+msgstr "Veuillez choisir les modules de profil réseau : "
 
 #: ../bin/draknetprofile:211
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "Cet assistant vous permet de gérer vos profils réseau."
 
 #: ../bin/draknetprofile:212
 #, c-format
@@ -2616,7 +2625,7 @@ msgstr "Lancer la connexion au démarrage"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "Enable traffic accounting"
-msgstr ""
+msgstr "Activer les statistiques réseau"
 
 #: ../lib/network/connection.pm:246
 #, c-format
@@ -2873,15 +2882,16 @@ msgid "Warning: IP address %s is usually reserved!"
 msgstr "Attention : l'adresse IP %s est déjà réservée !"
 
 #: ../lib/network/connection/ethernet.pm:192
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
-"%s est déjà utilisé par une connexion lancée au démarrage. Pour utiliser "
-"cette adresse avec cette connexion, vous devez d'abord désactiver tous les "
-"périphériques qui l'utilisent ou bien ne pas les activer au démarrage"
+"%s est déjà utilisé par une connexion lancée au démarrage (%s). Pour "
+"utiliser cette adresse avec cette connexion, vous devez d'abord désactiver "
+"tous les périphériques qui l'utilisent ou bien ne pas les activer au "
+"démarrage"
 
 #: ../lib/network/connection/ethernet.pm:219
 #, c-format
@@ -2896,6 +2906,8 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
+"Cela va permettre au serveur d'attribuer un nom à cette machine. Si le "
+"serveur n'attribue pas de nom d'hôte valide, il sera généré automatiquement."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2904,6 +2916,10 @@ msgid ""
 "Note that this hostname will be shared among all network connections.  If "
 "left blank, 'localhost.localdomain' will be used."
 msgstr ""
+"Vous devriez donner un nom d'hôte à cette machine qui permettra de "
+"l'identifier. Veuillez noter que ce nom d'hôte sera utilisé par toutes les "
+"connexions réseau. Si ce champ est laissé vide, « localhost.localdomain » "
+"sera utilisé."
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -3866,9 +3882,9 @@ msgstr ""
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
 #: ../lib/network/connection/wireless.pm:578
-#, fuzzy, c-format
+#, c-format
 msgid "Extra directives"
-msgstr "Directives EAP supplémentaires"
+msgstr "Directives supplémentaires"
 
 #: ../lib/network/connection/wireless.pm:579
 #, c-format
@@ -4189,7 +4205,7 @@ msgstr "Requête d'écho (ping)"
 #: ../lib/network/drakfirewall.pm:105
 #, c-format
 msgid "Network services autodiscovery (zeroconf and slp)"
-msgstr ""
+msgstr "Découverte automatique des services réseau (zeroconf et slp)"
 
 #: ../lib/network/drakfirewall.pm:110
 #, c-format
@@ -4283,7 +4299,7 @@ msgstr "Quels services souhaitez-vous laisser accessibles depuis internet ?"
 #: ../lib/network/network.pm:540
 #, c-format
 msgid "Those settings will be saved for the network profile <b>%s</b>"
-msgstr ""
+msgstr "Ces paramètres seront conservés dans le profil réseau <b>%s</b>"
 
 #: ../lib/network/drakfirewall.pm:268
 #, c-format
@@ -4515,6 +4531,9 @@ msgid ""
 "driver file (.dll or .o files). Note that only drivers up to Windows XP are "
 "supported."
 msgstr ""
+"Veuillez sélectionner le fichier de description du pilote Windows (.inf) ou "
+"le fichier pilote correspondant (fichier .dll ou .o). Veuillez noter que "
+"seuls les pilotes Windows XP ou antérieurs sont supportés."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -4580,7 +4599,7 @@ msgstr "Centre réseau"
 #: ../lib/network/netcenter.pm:164
 #, c-format
 msgid "You are currently using the network profile <b>%s</b>"
-msgstr ""
+msgstr "Vous utilisez actuellement le profil réseau <b>%s</b>"
 
 #: ../lib/network/netcenter.pm:170
 #, c-format
@@ -5656,33 +5675,3 @@ msgstr "Mode NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Utiliser un port UDP spécifique"
-
-#~ msgid "AVAHI and mDNS"
-#~ msgstr "AVAHI et mDNS"
-
-#, fuzzy
-#~ msgid "Account network traffic"
-#~ msgstr "Synchronisation de l'interface réseau"
-
-#~ msgid ""
-#~ "Name of the profile to create (the new profile is created as a copy of "
-#~ "the current one):"
-#~ msgstr ""
-#~ "Nom du profil à créer (le nouveau profil sera créé en copiant le profil "
-#~ "courant) :"
-
-#~ msgid ""
-#~ "This tool allows to activate an existing network profile, and to manage "
-#~ "(clone, delete) profiles."
-#~ msgstr ""
-#~ "Cet outil permet d'activer un profil réseau existant et de gérer (ajout, "
-#~ "suppression) de profils."
-
-#~ msgid "To modify a profile, you have to activate it first."
-#~ msgstr "Avant de modifier un profil, vous devez d'abord l'activer."
-
-#~ msgid "Clone"
-#~ msgstr "Dupliquer"
-
-#~ msgid "Please select the Windows driver (.inf file)"
-#~ msgstr "Selectionnez le pilote Windows (fichier .inf) s'il vous plaît"
