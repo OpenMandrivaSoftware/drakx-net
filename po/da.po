@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "POT-Creation-Date: 2009-08-24 11:11-0300\n"
-"PO-Revision-Date: 2009-04-04 03:26+0200\n"
+"PO-Revision-Date: 2009-09-08 09:25+0200\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
@@ -851,19 +851,19 @@ msgid "Network profiles"
 msgstr "Netværksprofiler"
 
 #: ../bin/draknetprofile:66
-#, fuzzy, c-format
+#, c-format
 msgid "Module"
-msgstr "Modem"
+msgstr "Modul"
 
 #: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#, c-format
 msgid "Enabled"
-msgstr "Aktivér"
+msgstr "Aktiveret"
 
 #: ../bin/draknetprofile:68
-#, fuzzy, c-format
+#, c-format
 msgid "Description"
-msgstr "Krypteringsnøgle"
+msgstr "Beskrivelse"
 
 #: ../bin/draknetprofile:84
 #, c-format
@@ -882,7 +882,7 @@ msgid ""
 "work, home, roaming, ..). This new profile will be created based on current "
 "settings, and you'll be able to configure your system configuration as usual "
 "afterwards."
-msgstr ""
+msgstr "Angiv navnet på den nye netværksprofil der skal oprettes (fx  arbejde, hjemme, på farten...). Denne nye profil vil blive oprettet ud fra de nuværende indstillinger, og du vil bagefter kunne konfigurere din systemkonfiguration som sædvanligt. "
 
 #: ../bin/draknetprofile:166
 #, c-format
@@ -890,9 +890,9 @@ msgid "The \"%s\" profile already exists!"
 msgstr "\"%s\" profilen eksisterer allerede!"
 
 #: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#, c-format
 msgid "New profile created"
-msgstr "Ny profil..."
+msgstr "Ny profil oprettet"
 
 #: ../bin/draknetprofile:172
 #, c-format
@@ -901,6 +901,8 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
+"Du bruger nu netværksprofilen %s. Du kan konfigurere dit system som "
+"sædvanligt, og alle dine netværksindstillinger vil fra nu af blive gemt i denne profil."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -910,16 +912,16 @@ msgid "Warning"
 msgstr "Advarsel"
 
 #: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "Du kan ikke slette standard-profilen"
+msgstr "Er du sikker på at du vil slette standard-profilen?"
 
 #: ../bin/draknetprofile:186
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
-msgstr "Du kan ikke slette den kørende profil"
+msgstr "Du kan ikke slette den kørende profil. Skift til en anden profil først."
 
 #: ../bin/draknetprofile:194 ../bin/draknfs:356
 #, c-format
@@ -927,19 +929,19 @@ msgid "Advanced"
 msgstr "Avanceret"
 
 #: ../bin/draknetprofile:198
-#, fuzzy, c-format
+#, c-format
 msgid "Select the netprofile modules:"
-msgstr "Vælg det modem, der skal konfigureres:"
+msgstr "Vælg moduler til netprofilen:"
 
 #: ../bin/draknetprofile:211
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "Dette værktøj giver dig mulighed for at behandle netværksprofiler."
 
 #: ../bin/draknetprofile:212
-#, fuzzy, c-format
+#, c-format
 msgid "Select a network profile:"
-msgstr "Vælg din udbyder"
+msgstr "Vælg en netværksprofil:"
 
 #: ../bin/draknetprofile:216
 #, c-format
@@ -949,7 +951,7 @@ msgstr "Aktivér"
 #: ../bin/draknetprofile:217
 #, c-format
 msgid "New"
-msgstr ""
+msgstr "Ny"
 
 #: ../bin/draknetprofile:218
 #, c-format
@@ -1645,8 +1647,7 @@ msgstr "Tilføj speciel delt Samba-printerressurce"
 
 #: ../bin/draksambashare:448
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
 msgstr ""
 "Målet for denne hjælper er at nemt oprette en speciel delt Samba-"
 "printerressurce."
@@ -1674,8 +1675,7 @@ msgstr "Hjælperen tilføjede Samba printer-delingen"
 #: ../bin/draksambashare:552
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
-msgstr ""
-"Tilføj eller vælg en delt Samba-skriverressurce for at kunne ændre den."
+msgstr "Tilføj eller vælg en delt Samba-skriverressurce for at kunne ændre den."
 
 #: ../bin/draksambashare:570
 #, c-format
@@ -1789,8 +1789,7 @@ msgstr "Offentlig:"
 
 #: ../bin/draksambashare:795
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 "Opretelses-maske, oprettelsesrettigheder og katalogmaske bør være nummerisk. "
 "fx: 0755."
@@ -1865,8 +1864,7 @@ msgstr ""
 
 #: ../bin/draksambashare:1072
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
 msgstr ""
 "Enkelt-server installationer kan bruge smbpasswd eller tdbsam adgangskode-"
 "motorer"
@@ -2028,8 +2026,7 @@ msgstr "Log-niveau: sæt log (udførlighed) niveau (0 <= logniveau <= 10)"
 #: ../bin/draksambashare:1153
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
-"Største logstørrelse: Sæt en grænse for størrelsen på logfilerne (i kB)."
+msgstr "Største logstørrelse: Sæt en grænse for størrelsen på logfilerne (i kB)."
 
 #: ../bin/draksambashare:1160 ../bin/draksambashare:1178
 #, c-format
@@ -2049,8 +2046,7 @@ msgstr "Log-niveau:"
 #: ../bin/draksambashare:1167
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
-"Hjælpeprogrammet indsamlede følgende parametre for opsætningen af Samba."
+msgstr "Hjælpeprogrammet indsamlede følgende parametre for opsætningen af Samba."
 
 #: ../bin/draksambashare:1167
 #, c-format
@@ -2524,7 +2520,7 @@ msgstr "Start opkoblingen ved opstart"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "Enable traffic accounting"
-msgstr ""
+msgstr "Aktivér trafikkontering"
 
 #: ../lib/network/connection.pm:246
 #, c-format
@@ -2539,8 +2535,7 @@ msgstr "MTU"
 #: ../lib/network/connection.pm:248
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr ""
-"Maximal størrelse på netværkspakke (MTU). Hvid i tvivl, så lad den være blank"
+msgstr "Maximal størrelse på netværkspakke (MTU). Hvid i tvivl, så lad den være blank"
 
 #: ../lib/network/connection.pm:324
 #, c-format
@@ -2676,8 +2671,7 @@ msgstr "Virtuelt grænsesnit"
 #: ../lib/network/connection/ethernet.pm:60
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
-msgstr ""
-"Kunne ikke finde netværksgrænseflade for den valgte enhed (bruger %s-driver)"
+msgstr "Kunne ikke finde netværksgrænseflade for den valgte enhed (bruger %s-driver)"
 
 #: ../lib/network/connection/ethernet.pm:70 ../lib/network/vpn/openvpn.pm:207
 #, c-format
@@ -2733,8 +2727,7 @@ msgstr "domæne der søges i"
 #: ../lib/network/connection/ethernet.pm:154
 #, c-format
 msgid "By default search domain will be set from the fully-qualified host name"
-msgstr ""
-"Som standard vil søge-domænet blive sat ud fra det fuldt angivne værtsnavn"
+msgstr "Som standard vil søge-domænet blive sat ud fra det fuldt angivne værtsnavn"
 
 #: ../lib/network/connection/ethernet.pm:157
 #, c-format
@@ -2777,13 +2770,13 @@ msgid "Warning: IP address %s is usually reserved!"
 msgstr "Advarsel: IP-adresse %s er normalt reserveret!"
 
 #: ../lib/network/connection/ethernet.pm:192
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
-"%s er allerede brugt af en forbindelse der startes ved opstart. For at bruge "
+"%s er allerede brugt af en forbindelse der startes ved opstart (%s). For at bruge "
 "denne adresse med denne forbindelse skal alle andre enheder, der bruger den, "
 "først deaktiveres; eller konfigurér dem til ikke at starte ved opstart"
 
@@ -2798,7 +2791,7 @@ msgid ""
 "This will allow the server to attribute a name for this machine. If the "
 "server does not provides a valid host name, it will be generated "
 "automatically."
-msgstr ""
+msgstr "Dette giver mulighed for at serveren tilknytter et navn til denne maskine. Hvis serveren ikke angiver et gyldigt værtsnavn vil det blive genereret automatisk."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2806,7 +2799,7 @@ msgid ""
 "You should define a hostname for this machine, which will identify this PC. "
 "Note that this hostname will be shared among all network connections.  If "
 "left blank, 'localhost.localdomain' will be used."
-msgstr ""
+msgstr "Du bør angive et værtsnavn for denne maskine, som vil identificere denne PC. Bemærk at dette værtsnavn vil blive delt med alle netværksforbindelser. Hvis det ikke sættes til noget, vil 'localhost.localdomain' blive brugt."
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -2920,7 +2913,7 @@ msgstr "Brasilien"
 #: ../lib/network/connection/providers/cellular.pm:38
 #, c-format
 msgid "Estonia"
-msgstr ""
+msgstr "Estland"
 
 #: ../lib/network/connection/providers/cellular.pm:42
 #: ../lib/network/connection/providers/cellular.pm:46
@@ -3372,9 +3365,9 @@ msgid "Encryption key"
 msgstr "Krypteringsnøgle"
 
 #: ../lib/network/connection/wireless.pm:461
-#, fuzzy, c-format
+#, c-format
 msgid "Hide password"
-msgstr "Adgangskode"
+msgstr "Skjul adgangskode"
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
@@ -3763,9 +3756,9 @@ msgstr ""
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
 #: ../lib/network/connection/wireless.pm:578
-#, fuzzy, c-format
+#, c-format
 msgid "Extra directives"
-msgstr "EAP ekstra direktiver"
+msgstr "Ekstra direktiver"
 
 #: ../lib/network/connection/wireless.pm:579
 #, c-format
@@ -4085,7 +4078,7 @@ msgstr "Echo-forespørgsel (ping)"
 #: ../lib/network/drakfirewall.pm:105
 #, c-format
 msgid "Network services autodiscovery (zeroconf and slp)"
-msgstr ""
+msgstr "Automatisk opdagelse af netværkstjenester (zeroconf og slp)"
 
 #: ../lib/network/drakfirewall.pm:110
 #, c-format
@@ -4177,7 +4170,7 @@ msgstr "Hvilke tjenester vil du tillade at Internettet kan koble op med?"
 #: ../lib/network/network.pm:540
 #, c-format
 msgid "Those settings will be saved for the network profile <b>%s</b>"
-msgstr ""
+msgstr "Disse indstillinger vil blive gemt for netværksprofilen <b>%s</b>"
 
 #: ../lib/network/drakfirewall.pm:268
 #, c-format
@@ -4258,8 +4251,7 @@ msgstr "Kunne ikke initiere %s-opkoblingstype!"
 #: ../lib/network/drakvpn.pm:60
 #, c-format
 msgid "Please select an existing VPN connection or enter a new name."
-msgstr ""
-"Venligst vælg en eksisterende VPN-opkobling eller indtast et nyt navn. "
+msgstr "Venligst vælg en eksisterende VPN-opkobling eller indtast et nyt navn. "
 
 #: ../lib/network/drakvpn.pm:64
 #, c-format
@@ -4362,8 +4354,7 @@ msgstr "Et angreb på %s er blevet forsøgt af %s"
 msgid ""
 "The \"%s\" application is trying to make a service (%s) available to the "
 "network."
-msgstr ""
-"Programmet '%s' prøver at bruge en tjeneste (%s) tilgængelig for netværket."
+msgstr "Programmet '%s' prøver at bruge en tjeneste (%s) tilgængelig for netværket."
 
 #. -PO: this should be kept lowercase since the expression is meant to be used between brackets
 #: ../lib/network/ifw.pm:155
@@ -4395,9 +4386,9 @@ msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "Ingen enhed der understøtter %s ndiswrapper-driveren er til stede!"
 
 #: ../lib/network/ndiswrapper.pm:36
-#, fuzzy, c-format
+#, c-format
 msgid "Please select the correct driver"
-msgstr "Vælg din leverandør:"
+msgstr "Vælg den korrekte driver"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -4406,6 +4397,8 @@ msgid ""
 "driver file (.dll or .o files). Note that only drivers up to Windows XP are "
 "supported."
 msgstr ""
+"Vælg Windows-driver beskrivelsesfilen (.inf), eller tilsvarende  "
+"driverfil (.dll eller .o filer). Bemærk at kun drivere op til Windows XP understøttes."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -4471,7 +4464,7 @@ msgstr "Netværkscenter"
 #: ../lib/network/netcenter.pm:164
 #, c-format
 msgid "You are currently using the network profile <b>%s</b>"
-msgstr ""
+msgstr "Du bruger i øjeblikket netværksprofilen <b>%s</b>"
 
 #: ../lib/network/netcenter.pm:170
 #, c-format
@@ -4904,8 +4897,7 @@ msgstr ""
 msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
-msgstr ""
-"Hvis din forbindelse ikke virker, kan du prøve at genstarte konfigurationen."
+msgstr "Hvis din forbindelse ikke virker, kan du prøve at genstarte konfigurationen."
 
 #: ../lib/network/netconnect.pm:778
 #, c-format
@@ -5300,8 +5292,7 @@ msgstr ""
 #: ../lib/network/thirdparty.pm:144
 #, c-format
 msgid "Some components (%s) are required but aren't available for %s hardware."
-msgstr ""
-"Nogen komponenter ('%s') behøves, men er ikke tilgængelige for %s-udstyret."
+msgstr "Nogen komponenter ('%s') behøves, men er ikke tilgængelige for %s-udstyret."
 
 #: ../lib/network/thirdparty.pm:145
 #, c-format
@@ -5312,8 +5303,7 @@ msgstr "Nogen pakker (%s) behøves, men er ikke tilgængelige."
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
 #, c-format
-msgid ""
-"These packages can be found in %s, or in the official %s package repository."
+msgid "These packages can be found in %s, or in the official %s package repository."
 msgstr "Disse pakker kan findes på %s eller i det officielle %s pakkelager."
 
 #: ../lib/network/thirdparty.pm:154
@@ -5535,29 +5525,3 @@ msgstr "NAT-tilstand"
 msgid "Use specific UDP port"
 msgstr "Brug specifik UDP-port"
 
-#, fuzzy
-#~ msgid "Account network traffic"
-#~ msgstr "Nerværksgrænsesnit for synkronisering"
-
-#~ msgid ""
-#~ "Name of the profile to create (the new profile is created as a copy of "
-#~ "the current one):"
-#~ msgstr ""
-#~ "Navn på profilen der skal oprettes (den ny profil bliver oprettet som en "
-#~ "kopi af den aktuelle profil):"
-
-#~ msgid ""
-#~ "This tool allows to activate an existing network profile, and to manage "
-#~ "(clone, delete) profiles."
-#~ msgstr ""
-#~ "Dette værktøj tillader at aktivere en eksisterende netværksprofil, og at "
-#~ "administrere (klone, slette) profiler."
-
-#~ msgid "To modify a profile, you have to activate it first."
-#~ msgstr "For at ændre en profil skal du aktivere den først."
-
-#~ msgid "Clone"
-#~ msgstr "Klon"
-
-#~ msgid "Please select the Windows driver (.inf file)"
-#~ msgstr "Vælg Windows-driveren (.inf-fil)"
