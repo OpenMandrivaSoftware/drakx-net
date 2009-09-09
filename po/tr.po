@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: drakx-net\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-08-24 11:11-0300\n"
-"PO-Revision-Date: 2009-04-02 23:59+0300\n"
+"PO-Revision-Date: 2009-09-10 02:06+0300\n"
 "Last-Translator: Atilla ÖNTAŞ <atilla_ontas@mandriva.org>\n"
 "Language-Team: Turkish <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -861,19 +861,19 @@ msgid "Network profiles"
 msgstr "Ağ Seçenekleri"
 
 #: ../bin/draknetprofile:66
-#, fuzzy, c-format
+#, c-format
 msgid "Module"
-msgstr "Modem"
+msgstr "Modül"
 
 #: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#, c-format
 msgid "Enabled"
-msgstr "Etkinleştir"
+msgstr "Etkinleştirildi"
 
 #: ../bin/draknetprofile:68
-#, fuzzy, c-format
+#, c-format
 msgid "Description"
-msgstr "Şifreleme"
+msgstr "Açıklama"
 
 #: ../bin/draknetprofile:84
 #, c-format
@@ -893,6 +893,9 @@ msgid ""
 "settings, and you'll be able to configure your system configuration as usual "
 "afterwards."
 msgstr ""
+"Lütfen oluşturulacak ağ profili için bir isim girin (örn: iş, ev ... v.b.). "
+"Bu profil şu andaki ayarlarınıza göre oluşturulacak ve daha sonra sistem "
+"yapılandırmanızı her zaman olduğu gibi ayarlayabileceksiniz."
 
 #: ../bin/draknetprofile:166
 #, c-format
@@ -900,9 +903,9 @@ msgid "The \"%s\" profile already exists!"
 msgstr "\"%s\" profili zaten mevcut!"
 
 #: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#, c-format
 msgid "New profile created"
-msgstr "Yeni profil..."
+msgstr "Yeni profil oluşturuldu."
 
 #: ../bin/draknetprofile:172
 #, c-format
@@ -911,6 +914,9 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
+"Şu anda %s ağ profilini kullanmaktasınız. Sisteminizi her zamanki gibi "
+"yapılandırabilirsiniz. Bundan sonra ağ ayarlarınızda yapacağınız her "
+"değişiklik bu profile kaydedilecektir."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -920,16 +926,17 @@ msgid "Warning"
 msgstr "Uyarı"
 
 #: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "Ön tanımlı profili silemezsiniz"
+msgstr "Öntanımlı profili silmek istediğinizden emin misiniz?"
 
 #: ../bin/draknetprofile:186
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
-msgstr "Geçerli profili silemezsiniz"
+msgstr ""
+"Geçerli profili silemezsiniz. Lütfen öncelikle bir başka profile geçin."
 
 #: ../bin/draknetprofile:194 ../bin/draknfs:356
 #, c-format
@@ -937,19 +944,19 @@ msgid "Advanced"
 msgstr "Gelişmiş"
 
 #: ../bin/draknetprofile:198
-#, fuzzy, c-format
+#, c-format
 msgid "Select the netprofile modules:"
-msgstr "Yapılandırmak istediğiniz modemi seçin:"
+msgstr "Netporfil modülü seçin:"
 
 #: ../bin/draknetprofile:211
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "Bu araç ağ profillerini denetlemenizi sağlar."
 
 #: ../bin/draknetprofile:212
-#, fuzzy, c-format
+#, c-format
 msgid "Select a network profile:"
-msgstr "Lütfen sağlayıcınızı seçin:"
+msgstr "Lütfen bir ağ profili seçin:"
 
 #: ../bin/draknetprofile:216
 #, c-format
@@ -959,7 +966,7 @@ msgstr "Etkinleştir"
 #: ../bin/draknetprofile:217
 #, c-format
 msgid "New"
-msgstr ""
+msgstr "Yeni"
 
 #: ../bin/draknetprofile:218
 #, c-format
@@ -2537,7 +2544,7 @@ msgstr "Bağlantıyı açılışta başlat"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "Enable traffic accounting"
-msgstr ""
+msgstr "Trafik hesaplamasını etkinleştir"
 
 #: ../lib/network/connection.pm:246
 #, c-format
@@ -2792,15 +2799,15 @@ msgid "Warning: IP address %s is usually reserved!"
 msgstr "Uyarı: %s IP adresi genellikle rezerve edilmiş olur!"
 
 #: ../lib/network/connection/ethernet.pm:192
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
-"%s zaten açılışta başlatılan bağlantı tarafından kullanılıyor. Bu adresi bu "
-"bağlantı ile kullanmak için; önce onu kullanan tüm aygıtları devre dışı "
-"bırakın veya açılışta başlamamalarını sağlayacak şekilde ayarlayın"
+"%s zaten açılışta başlatılan (%s) bağlantısı tarafından kullanılıyor. Bu "
+"adresi bu bağlantı ile kullanmak için; önce onu kullanan tüm aygıtları devre "
+"dışı bırakın veya açılışta başlamamalarını sağlayacak şekilde ayarlayın."
 
 #: ../lib/network/connection/ethernet.pm:219
 #, c-format
@@ -2814,6 +2821,8 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
+"Bu, sunucunun bu makine için bir ad atamasını sağlayacaktır. Sunucu geçerli "
+"bir makine adı atamazsa, otomatik olarak bir ad üretilecektir."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2822,6 +2831,9 @@ msgid ""
 "Note that this hostname will be shared among all network connections.  If "
 "left blank, 'localhost.localdomain' will be used."
 msgstr ""
+"Bu bilgisayarı tanımlayacak bir makine adı atamalısınız. Bu makine adının "
+"tüm ağ bağlantılarıyla paylaşılacağını unutmayın.  Boş bırakılırsa "
+"'localhost.localdomain' adı kullanılacaktır."
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -2935,7 +2947,7 @@ msgstr "Brezilya"
 #: ../lib/network/connection/providers/cellular.pm:38
 #, c-format
 msgid "Estonia"
-msgstr ""
+msgstr "Estonya"
 
 #: ../lib/network/connection/providers/cellular.pm:42
 #: ../lib/network/connection/providers/cellular.pm:46
@@ -3387,9 +3399,9 @@ msgid "Encryption key"
 msgstr "Şifreleme anahtarı"
 
 #: ../lib/network/connection/wireless.pm:461
-#, fuzzy, c-format
+#, c-format
 msgid "Hide password"
-msgstr "Şifre"
+msgstr "Şifreyi gizle"
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
@@ -3777,9 +3789,9 @@ msgid ""
 msgstr " "
 
 #: ../lib/network/connection/wireless.pm:578
-#, fuzzy, c-format
+#, c-format
 msgid "Extra directives"
-msgstr "EAP ek yönergeleri"
+msgstr "Ek yönergeler"
 
 #: ../lib/network/connection/wireless.pm:579
 #, c-format
@@ -4100,7 +4112,7 @@ msgstr "Echo isteği (ping)"
 #: ../lib/network/drakfirewall.pm:105
 #, c-format
 msgid "Network services autodiscovery (zeroconf and slp)"
-msgstr ""
+msgstr "Ağ hizmetlerini otomatik algılama (sıfır yapılandırma ve slp)"
 
 #: ../lib/network/drakfirewall.pm:110
 #, c-format
@@ -4193,7 +4205,7 @@ msgstr "Internet'e hangi servisleri açmak istiyorsunuz?"
 #: ../lib/network/network.pm:540
 #, c-format
 msgid "Those settings will be saved for the network profile <b>%s</b>"
-msgstr ""
+msgstr "Bu ayarlar ağ profiline kaydedilecektir. <b>%s</b>"
 
 #: ../lib/network/drakfirewall.pm:268
 #, c-format
@@ -4410,9 +4422,9 @@ msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "%s ndiswrapper sürücüsünü destekleyen herhangi bir aygıt yok!"
 
 #: ../lib/network/ndiswrapper.pm:36
-#, fuzzy, c-format
+#, c-format
 msgid "Please select the correct driver"
-msgstr "Lütfen hizmet sağlayıcınızı seçin:"
+msgstr "Lütfen doğru sürücüyü seçin"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -4421,6 +4433,9 @@ msgid ""
 "driver file (.dll or .o files). Note that only drivers up to Windows XP are "
 "supported."
 msgstr ""
+"Lütfen Windows sürücü tanımlama dosyasını (.inf) veya uygun sürücü dosyasını "
+"(.dll veya .o dosyaları) seçin. Sadece Windows XP' ye kadar olan sürücüler "
+"desteklenmektedir."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -4486,7 +4501,7 @@ msgstr "Ağ Merkezi"
 #: ../lib/network/netcenter.pm:164
 #, c-format
 msgid "You are currently using the network profile <b>%s</b>"
-msgstr ""
+msgstr "Şu anda <b>%s</b> ağ profilini kullanmaktasınız."
 
 #: ../lib/network/netcenter.pm:170
 #, c-format
