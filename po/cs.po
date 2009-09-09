@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "POT-Creation-Date: 2009-08-24 11:11-0300\n"
-"PO-Revision-Date: 2009-04-03 00:40+0200\n"
+"PO-Revision-Date: 2009-09-09 23:27+0200\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
-"Language-Team: Czech <cs@li.org>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 0.3\n"
 
 #: ../bin/drakconnect-old:45
 #, c-format
@@ -851,20 +851,17 @@ msgstr "Bit pro označení připojení"
 msgid "Network profiles"
 msgstr "Síťové profily"
 
-#: ../bin/draknetprofile:66
-#, fuzzy, c-format
+#: ../bin/draknetprofile:66, c-format
 msgid "Module"
-msgstr "Modem"
+msgstr "Modul"
 
-#: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#: ../bin/draknetprofile:67, c-format
 msgid "Enabled"
-msgstr "Povolit"
+msgstr "Povolen"
 
-#: ../bin/draknetprofile:68
-#, fuzzy, c-format
+#: ../bin/draknetprofile:68, c-format
 msgid "Description"
-msgstr "Šifrování"
+msgstr "Popis"
 
 #: ../bin/draknetprofile:84
 #, c-format
@@ -884,16 +881,19 @@ msgid ""
 "settings, and you'll be able to configure your system configuration as usual "
 "afterwards."
 msgstr ""
+"Zadejte prosím název nově vytvářeného síťového profilu (např. "
+"práce, domov, roaming, …). Tento nový profil bude vytvořen na "
+"základě současných nastavení a poté budete mít možnost "
+"toto nastavení změnit."
 
 #: ../bin/draknetprofile:166
 #, c-format
 msgid "The \"%s\" profile already exists!"
 msgstr "Profil \"%s\" už existuje!"
 
-#: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#: ../bin/draknetprofile:172, c-format
 msgid "New profile created"
-msgstr "Nový profil..."
+msgstr "Nový profil vytvořen"
 
 #: ../bin/draknetprofile:172
 #, c-format
@@ -902,6 +902,9 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
+"Nyní používáte síťový profil %s. Můžete nastavit váš systém jako "
+"obvykle a odteď budou všechna vaše síťová nastavení ukládána "
+"do tohoto profilu."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -910,37 +913,33 @@ msgstr ""
 msgid "Warning"
 msgstr "Varování"
 
-#: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#: ../bin/draknetprofile:183, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "Nelze smazat výchozí síťový profil"
+msgstr "Jste si jisti, že chcete smazat výchozí síťový profil?"
 
-#: ../bin/draknetprofile:186
-#, fuzzy, c-format
+#: ../bin/draknetprofile:186, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
-msgstr "Nelze smazat aktuální profil"
+msgstr "Nelze smazat současný profil. Nejprve prosím přepněte na jiný profil."
 
 #: ../bin/draknetprofile:194 ../bin/draknfs:356
 #, c-format
 msgid "Advanced"
 msgstr "Pokročilé"
 
-#: ../bin/draknetprofile:198
-#, fuzzy, c-format
+#: ../bin/draknetprofile:198, c-format
 msgid "Select the netprofile modules:"
-msgstr "Vyberte modem pro nastavení:"
+msgstr "Vyberte modul netprofile:"
 
 #: ../bin/draknetprofile:211
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "Tento nástroj vám umožňuje ovládat síťové profily."
 
-#: ../bin/draknetprofile:212
-#, fuzzy, c-format
+#: ../bin/draknetprofile:212, c-format
 msgid "Select a network profile:"
-msgstr "Vyberte svého poskytovatele:"
+msgstr "Vyberte síťový profil:"
 
 #: ../bin/draknetprofile:216
 #, c-format
@@ -950,7 +949,7 @@ msgstr "Zapnout"
 #: ../bin/draknetprofile:217
 #, c-format
 msgid "New"
-msgstr ""
+msgstr "Nový"
 
 #: ../bin/draknetprofile:218
 #, c-format
@@ -2524,7 +2523,7 @@ msgstr "Spustit připojení při startu"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "Enable traffic accounting"
-msgstr ""
+msgstr "Povolit počítání provozu"
 
 #: ../lib/network/connection.pm:246
 #, c-format
@@ -2777,14 +2776,14 @@ msgstr "Síťová maska by měla být ve formátu 255.255.224.0"
 msgid "Warning: IP address %s is usually reserved!"
 msgstr "Varování: IP adresa %s je obyčejně rezervována!"
 
-#: ../lib/network/connection/ethernet.pm:192
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:192, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
-"%s je již použita připojením, které se spouští při startu počítače. Chcete-"
+"%s je již použita připojením, které se spouští při startu počítače (%s). "
+"Chcete-"
 "li použít tuto adresu s tímto připojením, vypněte nejprve všechna ostatní "
 "zařízení, která ji používají, nebo je nastavte tak, aby se nespouštěla při "
 "startu"
@@ -2801,6 +2800,9 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
+"Toto umožní serveru přiřadit název tomuto počítači. Pokud server "
+"neposkytne platný název počítače, bude název vygenerován "
+"automaticky."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2809,6 +2811,9 @@ msgid ""
 "Note that this hostname will be shared among all network connections.  If "
 "left blank, 'localhost.localdomain' will be used."
 msgstr ""
+"Tento počítač by měl mít definovaný název, který jej bude identifikovat. "
+"Mějte na paměti, že tento název bude sdílený všemi síťovými připojeními. "
+"Pokud bude ponechán prázdný, použije se „localhost.localdomain”."
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -2922,7 +2927,7 @@ msgstr "Brazílie"
 #: ../lib/network/connection/providers/cellular.pm:38
 #, c-format
 msgid "Estonia"
-msgstr ""
+msgstr "Estonsko"
 
 #: ../lib/network/connection/providers/cellular.pm:42
 #: ../lib/network/connection/providers/cellular.pm:46
@@ -3373,10 +3378,9 @@ msgstr "Režim šifrování"
 msgid "Encryption key"
 msgstr "Šifrovací klíč"
 
-#: ../lib/network/connection/wireless.pm:461
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:461, c-format
 msgid "Hide password"
-msgstr "Heslo"
+msgstr "Skrýt heslo"
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
@@ -3763,10 +3767,9 @@ msgstr ""
 "tento řetězec v subjektu. Část řetězce je tomto formátu:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
-#: ../lib/network/connection/wireless.pm:578
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:578, c-format
 msgid "Extra directives"
-msgstr "Další direktivy EAP"
+msgstr "Další direktivy"
 
 #: ../lib/network/connection/wireless.pm:579
 #, c-format
@@ -4086,7 +4089,7 @@ msgstr "Požadavek na odezvu (ping)"
 #: ../lib/network/drakfirewall.pm:105
 #, c-format
 msgid "Network services autodiscovery (zeroconf and slp)"
-msgstr ""
+msgstr "Automatické objevení síťových služeb (zeroconf a slp)"
 
 #: ../lib/network/drakfirewall.pm:110
 #, c-format
@@ -4178,7 +4181,7 @@ msgstr "Které služby přístupné z Internetu chcete povolit?"
 #: ../lib/network/network.pm:540
 #, c-format
 msgid "Those settings will be saved for the network profile <b>%s</b>"
-msgstr ""
+msgstr "Tato nastavení budou uložena pro síťový profil <b>%s</b>"
 
 #: ../lib/network/drakfirewall.pm:268
 #, c-format
@@ -4393,10 +4396,9 @@ msgstr "Automaticky"
 msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "Není přítomno žádné zařízení podporující ovladač ndiswrapper %s!"
 
-#: ../lib/network/ndiswrapper.pm:36
-#, fuzzy, c-format
+#: ../lib/network/ndiswrapper.pm:36, c-format
 msgid "Please select the correct driver"
-msgstr "Vyberte prosím svého poskytovatele:"
+msgstr "Vyberte prosím správný ovladač"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -4405,6 +4407,9 @@ msgid ""
 "driver file (.dll or .o files). Note that only drivers up to Windows XP are "
 "supported."
 msgstr ""
+"Vyberte prosím soubor s popisem ovladače pro Windows (.inf) nebo "
+"odpovídající soubor s ovladačem (soubor .dll nebo .o). Mějte na paměti, "
+"že jsou podporovány pouze ovladače do Windows XP a starší."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -4470,7 +4475,7 @@ msgstr "Síťové centrum"
 #: ../lib/network/netcenter.pm:164
 #, c-format
 msgid "You are currently using the network profile <b>%s</b>"
-msgstr ""
+msgstr "Nyní používáte síťový profil <b>%s</b>"
 
 #: ../lib/network/netcenter.pm:170
 #, c-format
