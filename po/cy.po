@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mandriva drakx-net.cy\n"
 "POT-Creation-Date: 2009-08-24 11:11-0300\n"
-"PO-Revision-Date: 2008-10-06 19:50+0100\n"
-"Last-Translator: Rhoslyn Prys <post@meddal.com>\n"
+"PO-Revision-Date: 2009-08-24 21:52-0000\n"
+"Last-Translator: Rhoslyn Prys <rprys@yahoo.com>\n"
 "Language-Team: Cymraeg <post@meddal.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -202,7 +202,7 @@ msgid "Internet Connection Sharing"
 msgstr "Rhannu Cysylltiad â'r Rhyngrwyd"
 
 #: ../bin/drakgw:75
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -223,7 +223,8 @@ msgstr ""
 "gyda drakconnect cyn mynd ymhellach.\n"
 "\n"
 "Sylwer: bydd angen Addasydd Rhwydwaith un-pwrpas i greu Rhwydwaith Lleol "
-"(LAN)."
+"(LAN). Anablwch Mandriva Firewall ar gyfer yr addasydd rhwydwaith sy'n "
+"gysylltiedig â'ch cysylltiad LAN cyn cychwyn."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -293,6 +294,17 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"Dim ond un addasydd rhwydwaith sydd ar eich system sydd wedi ei ffurfweddu "
+"ar gyfer cysylltiadau LAN:\n"
+"\n"
+"%s\n"
+"\n"
+"Rwyf ar fin gosod eich Rhwydwaith Ardal Leol (LAN) gyda'r addasydd hwnnw.\n"
+"\n"
+"Os oes gennych unrhyw addasyddion eraill wedi eu cysylltu â'r Rhwydwaith "
+"Ardal Leol,\n"
+"datgysylltwch amddiffyniad mur cadarn arno gan ddefnyddio drakfirewall cyn\n"
+"ffurfweddu rhannu Cysylltiad Rhyngrwyd."
 
 #: ../bin/drakgw:156
 #, c-format
@@ -460,6 +472,12 @@ msgid ""
 "the Mandriva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
+"Nid oes addasydd rhwydwaith ethernet wedi ei ffurfweddu ar gyfer LAN wedi ei "
+"ganfod ar eich system.\n"
+"\n"
+"Defnyddiwch yr offeryn ffurfweddu caledwedd i'w ffurfweddu, gan ofalu nad yw "
+"mur cadarn Mandriva wedi ei alluogi ar gyfer addasydd rhwydwaith ar eich "
+"rhwydwaith LAN."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -838,12 +856,12 @@ msgid "Network profiles"
 msgstr "Proffiliau rhwydwaith"
 
 #: ../bin/draknetprofile:66
-#, fuzzy, c-format
+#, c-format
 msgid "Module"
-msgstr "Modd"
+msgstr "Modiwl"
 
 #: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#, c-format
 msgid "Enabled"
 msgstr "Galluogi"
 
@@ -870,6 +888,10 @@ msgid ""
 "settings, and you'll be able to configure your system configuration as usual "
 "afterwards."
 msgstr ""
+"Pennwch enw'r proffil rhwydwaith newydd i'w greu (e.e., cartref, "
+"crwydrol,...). Bydd y proffil newydd yn cael ei greu yn seiliedig ar y "
+"gosodiadau cyfredol, a byddwch yn gallu ffurfweddu eich system fel arfer yn "
+"dilyn hynny. "
 
 #: ../bin/draknetprofile:166
 #, c-format
@@ -877,9 +899,9 @@ msgid "The \"%s\" profile already exists!"
 msgstr "Mae proffil \"%s\" yn bod eisoes!"
 
 #: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#, c-format
 msgid "New profile created"
-msgstr "Proffil newydd..."
+msgstr "Crewyd proffil newydd"
 
 #: ../bin/draknetprofile:172
 #, c-format
@@ -888,6 +910,9 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
+"Rydych yn defnyddio proffil rhwydwaith %s. Gallwch ffurfweddu eich system yn "
+"ôl yr arfer a bydd eich gosodiadau rhwydwaith yn cael eu cadw i'r proffil "
+"hwn o hyn ymlaen."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -897,36 +922,38 @@ msgid "Warning"
 msgstr "Rhybudd"
 
 #: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "Nid oes modd dileu'r proffil rhagosodedig"
+msgstr "Ydych chi'n siŵr eich bod am ddileu'r proffil rhagosodedig?"
 
 #: ../bin/draknetprofile:186
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
-msgstr "Nid oes modd dileu'r proffil presennol"
+msgstr ""
+"Nid oes modd dileu'r proffil presennol. Newidiwch i broffil gwahanol yn "
+"gyntaf."
 
 #: ../bin/draknetprofile:194 ../bin/draknfs:356
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced"
-msgstr "Dewisiadau Uwch"
+msgstr "Uwch"
 
 #: ../bin/draknetprofile:198
-#, fuzzy, c-format
+#, c-format
 msgid "Select the netprofile modules:"
-msgstr "Dewis y rhyngwyneb rhwydwaith i'w dynnu:"
+msgstr "Dewis y modiwlau netprofile:"
 
 #: ../bin/draknetprofile:211
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "Mae'r offeryn hwn yn caniatáu i chi reoli proffiliau eich rhwydwaith."
 
 #: ../bin/draknetprofile:212
-#, fuzzy, c-format
+#, c-format
 msgid "Select a network profile:"
-msgstr "Dewis eich darparwr:"
+msgstr "Dewis proffil rhwydwaith:"
 
 #: ../bin/draknetprofile:216
 #, c-format
@@ -936,7 +963,7 @@ msgstr "Gweithredoli"
 #: ../bin/draknetprofile:217
 #, c-format
 msgid "New"
-msgstr ""
+msgstr "Newydd"
 
 #: ../bin/draknetprofile:218
 #, c-format
@@ -1016,9 +1043,9 @@ msgid "Error Restarting/Reloading NFS server"
 msgstr "Gwall Ailgychwyn/Ail-lwytho gweinydd NFS"
 
 #: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#, c-format
 msgid "Directory selection"
-msgstr "Dewis Cyfeiriadur"
+msgstr "Dewis cyfeiriadur"
 
 #: ../bin/draknfs:116 ../bin/draksambashare:253
 #, c-format
@@ -2181,9 +2208,9 @@ msgid "Gateway: %s"
 msgstr "Mynedfa: %s"
 
 #: ../bin/net_applet:98
-#, fuzzy, c-format
+#, c-format
 msgid "DNS: %s"
-msgstr "DNS"
+msgstr "DNS: %s"
 
 #: ../bin/net_applet:99
 #, c-format
@@ -2297,9 +2324,9 @@ msgid "Network Monitoring"
 msgstr "Monitro'r Rhwydwaith"
 
 #: ../bin/net_monitor:99
-#, fuzzy, c-format
+#, c-format
 msgid "Default connection: "
-msgstr "Cysylltiad cebl"
+msgstr "Cysylltiad rhagosodedig:"
 
 #: ../bin/net_monitor:101
 #, c-format
@@ -2345,11 +2372,9 @@ msgstr ""
 "derbyn:"
 
 #: ../bin/net_monitor:113
-#, fuzzy, c-format
+#, c-format
 msgid "Connection time: "
-msgstr ""
-"Amser\n"
-"cysylltiad:"
+msgstr "Amser cysylltiad:"
 
 #: ../bin/net_monitor:120
 #, c-format
@@ -2396,9 +2421,9 @@ msgstr ""
 "Gwiriwch eich ffurfweddiad yng Nghanolfan Rheoli Mandriva Linux."
 
 #: ../bin/net_monitor:360
-#, fuzzy, c-format
+#, c-format
 msgid "%s (%s)"
-msgstr "DNS"
+msgstr "%s (%s)"
 
 #: ../bin/net_monitor:385
 #, c-format
@@ -2423,7 +2448,7 @@ msgstr "cyfartaledd"
 #: ../bin/net_monitor:451
 #, c-format
 msgid "Reset counters"
-msgstr ""
+msgstr "Ailosod cyfrif"
 
 #: ../bin/net_monitor:454
 #, c-format
@@ -2502,7 +2527,7 @@ msgstr "Cychwyn y cysylltiad wrth gychwyn y cyfrifiadur"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "Enable traffic accounting"
-msgstr ""
+msgstr "Caniatau cyfrifo defnydd"
 
 #: ../lib/network/connection.pm:246
 #, c-format
@@ -2512,12 +2537,12 @@ msgstr "Metrig"
 #: ../lib/network/connection.pm:247
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:248
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr ""
+msgstr "Uchafswm maint neges rhwydwaith (MTU) Os yn ansicr, gadael yn wag."
 
 #: ../lib/network/connection.pm:324
 #, c-format
@@ -2589,7 +2614,7 @@ msgstr "GPRS/Edge/3G"
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
-msgstr ""
+msgstr "Rhif PIN (4 nod). Gadael yn wag os nad oes angen PIN."
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
@@ -2641,9 +2666,9 @@ msgid "Ethernet"
 msgstr "Ethernet"
 
 #: ../lib/network/connection/ethernet.pm:12
-#, fuzzy, c-format
+#, c-format
 msgid "Wired (Ethernet)"
-msgstr "Ethernet"
+msgstr "Gwifren (Ethernet)"
 
 #: ../lib/network/connection/ethernet.pm:30
 #, c-format
@@ -2762,11 +2787,15 @@ msgid ""
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
+"Mae %s eisoes yn cael ei ddefnyddio gan gysylltiad sy'n cychwyn wrth i'r "
+"cyfrifiadur gychwyn (%s). I ddefnyddio'r cyfeiriad yma gyda'r cysylltiad, "
+"rhaid anablu pob dyfais arall sy'n ei ddefnyddio, neu eu ffurfweddu i beidio "
+"cychwyn wrth i'r cyfrifiadur gychwyn."
 
 #: ../lib/network/connection/ethernet.pm:219
-#, fuzzy, c-format
+#, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
-msgstr "Rhowch enw'r gwesteiwr o'r cyfeiriad DHCP"
+msgstr "Rhowch enw'r gwesteiwr o'r cyfeiriad DHCP (neu gynhyrchu un unigryw)"
 
 #: ../lib/network/connection/ethernet.pm:220
 #, c-format
@@ -2775,6 +2804,8 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
+"Bydd hyn yn caniatáu i'r gweinydd bennu enw i'r peiriant hwn. Os nad yw'r "
+"peiriant yn pennu enw gwesteiwr dilys, bydd yn cael ei gynhyrchu’n awtomatig."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2783,6 +2814,10 @@ msgid ""
 "Note that this hostname will be shared among all network connections.  If "
 "left blank, 'localhost.localdomain' will be used."
 msgstr ""
+"Rhaid i chi ddiffinio enw gwesteiwr ar gyfer y peiriant hwn, sy'n dynodi'r "
+"PC. Sylwch y bydd yr enw gwesteiwr yn cael ei rannu ymysg yr holl "
+"gysylltiadau rhwydwaith. Os fydd yn cael ei adael yn wag, bydd 'localhost."
+"localdomain' yn cael ei ddefnyddio."
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -2896,7 +2931,7 @@ msgstr "Brasil"
 #: ../lib/network/connection/providers/cellular.pm:38
 #, c-format
 msgid "Estonia"
-msgstr ""
+msgstr "Estonia"
 
 #: ../lib/network/connection/providers/cellular.pm:42
 #: ../lib/network/connection/providers/cellular.pm:46
@@ -3248,9 +3283,9 @@ msgid "Wireless"
 msgstr "Diwyfr"
 
 #: ../lib/network/connection/wireless.pm:14
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless (Wi-Fi)"
-msgstr "Diwyfr"
+msgstr "Diwyfr (Wi-Fi)"
 
 #: ../lib/network/connection/wireless.pm:30
 #, c-format
@@ -3348,9 +3383,9 @@ msgid "Encryption key"
 msgstr "Allwedd amgryptio"
 
 #: ../lib/network/connection/wireless.pm:461
-#, fuzzy, c-format
+#, c-format
 msgid "Hide password"
-msgstr "Cyfrinair"
+msgstr "Cuddio cyfrinair"
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
@@ -3733,9 +3768,9 @@ msgstr ""
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
 #: ../lib/network/connection/wireless.pm:578
-#, fuzzy, c-format
+#, c-format
 msgid "Extra directives"
-msgstr "cyfarwyddid ychwanegol EAP"
+msgstr "Cyfarwyddid ychwanegol"
 
 #: ../lib/network/connection/wireless.pm:579
 #, c-format
@@ -3990,9 +4025,9 @@ msgid "FTP server"
 msgstr "Gweinydd FTP"
 
 #: ../lib/network/drakfirewall.pm:34
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP Server"
-msgstr "Gweinydd CUPS"
+msgstr "Gweinydd DHCP"
 
 #: ../lib/network/drakfirewall.pm:40
 #, c-format
@@ -4010,9 +4045,9 @@ msgid "Telnet server"
 msgstr "Gweinydd Telnet"
 
 #: ../lib/network/drakfirewall.pm:56
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "/_Gweinydd NFSr"
+msgstr "Gweinydd NFS"
 
 #: ../lib/network/drakfirewall.pm:64
 #, c-format
@@ -4022,12 +4057,12 @@ msgstr "Rhannu Ffeiliau Wondows (SMB)"
 #: ../lib/network/drakfirewall.pm:70
 #, c-format
 msgid "Bacula backup"
-msgstr ""
+msgstr "Bacula backup"
 
 #: ../lib/network/drakfirewall.pm:76
-#, fuzzy, c-format
+#, c-format
 msgid "Syslog network logging"
-msgstr "Plygio byw'r Rhwydwaith"
+msgstr "Cofnodi rhwydwaith sys;pg"
 
 #: ../lib/network/drakfirewall.pm:82
 #, c-format
@@ -4035,14 +4070,14 @@ msgid "CUPS server"
 msgstr "Gweinydd CUPS"
 
 #: ../lib/network/drakfirewall.pm:88
-#, fuzzy, c-format
+#, c-format
 msgid "MySQL server"
-msgstr "Gweinydd NFS"
+msgstr "Gweinydd MySQL"
 
 #: ../lib/network/drakfirewall.pm:94
-#, fuzzy, c-format
+#, c-format
 msgid "PostgreSQL server"
-msgstr "Gweinydd CUPS"
+msgstr "Gweinydd PostgreSQL"
 
 #: ../lib/network/drakfirewall.pm:100
 #, c-format
@@ -4145,6 +4180,7 @@ msgstr "Pa wasanaethau'r hoffech i'r Rhyngrwyd gysylltu â hwy?"
 #, c-format
 msgid "Those settings will be saved for the network profile <b>%s</b>"
 msgstr ""
+"Bydd y gosodiadau yn cael eu cadw ar gyfer y proffil rhwydwaith <b>%s</b>"
 
 #: ../lib/network/drakfirewall.pm:268
 #, c-format
@@ -4361,9 +4397,9 @@ msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "Does dim dyfais sy'n cynnal gyrrwr %s ndiswrapper yn bresenol!"
 
 #: ../lib/network/ndiswrapper.pm:36
-#, fuzzy, c-format
+#, c-format
 msgid "Please select the correct driver"
-msgstr "Dewiswch eich darparwr:"
+msgstr "Dewiswch y gyrrwr cywir"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -4372,6 +4408,9 @@ msgid ""
 "driver file (.dll or .o files). Note that only drivers up to Windows XP are "
 "supported."
 msgstr ""
+"Dewiswch ffeil Windows driver description (.inf), neu ffeil gyrrwr cyfatebol "
+"(.dll neu .o ). Sylwch mai dim ond gyrwyr hyd at Windows XP sy'n cael eu "
+"cynnal."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -4437,12 +4476,12 @@ msgstr "Canolfan Rhwydwaith"
 #: ../lib/network/netcenter.pm:164
 #, c-format
 msgid "You are currently using the network profile <b>%s</b>"
-msgstr ""
+msgstr "Rydych yn defnyddio proffil rhwydwaith <b>%s</b>"
 
 #: ../lib/network/netcenter.pm:170
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced settings"
-msgstr "Dewisiadau Uwch"
+msgstr "Gosodiadau uwch"
 
 #: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:522
 #: ../lib/network/netconnect.pm:536
@@ -4491,9 +4530,9 @@ msgid "Select the network interface to configure:"
 msgstr "Dewis y rhyngwyneb rhwydwaith i'w ffurfweddu:"
 
 #: ../lib/network/netconnect.pm:151
-#, fuzzy, c-format
+#, c-format
 msgid "%s: %s"
-msgstr "DNS"
+msgstr "%s: %s"
 
 #: ../lib/network/netconnect.pm:168
 #, c-format
@@ -4831,12 +4870,9 @@ msgstr ""
 "Ailffurfweddwch eich cysylltiad."
 
 #: ../lib/network/netconnect.pm:770
-#, fuzzy, c-format
+#, c-format
 msgid "Problems occured during the network connectivity test."
-msgstr ""
-"Digwyddodd gwall wrth ail gychwyn y rhwydwaith:\n"
-"\n"
-"%s"
+msgstr "Digwyddodd gwall wrth brofi cysylltiad y rhwydwaith."
 
 #: ../lib/network/netconnect.pm:771
 #, c-format
@@ -4844,6 +4880,8 @@ msgid ""
 "This can be caused by invalid network configuration, or problems with your "
 "modem or router."
 msgstr ""
+"Gall hyn gael ei achosi gan ffurfweddiad rhwydwaith annilys, neu broblemau "
+"gyda'ch modem neu lwybrydd."
 
 #: ../lib/network/netconnect.pm:772
 #, c-format
@@ -4851,13 +4889,13 @@ msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
 msgstr ""
+"Efallai y byddwch yn hoffi ailgychwyn y ffurfweddiad i ddilysu gosodiadau'r "
+"cysylltiad."
 
 #: ../lib/network/netconnect.pm:775
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network configuration is finished."
-msgstr ""
-"Llongyfarchiadau, mae ffurfweddiad y rhwydwaith a'r Rhyngrwyd wedi ei "
-"gwblhau\n"
+msgstr "Llongyfarchiadau, mae ffurfweddiad y rhwydwaith wedi ei gwblhau."
 
 #: ../lib/network/netconnect.pm:775
 #, c-format
@@ -4865,23 +4903,24 @@ msgid ""
 "However, the Internet connectivity test failed. You should test your "
 "connection manually, and verify your Internet modem or router."
 msgstr ""
+"Er hynny methodd cysylltu â'r Rhyngrwyd. Rhaid i chi brofi'r cysylltiad â "
+"llaw a dilysu eich modem a llwybrydd Rhyngrwyd."
 
 #: ../lib/network/netconnect.pm:776
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
 msgstr ""
-"Digwyddod anhawsterau yn ystod y ffurfweddiad.\n"
-"Profwch eich cysylltiad drwy net_monitor neu mcc. Os nad yw eich cysylltiad "
-"yn gweithio, efallai y byddwch eisiau ailgychwyn y ffurfweddiad"
+"Os nad yw eich cysylltiad yn gweithio, efallai y byddwch eisiau ailgychwyn y "
+"ffurfweddiad."
 
 #: ../lib/network/netconnect.pm:778
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
 msgstr ""
 "Llongyfarchiadau, mae ffurfweddiad y rhwydwaith a'r Rhyngrwyd wedi ei "
-"gwblhau\n"
+"gwblhau."
 
 #: ../lib/network/netconnect.pm:779
 #, c-format
@@ -5107,9 +5146,9 @@ msgstr ""
 "%s"
 
 #: ../lib/network/network.pm:514
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced network settings"
-msgstr "Gosodiadau rhwydwaith"
+msgstr "Gosodiadau rhwydwaith uwch"
 
 #: ../lib/network/network.pm:515
 #, c-format
@@ -5117,56 +5156,58 @@ msgid ""
 "Here you can configure advanced network settings. Please note that you have "
 "to reboot the machine for changes to take effect."
 msgstr ""
+"Dyma'r gosodiadau rhwydwaith uwch. Sylwch fod angen i chi ailgychwyn y "
+"peiriant i'r newidiadau ddod ar waith."
 
 #: ../lib/network/network.pm:517
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless regulatory domain"
-msgstr "Rhwydweithiau diwifr"
+msgstr "Parth rheoli diwifr"
 
 #: ../lib/network/network.pm:518
-#, fuzzy, c-format
+#, c-format
 msgid "TCP/IP settings"
-msgstr "Gosodiadau IP"
+msgstr "Gosodiadau TCP/IP"
 
 #: ../lib/network/network.pm:519
-#, fuzzy, c-format
+#, c-format
 msgid "Disable IPv6"
-msgstr "Analluogi"
+msgstr "Analluogi IPv6"
 
 #: ../lib/network/network.pm:520
 #, c-format
 msgid "Disable TCP Window Scaling"
-msgstr ""
+msgstr "Analluogi graddio Ffenestr TCP"
 
 #: ../lib/network/network.pm:521
 #, c-format
 msgid "Disable TCP Timestamps"
-msgstr ""
+msgstr "Analluogi Stamp Amser TCP"
 
 #: ../lib/network/network.pm:522
 #, c-format
 msgid "Security settings (defined by MSEC policy)"
-msgstr ""
+msgstr "Gosodiadau diogelwch (diffiniwyd gan bolisi MSEC)"
 
 #: ../lib/network/network.pm:523
 #, c-format
 msgid "Disable ICMP echo"
-msgstr ""
+msgstr "Anablu adlais ICMP"
 
 #: ../lib/network/network.pm:524
 #, c-format
 msgid "Disable ICMP echo for broadcasting messages"
-msgstr ""
+msgstr "Anablu adlais ICMP ar gyfer darlledu negeseuon"
 
 #: ../lib/network/network.pm:525
 #, c-format
 msgid "Disable invalid ICMP error responses"
-msgstr ""
+msgstr "Anablu ymatebion gwall ICMP annilys"
 
 #: ../lib/network/network.pm:526
 #, c-format
 msgid "Log strange packets"
-msgstr ""
+msgstr "Cofnodi pecynnau rhyfedd"
 
 #: ../lib/network/network.pm:539
 #, c-format
@@ -5223,7 +5264,7 @@ msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "Dylai'r URL ddechrau gyda 'ftp' neu 'http:'"
 
 #: ../lib/network/shorewall.pm:77
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
@@ -5239,6 +5280,9 @@ msgstr ""
 "\n"
 "Bydd pob rhyngwyneb sydd wedi ei gysylltu â'r Rhyngrwyd gael ei ddewis,\n"
 "nid oes angen dewis y rhai sydd wedi eu cysylltu â'r rhwydweithiau lleol.\n"
+"\n"
+"Os ydych yn bwriadu defnyddio rhannu Cysylltiad Rhyngrwyd Mandriva,\n"
+"dad-ddewis rhyngwynebau sy'n gysylltiedig â'r rhwydwaith lleol.\n"
 "\n"
 "Pa ryngwynebau sydd i'w diogelu?\n"
 
@@ -5501,6 +5545,9 @@ msgstr "Modd NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Defnyddio porth UDP penodol"
+
+#~ msgid "AVAHI and mDNS"
+#~ msgstr "AVAHI a mDNS"
 
 #, fuzzy
 #~ msgid "Account network traffic"
