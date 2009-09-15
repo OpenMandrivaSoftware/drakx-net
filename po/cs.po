@@ -8,15 +8,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
-"POT-Creation-Date: 2009-08-24 11:11-0300\n"
+"POT-Creation-Date: 2009-09-15 14:06-0300\n"
 "PO-Revision-Date: 2009-09-09 23:27+0200\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 0.3\n"
 
 #: ../bin/drakconnect-old:45
@@ -72,7 +72,7 @@ msgstr "Nastavení LAN"
 msgid "Configure Local Area Network..."
 msgstr "Nastavit lokální síť..."
 
-#: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:188
+#: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:190
 #, c-format
 msgid "Help"
 msgstr "Nápověda"
@@ -643,7 +643,7 @@ msgid "Failed to remove host."
 msgstr "Odstranění počítače selhalo."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:219
-#: ../bin/net_applet:189 ../lib/network/drakroam.pm:93
+#: ../bin/net_applet:191 ../lib/network/drakroam.pm:93
 #: ../lib/network/netcenter.pm:171
 #, c-format
 msgid "Quit"
@@ -656,7 +656,7 @@ msgstr "Povolené adresy"
 
 #: ../bin/drakids:40 ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:132 ../bin/net_applet:292
+#: ../bin/net_applet:134 ../bin/net_applet:306
 #: ../lib/network/drakfirewall.pm:311 ../lib/network/drakfirewall.pm:315
 #, c-format
 msgid "Interactive Firewall"
@@ -664,7 +664,7 @@ msgstr "Interaktivní firewall"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:292
+#: ../bin/net_applet:306
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "Nelze kontaktovat démona"
@@ -851,15 +851,18 @@ msgstr "Bit pro označení připojení"
 msgid "Network profiles"
 msgstr "Síťové profily"
 
-#: ../bin/draknetprofile:66, c-format
+#: ../bin/draknetprofile:66
+#, c-format
 msgid "Module"
 msgstr "Modul"
 
-#: ../bin/draknetprofile:67, c-format
+#: ../bin/draknetprofile:67
+#, c-format
 msgid "Enabled"
 msgstr "Povolen"
 
-#: ../bin/draknetprofile:68, c-format
+#: ../bin/draknetprofile:68
+#, c-format
 msgid "Description"
 msgstr "Popis"
 
@@ -881,17 +884,17 @@ msgid ""
 "settings, and you'll be able to configure your system configuration as usual "
 "afterwards."
 msgstr ""
-"Zadejte prosím název nově vytvářeného síťového profilu (např. "
-"práce, domov, roaming, …). Tento nový profil bude vytvořen na "
-"základě současných nastavení a poté budete mít možnost "
-"toto nastavení změnit."
+"Zadejte prosím název nově vytvářeného síťového profilu (např. práce, domov, "
+"roaming, …). Tento nový profil bude vytvořen na základě současných nastavení "
+"a poté budete mít možnost toto nastavení změnit."
 
 #: ../bin/draknetprofile:166
 #, c-format
 msgid "The \"%s\" profile already exists!"
 msgstr "Profil \"%s\" už existuje!"
 
-#: ../bin/draknetprofile:172, c-format
+#: ../bin/draknetprofile:172
+#, c-format
 msgid "New profile created"
 msgstr "Nový profil vytvořen"
 
@@ -902,9 +905,8 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
-"Nyní používáte síťový profil %s. Můžete nastavit váš systém jako "
-"obvykle a odteď budou všechna vaše síťová nastavení ukládána "
-"do tohoto profilu."
+"Nyní používáte síťový profil %s. Můžete nastavit váš systém jako obvykle a "
+"odteď budou všechna vaše síťová nastavení ukládána do tohoto profilu."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -913,11 +915,13 @@ msgstr ""
 msgid "Warning"
 msgstr "Varování"
 
-#: ../bin/draknetprofile:183, c-format
+#: ../bin/draknetprofile:183
+#, c-format
 msgid "Are you sure you want to delete the default profile?"
 msgstr "Jste si jisti, že chcete smazat výchozí síťový profil?"
 
-#: ../bin/draknetprofile:186, c-format
+#: ../bin/draknetprofile:186
+#, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
@@ -928,7 +932,8 @@ msgstr "Nelze smazat současný profil. Nejprve prosím přepněte na jiný prof
 msgid "Advanced"
 msgstr "Pokročilé"
 
-#: ../bin/draknetprofile:198, c-format
+#: ../bin/draknetprofile:198
+#, c-format
 msgid "Select the netprofile modules:"
 msgstr "Vyberte modul netprofile:"
 
@@ -937,7 +942,8 @@ msgstr "Vyberte modul netprofile:"
 msgid "This tool allows you to control network profiles."
 msgstr "Tento nástroj vám umožňuje ovládat síťové profily."
 
-#: ../bin/draknetprofile:212, c-format
+#: ../bin/draknetprofile:212
+#, c-format
 msgid "Select a network profile:"
 msgstr "Vyberte síťový profil:"
 
@@ -2227,89 +2233,94 @@ msgstr ""
 "Nemáte nastaveno žádné připojení k internetu.\n"
 "Spusťte průvodce \"%s\" z Ovládacího centra Mandriva Linux"
 
-#: ../bin/net_applet:129 ../bin/net_monitor:519
+#: ../bin/net_applet:106
+#, fuzzy, c-format
+msgid "Connecting.."
+msgstr "Připojuji se..."
+
+#: ../bin/net_applet:131 ../bin/net_monitor:519
 #, c-format
 msgid "Connect %s"
 msgstr "Připojit %s"
 
-#: ../bin/net_applet:130 ../bin/net_monitor:519
+#: ../bin/net_applet:132 ../bin/net_monitor:519
 #, c-format
 msgid "Disconnect %s"
 msgstr "Odpojit %s"
 
-#: ../bin/net_applet:131
+#: ../bin/net_applet:133
 #, c-format
 msgid "Monitor Network"
 msgstr "Sledovat síť"
 
-#: ../bin/net_applet:133
+#: ../bin/net_applet:135
 #, c-format
 msgid "Manage wireless networks"
 msgstr "Spravovat bezdrátové sítě"
 
-#: ../bin/net_applet:135
+#: ../bin/net_applet:137
 #, c-format
 msgid "Manage VPN connections"
 msgstr "Správa VPN připojení"
 
-#: ../bin/net_applet:139
+#: ../bin/net_applet:141
 #, c-format
 msgid "Configure Network"
 msgstr "Nastavit síť"
 
-#: ../bin/net_applet:141
+#: ../bin/net_applet:143
 #, c-format
 msgid "Watched interface"
 msgstr "Sledované rozhraní"
 
-#: ../bin/net_applet:142 ../bin/net_applet:143 ../bin/net_applet:145
+#: ../bin/net_applet:144 ../bin/net_applet:145 ../bin/net_applet:147
 #, c-format
 msgid "Auto-detect"
 msgstr "Autodetekce"
 
-#: ../bin/net_applet:150
+#: ../bin/net_applet:152
 #, c-format
 msgid "Active interfaces"
 msgstr "Aktivní rozhraní"
 
-#: ../bin/net_applet:170
+#: ../bin/net_applet:172
 #, c-format
 msgid "Profiles"
 msgstr "Profily"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:229
+#: ../bin/net_applet:182 ../lib/network/connection.pm:229
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
 msgid "VPN connection"
 msgstr "VPN připojení"
 
-#: ../bin/net_applet:372
+#: ../bin/net_applet:387
 #, c-format
 msgid "Network connection"
 msgstr "Síťové spojení"
 
-#: ../bin/net_applet:459
+#: ../bin/net_applet:474
 #, c-format
 msgid "More networks"
 msgstr "Více sítí"
 
-#: ../bin/net_applet:486
+#: ../bin/net_applet:501
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "Automatický režim interaktivního firewallu"
 
-#: ../bin/net_applet:491
+#: ../bin/net_applet:506
 #, c-format
 msgid "Always launch on startup"
 msgstr "Vždy spouštět při startu"
 
-#: ../bin/net_applet:496
+#: ../bin/net_applet:511
 #, c-format
 msgid "Wireless networks"
 msgstr "Bezdrátové sítě"
 
-#: ../bin/net_applet:503 ../bin/net_monitor:96
+#: ../bin/net_applet:518 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Nastavení"
@@ -2776,17 +2787,17 @@ msgstr "Síťová maska by měla být ve formátu 255.255.224.0"
 msgid "Warning: IP address %s is usually reserved!"
 msgstr "Varování: IP adresa %s je obyčejně rezervována!"
 
-#: ../lib/network/connection/ethernet.pm:192, c-format
+#: ../lib/network/connection/ethernet.pm:192
+#, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
 "%s je již použita připojením, které se spouští při startu počítače (%s). "
-"Chcete-"
-"li použít tuto adresu s tímto připojením, vypněte nejprve všechna ostatní "
-"zařízení, která ji používají, nebo je nastavte tak, aby se nespouštěla při "
-"startu"
+"Chcete-li použít tuto adresu s tímto připojením, vypněte nejprve všechna "
+"ostatní zařízení, která ji používají, nebo je nastavte tak, aby se "
+"nespouštěla při startu"
 
 #: ../lib/network/connection/ethernet.pm:219
 #, c-format
@@ -2800,9 +2811,8 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
-"Toto umožní serveru přiřadit název tomuto počítači. Pokud server "
-"neposkytne platný název počítače, bude název vygenerován "
-"automaticky."
+"Toto umožní serveru přiřadit název tomuto počítači. Pokud server neposkytne "
+"platný název počítače, bude název vygenerován automaticky."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -3313,7 +3323,7 @@ msgstr "WPA/WPA2 Enterprise"
 msgid "Windows driver"
 msgstr "Ovladač z Windows"
 
-#: ../lib/network/connection/wireless.pm:355
+#: ../lib/network/connection/wireless.pm:366
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
@@ -3322,77 +3332,78 @@ msgstr ""
 "Vaše bezdrátová karta je vypnuta, zapněte prosím nejprve přepínač pro "
 "bezdrátové vysílání (přepínač RF kill)."
 
-#: ../lib/network/connection/wireless.pm:445
+#: ../lib/network/connection/wireless.pm:456
 #, c-format
 msgid "Wireless settings"
 msgstr "Nastavení bezdrátového připojení"
 
-#: ../lib/network/connection/wireless.pm:450
+#: ../lib/network/connection/wireless.pm:461
 #: ../lib/network/connection_manager.pm:280
 #, c-format
 msgid "Operating Mode"
 msgstr "Operační režim"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Ad-hoc"
 msgstr "Ad-hoc"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Managed"
 msgstr "Spravované"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Master"
 msgstr "Primární"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Repeater"
 msgstr "Repeater"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Secondary"
 msgstr "Sekundární"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Auto"
 msgstr "Auto"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:465
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "Název sítě (ESSID)"
 
-#: ../lib/network/connection/wireless.pm:456
+#: ../lib/network/connection/wireless.pm:467
 #, c-format
 msgid "Encryption mode"
 msgstr "Režim šifrování"
 
-#: ../lib/network/connection/wireless.pm:458
+#: ../lib/network/connection/wireless.pm:469
 #, c-format
 msgid "Encryption key"
 msgstr "Šifrovací klíč"
 
-#: ../lib/network/connection/wireless.pm:461, c-format
+#: ../lib/network/connection/wireless.pm:472
+#, c-format
 msgid "Hide password"
 msgstr "Skrýt heslo"
 
-#: ../lib/network/connection/wireless.pm:463
+#: ../lib/network/connection/wireless.pm:474
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr "Vynutit použití tohoto klíče jako ASCII řetězec (např. pro Livebox)"
 
-#: ../lib/network/connection/wireless.pm:470
+#: ../lib/network/connection/wireless.pm:481
 #, c-format
 msgid "EAP Login/Username"
 msgstr "Přihlášení EAP/Uživatel"
 
-#: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
@@ -3403,12 +3414,12 @@ msgstr ""
 "text. Potřebujete-li zadat doménu, zkuste netestovanou\n"
 "syntaxi DOMÉNA\\uživatel"
 
-#: ../lib/network/connection/wireless.pm:475
+#: ../lib/network/connection/wireless.pm:486
 #, c-format
 msgid "EAP Password"
 msgstr "Heslo EAP"
 
-#: ../lib/network/connection/wireless.pm:478
+#: ../lib/network/connection/wireless.pm:489
 #, c-format
 msgid ""
 " Password: A string.\n"
@@ -3441,12 +3452,12 @@ msgstr ""
 "  Režim TLS je zcela založen na certifikátech a může\n"
 "ignorovat uživatelské jméno a heslo zde zadané."
 
-#: ../lib/network/connection/wireless.pm:492
+#: ../lib/network/connection/wireless.pm:503
 #, c-format
 msgid "EAP client certificate"
 msgstr "Klientský certifikát EAP"
 
-#: ../lib/network/connection/wireless.pm:494
+#: ../lib/network/connection/wireless.pm:505
 #, c-format
 msgid ""
 "The complete path and filename of client certificate. This is\n"
@@ -3460,32 +3471,32 @@ msgstr ""
 " Poznámka: další související nastavení jsou k dispozici na\n"
 "stránce pro pokročilé."
 
-#: ../lib/network/connection/wireless.pm:498
+#: ../lib/network/connection/wireless.pm:509
 #, c-format
 msgid "Network ID"
 msgstr "ID sítě"
 
-#: ../lib/network/connection/wireless.pm:499
+#: ../lib/network/connection/wireless.pm:510
 #, c-format
 msgid "Operating frequency"
 msgstr "Operační frekvence"
 
-#: ../lib/network/connection/wireless.pm:500
+#: ../lib/network/connection/wireless.pm:511
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "Práh citlivosti"
 
-#: ../lib/network/connection/wireless.pm:501
+#: ../lib/network/connection/wireless.pm:512
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "Bitová rychlost (b/s)"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:513
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../lib/network/connection/wireless.pm:503
+#: ../lib/network/connection/wireless.pm:514
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -3509,17 +3520,17 @@ msgstr ""
 "pevný nebo\n"
 "jej vypnout."
 
-#: ../lib/network/connection/wireless.pm:510
+#: ../lib/network/connection/wireless.pm:521
 #, c-format
 msgid "Fragmentation"
 msgstr "Fragmentace"
 
-#: ../lib/network/connection/wireless.pm:511
+#: ../lib/network/connection/wireless.pm:522
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "dodatečné parametry příkazu iwconfig"
 
-#: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/connection/wireless.pm:523
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -3535,12 +3546,12 @@ msgstr ""
 "Více informací viz manuálová stránka iwconfig(8)."
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:519
+#: ../lib/network/connection/wireless.pm:530
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "dodatečné parametry příkazu lwspy"
 
-#: ../lib/network/connection/wireless.pm:520
+#: ../lib/network/connection/wireless.pm:531
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -3559,12 +3570,12 @@ msgstr ""
 "\n"
 "Více informací viz manuálová stránka iwpspy(8)."
 
-#: ../lib/network/connection/wireless.pm:528
+#: ../lib/network/connection/wireless.pm:539
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "dodatečné parametry příkazu lwpriv"
 
-#: ../lib/network/connection/wireless.pm:530
+#: ../lib/network/connection/wireless.pm:541
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -3594,28 +3605,28 @@ msgstr ""
 "\n"
 "Více informací viz manuálová stránka iwpriv(8)."
 
-#: ../lib/network/connection/wireless.pm:541
+#: ../lib/network/connection/wireless.pm:552
 #, c-format
 msgid "EAP Protocol"
 msgstr "Protokol EAP"
 
-#: ../lib/network/connection/wireless.pm:542
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "Auto Detect"
 msgstr "Autodetekce"
 
-#: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid "WPA2"
 msgstr "WPA2"
 
-#: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid "WPA"
 msgstr "WPA"
 
-#: ../lib/network/connection/wireless.pm:544
+#: ../lib/network/connection/wireless.pm:555
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
@@ -3624,67 +3635,67 @@ msgstr ""
 "Autodetekce je doporučena, jelikož nejprve zkouší WPA verze 2\n"
 "a v případě neúspěchu WPA verze 1"
 
-#: ../lib/network/connection/wireless.pm:546
+#: ../lib/network/connection/wireless.pm:557
 #, c-format
 msgid "EAP Mode"
 msgstr "Režim EAP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "PEAP"
 msgstr "PEAP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TTLS"
 msgstr "TTLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TLS"
 msgstr "TLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "MSCHAPV2"
 msgstr "MSCHAPV2"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "MD5"
 msgstr "MD5"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "OTP"
 msgstr "OTP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "GTC"
 msgstr "GTC"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "LEAP"
 msgstr "LEAP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "PEAP TTLS"
 msgstr "PEAP TTLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TTLS TLS"
 msgstr "TTLS TLS"
 
-#: ../lib/network/connection/wireless.pm:549
+#: ../lib/network/connection/wireless.pm:560
 #, c-format
 msgid "EAP key_mgmt"
 msgstr "EAP správa_klíčů"
 
-#: ../lib/network/connection/wireless.pm:551
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid ""
 "list of accepted authenticated key management protocols.\n"
@@ -3693,12 +3704,12 @@ msgstr ""
 "seznam přípustných protokolů pro správu ověřených klíčů.\n"
 "možné hodnoty jsou WPA-EAP, IEEE8021X, NONE"
 
-#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:564
 #, c-format
 msgid "EAP outer identity"
 msgstr "Vnější identita EAP"
 
-#: ../lib/network/connection/wireless.pm:555
+#: ../lib/network/connection/wireless.pm:566
 #, c-format
 msgid ""
 "Anonymous identity string for EAP: to be used as the\n"
@@ -3709,12 +3720,12 @@ msgstr ""
 "jako nešifrovaná identita u typů EAP, které podporují\n"
 "odlišnou tunelovanou identitu, např. TTLS"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:569
 #, c-format
 msgid "EAP phase2"
 msgstr "EAP fáze2"
 
-#: ../lib/network/connection/wireless.pm:560
+#: ../lib/network/connection/wireless.pm:571
 #, c-format
 msgid ""
 "Inner authentication with TLS tunnel parameters.\n"
@@ -3727,12 +3738,12 @@ msgstr ""
 "auth=MSCHAPV2 pro PEAP nebo\n"
 "autheap=MSCHAPV2 autheap=MD5 pro TTLS"
 
-#: ../lib/network/connection/wireless.pm:564
+#: ../lib/network/connection/wireless.pm:575
 #, c-format
 msgid "EAP CA certificate"
 msgstr "Certifikát EAP CA"
 
-#: ../lib/network/connection/wireless.pm:566
+#: ../lib/network/connection/wireless.pm:577
 #, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
@@ -3747,12 +3758,12 @@ msgstr ""
 "Pokud je to možné, měl by být důvěryhodný certifikát CA vždy\n"
 "nastaven při použití TLS, TTLS nebo PEAP."
 
-#: ../lib/network/connection/wireless.pm:571
+#: ../lib/network/connection/wireless.pm:582
 #, c-format
 msgid "EAP certificate subject match"
 msgstr "Hledání v subjektu EAP certifikátu"
 
-#: ../lib/network/connection/wireless.pm:573
+#: ../lib/network/connection/wireless.pm:584
 #, c-format
 msgid ""
 " Substring to be matched against the subject of\n"
@@ -3767,11 +3778,12 @@ msgstr ""
 "tento řetězec v subjektu. Část řetězce je tomto formátu:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
-#: ../lib/network/connection/wireless.pm:578, c-format
+#: ../lib/network/connection/wireless.pm:589
+#, c-format
 msgid "Extra directives"
 msgstr "Další direktivy"
 
-#: ../lib/network/connection/wireless.pm:579
+#: ../lib/network/connection/wireless.pm:590
 #, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
@@ -3802,12 +3814,12 @@ msgstr ""
 "\tOstatní jako key_mgmt, eap lze použít pro vynucení\n"
 "\tzvláštních nastavení odlišných od nastavení z UI."
 
-#: ../lib/network/connection/wireless.pm:599
+#: ../lib/network/connection/wireless.pm:610
 #, c-format
 msgid "An encryption key is required."
 msgstr "Je vyžadován šifrovací klíč."
 
-#: ../lib/network/connection/wireless.pm:606
+#: ../lib/network/connection/wireless.pm:617
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
@@ -3816,7 +3828,7 @@ msgstr ""
 "Předsdílený klíč by měl mít 8 až 63 ASCII znaků nebo 64 hexadecimálních "
 "znaků."
 
-#: ../lib/network/connection/wireless.pm:612
+#: ../lib/network/connection/wireless.pm:623
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
@@ -3824,7 +3836,7 @@ msgid ""
 msgstr ""
 "WEP klíč by měl mít nejvýše %d ASCII znaků nebo %d hexadecimálních znaků."
 
-#: ../lib/network/connection/wireless.pm:619
+#: ../lib/network/connection/wireless.pm:630
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -3833,7 +3845,7 @@ msgstr ""
 "Frekvence má povolené přípony k, M nebo G (například \"2,46G\" pro frekvenci "
 "2,46 GHz) nebo přidejte dostatek '0' (nul)."
 
-#: ../lib/network/connection/wireless.pm:625
+#: ../lib/network/connection/wireless.pm:636
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
@@ -3842,17 +3854,17 @@ msgstr ""
 "Intenzita má povolené přípony k, M nebo G (např. \"11M\" nebo 11M) nebo "
 "přidejte dostatečný počet '0' (nul)."
 
-#: ../lib/network/connection/wireless.pm:637
+#: ../lib/network/connection/wireless.pm:648
 #, c-format
 msgid "Allow access point roaming"
 msgstr "Povolit stěhování přístupového bodu"
 
-#: ../lib/network/connection/wireless.pm:762
+#: ../lib/network/connection/wireless.pm:773
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "Bezdrátová síť \"%s\" přiřazena k rozhraní %s"
 
-#: ../lib/network/connection/wireless.pm:763
+#: ../lib/network/connection/wireless.pm:774
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "Ztraceno přiřazení k bezdrátové síti na rozhraní %s"
@@ -4396,7 +4408,8 @@ msgstr "Automaticky"
 msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "Není přítomno žádné zařízení podporující ovladač ndiswrapper %s!"
 
-#: ../lib/network/ndiswrapper.pm:36, c-format
+#: ../lib/network/ndiswrapper.pm:36
+#, c-format
 msgid "Please select the correct driver"
 msgstr "Vyberte prosím správný ovladač"
 
@@ -4408,8 +4421,8 @@ msgid ""
 "supported."
 msgstr ""
 "Vyberte prosím soubor s popisem ovladače pro Windows (.inf) nebo "
-"odpovídající soubor s ovladačem (soubor .dll nebo .o). Mějte na paměti, "
-"že jsou podporovány pouze ovladače do Windows XP a starší."
+"odpovídající soubor s ovladačem (soubor .dll nebo .o). Mějte na paměti, že "
+"jsou podporovány pouze ovladače do Windows XP a starší."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format

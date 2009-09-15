@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-tools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-24 11:11-0300\n"
+"POT-Creation-Date: 2009-09-15 14:06-0300\n"
 "PO-Revision-Date: 2008-03-24 03:26+0200\n"
 "Last-Translator: Dotan Kamber <kamberd@yahoo.com>\n"
 "Language-Team: Hebrew\n"
@@ -76,7 +76,7 @@ msgstr "הגדרת רשת מקומית"
 msgid "Configure Local Area Network..."
 msgstr "הגדרת רשת מקומית..."
 
-#: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:188
+#: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:190
 #, c-format
 msgid "Help"
 msgstr "עזרה"
@@ -626,7 +626,7 @@ msgid "Failed to remove host."
 msgstr "כשל בהסרת המארח."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:219
-#: ../bin/net_applet:189 ../lib/network/drakroam.pm:93
+#: ../bin/net_applet:191 ../lib/network/drakroam.pm:93
 #: ../lib/network/netcenter.pm:171
 #, c-format
 msgid "Quit"
@@ -639,7 +639,7 @@ msgstr "כתובות מותרות"
 
 #: ../bin/drakids:40 ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:132 ../bin/net_applet:292
+#: ../bin/net_applet:134 ../bin/net_applet:306
 #: ../lib/network/drakfirewall.pm:311 ../lib/network/drakfirewall.pm:315
 #, c-format
 msgid "Interactive Firewall"
@@ -647,7 +647,7 @@ msgstr "חומת אש אינטראקטיבית"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:292
+#: ../bin/net_applet:306
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "לא יכול להתחבר לתכנת הרקע"
@@ -2185,89 +2185,94 @@ msgstr ""
 "החיבור לאינטרנט לא הוגדר עדיין.\n"
 "נא להפעיל את האשף \"%s\" ממרכז הבקרה של מנדריבה לינוקס"
 
-#: ../bin/net_applet:129 ../bin/net_monitor:519
+#: ../bin/net_applet:106
+#, fuzzy, c-format
+msgid "Connecting.."
+msgstr "מתחבר..."
+
+#: ../bin/net_applet:131 ../bin/net_monitor:519
 #, c-format
 msgid "Connect %s"
 msgstr "חיבור %s"
 
-#: ../bin/net_applet:130 ../bin/net_monitor:519
+#: ../bin/net_applet:132 ../bin/net_monitor:519
 #, c-format
 msgid "Disconnect %s"
 msgstr "ניתוק %s"
 
-#: ../bin/net_applet:131
+#: ../bin/net_applet:133
 #, c-format
 msgid "Monitor Network"
 msgstr "ניטור הרשת"
 
-#: ../bin/net_applet:133
+#: ../bin/net_applet:135
 #, c-format
 msgid "Manage wireless networks"
 msgstr "ניהול רשתות אלחוטיות"
 
-#: ../bin/net_applet:135
+#: ../bin/net_applet:137
 #, c-format
 msgid "Manage VPN connections"
 msgstr "ניהול חיבורי VPN"
 
-#: ../bin/net_applet:139
+#: ../bin/net_applet:141
 #, c-format
 msgid "Configure Network"
 msgstr "הגדרת הרשת"
 
-#: ../bin/net_applet:141
+#: ../bin/net_applet:143
 #, c-format
 msgid "Watched interface"
 msgstr "ממשקים מנוטרים"
 
-#: ../bin/net_applet:142 ../bin/net_applet:143 ../bin/net_applet:145
+#: ../bin/net_applet:144 ../bin/net_applet:145 ../bin/net_applet:147
 #, c-format
 msgid "Auto-detect"
 msgstr "זיהוי-אוטומטי"
 
-#: ../bin/net_applet:150
+#: ../bin/net_applet:152
 #, c-format
 msgid "Active interfaces"
 msgstr "מנשקים פעילים"
 
-#: ../bin/net_applet:170
+#: ../bin/net_applet:172
 #, c-format
 msgid "Profiles"
 msgstr "פרופילים"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:229
+#: ../bin/net_applet:182 ../lib/network/connection.pm:229
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
 msgid "VPN connection"
 msgstr "חיבור VPN"
 
-#: ../bin/net_applet:372
+#: ../bin/net_applet:387
 #, c-format
 msgid "Network connection"
 msgstr "חיבורי רשת"
 
-#: ../bin/net_applet:459
+#: ../bin/net_applet:474
 #, c-format
 msgid "More networks"
 msgstr "רשתות נוספות"
 
-#: ../bin/net_applet:486
+#: ../bin/net_applet:501
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "מצב אוטומטי של חומת האש האינטראקטיבית"
 
-#: ../bin/net_applet:491
+#: ../bin/net_applet:506
 #, c-format
 msgid "Always launch on startup"
 msgstr "הפעל תמיד באתחול המערכת"
 
-#: ../bin/net_applet:496
+#: ../bin/net_applet:511
 #, c-format
 msgid "Wireless networks"
 msgstr "רשתות אלחוטיות"
 
-#: ../bin/net_applet:503 ../bin/net_monitor:96
+#: ../bin/net_applet:518 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "הגדרות"
@@ -3258,7 +3263,7 @@ msgstr "WPA/WPA2 Enterprise"
 msgid "Windows driver"
 msgstr "הנע התקן של וינדוז"
 
-#: ../lib/network/connection/wireless.pm:355
+#: ../lib/network/connection/wireless.pm:366
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
@@ -3266,78 +3271,78 @@ msgid ""
 msgstr ""
 "פעולת כרטיס האלחוט שלך מבוטלת, נא להפעיל את מתג האלחוט (מתג ה-RF kill) תחילה."
 
-#: ../lib/network/connection/wireless.pm:445
+#: ../lib/network/connection/wireless.pm:456
 #, c-format
 msgid "Wireless settings"
 msgstr "הגדרות אלחוט"
 
-#: ../lib/network/connection/wireless.pm:450
+#: ../lib/network/connection/wireless.pm:461
 #: ../lib/network/connection_manager.pm:280
 #, c-format
 msgid "Operating Mode"
 msgstr "אופן פעולה"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Ad-hoc"
 msgstr "לפי הצורך"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Managed"
 msgstr "מנוהל"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Master"
 msgstr "ראשי"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Repeater"
 msgstr "משחזר"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Secondary"
 msgstr "משני"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Auto"
 msgstr "אוטומטי"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:465
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "שם הרשת (ESSID)"
 
-#: ../lib/network/connection/wireless.pm:456
+#: ../lib/network/connection/wireless.pm:467
 #, c-format
 msgid "Encryption mode"
 msgstr "אופן הצפנה"
 
-#: ../lib/network/connection/wireless.pm:458
+#: ../lib/network/connection/wireless.pm:469
 #, c-format
 msgid "Encryption key"
 msgstr "מפתח הצפנה"
 
-#: ../lib/network/connection/wireless.pm:461
+#: ../lib/network/connection/wireless.pm:472
 #, fuzzy, c-format
 msgid "Hide password"
 msgstr "סיסמה"
 
-#: ../lib/network/connection/wireless.pm:463
+#: ../lib/network/connection/wireless.pm:474
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:470
+#: ../lib/network/connection/wireless.pm:481
 #, c-format
 msgid "EAP Login/Username"
 msgstr "משתמש EAP"
 
-#: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
@@ -3348,12 +3353,12 @@ msgstr ""
 "נסה את התחביר שלא נבדק -\n"
 "  מתחם\\שם משתמש"
 
-#: ../lib/network/connection/wireless.pm:475
+#: ../lib/network/connection/wireless.pm:486
 #, c-format
 msgid "EAP Password"
 msgstr "ססמת EAP"
 
-#: ../lib/network/connection/wireless.pm:478
+#: ../lib/network/connection/wireless.pm:489
 #, c-format
 msgid ""
 " Password: A string.\n"
@@ -3372,12 +3377,12 @@ msgid ""
 "the username and password values specified here."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:492
+#: ../lib/network/connection/wireless.pm:503
 #, c-format
 msgid "EAP client certificate"
 msgstr "אישור לקוח EAP"
 
-#: ../lib/network/connection/wireless.pm:494
+#: ../lib/network/connection/wireless.pm:505
 #, c-format
 msgid ""
 "The complete path and filename of client certificate. This is\n"
@@ -3390,32 +3395,32 @@ msgstr ""
 "שם משתמש/ססמה.\n"
 "לתשומת לבך: הגדרות קשורות נוספות מוצגות בדף המתקדם."
 
-#: ../lib/network/connection/wireless.pm:498
+#: ../lib/network/connection/wireless.pm:509
 #, c-format
 msgid "Network ID"
 msgstr "זיהוי רשת"
 
-#: ../lib/network/connection/wireless.pm:499
+#: ../lib/network/connection/wireless.pm:510
 #, c-format
 msgid "Operating frequency"
 msgstr "תדירות פעולה"
 
-#: ../lib/network/connection/wireless.pm:500
+#: ../lib/network/connection/wireless.pm:511
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "סף רגישות"
 
-#: ../lib/network/connection/wireless.pm:501
+#: ../lib/network/connection/wireless.pm:512
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "קצב סיביות - סל\"ש"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:513
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../lib/network/connection/wireless.pm:503
+#: ../lib/network/connection/wireless.pm:514
 #, fuzzy, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -3435,17 +3440,17 @@ msgstr ""
 "לגודל החבילה המרבי מבטל את הסכמה. באפשרותך גם לכוון ערך זה לנקבע אוטומטית או "
 "לכבוי."
 
-#: ../lib/network/connection/wireless.pm:510
+#: ../lib/network/connection/wireless.pm:521
 #, c-format
 msgid "Fragmentation"
 msgstr "פיצוליות"
 
-#: ../lib/network/connection/wireless.pm:511
+#: ../lib/network/connection/wireless.pm:522
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "משתנים נוספים עבור פקודת lwconfig"
 
-#: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/connection/wireless.pm:523
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -3461,12 +3466,12 @@ msgstr ""
 "מידע נוסף בנושא זה ניתן למצוא בדף ההסבר iwconfig(8) man page."
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:519
+#: ../lib/network/connection/wireless.pm:530
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "משתנים נוספים עבור פקודת lwspy"
 
-#: ../lib/network/connection/wireless.pm:520
+#: ../lib/network/connection/wireless.pm:531
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -3485,12 +3490,12 @@ msgstr ""
 "\n"
 "מידע נוסף בנושא זה ניתן למצוא בדף ההסבר iwpspy(8) man page."
 
-#: ../lib/network/connection/wireless.pm:528
+#: ../lib/network/connection/wireless.pm:539
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "משתנים נוספים עבור פקודת lwpriv"
 
-#: ../lib/network/connection/wireless.pm:530
+#: ../lib/network/connection/wireless.pm:541
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -3517,28 +3522,28 @@ msgstr ""
 "\n"
 "מידע נוסף בנושא זה ניתן למצוא בדף ההסבר iwpriv(8) man page."
 
-#: ../lib/network/connection/wireless.pm:541
+#: ../lib/network/connection/wireless.pm:552
 #, c-format
 msgid "EAP Protocol"
 msgstr "פרוטוקול EAP"
 
-#: ../lib/network/connection/wireless.pm:542
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "Auto Detect"
 msgstr "זיהוי אוטומטי"
 
-#: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid "WPA2"
 msgstr "WPA2"
 
-#: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid "WPA"
 msgstr "WPA"
 
-#: ../lib/network/connection/wireless.pm:544
+#: ../lib/network/connection/wireless.pm:555
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
@@ -3547,67 +3552,67 @@ msgstr ""
 "זיהוי אוטומטי מומלץ היות והוא מנסה ראשית WPA מגרסה 2 עם\n"
 "נפילה ל-WPA מגרסה 1"
 
-#: ../lib/network/connection/wireless.pm:546
+#: ../lib/network/connection/wireless.pm:557
 #, c-format
 msgid "EAP Mode"
 msgstr "מצב EAP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "PEAP"
 msgstr "PEAP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TTLS"
 msgstr "TTLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TLS"
 msgstr "TLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "MSCHAPV2"
 msgstr "MSCHAPV2"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "MD5"
 msgstr "MD5"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "OTP"
 msgstr "OTP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "GTC"
 msgstr "GTC"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "LEAP"
 msgstr "LEAP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "PEAP TTLS"
 msgstr "PEAP TTLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TTLS TLS"
 msgstr "TTLS TLS"
 
-#: ../lib/network/connection/wireless.pm:549
+#: ../lib/network/connection/wireless.pm:560
 #, c-format
 msgid "EAP key_mgmt"
 msgstr "EAP key_mgmt"
 
-#: ../lib/network/connection/wireless.pm:551
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid ""
 "list of accepted authenticated key management protocols.\n"
@@ -3616,12 +3621,12 @@ msgstr ""
 "רשימת פרוטוקולים מקובלים לניהול מפתחות הזדהות.\n"
 "הערכים האפשריים הם WPA-EAP, IEEE8021X, NONE"
 
-#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:564
 #, c-format
 msgid "EAP outer identity"
 msgstr "זהות EAP חיצונית"
 
-#: ../lib/network/connection/wireless.pm:555
+#: ../lib/network/connection/wireless.pm:566
 #, c-format
 msgid ""
 "Anonymous identity string for EAP: to be used as the\n"
@@ -3632,12 +3637,12 @@ msgstr ""
 "בלתי מוצפנת עם סוגי EAP התומכים בזהות מוצנרת\n"
 "שונה, לדוגמה TTLS"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:569
 #, c-format
 msgid "EAP phase2"
 msgstr "EAP phase2"
 
-#: ../lib/network/connection/wireless.pm:560
+#: ../lib/network/connection/wireless.pm:571
 #, c-format
 msgid ""
 "Inner authentication with TLS tunnel parameters.\n"
@@ -3646,12 +3651,12 @@ msgid ""
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:564
+#: ../lib/network/connection/wireless.pm:575
 #, c-format
 msgid "EAP CA certificate"
 msgstr "אישור CA EAP"
 
-#: ../lib/network/connection/wireless.pm:566
+#: ../lib/network/connection/wireless.pm:577
 #, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
@@ -3665,12 +3670,12 @@ msgstr ""
 "נכללים, אישור השרת לא יאומת. אם ניתן, יש תמיד להגדיר\n"
 "אישור CA מוכר בשימוש עם TLS, TTLS או PEAP."
 
-#: ../lib/network/connection/wireless.pm:571
+#: ../lib/network/connection/wireless.pm:582
 #, c-format
 msgid "EAP certificate subject match"
 msgstr "התאמת נושא אישור EAP"
 
-#: ../lib/network/connection/wireless.pm:573
+#: ../lib/network/connection/wireless.pm:584
 #, c-format
 msgid ""
 " Substring to be matched against the subject of\n"
@@ -3680,12 +3685,12 @@ msgid ""
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:578
+#: ../lib/network/connection/wireless.pm:589
 #, fuzzy, c-format
 msgid "Extra directives"
 msgstr "הנחיות EAP נוספות"
 
-#: ../lib/network/connection/wireless.pm:579
+#: ../lib/network/connection/wireless.pm:590
 #, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
@@ -3703,26 +3708,26 @@ msgid ""
 "\tspecial settings different from the U.I settings."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:599
+#: ../lib/network/connection/wireless.pm:610
 #, c-format
 msgid "An encryption key is required."
 msgstr "דרוש מפתח הצפנה."
 
-#: ../lib/network/connection/wireless.pm:606
+#: ../lib/network/connection/wireless.pm:617
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
 "hexadecimal characters."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:612
+#: ../lib/network/connection/wireless.pm:623
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
 "characters."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:619
+#: ../lib/network/connection/wireless.pm:630
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -3731,7 +3736,7 @@ msgstr ""
 "באפשרותך להגדיר תדירות עם הסיומת k, M או G (למשל \"2.46G\" עבור תדירות 2.46 "
 "GHz). לחלופין עליך לרפד את המספר עם מספיק אפסים."
 
-#: ../lib/network/connection/wireless.pm:625
+#: ../lib/network/connection/wireless.pm:636
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
@@ -3740,17 +3745,17 @@ msgstr ""
 "על הקצב להיות בעל הסיומת k, M או G (למשל \"11M\" עבור קצב של 11M). לחלופין "
 "ניתן להוסיף את מספר האפסים המתאים."
 
-#: ../lib/network/connection/wireless.pm:637
+#: ../lib/network/connection/wireless.pm:648
 #, c-format
 msgid "Allow access point roaming"
 msgstr "אפשר גישה לנקודת הגישה ממיקום בחו\"ל (roaming)"
 
-#: ../lib/network/connection/wireless.pm:762
+#: ../lib/network/connection/wireless.pm:773
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "מקושר לרשת האלחוטית \"%s\" בהתקן %s"
 
-#: ../lib/network/connection/wireless.pm:763
+#: ../lib/network/connection/wireless.pm:774
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "אבד הקישור לרשת האלחוטית בהתקן %s"
