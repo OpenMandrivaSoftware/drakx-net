@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-et\n"
-"POT-Creation-Date: 2009-08-24 11:11-0300\n"
+"POT-Creation-Date: 2009-09-15 14:06-0300\n"
 "PO-Revision-Date: 2009-08-25 16:00+0200\n"
 "Last-Translator: Marek Laane <bald@starman.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -68,7 +68,7 @@ msgstr "LAN-i seadistamine"
 msgid "Configure Local Area Network..."
 msgstr "Kohtvõrgu (LAN) seadistamine..."
 
-#: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:188
+#: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:190
 #, c-format
 msgid "Help"
 msgstr "Abi"
@@ -635,7 +635,7 @@ msgid "Failed to remove host."
 msgstr "Masina eemaldamine nurjus."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:219
-#: ../bin/net_applet:189 ../lib/network/drakroam.pm:93
+#: ../bin/net_applet:191 ../lib/network/drakroam.pm:93
 #: ../lib/network/netcenter.pm:171
 #, c-format
 msgid "Quit"
@@ -648,7 +648,7 @@ msgstr "Lubatud aadressid"
 
 #: ../bin/drakids:40 ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:132 ../bin/net_applet:292
+#: ../bin/net_applet:134 ../bin/net_applet:306
 #: ../lib/network/drakfirewall.pm:311 ../lib/network/drakfirewall.pm:315
 #, c-format
 msgid "Interactive Firewall"
@@ -656,7 +656,7 @@ msgstr "Interaktiivne tulemüür"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:292
+#: ../bin/net_applet:306
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "Ühendust deemoniga ei saadud"
@@ -2217,89 +2217,94 @@ msgstr ""
 "Internetiühendust ei ole veel seadistatud.\n"
 "Käivitage Mandriva Linuxi juhtimiskeskuses nõustaja \"%s\""
 
-#: ../bin/net_applet:129 ../bin/net_monitor:519
+#: ../bin/net_applet:106
+#, fuzzy, c-format
+msgid "Connecting.."
+msgstr "Ühendumine..."
+
+#: ../bin/net_applet:131 ../bin/net_monitor:519
 #, c-format
 msgid "Connect %s"
 msgstr "%s ühenduse loomine"
 
-#: ../bin/net_applet:130 ../bin/net_monitor:519
+#: ../bin/net_applet:132 ../bin/net_monitor:519
 #, c-format
 msgid "Disconnect %s"
 msgstr "%s ühenduse katkestamine"
 
-#: ../bin/net_applet:131
+#: ../bin/net_applet:133
 #, c-format
 msgid "Monitor Network"
 msgstr "Võrgu jälgimine"
 
-#: ../bin/net_applet:133
+#: ../bin/net_applet:135
 #, c-format
 msgid "Manage wireless networks"
 msgstr "Juhtmeta ühenduste haldamine"
 
-#: ../bin/net_applet:135
+#: ../bin/net_applet:137
 #, c-format
 msgid "Manage VPN connections"
 msgstr "VPN-ühenduste haldamine"
 
-#: ../bin/net_applet:139
+#: ../bin/net_applet:141
 #, c-format
 msgid "Configure Network"
 msgstr "Võrgu seadistamine"
 
-#: ../bin/net_applet:141
+#: ../bin/net_applet:143
 #, c-format
 msgid "Watched interface"
 msgstr "Jälgitav liides"
 
-#: ../bin/net_applet:142 ../bin/net_applet:143 ../bin/net_applet:145
+#: ../bin/net_applet:144 ../bin/net_applet:145 ../bin/net_applet:147
 #, c-format
 msgid "Auto-detect"
 msgstr "Automaattuvastus"
 
-#: ../bin/net_applet:150
+#: ../bin/net_applet:152
 #, c-format
 msgid "Active interfaces"
 msgstr "Aktiivsed liidesed"
 
-#: ../bin/net_applet:170
+#: ../bin/net_applet:172
 #, c-format
 msgid "Profiles"
 msgstr "Profiilid"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:229
+#: ../bin/net_applet:182 ../lib/network/connection.pm:229
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
 msgid "VPN connection"
 msgstr "VPN-ühendus"
 
-#: ../bin/net_applet:372
+#: ../bin/net_applet:387
 #, c-format
 msgid "Network connection"
 msgstr "Võrguühendus"
 
-#: ../bin/net_applet:459
+#: ../bin/net_applet:474
 #, c-format
 msgid "More networks"
 msgstr "Teised võrgud"
 
-#: ../bin/net_applet:486
+#: ../bin/net_applet:501
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "Interaktiivse tulemüüri automaatne režiim"
 
-#: ../bin/net_applet:491
+#: ../bin/net_applet:506
 #, c-format
 msgid "Always launch on startup"
 msgstr "Alati käivitatakse käivitumisel"
 
-#: ../bin/net_applet:496
+#: ../bin/net_applet:511
 #, c-format
 msgid "Wireless networks"
 msgstr "Juhtmeta võrgud"
 
-#: ../bin/net_applet:503 ../bin/net_monitor:96
+#: ../bin/net_applet:518 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Seadistused"
@@ -3300,7 +3305,7 @@ msgstr "WPA/WPA2 Enterprise"
 msgid "Windows driver"
 msgstr "Windowsi draiver"
 
-#: ../lib/network/connection/wireless.pm:355
+#: ../lib/network/connection/wireless.pm:366
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
@@ -3309,78 +3314,78 @@ msgstr ""
 "Teie juhtmeta ühenduse kaart on välja lülitatud, palun lülitage see "
 "kõigepealt sisse (RF kill)."
 
-#: ../lib/network/connection/wireless.pm:445
+#: ../lib/network/connection/wireless.pm:456
 #, c-format
 msgid "Wireless settings"
 msgstr "Juhtmeta ühenduse seadistused"
 
-#: ../lib/network/connection/wireless.pm:450
+#: ../lib/network/connection/wireless.pm:461
 #: ../lib/network/connection_manager.pm:280
 #, c-format
 msgid "Operating Mode"
 msgstr "Töörežiim"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Ad-hoc"
 msgstr "Ad hoc"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Managed"
 msgstr "Määratud"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Master"
 msgstr "Esmane"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Repeater"
 msgstr "Repiiter"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Secondary"
 msgstr "Teisene"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Auto"
 msgstr "Automaatne"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:465
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "Võrgu nimi (ESSID)"
 
-#: ../lib/network/connection/wireless.pm:456
+#: ../lib/network/connection/wireless.pm:467
 #, c-format
 msgid "Encryption mode"
 msgstr "Krüptorežiim"
 
-#: ../lib/network/connection/wireless.pm:458
+#: ../lib/network/connection/wireless.pm:469
 #, c-format
 msgid "Encryption key"
 msgstr "Krüptovõti"
 
-#: ../lib/network/connection/wireless.pm:461
+#: ../lib/network/connection/wireless.pm:472
 #, c-format
 msgid "Hide password"
 msgstr "Parooli ei näidata"
 
-#: ../lib/network/connection/wireless.pm:463
+#: ../lib/network/connection/wireless.pm:474
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr "Võtit kasutatakse ainult ASCII stringina (vajalik nt. Liveboxile)"
 
-#: ../lib/network/connection/wireless.pm:470
+#: ../lib/network/connection/wireless.pm:481
 #, c-format
 msgid "EAP Login/Username"
 msgstr "EAP kasutajatunnus"
 
-#: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
@@ -3391,12 +3396,12 @@ msgstr ""
 "määrama ka domeeni, võite proovida testimata süntaksit\n"
 "  DOMEEN\\kasutajanimi"
 
-#: ../lib/network/connection/wireless.pm:475
+#: ../lib/network/connection/wireless.pm:486
 #, c-format
 msgid "EAP Password"
 msgstr "EAP parool"
 
-#: ../lib/network/connection/wireless.pm:478
+#: ../lib/network/connection/wireless.pm:489
 #, c-format
 msgid ""
 " Password: A string.\n"
@@ -3429,12 +3434,12 @@ msgstr ""
 "  TLS režiim on täielikult sertifikaadipõhine ning võib eirata\n"
 "siin määratud kasutajanime ja parooli."
 
-#: ../lib/network/connection/wireless.pm:492
+#: ../lib/network/connection/wireless.pm:503
 #, c-format
 msgid "EAP client certificate"
 msgstr "EAP kliendi sertifikaat"
 
-#: ../lib/network/connection/wireless.pm:494
+#: ../lib/network/connection/wireless.pm:505
 #, c-format
 msgid ""
 "The complete path and filename of client certificate. This is\n"
@@ -3447,32 +3452,32 @@ msgstr ""
 "kasutajanime ja parooli kasutamise alternatiiviks.\n"
 " Märkus: täiendavad seadistused leiab muude valikute leheküljel."
 
-#: ../lib/network/connection/wireless.pm:498
+#: ../lib/network/connection/wireless.pm:509
 #, c-format
 msgid "Network ID"
 msgstr "Võrgu ID"
 
-#: ../lib/network/connection/wireless.pm:499
+#: ../lib/network/connection/wireless.pm:510
 #, c-format
 msgid "Operating frequency"
 msgstr "Töösagedus"
 
-#: ../lib/network/connection/wireless.pm:500
+#: ../lib/network/connection/wireless.pm:511
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "Tundlikkuslävi"
 
-#: ../lib/network/connection/wireless.pm:501
+#: ../lib/network/connection/wireless.pm:512
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "Bitikiirus (b/s)"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:513
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../lib/network/connection/wireless.pm:503
+#: ../lib/network/connection/wireless.pm:514
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -3492,17 +3497,17 @@ msgstr ""
 "võrdne väärtus tühistab võimaluse. Parameetri võib määrata ka automaatseks,\n"
 "fikseerituks või üldse välja lülitada."
 
-#: ../lib/network/connection/wireless.pm:510
+#: ../lib/network/connection/wireless.pm:521
 #, c-format
 msgid "Fragmentation"
 msgstr "Killustus"
 
-#: ../lib/network/connection/wireless.pm:511
+#: ../lib/network/connection/wireless.pm:522
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "Käsu iwconfig lisaargumendid"
 
-#: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/connection/wireless.pm:523
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -3518,12 +3523,12 @@ msgstr ""
 "Täpsemat infot annab man-lehekülg iwconfig(8)."
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:519
+#: ../lib/network/connection/wireless.pm:530
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "Käsu iwspy lisaargumendid"
 
-#: ../lib/network/connection/wireless.pm:520
+#: ../lib/network/connection/wireless.pm:531
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -3542,12 +3547,12 @@ msgstr ""
 "\n"
 "Täpsemat infot annab man-lehekülg iwspy(8)."
 
-#: ../lib/network/connection/wireless.pm:528
+#: ../lib/network/connection/wireless.pm:539
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "Käsu iwpriv lisaargumendid"
 
-#: ../lib/network/connection/wireless.pm:530
+#: ../lib/network/connection/wireless.pm:541
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -3574,28 +3579,28 @@ msgstr ""
 "\n"
 "Täpsemat infot annab man-lehekülg iwpriv(8)."
 
-#: ../lib/network/connection/wireless.pm:541
+#: ../lib/network/connection/wireless.pm:552
 #, c-format
 msgid "EAP Protocol"
 msgstr "EAP protokoll"
 
-#: ../lib/network/connection/wireless.pm:542
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "Auto Detect"
 msgstr "Automaatne tuvastamine"
 
-#: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid "WPA2"
 msgstr "WPA2"
 
-#: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid "WPA"
 msgstr "WPA"
 
-#: ../lib/network/connection/wireless.pm:544
+#: ../lib/network/connection/wireless.pm:555
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
@@ -3604,67 +3609,67 @@ msgstr ""
 "Soovitatav on valida automaatne tuvastamine, sest see proovib\n"
 "kõigepealt WPA versiooni 2 ja seejärel WPA versiooni 1"
 
-#: ../lib/network/connection/wireless.pm:546
+#: ../lib/network/connection/wireless.pm:557
 #, c-format
 msgid "EAP Mode"
 msgstr "EAP režiim"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "PEAP"
 msgstr "PEAP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TTLS"
 msgstr "TTLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TLS"
 msgstr "TLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "MSCHAPV2"
 msgstr "MSCHAPV2"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "MD5"
 msgstr "MD5"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "OTP"
 msgstr "OTP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "GTC"
 msgstr "GTC"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "LEAP"
 msgstr "LEAP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "PEAP TTLS"
 msgstr "PEAP TTLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TTLS TLS"
 msgstr "TTLS TLS"
 
-#: ../lib/network/connection/wireless.pm:549
+#: ../lib/network/connection/wireless.pm:560
 #, c-format
 msgid "EAP key_mgmt"
 msgstr "EAP key_mgmt"
 
-#: ../lib/network/connection/wireless.pm:551
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid ""
 "list of accepted authenticated key management protocols.\n"
@@ -3673,12 +3678,12 @@ msgstr ""
 "Aktsepteeritud autenditud võtmehalduse protokollide loend.\n"
 "Võimalikud väärtused on WPA-EAP, IEEE8021X, NONE"
 
-#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:564
 #, c-format
 msgid "EAP outer identity"
 msgstr "EAP väline identiteet"
 
-#: ../lib/network/connection/wireless.pm:555
+#: ../lib/network/connection/wireless.pm:566
 #, c-format
 msgid ""
 "Anonymous identity string for EAP: to be used as the\n"
@@ -3689,12 +3694,12 @@ msgstr ""
 "identiteedina EAP tüüpide korral, mis toetavad erinevat\n"
 "tunneldatud identiteeti, nt. TTLS"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:569
 #, c-format
 msgid "EAP phase2"
 msgstr "EAP faas 2"
 
-#: ../lib/network/connection/wireless.pm:560
+#: ../lib/network/connection/wireless.pm:571
 #, c-format
 msgid ""
 "Inner authentication with TLS tunnel parameters.\n"
@@ -3707,12 +3712,12 @@ msgstr ""
 "auth=MSCHAPV2 PEAP korral või\n"
 "autheap=MSCHAPV2 autheap=MD5 TTLS korral"
 
-#: ../lib/network/connection/wireless.pm:564
+#: ../lib/network/connection/wireless.pm:575
 #, c-format
 msgid "EAP CA certificate"
 msgstr "EAP SK sertifikaat"
 
-#: ../lib/network/connection/wireless.pm:566
+#: ../lib/network/connection/wireless.pm:577
 #, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
@@ -3727,12 +3732,12 @@ msgstr ""
 "Võimaluse korral tuleks TLS või TTLS või PEAP kasutamisel\n"
 "alati määrata usaldusväärne SK sertifikaat."
 
-#: ../lib/network/connection/wireless.pm:571
+#: ../lib/network/connection/wireless.pm:582
 #, c-format
 msgid "EAP certificate subject match"
 msgstr "EAP sertifikaadi subjekti sobivus"
 
-#: ../lib/network/connection/wireless.pm:573
+#: ../lib/network/connection/wireless.pm:584
 #, c-format
 msgid ""
 " Substring to be matched against the subject of\n"
@@ -3747,12 +3752,12 @@ msgstr ""
 "määratud string. Subjektistringi vorming on järgmine:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
-#: ../lib/network/connection/wireless.pm:578
+#: ../lib/network/connection/wireless.pm:589
 #, c-format
 msgid "Extra directives"
 msgstr "Lisadirektiivid"
 
-#: ../lib/network/connection/wireless.pm:579
+#: ../lib/network/connection/wireless.pm:590
 #, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
@@ -3784,12 +3789,12 @@ msgstr ""
 "\terinevate seadistuste pealesundimiseks võib kasutada\n"
 "\tka teisi direktiive, key_mgmt."
 
-#: ../lib/network/connection/wireless.pm:599
+#: ../lib/network/connection/wireless.pm:610
 #, c-format
 msgid "An encryption key is required."
 msgstr "Vajalik on krüptovõti."
 
-#: ../lib/network/connection/wireless.pm:606
+#: ../lib/network/connection/wireless.pm:617
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
@@ -3797,7 +3802,7 @@ msgid ""
 msgstr ""
 "Eeljagatud võtmel peab olema 8 kuni 63 ASCII märki või 64 16ndsüsteemis märki"
 
-#: ../lib/network/connection/wireless.pm:612
+#: ../lib/network/connection/wireless.pm:623
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
@@ -3806,7 +3811,7 @@ msgstr ""
 "WEP-võtmel peab olema maksimaalselt %d ASCII märki või %d 16ndsüsteemis "
 "märki."
 
-#: ../lib/network/connection/wireless.pm:619
+#: ../lib/network/connection/wireless.pm:630
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -3815,7 +3820,7 @@ msgstr ""
 "Sagedus peab sisaldama sufiksit k, M või G (näiteks \"2.46G\" - 2,46 GHz "
 "sagedusel) või tuleb lisada piisavalt nulle."
 
-#: ../lib/network/connection/wireless.pm:625
+#: ../lib/network/connection/wireless.pm:636
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
@@ -3824,17 +3829,17 @@ msgstr ""
 "Kiirus peab sisaldama sufiksit k, M või G (näiteks \"11M\") või tuleb lisada "
 "piisavalt nulle."
 
-#: ../lib/network/connection/wireless.pm:637
+#: ../lib/network/connection/wireless.pm:648
 #, c-format
 msgid "Allow access point roaming"
 msgstr "Tugijaama vahetumise lubamine"
 
-#: ../lib/network/connection/wireless.pm:762
+#: ../lib/network/connection/wireless.pm:773
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "Seotud juhtmeta võrguga \"%s\" liideses %s"
 
-#: ../lib/network/connection/wireless.pm:763
+#: ../lib/network/connection/wireless.pm:774
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "Kaotatud seos juhtmeta võrguga liideses %s"
@@ -5516,7 +5521,6 @@ msgstr "NAT režiim"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Kindla UDP-pordi kasutamine"
-
 
 #~ msgid "The VPN connection is enabled."
 #~ msgstr "VPN ühendus on loodud."

@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-ja\n"
-"POT-Creation-Date: 2009-08-24 11:11-0300\n"
+"POT-Creation-Date: 2009-09-15 14:06-0300\n"
 "PO-Revision-Date: 2009-03-22 21:05+0900\n"
 "Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 "Language-Team: Japanese <cooker-i18n@mandrivalinux.org>\n"
@@ -71,7 +71,7 @@ msgstr "LAN の設定"
 msgid "Configure Local Area Network..."
 msgstr "LAN を設定..."
 
-#: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:188
+#: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:190
 #, c-format
 msgid "Help"
 msgstr "ヘルプ"
@@ -619,7 +619,7 @@ msgid "Failed to remove host."
 msgstr "ホストの削除に失敗しました。"
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:219
-#: ../bin/net_applet:189 ../lib/network/drakroam.pm:93
+#: ../bin/net_applet:191 ../lib/network/drakroam.pm:93
 #: ../lib/network/netcenter.pm:171
 #, c-format
 msgid "Quit"
@@ -632,7 +632,7 @@ msgstr "許可するアドレス"
 
 #: ../bin/drakids:40 ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:132 ../bin/net_applet:292
+#: ../bin/net_applet:134 ../bin/net_applet:306
 #: ../lib/network/drakfirewall.pm:311 ../lib/network/drakfirewall.pm:315
 #, c-format
 msgid "Interactive Firewall"
@@ -640,7 +640,7 @@ msgstr "対話式ファイアウォール"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:292
+#: ../bin/net_applet:306
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "デーモンに接続できません"
@@ -2187,89 +2187,94 @@ msgstr ""
 "インターネットの接続が設定されていません。\n"
 "Mandriva Linux コントロールセンターの「%s」を実行してください。"
 
-#: ../bin/net_applet:129 ../bin/net_monitor:519
+#: ../bin/net_applet:106
+#, fuzzy, c-format
+msgid "Connecting.."
+msgstr "接続..."
+
+#: ../bin/net_applet:131 ../bin/net_monitor:519
 #, c-format
 msgid "Connect %s"
 msgstr "%s に接続"
 
-#: ../bin/net_applet:130 ../bin/net_monitor:519
+#: ../bin/net_applet:132 ../bin/net_monitor:519
 #, c-format
 msgid "Disconnect %s"
 msgstr "%s を切断"
 
-#: ../bin/net_applet:131
+#: ../bin/net_applet:133
 #, c-format
 msgid "Monitor Network"
 msgstr "ネットワークをモニタ"
 
-#: ../bin/net_applet:133
+#: ../bin/net_applet:135
 #, c-format
 msgid "Manage wireless networks"
 msgstr "ワイヤレスネットワークを管理"
 
-#: ../bin/net_applet:135
+#: ../bin/net_applet:137
 #, c-format
 msgid "Manage VPN connections"
 msgstr "VPN 接続を管理"
 
-#: ../bin/net_applet:139
+#: ../bin/net_applet:141
 #, c-format
 msgid "Configure Network"
 msgstr "ネットワークを設定"
 
-#: ../bin/net_applet:141
+#: ../bin/net_applet:143
 #, c-format
 msgid "Watched interface"
 msgstr "監視中のインターフェース"
 
-#: ../bin/net_applet:142 ../bin/net_applet:143 ../bin/net_applet:145
+#: ../bin/net_applet:144 ../bin/net_applet:145 ../bin/net_applet:147
 #, c-format
 msgid "Auto-detect"
 msgstr "自動検出"
 
-#: ../bin/net_applet:150
+#: ../bin/net_applet:152
 #, c-format
 msgid "Active interfaces"
 msgstr "アクティブなインターフェース"
 
-#: ../bin/net_applet:170
+#: ../bin/net_applet:172
 #, c-format
 msgid "Profiles"
 msgstr "プロファイル"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:229
+#: ../bin/net_applet:182 ../lib/network/connection.pm:229
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
 msgid "VPN connection"
 msgstr "VPN 接続"
 
-#: ../bin/net_applet:372
+#: ../bin/net_applet:387
 #, c-format
 msgid "Network connection"
 msgstr "ネットワーク接続"
 
-#: ../bin/net_applet:459
+#: ../bin/net_applet:474
 #, c-format
 msgid "More networks"
 msgstr "他のネットワーク"
 
-#: ../bin/net_applet:486
+#: ../bin/net_applet:501
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "対話式ファイアウォールの自動モード"
 
-#: ../bin/net_applet:491
+#: ../bin/net_applet:506
 #, c-format
 msgid "Always launch on startup"
 msgstr "起動時に開始"
 
-#: ../bin/net_applet:496
+#: ../bin/net_applet:511
 #, c-format
 msgid "Wireless networks"
 msgstr "ワイヤレスネットワーク"
 
-#: ../bin/net_applet:503 ../bin/net_monitor:96
+#: ../bin/net_applet:518 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "設定"
@@ -3267,7 +3272,7 @@ msgstr "WPA/WPA2 Enterprise"
 msgid "Windows driver"
 msgstr "Windows ドライバ"
 
-#: ../lib/network/connection/wireless.pm:355
+#: ../lib/network/connection/wireless.pm:366
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
@@ -3276,78 +3281,78 @@ msgstr ""
 "ワイヤレスカードが無効になっています。先にワイヤレススイッチ (RF Kill スイッ"
 "チ) を有効にしてください。"
 
-#: ../lib/network/connection/wireless.pm:445
+#: ../lib/network/connection/wireless.pm:456
 #, c-format
 msgid "Wireless settings"
 msgstr "ワイヤレスの設定"
 
-#: ../lib/network/connection/wireless.pm:450
+#: ../lib/network/connection/wireless.pm:461
 #: ../lib/network/connection_manager.pm:280
 #, c-format
 msgid "Operating Mode"
 msgstr "操作モード"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Ad-hoc"
 msgstr "Ad-hoc"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Managed"
 msgstr "Managed"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Master"
 msgstr "マスター"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Repeater"
 msgstr "リピータ"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Secondary"
 msgstr "セカンダリ"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Auto"
 msgstr "自動"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:465
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "ネットワーク名 (ESSID)"
 
-#: ../lib/network/connection/wireless.pm:456
+#: ../lib/network/connection/wireless.pm:467
 #, c-format
 msgid "Encryption mode"
 msgstr "暗号化モード"
 
-#: ../lib/network/connection/wireless.pm:458
+#: ../lib/network/connection/wireless.pm:469
 #, c-format
 msgid "Encryption key"
 msgstr "暗号鍵"
 
-#: ../lib/network/connection/wireless.pm:461
+#: ../lib/network/connection/wireless.pm:472
 #, fuzzy, c-format
 msgid "Hide password"
 msgstr "パスワード"
 
-#: ../lib/network/connection/wireless.pm:463
+#: ../lib/network/connection/wireless.pm:474
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr "この鍵を強制的に ASCII 文字列として使う (例えば Livebox 用)"
 
-#: ../lib/network/connection/wireless.pm:470
+#: ../lib/network/connection/wireless.pm:481
 #, c-format
 msgid "EAP Login/Username"
 msgstr "EAP ログイン/ユーザ名"
 
-#: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
@@ -3355,12 +3360,12 @@ msgid ""
 "  DOMAIN\\username"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:475
+#: ../lib/network/connection/wireless.pm:486
 #, c-format
 msgid "EAP Password"
 msgstr "EAP パスワード"
 
-#: ../lib/network/connection/wireless.pm:478
+#: ../lib/network/connection/wireless.pm:489
 #, c-format
 msgid ""
 " Password: A string.\n"
@@ -3379,12 +3384,12 @@ msgid ""
 "the username and password values specified here."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:492
+#: ../lib/network/connection/wireless.pm:503
 #, c-format
 msgid "EAP client certificate"
 msgstr "EAP クライアント証明書"
 
-#: ../lib/network/connection/wireless.pm:494
+#: ../lib/network/connection/wireless.pm:505
 #, c-format
 msgid ""
 "The complete path and filename of client certificate. This is\n"
@@ -3393,32 +3398,32 @@ msgid ""
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:498
+#: ../lib/network/connection/wireless.pm:509
 #, c-format
 msgid "Network ID"
 msgstr "ネットワーク ID"
 
-#: ../lib/network/connection/wireless.pm:499
+#: ../lib/network/connection/wireless.pm:510
 #, c-format
 msgid "Operating frequency"
 msgstr "動作周波数"
 
-#: ../lib/network/connection/wireless.pm:500
+#: ../lib/network/connection/wireless.pm:511
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "感度のしきい値"
 
-#: ../lib/network/connection/wireless.pm:501
+#: ../lib/network/connection/wireless.pm:512
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "ビットレート (b/s)"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:513
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../lib/network/connection/wireless.pm:503
+#: ../lib/network/connection/wireless.pm:514
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -3438,17 +3443,17 @@ msgstr ""
 "のメカニズムを無効にする最大パケットサイズと同じです。\n"
 "このパラメータを auto/fixed/off に設定することもできます。"
 
-#: ../lib/network/connection/wireless.pm:510
+#: ../lib/network/connection/wireless.pm:521
 #, c-format
 msgid "Fragmentation"
 msgstr "フラグメンテーション"
 
-#: ../lib/network/connection/wireless.pm:511
+#: ../lib/network/connection/wireless.pm:522
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "iwconfig コマンドの補助引数"
 
-#: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/connection/wireless.pm:523
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -3464,12 +3469,12 @@ msgstr ""
 "詳しくは man iwconfig(8) を参照してください。"
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:519
+#: ../lib/network/connection/wireless.pm:530
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "iwspy コマンドの補助引数"
 
-#: ../lib/network/connection/wireless.pm:520
+#: ../lib/network/connection/wireless.pm:531
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -3488,12 +3493,12 @@ msgstr ""
 "\n"
 "詳しくは man iwspy(8) を参照してください。"
 
-#: ../lib/network/connection/wireless.pm:528
+#: ../lib/network/connection/wireless.pm:539
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "iwpriv コマンドの補助引数"
 
-#: ../lib/network/connection/wireless.pm:530
+#: ../lib/network/connection/wireless.pm:541
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -3517,28 +3522,28 @@ msgstr ""
 "明されています。\n"
 "詳しくは man iwpriv(8) を参照してください。"
 
-#: ../lib/network/connection/wireless.pm:541
+#: ../lib/network/connection/wireless.pm:552
 #, c-format
 msgid "EAP Protocol"
 msgstr "EAP プロトコル"
 
-#: ../lib/network/connection/wireless.pm:542
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "Auto Detect"
 msgstr "自動検出"
 
-#: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid "WPA2"
 msgstr "WPA2"
 
-#: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid "WPA"
 msgstr "WPA"
 
-#: ../lib/network/connection/wireless.pm:544
+#: ../lib/network/connection/wireless.pm:555
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
@@ -3547,79 +3552,79 @@ msgstr ""
 "自動検出は最初に WPA のバージョン 2 を試し、使えない場合は\n"
 "バージョン 1 にフォールバックするので、これをお勧めします。"
 
-#: ../lib/network/connection/wireless.pm:546
+#: ../lib/network/connection/wireless.pm:557
 #, c-format
 msgid "EAP Mode"
 msgstr "EAP モード"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "PEAP"
 msgstr "PEAP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TTLS"
 msgstr "TTLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TLS"
 msgstr "TLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "MSCHAPV2"
 msgstr "MSCHAPV2"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "MD5"
 msgstr "MD5"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "OTP"
 msgstr "OTP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "GTC"
 msgstr "GTC"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "LEAP"
 msgstr "LEAP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "PEAP TTLS"
 msgstr "PEAP TTLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TTLS TLS"
 msgstr "TTLS TLS"
 
-#: ../lib/network/connection/wireless.pm:549
+#: ../lib/network/connection/wireless.pm:560
 #, c-format
 msgid "EAP key_mgmt"
 msgstr "EAP key_mgmt"
 
-#: ../lib/network/connection/wireless.pm:551
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid ""
 "list of accepted authenticated key management protocols.\n"
 "possible values are WPA-EAP, IEEE8021X, NONE"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:564
 #, c-format
 msgid "EAP outer identity"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:555
+#: ../lib/network/connection/wireless.pm:566
 #, c-format
 msgid ""
 "Anonymous identity string for EAP: to be used as the\n"
@@ -3627,12 +3632,12 @@ msgid ""
 "tunnelled identity, e.g., TTLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:569
 #, c-format
 msgid "EAP phase2"
 msgstr "EAP フェーズ 2"
 
-#: ../lib/network/connection/wireless.pm:560
+#: ../lib/network/connection/wireless.pm:571
 #, c-format
 msgid ""
 "Inner authentication with TLS tunnel parameters.\n"
@@ -3641,12 +3646,12 @@ msgid ""
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:564
+#: ../lib/network/connection/wireless.pm:575
 #, c-format
 msgid "EAP CA certificate"
 msgstr "EAP CA 証明書"
 
-#: ../lib/network/connection/wireless.pm:566
+#: ../lib/network/connection/wireless.pm:577
 #, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
@@ -3656,12 +3661,12 @@ msgid ""
 "when using TLS or TTLS or PEAP."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:571
+#: ../lib/network/connection/wireless.pm:582
 #, c-format
 msgid "EAP certificate subject match"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:573
+#: ../lib/network/connection/wireless.pm:584
 #, c-format
 msgid ""
 " Substring to be matched against the subject of\n"
@@ -3671,12 +3676,12 @@ msgid ""
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:578
+#: ../lib/network/connection/wireless.pm:589
 #, c-format
 msgid "Extra directives"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:579
+#: ../lib/network/connection/wireless.pm:590
 #, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
@@ -3694,26 +3699,26 @@ msgid ""
 "\tspecial settings different from the U.I settings."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:599
+#: ../lib/network/connection/wireless.pm:610
 #, c-format
 msgid "An encryption key is required."
 msgstr "暗号鍵が必要です。"
 
-#: ../lib/network/connection/wireless.pm:606
+#: ../lib/network/connection/wireless.pm:617
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
 "hexadecimal characters."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:612
+#: ../lib/network/connection/wireless.pm:623
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
 "characters."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:619
+#: ../lib/network/connection/wireless.pm:630
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -3722,7 +3727,7 @@ msgstr ""
 "単位は k, M, G で入力してください (2.46 GHz の場合は 2.46G)。\n"
 "もしくは 0 (ゼロ) で桁を増やしてください。"
 
-#: ../lib/network/connection/wireless.pm:625
+#: ../lib/network/connection/wireless.pm:636
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
@@ -3731,17 +3736,17 @@ msgstr ""
 "単位は k, M, G で入力してください (例: 11M)。\n"
 "もしくは 0 (ゼロ) で桁を増やしてください。"
 
-#: ../lib/network/connection/wireless.pm:637
+#: ../lib/network/connection/wireless.pm:648
 #, c-format
 msgid "Allow access point roaming"
 msgstr "アクセスポイントローミングを許可"
 
-#: ../lib/network/connection/wireless.pm:762
+#: ../lib/network/connection/wireless.pm:773
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "インターフェース %s のワイヤレスネットワーク \"%s\" に関連付けました"
 
-#: ../lib/network/connection/wireless.pm:763
+#: ../lib/network/connection/wireless.pm:774
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "インターフェース %s のワイヤレスネットワークへの関連付けが失われました"

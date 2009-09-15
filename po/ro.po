@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net 7.1\n"
 "Report-Msgid-Bugs-To: https://qa.mandriva.com\n"
-"POT-Creation-Date: 2009-08-24 11:11-0300\n"
+"POT-Creation-Date: 2009-09-15 14:06-0300\n"
 "PO-Revision-Date: 2009-09-01 22:45+0200\n"
 "Last-Translator: Florin Cătălin RUSSEN <cfrussen@yahoo.co.uk>\n"
 "Language-Team: Romanian <cooker-i18n@mandrivalinux.org  >\n"
@@ -109,7 +109,7 @@ msgstr "Configurație LAN"
 msgid "Configure Local Area Network..."
 msgstr "Configurare rețea locală (Local Area Network)"
 
-#: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:188
+#: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:190
 #, c-format
 msgid "Help"
 msgstr "Ajutor"
@@ -679,7 +679,7 @@ msgid "Failed to remove host."
 msgstr "Gazda nu a putut fi înlăturată."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:219
-#: ../bin/net_applet:189 ../lib/network/drakroam.pm:93
+#: ../bin/net_applet:191 ../lib/network/drakroam.pm:93
 #: ../lib/network/netcenter.pm:171
 #, c-format
 msgid "Quit"
@@ -692,7 +692,7 @@ msgstr "Adrese permise"
 
 #: ../bin/drakids:40 ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:132 ../bin/net_applet:292
+#: ../bin/net_applet:134 ../bin/net_applet:306
 #: ../lib/network/drakfirewall.pm:311 ../lib/network/drakfirewall.pm:315
 #, c-format
 msgid "Interactive Firewall"
@@ -700,7 +700,7 @@ msgstr "Parafoc interactiv"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:292
+#: ../bin/net_applet:306
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "Nu se poate contacta demonul"
@@ -887,15 +887,18 @@ msgstr "Bit de marcare a conexiunii"
 msgid "Network profiles"
 msgstr "Profile de rețea"
 
-#: ../bin/draknetprofile:66, c-format
+#: ../bin/draknetprofile:66
+#, c-format
 msgid "Module"
 msgstr "Modul"
 
-#: ../bin/draknetprofile:67, c-format
+#: ../bin/draknetprofile:67
+#, c-format
 msgid "Enabled"
 msgstr "Activat"
 
-#: ../bin/draknetprofile:68, c-format
+#: ../bin/draknetprofile:68
+#, c-format
 msgid "Description"
 msgstr "Descriere"
 
@@ -926,7 +929,8 @@ msgstr ""
 msgid "The \"%s\" profile already exists!"
 msgstr "Profilul \"%s\" există deja!"
 
-#: ../bin/draknetprofile:172, c-format
+#: ../bin/draknetprofile:172
+#, c-format
 msgid "New profile created"
 msgstr "Profil nou creat"
 
@@ -948,11 +952,13 @@ msgstr ""
 msgid "Warning"
 msgstr "Avertisment"
 
-#: ../bin/draknetprofile:183, c-format
+#: ../bin/draknetprofile:183
+#, c-format
 msgid "Are you sure you want to delete the default profile?"
 msgstr "Sînteți sigur că doriți să ștergeți profilul implicit?"
 
-#: ../bin/draknetprofile:186, c-format
+#: ../bin/draknetprofile:186
+#, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
@@ -965,7 +971,8 @@ msgstr ""
 msgid "Advanced"
 msgstr "Avansat"
 
-#: ../bin/draknetprofile:198, c-format
+#: ../bin/draknetprofile:198
+#, c-format
 msgid "Select the netprofile modules:"
 msgstr "Selectați modulele profilului de rețea:"
 
@@ -974,7 +981,8 @@ msgstr "Selectați modulele profilului de rețea:"
 msgid "This tool allows you to control network profiles."
 msgstr "Această uneltă vă permite controlul profilelor de rețea."
 
-#: ../bin/draknetprofile:212, c-format
+#: ../bin/draknetprofile:212
+#, c-format
 msgid "Select a network profile:"
 msgstr "Selectați un profil de rețea:"
 
@@ -2275,89 +2283,94 @@ msgstr ""
 "Nu aveți configurată nici o conexiune la Internet.\n"
 "Lansați asistentul \"%s\" din centrul de control Mandriva Linux"
 
-#: ../bin/net_applet:129 ../bin/net_monitor:519
+#: ../bin/net_applet:106
+#, fuzzy, c-format
+msgid "Connecting.."
+msgstr "Se conectează..."
+
+#: ../bin/net_applet:131 ../bin/net_monitor:519
 #, c-format
 msgid "Connect %s"
 msgstr "Conectează %s"
 
-#: ../bin/net_applet:130 ../bin/net_monitor:519
+#: ../bin/net_applet:132 ../bin/net_monitor:519
 #, c-format
 msgid "Disconnect %s"
 msgstr "Deconectează %s"
 
-#: ../bin/net_applet:131
+#: ../bin/net_applet:133
 #, c-format
 msgid "Monitor Network"
 msgstr "Supraveghează rețeaua"
 
-#: ../bin/net_applet:133
+#: ../bin/net_applet:135
 #, c-format
 msgid "Manage wireless networks"
 msgstr "Gestionează rețelele fără fir"
 
-#: ../bin/net_applet:135
+#: ../bin/net_applet:137
 #, c-format
 msgid "Manage VPN connections"
 msgstr "Gestionează conexiunile VPN"
 
-#: ../bin/net_applet:139
+#: ../bin/net_applet:141
 #, c-format
 msgid "Configure Network"
 msgstr "Configurează rețeaua"
 
-#: ../bin/net_applet:141
+#: ../bin/net_applet:143
 #, c-format
 msgid "Watched interface"
 msgstr "Interfața supravegheată"
 
-#: ../bin/net_applet:142 ../bin/net_applet:143 ../bin/net_applet:145
+#: ../bin/net_applet:144 ../bin/net_applet:145 ../bin/net_applet:147
 #, c-format
 msgid "Auto-detect"
 msgstr "Auto-detecție"
 
-#: ../bin/net_applet:150
+#: ../bin/net_applet:152
 #, c-format
 msgid "Active interfaces"
 msgstr "Interfețe active"
 
-#: ../bin/net_applet:170
+#: ../bin/net_applet:172
 #, c-format
 msgid "Profiles"
 msgstr "Profile"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:229
+#: ../bin/net_applet:182 ../lib/network/connection.pm:229
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
 msgid "VPN connection"
 msgstr "Conexiune VPN"
 
-#: ../bin/net_applet:372
+#: ../bin/net_applet:387
 #, c-format
 msgid "Network connection"
 msgstr "Conexiune rețea"
 
-#: ../bin/net_applet:459
+#: ../bin/net_applet:474
 #, c-format
 msgid "More networks"
 msgstr "Mai multe rețele"
 
-#: ../bin/net_applet:486
+#: ../bin/net_applet:501
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "Parafoc interactiv în mod automat"
 
-#: ../bin/net_applet:491
+#: ../bin/net_applet:506
 #, c-format
 msgid "Always launch on startup"
 msgstr "Lansează întotdeauna la pornire"
 
-#: ../bin/net_applet:496
+#: ../bin/net_applet:511
 #, c-format
 msgid "Wireless networks"
 msgstr "Rețele fără fir"
 
-#: ../bin/net_applet:503 ../bin/net_monitor:96
+#: ../bin/net_applet:518 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Reglaje"
@@ -2827,7 +2840,8 @@ msgstr "Masca de rețea ar trebui să fie în formatul 255.255.224.0"
 msgid "Warning: IP address %s is usually reserved!"
 msgstr "Atenție: adresa IP %s este de obicei rezervată!"
 
-#: ../lib/network/connection/ethernet.pm:192, c-format
+#: ../lib/network/connection/ethernet.pm:192
+#, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
 "address with this connection, first disable all other devices which use it, "
@@ -3365,7 +3379,7 @@ msgstr "WPA/WPA2 Enterprise"
 msgid "Windows driver"
 msgstr "Pilot Windows"
 
-#: ../lib/network/connection/wireless.pm:355
+#: ../lib/network/connection/wireless.pm:366
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
@@ -3374,77 +3388,78 @@ msgstr ""
 "Placa de rețea fără fir este dezactivată, activați-o apăsînd butonul în "
 "acest scop."
 
-#: ../lib/network/connection/wireless.pm:445
+#: ../lib/network/connection/wireless.pm:456
 #, c-format
 msgid "Wireless settings"
 msgstr "Parametrii conexiunii fără fir"
 
-#: ../lib/network/connection/wireless.pm:450
+#: ../lib/network/connection/wireless.pm:461
 #: ../lib/network/connection_manager.pm:280
 #, c-format
 msgid "Operating Mode"
 msgstr "Mod de operare"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Ad-hoc"
 msgstr "Ad-hoc"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Managed"
 msgstr "Gestionat"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Master"
 msgstr "Principal"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Repeater"
 msgstr "Repetor"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Secondary"
 msgstr "Secundar"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Auto"
 msgstr "Auto"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:465
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "Nume rețea (ESSID)"
 
-#: ../lib/network/connection/wireless.pm:456
+#: ../lib/network/connection/wireless.pm:467
 #, c-format
 msgid "Encryption mode"
 msgstr "Mod de criptare"
 
-#: ../lib/network/connection/wireless.pm:458
+#: ../lib/network/connection/wireless.pm:469
 #, c-format
 msgid "Encryption key"
 msgstr "Cheia de criptare"
 
-#: ../lib/network/connection/wireless.pm:461, c-format
+#: ../lib/network/connection/wireless.pm:472
+#, c-format
 msgid "Hide password"
 msgstr "Ascunde parola"
 
-#: ../lib/network/connection/wireless.pm:463
+#: ../lib/network/connection/wireless.pm:474
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr "Forțează utilizarea acestei chei ca șir ASCII (ex: pentru Livebox)"
 
-#: ../lib/network/connection/wireless.pm:470
+#: ../lib/network/connection/wireless.pm:481
 #, c-format
 msgid "EAP Login/Username"
 msgstr "Utilizator/Cont EAP"
 
-#: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
@@ -3455,12 +3470,12 @@ msgstr ""
 "Dacă trebuie precizat un domeniu, utilizați sintaxa\n"
 "(netestată) DOMENIU\\utilizator"
 
-#: ../lib/network/connection/wireless.pm:475
+#: ../lib/network/connection/wireless.pm:486
 #, c-format
 msgid "EAP Password"
 msgstr "Parolă EAP"
 
-#: ../lib/network/connection/wireless.pm:478
+#: ../lib/network/connection/wireless.pm:489
 #, c-format
 msgid ""
 " Password: A string.\n"
@@ -3493,12 +3508,12 @@ msgstr ""
 "  Modul TLS este bazat în mod unic pe un certificat și poate\n"
 "ignora numele utilizatorului și parola specificate aici."
 
-#: ../lib/network/connection/wireless.pm:492
+#: ../lib/network/connection/wireless.pm:503
 #, c-format
 msgid "EAP client certificate"
 msgstr "Certificat client EAP"
 
-#: ../lib/network/connection/wireless.pm:494
+#: ../lib/network/connection/wireless.pm:505
 #, c-format
 msgid ""
 "The complete path and filename of client certificate. This is\n"
@@ -3511,32 +3526,32 @@ msgstr ""
 "Poate fi considerată ca o alternativă cuplului utilizator/parolă.\n"
 " Notă : ceilalți parametri asociați îi găsiți în „Opțiuni avansate”."
 
-#: ../lib/network/connection/wireless.pm:498
+#: ../lib/network/connection/wireless.pm:509
 #, c-format
 msgid "Network ID"
 msgstr "Identificator rețea"
 
-#: ../lib/network/connection/wireless.pm:499
+#: ../lib/network/connection/wireless.pm:510
 #, c-format
 msgid "Operating frequency"
 msgstr "Frecvența de operare"
 
-#: ../lib/network/connection/wireless.pm:500
+#: ../lib/network/connection/wireless.pm:511
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "Prag de sensibilitate"
 
-#: ../lib/network/connection/wireless.pm:501
+#: ../lib/network/connection/wireless.pm:512
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "Rată de transfer (în biți/secundă)"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:513
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../lib/network/connection/wireless.pm:503
+#: ../lib/network/connection/wireless.pm:514
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -3558,19 +3573,19 @@ msgstr ""
 "pachetului dezactivează acest mecanism. De asemenea, acest parametru mai\n"
 "poate fi definit ca „auto”, „fixed” sau „off”."
 
-#: ../lib/network/connection/wireless.pm:510
+#: ../lib/network/connection/wireless.pm:521
 #, c-format
 msgid "Fragmentation"
 msgstr "Fragmentare"
 
-#: ../lib/network/connection/wireless.pm:511
+#: ../lib/network/connection/wireless.pm:522
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr ""
 "argumente suplimentare\n"
 "pentru comanda iwconfig"
 
-#: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/connection/wireless.pm:523
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -3587,14 +3602,14 @@ msgstr ""
 "Consultați pagina de manual iwconfig(8) pentru mai multe informații."
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:519
+#: ../lib/network/connection/wireless.pm:530
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr ""
 "argumente suplimentare\n"
 "pentru comanda iwspy"
 
-#: ../lib/network/connection/wireless.pm:520
+#: ../lib/network/connection/wireless.pm:531
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -3614,14 +3629,14 @@ msgstr ""
 "\n"
 "Consultați pagina de manual iwspy(8) pentru mai multe informații."
 
-#: ../lib/network/connection/wireless.pm:528
+#: ../lib/network/connection/wireless.pm:539
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr ""
 "argumente suplimentare\n"
 "pentru comanda iwpriv"
 
-#: ../lib/network/connection/wireless.pm:530
+#: ../lib/network/connection/wireless.pm:541
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -3651,28 +3666,28 @@ msgstr ""
 "\n"
 "Consultați pagina de manual iwpriv(8) pentru mai multe informații."
 
-#: ../lib/network/connection/wireless.pm:541
+#: ../lib/network/connection/wireless.pm:552
 #, c-format
 msgid "EAP Protocol"
 msgstr "Protocol EAP"
 
-#: ../lib/network/connection/wireless.pm:542
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "Auto Detect"
 msgstr "Detectare Automată"
 
-#: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid "WPA2"
 msgstr "WPA2"
 
-#: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid "WPA"
 msgstr "WPA"
 
-#: ../lib/network/connection/wireless.pm:544
+#: ../lib/network/connection/wireless.pm:555
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
@@ -3681,67 +3696,67 @@ msgstr ""
 "Auto-detecția este recomandată deoarece mai întîi se încearcă WPA\n"
 "versiunea 2, cu WPA versiunea 1 în secundar"
 
-#: ../lib/network/connection/wireless.pm:546
+#: ../lib/network/connection/wireless.pm:557
 #, c-format
 msgid "EAP Mode"
 msgstr "Mod EAP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "PEAP"
 msgstr "PEAP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TTLS"
 msgstr "TTLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TLS"
 msgstr "TLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "MSCHAPV2"
 msgstr "MSCHAPV2"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "MD5"
 msgstr "MD5"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "OTP"
 msgstr "OTP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "GTC"
 msgstr "GTC"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "LEAP"
 msgstr "LEAP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "PEAP TTLS"
 msgstr "PEAP TTLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TTLS TLS"
 msgstr "TTLS TLS"
 
-#: ../lib/network/connection/wireless.pm:549
+#: ../lib/network/connection/wireless.pm:560
 #, c-format
 msgid "EAP key_mgmt"
 msgstr "EAP key_mgmt"
 
-#: ../lib/network/connection/wireless.pm:551
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid ""
 "list of accepted authenticated key management protocols.\n"
@@ -3750,12 +3765,12 @@ msgstr ""
 "lista protocoalelor de gestiune de chei de autentificare acceptate.\n"
 "valori posibile: WPA-EAP, IEEE8021X, NONE"
 
-#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:564
 #, c-format
 msgid "EAP outer identity"
 msgstr "Identitate externă EAP"
 
-#: ../lib/network/connection/wireless.pm:555
+#: ../lib/network/connection/wireless.pm:566
 #, c-format
 msgid ""
 "Anonymous identity string for EAP: to be used as the\n"
@@ -3766,12 +3781,12 @@ msgstr ""
 "ca identitate necriptată cu tipurile de EAP ce suportă\n"
 "diferite identități încapsulate în tunele, ex: TTLS"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:569
 #, c-format
 msgid "EAP phase2"
 msgstr "EAP phase2"
 
-#: ../lib/network/connection/wireless.pm:560
+#: ../lib/network/connection/wireless.pm:571
 #, c-format
 msgid ""
 "Inner authentication with TLS tunnel parameters.\n"
@@ -3784,12 +3799,12 @@ msgstr ""
 "auth=MSCHAPV2 pentru PEAP sau\n"
 "autheap=MSCHAPV2 autheap=MD5 pentru TTLS"
 
-#: ../lib/network/connection/wireless.pm:564
+#: ../lib/network/connection/wireless.pm:575
 #, c-format
 msgid "EAP CA certificate"
 msgstr "Certificat CA EAP"
 
-#: ../lib/network/connection/wireless.pm:566
+#: ../lib/network/connection/wireless.pm:577
 #, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
@@ -3804,12 +3819,12 @@ msgstr ""
 "Dacă se poate, un certificat CA de încredere, trebuie întotdeauna\n"
 "configurat dacă se utilizează TLS, TTLS sau PEAP."
 
-#: ../lib/network/connection/wireless.pm:571
+#: ../lib/network/connection/wireless.pm:582
 #, c-format
 msgid "EAP certificate subject match"
 msgstr "Model de subiect de certificat EAP"
 
-#: ../lib/network/connection/wireless.pm:573
+#: ../lib/network/connection/wireless.pm:584
 #, c-format
 msgid ""
 " Substring to be matched against the subject of\n"
@@ -3824,11 +3839,12 @@ msgstr ""
 "Formatul subiectului trebuie să fie următorul:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
-#: ../lib/network/connection/wireless.pm:578, c-format
+#: ../lib/network/connection/wireless.pm:589
+#, c-format
 msgid "Extra directives"
 msgstr "Directive suplimentare"
 
-#: ../lib/network/connection/wireless.pm:579
+#: ../lib/network/connection/wireless.pm:590
 #, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
@@ -3859,12 +3875,12 @@ msgstr ""
 "\tAltele, precum key_mgmt și eap, permit forțarea\n"
 "\tde valori diferite de cele ale interfeței."
 
-#: ../lib/network/connection/wireless.pm:599
+#: ../lib/network/connection/wireless.pm:610
 #, c-format
 msgid "An encryption key is required."
 msgstr "Este necesară o cheie de criptare."
 
-#: ../lib/network/connection/wireless.pm:606
+#: ../lib/network/connection/wireless.pm:617
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
@@ -3873,7 +3889,7 @@ msgstr ""
 "Cheia pre-partajată conține între 8 și 63 de caractere ASCII, sau 64 "
 "caractere hexazecimale."
 
-#: ../lib/network/connection/wireless.pm:612
+#: ../lib/network/connection/wireless.pm:623
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
@@ -3881,7 +3897,7 @@ msgid ""
 msgstr ""
 "Cheia WEP conține cel mult %d caractere ASCII sau %d caractere hexazecimale."
 
-#: ../lib/network/connection/wireless.pm:619
+#: ../lib/network/connection/wireless.pm:630
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -3890,7 +3906,7 @@ msgstr ""
 "Frecvența trebuie să conțină sufixul k, M or G (de exemplu: \"2.46G\" pentru "
 "frecvența de 2.46 GHz), sau să aibă suficiente zerouri."
 
-#: ../lib/network/connection/wireless.pm:625
+#: ../lib/network/connection/wireless.pm:636
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
@@ -3899,17 +3915,17 @@ msgstr ""
 "Debitul trebuie să conțină sufixul k, M or G (de exemplu, \"11M\" pentru "
 "11M), sau să aibă suficiente zerouri."
 
-#: ../lib/network/connection/wireless.pm:637
+#: ../lib/network/connection/wireless.pm:648
 #, c-format
 msgid "Allow access point roaming"
 msgstr "Autorizează conexiunile itinerante"
 
-#: ../lib/network/connection/wireless.pm:762
+#: ../lib/network/connection/wireless.pm:773
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "Asociat rețelei fără fir \"%s\" pe interfața %s"
 
-#: ../lib/network/connection/wireless.pm:763
+#: ../lib/network/connection/wireless.pm:774
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "Asociere pierdută cu rețeaua fără fir pe interfața %s"
@@ -4457,7 +4473,8 @@ msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr ""
 "Nu este prezent nici un dispozitiv care să suporte pilotul ndiswrapper %s!"
 
-#: ../lib/network/ndiswrapper.pm:36, c-format
+#: ../lib/network/ndiswrapper.pm:36
+#, c-format
 msgid "Please select the correct driver"
 msgstr "Aalegeți pilotul corect"
 

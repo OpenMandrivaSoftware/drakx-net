@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2009-08-24 11:11-0300\n"
+"POT-Creation-Date: 2009-09-15 14:06-0300\n"
 "PO-Revision-Date: 2009-09-06 10:44+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Euskara <itzulpena@euskalgnu.org>\n"
@@ -70,7 +70,7 @@ msgstr "LAN konfiguraketa (bertako sarea)"
 msgid "Configure Local Area Network..."
 msgstr "Konfiguratu bertako sarea (LAN)..."
 
-#: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:188
+#: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:190
 #, c-format
 msgid "Help"
 msgstr "Laguntza"
@@ -292,8 +292,7 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
-"Sare moldagailu bakarra dago zure sisteman LAN loturarako "
-"konfiguratuta:\n"
+"Sare moldagailu bakarra dago zure sisteman LAN loturarako konfiguratuta:\n"
 "\n"
 "%s\n"
 "\n"
@@ -471,9 +470,9 @@ msgstr ""
 "Zure sisteman ez da aurkitu LAN-erako konfiguratuta dagoen ethernet sare "
 "moldagailurik.\n"
 "\n"
-"Mesedez exekutatu hardwarea konfiguratzeko tresna hura konfiguratzeko, "
-"eta ziurta ezazu Mandrivaren suhesia ez dagoela gaituta zure LAN sarera "
-"lotutako sare moldagailuan."
+"Mesedez exekutatu hardwarea konfiguratzeko tresna hura konfiguratzeko, eta "
+"ziurta ezazu Mandrivaren suhesia ez dagoela gaituta zure LAN sarera lotutako "
+"sare moldagailuan."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -641,7 +640,7 @@ msgid "Failed to remove host."
 msgstr "Ostalari ezabaketak huts egin du."
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:219
-#: ../bin/net_applet:189 ../lib/network/drakroam.pm:93
+#: ../bin/net_applet:191 ../lib/network/drakroam.pm:93
 #: ../lib/network/netcenter.pm:171
 #, c-format
 msgid "Quit"
@@ -654,7 +653,7 @@ msgstr "Onartutako helbideak"
 
 #: ../bin/drakids:40 ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:132 ../bin/net_applet:292
+#: ../bin/net_applet:134 ../bin/net_applet:306
 #: ../lib/network/drakfirewall.pm:311 ../lib/network/drakfirewall.pm:315
 #, c-format
 msgid "Interactive Firewall"
@@ -662,7 +661,7 @@ msgstr "Suhesi Interaktiboa"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:292
+#: ../bin/net_applet:306
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "Ezin da deabrua kontaktatu"
@@ -1653,7 +1652,8 @@ msgstr "Erantsi Inprimagailu Berezia partekatzea"
 
 #: ../bin/draksambashare:448
 #, c-format
-msgid "Goal of this wizard is to easily create a new special printer Samba share."
+msgid ""
+"Goal of this wizard is to easily create a new special printer Samba share."
 msgstr ""
 "Morroi honen helburua Samba inprimagailu berezi partekatze bat era errazean "
 "sortzea da."
@@ -1763,7 +1763,8 @@ msgstr "DrakSamba sarrera"
 #: ../bin/draksambashare:695
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
-msgstr "Mesedez erantsi edo aukeratu Samba partekatze bat hura aldatu ahal izateko."
+msgstr ""
+"Mesedez erantsi edo aukeratu Samba partekatze bat hura aldatu ahal izateko."
 
 #: ../bin/draksambashare:718
 #, c-format
@@ -1797,7 +1798,8 @@ msgstr "Publikoa:"
 
 #: ../bin/draksambashare:795
 #, c-format
-msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid ""
+"Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 "Sortu maskara, sortu modua eta direktorio maskara zenbakizkoak izan behar "
 "dira. adib: 0755."
@@ -1872,7 +1874,8 @@ msgstr ""
 
 #: ../bin/draksambashare:1072
 #, c-format
-msgid "Single server installations may use smbpasswd or tdbsam password backends"
+msgid ""
+"Single server installations may use smbpasswd or tdbsam password backends"
 msgstr ""
 "Zerbitzari bakarreko instalazioek smbpasswd edo tdbsam pasahitz sistemak "
 "erabili ditzakete"
@@ -1969,7 +1972,8 @@ msgstr ""
 #: ../bin/draksambashare:1121
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr "Partekatze maila: bezeroa partekatutako baliabide bakoitzera egiaztatzen da"
+msgstr ""
+"Partekatze maila: bezeroa partekatutako baliabide bakoitzera egiaztatzen da"
 
 #: ../bin/draksambashare:1121
 #, c-format
@@ -2236,89 +2240,94 @@ msgstr ""
 "Ez daukazu konfiguratutako Internet loturarik.\n"
 "Exekutatu Mandriva Linux Aginte Guneko \"%s\" morroia"
 
-#: ../bin/net_applet:129 ../bin/net_monitor:519
+#: ../bin/net_applet:106
+#, fuzzy, c-format
+msgid "Connecting.."
+msgstr "Konektatzen..."
+
+#: ../bin/net_applet:131 ../bin/net_monitor:519
 #, c-format
 msgid "Connect %s"
 msgstr "Konektatu %s"
 
-#: ../bin/net_applet:130 ../bin/net_monitor:519
+#: ../bin/net_applet:132 ../bin/net_monitor:519
 #, c-format
 msgid "Disconnect %s"
 msgstr "Deskonektatu %s"
 
-#: ../bin/net_applet:131
+#: ../bin/net_applet:133
 #, c-format
 msgid "Monitor Network"
 msgstr "Sarea Monitoretu"
 
-#: ../bin/net_applet:133
+#: ../bin/net_applet:135
 #, c-format
 msgid "Manage wireless networks"
 msgstr "Kudeatu hari gabeko sareak"
 
-#: ../bin/net_applet:135
+#: ../bin/net_applet:137
 #, c-format
 msgid "Manage VPN connections"
 msgstr "VPN loturak kudeatu"
 
-#: ../bin/net_applet:139
+#: ../bin/net_applet:141
 #, c-format
 msgid "Configure Network"
 msgstr "Sarea Konfiguratu"
 
-#: ../bin/net_applet:141
+#: ../bin/net_applet:143
 #, c-format
 msgid "Watched interface"
 msgstr "Zelatatutako interfazea"
 
-#: ../bin/net_applet:142 ../bin/net_applet:143 ../bin/net_applet:145
+#: ../bin/net_applet:144 ../bin/net_applet:145 ../bin/net_applet:147
 #, c-format
 msgid "Auto-detect"
 msgstr "Autodetektatu"
 
-#: ../bin/net_applet:150
+#: ../bin/net_applet:152
 #, c-format
 msgid "Active interfaces"
 msgstr "Interfaze aktiboak"
 
-#: ../bin/net_applet:170
+#: ../bin/net_applet:172
 #, c-format
 msgid "Profiles"
 msgstr "Profilak"
 
-#: ../bin/net_applet:180 ../lib/network/connection.pm:229
+#: ../bin/net_applet:182 ../lib/network/connection.pm:229
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
 #: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
 #, c-format
 msgid "VPN connection"
 msgstr "VPN lotura"
 
-#: ../bin/net_applet:372
+#: ../bin/net_applet:387
 #, c-format
 msgid "Network connection"
 msgstr "Sare lotura"
 
-#: ../bin/net_applet:459
+#: ../bin/net_applet:474
 #, c-format
 msgid "More networks"
 msgstr "Sare gehiago"
 
-#: ../bin/net_applet:486
+#: ../bin/net_applet:501
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "Suhesi Interaktiboaren modu automatikoa"
 
-#: ../bin/net_applet:491
+#: ../bin/net_applet:506
 #, c-format
 msgid "Always launch on startup"
 msgstr "Jaurti beti hasterakoan"
 
-#: ../bin/net_applet:496
+#: ../bin/net_applet:511
 #, c-format
 msgid "Wireless networks"
 msgstr "Hari gabeko sareak"
 
-#: ../bin/net_applet:503 ../bin/net_monitor:96
+#: ../bin/net_applet:518 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Ezarpenak"
@@ -2793,9 +2802,9 @@ msgid ""
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
-"%s erabilita dago abioan hasten den lotura batekin (%s). Helbide hau "
-"lotura honekin erabiltzeko, ezgaitu lehenengo bera erabiltzen duten "
-"gainontzeko gailu guztiak, edo konfiguratu itzazu abioan ez hasteko"
+"%s erabilita dago abioan hasten den lotura batekin (%s). Helbide hau lotura "
+"honekin erabiltzeko, ezgaitu lehenengo bera erabiltzen duten gainontzeko "
+"gailu guztiak, edo konfiguratu itzazu abioan ez hasteko"
 
 #: ../lib/network/connection/ethernet.pm:219
 #, c-format
@@ -2810,8 +2819,8 @@ msgid ""
 "automatically."
 msgstr ""
 "Honek zerbitzariari makinarentzako izen bat ematea ahalbidetuko dio. "
-"Zerbitzariak ostalari izen balioduna hornitzen ez badu, automatikoki "
-"sortuko da."
+"Zerbitzariak ostalari izen balioduna hornitzen ez badu, automatikoki sortuko "
+"da."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2822,8 +2831,7 @@ msgid ""
 msgstr ""
 "Makina honentzako ostalari izen bat zehaztu behar zenuke, PC hau "
 "identifikatzeko. Ohartu ostalari izen hau sare lotura guztien artean "
-"partekatuko dela. Hutsik utzi ezkero, 'localhost.localdomain' erabiliko "
-"da."
+"partekatuko dela. Hutsik utzi ezkero, 'localhost.localdomain' erabiliko da."
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -3323,7 +3331,7 @@ msgstr "WPA/WPA2 Enterprise"
 msgid "Windows driver"
 msgstr "Windows gidaria"
 
-#: ../lib/network/connection/wireless.pm:355
+#: ../lib/network/connection/wireless.pm:366
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
@@ -3332,78 +3340,79 @@ msgstr ""
 "Zure sareko irrati txartela ezgaituta dago, mesedez gaitu irrati etengailua "
 "lehenengo."
 
-#: ../lib/network/connection/wireless.pm:445
+#: ../lib/network/connection/wireless.pm:456
 #, c-format
 msgid "Wireless settings"
 msgstr "Irrati-sare ezarpenak"
 
-#: ../lib/network/connection/wireless.pm:450
+#: ../lib/network/connection/wireless.pm:461
 #: ../lib/network/connection_manager.pm:280
 #, c-format
 msgid "Operating Mode"
 msgstr "Lan egiteko modua"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Ad-hoc"
 msgstr "Ad-hoc"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Managed"
 msgstr "Kudeatua"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Master"
 msgstr "Maisua"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Repeater"
 msgstr "Errepikatzailea"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Secondary"
 msgstr "Bigarren mailakoa"
 
-#: ../lib/network/connection/wireless.pm:451
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Auto"
 msgstr "Automatikoa"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:465
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "Sare-izena (ESSID)"
 
-#: ../lib/network/connection/wireless.pm:456
+#: ../lib/network/connection/wireless.pm:467
 #, c-format
 msgid "Encryption mode"
 msgstr "Zifraketa modua"
 
-#: ../lib/network/connection/wireless.pm:458
+#: ../lib/network/connection/wireless.pm:469
 #, c-format
 msgid "Encryption key"
 msgstr "Enkriptatze-gakoa"
 
-#: ../lib/network/connection/wireless.pm:461
+#: ../lib/network/connection/wireless.pm:472
 #, c-format
 msgid "Hide password"
 msgstr "Pasahitza ezkutatu"
 
-#: ../lib/network/connection/wireless.pm:463
+#: ../lib/network/connection/wireless.pm:474
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
-msgstr "Gako hau ASCII testu lerro bezala erabili dadin behartu (adib Livebox-ekin)"
+msgstr ""
+"Gako hau ASCII testu lerro bezala erabili dadin behartu (adib Livebox-ekin)"
 
-#: ../lib/network/connection/wireless.pm:470
+#: ../lib/network/connection/wireless.pm:481
 #, c-format
 msgid "EAP Login/Username"
 msgstr "EAP Login/Erabiltzaileizena"
 
-#: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
@@ -3414,12 +3423,12 @@ msgstr ""
 "Domeinua zehaztu behar baduzu erabili frogatu gabeko\n"
 "sintaxia  DOMEINUA\\erabitzaileizena"
 
-#: ../lib/network/connection/wireless.pm:475
+#: ../lib/network/connection/wireless.pm:486
 #, c-format
 msgid "EAP Password"
 msgstr "EAP Pasahitza"
 
-#: ../lib/network/connection/wireless.pm:478
+#: ../lib/network/connection/wireless.pm:489
 #, c-format
 msgid ""
 " Password: A string.\n"
@@ -3452,12 +3461,12 @@ msgstr ""
 "  TLS modua ziurtagirietan erabat oinarrituta dago eta hemen\n"
 "zehaztutako erabiltzaileizen eta pasahitz balioak baztertu ditzake."
 
-#: ../lib/network/connection/wireless.pm:492
+#: ../lib/network/connection/wireless.pm:503
 #, c-format
 msgid "EAP client certificate"
 msgstr "EAP bezero ziurtagiria"
 
-#: ../lib/network/connection/wireless.pm:494
+#: ../lib/network/connection/wireless.pm:505
 #, c-format
 msgid ""
 "The complete path and filename of client certificate. This is\n"
@@ -3470,32 +3479,32 @@ msgstr ""
 "Erabiltzaileizen/pasahitz bikotearen ordezkotzat hartu daiteke.\n"
 "Oharra: zerikusia duten ezarpenak erakusten dira Aurreratua orrian."
 
-#: ../lib/network/connection/wireless.pm:498
+#: ../lib/network/connection/wireless.pm:509
 #, c-format
 msgid "Network ID"
 msgstr "Sareko ID"
 
-#: ../lib/network/connection/wireless.pm:499
+#: ../lib/network/connection/wireless.pm:510
 #, c-format
 msgid "Operating frequency"
 msgstr "Eragiketa-maiztasuna"
 
-#: ../lib/network/connection/wireless.pm:500
+#: ../lib/network/connection/wireless.pm:511
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "Sentikortasun-atalasea"
 
-#: ../lib/network/connection/wireless.pm:501
+#: ../lib/network/connection/wireless.pm:512
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "Bit-abiadura (b/s)"
 
-#: ../lib/network/connection/wireless.pm:502
+#: ../lib/network/connection/wireless.pm:513
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../lib/network/connection/wireless.pm:503
+#: ../lib/network/connection/wireless.pm:514
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -3517,17 +3526,17 @@ msgstr ""
 "dezakezu\n"
 "automatikoa, finkoa edo desaktibatuta."
 
-#: ../lib/network/connection/wireless.pm:510
+#: ../lib/network/connection/wireless.pm:521
 #, c-format
 msgid "Fragmentation"
 msgstr "Fragmentazioa"
 
-#: ../lib/network/connection/wireless.pm:511
+#: ../lib/network/connection/wireless.pm:522
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "iwconfig komandoko argumentu estrak"
 
-#: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/connection/wireless.pm:523
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -3543,12 +3552,12 @@ msgstr ""
 "Informazioa lortzeko, ikus iwconfig(8) eskuliburuko orrialdea."
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:519
+#: ../lib/network/connection/wireless.pm:530
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "iwspy komandoko argumentu estrak"
 
-#: ../lib/network/connection/wireless.pm:520
+#: ../lib/network/connection/wireless.pm:531
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -3568,12 +3577,12 @@ msgstr ""
 "\n"
 "Informazio gehiago lortzeko, ikus iwpspy(8) eskuliburuko orrialdea."
 
-#: ../lib/network/connection/wireless.pm:528
+#: ../lib/network/connection/wireless.pm:539
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "iwpriv komandoko argumentu estrak"
 
-#: ../lib/network/connection/wireless.pm:530
+#: ../lib/network/connection/wireless.pm:541
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -3604,28 +3613,28 @@ msgstr ""
 "\n"
 "Informazio gehiago lortzeko, ikus iwpriv(8) eskuliburuko orrialdea."
 
-#: ../lib/network/connection/wireless.pm:541
+#: ../lib/network/connection/wireless.pm:552
 #, c-format
 msgid "EAP Protocol"
 msgstr "EAP Protokoloa"
 
-#: ../lib/network/connection/wireless.pm:542
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "Auto Detect"
 msgstr "Auto detektatu"
 
-#: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid "WPA2"
 msgstr "WPA2"
 
-#: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid "WPA"
 msgstr "WPA"
 
-#: ../lib/network/connection/wireless.pm:544
+#: ../lib/network/connection/wireless.pm:555
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
@@ -3634,67 +3643,67 @@ msgstr ""
 "Auto Detekzioa gomendatzen da lehenengo WPA 2 bertsioarekin\n"
 "saiatzen bait da eta ondoren WPA 1 bertsioarekin"
 
-#: ../lib/network/connection/wireless.pm:546
+#: ../lib/network/connection/wireless.pm:557
 #, c-format
 msgid "EAP Mode"
 msgstr "EAP Modua"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "PEAP"
 msgstr "PEAP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TTLS"
 msgstr "TTLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TLS"
 msgstr "TLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "MSCHAPV2"
 msgstr "MSCHAPV2"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "MD5"
 msgstr "MD5"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "OTP"
 msgstr "OTP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "GTC"
 msgstr "GTC"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "LEAP"
 msgstr "LEAP"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "PEAP TTLS"
 msgstr "PEAP TTLS"
 
-#: ../lib/network/connection/wireless.pm:547
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid "TTLS TLS"
 msgstr "TTLS TLS"
 
-#: ../lib/network/connection/wireless.pm:549
+#: ../lib/network/connection/wireless.pm:560
 #, c-format
 msgid "EAP key_mgmt"
 msgstr "EAP key_mgmt"
 
-#: ../lib/network/connection/wireless.pm:551
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid ""
 "list of accepted authenticated key management protocols.\n"
@@ -3703,12 +3712,12 @@ msgstr ""
 "Onartutako autentikatutako gako kudeatzeko protokoloen zerrenda.\n"
 "Izan daitezkeen balioak WPA-EAP, IEEE8021X eta NONE dira"
 
-#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:564
 #, c-format
 msgid "EAP outer identity"
 msgstr "EAP kanpoko nortasuna"
 
-#: ../lib/network/connection/wireless.pm:555
+#: ../lib/network/connection/wireless.pm:566
 #, c-format
 msgid ""
 "Anonymous identity string for EAP: to be used as the\n"
@@ -3719,12 +3728,12 @@ msgstr ""
 "gabeko identitate bezela erabiltzeko tuneleratutako identitate\n"
 "desberdinak onartzen dituzten EAP motekin, adib, TTLS"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:569
 #, c-format
 msgid "EAP phase2"
 msgstr "EAP fase2"
 
-#: ../lib/network/connection/wireless.pm:560
+#: ../lib/network/connection/wireless.pm:571
 #, c-format
 msgid ""
 "Inner authentication with TLS tunnel parameters.\n"
@@ -3737,12 +3746,12 @@ msgstr ""
 "auth=MSCHAPV2 PEAP-ekin edo\n"
 "autheap=MSCHAPV2 autheap=MD5 TTLS-rekin"
 
-#: ../lib/network/connection/wireless.pm:564
+#: ../lib/network/connection/wireless.pm:575
 #, c-format
 msgid "EAP CA certificate"
 msgstr "EAP CA ziurtagiria"
 
-#: ../lib/network/connection/wireless.pm:566
+#: ../lib/network/connection/wireless.pm:577
 #, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
@@ -3757,12 +3766,12 @@ msgstr ""
 "Posible bada, beti konfiguratu beharko litzateke konfidantzazko\n"
 "CA ziurtagiri bat TLS edo TTLS edo PEAP erabiltzerakoan."
 
-#: ../lib/network/connection/wireless.pm:571
+#: ../lib/network/connection/wireless.pm:582
 #, c-format
 msgid "EAP certificate subject match"
 msgstr "EAP ziurtagiriaren 'subject' eremua parekatu"
 
-#: ../lib/network/connection/wireless.pm:573
+#: ../lib/network/connection/wireless.pm:584
 #, c-format
 msgid ""
 " Substring to be matched against the subject of\n"
@@ -3777,12 +3786,12 @@ msgstr ""
 "lerro hau eduki ezkero. 'Subject' testu lerroa ondorengo formatuan dago:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
-#: ../lib/network/connection/wireless.pm:578
+#: ../lib/network/connection/wireless.pm:589
 #, c-format
 msgid "Extra directives"
 msgstr "Zuzentarau gehigarriak"
 
-#: ../lib/network/connection/wireless.pm:579
+#: ../lib/network/connection/wireless.pm:590
 #, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
@@ -3813,12 +3822,12 @@ msgstr ""
 "\tBeste batzuk, key_mgmt, eap, U.I. ezarpenen ezberdinak\n"
 "\tdiren ezarpen bereziak behartzeko erabili daitezke."
 
-#: ../lib/network/connection/wireless.pm:599
+#: ../lib/network/connection/wireless.pm:610
 #, c-format
 msgid "An encryption key is required."
 msgstr "Zifraketa gako bat behar da."
 
-#: ../lib/network/connection/wireless.pm:606
+#: ../lib/network/connection/wireless.pm:617
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
@@ -3827,7 +3836,7 @@ msgstr ""
 "Aurrez partekatutako gakoak 8 eta 63 ASCII karaktere bitartean izan beharko "
 "lituzke, edo 64 caractere hamaseitar."
 
-#: ../lib/network/connection/wireless.pm:612
+#: ../lib/network/connection/wireless.pm:623
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
@@ -3836,7 +3845,7 @@ msgstr ""
 "WEP gakoak gehinez %d ASCII karaktere edo %d karaktere hamaseitar izan "
 "beharko lituzke."
 
-#: ../lib/network/connection/wireless.pm:619
+#: ../lib/network/connection/wireless.pm:630
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -3845,7 +3854,7 @@ msgstr ""
 "Maiztasunak k, M edo G atzizkia izan behar du (adibidez, \"2,46G\" 2,46 GHz "
 "adierazteko), edo bestela behar adina '0' (zero) gehitu behar dira."
 
-#: ../lib/network/connection/wireless.pm:625
+#: ../lib/network/connection/wireless.pm:636
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
@@ -3854,17 +3863,17 @@ msgstr ""
 "Abiadurak k, M edo G atzizkia izan behar du (adibidez, \"11M\" 11M "
 "adierazteko), edo bestela behar adina '0' (zero) gehitu behar dira."
 
-#: ../lib/network/connection/wireless.pm:637
+#: ../lib/network/connection/wireless.pm:648
 #, c-format
 msgid "Allow access point roaming"
 msgstr "Sarbide puntuen ibiltaritza onartu"
 
-#: ../lib/network/connection/wireless.pm:762
+#: ../lib/network/connection/wireless.pm:773
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "\"%s\" irrati sarera elkartuta %s interfazean"
 
-#: ../lib/network/connection/wireless.pm:763
+#: ../lib/network/connection/wireless.pm:774
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "Irrati sareara elkarketa galdu da %s interfazean"
@@ -4274,7 +4283,8 @@ msgstr "Ezin da %s lotura mota hasieratu!"
 #: ../lib/network/drakvpn.pm:60
 #, c-format
 msgid "Please select an existing VPN connection or enter a new name."
-msgstr "Mesedez hautatu sortuta dagoen VPN lotura bat edo sartu izen berri bat."
+msgstr ""
+"Mesedez hautatu sortuta dagoen VPN lotura bat edo sartu izen berri bat."
 
 #: ../lib/network/drakvpn.pm:64
 #, c-format
@@ -4901,8 +4911,8 @@ msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
 msgstr ""
-"Konfiguraketa berrabiarazten saiatu zaitezke loturaren "
-"ezarpenak egiaztatzeko."
+"Konfiguraketa berrabiarazten saiatu zaitezke loturaren ezarpenak "
+"egiaztatzeko."
 
 #: ../lib/network/netconnect.pm:775
 #, c-format
@@ -4924,8 +4934,7 @@ msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
 msgstr ""
-"Zure loturak huts egiten badu, konfiguraketa berrabiarazten saiatu "
-"zaitezke."
+"Zure loturak huts egiten badu, konfiguraketa berrabiarazten saiatu zaitezke."
 
 #: ../lib/network/netconnect.pm:778
 #, c-format
@@ -5331,8 +5340,10 @@ msgstr "Pakete batzuk (%s) behar dira baino ezin dira eskuratu."
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
 #, c-format
-msgid "These packages can be found in %s, or in the official %s package repository."
-msgstr "Pakete hauek %s-n aurkitu daitezke, edo %s pakete gordetegi ofizialean."
+msgid ""
+"These packages can be found in %s, or in the official %s package repository."
+msgstr ""
+"Pakete hauek %s-n aurkitu daitezke, edo %s pakete gordetegi ofizialean."
 
 #: ../lib/network/thirdparty.pm:154
 #, c-format
@@ -5552,4 +5563,3 @@ msgstr "NAT Modua"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Erabili UDP ataka zehatza"
-
