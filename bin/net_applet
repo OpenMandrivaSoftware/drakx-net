@@ -46,7 +46,7 @@ our %pixbufs =
   (
       firewall => gtknew('Pixbuf', file => 'drakfirewall'),
       firewall_icon => gtknew('Pixbuf', file => 'drakfirewall')->scale_simple(24, 24, 'hyper'),
-      state => { map { $_ => gtknew('Pixbuf', file => $_) } qw(connected disconnected unconfigured) },
+      state => { map { $_ => gtknew('Pixbuf', file => $_) } qw(connected disconnected unconfigured connecting) },
       link_level => { map {
           $_ => gtknew('Pixbuf', file => 'wifi-' . sprintf('%03d', $_))->scale_simple(24, 24, 'hyper');
       } qw(20 40 60 80 100) },
@@ -99,9 +99,11 @@ sub get_state_message {
             ($network && "\n\n" . N("Connected to %s (link level: %d %%)", $network->{name}, $network->{signal_strength}))
         : $current_state eq 'disconnected' ?
           N("Network is down on interface %s.", get_interface_name($interface))
-        :
+        : $current_state eq 'unconfigured' ?
           N("You do not have any configured Internet connection.
 Run the \"%s\" assistant from the Mandriva Linux Control Center", N("Set up a new network interface (LAN, ISDN, ADSL, ...)"))
+        :
+         N("Connecting..")
     );
 }
 
@@ -251,6 +253,18 @@ sub is_running {
 	$ppid != 1 && $pid != $$ && $n eq $name;
     } `ps -o '%P %p %c' -u $user`;
 }
+
+sub is_running_match {
+    # (eugeni) this matches part of a running command.
+    # Right now it is only used to detect if ifup script is running.
+    my ($name, $o_user) = @_;
+    my $user = $o_user || $ENV{USER};
+    any {
+	my ($ppid, $pid, $n) = /^\s*(\d+)\s+(\d+)\s+(.*)/;
+	$ppid != 1 && $pid != $$ && $n =~ $name;
+    } `ps -o '%P %p %c' -u $user`;
+}
+
 sub shouldStart() {
     my ($opt) = @ARGV;
     if ($opt eq '--force' || $opt eq '-f') {
@@ -333,7 +347,8 @@ sub checkNetwork() {
     my ($gw_intf, $_is_up, $gw_address) = $watched_interface ?
       ($watched_interface, network::tools::get_interface_status($watched_interface)) :
       network::tools::get_default_connection($net);
-    go2State($gw_address ? 'connected' : $gw_intf ? 'disconnected' : 'unconfigured', $gw_intf);
+    my $connecting = is_running_match('ifup', 'root');
+    go2State($gw_address ? 'connected' : $connecting ? 'connecting' : $gw_intf ? 'disconnected' : 'unconfigured', $gw_intf);
 }
 sub checkNetworkForce() {
     $net = {};
@@ -366,7 +381,7 @@ sub go2State {
         $need_update = 1;
     }
     if ($current_state ne $state_type) {
-        my $show = defined $current_state; # don't show notification at applet startup
+        my $show = defined $current_state && $state_type ne 'connecting'; # don't show notification at applet startup and when establishing a connection
         $current_state = $state_type;
         $notification_queue->add({
             title => $old_description || $current_description || N("Network connection"),
