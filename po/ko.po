@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2009-09-15 14:06-0300\n"
+"POT-Creation-Date: 2009-09-16 11:29-0300\n"
 "PO-Revision-Date: 2002-09-09 09:08+0900\n"
 "Last-Translator: Jaegeum Cze <baedaron@hanafos.com>\n"
 "Language-Team: Korean <beadaron@hanafos.com>\n"
@@ -2101,9 +2101,9 @@ msgstr ""
 "인터넷 연결이 없습니다.\n"
 "「설정」을 눌러 먼저 연결을 설정하세요."
 
-#: ../bin/net_applet:106
-#, fuzzy, c-format
-msgid "Connecting.."
+#: ../bin/net_applet:106 ../lib/network/connection_manager.pm:206
+#, c-format
+msgid "Connecting..."
 msgstr "접속중입니다..."
 
 #: ../bin/net_applet:131 ../bin/net_monitor:519
@@ -3707,11 +3707,6 @@ msgstr "C 클래스 지역 네트웍"
 msgid "Please enter settings for network"
 msgstr "자세한 정보"
 
-#: ../lib/network/connection_manager.pm:206
-#, c-format
-msgid "Connecting..."
-msgstr "접속중입니다..."
-
 #: ../lib/network/connection_manager.pm:223
 #: ../lib/network/connection_manager.pm:479
 #: ../lib/network/connection_manager.pm:492 ../lib/network/drakvpn.pm:100
@@ -5235,6 +5230,10 @@ msgstr "모드"
 #, c-format
 msgid "Use specific UDP port"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Connecting.."
+#~ msgstr "접속중입니다..."
 
 #, fuzzy
 #~ msgid "Account network traffic"

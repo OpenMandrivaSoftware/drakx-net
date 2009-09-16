@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-tools-sv\n"
-"POT-Creation-Date: 2009-09-15 14:06-0300\n"
+"POT-Creation-Date: 2009-09-16 11:29-0300\n"
 "PO-Revision-Date: 2008-09-27 17:13+0300\n"
 "Last-Translator: Thomas Backlund <tmb@mandriva.org>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -2215,9 +2215,9 @@ msgstr ""
 "Gränssnittet har inte konfigurerats ännu.\n"
 "Starta guiden \"%s\" från Mandriva Linux kontrollcentral."
 
-#: ../bin/net_applet:106
-#, fuzzy, c-format
-msgid "Connecting.."
+#: ../bin/net_applet:106 ../lib/network/connection_manager.pm:206
+#, c-format
+msgid "Connecting..."
 msgstr "Ansluter..."
 
 #: ../bin/net_applet:131 ../bin/net_monitor:519
@@ -3936,11 +3936,6 @@ msgstr "Nätverksinställningar"
 msgid "Please enter settings for network"
 msgstr "Vänligen ge inställningar för nätverk"
 
-#: ../lib/network/connection_manager.pm:206
-#, c-format
-msgid "Connecting..."
-msgstr "Ansluter..."
-
 #: ../lib/network/connection_manager.pm:223
 #: ../lib/network/connection_manager.pm:479
 #: ../lib/network/connection_manager.pm:492 ../lib/network/drakvpn.pm:100
@@ -5517,6 +5512,10 @@ msgstr "NAT Läge"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Använd en specifik UDP port"
+
+#, fuzzy
+#~ msgid "Connecting.."
+#~ msgstr "Ansluter..."
 
 #, fuzzy
 #~ msgid "Account network traffic"

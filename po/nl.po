@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-tools\n"
-"POT-Creation-Date: 2009-09-15 14:06-0300\n"
+"POT-Creation-Date: 2009-09-16 11:29-0300\n"
 "PO-Revision-Date: 2009-04-07 00:19+0200\n"
 "Last-Translator: Reinout van Schouwen <reinout@gmail.com>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -2254,9 +2254,9 @@ msgstr ""
 "U heeft nog geen geconfigureerde internetverbinding.\n"
 "Start de \"%s\"-assistent vanuit het Mandriva Linux configuratiecentrum."
 
-#: ../bin/net_applet:106
-#, fuzzy, c-format
-msgid "Connecting.."
+#: ../bin/net_applet:106 ../lib/network/connection_manager.pm:206
+#, c-format
+msgid "Connecting..."
 msgstr "Verbinden..."
 
 #: ../bin/net_applet:131 ../bin/net_monitor:519
@@ -4002,11 +4002,6 @@ msgstr "Netwerkinstellingen"
 msgid "Please enter settings for network"
 msgstr "Geef de instellingen voor het netwerk"
 
-#: ../lib/network/connection_manager.pm:206
-#, c-format
-msgid "Connecting..."
-msgstr "Verbinden..."
-
 #: ../lib/network/connection_manager.pm:223
 #: ../lib/network/connection_manager.pm:479
 #: ../lib/network/connection_manager.pm:492 ../lib/network/drakvpn.pm:100
@@ -5593,6 +5588,10 @@ msgstr "NAT-modus"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Specifieke UDP-poort gebruiken"
+
+#, fuzzy
+#~ msgid "Connecting.."
+#~ msgstr "Verbinden..."
 
 #, fuzzy
 #~ msgid "Account network traffic"

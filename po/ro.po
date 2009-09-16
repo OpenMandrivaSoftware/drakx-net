@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net 7.1\n"
 "Report-Msgid-Bugs-To: https://qa.mandriva.com\n"
-"POT-Creation-Date: 2009-09-15 14:06-0300\n"
+"POT-Creation-Date: 2009-09-16 11:29-0300\n"
 "PO-Revision-Date: 2009-09-01 22:45+0200\n"
 "Last-Translator: Florin Cătălin RUSSEN <cfrussen@yahoo.co.uk>\n"
 "Language-Team: Romanian <cooker-i18n@mandrivalinux.org  >\n"
@@ -2283,9 +2283,9 @@ msgstr ""
 "Nu aveți configurată nici o conexiune la Internet.\n"
 "Lansați asistentul \"%s\" din centrul de control Mandriva Linux"
 
-#: ../bin/net_applet:106
-#, fuzzy, c-format
-msgid "Connecting.."
+#: ../bin/net_applet:106 ../lib/network/connection_manager.pm:206
+#, c-format
+msgid "Connecting..."
 msgstr "Se conectează..."
 
 #: ../bin/net_applet:131 ../bin/net_monitor:519
@@ -4027,11 +4027,6 @@ msgstr "Parametrii de rețea"
 msgid "Please enter settings for network"
 msgstr "Introduceți parametrii de rețea"
 
-#: ../lib/network/connection_manager.pm:206
-#, c-format
-msgid "Connecting..."
-msgstr "Se conectează..."
-
 #: ../lib/network/connection_manager.pm:223
 #: ../lib/network/connection_manager.pm:479
 #: ../lib/network/connection_manager.pm:492 ../lib/network/drakvpn.pm:100
@@ -5620,6 +5615,10 @@ msgstr "Mod NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Utilizează un port UDP specific"
+
+#, fuzzy
+#~ msgid "Connecting.."
+#~ msgstr "Se conectează..."
 
 #, fuzzy
 #~ msgid "Account network traffic"

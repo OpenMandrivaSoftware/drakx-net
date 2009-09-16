@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-15 14:06-0300\n"
+"POT-Creation-Date: 2009-09-16 11:29-0300\n"
 "PO-Revision-Date: 2008-10-06 16:52+0100\n"
 "Last-Translator: Zé <ze@mandriva.org>\n"
 "Language-Team: Português <pt@li.org>\n"
@@ -2234,9 +2234,9 @@ msgstr ""
 "Não tem qualquer conexão Internet configurada.\n"
 "Execute o assistente \"%s\" do Centro de Controlo Mandriva Linux"
 
-#: ../bin/net_applet:106
-#, fuzzy, c-format
-msgid "Connecting.."
+#: ../bin/net_applet:106 ../lib/network/connection_manager.pm:206
+#, c-format
+msgid "Connecting..."
 msgstr "A conectar..."
 
 #: ../bin/net_applet:131 ../bin/net_monitor:519
@@ -3960,11 +3960,6 @@ msgstr "Definições de rede"
 msgid "Please enter settings for network"
 msgstr "Por favor indique as definições para a rede"
 
-#: ../lib/network/connection_manager.pm:206
-#, c-format
-msgid "Connecting..."
-msgstr "A conectar..."
-
 #: ../lib/network/connection_manager.pm:223
 #: ../lib/network/connection_manager.pm:479
 #: ../lib/network/connection_manager.pm:492 ../lib/network/drakvpn.pm:100
@@ -5546,6 +5541,10 @@ msgstr "Modo NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Usar porto UDP específico"
+
+#, fuzzy
+#~ msgid "Connecting.."
+#~ msgstr "A conectar..."
 
 #, fuzzy
 #~ msgid "Account network traffic"

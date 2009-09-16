@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sl\n"
-"POT-Creation-Date: 2009-09-15 14:06-0300\n"
+"POT-Creation-Date: 2009-09-16 11:29-0300\n"
 "PO-Revision-Date: 2009-04-22 05:39+0200\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -2219,9 +2219,9 @@ msgstr ""
 "Nobena internetna povezava ni nastavljena.\n"
 "Zaženite »%s« v Mandriva Linux nadzornem središču"
 
-#: ../bin/net_applet:106
-#, fuzzy, c-format
-msgid "Connecting.."
+#: ../bin/net_applet:106 ../lib/network/connection_manager.pm:206
+#, c-format
+msgid "Connecting..."
 msgstr "Povezovanje..."
 
 #: ../bin/net_applet:131 ../bin/net_monitor:519
@@ -3938,11 +3938,6 @@ msgstr "Nastavitve omrežja"
 msgid "Please enter settings for network"
 msgstr "Vnesite nastavitve za omrežje"
 
-#: ../lib/network/connection_manager.pm:206
-#, c-format
-msgid "Connecting..."
-msgstr "Povezovanje..."
-
 #: ../lib/network/connection_manager.pm:223
 #: ../lib/network/connection_manager.pm:479
 #: ../lib/network/connection_manager.pm:492 ../lib/network/drakvpn.pm:100
@@ -5515,6 +5510,10 @@ msgstr "Način NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Uporabi določena vrata UDP"
+
+#, fuzzy
+#~ msgid "Connecting.."
+#~ msgstr "Povezovanje..."
 
 #, fuzzy
 #~ msgid "Account network traffic"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network-tools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-15 14:06-0300\n"
+"POT-Creation-Date: 2009-09-16 11:29-0300\n"
 "PO-Revision-Date: 2008-03-24 03:26+0200\n"
 "Last-Translator: Dotan Kamber <kamberd@yahoo.com>\n"
 "Language-Team: Hebrew\n"
@@ -2185,9 +2185,9 @@ msgstr ""
 "החיבור לאינטרנט לא הוגדר עדיין.\n"
 "נא להפעיל את האשף \"%s\" ממרכז הבקרה של מנדריבה לינוקס"
 
-#: ../bin/net_applet:106
-#, fuzzy, c-format
-msgid "Connecting.."
+#: ../bin/net_applet:106 ../lib/network/connection_manager.pm:206
+#, c-format
+msgid "Connecting..."
 msgstr "מתחבר..."
 
 #: ../bin/net_applet:131 ../bin/net_monitor:519
@@ -3856,11 +3856,6 @@ msgstr "הגדרות רשת"
 msgid "Please enter settings for network"
 msgstr "נא להכניס הגדרות עבור רשת"
 
-#: ../lib/network/connection_manager.pm:206
-#, c-format
-msgid "Connecting..."
-msgstr "מתחבר..."
-
 #: ../lib/network/connection_manager.pm:223
 #: ../lib/network/connection_manager.pm:479
 #: ../lib/network/connection_manager.pm:492 ../lib/network/drakvpn.pm:100
@@ -5426,6 +5421,10 @@ msgstr "מצב EAP"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "השתמש בשער UDP מסוים"
+
+#, fuzzy
+#~ msgid "Connecting.."
+#~ msgstr "מתחבר..."
 
 #, fuzzy
 #~ msgid "Account network traffic"
