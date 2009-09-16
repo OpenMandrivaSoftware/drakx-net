@@ -287,7 +287,7 @@ sub create_networks_list {
         (undef, undef, my $model, my $path, my $iter) = $widget->get_tooltip_context($x, $y, $kbd_tip) or return;
         my $ap = $model->get($iter, 0);
         my $network = $cmanager->{connection}{networks}{$ap};
-        $tooltip->set_text("$network->{signal_strength}% $network->{flags}");
+        $tooltip->set_text(sprintf("%2.2f%% %s\n", $network->{signal_strength}, $network->{flags}));
         $widget->set_tooltip_row($tooltip, $path);
         1;
     });
