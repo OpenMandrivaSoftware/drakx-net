@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-tools-2010.0\n"
-"POT-Creation-Date: 2009-09-15 14:06-0300\n"
+"POT-Creation-Date: 2009-09-16 11:29-0300\n"
 "PO-Revision-Date: 2009-08-25 13:15+0100\n"
 "Last-Translator: Gergely Lónyai <aleph@mandriva.org>\n"
 "Language-Team: Hungarian <aleph@mandriva.org>\n"
@@ -2248,9 +2248,9 @@ msgstr ""
 "Internetkapcsolat még nem lett beállítva.\n"
 "Használja a \"%s\" funkciót a Mandriva Linux Vezérlőközpontban."
 
-#: ../bin/net_applet:106
-#, fuzzy, c-format
-msgid "Connecting.."
+#: ../bin/net_applet:106 ../lib/network/connection_manager.pm:206
+#, c-format
+msgid "Connecting..."
 msgstr "Csatlakozás..."
 
 #: ../bin/net_applet:131 ../bin/net_monitor:519
@@ -3996,11 +3996,6 @@ msgstr "Hálózati beállítások"
 msgid "Please enter settings for network"
 msgstr "Adja meg a hálózat beállításait"
 
-#: ../lib/network/connection_manager.pm:206
-#, c-format
-msgid "Connecting..."
-msgstr "Csatlakozás..."
-
 #: ../lib/network/connection_manager.pm:223
 #: ../lib/network/connection_manager.pm:479
 #: ../lib/network/connection_manager.pm:492 ../lib/network/drakvpn.pm:100
@@ -5588,6 +5583,10 @@ msgstr "NAT Mód"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Megadott UDP port használata"
+
+#, fuzzy
+#~ msgid "Connecting.."
+#~ msgstr "Csatlakozás..."
 
 #, fuzzy
 #~ msgid "Account network traffic"

@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
-"POT-Creation-Date: 2009-09-15 14:06-0300\n"
+"POT-Creation-Date: 2009-09-16 11:29-0300\n"
 "PO-Revision-Date: 2009-09-15 01:50+0500\n"
 "Last-Translator: akdengi <kazancas@mandriva.ru>\n"
 "Language-Team: Russian <gnu@mx.ru>\n"
@@ -2245,9 +2245,9 @@ msgstr ""
 "У вас ещё нет ни одного настроенного соединения с Интернет.\n"
 "Запустите помощника \"%s\" из Центра Управления Mandriva Linux"
 
-#: ../bin/net_applet:106
-#, fuzzy, c-format
-msgid "Connecting.."
+#: ../bin/net_applet:106 ../lib/network/connection_manager.pm:206
+#, c-format
+msgid "Connecting..."
 msgstr "Устанавливается соединение..."
 
 #: ../bin/net_applet:131 ../bin/net_monitor:519
@@ -3998,11 +3998,6 @@ msgstr "Параметры сети"
 msgid "Please enter settings for network"
 msgstr "Укажите сетевые параметры"
 
-#: ../lib/network/connection_manager.pm:206
-#, c-format
-msgid "Connecting..."
-msgstr "Устанавливается соединение..."
-
 #: ../lib/network/connection_manager.pm:223
 #: ../lib/network/connection_manager.pm:479
 #: ../lib/network/connection_manager.pm:492 ../lib/network/drakvpn.pm:100
@@ -5584,3 +5579,7 @@ msgstr "Режим NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Использовать определённый порт UDP"
+
+#, fuzzy
+#~ msgid "Connecting.."
+#~ msgstr "Устанавливается соединение..."
