@@ -828,19 +828,19 @@ msgid "Network profiles"
 msgstr "网络配置文件"
 
 #: ../bin/draknetprofile:66
-#, fuzzy, c-format
+#, c-format
 msgid "Module"
-msgstr "调制解调器"
+msgstr "模块"
 
 #: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#, c-format
 msgid "Enabled"
 msgstr "启用"
 
 #: ../bin/draknetprofile:68
-#, fuzzy, c-format
+#, c-format
 msgid "Description"
-msgstr "加密"
+msgstr "描述"
 
 #: ../bin/draknetprofile:84
 #, c-format
@@ -860,6 +860,8 @@ msgid ""
 "settings, and you'll be able to configure your system configuration as usual "
 "afterwards."
 msgstr ""
+"请指定要创建的新网络配置文件的名称(如 work、home、roaming 等等)。"
+"这一新的网络配置文件将会基于当前设置创建，您稍候也可以按照通常的方式对您的系统进行配置。"
 
 #: ../bin/draknetprofile:166
 #, c-format
@@ -867,9 +869,9 @@ msgid "The \"%s\" profile already exists!"
 msgstr "配置文件“%s”已经存在！"
 
 #: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#, c-format
 msgid "New profile created"
-msgstr "新建配置文件..."
+msgstr "创建了新的配置文件"
 
 #: ../bin/draknetprofile:172
 #, c-format
@@ -878,6 +880,7 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
+"您现在正在使用网络配置文件 %s。您可以按通常的方式配置您的系统，而您自现在开始所有与网络有关的设置都将保存在此配置文件中。"
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -887,16 +890,16 @@ msgid "Warning"
 msgstr "警告"
 
 #: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "您不能删除默认配置文件"
+msgstr "您确定想要删除默认配置文件吗？"
 
 #: ../bin/draknetprofile:186
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
-msgstr "您不能删除当前配置文件"
+msgstr "您不能删除当前配置文件。请先切换到不同的配置文件。"
 
 #: ../bin/draknetprofile:194 ../bin/draknfs:356
 #, c-format
@@ -904,19 +907,19 @@ msgid "Advanced"
 msgstr "高级"
 
 #: ../bin/draknetprofile:198
-#, fuzzy, c-format
+#, c-format
 msgid "Select the netprofile modules:"
-msgstr "选择要配置的调制解调器:"
+msgstr "选择网络配置文件模块："
 
 #: ../bin/draknetprofile:211
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "此工具允许您控制网络配置文件。"
 
 #: ../bin/draknetprofile:212
-#, fuzzy, c-format
+#, c-format
 msgid "Select a network profile:"
-msgstr "选择您的服务商:"
+msgstr "选择网络配置文件："
 
 #: ../bin/draknetprofile:216
 #, c-format
@@ -926,7 +929,7 @@ msgstr "激活"
 #: ../bin/draknetprofile:217
 #, c-format
 msgid "New"
-msgstr ""
+msgstr "新建"
 
 #: ../bin/draknetprofile:218
 #, c-format
@@ -2469,7 +2472,7 @@ msgstr "启动时开启连接"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "Enable traffic accounting"
-msgstr ""
+msgstr "启用流量统计"
 
 #: ../lib/network/connection.pm:246
 #, c-format
@@ -2720,13 +2723,13 @@ msgid "Warning: IP address %s is usually reserved!"
 msgstr "警告: IP 地址 %s 通常是被保留的！"
 
 #: ../lib/network/connection/ethernet.pm:192
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
-"%s 已经被启动时的连接所占用。要在此连接中使用此地址，首先应禁用该连接上的其它"
+"%s 已经被启动时的连接所占用(%s)。要在此连接中使用此地址，首先应禁用该连接上的其它"
 "服务，或者将这些服务配置为启动时不要启动"
 
 #: ../lib/network/connection/ethernet.pm:219
@@ -2741,6 +2744,7 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
+"这将允许服务器为此计算机指定名称。如果服务器不提供有效的主机名的话，系统将会自动生成一个主机名。"
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2749,6 +2753,8 @@ msgid ""
 "Note that this hostname will be shared among all network connections.  If "
 "left blank, 'localhost.localdomain' will be used."
 msgstr ""
+"您应该为此计算机定义一个主机名，以便标识这台计算机。请注意，此主机名将会在所有网络连接中共享。"
+"如果留空的话，将会使用“localhost.localdomain”。"
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -2862,7 +2868,7 @@ msgstr "巴西"
 #: ../lib/network/connection/providers/cellular.pm:38
 #, c-format
 msgid "Estonia"
-msgstr ""
+msgstr "爱沙尼亚"
 
 #: ../lib/network/connection/providers/cellular.pm:42
 #: ../lib/network/connection/providers/cellular.pm:46
@@ -3312,9 +3318,9 @@ msgid "Encryption key"
 msgstr "加密密钥"
 
 #: ../lib/network/connection/wireless.pm:472
-#, fuzzy, c-format
+#, c-format
 msgid "Hide password"
-msgstr "密码"
+msgstr "隐藏密码"
 
 #: ../lib/network/connection/wireless.pm:474
 #, c-format
@@ -3680,9 +3686,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:589
-#, fuzzy, c-format
+#, c-format
 msgid "Extra directives"
-msgstr "EAP 额外指令"
+msgstr "额外指令"
 
 #: ../lib/network/connection/wireless.pm:590
 #, c-format
@@ -3977,7 +3983,7 @@ msgstr "回显请求(ping)"
 #: ../lib/network/drakfirewall.pm:105
 #, c-format
 msgid "Network services autodiscovery (zeroconf and slp)"
-msgstr ""
+msgstr "网络服务自动发现(zeroconf 和 slp)"
 
 #: ../lib/network/drakfirewall.pm:110
 #, c-format
@@ -4068,7 +4074,7 @@ msgstr "您想要本机上开放哪些服务?"
 #: ../lib/network/network.pm:540
 #, c-format
 msgid "Those settings will be saved for the network profile <b>%s</b>"
-msgstr ""
+msgstr "这些设置将会保存在网络配置文件 <b>%s</b> 中"
 
 #: ../lib/network/drakfirewall.pm:268
 #, c-format
@@ -4282,9 +4288,9 @@ msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "目前没有支持 %s ndiswrapper 驱动程序的设备!"
 
 #: ../lib/network/ndiswrapper.pm:36
-#, fuzzy, c-format
+#, c-format
 msgid "Please select the correct driver"
-msgstr "请选择您的网络运营商："
+msgstr "请选择正确的驱动程序"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -4293,6 +4299,8 @@ msgid ""
 "driver file (.dll or .o files). Note that only drivers up to Windows XP are "
 "supported."
 msgstr ""
+"请选择 Windows 驱动程序描述(.inf)文件，或者相应的驱动程序文件(.dll 或 .o 文件)。"
+"请注意，目前所支持最新的驱动程序是 Windows XP 驱动程序。"
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -4358,7 +4366,7 @@ msgstr "网络中心"
 #: ../lib/network/netcenter.pm:164
 #, c-format
 msgid "You are currently using the network profile <b>%s</b>"
-msgstr ""
+msgstr "您现在正在使用网络配置文件 <b>%s</b>"
 
 #: ../lib/network/netcenter.pm:170
 #, c-format
@@ -5399,30 +5407,3 @@ msgstr "NAT 模式"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "使用指定的 UDP 端口"
-
-#, fuzzy
-#~ msgid "Connecting.."
-#~ msgstr "正在连接..."
-
-#, fuzzy
-#~ msgid "Account network traffic"
-#~ msgstr "同步网卡"
-
-#~ msgid ""
-#~ "Name of the profile to create (the new profile is created as a copy of "
-#~ "the current one):"
-#~ msgstr "要创建的配置文件名称(新配置文件将会以当前配置文件为基础创建)："
-
-#~ msgid ""
-#~ "This tool allows to activate an existing network profile, and to manage "
-#~ "(clone, delete) profiles."
-#~ msgstr "此工具允许您激活现有的网络配置文件，以及管理(克隆、删除)配置文件。"
-
-#~ msgid "To modify a profile, you have to activate it first."
-#~ msgstr "要修改配置文件，您必须先激活该配置文件。"
-
-#~ msgid "Clone"
-#~ msgstr "克隆"
-
-#~ msgid "Please select the Windows driver (.inf file)"
-#~ msgstr "请选择 Windows 驱动程序(.inf 文件)"
