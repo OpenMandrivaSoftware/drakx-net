@@ -240,6 +240,10 @@ $SIG{HUP} = sub {
     print "received SIGHUP, reloading network configuration\n";
     checkNetworkForce();
 };
+$SIG{USR1} = sub {
+    # clear all ifw notifications
+    my @packets = eval { $network::net_applet::ifw->get_reports };
+};
 
 Gtk2->main;
 
