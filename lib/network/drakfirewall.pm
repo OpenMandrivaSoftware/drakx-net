@@ -360,6 +360,9 @@ sub main {
         }
     }
 
+    # clearing pending ifw notifications in net_applet
+    system('killall -s SIGUSR1 net_applet');
+
     ($disabled, $ports);
 }
 
