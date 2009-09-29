@@ -245,6 +245,9 @@ $SIG{USR1} = sub {
     my @packets = eval { $network::net_applet::ifw->get_reports };
 };
 
+# do not create zombies (#20552)
+$SIG{CHLD} = 'IGNORE';
+
 Gtk2->main;
 
 ugtk2::exit(0);
