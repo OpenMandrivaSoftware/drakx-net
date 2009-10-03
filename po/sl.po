@@ -12,13 +12,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sl\n"
 "POT-Creation-Date: 2009-09-16 11:29-0300\n"
-"PO-Revision-Date: 2009-04-22 05:39+0200\n"
+"PO-Revision-Date: 2009-10-03 20:03+0200\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.3\n"
+"X-Generator: Lokalize 1.0\n"
 "Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3);\n"
 
@@ -313,8 +313,7 @@ msgstr ""
 msgid ""
 "Please choose what network adapter will be connected to your Local Area "
 "Network."
-msgstr ""
-"Izberite, kateri omrežni vmesnik bo povezan z vašim krajevnim omrežjem."
+msgstr "Izberite, kateri omrežni vmesnik bo povezan z vašim krajevnim omrežjem."
 
 #: ../bin/drakgw:177
 #, c-format
@@ -856,20 +855,17 @@ msgstr "Mark bit povezave"
 msgid "Network profiles"
 msgstr "Omrežni profili"
 
-#: ../bin/draknetprofile:66
-#, fuzzy, c-format
+#: ../bin/draknetprofile:66, c-format
 msgid "Module"
-msgstr "Način"
+msgstr "Modul"
 
-#: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#: ../bin/draknetprofile:67, c-format
 msgid "Enabled"
-msgstr "Omogoči"
+msgstr "Omogočeno"
 
-#: ../bin/draknetprofile:68
-#, fuzzy, c-format
+#: ../bin/draknetprofile:68, c-format
 msgid "Description"
-msgstr "Usmeritev"
+msgstr "Opis"
 
 #: ../bin/draknetprofile:84
 #, c-format
@@ -889,16 +885,18 @@ msgid ""
 "settings, and you'll be able to configure your system configuration as usual "
 "afterwards."
 msgstr ""
+"Določite ime novega omrežnega profila, ki bo ustvarjen (npr. dom, služba, šola "
+"...). Novi profil bo ustvarjen na osnovi trenutnih nastavitev, po tem pa boste "
+"lahko nastavitve prilagodili kot običajno."
 
 #: ../bin/draknetprofile:166
 #, c-format
 msgid "The \"%s\" profile already exists!"
 msgstr "Profil \"%s\" že obstaja!"
 
-#: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#: ../bin/draknetprofile:172, c-format
 msgid "New profile created"
-msgstr "Nov profil ..."
+msgstr "Nov profil je bil ustvarjen"
 
 #: ../bin/draknetprofile:172
 #, c-format
@@ -907,6 +905,8 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
+"Sedaj uporabljate omrežni profil %s. Sistem lahko nastavljate kot običajno, "
+"vse omrežne nastavitve pa bodo odslej shranjene v ta profil."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -915,37 +915,34 @@ msgstr ""
 msgid "Warning"
 msgstr "Opozorilo"
 
-#: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#: ../bin/draknetprofile:183, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "Privzetega profila ni mogoče odstraniti"
+msgstr "Ali res želite izbrisati privzeti profil?"
 
-#: ../bin/draknetprofile:186
-#, fuzzy, c-format
+#: ../bin/draknetprofile:186, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
-msgstr "Trenutnega profila ne morete izbrisati"
+msgstr ""
+"Trenutnega profila ne morete izbrisati. Najprej preklopite na drug profil."
 
 #: ../bin/draknetprofile:194 ../bin/draknfs:356
 #, c-format
 msgid "Advanced"
 msgstr "Napredno"
 
-#: ../bin/draknetprofile:198
-#, fuzzy, c-format
+#: ../bin/draknetprofile:198, c-format
 msgid "Select the netprofile modules:"
-msgstr "Izberite modem, ki ga želite nastaviti:"
+msgstr "Izberite module omrežnega profila:"
 
 #: ../bin/draknetprofile:211
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "To orodje vam omogoča nadzorovanje omrežnih profilov."
 
-#: ../bin/draknetprofile:212
-#, fuzzy, c-format
+#: ../bin/draknetprofile:212, c-format
 msgid "Select a network profile:"
-msgstr "Izberite ponudnika:"
+msgstr "Izberite omrežni profil:"
 
 #: ../bin/draknetprofile:216
 #, c-format
@@ -955,7 +952,7 @@ msgstr "Aktiviraj"
 #: ../bin/draknetprofile:217
 #, c-format
 msgid "New"
-msgstr ""
+msgstr "Nov"
 
 #: ../bin/draknetprofile:218
 #, c-format
@@ -1787,8 +1784,7 @@ msgstr "Javno:"
 
 #: ../bin/draksambashare:795
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 "Maska za ustvarjanje in za mape ter način za ustvarjanje naj bodo številski. "
 "Na primer: 0755."
@@ -1863,8 +1859,7 @@ msgstr ""
 
 #: ../bin/draksambashare:1072
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
 msgstr ""
 "Samostojni strežniki lahko za gesla uporabljajo hrbtenico smbpasswd ali "
 "tdbsam"
@@ -2520,7 +2515,7 @@ msgstr "Omogoči povezavo ob zagonu sistema"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "Enable traffic accounting"
-msgstr ""
+msgstr "Omogoči spremljanje prometa"
 
 #: ../lib/network/connection.pm:246
 #, c-format
@@ -2773,16 +2768,16 @@ msgstr "Mrežna maska bi morala biti v obliki 255.255.255.0"
 msgid "Warning: IP address %s is usually reserved!"
 msgstr "Opozorilo: naslov IP %s je običajno rezerviran!"
 
-#: ../lib/network/connection/ethernet.pm:192
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:192, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
-"%s že uporablja povezava, ki se vzpostavi ob zagonu. Da bi lahko uporabili "
+"%s že uporablja povezava, ki se vzpostavi ob zagonu (%s). Da bi lahko "
+"uporabili "
 "ta naslov za to povezavo, morate najprej onemogočiti vse ostale naprave, ki "
-"ga uporabljajo, ali pa napravam onemogočiti povezoavanje ob zagonu."
+"ga uporabljajo, ali pa napravam onemogočiti povezovanje ob zagonu."
 
 #: ../lib/network/connection/ethernet.pm:219
 #, c-format
@@ -2796,6 +2791,8 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
+"To bo strežniku omogočilo temu računalniku dodeliti ime. Če strežnik ne ponudi "
+"veljavnega imena gostitelja, bo le to ustvarjeno samodejno."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2804,6 +2801,9 @@ msgid ""
 "Note that this hostname will be shared among all network connections.  If "
 "left blank, 'localhost.localdomain' will be used."
 msgstr ""
+"Določiti bi morali ime gostitelja za ta računalnik, kar ga bo identificiralo. "
+"Vedite, da bo to ime gostitelja deljeno med vsemi omrežnimi povezavami. Če "
+"pustite prazno, bo uporabljeno ime »localhost.localdomain«."
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -2918,7 +2918,7 @@ msgstr "Brazilija"
 #: ../lib/network/connection/providers/cellular.pm:38
 #, c-format
 msgid "Estonia"
-msgstr ""
+msgstr "Estonija"
 
 #: ../lib/network/connection/providers/cellular.pm:42
 #: ../lib/network/connection/providers/cellular.pm:46
@@ -3369,10 +3369,9 @@ msgstr "Način šifriranja"
 msgid "Encryption key"
 msgstr "Šifrirni ključ"
 
-#: ../lib/network/connection/wireless.pm:472
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:472, c-format
 msgid "Hide password"
-msgstr "Geslo"
+msgstr "Skrij geslo"
 
 #: ../lib/network/connection/wireless.pm:474
 #, c-format
@@ -3755,10 +3754,9 @@ msgstr ""
 "oblike:\n"
 "/C=US/ST=CA/L=Ljubljana/CN=Test/emailAddress=kot@primer.si"
 
-#: ../lib/network/connection/wireless.pm:589
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:589, c-format
 msgid "Extra directives"
-msgstr "Dodatne direktive EAP"
+msgstr "Dodatne direktive"
 
 #: ../lib/network/connection/wireless.pm:590
 #, c-format
@@ -3817,8 +3815,7 @@ msgstr ""
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
 "frequency), or add enough '0' (zeroes)."
-msgstr ""
-"Frekvenca mora imeti predpono k, M ali G oziroma zadostno število ničel."
+msgstr "Frekvenca mora imeti predpono k, M ali G oziroma zadostno število ničel."
 
 #: ../lib/network/connection/wireless.pm:636
 #, c-format
@@ -4068,7 +4065,7 @@ msgstr "Ping"
 #: ../lib/network/drakfirewall.pm:105
 #, c-format
 msgid "Network services autodiscovery (zeroconf and slp)"
-msgstr ""
+msgstr "Samodejno odkrivanje omrežnih storitev (Zeroconf in SLP)"
 
 #: ../lib/network/drakfirewall.pm:110
 #, c-format
@@ -4160,7 +4157,7 @@ msgstr "Katerim storitvam želite omogočiti dostop do interneta?"
 #: ../lib/network/network.pm:540
 #, c-format
 msgid "Those settings will be saved for the network profile <b>%s</b>"
-msgstr ""
+msgstr "Te nastavitve bodo shranjene v omrežni profil <b>%s</b>"
 
 #: ../lib/network/drakfirewall.pm:268
 #, c-format
@@ -4375,10 +4372,9 @@ msgstr "Samodejno"
 msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "Na voljo ni nobene naprave, ki bi podpirala gonilnik %s ndiswrapper!"
 
-#: ../lib/network/ndiswrapper.pm:36
-#, fuzzy, c-format
+#: ../lib/network/ndiswrapper.pm:36, c-format
 msgid "Please select the correct driver"
-msgstr "Izberite svojega operaterja:"
+msgstr "Izberite pravi gonilnik"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -4387,6 +4383,9 @@ msgid ""
 "driver file (.dll or .o files). Note that only drivers up to Windows XP are "
 "supported."
 msgstr ""
+"Izberite datoteko z opisom gonilnika za Windows (*.inf) ali pa ustrezno "
+"datoteko samega gonilnika (*.dll ali *.o). Vedite, da so podprti samo "
+"gonilniki za Windows XP ali starejše."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -4452,7 +4451,7 @@ msgstr "Omrežno središče"
 #: ../lib/network/netcenter.pm:164
 #, c-format
 msgid "You are currently using the network profile <b>%s</b>"
-msgstr ""
+msgstr "Trenutno uporabljate omrežni profil <b>%s</b>"
 
 #: ../lib/network/netcenter.pm:170
 #, c-format
