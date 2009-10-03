@@ -1,4 +1,4 @@
-# translation of it.po to Italian
+# translation of drakx-net.po to Italian
 # Copyright (C) 2000, 2001 Mandriva S.A.
 #
 # Paolo Lorenzin <pasusu@tin.it>, 2000.
@@ -8,14 +8,15 @@
 # Giuseppe Levi <giuseppe.levi@email.it>, 2005.
 # Andrea Celli <andrea.celli@libero.it>, 2003, 2004, 2005, 2006, 2007, 2008, 2009.
 # Ruggero Tonelli <ruggero@valtellinux.it>, 2008.
+# Moreno Manzini <moreno.mg@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: it\n"
+"Project-Id-Version: drakx-net\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-09-16 11:29-0300\n"
-"PO-Revision-Date: 2009-04-26 20:24+0200\n"
-"Last-Translator: Andrea Celli <andrea.celli@libero.it>\n"
-"Language-Team: Italian <timl@freelists.org>\n"
+"PO-Revision-Date: 2009-10-02 13:08+0200\n"
+"Last-Translator: Moreno Manzini <moreno.mg@gmail.com>\n"
+"Language-Team: Italian <timl@freelist.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -63,7 +64,7 @@ msgstr "Nome host: "
 #: ../bin/drakconnect-old:81
 #, c-format
 msgid "Configure hostname..."
-msgstr "Configura nome host"
+msgstr "Configura nome host..."
 
 #: ../bin/drakconnect-old:95 ../bin/drakconnect-old:171
 #, c-format
@@ -109,12 +110,12 @@ msgstr "OK"
 #: ../lib/network/thirdparty.pm:369
 #, c-format
 msgid "Please wait"
-msgstr "Attendere prego"
+msgstr "Attendi"
 
 #: ../bin/drakconnect-old:115
 #, c-format
 msgid "Please Wait... Applying the configuration"
-msgstr "Bisogna attendere, ... sto applicando la configurazione"
+msgstr "Attendi... sto applicando la configurazione"
 
 #: ../bin/drakconnect-old:141
 #, c-format
@@ -149,7 +150,7 @@ msgstr "Scheda %s: %s"
 #: ../lib/network/connection/ethernet.pm:145
 #, c-format
 msgid "Netmask"
-msgstr "Netmask"
+msgstr "Maschera di rete"
 
 #: ../bin/drakconnect-old:210
 #, c-format
@@ -173,7 +174,7 @@ msgid ""
 "Run the \"%s\" assistant from the Mandriva Linux Control Center"
 msgstr ""
 "Questa interfaccia non è stata ancora configurata.\n"
-"Lancia l'assistente \"%s\" dal Mandriva Linux Control Center"
+"Esegui l'assistente \"%s\" dal Centro di controllo Mandriva Linux"
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:104
 #, c-format
@@ -204,7 +205,7 @@ msgstr "disattivato"
 #: ../bin/drakgw:71
 #, c-format
 msgid "Internet Connection Sharing"
-msgstr "Condividere la connessione Internet"
+msgstr "Condivisione della connessione Internet"
 
 #: ../bin/drakgw:75
 #, c-format
@@ -241,9 +242,9 @@ msgid ""
 "What would you like to do?"
 msgstr ""
 "La condivisione della connessione internet è già stata configurata.\n"
-"Al momento, è abilitata.\n"
+"Al momento, è attivata.\n"
 "\n"
-"Cosa hai intenzione di fare?"
+"Cosa vuoi fare?"
 
 #: ../bin/drakgw:95
 #, c-format
@@ -254,7 +255,7 @@ msgid ""
 "What would you like to do?"
 msgstr ""
 "La condivisione della connessione internet è già stata configurata.\n"
-"Ma, al momento, è disabilitata.\n"
+"Al momento, è disattivata\n"
 "\n"
 "Cosa vuoi fare?"
 
@@ -276,8 +277,7 @@ msgstr "Riconfigura"
 #: ../bin/drakgw:122
 #, c-format
 msgid "Please select the network interface directly connected to the internet."
-msgstr ""
-"Dovresti selezionare l'interfaccia di rete direttamente connessa ad Internet"
+msgstr "Devi selezionare l'interfaccia di rete direttamente connessa ad Internet"
 
 #: ../bin/drakgw:123 ../lib/network/netconnect.pm:379
 #: ../lib/network/netconnect.pm:414
@@ -299,11 +299,11 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
-"C'è un solo dispositivo configurato per connettersi alla LAN:\n"
+"Nel sistema c'è un solo dispositivo configurato per connettersi alla rete LAN:\n"
 " \n"
 "%s\n"
 "\n"
-"Si sta per configurare la rete locale tramite questo dispositivo.\n"
+"Sto per configurare la rete locale tramite questo dispositivo.\n"
 "\n"
 "Se hai un altro dispositivo collegato alla rete locale, disattiva\n"
 "la protezione firewall nei suoi confronti, utilizzando drakfirewall,\n"
@@ -314,13 +314,12 @@ msgstr ""
 msgid ""
 "Please choose what network adapter will be connected to your Local Area "
 "Network."
-msgstr ""
-"Per favore scegli quale scheda di rete sarà connessa alla rete locale (LAN)."
+msgstr "Scegli quale scheda di rete sarà connessa alla rete locale (LAN)."
 
 #: ../bin/drakgw:177
 #, c-format
 msgid "Local Area Network settings"
-msgstr "Impostazioni rete locale"
+msgstr "Impostazioni della rete locale"
 
 #: ../bin/drakgw:180 ../lib/network/vpn/openvpn.pm:227
 #, c-format
@@ -373,9 +372,7 @@ msgstr "Errore"
 #: ../bin/drakgw:188
 #, c-format
 msgid "Potential LAN address conflict found in current config of %s!\n"
-msgstr ""
-"C'è un potenziale conflitto di indirizzo LAN nell'attuale configurazione di %"
-"s!\n"
+msgstr "C'è un potenziale conflitto di indirizzo LAN nell'attuale configurazione di %s!\n"
 
 #: ../bin/drakgw:204
 #, c-format
@@ -475,21 +472,21 @@ msgid ""
 "the Mandriva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
-"Non è stato rilevato alcun dispositivo di rete configurato per la LAN.\n"
+"Nel sistema on è stato rilevato alcun dispositivo di rete configurato per la LAN.\n"
 "\n"
-"Dovresti configurarne uno con il tool per la configurazione dell'hardware ed "
+"Devi configurarne uno con lo strumento di configurazione dell'hardware ed "
 "assicurarti che il firewall di Mandriva non sia attiva nei confronti del "
-"dispositivo di rete collegato alla LAN."
+"dispositivo di rete collegato alla rete LAN."
 
 #: ../bin/drakgw:316
 #, c-format
 msgid "Internet Connection Sharing is now enabled."
-msgstr "La condivisione della connessione ad Internet ora è abilitata."
+msgstr "La condivisione della connessione ad Internet ora è attiva."
 
 #: ../bin/drakgw:322
 #, c-format
 msgid "Internet Connection Sharing is now disabled."
-msgstr "Ora la condivisione della connessione ad Internet è disabilitata."
+msgstr "La condivisione della connessione ad Internet è ora disattivata."
 
 #: ../bin/drakgw:328
 #, c-format
@@ -501,8 +498,7 @@ msgid ""
 msgstr ""
 "La configurazione è completa.\n"
 "Ora puoi condividere il collegamento a Internet con gli altri computer della "
-"tua rete locale, utilizzando la configurazione automatica della rete (DHCP) "
-"e\n"
+"tua rete locale, utilizzando la configurazione automatica della rete (DHCP) ed\n"
 " un server proxy trasparente (SQUID)."
 
 #: ../bin/drakgw:351
@@ -537,22 +533,22 @@ msgstr "Configurazione del firewall in corso..."
 #: ../bin/drakhosts:100
 #, c-format
 msgid "Please add an host to be able to modify it."
-msgstr "Aggiungi un host da poter modificare."
+msgstr "Aggiungi un host per poterlo modificare."
 
 #: ../bin/drakhosts:110
 #, c-format
 msgid "Please modify information"
-msgstr "Modifica informazioni"
+msgstr "Modifica le informazioni"
 
 #: ../bin/drakhosts:111
 #, c-format
 msgid "Please delete information"
-msgstr "Cancella informazioni"
+msgstr "Cancella le informazioni"
 
 #: ../bin/drakhosts:112
 #, c-format
 msgid "Please add information"
-msgstr "Aggiungi informazioni"
+msgstr "Aggiungi le informazioni"
 
 #: ../bin/drakhosts:116
 #, c-format
@@ -709,7 +705,7 @@ msgstr "Servizi bloccati"
 #: ../bin/drakids:114
 #, c-format
 msgid "Clear logs"
-msgstr "Azzerare i log"
+msgstr "Azzera registro"
 
 #: ../bin/drakids:115 ../bin/drakids:120
 #, c-format
@@ -857,19 +853,19 @@ msgid "Network profiles"
 msgstr "Profili di rete"
 
 #: ../bin/draknetprofile:66
-#, fuzzy, c-format
+#, c-format
 msgid "Module"
-msgstr "Modem"
+msgstr "Modulo"
 
 #: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#, c-format
 msgid "Enabled"
-msgstr "Attiva"
+msgstr "Abilitato"
 
 #: ../bin/draknetprofile:68
-#, fuzzy, c-format
+#, c-format
 msgid "Description"
-msgstr "Cifratura"
+msgstr "Descrizione"
 
 #: ../bin/draknetprofile:84
 #, c-format
@@ -889,16 +885,19 @@ msgid ""
 "settings, and you'll be able to configure your system configuration as usual "
 "afterwards."
 msgstr ""
+"Specifica il nome del nuovo profilo di rete da creare (es. lavoro, casa, "
+"roaming etc.). Il nuovo profilo verrà creato usando le impostazioni attuali, "
+" in seguito potrai modificare la configurazione del sistema nel modo consueto."
 
 #: ../bin/draknetprofile:166
 #, c-format
 msgid "The \"%s\" profile already exists!"
-msgstr "Il profilo \"%s\" già esiste!"
+msgstr "Il profilo \"%s\" è già presente!"
 
 #: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#, c-format
 msgid "New profile created"
-msgstr "Nuovo profilo..."
+msgstr "Creato nuovo profilo"
 
 #: ../bin/draknetprofile:172
 #, c-format
@@ -907,6 +906,9 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
+"Ora stai usando il profilo di rete %s. Puoi configurare il sistema nel modo "
+"consueto e da questo momento, tutte le modifiche alle impostazioni della "
+"rete saranno salvate in questo profilo."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -916,16 +918,18 @@ msgid "Warning"
 msgstr "Attenzione"
 
 #: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "Non puoi eliminare il profilo predefinito"
+msgstr "Sei sicuro di volere eliminare il profilo predefinito?"
 
 #: ../bin/draknetprofile:186
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
-msgstr "Non puoi cancellare il profilo attualmente in uso"
+msgstr ""
+"Non puoi cancellare il profilo attualmente in uso, prima passa ad un differente "
+"profilo."
 
 #: ../bin/draknetprofile:194 ../bin/draknfs:356
 #, c-format
@@ -933,19 +937,19 @@ msgid "Advanced"
 msgstr "Avanzate"
 
 #: ../bin/draknetprofile:198
-#, fuzzy, c-format
+#, c-format
 msgid "Select the netprofile modules:"
-msgstr "Indica il modem da configurare:"
+msgstr "Seleziona i moduli netprofile:"
 
 #: ../bin/draknetprofile:211
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "Questa applicazione ti permette di gestire i profili della rete."
 
 #: ../bin/draknetprofile:212
-#, fuzzy, c-format
+#, c-format
 msgid "Select a network profile:"
-msgstr "Indica il provider:"
+msgstr "Seleziona un profilo di rete:"
 
 #: ../bin/draknetprofile:216
 #, c-format
@@ -955,7 +959,7 @@ msgstr "Attiva"
 #: ../bin/draknetprofile:217
 #, c-format
 msgid "New"
-msgstr ""
+msgstr "Nuovo"
 
 #: ../bin/draknetprofile:218
 #, c-format
@@ -975,12 +979,12 @@ msgstr "mappa tutti gli utenti come anonymous"
 #: ../bin/draknfs:51
 #, c-format
 msgid "No user UID mapping"
-msgstr "Nessuna mappatura di UID"
+msgstr "Nessuna mappatura UID utente"
 
 #: ../bin/draknfs:52
 #, c-format
 msgid "allow real remote root access"
-msgstr "Permetti l'accesso remoto come root"
+msgstr "permetti l'accesso remoto come root"
 
 #: ../bin/draknfs:66 ../bin/draknfs:67 ../bin/draknfs:68
 #: ../bin/draksambashare:175 ../bin/draksambashare:176
@@ -1027,7 +1031,7 @@ msgstr "Server NFS"
 #: ../bin/draknfs:92
 #, c-format
 msgid "Restarting/Reloading NFS server..."
-msgstr "Riavvio/ricarico il server NFS..."
+msgstr "Riavvia/ricarica il server NFS..."
 
 #: ../bin/draknfs:93
 #, c-format
@@ -1037,7 +1041,7 @@ msgstr "Problemi nel riavviare/ricaricare il server NFS"
 #: ../bin/draknfs:109 ../bin/draksambashare:246
 #, c-format
 msgid "Directory selection"
-msgstr "Scelta directory"
+msgstr "Scelta della directory"
 
 #: ../bin/draknfs:116 ../bin/draksambashare:253
 #, c-format
@@ -1174,7 +1178,7 @@ msgid ""
 msgstr ""
 "<span foreground=\"royalblue3\">%s :</span> Questa opzione impone che la "
 "richiesta sia originata da una porta con IP inferiore a IPPORT_RESERVED "
-"(1024). Questa è l'opzione preimpostata."
+"(1024). Questa è l'opzione predefinita."
 
 #: ../bin/draknfs:184
 #, c-format
@@ -1208,8 +1212,8 @@ msgid ""
 "exports(5) man page for more details."
 msgstr ""
 "<span foreground=\"royalblue3\">%s</span> attiva la verifica delle "
-"ramificazioni che permette di migliorare la sicurezza in certi casi, ma che "
-"può ridurre l'affidabilità. Vedi la pagina man export (5) per maggiori "
+"ramificazioni che permette, in certi casi, di migliorare la sicurezza, ma che "
+"può ridurne l'affidabilità. Vedi la pagina man export (5) per maggiori "
 "dettagli."
 
 #: ../bin/draknfs:191 ../bin/draksambashare:623 ../bin/draksambashare:789
@@ -1225,7 +1229,7 @@ msgstr "Directory"
 #: ../bin/draknfs:282
 #, c-format
 msgid "Please add an NFS share to be able to modify it."
-msgstr "Aggiungi una condivisione NFS da poter modificare."
+msgstr "Aggiungi una condivisione NFS per poterla modificare."
 
 #: ../bin/draknfs:379
 #, c-format
@@ -1312,7 +1316,7 @@ msgstr "Indica una directory da condividere."
 #: ../bin/draknfs:533
 #, c-format
 msgid "Please use the modify button to set right access."
-msgstr "Usa pulsante di modifica per impostare i diritti di accesso."
+msgstr "Usa il pulsante di modifica per impostare i diritti di accesso."
 
 #: ../bin/draknfs:548
 #, c-format
@@ -1352,7 +1356,7 @@ msgstr "Nome dell'utente"
 #: ../bin/draksambashare:72 ../bin/draksambashare:100
 #, c-format
 msgid "Share name"
-msgstr "Nome di condivisione"
+msgstr "Nome della condivisione"
 
 #: ../bin/draksambashare:73 ../bin/draksambashare:101
 #, c-format
@@ -1363,7 +1367,7 @@ msgstr "Condividi directory"
 #: ../bin/draksambashare:119
 #, c-format
 msgid "Comment"
-msgstr "Commenta"
+msgstr "Commento"
 
 #: ../bin/draksambashare:75 ../bin/draksambashare:120
 #, c-format
@@ -1409,12 +1413,12 @@ msgstr "Amministrazione utenti"
 #: ../bin/draksambashare:83 ../bin/draksambashare:159
 #, c-format
 msgid "Valid users"
-msgstr "Utente validi"
+msgstr "Utenti validi"
 
 #: ../bin/draksambashare:84
 #, c-format
 msgid "Inherit Permissions"
-msgstr "Permessi \"inherit\""
+msgstr "Permessi ereditati"
 
 #: ../bin/draksambashare:85 ../bin/draksambashare:160
 #, c-format
@@ -1429,7 +1433,7 @@ msgstr "Nascondi i file"
 #: ../bin/draksambashare:87 ../bin/draksambashare:165
 #, c-format
 msgid "Preserve case"
-msgstr "Mantieni maiuscole"
+msgstr "Mantieni maiuscole/minuscole"
 
 #: ../bin/draksambashare:88
 #, c-format
@@ -1439,7 +1443,7 @@ msgstr "Diritti forzati alla creazione"
 #: ../bin/draksambashare:89
 #, c-format
 msgid "Force group"
-msgstr "Gruppo predefinito"
+msgstr "Forza gruppo"
 
 #: ../bin/draksambashare:90 ../bin/draksambashare:164
 #, c-format
@@ -1454,7 +1458,7 @@ msgstr "Nome stampante"
 #: ../bin/draksambashare:118
 #, c-format
 msgid "Path"
-msgstr "Path"
+msgstr "Percorso"
 
 #: ../bin/draksambashare:121 ../bin/draksambashare:594
 #, c-format
@@ -1474,13 +1478,13 @@ msgstr "Comando LPQ"
 #: ../bin/draksambashare:124
 #, c-format
 msgid "Guest ok"
-msgstr "Guest ok"
+msgstr "Ospite ok"
 
 #: ../bin/draksambashare:127 ../bin/draksambashare:168
 #: ../bin/draksambashare:603
 #, c-format
 msgid "Inherit permissions"
-msgstr "Permessi \"inherit\""
+msgstr "Permessi ereditati"
 
 #: ../bin/draksambashare:128
 #, c-format
@@ -1510,12 +1514,12 @@ msgstr "Abilitati a scrivere"
 #: ../bin/draksambashare:162
 #, c-format
 msgid "Force Group"
-msgstr "Gruppo predefinito"
+msgstr "Forza gruppo"
 
 #: ../bin/draksambashare:163
 #, c-format
 msgid "Force create group"
-msgstr "gruppo predefinito alla creazione"
+msgstr "Gruppo forzato alla creazione"
 
 #: ../bin/draksambashare:179 ../bin/draksambashare:180
 #: ../bin/draksambashare:181 ../bin/draksambashare:182
@@ -1566,7 +1570,7 @@ msgstr "Copyright (C) %s di Mandriva"
 #: ../bin/draksambashare:198
 #, c-format
 msgid "This is a simple tool to easily manage Samba configuration."
-msgstr "Questo è un semplice strumento per configurare facilmente Samba."
+msgstr "Questo è una semplice applicazione per configurare facilmente Samba."
 
 #: ../bin/draksambashare:200
 #, c-format
@@ -1622,8 +1626,8 @@ msgid ""
 "Share with the same name already exist or share name empty, please choose "
 "another name."
 msgstr ""
-"Esiste già una condivisione con questo nome o non hai fornito nessun nome. "
-"Scrivi un nome nuovo."
+"Esiste già una condivisione con questo nome o non hai fornito alcun nome. "
+"Scrivi un nuovo nome."
 
 #: ../bin/draksambashare:400
 #, c-format
@@ -1639,7 +1643,7 @@ msgstr "Scrivi un commento per questa condivisione."
 #: ../bin/draksambashare:440
 #, c-format
 msgid "pdf-gen - a PDF generator"
-msgstr "pdf-gen - un generatore di PDF"
+msgstr "pdf-gen - Generatore di PDF"
 
 #: ../bin/draksambashare:441
 #, c-format
@@ -1649,12 +1653,11 @@ msgstr "Stampanti - tutte le stampanti disponibili"
 #: ../bin/draksambashare:445
 #, c-format
 msgid "Add Special Printer share"
-msgstr "Aggiungi condivisione di una stampante"
+msgstr "Aggiungi condivisione di una stampante speciale"
 
 #: ../bin/draksambashare:448
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
 msgstr ""
 "Lo scopo di questa procedura è di aiutarti a creare una condivisione per "
 "stampati speciali."
@@ -1749,12 +1752,12 @@ msgstr "Comando LPQ:"
 #: ../bin/draksambashare:613
 #, c-format
 msgid "Printing:"
-msgstr "Stampare:"
+msgstr "Stampa:"
 
 #: ../bin/draksambashare:629
 #, c-format
 msgid "create mode should be numeric. ie: 0755."
-msgstr "I diritti quando si crea devono essere un codice numerico (es. 07755)."
+msgstr "i diritti di creazione devono essere un codice numerico (es. 0755)."
 
 #: ../bin/draksambashare:690
 #, c-format
@@ -1764,8 +1767,7 @@ msgstr "Voce di DrakSamba"
 #: ../bin/draksambashare:695
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
-msgstr ""
-"Aggiungi o seleziona una condivisione Samba, prima di tentare di modificarla."
+msgstr "Aggiungi o seleziona una condivisione Samba, prima di tentare di modificarla."
 
 #: ../bin/draksambashare:718
 #, c-format
@@ -1790,7 +1792,7 @@ msgstr "Directory condivisa con Samba"
 #: ../bin/draksambashare:765
 #, c-format
 msgid "Share name:"
-msgstr "Nome di condivisione:"
+msgstr "Nome condivisione:"
 
 #: ../bin/draksambashare:771
 #, c-format
@@ -1799,8 +1801,7 @@ msgstr "Pubblico:"
 
 #: ../bin/draksambashare:795
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
 msgstr ""
 "I parametri create mask, create mode e directory mask devono essere "
 "numerici. Cioè del tipo: 0755."
@@ -1818,7 +1819,7 @@ msgstr "Aggiungi un utente Samba"
 #: ../bin/draksambashare:929
 #, c-format
 msgid "User information"
-msgstr "Informazioni su utente"
+msgstr "Informazioni sull'utente"
 
 #: ../bin/draksambashare:931
 #, c-format
@@ -1857,7 +1858,7 @@ msgid ""
 "workstations running non-Linux systems."
 msgstr ""
 "Samba permette ad un computer di funzionare come server di file e di stampa "
-"per delle workstation basate su sistemi diversi da Linux."
+"per delle workstation basate su sistemi operativi diversi da Linux."
 
 #: ../bin/draksambashare:1072
 #, c-format
@@ -1875,10 +1876,9 @@ msgstr ""
 
 #: ../bin/draksambashare:1072
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
 msgstr ""
-"Le installazioni isolate di server possono i gestori di password smbpasswd o "
+"Le installazioni isolate di server possono gestire le password con smbpasswd o "
 "tdbsam"
 
 #: ../bin/draksambashare:1072
@@ -1887,7 +1887,7 @@ msgid ""
 "Domain master = yes, causes the server to register the NetBIOS name <pdc "
 "name>. This name will be recognized by other servers."
 msgstr ""
-"Domain master = yes, provoca che il server se si registri in NetBIOS con il "
+"Domain master = yes, causa che il server se si registri in NetBIOS con il "
 "nome <pdc name>. Questo nome verrà riconosciuto dagli altri server."
 
 #: ../bin/draksambashare:1089
@@ -1985,7 +1985,7 @@ msgid ""
 "is shared between domain (security) controllers."
 msgstr ""
 "Livello Dominio: fornisce un meccanismo per memorizzare tutti gli account "
-"utente e gruppi in un repository centralizzato e condiviso. tale repository "
+"utente e gruppi in un archivio centralizzato condiviso. tale archivio "
 "è condiviso tra i controller di dominio."
 
 #: ../bin/draksambashare:1132
@@ -2003,8 +2003,7 @@ msgstr "Banner del server"
 msgid ""
 "The banner is the way this server will be described in the Windows "
 "workstations."
-msgstr ""
-"Il banner è ciò che descrive un server nelle stazioni di lavoro Windows."
+msgstr "Il banner è ciò che descrive un server nelle stazioni di lavoro Windows."
 
 #: ../bin/draksambashare:1142
 #, c-format
@@ -2019,7 +2018,7 @@ msgstr "Il banner del server non è valido."
 #: ../bin/draksambashare:1153
 #, c-format
 msgid "Samba Log"
-msgstr "Log di Samba"
+msgstr "Registro di Samba"
 
 #: ../bin/draksambashare:1153
 #, c-format
@@ -2027,39 +2026,38 @@ msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
 "connects"
 msgstr ""
-"File log: utilizza file.%m per disporre di un file log separato per ogni "
+"File registro: utilizza file.%m per disporre di un file di registro separato per ogni "
 "macchina che si collega"
 
 #: ../bin/draksambashare:1153
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
-msgstr "Livello del log: imposta il dettaglio del log (0 <= livello <= 10)"
+msgstr "Livello del registro: imposta il dettaglio delle registrazioni (0 <= livello <= 10)"
 
 #: ../bin/draksambashare:1153
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr "Dimensione massima log: limita la grandezza dei file di log (in Kb)."
+msgstr "Dimensione massima del registro: limita la grandezza dei file registro (in Kb)."
 
 #: ../bin/draksambashare:1160 ../bin/draksambashare:1178
 #, c-format
 msgid "Log file:"
-msgstr "File log:"
+msgstr "File registro:"
 
 #: ../bin/draksambashare:1161
 #, c-format
 msgid "Max log size:"
-msgstr "Dimensione massima log:"
+msgstr "Dimensione massima registro:"
 
 #: ../bin/draksambashare:1162
 #, c-format
 msgid "Log level:"
-msgstr "Livello del log:"
+msgstr "Livello di registrazione:"
 
 #: ../bin/draksambashare:1167
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
-"L'assistente ha raccolto questi parametri per la configurazione di Samba."
+msgstr "L'assistente ha raccolto questi parametri per la configurazione di Samba."
 
 #: ../bin/draksambashare:1167
 #, c-format
@@ -2128,17 +2126,17 @@ msgstr "Gestione della configurazione di Samba"
 #: ../bin/draksambashare:1354
 #, c-format
 msgid "Failed to Modify Samba share."
-msgstr "La modifica di una condivisione Samba non è riuscita."
+msgstr "La modifica della condivisione Samba non è riuscita."
 
 #: ../bin/draksambashare:1363
 #, c-format
 msgid "Failed to remove a Samba share."
-msgstr "La rimozione di una condivisione Samba non è riuscita."
+msgstr "La rimozione della condivisione Samba non è riuscita."
 
 #: ../bin/draksambashare:1370
 #, c-format
 msgid "File share"
-msgstr "Condividere file"
+msgstr "Condividi file"
 
 #: ../bin/draksambashare:1385
 #, c-format
@@ -2158,7 +2156,7 @@ msgstr "Stampanti"
 #: ../bin/draksambashare:1413
 #, c-format
 msgid "Failed to add user."
-msgstr "È stato impossibile aggiungere utente."
+msgstr "È stato impossibile aggiungere un utente."
 
 #: ../bin/draksambashare:1422
 #, c-format
@@ -2168,7 +2166,7 @@ msgstr "È stato impossibile cambiare la password dell'utente."
 #: ../bin/draksambashare:1434
 #, c-format
 msgid "Failed to delete user."
-msgstr "È stato impossibile rimuovere utente."
+msgstr "È stato impossibile rimuovere l'utente."
 
 #: ../bin/draksambashare:1439
 #, c-format
@@ -2183,7 +2181,7 @@ msgstr "Utenti Samba"
 #: ../bin/draksambashare:1455
 #, c-format
 msgid "Please configure your Samba server"
-msgstr "Dovresti configurare il server Samba"
+msgstr "Devi configurare il server Samba"
 
 #: ../bin/draksambashare:1455
 #, c-format
@@ -2401,7 +2399,7 @@ msgstr "Attendi, sto provando la connessione..."
 #: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
 msgid "Disconnecting from Internet "
-msgstr "Sconnessione da Internet "
+msgstr "Disconnessione da Internet "
 
 #: ../bin/net_monitor:210 ../bin/net_monitor:223
 #, c-format
@@ -2411,12 +2409,12 @@ msgstr "Connessione ad Internet "
 #: ../bin/net_monitor:254
 #, c-format
 msgid "Disconnection from Internet failed."
-msgstr "Sconnessione da Internet non riuscita."
+msgstr "Disconnessione da Internet non riuscita."
 
 #: ../bin/net_monitor:255
 #, c-format
 msgid "Disconnection from Internet complete."
-msgstr "Ho chiuso la connessione a Internet."
+msgstr "Disconnessione da Internet completata."
 
 #: ../bin/net_monitor:257
 #, c-format
@@ -2494,7 +2492,7 @@ msgstr "Connessione a Internet non configurata"
 #: ../lib/network/connection.pm:16
 #, c-format
 msgid "Unknown connection type"
-msgstr "Tipo di connessione sconosciuto"
+msgstr "Tipo di connessione sconosciuta"
 
 #: ../lib/network/connection.pm:162
 #, c-format
@@ -2509,7 +2507,7 @@ msgstr "Impostazioni di accesso"
 #: ../lib/network/connection.pm:164
 #, c-format
 msgid "Address settings"
-msgstr "Impostazioni indirizzo"
+msgstr "Impostazione indirizzi"
 
 #: ../lib/network/connection.pm:178 ../lib/network/connection.pm:198
 #: ../lib/network/connection/isdn.pm:155 ../lib/network/netconnect.pm:217
@@ -2517,7 +2515,7 @@ msgstr "Impostazioni indirizzo"
 #: ../lib/network/netconnect.pm:591
 #, c-format
 msgid "Unlisted - edit manually"
-msgstr "Non in elenco - modificare a mano"
+msgstr "Non in elenco - modificare manualmente"
 
 #: ../lib/network/connection.pm:231 ../lib/network/connection/cable.pm:41
 #: ../lib/network/connection/wireless.pm:46 ../lib/network/vpn/openvpn.pm:127
@@ -2529,7 +2527,7 @@ msgstr "Nessuno"
 #: ../lib/network/connection.pm:243
 #, c-format
 msgid "Allow users to manage the connection"
-msgstr "Consentire agli utenti la gestione della connessione"
+msgstr "Consenti agli utenti la gestione della connessione"
 
 #: ../lib/network/connection.pm:244
 #, c-format
@@ -2539,7 +2537,7 @@ msgstr "Avviare la connessione al boot"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "Enable traffic accounting"
-msgstr ""
+msgstr "Attiva la contabilizzazione del traffico"
 
 #: ../lib/network/connection.pm:246
 #, c-format
@@ -2554,13 +2552,12 @@ msgstr "MTU"
 #: ../lib/network/connection.pm:248
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr ""
-"Dimensione massima dei messaggi in rete (MTU). Nel dubbio, lascia in bianco."
+msgstr "Dimensione massima dei messaggi in rete (MTU). Nel dubbio, lascia in bianco."
 
 #: ../lib/network/connection.pm:324
 #, c-format
 msgid "Link detected on interface %s"
-msgstr "collegamento rilevato sull'interfaccia: %s"
+msgstr "Collegamento rilevato sull'interfaccia: %s"
 
 #: ../lib/network/connection.pm:325 ../lib/network/connection/ethernet.pm:302
 #, c-format
@@ -2644,7 +2641,9 @@ msgstr "Assicurarsi che la scheda SIM sia inserita."
 msgid ""
 "You entered a wrong PIN code.\n"
 "Entering the wrong PIN code multiple times may lock your SIM card!"
-msgstr "Avete inserito un codice PIN errato"
+msgstr ""
+"Hai inserito un codice PIN errato.\n"
+"Inserendo più volte un PIN sbagliato si può bloccare la scheda SIM!"
 
 #: ../lib/network/connection/dvb.pm:9
 #, c-format
@@ -2659,7 +2658,7 @@ msgstr "Satellite (DVB)"
 #: ../lib/network/connection/dvb.pm:53
 #, c-format
 msgid "Adapter card"
-msgstr "Scheda adattatrice"
+msgstr "Scheda adattatore"
 
 #: ../lib/network/connection/dvb.pm:54
 #, c-format
@@ -2715,7 +2714,7 @@ msgid ""
 "Each item should be entered as an IP address in dotted-decimal\n"
 "notation (for example, 1.2.3.4)."
 msgstr ""
-"Per favore inserisci la configurazione IP per questa macchina.\n"
+"Inserisci la configurazione IP per questa macchina.\n"
 "Ogni dato dovrebbe essere inserito come indirizzo IP\n"
 "in notazione decimale puntata (ad esempio 1.2.3.4)."
 
@@ -2793,13 +2792,13 @@ msgid "Warning: IP address %s is usually reserved!"
 msgstr "Attenzione: di solito l'indirizzo IP %s è riservato!"
 
 #: ../lib/network/connection/ethernet.pm:192
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
-"%s è già utilizzato per la connessione avviata al boot. Per usare questo "
+"%s è già utilizzato dalla connessione avviata al boot (%s). Per usare questo "
 "indirizzo con questa connessione, prima devi disattivare tutti gli altri "
 "dispositivi che lo usano o configurarli in modo che non partano al boot"
 
@@ -2807,7 +2806,7 @@ msgstr ""
 #, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
 msgstr ""
-"Assegna il nome dell'host a partire dall'indirizzo DHCP (o generane uno "
+"Assegna il nome host con quello fornito dal server DHCP (o generane uno "
 "univoco)"
 
 #: ../lib/network/connection/ethernet.pm:220
@@ -2817,6 +2816,9 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
+"Questo permetterà al server di fornire un nome a questa macchina. "
+"Se il server non fornisce un nome host valido, esso verrà generato "
+"automaticamente."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2825,16 +2827,19 @@ msgid ""
 "Note that this hostname will be shared among all network connections.  If "
 "left blank, 'localhost.localdomain' will be used."
 msgstr ""
+"Devi definire un nome host per questa macchina che la identificherà. "
+"Nota che il nome host sarà condiviso con tutte le connessioni di rete. "
+"Se non definito sarà usato il nome host \"'localhost.localdomain\"."
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
 msgid "Network Hotplugging"
-msgstr "Hotplugging della rete"
+msgstr "Collegamento a caldo della rete"
 
 #: ../lib/network/connection/ethernet.pm:245
 #, c-format
 msgid "Enable IPv6 to IPv4 tunnel"
-msgstr "Attiva tunnel IPV6 su IPV4"
+msgstr "Attiva istradamento IPV6 su IPV4"
 
 #: ../lib/network/connection/ethernet.pm:301
 #, c-format
@@ -2844,9 +2849,7 @@ msgstr "Segnale di linea rilevato sull'interfaccia %s"
 #: ../lib/network/connection/ethernet.pm:304
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
-msgstr ""
-"Richiesta in corso di un indirizzo di rete per l'interfaccia %s (protocollo %"
-"s)..."
+msgstr "Richiesta in corso di un indirizzo di rete per l'interfaccia %s (protocollo %s)..."
 
 #: ../lib/network/connection/ethernet.pm:305
 #, c-format
@@ -2897,7 +2900,7 @@ msgstr "POTS"
 #: ../lib/network/connection/pots.pm:16
 #, c-format
 msgid "Analog telephone modem (POTS)"
-msgstr "modem telefonico analogico (POTS)"
+msgstr "Modem telefonico analogico (POTS)"
 
 #: ../lib/network/connection/ppp.pm:9 ../lib/network/netconnect.pm:78
 #, c-format
@@ -2942,7 +2945,7 @@ msgstr "Brasile"
 #: ../lib/network/connection/providers/cellular.pm:38
 #, c-format
 msgid "Estonia"
-msgstr ""
+msgstr "Estonia"
 
 #: ../lib/network/connection/providers/cellular.pm:42
 #: ../lib/network/connection/providers/cellular.pm:46
@@ -3057,7 +3060,7 @@ msgstr "Austria"
 #: ../lib/network/connection/providers/xdsl.pm:1258
 #, c-format
 msgid "Any"
-msgstr "Ogni"
+msgstr "Altro"
 
 #: ../lib/network/connection/providers/xdsl.pm:114
 #: ../lib/network/connection/providers/xdsl.pm:124
@@ -3296,7 +3299,7 @@ msgstr "Wireless"
 #: ../lib/network/connection/wireless.pm:14
 #, c-format
 msgid "Wireless (Wi-Fi)"
-msgstr "Senza fili (Wi-Fi)"
+msgstr "Wireless (Wi-Fi)"
 
 #: ../lib/network/connection/wireless.pm:30
 #, c-format
@@ -3306,7 +3309,7 @@ msgstr "Usa un driver per Windows (con ndiswrapper)"
 #: ../lib/network/connection/wireless.pm:47
 #, c-format
 msgid "Open WEP"
-msgstr "Open WEP"
+msgstr "WEP aperto"
 
 #: ../lib/network/connection/wireless.pm:48
 #, c-format
@@ -3316,12 +3319,12 @@ msgstr "WEP ristretto"
 #: ../lib/network/connection/wireless.pm:49
 #, c-format
 msgid "WPA/WPA2 Pre-Shared Key"
-msgstr "Chiave WPA/WPA2 \"pre-shared\""
+msgstr "Chiave WPA/WPA2 pre-condivisa"
 
 #: ../lib/network/connection/wireless.pm:50
 #, c-format
 msgid "WPA/WPA2 Enterprise"
-msgstr "WPA/WPA2 Enterprise"
+msgstr "WPA/WPA2 aziendale"
 
 #: ../lib/network/connection/wireless.pm:269
 #, c-format
@@ -3334,8 +3337,8 @@ msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
 "switch) first."
 msgstr ""
-"La scheda wireless è disabilitata, abilitare prima lo switch (RF elimina lo "
-"switch)."
+"La scheda wireless è disattivata, abilitare prima lo switch (Interruttore "
+"disabilitazione RF)."
 
 #: ../lib/network/connection/wireless.pm:456
 #, c-format
@@ -3351,17 +3354,17 @@ msgstr "Modo di operare"
 #: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Ad-hoc"
-msgstr "Ad-hoc"
+msgstr "Punto punto (Ad-hoc)"
 
 #: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Managed"
-msgstr "Con access point"
+msgstr "Con access point (Managed)"
 
 #: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Master"
-msgstr "Principale"
+msgstr "Come access point (Master)"
 
 #: ../lib/network/connection/wireless.pm:462
 #, c-format
@@ -3394,14 +3397,14 @@ msgid "Encryption key"
 msgstr "Chiave di cifratura"
 
 #: ../lib/network/connection/wireless.pm:472
-#, fuzzy, c-format
+#, c-format
 msgid "Hide password"
-msgstr "Password"
+msgstr "Nasconde la password"
 
 #: ../lib/network/connection/wireless.pm:474
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
-msgstr "Forza l'uso di questo tasto come una stringa ASCII (es. per Livebox)"
+msgstr "Forza l'uso di questa chiave come una stringa ASCII (es. per Livebox)"
 
 #: ../lib/network/connection/wireless.pm:481
 #, c-format
@@ -3415,9 +3418,9 @@ msgid ""
 "need to specify domain then try the untested syntax\n"
 "  DOMAIN\\username"
 msgstr ""
-"Il Formato per login o nomeutente è solo testo. \n"
+"Il Formato per login o nome utente è in solo testo. \n"
 "Se devi specificare il dominio allora prova la sintassi non collaudata\n"
-"  DOMINO\\nomeutente"
+"  DOMINO\\ nomeutente"
 
 #: ../lib/network/connection/wireless.pm:486
 #, c-format
@@ -3513,10 +3516,11 @@ msgid ""
 "fixed\n"
 "or off."
 msgstr ""
-"RTS/CTS antepone un \"handshake\" alla trasmissione di ogni pacchetto per\n"
+"RTS/CTS antepone un carattere di controllo alla trasmissione di ogni pacchetto "
+" per\n"
 "essere sicuri che il canale sia libero. Ciò aumenta il traffico, ma anche la "
 "performance\n"
-"se ci sono nodi \"hidden\" o molti nodi attivi. Questi parametri fissano la\n"
+"se ci sono nodi nascosti o molti nodi attivi. Questi parametri fissano la\n"
 "dimensione del pacchetto più piccolo per cui il nodo invia un RTS, un\n"
 "valore uguale a quello massimo disabilita lo schema. Puoi anche porre "
 "questo\n"
@@ -3531,7 +3535,7 @@ msgstr "Frammentazione"
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr ""
-"Argomenti supplementari per il\n"
+"Argomenti aggiuntivi per il\n"
 "comando iwconfig"
 
 #: ../lib/network/connection/wireless.pm:523
@@ -3554,7 +3558,7 @@ msgstr ""
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr ""
-"Argomenti supplementari per il\n"
+"Argomenti aggiuntivi per il\n"
 "comando iwspy"
 
 #: ../lib/network/connection/wireless.pm:531
@@ -3581,7 +3585,7 @@ msgstr ""
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr ""
-"Argomenti supplementari per\n"
+"Argomenti aggiuntivi per\n"
 "il comando iwpriv"
 
 #: ../lib/network/connection/wireless.pm:541
@@ -3638,7 +3642,7 @@ msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr ""
-"E' preferibile usare il Riconoscimento Automatico in quanto prova prima il \n"
+"È preferibile usare il Riconoscimento Automatico in quanto prova prima il \n"
 "WPA versione 2 e poi passa al WPA versione 1"
 
 #: ../lib/network/connection/wireless.pm:557
@@ -3707,7 +3711,7 @@ msgid ""
 "list of accepted authenticated key management protocols.\n"
 "possible values are WPA-EAP, IEEE8021X, NONE"
 msgstr ""
-"lista dei protocolli autenticati accettati per lo scambio delle chiavi.\n"
+"lista dei protocolli di gestione delle chiavi di autenticazione accettati.\n"
 "I valori possibili sono WPA-EAP, IEEE8021X, NONE"
 
 #: ../lib/network/connection/wireless.pm:564
@@ -3741,7 +3745,7 @@ msgid ""
 msgstr ""
 "Identificazione interna per i parametri del tunnel TLS.\n"
 "L'input è dato da stringhe con campi a coppie, Esempi:\n"
-"auth=MSCHAPV2 per PEAP or\n"
+"auth=MSCHAPV2 per PEAP o\n"
 "autheap=MSCHAPV2 autheap=MD5 per TTLS"
 
 #: ../lib/network/connection/wireless.pm:575
@@ -3787,9 +3791,9 @@ msgstr ""
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
 #: ../lib/network/connection/wireless.pm:589
-#, fuzzy, c-format
+#, c-format
 msgid "Extra directives"
-msgstr "Parametri extra per EAP"
+msgstr "Direttive aggiuntive"
 
 #: ../lib/network/connection/wireless.pm:590
 #, c-format
@@ -3825,7 +3829,7 @@ msgstr ""
 #: ../lib/network/connection/wireless.pm:610
 #, c-format
 msgid "An encryption key is required."
-msgstr "E' richiesta una chiave di cifratura"
+msgstr "È richiesta una chiave di cifratura"
 
 #: ../lib/network/connection/wireless.pm:617
 #, c-format
@@ -3833,7 +3837,7 @@ msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
 "hexadecimal characters."
 msgstr ""
-"La chiave pre.shared dovrebbe avere tra gli 8 ed i 63 caratteri ASCII, o 64 "
+"La chiave pre.condivisa dovrebbe avere tra gli 8 ed i 63 caratteri ASCII, o 64 "
 "caratteri esadecimali."
 
 #: ../lib/network/connection/wireless.pm:623
@@ -3886,7 +3890,7 @@ msgstr "DSL"
 #: ../lib/network/connection/xdsl.pm:97 ../lib/network/netconnect.pm:789
 #, c-format
 msgid "Alcatel speedtouch USB modem"
-msgstr "Modem Alcatel speedtouch USB"
+msgstr "Modem USB Alcatel speedtouch"
 
 #: ../lib/network/connection/xdsl.pm:125
 #, c-format
@@ -3908,7 +3912,7 @@ msgid ""
 "binary firmware distribution problem."
 msgstr ""
 "I modem che usano i chipset Conexant AccessRunner non possono essere "
-"supportati per problemi di distribuzione del firmware."
+"supportati per problemi di distribuzione del firmware binario."
 
 #: ../lib/network/connection/xdsl.pm:205
 #, c-format
@@ -3933,17 +3937,17 @@ msgstr "Point to Point Tuneling Protocol (PPTP)"
 #: ../lib/network/connection/xdsl.pm:211
 #, c-format
 msgid "PPP over Ethernet (PPPoE)"
-msgstr "PPP over Ethernet (PPPoE)"
+msgstr "PPP su Ethernet (PPPoE)"
 
 #: ../lib/network/connection/xdsl.pm:212
 #, c-format
 msgid "PPP over ATM (PPPoA)"
-msgstr "PPP over ATM (PPPoA)"
+msgstr "PPP su ATM (PPPoA)"
 
 #: ../lib/network/connection/xdsl.pm:252
 #, c-format
 msgid "Virtual Path ID (VPI):"
-msgstr "ID del path virtuale (VPI):"
+msgstr "ID del percorso virtuale (VPI):"
 
 #: ../lib/network/connection/xdsl.pm:253
 #, c-format
@@ -4030,7 +4034,7 @@ msgstr "Server web"
 #: ../lib/network/drakfirewall.pm:19
 #, c-format
 msgid "Domain Name Server"
-msgstr "Domain Name Server"
+msgstr "Server di dominio dei nomi (DNS)"
 
 #: ../lib/network/drakfirewall.pm:24
 #, c-format
@@ -4040,7 +4044,7 @@ msgstr "Server SSH"
 #: ../lib/network/drakfirewall.pm:29
 #, c-format
 msgid "FTP server"
-msgstr "server FTP"
+msgstr "Server FTP"
 
 #: ../lib/network/drakfirewall.pm:34
 #, c-format
@@ -4060,7 +4064,7 @@ msgstr "Server POP e IMAP"
 #: ../lib/network/drakfirewall.pm:50
 #, c-format
 msgid "Telnet server"
-msgstr "Server telnet"
+msgstr "Server Telnet"
 
 #: ../lib/network/drakfirewall.pm:56
 #, c-format
@@ -4105,7 +4109,7 @@ msgstr "Richiesta di eco (ping)"
 #: ../lib/network/drakfirewall.pm:105
 #, c-format
 msgid "Network services autodiscovery (zeroconf and slp)"
-msgstr ""
+msgstr "Ricerca automatica dei servizi di rete (zeroconf e slp)"
 
 #: ../lib/network/drakfirewall.pm:110
 #, c-format
@@ -4115,12 +4119,12 @@ msgstr "BitTorrent"
 #: ../lib/network/drakfirewall.pm:116
 #, c-format
 msgid "Windows Mobile device synchronization"
-msgstr "Sincronizzazione dispositivo Windows Mobile"
+msgstr "Sincronizzazione con dispositivi Windows Mobile"
 
 #: ../lib/network/drakfirewall.pm:125
 #, c-format
 msgid "Port scan detection"
-msgstr "Rilevazione scanning porte"
+msgstr "Rilevazione scansione porte"
 
 #: ../lib/network/drakfirewall.pm:224 ../lib/network/drakfirewall.pm:230
 #: ../lib/network/shorewall.pm:75
@@ -4137,7 +4141,7 @@ msgid ""
 "For a powerful and dedicated firewall solution, please look to the\n"
 "specialized Mandriva Security Firewall distribution."
 msgstr ""
-"Configuratore di drakfirewall\n"
+"Configuratore drakfirewall\n"
 "\n"
 "Configura un firewall personale per questo sistema Mandriva Linux.\n"
 "Per una soluzione firewall potente e dedicata, affidati alla\n"
@@ -4151,9 +4155,9 @@ msgid ""
 "Make sure you have configured your Network/Internet access with\n"
 "drakconnect before going any further."
 msgstr ""
-"configuratore di drakfirewall\n"
+"configuratore drakfirewall\n"
 "\n"
-"Prima di proseguire, assicurati di aver configurato il tuo accesso\n"
+"Prima di proseguire, assicurati di avere configurato il tuo accesso\n"
 "alla LAN o a Internet con drakconnect."
 
 #: ../lib/network/drakfirewall.pm:247 ../lib/network/drakfirewall.pm:249
@@ -4170,7 +4174,7 @@ msgid ""
 "Have a look at /etc/services for information."
 msgstr ""
 "Puoi immettere porte di tipo diverso.\n"
-"Esempi ammissibili sono: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
+"Esempi validi sono: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
 "Dai un'occhiata a /etc/services per maggiori informazioni."
 
 #: ../lib/network/drakfirewall.pm:256
@@ -4197,7 +4201,7 @@ msgstr "Quali servizi vuoi che siano accessibili tramite Internet?"
 #: ../lib/network/network.pm:540
 #, c-format
 msgid "Those settings will be saved for the network profile <b>%s</b>"
-msgstr ""
+msgstr "Queste impostazioni saranno salvate nel profilo di rete <b>%s</b>"
 
 #: ../lib/network/drakfirewall.pm:268
 #, c-format
@@ -4212,7 +4216,7 @@ msgstr "Altre porte"
 #: ../lib/network/drakfirewall.pm:271
 #, c-format
 msgid "Log firewall messages in system logs"
-msgstr "Registrare i messaggi del firewall nei log di sistema"
+msgstr "Registra i messaggi del firewall nel registro di sistema"
 
 #: ../lib/network/drakfirewall.pm:313
 #, c-format
@@ -4221,9 +4225,9 @@ msgid ""
 "into your computer.\n"
 "Please select which network activities should be watched."
 msgstr ""
-"Potete essere avvisati quando qualcuno accede ad un servizio o tenta "
+"Puoi essere avvisato quando qualcuno accede ad un servizio o tenta "
 "un'intrusione.\n"
-"Selezionate quali attività di rete devono essere monitorate."
+"Seleziona quali attività di rete devono essere monitorate."
 
 #: ../lib/network/drakfirewall.pm:318
 #, c-format
@@ -4263,18 +4267,17 @@ msgstr "Configurazione VPN"
 #: ../lib/network/drakvpn.pm:34
 #, c-format
 msgid "Choose the VPN type"
-msgstr "Scegliere il tipo di VPN"
+msgstr "Scegli il tipo di VPN"
 
 #: ../lib/network/drakvpn.pm:49
 #, c-format
 msgid "Initializing tools and detecting devices for %s..."
-msgstr ""
-"Inizializzazione degli strumenti e rilevamento delle periferiche per %s..."
+msgstr "Inizializzazione degli strumenti e rilevamento delle periferiche per %s..."
 
 #: ../lib/network/drakvpn.pm:52
 #, c-format
 msgid "Unable to initialize %s connection type!"
-msgstr "Impossibile inizializzare connessioni tipo %s!"
+msgstr "Impossibile inizializzare connessioni di tipo %s!"
 
 #: ../lib/network/drakvpn.pm:60
 #, c-format
@@ -4284,7 +4287,7 @@ msgstr "Seleziona una connessione VPN esistente o inserisci un nuovo nome."
 #: ../lib/network/drakvpn.pm:64
 #, c-format
 msgid "Configure a new connection..."
-msgstr "Configurare una nuova connessione..."
+msgstr "Configurazione di una nuova connessione..."
 
 #: ../lib/network/drakvpn.pm:66
 #, c-format
@@ -4304,7 +4307,7 @@ msgstr "Inserisci la chiave/i prevista"
 #: ../lib/network/drakvpn.pm:86
 #, c-format
 msgid "Please enter the settings of your VPN connection"
-msgstr "Inserire le impostazioni per la connessione VPN"
+msgstr "Inserisci le impostazioni per la connessione VPN"
 
 #: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:298
 #, c-format
@@ -4331,12 +4334,12 @@ msgstr ""
 #: ../lib/network/ifw.pm:132
 #, c-format
 msgid "Port scanning"
-msgstr "Scanning delle porte"
+msgstr "Scansione delle porte"
 
 #: ../lib/network/ifw.pm:133
 #, c-format
 msgid "Service attack"
-msgstr "Attacco a servizio"
+msgstr "Attacco ad un servizio"
 
 #: ../lib/network/ifw.pm:134
 #, c-format
@@ -4356,7 +4359,7 @@ msgstr "Attacco \"%s\""
 #: ../lib/network/ifw.pm:138
 #, c-format
 msgid "A port scanning attack has been attempted by %s."
-msgstr "Un attacco \"port scanning\" è stato tentato da %s."
+msgstr "Un attacco di scansione delle porte è stato tentato da %s."
 
 #: ../lib/network/ifw.pm:139
 #, c-format
@@ -4366,7 +4369,7 @@ msgstr "Il servizio %s è stato attaccato da %s."
 #: ../lib/network/ifw.pm:140
 #, c-format
 msgid "A password cracking attack has been attempted by %s."
-msgstr "Un attacco cercando di forzare la password è stato tentato da %s."
+msgstr "Un attacco per forzare la password è stato tentato da %s."
 
 #: ../lib/network/ifw.pm:141
 #, c-format
@@ -4409,18 +4412,17 @@ msgstr "Manuale"
 #: ../lib/network/netconnect.pm:667
 #, c-format
 msgid "Automatic"
-msgstr "IP automatico"
+msgstr "Automatico"
 
 #: ../lib/network/ndiswrapper.pm:30
 #, c-format
 msgid "No device supporting the %s ndiswrapper driver is present!"
-msgstr ""
-"Non è presente alcun dispositivo che supporti il driver ndiswrapper %s!"
+msgstr "Non è presente alcun dispositivo che supporti il driver ndiswrapper %s!"
 
 #: ../lib/network/ndiswrapper.pm:36
-#, fuzzy, c-format
+#, c-format
 msgid "Please select the correct driver"
-msgstr "Seleziona il tuo provider:"
+msgstr "Seleziona il driver corretto"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -4429,6 +4431,8 @@ msgid ""
 "driver file (.dll or .o files). Note that only drivers up to Windows XP are "
 "supported."
 msgstr ""
+"Seleziona il file Windows di descrizione del driver (.inf), o il corrispondente "
+"file driver (.dll o .o). Nota che sono supportati i driver solo sino a Windows XP."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -4489,12 +4493,12 @@ msgstr "Monitor"
 #: ../lib/network/netcenter.pm:145
 #, c-format
 msgid "Network Center"
-msgstr "Centro della rete"
+msgstr "Centro di gestione rete"
 
 #: ../lib/network/netcenter.pm:164
 #, c-format
 msgid "You are currently using the network profile <b>%s</b>"
-msgstr ""
+msgstr "Ora stai usando il profilo di rete <b>%s</b>"
 
 #: ../lib/network/netcenter.pm:170
 #, c-format
@@ -4534,7 +4538,7 @@ msgstr ""
 #: ../lib/network/netconnect.pm:122
 #, c-format
 msgid "Network & Internet Configuration"
-msgstr "Configurazione della LAN e di Internet"
+msgstr "Configurazione della rete LAN e di Internet"
 
 #: ../lib/network/netconnect.pm:127
 #, c-format
@@ -4573,8 +4577,8 @@ msgid ""
 "Please select your connection protocol.\n"
 "If you do not know it, keep the preselected protocol."
 msgstr ""
-"Selezionare il vostro protocollo di connessione.\n"
-"Se non lo conoscete, lasciate le impostazioni predefinite."
+"Seleziona il protocollo di connessione.\n"
+"Se non lo conosci, lascia le impostazioni predefinite."
 
 #: ../lib/network/netconnect.pm:292 ../lib/network/netconnect.pm:684
 #, c-format
@@ -4584,7 +4588,7 @@ msgstr "Controllo connessione"
 #: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:733
 #, c-format
 msgid "Testing your connection..."
-msgstr "Sto provando la tua connessione..."
+msgstr "Sto provando la connessione..."
 
 #: ../lib/network/netconnect.pm:344
 #, c-format
@@ -4614,7 +4618,7 @@ msgstr "Numero telefonico del provider"
 #: ../lib/network/netconnect.pm:350
 #, c-format
 msgid "Provider DNS 1 (optional)"
-msgstr "DNS 1 del provider (opzionale"
+msgstr "DNS 1 del provider (opzionale)"
 
 #: ../lib/network/netconnect.pm:351
 #, c-format
@@ -4736,7 +4740,7 @@ msgid ""
 "If it is not listed, choose Unlisted."
 msgstr ""
 "Scegli il tuo provider.\n"
-"Se non è nella lista, scegli \"Fuori lista\"."
+"Se non è nella lista, scegli \"Non in elenco\"."
 
 #: ../lib/network/netconnect.pm:491 ../lib/network/netconnect.pm:587
 #, c-format
@@ -4755,7 +4759,7 @@ msgstr ""
 #: ../lib/network/netconnect.pm:519
 #, c-format
 msgid "Select the modem to configure:"
-msgstr "Indica il modem da configurare:"
+msgstr "Seleziona il modem da configurare:"
 
 #: ../lib/network/netconnect.pm:521
 #, c-format
@@ -4765,7 +4769,7 @@ msgstr "Modem"
 #: ../lib/network/netconnect.pm:556
 #, c-format
 msgid "Please choose which serial port your modem is connected to."
-msgstr "Per favore indica la porta seriale a cui è connesso il modem."
+msgstr "Scegli la porta seriale a cui è connesso il modem."
 
 #: ../lib/network/netconnect.pm:585
 #, c-format
@@ -4845,7 +4849,7 @@ msgstr "Indirizzo IP del gateway"
 #: ../lib/network/netconnect.pm:699
 #, c-format
 msgid "Automatically at boot"
-msgstr "Automaticamente all'accensione"
+msgstr "Automaticamente all'avvio"
 
 #: ../lib/network/netconnect.pm:701
 #, c-format
@@ -4855,7 +4859,7 @@ msgstr "Utilizzando l'applet di rete nel vassoio di sistema"
 #: ../lib/network/netconnect.pm:703
 #, c-format
 msgid "Manually (the interface would still be activated at boot)"
-msgstr "Manualmente (l'interfaccia sarà riattivata al boot)"
+msgstr "Manualmente (l'interfaccia sarà riattivata all'avvio)"
 
 #: ../lib/network/netconnect.pm:712
 #, c-format
@@ -4870,7 +4874,7 @@ msgstr "Vuoi provare a connetterti ad Internet adesso?"
 #: ../lib/network/netconnect.pm:752
 #, c-format
 msgid "The system is now connected to the Internet."
-msgstr "Adesso il sistema è connesso ad Internet"
+msgstr "Ora il sistema è connesso ad Internet"
 
 #: ../lib/network/netconnect.pm:753
 #, c-format
@@ -4889,8 +4893,7 @@ msgstr ""
 #: ../lib/network/netconnect.pm:770
 #, c-format
 msgid "Problems occured during the network connectivity test."
-msgstr ""
-"Si è verificato un problema mentre si verificava la connessione alla rete."
+msgstr "Si è verificato un problema mentre si verificava la connessione alla rete."
 
 #: ../lib/network/netconnect.pm:771
 #, c-format
@@ -4906,8 +4909,7 @@ msgstr ""
 msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
-msgstr ""
-"Dovresti rilanciare la configurazione per verificare le impostazioni date."
+msgstr "Devi rilanciare la configurazione per verificare le impostazioni date."
 
 #: ../lib/network/netconnect.pm:775
 #, c-format
@@ -4920,7 +4922,7 @@ msgid ""
 "However, the Internet connectivity test failed. You should test your "
 "connection manually, and verify your Internet modem or router."
 msgstr ""
-"Comunque, il test di connessione a Internet non è riuscito. Dovresti "
+"Comunque, il test di connessione a Internet non è riuscito. Devi "
 "controllare manualmente il collegamento e verificare il tuo modem Internet o "
 "il router."
 
@@ -4929,7 +4931,7 @@ msgstr ""
 msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
-msgstr "Se la connessione non funziona, dovresti rilanciare la configurazione."
+msgstr "Se la connessione non funziona, devi rilanciare la configurazione."
 
 #: ../lib/network/netconnect.pm:778
 #, c-format
@@ -4983,7 +4985,7 @@ msgstr "Connessione ISDN"
 #: ../lib/network/netconnect.pm:799
 #, c-format
 msgid "Modem connection"
-msgstr "Connessione tramite modem"
+msgstr "Connessione Modem"
 
 #: ../lib/network/netconnect.pm:800
 #, c-format
@@ -5064,7 +5066,7 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"Si è verificato un problema al momento di riavviare la rete: \n"
+"Si è verificato un problema durante il riavvio della rete: \n"
 "\n"
 "%s"
 
@@ -5114,7 +5116,7 @@ msgid ""
 "choose the one you want to use."
 msgstr ""
 "Puoi usare uno di questi protocolli per configurare la connessione LAN. "
-"Dovresti indicare quello che vuoi usare."
+"Devi indicare quello che vuoi usare."
 
 #: ../lib/network/netconnect.pm:825
 #, c-format
@@ -5124,7 +5126,7 @@ msgid ""
 "such as ``mybox.mylab.myco.com''.\n"
 "You may also enter the IP address of the gateway if you have one."
 msgstr ""
-"Per favore inserisci il nome del tuo host.\n"
+"Inserisci il nome del tuo host.\n"
 "Questo dovrebbe essere un nome-host pienamente qualificato,\n"
 "come \"mybox.mylab.myco.com\".\n"
 "Puoi anche inserire l'indirizzo IP del gateway, se ne hai uno. "
@@ -5132,23 +5134,22 @@ msgstr ""
 #: ../lib/network/netconnect.pm:830
 #, c-format
 msgid "Last but not least you can also type in your DNS server IP addresses."
-msgstr ""
-"Per finire, ma è importante, puoi anche inserire i tuoi indirizzi DNS e IP."
+msgstr "Per finire, ma è importante, puoi anche inserire i tuoi indirizzi DNS e IP."
 
 #: ../lib/network/netconnect.pm:831
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
-msgstr "L'indirizzo del DNS deve essere nel formato 1.2.3.4"
+msgstr "L'indirizzo del server DNS deve essere nel formato 1.2.3.4"
 
 #: ../lib/network/netconnect.pm:832
 #, c-format
 msgid "Gateway address should be in format 1.2.3.4"
-msgstr "L'indirizzo del gateway deve essere nel formato 1.2.3.4"
+msgstr "L'indirizzo del Gateway deve essere nel formato 1.2.3.4"
 
 #: ../lib/network/netconnect.pm:833
 #, c-format
 msgid "Gateway device"
-msgstr "Dispositivo di gateway"
+msgstr "Dispositivo di Gateway"
 
 #: ../lib/network/netconnect.pm:847
 #, c-format
@@ -5206,7 +5207,7 @@ msgstr "Impostazioni per la sicurezza (definite da regole MSEC)"
 #: ../lib/network/network.pm:523
 #, c-format
 msgid "Disable ICMP echo"
-msgstr "Disattiva eco di IMCP"
+msgstr "Disattiva eco di IMCP (ping)"
 
 #: ../lib/network/network.pm:524
 #, c-format
@@ -5216,7 +5217,7 @@ msgstr "Disattiva la ripetizione ICMP per i messaggi diffusi"
 #: ../lib/network/network.pm:525
 #, c-format
 msgid "Disable invalid ICMP error responses"
-msgstr "Disattiva le risposte di errore non valide di ICMP"
+msgstr "Disattiva le risposte di errore a pacchetti ICMP non validi"
 
 #: ../lib/network/network.pm:526
 #, c-format
@@ -5234,7 +5235,7 @@ msgid ""
 "Here you can set up your proxies configuration (eg: http://"
 "my_caching_server:8080)"
 msgstr ""
-"Qui potete impostare la configurazione dei proxy (es. http://"
+"Qui puoi impostare la configurazione dei proxy (es. http://"
 "my_caching_server:8080)"
 
 #: ../lib/network/network.pm:541
@@ -5265,12 +5266,12 @@ msgstr "Nessun proxy per (lista separata da virgole)"
 #: ../lib/network/network.pm:550
 #, c-format
 msgid "Proxy should be http://..."
-msgstr "Il proxy dovrebbe essere http://..."
+msgstr "Il proxy deve essere http://..."
 
 #: ../lib/network/network.pm:551
 #, c-format
 msgid "Proxy should be http://... or https://..."
-msgstr "Il proxy dovrebbe essere http://... or https://..."
+msgstr "Il proxy deve essere http://... or https://..."
 
 #: ../lib/network/network.pm:552
 #, c-format
@@ -5318,7 +5319,7 @@ msgid ""
 "What do you want to do?"
 msgstr ""
 "La configurazione del firewall è stata modificata a mano e contiene\n"
-"regole che potrebbero confliggere con la configurazione appena impostata.\n"
+"regole che potrebbero entrare in conflitto con la configurazione appena impostata.\n"
 "Cosa si vuole fare?"
 
 #: ../lib/network/thirdparty.pm:144
@@ -5337,8 +5338,7 @@ msgstr "Servono alcuni pacchetti (%s) ma non sono disponibili."
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
 #, c-format
-msgid ""
-"These packages can be found in %s, or in the official %s package repository."
+msgid "These packages can be found in %s, or in the official %s package repository."
 msgstr ""
 "Questi pacchetti si trovano nella nel %s o nel repository ufficiale dei "
 "pacchetti %s."
@@ -5414,7 +5414,7 @@ msgstr "Avanti"
 #: ../lib/network/thirdparty.pm:255
 #, c-format
 msgid "Floppy access error, unable to mount device %s"
-msgstr "Errore nell'accedere al floppy, impossibile montare il dispositivo %s"
+msgstr "Errore di accesso al floppy, impossibile montare il dispositivo %s"
 
 #: ../lib/network/thirdparty.pm:354
 #, c-format
@@ -5455,12 +5455,12 @@ msgstr "Chiave"
 #: ../lib/network/vpn/openvpn.pm:160
 #, c-format
 msgid "TLS control channel key"
-msgstr "chiave di controllo del TLS"
+msgstr "Chiave di controllo del canale TLS"
 
 #: ../lib/network/vpn/openvpn.pm:167
 #, c-format
 msgid "Key direction"
-msgstr "Tasti direzione"
+msgstr "Direzione della chiave"
 
 #: ../lib/network/vpn/openvpn.pm:175
 #, c-format
@@ -5505,7 +5505,7 @@ msgstr "Indirizzo IP remoto"
 #: ../lib/network/vpn/openvpn.pm:237
 #, c-format
 msgid "Use TCP protocol"
-msgstr "Usare il protocollo TCP"
+msgstr "Usa il protocollo TCP"
 
 #: ../lib/network/vpn/openvpn.pm:243
 #, c-format
@@ -5525,12 +5525,12 @@ msgstr "Avvio della connessione..."
 #: ../lib/network/vpn/openvpn.pm:380
 #, c-format
 msgid "Please insert your token"
-msgstr "Dovresti inserire il tuo token"
+msgstr "Devi inserire il tuo token"
 
 #: ../lib/network/vpn/openvpn.pm:391
 #, c-format
 msgid "PIN number"
-msgstr "codice PIN"
+msgstr "Codice PIN"
 
 #: ../lib/network/vpn/vpnc.pm:9
 #, c-format
@@ -5545,7 +5545,7 @@ msgstr "Nome del gruppo"
 #: ../lib/network/vpn/vpnc.pm:47
 #, c-format
 msgid "Group secret"
-msgstr "Group secret"
+msgstr "Gruppo secret"
 
 #: ../lib/network/vpn/vpnc.pm:52
 #, c-format
@@ -5560,35 +5560,5 @@ msgstr "Modo NAT"
 #: ../lib/network/vpn/vpnc.pm:67
 #, c-format
 msgid "Use specific UDP port"
-msgstr "Usare una specifica porta UDP"
+msgstr "Usa una porta UDP specifica"
 
-#, fuzzy
-#~ msgid "Connecting.."
-#~ msgstr "Connessione..."
-
-#, fuzzy
-#~ msgid "Account network traffic"
-#~ msgstr "Sincronizzazione dell'interfaccia di rete"
-
-#~ msgid ""
-#~ "Name of the profile to create (the new profile is created as a copy of "
-#~ "the current one):"
-#~ msgstr ""
-#~ "Nome del profilo da creare (il nuovo profilo verrà creato come copia di "
-#~ "quello attuale):"
-
-#~ msgid ""
-#~ "This tool allows to activate an existing network profile, and to manage "
-#~ "(clone, delete) profiles."
-#~ msgstr ""
-#~ "Questa applicazione permette di attivare un profilo di rete esistente e "
-#~ "di gestire (clonare, cancellare) i profili."
-
-#~ msgid "To modify a profile, you have to activate it first."
-#~ msgstr "Per modificare un profilo devi prima attivarlo."
-
-#~ msgid "Clone"
-#~ msgstr "Clona"
-
-#~ msgid "Please select the Windows driver (.inf file)"
-#~ msgstr "Seleziona il driver Windows (file .inf)"
