@@ -9,24 +9,24 @@
 # Mattias Newzella <newzella@linux.nu>, 2001, 2002,2003.
 # Magnus Björklöf <bjorklof@nic.fi>, 2003.
 # Lars Westergren <lars.westergren@home.se>, 2003, 2004, 2005.
-# Thomas Backlund <tmb@mandriva.org>, 2004, 2005, 2006, 2008.
+# Thomas Backlund <tmb@mandriva.org>, 2004, 2005, 2006, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: network-tools-sv\n"
 "POT-Creation-Date: 2009-09-16 11:29-0300\n"
-"PO-Revision-Date: 2008-09-27 17:13+0300\n"
+"PO-Revision-Date: 2009-10-14 01:13+0300\n"
 "Last-Translator: Thomas Backlund <tmb@mandriva.org>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.0\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../bin/drakconnect-old:45
 #, c-format
 msgid "Network configuration (%d adapters)"
-msgstr "Nätverkskonfiguration (%d kort)"
+msgstr "Nätverks-konfiguration (%d kort)"
 
 #: ../bin/drakconnect-old:64 ../bin/drakinvictus:105
 #, c-format
@@ -205,10 +205,9 @@ msgstr "ner"
 #: ../bin/drakgw:71
 #, c-format
 msgid "Internet Connection Sharing"
-msgstr "Internetdelning"
+msgstr "Internet-delning"
 
-#: ../bin/drakgw:75
-#, fuzzy, c-format
+#: ../bin/drakgw:75, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -226,10 +225,11 @@ msgstr ""
 "Internetanslutning.\n"
 "\n"
 "Se till så att du har konfigurerat din nätverks- och Internetanslutning med\n"
-"Drakconnect innan du fortsätter.\n"
+"drakconnect innan du fortsätter.\n"
 "\n"
 "Observera att du behöver ett dedikerat nätverkskort för att sätta upp ett "
-"lokalt nätverk (LAN)."
+"lokalt nätverk (LAN). Inaktivera brandväggen för det nätverkskort som är "
+"anslutet till ditt lokala nätverk innan du fortsätter."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -297,6 +297,16 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"Det finns bara ett nätverkskort i ditt system konfigurerat för lokala "
+"nätverket:\n"
+"\n"
+"%s\n"
+"\n"
+"Du kommer nu att konfigurera ditt lokala nätverk med det kortet.\n"
+"\n"
+"Om du har något annat kort anslutet mot lokala nätet, bör du\n"
+"först inaktivera brandväggen på det med drakfirewall innan\n"
+"du konfigurerar internet anslutnings-delning."
 
 #: ../bin/drakgw:156
 #, c-format
@@ -461,6 +471,10 @@ msgid ""
 "the Mandriva firewall is not enabled for network adapter connected to your "
 "LAN network."
 msgstr ""
+"Inget nätverkskort konfigurerat för lokala nätet har hittats i ditt system.\n"
+"\n"
+"Kör hårdvaru-verktyget för att konfigurera det, och kontrollera att "
+"Mandriva brandväggen inte är aktiv för det kortet."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -836,15 +850,13 @@ msgstr "Anslutnings märk bit"
 msgid "Network profiles"
 msgstr "Nätverksprofiler"
 
-#: ../bin/draknetprofile:66
-#, fuzzy, c-format
+#: ../bin/draknetprofile:66, c-format
 msgid "Module"
-msgstr "Läge"
+msgstr "Modul"
 
-#: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#: ../bin/draknetprofile:67, c-format
 msgid "Enabled"
-msgstr "Aktivera"
+msgstr "Aktiverad"
 
 #: ../bin/draknetprofile:68
 #, c-format
@@ -869,16 +881,18 @@ msgid ""
 "settings, and you'll be able to configure your system configuration as usual "
 "afterwards."
 msgstr ""
+"Ange namnet på nätverks-profilen son skall skapas (t.ex. arbete, hemma, "
+"roaming, ...). Denna profil baseras på nuvarande inställningar, och du kan "
+"ändra dina systeminställningar som vanligt efteråt."
 
 #: ../bin/draknetprofile:166
 #, c-format
 msgid "The \"%s\" profile already exists!"
 msgstr "Profilen \"%s\" finns redan."
 
-#: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#: ../bin/draknetprofile:172, c-format
 msgid "New profile created"
-msgstr "Ny profil..."
+msgstr "Ny profil skapad"
 
 #: ../bin/draknetprofile:172
 #, c-format
@@ -887,6 +901,9 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
+"Du använder nu nätverksprofilen %s. Du kan konfigurera ditt system "
+"som vanligt, och alla dina nätverksinställningar sparas till nuvarande "
+"profil."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -895,37 +912,33 @@ msgstr ""
 msgid "Warning"
 msgstr "Varning"
 
-#: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#: ../bin/draknetprofile:183, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "Du kan inte radrera standardprofilen"
+msgstr "Är du säker du vill radera standardprofilen?"
 
-#: ../bin/draknetprofile:186
-#, fuzzy, c-format
+#: ../bin/draknetprofile:186, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
-msgstr "Du kan inte ta bort den aktuella profilen"
+msgstr ""
+"Du kan inte ta bort den aktuella profilen. Ändra till en annan profil först."
 
-#: ../bin/draknetprofile:194 ../bin/draknfs:356
-#, fuzzy, c-format
+#: ../bin/draknetprofile:194 ../bin/draknfs:356, c-format
 msgid "Advanced"
-msgstr "Avancerade Alternativ"
+msgstr "Avancerat"
 
-#: ../bin/draknetprofile:198
-#, fuzzy, c-format
+#: ../bin/draknetprofile:198, c-format
 msgid "Select the netprofile modules:"
-msgstr "Välj nätverksgränssnitt att ta bort:"
+msgstr "Välj moduler för netprofile:"
 
 #: ../bin/draknetprofile:211
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "Detta verktyg låter dig hantera nätverks-profiler."
 
-#: ../bin/draknetprofile:212
-#, fuzzy, c-format
+#: ../bin/draknetprofile:212, c-format
 msgid "Select a network profile:"
-msgstr "Välj leverantör:"
+msgstr "Välj en nätverksprofil:"
 
 #: ../bin/draknetprofile:216
 #, c-format
@@ -935,7 +948,7 @@ msgstr "Aktivera"
 #: ../bin/draknetprofile:217
 #, c-format
 msgid "New"
-msgstr ""
+msgstr "Ny"
 
 #: ../bin/draknetprofile:218
 #, c-format
@@ -1014,8 +1027,7 @@ msgstr "Startar/Laddar om NFS server..."
 msgid "Error Restarting/Reloading NFS server"
 msgstr "Fel vid Omstart/Omladdning av NFS server"
 
-#: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#: ../bin/draknfs:109 ../bin/draksambashare:246, c-format
 msgid "Directory selection"
 msgstr "Katalogval"
 
@@ -2191,10 +2203,9 @@ msgstr "IP-adress: %s"
 msgid "Gateway: %s"
 msgstr "Gateway: %s"
 
-#: ../bin/net_applet:98
-#, fuzzy, c-format
+#: ../bin/net_applet:98, c-format
 msgid "DNS: %s"
-msgstr "DNS"
+msgstr "DNS: %s"
 
 #: ../bin/net_applet:99
 #, c-format
@@ -2312,10 +2323,9 @@ msgstr "Inställningar"
 msgid "Network Monitoring"
 msgstr "Nätverksövervakning"
 
-#: ../bin/net_monitor:99
-#, fuzzy, c-format
+#: ../bin/net_monitor:99, c-format
 msgid "Default connection: "
-msgstr "Anslutning med kabelmodem"
+msgstr "Standard-anslutning: "
 
 #: ../bin/net_monitor:101
 #, c-format
@@ -2360,12 +2370,9 @@ msgstr ""
 "Mottagnings-\n"
 "hastighet:"
 
-#: ../bin/net_monitor:113
-#, fuzzy, c-format
+#: ../bin/net_monitor:113, c-format
 msgid "Connection time: "
-msgstr ""
-"Anslutnings-\n"
-"tid: "
+msgstr "Anslutnings-tid: "
 
 #: ../bin/net_monitor:120
 #, c-format
@@ -2411,10 +2418,9 @@ msgstr ""
 "Anslutning misslyckades.\n"
 "Verifiera konfigurationen i Mandriva Linux kontrollcentral."
 
-#: ../bin/net_monitor:360
-#, fuzzy, c-format
+#: ../bin/net_monitor:360, c-format
 msgid "%s (%s)"
-msgstr "DNS"
+msgstr "%s (%s)"
 
 #: ../bin/net_monitor:385
 #, c-format
@@ -2439,7 +2445,7 @@ msgstr "medelvärde"
 #: ../bin/net_monitor:451
 #, c-format
 msgid "Reset counters"
-msgstr ""
+msgstr "Nollställ räknare"
 
 #: ../bin/net_monitor:454
 #, c-format
@@ -2515,10 +2521,9 @@ msgstr "Tillåt användare hantera anslutningen"
 msgid "Start the connection at boot"
 msgstr "Starta anslutningen vid systemstart"
 
-#: ../lib/network/connection.pm:245
-#, c-format
+#: ../lib/network/connection.pm:245, c-format
 msgid "Enable traffic accounting"
-msgstr ""
+msgstr "Aktivera trafikloggning"
 
 #: ../lib/network/connection.pm:246
 #, c-format
@@ -2528,12 +2533,12 @@ msgstr "Meter"
 #: ../lib/network/connection.pm:247
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:248
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr ""
+msgstr "Maximal storlek på nätverkspaket (MTU). Om du är osäker, lämna tomt."
 
 #: ../lib/network/connection.pm:324
 #, c-format
@@ -2605,7 +2610,7 @@ msgstr "GPRS/Edge/3G"
 #: ../lib/network/connection/cellular_card.pm:110
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
-msgstr ""
+msgstr "PIN-kod (4 siffror). Lämna tomt om PIN-kod inte behövs."
 
 #: ../lib/network/connection/cellular_card.pm:186
 #, c-format
@@ -2656,10 +2661,9 @@ msgstr "PID"
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: ../lib/network/connection/ethernet.pm:12
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:12, c-format
 msgid "Wired (Ethernet)"
-msgstr "Ethernet"
+msgstr "Fast nät (Ethernet)"
 
 #: ../lib/network/connection/ethernet.pm:30
 #, c-format
@@ -2775,11 +2779,14 @@ msgid ""
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
+"%s är redan i användning av en anslutning som startas vid systemstart "
+"(%s). För att använda denna adress med denna anslutning, bör du förts "
+"inaktivera alla andra enheter som använder den, eller ställ in dem så "
+"de inte startar vid systemstart."
 
-#: ../lib/network/connection/ethernet.pm:219
-#, fuzzy, c-format
+#: ../lib/network/connection/ethernet.pm:219, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
-msgstr "Tilldela värddatornamn från DHCP-adress"
+msgstr "Tilldela värddatornamn från DHCP-server (eller generera ett unikt)"
 
 #: ../lib/network/connection/ethernet.pm:220
 #, c-format
@@ -2788,6 +2795,8 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
+"Detta låter servern ange ett namn för denna maskin. Om servern "
+"inte anger ett giltigt namn, kommer det att genereras automatiskt."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2796,6 +2805,9 @@ msgid ""
 "Note that this hostname will be shared among all network connections.  If "
 "left blank, 'localhost.localdomain' will be used."
 msgstr ""
+"Du borde ange ett namn för denna maskin, som identifierar denna dator. "
+"Observera att detta namn kommer att delas av alla nätverksanslutningar. "
+"Om du lämnar det tomt, kommer 'localhost.localdomain' att användas."
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -2909,7 +2921,7 @@ msgstr "Brasilien"
 #: ../lib/network/connection/providers/cellular.pm:38
 #, c-format
 msgid "Estonia"
-msgstr ""
+msgstr "Estland"
 
 #: ../lib/network/connection/providers/cellular.pm:42
 #: ../lib/network/connection/providers/cellular.pm:46
@@ -3260,10 +3272,9 @@ msgstr "Förenade Arabemiraten"
 msgid "Wireless"
 msgstr "Trådlös"
 
-#: ../lib/network/connection/wireless.pm:14
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:14, c-format
 msgid "Wireless (Wi-Fi)"
-msgstr "Trådlös"
+msgstr "Trådlös (Wi-Fi)"
 
 #: ../lib/network/connection/wireless.pm:30
 #, c-format
@@ -3360,10 +3371,9 @@ msgstr "Krypteringsläge"
 msgid "Encryption key"
 msgstr "Krypteringsnyckel"
 
-#: ../lib/network/connection/wireless.pm:472
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:472, c-format
 msgid "Hide password"
-msgstr "Lösenord"
+msgstr "Göm Lösenord"
 
 #: ../lib/network/connection/wireless.pm:474
 #, c-format
@@ -3750,10 +3760,9 @@ msgstr ""
 "ämne. Ämnessträngen har följande format:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
-#: ../lib/network/connection/wireless.pm:589
-#, fuzzy, c-format
+#: ../lib/network/connection/wireless.pm:589, c-format
 msgid "Extra directives"
-msgstr "EAP extra direktiv"
+msgstr "Extra direktiv"
 
 #: ../lib/network/connection/wireless.pm:590
 #, c-format
@@ -4003,10 +4012,9 @@ msgstr "SSH-server"
 msgid "FTP server"
 msgstr "FTP-server"
 
-#: ../lib/network/drakfirewall.pm:34
-#, fuzzy, c-format
+#: ../lib/network/drakfirewall.pm:34, c-format
 msgid "DHCP Server"
-msgstr "CUPS-server"
+msgstr "DHCP Server"
 
 #: ../lib/network/drakfirewall.pm:40
 #, c-format
@@ -4023,10 +4031,9 @@ msgstr "POP- och IMAP-server"
 msgid "Telnet server"
 msgstr "Telnet-server"
 
-#: ../lib/network/drakfirewall.pm:56
-#, fuzzy, c-format
+#: ../lib/network/drakfirewall.pm:56, c-format
 msgid "NFS Server"
-msgstr "/_NFS Server"
+msgstr "NFS Server"
 
 #: ../lib/network/drakfirewall.pm:64
 #, c-format
@@ -4036,27 +4043,24 @@ msgstr "Windows Fildelning (SMB)"
 #: ../lib/network/drakfirewall.pm:70
 #, c-format
 msgid "Bacula backup"
-msgstr ""
+msgstr "Bacula säkerhetskopiering"
 
-#: ../lib/network/drakfirewall.pm:76
-#, fuzzy, c-format
+#: ../lib/network/drakfirewall.pm:76, c-format
 msgid "Syslog network logging"
-msgstr "Nätverks \"hotplugging\""
+msgstr "Syslog nätverks-loggning"
 
 #: ../lib/network/drakfirewall.pm:82
 #, c-format
 msgid "CUPS server"
 msgstr "CUPS-server"
 
-#: ../lib/network/drakfirewall.pm:88
-#, fuzzy, c-format
+#: ../lib/network/drakfirewall.pm:88, c-format
 msgid "MySQL server"
-msgstr "NFS-server"
+msgstr "MySQL server"
 
-#: ../lib/network/drakfirewall.pm:94
-#, fuzzy, c-format
+#: ../lib/network/drakfirewall.pm:94, c-format
 msgid "PostgreSQL server"
-msgstr "CUPS-server"
+msgstr "PostgreSQL server"
 
 #: ../lib/network/drakfirewall.pm:100
 #, c-format
@@ -4066,7 +4070,7 @@ msgstr "Ekoförfrågan (ping)"
 #: ../lib/network/drakfirewall.pm:105
 #, c-format
 msgid "Network services autodiscovery (zeroconf and slp)"
-msgstr ""
+msgstr "Auto-detektering av nätverkstjänster (zeroconf och slp)"
 
 #: ../lib/network/drakfirewall.pm:110
 #, c-format
@@ -4160,7 +4164,7 @@ msgstr "Vilka tjänster vill du tilllåta att Internet ansluter till?"
 #: ../lib/network/network.pm:540
 #, c-format
 msgid "Those settings will be saved for the network profile <b>%s</b>"
-msgstr ""
+msgstr "Dessa inställningar kommer att sparas för nätverks-profilen <b>%s</b>"
 
 #: ../lib/network/drakfirewall.pm:268
 #, c-format
@@ -4377,10 +4381,9 @@ msgstr "Automatisk"
 msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "Ingen enhet som stöds av %s ndiswrapper drivrutinen har hittats."
 
-#: ../lib/network/ndiswrapper.pm:36
-#, fuzzy, c-format
+#: ../lib/network/ndiswrapper.pm:36, c-format
 msgid "Please select the correct driver"
-msgstr "Vänligen välj din leverantör:"
+msgstr "Vänligen välj korrekt drivrutin"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -4389,6 +4392,10 @@ msgid ""
 "driver file (.dll or .o files). Note that only drivers up to Windows XP are "
 "supported."
 msgstr ""
+"Vänligen välj Windows drivrutinens beskrivningsfil (.inf), eller motsvarande "
+"drivrutinsfil (.dll eller .o). Observera att endast drivrutiner upp till "
+"Windows "
+"XP stöds."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -4454,12 +4461,11 @@ msgstr "Nätverkscenter"
 #: ../lib/network/netcenter.pm:164
 #, c-format
 msgid "You are currently using the network profile <b>%s</b>"
-msgstr ""
+msgstr "Du använder för nuvarande nätverks-profilen <b>%s</b>"
 
-#: ../lib/network/netcenter.pm:170
-#, fuzzy, c-format
+#: ../lib/network/netcenter.pm:170, c-format
 msgid "Advanced settings"
-msgstr "Avancerade Alternativ"
+msgstr "Avancerade inställningar"
 
 #: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:522
 #: ../lib/network/netconnect.pm:536
@@ -4507,10 +4513,9 @@ msgstr "Välj den anslutning du vill konfigurera"
 msgid "Select the network interface to configure:"
 msgstr "Välj vilken nätverksenhet som skall konfigureras"
 
-#: ../lib/network/netconnect.pm:151
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:151, c-format
 msgid "%s: %s"
-msgstr "DNS"
+msgstr "%s: %s"
 
 #: ../lib/network/netconnect.pm:168
 #, c-format
@@ -4845,13 +4850,9 @@ msgstr ""
 "Systemet verkar inte vara anslutet till Internet.\n"
 "Prova att konfigurera om anslutningen."
 
-#: ../lib/network/netconnect.pm:770
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:770, c-format
 msgid "Problems occured during the network connectivity test."
-msgstr ""
-"Ett fel uppstod när nätverket skulle startas om: \n"
-"\n"
-"%s"
+msgstr "Ett fel uppstod vid nätverkets anslutnings-kontroll."
 
 #: ../lib/network/netconnect.pm:771
 #, c-format
@@ -4859,6 +4860,8 @@ msgid ""
 "This can be caused by invalid network configuration, or problems with your "
 "modem or router."
 msgstr ""
+"Detta kan bero på en felaktig nätverks-inställning, eller problem med "
+"ditt modem eller router."
 
 #: ../lib/network/netconnect.pm:772
 #, c-format
@@ -4866,13 +4869,12 @@ msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
 msgstr ""
+"Du kanske vill starta om konfigurationen för att granska anslutningens "
+"inställningar."
 
-#: ../lib/network/netconnect.pm:775
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:775, c-format
 msgid "Congratulations, the network configuration is finished."
-msgstr ""
-"Gratulerar, nätverks- och Internetkonfigurationen är klar.\n"
-"\n"
+msgstr "Gratulerar, nätverks-konfigurationen är klar."
 
 #: ../lib/network/netconnect.pm:775
 #, c-format
@@ -4880,23 +4882,20 @@ msgid ""
 "However, the Internet connectivity test failed. You should test your "
 "connection manually, and verify your Internet modem or router."
 msgstr ""
+"Observera att Internet anslutningstestet misslyckades. Du borde "
+"testa anslutningen manuellt, och kontrollera ditt Internet modem "
+"eller router."
 
-#: ../lib/network/netconnect.pm:776
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:776, c-format
 msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
 msgstr ""
-"Problem uppstod under konfigurationen.\n"
-"Testa anslutningen via net_monitor eller mcc. Om anslutningen inte fungerar "
-"kan du starta om konfigurationen."
+"Om anslutningen inte fungerar, bör du kanske starta om konfigurationen."
 
-#: ../lib/network/netconnect.pm:778
-#, fuzzy, c-format
+#: ../lib/network/netconnect.pm:778, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
-msgstr ""
-"Gratulerar, nätverks- och Internetkonfigurationen är klar.\n"
-"\n"
+msgstr "Gratulerar, nätverks- och Internet-konfigurationen är klar."
 
 #: ../lib/network/netconnect.pm:779
 #, c-format
@@ -5120,10 +5119,9 @@ msgstr ""
 "Ett oväntat fel inträffade:\n"
 "%s"
 
-#: ../lib/network/network.pm:514
-#, fuzzy, c-format
+#: ../lib/network/network.pm:514, c-format
 msgid "Advanced network settings"
-msgstr "Nätverksinställningar"
+msgstr "Avancerade nätverks-inställningar"
 
 #: ../lib/network/network.pm:515
 #, c-format
@@ -5131,56 +5129,55 @@ msgid ""
 "Here you can configure advanced network settings. Please note that you have "
 "to reboot the machine for changes to take effect."
 msgstr ""
+"Här kan du ställa in avancerade nätverks-inställningar. Observera att du "
+"måste starta om datorn för att ändringarna skall träda i kraft."
 
-#: ../lib/network/network.pm:517
-#, fuzzy, c-format
+#: ../lib/network/network.pm:517, c-format
 msgid "Wireless regulatory domain"
-msgstr "Trådlösa nätverk"
+msgstr "Trådlösa nätverkets reglerande domän"
 
-#: ../lib/network/network.pm:518
-#, fuzzy, c-format
+#: ../lib/network/network.pm:518, c-format
 msgid "TCP/IP settings"
-msgstr "IP inställning"
+msgstr "TCP/IP inställningar"
 
-#: ../lib/network/network.pm:519
-#, fuzzy, c-format
+#: ../lib/network/network.pm:519, c-format
 msgid "Disable IPv6"
-msgstr "Inaktivera"
+msgstr "Inaktivera IPv6"
 
 #: ../lib/network/network.pm:520
 #, c-format
 msgid "Disable TCP Window Scaling"
-msgstr ""
+msgstr "Inaktivera TCP Fönster-skalning"
 
 #: ../lib/network/network.pm:521
 #, c-format
 msgid "Disable TCP Timestamps"
-msgstr ""
+msgstr "Inaktivera TCP Tids-stämplar"
 
 #: ../lib/network/network.pm:522
 #, c-format
 msgid "Security settings (defined by MSEC policy)"
-msgstr ""
+msgstr "Säkerhetsinställningar (definierade i en MSEC policy)"
 
 #: ../lib/network/network.pm:523
 #, c-format
 msgid "Disable ICMP echo"
-msgstr ""
+msgstr "Inaktivera ICMP echo"
 
 #: ../lib/network/network.pm:524
 #, c-format
 msgid "Disable ICMP echo for broadcasting messages"
-msgstr ""
+msgstr "Inaktivera ICMP echo för broadcast meddelanden"
 
 #: ../lib/network/network.pm:525
 #, c-format
 msgid "Disable invalid ICMP error responses"
-msgstr ""
+msgstr "Inaktivera felsvar på ogiltiga ICMP"
 
 #: ../lib/network/network.pm:526
 #, c-format
 msgid "Log strange packets"
-msgstr ""
+msgstr "Logga märkliga paket"
 
 #: ../lib/network/network.pm:539
 #, c-format
@@ -5234,8 +5231,7 @@ msgstr "Proxy bör vara http://... eller https://..."
 msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "Webbadressen ska börja med \"ftp:\" eller \"http:\""
 
-#: ../lib/network/shorewall.pm:77
-#, fuzzy, c-format
+#: ../lib/network/shorewall.pm:77, c-format
 msgid ""
 "Please select the interfaces that will be protected by the firewall.\n"
 "\n"
@@ -5251,6 +5247,9 @@ msgstr ""
 "\n"
 "Alla anslutningar direkt mot Internet bör väljas, medan\n"
 "anslutningar mot lokala nätet kan väljas bort.\n"
+"\n"
+"Om du tänker använda Mandriva Internet anslutnings-delning\n"
+"välj då bort anslutningar mot lokala nätverket.\n"
 "\n"
 "Vilka anslutningar skall skyddas?\n"
 
