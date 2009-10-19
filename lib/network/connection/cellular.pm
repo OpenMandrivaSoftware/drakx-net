@@ -8,8 +8,12 @@ use common;
 my $cellular_d = "/etc/sysconfig/network-scripts/cellular.d";
 
 sub get_providers {
+    # manually-defined providers
     require network::connection::providers::cellular;
-    (\%network::connection::providers::cellular::data, '|');
+    # providers imported from mobile-broadband-provider-info
+    require network::connection::providers::cellular_extra;
+    my %providers = (%network::connection::providers::cellular::data, %network::connection::providers::cellular_extra::data);
+    (\%providers, '|');
 }
 
 sub get_cellular_settings_file {
