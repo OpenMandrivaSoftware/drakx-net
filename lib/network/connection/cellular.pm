@@ -12,7 +12,12 @@ sub get_providers {
     require network::connection::providers::cellular;
     # providers imported from mobile-broadband-provider-info
     require network::connection::providers::cellular_extra;
-    my %providers = (%network::connection::providers::cellular::data, %network::connection::providers::cellular_extra::data);
+    # combine custom providers with m.b.p.i. imported ones,
+    # filtering out CDMA-only providers which we do not support for now
+    my %providers = (
+        %network::connection::providers::cellular::data,
+        grep_each{!$::b->{cdma} } %network::connection::providers::cellular_extra::data
+    );
     (\%providers, '|');
 }
 
