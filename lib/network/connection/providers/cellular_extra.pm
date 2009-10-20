@@ -323,12 +323,12 @@ our %data = (
         dns => "207.181.101.4",
         dns => "207.181.101.5",
     },
-    N("Congo, The Democratic Republic of the") . "|Vodafone" => {
+    N("Congo (Kinshasa)") . "|Vodafone" => {
         apn => "vodanet",
         login => "vodalive",
         dns => "172.24.97.1",
     },
-    N("Congo") . "|Vodafone" => {
+    N("Congo (Brazzaville)") . "|Vodafone" => {
         apn => "vodanet",
         login => "vodalive",
         dns => "172.24.97.1",
@@ -352,7 +352,7 @@ our %data = (
         dns => "164.128.36.34",
         dns => "164.128.76.39",
     },
-    N("Côte d'Ivoire") . "|internet" => {
+    N("Cote d'Ivoire") . "|internet" => {
         apn => "172.16.100.5",
     },
     N("Chile") . "|Claro Chile" => {
@@ -1301,7 +1301,7 @@ our %data = (
         dns => "212.19.149.53 ",
         dns => "194.226.128.1",
     },
-    N("Lao People's Democratic Republic") . "|ETL" => {
+    N("Laos") . "|ETL" => {
         apn => "etlnet",
         dns => "192.168.4.130",
     },
@@ -1393,12 +1393,12 @@ our %data = (
         login => "MEDIWAP",
         password => "MEDIWAP",
     },
-    N("Moldova, Republic of") . "|Moldcell" => {
+    N("Moldova") . "|Moldcell" => {
         apn => "internet",
         login => "gprs",
         password => "gprs",
     },
-    N("Moldova, Republic of") . "|Eventis" => {
+    N("Moldova") . "|Eventis" => {
         apn => "internet.md",
     },
     N("Montenegro") . "|Mobtel Srbija" => {
@@ -2095,19 +2095,19 @@ our %data = (
         login => "wap",
         password => "wap",
     },
-    N("Taiwan, Province of China") . "|Chunghwa Telecom (emome)" => {
+    N("Taiwan") . "|Chunghwa Telecom (emome)" => {
         apn => "internet",
     },
-    N("Taiwan, Province of China") . "|Far EasTone / KGT" => {
+    N("Taiwan") . "|Far EasTone / KGT" => {
         apn => "internet",
     },
-    N("Taiwan, Province of China") . "|TW Mobile / TransAsia" => {
+    N("Taiwan") . "|TW Mobile / TransAsia" => {
         apn => "internet",
     },
-    N("Taiwan, Province of China") . "|Vibo Telecom / Aurora" => {
+    N("Taiwan") . "|Vibo Telecom / Aurora" => {
         apn => "vibo",
     },
-    N("Taiwan, Province of China") . "|Asia Pacific Telecom (APBW)" => {
+    N("Taiwan") . "|Asia Pacific Telecom (APBW)" => {
         cdma => 1,
     },
     N("Ukraine") . "|Jeans" => {
