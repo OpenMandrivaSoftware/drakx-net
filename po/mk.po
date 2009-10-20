@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-mk\n"
-"POT-Creation-Date: 2009-09-16 11:29-0300\n"
+"POT-Creation-Date: 2009-10-20 08:28-0200\n"
 "PO-Revision-Date: 2004-11-03 18:47+0100\n"
 "Last-Translator: Зоран Димовски <decata@mt.net.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -101,7 +101,7 @@ msgstr "Во ред"
 #: ../lib/network/connection_manager.pm:206
 #: ../lib/network/connection_manager.pm:235
 #: ../lib/network/connection_manager.pm:351 ../lib/network/drakvpn.pm:49
-#: ../lib/network/netcenter.pm:143 ../lib/network/netconnect.pm:186
+#: ../lib/network/netcenter.pm:152 ../lib/network/netconnect.pm:186
 #: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
 #: ../lib/network/netconnect.pm:733 ../lib/network/thirdparty.pm:354
 #: ../lib/network/thirdparty.pm:369
@@ -629,7 +629,7 @@ msgstr ""
 
 #: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:219
 #: ../bin/net_applet:191 ../lib/network/drakroam.pm:93
-#: ../lib/network/netcenter.pm:171
+#: ../lib/network/netcenter.pm:180
 #, c-format
 msgid "Quit"
 msgstr "Излез"
@@ -641,7 +641,7 @@ msgstr "Дозволи на сите корисници"
 
 #: ../bin/drakids:40 ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:134 ../bin/net_applet:306
+#: ../bin/net_applet:134 ../bin/net_applet:313
 #: ../lib/network/drakfirewall.pm:311 ../lib/network/drakfirewall.pm:315
 #, fuzzy, c-format
 msgid "Interactive Firewall"
@@ -649,7 +649,7 @@ msgstr "Firewall"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:306
+#: ../bin/net_applet:313
 #, fuzzy, c-format
 msgid "Unable to contact daemon"
 msgstr "Не можеше да контактира со другиот %s"
@@ -933,7 +933,7 @@ msgstr "Активирај"
 #: ../bin/draknetprofile:217
 #, c-format
 msgid "New"
-msgstr ""
+msgstr "Ново"
 
 #: ../bin/draknetprofile:218
 #, c-format
@@ -2180,32 +2180,32 @@ msgstr "Профили"
 msgid "VPN connection"
 msgstr "Локална мрежна (LAN) конекција"
 
-#: ../bin/net_applet:387
+#: ../bin/net_applet:394
 #, c-format
 msgid "Network connection"
 msgstr "Мрежна врска"
 
-#: ../bin/net_applet:474
+#: ../bin/net_applet:481
 #, c-format
 msgid "More networks"
 msgstr ""
 
-#: ../bin/net_applet:501
+#: ../bin/net_applet:508
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr ""
 
-#: ../bin/net_applet:506
+#: ../bin/net_applet:513
 #, c-format
 msgid "Always launch on startup"
 msgstr "Секогаш стартувај при подигање"
 
-#: ../bin/net_applet:511
+#: ../bin/net_applet:518
 #, fuzzy, c-format
 msgid "Wireless networks"
 msgstr "Безжична конекција"
 
-#: ../bin/net_applet:518 ../bin/net_monitor:96
+#: ../bin/net_applet:525 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Подесувања"
@@ -2480,7 +2480,7 @@ msgstr "Најава на сметка (корисничко име)"
 msgid "Account Password"
 msgstr "Лозинка на сметката"
 
-#: ../lib/network/connection/cellular.pm:66
+#: ../lib/network/connection/cellular.pm:75
 #, c-format
 msgid "Access Point Name"
 msgstr ""
@@ -2795,6 +2795,12 @@ msgid "PAP/CHAP"
 msgstr "PAP/CHAP"
 
 #: ../lib/network/connection/providers/cellular.pm:15
+#: ../lib/network/connection/providers/cellular_extra.pm:250
+#: ../lib/network/connection/providers/cellular_extra.pm:255
+#: ../lib/network/connection/providers/cellular_extra.pm:259
+#: ../lib/network/connection/providers/cellular_extra.pm:266
+#: ../lib/network/connection/providers/cellular_extra.pm:271
+#: ../lib/network/connection/providers/cellular_extra.pm:277
 #: ../lib/network/connection/providers/xdsl.pm:191
 #: ../lib/network/connection/providers/xdsl.pm:201
 #: ../lib/network/connection/providers/xdsl.pm:210
@@ -2810,9 +2816,14 @@ msgstr "Бразил"
 #: ../lib/network/connection/providers/cellular.pm:32
 #: ../lib/network/connection/providers/cellular.pm:35
 #: ../lib/network/connection/providers/cellular.pm:38
+#: ../lib/network/connection/providers/cellular_extra.pm:608
+#: ../lib/network/connection/providers/cellular_extra.pm:613
+#: ../lib/network/connection/providers/cellular_extra.pm:616
+#: ../lib/network/connection/providers/cellular_extra.pm:620
+#: ../lib/network/connection/providers/cellular_extra.pm:623
 #, c-format
 msgid "Estonia"
-msgstr ""
+msgstr "Естонија"
 
 #: ../lib/network/connection/providers/cellular.pm:42
 #: ../lib/network/connection/providers/cellular.pm:46
@@ -2824,6 +2835,11 @@ msgstr ""
 #: ../lib/network/connection/providers/cellular.pm:79
 #: ../lib/network/connection/providers/cellular.pm:85
 #: ../lib/network/connection/providers/cellular.pm:89
+#: ../lib/network/connection/providers/cellular_extra.pm:685
+#: ../lib/network/connection/providers/cellular_extra.pm:690
+#: ../lib/network/connection/providers/cellular_extra.pm:693
+#: ../lib/network/connection/providers/cellular_extra.pm:696
+#: ../lib/network/connection/providers/cellular_extra.pm:701
 #: ../lib/network/connection/providers/xdsl.pm:483
 #, c-format
 msgid "Finland"
@@ -2838,6 +2854,21 @@ msgstr "Финска"
 #: ../lib/network/connection/providers/cellular.pm:122
 #: ../lib/network/connection/providers/cellular.pm:125
 #: ../lib/network/connection/providers/cellular.pm:128
+#: ../lib/network/connection/providers/cellular_extra.pm:709
+#: ../lib/network/connection/providers/cellular_extra.pm:713
+#: ../lib/network/connection/providers/cellular_extra.pm:718
+#: ../lib/network/connection/providers/cellular_extra.pm:722
+#: ../lib/network/connection/providers/cellular_extra.pm:729
+#: ../lib/network/connection/providers/cellular_extra.pm:734
+#: ../lib/network/connection/providers/cellular_extra.pm:741
+#: ../lib/network/connection/providers/cellular_extra.pm:748
+#: ../lib/network/connection/providers/cellular_extra.pm:753
+#: ../lib/network/connection/providers/cellular_extra.pm:756
+#: ../lib/network/connection/providers/cellular_extra.pm:761
+#: ../lib/network/connection/providers/cellular_extra.pm:764
+#: ../lib/network/connection/providers/cellular_extra.pm:769
+#: ../lib/network/connection/providers/cellular_extra.pm:774
+#: ../lib/network/connection/providers/cellular_extra.pm:781
 #: ../lib/network/connection/providers/xdsl.pm:492
 #: ../lib/network/connection/providers/xdsl.pm:504
 #: ../lib/network/connection/providers/xdsl.pm:516
@@ -2856,6 +2887,16 @@ msgstr "Франција"
 
 #: ../lib/network/connection/providers/cellular.pm:131
 #: ../lib/network/connection/providers/cellular.pm:134
+#: ../lib/network/connection/providers/cellular_extra.pm:505
+#: ../lib/network/connection/providers/cellular_extra.pm:512
+#: ../lib/network/connection/providers/cellular_extra.pm:519
+#: ../lib/network/connection/providers/cellular_extra.pm:526
+#: ../lib/network/connection/providers/cellular_extra.pm:531
+#: ../lib/network/connection/providers/cellular_extra.pm:536
+#: ../lib/network/connection/providers/cellular_extra.pm:541
+#: ../lib/network/connection/providers/cellular_extra.pm:547
+#: ../lib/network/connection/providers/cellular_extra.pm:554
+#: ../lib/network/connection/providers/cellular_extra.pm:561
 #: ../lib/network/connection/providers/xdsl.pm:621
 #: ../lib/network/connection/providers/xdsl.pm:630
 #: ../lib/network/connection/providers/xdsl.pm:640
@@ -2867,6 +2908,15 @@ msgstr "Германија"
 #: ../lib/network/connection/providers/cellular.pm:142
 #: ../lib/network/connection/providers/cellular.pm:147
 #: ../lib/network/connection/providers/cellular.pm:152
+#: ../lib/network/connection/providers/cellular_extra.pm:1213
+#: ../lib/network/connection/providers/cellular_extra.pm:1216
+#: ../lib/network/connection/providers/cellular_extra.pm:1219
+#: ../lib/network/connection/providers/cellular_extra.pm:1225
+#: ../lib/network/connection/providers/cellular_extra.pm:1228
+#: ../lib/network/connection/providers/cellular_extra.pm:1231
+#: ../lib/network/connection/providers/cellular_extra.pm:1234
+#: ../lib/network/connection/providers/cellular_extra.pm:1237
+#: ../lib/network/connection/providers/cellular_extra.pm:1240
 #: ../lib/network/connection/providers/xdsl.pm:814
 #: ../lib/network/connection/providers/xdsl.pm:825
 #: ../lib/network/connection/providers/xdsl.pm:835
@@ -2880,6 +2930,13 @@ msgstr "Италија"
 #: ../lib/network/connection/providers/cellular.pm:162
 #: ../lib/network/connection/providers/cellular.pm:167
 #: ../lib/network/connection/providers/cellular.pm:170
+#: ../lib/network/connection/providers/cellular_extra.pm:1711
+#: ../lib/network/connection/providers/cellular_extra.pm:1718
+#: ../lib/network/connection/providers/cellular_extra.pm:1725
+#: ../lib/network/connection/providers/cellular_extra.pm:1728
+#: ../lib/network/connection/providers/cellular_extra.pm:1733
+#: ../lib/network/connection/providers/cellular_extra.pm:1740
+#: ../lib/network/connection/providers/cellular_extra.pm:1747
 #: ../lib/network/connection/providers/xdsl.pm:1001
 #: ../lib/network/connection/providers/xdsl.pm:1011
 #, c-format
@@ -2887,6 +2944,22 @@ msgid "Poland"
 msgstr "Полска"
 
 #: ../lib/network/connection/providers/cellular.pm:173
+#: ../lib/network/connection/providers/cellular_extra.pm:788
+#: ../lib/network/connection/providers/cellular_extra.pm:791
+#: ../lib/network/connection/providers/cellular_extra.pm:798
+#: ../lib/network/connection/providers/cellular_extra.pm:805
+#: ../lib/network/connection/providers/cellular_extra.pm:810
+#: ../lib/network/connection/providers/cellular_extra.pm:817
+#: ../lib/network/connection/providers/cellular_extra.pm:822
+#: ../lib/network/connection/providers/cellular_extra.pm:829
+#: ../lib/network/connection/providers/cellular_extra.pm:834
+#: ../lib/network/connection/providers/cellular_extra.pm:841
+#: ../lib/network/connection/providers/cellular_extra.pm:848
+#: ../lib/network/connection/providers/cellular_extra.pm:851
+#: ../lib/network/connection/providers/cellular_extra.pm:858
+#: ../lib/network/connection/providers/cellular_extra.pm:861
+#: ../lib/network/connection/providers/cellular_extra.pm:864
+#: ../lib/network/connection/providers/cellular_extra.pm:871
 #: ../lib/network/connection/providers/xdsl.pm:1330
 #: ../lib/network/connection/providers/xdsl.pm:1340
 #: ../lib/network/netconnect.pm:38
@@ -2895,23 +2968,63 @@ msgid "United Kingdom"
 msgstr "Велика Британија"
 
 #: ../lib/network/connection/providers/cellular.pm:178
+#: ../lib/network/connection/providers/cellular_extra.pm:2175
+#: ../lib/network/connection/providers/cellular_extra.pm:2180
+#: ../lib/network/connection/providers/cellular_extra.pm:2185
+#: ../lib/network/connection/providers/cellular_extra.pm:2190
+#: ../lib/network/connection/providers/cellular_extra.pm:2193
+#: ../lib/network/connection/providers/cellular_extra.pm:2196
+#: ../lib/network/connection/providers/cellular_extra.pm:2199
+#: ../lib/network/connection/providers/cellular_extra.pm:2202
+#: ../lib/network/connection/providers/cellular_extra.pm:2205
+#: ../lib/network/connection/providers/cellular_extra.pm:2208
+#: ../lib/network/connection/providers/cellular_extra.pm:2211
+#: ../lib/network/connection/providers/cellular_extra.pm:2214
+#: ../lib/network/connection/providers/cellular_extra.pm:2217
+#: ../lib/network/connection/providers/cellular_extra.pm:2220
+#: ../lib/network/connection/providers/cellular_extra.pm:2223
 #: ../lib/network/netconnect.pm:37
 #, c-format
 msgid "United States"
 msgstr "САД"
 
-#: ../lib/network/connection/providers/xdsl.pm:47
-#: ../lib/network/connection/providers/xdsl.pm:57
+#: ../lib/network/connection/providers/cellular_extra.pm:11
+#: ../lib/network/connection/providers/cellular_extra.pm:18
+#: ../lib/network/connection/providers/xdsl.pm:1320
 #, c-format
-msgid "Algeria"
-msgstr "Алжир"
+msgid "United Arab Emirates"
+msgstr "Обединете Арапски Емирати"
 
+#: ../lib/network/connection/providers/cellular_extra.pm:23
+#, c-format
+msgid "Albania"
+msgstr "Албанија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:26
+#: ../lib/network/connection/providers/cellular_extra.pm:48
+#, c-format
+msgid "Angola"
+msgstr "Ангола"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:30
+#: ../lib/network/connection/providers/cellular_extra.pm:37
+#: ../lib/network/connection/providers/cellular_extra.pm:43
 #: ../lib/network/connection/providers/xdsl.pm:67
 #: ../lib/network/connection/providers/xdsl.pm:77
 #, c-format
 msgid "Argentina"
 msgstr "Аргентина"
 
+#: ../lib/network/connection/providers/cellular_extra.pm:51
+#: ../lib/network/connection/providers/cellular_extra.pm:57
+#: ../lib/network/connection/providers/cellular_extra.pm:63
+#: ../lib/network/connection/providers/cellular_extra.pm:69
+#: ../lib/network/connection/providers/cellular_extra.pm:75
+#: ../lib/network/connection/providers/cellular_extra.pm:82
+#: ../lib/network/connection/providers/cellular_extra.pm:89
+#: ../lib/network/connection/providers/cellular_extra.pm:96
+#: ../lib/network/connection/providers/cellular_extra.pm:103
+#: ../lib/network/connection/providers/cellular_extra.pm:106
 #: ../lib/network/connection/providers/xdsl.pm:87
 #: ../lib/network/connection/providers/xdsl.pm:96
 #: ../lib/network/connection/providers/xdsl.pm:105
@@ -2919,16 +3032,18 @@ msgstr "Аргентина"
 msgid "Austria"
 msgstr "Австрија"
 
-#: ../lib/network/connection/providers/xdsl.pm:87
-#: ../lib/network/connection/providers/xdsl.pm:446
-#: ../lib/network/connection/providers/xdsl.pm:650
-#: ../lib/network/connection/providers/xdsl.pm:668
-#: ../lib/network/connection/providers/xdsl.pm:787
-#: ../lib/network/connection/providers/xdsl.pm:1258
-#, c-format
-msgid "Any"
-msgstr ""
-
+#: ../lib/network/connection/providers/cellular_extra.pm:109
+#: ../lib/network/connection/providers/cellular_extra.pm:112
+#: ../lib/network/connection/providers/cellular_extra.pm:117
+#: ../lib/network/connection/providers/cellular_extra.pm:122
+#: ../lib/network/connection/providers/cellular_extra.pm:127
+#: ../lib/network/connection/providers/cellular_extra.pm:133
+#: ../lib/network/connection/providers/cellular_extra.pm:138
+#: ../lib/network/connection/providers/cellular_extra.pm:144
+#: ../lib/network/connection/providers/cellular_extra.pm:148
+#: ../lib/network/connection/providers/cellular_extra.pm:155
+#: ../lib/network/connection/providers/cellular_extra.pm:162
+#: ../lib/network/connection/providers/cellular_extra.pm:168
 #: ../lib/network/connection/providers/xdsl.pm:114
 #: ../lib/network/connection/providers/xdsl.pm:124
 #: ../lib/network/connection/providers/xdsl.pm:134
@@ -2936,6 +3051,40 @@ msgstr ""
 msgid "Australia"
 msgstr "Австралија"
 
+#: ../lib/network/connection/providers/cellular_extra.pm:173
+#: ../lib/network/connection/providers/cellular_extra.pm:176
+#, c-format
+msgid "Azerbaijan"
+msgstr "Азербејџан"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:179
+#, c-format
+msgid "Bosnia and Herzegovina"
+msgstr "Босна и Херцеговина"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:182
+#, c-format
+msgid "Bahamas"
+msgstr "Бахами"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:185
+#: ../lib/network/connection/providers/cellular_extra.pm:189
+#: ../lib/network/connection/providers/cellular_extra.pm:192
+#, c-format
+msgid "Bangladesh"
+msgstr "Бангладеш"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:197
+#, c-format
+msgid "Barbados"
+msgstr "Барбодас"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:200
+#: ../lib/network/connection/providers/cellular_extra.pm:207
+#: ../lib/network/connection/providers/cellular_extra.pm:210
+#: ../lib/network/connection/providers/cellular_extra.pm:215
+#: ../lib/network/connection/providers/cellular_extra.pm:220
+#: ../lib/network/connection/providers/cellular_extra.pm:225
 #: ../lib/network/connection/providers/xdsl.pm:144
 #: ../lib/network/connection/providers/xdsl.pm:153
 #: ../lib/network/connection/providers/xdsl.pm:164
@@ -2946,12 +3095,79 @@ msgstr "Австралија"
 msgid "Belgium"
 msgstr "Белгија"
 
+#: ../lib/network/connection/providers/cellular_extra.pm:232
+#: ../lib/network/connection/providers/cellular_extra.pm:237
+#: ../lib/network/connection/providers/cellular_extra.pm:244
 #: ../lib/network/connection/providers/xdsl.pm:228
 #: ../lib/network/connection/providers/xdsl.pm:237
 #, c-format
 msgid "Bulgaria"
 msgstr "Бугарија"
 
+#: ../lib/network/connection/providers/cellular_extra.pm:282
+#: ../lib/network/connection/providers/cellular_extra.pm:287
+#: ../lib/network/connection/providers/cellular_extra.pm:294
+#: ../lib/network/connection/providers/cellular_extra.pm:299
+#: ../lib/network/connection/providers/cellular_extra.pm:304
+#, c-format
+msgid "Belarus"
+msgstr "Белорусија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:309
+#, c-format
+msgid "Botswana"
+msgstr "Боцвана"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:312
+#: ../lib/network/connection/providers/cellular_extra.pm:319
+#, c-format
+msgid "Canada"
+msgstr "Канада"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:326
+#, c-format
+msgid "Congo (Kinshasa)"
+msgstr "Конго (Киншаса)"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:331
+#, c-format
+msgid "Congo (Brazzaville)"
+msgstr "Конго (Бразавил)"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:336
+#: ../lib/network/connection/providers/cellular_extra.pm:341
+#: ../lib/network/connection/providers/cellular_extra.pm:348
+#: ../lib/network/connection/providers/xdsl.pm:1258
+#: ../lib/network/connection/providers/xdsl.pm:1267
+#: ../lib/network/connection/providers/xdsl.pm:1277
+#, c-format
+msgid "Switzerland"
+msgstr "Швајцарија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:355
+#, c-format
+msgid "Cote d'Ivoire"
+msgstr "Cote d'Ivoire"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:358
+#: ../lib/network/connection/providers/cellular_extra.pm:363
+#: ../lib/network/connection/providers/cellular_extra.pm:368
+#: ../lib/network/connection/providers/cellular_extra.pm:373
+#: ../lib/network/connection/providers/cellular_extra.pm:378
+#: ../lib/network/connection/providers/cellular_extra.pm:383
+#: ../lib/network/connection/providers/cellular_extra.pm:388
+#, c-format
+msgid "Chile"
+msgstr "Чиле"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:393
+#: ../lib/network/connection/providers/cellular_extra.pm:398
+#, c-format
+msgid "Cameroon"
+msgstr "Камерун"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:402
+#: ../lib/network/connection/providers/cellular_extra.pm:407
 #: ../lib/network/connection/providers/xdsl.pm:246
 #: ../lib/network/connection/providers/xdsl.pm:255
 #: ../lib/network/connection/providers/xdsl.pm:264
@@ -2976,12 +3192,49 @@ msgstr "Бугарија"
 msgid "China"
 msgstr "Кина"
 
+#: ../lib/network/connection/providers/cellular_extra.pm:412
+#, c-format
+msgid "Costa Rica"
+msgstr "Костарика"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:417
+#: ../lib/network/connection/providers/cellular_extra.pm:422
+#: ../lib/network/connection/providers/cellular_extra.pm:425
+#, c-format
+msgid "Colombia"
+msgstr "Колумбија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:430
+#: ../lib/network/connection/providers/cellular_extra.pm:435
+#: ../lib/network/connection/providers/cellular_extra.pm:440
+#: ../lib/network/connection/providers/cellular_extra.pm:445
+#: ../lib/network/connection/providers/cellular_extra.pm:452
+#: ../lib/network/connection/providers/cellular_extra.pm:457
+#: ../lib/network/connection/providers/cellular_extra.pm:462
+#: ../lib/network/connection/providers/cellular_extra.pm:467
+#: ../lib/network/connection/providers/cellular_extra.pm:470
+#: ../lib/network/connection/providers/cellular_extra.pm:475
+#: ../lib/network/connection/providers/cellular_extra.pm:480
+#: ../lib/network/connection/providers/cellular_extra.pm:485
+#: ../lib/network/connection/providers/cellular_extra.pm:490
+#: ../lib/network/connection/providers/cellular_extra.pm:495
+#: ../lib/network/connection/providers/cellular_extra.pm:500
 #: ../lib/network/connection/providers/xdsl.pm:426
 #: ../lib/network/connection/providers/xdsl.pm:436
 #, c-format
 msgid "Czech Republic"
 msgstr "Чешка Република"
 
+#: ../lib/network/connection/providers/cellular_extra.pm:564
+#: ../lib/network/connection/providers/cellular_extra.pm:567
+#: ../lib/network/connection/providers/cellular_extra.pm:570
+#: ../lib/network/connection/providers/cellular_extra.pm:573
+#: ../lib/network/connection/providers/cellular_extra.pm:576
+#: ../lib/network/connection/providers/cellular_extra.pm:581
+#: ../lib/network/connection/providers/cellular_extra.pm:586
+#: ../lib/network/connection/providers/cellular_extra.pm:591
+#: ../lib/network/connection/providers/cellular_extra.pm:596
+#: ../lib/network/connection/providers/cellular_extra.pm:599
 #: ../lib/network/connection/providers/xdsl.pm:446
 #: ../lib/network/connection/providers/xdsl.pm:455
 #: ../lib/network/connection/providers/xdsl.pm:464
@@ -2989,123 +3242,32 @@ msgstr "Чешка Република"
 msgid "Denmark"
 msgstr "Данска"
 
+#: ../lib/network/connection/providers/cellular_extra.pm:602
+#, c-format
+msgid "Dominican Republic"
+msgstr "Доминиканска Република"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:605
+#, c-format
+msgid "Ecuador"
+msgstr "Еквадор"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:628
+#: ../lib/network/connection/providers/cellular_extra.pm:633
+#: ../lib/network/connection/providers/cellular_extra.pm:636
 #: ../lib/network/connection/providers/xdsl.pm:473
 #, c-format
 msgid "Egypt"
 msgstr "Египет"
 
-#: ../lib/network/connection/providers/xdsl.pm:650
-#, c-format
-msgid "Greece"
-msgstr "Грција"
-
-#: ../lib/network/connection/providers/xdsl.pm:659
-#, c-format
-msgid "Hungary"
-msgstr "Унгарија"
-
-#: ../lib/network/connection/providers/xdsl.pm:668
-#, c-format
-msgid "Ireland"
-msgstr "Ирска"
-
-#: ../lib/network/connection/providers/xdsl.pm:677
-#: ../lib/network/connection/providers/xdsl.pm:687
-#: ../lib/network/connection/providers/xdsl.pm:697
-#: ../lib/network/connection/providers/xdsl.pm:707
-#: ../lib/network/connection/providers/xdsl.pm:717
-#: ../lib/network/connection/providers/xdsl.pm:727
-#: ../lib/network/connection/providers/xdsl.pm:737
-#: ../lib/network/connection/providers/xdsl.pm:747
-#: ../lib/network/connection/providers/xdsl.pm:757
-#: ../lib/network/connection/providers/xdsl.pm:767
-#: ../lib/network/connection/providers/xdsl.pm:777
-#, c-format
-msgid "Israel"
-msgstr "Израел"
-
-#: ../lib/network/connection/providers/xdsl.pm:787
-#, c-format
-msgid "India"
-msgstr "Индија"
-
-#: ../lib/network/connection/providers/xdsl.pm:796
-#: ../lib/network/connection/providers/xdsl.pm:805
-#, c-format
-msgid "Iceland"
-msgstr "Исланд"
-
-#: ../lib/network/connection/providers/xdsl.pm:858
-#, c-format
-msgid "Sri Lanka"
-msgstr "Шри Ланка"
-
-#: ../lib/network/connection/providers/xdsl.pm:870
-#, c-format
-msgid "Lithuania"
-msgstr "Литванија"
-
-#: ../lib/network/connection/providers/xdsl.pm:879
-#: ../lib/network/connection/providers/xdsl.pm:889
-#, c-format
-msgid "Mauritius"
-msgstr "Маурициус"
-
-#: ../lib/network/connection/providers/xdsl.pm:900
-#, c-format
-msgid "Morocco"
-msgstr "Мароко"
-
-#: ../lib/network/connection/providers/xdsl.pm:910
-#: ../lib/network/connection/providers/xdsl.pm:919
-#: ../lib/network/connection/providers/xdsl.pm:928
-#: ../lib/network/connection/providers/xdsl.pm:937
-#: ../lib/network/netconnect.pm:34
-#, c-format
-msgid "Netherlands"
-msgstr "Холандија"
-
-#: ../lib/network/connection/providers/xdsl.pm:946
-#: ../lib/network/connection/providers/xdsl.pm:952
-#: ../lib/network/connection/providers/xdsl.pm:958
-#: ../lib/network/connection/providers/xdsl.pm:964
-#: ../lib/network/connection/providers/xdsl.pm:970
-#: ../lib/network/connection/providers/xdsl.pm:976
-#: ../lib/network/connection/providers/xdsl.pm:982
-#, c-format
-msgid "Norway"
-msgstr "Норвешка"
-
-#: ../lib/network/connection/providers/xdsl.pm:990
-#, c-format
-msgid "Pakistan"
-msgstr "Пакистан"
-
-#: ../lib/network/connection/providers/xdsl.pm:1022
-#, c-format
-msgid "Portugal"
-msgstr "Португалија"
-
-#: ../lib/network/connection/providers/xdsl.pm:1031
-#, c-format
-msgid "Russia"
-msgstr "Русија"
-
-#: ../lib/network/connection/providers/xdsl.pm:1042
-#, c-format
-msgid "Singapore"
-msgstr "Сингапур"
-
-#: ../lib/network/connection/providers/xdsl.pm:1051
-#, c-format
-msgid "Senegal"
-msgstr "Сенегал"
-
-#: ../lib/network/connection/providers/xdsl.pm:1061
-#, c-format
-msgid "Slovenia"
-msgstr "Словенија"
-
+#: ../lib/network/connection/providers/cellular_extra.pm:641
+#: ../lib/network/connection/providers/cellular_extra.pm:648
+#: ../lib/network/connection/providers/cellular_extra.pm:655
+#: ../lib/network/connection/providers/cellular_extra.pm:658
+#: ../lib/network/connection/providers/cellular_extra.pm:665
+#: ../lib/network/connection/providers/cellular_extra.pm:672
+#: ../lib/network/connection/providers/cellular_extra.pm:679
+#: ../lib/network/connection/providers/cellular_extra.pm:682
 #: ../lib/network/connection/providers/xdsl.pm:1072
 #: ../lib/network/connection/providers/xdsl.pm:1084
 #: ../lib/network/connection/providers/xdsl.pm:1096
@@ -3126,39 +3288,632 @@ msgstr "Словенија"
 msgid "Spain"
 msgstr "Шпанија"
 
+#: ../lib/network/connection/providers/cellular_extra.pm:706
+#, c-format
+msgid "Fiji"
+msgstr "Фуџи"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:878
+#, c-format
+msgid "Georgia"
+msgstr "Џорџија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:883
+#: ../lib/network/connection/providers/cellular_extra.pm:888
+#: ../lib/network/connection/providers/cellular_extra.pm:891
+#: ../lib/network/connection/providers/cellular_extra.pm:896
+#, c-format
+msgid "Ghana"
+msgstr "Гана"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:899
+#: ../lib/network/connection/providers/cellular_extra.pm:903
+#: ../lib/network/connection/providers/cellular_extra.pm:909
+#: ../lib/network/connection/providers/cellular_extra.pm:912
+#: ../lib/network/connection/providers/xdsl.pm:650
+#, c-format
+msgid "Greece"
+msgstr "Грција"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:917
+#: ../lib/network/connection/providers/cellular_extra.pm:922
+#, c-format
+msgid "Guatemala"
+msgstr "Гватемала"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:925
+#, c-format
+msgid "Guyana"
+msgstr "Гвајана"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:930
+#: ../lib/network/connection/providers/cellular_extra.pm:935
+#: ../lib/network/connection/providers/cellular_extra.pm:938
+#: ../lib/network/connection/providers/cellular_extra.pm:941
+#: ../lib/network/connection/providers/cellular_extra.pm:946
+#: ../lib/network/connection/providers/cellular_extra.pm:949
+#: ../lib/network/connection/providers/cellular_extra.pm:952
+#, c-format
+msgid "Hong Kong"
+msgstr "Хонг Конг"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:955
+#, c-format
+msgid "Honduras"
+msgstr "Хондурас"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:958
+#: ../lib/network/connection/providers/cellular_extra.pm:962
+#: ../lib/network/connection/providers/cellular_extra.pm:968
+#: ../lib/network/connection/providers/cellular_extra.pm:974
+#, c-format
+msgid "Croatia"
+msgstr "Хрватска"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:981
+#: ../lib/network/connection/providers/cellular_extra.pm:986
+#: ../lib/network/connection/providers/cellular_extra.pm:991
+#: ../lib/network/connection/providers/cellular_extra.pm:996
+#: ../lib/network/connection/providers/cellular_extra.pm:1001
+#: ../lib/network/connection/providers/cellular_extra.pm:1007
+#: ../lib/network/connection/providers/cellular_extra.pm:1014
+#: ../lib/network/connection/providers/cellular_extra.pm:1021
+#: ../lib/network/connection/providers/cellular_extra.pm:1026
+#: ../lib/network/connection/providers/xdsl.pm:659
+#, c-format
+msgid "Hungary"
+msgstr "Унгарија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1031
+#: ../lib/network/connection/providers/cellular_extra.pm:1036
+#: ../lib/network/connection/providers/cellular_extra.pm:1043
+#: ../lib/network/connection/providers/cellular_extra.pm:1047
+#: ../lib/network/connection/providers/cellular_extra.pm:1054
+#: ../lib/network/connection/providers/cellular_extra.pm:1061
+#, c-format
+msgid "Indonesia"
+msgstr "Идонезија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1066
+#: ../lib/network/connection/providers/cellular_extra.pm:1073
+#: ../lib/network/connection/providers/cellular_extra.pm:1080
+#: ../lib/network/connection/providers/cellular_extra.pm:1085
+#: ../lib/network/connection/providers/cellular_extra.pm:1090
+#: ../lib/network/connection/providers/cellular_extra.pm:1095
+#: ../lib/network/connection/providers/cellular_extra.pm:1101
+#: ../lib/network/connection/providers/xdsl.pm:668
+#, c-format
+msgid "Ireland"
+msgstr "Ирска"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1106
+#: ../lib/network/connection/providers/cellular_extra.pm:1112
+#: ../lib/network/connection/providers/cellular_extra.pm:1117
+#: ../lib/network/connection/providers/xdsl.pm:677
+#: ../lib/network/connection/providers/xdsl.pm:687
+#: ../lib/network/connection/providers/xdsl.pm:697
+#: ../lib/network/connection/providers/xdsl.pm:707
+#: ../lib/network/connection/providers/xdsl.pm:717
+#: ../lib/network/connection/providers/xdsl.pm:727
+#: ../lib/network/connection/providers/xdsl.pm:737
+#: ../lib/network/connection/providers/xdsl.pm:747
+#: ../lib/network/connection/providers/xdsl.pm:757
+#: ../lib/network/connection/providers/xdsl.pm:767
+#: ../lib/network/connection/providers/xdsl.pm:777
+#, c-format
+msgid "Israel"
+msgstr "Израел"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1121
+#: ../lib/network/connection/providers/cellular_extra.pm:1126
+#: ../lib/network/connection/providers/cellular_extra.pm:1132
+#: ../lib/network/connection/providers/cellular_extra.pm:1136
+#: ../lib/network/connection/providers/cellular_extra.pm:1141
+#: ../lib/network/connection/providers/cellular_extra.pm:1146
+#: ../lib/network/connection/providers/cellular_extra.pm:1151
+#: ../lib/network/connection/providers/cellular_extra.pm:1155
+#: ../lib/network/connection/providers/cellular_extra.pm:1160
+#: ../lib/network/connection/providers/cellular_extra.pm:1165
+#: ../lib/network/connection/providers/cellular_extra.pm:1170
+#: ../lib/network/connection/providers/cellular_extra.pm:1175
+#: ../lib/network/connection/providers/cellular_extra.pm:1180
+#: ../lib/network/connection/providers/cellular_extra.pm:1185
+#: ../lib/network/connection/providers/cellular_extra.pm:1188
+#: ../lib/network/connection/providers/cellular_extra.pm:1193
+#: ../lib/network/connection/providers/cellular_extra.pm:1198
+#: ../lib/network/connection/providers/xdsl.pm:787
+#, c-format
+msgid "India"
+msgstr "Индија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1203
+#: ../lib/network/connection/providers/cellular_extra.pm:1208
+#: ../lib/network/connection/providers/xdsl.pm:796
+#: ../lib/network/connection/providers/xdsl.pm:805
+#, c-format
+msgid "Iceland"
+msgstr "Исланд"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1243
+#: ../lib/network/connection/providers/cellular_extra.pm:1246
+#, c-format
+msgid "Jamaica"
+msgstr "Јамајка"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1253
+#: ../lib/network/connection/providers/cellular_extra.pm:1260
+#: ../lib/network/connection/providers/cellular_extra.pm:1265
+#: ../lib/network/connection/providers/cellular_extra.pm:1270
+#: ../lib/network/connection/providers/cellular_extra.pm:1273
+#, c-format
+msgid "Japan"
+msgstr "Јапонија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1280
+#: ../lib/network/connection/providers/cellular_extra.pm:1283
+#: ../lib/network/connection/providers/cellular_extra.pm:1288
+#, c-format
+msgid "Kenya"
+msgstr "Кенија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1291
+#: ../lib/network/connection/providers/cellular_extra.pm:1295
+#, c-format
+msgid "Kuwait"
+msgstr "Кувајт"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1298
+#, c-format
+msgid "Kazakhstan"
+msgstr "Казахстан"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1304
+#, c-format
+msgid "Laos"
+msgstr "Лаос"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1308
+#: ../lib/network/connection/providers/cellular_extra.pm:1313
+#: ../lib/network/connection/providers/cellular_extra.pm:1316
+#, c-format
+msgid "Lebanon"
+msgstr "Либан"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1319
+#, c-format
+msgid "Saint Lucia"
+msgstr "Света Луција"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1323
+#: ../lib/network/connection/providers/cellular_extra.pm:1326
+#: ../lib/network/connection/providers/cellular_extra.pm:1329
+#: ../lib/network/connection/providers/cellular_extra.pm:1332
+#: ../lib/network/connection/providers/cellular_extra.pm:1335
+#: ../lib/network/connection/providers/cellular_extra.pm:1338
+#: ../lib/network/connection/providers/xdsl.pm:858
+#, c-format
+msgid "Sri Lanka"
+msgstr "Шри Ланка"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1341
+#: ../lib/network/connection/providers/cellular_extra.pm:1347
+#: ../lib/network/connection/providers/cellular_extra.pm:1351
+#: ../lib/network/connection/providers/cellular_extra.pm:1356
+#: ../lib/network/connection/providers/xdsl.pm:870
+#, c-format
+msgid "Lithuania"
+msgstr "Литванија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1363
+#: ../lib/network/connection/providers/cellular_extra.pm:1368
+#: ../lib/network/connection/providers/cellular_extra.pm:1373
+#, c-format
+msgid "Luxembourg"
+msgstr "Луксембург"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1376
+#: ../lib/network/connection/providers/cellular_extra.pm:1381
+#, c-format
+msgid "Latvia"
+msgstr "Латвија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1386
+#: ../lib/network/connection/providers/cellular_extra.pm:1391
+#: ../lib/network/connection/providers/xdsl.pm:900
+#, c-format
+msgid "Morocco"
+msgstr "Мароко"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1396
+#: ../lib/network/connection/providers/cellular_extra.pm:1401
+#, c-format
+msgid "Moldova"
+msgstr "Молдавија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1404
+#: ../lib/network/connection/providers/cellular_extra.pm:1411
+#: ../lib/network/connection/providers/cellular_extra.pm:1414
+#: ../lib/network/connection/providers/cellular_extra.pm:1419
+#: ../lib/network/connection/providers/cellular_extra.pm:1425
+#: ../lib/network/connection/providers/cellular_extra.pm:1431
+#, fuzzy, c-format
+msgid "Montenegro"
+msgstr "Србија и Црнагора"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1437
+#, c-format
+msgid "Mongolia"
+msgstr "Монголија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1440
+#: ../lib/network/connection/providers/cellular_extra.pm:1443
+#: ../lib/network/connection/providers/cellular_extra.pm:1448
+#: ../lib/network/connection/providers/cellular_extra.pm:1451
+#, c-format
+msgid "Macao"
+msgstr ""
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1456
+#: ../lib/network/connection/providers/cellular_extra.pm:1459
+#: ../lib/network/connection/providers/cellular_extra.pm:1462
+#, c-format
+msgid "Malta"
+msgstr "Малта"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1467
+#: ../lib/network/connection/providers/xdsl.pm:879
+#: ../lib/network/connection/providers/xdsl.pm:889
+#, c-format
+msgid "Mauritius"
+msgstr "Маурициус"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1470
+#, c-format
+msgid "Maldives"
+msgstr "Малдиви"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1473
+#: ../lib/network/connection/providers/cellular_extra.pm:1480
+#, c-format
+msgid "Mexico"
+msgstr "Мексико"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1483
+#: ../lib/network/connection/providers/cellular_extra.pm:1488
+#: ../lib/network/connection/providers/cellular_extra.pm:1493
+#: ../lib/network/connection/providers/cellular_extra.pm:1498
+#: ../lib/network/connection/providers/cellular_extra.pm:1503
+#: ../lib/network/connection/providers/cellular_extra.pm:1507
+#: ../lib/network/connection/providers/cellular_extra.pm:1510
+#, c-format
+msgid "Malaysia"
+msgstr "Малезија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1517
+#, c-format
+msgid "Mozambique"
+msgstr "Мозамбик"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1524
+#: ../lib/network/connection/providers/cellular_extra.pm:1529
+#: ../lib/network/connection/providers/cellular_extra.pm:1534
+#, c-format
+msgid "Nigeria"
+msgstr "Нигериа"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1540
+#: ../lib/network/connection/providers/cellular_extra.pm:1545
+#, c-format
+msgid "Nicaragua"
+msgstr "Никарагва"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1550
+#: ../lib/network/connection/providers/cellular_extra.pm:1553
+#: ../lib/network/connection/providers/cellular_extra.pm:1560
+#: ../lib/network/connection/providers/cellular_extra.pm:1565
+#: ../lib/network/connection/providers/cellular_extra.pm:1570
+#: ../lib/network/connection/providers/cellular_extra.pm:1574
+#: ../lib/network/connection/providers/cellular_extra.pm:1579
+#: ../lib/network/connection/providers/cellular_extra.pm:1584
+#: ../lib/network/connection/providers/xdsl.pm:910
+#: ../lib/network/connection/providers/xdsl.pm:919
+#: ../lib/network/connection/providers/xdsl.pm:928
+#: ../lib/network/connection/providers/xdsl.pm:937
+#: ../lib/network/netconnect.pm:34
+#, c-format
+msgid "Netherlands"
+msgstr "Холандија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1587
+#: ../lib/network/connection/providers/cellular_extra.pm:1594
+#: ../lib/network/connection/providers/cellular_extra.pm:1599
+#: ../lib/network/connection/providers/cellular_extra.pm:1604
+#: ../lib/network/connection/providers/cellular_extra.pm:1609
+#: ../lib/network/connection/providers/cellular_extra.pm:1612
+#: ../lib/network/connection/providers/cellular_extra.pm:1615
+#: ../lib/network/connection/providers/cellular_extra.pm:1618
+#: ../lib/network/connection/providers/cellular_extra.pm:1621
+#: ../lib/network/connection/providers/cellular_extra.pm:1624
+#: ../lib/network/connection/providers/xdsl.pm:946
+#: ../lib/network/connection/providers/xdsl.pm:952
+#: ../lib/network/connection/providers/xdsl.pm:958
+#: ../lib/network/connection/providers/xdsl.pm:964
+#: ../lib/network/connection/providers/xdsl.pm:970
+#: ../lib/network/connection/providers/xdsl.pm:976
+#: ../lib/network/connection/providers/xdsl.pm:982
+#, c-format
+msgid "Norway"
+msgstr "Норвешка"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1627
+#, c-format
+msgid "Nepal"
+msgstr "Непал"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1630
+#: ../lib/network/connection/providers/cellular_extra.pm:1635
+#: ../lib/network/connection/providers/cellular_extra.pm:1640
+#, c-format
+msgid "New Zealand"
+msgstr "Нов Зеланд"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1645
+#: ../lib/network/connection/providers/cellular_extra.pm:1650
+#, c-format
+msgid "Panama"
+msgstr "Панама"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1655
+#, c-format
+msgid "Oman"
+msgstr "Оман"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1658
+#, c-format
+msgid "Peru"
+msgstr "Перу"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1663
+#: ../lib/network/connection/providers/cellular_extra.pm:1670
+#: ../lib/network/connection/providers/cellular_extra.pm:1677
+#: ../lib/network/connection/providers/cellular_extra.pm:1680
+#, c-format
+msgid "Philippines"
+msgstr "Филипини"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1687
+#: ../lib/network/connection/providers/cellular_extra.pm:1692
+#: ../lib/network/connection/providers/cellular_extra.pm:1695
+#: ../lib/network/connection/providers/cellular_extra.pm:1698
+#: ../lib/network/connection/providers/cellular_extra.pm:1703
+#: ../lib/network/connection/providers/cellular_extra.pm:1708
+#: ../lib/network/connection/providers/xdsl.pm:990
+#, c-format
+msgid "Pakistan"
+msgstr "Пакистан"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1752
+#: ../lib/network/connection/providers/cellular_extra.pm:1757
+#: ../lib/network/connection/providers/cellular_extra.pm:1762
+#: ../lib/network/connection/providers/cellular_extra.pm:1766
+#: ../lib/network/connection/providers/cellular_extra.pm:1771
+#: ../lib/network/connection/providers/xdsl.pm:1022
+#, c-format
+msgid "Portugal"
+msgstr "Португалија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1776
+#, c-format
+msgid "Paraguay"
+msgstr "Парагвај"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1781
+#: ../lib/network/connection/providers/cellular_extra.pm:1786
+#: ../lib/network/connection/providers/cellular_extra.pm:1793
+#, c-format
+msgid "Romania"
+msgstr "Романија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1798
+#: ../lib/network/connection/providers/cellular_extra.pm:1805
+#: ../lib/network/connection/providers/cellular_extra.pm:1811
+#: ../lib/network/connection/providers/cellular_extra.pm:1817
+#, fuzzy, c-format
+msgid "Serbia"
+msgstr "Сервис"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1823
+#: ../lib/network/connection/providers/cellular_extra.pm:1830
+#: ../lib/network/connection/providers/cellular_extra.pm:1837
+#: ../lib/network/connection/providers/cellular_extra.pm:1842
+#: ../lib/network/connection/providers/cellular_extra.pm:1849
+#: ../lib/network/connection/providers/cellular_extra.pm:1852
+#: ../lib/network/connection/providers/cellular_extra.pm:1857
+#: ../lib/network/connection/providers/cellular_extra.pm:1862
+#: ../lib/network/connection/providers/cellular_extra.pm:1867
+#: ../lib/network/connection/providers/cellular_extra.pm:1872
+#: ../lib/network/connection/providers/cellular_extra.pm:1877
+#: ../lib/network/connection/providers/cellular_extra.pm:1882
+#: ../lib/network/connection/providers/cellular_extra.pm:1887
+#: ../lib/network/connection/providers/cellular_extra.pm:1892
+#: ../lib/network/connection/providers/cellular_extra.pm:1898
+#: ../lib/network/connection/providers/cellular_extra.pm:1903
+#: ../lib/network/connection/providers/cellular_extra.pm:1908
+#: ../lib/network/connection/providers/cellular_extra.pm:1914
+#: ../lib/network/connection/providers/cellular_extra.pm:1920
+#: ../lib/network/connection/providers/cellular_extra.pm:1927
+#: ../lib/network/connection/providers/cellular_extra.pm:1933
+#, c-format
+msgid "Russian Federation"
+msgstr "Руска Федерација"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1938
+#: ../lib/network/connection/providers/cellular_extra.pm:1941
+#, c-format
+msgid "Saudi Arabia"
+msgstr "Саудиска Арабија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:1946
+#: ../lib/network/connection/providers/cellular_extra.pm:1949
+#: ../lib/network/connection/providers/cellular_extra.pm:1952
+#: ../lib/network/connection/providers/cellular_extra.pm:1955
+#: ../lib/network/connection/providers/cellular_extra.pm:1958
+#: ../lib/network/connection/providers/cellular_extra.pm:1961
+#: ../lib/network/connection/providers/cellular_extra.pm:1966
+#: ../lib/network/connection/providers/cellular_extra.pm:1969
+#: ../lib/network/connection/providers/cellular_extra.pm:1972
 #: ../lib/network/connection/providers/xdsl.pm:1249
 #, c-format
 msgid "Sweden"
 msgstr "Шведска"
 
-#: ../lib/network/connection/providers/xdsl.pm:1258
-#: ../lib/network/connection/providers/xdsl.pm:1267
-#: ../lib/network/connection/providers/xdsl.pm:1277
+#: ../lib/network/connection/providers/cellular_extra.pm:1975
+#: ../lib/network/connection/providers/cellular_extra.pm:1982
+#: ../lib/network/connection/providers/cellular_extra.pm:1987
+#: ../lib/network/connection/providers/xdsl.pm:1042
 #, c-format
-msgid "Switzerland"
-msgstr "Швајцарија"
+msgid "Singapore"
+msgstr "Сингапур"
 
+#: ../lib/network/connection/providers/cellular_extra.pm:1993
+#: ../lib/network/connection/providers/cellular_extra.pm:2000
+#: ../lib/network/connection/providers/cellular_extra.pm:2007
+#: ../lib/network/connection/providers/xdsl.pm:1061
+#, c-format
+msgid "Slovenia"
+msgstr "Словенија"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:2012
+#: ../lib/network/connection/providers/cellular_extra.pm:2017
+#: ../lib/network/connection/providers/cellular_extra.pm:2022
+#: ../lib/network/connection/providers/cellular_extra.pm:2029
+#, c-format
+msgid "Slovakia"
+msgstr "Словачка"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:2034
+#: ../lib/network/connection/providers/xdsl.pm:1051
+#, c-format
+msgid "Senegal"
+msgstr "Сенегал"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:2039
+#, c-format
+msgid "El Salvador"
+msgstr "Ел Салвадор"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:2044
+#: ../lib/network/connection/providers/cellular_extra.pm:2049
+#: ../lib/network/connection/providers/cellular_extra.pm:2054
 #: ../lib/network/connection/providers/xdsl.pm:1286
 #, c-format
 msgid "Thailand"
 msgstr "Тајланд"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:2059
+#: ../lib/network/connection/providers/cellular_extra.pm:2064
+#: ../lib/network/connection/providers/cellular_extra.pm:2069
+#: ../lib/network/connection/providers/cellular_extra.pm:2076
+#: ../lib/network/connection/providers/cellular_extra.pm:2083
+#: ../lib/network/connection/providers/xdsl.pm:1307
+#, c-format
+msgid "Turkey"
+msgstr "Турција"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:2088
+#: ../lib/network/connection/providers/cellular_extra.pm:2093
+#, c-format
+msgid "Trinidad and Tobago"
+msgstr "Тринидад и Тобаго"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:2098
+#: ../lib/network/connection/providers/cellular_extra.pm:2101
+#: ../lib/network/connection/providers/cellular_extra.pm:2104
+#: ../lib/network/connection/providers/cellular_extra.pm:2107
+#: ../lib/network/connection/providers/cellular_extra.pm:2110
+#, c-format
+msgid "Taiwan"
+msgstr "Тајван"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:2113
+#: ../lib/network/connection/providers/cellular_extra.pm:2118
+#: ../lib/network/connection/providers/cellular_extra.pm:2123
+#: ../lib/network/connection/providers/cellular_extra.pm:2128
+#: ../lib/network/connection/providers/cellular_extra.pm:2133
+#: ../lib/network/connection/providers/cellular_extra.pm:2138
+#: ../lib/network/connection/providers/cellular_extra.pm:2141
+#: ../lib/network/connection/providers/cellular_extra.pm:2146
+#: ../lib/network/connection/providers/cellular_extra.pm:2151
+#: ../lib/network/connection/providers/cellular_extra.pm:2156
+#: ../lib/network/connection/providers/cellular_extra.pm:2162
+#: ../lib/network/connection/providers/cellular_extra.pm:2167
+#, c-format
+msgid "Ukraine"
+msgstr "Украина"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:2170
+#, c-format
+msgid "Uganda"
+msgstr "Уганда"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:2226
+#: ../lib/network/connection/providers/cellular_extra.pm:2231
+#: ../lib/network/connection/providers/cellular_extra.pm:2236
+#, c-format
+msgid "Uruguay"
+msgstr "Уругвај"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:2241
+#, c-format
+msgid "Uzbekistan"
+msgstr "Узбекистан"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:2246
+#, c-format
+msgid "Saint Vincent and the Grenadines"
+msgstr "Свети Винсент"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:2251
+#, c-format
+msgid "Venezuela"
+msgstr "Венецуела"
+
+#: ../lib/network/connection/providers/cellular_extra.pm:2255
+#: ../lib/network/connection/providers/cellular_extra.pm:2262
+#: ../lib/network/connection/providers/cellular_extra.pm:2267
+#: ../lib/network/connection/providers/cellular_extra.pm:2272
+#: ../lib/network/connection/providers/cellular_extra.pm:2277
+#, c-format
+msgid "South Africa"
+msgstr "Јужна Африка"
+
+#: ../lib/network/connection/providers/xdsl.pm:47
+#: ../lib/network/connection/providers/xdsl.pm:57
+#, c-format
+msgid "Algeria"
+msgstr "Алжир"
+
+#: ../lib/network/connection/providers/xdsl.pm:87
+#: ../lib/network/connection/providers/xdsl.pm:446
+#: ../lib/network/connection/providers/xdsl.pm:650
+#: ../lib/network/connection/providers/xdsl.pm:668
+#: ../lib/network/connection/providers/xdsl.pm:787
+#: ../lib/network/connection/providers/xdsl.pm:1258
+#, c-format
+msgid "Any"
+msgstr ""
+
+#: ../lib/network/connection/providers/xdsl.pm:1031
+#, c-format
+msgid "Russia"
+msgstr "Русија"
 
 #: ../lib/network/connection/providers/xdsl.pm:1296
 #, c-format
 msgid "Tunisia"
 msgstr "Тунис"
 
-#: ../lib/network/connection/providers/xdsl.pm:1307
-#, c-format
-msgid "Turkey"
-msgstr "Турција"
-
-#: ../lib/network/connection/providers/xdsl.pm:1320
-#, c-format
-msgid "United Arab Emirates"
-msgstr "Обединете Арапски Емирати"
-
-#: ../lib/network/connection/wireless.pm:13
+#: ../lib/network/connection/wireless.pm:13 ../lib/network/netcenter.pm:140
 #, c-format
 msgid "Wireless"
 msgstr ""
@@ -4004,12 +4759,12 @@ msgstr "Не е пронајден уред"
 msgid "Device: "
 msgstr "Уред: "
 
-#: ../lib/network/drakroam.pm:89 ../lib/network/netcenter.pm:65
+#: ../lib/network/drakroam.pm:89 ../lib/network/netcenter.pm:66
 #, c-format
 msgid "Configure"
 msgstr "Конфигурирај"
 
-#: ../lib/network/drakroam.pm:92 ../lib/network/netcenter.pm:70
+#: ../lib/network/drakroam.pm:92 ../lib/network/netcenter.pm:71
 #, c-format
 msgid "Refresh"
 msgstr "Освежи"
@@ -4226,29 +4981,34 @@ msgstr "Рачно вчитај драјвер"
 msgid "Select a device:"
 msgstr ""
 
-#: ../lib/network/netcenter.pm:54 ../lib/network/netconnect.pm:211
+#: ../lib/network/netcenter.pm:55 ../lib/network/netconnect.pm:211
 #, c-format
 msgid "Please select your network:"
 msgstr ""
 
-#: ../lib/network/netcenter.pm:61
+#: ../lib/network/netcenter.pm:62
 #, fuzzy, c-format
 msgid ""
 "_: This is a verb\n"
 "Monitor"
 msgstr "Надгледувај мрежа"
 
-#: ../lib/network/netcenter.pm:145
+#: ../lib/network/netcenter.pm:140
+#, c-format
+msgid "Do you want to apply new wireless regulation settings now?"
+msgstr ""
+
+#: ../lib/network/netcenter.pm:154
 #, fuzzy, c-format
 msgid "Network Center"
 msgstr "Мрежа и Интернет"
 
-#: ../lib/network/netcenter.pm:164
+#: ../lib/network/netcenter.pm:173
 #, c-format
 msgid "You are currently using the network profile <b>%s</b>"
 msgstr ""
 
-#: ../lib/network/netcenter.pm:170
+#: ../lib/network/netcenter.pm:179
 #, fuzzy, c-format
 msgid "Advanced settings"
 msgstr "Напредни опции"
