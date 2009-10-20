@@ -137,10 +137,8 @@ sub advanced_settings {
 		network::network::advanced_settings_write($u);
         # check if the CRDA changed
         if ($old_crda ne $net->{network}{CRDA_DOMAIN}) {
-            if ($in->ask_okcancel(N("Wireless"), N("Do you want to apply new wireless regulation settings now?"), 1)) {
-                # restarting network
-                run_program::run("iw", "reg", "set", $net->{network}{CRDA_DOMAIN});
-            }
+            # reconfiguring wireless domain
+            run_program::run("iw", "reg", "set", $net->{network}{CRDA_DOMAIN});
         }
         network::network::write_network_conf($net);
 	}
