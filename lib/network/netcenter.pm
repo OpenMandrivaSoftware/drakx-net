@@ -12,6 +12,7 @@ use network::connection;
 use network::connection_manager;
 use network::tools;
 use network::network;
+use run_program;
 
 sub build_cmanager {
     my ($in, $net, $w, $pixbufs, $connection) = @_;
@@ -131,8 +132,16 @@ sub get_connections() {
 sub advanced_settings {
 	my ($in, $net) = @_;
 	my $u = network::network::advanced_settings_read();
+	my $old_crda = $net->{network}{CRDA_DOMAIN};
 	if (network::network::advanced_choose($in, $net, $u)) {
 		network::network::advanced_settings_write($u);
+        # check if the CRDA changed
+        if ($old_crda ne $net->{network}{CRDA_DOMAIN}) {
+            if ($in->ask_okcancel(N("Wireless configuration"), N("Do you want to apply new wireless regulation settings now?"), 1)) {
+                # restarting network
+                run_program::run("iw", "reg", "set", $net->{network}{CRDA_DOMAIN});
+            }
+        }
         network::network::write_network_conf($net);
 	}
 }
