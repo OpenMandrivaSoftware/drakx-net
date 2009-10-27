@@ -484,14 +484,16 @@ sub setup_dbus_handlers {
             if ($msg->get_interface eq 'com.mandriva.monitoring.wireless' && $msg->get_member eq 'Event') {
                 my ($event, $interface) = $msg->get_args_list;
                 print "got wireless event: $event $interface\n";
-                my $cmanager = find { $_->{connection}->get_interface eq $interface } @$cmanagers;
-                if ($cmanager && $cmanager->{wait_message}) {
-                    # CTRL-EVENT-CONNECTED does not have to be handled, further status will be handled by interface status code
-                    if ($event =~ /Authentication with (.+?) timed out/) {
-                        undef $cmanager->{wait_message};
-                        $cmanager->{in}->ask_warn(N("Error"), N("Connection failed."));
-                    }
-                }
+                # eugeni: wpa_supplicant seems to issue 'Authentication..timed out messages' even if they
+                # are not fatal (#54002). We should either handle them with more care, or just ignore them altogether
+#                my $cmanager = find { $_->{connection}->get_interface eq $interface } @$cmanagers;
+#                if ($cmanager && $cmanager->{wait_message}) {
+#                    # CTRL-EVENT-CONNECTED does not have to be handled, further status will be handled by interface status code
+#                    if ($event =~ /Authentication with (.+?) timed out/) {
+#                        undef $cmanager->{wait_message};
+#                        $cmanager->{in}->ask_warn(N("Error"), N("Connection failed."));
+#                    }
+#                }
             }
         });
     $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
