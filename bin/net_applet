@@ -2,6 +2,7 @@
 
 use strict;
 
+use POSIX ":sys_wait_h";
 use lib qw(/usr/lib/libDrakX);
 # i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
 BEGIN { unshift @::textdomains, 'drakx-net' }
@@ -127,13 +128,6 @@ sub get_interface_name {
     $type_name ? "$type_name ($interface)" : $interface;
 }
 
-sub ignore_children(&) {
-    my ($f) = @_;
-    # do not create zombies (#20552)
-    local $SIG{CHLD} = 'IGNORE';
-    &$f;
-}
-
 my %actions = (
                'upNetwork' => { name => sub { N("Connect %s", get_interface_name($_[0])) }, launch => sub { network::tools::start_interface($_[0], 1) } },
                'downNetwork' => { name => sub { N("Disconnect %s", get_interface_name($_[0])) }, launch => sub { network::tools::stop_interface($_[0], 1) } },
@@ -142,18 +136,10 @@ my %actions = (
                'wireless' => { name => N("Manage wireless networks"), launch => sub { run_drakroam() } },
                'drakvpn' => {
                    name => N("Manage VPN connections"), launch => sub {
-                       ignore_children {
-                           run_program::raw({ detach => 1 }, '/usr/sbin/drakvpn');
-                       };
+                       run_program::raw({ detach => 1 }, '/usr/sbin/drakvpn');
                    },
                },
-               'confNetwork' => {
-                   name => N("Configure Network"), launch => sub {
-                       ignore_children {
-                           system("/usr/sbin/drakconnect &");
-                       };
-                   }
-               },
+               'confNetwork' => { name => N("Configure Network"), launch => sub { system("/usr/sbin/drakconnect &") } },
                'chooseInterface' => {
                    name => N("Watched interface"),
                    choices => sub { N("Auto-detect"), sort keys %{$net->{ifcfg}} },
@@ -188,11 +174,9 @@ my %actions = (
                    choices => sub { network::network::netprofile_list() },
                    choice_selected => sub { $_[0] eq $net->{PROFILE} },
                    launch => sub {
-                       ignore_children {
-                           require run_program;
-                           $net->{PROFILE} = $_[0];
-                           run_program::raw({ detach => 1 }, common::wrap_command_for_root('/sbin/set-netprofile', $net->{PROFILE}));
-                       };
+		       require run_program;
+		       $net->{PROFILE} = $_[0];
+		       run_program::raw({ detach => 1 }, common::wrap_command_for_root('/sbin/set-netprofile', $net->{PROFILE}));
                    }
                },
                'chooseVPN' => {
@@ -204,14 +188,7 @@ my %actions = (
                    choice_selected => sub { $_[0]->is_started },
                    launch => sub { require interactive; $_[0]->is_started ? $_[0]->stop : $_[0]->start(interactive->vnew) },
                },
-               'help' => {
-                   name => N("Help"),
-                   launch => sub {
-                       ignore_children {
-                           system("drakhelp --id internet-connection &");
-                       };
-                   },
-               },
+               'help' => { name => N("Help"), launch => sub { system("drakhelp --id internet-connection &") } },
                'quit' => { name => N("Quit"), launch => \&mainQuit },
               );
 
@@ -269,6 +246,15 @@ $SIG{USR1} = sub {
     my @packets = eval { $network::net_applet::ifw->get_reports };
 };
 
+# do not create zombies (#20552)
+$SIG{CHLD} = \&harvester;
+sub harvester {
+    my $pid;
+    do {
+        # we don't care about our child processes
+        $pid = waitpid(-1, &WNOHANG);
+    } while $pid > 0;
+}
 
 Gtk2->main;
 
@@ -302,29 +288,21 @@ sub shouldStart() {
     return getAutoStart();
 }
 sub run_net_monitor() {
-    ignore_children {
-        run_program::raw({ detach => 1 }, '/usr/bin/net_monitor', '--defaultintf', $current_interface) unless is_running('net_monitor');
-    };
+    run_program::raw({ detach => 1 }, '/usr/bin/net_monitor', '--defaultintf', $current_interface) unless is_running('net_monitor');
 }
 sub run_netcenter() {
-    ignore_children {
-        run_program::raw({ detach => 1 }, '/usr/bin/draknetcenter') unless is_running('draknetcenter', 'root');
-    };
+    run_program::raw({ detach => 1 }, '/usr/bin/draknetcenter') unless is_running('draknetcenter', 'root');
 }
 sub run_drakroam {
     my ($o_ap) = @_;
-    ignore_children {
-        run_program::raw({ detach => 1 }, '/usr/sbin/drakroam', if_($o_ap, "--ap=$o_ap")) unless is_running('drakroam', 'root');
-    };
+    run_program::raw({ detach => 1 }, '/usr/sbin/drakroam', if_($o_ap, "--ap=$o_ap")) unless is_running('drakroam', 'root');
 }
 sub run_drakids() {
     $ifw_alert = 0;
     if (is_running('drakids')) {
         eval { $ifw->send_manage_request };
     } else {
-        ignore_children {
-            run_program::raw({ detach => 1 }, '/usr/sbin/drakids');
-        };
+        run_program::raw({ detach => 1 }, '/usr/sbin/drakids');
     }
 }
 sub generate_wireless_menuitem {
