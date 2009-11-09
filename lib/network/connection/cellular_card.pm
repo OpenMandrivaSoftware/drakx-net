@@ -63,15 +63,45 @@ sub get_interface {
 
 sub get_tty_device {
     my ($self) = @_;
+
+    my $tty_interface = 0;
+    my %udev_env = map { if_(/^([^=]*)=(.*)$/, $1 => $2) } chomp_(run_program::get_stdout("udevadm info --query=property --path=$self->{device}{sysfs_device}"));
+
+    if ($udev_env{USB_INTERFACE}) {
+        my $dev_sys_path = $self->{device}->{sysfs_device};
+        my $cfg = chomp_(cat_($dev_sys_path . "/bConfigurationValue"));
+        my $tty_usb = basename(glob_("$dev_sys_path/" .
+            $self->{device}->{pci_bus} . "-" .
+            ($self->{device}->{usb_port} + 1) . ":$cfg." .
+            $udev_env{USB_INTERFACE} . "/ttyUSB*"));
+        if ($tty_usb) {
+            $tty_usb =~ s/ttyUSB//;
+	    $tty_interface = $tty_usb;
+        }
+    } else {
+        # if no usb interface for tty port given, use first one
+        my @intfs = glob_("$self->{device}->{sysfs_device}/" .
+                     $self->{device}->{pci_bus} . "-" .
+                     ($self->{device}->{usb_port} + 1) . ":*");
+        foreach (@intfs) {
+	    my $tty_usb = basename(glob_("$_/tty*"));
+	    if ($tty_usb) {
+                $tty_usb =~ s/tty[a-zA-Z]*//;
+                $tty_interface = $tty_usb;
+		last;
+            }
+        }
+    }
+
     $self->{device}{device} ?
       "/dev/" . $self->{device}{device} :
     $self->get_driver eq "nozomi" ?
-      "/dev/noz0" :
+      "/dev/noz" . $tty_interface :
     $self->get_driver eq "cdc_acm" ?
-      "/dev/ttyACM0" :
+      "/dev/ttyACM" . $tty_interface :
     $self->get_driver eq "hso" ?
-      "/dev/ttyHS0" :
-      "/dev/ttyUSB0";
+      "/dev/ttyHS" . $tty_interface :
+      "/dev/ttyUSB" . $tty_interface;
 }
 
 sub get_control_device {
