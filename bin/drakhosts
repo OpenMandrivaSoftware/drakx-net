@@ -120,15 +120,6 @@ sub add_modify_entry {
 			       cancel_clicked => sub { $dialog->destroy },
 			       ok_clicked => sub {
 				 is_ip($ip->get_text) or err_dialog(N("Error!"), N("Please enter a valid IP address.")) and return;
-				 my $testip = chomp_($ip->get_text);
-				 my $toldip = chomp_($oldip);
-				 if ($testip !~ /$toldip/ || $wanted =~ /add/) {
-				   foreach my $a (@listhosts) {
-				     if ($a->{ip} =~ /$testip/) {
-				       err_dialog(N("Error!"), N("Same IP is already in %s file.", $HOSTS)) and return;
-				     }
-				   }
-				 }
 				 if ($wanted =~ /add/) {
 				   $iter = $model->append;
 				   $i = "-1";
