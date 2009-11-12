@@ -67,13 +67,13 @@ sub get_tty_device {
     my $tty_interface = 0;
     my %udev_env = map { if_(/^([^=]*)=(.*)$/, $1 => $2) } chomp_(run_program::get_stdout("udevadm info --query=property --path=$self->{device}{sysfs_device}"));
 
-    if ($udev_env{USB_INTERFACE}) {
+    if ($udev_env{USB_MODEM_INTERFACE}) {
         my $dev_sys_path = $self->{device}->{sysfs_device};
         my $cfg = chomp_(cat_($dev_sys_path . "/bConfigurationValue"));
         my $tty_usb = basename(glob_("$dev_sys_path/" .
             $self->{device}->{pci_bus} . "-" .
             ($self->{device}->{usb_port} + 1) . ":$cfg." .
-            $udev_env{USB_INTERFACE} . "/ttyUSB*"));
+            $udev_env{USB_MODEM_INTERFACE} . "/ttyUSB*"));
         if ($tty_usb) {
             $tty_usb =~ s/ttyUSB//;
 	    $tty_interface = $tty_usb;
