@@ -293,7 +293,7 @@ sub get_samba_share() {
 
 sub get_samba_user() {
   undef @listusers;
-  foreach (cat_("/etc/samba/smbpasswd")) {
+  foreach (split '\n', `pdbedit -L -w`) {
     my ($user) = m!^([\w-]+):!;
     $user and push @listusers, {
 				user_name => $user,
