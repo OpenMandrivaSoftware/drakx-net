@@ -797,8 +797,9 @@ sub modify_entry {
 							       }
 							       foreach ($read_list->get_text, $write_list->get_text, $admin_users->get_text, $valid_users->get_text) {
 								 my @users = split(" ", $_);
+								 my @known_users = split("\n", `pdbedit -L -w`);
 								 foreach my $user (@users) {
-								   if (!(any { /^$user:/ } cat_("/etc/samba/smbpasswd")) && !/\@/) {
+								   if (!(any { /^$user:/ } @known_users) && !/\@/) {
 								     err_dialog(N("Error"), N("Please create this Samba user: %s", $user)) and return;
 								   }
 								 }
