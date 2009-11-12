@@ -76,7 +76,7 @@ sub get_tty_device {
             $udev_env{USB_MODEM_INTERFACE} . "/ttyUSB*"));
         if ($tty_usb) {
             $tty_usb =~ s/ttyUSB//;
-	    $tty_interface = $tty_usb;
+            $tty_interface = $tty_usb;
         }
     } else {
         # if no usb interface for tty port given, use first one
@@ -84,11 +84,11 @@ sub get_tty_device {
                      $self->{device}->{pci_bus} . "-" .
                      ($self->{device}->{usb_port} + 1) . ":*");
         foreach (@intfs) {
-	    my $tty_usb = basename(glob_("$_/tty*"));
-	    if ($tty_usb) {
+            my $tty_usb = basename(glob_("$_/tty*"));
+            if ($tty_usb) {
                 $tty_usb =~ s/tty[a-zA-Z]*//;
                 $tty_interface = $tty_usb;
-		last;
+                last;
             }
         }
     }
