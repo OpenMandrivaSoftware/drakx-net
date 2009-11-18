@@ -129,68 +129,100 @@ sub get_interface_name {
 }
 
 my %actions = (
-               'upNetwork' => { name => sub { N("Connect %s", get_interface_name($_[0])) }, launch => sub { network::tools::start_interface($_[0], 1) } },
-               'downNetwork' => { name => sub { N("Disconnect %s", get_interface_name($_[0])) }, launch => sub { network::tools::stop_interface($_[0], 1) } },
-               'monitorNetwork' => { name => N("Monitor Network"), launch => \&run_net_monitor },
-               'monitorIFW' => { name => N("Interactive Firewall"), launch => \&run_drakids },
-               'wireless' => { name => N("Manage wireless networks"), launch => sub { run_drakroam() } },
-               'drakvpn' => {
-                   name => N("Manage VPN connections"), launch => sub {
-                       run_program::raw({ detach => 1 }, '/usr/sbin/drakvpn');
-                   },
-               },
-               'confNetwork' => { name => N("Configure Network"), launch => sub { system("/usr/sbin/drakconnect &") } },
-               'chooseInterface' => {
-                   name => N("Watched interface"),
-                   choices => sub { N("Auto-detect"), sort keys %{$net->{ifcfg}} },
-                   choice_selected => sub { $watched_interface ? $_[0] eq $watched_interface : $_[0] eq N("Auto-detect") },
-                   launch => sub {
-                       $watched_interface = $_[0] eq N("Auto-detect") ? undef : $_[0];
-                       checkNetworkForce();
-                   }
-               },
-               'setInterface' => {
-                   name => N("Active interfaces"),
-                   use_checkbox => 1,
-                   choices => sub { sort keys %{$net->{ifcfg}} },
-                   choice_selected => sub {
-                       my ($is_up, $_gw) = network::tools::get_interface_status($_[0]);
-                       $is_up;
-                   },
-                   format_choice => \&get_interface_name,
-                   get_icon => \&get_interface_icon,
-                   launch => sub {
-                       my ($is_up, $_gw) = network::tools::get_interface_status($_[0]);
-                       if ($is_up) {
-                           network::tools::stop_interface($_[0], 1);
-                       } else {
-                           network::tools::start_interface($_[0], 1);
-                       }
-                       checkNetworkForce();
-                   }
-               },
-               'chooseProfile' => {
-                   name => N("Profiles"),
-                   choices => sub { network::network::netprofile_list() },
-                   choice_selected => sub { $_[0] eq $net->{PROFILE} },
-                   launch => sub {
-		       require run_program;
-		       $net->{PROFILE} = $_[0];
-		       run_program::raw({ detach => 1 }, common::wrap_command_for_root('/sbin/set-netprofile', $net->{PROFILE}));
-                   }
-               },
-               'chooseVPN' => {
-                   name => N("VPN connection"),
-                   header => "drakvpn",
-                   choices => sub { map { $_->get_configured_connections } network::vpn::list_types },
-                   allow_single_choice => 1,
-                   format_choice => \&network::vpn::get_label,
-                   choice_selected => sub { $_[0]->is_started },
-                   launch => sub { require interactive; $_[0]->is_started ? $_[0]->stop : $_[0]->start(interactive->vnew) },
-               },
-               'help' => { name => N("Help"), launch => sub { system("drakhelp --id internet-connection &") } },
-               'quit' => { name => N("Quit"), launch => \&mainQuit },
-              );
+    'upNetwork' => {
+	name => sub { N("Connect %s", get_interface_name($_[0])) },
+	launch => sub { network::tools::start_interface($_[0], 1) }
+    },
+    'downNetwork' => {
+	name => sub { N("Disconnect %s", get_interface_name($_[0])) },
+	launch => sub { network::tools::stop_interface($_[0], 1) }
+    },
+    'monitorNetwork' => {
+	name => N("Monitor Network"),
+	launch => \&run_net_monitor
+    },
+    'monitorIFW' => {\
+	name => N("Interactive Firewall"),
+	launch => \&run_drakids
+    },
+    'wireless' => {
+	name => N("Manage wireless networks"),
+	launch => sub { run_drakroam() }
+    },
+    'drakvpn' => {
+        name => N("Manage VPN connections"),
+	launch => sub { run_program::raw({ detach => 1 }, '/usr/sbin/drakvpn'); },
+    },
+    'confNetwork' => {
+	name => N("Configure Network"),
+	launch => sub { system("/usr/sbin/drakconnect &") }
+    },
+    'chooseInterface' => {
+        name => N("Watched interface"),
+        choices => sub { N("Auto-detect"), sort keys %{$net->{ifcfg}} },
+        choice_selected => sub {
+	    $watched_interface ? $_[0] eq $watched_interface :
+	        $_[0] eq N("Auto-detect")
+	},
+        launch => sub {
+            $watched_interface = $_[0] eq N("Auto-detect") ? undef : $_[0];
+            checkNetworkForce();
+        }
+    },
+    'setInterface' => {
+        name => N("Active interfaces"),
+        use_checkbox => 1,
+        choices => sub { sort keys %{$net->{ifcfg}} },
+        choice_selected => sub {
+            my ($is_up, $_gw) = network::tools::get_interface_status($_[0]);
+            $is_up;
+        },
+        format_choice => \&get_interface_name,
+        get_icon => \&get_interface_icon,
+        launch => sub {
+            my ($is_up, $_gw) = network::tools::get_interface_status($_[0]);
+            if ($is_up) {
+                network::tools::stop_interface($_[0], 1);
+            } else {
+                network::tools::start_interface($_[0], 1);
+            }
+            checkNetworkForce();
+        }
+    },
+    'chooseProfile' => {
+        name => N("Profiles"),
+        choices => sub { network::network::netprofile_list() },
+        choice_selected => sub { $_[0] eq $net->{PROFILE} },
+        launch => sub {
+	    require run_program;
+	    $net->{PROFILE} = $_[0];
+	    run_program::raw({ detach => 1 }, common::wrap_command_for_root('/sbin/set-netprofile', $net->{PROFILE}));
+        }
+    },
+    'chooseVPN' => {
+        name => N("VPN connection"),
+        header => "drakvpn",
+        choices => sub {
+	    map { $_->get_configured_connections } network::vpn::list_types
+        },
+        allow_single_choice => 1,
+        format_choice => \&network::vpn::get_label,
+        choice_selected => sub { $_[0]->is_started },
+        launch => sub {
+	    require interactive; $_[0]->is_started ?
+	        $_[0]->stop : $_[0]->start(interactive->vnew)
+	},
+    },
+    'help' => {
+	name => N("Help"),
+	launch => sub { system("drakhelp --id internet-connection &") }
+    },
+    'quit' => {
+	name => N("Quit"),
+	launch => \&mainQuit
+    },
+);
+
 
 $icon = Gtk2::StatusIcon->new;
 
