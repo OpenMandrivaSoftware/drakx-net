@@ -121,8 +121,11 @@ sub supplement_address_settings {
     if ($self->{protocol} eq 'static' && network::network::is_ip($self->{address}{ip_address})) {
         require network::network;
         $self->{address}{netmask} ||= network::network::netmask($self->{address}{ip_address});
-        $self->{address}{gateway} ||= network::network::gateway($self->{address}{ip_address});
-        $self->{address}{dns1} ||= network::network::dns($self->{address}{ip_address});
+	# Bug #28033: don't guess default gateway and ns in static interfaces if
+	# user doesn't set one (otherwise we'll mess multi-interface systems)
+	#
+	#$self->{address}{gateway} ||= network::network::gateway($self->{address}{ip_address});
+	#$self->{address}{dns1} ||= network::network::dns($self->{address}{ip_address});
     }
 }
 
