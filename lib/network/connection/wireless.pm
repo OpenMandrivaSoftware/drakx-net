@@ -138,12 +138,22 @@ my @thirdparty_settings = (
     } ([ 3945, '-1' ], [ 4965, '-1' ], [ 'agn', '-1', 5000 ])),
 
     {
-        name => 'prism54',
-        description => 'Prism GT / Prism Duette / Prism Indigo Chipsets',
-        url => 'http://prism54.org/',
+        name => 'p54pci',
+        description => 'PCI adaptors based on the Intersil Prism54 chip series',
+        url => 'http://wireless.kernel.org/en/users/Drivers/p54',
         firmware => {
-            url => 'http://prism54.org/~mcgrof/firmware/',
-            test_file => "isl38*",
+            url => 'http://wireless.kernel.org/en/users/Drivers/p54#firmware',
+            test_file => "isl3886pci",
+        },
+    },
+
+    {
+        name => 'p54usb',
+        description => 'USB adaptors based on the Intersil Prism54 chip series',
+        url => 'http://wireless.kernel.org/en/users/Drivers/p54',
+        firmware => {
+            url => 'http://wireless.kernel.org/en/users/Drivers/p54#firmware',
+            test_file => "isl388*usb",
         },
     },
 
