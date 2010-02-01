@@ -304,7 +304,7 @@ sub create_networks_list {
         my ($sortable, $iter_left, $iter_right) = @_;
         my $s1 = $cmanager->{connection}{networks}{$sortable->get($iter_left, 0)}->{signal_strength};
         my $s2 = $cmanager->{connection}{networks}{$sortable->get($iter_right, 0)}->{signal_strength};
-        return $s2 <=> $s1;
+        return $s1 <=> $s2;
     });
     $cmanager->{gui}{networks_list}->get_column(3)->set_sort_column_id(3);
     $cmanager->{gui}{networks_list}->get_model->set_sort_func (3, sub {
