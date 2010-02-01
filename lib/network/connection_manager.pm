@@ -320,6 +320,8 @@ sub create_networks_list {
                     my ($model, $column, $key, $iter, $data) = @_;
                         return $model->get($iter, 2) !~ /^\Q$key/i;
                     });
+    # Sort by signal level by default
+    $cmanager->{gui}{networks_list}->get_model->set_sort_column_id(2, 'descending');
 }
 
 sub select_network {
