@@ -1,4 +1,3 @@
-0.87:
 - properly update /etc/hosts file when there are multiple aliases for the
   the same ip (#30168).
 - ndiswrapper support:
@@ -14,6 +13,7 @@
 - Don't guess gateway and nameserver if not specified (#28033)
 - Sort wireless networks by signal level by default
 - Fix inverted wireless networks signal level sorting
+- disable CA certificate field if pkcs12 certificate is used (#38463)
 
 0.86.1:
 - ignore non-fatal wpa_supplicant messages (#54002)

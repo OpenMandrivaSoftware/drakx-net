@@ -142,7 +142,7 @@ sub get_key_settings {
               N("Certificate Authority (CA)"),
             type => 'file',
             val => \$connection->{ca_file},
-            disabled => sub { $connection->{type} ne 'pki' },
+            disabled => sub { $connection->{type} ne 'pki' || $connection->{pkcs12_file} },
         },
         {
             label => N("Certificate"),
