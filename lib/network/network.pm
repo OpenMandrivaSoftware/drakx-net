@@ -126,10 +126,17 @@ sub write_zeroconf {
     services::set_status('tmdns', $net->{zeroconf}{hostname}, $::isInstall);
 }
 
+sub update_resolv_conf {
+    # is there a better way to do this?
+    system "/etc/init.d/resolvconf reload";
+}
+
 sub write_resolv_conf {
     my ($net) = @_;
     my $resolv = $net->{resolv};
-    my $file = $::prefix . $resolv_file;
+    # (bug #54180)
+    #my $file = $::prefix . $resolv_file;
+    my $file = $::prefix . "/etc/resolvconf/run/interface/" . $net->{net_interface};
 
     my %new = (
         search => [ grep { $_ } uniq(@$resolv{'DOMAINNAME', 'DOMAINNAME2', 'DOMAINNAME3'}) ],
@@ -164,6 +171,8 @@ sub write_resolv_conf {
 	    @new, @old;
 	};
 	output_with_perm($file, 0644, @search, @nameserver, (map { "# $_\n" } @unknown), "\n# ppp temp entry\n");
+
+	update_resolv_conf();
 
 	#-res_init();		# reinit the resolver so DNS changes take affect
 	1;
