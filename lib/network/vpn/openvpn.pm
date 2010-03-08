@@ -73,6 +73,8 @@ sub write_config {
     }
 
     delete $connection->{keysize} if !$connection->{cipher};
+    delete $connection->{ca_file} if $connection->{pkcs12_file};
+
     if ($connection->{type} eq 'static') {
         $connection->{secret_file} = delete $connection->{key};
         delete $connection->{ca_file};
