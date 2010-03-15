@@ -10,16 +10,16 @@ sub read_nfs_ports {
     my $lockd_udp_port = 4002;
     my $rpc_mountd_port = 4003;
     my $rpc_rquotad_port = 4004;
-    if (-f "/etc/sysconfig/nfs-common") {
-            foreach (cat_("/etc/sysconfig/nfs-common")) {
+    if (-f "$::prefix/etc/sysconfig/nfs-common") {
+            foreach (cat_("$::prefix/etc/sysconfig/nfs-common")) {
             $_ =~ /^STATD_OPTIONS=.*(--port|-p) (\d+).*$/ and $statd_port = $2;
             $_ =~ /^STATD_OPTIONS=.*(--outgoing-port|-o) (\d+).*$/ and $statd_outgoing_port = $2;
             $_ =~ /^LOCKD_TCPPORT=(\d+)/ and $lockd_tcp_port = $1;
             $_ =~ /^LOCKD_UDPPORT=(\d+)/ and $lockd_udp_port = $1;
         }
     }
-    if (-f "/etc/sysconfig/nfs-server") {
-        foreach (cat_("/etc/sysconfig/nfs-server")) {
+    if (-f "$::prefix/etc/sysconfig/nfs-server") {
+        foreach (cat_("$::prefix/etc/sysconfig/nfs-server")) {
             $_ =~ /^RPCMOUNTD_OPTIONS=.*(--port|-p) (\d+).*$/ and $rpc_mountd_port = $2;
             $_ =~ /^RPCRQUOTAD_OPTIONS=.*(--port|-p) (\d+).*$/ and $rpc_rquotad_port = $2;
         }
@@ -56,6 +56,7 @@ sub write_nfs_ports {
     my ($ports) = @_;
     # enabling fixed ports for NFS services
     # nfs-common
+    my $lockd_options="";
     substInFile {
         if ($ports->{statd_port}) {
             my $port = $ports->{statd_port};
@@ -71,7 +72,13 @@ sub write_nfs_ports {
             my $port = $ports->{lockd_udp_port};
             s/^LOCKD_UDPPORT=.*/LOCKD_UDPPORT=$port/;
         }
-    } "/etc/sysconfig/nfs-common";
+    } "$::prefix/etc/sysconfig/nfs-common";
+    # kernel-side configuration of nlockmgr
+    $lockd_options .= " nlm_tcpport=$ports->{lockd_tcp_port}" if $ports->{lockd_tcp_port};
+    $lockd_options .= " nlm_udpport=$ports->{lockd_udp_port}" if $ports->{lockd_udp_port};
+    if ($lockd_options ne "") {
+        output("$::prefix/etc/modprobe.d/lockd.drakx", "options lockd $lockd_options\n");
+    }
     # nfs-server
     substInFile {
         if ($ports->{rpc_mountd_port}) {
@@ -86,7 +93,7 @@ sub write_nfs_ports {
             s/^(RPCRQUOTAD_OPTIONS)="(.*)(--port \d+)(.*)"$/$1="$2--port $port$4"/;
             s/^(RPCRQUOTAD_OPTIONS)="(.*)(-p \d+)(.*)"$/$1="$2--port $port$4"/;
         }
-    } "/etc/sysconfig/nfs-server";
+    } "$::prefix/etc/sysconfig/nfs-server";
 }
 
 1;
