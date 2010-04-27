@@ -194,7 +194,7 @@ sub delete_selected_profile() {
 my $expander = Gtk2::Expander->new(N("Advanced"));
 $expander->add(gtkpack_(Gtk2::VBox->new,
         0, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 1),
-            0, gtkpack_(gtkset_border_width(Gtk2::VBox->new, 0),
+            1, gtkpack_(gtkset_border_width(Gtk2::VBox->new, 0),
                0, gtknew('WrappedLabel', text => N("Select the netprofile modules:")),
                0, gtknew('ScrolledWindow', width => 300, height => 150, child => $modules_list),
            ),
