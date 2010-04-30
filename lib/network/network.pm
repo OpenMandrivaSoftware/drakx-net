@@ -779,20 +779,17 @@ sub easy_dhcp {
     modules::load_category($modules_conf, list_modules::ethernet_categories());
     my @all_dev = sort map { $_->[0] } network::connection::ethernet::get_eth_cards($modules_conf);
 
-    #- only for a single ethernet network card
     my @ether_dev = grep { /^eth[0-9]+$/ && `LC_ALL= LANG= $::prefix/sbin/ip -o link show $_ 2>/dev/null` =~ m|\slink/ether\s| } @all_dev;
-    @ether_dev == 1 or return;
-
-    my $dhcp_intf = $ether_dev[0];
-    log::explanations("easy_dhcp: found $dhcp_intf");
-
-    $net->{ifcfg}{$dhcp_intf} ||= {};
-    put_in_hash($net->{ifcfg}{$dhcp_intf}, {
+    foreach my $dhcp_intf (@ether_dev) {
+        log::explanations("easy_dhcp: found $dhcp_intf");
+        $net->{ifcfg}{$dhcp_intf} ||= {};
+        put_in_hash($net->{ifcfg}{$dhcp_intf}, {
 				      DEVICE => $dhcp_intf,
 				      BOOTPROTO => 'dhcp',
 				      NETMASK => '255.255.255.0',
 				      ONBOOT => 'yes'
-				     });
+                                  });
+    }
 
     1;
 }
