@@ -363,7 +363,7 @@ sub get_interface_sysfs_path {
     my ($interface) = @_;
     $interface = network::tools::get_real_interface($interface);
     my $dev_path = "/sys/class/net/$interface/device";
-    my $bus = detect_devices::get_sysfs_field_from_link($dev_path, 'bus');
+    my $bus = detect_devices::get_sysfs_field_from_link($dev_path, "subsystem");
     if ($bus eq 'ieee1394') {
 	my $child = first(glob("$dev_path/host_id/*-*"));
 	$dev_path = $child if $child;
