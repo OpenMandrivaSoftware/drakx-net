@@ -786,12 +786,6 @@ sub easy_dhcp {
     my $dhcp_intf = $ether_dev[0];
     log::explanations("easy_dhcp: found $dhcp_intf");
 
-    put_in_hash($net->{network}, {
-				  NETWORKING => "yes",
-				  DHCP => "yes",
-				  NET_DEVICE => $dhcp_intf,
-				  NET_INTERFACE => $dhcp_intf,
-				 });
     $net->{ifcfg}{$dhcp_intf} ||= {};
     put_in_hash($net->{ifcfg}{$dhcp_intf}, {
 				      DEVICE => $dhcp_intf,
@@ -799,8 +793,6 @@ sub easy_dhcp {
 				      NETMASK => '255.255.255.0',
 				      ONBOOT => 'yes'
 				     });
-    $net->{type} = 'lan';
-    $net->{net_interface} = $dhcp_intf;
 
     1;
 }
