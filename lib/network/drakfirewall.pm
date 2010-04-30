@@ -336,7 +336,10 @@ sub main {
 
     ($disabled, $servers, $unlisted, $log_net_drop) = choose_allowed_services($in, $disabled, $servers, $unlisted, $log_net_drop) or return;
 
-    if (!$disabled) {
+    my $system_file = '/etc/sysconfig/drakx-net';
+    my %global_settings = getVarsFromSh($system_file);
+
+    if (!$disabled && (!defined($global_settings{IFW}) || text2bool($global_settings{IFW}))) {
         choose_watched_services($in, $servers, $unlisted) or return;
     }
 
