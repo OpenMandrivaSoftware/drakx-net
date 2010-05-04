@@ -17,6 +17,7 @@ sub write_squid_conf {
     my ($squid_conf, $intf, $internal_domain_name) = @_;
 
     renamef($squid_conf_file, "$squid_conf_file.old");
+    my $prefix = network::network::netmask_to_vlsm($intf->{NETMASK});
     output($squid_conf_file, qq(
 http_port $squid_conf->{http_port}[0] transparent
 hierarchy_stoplist cgi-bin ?
@@ -31,9 +32,8 @@ refresh_pattern ^ftp:           1440    20%     10080
 refresh_pattern ^gopher:        1440    0%      1440
 refresh_pattern .               0       20%     4320
 half_closed_clients off
-acl all src 0.0.0.0/0.0.0.0
 acl manager proto cache_object
-acl localhost src 127.0.0.1/255.255.255.255
+acl localhost src 127.0.0.0/8
 acl to_localhost dst 127.0.0.0/8
 acl localnet src 10.0.0.0/8     # RFC1918 possible internal network
 acl localnet src 172.16.0.0/12  # RFC1918 possible internal network
@@ -55,7 +55,7 @@ http_access deny manager
 http_access deny !Safe_ports
 http_access deny CONNECT !SSL_ports
 http_access deny to_localhost
-acl mynetwork src $intf->{NETWORK}/$intf->{NETMASK}
+acl mynetwork src $intf->{NETWORK}/$prefix
 http_access allow mynetwork
 http_access allow localnet
 http_access allow localhost
