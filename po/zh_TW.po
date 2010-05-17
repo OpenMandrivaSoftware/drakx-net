@@ -835,19 +835,19 @@ msgid "Network profiles"
 msgstr "網路設定檔"
 
 #: ../bin/draknetprofile:66
-#, fuzzy, c-format
+#, c-format
 msgid "Module"
-msgstr "數據機"
+msgstr "模組"
 
 #: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#, c-format
 msgid "Enabled"
 msgstr "啟動"
 
 #: ../bin/draknetprofile:68
-#, fuzzy, c-format
+#, c-format
 msgid "Description"
-msgstr "加密"
+msgstr "敘述"
 
 #: ../bin/draknetprofile:84
 #, c-format
@@ -874,9 +874,9 @@ msgid "The \"%s\" profile already exists!"
 msgstr "\"%s\" 設定檔已經存在！"
 
 #: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#, c-format
 msgid "New profile created"
-msgstr "新設定檔..."
+msgstr "已建立新設定檔"
 
 #: ../bin/draknetprofile:172
 #, c-format
@@ -894,16 +894,16 @@ msgid "Warning"
 msgstr "警告"
 
 #: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "您不能刪除預設設定檔"
+msgstr "您確定要刪除預設設定檔？"
 
 #: ../bin/draknetprofile:186
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
-msgstr "您無法刪除現在的設定檔"
+msgstr "您無法刪除使用中的設定檔。請先切換到其他設定檔。"
 
 #: ../bin/draknetprofile:194 ../bin/draknfs:356
 #, c-format
@@ -921,9 +921,9 @@ msgid "This tool allows you to control network profiles."
 msgstr ""
 
 #: ../bin/draknetprofile:212
-#, fuzzy, c-format
+#, c-format
 msgid "Select a network profile:"
-msgstr "選擇您的提供者："
+msgstr "選擇一個網路設定檔："
 
 #: ../bin/draknetprofile:216
 #, c-format
@@ -1013,7 +1013,7 @@ msgid "Error Restarting/Reloading NFS server"
 msgstr "重新啟動/載入 NFS 伺服器時發生錯誤"
 
 #: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#, c-format
 msgid "Directory selection"
 msgstr "選取目錄"
 
@@ -3537,9 +3537,9 @@ msgstr "摩爾多瓦"
 #: ../lib/network/connection/providers/cellular_extra.pm:1419
 #: ../lib/network/connection/providers/cellular_extra.pm:1425
 #: ../lib/network/connection/providers/cellular_extra.pm:1431
-#, fuzzy, c-format
+#, c-format
 msgid "Montenegro"
-msgstr "塞爾維亞與蒙特內哥羅"
+msgstr "蒙特內哥羅"
 
 #: ../lib/network/connection/providers/cellular_extra.pm:1437
 #, c-format
@@ -4018,9 +4018,9 @@ msgid "Encryption key"
 msgstr "加密金鑰"
 
 #: ../lib/network/connection/wireless.pm:472
-#, fuzzy, c-format
+#, c-format
 msgid "Hide password"
-msgstr "密碼"
+msgstr "隱藏密碼"
 
 #: ../lib/network/connection/wireless.pm:474
 #, c-format
@@ -4935,9 +4935,9 @@ msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr "沒有找到支援 %s ndiswrapper 驅動程式的裝置！"
 
 #: ../lib/network/ndiswrapper.pm:36
-#, fuzzy, c-format
+#, c-format
 msgid "Please select the correct driver"
-msgstr "請選擇您的提供者："
+msgstr "請選擇正確的驅動程式"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
@@ -5436,14 +5436,11 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/netconnect.pm:776
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
-msgstr ""
-"設定時發生問題.\n"
-"以 net_monitor 或 mcc 測試您的連線狀態。若是您發現您的網路連線沒有作用，您或"
-"許需要重新進行設定。"
+msgstr "若是您發現您的網路連線沒有作用，您或許需要重新進行設定。"
 
 #: ../lib/network/netconnect.pm:778
 #, c-format
@@ -6058,35 +6055,3 @@ msgstr "NAT 模式"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "使用指定的 UDP 埠"
-
-#, fuzzy
-#~ msgid "Do you want to apply new wireless regulation settings now?"
-#~ msgstr "您要現在啟動這個連線嗎？"
-
-#, fuzzy
-#~ msgid "Connecting.."
-#~ msgstr "連線中..."
-
-#, fuzzy
-#~ msgid "Account network traffic"
-#~ msgstr "同步網路介面"
-
-#~ msgid ""
-#~ "Name of the profile to create (the new profile is created as a copy of "
-#~ "the current one):"
-#~ msgstr "要建立的設定檔名 (新的設定檔將建立為現在的設定檔之副本)："
-
-#~ msgid ""
-#~ "This tool allows to activate an existing network profile, and to manage "
-#~ "(clone, delete) profiles."
-#~ msgstr ""
-#~ "這個工具讓您可以啟用一個現存的網路設定檔，以及管理 (複製、刪除) 設定檔。"
-
-#~ msgid "To modify a profile, you have to activate it first."
-#~ msgstr "要修改設定檔之前，您必須先啟用它。"
-
-#~ msgid "Clone"
-#~ msgstr "複製"
-
-#~ msgid "Please select the Windows driver (.inf file)"
-#~ msgstr "請選取 Windows 驅動程式 (.inf 檔)"
