@@ -314,8 +314,8 @@ my @thirdparty_settings = (
             url => 'http://www.ralinktech.com/',
             test_file => "rt${_}.bin",
         },
-      },
-    } (2860, 2870, 3090),
+      };
+    } (2860, 2870, 3090)),
 
     {
         name => 'rtl8187se',
