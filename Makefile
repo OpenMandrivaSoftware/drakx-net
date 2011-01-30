@@ -42,10 +42,16 @@ install:
 	perl -pe 's/.*X-KDE.*\n//;s/\s+--force//g' $(DESTDIR)$(desktopdir)/net_applet.desktop > $(DESTDIR)$(autostartgnomedir)/net_applet.desktop
 	make -C po install
 
-dis:
+cleandist:
 	rm -rf $(NAME)-$(VERSION) ../$(NAME)-$(VERSION).tar*
+
+dis: cleandist
 	svn export -q -rBASE . $(NAME)-$(VERSION)
 	tar cfj ../$(NAME)-$(VERSION).tar.bz2 $(NAME)-$(VERSION)
+	rm -rf $(NAME)-$(VERSION)
+
+gitdist: cleandist
+	git archive --prefix $(NAME)-$(VERSION)/ HEAD | bzip2 -9 > ../$(NAME)-$(VERSION).tar.bz2
 	rm -rf $(NAME)-$(VERSION)
 
 clean:
