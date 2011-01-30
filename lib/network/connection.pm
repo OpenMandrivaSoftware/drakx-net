@@ -150,6 +150,7 @@ sub load_interface_settings {
     $self->{control}{metric} = $self->{ifcfg}{METRIC};
     $self->{control}{mtu} = $self->{ifcfg}{MTU};
     $self->{control}{accounting} = $self->{ifcfg}{ACCOUNTING};
+    $self->{control}{nm_controlled} = $self->{ifcfg}{NM_CONTROLLED};
 }
 
 #- override to return 1 if the connection network scan is slow
@@ -243,6 +244,7 @@ sub get_control_settings {
         { text => N("Allow users to manage the connection"), val => \$self->{control}{userctl}, type => "bool" },
         { text => N("Start the connection at boot"), val => \$self->{control}{onboot}, type => "bool" },
         { text => N("Enable traffic accounting"), val => \$self->{control}{accounting}, type => "bool" },
+        { text => N("Allow interface to be controlled by Network Manager"), val => \$self->{control}{nm_controlled}, type => "bool" },
         { label => N("Metric"), val => \$self->{control}{metric}, advanced => 1 },
         { label => N("MTU"), val => \$self->{control}{mtu}, advanced => 1,
           help => N("Maximum size of network message (MTU). If unsure, left blank.") },
@@ -255,6 +257,7 @@ sub build_ifcfg_settings {
         DEVICE => $self->get_interface,
         ONBOOT => bool2yesno($self->{control}{onboot}),
         ACCOUNTING => bool2yesno($self->{control}{accounting}),
+        NM_CONTROLLED => bool2yesno($self->{control}{nm_controlled}),
         USERCTL => bool2yesno($self->{control}{userctl}),
         METRIC => $self->{control}{metric},
         MTU => $self->{control}{mtu},
