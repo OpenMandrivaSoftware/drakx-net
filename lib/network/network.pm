@@ -193,6 +193,7 @@ sub write_interface_settings {
                 qw(VPN_NAME VPN_TYPE),
                 qw(ACCOUNTING),
                 qw(NM_CONTROLLED),
+                qw(UUID NAME LAST_CONNECT),
                 qw(CELLULAR_CID),
                 if_($intf->{BOOTPROTO} eq "dhcp", qw(DHCP_CLIENT DHCP_HOSTNAME NEEDHOSTNAME PEERDNS PEERYP PEERNTPD DHCP_TIMEOUT)),
                 if_($intf->{DEVICE} =~ /^ippp\d+$/, qw(DIAL_ON_IFUP))

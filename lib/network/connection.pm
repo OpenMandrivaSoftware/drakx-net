@@ -151,6 +151,9 @@ sub load_interface_settings {
     $self->{control}{mtu} = $self->{ifcfg}{MTU};
     $self->{control}{accounting} = $self->{ifcfg}{ACCOUNTING};
     $self->{control}{nm_controlled} = $self->{ifcfg}{NM_CONTROLLED};
+    $self->{control}{uuid} = $self->{ifcfg}{UUID};
+    $self->{control}{name} = $self->{ifcfg}{NAME};
+    $self->{control}{last_connect} = $self->{ifcfg}{LAST_CONNECT};
 }
 
 #- override to return 1 if the connection network scan is slow
@@ -261,6 +264,9 @@ sub build_ifcfg_settings {
         USERCTL => bool2yesno($self->{control}{userctl}),
         METRIC => $self->{control}{metric},
         MTU => $self->{control}{mtu},
+        UUID => $self->{control}{uuid},
+        NAME => $self->{control}{name},
+        LAST_CONNECT => $self->{control}{last_connect},
         VPN_TYPE => defined $self->{control}{vpn} && $self->{control}{vpn}->get_type,
         VPN_NAME => defined $self->{control}{vpn} && $self->{control}{vpn}->get_name,
         #- FIXME: add MS_DNSx variables if DNS servers are specified
