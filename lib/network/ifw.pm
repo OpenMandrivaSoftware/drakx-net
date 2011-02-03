@@ -9,7 +9,7 @@ sub init {
     my ($bus, $filter) = @_;
     my $con = $bus->{connection};
     $con->add_filter($filter);
-    $con->add_match("type='signal',interface='com.mandriva.monitoring.ifw'");
+    $con->add_match("type='signal',interface='org.mageia.monitoring.ifw'");
 }
 
 sub new {
@@ -17,9 +17,9 @@ sub new {
     require dbus_object;
     my $o = dbus_object::new($type,
 			     $bus,
-			     "com.mandriva.monitoring",
-			     "/com/mandriva/monitoring/ifw",
-			     "com.mandriva.monitoring.ifw");
+			     "org.mageia.monitoring",
+			     "/org/mageia/monitoring/ifw",
+			     "org.mageia.monitoring.ifw");
     $o;
 }
 

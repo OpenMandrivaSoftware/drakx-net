@@ -5,9 +5,9 @@ use dbus_object;
 
 our @ISA = qw(dbus_object);
 
-my $monitor_service = "com.mandriva.monitoring";
-my $monitor_path = "/com/mandriva/monitoring/wireless";
-my $monitor_interface = "com.mandriva.monitoring.wireless";
+my $monitor_service = "org.mageia.monitoring";
+my $monitor_path = "/org/mageia/monitoring/wireless";
+my $monitor_interface = "org.mageia.monitoring.wireless";
 
 sub new {
     my ($type, $bus) = @_;

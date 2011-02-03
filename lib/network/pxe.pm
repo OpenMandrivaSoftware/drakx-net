@@ -110,7 +110,7 @@ sub write_default_pxe_messages {
   my $hostname = $net->{hostname} || chomp_(`hostname`);
   output($pxelinux_message_file, <<EOF);
 
-                   Welcome to Mandriva Linux PXE Server
+                   Welcome to Mageia Linux PXE Server
                                                        Pxelinux
               .              .-----------------------------------.
              /|\\            /    Press F1 for available images    \\

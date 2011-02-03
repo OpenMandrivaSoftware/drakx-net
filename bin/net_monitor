@@ -255,7 +255,7 @@ sub connection() {
                         N("Disconnection from Internet complete.")) :
                     ($isconnected ?
                         N("Connection complete.") :
-                        N("Connection failed.\nVerify your configuration in the Mandriva Linux Control Center."))
+                        N("Connection failed.\nVerify your configuration in the Mageia Linux Control Center."))
                 );
                 # remove the connection time timer if connection is down or failed
                 $isconnected or Glib::Source->remove($ct_tag);

@@ -458,7 +458,7 @@ sub setup_dbus_handlers {
     $dbus->{connection}->add_filter(
         sub {
             my ($_con, $msg) = @_;
-            if ($msg->get_interface eq 'com.mandriva.network') {
+            if ($msg->get_interface eq 'org.mageia.network') {
                 my $member = $msg->get_member;
                 my $message = _get_network_event_message($connections, $member, $msg->get_args_list);
                 $on_network_event->($message) if $on_network_event && $message;
@@ -483,7 +483,7 @@ sub setup_dbus_handlers {
                     }
                 }
             }
-            if ($msg->get_interface eq 'com.mandriva.monitoring.wireless' && $msg->get_member eq 'Event') {
+            if ($msg->get_interface eq 'org.mageia.monitoring.wireless' && $msg->get_member eq 'Event') {
                 my ($event, $interface) = $msg->get_args_list;
                 print "got wireless event: $event $interface\n";
                 # eugeni: wpa_supplicant seems to issue 'Authentication..timed out messages' even if they
@@ -498,8 +498,8 @@ sub setup_dbus_handlers {
 #                }
             }
         });
-    $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
-    $dbus->{connection}->add_match("type='signal',interface='com.mandriva.monitoring.wireless'");
+    $dbus->{connection}->add_match("type='signal',interface='org.mageia.network'");
+    $dbus->{connection}->add_match("type='signal',interface='org.mageia.monitoring.wireless'");
     dbus_object::set_gtk2_watch_helper($dbus);
 }
 

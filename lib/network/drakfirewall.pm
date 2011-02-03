@@ -1,4 +1,4 @@
-package network::drakfirewall; # $Id$
+package network::drakfirewall; # $Id: drakfirewall.pm 268043 2010-04-30 13:29:37Z blino $
 
 use strict;
 use diagnostics;
@@ -223,9 +223,7 @@ sub get_conf {
     } else {
 	$in->ask_okcancel(N("Firewall configuration"), N("drakfirewall configurator
 
-This configures a personal firewall for this Mandriva Linux machine.
-For a powerful and dedicated firewall solution, please look to the
-specialized Mandriva Security Firewall distribution."), 1) or return;
+This configures a personal firewall for this Mageia machine."), 1) or return;
 
 	$in->ask_okcancel(N("Firewall configuration"), N("drakfirewall configurator
 

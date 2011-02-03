@@ -102,7 +102,7 @@ sub get_state_message {
           N("Network is down on interface %s.", get_interface_name($interface))
         : $current_state eq 'unconfigured' ?
           N("You do not have any configured Internet connection.
-Run the \"%s\" assistant from the Mandriva Linux Control Center", N("Set up a new network interface (LAN, ISDN, ADSL, ...)"))
+Run the \"%s\" assistant from the Mageia Linux Control Center", N("Set up a new network interface (LAN, ISDN, ADSL, ...)"))
         :
          N("Connecting...")
     );
@@ -235,7 +235,7 @@ if ($dbus) {
 if ($dbus) {
     $dbus->{connection}->add_filter(sub {
         my ($_con, $msg) = @_;
-            if ($msg->get_interface eq 'com.mandriva.network' && $msg->get_member eq 'status') {
+            if ($msg->get_interface eq 'org.mageia.network' && $msg->get_member eq 'status') {
                 my ($status, $interface) = $msg->get_args_list;
                 print "got connection status event: $status $interface\n";
                 if ($status eq "add") {
@@ -243,7 +243,7 @@ if ($dbus) {
                 }
             }
     });
-    $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
+    $dbus->{connection}->add_match("type='signal',interface='org.mageia.network'");
     dbus_object::set_gtk2_watch_helper($dbus);
 }
 

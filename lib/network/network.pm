@@ -1,4 +1,4 @@
-package network::network; # $Id$wir
+package network::network; # $Id: network.pm 268044 2010-04-30 13:31:34Z blino $wir
 
 #-######################################################################################
 #- misc imports

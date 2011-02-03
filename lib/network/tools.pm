@@ -1,4 +1,4 @@
-package network::tools; # $Id$
+package network::tools; # $Id: tools.pm 253976 2009-03-13 10:57:55Z eugeni $
 
 use strict;
 use common;
@@ -47,7 +47,7 @@ sub stop_net_interface {
     stop_interface($net->{net_interface}, $detach);
 }
 
-sub connected() { gethostbyname("www.mandriva.com") ? 1 : 0 }
+sub connected() { gethostbyname("www.mageia.org") ? 1 : 0 }
 
 # request a ref on a bg_connect and a ref on a scalar
 sub connected_bg__raw {
@@ -111,7 +111,7 @@ sub check_link_beat() {
                         } else {
                             $p = Net::Ping->new("icmp");
                         }
-                        print $p->ping("www.mandriva.com") ? 1 : 0;
+                        print $p->ping("www.mageia.org") ? 1 : 0;
                     });
 }
 

@@ -1,4 +1,4 @@
-package network::adsl; # $Id$
+package network::adsl; # $Id: adsl.pm 219797 2007-05-25 15:39:46Z blino $
 
 use common;
 use run_program;
