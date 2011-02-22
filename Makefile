@@ -6,9 +6,7 @@ libdir=/usr/lib
 bindir=/usr/bin
 sbindir=/usr/sbin
 desktopdir=/usr/share/applications
-autostartdir=/usr/share/autostart
-autostartgnomedir=/usr/share/gnome/autostart
-xinitdir=/etc/X11/xinit.d
+autostartdir=/etc/xdg/autostart
 iconsdir=/usr/lib/libDrakX/icons
 pixmapsdir=/usr/share/libDrakX/pixmaps
 pamdir=/etc/pam.d
@@ -27,19 +25,17 @@ check:
 	@for p in bin/*; do perl -cw $$p || exit 1; done
 
 install:
-	install -d $(DESTDIR){$(libdir),$(bindir),$(sbindir),$(desktopdir),$(autostartdir),$(autostartgnomedir),$(xinitdir),$(iconsdir),$(pixmapsdir),$(pamdir),$(consoleappsdir)}
+	install -d $(DESTDIR){$(libdir),$(bindir),$(sbindir),$(desktopdir),$(autostartdir),$(iconsdir),$(pixmapsdir),$(pamdir),$(consoleappsdir)}
 	cp -a lib/* $(DESTDIR)$(libdir)/libDrakX/
 	find $(DESTDIR) -name .perl_checker -exec rm {} \;
 	(cd bin; \
 	  install -m755 $(BIN_TOOLS) $(DESTDIR)$(bindir); \
 	  install -m755 $(SBIN_TOOLS) $(DESTDIR)$(sbindir); \
 	)
-	install -m755 scripts/net_applet.xinit $(DESTDIR)$(xinitdir)/70net_applet
 	install -m644 $(wildcard data/*.desktop) $(DESTDIR)$(desktopdir)
 	install -m644 $(wildcard data/icons/*.png) $(DESTDIR)$(iconsdir)
 	install -m644 $(wildcard data/pixmaps/*.png) $(DESTDIR)$(pixmapsdir)
 	perl -pe 's/\s+--force//g' $(DESTDIR)$(desktopdir)/net_applet.desktop > $(DESTDIR)$(autostartdir)/net_applet.desktop
-	perl -pe 's/.*X-KDE.*\n//;s/\s+--force//g' $(DESTDIR)$(desktopdir)/net_applet.desktop > $(DESTDIR)$(autostartgnomedir)/net_applet.desktop
 	make -C po install
 
 cleandist:
