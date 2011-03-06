@@ -241,6 +241,8 @@ sub stop_connection {
 
 sub monitor_connection {
     my ($cmanager) = @_;
+    # We need to check if net_monitor is installed or not.
+    $in->do_pkgs->ensure_is_installed('net_monitor', '/usr/bin/net_monitor') or return 1;
     my $interface  = $cmanager->{connection} && $cmanager->{connection}->get_interface or return;
     run_program::raw({ detach => 1 }, '/usr/bin/net_monitor', '--defaultintf', $interface);
 }
