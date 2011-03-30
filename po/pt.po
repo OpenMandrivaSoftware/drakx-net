@@ -26,6 +26,7 @@ msgstr ""
 "PO-Revision-Date: 2010-08-14 23:54+0100\n"
 "Last-Translator: Zé <mmodem00@gmal.com>\n"
 "Language-Team: Portuguese <kde-i18n-doc@kde.org>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -236,11 +237,10 @@ msgstr ""
 "deste computador.\n"
 "\n"
 "Certifique-se que já configurou o seu acesso da Rede/Internet usando o "
-"drakconnect "
-"antes de continuar.\n"
+"drakconnect antes de continuar.\n"
 "\n"
-"Nota: precisa de um Adaptador de Rede dedicado para definir uma Rede de "
-"Área Local (LAN). Antes de prosseguir desactive a 'Firewall' Mageia para o "
+"Nota: precisa de um Adaptador de Rede dedicado para definir uma Rede de Área "
+"Local (LAN). Antes de prosseguir desactive a 'Firewall' Mageia para o "
 "adaptador de rede conectado à sua rede LAN."
 
 #: ../bin/drakgw:91
@@ -310,8 +310,8 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
-"Existe apenas um adaptador de rede configurado no seu sistema "
-"para conexões LAN:\n"
+"Existe apenas um adaptador de rede configurado no seu sistema para conexões "
+"LAN:\n"
 "\n"
 "%s\n"
 "\n"
@@ -387,8 +387,8 @@ msgstr "Erro"
 #, c-format
 msgid "Potential LAN address conflict found in current config of %s!\n"
 msgstr ""
-"Potencial conflito de endereços LAN encontrado na actual "
-"configuração de %s!\n"
+"Potencial conflito de endereços LAN encontrado na actual configuração de "
+"%s!\n"
 
 #: ../bin/drakgw:204
 #, c-format
@@ -415,8 +415,8 @@ msgid ""
 msgstr ""
 "Configuração do Servidor DHCP.\n"
 "\n"
-"Aqui pode escolher as diferentes opções para a configuração do servidor DHCP."
-"\n"
+"Aqui pode escolher as diferentes opções para a configuração do servidor "
+"DHCP.\n"
 "Se desconhecer o significado de uma opção, simplesmente deixe-a como está."
 
 #: ../bin/drakgw:243
@@ -486,15 +486,15 @@ msgid ""
 "system.\n"
 "\n"
 "Please run the hardware configuration tool to configure it, and ensure that "
-"the Mageia firewall is not enabled for network adapter connected to your "
-"LAN network."
+"the Mageia firewall is not enabled for network adapter connected to your LAN "
+"network."
 msgstr ""
-"Nenhum adaptador de rede ethernet configurado para uma LAN detectado no "
-"seu sistema.\n"
+"Nenhum adaptador de rede ethernet configurado para uma LAN detectado no seu "
+"sistema.\n"
 "\n"
-"Por favor execute a ferramenta de configuração de material para configurar "
-"o adaptador de rede, e certifique-se que a 'firewall' Mageia não está "
-"activada para o adaptador de rede ligado à sua rede LAN."
+"Por favor execute a ferramenta de configuração de material para configurar o "
+"adaptador de rede, e certifique-se que a 'firewall' Mageia não está activada "
+"para o adaptador de rede ligado à sua rede LAN."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -535,8 +535,8 @@ msgid ""
 "Warning! An existing firewalling configuration has been detected. You may "
 "need some manual fixes after installation."
 msgstr ""
-"Aviso! Foi detectada uma configuração 'firewall' existente. Pode precisar "
-"de algumas correcções manuais após a instalação."
+"Aviso! Foi detectada uma configuração 'firewall' existente. Pode precisar de "
+"algumas correcções manuais após a instalação."
 
 #: ../bin/drakgw:371
 #, c-format
@@ -816,8 +816,8 @@ msgid ""
 "This tool allows to set up network interfaces failover and firewall "
 "replication."
 msgstr ""
-"Esta ferramenta permite-lhe configurar interfaces de rede com "
-"tolerância de falhas (failover) e replicação da 'firewall'."
+"Esta ferramenta permite-lhe configurar interfaces de rede com tolerância de "
+"falhas (failover) e replicação da 'firewall'."
 
 #: ../bin/drakinvictus:102
 #, c-format
@@ -905,8 +905,8 @@ msgid ""
 msgstr ""
 "Por favor indique o nome do novo perfil de rede a ser criado (p.ex. "
 "trabalho, casa, 'roaming',...). Este novo perfil será criado baseado nas "
-"definições actuais, e poderá definir a configuração do seu sistema "
-"como normalmente faz."
+"definições actuais, e poderá definir a configuração do seu sistema como "
+"normalmente faz."
 
 #: ../bin/draknetprofile:166
 #, c-format
@@ -1143,9 +1143,9 @@ msgstr ""
 "<span weight=\"bold\">Opções ID do utilizador</span>\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">mapeia o utilizador root como anónimo:</span>"
-" "
-"pedidos de mapeamento do uid/gid 0 para o uid/gid anónimo (root_squash).\n"
+"<span foreground=\"royalblue3\">mapeia o utilizador root como anónimo:</"
+"span> pedidos de mapeamento do uid/gid 0 para o uid/gid anónimo "
+"(root_squash).\n"
 "\n"
 "\n"
 "<span foreground=\"royalblue3\">permite o acesso root remoto real:</span> "
@@ -1156,15 +1156,12 @@ msgstr ""
 "<span foreground=\"royalblue3\">mapeia todos os utilizadores para utilizador "
 "anónimo:</span> mapear todos os uids e gids para o utilizador anónimo "
 "(all_squash).É útil para directórios FTP públicos exportados por NFS, "
-"directórios "
-"de notícias em fila, etc. A opção oposta é não ter mapeamento de UID do "
-"utilizador "
-"(no_all_squash), que é a opção predefinida.\n"
+"directórios de notícias em fila, etc. A opção oposta é não ter mapeamento de "
+"UID do utilizador (no_all_squash), que é a opção predefinida.\n"
 "\n"
 "\n"
 "<span foreground=\"royalblue3\">anonuid e anongid:</span> define "
-"explicitamente "
-"o uid e o gid da conta anónima.\n"
+"explicitamente o uid e o gid da conta anónima.\n"
 
 #: ../bin/draknfs:177
 #, c-format
@@ -1212,10 +1209,8 @@ msgid ""
 msgstr ""
 "<span foreground=\"royalblue3\">%s</span> permite pedidos de apenas-leitura "
 "ou de leitura e escrita neste volume NFS. Por predefinição não permite "
-"qualquer "
-"pedido que mude o sistema de ficheiros. Isto pode também ser feito "
-"explicitamente "
-"ao usar esta opção."
+"qualquer pedido que mude o sistema de ficheiros. Isto pode também ser feito "
+"explicitamente ao usar esta opção."
 
 #: ../bin/draknfs:185
 #, c-format
@@ -1236,8 +1231,8 @@ msgid ""
 "exports(5) man page for more details."
 msgstr ""
 "<span foreground=\"royalblue3\">%s</span> activar a verificação de árvores "
-"secundárias pode melhorar a segurança em alguns casos, mas pode diminuir "
-"a confiança. Veja a página do manual exports(5) para mais detalhes."
+"secundárias pode melhorar a segurança em alguns casos, mas pode diminuir a "
+"confiança. Veja a página do manual exports(5) para mais detalhes."
 
 #: ../bin/draknfs:191 ../bin/draksambashare:623 ../bin/draksambashare:789
 #, c-format
@@ -1651,8 +1646,8 @@ msgid ""
 "Share with the same name already exist or share name empty, please choose "
 "another name."
 msgstr ""
-"Partilha com o mesmo nome já existente ou nome de partilha vazio, por "
-"favor escolha outro nome."
+"Partilha com o mesmo nome já existente ou nome de partilha vazio, por favor "
+"escolha outro nome."
 
 #: ../bin/draksambashare:400
 #, c-format
@@ -1886,8 +1881,8 @@ msgid ""
 "Samba allows your server to behave as a file and print server for "
 "workstations running non-Linux systems."
 msgstr ""
-"O samba permite ao seu servidor comportar-se como um ficheiro e "
-"mostrar o servidor em ambientes de trabalho a correrem sistemas não-Linux."
+"O samba permite ao seu servidor comportar-se como um ficheiro e mostrar o "
+"servidor em ambientes de trabalho a correrem sistemas não-Linux."
 
 #: ../bin/draksambashare:1072
 #, c-format
@@ -2013,8 +2008,8 @@ msgid ""
 msgstr ""
 "Nível do domínio: fornece um mecanismo para armazenar todos os utilizadores "
 "e agrupar contas num repositório de contas central, partilhado. O "
-"repositório de "
-"contas central é partilhado entre os controladores de domínio (segurança)."
+"repositório de contas central é partilhado entre os controladores de domínio "
+"(segurança)."
 
 #: ../bin/draksambashare:1132
 #, c-format
@@ -2504,8 +2499,8 @@ msgid ""
 "Warning, another internet connection has been detected, maybe using your "
 "network"
 msgstr ""
-"Atenção, foi detectada outra conexão Internet, que talvez esteja a usar "
-"a sua rede"
+"Atenção, foi detectada outra conexão Internet, que talvez esteja a usar a "
+"sua rede"
 
 #: ../bin/net_monitor:516
 #, c-format
@@ -2676,8 +2671,8 @@ msgid ""
 "Entering the wrong PIN code multiple times may lock your SIM card!"
 msgstr ""
 "Indicou um número PIN incorrecto.\n"
-"Ao indicar várias vezes um número PIN incorrecto pode bloquear "
-"o seu cartão SIM!"
+"Ao indicar várias vezes um número PIN incorrecto pode bloquear o seu cartão "
+"SIM!"
 
 #: ../lib/network/connection/dvb.pm:9
 #, c-format
@@ -2723,8 +2718,8 @@ msgstr "Interface virtual"
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
 msgstr ""
-"Incapaz de encontrar o interface de rede para o dispositivo seleccionado "
-"(a usar o controlador %s)."
+"Incapaz de encontrar o interface de rede para o dispositivo seleccionado (a "
+"usar o controlador %s)."
 
 #: ../lib/network/connection/ethernet.pm:70 ../lib/network/vpn/openvpn.pm:207
 #, c-format
@@ -2832,10 +2827,10 @@ msgid ""
 "address with this connection, first disable all other devices which use it, "
 "or configure them not to start at boot"
 msgstr ""
-"%s já está a ser usado por uma conexão que é iniciada no arranque (%s). "
-"Para usar este endereço com esta conexão, primeiro desactive todos "
-"os outros dispositivos que a usam, ou configure-os para não serem "
-"iniciados no arranque."
+"%s já está a ser usado por uma conexão que é iniciada no arranque (%s). Para "
+"usar este endereço com esta conexão, primeiro desactive todos os outros "
+"dispositivos que a usam, ou configure-os para não serem iniciados no "
+"arranque."
 
 #: ../lib/network/connection/ethernet.pm:219
 #, c-format
@@ -2850,9 +2845,8 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
-"Isto irá permitir ao servidor atribuir um nome a esta máquina. Se o "
-"servidor não fornecer um nome de endereço válido, será gerado um "
-"automaticamente."
+"Isto irá permitir ao servidor atribuir um nome a esta máquina. Se o servidor "
+"não fornecer um nome de endereço válido, será gerado um automaticamente."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2861,9 +2855,9 @@ msgid ""
 "Note that this hostname will be shared among all network connections.  If "
 "left blank, 'localhost.localdomain' will be used."
 msgstr ""
-"Deve definir um nome de endereço para esta máquina, irá identificar este "
-"PC. Note que este nome de endereço será partilhado por todas as outras "
-"conexões da rede. Se deixar em branco, será usado 'localhost.localdomain'."
+"Deve definir um nome de endereço para esta máquina, irá identificar este PC. "
+"Note que este nome de endereço será partilhado por todas as outras conexões "
+"da rede. Se deixar em branco, será usado 'localhost.localdomain'."
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -4125,8 +4119,8 @@ msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
 "switch) first."
 msgstr ""
-"A sua placa de rede sem-fio está desactivada, por favor active primeiro "
-"o comutador sem-fio (RF kill switch)."
+"A sua placa de rede sem-fio está desactivada, por favor active primeiro o "
+"comutador sem-fio (RF kill switch)."
 
 #: ../lib/network/connection/wireless.pm:456
 #, c-format
@@ -5213,8 +5207,8 @@ msgid ""
 "supported."
 msgstr ""
 "Por favor seleccione o ficheiro (.inf) de descrição do controlador Windows, "
-"ou o ficheiro do controlador correspondente (ficheiros .dll ou .o). Note "
-"que apenas são controlados os controladores até à versão do Windows XP."
+"ou o ficheiro do controlador correspondente (ficheiros .dll ou .o). Note que "
+"apenas são controlados os controladores até à versão do Windows XP."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -5682,8 +5676,8 @@ msgid ""
 "This can be caused by invalid network configuration, or problems with your "
 "modem or router."
 msgstr ""
-"Isto pode ser causado por uma configuração de rede inválida, ou "
-"problemas com o seu modem ou roteador."
+"Isto pode ser causado por uma configuração de rede inválida, ou problemas "
+"com o seu modem ou roteador."
 
 #: ../lib/network/netconnect.pm:772
 #, c-format
@@ -5691,8 +5685,8 @@ msgid ""
 "You might want to relaunch the configuration to verify the connection "
 "settings."
 msgstr ""
-"Pode querer lançar novamente a configuração para verificar as "
-"definições da conexão."
+"Pode querer lançar novamente a configuração para verificar as definições da "
+"conexão."
 
 #: ../lib/network/netconnect.pm:775
 #, c-format
@@ -5705,8 +5699,8 @@ msgid ""
 "However, the Internet connectivity test failed. You should test your "
 "connection manually, and verify your Internet modem or router."
 msgstr ""
-"No entanto, o test de conectividade da Internet falhou. Deve testar "
-"a sua conexão manualmente, e verificar o seu modem ou roteador."
+"No entanto, o test de conectividade da Internet falhou. Deve testar a sua "
+"conexão manualmente, e verificar o seu modem ou roteador."
 
 #: ../lib/network/netconnect.pm:776
 #, c-format
@@ -5714,8 +5708,7 @@ msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
 msgstr ""
-"Se a sua conexão não funcionar, pode querer lançar novamente "
-"a configuração."
+"Se a sua conexão não funcionar, pode querer lançar novamente a configuração."
 
 #: ../lib/network/netconnect.pm:778
 #, c-format
@@ -6080,8 +6073,8 @@ msgstr ""
 "Todos os interfaces ligados directamente à Internet devem ser detectados,\n"
 "enquanto os interfaces ligados a uma rede local podem ser de-seleccionados.\n"
 "\n"
-"Se pretende usar a partilha da Conexão Internet Mageia, "
-"desmarque os interfaces que irão estar ligados à rede local.\n"
+"Se pretende usar a partilha da Conexão Internet Mageia, desmarque os "
+"interfaces que irão estar ligados à rede local.\n"
 "\n"
 "Que interfaces devem ser protegidos?\n"
 
