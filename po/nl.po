@@ -1,6 +1,6 @@
-# translation of network-tools to Nederlands
-# Copyright (C) 2000, 2005, 2006, 2008 Free Software Foundation, Inc.
-# Copyright (c) 2000 Mageia
+# Translation of drakx-net to Nederlands
+# Copyright (C) 2000 Mandriva
+# Copyright (C) 2011 Mageia
 #
 # Niels Gras <niels.gras@wanadoo.nl>, 2000.
 # Jeroen ten Berge <j.ten.berge@twinbit.nl>, 2002.
@@ -10,18 +10,20 @@
 # Arno Fleming, 2006.
 # C. Verschuuren <c.verschuuren AT gmail DOT com>, 2008, 2009.
 # aapgorilla <godutchnow@gmail.com>, 2009
+# Remco Rijnders <remco@webconquest.com>, 2011
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: network-tools\n"
+"Project-Id-Version: drakx-net\n"
 "POT-Creation-Date: 2009-10-20 08:41-0200\n"
-"PO-Revision-Date: 2009-04-07 00:19+0200\n"
-"Last-Translator: Reinout van Schouwen <reinout@gmail.com>\n"
-"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
-"Language: nl\n"
+"PO-Revision-Date: 2011-04-30 13:01+0000\n"
+"Last-Translator: Remco Rijnders <remco@webconquest.com>\n"
+"Language-Team: Dutch <i18n-nl@ml.mageia.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../bin/drakconnect-old:45
 #, c-format
@@ -104,10 +106,10 @@ msgstr "Ok"
 #: ../lib/network/connection_manager.pm:206
 #: ../lib/network/connection_manager.pm:235
 #: ../lib/network/connection_manager.pm:351 ../lib/network/drakvpn.pm:49
-#: ../lib/network/netcenter.pm:150 ../lib/network/netconnect.pm:186
-#: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
-#: ../lib/network/netconnect.pm:733 ../lib/network/thirdparty.pm:354
-#: ../lib/network/thirdparty.pm:369
+#: ../lib/network/netcenter.pm:150 ../lib/network/netcenter.pm:150
+#: ../lib/network/netconnect.pm:186 ../lib/network/netconnect.pm:208
+#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:733
+#: ../lib/network/thirdparty.pm:354 ../lib/network/thirdparty.pm:369
 #, c-format
 msgid "Please wait"
 msgstr "Even geduld"
@@ -211,26 +213,18 @@ msgstr "Internetverbinding delen"
 #, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
-"With that feature, other computers on your local network will be able to use "
-"this computer's Internet connection.\n"
+"With that feature, other computers on your local network will be able to use this computer's Internet connection.\n"
 "\n"
-"Make sure you have configured your Network/Internet access using drakconnect "
-"before going any further.\n"
+"Make sure you have configured your Network/Internet access using drakconnect before going any further.\n"
 "\n"
-"Note: you need a dedicated Network Adapter to set up a Local Area Network "
-"(LAN). Please disable Mageia Firewall for the network adapter connected to "
-"your LAN connection before proceeding."
+"Note: you need a dedicated Network Adapter to set up a Local Area Network (LAN). Please disable Mageia Firewall for the network adapter connected to your LAN connection before proceeding."
 msgstr ""
 "U staat op het punt om de internetverbinding van de computer te delen.\n"
-" Via deze functie zullen andere computers op uw netwerk in staat zijn de "
-"internetverbinding van deze computer te gebruiken.\n"
+" Via deze functie zullen andere computers op uw netwerk in staat zijn de internetverbinding van deze computer te gebruiken.\n"
 "\n"
-"Wees er zeker van dat uw netwerk-/internetverbinding is geconfigureerd via "
-"drakconnect voordat u verder gaat.\n"
+"Wees er zeker van dat uw netwerk-/internetverbinding is geconfigureerd via drakconnect voordat u verder gaat.\n"
 "\n"
-"Opmerking: u heeft een specifiek hiervoor bestemde netwerkadapter nodig om "
-"een Local Area Network (LAN) op te zetten. Zet voordat u verder gaat eerst "
-"de Mageia Firewall uit voor de netwerkadapter verbonden met het LAN."
+"Opmerking: u heeft een specifiek hiervoor bestemde netwerkadapter nodig om een Local Area Network (LAN) op te zetten. Zet voordat u verder gaat eerst de Mageia Firewall uit voor de netwerkadapter verbonden met het LAN."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -276,9 +270,7 @@ msgstr "Herconfigureren"
 #: ../bin/drakgw:122
 #, c-format
 msgid "Please select the network interface directly connected to the internet."
-msgstr ""
-"Kies alstublieft de netwerkinterface die rechtstreeks is verbonden met het "
-"internet."
+msgstr "Kies alstublieft de netwerkinterface die rechtstreeks is verbonden met het internet."
 
 #: ../bin/drakgw:123 ../lib/network/netconnect.pm:379
 #: ../lib/network/netconnect.pm:414
@@ -289,8 +281,7 @@ msgstr "Netwerkapparaat"
 #: ../bin/drakgw:141
 #, c-format
 msgid ""
-"There is only one network adapter on your system configured for LAN "
-"connections:\n"
+"There is only one network adapter on your system configured for LAN connections:\n"
 "\n"
 "%s\n"
 "\n"
@@ -300,13 +291,11 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
-"Slechts een netwerkadapter is op het systeem geconfigureerd voor LAN-"
-"verbindingen:\n"
+"Slechts een netwerkadapter is op het systeem geconfigureerd voor LAN-verbindingen:\n"
 "\n"
 "%s\n"
 "\n"
-"Ik sta op het punt om het Local Area Network te configureren met deze "
-"adapter.\n"
+"Ik sta op het punt om het Local Area Network te configureren met deze adapter.\n"
 "\n"
 "Als u nog een andere adapter verbonden heeft met het Local Area Network,\n"
 "schakel dan de firewall voor deze adapter uit via drakfirewall voor het\n"
@@ -314,12 +303,8 @@ msgstr ""
 
 #: ../bin/drakgw:156
 #, c-format
-msgid ""
-"Please choose what network adapter will be connected to your Local Area "
-"Network."
-msgstr ""
-"Kies alstublieft welke netwerkadapter verbinding zal maken met uw Local Area "
-"Network."
+msgid "Please choose what network adapter will be connected to your Local Area Network."
+msgstr "Kies alstublieft welke netwerkadapter verbinding zal maken met uw Local Area Network."
 
 #: ../bin/drakgw:177
 #, c-format
@@ -376,7 +361,9 @@ msgstr "Fout"
 
 #: ../bin/drakgw:188
 #, c-format
-msgid "Potential LAN address conflict found in current config of %s!\n"
+msgid ""
+"Potential LAN address conflict found in current config of %s!\n"
+""
 msgstr ""
 "Potentieel LAN-adresconflict gevonden in de huidige configuratie \n"
 "van %s!\n"
@@ -472,19 +459,13 @@ msgstr "Printer informatie uitzenden"
 #: ../bin/drakgw:308
 #, c-format
 msgid ""
-"No ethernet network adapter configured for LAN has been detected on your "
-"system.\n"
+"No ethernet network adapter configured for LAN has been detected on your system.\n"
 "\n"
-"Please run the hardware configuration tool to configure it, and ensure that "
-"the Mageia firewall is not enabled for network adapter connected to your LAN "
-"network."
+"Please run the hardware configuration tool to configure it, and ensure that the Mageia firewall is not enabled for network adapter connected to your LAN network."
 msgstr ""
-"Geen voor LAN geconfigureerde ethernet-netwerkadapter is gevonden op uw "
-"systeem.\n"
+"Geen voor LAN geconfigureerde ethernet-netwerkadapter is gevonden op uw systeem.\n"
 "\n"
-"Start het apparatuurconfiguratieprogramma om het te configureren en wees er "
-"zeker van dat de Mageia firewall niet is ingeschakeld voor de netwerk-"
-"adapter verbonden met het LAN-netwerk."
+"Start het apparatuurconfiguratieprogramma om het te configureren en wees er zeker van dat de Mageia firewall niet is ingeschakeld voor de netwerk-adapter verbonden met het LAN-netwerk."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -500,13 +481,11 @@ msgstr "Internetverbinding delen staat op dit moment uit."
 #, c-format
 msgid ""
 "Everything has been configured.\n"
-"You may now share Internet connection with other computers on your Local "
-"Area Network, using automatic network configuration (DHCP) and\n"
+"You may now share Internet connection with other computers on your Local Area Network, using automatic network configuration (DHCP) and\n"
 " a Transparent Proxy Cache server (SQUID)."
 msgstr ""
 "Alles is geconfigureerd. \n"
-"U kunt nu uw internetverbinding delen met andere computers op uw Local Area "
-"Network, met gebruikmaking van automatische netwerkconfiguratie (DHCP) en\n"
+"U kunt nu uw internetverbinding delen met andere computers op uw Local Area Network, met gebruikmaking van automatische netwerkconfiguratie (DHCP) en\n"
 "een Transparent Proxy Cache-server (SQUID)."
 
 #: ../bin/drakgw:351
@@ -521,12 +500,8 @@ msgstr "Firewallconfiguratie gevonden!"
 
 #: ../bin/drakgw:366
 #, c-format
-msgid ""
-"Warning! An existing firewalling configuration has been detected. You may "
-"need some manual fixes after installation."
-msgstr ""
-"Waarschuwing! Een bestaande firewall configuratie is gevonden. U kunt "
-"misschien na de installatie een handmatige aanpassing nodig hebben."
+msgid "Warning! An existing firewalling configuration has been detected. You may need some manual fixes after installation."
+msgstr "Waarschuwing! Een bestaande firewall configuratie is gevonden. U kunt misschien na de installatie een handmatige aanpassing nodig hebben."
 
 #: ../bin/drakgw:371
 #, c-format
@@ -802,12 +777,8 @@ msgstr "Wachtwoord vereist."
 
 #: ../bin/drakinvictus:100
 #, c-format
-msgid ""
-"This tool allows to set up network interfaces failover and firewall "
-"replication."
-msgstr ""
-"Dit hulpprogramma laat u de terugval-netwerkinterface en firewall-replicatie "
-"instellen."
+msgid "This tool allows to set up network interfaces failover and firewall replication."
+msgstr "Dit hulpprogramma laat u de terugval-netwerkinterface en firewall-replicatie instellen."
 
 #: ../bin/drakinvictus:102
 #, c-format
@@ -861,14 +832,14 @@ msgid "Network profiles"
 msgstr "Netwerkprofielen"
 
 #: ../bin/draknetprofile:66
-#, fuzzy, c-format
+#, c-format
 msgid "Module"
-msgstr "Modus"
+msgstr "Module"
 
 #: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#, c-format
 msgid "Enabled"
-msgstr "Inschakelen"
+msgstr "Ingeschakeld"
 
 #: ../bin/draknetprofile:68
 #, c-format
@@ -887,12 +858,8 @@ msgstr "Nieuw profiel..."
 
 #: ../bin/draknetprofile:155
 #, c-format
-msgid ""
-"Please specify the name of the new network profile to be created (e.g., "
-"work, home, roaming, ..). This new profile will be created based on current "
-"settings, and you'll be able to configure your system configuration as usual "
-"afterwards."
-msgstr ""
+msgid "Please specify the name of the new network profile to be created (e.g., work, home, roaming, ..). This new profile will be created based on current settings, and you'll be able to configure your system configuration as usual afterwards."
+msgstr "Geeft u alstublieft de naam voor het nieuw aan te maken netwerkprofiel (bijv: werk, thuis, roaming, ...). Dit nieuwe profiel zal gebaseerd zijn op de huidige instellingen en kan naderhand op de gebruikelijke manier aangepast worden."
 
 #: ../bin/draknetprofile:166
 #, c-format
@@ -900,17 +867,14 @@ msgid "The \"%s\" profile already exists!"
 msgstr "Het profiel \"%s\" bestaat al!"
 
 #: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#, c-format
 msgid "New profile created"
-msgstr "Nieuw profiel..."
+msgstr "Nieuw profiel is aangemaakt"
 
 #: ../bin/draknetprofile:172
 #, c-format
-msgid ""
-"You are now using network profile %s. You can configure your system as "
-"usual, and all your network settings from now on will be saved into this "
-"profile."
-msgstr ""
+msgid "You are now using network profile %s. You can configure your system as usual, and all your network settings from now on will be saved into this profile."
+msgstr "U gebruikt nu netwerkprofiel %s. U kunt uw systeem op de gebruikelijke manier instellen; Alle netwerkinstellingen worden vanaf dit moment in dit profiel opgeslagen."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -920,16 +884,14 @@ msgid "Warning"
 msgstr "Waarschuwing"
 
 #: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "U kunt het standaardprofiel niet verwijderen"
+msgstr "Weet u zeker dat u het standaardprofiel wilt verwijderen?"
 
 #: ../bin/draknetprofile:186
-#, fuzzy, c-format
-msgid ""
-"You can not delete the current profile. Please switch to a different profile "
-"first."
-msgstr "U kunt het huidige profiel niet wissen"
+#, c-format
+msgid "You can not delete the current profile. Please switch to a different profile first."
+msgstr "U kunt het huidige profiel niet verwijderen. Schakel eerst over naar een ander profiel."
 
 #: ../bin/draknetprofile:194 ../bin/draknfs:356
 #, c-format
@@ -937,19 +899,19 @@ msgid "Advanced"
 msgstr "Geavanceerd"
 
 #: ../bin/draknetprofile:198
-#, fuzzy, c-format
+#, c-format
 msgid "Select the netprofile modules:"
-msgstr "Kies de te verwijderen netwerkinterface:"
+msgstr "Selecteer de netprofiel-modules:"
 
 #: ../bin/draknetprofile:211
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "Dit gereedschap stelt u in staat om netwerkprofielen te beheren."
 
 #: ../bin/draknetprofile:212
-#, fuzzy, c-format
+#, c-format
 msgid "Select a network profile:"
-msgstr "Selecteer uw provider:"
+msgstr "Selecteer een netwerkprofiel:"
 
 #: ../bin/draknetprofile:216
 #, c-format
@@ -1051,51 +1013,34 @@ msgstr "Dient een map te zijn."
 #: ../bin/draknfs:146
 #, c-format
 msgid ""
-"<span weight=\"bold\">NFS clients</span> may be specified in a number of "
-"ways:\n"
+"<span weight=\"bold\">NFS clients</span> may be specified in a number of ways:\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">single host:</span> a host either by an "
-"abbreviated name recognized be the resolver, fully qualified domain name, or "
-"an IP address\n"
+"<span foreground=\"royalblue3\">single host:</span> a host either by an abbreviated name recognized be the resolver, fully qualified domain name, or an IP address\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">netgroups:</span> NIS netgroups may be given "
-"as @group.\n"
+"<span foreground=\"royalblue3\">netgroups:</span> NIS netgroups may be given as @group.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">wildcards:</span> machine names may contain "
-"the wildcard characters * and ?. For instance: *.cs.foo.edu  matches all  "
-"hosts  in the domain cs.foo.edu.\n"
+"<span foreground=\"royalblue3\">wildcards:</span> machine names may contain the wildcard characters * and ?. For instance: *.cs.foo.edu  matches all  hosts  in the domain cs.foo.edu.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">IP networks:</span> you can also export "
-"directories to all hosts on an IP (sub-)network simultaneously. for example, "
-"either `/255.255.252.0' or  `/22'  appended to the network base address "
-"result.\n"
+"<span foreground=\"royalblue3\">IP networks:</span> you can also export directories to all hosts on an IP (sub-)network simultaneously. for example, either `/255.255.252.0' or  `/22'  appended to the network base address result.\n"
+""
 msgstr ""
-"<span weight=\"bold\">NFS clients</span> mag op verschillende wijzen "
-"vastgelegd worden:\n"
+"<span weight=\"bold\">NFS clients</span> mag op verschillende wijzen vastgelegd worden:\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">single host:</span> een host met afgekorte "
-"naam, te herkennen door de resolver, met een \"fully qualified domain name\" "
-"of met een IP adres\n"
+"<span foreground=\"royalblue3\">single host:</span> een host met afgekorte naam, te herkennen door de resolver, met een \"fully qualified domain name\" of met een IP adres\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">netgroups:</span> NIS netgroups kan gegeven "
-"worden als @group.\n"
+"<span foreground=\"royalblue3\">netgroups:</span> NIS netgroups kan gegeven worden als @group.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">wildcards:</span> machinenamen mogen de "
-"wildcards * en ? bevatten. Bijvoorbeeld: *.cs.foo.edu is te gebruiken voor "
-"alle hosts in het domein cs.foo.edu.\n"
+"<span foreground=\"royalblue3\">wildcards:</span> machinenamen mogen de wildcards * en ? bevatten. Bijvoorbeeld: *.cs.foo.edu is te gebruiken voor alle hosts in het domein cs.foo.edu.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">IP networks:</span> u kunt tegelijkertijd "
-"mappen exporteren naar alle hosts op een IP (sub-)netwerk, bijvoorbeeld met "
-"`/255.255.252.0' of  `/22'  toegevoegd aan het netwerk basis adres "
-"resultaat.\n"
+"<span foreground=\"royalblue3\">IP networks:</span> u kunt tegelijkertijd mappen exporteren naar alle hosts op een IP (sub-)netwerk, bijvoorbeeld met `/255.255.252.0' of  `/22'  toegevoegd aan het netwerk basis adres resultaat.\n"
 
 #: ../bin/draknfs:161
 #, c-format
@@ -1103,46 +1048,31 @@ msgid ""
 "<span weight=\"bold\">User ID options</span>\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">map root user as anonymous:</span> map "
-"requests from uid/gid 0 to the anonymous uid/gid (root_squash).\n"
+"<span foreground=\"royalblue3\">map root user as anonymous:</span> map requests from uid/gid 0 to the anonymous uid/gid (root_squash).\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">allow real remote root access:</span> turn "
-"off root squashing. This option is mainly useful for diskless clients "
-"(no_root_squash).\n"
+"<span foreground=\"royalblue3\">allow real remote root access:</span> turn off root squashing. This option is mainly useful for diskless clients (no_root_squash).\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">map all users to anonymous user:</span> map "
-"all uids and gids to the anonymous  user (all_squash). Useful for NFS-"
-"exported public FTP directories, news spool directories, etc. The opposite "
-"option is no user UID mapping (no_all_squash), which is the default "
-"setting.\n"
+"<span foreground=\"royalblue3\">map all users to anonymous user:</span> map all uids and gids to the anonymous  user (all_squash). Useful for NFS-exported public FTP directories, news spool directories, etc. The opposite option is no user UID mapping (no_all_squash), which is the default setting.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">anonuid and anongid:</span> explicitly set "
-"the uid and gid of the anonymous account.\n"
+"<span foreground=\"royalblue3\">anonuid and anongid:</span> explicitly set the uid and gid of the anonymous account.\n"
+""
 msgstr ""
 "<span weight=\"bold\">Gebruikers ID opties</span>\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">map root user as anonymous:</span> map "
-"requests from uid/gid 0 to the anonymous uid/gid (root_squash).\n"
+"<span foreground=\"royalblue3\">map root user as anonymous:</span> map requests from uid/gid 0 to the anonymous uid/gid (root_squash).\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">allow real remote root access:</span> turn "
-"off root squashing. This option is mainly useful for diskless clients "
-"(no_root_squash).\n"
+"<span foreground=\"royalblue3\">allow real remote root access:</span> turn off root squashing. This option is mainly useful for diskless clients (no_root_squash).\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">map all users to anonymous user:</span> map "
-"all uids and gids to the anonymous  user (all_squash). Useful for NFS-"
-"exported public FTP directories, news spool directories, etc. The opposite "
-"option is no user UID mapping (no_all_squash), which is the default "
-"setting.\n"
+"<span foreground=\"royalblue3\">map all users to anonymous user:</span> map all uids and gids to the anonymous  user (all_squash). Useful for NFS-exported public FTP directories, news spool directories, etc. The opposite option is no user UID mapping (no_all_squash), which is the default setting.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">anonuid and anongid:</span> explicitly set "
-"the uid and gid of the anonymous account.\n"
+"<span foreground=\"royalblue3\">anonuid and anongid:</span> explicitly set the uid and gid of the anonymous account.\n"
 
 #: ../bin/draknfs:177
 #, c-format
@@ -1171,50 +1101,23 @@ msgstr "Geavanceerde opties"
 
 #: ../bin/draknfs:183
 #, c-format
-msgid ""
-"<span foreground=\"royalblue3\">%s</span> this option requires that requests "
-"originate on an internet port less than IPPORT_RESERVED (1024). This option "
-"is on by default."
-msgstr ""
-"<span foreground=\"royalblue3\">%s</span> deze optie vereist dat requests "
-"voortkomen van een internet poort lager dan IPPORT_RESERVED (1024). Deze "
-"optie staat standaard aan."
+msgid "<span foreground=\"royalblue3\">%s</span> this option requires that requests originate on an internet port less than IPPORT_RESERVED (1024). This option is on by default."
+msgstr "<span foreground=\"royalblue3\">%s</span> deze optie vereist dat requests voortkomen van een internet poort lager dan IPPORT_RESERVED (1024). Deze optie staat standaard aan."
 
 #: ../bin/draknfs:184
 #, c-format
-msgid ""
-"<span foreground=\"royalblue3\">%s</span> allow either only read or both "
-"read and write requests on this NFS volume. The default is to disallow any "
-"request which changes the filesystem. This can also be made explicit by "
-"using this option."
-msgstr ""
-"<span foreground=\"royalblue3\">%s</span> sta ofwel alleen lezen of ook "
-"schrijven toe op deze NFS gedeelde mappen. Standaard worden alle requests "
-"die het bestandssysteem wijzigen gewijgerd. Dit kan ook expliciet gemaakt "
-"worden met deze optie."
+msgid "<span foreground=\"royalblue3\">%s</span> allow either only read or both read and write requests on this NFS volume. The default is to disallow any request which changes the filesystem. This can also be made explicit by using this option."
+msgstr "<span foreground=\"royalblue3\">%s</span> sta ofwel alleen lezen of ook schrijven toe op deze NFS gedeelde mappen. Standaard worden alle requests die het bestandssysteem wijzigen gewijgerd. Dit kan ook expliciet gemaakt worden met deze optie."
 
 #: ../bin/draknfs:185
 #, c-format
-msgid ""
-"<span foreground=\"royalblue3\">%s</span> disallows the NFS server to "
-"violate the NFS protocol and to reply to requests before any changes made by "
-"these requests have been committed to stable storage (e.g. disc drive)."
-msgstr ""
-"<span foreground=\"royalblue3\">%s</span> sta de NFS server niet toe het NFS "
-"protocol te schenden en requests te beantwoorden voordat enige wijzigingen "
-"door deze requests zijn doorgevoerd aan stabiele opslag (bijv. hard disk)."
+msgid "<span foreground=\"royalblue3\">%s</span> disallows the NFS server to violate the NFS protocol and to reply to requests before any changes made by these requests have been committed to stable storage (e.g. disc drive)."
+msgstr "<span foreground=\"royalblue3\">%s</span> sta de NFS server niet toe het NFS protocol te schenden en requests te beantwoorden voordat enige wijzigingen door deze requests zijn doorgevoerd aan stabiele opslag (bijv. hard disk)."
 
 #: ../bin/draknfs:186
 #, c-format
-msgid ""
-"<span foreground=\"royalblue3\">%s</span> enable subtree checking which can "
-"help improve security in some cases, but can decrease reliability. See "
-"exports(5) man page for more details."
-msgstr ""
-"<span foreground=\"royalblue3\">%s</span> subboom-controle inschakelen "
-"waarmee in sommige gevallen de beveiliging verbeterd wordt, maar de "
-"betrouwbaarheid kan verminderen. Zie de exports(5) manual-pagina voor meer "
-"details."
+msgid "<span foreground=\"royalblue3\">%s</span> enable subtree checking which can help improve security in some cases, but can decrease reliability. See exports(5) man page for more details."
+msgstr "<span foreground=\"royalblue3\">%s</span> subboom-controle inschakelen waarmee in sommige gevallen de beveiliging verbeterd wordt, maar de betrouwbaarheid kan verminderen. Zie de exports(5) manual-pagina voor meer details."
 
 #: ../bin/draknfs:191 ../bin/draksambashare:623 ../bin/draksambashare:789
 #, c-format
@@ -1537,7 +1440,6 @@ msgstr "/_Configureren"
 msgid "/_Help"
 msgstr "/_Hulp"
 
-#
 #: ../bin/draksambashare:184
 #, c-format
 msgid "/_Samba Documentation"
@@ -1571,19 +1473,20 @@ msgstr "Copyright © %s door Mageia"
 #: ../bin/draksambashare:198
 #, c-format
 msgid "This is a simple tool to easily manage Samba configuration."
-msgstr ""
-"Dit is een eenvoudig programma om de Samba-configuratie gemakkelijk te "
-"beheren."
+msgstr "Dit is een eenvoudig programma om de Samba-configuratie gemakkelijk te beheren."
 
 #: ../bin/draksambashare:200
 #, c-format
 msgid "Mageia"
 msgstr "Mageia"
 
-#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
+#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith
+#. <jsmith@nowhere.com>")
 #: ../bin/draksambashare:205
 #, c-format
-msgid "_: Translator(s) name(s) & email(s)\n"
+msgid ""
+"_: Translator(s) name(s) & email(s)\n"
+""
 msgstr ""
 "Reinout van Schouwen <reinout@gmail.com>\n"
 "C. Verschuuren\n"
@@ -1627,12 +1530,8 @@ msgstr "Opmerking:"
 
 #: ../bin/draksambashare:393
 #, c-format
-msgid ""
-"Share with the same name already exist or share name empty, please choose "
-"another name."
-msgstr ""
-"Gedeelde map met dezelfde naam bestaat al of het naamveld is leeg, kies een "
-"andere naam."
+msgid "Share with the same name already exist or share name empty, please choose another name."
+msgstr "Gedeelde map met dezelfde naam bestaat al of het naamveld is leeg, kies een andere naam."
 
 #: ../bin/draksambashare:400
 #, c-format
@@ -1662,11 +1561,8 @@ msgstr "Speciale gedeelde printer toevoegen"
 
 #: ../bin/draksambashare:448
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
-msgstr ""
-"Het doel van deze wizard is om gemakkelijk een nieuwe speciale gedeelde "
-"Windows-netwerkprinter te maken."
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
+msgstr "Het doel van deze wizard is om gemakkelijk een nieuwe speciale gedeelde Windows-netwerkprinter te maken."
 
 #: ../bin/draksambashare:455
 #, c-format
@@ -1691,9 +1587,7 @@ msgstr "De wizard heeft de gedeelde Samba-map met succes toegevoegd."
 #: ../bin/draksambashare:552
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
-msgstr ""
-"Selecteer of voeg een gedeelde Windows-netwerkprinter toe om hem te kunnen "
-"wijzigen."
+msgstr "Selecteer of voeg een gedeelde Windows-netwerkprinter toe om hem te kunnen wijzigen."
 
 #: ../bin/draksambashare:570
 #, c-format
@@ -1773,9 +1667,7 @@ msgstr "DrakSamba ingang"
 #: ../bin/draksambashare:695
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
-msgstr ""
-"Selecteer of voeg een gedeelde Windows-netwerkmap toe om hem te kunnen "
-"wijzigen."
+msgstr "Selecteer of voeg een gedeelde Windows-netwerkmap toe om hem te kunnen wijzigen."
 
 #: ../bin/draksambashare:718
 #, c-format
@@ -1809,11 +1701,8 @@ msgstr "Publiek:"
 
 #: ../bin/draksambashare:795
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
-msgstr ""
-"Aanmaakmasker, aanmaakmodus en mapmasker dienen een getal te zijn, "
-"bijvoorbeeld: 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgstr "Aanmaakmasker, aanmaakmodus en mapmasker dienen een getal te zijn, bijvoorbeeld: 0755."
 
 #: ../bin/draksambashare:802
 #, c-format
@@ -1862,12 +1751,8 @@ msgstr "Samba server configuratiewizard"
 
 #: ../bin/draksambashare:1056
 #, c-format
-msgid ""
-"Samba allows your server to behave as a file and print server for "
-"workstations running non-Linux systems."
-msgstr ""
-"Samba laat u uw server functioneren als een bestands- en printerserver voor "
-"werkstations met niet-Linux systemen."
+msgid "Samba allows your server to behave as a file and print server for workstations running non-Linux systems."
+msgstr "Samba laat u uw server functioneren als een bestands- en printerserver voor werkstations met niet-Linux systemen."
 
 #: ../bin/draksambashare:1072
 #, c-format
@@ -1876,29 +1761,18 @@ msgstr "PDC server: primaire domeincontroller"
 
 #: ../bin/draksambashare:1072
 #, c-format
-msgid ""
-"Server configured as a PDC is responsible for Windows authentication "
-"throughout the domain."
-msgstr ""
-"een als PDC geconfigureerde server is verantwoordelijk voor Windows "
-"toegangsverlening in het domein."
+msgid "Server configured as a PDC is responsible for Windows authentication throughout the domain."
+msgstr "een als PDC geconfigureerde server is verantwoordelijk voor Windows toegangsverlening in het domein."
 
 #: ../bin/draksambashare:1072
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
-msgstr ""
-"Op zichzelf staande serverinstallaties kunnen smbpasswd of tdbsam wachtwoord "
-"backends gebruiken"
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
+msgstr "Op zichzelf staande serverinstallaties kunnen smbpasswd of tdbsam wachtwoord backends gebruiken"
 
 #: ../bin/draksambashare:1072
 #, c-format
-msgid ""
-"Domain master = yes, causes the server to register the NetBIOS name <pdc "
-"name>. This name will be recognized by other servers."
-msgstr ""
-"Domain master = ja, laat de server de NetBIOS-naam <pdc name> registreren. "
-"Deze naam zal door andere servers herkend worden."
+msgid "Domain master = yes, causes the server to register the NetBIOS name <pdc name>. This name will be recognized by other servers."
+msgstr "Domain master = ja, laat de server de NetBIOS-naam <pdc name> registreren. Deze naam zal door andere servers herkend worden."
 
 #: ../bin/draksambashare:1089
 #, c-format
@@ -1922,18 +1796,8 @@ msgstr "OS-niveau:"
 
 #: ../bin/draksambashare:1091
 #, c-format
-msgid ""
-"The global os level option dictates the operating system level at which "
-"Samba will masquerade during a browser election. If you wish to have Samba "
-"win an election and become the master browser, you can set the level above "
-"that of the operating system on your network with the highest current value. "
-"ie: os level = 34"
-msgstr ""
-"De algemene os niveau-optie bepaalt het besturingssysteemniveau waarop Samba "
-"zich zal tonen tijdens een verkiezingsronde. Als u wilt dat Samba de "
-"verkiezing wint en master browser wordt, kunt u het niveau instellen boven "
-"dat van het andere besturingssysteem in uw netwerk met de hoogste waarde op "
-"dat moment, bijv.: os niveau = 34"
+msgid "The global os level option dictates the operating system level at which Samba will masquerade during a browser election. If you wish to have Samba win an election and become the master browser, you can set the level above that of the operating system on your network with the highest current value. ie: os level = 34"
+msgstr "De algemene os niveau-optie bepaalt het besturingssysteemniveau waarop Samba zich zal tonen tijdens een verkiezingsronde. Als u wilt dat Samba de verkiezing wint en master browser wordt, kunt u het niveau instellen boven dat van het andere besturingssysteem in uw netwerk met de hoogste waarde op dat moment, bijv.: os niveau = 34"
 
 #: ../bin/draksambashare:1095
 #, c-format
@@ -1948,8 +1812,7 @@ msgstr "Werkgroep"
 #: ../bin/draksambashare:1102
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
-msgstr ""
-"Samba heeft de naam van de Windows-werkgroep nodig die het zal bedienen."
+msgstr "Samba heeft de naam van de Windows-werkgroep nodig die het zal bedienen."
 
 #: ../bin/draksambashare:1109 ../bin/draksambashare:1176
 #, c-format
@@ -1973,31 +1836,18 @@ msgstr "Beveiligingsmodus"
 
 #: ../bin/draksambashare:1121
 #, c-format
-msgid ""
-"User level: the client sends a session setup request directly following "
-"protocol negotiation. This request provides a username and password."
-msgstr ""
-"Gebruikersniveau: de client zendt een verzoek om een sessie op te zetten, "
-"direct gevolgd door een protocolonderhandeling. Dit verzoek vereist een "
-"gebruikersnaam en wachtwoord."
+msgid "User level: the client sends a session setup request directly following protocol negotiation. This request provides a username and password."
+msgstr "Gebruikersniveau: de client zendt een verzoek om een sessie op te zetten, direct gevolgd door een protocolonderhandeling. Dit verzoek vereist een gebruikersnaam en wachtwoord."
 
 #: ../bin/draksambashare:1121
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
-"Deelniveau: de client meldt zich afzonderlijk aan voor iedere gedeelde map"
+msgstr "Deelniveau: de client meldt zich afzonderlijk aan voor iedere gedeelde map"
 
 #: ../bin/draksambashare:1121
 #, c-format
-msgid ""
-"Domain level: provides a mechanism for storing all user and group accounts "
-"in a central, shared, account repository. The centralized account repository "
-"is shared between domain (security) controllers."
-msgstr ""
-"Domeinniveau: voorziet in een mechanisme voor het opslaan van alle "
-"gebruikrs- en groepsaccounts in een centale, gedeelde accountdatabase. De "
-"gecentraliseerde accountdatabase wordt gedeeld tussen domein (beveiligings) "
-"controllers."
+msgid "Domain level: provides a mechanism for storing all user and group accounts in a central, shared, account repository. The centralized account repository is shared between domain (security) controllers."
+msgstr "Domeinniveau: voorziet in een mechanisme voor het opslaan van alle gebruikrs- en groepsaccounts in een centale, gedeelde accountdatabase. De gecentraliseerde accountdatabase wordt gedeeld tussen domein (beveiligings) controllers."
 
 #: ../bin/draksambashare:1132
 #, c-format
@@ -2011,12 +1861,8 @@ msgstr "Serveromschrijving."
 
 #: ../bin/draksambashare:1137
 #, c-format
-msgid ""
-"The banner is the way this server will be described in the Windows "
-"workstations."
-msgstr ""
-"Het servernaamis de wijze waarop de server wordt omschreven in de Windows "
-"werkstations."
+msgid "The banner is the way this server will be described in the Windows workstations."
+msgstr "Het servernaamis de wijze waarop de server wordt omschreven in de Windows werkstations."
 
 #: ../bin/draksambashare:1142
 #, c-format
@@ -2035,24 +1881,18 @@ msgstr "Samba logbestand"
 
 #: ../bin/draksambashare:1153
 #, c-format
-msgid ""
-"Log file: use file.%m to use a separate log file for each machine that "
-"connects"
-msgstr ""
-"Logbestand: gebruik file.%m om een apart logbestand aan te maken voor elke "
-"machine die verbinding maakt"
+msgid "Log file: use file.%m to use a separate log file for each machine that connects"
+msgstr "Logbestand: gebruik file.%m om een apart logbestand aan te maken voor elke machine die verbinding maakt"
 
 #: ../bin/draksambashare:1153
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
-msgstr ""
-"Logniveau: stel het logniveau (hoeveelheid informatie) in (tussen 0 en 10)"
+msgstr "Logniveau: stel het logniveau (hoeveelheid informatie) in (tussen 0 en 10)"
 
 #: ../bin/draksambashare:1153
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
-"Maximale grootte logbestand: maximeer de grootte van het logbestand (in Kb)."
+msgstr "Maximale grootte logbestand: maximeer de grootte van het logbestand (in Kb)."
 
 #: ../bin/draksambashare:1160 ../bin/draksambashare:1178
 #, c-format
@@ -2072,28 +1912,17 @@ msgstr "Logniveau:"
 #: ../bin/draksambashare:1167
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
-"De configuratieassistent verzamelde de volgende paramaters voor het "
-"configureren van Samba"
+msgstr "De configuratieassistent verzamelde de volgende paramaters voor het configureren van Samba"
 
 #: ../bin/draksambashare:1167
 #, c-format
-msgid ""
-"To accept these values, and configure your server, click the Next button or "
-"use the Back button to correct them."
-msgstr ""
-"Klik op Volgende om de waarden te accepteren en uw server te configureren of "
-"klik op Terug om ze te corrigeren."
+msgid "To accept these values, and configure your server, click the Next button or use the Back button to correct them."
+msgstr "Klik op Volgende om de waarden te accepteren en uw server te configureren of klik op Terug om ze te corrigeren."
 
 #: ../bin/draksambashare:1167
 #, c-format
-msgid ""
-"If you have previously create some shares, they will appear in this "
-"configuration. Run 'drakwizard sambashare' to manage your shares."
-msgstr ""
-"Als u al eerder gedeelde mappen heeft aangemaakt, zullen deze verschijnen in "
-"deze configuratie. Voer 'drakwizard sambashare' uit om uw gedeelde mappen te "
-"beheren. "
+msgid "If you have previously create some shares, they will appear in this configuration. Run 'drakwizard sambashare' to manage your shares."
+msgstr "Als u al eerder gedeelde mappen heeft aangemaakt, zullen deze verschijnen in deze configuratie. Voer 'drakwizard sambashare' uit om uw gedeelde mappen te beheren. "
 
 #: ../bin/draksambashare:1175
 #, c-format
@@ -2128,8 +1957,7 @@ msgstr "Weergave-tekenset:"
 #: ../bin/draksambashare:1197
 #, c-format
 msgid "The wizard successfully configured your Samba server."
-msgstr ""
-"De configuratieassistent heeft uw Sambaserver met succes geconfigureerd."
+msgstr "De configuratieassistent heeft uw Sambaserver met succes geconfigureerd."
 
 #: ../bin/draksambashare:1252
 #, c-format
@@ -2208,8 +2036,7 @@ msgid ""
 "A wizard will appear to configure a basic Samba server"
 msgstr ""
 "Dit is de eerste keer dat u dit hulpmiddel gebruikt.\n"
-" Een configuratieassistent zal u helpen bij het instellen van een basis "
-"Samba server"
+" Een configuratieassistent zal u helpen bij het instellen van een basis Samba server"
 
 #: ../bin/draksambashare:1464
 #, c-format
@@ -2486,12 +2313,8 @@ msgstr "Lokaal gemeten"
 
 #: ../bin/net_monitor:512
 #, c-format
-msgid ""
-"Warning, another internet connection has been detected, maybe using your "
-"network"
-msgstr ""
-"Waarschuwing: een andere internetverbinding is bespeurd, misschien gebruikt "
-"deze uw netwerk."
+msgid "Warning, another internet connection has been detected, maybe using your network"
+msgstr "Waarschuwing: een andere internetverbinding is bespeurd, misschien gebruikt deze uw netwerk."
 
 #: ../bin/net_monitor:516
 #, c-format
@@ -2556,7 +2379,7 @@ msgstr "De verbinding bij het opstarten maken"
 #: ../lib/network/connection.pm:245
 #, c-format
 msgid "Enable traffic accounting"
-msgstr ""
+msgstr "Schakel 'traffic accounting' in"
 
 #: ../lib/network/connection.pm:246
 #, c-format
@@ -2571,9 +2394,7 @@ msgstr "MTU"
 #: ../lib/network/connection.pm:248
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
-msgstr ""
-"Maximum grootte van netwerkberichten (MTU). Indien u het niet zeker weet, "
-"open laten."
+msgstr "Maximum grootte van netwerkberichten (MTU). Indien u het niet zeker weet, open laten."
 
 #: ../lib/network/connection.pm:324
 #, c-format
@@ -2709,9 +2530,7 @@ msgstr "Virtuele interface"
 #: ../lib/network/connection/ethernet.pm:60
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
-msgstr ""
-"Van het geselecteerde apparaat is het niet mogelijk om met het "
-"stuurprogramma %s de netwerkaansluiting te vinden."
+msgstr "Van het geselecteerde apparaat is het niet mogelijk om met het stuurprogramma %s de netwerkaansluiting te vinden."
 
 #: ../lib/network/connection/ethernet.pm:70 ../lib/network/vpn/openvpn.pm:207
 #, c-format
@@ -2768,9 +2587,7 @@ msgstr "Zoekdomein"
 #: ../lib/network/connection/ethernet.pm:154
 #, c-format
 msgid "By default search domain will be set from the fully-qualified host name"
-msgstr ""
-"Gewoonlijk wordt het zoekdomein ingesteld vanuit de volledig gekwalificeerde "
-"hostnaam"
+msgstr "Gewoonlijk wordt het zoekdomein ingesteld vanuit de volledig gekwalificeerde hostnaam"
 
 #: ../lib/network/connection/ethernet.pm:157
 #, c-format
@@ -2813,38 +2630,24 @@ msgid "Warning: IP address %s is usually reserved!"
 msgstr "Waarschuwing: IP-adres %s is normaal gesproken gereserveerd!"
 
 #: ../lib/network/connection/ethernet.pm:192
-#, fuzzy, c-format
-msgid ""
-"%s is already used by a connection that starts on boot (%s). To use this "
-"address with this connection, first disable all other devices which use it, "
-"or configure them not to start at boot"
-msgstr ""
-"%s wordt al gebruikt door de verbinding die gemaakt wordt bij het opstarten. "
-"Schakel eerst alle andere apparaten die hem gebruiken uit of configureer ze "
-"om niet te starten bij de systeemstart om dit adres met deze verbinding te "
-"kunnen gebuiken."
+#, c-format
+msgid "%s is already used by a connection that starts on boot (%s). To use this address with this connection, first disable all other devices which use it, or configure them not to start at boot"
+msgstr "%s wordt al gebruikt door een verbinding die gemaakt wordt bij het opstarten (%s). Schakel eerst alle andere apparaten die dit adres gebruiken uit of configureer ze om niet te starten bij de systeemstart om dit adres met deze verbinding te kunnen gebruiken"
 
 #: ../lib/network/connection/ethernet.pm:219
 #, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
-msgstr ""
-"Hostnaam laten toekennen door DHCP-server (of genereer een unieke hostnaam)"
+msgstr "Hostnaam laten toekennen door DHCP-server (of genereer een unieke hostnaam)"
 
 #: ../lib/network/connection/ethernet.pm:220
 #, c-format
-msgid ""
-"This will allow the server to attribute a name for this machine. If the "
-"server does not provides a valid host name, it will be generated "
-"automatically."
-msgstr ""
+msgid "This will allow the server to attribute a name for this machine. If the server does not provides a valid host name, it will be generated automatically."
+msgstr "Dit stelt de server in staat om een naam aan deze machine te koppelen. Wanneer de server geen geldige computernaam geeft zal er automatish een gegenereerd worden."
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
-msgid ""
-"You should define a hostname for this machine, which will identify this PC. "
-"Note that this hostname will be shared among all network connections.  If "
-"left blank, 'localhost.localdomain' will be used."
-msgstr ""
+msgid "You should define a hostname for this machine, which will identify this PC. Note that this hostname will be shared among all network connections.  If left blank, 'localhost.localdomain' will be used."
+msgstr "U dient een computernaam te kiezen voor deze machine welke gebruikt wordt om deze computer te identificeren. Let erop dat deze computernaam door alle netwerkverbindingen gedeeld zal worden. Wanneer u dit leeg laat zal 'localhost.localdomain' gebruikt worden."
 
 #: ../lib/network/connection/ethernet.pm:241
 #, c-format
@@ -3682,9 +3485,9 @@ msgstr "Moldavië"
 #: ../lib/network/connection/providers/cellular_extra.pm:1419
 #: ../lib/network/connection/providers/cellular_extra.pm:1425
 #: ../lib/network/connection/providers/cellular_extra.pm:1431
-#, fuzzy, c-format
+#, c-format
 msgid "Montenegro"
-msgstr "Servië & Montenegro"
+msgstr "Montenegro"
 
 #: ../lib/network/connection/providers/cellular_extra.pm:1437
 #, c-format
@@ -3697,7 +3500,7 @@ msgstr "Mongolië"
 #: ../lib/network/connection/providers/cellular_extra.pm:1451
 #, c-format
 msgid "Macao"
-msgstr ""
+msgstr "Macau"
 
 #: ../lib/network/connection/providers/cellular_extra.pm:1456
 #: ../lib/network/connection/providers/cellular_extra.pm:1459
@@ -3864,9 +3667,9 @@ msgstr "Roemenië"
 #: ../lib/network/connection/providers/cellular_extra.pm:1805
 #: ../lib/network/connection/providers/cellular_extra.pm:1811
 #: ../lib/network/connection/providers/cellular_extra.pm:1817
-#, fuzzy, c-format
+#, c-format
 msgid "Serbia"
-msgstr "Dienst"
+msgstr "Servië"
 
 #: ../lib/network/connection/providers/cellular_extra.pm:1823
 #: ../lib/network/connection/providers/cellular_extra.pm:1830
@@ -4101,12 +3904,8 @@ msgstr "Windows stuurprogramma"
 
 #: ../lib/network/connection/wireless.pm:366
 #, c-format
-msgid ""
-"Your wireless card is disabled, please enable the wireless switch (RF kill "
-"switch) first."
-msgstr ""
-"Uw draadloze netwerkkaart is uitgeschakeld, schakel eerst de draadloze "
-"netwerk schakelaar (RF kill switch) in."
+msgid "Your wireless card is disabled, please enable the wireless switch (RF kill switch) first."
+msgstr "Uw draadloze netwerkkaart is uitgeschakeld, schakel eerst de draadloze netwerk schakelaar (RF kill switch) in."
 
 #: ../lib/network/connection/wireless.pm:456
 #, c-format
@@ -4119,25 +3918,21 @@ msgstr "Draadloze instellingen"
 msgid "Operating Mode"
 msgstr "Operatiemodus"
 
-# Wifi-termen
 #: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Ad-hoc"
 msgstr "Ad-hoc"
 
-# Wifi-termen
 #: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Managed"
 msgstr "Beheerd"
 
-# Wifi-termen
 #: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Master"
 msgstr "Master"
 
-# Wifi-termen
 #: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Repeater"
@@ -4169,15 +3964,14 @@ msgid "Encryption key"
 msgstr "Vercijferingssleutel"
 
 #: ../lib/network/connection/wireless.pm:472
-#, fuzzy, c-format
+#, c-format
 msgid "Hide password"
-msgstr "Wachtwoord"
+msgstr "Verberg paswoord"
 
 #: ../lib/network/connection/wireless.pm:474
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
-msgstr ""
-"Deze sleutel altijd als ASCII-tekenreeks gebruiken (bijv. voor Livebox)"
+msgstr "Deze sleutel altijd als ASCII-tekenreeks gebruiken (bijv. voor Livebox)"
 
 #: ../lib/network/connection/wireless.pm:481
 #, c-format
@@ -4191,8 +3985,7 @@ msgid ""
 "need to specify domain then try the untested syntax\n"
 "  DOMAIN\\username"
 msgstr ""
-"De account-aanmelding of gebruikersnaam. Het format is platte tekst. Als u "
-"een domein op moet geven, probeer dan de volgende syntax\n"
+"De account-aanmelding of gebruikersnaam. Het format is platte tekst. Als u een domein op moet geven, probeer dan de volgende syntax\n"
 "  DOMEIN\\gebruikersnaam"
 
 #: ../lib/network/connection/wireless.pm:486
@@ -4224,8 +4017,7 @@ msgstr ""
 "AANVULLENDE INFORMATIE:\n"
 "Op de pagina voor geavanceerde instellingen, kunt u aangeve welke EAP modus\n"
 " wordt gebruikt voor aanmelding. Voor de eap instelling\n"
-"   Automatisch bespeuren: betekent dat alle mogelijke modi worden "
-"geprobeerd.\n"
+"   Automatisch bespeuren: betekent dat alle mogelijke modi worden geprobeerd.\n"
 "\n"
 "Als Automatisch bespeuren mislukt, probeer dan eerst het PEAP TTLS combo\n"
 "Noot:\n"
@@ -4251,8 +4043,7 @@ msgstr ""
 "alleen gebruikt voor EAP certificaat gebaseerde aanmelding. Het kan gezien\n"
 "worden als een alternatief voor de gebruikersnaam/wachtwoord \n"
 "combinatie.\n"
-"Noot: andere gerelateerd instellingen vindt u op het blad voor geavanceerde "
-"instellingen."
+"Noot: andere gerelateerd instellingen vindt u op het blad voor geavanceerde instellingen."
 
 #: ../lib/network/connection/wireless.pm:509
 #, c-format
@@ -4282,14 +4073,11 @@ msgstr "RTS/CTS"
 #: ../lib/network/connection/wireless.pm:514
 #, c-format
 msgid ""
-"RTS/CTS adds a handshake before each packet transmission to make sure that "
-"the\n"
-"channel is clear. This adds overhead, but increase performance in case of "
-"hidden\n"
+"RTS/CTS adds a handshake before each packet transmission to make sure that the\n"
+"channel is clear. This adds overhead, but increase performance in case of hidden\n"
 "nodes or large number of active nodes. This parameter sets the size of the\n"
 "smallest packet for which the node sends RTS, a value equal to the maximum\n"
-"packet size disable the scheme. You may also set this parameter to auto, "
-"fixed\n"
+"packet size disable the scheme. You may also set this parameter to auto, fixed\n"
 "or off."
 msgstr ""
 "RTS/CTS voegt een ''handshake'' toe vóór iedere packet-overdracht om ervoor\n"
@@ -4300,7 +4088,6 @@ msgstr ""
 "aan de maximum-packetgrootte maakt dit ontwerp ongedaan. U kunt deze \n"
 "parameter ook instellen op auto, fixed (vast) of off (uit). "
 
-#
 #: ../lib/network/connection/wireless.pm:521
 #, c-format
 msgid "Fragmentation"
@@ -4315,18 +4102,17 @@ msgstr "Extra argumenten voor iwconfig-opdracht"
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
-"ap, channel, commit, enc, power, retry, sens, txpower (nick is already set "
-"as the hostname).\n"
+"ap, channel, commit, enc, power, retry, sens, txpower (nick is already set as the hostname).\n"
 "\n"
 "See iwconfig(8) man page for further information."
 msgstr ""
 "Hier kunt u enkele extra draadloos-parameter instellen zoals:\n"
-"ap, channel, commit, enc, power, retry, sens, txpower (nick is reeds "
-"ingesteld als de hostnaam.\n"
+"ap, channel, commit, enc, power, retry, sens, txpower (nick is reeds ingesteld als de hostnaam.\n"
 "\n"
 "Zie de iwconfig(8) manpagina voor meer informatie."
 
-#. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
+#. -PO: split the "xyz command extra argument" translated string into two
+#. lines if it's bigger than the english one
 #: ../lib/network/connection/wireless.pm:530
 #, c-format
 msgid "iwspy command extra arguments"
@@ -4343,10 +4129,8 @@ msgid ""
 "\n"
 "See iwpspy(8) man page for further information."
 msgstr ""
-"iwspy wordt gebruikt voor het instellen van een adreslijst in een draadloos "
-"netwerk\n"
-"en om de kwaliteit van de link informatie van elk van die adressen terug te "
-"lezen.\n"
+"iwspy wordt gebruikt voor het instellen van een adreslijst in een draadloos netwerk\n"
+"en om de kwaliteit van de link informatie van elk van die adressen terug te lezen.\n"
 "\n"
 "Deze informatie is dezelfde als die voorhanden is in /proc/net/wireless :\n"
 "kwaliteit van de link, signaalsterkte en ruisniveau.\n"
@@ -4361,30 +4145,24 @@ msgstr "Extra argumenten voor iwpriv-opdracht"
 #: ../lib/network/connection/wireless.pm:541
 #, c-format
 msgid ""
-"iwpriv enable to set up optionals (private) parameters of a wireless "
-"network\n"
+"iwpriv enable to set up optionals (private) parameters of a wireless network\n"
 "interface.\n"
 "\n"
-"iwpriv deals with parameters and setting specific to each driver (as opposed "
-"to\n"
+"iwpriv deals with parameters and setting specific to each driver (as opposed to\n"
 "iwconfig which deals with generic ones).\n"
 "\n"
-"In theory, the documentation of each device driver should indicate how to "
-"use\n"
+"In theory, the documentation of each device driver should indicate how to use\n"
 "those interface specific commands and their effect.\n"
 "\n"
 "See iwpriv(8) man page for further information."
 msgstr ""
-"iwpriv maakt het mogelijk optionele (privé) parameters van een draadloze "
-"netwerk-\n"
+"iwpriv maakt het mogelijk optionele (privé) parameters van een draadloze netwerk-\n"
 "interface in te stellen.\n"
 "\n"
-"iwpriv handelt parameters en instellingen af specifiek voor elk "
-"stuurprogramma \n"
+"iwpriv handelt parameters en instellingen af specifiek voor elk stuurprogramma \n"
 "(in tegenstelling tot iwconfig dat meer generiek werkt).\n"
 "\n"
-"In theorie, geeft de documentatie van elk stuurprogramma aan hoe de "
-"interface-\n"
+"In theorie, geeft de documentatie van elk stuurprogramma aan hoe de interface-\n"
 "specifieke opdrachten gebruikt dienen te worden en wat hun effect is.\n"
 "\n"
 "Zie de iwpriv(8) man-pagina voor meer informatie."
@@ -4416,8 +4194,7 @@ msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr ""
-"Automatisch bespeuren wordt aanbevolen omdat dit eerst WPA versie 2 "
-"probeert\n"
+"Automatisch bespeuren wordt aanbevolen omdat dit eerst WPA versie 2 probeert\n"
 "en eventueel terugvalt op WPA versie 1."
 
 #: ../lib/network/connection/wireless.pm:557
@@ -4502,8 +4279,7 @@ msgid ""
 "tunnelled identity, e.g., TTLS"
 msgstr ""
 "Tekenreeks onbekende identiteit voor EAP: wordt gebruikt als de\n"
-"niet versleutelde identiteit van EAP types die verschillende getunnelde "
-"identiteiten ondersteunen, bijv. TTLS"
+"niet versleutelde identiteit van EAP types die verschillende getunnelde identiteiten ondersteunen, bijv. TTLS"
 
 #: ../lib/network/connection/wireless.pm:569
 #, c-format
@@ -4538,8 +4314,7 @@ msgid ""
 "when using TLS or TTLS or PEAP."
 msgstr ""
 "Volledig pad naar het CA certificaatbestand (PEM/DER). Dit bestand\n"
-"kan een of meer vertrouwde CA certificaten bevatten. Als ca_cert niet zijn "
-"inbegrepen,\n"
+"kan een of meer vertrouwde CA certificaten bevatten. Als ca_cert niet zijn inbegrepen,\n"
 "zal het servercertificaat niet geverifieerd worden. Indien mogelijk,\n"
 "moet altijd een vertrouwd CA certificaat geconfigureerd worden\n"
 "als TLS, TTLS of PEAP gebruikt wordt."
@@ -4561,14 +4336,13 @@ msgstr ""
 " Deelreeks die moet overeenkomen met het onderwerp van \n"
 "het aanmeldingsservercertificaat. Als deze tekenreeks is ingesteld,\n"
 "wordt het servercertificaat alleen geaccepteerd als het deze\n"
-"tekenreeks bevat in het onderwerp. De onderwerp-tekenreeks heeft het "
-"volgende format:\n"
+"tekenreeks bevat in het onderwerp. De onderwerp-tekenreeks heeft het volgende format:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
 #: ../lib/network/connection/wireless.pm:589
-#, fuzzy, c-format
+#, c-format
 msgid "Extra directives"
-msgstr "EAP extra aanwijzingen"
+msgstr "Extra aanwijzingen"
 
 #: ../lib/network/connection/wireless.pm:590
 #, c-format
@@ -4589,19 +4363,16 @@ msgid ""
 msgstr ""
 "Hier kunt u extra instellingen meegeven voor wpa_supplicant\n"
 "Het verwachte format is een tekstveld=waarde paar. Meerdere waarden\n"
-"kunnen aangegeven worden, waarbij elke waarde gescheiden wordt met het "
-"karakter #.\n"
+"kunnen aangegeven worden, waarbij elke waarde gescheiden wordt met het karakter #.\n"
 "Noot: aanwijzingen worden ongecontroleerd doorgegeven en kunnen veroorzaken\n"
-"dat de wpa aanmelding zonder foutmelding mislukt. Ondersteunde aanwijzingen "
-"worden\n"
+"dat de wpa aanmelding zonder foutmelding mislukt. Ondersteunde aanwijzingen worden\n"
 " gehandhaafd bij wijzigingen.\n"
 "Ondersteunde aanwijzingen zijn:\n"
 "\tdisabled, id_str, bssid, priority, auth_alg, eapol_flags,\n"
 "\tproactive_key_caching, peerkey, ca_path, private_key,\n"
 "\tprivate_key_passwd, dh_file, altsubject_match, phase1,\n"
 "\tfragment_size and eap_workaround, pairwise, group\n"
-"\tAnderen zoals key_mgmt, eap kunnen gebruikt worden om speciale "
-"instellingen te forceren\n"
+"\tAnderen zoals key_mgmt, eap kunnen gebruikt worden om speciale instellingen te forceren\n"
 "\tdie afwijken van de instellingen in de gebruikersinterface."
 
 #: ../lib/network/connection/wireless.pm:610
@@ -4611,40 +4382,23 @@ msgstr "Een encryptie-sleutel is verplicht."
 
 #: ../lib/network/connection/wireless.pm:617
 #, c-format
-msgid ""
-"The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
-"hexadecimal characters."
-msgstr ""
-"De vooraf gedeelde sleutel dient tussen de 8 en 63 ASCII-tekens, of 64 "
-"hexadecimale tekens, lang te zijn."
+msgid "The pre-shared key should have between 8 and 63 ASCII characters, or 64 hexadecimal characters."
+msgstr "De vooraf gedeelde sleutel dient tussen de 8 en 63 ASCII-tekens, of 64 hexadecimale tekens, lang te zijn."
 
 #: ../lib/network/connection/wireless.pm:623
 #, c-format
-msgid ""
-"The WEP key should have at most %d ASCII characters or %d hexadecimal "
-"characters."
-msgstr ""
-"De WEP-sleutel dient uit maximaal %d ASCII-tekens of %d hexadecimale tekens "
-"te bestaan."
+msgid "The WEP key should have at most %d ASCII characters or %d hexadecimal characters."
+msgstr "De WEP-sleutel dient uit maximaal %d ASCII-tekens of %d hexadecimale tekens te bestaan."
 
 #: ../lib/network/connection/wireless.pm:630
 #, c-format
-msgid ""
-"Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
-"frequency), or add enough '0' (zeroes)."
-msgstr ""
-"'Freq' dient het achtervoegsel k, M of G te hebben (bijvoorbeeld \"2.46G"
-"\"voor een frequentie van 2.46 GHz, of genoeg '0' (nullen) aan het eind "
-"toegevoegd."
+msgid "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz frequency), or add enough '0' (zeroes)."
+msgstr "'Freq' dient het achtervoegsel k, M of G te hebben (bijvoorbeeld \"2.46G\"voor een frequentie van 2.46 GHz, of genoeg '0' (nullen) aan het eind toegevoegd."
 
 #: ../lib/network/connection/wireless.pm:636
 #, c-format
-msgid ""
-"Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
-"enough '0' (zeroes)."
-msgstr ""
-"'Rate' dient het achtervoegsel k, M of G te hebben (bijvoorbeeld \"11M\"voor "
-"11M), of genoeg '0' (nullen) aan het eind toegevoegd."
+msgid "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add enough '0' (zeroes)."
+msgstr "'Rate' dient het achtervoegsel k, M of G te hebben (bijvoorbeeld \"11M\"voor 11M), of genoeg '0' (nullen) aan het eind toegevoegd."
 
 #: ../lib/network/connection/wireless.pm:648
 #, c-format
@@ -4674,24 +4428,18 @@ msgstr "Alcatel speedtouch USB-modem"
 #: ../lib/network/connection/xdsl.pm:125
 #, c-format
 msgid ""
-"The ECI Hi-Focus modem cannot be supported due to binary driver distribution "
-"problem.\n"
+"The ECI Hi-Focus modem cannot be supported due to binary driver distribution problem.\n"
 "\n"
 "You can find a driver on http://eciadsl.flashtux.org/"
 msgstr ""
-"Het ECI Hi-Focus modem is niet ondersteund vanwege het probleem dat het "
-"stuurprogramma binair gedistribueerd wordt.\n"
+"Het ECI Hi-Focus modem is niet ondersteund vanwege het probleem dat het stuurprogramma binair gedistribueerd wordt.\n"
 "\n"
 "U kunt het stuurprogramma vinden op http://eciadsl.flashtux.org/"
 
 #: ../lib/network/connection/xdsl.pm:185
 #, c-format
-msgid ""
-"Modems using Conexant AccessRunner chipsets cannot be supported due to "
-"binary firmware distribution problem."
-msgstr ""
-"Modems die een Conexant AccessRunner chipset gebruiken, kunnen niet "
-"ondersteund worden vanwege problemen met de distributie van binaire firmware."
+msgid "Modems using Conexant AccessRunner chipsets cannot be supported due to binary firmware distribution problem."
+msgstr "Modems die een Conexant AccessRunner chipset gebruiken, kunnen niet ondersteund worden vanwege problemen met de distributie van binaire firmware."
 
 #: ../lib/network/connection/xdsl.pm:205
 #, c-format
@@ -4888,7 +4636,7 @@ msgstr "Echo-aanvraag (ping)"
 #: ../lib/network/drakfirewall.pm:105
 #, c-format
 msgid "Network services autodiscovery (zeroconf and slp)"
-msgstr ""
+msgstr "Automatische opzoeking van network services (zeroconf en slp)"
 
 #: ../lib/network/drakfirewall.pm:110
 #, c-format
@@ -4981,7 +4729,7 @@ msgstr "Welke diensten wilt u beschikbaar stellen aan het Internet?"
 #: ../lib/network/network.pm:540
 #, c-format
 msgid "Those settings will be saved for the network profile <b>%s</b>"
-msgstr ""
+msgstr "Deze instellingen worden bewaard voor het netwerkprofiel <b>%s</b>"
 
 #: ../lib/network/drakfirewall.pm:268
 #, c-format
@@ -5001,12 +4749,10 @@ msgstr "Verslag van firewall meldingen vastleggen in het systeemlogboek"
 #: ../lib/network/drakfirewall.pm:313
 #, c-format
 msgid ""
-"You can be warned when someone accesses to a service or tries to intrude "
-"into your computer.\n"
+"You can be warned when someone accesses to a service or tries to intrude into your computer.\n"
 "Please select which network activities should be watched."
 msgstr ""
-"U kunt worden gewaarschuwd wanneer iemand tracht toegang te krijgen tot een "
-"dienst of in probeert te breken in uw computer.\n"
+"U kunt worden gewaarschuwd wanneer iemand tracht toegang te krijgen tot een dienst of in probeert te breken in uw computer.\n"
 "Selecteer alstublieft welke netwerkactiviteit gevolgd dient te worden."
 
 #: ../lib/network/drakfirewall.pm:318
@@ -5099,16 +4845,14 @@ msgstr "Wilt u de verbinding nu starten?"
 msgid ""
 "The VPN connection is now configured.\n"
 "\n"
-"This VPN connection can be automatically started together with a network "
-"connection.\n"
-"It can be done by reconfiguring the network connection and selecting this "
-"VPN connection.\n"
+"This VPN connection can be automatically started together with a network connection.\n"
+"It can be done by reconfiguring the network connection and selecting this VPN connection.\n"
+""
 msgstr ""
 "De VPN verbinding is nu ingesteld.\n"
 "\n"
 "Als deze verbinding tegelijk gestart moet worden met de netwerkverbinding,\n"
-"pas de instellingen van het netwerk dan zo aan dat deze VPN-verbinding "
-"standaard wordt gebruikt.\n"
+"pas de instellingen van het netwerk dan zo aan dat deze VPN-verbinding standaard wordt gebruikt.\n"
 
 #: ../lib/network/ifw.pm:132
 #, c-format
@@ -5162,14 +4906,11 @@ msgstr "Een \"%s\"-aanval is geprobeerd door %s."
 
 #: ../lib/network/ifw.pm:151
 #, c-format
-msgid ""
-"The \"%s\" application is trying to make a service (%s) available to the "
-"network."
-msgstr ""
-"Het programma \"%s\" probeert de dienst %s beschikbaar te stellen aan het "
-"netwerk."
+msgid "The \"%s\" application is trying to make a service (%s) available to the network."
+msgstr "Het programma \"%s\" probeert de dienst %s beschikbaar te stellen aan het netwerk."
 
-#. -PO: this should be kept lowercase since the expression is meant to be used between brackets
+#. -PO: this should be kept lowercase since the expression is meant to be used
+#. between brackets
 #: ../lib/network/ifw.pm:155
 #, c-format
 msgid "port %d"
@@ -5196,21 +4937,17 @@ msgstr "Automatisch"
 #: ../lib/network/ndiswrapper.pm:30
 #, c-format
 msgid "No device supporting the %s ndiswrapper driver is present!"
-msgstr ""
-"Geen apparaat aanwezig dat het %s-ndiswrapper-stuurprogramma ondersteunt!"
-
-#: ../lib/network/ndiswrapper.pm:36
-#, fuzzy, c-format
-msgid "Please select the correct driver"
-msgstr "Selecteer uw aanbieder:"
+msgstr "Geen apparaat aanwezig dat het %s-ndiswrapper-stuurprogramma ondersteunt!"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
-msgid ""
-"Please select the Windows driver description (.inf) file, or corresponding "
-"driver file (.dll or .o files). Note that only drivers up to Windows XP are "
-"supported."
-msgstr ""
+msgid "Please select the correct driver"
+msgstr "Selecteer alstublieft de juiste driver"
+
+#: ../lib/network/ndiswrapper.pm:36
+#, c-format
+msgid "Please select the Windows driver description (.inf) file, or corresponding driver file (.dll or .o files). Note that only drivers up to Windows XP are supported."
+msgstr "Selecteert u het bestand met de Windows driver beschrijving (.inf), of de corresponderende driver bestanden (.dll of .o-bestanden). Let erop dat alleen drivers voor Windows versies tot en met XP ondersteund worden."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -5276,7 +5013,7 @@ msgstr "Netwerkcentrum"
 #: ../lib/network/netcenter.pm:171
 #, c-format
 msgid "You are currently using the network profile <b>%s</b>"
-msgstr ""
+msgstr "U gebruikt op dit moment het netwerkprofiel <b>%s</b>"
 
 #: ../lib/network/netcenter.pm:177
 #, c-format
@@ -5471,12 +5208,11 @@ msgid ""
 "\n"
 "If you have an ISA card, the values on the next screen should be right.\n"
 "\n"
-"If you have a PCMCIA card, you have to know the \"irq\" and \"io\" of your "
-"card.\n"
+"If you have a PCMCIA card, you have to know the \"irq\" and \"io\" of your card.\n"
+""
 msgstr ""
 "\n"
-"Als u een ISA kaart bezit, zouden de waardes op het volgende scherm moeten "
-"kloppen.\n"
+"Als u een ISA kaart bezit, zouden de waardes op het volgende scherm moeten kloppen.\n"
 "\n"
 "Als  u een PCMCIA kaart bezit, moet u het irq en io van uw kaart weten.\n"
 
@@ -5497,14 +5233,8 @@ msgstr "Welke van de volgende is uw ISDN kaart?"
 
 #: ../lib/network/netconnect.pm:461
 #, c-format
-msgid ""
-"A CAPI driver is available for this modem. This CAPI driver can offer more "
-"capabilities than the free driver (like sending faxes). Which driver do you "
-"want to use?"
-msgstr ""
-"Er is een CAPI-stuurprogramma beschikbaar voor deze modem. Dit CAPI-"
-"stuurprogramma biedt meer mogelijkheden dan de vrije versie (zoals het "
-"verzenden van faxen). Welk stuurprogramma wilt u gebruiken?"
+msgid "A CAPI driver is available for this modem. This CAPI driver can offer more capabilities than the free driver (like sending faxes). Which driver do you want to use?"
+msgstr "Er is een CAPI-stuurprogramma beschikbaar voor deze modem. Dit CAPI-stuurprogramma biedt meer mogelijkheden dan de vrije versie (zoals het verzenden van faxen). Welk stuurprogramma wilt u gebruiken?"
 
 #: ../lib/network/netconnect.pm:475
 #, c-format
@@ -5675,21 +5405,13 @@ msgstr "Er hebben zich problemen voorgedaan tijdens de netwerkverbindingstest."
 
 #: ../lib/network/netconnect.pm:771
 #, c-format
-msgid ""
-"This can be caused by invalid network configuration, or problems with your "
-"modem or router."
-msgstr ""
-"Dit kan worden veroorzaakt door een onjuiste netwerkconfiguratie of "
-"problemen met de modem of router."
+msgid "This can be caused by invalid network configuration, or problems with your modem or router."
+msgstr "Dit kan worden veroorzaakt door een onjuiste netwerkconfiguratie of problemen met de modem of router."
 
 #: ../lib/network/netconnect.pm:772
 #, c-format
-msgid ""
-"You might want to relaunch the configuration to verify the connection "
-"settings."
-msgstr ""
-"U zou de configuratie kunnen herstarten om de verbindingsinstellingen te "
-"controleren."
+msgid "You might want to relaunch the configuration to verify the connection settings."
+msgstr "U zou de configuratie kunnen herstarten om de verbindingsinstellingen te controleren."
 
 #: ../lib/network/netconnect.pm:775
 #, c-format
@@ -5698,22 +5420,13 @@ msgstr "Gefeliciteerd, de netwerkconfiguratie is voltooid."
 
 #: ../lib/network/netconnect.pm:775
 #, c-format
-msgid ""
-"However, the Internet connectivity test failed. You should test your "
-"connection manually, and verify your Internet modem or router."
-msgstr ""
-"Echter, de internetverbindingstest is niet gelukt. U dient de verbinding "
-"handmatig te testen en de modem of router controleren. Het kan raadzaam zijn "
-"deze eerst te herstarten."
+msgid "However, the Internet connectivity test failed. You should test your connection manually, and verify your Internet modem or router."
+msgstr "Echter, de internetverbindingstest is niet gelukt. U dient de verbinding handmatig te testen en de modem of router controleren. Het kan raadzaam zijn deze eerst te herstarten."
 
 #: ../lib/network/netconnect.pm:776
 #, c-format
-msgid ""
-"If your connection does not work, you might want to relaunch the "
-"configuration."
-msgstr ""
-"Als uw verbinding niet functioneert, is het wellicht raadzaam om de "
-"configuratie nogmaals te doorlopen."
+msgid "If your connection does not work, you might want to relaunch the configuration."
+msgstr "Als uw verbinding niet functioneert, is het wellicht raadzaam om de configuratie nogmaals te doorlopen."
 
 #: ../lib/network/netconnect.pm:778
 #, c-format
@@ -5722,12 +5435,8 @@ msgstr "Gefeliciteerd, de netwerk- en internetconfiguratie is voltooid."
 
 #: ../lib/network/netconnect.pm:779
 #, c-format
-msgid ""
-"After this is done, we recommend that you restart your X environment to "
-"avoid any hostname-related problems."
-msgstr ""
-"We raden u aan om nadat dit gebeurd is, uw X omgeving te herstarten om "
-"hostnaam gerelateerde problemen te voorkomen."
+msgid "After this is done, we recommend that you restart your X environment to avoid any hostname-related problems."
+msgstr "We raden u aan om nadat dit gebeurd is, uw X omgeving te herstarten om hostnaam gerelateerde problemen te voorkomen."
 
 #: ../lib/network/netconnect.pm:790
 #, c-format
@@ -5827,14 +5536,12 @@ msgstr "Zeroconf-hostnaam mag geen . bevatten"
 #: ../lib/network/netconnect.pm:813
 #, c-format
 msgid ""
-"Because you are doing a network installation, your network is already "
-"configured.\n"
-"Click on Ok to keep your configuration, or cancel to reconfigure your "
-"Internet & Network connection.\n"
+"Because you are doing a network installation, your network is already configured.\n"
+"Click on Ok to keep your configuration, or cancel to reconfigure your Internet & Network connection.\n"
+""
 msgstr ""
 "Omdat u een netwerk-installatie uitvoert, is uw netwerk reeds ingesteld.\n"
-"Klik op OK om uw instellingen te behouden, of op Annuleren om uw Internet & "
-"Netwerkverbinding opnieuw in te stellen.\n"
+"Klik op OK om uw instellingen te behouden, of op Annuleren om uw Internet & Netwerkverbinding opnieuw in te stellen.\n"
 
 #: ../lib/network/netconnect.pm:816
 #, c-format
@@ -5876,6 +5583,7 @@ msgid ""
 "You have configured multiple ways to connect to the Internet.\n"
 "Choose the one you want to use.\n"
 "\n"
+""
 msgstr ""
 "U heeft meerdere manieren om te verbinden met het Internet ingesteld.\n"
 "Kies degene die u wenst te gebruiken.\n"
@@ -5893,12 +5601,8 @@ msgstr "Bezig met configureren van netwerkapparaat %s (stuurprogramma %s)"
 
 #: ../lib/network/netconnect.pm:824
 #, c-format
-msgid ""
-"The following protocols can be used to configure a LAN connection. Please "
-"choose the one you want to use."
-msgstr ""
-"Een LANverbinding kan met de volgende protocollen geconfigureerd worden. "
-"Kiest u degene die u wenst."
+msgid "The following protocols can be used to configure a LAN connection. Please choose the one you want to use."
+msgstr "Een LANverbinding kan met de volgende protocollen geconfigureerd worden. Kiest u degene die u wenst."
 
 #: ../lib/network/netconnect.pm:825
 #, c-format
@@ -5948,12 +5652,8 @@ msgstr "Geavanceerde netwerkinstellingen"
 
 #: ../lib/network/network.pm:515
 #, c-format
-msgid ""
-"Here you can configure advanced network settings. Please note that you have "
-"to reboot the machine for changes to take effect."
-msgstr ""
-"Hier kunt u geavanceerde netwerkinstellingen maken. De computer moet "
-"herstart worden voordat de veranderingen effectief worden."
+msgid "Here you can configure advanced network settings. Please note that you have to reboot the machine for changes to take effect."
+msgstr "Hier kunt u geavanceerde netwerkinstellingen maken. De computer moet herstart worden voordat de veranderingen effectief worden."
 
 #: ../lib/network/network.pm:517
 #, c-format
@@ -6012,12 +5712,8 @@ msgstr "Configuratie van proxy('s)"
 
 #: ../lib/network/network.pm:540
 #, c-format
-msgid ""
-"Here you can set up your proxies configuration (eg: http://"
-"my_caching_server:8080)"
-msgstr ""
-"Hier kunnen de proxies ingesteld worden. (bijvoorbeeld: http://"
-"mijnProxy:8080)"
+msgid "Here you can set up your proxies configuration (eg: http://my_caching_server:8080)"
+msgstr "Hier kunnen de proxies ingesteld worden. (bijvoorbeeld: http://mijnProxy:8080)"
 
 #: ../lib/network/network.pm:541
 #, c-format
@@ -6071,12 +5767,11 @@ msgid ""
 "unselect interfaces which will be connected to local network.\n"
 "\n"
 "Which interfaces should be protected?\n"
+""
 msgstr ""
 "Selecteer de interfaces die beschermd moeten worden door de firewall.\n"
 "\n"
-"Alle adapters direct verbonden met het internet moeten worden geselecteerd "
-"dienen, adapters verbonden met een lokaal netwerk hoeven niet geselecteerd "
-"te worden.\n"
+"Alle adapters direct verbonden met het internet moeten worden geselecteerd dienen, adapters verbonden met een lokaal netwerk hoeven niet geselecteerd te worden.\n"
 "Als u van plan bent om Mageia Internetverbinding delen te gebruiken, \n"
 "deselecteer dan de interfaces die verbonden worden met het lokale netwerk.\n"
 "\n"
@@ -6099,17 +5794,14 @@ msgid ""
 "rules that may conflict with the configuration that has just been set up.\n"
 "What do you want to do?"
 msgstr ""
-"De instellingen van de Firewall zijn handmatig bewerkt en bevatten regels "
-"die \n"
+"De instellingen van de Firewall zijn handmatig bewerkt en bevatten regels die \n"
 "wellicht in tegenspraak zijn met de regels die zojuist zijn ingesteld.\n"
 "Wat wit u doen?"
 
 #: ../lib/network/thirdparty.pm:144
 #, c-format
 msgid "Some components (%s) are required but aren't available for %s hardware."
-msgstr ""
-"Sommige componenten (%s) zijn vereist maar niet beschikbaar voor %s-"
-"apparatuur"
+msgstr "Sommige componenten (%s) zijn vereist maar niet beschikbaar voor %s-apparatuur"
 
 #: ../lib/network/thirdparty.pm:145
 #, c-format
@@ -6120,10 +5812,8 @@ msgstr "Sommige pakketten (%s) zijn nodig maar niet verkrijgbaar."
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
 #, c-format
-msgid ""
-"These packages can be found in %s, or in the official %s package repository."
-msgstr ""
-"Deze pakketten zijn te vinden in %s of in het officiële pakketdepot van %s."
+msgid "These packages can be found in %s, or in the official %s package repository."
+msgstr "Deze pakketten zijn te vinden in %s of in het officiële pakketdepot van %s."
 
 #: ../lib/network/thirdparty.pm:154
 #, c-format
@@ -6181,12 +5871,8 @@ msgstr "Plaats een diskette"
 
 #: ../lib/network/thirdparty.pm:245
 #, c-format
-msgid ""
-"Insert a FAT formatted floppy in drive %s with %s in root directory and "
-"press %s"
-msgstr ""
-"Plaats een met het FAT-bestandssysteem geformatteerde diskette in station %s "
-"met %s in de hoofdmap en druk op %s"
+msgid "Insert a FAT formatted floppy in drive %s with %s in root directory and press %s"
+msgstr "Plaats een met het FAT-bestandssysteem geformatteerde diskette in station %s met %s in de hoofdmap en druk op %s"
 
 #: ../lib/network/thirdparty.pm:245
 #, c-format
@@ -6196,8 +5882,7 @@ msgstr "Volgende"
 #: ../lib/network/thirdparty.pm:255
 #, c-format
 msgid "Floppy access error, unable to mount device %s"
-msgstr ""
-"Probleem bij benaderen van diskette, niet in staat apparaat %s te koppelen"
+msgstr "Probleem bij benaderen van diskette, niet in staat apparaat %s te koppelen"
 
 #: ../lib/network/thirdparty.pm:354
 #, c-format
@@ -6344,1257 +6029,3 @@ msgstr "NAT-modus"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Specifieke UDP-poort gebruiken"
-
-#, fuzzy
-#~ msgid "Do you want to apply new wireless regulation settings now?"
-#~ msgstr "Wilt u de verbinding nu starten?"
-
-#, fuzzy
-#~ msgid "Connecting.."
-#~ msgstr "Verbinden..."
-
-#, fuzzy
-#~ msgid "Account network traffic"
-#~ msgstr "Synchroniseren netwerkverbinding"
-
-#~ msgid ""
-#~ "Name of the profile to create (the new profile is created as a copy of "
-#~ "the current one):"
-#~ msgstr ""
-#~ "Naam van het aan te maken profiel (het nieuwe profiel wordt als kopie van "
-#~ "het huidige aangemaakt):"
-
-#~ msgid ""
-#~ "This tool allows to activate an existing network profile, and to manage "
-#~ "(clone, delete) profiles."
-#~ msgstr ""
-#~ "Dit hulpmiddel laat u een bestaand netwerkprofiel activeren en de "
-#~ "profielen beheren (dupliceren, verwijderen)"
-
-#~ msgid "To modify a profile, you have to activate it first."
-#~ msgstr "Om een profiel te wijzigen moet u het eerst activeren."
-
-#~ msgid "Clone"
-#~ msgstr "Klonen"
-
-#~ msgid "Please select the Windows driver (.inf file)"
-#~ msgstr "Selecteer het Windows-stuurprogramma (.inf-bestand)"
-
-#~ msgid ""
-#~ "There is only one configured network adapter on your system:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "I am about to setup your Local Area Network with that adapter."
-#~ msgstr ""
-#~ "Er is maar één geconfigureerde netwerkadapter op uw systeem:\n"
-#~ "\n"
-#~ "%s \n"
-#~ "\n"
-#~ "Ik sta op het punt om uw Local Area Network te koppelen aan\n"
-#~ "deze adapter."
-
-#~ msgid ""
-#~ "No ethernet network adapter has been detected on your system. Please run "
-#~ "the hardware configuration tool."
-#~ msgstr ""
-#~ "Er is geen ethernet netwerkadapter op uw systeem gevonden. Gelieve het "
-#~ "hardware configuratieprogramma te draaien."
-
-#~ msgid "Connection type: "
-#~ msgstr "Soort verbinding: "
-
-#~ msgid "%s already in use\n"
-#~ msgstr "%s reeds in gebruik\n"
-
-#~ msgid "Draknfs entry"
-#~ msgstr "Draknfs ingang"
-
-#~ msgid "DrakVPN"
-#~ msgstr "DrakVPN"
-
-#~ msgid "The VPN connection is enabled."
-#~ msgstr "De VPN-verbinding is ingeschakeld."
-
-#~ msgid ""
-#~ "The setup of a VPN connection has already been done.\n"
-#~ "\n"
-#~ "It's currently enabled.\n"
-#~ "\n"
-#~ "What would you like to do?"
-#~ msgstr ""
-#~ "De instellingen van een VPN-verbinding zijn al gemaakt.\n"
-#~ "\n"
-#~ "Het is op dit moment actief.\n"
-#~ "\n"
-#~ "Wat wilt u doen?"
-
-#~ msgid "disable"
-#~ msgstr "uitschakelen"
-
-#~ msgid "reconfigure"
-#~ msgstr "herconfigureren"
-
-#~ msgid "dismiss"
-#~ msgstr "klaar"
-
-#~ msgid "Disabling VPN..."
-#~ msgstr "VPN uitschakelen..."
-
-#~ msgid "The VPN connection is now disabled."
-#~ msgstr "De VPN-verbinding is nu uitgeschakeld."
-
-#~ msgid "VPN connection currently disabled"
-#~ msgstr "De VPN-verbinding is momenteel uitgeschakeld."
-
-#~ msgid ""
-#~ "The setup of a VPN connection has already been done.\n"
-#~ "\n"
-#~ "It's currently disabled.\n"
-#~ "\n"
-#~ "What would you like to do?"
-#~ msgstr ""
-#~ "De instellingen van een VPN-verbinding zijn al gemaakt.\n"
-#~ "\n"
-#~ "Het is op dit moment niet actief.\n"
-#~ "\n"
-#~ "Wat wilt u doen?"
-
-#~ msgid "enable"
-#~ msgstr "inschakelen"
-
-#~ msgid "Enabling VPN..."
-#~ msgstr "VPN inschakelen..."
-
-#~ msgid "The VPN connection is now enabled."
-#~ msgstr "De VPN-verbinding is nu ingeschakeld."
-
-#~ msgid "Simple VPN setup."
-#~ msgstr "Eenvoudige VPN-instellingen."
-
-#~ msgid ""
-#~ "You are about to configure your computer to use a VPN connection.\n"
-#~ "\n"
-#~ "With this feature, computers on your local private network and computers\n"
-#~ "on some other remote private networks, can share resources, through\n"
-#~ "their respective firewalls, over the Internet, in a secure manner. \n"
-#~ "\n"
-#~ "The communication over the Internet is encrypted. The local and remote\n"
-#~ "computers look as if they were on the same network.\n"
-#~ "\n"
-#~ "Make sure you have configured your Network/Internet access using\n"
-#~ "drakconnect before going any further."
-#~ msgstr ""
-#~ "U staat op het punt uw computer te configureren om een VPN-verbinding "
-#~ "te \n"
-#~ "gebruiken.\n"
-#~ "Met deze functie kunnen computers op uw privé-netwerk en computers op \n"
-#~ "andere privé-netwerken op afstand bronnen delen, door hun "
-#~ "respectievelijke\n"
-#~ "firewalls, over het Internet, op een veilige wijze. \n"
-#~ "\n"
-#~ "De communicatie over het Internet is vercijferd. De lokale en afstands-\n"
-#~ "computers zien eruit alsof ze op hetzelfde netwerk zitten.\n"
-#~ "\n"
-#~ "Zorg ervoor dat u uw netwerk-/internettoegang hebt geconfigureerd met \n"
-#~ "drakconnect voordat u verder gaat."
-
-#~ msgid ""
-#~ "VPN connection.\n"
-#~ "\n"
-#~ "This program is based on the following projects:\n"
-#~ " - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
-#~ " - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
-#~ " - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
-#~ " - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
-#~ " - the docs and man pages coming with the %s package\n"
-#~ "\n"
-#~ "Please read AT LEAST the ipsec-howto docs\n"
-#~ "before going any further."
-#~ msgstr ""
-#~ "VPN-verbinding.\n"
-#~ "\n"
-#~ "Dit programma is gebaseerd op de volgende projecten:\n"
-#~ " - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
-#~ " - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
-#~ " - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
-#~ " - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
-#~ " - de documentatie die bij het %s-pakket geleverd is\n"
-#~ "\n"
-#~ "Leest u TENMINSTE de ipsec-howto documentatie\n"
-#~ "voordat u verder gaat."
-
-#~ msgid "Problems installing package %s"
-#~ msgstr "Problemen met installeren van pakket %s"
-
-#~ msgid "Security Policies"
-#~ msgstr "Beveiligingsbeleid"
-
-#~ msgid "IKE daemon racoon"
-#~ msgstr "IKE-voorziening racoon"
-
-#~ msgid "Configuration file"
-#~ msgstr "Configuratiebestand"
-
-#~ msgid ""
-#~ "Configuration step!\n"
-#~ "\n"
-#~ "You need to define the Security Policies and then to \n"
-#~ "configure the automatic key exchange (IKE) daemon. \n"
-#~ "The KAME IKE daemon we're using is called 'racoon'.\n"
-#~ "\n"
-#~ "What would you like to configure?\n"
-#~ msgstr ""
-#~ "Configuratiestap!\n"
-#~ "\n"
-#~ "U dient de het beveiligingsbeleid te definiëren en\n"
-#~ "vervolgens de automatic key exchange (IKE)-voorziening\n"
-#~ "te configureren. De KAME IKE-voorziening die wij gebruiken\n"
-#~ "heet 'racoon'.\n"
-#~ "\n"
-#~ "Wat wilt u configureren?\n"
-
-#~ msgid "%s entries"
-#~ msgstr "%s items"
-
-#~ msgid ""
-#~ "The %s file contents\n"
-#~ "is divided into sections.\n"
-#~ "\n"
-#~ "You can now:\n"
-#~ "\n"
-#~ "  - display, add, edit, or remove sections, then\n"
-#~ "  - commit the changes\n"
-#~ "\n"
-#~ "What would you like to do?\n"
-#~ msgstr ""
-#~ "De inhoud van het bestand %s\n"
-#~ "is in secties onderverdeeld.\n"
-#~ "\n"
-#~ "U kunt nu:\n"
-#~ "\n"
-#~ "  - secties weergeven, toevoegen, bewerken, of verwijderen en dan\n"
-#~ "  - de wijzigingen bevestigen\n"
-#~ "\n"
-#~ "Wat wilt u doen?\n"
-
-#~ msgid ""
-#~ "_:display here is a verb\n"
-#~ "Display"
-#~ msgstr "Weergeven"
-
-#~ msgid "Edit"
-#~ msgstr "Bewerken"
-
-#~ msgid "Commit"
-#~ msgstr "Bevestigen"
-
-#~ msgid ""
-#~ "_:display here is a verb\n"
-#~ "Display configuration"
-#~ msgstr "Configuratie weergeven"
-
-#~ msgid ""
-#~ "The %s file does not exist.\n"
-#~ "\n"
-#~ "This must be a new configuration.\n"
-#~ "\n"
-#~ "You'll have to go back and choose 'add'.\n"
-#~ msgstr ""
-#~ "Het bestand %s bestaat niet.\n"
-#~ "\n"
-#~ "Dit zal wel een nieuwe configuratie zijn.\n"
-#~ "\n"
-#~ "U dient terug te gaan en 'Toevoegen' te kiezen.\n"
-
-#~ msgid ""
-#~ "Add a Security Policy.\n"
-#~ "\n"
-#~ "You can now add a Security Policy.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data.\n"
-#~ msgstr ""
-#~ "Een beveiligingsbeleid toevoegen.\n"
-#~ "\n"
-#~ "U kunt nu een beveiligingsbeleid toevoegen.\n"
-#~ "\n"
-#~ "Kies doorgaan wanneer u gereed bent om de gegevens op te slaan.\n"
-
-#~ msgid "Edit section"
-#~ msgstr "Sectie bewerken"
-
-#~ msgid ""
-#~ "Your %s file has several sections or connections.\n"
-#~ "\n"
-#~ "You can choose here below the one you want to edit \n"
-#~ "and then click on next.\n"
-#~ msgstr ""
-#~ "Uw %s-bestand heeft meerdere secties of verbindingen.\n"
-#~ "\n"
-#~ "U kunt hieronder kiezen welke u wilt bewerken \n"
-#~ "en dan op volgende klikken.\n"
-
-#~ msgid "Section names"
-#~ msgstr "Sectienamen"
-
-#~ msgid ""
-#~ "Edit a Security Policy.\n"
-#~ "\n"
-#~ "You can now edit a Security Policy.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data.\n"
-#~ msgstr ""
-#~ "Een beveiligingsbeleid bewerken.\n"
-#~ "\n"
-#~ "U kunt nu een beveiligingsbeleid bewerken.\n"
-#~ "\n"
-#~ "Kies Doorgaan wanneer u gereed bent om de gegevens op te slaan.\n"
-
-#~ msgid "Remove section"
-#~ msgstr "Sectie verwijderen"
-
-#~ msgid ""
-#~ "Your %s file has several sections or connections.\n"
-#~ "\n"
-#~ "You can choose here below the one you want to remove\n"
-#~ "and then click on next.\n"
-#~ msgstr ""
-#~ "Uw %s-bestand heeft een aantal secties ofwel verbindingen.\n"
-#~ "\n"
-#~ "U kunt hieronder degene kiezen die u wilt verwijderen\n"
-#~ "en dan op Volgende klikken.\n"
-
-#~ msgid ""
-#~ "The racoon.conf file configuration.\n"
-#~ "\n"
-#~ "The contents of this file is divided into sections.\n"
-#~ "You can now:\n"
-#~ "  - display \t\t (display the file contents)\n"
-#~ "  - add\t\t\t (add one section)\n"
-#~ "  - edit \t\t\t (modify parameters of an existing section)\n"
-#~ "  - remove \t\t (remove an existing section)\n"
-#~ "  - commit \t\t (writes the changes to the real file)"
-#~ msgstr ""
-#~ "De racoon.conf bestandsconfiguratie.\n"
-#~ "\n"
-#~ "De inhoud van dit bestand is onderverdeeld in secties.\n"
-#~ "U kunt nu:\n"
-#~ "  - weergeven \t\t (bestandsinhoud weergeven)\n"
-#~ "  - toevoegen\t\t\t (een sectie toevoegen)\n"
-#~ "  - bewerken \t\t\t (parameters aanpassen in een bestaande sectie)\n"
-#~ "  - verwijderen \t\t (een bestaande sectie verwijderen)\n"
-#~ "  - bevestigen \t\t (schrijft de wijzigingen naar het echte bestand)"
-
-#~ msgid ""
-#~ "The %s file does not exist\n"
-#~ "\n"
-#~ "This must be a new configuration.\n"
-#~ "\n"
-#~ "You'll have to go back and choose configure.\n"
-#~ msgstr ""
-#~ "Het bestand %s bestaat niet.\n"
-#~ "\n"
-#~ "Dit moet wel een nieuwe configuratie zijn.\n"
-#~ "\n"
-#~ "U kunt beter teruggaan en 'configureren' kiezen.\n"
-
-#~ msgid "racoon.conf entries"
-#~ msgstr "racoon.conf-entry's"
-
-#~ msgid ""
-#~ "The 'add' sections step.\n"
-#~ "\n"
-#~ "Here below is the racoon.conf file skeleton:\n"
-#~ "\t'path'\n"
-#~ "\t'remote'\n"
-#~ "\t'sainfo' \n"
-#~ "\n"
-#~ "Choose the section you would like to add.\n"
-#~ msgstr ""
-#~ "De 'sectie toevoegen' stap.\n"
-#~ "\n"
-#~ "Dit is het racoon.conf-bestandsskelet:\n"
-#~ "\t'pad'\n"
-#~ "\t'op afstand'\n"
-#~ "\t'sainfo' \n"
-#~ "\n"
-#~ "Kies de sectie die u wilt toevoegen.\n"
-
-#~ msgid "path"
-#~ msgstr "pad"
-
-#~ msgid "remote"
-#~ msgstr "op afstand"
-
-#~ msgid "sainfo"
-#~ msgstr "sainfo"
-
-#~ msgid ""
-#~ "The 'add path' section step.\n"
-#~ "\n"
-#~ "The path sections have to be on top of your racoon.conf file.\n"
-#~ "\n"
-#~ "Put your mouse over the certificate entry to obtain online help."
-#~ msgstr ""
-#~ "De  'pad sectie toevoegen' stap.\n"
-#~ "\n"
-#~ "De pad secties moeten bovenaan in het racoon.conf bestand staan.\n"
-#~ "\n"
-#~ "Houd uw muis over de certificaatingang om online hulp te krijgen."
-
-#~ msgid "path type"
-#~ msgstr "pad-type"
-
-#~ msgid ""
-#~ "path include path: specifies a path to include\n"
-#~ "a file. See File Inclusion.\n"
-#~ "\tExample: path include '/etc/racoon'\n"
-#~ "\n"
-#~ "path pre_shared_key file: specifies a file containing\n"
-#~ "pre-shared key(s) for various ID(s). See Pre-shared key File.\n"
-#~ "\tExample: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
-#~ "\n"
-#~ "path certificate path: racoon(8) will search this directory\n"
-#~ "if a certificate or certificate request is received.\n"
-#~ "\tExample: path certificate '/etc/cert' ;\n"
-#~ "\n"
-#~ "File Inclusion: include file \n"
-#~ "other configuration files can be included.\n"
-#~ "\tExample: include \"remote.conf\" ;\n"
-#~ "\n"
-#~ "Pre-shared key File: Pre-shared key file defines a pair\n"
-#~ "of the identifier and the shared secret key which are used at\n"
-#~ "Pre-shared key authentication method in phase 1."
-#~ msgstr ""
-#~ "path include pad: beschrijft een pad om een bestand\n"
-#~ "in te sluiten. Zie Bestandsinsluiting.\n"
-#~ "\tVoorbeeld: path include '/etc/racoon'\n"
-#~ "\n"
-#~ "path pre_shared_key Bestand: beschrijft een bestand met\n"
-#~ "pre-shared key(s) voor verscheidene ID(s). Zie Pre-shared key Bestand.\n"
-#~ "\tVoorbeeld: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
-#~ "\n"
-#~ "path certificate Pad: racoon(8) zal deze map doorzoeken\n"
-#~ "als een certificaat of aanvraag naar een certificaat wordt ontvangen.\n"
-#~ "\tVoorbeeld: path certificate '/etc/cert' ;\n"
-#~ "\n"
-#~ "Bestandsinsluiting: include Bestand \n"
-#~ "andere configuratie bestanden kunnen worden ingesloten.\n"
-#~ "\tVoorbeeld: include 'remote.conf' ;\n"
-#~ "\n"
-#~ "Pre-shared key Bestand: Pre-shared key Bestand legt een paar\n"
-#~ "vast van de indentifier en de gedeelde geheime sleutel die gebruikt "
-#~ "worden\n"
-#~ "bij Pre-shared key authenticatie methode in fase 1."
-
-#~ msgid "real file"
-#~ msgstr "echt bestand"
-
-#~ msgid ""
-#~ "Make sure you already have the path sections\n"
-#~ "on the top of your racoon.conf file.\n"
-#~ "\n"
-#~ "You can now choose the remote settings.\n"
-#~ "Choose continue or previous when you are done.\n"
-#~ msgstr ""
-#~ "Zorg ervoor dat u de path-secties al bovenaan\n"
-#~ "uw racoon.conf-bestand heeft staan.\n"
-#~ "\n"
-#~ "U kunt nu de afstandsinstellingen kiezen.\n"
-#~ "Kies Doorgaan of Vorige wanneer u gereed bent.\n"
-
-#~ msgid ""
-#~ "Make sure you already have the path sections\n"
-#~ "on the top of your %s file.\n"
-#~ "\n"
-#~ "You can now choose the sainfo settings.\n"
-#~ "Choose continue or previous when you are done.\n"
-#~ msgstr ""
-#~ "Zorg ervoor dat u de path-secties bovenaan\n"
-#~ "uw bestand %s heeft staan.\n"
-#~ "\n"
-#~ "U kunt nu de sainfo-instellingen kiezen.\n"
-#~ "Kies Doorgaan of Vorige wanneer u gereed bent.\n"
-
-#~ msgid ""
-#~ "Your %s file has several sections or connections.\n"
-#~ "\n"
-#~ "You can choose here in the list below the one you want\n"
-#~ "to edit and then click on next.\n"
-#~ msgstr ""
-#~ "Uw bestand %s heeft verscheidene secties of verbindingen.\n"
-#~ "\n"
-#~ "U kunt in benedenstaande lijst selecteren welke u wilt wijzigen\n"
-#~ "en dan Volgende kiezen.\n"
-
-#~ msgid ""
-#~ "Your %s file has several sections.\n"
-#~ "\n"
-#~ "\n"
-#~ "You can now edit the remote section entries.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data.\n"
-#~ msgstr ""
-#~ "Uw bestand %s heeft verscheidene secties.\n"
-#~ "\n"
-#~ "U kunt nu de afstandsinstellingen wijzigen.\n"
-#~ "\n"
-#~ "Kies Doorgaan wanneer u gereed bent om de gegevens te laten schrijven.\n"
-
-#~ msgid ""
-#~ "Your %s file has several sections.\n"
-#~ "\n"
-#~ "You can now edit the sainfo section entries.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data."
-#~ msgstr ""
-#~ "Uw bestand %s heeft verscheidene secties.\n"
-#~ "\n"
-#~ "U kunt nu de sainfo-instellingen wijzigen.\n"
-#~ "\n"
-#~ "Kies Doorgaan wanneer u gereed bent om de gegevens te laten schrijven."
-
-#~ msgid ""
-#~ "This section has to be on top of your\n"
-#~ "%s file.\n"
-#~ "\n"
-#~ "Make sure all other sections follow these path\n"
-#~ "sections.\n"
-#~ "\n"
-#~ "You can now edit the path entries.\n"
-#~ "\n"
-#~ "Choose continue or previous when you are done.\n"
-#~ msgstr ""
-#~ "Deze sectie dient bovenaan uw bestand %s\n"
-#~ "te staan.\n"
-#~ "\n"
-#~ "Zorg ervoor dat alle andere secties deze pad\n"
-#~ "secties opvolgen.\n"
-#~ "\n"
-#~ "U kunt nu de pad-instellingen wijzigen.\n"
-#~ "\n"
-#~ "Kies Doorgaan of Vorige wanneer u gereed bent.\n"
-
-#~ msgid "path_type"
-#~ msgstr "path_type "
-
-#~ msgid "Congratulations!"
-#~ msgstr "Gefeliciteerd!"
-
-#~ msgid ""
-#~ "Everything has been configured.\n"
-#~ "\n"
-#~ "You may now share resources through the Internet,\n"
-#~ "in a secure way, using a VPN connection.\n"
-#~ "\n"
-#~ "You should make sure that the tunnels shorewall\n"
-#~ "section is configured."
-#~ msgstr ""
-#~ "Alles is geconfigureerd.\n"
-#~ "\n"
-#~ "U kunt nu over het internet op een veilige manier,\n"
-#~ "door middel van een VPN-verbinding informatie delen.\n"
-#~ "\n"
-#~ "Zorg ervoor dat de tunnels shorewall sectie is\n"
-#~ "geconfigureerd."
-
-#~ msgid "Sainfo source address"
-#~ msgstr "Sainfo-bronadres"
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.209 is the source address\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.1.0/24 is the source address"
-#~ msgstr ""
-#~ "sainfo (bron_id bestemming_id | anonymous) { statements }\n"
-#~ "legt de parameters vast van de IKE fase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "bron_id en bestemming_id worden als volgt ingegeven:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Voorbeelden: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepteert verbindingen van overal)\n"
-#~ "\tlaat dit veld leeg als u anonieme verbindingen wilt\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.209 is het bronadres\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.1.0/24 is het bronadres"
-
-#~ msgid "Sainfo source protocol"
-#~ msgstr "Sainfo bronprotocol"
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tthe first 'any' allows any protocol for the source"
-#~ msgstr ""
-#~ "sainfo (bron_id bestemming_id | anonymous) { statements }\n"
-#~ "legt de parameters vast van de IKE fase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "bron_id en bestemming_id worden als volgt ingegeven:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Voorbeelden: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepteert verbindingen van overal)\n"
-#~ "\tlaat dit veld leeg als u anonieme verbindingen wilt\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tde eerste 'any' staat elk protocol toe voor de bron"
-
-#~ msgid "Sainfo destination address"
-#~ msgstr "Sainfo doeladres"
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.218 is the destination address\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.2.0/24 is the destination address"
-#~ msgstr ""
-#~ "sainfo (bron_id bestemming_id | anonymous) { statements }\n"
-#~ "legt de parameters vast van de IKE fase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "bron_id en bestemming_id worden als volgt ingegeven:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Voorbeelden: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepteert verbindingen van overal)\n"
-#~ "\tlaat dit veld leeg als u anonieme verbindingen wilt\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.218 is het bestemmingsadres\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.2.0/24 is het bestemmingsadres"
-
-#~ msgid "Sainfo destination protocol"
-#~ msgstr "Sainfo doel-protocol"
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tthe last 'any' allows any protocol for the destination"
-#~ msgstr ""
-#~ "sainfo (bron_id bestemming_id | anonymous) { statements }\n"
-#~ "legt de parameters vast van de IKE fase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "bron_id en bestemming_id worden als volgt ingegeven:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Voorbeelden: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepteert verbindingen van overal)\n"
-#~ "\tlaat dit veld leeg als u anonieme verbindingen wilt\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tde laatste 'any' staat elk protocol toe voor de bestemming"
-
-#~ msgid "PFS group"
-#~ msgstr "PFS-groep"
-
-#~ msgid ""
-#~ "define the group of Diffie-Hellman exponentiations.\n"
-#~ "If you do not require PFS then you can omit this directive.\n"
-#~ "Any proposal will be accepted if you do not specify one.\n"
-#~ "group is one of the following: modp768, modp1024, modp1536.\n"
-#~ "Or you can define 1, 2, or 5 as the DH group number."
-#~ msgstr ""
-#~ "definiëer de groep van Diffie-Hellman exponentiations.\n"
-#~ "Als u geen PFS nodig heeft kunt u dit voorschrift weglaten.\n"
-#~ "Elk voorstel wordt geaccepteerd als u er geen vastlegt.\n"
-#~ "group is een van de volgenden: modp768, modp1024, modp1536.\n"
-#~ "Of u kunt 1,2, of 5 als DH groepsnummer definiëren."
-
-#~ msgid "Lifetime number"
-#~ msgstr "Levensduur-getal"
-
-#~ msgid ""
-#~ "define a lifetime of a certain time which will be pro-\n"
-#~ "posed in the phase 1 negotiations.  Any proposal will be\n"
-#~ "accepted, and the attribute(s) will not be proposed to\n"
-#~ "the peer if you do not specify it(them).  They can be\n"
-#~ "individually specified in each proposal.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "So, here, the lifetime numbers are 1, 1, 30, 30, 60 and 12.\n"
-#~ msgstr ""
-#~ "leg een levensduur vast van een bepaalde tijd, die zal worden\n"
-#~ "voorgesteld in de fase 1 onderhandelingen. Elk voorstel zal\n"
-#~ "worden geaccepteerd, en attributen zullen niet worden\n"
-#~ "voorgesteld als u ze niet vastlegt. Ze kunnen individueel\n"
-#~ "vastgelegd worden in elk voorstel.\n"
-#~ "\n"
-#~ "Voorbeelden: \n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,uur\n"
-#~ "        lifetime time 1 min;    # sec,min,uur\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "Dus, hier zijn de levensduur nummers 1, 1, 30, 30, 60 en 12.\n"
-
-#~ msgid "Lifetime unit"
-#~ msgstr "Levensduur-eenheid"
-
-#~ msgid ""
-#~ "define a lifetime of a certain time which will be pro-\n"
-#~ "posed in the phase 1 negotiations.  Any proposal will be\n"
-#~ "accepted, and the attribute(s) will not be proposed to\n"
-#~ "the peer if you do not specify it(them).  They can be\n"
-#~ "individually specified in each proposal.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "So, here, the lifetime units are 'min', 'min', 'sec', 'sec', 'sec' and "
-#~ "'hour'.\n"
-#~ msgstr ""
-#~ "leg een levensduur vast van een bepaalde tijd, die zal worden\n"
-#~ "voorgesteld in de fase 1 onderhandelingen. Elk voorstel zal\n"
-#~ "worden geaccepteerd, en attributen zullen niet worden\n"
-#~ "voorgesteld als u ze niet vastlegt. Ze kunnen individueel\n"
-#~ "vastgelegd worden in elk voorstel.\n"
-#~ "\n"
-#~ "Voorbeelden: \n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,uur\n"
-#~ "        lifetime time 1 min;    # sec,min,uur\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "Dus, hier zijn de levensduur nummers 1, 1, 30, 30, 60 en 12.\n"
-
-#~ msgid "Encryption algorithm"
-#~ msgstr "Versleutelingsalgoritme"
-
-#~ msgid "Authentication algorithm"
-#~ msgstr "Aanmeldingscontrole-algoritme"
-
-#~ msgid "Compression algorithm"
-#~ msgstr "Compressiealgoritme"
-
-#~ msgid "deflate"
-#~ msgstr "deflate"
-
-#~ msgid "Remote"
-#~ msgstr "Op afstand"
-
-#~ msgid ""
-#~ "remote (address | anonymous) [[port]] { statements }\n"
-#~ "specifies the parameters for IKE phase 1 for each remote node.\n"
-#~ "The default port is 500.  If anonymous is specified, the state-\n"
-#~ "ments apply to all peers which do not match any other remote\n"
-#~ "directive.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "remote anonymous\n"
-#~ "remote ::1 [8000]"
-#~ msgstr ""
-#~ "remote (address | anonymous) [[port]] { statements }\n"
-#~ "legt de parameters vast voor IKE fase 1 voor elke knoop op afstand.\n"
-#~ "De standaard poort is 500.  Als anonymous is gespecificeerd, zijn de\n"
-#~ "uitingen van toepassing op alle andere machines die met geen enkel\n"
-#~ "afstands-voorschift overeen komen.\n"
-#~ "\n"
-#~ "Voorbeelden: \n"
-#~ "\n"
-#~ "remote anonymous\n"
-#~ "remote ::1 [8000]"
-
-#~ msgid "Exchange mode"
-#~ msgstr "Uitwisselmodus"
-
-#~ msgid ""
-#~ "defines the exchange mode for phase 1 when racoon is the\n"
-#~ "initiator. Also it means the acceptable exchange mode\n"
-#~ "when racoon is responder. More than one mode can be\n"
-#~ "specified by separating them with a comma. All of the\n"
-#~ "modes are acceptable. The first exchange mode is what\n"
-#~ "racoon uses when it is the initiator.\n"
-#~ msgstr ""
-#~ "legt de uitwisselingsmodus vast voor fase 1 wanneer racoon\n"
-#~ "de initiator is. Het slaat ook op de acceptabele uitwisselingsmodus\n"
-#~ "als racoon de antwoorder is. Meer dan 1 modus kan worden \n"
-#~ "ingesteld door ze met een komma te scheiden. Alle modi\n"
-#~ "zijn acceptabel. De eerste uitwisselingsmodus is wat\n"
-#~ "racoon gebruikt wanneer het de initiator is.\n"
-
-#~ msgid "Generate policy"
-#~ msgstr "Policy genereren"
-
-#~ msgid "off"
-#~ msgstr "uit"
-
-#~ msgid "on"
-#~ msgstr "aan"
-
-#~ msgid ""
-#~ "This directive is for the responder.  Therefore you\n"
-#~ "should set passive on in order that racoon(8) only\n"
-#~ "becomes a responder.  If the responder does not have any\n"
-#~ "policy in SPD during phase 2 negotiation, and the direc-\n"
-#~ "tive is set on, then racoon(8) will choose the first pro-\n"
-#~ "posal in the SA payload from the initiator, and generate\n"
-#~ "policy entries from the proposal.  It is useful to nego-\n"
-#~ "tiate with the client which is allocated IP address\n"
-#~ "dynamically.  Note that inappropriate policy might be\n"
-#~ "installed into the responder's SPD by the initiator.  So\n"
-#~ "that other communication might fail if such policies\n"
-#~ "installed due to some policy mismatches between the ini-\n"
-#~ "tiator and the responder.  This directive is ignored in\n"
-#~ "the initiator case.  The default value is off."
-#~ msgstr ""
-#~ "Dit voorschift is voor de antwoorder. Daarom dient u\n"
-#~ "passief in te schakelen zodat racoon(8) alleen een\n"
-#~ "antwoorder wordt. Als de antwoorder geen policy in SPD\n"
-#~ "heeft gedurende fase 2 onderhandelingen, en het voorschrift\n"
-#~ "is ingeschakeld, zal racoon(8) het eerste voorstel in de \n"
-#~ "SA payload van de initiator aannemen, en policy regels\n"
-#~ "van het voorstel maken. Het is zinvol met de client te\n"
-#~ "onderhandelen die dynamisch IP toegewezen krijgt.\n"
-#~ "Merk op dat niet-toepasbare policy zou kunnen worden\n"
-#~ "ingevoerd in de antwoorders SPD door de initiator. Dus\n"
-#~ "andere communicatie zou kunnen mislukken als een\n"
-#~ "dergelijke policy, geïnstalleerd door een of andere policy\n"
-#~ "niet past tussen de initiator en de antwoorder. Dit voorschrift\n"
-#~ "wordt niet nageleefd door de initiator. Standaard staat het uit."
-
-#~ msgid "Passive"
-#~ msgstr "Passief"
-
-#~ msgid ""
-#~ "If you do not want to initiate the negotiation, set this\n"
-#~ "to on.  The default value is off.  It is useful for a\n"
-#~ "server."
-#~ msgstr ""
-#~ "Indien u de onderhandelingen niet wilt initiëren, zet dit\n"
-#~ "dan aan. De standaardwaarde is uit. Het is nuttig voor een\n"
-#~ "server."
-
-#~ msgid "Certificate type"
-#~ msgstr "Certificaattype"
-
-#~ msgid "My certfile"
-#~ msgstr "Mijn certbestand"
-
-#~ msgid "Name of the certificate"
-#~ msgstr "Naam van het certificaat"
-
-#~ msgid "My private key"
-#~ msgstr "Mijn privésleutel"
-
-#~ msgid "Name of the private key"
-#~ msgstr "Naam van de privésleutel"
-
-#~ msgid "Peers certfile"
-#~ msgstr "Peers-certbestand"
-
-#~ msgid "Name of the peers certificate"
-#~ msgstr "Naam van het peers-certficaat"
-
-#~ msgid "Verify cert"
-#~ msgstr "Cert verifiëren"
-
-#~ msgid ""
-#~ "If you do not want to verify the peer's certificate for\n"
-#~ "some reason, set this to off.  The default is on."
-#~ msgstr ""
-#~ "Indien u om welke reden dan ook het certificaat van de 'peer'\n"
-#~ "niet wilt verifiëren, zet dit dan uit. De standaardwaarde is aan."
-
-#~ msgid "My identifier"
-#~ msgstr "Mijn kenmerk"
-
-#~ msgid ""
-#~ "specifies the identifier sent to the remote host and the\n"
-#~ "type to use in the phase 1 negotiation.  address, FQDN,\n"
-#~ "user_fqdn, keyid and asn1dn can be used as an idtype.\n"
-#~ "they are used like:\n"
-#~ "\tmy_identifier address [address];\n"
-#~ "\t\tthe type is the IP address.  This is the default\n"
-#~ "\t\ttype if you do not specify an identifier to use.\n"
-#~ "\tmy_identifier user_fqdn string;\n"
-#~ "\t\tthe type is a USER_FQDN (user fully-qualified\n"
-#~ "\t\tdomain name).\n"
-#~ "\tmy_identifier FQDN string;\n"
-#~ "\t\tthe type is a FQDN (fully-qualified domain name).\n"
-#~ "\tmy_identifier keyid file;\n"
-#~ "\t\tthe type is a KEY_ID.\n"
-#~ "\tmy_identifier asn1dn [string];\n"
-#~ "\t\tthe type is an ASN.1 distinguished name.  If\n"
-#~ "\t\tstring is omitted, racoon(8) will get DN from\n"
-#~ "\t\tSubject field in the certificate.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "my_identifier user_fqdn \"myemail@mydomain.com\""
-#~ msgstr ""
-#~ "legt de identifier vast die aan de machine op afstand gestuurd\n"
-#~ "wordt en het in fase 1 te gebruiken type.  address, FQDN,\n"
-#~ "user_fqdn, keyid en asn1dn kunnen worden gebruikt als ID type.\n"
-#~ "het gebruik is als volgt:\n"
-#~ "\tmy_identifier adres [adres];\n"
-#~ "\t\thet type is het IP adres.  Dit is het standaard\n"
-#~ "\t\ttype als u geen identifier voorschrijft.\n"
-#~ "\tmy_identifier user_fqdn string;\n"
-#~ "\t\thet type is USER_FQDN (user fully-qualified\n"
-#~ "\t\tdomain name).\n"
-#~ "\tmy_identifier FQDN string;\n"
-#~ "\t\thet type is een FQDN (fully-qualified domain name).\n"
-#~ "\tmy_identifier keyid file;\n"
-#~ "\t\thet type is een KEY_ID.\n"
-#~ "\tmy_identifier asn1dn [string];\n"
-#~ "\t\thet type is een ASN.1 distinguished name.  Als\n"
-#~ "\t\tstring wordt weggelaten, zal racoon(8) DN van\n"
-#~ "\t\tSubject veld in het certificaat halen.\n"
-#~ "\n"
-#~ "Voorbeelden: \n"
-#~ "\n"
-#~ "my_identifier user_fqdn ‘mijnemail@mijndomein.com’"
-
-#~ msgid "Peers identifier"
-#~ msgstr "Peers-herkenningsteken"
-
-#~ msgid "Proposal"
-#~ msgstr "Voorstel"
-
-#~ msgid ""
-#~ "specify the encryption algorithm used for the\n"
-#~ "phase 1 negotiation. This directive must be defined. \n"
-#~ "algorithm is one of the following: \n"
-#~ "\n"
-#~ "DES, 3DES, blowfish, cast128 for oakley.\n"
-#~ "\n"
-#~ "For other transforms, this statement should not be used."
-#~ msgstr ""
-#~ "specificeer het vercijferingsalgoritme te gebruiken voor de fase-1\n"
-#~ "onderhandeling. Deze richtlijn moet gedefinieerd worden.\n"
-#~ "algorithm kan één van de volgende zijn: \n"
-#~ "\n"
-#~ "DES, 3DES, blowfish, cast128 voor oakley.\n"
-#~ "\n"
-#~ "Voor overige transformaties dient dit statement niet gebruikt te worden."
-
-#~ msgid "Hash algorithm"
-#~ msgstr "Hash-algoritme"
-
-#~ msgid "Authentication method"
-#~ msgstr "Aanmeldingscontrole-methode"
-
-#~ msgid "DH group"
-#~ msgstr "DH-groep"
-
-#~ msgid "Command"
-#~ msgstr "Opdracht"
-
-#~ msgid "Source IP range"
-#~ msgstr "Bron IP-bereik"
-
-#~ msgid "Destination IP range"
-#~ msgstr "Doel IP-bereik"
-
-#~ msgid "Upper-layer protocol"
-#~ msgstr "Upper-layer protocol"
-
-#~ msgid "any"
-#~ msgstr "elke"
-
-#~ msgid "Flag"
-#~ msgstr "Vlag"
-
-#~ msgid "Direction"
-#~ msgstr "Richting"
-
-#~ msgid "IPsec policy"
-#~ msgstr "IPsec-policy"
-
-#~ msgid "ipsec"
-#~ msgstr "ipsec"
-
-#~ msgid "discard"
-#~ msgstr "verwerpen"
-
-#~ msgid "none"
-#~ msgstr "geen"
-
-#~ msgid "tunnel"
-#~ msgstr "tunnel"
-
-#~ msgid "transport"
-#~ msgstr "transport"
-
-#~ msgid "Source/destination"
-#~ msgstr "Bron/doel"
-
-#~ msgid "Level"
-#~ msgstr "Niveau"
-
-#~ msgid "require"
-#~ msgstr "vereist"
-
-#~ msgid "default"
-#~ msgstr "standaard"
-
-#~ msgid "use"
-#~ msgstr "gebruikt"
-
-#~ msgid "unique"
-#~ msgstr "uniek"
-
-#~ msgid "You need to log out and back in again for changes to take effect"
-#~ msgstr ""
-#~ "U dient zich af te melden en weer aan te melden voordat de veranderingen "
-#~ "effect hebben"
-
-#, fuzzy
-#~ msgid "Process attack"
-#~ msgstr "Dienst-aanval"
-
-#~ msgid "Interactive Firewall: intrusion detected"
-#~ msgstr "Interactieve firewall: inbraak bespeurd"
-
-#~ msgid "What do you want to do with this attacker?"
-#~ msgstr "Wat wilt u met deze aanvaller doen?"
-
-#~ msgid "Attack details"
-#~ msgstr "Aanvalsdetails"
-
-#~ msgid "Attack time: %s"
-#~ msgstr "Aanvalstijd: %s"
-
-#~ msgid "Network interface: %s"
-#~ msgstr "Netwerk-interface: %s"
-
-#~ msgid "Attack type: %s"
-#~ msgstr "Aanvalstype: %s"
-
-#~ msgid "Protocol: %s"
-#~ msgstr "Protocol: %s"
-
-#~ msgid "Attacker IP address: %s"
-#~ msgstr "IP-adres van de aanvaller: %s"
-
-#~ msgid "Attacker hostname: %s"
-#~ msgstr "Hostnaam van de aanvaller: %s"
-
-#~ msgid "Service attacked: %s"
-#~ msgstr "Aangevallen dienst: %s"
-
-#~ msgid "Port attacked: %s"
-#~ msgstr "Aangevallen poort: %s"
-
-#~ msgid "Type of ICMP attack: %s"
-#~ msgstr "Type ICMP-aanval: %s"
-
-#~ msgid "Always blacklist (do not ask again)"
-#~ msgstr "Altijd op de zwarte lijst zetten (niet nogmaals vragen)"
-
-#~ msgid "Ignore"
-#~ msgstr "Negeren"
-
-#~ msgid "Interactive Firewall: new service"
-#~ msgstr "Interactieve firewall: nieuwe dienst"
-
-#, fuzzy
-#~ msgid "Process connection"
-#~ msgstr "Draadloze verbinding"
-
-#~ msgid "Do you want to open this service?"
-#~ msgstr "Wenst u deze dienst vrij te geven?"
-
-#~ msgid "Remember this answer"
-#~ msgstr "Onthoud dit antwoord"
-
-#~ msgid "Use Cisco-UDP encapsulation"
-#~ msgstr "Cisco-UDP encapsulatie gebruiken"
-
-#~ msgid "Gateway:"
-#~ msgstr "Gateway:"
-
-#~ msgid "Interface:"
-#~ msgstr "Interface:"
-
-#~ msgid "Manage connections"
-#~ msgstr "Verbindingen beheren"
-
-#~ msgid "IP configuration"
-#~ msgstr "IP-configuratie"
-
-#~ msgid "DNS servers"
-#~ msgstr "DNS-servers"
-
-#~ msgid "Search Domain"
-#~ msgstr "Zoekdomein"
-
-#~ msgid "static"
-#~ msgstr "statisch"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Start at boot"
-#~ msgstr "Bij opstarten starten"
-
-#~ msgid "Flow control"
-#~ msgstr "Flow control"
-
-#~ msgid "Line termination"
-#~ msgstr "Regeleinde"
-
-#~ msgid "Modem timeout"
-#~ msgstr "Modemwachttijd"
-
-#~ msgid "Use lock file"
-#~ msgstr "Lock-bestand gebruiken"
-
-#~ msgid "Wait for dialup tone before dialing"
-#~ msgstr "Wachten op kiestoon voor inbellen"
-
-#~ msgid "Busy wait"
-#~ msgstr "Wachten bij in gesprek"
-
-#~ msgid "Modem sound"
-#~ msgstr "Modemgeluid"
-
-#~ msgid "Vendor"
-#~ msgstr "Fabrikant"
-
-#~ msgid "Media class"
-#~ msgstr "Mediaklasse"
-
-#~ msgid "Module name"
-#~ msgstr "Modulenaam"
-
-#~ msgid "Mac Address"
-#~ msgstr "Mac-adres"
-
-#~ msgid "Bus"
-#~ msgstr "Bus"
-
-#~ msgid "Location on the bus"
-#~ msgstr "Locatie op de bus"
-
-#~ msgid "Remove a network interface"
-#~ msgstr "Een netwerkinterface verwijderen"
-
-#~ msgid ""
-#~ "An error occurred while deleting the \"%s\" network interface:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Een probleem deed zich voor bij het verwijderen van de \"%s\" "
-#~ "netwerkinterface:\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Congratulations, the \"%s\" network interface has been successfully "
-#~ "deleted"
-#~ msgstr "Gefeliciteerd, de netwerkinterface \"%s\" is succesvol verwijderd"
-
-#~ msgid "Disconnect..."
-#~ msgstr "Verbinding verbreken…"
-
-#~ msgid "Connect..."
-#~ msgstr "Verbinding maken…"
-
-#~ msgid "Internet connection configuration"
-#~ msgstr "Internetverbinding configureren"
-
-#~ msgid "Host name (optional)"
-#~ msgstr "Hostnaam (optioneel)"
-
-#~ msgid "Third DNS server (optional)"
-#~ msgstr "Derde DNS-server (optioneel)"
-
-#~ msgid "Internet Connection Configuration"
-#~ msgstr "Internetverbinding configureren"
-
-#~ msgid "Internet access"
-#~ msgstr "Internet-toegang"
-
-#~ msgid "Status:"
-#~ msgstr "Status:"
-
-#~ msgid "Parameters"
-#~ msgstr "Parameters"
