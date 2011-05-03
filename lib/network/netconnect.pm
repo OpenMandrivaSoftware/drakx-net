@@ -767,7 +767,7 @@ Try to reconfigure your connection.");
                    {
                     name => sub {
                         if (!$success) {
-                            return join("\n\n", N("Problems occured during the network connectivity test."),
+                            return join("\n\n", N("Problems occurred during the network connectivity test."),
                                 N("This can be caused by invalid network configuration, or problems with your modem or router."),
                                 N("You might want to relaunch the configuration to verify the connection settings."));
                         }

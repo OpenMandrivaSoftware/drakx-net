@@ -586,7 +586,7 @@ when using TLS or TTLS or PEAP.") },
           disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
           help => N(" Substring to be matched against the subject of
 the authentication server certificate. If this string is set,
-the server sertificate is only accepted if it contains this
+the server certificate is only accepted if it contains this
 string in the subject.  The subject string is in following format:
 /C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as\@example.com") },
         { label => N("Extra directives"), val => \$self->{access}{network}{extra}, advanced => 1,
