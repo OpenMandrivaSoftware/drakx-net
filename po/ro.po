@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
 "Report-Msgid-Bugs-To: https://qa.mandriva.com\n"
-"POT-Creation-Date: 2009-10-20 08:41-0200\n"
+"POT-Creation-Date: 2011-05-03 15:42+0200\n"
 "PO-Revision-Date: 2010-06-11 15:07+0100\n"
 "Last-Translator: Cătălin Florin RUSSEN <cfrussen@yahoo.co.uk>\n"
 "Language-Team: Romanian <mageia-i18n@mandrivalinux.org>\n"
@@ -67,9 +67,9 @@ msgstr "Configurație de rețea (%d adaptoare)"
 msgid "Interface"
 msgstr "Interfață"
 
-#: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:196
-#: ../lib/network/connection/ethernet.pm:138 ../lib/network/netconnect.pm:633
-#: ../lib/network/vpn/openvpn.pm:221
+#: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:187
+#: ../lib/network/connection/ethernet.pm:141 ../lib/network/netconnect.pm:633
+#: ../lib/network/vpn/openvpn.pm:223
 #, c-format
 msgid "IP address"
 msgstr "Adresă IP"
@@ -110,7 +110,7 @@ msgstr "Configurare LAN"
 msgid "Configure Local Area Network..."
 msgstr "Configurare rețea locală (LAN)..."
 
-#: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:190
+#: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:217
 #, c-format
 msgid "Help"
 msgstr "Ajutor"
@@ -137,11 +137,11 @@ msgstr "OK"
 #: ../lib/network/connection_manager.pm:89
 #: ../lib/network/connection_manager.pm:206
 #: ../lib/network/connection_manager.pm:235
-#: ../lib/network/connection_manager.pm:351 ../lib/network/drakvpn.pm:49
+#: ../lib/network/connection_manager.pm:353 ../lib/network/drakvpn.pm:49
 #: ../lib/network/netcenter.pm:150 ../lib/network/netconnect.pm:186
 #: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
-#: ../lib/network/netconnect.pm:733 ../lib/network/thirdparty.pm:354
-#: ../lib/network/thirdparty.pm:369
+#: ../lib/network/netconnect.pm:733 ../lib/network/thirdparty.pm:352
+#: ../lib/network/thirdparty.pm:367
 #, c-format
 msgid "Please wait"
 msgstr "Așteptați vă rog"
@@ -181,7 +181,7 @@ msgid "Adapter %s: %s"
 msgstr "Adaptor %s: %s"
 
 #: ../bin/drakconnect-old:209 ../bin/drakgw:181
-#: ../lib/network/connection/ethernet.pm:145
+#: ../lib/network/connection/ethernet.pm:148
 #, c-format
 msgid "Netmask"
 msgstr "Mască de rețea"
@@ -196,21 +196,21 @@ msgstr "Protocol de pornire"
 msgid "Started on boot"
 msgstr "Inițiată la pornire"
 
-#: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:156
+#: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:159
 #, c-format
 msgid "DHCP client"
 msgstr "Client DHCP"
 
 #: ../bin/drakconnect-old:247
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "This interface has not been configured yet.\n"
-"Run the \"%s\" assistant from the Mageia Control Center"
+"Run the \"%s\" assistant from the Mageia Linux Control Center"
 msgstr ""
 "Această interfață nu a fost configurată încă.\n"
 "Lansați asistentul „%s” din centrul de control Mageia"
 
-#: ../bin/drakconnect-old:247 ../bin/net_applet:104
+#: ../bin/drakconnect-old:247 ../bin/net_applet:105
 #, c-format
 msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
 msgstr "Configurează o nouă interfață de rețea (LAN, ISDN, ADSL, ...)"
@@ -356,7 +356,7 @@ msgstr "Alegeți care placă de rețea va fi conectată la rețeaua voastră loc
 msgid "Local Area Network settings"
 msgstr "Configurațiile rețelei locale"
 
-#: ../bin/drakgw:180 ../lib/network/vpn/openvpn.pm:227
+#: ../bin/drakgw:180 ../lib/network/vpn/openvpn.pm:229
 #, c-format
 msgid "Local IP address"
 msgstr "Adresă IP locală"
@@ -366,8 +366,8 @@ msgstr "Adresă IP locală"
 msgid "The internal domain name"
 msgstr "Numele de domeniu intern"
 
-#: ../bin/drakgw:188 ../bin/drakhosts:100 ../bin/drakhosts:245
-#: ../bin/drakhosts:252 ../bin/drakhosts:259 ../bin/drakinvictus:72
+#: ../bin/drakgw:188 ../bin/drakhosts:100 ../bin/drakhosts:236
+#: ../bin/drakhosts:243 ../bin/drakhosts:250 ../bin/drakinvictus:72
 #: ../bin/draknetprofile:166 ../bin/draknetprofile:186 ../bin/draknfs:93
 #: ../bin/draknfs:282 ../bin/draknfs:429 ../bin/draknfs:431 ../bin/draknfs:434
 #: ../bin/draknfs:526 ../bin/draknfs:533 ../bin/draknfs:605 ../bin/draknfs:612
@@ -375,13 +375,13 @@ msgstr "Numele de domeniu intern"
 #: ../bin/draksambashare:403 ../bin/draksambashare:455
 #: ../bin/draksambashare:479 ../bin/draksambashare:552
 #: ../bin/draksambashare:629 ../bin/draksambashare:695
-#: ../bin/draksambashare:795 ../bin/draksambashare:802
-#: ../bin/draksambashare:941 ../bin/draksambashare:1095
-#: ../bin/draksambashare:1114 ../bin/draksambashare:1146
-#: ../bin/draksambashare:1252 ../bin/draksambashare:1354
-#: ../bin/draksambashare:1363 ../bin/draksambashare:1385
-#: ../bin/draksambashare:1394 ../bin/draksambashare:1413
-#: ../bin/draksambashare:1422 ../bin/draksambashare:1434
+#: ../bin/draksambashare:795 ../bin/draksambashare:803
+#: ../bin/draksambashare:942 ../bin/draksambashare:1096
+#: ../bin/draksambashare:1115 ../bin/draksambashare:1147
+#: ../bin/draksambashare:1253 ../bin/draksambashare:1355
+#: ../bin/draksambashare:1364 ../bin/draksambashare:1386
+#: ../bin/draksambashare:1395 ../bin/draksambashare:1414
+#: ../bin/draksambashare:1423 ../bin/draksambashare:1435
 #: ../lib/network/connection/xdsl.pm:361
 #: ../lib/network/connection_manager.pm:62
 #: ../lib/network/connection_manager.pm:68
@@ -390,16 +390,15 @@ msgstr "Numele de domeniu intern"
 #: ../lib/network/connection_manager.pm:177
 #: ../lib/network/connection_manager.pm:181
 #: ../lib/network/connection_manager.pm:223
-#: ../lib/network/connection_manager.pm:479
-#: ../lib/network/connection_manager.pm:492 ../lib/network/drakvpn.pm:45
+#: ../lib/network/connection_manager.pm:481 ../lib/network/drakvpn.pm:45
 #: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
 #: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:135
 #: ../lib/network/netconnect.pm:188 ../lib/network/netconnect.pm:234
 #: ../lib/network/netconnect.pm:275 ../lib/network/netconnect.pm:847
 #: ../lib/network/thirdparty.pm:123 ../lib/network/thirdparty.pm:141
-#: ../lib/network/thirdparty.pm:232 ../lib/network/thirdparty.pm:234
-#: ../lib/network/thirdparty.pm:255
+#: ../lib/network/thirdparty.pm:230 ../lib/network/thirdparty.pm:232
+#: ../lib/network/thirdparty.pm:253
 #, c-format
 msgid "Error"
 msgstr "Eroare"
@@ -602,10 +601,9 @@ msgstr "Nume de gazdă:"
 msgid "Host Aliases:"
 msgstr "Aliasuri gazdă:"
 
-#: ../bin/drakhosts:122 ../bin/drakhosts:128 ../bin/draknfs:116
-#: ../bin/draksambashare:230 ../bin/draksambashare:253
-#: ../bin/draksambashare:397 ../bin/draksambashare:625
-#: ../bin/draksambashare:791
+#: ../bin/drakhosts:122 ../bin/draknfs:116 ../bin/draksambashare:230
+#: ../bin/draksambashare:253 ../bin/draksambashare:397
+#: ../bin/draksambashare:625 ../bin/draksambashare:791
 #, c-format
 msgid "Error!"
 msgstr "Eroare!"
@@ -615,73 +613,68 @@ msgstr "Eroare!"
 msgid "Please enter a valid IP address."
 msgstr "Introduceți o adresă IP validă."
 
-#: ../bin/drakhosts:128
-#, c-format
-msgid "Same IP is already in %s file."
-msgstr "Același IP este deja prezent în fișierul %s."
-
-#: ../bin/drakhosts:196 ../lib/network/connection/ethernet.pm:222
+#: ../bin/drakhosts:187 ../lib/network/connection/ethernet.pm:225
 #, c-format
 msgid "Host name"
 msgstr "Nume de gazdă"
 
-#: ../bin/drakhosts:196
+#: ../bin/drakhosts:187
 #, c-format
 msgid "Host Aliases"
 msgstr "Aliasuri gazdă"
 
-#: ../bin/drakhosts:206 ../bin/drakhosts:236
+#: ../bin/drakhosts:197 ../bin/drakhosts:227
 #, c-format
 msgid "Manage hosts definitions"
 msgstr "Gestionați definițiile gazdelor"
 
-#: ../bin/drakhosts:222 ../bin/drakhosts:249 ../bin/draknfs:369
+#: ../bin/drakhosts:213 ../bin/drakhosts:240 ../bin/draknfs:369
 #, c-format
 msgid "Modify entry"
 msgstr "Modifică intrarea"
 
-#: ../bin/drakhosts:241 ../bin/draknfs:601 ../bin/draksambashare:1347
-#: ../bin/draksambashare:1378 ../bin/draksambashare:1409
+#: ../bin/drakhosts:232 ../bin/draknfs:601 ../bin/draksambashare:1348
+#: ../bin/draksambashare:1379 ../bin/draksambashare:1410
 #, c-format
 msgid "Add"
 msgstr "Adaugă"
 
-#: ../bin/drakhosts:242
+#: ../bin/drakhosts:233
 #, c-format
 msgid "Add entry"
 msgstr "Adaugă o intrare"
 
-#: ../bin/drakhosts:245
+#: ../bin/drakhosts:236
 #, c-format
 msgid "Failed to add host."
 msgstr "Adăugarea gazdei a eșuat."
 
-#: ../bin/drakhosts:248 ../bin/draknfs:608 ../bin/draksambashare:1304
-#: ../bin/draksambashare:1349 ../bin/draksambashare:1380
-#: ../bin/draksambashare:1417
+#: ../bin/drakhosts:239 ../bin/draknfs:608 ../bin/draksambashare:1305
+#: ../bin/draksambashare:1350 ../bin/draksambashare:1381
+#: ../bin/draksambashare:1418
 #, c-format
 msgid "Modify"
 msgstr "Modifică"
 
-#: ../bin/drakhosts:252
+#: ../bin/drakhosts:243
 #, c-format
 msgid "Failed to Modify host."
 msgstr "Modificarea gazdei a eșuat."
 
-#: ../bin/drakhosts:255 ../bin/drakids:95 ../bin/drakids:104
-#: ../bin/draknfs:615 ../bin/draksambashare:1305 ../bin/draksambashare:1357
-#: ../bin/draksambashare:1388 ../bin/draksambashare:1425
+#: ../bin/drakhosts:246 ../bin/drakids:95 ../bin/drakids:104
+#: ../bin/draknfs:615 ../bin/draksambashare:1306 ../bin/draksambashare:1358
+#: ../bin/draksambashare:1389 ../bin/draksambashare:1426
 #, c-format
 msgid "Remove"
 msgstr "Înlătură"
 
-#: ../bin/drakhosts:259
+#: ../bin/drakhosts:250
 #, c-format
 msgid "Failed to remove host."
 msgstr "Înlăturarea gazdei a eșuat."
 
-#: ../bin/drakhosts:262 ../bin/drakinvictus:141 ../bin/draknetprofile:219
-#: ../bin/net_applet:191 ../lib/network/drakroam.pm:93
+#: ../bin/drakhosts:253 ../bin/drakinvictus:141 ../bin/draknetprofile:219
+#: ../bin/net_applet:221 ../lib/network/drakroam.pm:93
 #: ../lib/network/netcenter.pm:178
 #, c-format
 msgid "Quit"
@@ -694,15 +687,15 @@ msgstr "Adrese permise"
 
 #: ../bin/drakids:40 ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:134 ../bin/net_applet:313
-#: ../lib/network/drakfirewall.pm:311 ../lib/network/drakfirewall.pm:315
+#: ../bin/net_applet:145 ../bin/net_applet:353
+#: ../lib/network/drakfirewall.pm:309 ../lib/network/drakfirewall.pm:313
 #, c-format
 msgid "Interactive Firewall"
 msgstr "Parafoc interactiv"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:313
+#: ../bin/net_applet:353
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "Nu se poate contacta demonul"
@@ -779,7 +772,7 @@ msgstr "Dată"
 msgid "Remote host"
 msgstr "Gazdă distantă"
 
-#: ../bin/drakids:258 ../lib/network/vpn/openvpn.pm:115
+#: ../bin/drakids:258 ../lib/network/vpn/openvpn.pm:117
 #, c-format
 msgid "Type"
 msgstr "Tip"
@@ -1603,8 +1596,8 @@ msgid "Draksambashare"
 msgstr "Draksambashare"
 
 #: ../bin/draksambashare:196
-#, c-format
-msgid "Copyright (C) %s by Mageia"
+#, fuzzy, c-format
+msgid "Copyright (C) %s by Mandriva"
 msgstr "Drepturi de autor (C) %s Mageia"
 
 #: ../bin/draksambashare:198
@@ -1719,7 +1712,7 @@ msgstr "Există deja un generator de fișiere PDF."
 msgid "Printers and print$ already exist."
 msgstr "Imprimantele și print$ există deja."
 
-#: ../bin/draksambashare:529 ../bin/draksambashare:1197
+#: ../bin/draksambashare:529 ../bin/draksambashare:1198
 #, c-format
 msgid "Congratulations"
 msgstr "Felicitări"
@@ -1854,52 +1847,52 @@ msgstr ""
 "Masca de creare, drepturile pe directoare și fișiere ar trebui să fie "
 "numerice. Ex: 0755."
 
-#: ../bin/draksambashare:802
+#: ../bin/draksambashare:803
 #, c-format
 msgid "Please create this Samba user: %s"
 msgstr "Creați acest utilizator Samba: %s"
 
-#: ../bin/draksambashare:914
+#: ../bin/draksambashare:915
 #, c-format
 msgid "Add Samba user"
 msgstr "Adaugă un utilizator Samba"
 
-#: ../bin/draksambashare:929
+#: ../bin/draksambashare:930
 #, c-format
 msgid "User information"
 msgstr "Informații utilizator"
 
-#: ../bin/draksambashare:931
+#: ../bin/draksambashare:932
 #, c-format
 msgid "User name:"
 msgstr "Numele utilizatorului:"
 
-#: ../bin/draksambashare:932
+#: ../bin/draksambashare:933
 #, c-format
 msgid "Password:"
 msgstr "Parolă:"
 
-#: ../bin/draksambashare:1046
+#: ../bin/draksambashare:1047
 #, c-format
 msgid "PDC - primary domain controller"
 msgstr "PDC - Controlor de domeniu principal"
 
-#: ../bin/draksambashare:1047
+#: ../bin/draksambashare:1048
 #, c-format
 msgid "Standalone - standalone server"
 msgstr "Standalone - Server autonom"
 
-#: ../bin/draksambashare:1053
+#: ../bin/draksambashare:1054
 #, c-format
 msgid "Samba Wizard"
 msgstr "Asistent Samba"
 
-#: ../bin/draksambashare:1056
+#: ../bin/draksambashare:1057
 #, c-format
 msgid "Samba server configuration Wizard"
 msgstr "Asistentul de configurare al serverului Samba"
 
-#: ../bin/draksambashare:1056
+#: ../bin/draksambashare:1057
 #, c-format
 msgid ""
 "Samba allows your server to behave as a file and print server for "
@@ -1908,12 +1901,12 @@ msgstr ""
 "Samba permite serverului vostru să se comporte ca un server de fișiere și "
 "imprimante pentru stațiile de lucru non-Linux."
 
-#: ../bin/draksambashare:1072
+#: ../bin/draksambashare:1073
 #, c-format
 msgid "PDC server: primary domain controller"
 msgstr "Server PDC: controlor de domeniu principal"
 
-#: ../bin/draksambashare:1072
+#: ../bin/draksambashare:1073
 #, c-format
 msgid ""
 "Server configured as a PDC is responsible for Windows authentication "
@@ -1922,7 +1915,7 @@ msgstr ""
 "Serverul configurat ca PDC răspunde de autentificarea stațiilor Windows în "
 "întreg domeniul."
 
-#: ../bin/draksambashare:1072
+#: ../bin/draksambashare:1073
 #, c-format
 msgid ""
 "Single server installations may use smbpasswd or tdbsam password backends"
@@ -1930,7 +1923,7 @@ msgstr ""
 "Instalările de server simplu pot folosi utilitarele de parole smbpasswd sau "
 "tdbsam"
 
-#: ../bin/draksambashare:1072
+#: ../bin/draksambashare:1073
 #, c-format
 msgid ""
 "Domain master = yes, causes the server to register the NetBIOS name <pdc "
@@ -1939,27 +1932,27 @@ msgstr ""
 "Domain master = yes, impune serverului să se declare cu numele NetBIOS <pdc "
 "name>. Acest nume va fi cel recunoscut de către celelate servere."
 
-#: ../bin/draksambashare:1089
+#: ../bin/draksambashare:1090
 #, c-format
 msgid "Wins support:"
 msgstr "Suport Wins:"
 
-#: ../bin/draksambashare:1090
+#: ../bin/draksambashare:1091
 #, c-format
 msgid "admin users:"
 msgstr "utilizatori administratori:"
 
-#: ../bin/draksambashare:1090
+#: ../bin/draksambashare:1091
 #, c-format
 msgid "root @adm"
 msgstr "root @adm"
 
-#: ../bin/draksambashare:1091
+#: ../bin/draksambashare:1092
 #, c-format
 msgid "Os level:"
 msgstr "Os level:"
 
-#: ../bin/draksambashare:1091
+#: ../bin/draksambashare:1092
 #, c-format
 msgid ""
 "The global os level option dictates the operating system level at which "
@@ -1974,42 +1967,42 @@ msgstr ""
 "specificați un nivel superior celui dintre sistemele de operare cu nivelul "
 "cel mai mare, prezent în rețea. Ex: Os level = 34"
 
-#: ../bin/draksambashare:1095
+#: ../bin/draksambashare:1096
 #, c-format
 msgid "The domain is wrong."
 msgstr "Domeniul este incorect."
 
-#: ../bin/draksambashare:1102
+#: ../bin/draksambashare:1103
 #, c-format
 msgid "Workgroup"
 msgstr "Workgroup"
 
-#: ../bin/draksambashare:1102
+#: ../bin/draksambashare:1103
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
 msgstr "Samba trebuie să cunoască Windows Workgroup pe care-l va deservi."
 
-#: ../bin/draksambashare:1109 ../bin/draksambashare:1176
+#: ../bin/draksambashare:1110 ../bin/draksambashare:1177
 #, c-format
 msgid "Workgroup:"
 msgstr "Workgroup:"
 
-#: ../bin/draksambashare:1110
+#: ../bin/draksambashare:1111
 #, c-format
 msgid "Netbios name:"
 msgstr "Nume Netbios:"
 
-#: ../bin/draksambashare:1114
+#: ../bin/draksambashare:1115
 #, c-format
 msgid "The Workgroup is wrong."
 msgstr "Workgroup incorect."
 
-#: ../bin/draksambashare:1121 ../bin/draksambashare:1131
+#: ../bin/draksambashare:1122 ../bin/draksambashare:1132
 #, c-format
 msgid "Security mode"
 msgstr "Mod de securitate"
 
-#: ../bin/draksambashare:1121
+#: ../bin/draksambashare:1122
 #, c-format
 msgid ""
 "User level: the client sends a session setup request directly following "
@@ -2019,12 +2012,12 @@ msgstr ""
 "după negocierea protocolului. Această cerere conține un nume de utilizator "
 "și o parolă."
 
-#: ../bin/draksambashare:1121
+#: ../bin/draksambashare:1122
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
 msgstr "Nivel partaj: clientul se identifică separat pentru fiecare partaj"
 
-#: ../bin/draksambashare:1121
+#: ../bin/draksambashare:1122
 #, c-format
 msgid ""
 "Domain level: provides a mechanism for storing all user and group accounts "
@@ -2035,17 +2028,17 @@ msgstr ""
 "utilizatori într-un spațiu de conturi centralizat, partajat între "
 "controlorii (securitate) de domeniu."
 
-#: ../bin/draksambashare:1132
+#: ../bin/draksambashare:1133
 #, c-format
 msgid "Hosts allow"
 msgstr "Gazde autorizate"
 
-#: ../bin/draksambashare:1137
+#: ../bin/draksambashare:1138
 #, c-format
 msgid "Server Banner."
 msgstr "Bandiera serverului."
 
-#: ../bin/draksambashare:1137
+#: ../bin/draksambashare:1138
 #, c-format
 msgid ""
 "The banner is the way this server will be described in the Windows "
@@ -2054,22 +2047,22 @@ msgstr ""
 "Bandiera serverului este modul în care serverul va fi descris pe stațiile "
 "Windows."
 
-#: ../bin/draksambashare:1142
+#: ../bin/draksambashare:1143
 #, c-format
 msgid "Banner:"
 msgstr "Bandieră:"
 
-#: ../bin/draksambashare:1146
+#: ../bin/draksambashare:1147
 #, c-format
 msgid "The Server Banner is incorrect."
 msgstr "Bandiera serverului este incorectă."
 
-#: ../bin/draksambashare:1153
+#: ../bin/draksambashare:1154
 #, c-format
 msgid "Samba Log"
 msgstr "Jurnale Samba"
 
-#: ../bin/draksambashare:1153
+#: ../bin/draksambashare:1154
 #, c-format
 msgid ""
 "Log file: use file.%m to use a separate log file for each machine that "
@@ -2078,39 +2071,39 @@ msgstr ""
 "Fișier jurnal: utilizați fișier.%m pentru a dispune de un fișier jurnal "
 "diferit pentru fiecare mașină care se conectează."
 
-#: ../bin/draksambashare:1153
+#: ../bin/draksambashare:1154
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
 msgstr ""
 "Nivel jurnal: determină nivelul (de detaliu al) jurnalului (0 <= nivel <= "
 "10) "
 
-#: ../bin/draksambashare:1153
+#: ../bin/draksambashare:1154
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
 msgstr "Mărime maximă jurnal: limitează mărimea fișierelor jurnal (în Ko)."
 
-#: ../bin/draksambashare:1160 ../bin/draksambashare:1178
+#: ../bin/draksambashare:1161 ../bin/draksambashare:1179
 #, c-format
 msgid "Log file:"
 msgstr "Fișier jurnal:"
 
-#: ../bin/draksambashare:1161
+#: ../bin/draksambashare:1162
 #, c-format
 msgid "Max log size:"
 msgstr "Mărime maximă jurnal:"
 
-#: ../bin/draksambashare:1162
+#: ../bin/draksambashare:1163
 #, c-format
 msgid "Log level:"
 msgstr "Nivel jurnal:"
 
-#: ../bin/draksambashare:1167
+#: ../bin/draksambashare:1168
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
 msgstr "Asistentul a colectat următorii parametri pentru a configura Samba."
 
-#: ../bin/draksambashare:1167
+#: ../bin/draksambashare:1168
 #, c-format
 msgid ""
 "To accept these values, and configure your server, click the Next button or "
@@ -2119,7 +2112,7 @@ msgstr ""
 "Ca să acceptați aceste valori, și să configurați serverul, alegeți să "
 "continuați, sau să reveniți la etapa precedentă pentru corectare."
 
-#: ../bin/draksambashare:1167
+#: ../bin/draksambashare:1168
 #, c-format
 msgid ""
 "If you have previously create some shares, they will appear in this "
@@ -2128,112 +2121,112 @@ msgstr ""
 "Dacă ați creat partaje precedent, vor apărea în această configurație. "
 "Lansați „drakwizard sambashare” pentru a vă gestiona partajele."
 
-#: ../bin/draksambashare:1175
+#: ../bin/draksambashare:1176
 #, c-format
 msgid "Samba type:"
 msgstr "Tip de Samba:"
 
-#: ../bin/draksambashare:1177
+#: ../bin/draksambashare:1178
 #, c-format
 msgid "Server banner:"
 msgstr "Bandieră server:"
 
-#: ../bin/draksambashare:1179
+#: ../bin/draksambashare:1180
 #, c-format
 msgid " "
 msgstr " "
 
-#: ../bin/draksambashare:1180
+#: ../bin/draksambashare:1181
 #, c-format
 msgid "Unix Charset:"
 msgstr "Set de caractere Unix:"
 
-#: ../bin/draksambashare:1181
+#: ../bin/draksambashare:1182
 #, c-format
 msgid "Dos Charset:"
 msgstr "Set de caractere Dos:"
 
-#: ../bin/draksambashare:1182
+#: ../bin/draksambashare:1183
 #, c-format
 msgid "Display Charset:"
 msgstr "Set de caractere afișaj:"
 
-#: ../bin/draksambashare:1197
+#: ../bin/draksambashare:1198
 #, c-format
 msgid "The wizard successfully configured your Samba server."
 msgstr "Asistentul v-a configurat cu succes serverul Samba."
 
-#: ../bin/draksambashare:1252
+#: ../bin/draksambashare:1253
 #, c-format
 msgid "The Samba wizard has unexpectedly failed:"
 msgstr "Asistentul Samba a eșuat în mod neașteptat:"
 
-#: ../bin/draksambashare:1266
+#: ../bin/draksambashare:1267
 #, c-format
 msgid "Manage Samba configuration"
 msgstr "Gestionați configurația Samba"
 
-#: ../bin/draksambashare:1354
+#: ../bin/draksambashare:1355
 #, c-format
 msgid "Failed to Modify Samba share."
 msgstr "Modificarea partajului Samba a eșuat."
 
-#: ../bin/draksambashare:1363
+#: ../bin/draksambashare:1364
 #, c-format
 msgid "Failed to remove a Samba share."
 msgstr "Înlăturarea partajului Samba a eșuat."
 
-#: ../bin/draksambashare:1370
+#: ../bin/draksambashare:1371
 #, c-format
 msgid "File share"
 msgstr "Partaj de fișiere"
 
-#: ../bin/draksambashare:1385
+#: ../bin/draksambashare:1386
 #, c-format
 msgid "Failed to Modify."
 msgstr "Modificarea a eșuat."
 
-#: ../bin/draksambashare:1394
+#: ../bin/draksambashare:1395
 #, c-format
 msgid "Failed to remove."
 msgstr "Înlăturarea a eșuat."
 
-#: ../bin/draksambashare:1401
+#: ../bin/draksambashare:1402
 #, c-format
 msgid "Printers"
 msgstr "Imprimante"
 
-#: ../bin/draksambashare:1413
+#: ../bin/draksambashare:1414
 #, c-format
 msgid "Failed to add user."
 msgstr "Adăugarea utilizatorului a eșuat."
 
-#: ../bin/draksambashare:1422
+#: ../bin/draksambashare:1423
 #, c-format
 msgid "Failed to change user password."
 msgstr "Schimbarea parolei utilizatorului a eșuat."
 
-#: ../bin/draksambashare:1434
+#: ../bin/draksambashare:1435
 #, c-format
 msgid "Failed to delete user."
 msgstr "Ștergerea utilizatorului a eșuat."
 
-#: ../bin/draksambashare:1439
+#: ../bin/draksambashare:1440
 #, c-format
 msgid "Userdrake"
 msgstr "Userdrake"
 
-#: ../bin/draksambashare:1447
+#: ../bin/draksambashare:1448
 #, c-format
 msgid "Samba Users"
 msgstr "Utilizatori Samba"
 
-#: ../bin/draksambashare:1455
+#: ../bin/draksambashare:1456
 #, c-format
 msgid "Please configure your Samba server"
 msgstr "Configurați serverul Samba"
 
-#: ../bin/draksambashare:1455
+#: ../bin/draksambashare:1456
 #, c-format
 msgid ""
 "It seems this is the first time you run this tool.\n"
@@ -2242,138 +2235,138 @@ msgstr ""
 "Pare să fie prima oară cînd rulați această unealtă.\n"
 "Un asistent vă va ajuta să configurați un server Samba de bază"
 
-#: ../bin/draksambashare:1464
+#: ../bin/draksambashare:1465
 #, c-format
 msgid "DrakSamba manage Samba shares"
 msgstr "DrakSamba gestionează partajele Samba"
 
-#: ../bin/net_applet:95
+#: ../bin/net_applet:96
 #, c-format
 msgid "Network is up on interface %s."
 msgstr "Rețeaua este activă pe interfața %s."
 
-#: ../bin/net_applet:96
+#: ../bin/net_applet:97
 #, c-format
 msgid "IP address: %s"
 msgstr "Adresă IP: %s"
 
-#: ../bin/net_applet:97
+#: ../bin/net_applet:98
 #, c-format
 msgid "Gateway: %s"
 msgstr "Pasarelă: %s"
 
-#: ../bin/net_applet:98
+#: ../bin/net_applet:99
 #, c-format
 msgid "DNS: %s"
 msgstr "DNS: %s"
 
-#: ../bin/net_applet:99
+#: ../bin/net_applet:100
 #, c-format
 msgid "Connected to %s (link level: %d %%)"
 msgstr "Conectat la %s (nivel conexiune: %d %%)"
 
-#: ../bin/net_applet:101
+#: ../bin/net_applet:102
 #, c-format
 msgid "Network is down on interface %s."
 msgstr "Rețeaua este inactivă pe interfața %s."
 
-#: ../bin/net_applet:103
-#, c-format
+#: ../bin/net_applet:104
+#, fuzzy, c-format
 msgid ""
 "You do not have any configured Internet connection.\n"
-"Run the \"%s\" assistant from the Mageia Control Center"
+"Run the \"%s\" assistant from the Mageia Linux Control Center"
 msgstr ""
 "Nu aveți configurată nici o conexiune la Internet.\n"
 "Lansați asistentul „%s” din centrul de control Mageia"
 
-#: ../bin/net_applet:106 ../lib/network/connection_manager.pm:206
+#: ../bin/net_applet:107 ../lib/network/connection_manager.pm:206
 #, c-format
 msgid "Connecting..."
 msgstr "Conectare..."
 
-#: ../bin/net_applet:131 ../bin/net_monitor:519
+#: ../bin/net_applet:133 ../bin/net_monitor:519
 #, c-format
 msgid "Connect %s"
 msgstr "Conectează %s"
 
-#: ../bin/net_applet:132 ../bin/net_monitor:519
+#: ../bin/net_applet:137 ../bin/net_monitor:519
 #, c-format
 msgid "Disconnect %s"
 msgstr "Deconectează %s"
 
-#: ../bin/net_applet:133
+#: ../bin/net_applet:141
 #, c-format
 msgid "Monitor Network"
 msgstr "Supraveghează rețeaua"
 
-#: ../bin/net_applet:135
+#: ../bin/net_applet:149
 #, c-format
 msgid "Manage wireless networks"
 msgstr "Gestionați rețelele fără-fir"
 
-#: ../bin/net_applet:137
+#: ../bin/net_applet:153
 #, c-format
 msgid "Manage VPN connections"
 msgstr "Gestionați conexiunile VPN"
 
-#: ../bin/net_applet:141
+#: ../bin/net_applet:157
 #, c-format
 msgid "Configure Network"
 msgstr "Configurează rețeaua"
 
-#: ../bin/net_applet:143
+#: ../bin/net_applet:161
 #, c-format
 msgid "Watched interface"
 msgstr "Interfața supravegheată"
 
-#: ../bin/net_applet:144 ../bin/net_applet:145 ../bin/net_applet:147
+#: ../bin/net_applet:162 ../bin/net_applet:165 ../bin/net_applet:168
 #, c-format
 msgid "Auto-detect"
 msgstr "Auto-detecție"
 
-#: ../bin/net_applet:152
+#: ../bin/net_applet:173
 #, c-format
 msgid "Active interfaces"
 msgstr "Interfețe active"
 
-#: ../bin/net_applet:172
+#: ../bin/net_applet:193
 #, c-format
 msgid "Profiles"
 msgstr "Profile"
 
-#: ../bin/net_applet:182 ../lib/network/connection.pm:229
-#: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:365
-#: ../lib/network/vpn/openvpn.pm:379 ../lib/network/vpn/openvpn.pm:390
+#: ../bin/net_applet:203 ../lib/network/connection.pm:233
+#: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:367
+#: ../lib/network/vpn/openvpn.pm:381 ../lib/network/vpn/openvpn.pm:392
 #, c-format
 msgid "VPN connection"
 msgstr "Conexiune VPN"
 
-#: ../bin/net_applet:394
+#: ../bin/net_applet:434
 #, c-format
 msgid "Network connection"
 msgstr "Conexiune rețea"
 
-#: ../bin/net_applet:481
+#: ../bin/net_applet:521
 #, c-format
 msgid "More networks"
 msgstr "Mai multe rețele"
 
-#: ../bin/net_applet:508
+#: ../bin/net_applet:548
 #, c-format
 msgid "Interactive Firewall automatic mode"
 msgstr "Parafoc interactiv în mod automat"
 
-#: ../bin/net_applet:513
+#: ../bin/net_applet:553
 #, c-format
 msgid "Always launch on startup"
 msgstr "Lansează întotdeauna la pornire"
 
-#: ../bin/net_applet:518
+#: ../bin/net_applet:558
 #, c-format
 msgid "Wireless networks"
 msgstr "Rețele fără-fir"
 
-#: ../bin/net_applet:525 ../bin/net_monitor:96
+#: ../bin/net_applet:565 ../bin/net_monitor:96
 #, c-format
 msgid "Settings"
 msgstr "Configurări"
@@ -2472,10 +2465,10 @@ msgid "Connection complete."
 msgstr "Conectare reușită."
 
 #: ../bin/net_monitor:258
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Connection failed.\n"
-"Verify your configuration in the Mageia Control Center."
+"Verify your configuration in the Mageia Linux Control Center."
 msgstr ""
 "Conectare eșuată.\n"
 "Verificați configurația în centrul de control Mageia."
@@ -2544,22 +2537,22 @@ msgstr "Nu este configurată nici o conexiune la Internet"
 msgid "Unknown connection type"
 msgstr "Tip de conexiune necunoscut"
 
-#: ../lib/network/connection.pm:162
+#: ../lib/network/connection.pm:166
 #, c-format
 msgid "Network access settings"
 msgstr "Parametri de acces la rețea"
 
-#: ../lib/network/connection.pm:163
+#: ../lib/network/connection.pm:167
 #, c-format
 msgid "Access settings"
 msgstr "Parametri de acces"
 
-#: ../lib/network/connection.pm:164
+#: ../lib/network/connection.pm:168
 #, c-format
 msgid "Address settings"
 msgstr "Parametrii adresei"
 
-#: ../lib/network/connection.pm:178 ../lib/network/connection.pm:198
+#: ../lib/network/connection.pm:182 ../lib/network/connection.pm:202
 #: ../lib/network/connection/isdn.pm:155 ../lib/network/netconnect.pm:217
 #: ../lib/network/netconnect.pm:492 ../lib/network/netconnect.pm:588
 #: ../lib/network/netconnect.pm:591
@@ -2567,51 +2560,56 @@ msgstr "Parametrii adresei"
 msgid "Unlisted - edit manually"
 msgstr "Nelistat - editează manual"
 
-#: ../lib/network/connection.pm:231 ../lib/network/connection/cable.pm:41
-#: ../lib/network/connection/wireless.pm:46 ../lib/network/vpn/openvpn.pm:127
-#: ../lib/network/vpn/openvpn.pm:171 ../lib/network/vpn/openvpn.pm:339
+#: ../lib/network/connection.pm:235 ../lib/network/connection/cable.pm:41
+#: ../lib/network/connection/wireless.pm:46 ../lib/network/vpn/openvpn.pm:129
+#: ../lib/network/vpn/openvpn.pm:173 ../lib/network/vpn/openvpn.pm:341
 #, c-format
 msgid "None"
 msgstr "Nici unul"
 
-#: ../lib/network/connection.pm:243
+#: ../lib/network/connection.pm:247
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr "Permite utilizatorilor să gestioneze conexiunea"
 
-#: ../lib/network/connection.pm:244
+#: ../lib/network/connection.pm:248
 #, c-format
 msgid "Start the connection at boot"
 msgstr "Inițiază conexiunea la pornire"
 
-#: ../lib/network/connection.pm:245
+#: ../lib/network/connection.pm:249
 #, c-format
 msgid "Enable traffic accounting"
 msgstr "Activează contabilizarea traficului"
 
-#: ../lib/network/connection.pm:246
+#: ../lib/network/connection.pm:250
+#, c-format
+msgid "Allow interface to be controlled by Network Manager"
+msgstr ""
+
+#: ../lib/network/connection.pm:251
 #, c-format
 msgid "Metric"
 msgstr "Metrică"
 
-#: ../lib/network/connection.pm:247
+#: ../lib/network/connection.pm:252
 #, c-format
 msgid "MTU"
 msgstr "MTU"
 
-#: ../lib/network/connection.pm:248
+#: ../lib/network/connection.pm:253
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
 msgstr ""
 "Lungimea maximă a unui mesaj de rețea (MTU). Lăsați gol dacă nu sînteți "
 "sigur."
 
-#: ../lib/network/connection.pm:324
+#: ../lib/network/connection.pm:333
 #, c-format
 msgid "Link detected on interface %s"
 msgstr "Conexiune detectată pe interfața %s"
 
-#: ../lib/network/connection.pm:325 ../lib/network/connection/ethernet.pm:302
+#: ../lib/network/connection.pm:334 ../lib/network/connection/ethernet.pm:305
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "Conexiune pierdută pe interfața %s"
@@ -2637,13 +2635,13 @@ msgid "Authentication"
 msgstr "Autentificare"
 
 #: ../lib/network/connection/cable.pm:47 ../lib/network/connection/ppp.pm:22
-#: ../lib/network/netconnect.pm:355 ../lib/network/vpn/openvpn.pm:393
+#: ../lib/network/netconnect.pm:355 ../lib/network/vpn/openvpn.pm:395
 #, c-format
 msgid "Account Login (user name)"
 msgstr "Numele utilizatorului contului"
 
 #: ../lib/network/connection/cable.pm:49 ../lib/network/connection/ppp.pm:23
-#: ../lib/network/netconnect.pm:356 ../lib/network/vpn/openvpn.pm:394
+#: ../lib/network/netconnect.pm:356 ../lib/network/vpn/openvpn.pm:396
 #, c-format
 msgid "Account Password"
 msgstr "Parola contului"
@@ -2673,22 +2671,22 @@ msgstr "Format greșit de cod PIN: ar trebui să fie 4 cifre."
 msgid "GPRS/Edge/3G"
 msgstr "GPRS/Edge/3G"
 
-#: ../lib/network/connection/cellular_card.pm:110
+#: ../lib/network/connection/cellular_card.pm:140
 #, c-format
 msgid "PIN number (4 digits). Leave empty if PIN is not required."
 msgstr "Codul PIN (4 cifre). Lăsați gol dacă nici un cod PIN nu este cerut."
 
-#: ../lib/network/connection/cellular_card.pm:186
+#: ../lib/network/connection/cellular_card.pm:216
 #, c-format
 msgid "Unable to open device %s"
 msgstr "Nu se poate accesa dispozitivul %s"
 
-#: ../lib/network/connection/cellular_card.pm:218
+#: ../lib/network/connection/cellular_card.pm:248
 #, c-format
 msgid "Please check that your SIM card is inserted."
 msgstr "Verificați inserarea corectă a cartelei SIM în aparat."
 
-#: ../lib/network/connection/cellular_card.pm:229
+#: ../lib/network/connection/cellular_card.pm:259
 #, c-format
 msgid ""
 "You entered a wrong PIN code.\n"
@@ -2745,7 +2743,7 @@ msgstr ""
 "Nu se găsește interfața de rețea pentru dispozitivul selecționat (se "
 "utilizează pilotul %s)."
 
-#: ../lib/network/connection/ethernet.pm:70 ../lib/network/vpn/openvpn.pm:207
+#: ../lib/network/connection/ethernet.pm:70 ../lib/network/vpn/openvpn.pm:209
 #, c-format
 msgid "Manual configuration"
 msgstr "Configurare manuală"
@@ -2755,12 +2753,12 @@ msgstr "Configurare manuală"
 msgid "Automatic IP (BOOTP/DHCP)"
 msgstr "Alocare automată de adresă IP (BOOTP/DHCP)"
 
-#: ../lib/network/connection/ethernet.pm:129
+#: ../lib/network/connection/ethernet.pm:132
 #, c-format
 msgid "IP settings"
 msgstr "Parametri IP"
 
-#: ../lib/network/connection/ethernet.pm:142
+#: ../lib/network/connection/ethernet.pm:145
 #, c-format
 msgid ""
 "Please enter the IP configuration for this machine.\n"
@@ -2771,80 +2769,80 @@ msgstr ""
 "Fiecare rubrică va trebui să fie completată ca o adresă IP în format\n"
 "zecimal-punctat (de exemplu: 192.168.1.55)."
 
-#: ../lib/network/connection/ethernet.pm:146 ../lib/network/netconnect.pm:665
-#: ../lib/network/vpn/openvpn.pm:212 ../lib/network/vpn/vpnc.pm:39
+#: ../lib/network/connection/ethernet.pm:149 ../lib/network/netconnect.pm:665
+#: ../lib/network/vpn/openvpn.pm:214 ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
 msgstr "Pasarelă"
 
-#: ../lib/network/connection/ethernet.pm:149
+#: ../lib/network/connection/ethernet.pm:152
 #, c-format
 msgid "Get DNS servers from DHCP"
 msgstr "Recuperează serverele DNS din DHCP"
 
-#: ../lib/network/connection/ethernet.pm:151
+#: ../lib/network/connection/ethernet.pm:154
 #, c-format
 msgid "DNS server 1"
 msgstr "Server DNS 1"
 
-#: ../lib/network/connection/ethernet.pm:152
+#: ../lib/network/connection/ethernet.pm:155
 #, c-format
 msgid "DNS server 2"
 msgstr "Server DNS 2"
 
-#: ../lib/network/connection/ethernet.pm:153
+#: ../lib/network/connection/ethernet.pm:156
 #, c-format
 msgid "Search domain"
 msgstr "Domeniu de căutare"
 
-#: ../lib/network/connection/ethernet.pm:154
+#: ../lib/network/connection/ethernet.pm:157
 #, c-format
 msgid "By default search domain will be set from the fully-qualified host name"
 msgstr ""
 "Implicit, domeniul de căutare va fi dedus din numele mașinii complet "
 "calificat"
 
-#: ../lib/network/connection/ethernet.pm:157
+#: ../lib/network/connection/ethernet.pm:160
 #, c-format
 msgid "DHCP timeout (in seconds)"
 msgstr "Durată de expirare DHCP (în secunde)"
 
-#: ../lib/network/connection/ethernet.pm:158
+#: ../lib/network/connection/ethernet.pm:161
 #, c-format
 msgid "Get YP servers from DHCP"
 msgstr "Recuperează serverele YP din DHCP"
 
-#: ../lib/network/connection/ethernet.pm:159
+#: ../lib/network/connection/ethernet.pm:162
 #, c-format
 msgid "Get NTPD servers from DHCP"
 msgstr "Recuperează serverele NTPD din DHCP"
 
-#: ../lib/network/connection/ethernet.pm:160
+#: ../lib/network/connection/ethernet.pm:163
 #, c-format
 msgid "DHCP host name"
 msgstr "Nume de gazdă DHCP"
 
-#: ../lib/network/connection/ethernet.pm:162
+#: ../lib/network/connection/ethernet.pm:165
 #, c-format
 msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
 msgstr "Nu reveni la Zeroconf (rețeaua 169.254.0.0)"
 
-#: ../lib/network/connection/ethernet.pm:173
+#: ../lib/network/connection/ethernet.pm:176
 #, c-format
 msgid "IP address should be in format 1.2.3.4"
 msgstr "Adresa IP ar trebui să fie în formatul 1.2.3.4"
 
-#: ../lib/network/connection/ethernet.pm:178
+#: ../lib/network/connection/ethernet.pm:181
 #, c-format
 msgid "Netmask should be in format 255.255.224.0"
 msgstr "Masca de rețea ar trebui să fie în formatul 255.255.224.0"
 
-#: ../lib/network/connection/ethernet.pm:183
+#: ../lib/network/connection/ethernet.pm:186
 #, c-format
 msgid "Warning: IP address %s is usually reserved!"
 msgstr "Atenție: adresa IP %s este de obicei rezervată!"
 
-#: ../lib/network/connection/ethernet.pm:192
+#: ../lib/network/connection/ethernet.pm:195
 #, c-format
 msgid ""
 "%s is already used by a connection that starts on boot (%s). To use this "
@@ -2856,12 +2854,12 @@ msgstr ""
 "întîi toate dispozitivele care o utilizează, sau să le configurați să nu fie "
 "inițiate la pornire"
 
-#: ../lib/network/connection/ethernet.pm:219
+#: ../lib/network/connection/ethernet.pm:222
 #, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
 msgstr "Atribuie nume gazdei de la serverul DHCP (sau generează unul unic)"
 
-#: ../lib/network/connection/ethernet.pm:220
+#: ../lib/network/connection/ethernet.pm:223
 #, c-format
 msgid ""
 "This will allow the server to attribute a name for this machine. If the "
@@ -2872,7 +2870,7 @@ msgstr ""
 "serverul nu poate furniza un nume de gazdă valid, acesta va fi generat în "
 "mod automat."
 
-#: ../lib/network/connection/ethernet.pm:223
+#: ../lib/network/connection/ethernet.pm:226
 #, c-format
 msgid ""
 "You should define a hostname for this machine, which will identify this PC. "
@@ -2884,32 +2882,32 @@ msgstr ""
 "detoate conexiunile de rețea. Dacă-l lăsați gol, „localhost.localdomain” va "
 "fi folosit."
 
-#: ../lib/network/connection/ethernet.pm:241
+#: ../lib/network/connection/ethernet.pm:244
 #, c-format
 msgid "Network Hotplugging"
 msgstr "Cuplarea la cald a rețelei"
 
-#: ../lib/network/connection/ethernet.pm:245
+#: ../lib/network/connection/ethernet.pm:248
 #, c-format
 msgid "Enable IPv6 to IPv4 tunnel"
 msgstr "Activează tunelul IPv6 către IPv4"
 
-#: ../lib/network/connection/ethernet.pm:301
+#: ../lib/network/connection/ethernet.pm:304
 #, c-format
 msgid "Link beat detected on interface %s"
 msgstr "Conexiune detectată pe interfața %s"
 
-#: ../lib/network/connection/ethernet.pm:304
+#: ../lib/network/connection/ethernet.pm:307
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
 msgstr "Se solicită o adresă de rețea pentru interfața %s (protocol %s)..."
 
-#: ../lib/network/connection/ethernet.pm:305
+#: ../lib/network/connection/ethernet.pm:308
 #, c-format
 msgid "Got a network address on interface %s (%s protocol)"
 msgstr "Adresă de rețea atribuită pentru interfața %s (protocol %s)"
 
-#: ../lib/network/connection/ethernet.pm:306
+#: ../lib/network/connection/ethernet.pm:309
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
 msgstr ""
@@ -4133,12 +4131,12 @@ msgstr "WPA/WPA2 cu cheie pre-partajată (PSK)"
 msgid "WPA/WPA2 Enterprise"
 msgstr "WPA/WPA2 Enterprise"
 
-#: ../lib/network/connection/wireless.pm:269
+#: ../lib/network/connection/wireless.pm:281
 #, c-format
 msgid "Windows driver"
 msgstr "Pilot Windows"
 
-#: ../lib/network/connection/wireless.pm:366
+#: ../lib/network/connection/wireless.pm:369
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
@@ -4147,78 +4145,78 @@ msgstr ""
 "Placa de rețea fără-fir este dezactivată, activați-o apăsînd butonul "
 "prevăzut în acest scop."
 
-#: ../lib/network/connection/wireless.pm:456
+#: ../lib/network/connection/wireless.pm:459
 #, c-format
 msgid "Wireless settings"
 msgstr "Parametrii conexiunii fără-fir"
 
-#: ../lib/network/connection/wireless.pm:461
+#: ../lib/network/connection/wireless.pm:464
 #: ../lib/network/connection_manager.pm:280
 #, c-format
 msgid "Operating Mode"
 msgstr "Mod de operare"
 
-#: ../lib/network/connection/wireless.pm:462
+#: ../lib/network/connection/wireless.pm:465
 #, c-format
 msgid "Ad-hoc"
 msgstr "Ad-hoc"
 
-#: ../lib/network/connection/wireless.pm:462
+#: ../lib/network/connection/wireless.pm:465
 #, c-format
 msgid "Managed"
 msgstr "Gestionat"
 
-#: ../lib/network/connection/wireless.pm:462
+#: ../lib/network/connection/wireless.pm:465
 #, c-format
 msgid "Master"
 msgstr "Principal"
 
-#: ../lib/network/connection/wireless.pm:462
+#: ../lib/network/connection/wireless.pm:465
 #, c-format
 msgid "Repeater"
 msgstr "Repetor"
 
-#: ../lib/network/connection/wireless.pm:462
+#: ../lib/network/connection/wireless.pm:465
 #, c-format
 msgid "Secondary"
 msgstr "Secundar"
 
-#: ../lib/network/connection/wireless.pm:462
+#: ../lib/network/connection/wireless.pm:465
 #, c-format
 msgid "Auto"
 msgstr "Auto"
 
-#: ../lib/network/connection/wireless.pm:465
+#: ../lib/network/connection/wireless.pm:468
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "Numele rețelei (ESSID)"
 
-#: ../lib/network/connection/wireless.pm:467
+#: ../lib/network/connection/wireless.pm:470
 #, c-format
 msgid "Encryption mode"
 msgstr "Mod de criptare"
 
-#: ../lib/network/connection/wireless.pm:469
+#: ../lib/network/connection/wireless.pm:472
 #, c-format
 msgid "Encryption key"
 msgstr "Cheia de criptare"
 
-#: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/connection/wireless.pm:475
 #, c-format
 msgid "Hide password"
 msgstr "Ascunde parola"
 
-#: ../lib/network/connection/wireless.pm:474
+#: ../lib/network/connection/wireless.pm:477
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr "Forțează utilizarea acestei chei ca șir ASCII (ex: pentru Livebox)"
 
-#: ../lib/network/connection/wireless.pm:481
+#: ../lib/network/connection/wireless.pm:484
 #, c-format
 msgid "EAP Login/Username"
 msgstr "Utilizator/Cont EAP"
 
-#: ../lib/network/connection/wireless.pm:483
+#: ../lib/network/connection/wireless.pm:486
 #, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
@@ -4229,12 +4227,12 @@ msgstr ""
 "Dacă trebuie precizat un domeniu, utilizați sintaxa\n"
 "(netestată) DOMENIU\\utilizator"
 
-#: ../lib/network/connection/wireless.pm:486
+#: ../lib/network/connection/wireless.pm:489
 #, c-format
 msgid "EAP Password"
 msgstr "Parolă EAP"
 
-#: ../lib/network/connection/wireless.pm:489
+#: ../lib/network/connection/wireless.pm:492
 #, c-format
 msgid ""
 " Password: A string.\n"
@@ -4267,12 +4265,12 @@ msgstr ""
 "  Modul TLS este bazat în mod unic pe un certificat și poate\n"
 "ignora numele utilizatorului și parola specificate aici."
 
-#: ../lib/network/connection/wireless.pm:503
+#: ../lib/network/connection/wireless.pm:506
 #, c-format
 msgid "EAP client certificate"
 msgstr "Certificat client EAP"
 
-#: ../lib/network/connection/wireless.pm:505
+#: ../lib/network/connection/wireless.pm:508
 #, c-format
 msgid ""
 "The complete path and filename of client certificate. This is\n"
@@ -4285,32 +4283,32 @@ msgstr ""
 "Poate fi considerată ca o alternativă cuplului utilizator/parolă.\n"
 " Notă: ceilalți parametri asociați îi găsiți în „Opțiuni avansate”."
 
-#: ../lib/network/connection/wireless.pm:509
+#: ../lib/network/connection/wireless.pm:512
 #, c-format
 msgid "Network ID"
 msgstr "ID rețea"
 
-#: ../lib/network/connection/wireless.pm:510
+#: ../lib/network/connection/wireless.pm:513
 #, c-format
 msgid "Operating frequency"
 msgstr "Frecvența de operare"
 
-#: ../lib/network/connection/wireless.pm:511
+#: ../lib/network/connection/wireless.pm:514
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "Prag de sensibilitate"
 
-#: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/connection/wireless.pm:515
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "Rată de transfer (în biți/secundă)"
 
-#: ../lib/network/connection/wireless.pm:513
+#: ../lib/network/connection/wireless.pm:516
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../lib/network/connection/wireless.pm:514
+#: ../lib/network/connection/wireless.pm:517
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -4332,19 +4330,19 @@ msgstr ""
 "pachetului dezactivează acest mecanism. De asemenea, acest parametru mai\n"
 "poate fi definit ca „auto”, „fixed” sau „off”."
 
-#: ../lib/network/connection/wireless.pm:521
+#: ../lib/network/connection/wireless.pm:524
 #, c-format
 msgid "Fragmentation"
 msgstr "Fragmentare"
 
-#: ../lib/network/connection/wireless.pm:522
+#: ../lib/network/connection/wireless.pm:525
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr ""
 "argumente suplimentare\n"
 "pentru comanda iwconfig"
 
-#: ../lib/network/connection/wireless.pm:523
+#: ../lib/network/connection/wireless.pm:526
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -4361,14 +4359,14 @@ msgstr ""
 "Consultați pagina de manual iwconfig(8) pentru mai multe informații."
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:530
+#: ../lib/network/connection/wireless.pm:533
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr ""
 "argumente suplimentare\n"
 "pentru comanda iwspy"
 
-#: ../lib/network/connection/wireless.pm:531
+#: ../lib/network/connection/wireless.pm:534
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -4388,14 +4386,14 @@ msgstr ""
 "\n"
 "Consultați pagina de manual iwspy(8) pentru mai multe informații."
 
-#: ../lib/network/connection/wireless.pm:539
+#: ../lib/network/connection/wireless.pm:542
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr ""
 "argumente suplimentare\n"
 "pentru comanda iwpriv"
 
-#: ../lib/network/connection/wireless.pm:541
+#: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -4426,28 +4424,28 @@ msgstr ""
 "\n"
 "Consultați pagina de manual iwpriv(8) pentru mai multe informații."
 
-#: ../lib/network/connection/wireless.pm:552
+#: ../lib/network/connection/wireless.pm:555
 #, c-format
 msgid "EAP Protocol"
 msgstr "Protocol EAP"
 
-#: ../lib/network/connection/wireless.pm:553
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:556
+#: ../lib/network/connection/wireless.pm:561
 #, c-format
 msgid "Auto Detect"
 msgstr "Detectare Automată"
 
-#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:556
 #, c-format
 msgid "WPA2"
 msgstr "WPA2"
 
-#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:556
 #, c-format
 msgid "WPA"
 msgstr "WPA"
 
-#: ../lib/network/connection/wireless.pm:555
+#: ../lib/network/connection/wireless.pm:558
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
@@ -4456,67 +4454,67 @@ msgstr ""
 "Auto-detecția este recomandată deoarece mai întîi se încearcă WPA\n"
 "versiunea 2, cu WPA versiunea 1 în secundar"
 
-#: ../lib/network/connection/wireless.pm:557
+#: ../lib/network/connection/wireless.pm:560
 #, c-format
 msgid "EAP Mode"
 msgstr "Mod EAP"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:561
 #, c-format
 msgid "PEAP"
 msgstr "PEAP"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:561
 #, c-format
 msgid "TTLS"
 msgstr "TTLS"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:561
 #, c-format
 msgid "TLS"
 msgstr "TLS"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:561
 #, c-format
 msgid "MSCHAPV2"
 msgstr "MSCHAPV2"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:561
 #, c-format
 msgid "MD5"
 msgstr "MD5"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:561
 #, c-format
 msgid "OTP"
 msgstr "OTP"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:561
 #, c-format
 msgid "GTC"
 msgstr "GTC"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:561
 #, c-format
 msgid "LEAP"
 msgstr "LEAP"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:561
 #, c-format
 msgid "PEAP TTLS"
 msgstr "PEAP TTLS"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:561
 #, c-format
 msgid "TTLS TLS"
 msgstr "TTLS TLS"
 
-#: ../lib/network/connection/wireless.pm:560
+#: ../lib/network/connection/wireless.pm:563
 #, c-format
 msgid "EAP key_mgmt"
 msgstr "EAP key_mgmt"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:565
 #, c-format
 msgid ""
 "list of accepted authenticated key management protocols.\n"
@@ -4525,12 +4523,12 @@ msgstr ""
 "lista protocoalelor de gestiune de chei de autentificare acceptate.\n"
 "valori posibile: WPA-EAP, IEEE8021X, NONE"
 
-#: ../lib/network/connection/wireless.pm:564
+#: ../lib/network/connection/wireless.pm:567
 #, c-format
 msgid "EAP outer identity"
 msgstr "Identitate externă EAP"
 
-#: ../lib/network/connection/wireless.pm:566
+#: ../lib/network/connection/wireless.pm:569
 #, c-format
 msgid ""
 "Anonymous identity string for EAP: to be used as the\n"
@@ -4541,12 +4539,12 @@ msgstr ""
 "ca identitate necriptată cu tipurile de EAP ce suportă\n"
 "diferite identități încapsulate în tunele, ex: TTLS"
 
-#: ../lib/network/connection/wireless.pm:569
+#: ../lib/network/connection/wireless.pm:572
 #, c-format
 msgid "EAP phase2"
 msgstr "EAP phase2"
 
-#: ../lib/network/connection/wireless.pm:571
+#: ../lib/network/connection/wireless.pm:574
 #, c-format
 msgid ""
 "Inner authentication with TLS tunnel parameters.\n"
@@ -4559,12 +4557,12 @@ msgstr ""
 "auth=MSCHAPV2 pentru PEAP sau\n"
 "autheap=MSCHAPV2 autheap=MD5 pentru TTLS"
 
-#: ../lib/network/connection/wireless.pm:575
+#: ../lib/network/connection/wireless.pm:578
 #, c-format
 msgid "EAP CA certificate"
 msgstr "Certificat CA EAP"
 
-#: ../lib/network/connection/wireless.pm:577
+#: ../lib/network/connection/wireless.pm:580
 #, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
@@ -4579,12 +4577,12 @@ msgstr ""
 "Dacă se poate, un certificat CA de încredere trebuie întotdeauna\n"
 "configurat dacă se utilizează TLS, TTLS sau PEAP."
 
-#: ../lib/network/connection/wireless.pm:582
+#: ../lib/network/connection/wireless.pm:585
 #, c-format
 msgid "EAP certificate subject match"
 msgstr "Model de subiect de certificat EAP"
 
-#: ../lib/network/connection/wireless.pm:584
+#: ../lib/network/connection/wireless.pm:587
 #, c-format
 msgid ""
 " Substring to be matched against the subject of\n"
@@ -4599,12 +4597,12 @@ msgstr ""
 "Formatul subiectului trebuie să fie următorul:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
-#: ../lib/network/connection/wireless.pm:589
+#: ../lib/network/connection/wireless.pm:592
 #, c-format
 msgid "Extra directives"
 msgstr "Directive suplimentare"
 
-#: ../lib/network/connection/wireless.pm:590
+#: ../lib/network/connection/wireless.pm:593
 #, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
@@ -4635,12 +4633,12 @@ msgstr ""
 "\tAltele, precum key_mgmt și eap, permit forțarea\n"
 "\tde valori diferite de cele ale interfeței."
 
-#: ../lib/network/connection/wireless.pm:610
+#: ../lib/network/connection/wireless.pm:613
 #, c-format
 msgid "An encryption key is required."
 msgstr "Este necesară o cheie de criptare."
 
-#: ../lib/network/connection/wireless.pm:617
+#: ../lib/network/connection/wireless.pm:620
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
@@ -4649,7 +4647,7 @@ msgstr ""
 "Cheia pre-partajată conține între 8 și 63 de caractere ASCII, sau 64 de "
 "caractere hexazecimale."
 
-#: ../lib/network/connection/wireless.pm:623
+#: ../lib/network/connection/wireless.pm:626
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
@@ -4657,7 +4655,7 @@ msgid ""
 msgstr ""
 "Cheia WEP conține cel mult %d caractere ASCII sau %d caractere hexazecimale."
 
-#: ../lib/network/connection/wireless.pm:630
+#: ../lib/network/connection/wireless.pm:633
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -4666,7 +4664,7 @@ msgstr ""
 "Frecvența trebuie să conțină sufixul k, M or G (de exemplu: „2.46G” pentru "
 "frecvența de 2.46 GHz), sau să aibă suficiente „0” (zerouri)."
 
-#: ../lib/network/connection/wireless.pm:636
+#: ../lib/network/connection/wireless.pm:639
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
@@ -4675,17 +4673,17 @@ msgstr ""
 "Debitul trebuie să conțină sufixul k, M or G (de exemplu, \"11M\" pentru "
 "11M), sau să aibă suficiente „0” (zerouri)."
 
-#: ../lib/network/connection/wireless.pm:648
+#: ../lib/network/connection/wireless.pm:651
 #, c-format
 msgid "Allow access point roaming"
 msgstr "Autorizează conexiunile itinerante"
 
-#: ../lib/network/connection/wireless.pm:773
+#: ../lib/network/connection/wireless.pm:776
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "Asociat rețelei fără-fir „%s” pe interfața %s"
 
-#: ../lib/network/connection/wireless.pm:774
+#: ../lib/network/connection/wireless.pm:777
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "S-a pierdut asocierea cu rețeaua fără-fir pe interfața %s"
@@ -4788,8 +4786,7 @@ msgid "Please enter settings for network"
 msgstr "Introduceți parametrii rețelei"
 
 #: ../lib/network/connection_manager.pm:223
-#: ../lib/network/connection_manager.pm:479
-#: ../lib/network/connection_manager.pm:492 ../lib/network/drakvpn.pm:100
+#: ../lib/network/connection_manager.pm:481 ../lib/network/drakvpn.pm:100
 #, c-format
 msgid "Connection failed."
 msgstr "Conexiunea a eșuat."
@@ -4814,22 +4811,22 @@ msgstr "Putere semnal"
 msgid "Encryption"
 msgstr "Criptare"
 
-#: ../lib/network/connection_manager.pm:351 ../lib/network/netconnect.pm:208
+#: ../lib/network/connection_manager.pm:353 ../lib/network/netconnect.pm:208
 #, c-format
 msgid "Scanning for networks..."
 msgstr "Se caută rețele..."
 
-#: ../lib/network/connection_manager.pm:400 ../lib/network/drakroam.pm:91
+#: ../lib/network/connection_manager.pm:402 ../lib/network/drakroam.pm:91
 #, c-format
 msgid "Disconnect"
 msgstr "Deconectează"
 
-#: ../lib/network/connection_manager.pm:400 ../lib/network/drakroam.pm:90
+#: ../lib/network/connection_manager.pm:402 ../lib/network/drakroam.pm:90
 #, c-format
 msgid "Connect"
 msgstr "Conectează"
 
-#: ../lib/network/connection_manager.pm:445
+#: ../lib/network/connection_manager.pm:447
 #, c-format
 msgid "Hostname changed to \"%s\""
 msgstr "Numele gazdei a fost schimbat în „%s”"
@@ -4934,7 +4931,7 @@ msgstr "Sincronizare de dispozitiv Windows Mobile"
 msgid "Port scan detection"
 msgstr "Detectare de scanare de porturi"
 
-#: ../lib/network/drakfirewall.pm:224 ../lib/network/drakfirewall.pm:230
+#: ../lib/network/drakfirewall.pm:224 ../lib/network/drakfirewall.pm:228
 #: ../lib/network/shorewall.pm:75
 #, c-format
 msgid "Firewall configuration"
@@ -4945,17 +4942,10 @@ msgstr "Configurare de parafoc"
 msgid ""
 "drakfirewall configurator\n"
 "\n"
-"This configures a personal firewall for this Mageia machine.\n"
-"For a powerful and dedicated firewall solution, please look to the\n"
-"specialized Mageia Security Firewall distribution."
+"This configures a personal firewall for this Mageia machine."
 msgstr ""
-"Configurare de drakfirewall\n"
-"\n"
-"Acesta configurează parafocul personal pentru această mașină Mageia Linux.\n"
-"Dacă doriți un parafoc dedicat și mai puternic, îndreptați-vă mai degrabă\n"
-"către distribuția specializată Mageia Security."
 
-#: ../lib/network/drakfirewall.pm:230
+#: ../lib/network/drakfirewall.pm:228
 #, c-format
 msgid ""
 "drakfirewall configurator\n"
@@ -4968,13 +4958,13 @@ msgstr ""
 "Înainte de a continua, asigurați-vă că ați configurat accesul la\n"
 "rețeaua locală și Internet, cu ajutorul lui drakconnect."
 
-#: ../lib/network/drakfirewall.pm:247 ../lib/network/drakfirewall.pm:249
+#: ../lib/network/drakfirewall.pm:245 ../lib/network/drakfirewall.pm:247
 #: ../lib/network/shorewall.pm:167
 #, c-format
 msgid "Firewall"
 msgstr "Parafoc"
 
-#: ../lib/network/drakfirewall.pm:250
+#: ../lib/network/drakfirewall.pm:248
 #, c-format
 msgid ""
 "You can enter miscellaneous ports. \n"
@@ -4985,7 +4975,7 @@ msgstr ""
 "Exemple valide: 139/tcp 139/udp 600:610/tcp 600:610/udp.\n"
 "Aruncați o privire peste /etc/services pentru mai multe informații."
 
-#: ../lib/network/drakfirewall.pm:256
+#: ../lib/network/drakfirewall.pm:254
 #, c-format
 msgid ""
 "Invalid port given: %s.\n"
@@ -5000,33 +4990,33 @@ msgstr ""
 "\n"
 "Se poate specifica și un interval de porturi (ex: 24300:24350/udp)"
 
-#: ../lib/network/drakfirewall.pm:266
+#: ../lib/network/drakfirewall.pm:264
 #, c-format
 msgid "Which services would you like to allow the Internet to connect to?"
 msgstr "Ce servicii doriți să fie accesibile din Internet?"
 
-#: ../lib/network/drakfirewall.pm:267 ../lib/network/netconnect.pm:127
-#: ../lib/network/network.pm:540
+#: ../lib/network/drakfirewall.pm:265 ../lib/network/netconnect.pm:127
+#: ../lib/network/network.pm:549
 #, c-format
 msgid "Those settings will be saved for the network profile <b>%s</b>"
 msgstr "Acele configurări vor fi salvate pentru profilul de rețea <b>%s</b>"
 
-#: ../lib/network/drakfirewall.pm:268
+#: ../lib/network/drakfirewall.pm:266
 #, c-format
 msgid "Everything (no firewall)"
 msgstr "Totul (fără parafoc)"
 
-#: ../lib/network/drakfirewall.pm:270
+#: ../lib/network/drakfirewall.pm:268
 #, c-format
 msgid "Other ports"
 msgstr "Alte porturi"
 
-#: ../lib/network/drakfirewall.pm:271
+#: ../lib/network/drakfirewall.pm:269
 #, c-format
 msgid "Log firewall messages in system logs"
 msgstr "Înregistrează mesajele parafocului în jurnalele sistemului"
 
-#: ../lib/network/drakfirewall.pm:313
+#: ../lib/network/drakfirewall.pm:311
 #, c-format
 msgid ""
 "You can be warned when someone accesses to a service or tries to intrude "
@@ -5037,7 +5027,7 @@ msgstr ""
 "încearcă să intre pe calculatorul vostru.\n"
 "Selectați serviciile de rețea pe care doriți să le supravegheați."
 
-#: ../lib/network/drakfirewall.pm:318
+#: ../lib/network/drakfirewall.pm:316
 #, c-format
 msgid "Use Interactive Firewall"
 msgstr "Utilizează parafocul interactiv"
@@ -5974,12 +5964,12 @@ msgstr ""
 "S-a produs o eroare neașteptată:\n"
 "%s"
 
-#: ../lib/network/network.pm:514
+#: ../lib/network/network.pm:523
 #, c-format
 msgid "Advanced network settings"
 msgstr "Configurări avansate de rețea"
 
-#: ../lib/network/network.pm:515
+#: ../lib/network/network.pm:524
 #, c-format
 msgid ""
 "Here you can configure advanced network settings. Please note that you have "
@@ -5988,62 +5978,62 @@ msgstr ""
 "Aici puteți configura parametri avansați de rețea. Va trebui să reporniți "
 "calculatorul pentru a activa modificările."
 
-#: ../lib/network/network.pm:517
+#: ../lib/network/network.pm:526
 #, c-format
 msgid "Wireless regulatory domain"
 msgstr "Domeniul normativ de rețea fără-fir"
 
-#: ../lib/network/network.pm:518
+#: ../lib/network/network.pm:527
 #, c-format
 msgid "TCP/IP settings"
 msgstr "Parametri TCP/IP"
 
-#: ../lib/network/network.pm:519
+#: ../lib/network/network.pm:528
 #, c-format
 msgid "Disable IPv6"
 msgstr "Dezactivează IPv6"
 
-#: ../lib/network/network.pm:520
+#: ../lib/network/network.pm:529
 #, c-format
 msgid "Disable TCP Window Scaling"
 msgstr "Dezactivează adaptarea ferestrelor TCP"
 
-#: ../lib/network/network.pm:521
+#: ../lib/network/network.pm:530
 #, c-format
 msgid "Disable TCP Timestamps"
 msgstr "Dezactivează opțiunea TCP Timestamps"
 
-#: ../lib/network/network.pm:522
+#: ../lib/network/network.pm:531
 #, c-format
 msgid "Security settings (defined by MSEC policy)"
 msgstr "Parametri de securitate (definiți de pilotica MSEC)"
 
-#: ../lib/network/network.pm:523
+#: ../lib/network/network.pm:532
 #, c-format
 msgid "Disable ICMP echo"
 msgstr "Dezactivează ecoul ICMP"
 
-#: ../lib/network/network.pm:524
+#: ../lib/network/network.pm:533
 #, c-format
 msgid "Disable ICMP echo for broadcasting messages"
 msgstr "Dezactivează ecoul ICMP pentru mesajele difuzate"
 
-#: ../lib/network/network.pm:525
+#: ../lib/network/network.pm:534
 #, c-format
 msgid "Disable invalid ICMP error responses"
 msgstr "Dezactivează mesajele de eroare ICMP invalide"
 
-#: ../lib/network/network.pm:526
+#: ../lib/network/network.pm:535
 #, c-format
 msgid "Log strange packets"
 msgstr "Înregistrează în jurnal pachetele bizare"
 
-#: ../lib/network/network.pm:539
+#: ../lib/network/network.pm:548
 #, c-format
 msgid "Proxies configuration"
 msgstr "Configurare proxy"
 
-#: ../lib/network/network.pm:540
+#: ../lib/network/network.pm:549
 #, c-format
 msgid ""
 "Here you can set up your proxies configuration (eg: http://"
@@ -6052,42 +6042,42 @@ msgstr ""
 "Puteți defini aici configurația serverelor proxy (ex : http://"
 "serverul_meu_proxy:8080)"
 
-#: ../lib/network/network.pm:541
+#: ../lib/network/network.pm:550
 #, c-format
 msgid "HTTP proxy"
 msgstr "Proxy HTTP"
 
-#: ../lib/network/network.pm:542
+#: ../lib/network/network.pm:551
 #, c-format
 msgid "Use HTTP proxy for HTTPS connections"
 msgstr "Utilizează un proxy HTTP pentru conexiunile HTTPS"
 
-#: ../lib/network/network.pm:543
+#: ../lib/network/network.pm:552
 #, c-format
 msgid "HTTPS proxy"
 msgstr "Proxy HTTPS"
 
-#: ../lib/network/network.pm:544
+#: ../lib/network/network.pm:553
 #, c-format
 msgid "FTP proxy"
 msgstr "Proxy FTP"
 
-#: ../lib/network/network.pm:545
+#: ../lib/network/network.pm:554
 #, c-format
 msgid "No proxy for (comma separated list):"
 msgstr "Fără proxy pentru (listă separată prin virgulă):"
 
-#: ../lib/network/network.pm:550
+#: ../lib/network/network.pm:559
 #, c-format
 msgid "Proxy should be http://..."
 msgstr "Sintaxa proxyului ar trebui să fie http://..."
 
-#: ../lib/network/network.pm:551
+#: ../lib/network/network.pm:560
 #, c-format
 msgid "Proxy should be http://... or https://..."
 msgstr "Sintaxa proxyului ar trebui să fie http://... sau https://..."
 
-#: ../lib/network/network.pm:552
+#: ../lib/network/network.pm:561
 #, c-format
 msgid "URL should begin with 'ftp:' or 'http:'"
 msgstr "Adresa URL ar trebui să înceapă cu „http:” sau „ftp:”"
@@ -6156,12 +6146,12 @@ msgid ""
 "These packages can be found in %s, or in the official %s package repository."
 msgstr "Aceste pachete se pot fi găsite pe %s, sau pe mediul oficial %s."
 
-#: ../lib/network/thirdparty.pm:154
+#: ../lib/network/thirdparty.pm:152
 #, c-format
 msgid "The following component is missing: %s"
 msgstr "Lipsește următoarea componentă: %s"
 
-#: ../lib/network/thirdparty.pm:156
+#: ../lib/network/thirdparty.pm:154
 #, c-format
 msgid ""
 "The required files can also be installed from this URL:\n"
@@ -6170,47 +6160,47 @@ msgstr ""
 "Fișierele necesare pot fi instalate și de la adresa URL:\n"
 "%s"
 
-#: ../lib/network/thirdparty.pm:192
+#: ../lib/network/thirdparty.pm:190
 #, c-format
 msgid "Firmware files are required for this device."
 msgstr "Fișierele de microcod sînt necesare pentru acest dispozitiv."
 
-#: ../lib/network/thirdparty.pm:195 ../lib/network/thirdparty.pm:200
+#: ../lib/network/thirdparty.pm:193 ../lib/network/thirdparty.pm:198
 #, c-format
 msgid "Use a floppy"
 msgstr "Utilizează o dischetă"
 
-#: ../lib/network/thirdparty.pm:196 ../lib/network/thirdparty.pm:203
+#: ../lib/network/thirdparty.pm:194 ../lib/network/thirdparty.pm:201
 #, c-format
 msgid "Use my Windows partition"
 msgstr "Utilizează partiția Windows"
 
-#: ../lib/network/thirdparty.pm:197
+#: ../lib/network/thirdparty.pm:195
 #, c-format
 msgid "Select file"
 msgstr "Selectează fișierul"
 
-#: ../lib/network/thirdparty.pm:208
+#: ../lib/network/thirdparty.pm:206
 #, c-format
 msgid "Please select the firmware file (for example: %s)"
 msgstr "Selectați fișierul de microcod (de exemplu: %s)"
 
-#: ../lib/network/thirdparty.pm:232
+#: ../lib/network/thirdparty.pm:230
 #, c-format
 msgid "Unable to find \"%s\" on your Windows system!"
 msgstr "„%s” nu poate fi găsit pe sistemul vostru Windows!"
 
-#: ../lib/network/thirdparty.pm:234
+#: ../lib/network/thirdparty.pm:232
 #, c-format
 msgid "No Windows system has been detected!"
 msgstr "Nu a fost detectat nici un sistem Windows!"
 
-#: ../lib/network/thirdparty.pm:244
+#: ../lib/network/thirdparty.pm:242
 #, c-format
 msgid "Insert floppy"
 msgstr "Introduceți discheta"
 
-#: ../lib/network/thirdparty.pm:245
+#: ../lib/network/thirdparty.pm:243
 #, c-format
 msgid ""
 "Insert a FAT formatted floppy in drive %s with %s in root directory and "
@@ -6219,128 +6209,128 @@ msgstr ""
 "Introduceți o dischetă formatată FAT în unitatea %s cu %s în directorul "
 "rădăcină și apăsați %s"
 
-#: ../lib/network/thirdparty.pm:245
+#: ../lib/network/thirdparty.pm:243
 #, c-format
 msgid "Next"
 msgstr "Înainte"
 
-#: ../lib/network/thirdparty.pm:255
+#: ../lib/network/thirdparty.pm:253
 #, c-format
 msgid "Floppy access error, unable to mount device %s"
 msgstr "Eroare la accesarea dischetei, nu se poate monta dispozitivul %s"
 
-#: ../lib/network/thirdparty.pm:354
+#: ../lib/network/thirdparty.pm:352
 #, c-format
 msgid "Looking for required software and drivers..."
 msgstr "Se caută programele si piloții necesari..."
 
-#: ../lib/network/thirdparty.pm:369
+#: ../lib/network/thirdparty.pm:367
 #, c-format
 msgid "Please wait, running device configuration commands..."
 msgstr "Așteptați, se execută comenzile de configurare a dispozitivului..."
 
-#: ../lib/network/vpn/openvpn.pm:107
+#: ../lib/network/vpn/openvpn.pm:109
 #, c-format
 msgid "X509 Public Key Infrastructure"
 msgstr "Infrastructură de cheie publică X509"
 
-#: ../lib/network/vpn/openvpn.pm:108
+#: ../lib/network/vpn/openvpn.pm:110
 #, c-format
 msgid "Static Key"
 msgstr "Cheie statică"
 
 #. -PO: please don't translate the CA acronym
-#: ../lib/network/vpn/openvpn.pm:142
+#: ../lib/network/vpn/openvpn.pm:144
 #, c-format
 msgid "Certificate Authority (CA)"
 msgstr "Autoritate de certificare (CA)"
 
-#: ../lib/network/vpn/openvpn.pm:148
+#: ../lib/network/vpn/openvpn.pm:150
 #, c-format
 msgid "Certificate"
 msgstr "Certificat"
 
-#: ../lib/network/vpn/openvpn.pm:154
+#: ../lib/network/vpn/openvpn.pm:156
 #, c-format
 msgid "Key"
 msgstr "Cheie"
 
-#: ../lib/network/vpn/openvpn.pm:160
+#: ../lib/network/vpn/openvpn.pm:162
 #, c-format
 msgid "TLS control channel key"
 msgstr "Cheie pentru canalul de control TLS"
 
-#: ../lib/network/vpn/openvpn.pm:167
+#: ../lib/network/vpn/openvpn.pm:169
 #, c-format
 msgid "Key direction"
 msgstr "Direcția cheii"
 
-#: ../lib/network/vpn/openvpn.pm:175
+#: ../lib/network/vpn/openvpn.pm:177
 #, c-format
 msgid "Authenticate using username and password"
 msgstr "Autentificare cu nume de utilizator și parolă"
 
-#: ../lib/network/vpn/openvpn.pm:181
+#: ../lib/network/vpn/openvpn.pm:183
 #, c-format
 msgid "Check server certificate"
 msgstr "Verifică certificatul serverului"
 
-#: ../lib/network/vpn/openvpn.pm:187
+#: ../lib/network/vpn/openvpn.pm:189
 #, c-format
 msgid "Cipher algorithm"
 msgstr "Algoritm de cifrare"
 
-#: ../lib/network/vpn/openvpn.pm:191
+#: ../lib/network/vpn/openvpn.pm:193
 #, c-format
 msgid "Default"
 msgstr "Alegere implicită"
 
-#: ../lib/network/vpn/openvpn.pm:195
+#: ../lib/network/vpn/openvpn.pm:197
 #, c-format
 msgid "Size of cipher key"
 msgstr "Mărimea cheii de cifrare"
 
-#: ../lib/network/vpn/openvpn.pm:206
+#: ../lib/network/vpn/openvpn.pm:208
 #, c-format
 msgid "Get from server"
 msgstr "Recuperează de la server"
 
-#: ../lib/network/vpn/openvpn.pm:216
+#: ../lib/network/vpn/openvpn.pm:218
 #, c-format
 msgid "Gateway port"
 msgstr "Port pasarelă"
 
-#: ../lib/network/vpn/openvpn.pm:232
+#: ../lib/network/vpn/openvpn.pm:234
 #, c-format
 msgid "Remote IP address"
 msgstr "Adresă IP distantă"
 
-#: ../lib/network/vpn/openvpn.pm:237
+#: ../lib/network/vpn/openvpn.pm:239
 #, c-format
 msgid "Use TCP protocol"
 msgstr "Utilizează protocolul TCP"
 
-#: ../lib/network/vpn/openvpn.pm:243
+#: ../lib/network/vpn/openvpn.pm:245
 #, c-format
 msgid "Virtual network device type"
 msgstr "Tipul dispozitivului de rețea virtuală"
 
-#: ../lib/network/vpn/openvpn.pm:250
+#: ../lib/network/vpn/openvpn.pm:252
 #, c-format
 msgid "Virtual network device number (optional)"
 msgstr "Numărul dispozitivului de rețea virtuală (opțional)"
 
-#: ../lib/network/vpn/openvpn.pm:365
+#: ../lib/network/vpn/openvpn.pm:367
 #, c-format
 msgid "Starting connection.."
 msgstr "Se pornește conexiunea..."
 
-#: ../lib/network/vpn/openvpn.pm:380
+#: ../lib/network/vpn/openvpn.pm:382
 #, c-format
 msgid "Please insert your token"
 msgstr "Inserați jetonul vostru"
 
-#: ../lib/network/vpn/openvpn.pm:391
+#: ../lib/network/vpn/openvpn.pm:393
 #, c-format
 msgid "PIN number"
 msgstr "Cod PIN"
@@ -6374,6 +6364,24 @@ msgstr "Mod NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Utilizează un port UDP specific"
+
+#~ msgid "Same IP is already in %s file."
+#~ msgstr "Același IP este deja prezent în fișierul %s."
+
+#~ msgid ""
+#~ "drakfirewall configurator\n"
+#~ "\n"
+#~ "This configures a personal firewall for this Mageia machine.\n"
+#~ "For a powerful and dedicated firewall solution, please look to the\n"
+#~ "specialized Mageia Security Firewall distribution."
+#~ msgstr ""
+#~ "Configurare de drakfirewall\n"
+#~ "\n"
+#~ "Acesta configurează parafocul personal pentru această mașină Mageia "
+#~ "Linux.\n"
+#~ "Dacă doriți un parafoc dedicat și mai puternic, îndreptați-vă mai "
+#~ "degrabă\n"
+#~ "către distribuția specializată Mageia Security."
 
 #, fuzzy
 #~ msgid "Do you want to apply new wireless regulation settings now?"
