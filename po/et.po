@@ -2,19 +2,20 @@
 # Copyright (C) 2003 Free Software Foundation, Inc.
 # Riho Kurg <rx@linux.ee>, 1999-2003.
 # Marek Laane <bald@starman.ee>, 2002-2009.
+# Marek Laane <bald@smail.ee>, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: drakx-net-et\n"
+"Project-Id-Version: drakx-net\n"
 "POT-Creation-Date: 2011-05-03 15:42+0200\n"
-"PO-Revision-Date: 2009-11-02 13:27+0200\n"
-"Last-Translator: Marek Laane <bald@starman.ee>\n"
-"Language-Team: Estonian <et@li.org>\n"
-"Language: et\n"
+"PO-Revision-Date: 2011-05-09 16:18+0000\n"
+"Last-Translator: Marek Laane <bald@smail.ee>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Language: et\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../bin/drakconnect-old:45
 #, c-format
@@ -97,10 +98,10 @@ msgstr "Olgu"
 #: ../lib/network/connection_manager.pm:206
 #: ../lib/network/connection_manager.pm:235
 #: ../lib/network/connection_manager.pm:353 ../lib/network/drakvpn.pm:49
-#: ../lib/network/netcenter.pm:150 ../lib/network/netconnect.pm:186
-#: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
-#: ../lib/network/netconnect.pm:733 ../lib/network/thirdparty.pm:352
-#: ../lib/network/thirdparty.pm:367
+#: ../lib/network/netcenter.pm:150 ../lib/network/netcenter.pm:150
+#: ../lib/network/netconnect.pm:186 ../lib/network/netconnect.pm:208
+#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:733
+#: ../lib/network/thirdparty.pm:352 ../lib/network/thirdparty.pm:367
 #, c-format
 msgid "Please wait"
 msgstr "Palun oodake"
@@ -161,13 +162,13 @@ msgid "DHCP client"
 msgstr "DHCP klient"
 
 #: ../bin/drakconnect-old:247
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This interface has not been configured yet.\n"
 "Run the \"%s\" assistant from the Mageia Linux Control Center"
 msgstr ""
 "Seda liidest ei ole veel seadistatud.\n"
-"Käivitage Mageiai juhtimiskeskuses nõustaja \"%s\""
+"Käivitage Mageia juhtimiskeskuses nõustaja \"%s\""
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:105
 #, c-format
@@ -204,26 +205,18 @@ msgstr "Internetiühenduse jagamine"
 #, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
-"With that feature, other computers on your local network will be able to use "
-"this computer's Internet connection.\n"
+"With that feature, other computers on your local network will be able to use this computer's Internet connection.\n"
 "\n"
-"Make sure you have configured your Network/Internet access using drakconnect "
-"before going any further.\n"
+"Make sure you have configured your Network/Internet access using drakconnect before going any further.\n"
 "\n"
-"Note: you need a dedicated Network Adapter to set up a Local Area Network "
-"(LAN). Please disable Mageia Firewall for the network adapter connected to "
-"your LAN connection before proceeding."
+"Note: you need a dedicated Network Adapter to set up a Local Area Network (LAN). Please disable Mageia Firewall for the network adapter connected to your LAN connection before proceeding."
 msgstr ""
 "Nüüd on Teil võimalik seadistada oma arvuti internetiühendust jagama.\n"
-"Selle võimaluse abil saavad teised Teie kohtvõrgu arvutid kasutada selle "
-"masina internetiühendust.\n"
+"Selle võimaluse abil saavad teised Teie kohtvõrgu arvutid kasutada selle masina internetiühendust.\n"
 "\n"
-"Kontrollige enne jätkamist, et olete seadistanud oma võrgu/internetiühenduse "
-"drakconnecti abil.\n"
+"Kontrollige enne jätkamist, et olete seadistanud oma võrgu/internetiühenduse drakconnecti abil.\n"
 "\n"
-"Märkus: kohtvõrgu (LAN) jaoks on vajalik eraldi võrgukaardi olemasolu. Palun "
-"lülitage LAN-iga seotud võrgukaardi puhul enne jätkamist välja Mageia "
-"tulemüür."
+"Märkus: kohtvõrgu (LAN) jaoks on vajalik eraldi võrgukaardi olemasolu. Palun lülitage LAN-iga seotud võrgukaardi puhul enne jätkamist välja Mageia tulemüür."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -280,8 +273,7 @@ msgstr "Võrguseade"
 #: ../bin/drakgw:141
 #, c-format
 msgid ""
-"There is only one network adapter on your system configured for LAN "
-"connections:\n"
+"There is only one network adapter on your system configured for LAN connections:\n"
 "\n"
 "%s\n"
 "\n"
@@ -297,15 +289,11 @@ msgstr ""
 "\n"
 "Kõik on valmis teie kohtvõrgu häälestamiseks seda kaarti kasutama.\n"
 "\n"
-"Kui Teil on veel mõni kohtvõrguga ühendatud kaart, keelake tööriista "
-"drakfirewall abil sellel tulemüüri kasutamine, enne kui asute "
-"internetiühenduse jagamist seadistama."
+"Kui Teil on veel mõni kohtvõrguga ühendatud kaart, keelake tööriista drakfirewall abil sellel tulemüüri kasutamine, enne kui asute internetiühenduse jagamist seadistama."
 
 #: ../bin/drakgw:156
 #, c-format
-msgid ""
-"Please choose what network adapter will be connected to your Local Area "
-"Network."
+msgid "Please choose what network adapter will be connected to your Local Area Network."
 msgstr "Palun valige, millist võrguliidest soovite kasutada kohtvõrgu jaoks."
 
 #: ../bin/drakgw:177
@@ -362,7 +350,9 @@ msgstr "Viga"
 
 #: ../bin/drakgw:188
 #, c-format
-msgid "Potential LAN address conflict found in current config of %s!\n"
+msgid ""
+"Potential LAN address conflict found in current config of %s!\n"
+""
 msgstr "Võimalik kohtvõrgu aadressi konflikt %s seadistuses!\n"
 
 #: ../bin/drakgw:204
@@ -456,19 +446,13 @@ msgstr "Printeri üldleviinfo"
 #: ../bin/drakgw:308
 #, c-format
 msgid ""
-"No ethernet network adapter configured for LAN has been detected on your "
-"system.\n"
+"No ethernet network adapter configured for LAN has been detected on your system.\n"
 "\n"
-"Please run the hardware configuration tool to configure it, and ensure that "
-"the Mageia firewall is not enabled for network adapter connected to your LAN "
-"network."
+"Please run the hardware configuration tool to configure it, and ensure that the Mageia firewall is not enabled for network adapter connected to your LAN network."
 msgstr ""
-"Teie süsteemis ei leitud ühtegi kohtvõrgu jaoks seadistatud Etherneti "
-"võrgukaarti.\n"
+"Teie süsteemis ei leitud ühtegi kohtvõrgu jaoks seadistatud Etherneti võrgukaarti.\n"
 "\n"
-"Palun käivitage selle seadistamiseks riistvara seadistuste tööriist ja "
-"kontrollige, et kohtvõrguga ühendatud võrgukaardil poleks sisse lülitatud "
-"Mageia tulemüür."
+"Palun käivitage selle seadistamiseks riistvara seadistuste tööriist ja kontrollige, et kohtvõrguga ühendatud võrgukaardil poleks sisse lülitatud Mageia tulemüür."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -484,13 +468,11 @@ msgstr "Internetiühendust nüüd enam ei jagata."
 #, c-format
 msgid ""
 "Everything has been configured.\n"
-"You may now share Internet connection with other computers on your Local "
-"Area Network, using automatic network configuration (DHCP) and\n"
+"You may now share Internet connection with other computers on your Local Area Network, using automatic network configuration (DHCP) and\n"
 " a Transparent Proxy Cache server (SQUID)."
 msgstr ""
 "Kõik on seadistatud.\n"
-"Nüüd saate internetiühendust jagada teistele kohtvõrgu arvutitele, kasutades "
-"automaatset võrguseadistust (DHCP) ja läbipaistvat puhverserverit (SQUID)."
+"Nüüd saate internetiühendust jagada teistele kohtvõrgu arvutitele, kasutades automaatset võrguseadistust (DHCP) ja läbipaistvat puhverserverit (SQUID)."
 
 #: ../bin/drakgw:351
 #, c-format
@@ -504,12 +486,8 @@ msgstr "Leiti tulemüüri seadistused!"
 
 #: ../bin/drakgw:366
 #, c-format
-msgid ""
-"Warning! An existing firewalling configuration has been detected. You may "
-"need some manual fixes after installation."
-msgstr ""
-"Hoiatus! Leiti olemasolevad tulemüüri seadistused. Tõenäoliselt peaksite "
-"need hiljem üle vaatama."
+msgid "Warning! An existing firewalling configuration has been detected. You may need some manual fixes after installation."
+msgstr "Hoiatus! Leiti olemasolevad tulemüüri seadistused. Tõenäoliselt peaksite need hiljem üle vaatama."
 
 #: ../bin/drakgw:371
 #, c-format
@@ -779,12 +757,8 @@ msgstr "Parool on nõutav."
 
 #: ../bin/drakinvictus:100
 #, c-format
-msgid ""
-"This tool allows to set up network interfaces failover and firewall "
-"replication."
-msgstr ""
-"See tööriist võimaldab seadistada võrguliideste tõrkesiirdeid ja tulemüüri "
-"tiražeerimist."
+msgid "This tool allows to set up network interfaces failover and firewall replication."
+msgstr "See tööriist võimaldab seadistada võrguliideste tõrkesiirdeid ja tulemüüri tiražeerimist."
 
 #: ../bin/drakinvictus:102
 #, c-format
@@ -864,15 +838,8 @@ msgstr "Uus profiil..."
 
 #: ../bin/draknetprofile:155
 #, c-format
-msgid ""
-"Please specify the name of the new network profile to be created (e.g., "
-"work, home, roaming, ..). This new profile will be created based on current "
-"settings, and you'll be able to configure your system configuration as usual "
-"afterwards."
-msgstr ""
-"Palun andke loodavale võrguprofiilile nimi (nt. kodu, töö, reisil...) "
-"Profiili loomisel võetakse aluseks olemasolevad seadistused, mida Teil on "
-"võimalik seejärel muuta vastavalt vajadustele."
+msgid "Please specify the name of the new network profile to be created (e.g., work, home, roaming, ..). This new profile will be created based on current settings, and you'll be able to configure your system configuration as usual afterwards."
+msgstr "Palun andke loodavale võrguprofiilile nimi (nt. kodu, töö, reisil...) Profiili loomisel võetakse aluseks olemasolevad seadistused, mida Teil on võimalik seejärel muuta vastavalt vajadustele."
 
 #: ../bin/draknetprofile:166
 #, c-format
@@ -886,14 +853,8 @@ msgstr "Uus profiil on loodud"
 
 #: ../bin/draknetprofile:172
 #, c-format
-msgid ""
-"You are now using network profile %s. You can configure your system as "
-"usual, and all your network settings from now on will be saved into this "
-"profile."
-msgstr ""
-"Te kasutate nüüd võrguprofiili %s. Te võite seadistada süsteemi nii, nagu Te "
-"seda ka muidu teeksite, ning kõik Teie võrguseadistused salvestatakse "
-"nüüdsest sellesse profiili."
+msgid "You are now using network profile %s. You can configure your system as usual, and all your network settings from now on will be saved into this profile."
+msgstr "Te kasutate nüüd võrguprofiili %s. Te võite seadistada süsteemi nii, nagu Te seda ka muidu teeksite, ning kõik Teie võrguseadistused salvestatakse nüüdsest sellesse profiili."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
 #: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
@@ -909,12 +870,8 @@ msgstr "Kas tõesti soovite kustutada vaikeprofiili?"
 
 #: ../bin/draknetprofile:186
 #, c-format
-msgid ""
-"You can not delete the current profile. Please switch to a different profile "
-"first."
-msgstr ""
-"Aktiivset profiili ei saa kustutada. Palun lülituge kõigepealt mõnele muule "
-"profiilile."
+msgid "You can not delete the current profile. Please switch to a different profile first."
+msgstr "Aktiivset profiili ei saa kustutada. Palun lülituge kõigepealt mõnele muule profiilile."
 
 #: ../bin/draknetprofile:194 ../bin/draknfs:356
 #, c-format
@@ -1036,48 +993,34 @@ msgstr "Peab olema kataloog."
 #: ../bin/draknfs:146
 #, c-format
 msgid ""
-"<span weight=\"bold\">NFS clients</span> may be specified in a number of "
-"ways:\n"
+"<span weight=\"bold\">NFS clients</span> may be specified in a number of ways:\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">single host:</span> a host either by an "
-"abbreviated name recognized be the resolver, fully qualified domain name, or "
-"an IP address\n"
+"<span foreground=\"royalblue3\">single host:</span> a host either by an abbreviated name recognized be the resolver, fully qualified domain name, or an IP address\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">netgroups:</span> NIS netgroups may be given "
-"as @group.\n"
+"<span foreground=\"royalblue3\">netgroups:</span> NIS netgroups may be given as @group.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">wildcards:</span> machine names may contain "
-"the wildcard characters * and ?. For instance: *.cs.foo.edu  matches all  "
-"hosts  in the domain cs.foo.edu.\n"
+"<span foreground=\"royalblue3\">wildcards:</span> machine names may contain the wildcard characters * and ?. For instance: *.cs.foo.edu  matches all  hosts  in the domain cs.foo.edu.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">IP networks:</span> you can also export "
-"directories to all hosts on an IP (sub-)network simultaneously. for example, "
-"either `/255.255.252.0' or  `/22'  appended to the network base address "
-"result.\n"
+"<span foreground=\"royalblue3\">IP networks:</span> you can also export directories to all hosts on an IP (sub-)network simultaneously. for example, either `/255.255.252.0' or  `/22'  appended to the network base address result.\n"
+""
 msgstr ""
 "<span weight=\"bold\">NFS-i klienti</span> võib määrata mitmel moel:\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">üksikmasin:</span> masin kas nimelahendajale "
-"tuntud lühinime, täielikult kvalifitseeritud nime või IP-aadressi järgi\n"
+"<span foreground=\"royalblue3\">üksikmasin:</span> masin kas nimelahendajale tuntud lühinime, täielikult kvalifitseeritud nime või IP-aadressi järgi\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">võrgugrupid:</span> NIS-võrgugrupid võib "
-"anda kui @grupp.\n"
+"<span foreground=\"royalblue3\">võrgugrupid:</span> NIS-võrgugrupid võib anda kui @grupp.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">metamärgid:</span> masinanimed võivad "
-"sisaldada metamärke * ja ?. Näiteks *.cs.foo.edu korral sobivad kõik masinad "
-"domeenis cs.foo.edu.\n"
+"<span foreground=\"royalblue3\">metamärgid:</span> masinanimed võivad sisaldada metamärke * ja ?. Näiteks *.cs.foo.edu korral sobivad kõik masinad domeenis cs.foo.edu.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">IP-võrgud:</span> kataloogid võib ka "
-"eksportida kõigile masinatele IP-(alam-)võrgus korraga, lisades näiteks "
-"`/255.255.252.0' või `/22' võrgu baasaadressile.\n"
+"<span foreground=\"royalblue3\">IP-võrgud:</span> kataloogid võib ka eksportida kõigile masinatele IP-(alam-)võrgus korraga, lisades näiteks `/255.255.252.0' või `/22' võrgu baasaadressile.\n"
 
 #: ../bin/draknfs:161
 #, c-format
@@ -1085,45 +1028,31 @@ msgid ""
 "<span weight=\"bold\">User ID options</span>\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">map root user as anonymous:</span> map "
-"requests from uid/gid 0 to the anonymous uid/gid (root_squash).\n"
+"<span foreground=\"royalblue3\">map root user as anonymous:</span> map requests from uid/gid 0 to the anonymous uid/gid (root_squash).\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">allow real remote root access:</span> turn "
-"off root squashing. This option is mainly useful for diskless clients "
-"(no_root_squash).\n"
+"<span foreground=\"royalblue3\">allow real remote root access:</span> turn off root squashing. This option is mainly useful for diskless clients (no_root_squash).\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">map all users to anonymous user:</span> map "
-"all uids and gids to the anonymous  user (all_squash). Useful for NFS-"
-"exported public FTP directories, news spool directories, etc. The opposite "
-"option is no user UID mapping (no_all_squash), which is the default "
-"setting.\n"
+"<span foreground=\"royalblue3\">map all users to anonymous user:</span> map all uids and gids to the anonymous  user (all_squash). Useful for NFS-exported public FTP directories, news spool directories, etc. The opposite option is no user UID mapping (no_all_squash), which is the default setting.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">anonuid and anongid:</span> explicitly set "
-"the uid and gid of the anonymous account.\n"
+"<span foreground=\"royalblue3\">anonuid and anongid:</span> explicitly set the uid and gid of the anonymous account.\n"
+""
 msgstr ""
 "<span weight=\"bold\">Kasutaja ID valikud</span>\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">administraatori sidumine anonüümsena:</span> "
-"kõik uid/gid 0 päringud seotakse anonüümse uid/gid-iga.\n"
+"<span foreground=\"royalblue3\">administraatori sidumine anonüümsena:</span> kõik uid/gid 0 päringud seotakse anonüümse uid/gid-iga.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">administraatori kaugligipääsu lubamine:</"
-"span> administraatori sidumist ei lubata. See on kasulik peamiselt kettata "
-"klientide korral.\n"
+"<span foreground=\"royalblue3\">administraatori kaugligipääsu lubamine:</span> administraatori sidumist ei lubata. See on kasulik peamiselt kettata klientide korral.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">kõigi kasutajate sidumine anonüümsena:</"
-"span> kõik uid-d ja gid-d seaotakse anonüümse kasutajaga. Kasulik NFS-"
-"eksporditud avalike FTP-kataloogide, uudiste puhverkataloogide jms, korral. "
-"Vastand on vaikimisi kasutatav kasutaja UID mittesidumine (no_all_squash).\n"
+"<span foreground=\"royalblue3\">kõigi kasutajate sidumine anonüümsena:</span> kõik uid-d ja gid-d seaotakse anonüümse kasutajaga. Kasulik NFS-eksporditud avalike FTP-kataloogide, uudiste puhverkataloogide jms, korral. Vastand on vaikimisi kasutatav kasutaja UID mittesidumine (no_all_squash).\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">anonuid ja anongid:</span> anonüümse konto "
-"uid ja gid vahetu määramine.\n"
+"<span foreground=\"royalblue3\">anonuid ja anongid:</span> anonüümse konto uid ja gid vahetu määramine.\n"
 
 #: ../bin/draknfs:177
 #, c-format
@@ -1152,50 +1081,23 @@ msgstr "Muud valikud"
 
 #: ../bin/draknfs:183
 #, c-format
-msgid ""
-"<span foreground=\"royalblue3\">%s</span> this option requires that requests "
-"originate on an internet port less than IPPORT_RESERVED (1024). This option "
-"is on by default."
-msgstr ""
-"<span foreground=\"royalblue3\">%s</span> see nõuab, et päringud tuleksid "
-"internetipordist, mis on väiksem kui IPPORT_RESERVED (1024). Vaikimisi on "
-"sisse lülitatud."
+msgid "<span foreground=\"royalblue3\">%s</span> this option requires that requests originate on an internet port less than IPPORT_RESERVED (1024). This option is on by default."
+msgstr "<span foreground=\"royalblue3\">%s</span> see nõuab, et päringud tuleksid internetipordist, mis on väiksem kui IPPORT_RESERVED (1024). Vaikimisi on sisse lülitatud."
 
 #: ../bin/draknfs:184
 #, c-format
-msgid ""
-"<span foreground=\"royalblue3\">%s</span> allow either only read or both "
-"read and write requests on this NFS volume. The default is to disallow any "
-"request which changes the filesystem. This can also be made explicit by "
-"using this option."
-msgstr ""
-"<span foreground=\"royalblue3\">%s</span> võimaldab lubada antud NFS-kettal "
-"kas ainult lugemis- või nii lugemis- kui ka kirjutamispäringuid. Vaikimisi "
-"on keelatud kõik päringud, mis failisüsteemi muudavad. Seda saab antud "
-"valikuga ka vahetult määrata."
+msgid "<span foreground=\"royalblue3\">%s</span> allow either only read or both read and write requests on this NFS volume. The default is to disallow any request which changes the filesystem. This can also be made explicit by using this option."
+msgstr "<span foreground=\"royalblue3\">%s</span> võimaldab lubada antud NFS-kettal kas ainult lugemis- või nii lugemis- kui ka kirjutamispäringuid. Vaikimisi on keelatud kõik päringud, mis failisüsteemi muudavad. Seda saab antud valikuga ka vahetult määrata."
 
 #: ../bin/draknfs:185
 #, c-format
-msgid ""
-"<span foreground=\"royalblue3\">%s</span> disallows the NFS server to "
-"violate the NFS protocol and to reply to requests before any changes made by "
-"these requests have been committed to stable storage (e.g. disc drive)."
-msgstr ""
-"<span foreground=\"royalblue3\">%s</span> NFS-serveril keelatakse rikkuda "
-"NFS-i protokolli ja vastata päringutele enne, kui nende päringutega tehtud "
-"muudatused on salvestatud stabiilsele andmekandjale (nt. füüsilisele "
-"kettale)."
+msgid "<span foreground=\"royalblue3\">%s</span> disallows the NFS server to violate the NFS protocol and to reply to requests before any changes made by these requests have been committed to stable storage (e.g. disc drive)."
+msgstr "<span foreground=\"royalblue3\">%s</span> NFS-serveril keelatakse rikkuda NFS-i protokolli ja vastata päringutele enne, kui nende päringutega tehtud muudatused on salvestatud stabiilsele andmekandjale (nt. füüsilisele kettale)."
 
 #: ../bin/draknfs:186
 #, c-format
-msgid ""
-"<span foreground=\"royalblue3\">%s</span> enable subtree checking which can "
-"help improve security in some cases, but can decrease reliability. See "
-"exports(5) man page for more details."
-msgstr ""
-"<span foreground=\"royalblue3\">%s</span> alampuu kontrolli lubamine võib "
-"mõnel juhul suurendada turvalisust, aga samas vähendada töökindlust. "
-"Täpsemalt kõneleb sellest manuaalilehekülg exports(5)."
+msgid "<span foreground=\"royalblue3\">%s</span> enable subtree checking which can help improve security in some cases, but can decrease reliability. See exports(5) man page for more details."
+msgstr "<span foreground=\"royalblue3\">%s</span> alampuu kontrolli lubamine võib mõnel juhul suurendada turvalisust, aga samas vähendada töökindlust. Täpsemalt kõneleb sellest manuaalilehekülg exports(5)."
 
 #: ../bin/draknfs:191 ../bin/draksambashare:623 ../bin/draksambashare:789
 #, c-format
@@ -1544,9 +1446,9 @@ msgid "Draksambashare"
 msgstr "Draksambashare"
 
 #: ../bin/draksambashare:196
-#, fuzzy, c-format
+#, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr "Autoriõigus (C) %s: Mageia"
+msgstr "Autoriõigus (C) %s: Mandriva"
 
 #: ../bin/draksambashare:198
 #, c-format
@@ -1558,10 +1460,13 @@ msgstr "See on lihtne tööriist Samba seadistuste hõlpsaks haldamiseks."
 msgid "Mageia"
 msgstr "Mageia"
 
-#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
+#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith
+#. <jsmith@nowhere.com>")
 #: ../bin/draksambashare:205
 #, c-format
-msgid "_: Translator(s) name(s) & email(s)\n"
+msgid ""
+"_: Translator(s) name(s) & email(s)\n"
+""
 msgstr "Marek Laane <bald@smail.ee>\n"
 
 #: ../bin/draksambashare:229
@@ -1603,12 +1508,8 @@ msgstr "Kommentaar:"
 
 #: ../bin/draksambashare:393
 #, c-format
-msgid ""
-"Share with the same name already exist or share name empty, please choose "
-"another name."
-msgstr ""
-"Sellise nimega jagatud ressurss on juba olemas või jätsite nime andmata. "
-"Palun valige uus nimi."
+msgid "Share with the same name already exist or share name empty, please choose another name."
+msgstr "Sellise nimega jagatud ressurss on juba olemas või jätsite nime andmata. Palun valige uus nimi."
 
 #: ../bin/draksambashare:400
 #, c-format
@@ -1638,11 +1539,8 @@ msgstr "Spetsiaalse printeri ressursi lisamine"
 
 #: ../bin/draksambashare:448
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
-msgstr ""
-"Selle nõustaja eesmärk on Samba spetsiaalse printeri ressurssi lihtne "
-"loomine."
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
+msgstr "Selle nõustaja eesmärk on Samba spetsiaalse printeri ressurssi lihtne loomine."
 
 #: ../bin/draksambashare:455
 #, c-format
@@ -1781,10 +1679,8 @@ msgstr "Avalik:"
 
 #: ../bin/draksambashare:795
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
-msgstr ""
-"Loomise mask, loomise režiim ja kataloogi mask peavad olema arvud, nt. 0755."
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgstr "Loomise mask, loomise režiim ja kataloogi mask peavad olema arvud, nt. 0755."
 
 #: ../bin/draksambashare:803
 #, c-format
@@ -1833,12 +1729,8 @@ msgstr "Samba serveri seadistuste nõustaja"
 
 #: ../bin/draksambashare:1057
 #, c-format
-msgid ""
-"Samba allows your server to behave as a file and print server for "
-"workstations running non-Linux systems."
-msgstr ""
-"Samba võimaldab Teie serveril toimida faili- ja trükkimisserverina ka "
-"tööjaamadele, kus ei tööta Linux."
+msgid "Samba allows your server to behave as a file and print server for workstations running non-Linux systems."
+msgstr "Samba võimaldab Teie serveril toimida faili- ja trükkimisserverina ka tööjaamadele, kus ei tööta Linux."
 
 #: ../bin/draksambashare:1073
 #, c-format
@@ -1847,28 +1739,18 @@ msgstr "PDC server: primaarne domeenikontroller"
 
 #: ../bin/draksambashare:1073
 #, c-format
-msgid ""
-"Server configured as a PDC is responsible for Windows authentication "
-"throughout the domain."
-msgstr ""
-"PDC-na seadistatud server vastutab Windowsi autentimise eest kogu domeenis."
+msgid "Server configured as a PDC is responsible for Windows authentication throughout the domain."
+msgstr "PDC-na seadistatud server vastutab Windowsi autentimise eest kogu domeenis."
 
 #: ../bin/draksambashare:1073
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
-msgstr ""
-"Ühe serveri paigalduse korral võib kasutada paroolirakenduse "
-"taustaprogrammina programmi smbpasswd või tdbsam"
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
+msgstr "Ühe serveri paigalduse korral võib kasutada paroolirakenduse taustaprogrammina programmi smbpasswd või tdbsam"
 
 #: ../bin/draksambashare:1073
 #, c-format
-msgid ""
-"Domain master = yes, causes the server to register the NetBIOS name <pdc "
-"name>. This name will be recognized by other servers."
-msgstr ""
-"Domeeni master = jah sunnib serveri registreerima NetBIOS-e nime <pdc nimi>. "
-"Seda nime tunnustavad seejärel teised serverid."
+msgid "Domain master = yes, causes the server to register the NetBIOS name <pdc name>. This name will be recognized by other servers."
+msgstr "Domeeni master = jah sunnib serveri registreerima NetBIOS-e nime <pdc nimi>. Seda nime tunnustavad seejärel teised serverid."
 
 #: ../bin/draksambashare:1090
 #, c-format
@@ -1892,18 +1774,8 @@ msgstr "OS-i tase:"
 
 #: ../bin/draksambashare:1092
 #, c-format
-msgid ""
-"The global os level option dictates the operating system level at which "
-"Samba will masquerade during a browser election. If you wish to have Samba "
-"win an election and become the master browser, you can set the level above "
-"that of the operating system on your network with the highest current value. "
-"ie: os level = 34"
-msgstr ""
-"Globaalne OS-i tase määrab operatsioonisüsteemi taseme, mille puhul Samba "
-"kasutab brauseri valimisel maskimist. Kui soovite, et Samba tuleks "
-"valimistelt välja võitjana ja saaks peabrauseriks, tuleb valida tase, mis on "
-"kõrgem kui Teie võrgu kõrgeima väärtusega operatsioonisüsteemil. Näide: OS-i "
-"tase = 34"
+msgid "The global os level option dictates the operating system level at which Samba will masquerade during a browser election. If you wish to have Samba win an election and become the master browser, you can set the level above that of the operating system on your network with the highest current value. ie: os level = 34"
+msgstr "Globaalne OS-i tase määrab operatsioonisüsteemi taseme, mille puhul Samba kasutab brauseri valimisel maskimist. Kui soovite, et Samba tuleks valimistelt välja võitjana ja saaks peabrauseriks, tuleb valida tase, mis on kõrgem kui Teie võrgu kõrgeima väärtusega operatsioonisüsteemil. Näide: OS-i tase = 34"
 
 #: ../bin/draksambashare:1096
 #, c-format
@@ -1942,12 +1814,8 @@ msgstr "Turvarežiim"
 
 #: ../bin/draksambashare:1122
 #, c-format
-msgid ""
-"User level: the client sends a session setup request directly following "
-"protocol negotiation. This request provides a username and password."
-msgstr ""
-"Kasutaja tase: klient saadab seansi häälestamise soovi otse pärast "
-"protokolli läbirääkimisi. Soov sisaldab kasutajanime ja parooli."
+msgid "User level: the client sends a session setup request directly following protocol negotiation. This request provides a username and password."
+msgstr "Kasutaja tase: klient saadab seansi häälestamise soovi otse pärast protokolli läbirääkimisi. Soov sisaldab kasutajanime ja parooli."
 
 #: ../bin/draksambashare:1122
 #, c-format
@@ -1956,14 +1824,8 @@ msgstr "Jagatud ressursi tase: klient autendib end eraldi iga ressursi puhul"
 
 #: ../bin/draksambashare:1122
 #, c-format
-msgid ""
-"Domain level: provides a mechanism for storing all user and group accounts "
-"in a central, shared, account repository. The centralized account repository "
-"is shared between domain (security) controllers."
-msgstr ""
-"Domeeni tase: mehhanism kõigi kasutajate ja gruppide kontode salvestamiseks "
-"kesksesse jagatud kontohoidlasse. Keskset kontohoidlat jagavad omavahel "
-"domeeni (turvalisuse) kontrollerid."
+msgid "Domain level: provides a mechanism for storing all user and group accounts in a central, shared, account repository. The centralized account repository is shared between domain (security) controllers."
+msgstr "Domeeni tase: mehhanism kõigi kasutajate ja gruppide kontode salvestamiseks kesksesse jagatud kontohoidlasse. Keskset kontohoidlat jagavad omavahel domeeni (turvalisuse) kontrollerid."
 
 #: ../bin/draksambashare:1133
 #, c-format
@@ -1977,9 +1839,7 @@ msgstr "Serveri nimi"
 
 #: ../bin/draksambashare:1138
 #, c-format
-msgid ""
-"The banner is the way this server will be described in the Windows "
-"workstations."
+msgid "The banner is the way this server will be described in the Windows workstations."
 msgstr "See on nimi, millega server annab end teada Windowsi tööjaamadele."
 
 #: ../bin/draksambashare:1143
@@ -1999,11 +1859,8 @@ msgstr "Samba logi"
 
 #: ../bin/draksambashare:1154
 #, c-format
-msgid ""
-"Log file: use file.%m to use a separate log file for each machine that "
-"connects"
-msgstr ""
-"Logifail: fail.%m võimaldab eraldi salvestada iga ühenduva masina logifaili"
+msgid "Log file: use file.%m to use a separate log file for each machine that connects"
+msgstr "Logifail: fail.%m võimaldab eraldi salvestada iga ühenduva masina logifaili"
 
 #: ../bin/draksambashare:1154
 #, c-format
@@ -2037,21 +1894,13 @@ msgstr "Nõustaja kogus Samba seadistamiseks järgmised andmed."
 
 #: ../bin/draksambashare:1168
 #, c-format
-msgid ""
-"To accept these values, and configure your server, click the Next button or "
-"use the Back button to correct them."
-msgstr ""
-"Väärtustega nõustumiseks ja serveri seadistamiseks klõpsake nupule Edasi. "
-"Kui soovite neid muuta, klõpsake nupule Tagasi."
+msgid "To accept these values, and configure your server, click the Next button or use the Back button to correct them."
+msgstr "Väärtustega nõustumiseks ja serveri seadistamiseks klõpsake nupule Edasi. Kui soovite neid muuta, klõpsake nupule Tagasi."
 
 #: ../bin/draksambashare:1168
 #, c-format
-msgid ""
-"If you have previously create some shares, they will appear in this "
-"configuration. Run 'drakwizard sambashare' to manage your shares."
-msgstr ""
-"Kui olete juba varem loonud jagatud ressursse, on need seadistuses näha. "
-"Jagatud ressursside haldamiseks käivitage 'drakwizard sambashare'."
+msgid "If you have previously create some shares, they will appear in this configuration. Run 'drakwizard sambashare' to manage your shares."
+msgstr "Kui olete juba varem loonud jagatud ressursse, on need seadistuses näha. Jagatud ressursside haldamiseks käivitage 'drakwizard sambashare'."
 
 #: ../bin/draksambashare:1176
 #, c-format
@@ -2203,13 +2052,13 @@ msgid "Network is down on interface %s."
 msgstr "Võrk ei tööta liideses %s"
 
 #: ../bin/net_applet:104
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You do not have any configured Internet connection.\n"
 "Run the \"%s\" assistant from the Mageia Linux Control Center"
 msgstr ""
 "Internetiühendust ei ole veel seadistatud.\n"
-"Käivitage Mageiai juhtimiskeskuses nõustaja \"%s\""
+"Käivitage Mageia juhtimiskeskuses nõustaja \"%s\""
 
 #: ../bin/net_applet:107 ../lib/network/connection_manager.pm:206
 #, c-format
@@ -2397,13 +2246,13 @@ msgid "Connection complete."
 msgstr "Ühendus on loodud."
 
 #: ../bin/net_monitor:258
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Connection failed.\n"
 "Verify your configuration in the Mageia Linux Control Center."
 msgstr ""
 "Ühenduse loomine nurjus.\n"
-"Kontrollige palun seadistusi Mageiai juhtimiskeskuse abil."
+"Kontrollige palun seadistusi Mageia juhtimiskeskuse abil."
 
 #: ../bin/net_monitor:360
 #, c-format
@@ -2442,11 +2291,8 @@ msgstr "Kohalikud andmed"
 
 #: ../bin/net_monitor:512
 #, c-format
-msgid ""
-"Warning, another internet connection has been detected, maybe using your "
-"network"
-msgstr ""
-"Hoiatus, leiti veel üks internetiühendus, mis võib-olla kasutab Teie võrku"
+msgid "Warning, another internet connection has been detected, maybe using your network"
+msgstr "Hoiatus, leiti veel üks internetiühendus, mis võib-olla kasutab Teie võrku"
 
 #: ../bin/net_monitor:516
 #, c-format
@@ -2516,7 +2362,7 @@ msgstr "Võrguliikluse arvestuse lubamine"
 #: ../lib/network/connection.pm:250
 #, c-format
 msgid "Allow interface to be controlled by Network Manager"
-msgstr ""
+msgstr "Liidest juhitakse NetworkManageriga"
 
 #: ../lib/network/connection.pm:251
 #, c-format
@@ -2724,9 +2570,7 @@ msgstr "Otsingudomeen"
 #: ../lib/network/connection/ethernet.pm:157
 #, c-format
 msgid "By default search domain will be set from the fully-qualified host name"
-msgstr ""
-"Otsingudomeen määratakse vaikimisi täielikult kvalifitseeritud masinanime "
-"põhjal"
+msgstr "Otsingudomeen määratakse vaikimisi täielikult kvalifitseeritud masinanime põhjal"
 
 #: ../lib/network/connection/ethernet.pm:160
 #, c-format
@@ -2770,15 +2614,8 @@ msgstr "Hoiatus : IP-aadress %s on tavaliselt reserveeritud!"
 
 #: ../lib/network/connection/ethernet.pm:195
 #, c-format
-msgid ""
-"%s is already used by a connection that starts on boot (%s). To use this "
-"address with this connection, first disable all other devices which use it, "
-"or configure them not to start at boot"
-msgstr ""
-"%s on juba kasutusel alglaadimisel käivitatava ühenduse poolt (%s)). Selle "
-"aadressi kasutamiseks selle ühendusega keelake kõigepealt kõik teised "
-"seadmed, mis seda kasutavad, või seadistage nad alglaadimisel mitte "
-"käivituma."
+msgid "%s is already used by a connection that starts on boot (%s). To use this address with this connection, first disable all other devices which use it, or configure them not to start at boot"
+msgstr "%s on juba kasutusel alglaadimisel käivitatava ühenduse poolt (%s)). Selle aadressi kasutamiseks selle ühendusega keelake kõigepealt kõik teised seadmed, mis seda kasutavad, või seadistage nad alglaadimisel mitte käivituma."
 
 #: ../lib/network/connection/ethernet.pm:222
 #, c-format
@@ -2787,24 +2624,13 @@ msgstr "Masinanimi omistatakse DHCP serverist (või luuakse uus unikaalne)"
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
-msgid ""
-"This will allow the server to attribute a name for this machine. If the "
-"server does not provides a valid host name, it will be generated "
-"automatically."
-msgstr ""
-"See võimaldab serveril omistada masinale nime. Kui server ei paku korrektset "
-"masinanime, luuakse see automaatselt."
+msgid "This will allow the server to attribute a name for this machine. If the server does not provides a valid host name, it will be generated automatically."
+msgstr "See võimaldab serveril omistada masinale nime. Kui server ei paku korrektset masinanime, luuakse see automaatselt."
 
 #: ../lib/network/connection/ethernet.pm:226
 #, c-format
-msgid ""
-"You should define a hostname for this machine, which will identify this PC. "
-"Note that this hostname will be shared among all network connections.  If "
-"left blank, 'localhost.localdomain' will be used."
-msgstr ""
-"Peaksite määrama sellele masinale nime, mis tuvastaks üheselt selle arvuti. "
-"Pange tähele, et sama masinanime kasutavad kõik võrguühendused. Kui jätate "
-"selle tühjaks, kasutatakse nime 'localhost.localdomain'."
+msgid "You should define a hostname for this machine, which will identify this PC. Note that this hostname will be shared among all network connections.  If left blank, 'localhost.localdomain' will be used."
+msgstr "Peaksite määrama sellele masinale nime, mis tuvastaks üheselt selle arvuti. Pange tähele, et sama masinanime kasutavad kõik võrguühendused. Kui jätate selle tühjaks, kasutatakse nime 'localhost.localdomain'."
 
 #: ../lib/network/connection/ethernet.pm:244
 #, c-format
@@ -4061,12 +3887,8 @@ msgstr "Windowsi draiver"
 
 #: ../lib/network/connection/wireless.pm:369
 #, c-format
-msgid ""
-"Your wireless card is disabled, please enable the wireless switch (RF kill "
-"switch) first."
-msgstr ""
-"Teie juhtmeta ühenduse kaart on välja lülitatud, palun lülitage see "
-"kõigepealt sisse (RF kill)."
+msgid "Your wireless card is disabled, please enable the wireless switch (RF kill switch) first."
+msgstr "Teie juhtmeta ühenduse kaart on välja lülitatud, palun lülitage see kõigepealt sisse (RF kill)."
 
 #: ../lib/network/connection/wireless.pm:459
 #, c-format
@@ -4234,14 +4056,11 @@ msgstr "RTS/CTS"
 #: ../lib/network/connection/wireless.pm:517
 #, c-format
 msgid ""
-"RTS/CTS adds a handshake before each packet transmission to make sure that "
-"the\n"
-"channel is clear. This adds overhead, but increase performance in case of "
-"hidden\n"
+"RTS/CTS adds a handshake before each packet transmission to make sure that the\n"
+"channel is clear. This adds overhead, but increase performance in case of hidden\n"
 "nodes or large number of active nodes. This parameter sets the size of the\n"
 "smallest packet for which the node sends RTS, a value equal to the maximum\n"
-"packet size disable the scheme. You may also set this parameter to auto, "
-"fixed\n"
+"packet size disable the scheme. You may also set this parameter to auto, fixed\n"
 "or off."
 msgstr ""
 "RTS/CTS lisab enne iga paketi edastamist käepigistuse kontrollimaks, et\n"
@@ -4265,18 +4084,17 @@ msgstr "Käsu iwconfig lisaargumendid"
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
-"ap, channel, commit, enc, power, retry, sens, txpower (nick is already set "
-"as the hostname).\n"
+"ap, channel, commit, enc, power, retry, sens, txpower (nick is already set as the hostname).\n"
 "\n"
 "See iwconfig(8) man page for further information."
 msgstr ""
 "Siin saab seadistada mõningaid juhtmeta võrgu lisaparameetreid:\n"
-"ap, channel, commit, enc, power, retry, sens, txpower (hüüdnimi on juba "
-"määratud masinanimeks).\n"
+"ap, channel, commit, enc, power, retry, sens, txpower (hüüdnimi on juba määratud masinanimeks).\n"
 "\n"
 "Täpsemat infot annab man-lehekülg iwconfig(8)."
 
-#. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
+#. -PO: split the "xyz command extra argument" translated string into two
+#. lines if it's bigger than the english one
 #: ../lib/network/connection/wireless.pm:533
 #, c-format
 msgid "iwspy command extra arguments"
@@ -4309,16 +4127,13 @@ msgstr "Käsu iwpriv lisaargumendid"
 #: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid ""
-"iwpriv enable to set up optionals (private) parameters of a wireless "
-"network\n"
+"iwpriv enable to set up optionals (private) parameters of a wireless network\n"
 "interface.\n"
 "\n"
-"iwpriv deals with parameters and setting specific to each driver (as opposed "
-"to\n"
+"iwpriv deals with parameters and setting specific to each driver (as opposed to\n"
 "iwconfig which deals with generic ones).\n"
 "\n"
-"In theory, the documentation of each device driver should indicate how to "
-"use\n"
+"In theory, the documentation of each device driver should indicate how to use\n"
 "those interface specific commands and their effect.\n"
 "\n"
 "See iwpriv(8) man page for further information."
@@ -4550,38 +4365,23 @@ msgstr "Vajalik on krüptovõti."
 
 #: ../lib/network/connection/wireless.pm:620
 #, c-format
-msgid ""
-"The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
-"hexadecimal characters."
-msgstr ""
-"Eeljagatud võtmel peab olema 8 kuni 63 ASCII märki või 64 16ndsüsteemis märki"
+msgid "The pre-shared key should have between 8 and 63 ASCII characters, or 64 hexadecimal characters."
+msgstr "Eeljagatud võtmel peab olema 8 kuni 63 ASCII märki või 64 16ndsüsteemis märki"
 
 #: ../lib/network/connection/wireless.pm:626
 #, c-format
-msgid ""
-"The WEP key should have at most %d ASCII characters or %d hexadecimal "
-"characters."
-msgstr ""
-"WEP-võtmel peab olema maksimaalselt %d ASCII märki või %d 16ndsüsteemis "
-"märki."
+msgid "The WEP key should have at most %d ASCII characters or %d hexadecimal characters."
+msgstr "WEP-võtmel peab olema maksimaalselt %d ASCII märki või %d 16ndsüsteemis märki."
 
 #: ../lib/network/connection/wireless.pm:633
 #, c-format
-msgid ""
-"Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
-"frequency), or add enough '0' (zeroes)."
-msgstr ""
-"Sagedus peab sisaldama sufiksit k, M või G (näiteks \"2.46G\" - 2,46 GHz "
-"sagedusel) või tuleb lisada piisavalt nulle."
+msgid "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz frequency), or add enough '0' (zeroes)."
+msgstr "Sagedus peab sisaldama sufiksit k, M või G (näiteks \"2.46G\" - 2,46 GHz sagedusel) või tuleb lisada piisavalt nulle."
 
 #: ../lib/network/connection/wireless.pm:639
 #, c-format
-msgid ""
-"Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
-"enough '0' (zeroes)."
-msgstr ""
-"Kiirus peab sisaldama sufiksit k, M või G (näiteks \"11M\") või tuleb lisada "
-"piisavalt nulle."
+msgid "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add enough '0' (zeroes)."
+msgstr "Kiirus peab sisaldama sufiksit k, M või G (näiteks \"11M\") või tuleb lisada piisavalt nulle."
 
 #: ../lib/network/connection/wireless.pm:651
 #, c-format
@@ -4611,24 +4411,18 @@ msgstr "Alcatel speedtouch USB modem"
 #: ../lib/network/connection/xdsl.pm:125
 #, c-format
 msgid ""
-"The ECI Hi-Focus modem cannot be supported due to binary driver distribution "
-"problem.\n"
+"The ECI Hi-Focus modem cannot be supported due to binary driver distribution problem.\n"
 "\n"
 "You can find a driver on http://eciadsl.flashtux.org/"
 msgstr ""
-"ECI Hi-Focus modemil puudub toetus binaarse draiveri levitamise probleemide "
-"tõttu.\n"
+"ECI Hi-Focus modemil puudub toetus binaarse draiveri levitamise probleemide tõttu.\n"
 "\n"
 "Te leiate draiveri aadressil http://eciadsl.flashtux.org/"
 
 #: ../lib/network/connection/xdsl.pm:185
 #, c-format
-msgid ""
-"Modems using Conexant AccessRunner chipsets cannot be supported due to "
-"binary firmware distribution problem."
-msgstr ""
-"Conexant AccessRunneri kiibistikuga modemid ei ole toetatud binaarse "
-"püsivara levitamise probleemi tõttu."
+msgid "Modems using Conexant AccessRunner chipsets cannot be supported due to binary firmware distribution problem."
+msgstr "Conexant AccessRunneri kiibistikuga modemid ei ole toetatud binaarse püsivara levitamise probleemi tõttu."
 
 #: ../lib/network/connection/xdsl.pm:205
 #, c-format
@@ -4854,6 +4648,9 @@ msgid ""
 "\n"
 "This configures a personal firewall for this Mageia machine."
 msgstr ""
+"drakfirewalli seadistaja\n"
+"\n"
+"Selle tööriistaga saate luua oma Mageia masinale isikliku tulemüüri."
 
 #: ../lib/network/drakfirewall.pm:228
 #, c-format
@@ -4929,12 +4726,10 @@ msgstr "Tulemüüriteadete logimine süsteemi logidesse"
 #: ../lib/network/drakfirewall.pm:311
 #, c-format
 msgid ""
-"You can be warned when someone accesses to a service or tries to intrude "
-"into your computer.\n"
+"You can be warned when someone accesses to a service or tries to intrude into your computer.\n"
 "Please select which network activities should be watched."
 msgstr ""
-"Teid hoiatatakse, kui keegi üritab mõnda teenust kasutada või püüab Teie "
-"arvutisse tungida.\n"
+"Teid hoiatatakse, kui keegi üritab mõnda teenust kasutada või püüab Teie arvutisse tungida.\n"
 "Palun valige, millist laadi võrguaktiivsust jälgida."
 
 #: ../lib/network/drakfirewall.pm:316
@@ -5027,10 +4822,9 @@ msgstr "Kas soovite ühenduse kohe käivitada?"
 msgid ""
 "The VPN connection is now configured.\n"
 "\n"
-"This VPN connection can be automatically started together with a network "
-"connection.\n"
-"It can be done by reconfiguring the network connection and selecting this "
-"VPN connection.\n"
+"This VPN connection can be automatically started together with a network connection.\n"
+"It can be done by reconfiguring the network connection and selecting this VPN connection.\n"
+""
 msgstr ""
 "VPN-ühendus on nüüd seadistatud.\n"
 "\n"
@@ -5089,12 +4883,11 @@ msgstr "\"%s\" rünnaku katse %s poolt"
 
 #: ../lib/network/ifw.pm:151
 #, c-format
-msgid ""
-"The \"%s\" application is trying to make a service (%s) available to the "
-"network."
+msgid "The \"%s\" application is trying to make a service (%s) available to the network."
 msgstr "Rakendus \"%s\" üritab muuta teenust (%s) võrgus kättesaadavaks."
 
-#. -PO: this should be kept lowercase since the expression is meant to be used between brackets
+#. -PO: this should be kept lowercase since the expression is meant to be used
+#. between brackets
 #: ../lib/network/ifw.pm:155
 #, c-format
 msgid "port %d"
@@ -5130,14 +4923,8 @@ msgstr "Palun valige korrektne draiver"
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
-msgid ""
-"Please select the Windows driver description (.inf) file, or corresponding "
-"driver file (.dll or .o files). Note that only drivers up to Windows XP are "
-"supported."
-msgstr ""
-"Palun valige Windowsi draiveri kirjeldusfail (.inf) või vastav draiverifail "
-"(.dll või .o). Arvestage, et toetatud on ainult Windows XP või varasemad "
-"draiverid."
+msgid "Please select the Windows driver description (.inf) file, or corresponding driver file (.dll or .o files). Note that only drivers up to Windows XP are supported."
+msgstr "Palun valige Windowsi draiveri kirjeldusfail (.inf) või vastav draiverifail (.dll või .o). Arvestage, et toetatud on ainult Windows XP või varasemad draiverid."
 
 #: ../lib/network/ndiswrapper.pm:45
 #, c-format
@@ -5398,8 +5185,8 @@ msgid ""
 "\n"
 "If you have an ISA card, the values on the next screen should be right.\n"
 "\n"
-"If you have a PCMCIA card, you have to know the \"irq\" and \"io\" of your "
-"card.\n"
+"If you have a PCMCIA card, you have to know the \"irq\" and \"io\" of your card.\n"
+""
 msgstr ""
 "\n"
 "Kui Teil on ISA kaart, siis peaks järgmised väärtused olema õiged.\n"
@@ -5423,14 +5210,8 @@ msgstr "Milline on Teie ISDN kaart?"
 
 #: ../lib/network/netconnect.pm:461
 #, c-format
-msgid ""
-"A CAPI driver is available for this modem. This CAPI driver can offer more "
-"capabilities than the free driver (like sending faxes). Which driver do you "
-"want to use?"
-msgstr ""
-"Sellele modemile on olemas CAPI draiver. CAPI draiver pakub rohkem võimalusi "
-"kui vaba draiver (näiteks fakside saatmine). Millist draiverit soovite "
-"kasutada?"
+msgid "A CAPI driver is available for this modem. This CAPI driver can offer more capabilities than the free driver (like sending faxes). Which driver do you want to use?"
+msgstr "Sellele modemile on olemas CAPI draiver. CAPI draiver pakub rohkem võimalusi kui vaba draiver (näiteks fakside saatmine). Millist draiverit soovite kasutada?"
 
 #: ../lib/network/netconnect.pm:475
 #, c-format
@@ -5601,18 +5382,12 @@ msgstr "Võrguühenduse testimisel esines probleeme."
 
 #: ../lib/network/netconnect.pm:771
 #, c-format
-msgid ""
-"This can be caused by invalid network configuration, or problems with your "
-"modem or router."
-msgstr ""
-"Need võisid tekkida vigasest võrguseadistusest või olla seotud modemi või "
-"ruuteriga."
+msgid "This can be caused by invalid network configuration, or problems with your modem or router."
+msgstr "Need võisid tekkida vigasest võrguseadistusest või olla seotud modemi või ruuteriga."
 
 #: ../lib/network/netconnect.pm:772
 #, c-format
-msgid ""
-"You might want to relaunch the configuration to verify the connection "
-"settings."
+msgid "You might want to relaunch the configuration to verify the connection settings."
 msgstr "Seadistus tasuks vahest üle vaadata ja kontrollida kõiki valikuid."
 
 #: ../lib/network/netconnect.pm:775
@@ -5622,18 +5397,12 @@ msgstr "Õnnitleme, võrgu seadistamine on lõpetatud."
 
 #: ../lib/network/netconnect.pm:775
 #, c-format
-msgid ""
-"However, the Internet connectivity test failed. You should test your "
-"connection manually, and verify your Internet modem or router."
-msgstr ""
-"Paraku nurjus internetiühenduse test. Teil tuleks testida ühendust käsitsi "
-"ning kontrollida oma modemit või ruuterit."
+msgid "However, the Internet connectivity test failed. You should test your connection manually, and verify your Internet modem or router."
+msgstr "Paraku nurjus internetiühenduse test. Teil tuleks testida ühendust käsitsi ning kontrollida oma modemit või ruuterit."
 
 #: ../lib/network/netconnect.pm:776
 #, c-format
-msgid ""
-"If your connection does not work, you might want to relaunch the "
-"configuration."
+msgid "If your connection does not work, you might want to relaunch the configuration."
 msgstr "Kui ühendus ei toimi, tasuks seadistus üle vaadata."
 
 #: ../lib/network/netconnect.pm:778
@@ -5643,9 +5412,7 @@ msgstr "Õnnitleme, võrgu ja internetiühenduse seadistamine on lõpetatud."
 
 #: ../lib/network/netconnect.pm:779
 #, c-format
-msgid ""
-"After this is done, we recommend that you restart your X environment to "
-"avoid any hostname-related problems."
+msgid "After this is done, we recommend that you restart your X environment to avoid any hostname-related problems."
 msgstr ""
 "Soovitame uuesti käivitada ka X keskkonna, et vältida võimalikke\n"
 "masinanime muutmisest tingitud probleeme."
@@ -5748,14 +5515,12 @@ msgstr "Zeroconfi masinanimi ei tohi sisaldada punkti (.)"
 #: ../lib/network/netconnect.pm:813
 #, c-format
 msgid ""
-"Because you are doing a network installation, your network is already "
-"configured.\n"
-"Click on Ok to keep your configuration, or cancel to reconfigure your "
-"Internet & Network connection.\n"
+"Because you are doing a network installation, your network is already configured.\n"
+"Click on Ok to keep your configuration, or cancel to reconfigure your Internet & Network connection.\n"
+""
 msgstr ""
 "Võrguühendus on juba seadistatud, sest paigaldatakse ju võrgust.\n"
-"Kui soovite neid seadistusi säilitada, valige \"Olgu\", muidu loobuge ja "
-"saate seadistada uuesti.\n"
+"Kui soovite neid seadistusi säilitada, valige \"Olgu\", muidu loobuge ja saate seadistada uuesti.\n"
 
 #: ../lib/network/netconnect.pm:816
 #, c-format
@@ -5797,6 +5562,7 @@ msgid ""
 "You have configured multiple ways to connect to the Internet.\n"
 "Choose the one you want to use.\n"
 "\n"
+""
 msgstr ""
 "Olete seadistanud mitu võimalust internetiga ühendumiseks.\n"
 "Valige palun see, mida soovite kasutada.\n"
@@ -5814,12 +5580,8 @@ msgstr "Võrgukaardi %s (draiver %s) seadistamine"
 
 #: ../lib/network/netconnect.pm:824
 #, c-format
-msgid ""
-"The following protocols can be used to configure a LAN connection. Please "
-"choose the one you want to use."
-msgstr ""
-"LAN-ühenduse seadistamiseks saab kasutada järgmisi protokolle. Palun valige "
-"nende seast sobilik."
+msgid "The following protocols can be used to configure a LAN connection. Please choose the one you want to use."
+msgstr "LAN-ühenduse seadistamiseks saab kasutada järgmisi protokolle. Palun valige nende seast sobilik."
 
 #: ../lib/network/netconnect.pm:825
 #, c-format
@@ -5870,12 +5632,8 @@ msgstr "Muud võrguseadistused"
 
 #: ../lib/network/network.pm:524
 #, c-format
-msgid ""
-"Here you can configure advanced network settings. Please note that you have "
-"to reboot the machine for changes to take effect."
-msgstr ""
-"Siin saab määrata veel mõningaid võrguseadistusi. Pange tähele, et nende "
-"rakendamiseks tuleb masin taaskäivitada."
+msgid "Here you can configure advanced network settings. Please note that you have to reboot the machine for changes to take effect."
+msgstr "Siin saab määrata veel mõningaid võrguseadistusi. Pange tähele, et nende rakendamiseks tuleb masin taaskäivitada."
 
 #: ../lib/network/network.pm:526
 #, c-format
@@ -5934,12 +5692,8 @@ msgstr "Puhverserverite seadistamine"
 
 #: ../lib/network/network.pm:549
 #, c-format
-msgid ""
-"Here you can set up your proxies configuration (eg: http://"
-"my_caching_server:8080)"
-msgstr ""
-"Siin saab määrata puhverserverite seadistuse (nt: http://"
-"minu_puhverserver:8080)"
+msgid "Here you can set up your proxies configuration (eg: http://my_caching_server:8080)"
+msgstr "Siin saab määrata puhverserverite seadistuse (nt: http://minu_puhverserver:8080)"
 
 #: ../lib/network/network.pm:550
 #, c-format
@@ -5993,6 +5747,7 @@ msgid ""
 "unselect interfaces which will be connected to local network.\n"
 "\n"
 "Which interfaces should be protected?\n"
+""
 msgstr ""
 "Palun valige liidesed, mida tulemüür peab kaitsma.\n"
 "\n"
@@ -6028,8 +5783,7 @@ msgstr ""
 #: ../lib/network/thirdparty.pm:144
 #, c-format
 msgid "Some components (%s) are required but aren't available for %s hardware."
-msgstr ""
-"%s riistvara jaoks on vajalikud mõned komponendid (%s), mida pole saadaval."
+msgstr "%s riistvara jaoks on vajalikud mõned komponendid (%s), mida pole saadaval."
 
 #: ../lib/network/thirdparty.pm:145
 #, c-format
@@ -6040,8 +5794,7 @@ msgstr "Mõned paketid (%s) on vajalikud, kuid pole saadaval."
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
 #, c-format
-msgid ""
-"These packages can be found in %s, or in the official %s package repository."
+msgid "These packages can be found in %s, or in the official %s package repository."
 msgstr "Neid pakette pakub %s või ametlik %s tarkvarahoidla."
 
 #: ../lib/network/thirdparty.pm:152
@@ -6100,12 +5853,8 @@ msgstr "Sisestage diskett"
 
 #: ../lib/network/thirdparty.pm:243
 #, c-format
-msgid ""
-"Insert a FAT formatted floppy in drive %s with %s in root directory and "
-"press %s"
-msgstr ""
-"Pange FAT-vormingus diskett seadmesse %s, nii et %s oleks juurkataloogis, "
-"ning klõpsakse nupule \"%s\""
+msgid "Insert a FAT formatted floppy in drive %s with %s in root directory and press %s"
+msgstr "Pange FAT-vormingus diskett seadmesse %s, nii et %s oleks juurkataloogis, ning klõpsakse nupule \"%s\""
 
 #: ../lib/network/thirdparty.pm:243
 #, c-format
@@ -6262,1206 +6011,3 @@ msgstr "NAT režiim"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Kindla UDP-pordi kasutamine"
-
-#~ msgid "Same IP is already in %s file."
-#~ msgstr "See IP esineb juba %s-failis."
-
-#~ msgid ""
-#~ "drakfirewall configurator\n"
-#~ "\n"
-#~ "This configures a personal firewall for this Mageia machine.\n"
-#~ "For a powerful and dedicated firewall solution, please look to the\n"
-#~ "specialized Mageia Security Firewall distribution."
-#~ msgstr ""
-#~ "drakfirewalli seadistaja\n"
-#~ "\n"
-#~ "Selle tööriistaga saate luua lihtsa kaitse interneti ohtude vastu.\n"
-#~ "Kui vajate võimsat tulemüüri, vaadake palun\n"
-#~ "spetsiaalset Mageia Security Firewall distributsiooni."
-
-#, fuzzy
-#~ msgid "Do you want to apply new wireless regulation settings now?"
-#~ msgstr "Kas soovite ühenduse kohe käivitada?"
-
-#, fuzzy
-#~ msgid "Connecting.."
-#~ msgstr "Ühendumine..."
-
-#~ msgid "The VPN connection is enabled."
-#~ msgstr "VPN ühendus on loodud."
-
-#~ msgid ""
-#~ "The setup of a VPN connection has already been done.\n"
-#~ "\n"
-#~ "It's currently enabled.\n"
-#~ "\n"
-#~ "What would you like to do?"
-#~ msgstr ""
-#~ "VPN ühenduse jagamine on juba seadistatud\n"
-#~ "ja hetkel ka lubatud.\n"
-#~ "\n"
-#~ "Mida soovite ette võtta?"
-
-#~ msgid "disable"
-#~ msgstr "keelata"
-
-#~ msgid "reconfigure"
-#~ msgstr "uuesti seadistada"
-
-#~ msgid "dismiss"
-#~ msgstr "tühistada"
-
-#~ msgid "Disabling VPN..."
-#~ msgstr "VPN keelamine..."
-
-#~ msgid "The VPN connection is now disabled."
-#~ msgstr "VPN ühendus on nüüd välja lülitatud."
-
-#~ msgid "VPN connection currently disabled"
-#~ msgstr "VPN ühendus hetkel ei tööta"
-
-#~ msgid ""
-#~ "The setup of a VPN connection has already been done.\n"
-#~ "\n"
-#~ "It's currently disabled.\n"
-#~ "\n"
-#~ "What would you like to do?"
-#~ msgstr ""
-#~ "VPN ühenduse jagamine on juba seadistatud,\n"
-#~ "aga hetkel on see keelatud.\n"
-#~ "\n"
-#~ "Mida soovite ette võtta?"
-
-#~ msgid "enable"
-#~ msgstr "lubada"
-
-#~ msgid "Enabling VPN..."
-#~ msgstr "VPN lubamine..."
-
-#~ msgid "The VPN connection is now enabled."
-#~ msgstr "VPN ühendus on nüüd sisse lülitatud."
-
-#~ msgid "Simple VPN setup."
-#~ msgstr "Lihtne VPN seadistamine."
-
-#~ msgid ""
-#~ "You are about to configure your computer to use a VPN connection.\n"
-#~ "\n"
-#~ "With this feature, computers on your local private network and computers\n"
-#~ "on some other remote private networks, can share resources, through\n"
-#~ "their respective firewalls, over the Internet, in a secure manner. \n"
-#~ "\n"
-#~ "The communication over the Internet is encrypted. The local and remote\n"
-#~ "computers look as if they were on the same network.\n"
-#~ "\n"
-#~ "Make sure you have configured your Network/Internet access using\n"
-#~ "drakconnect before going any further."
-#~ msgstr ""
-#~ "Kavatsete seadistada oma arvuti kasutama VPN ühendust.\n"
-#~ "\n"
-#~ "Selle võimalusega võivad arvutid Teie privaatvõrgus ja mõnes muus\n"
-#~ "privaatvõrgus jagada ressursse üle oma tulemüüri väga turvaliselt.\n"
-#~ "\n"
-#~ "Internetiühendus on krüptitud. Kohalikud ja võrgumasinad paistavad\n"
-#~ "asuvat ühes ja samas võrgus.\n"
-#~ "\n"
-#~ "Kontrollige, et oleksite drakconnecti abil seadistanud võrgu- ja\n"
-#~ "internetiühenduse, enne kui asute edasi tegutsema."
-
-#~ msgid ""
-#~ "VPN connection.\n"
-#~ "\n"
-#~ "This program is based on the following projects:\n"
-#~ " - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
-#~ " - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
-#~ " - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
-#~ " - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
-#~ " - the docs and man pages coming with the %s package\n"
-#~ "\n"
-#~ "Please read AT LEAST the ipsec-howto docs\n"
-#~ "before going any further."
-#~ msgstr ""
-#~ "VPN ühendus.\n"
-#~ "\n"
-#~ "Selle programmi aluseks on järgmised projektid:\n"
-#~ " - FreeSwan: \t\t\thttp://www.freeswan.org/\n"
-#~ " - Super-FreeSwan: \t\thttp://www.freeswan.ca/\n"
-#~ " - ipsec-tools: \t\t\thttp://ipsec-tools.sourceforge.net/\n"
-#~ " - ipsec-howto: \t\thttp://www.ipsec-howto.org\n"
-#~ " - dokumendid ja man-leheküljed paketist %s\n"
-#~ "\n"
-#~ "Palun lugege enne edasitegutsemist läbi\n"
-#~ "VÄHEMALT ipsec-howto dokumendid."
-
-#~ msgid "Problems installing package %s"
-#~ msgstr "Probleemid paketi %s paigaldamisel"
-
-#~ msgid "Security Policies"
-#~ msgstr "Turvareeglid"
-
-#~ msgid "IKE daemon racoon"
-#~ msgstr "IKE deemon racoon"
-
-#~ msgid "Configuration file"
-#~ msgstr "Seadistusfail"
-
-#~ msgid ""
-#~ "Configuration step!\n"
-#~ "\n"
-#~ "You need to define the Security Policies and then to \n"
-#~ "configure the automatic key exchange (IKE) daemon. \n"
-#~ "The KAME IKE daemon we're using is called 'racoon'.\n"
-#~ "\n"
-#~ "What would you like to configure?\n"
-#~ msgstr ""
-#~ "Seadistamine.\n"
-#~ "\n"
-#~ "Teil tuleb määrata turvareeglid ja seejärel seadistada \n"
-#~ "automaatse võtmevahetuse (IKE) deemon. \n"
-#~ "Meie kasutatav KAME IKE deemon kannab nime \"racoon\".\n"
-#~ "\n"
-#~ "Mida soovite seadistada?\n"
-
-#~ msgid "%s entries"
-#~ msgstr "%s kirjed"
-
-#~ msgid ""
-#~ "The %s file contents\n"
-#~ "is divided into sections.\n"
-#~ "\n"
-#~ "You can now:\n"
-#~ "\n"
-#~ "  - display, add, edit, or remove sections, then\n"
-#~ "  - commit the changes\n"
-#~ "\n"
-#~ "What would you like to do?\n"
-#~ msgstr ""
-#~ "Faili %s sisu on\n"
-#~ "jagatud sektsioonideks.\n"
-#~ "\n"
-#~ "Võite nüüd:\n"
-#~ "\n"
-#~ "  - vaadata, lisada, muuta ja eemaldada sektsioone ja siis\n"
-#~ "  - muutused rakendada.\n"
-#~ "\n"
-#~ "Mida soovite ette võtta?\n"
-
-#~ msgid ""
-#~ "_:display here is a verb\n"
-#~ "Display"
-#~ msgstr "Vaatamine"
-
-#~ msgid "Edit"
-#~ msgstr "Muuda"
-
-#~ msgid "Commit"
-#~ msgstr "Rakendamine"
-
-#~ msgid ""
-#~ "_:display here is a verb\n"
-#~ "Display configuration"
-#~ msgstr "Seadistuse vaatamine"
-
-#~ msgid ""
-#~ "The %s file does not exist.\n"
-#~ "\n"
-#~ "This must be a new configuration.\n"
-#~ "\n"
-#~ "You'll have to go back and choose 'add'.\n"
-#~ msgstr ""
-#~ "Faili %s ei ole olemas.\n"
-#~ "\n"
-#~ "See on ilmselt uus konfiguratsioon.\n"
-#~ "\n"
-#~ "Peaksite minema tagasi ja valima \"lisada\".\n"
-
-#~ msgid ""
-#~ "Add a Security Policy.\n"
-#~ "\n"
-#~ "You can now add a Security Policy.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data.\n"
-#~ msgstr ""
-#~ "Turvareegli lisamine.\n"
-#~ "\n"
-#~ "Võite nüüd lisada turvareegli.\n"
-#~ "Kui olete lõpetanud, jätkake andmete salvestamiseks.\n"
-
-#~ msgid "Edit section"
-#~ msgstr "Sektsiooni redigeerimine"
-
-#~ msgid ""
-#~ "Your %s file has several sections or connections.\n"
-#~ "\n"
-#~ "You can choose here below the one you want to edit \n"
-#~ "and then click on next.\n"
-#~ msgstr ""
-#~ "Failil %s on mitu sektsiooni või ühendust.\n"
-#~ "\n"
-#~ "Allpool saate valida, millist soovite redigeerida.\n"
-#~ "Seejärel klõpsake nupule \"Edasi\".\n"
-
-#~ msgid "Section names"
-#~ msgstr "Sektsiooni nimed"
-
-#~ msgid ""
-#~ "Edit a Security Policy.\n"
-#~ "\n"
-#~ "You can now edit a Security Policy.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data.\n"
-#~ msgstr ""
-#~ "Turvareegli redigeerimine.\n"
-#~ "\n"
-#~ "Võite nüüd lisada turvareegli.\n"
-#~ "Kui olete lõpetanud, jätkake andmete salvestamiseks.\n"
-
-#~ msgid "Remove section"
-#~ msgstr "Sektsiooni eemaldamine"
-
-#~ msgid ""
-#~ "Your %s file has several sections or connections.\n"
-#~ "\n"
-#~ "You can choose here below the one you want to remove\n"
-#~ "and then click on next.\n"
-#~ msgstr ""
-#~ "Failil %s on mitu sektsiooni või ühendust.\n"
-#~ "\n"
-#~ "Valige allpool, millist sektsiooni soovite eemaldada\n"
-#~ "ja klõpsake nupule \"Edasi\".\n"
-
-#~ msgid ""
-#~ "The racoon.conf file configuration.\n"
-#~ "\n"
-#~ "The contents of this file is divided into sections.\n"
-#~ "You can now:\n"
-#~ "  - display \t\t (display the file contents)\n"
-#~ "  - add\t\t\t (add one section)\n"
-#~ "  - edit \t\t\t (modify parameters of an existing section)\n"
-#~ "  - remove \t\t (remove an existing section)\n"
-#~ "  - commit \t\t (writes the changes to the real file)"
-#~ msgstr ""
-#~ "Faili racoon.conf konfiguratsioon.\n"
-#~ "\n"
-#~ "Faili sisu on jagatud sektsioonidesse.\n"
-#~ "Te võite nüüd:\n"
-#~ "  - vaadata \t\t (näha faili sisu)\n"
-#~ "  - lisada\t\t\t (lisada sektsiooni)\n"
-#~ "  - muuta \t\t\t (muuta olemasoleva sektsiooni parameetreid)\n"
-#~ "  - eemaldada \t\t (eemaldada olemasoleva sektsiooni)\n"
-#~ "  - rakendada \t\t (kirjutada muudatused ka tegelikult faili)"
-
-#~ msgid ""
-#~ "The %s file does not exist\n"
-#~ "\n"
-#~ "This must be a new configuration.\n"
-#~ "\n"
-#~ "You'll have to go back and choose configure.\n"
-#~ msgstr ""
-#~ "Faili %s ei ole olemas.\n"
-#~ "\n"
-#~ "Ilmselt on see uus konfiguratsioon.\n"
-#~ "\n"
-#~ "Peaksite minema tagasi ja valima seadistamine.\n"
-
-#~ msgid "racoon.conf entries"
-#~ msgstr "racoon.conf kirjed"
-
-#~ msgid ""
-#~ "The 'add' sections step.\n"
-#~ "\n"
-#~ "Here below is the racoon.conf file skeleton:\n"
-#~ "\t'path'\n"
-#~ "\t'remote'\n"
-#~ "\t'sainfo' \n"
-#~ "\n"
-#~ "Choose the section you would like to add.\n"
-#~ msgstr ""
-#~ "Sektsioonide lisamine.\n"
-#~ "\n"
-#~ "All on toodud faili racoon.conf mall:\n"
-#~ "\t'path'\n"
-#~ "\t'remote'\n"
-#~ "\t'sainfo' \n"
-#~ "\n"
-#~ "Valige sektsioon, mida soovite lisada.\n"
-
-#~ msgid "path"
-#~ msgstr "path"
-
-#~ msgid "remote"
-#~ msgstr "remote"
-
-#~ msgid "sainfo"
-#~ msgstr "sainfo"
-
-#~ msgid ""
-#~ "The 'add path' section step.\n"
-#~ "\n"
-#~ "The path sections have to be on top of your racoon.conf file.\n"
-#~ "\n"
-#~ "Put your mouse over the certificate entry to obtain online help."
-#~ msgstr ""
-#~ "Sektsioon 'add path' (asukoha lisamine).\n"
-#~ "\n"
-#~ "Asukoha sektsioon peab olema faili racoon.conf alguses.\n"
-#~ "\n"
-#~ "Hiire hoidmine sertifikaadikirje kohal näitab abivihjet."
-
-#~ msgid "path type"
-#~ msgstr "path type"
-
-#~ msgid ""
-#~ "path include path: specifies a path to include\n"
-#~ "a file. See File Inclusion.\n"
-#~ "\tExample: path include '/etc/racoon'\n"
-#~ "\n"
-#~ "path pre_shared_key file: specifies a file containing\n"
-#~ "pre-shared key(s) for various ID(s). See Pre-shared key File.\n"
-#~ "\tExample: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
-#~ "\n"
-#~ "path certificate path: racoon(8) will search this directory\n"
-#~ "if a certificate or certificate request is received.\n"
-#~ "\tExample: path certificate '/etc/cert' ;\n"
-#~ "\n"
-#~ "File Inclusion: include file \n"
-#~ "other configuration files can be included.\n"
-#~ "\tExample: include \"remote.conf\" ;\n"
-#~ "\n"
-#~ "Pre-shared key File: Pre-shared key file defines a pair\n"
-#~ "of the identifier and the shared secret key which are used at\n"
-#~ "Pre-shared key authentication method in phase 1."
-#~ msgstr ""
-#~ "path include path: määrab kaasatava faili asukoha.\n"
-#~ "Vaata faili kaasamise osa.\n"
-#~ "\tNäide: path include '/etc/racoon'\n"
-#~ "\n"
-#~ "path pre_shared_key file: määrab faili, mis sisaldab\n"
-#~ "erinevate ID-de eelnevalt jagatud ühisvõtmeid.\n"
-#~ "Vaata ühisvõtmete osa.\n"
-#~ "\tNäide: path pre_shared_key '/etc/racoon/psk.txt' ;\n"
-#~ "\n"
-#~ "path certificate path: racoon(8) otsib sellest kataloogist,\n"
-#~ "kui saadakse sertifikaat või sertifikaadinõue.\n"
-#~ "\tNäide: path certificate '/etc/cert' ;\n"
-#~ "\n"
-#~ "Faili kaasamine: võimalus kaasata fail \n"
-#~ "võimalus kaasata muid seadistusfaile.\n"
-#~ "\tN'ide: include \"remote.conf\" ;\n"
-#~ "\n"
-#~ "Ühisvõtme fail: eelnevalt jagatud ühisvõtme fail määrab\n"
-#~ "identifikaatori ja jagatud salajase võtme paari, mida\n"
-#~ "kasutatakse eelnevalt jagatud ühisvõtme autentimismeetodis\n"
-#~ "esimeses faasis."
-
-#~ msgid "real file"
-#~ msgstr "real file"
-
-#~ msgid ""
-#~ "Make sure you already have the path sections\n"
-#~ "on the top of your racoon.conf file.\n"
-#~ "\n"
-#~ "You can now choose the remote settings.\n"
-#~ "Choose continue or previous when you are done.\n"
-#~ msgstr ""
-#~ "Kontrollige, et asukohasektsioonid asuks alati\n"
-#~ "faili racoon.conf alguses.\n"
-#~ "\n"
-#~ "Nüüd võite asuda määrama võrguseadistusi.\n"
-#~ "Kui olete valmis, jätkake või minge tagasi.\n"
-
-#~ msgid ""
-#~ "Make sure you already have the path sections\n"
-#~ "on the top of your %s file.\n"
-#~ "\n"
-#~ "You can now choose the sainfo settings.\n"
-#~ "Choose continue or previous when you are done.\n"
-#~ msgstr ""
-#~ "Kontrollige, et asukohasektsioonid oleks\n"
-#~ "ikka faili %s alguses.\n"
-#~ "\n"
-#~ "\n"
-#~ "Nüüd võite asuda sainfo seadistuste juurde.\n"
-#~ "Kui olete valmis, jätkake või minge tagasi.\n"
-
-#~ msgid ""
-#~ "Your %s file has several sections or connections.\n"
-#~ "\n"
-#~ "You can choose here in the list below the one you want\n"
-#~ "to edit and then click on next.\n"
-#~ msgstr ""
-#~ "Failil %s on mitu sektsiooni või ühendust.\n"
-#~ "\n"
-#~ "Vali allpool olevas nimekirjast, millist soovite\n"
-#~ "redigeerida ja klõpsake nupule \"Edasi\".\n"
-
-#~ msgid ""
-#~ "Your %s file has several sections.\n"
-#~ "\n"
-#~ "\n"
-#~ "You can now edit the remote section entries.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data.\n"
-#~ msgstr ""
-#~ "Failil %s on mitu sektsiooni.\n"
-#~ "\n"
-#~ "\n"
-#~ "Nüüd võite asuda võrgusektsiooni juurde.\n"
-#~ "\n"
-#~ "Kui olete valmis, jätkake andmete salvestamiseks.\n"
-
-#~ msgid ""
-#~ "Your %s file has several sections.\n"
-#~ "\n"
-#~ "You can now edit the sainfo section entries.\n"
-#~ "\n"
-#~ "Choose continue when you are done to write the data."
-#~ msgstr ""
-#~ "Failil %s on mitu sektsiooni.\n"
-#~ "\n"
-#~ "Nüüd võite asuda sainfo sektsiooni juurde.\n"
-#~ "\n"
-#~ "Kui olete valmis, jätkake andmete salvestamiseks."
-
-#~ msgid ""
-#~ "This section has to be on top of your\n"
-#~ "%s file.\n"
-#~ "\n"
-#~ "Make sure all other sections follow these path\n"
-#~ "sections.\n"
-#~ "\n"
-#~ "You can now edit the path entries.\n"
-#~ "\n"
-#~ "Choose continue or previous when you are done.\n"
-#~ msgstr ""
-#~ "See sektsioon peab asuma faili\n"
-#~ "%s alguses.\n"
-#~ "\n"
-#~ "Kontrollige, et ülejäänud sektsioonid\n"
-#~ "seisaksid selle järel.\n"
-#~ "\n"
-#~ "Nüüd võite asuda asukohakirjete muutmise juurde.\n"
-#~ "\n"
-#~ "Kui olete valmis, jätkake või minge tagasi.\n"
-
-#~ msgid "path_type"
-#~ msgstr "path_type"
-
-#~ msgid "Congratulations!"
-#~ msgstr "Õnnitleme!"
-
-#~ msgid ""
-#~ "Everything has been configured.\n"
-#~ "\n"
-#~ "You may now share resources through the Internet,\n"
-#~ "in a secure way, using a VPN connection.\n"
-#~ "\n"
-#~ "You should make sure that the tunnels shorewall\n"
-#~ "section is configured."
-#~ msgstr ""
-#~ "Kõik on seadistatud.\n"
-#~ "\n"
-#~ "Nüüd on Teil võimalik jagada ressursse üle Interneti\n"
-#~ "turvalise VPN ühenduse vahendusel.\n"
-#~ "\n"
-#~ "Te peaksite siiski kontrollima, et seadistatud oleks\n"
-#~ "ka tunnelite shorewalli sektsioon."
-
-#~ msgid "Sainfo source address"
-#~ msgstr "Sainfo lähteaadress"
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.209 is the source address\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.1.0/24 is the source address"
-#~ msgstr ""
-#~ "sainfo (lähte_id siht_id | anonymous) { argumendid }\n"
-#~ "määrab IKE faasi 2 parameetrid\n"
-#~ "(IPsec-SA kehtestamine).\n"
-#~ "\n"
-#~ "lähte_id ja siht_id luuakse järgmiselt:\n"
-#~ "\n"
-#~ "\taadress address [/ prefiks] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Näited : \n"
-#~ "\n"
-#~ "sainfo anonymous (võtab vastu kõik ühendused)\n"
-#~ "\tjätke kirje tühjaks, kui soovite anonüümset\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.209 on lähteaadress\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.1.0/24 on lähteaadress"
-
-#~ msgid "Sainfo source protocol"
-#~ msgstr "Sainfo lähteprotokoll"
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tthe first 'any' allows any protocol for the source"
-#~ msgstr ""
-#~ "sainfo (lähte_id siht_id | anonymous) { argumendid }\n"
-#~ "määrab IKE faasi 2 parameetrid\n"
-#~ "(IPsec-SA kehtestamine).\n"
-#~ "\n"
-#~ "lähte_id ja siht_id luuakse järgmiselt:\n"
-#~ "\n"
-#~ "\taadress aadress [/ prefiks] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Näited : \n"
-#~ "\n"
-#~ "sainfo anonymous (võtab vastu kõik ühendused)\n"
-#~ "\tjätke tühjaks, kui soovite anonüümset\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tesimene 'any' lubab lähtekohale kõiki protokolle"
-
-#~ msgid "Sainfo destination address"
-#~ msgstr "Sainfo sihtaadress"
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.218 is the destination address\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.2.0/24 is the destination address"
-#~ msgstr ""
-#~ "sainfo (lähte_id siht_id | anonymous) { argumendid }\n"
-#~ "määrab IKE faasi 2 parameetrid\n"
-#~ "(IPsec-SA kehtestamine).\n"
-#~ "\n"
-#~ "lähte_id ja siht_id luuakse järgmiselt:\n"
-#~ "\n"
-#~ "\taadress aadress [/ prefiks] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Näited : \n"
-#~ "\n"
-#~ "sainfo anonymous (võtab vastu kõik ühendused)\n"
-#~ "\tjätke tühjaks, kui soovite anonüümset\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\t203.178.141.218 on sihtaadress\n"
-#~ "\n"
-#~ "sainfo address 172.16.1.0/24 any address 172.16.2.0/24 any\n"
-#~ "\t172.16.2.0/24 on sihtaadress"
-
-#~ msgid "Sainfo destination protocol"
-#~ msgstr "Sainfo sihtprotokoll"
-
-#~ msgid ""
-#~ "sainfo (source_id destination_id | anonymous) { statements }\n"
-#~ "defines the parameters of the IKE phase 2\n"
-#~ "(IPsec-SA establishment).\n"
-#~ "\n"
-#~ "source_id and destination_id are constructed like:\n"
-#~ "\n"
-#~ "\taddress address [/ prefix] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "sainfo anonymous (accepts connections from anywhere)\n"
-#~ "\tleave blank this entry if you want anonymous\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tthe last 'any' allows any protocol for the destination"
-#~ msgstr ""
-#~ "sainfo (lähte_id siht_id | anonymous) { argumendid }\n"
-#~ "määrab IKE faasi 2 parameetrid\n"
-#~ "(IPsec-SA kehtestamine).\n"
-#~ "\n"
-#~ "lähte_id ja siht_id luuakse järgmiselt:\n"
-#~ "\n"
-#~ "\taadress aadress [/ prefiks] [[port]] ul_proto\n"
-#~ "\n"
-#~ "Näited : \n"
-#~ "\n"
-#~ "sainfo anonymous (võtab vastu kõik ühendused)\n"
-#~ "\tjätke tühjaks, kui soovite anonüümset\n"
-#~ "\n"
-#~ "sainfo address 203.178.141.209 any address 203.178.141.218 any\n"
-#~ "\tviimane 'any' lubab sihtkohale kõiki protokolle"
-
-#~ msgid "PFS group"
-#~ msgstr "PFS grupp"
-
-#~ msgid ""
-#~ "define the group of Diffie-Hellman exponentiations.\n"
-#~ "If you do not require PFS then you can omit this directive.\n"
-#~ "Any proposal will be accepted if you do not specify one.\n"
-#~ "group is one of the following: modp768, modp1024, modp1536.\n"
-#~ "Or you can define 1, 2, or 5 as the DH group number."
-#~ msgstr ""
-#~ "määrab Diffie-Hellmani astenduse grupi.\n"
-#~ "Kui Te ei vaja PFS-i, võite selle direktiivi vahele jätta.\n"
-#~ "Iga ettepanek võetakse vastu, kui Te midagi ei määra.\n"
-#~ "grupp võib olla üks järgmistest: modp768, modp1024, modp1536.\n"
-#~ "Samuti võib määrata 1, 2 või 5 DH grupi numbri tähistajana."
-
-#~ msgid "Lifetime number"
-#~ msgstr "Eluea number"
-
-#~ msgid ""
-#~ "define a lifetime of a certain time which will be pro-\n"
-#~ "posed in the phase 1 negotiations.  Any proposal will be\n"
-#~ "accepted, and the attribute(s) will not be proposed to\n"
-#~ "the peer if you do not specify it(them).  They can be\n"
-#~ "individually specified in each proposal.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "So, here, the lifetime numbers are 1, 1, 30, 30, 60 and 12.\n"
-#~ msgstr ""
-#~ "määrab teatud eluea, mis pakutakse välja faasi 1\n"
-#~ "läbirääkimistel. Iga ettepanek võetakse vastu ja\n"
-#~ "partnerile ei pakuta atribuuti/atribuute, kui Te\n"
-#~ "seda/neid ei määra. Neid võib iga ettepaneku puhul\n"
-#~ "eraldi määrata.\n"
-#~ "\n"
-#~ "Näited:: \n"
-#~ "\n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "Antud juhul on siis eluea numbrid 1, 1, 30, 30, 60 ja 12.\n"
-
-#~ msgid "Lifetime unit"
-#~ msgstr "Eluea ühik"
-
-#~ msgid ""
-#~ "define a lifetime of a certain time which will be pro-\n"
-#~ "posed in the phase 1 negotiations.  Any proposal will be\n"
-#~ "accepted, and the attribute(s) will not be proposed to\n"
-#~ "the peer if you do not specify it(them).  They can be\n"
-#~ "individually specified in each proposal.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "So, here, the lifetime units are 'min', 'min', 'sec', 'sec', 'sec' and "
-#~ "'hour'.\n"
-#~ msgstr ""
-#~ "määrab teatud eluea, mis pakutakse välja faasi 1\n"
-#~ "läbirääkimistel. Iga ettepanek võetakse vastu ja\n"
-#~ "partnerile ei pakuta atribuuti/atribuute, kui Te\n"
-#~ "seda/neid ei määra. Neid võib iga ettepaneku puhul\n"
-#~ "eraldi määrata.\n"
-#~ "\n"
-#~ "Näited:: \n"
-#~ "\n"
-#~ "\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 1 min;    # sec,min,hour\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 30 sec;\n"
-#~ "        lifetime time 60 sec;\n"
-#~ "\tlifetime time 12 hour;\n"
-#~ "\n"
-#~ "Antud juhul on siis eluea ühikud 'min', 'min', 'sec', 'sec', 'sec' ja "
-#~ "'hour'.\n"
-
-#~ msgid "Encryption algorithm"
-#~ msgstr "Krüptoalgoritm"
-
-#~ msgid "Authentication algorithm"
-#~ msgstr "Autentimisalgoritm"
-
-#~ msgid "Compression algorithm"
-#~ msgstr "Tihendusalgoritm"
-
-#~ msgid "deflate"
-#~ msgstr "deflate"
-
-#~ msgid "Remote"
-#~ msgstr "Mujalasuv"
-
-#~ msgid ""
-#~ "remote (address | anonymous) [[port]] { statements }\n"
-#~ "specifies the parameters for IKE phase 1 for each remote node.\n"
-#~ "The default port is 500.  If anonymous is specified, the state-\n"
-#~ "ments apply to all peers which do not match any other remote\n"
-#~ "directive.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "remote anonymous\n"
-#~ "remote ::1 [8000]"
-#~ msgstr ""
-#~ "remote (aadress | anonymous) [[port]] { argumendid }\n"
-#~ "määrab IKE faasi 1 parameetrid igale võrgusõlmele.\n"
-#~ "Vaikeport on 500.  Kui määratud on anonüümne, rakenduvad\n"
-#~ "argumendid kõigile partneritele, kes ei vasta mingile\n"
-#~ "muule direktiivile.\n"
-#~ "\n"
-#~ "Näited : \n"
-#~ "\n"
-#~ "remote anonymous\n"
-#~ "remote ::1 [8000]"
-
-#~ msgid "Exchange mode"
-#~ msgstr "Vahetusrežiim"
-
-#~ msgid ""
-#~ "defines the exchange mode for phase 1 when racoon is the\n"
-#~ "initiator. Also it means the acceptable exchange mode\n"
-#~ "when racoon is responder. More than one mode can be\n"
-#~ "specified by separating them with a comma. All of the\n"
-#~ "modes are acceptable. The first exchange mode is what\n"
-#~ "racoon uses when it is the initiator.\n"
-#~ msgstr ""
-#~ "määrab vahetusrežiimi faasis 1, kui algataja on racoon.\n"
-#~ "Samuti määrab vastuvõetava vahetusrežiimi, kui racoon on\n"
-#~ "vastaja. Määrata võib enam kui ühe režiimi, eraldajaks\n"
-#~ "koma. Kõik režiimid on vastuvõetavad. Esimene režiim on see,\n"
-#~ "mida racoon kasutab juhul, kui ta on algataja.\n"
-
-#~ msgid "Generate policy"
-#~ msgstr "Reegli genereerimine"
-
-#~ msgid "off"
-#~ msgstr "väljas"
-
-#~ msgid "on"
-#~ msgstr "sees"
-
-#~ msgid ""
-#~ "This directive is for the responder.  Therefore you\n"
-#~ "should set passive on in order that racoon(8) only\n"
-#~ "becomes a responder.  If the responder does not have any\n"
-#~ "policy in SPD during phase 2 negotiation, and the direc-\n"
-#~ "tive is set on, then racoon(8) will choose the first pro-\n"
-#~ "posal in the SA payload from the initiator, and generate\n"
-#~ "policy entries from the proposal.  It is useful to nego-\n"
-#~ "tiate with the client which is allocated IP address\n"
-#~ "dynamically.  Note that inappropriate policy might be\n"
-#~ "installed into the responder's SPD by the initiator.  So\n"
-#~ "that other communication might fail if such policies\n"
-#~ "installed due to some policy mismatches between the ini-\n"
-#~ "tiator and the responder.  This directive is ignored in\n"
-#~ "the initiator case.  The default value is off."
-#~ msgstr ""
-#~ "See direktiiv on mõeldud vastuvõtjale. Seepärast võiks\n"
-#~ "selle määrata passiivseks, et racoon(8) oleks ainult\n"
-#~ "vastuvõtja. Kui vastuvõtja SPD ei sisalda faasi 2\n"
-#~ "läbirääkimiste ajal mingit reeglit ja see direktiiv on\n"
-#~ "kehtestatud, valib racoon(8) esimese ettepaneku algataja SA\n"
-#~ "seast ja loob selle põhjal reeglikirjed. See on kasulik\n"
-#~ "läbirääkimistel kliendiga, kellele IP eraldatakse dünaamiliselt.\n"
-#~ "Pange tähele, et algataja võib olla paigaldanud vastuvõtja\n"
-#~ "SPD-sse sobimatu reegli, mis tähendab, et algataja ja\n"
-#~ "vastuvõtja reeglite erinevuse tõttu võib suhtlemine kannatada.\n"
-#~ "Algataja ise ei tee sellest direktiivist välja. Vaikimisi on\n"
-#~ "see välja lülitatud."
-
-#~ msgid "Passive"
-#~ msgstr "Passiivne"
-
-#~ msgid ""
-#~ "If you do not want to initiate the negotiation, set this\n"
-#~ "to on.  The default value is off.  It is useful for a\n"
-#~ "server."
-#~ msgstr ""
-#~ "Kui Te ei soovi algatada läbirääkimisi, lülitage see sisse.\n"
-#~ "Vaikimisi on väljas. See on mõttekas serveri puhul."
-
-#~ msgid "Certificate type"
-#~ msgstr "Sertifikaadi tüüp"
-
-#~ msgid "My certfile"
-#~ msgstr "Minu sertifikaadifail"
-
-#~ msgid "Name of the certificate"
-#~ msgstr "Sertifikaadi nimi"
-
-#~ msgid "My private key"
-#~ msgstr "Minu privaatvõti"
-
-#~ msgid "Name of the private key"
-#~ msgstr "Privaatvõtme nimi"
-
-#~ msgid "Peers certfile"
-#~ msgstr "Partneri sertifikaadifail"
-
-#~ msgid "Name of the peers certificate"
-#~ msgstr "Partneri sertifikaadi nimi"
-
-#~ msgid "Verify cert"
-#~ msgstr "Sertifikaadi verifitseerimine"
-
-#~ msgid ""
-#~ "If you do not want to verify the peer's certificate for\n"
-#~ "some reason, set this to off.  The default is on."
-#~ msgstr ""
-#~ "Kui Te mingil põhjusel ei soovi partneri sertifikaati\n"
-#~ "kontrollida, lülitage see välja. Vaikimisi on sees."
-
-#~ msgid "My identifier"
-#~ msgstr "Minu identifikaator"
-
-#~ msgid ""
-#~ "specifies the identifier sent to the remote host and the\n"
-#~ "type to use in the phase 1 negotiation.  address, FQDN,\n"
-#~ "user_fqdn, keyid and asn1dn can be used as an idtype.\n"
-#~ "they are used like:\n"
-#~ "\tmy_identifier address [address];\n"
-#~ "\t\tthe type is the IP address.  This is the default\n"
-#~ "\t\ttype if you do not specify an identifier to use.\n"
-#~ "\tmy_identifier user_fqdn string;\n"
-#~ "\t\tthe type is a USER_FQDN (user fully-qualified\n"
-#~ "\t\tdomain name).\n"
-#~ "\tmy_identifier FQDN string;\n"
-#~ "\t\tthe type is a FQDN (fully-qualified domain name).\n"
-#~ "\tmy_identifier keyid file;\n"
-#~ "\t\tthe type is a KEY_ID.\n"
-#~ "\tmy_identifier asn1dn [string];\n"
-#~ "\t\tthe type is an ASN.1 distinguished name.  If\n"
-#~ "\t\tstring is omitted, racoon(8) will get DN from\n"
-#~ "\t\tSubject field in the certificate.\n"
-#~ "\n"
-#~ "Examples: \n"
-#~ "\n"
-#~ "my_identifier user_fqdn \"myemail@mydomain.com\""
-#~ msgstr ""
-#~ "määrab faasi 1 läbirääkimistel võrgumasinale saadetava\n"
-#~ "identifikaatori ja kasutatava tübi.  aadress, FQDN,\n"
-#~ "user_fqdn, keyid ja asn1dn on kasutatava ID tüübina.\n"
-#~ "kasutamine on järgmine:\n"
-#~ "\tmy_identifier address [aadress];\n"
-#~ "\t\ttüüp on IP-aadress.  See on vaiketüüp,\n"
-#~ "\t\tkui Te ei määra kasutatavat identifikaatorit.\n"
-#~ "\tmy_identifier user_fqdn string;\n"
-#~ "\t\ttüüp on USER_FQDN (kasutaja täielik\n"
-#~ "\t\tdomeeni nimi).\n"
-#~ "\tmy_identifier FQDN string;\n"
-#~ "\t\ttüüp on FQDN (täielik domeeni nimi).\n"
-#~ "\tmy_identifier keyid fail;\n"
-#~ "\t\ttüüp on KEY_ID.\n"
-#~ "\tmy_identifier asn1dn [string];\n"
-#~ "\t\ttüüp on ASN.1 eristatav nimi.  Kui\n"
-#~ "\t\tstring ära jätta, hangib (8) DN\n"
-#~ "\t\tsertifikaadi subjektirealt.\n"
-#~ "\n"
-#~ "Näited : \n"
-#~ "\n"
-#~ "my_identifier user_fqdn \"minuepostiaadress@minudomeen.ee\""
-
-#~ msgid "Peers identifier"
-#~ msgstr "Partneri identifikaator"
-
-#~ msgid "Proposal"
-#~ msgstr "Ettepanek"
-
-#~ msgid ""
-#~ "specify the encryption algorithm used for the\n"
-#~ "phase 1 negotiation. This directive must be defined. \n"
-#~ "algorithm is one of the following: \n"
-#~ "\n"
-#~ "DES, 3DES, blowfish, cast128 for oakley.\n"
-#~ "\n"
-#~ "For other transforms, this statement should not be used."
-#~ msgstr ""
-#~ "määrab faasi 1 läbirääkimistel kasutatava\n"
-#~ "krüptoalgoritmi. See peab olema määratud. \n"
-#~ "algoritm võib olla üks järgmistest: \n"
-#~ "\n"
-#~ "DES, 3DES, blowfish, cast128 oakley puhul.\n"
-#~ "\n"
-#~ "Muudel juhtudel ei peaks seda direktiivi kasutama."
-
-#~ msgid "Hash algorithm"
-#~ msgstr "Räsialgoritm"
-
-#~ msgid "Authentication method"
-#~ msgstr "Autentimisviis"
-
-#~ msgid "DH group"
-#~ msgstr "DH grupp"
-
-#~ msgid "Command"
-#~ msgstr "Käsk"
-
-#~ msgid "Source IP range"
-#~ msgstr "Lähtekoha IP vahemik"
-
-#~ msgid "Destination IP range"
-#~ msgstr "Sihtkoha IP vahemik"
-
-#~ msgid "Upper-layer protocol"
-#~ msgstr "Ülakihi protokoll"
-
-#~ msgid "any"
-#~ msgstr "suvaline"
-
-#~ msgid "Flag"
-#~ msgstr "Lipp"
-
-#~ msgid "Direction"
-#~ msgstr "Suund"
-
-#~ msgid "IPsec policy"
-#~ msgstr "IPsec reegel"
-
-#~ msgid "ipsec"
-#~ msgstr "ipsec"
-
-#~ msgid "discard"
-#~ msgstr "keelatud"
-
-#~ msgid "none"
-#~ msgstr "puudub"
-
-#~ msgid "tunnel"
-#~ msgstr "tunnel"
-
-#~ msgid "transport"
-#~ msgstr "transport"
-
-#~ msgid "Source/destination"
-#~ msgstr "Lähtekoht/sihtkoht"
-
-#~ msgid "Level"
-#~ msgstr "Tase"
-
-#~ msgid "require"
-#~ msgstr "nõutav"
-
-#~ msgid "default"
-#~ msgstr "vaikimisi"
-
-#~ msgid "use"
-#~ msgstr "kasutatakse"
-
-#~ msgid "unique"
-#~ msgstr "unikaalne"
-
-#~ msgid "You need to log out and back in again for changes to take effect"
-#~ msgstr "Muudatuste rakendamiseks tuleb end uuesti sisse logida"
-
-#~ msgid "Process attack"
-#~ msgstr "Käsitle rünnakut"
-
-#~ msgid "Interactive Firewall: intrusion detected"
-#~ msgstr "Interaktiivne tulemüür: tuvastati sissetung"
-
-#~ msgid "What do you want to do with this attacker?"
-#~ msgstr "Mida selle ründajaga ette võtta?"
-
-#~ msgid "Attack details"
-#~ msgstr "Rünnaku üksikasjad"
-
-#~ msgid "Attack time: %s"
-#~ msgstr "Rünnaku aeg: %s"
-
-#~ msgid "Network interface: %s"
-#~ msgstr "Võrguliides: %s"
-
-#~ msgid "Attack type: %s"
-#~ msgstr "Rünnaku tüüp: %s"
-
-#~ msgid "Protocol: %s"
-#~ msgstr "Protokoll: %s"
-
-#~ msgid "Attacker IP address: %s"
-#~ msgstr "Ründaja IP-aadress: %s"
-
-#~ msgid "Attacker hostname: %s"
-#~ msgstr "Ründaja masinanimi: %s"
-
-#~ msgid "Service attacked: %s"
-#~ msgstr "Rünnatu teenus: %s"
-
-#~ msgid "Port attacked: %s"
-#~ msgstr "Rünnatud port: %s"
-
-#~ msgid "Type of ICMP attack: %s"
-#~ msgstr "ICMP rünnaku tüüp: %s"
-
-#~ msgid "Always blacklist (do not ask again)"
-#~ msgstr "Lisatakse alati musta nimekirja (rohkem ei küsita)"
-
-#~ msgid "Ignore"
-#~ msgstr "Ignoreeritakse"
-
-#~ msgid "Interactive Firewall: new service"
-#~ msgstr "Interaktiivne tulemüür: uus teenus"
-
-#~ msgid "Process connection"
-#~ msgstr "Käsitle ühendust"
-
-#~ msgid "Do you want to open this service?"
-#~ msgstr "Kas soovite selle teenuse avada?"
-
-#~ msgid "Remember this answer"
-#~ msgstr "Vastus jäetakse meelde"
-
-#~ msgid "Use Cisco-UDP encapsulation"
-#~ msgstr "Cisco-UDP kapselduse kasutamine"
-
-#~ msgid "Gateway:"
-#~ msgstr "Vaikelüüs:"
-
-#~ msgid "Interface:"
-#~ msgstr "Liides:"
-
-#~ msgid "Manage connections"
-#~ msgstr "Ühenduste haldamine"
-
-#~ msgid "IP configuration"
-#~ msgstr "IP seadistus"
-
-#~ msgid "DNS servers"
-#~ msgstr "Nimeserverid"
-
-#~ msgid "Search Domain"
-#~ msgstr "Otsingudomeen"
-
-#~ msgid "static"
-#~ msgstr "staatiline"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Start at boot"
-#~ msgstr "Käivitatakse alglaadimisel"
-
-#~ msgid "Flow control"
-#~ msgstr "Vookontroll"
-
-#~ msgid "Line termination"
-#~ msgstr "Rea lõpp"
-
-#~ msgid "Modem timeout"
-#~ msgstr "Modemi aegumine"
-
-#~ msgid "Use lock file"
-#~ msgstr "Kasutatakse lukustusfaili"
-
-#~ msgid "Wait for dialup tone before dialing"
-#~ msgstr "Enne valimist oodatakse tooni"
-
-#~ msgid "Busy wait"
-#~ msgstr "Oodatakse kinnise tooni puhul"
-
-#~ msgid "Modem sound"
-#~ msgstr "Modemi heli"
-
-#~ msgid "Vendor"
-#~ msgstr "Tootja"
-
-#~ msgid "Media class"
-#~ msgstr "Andmekandja klass"
-
-#~ msgid "Module name"
-#~ msgstr "Mooduli nimi"
-
-#~ msgid "Mac Address"
-#~ msgstr "MAC aadress"
-
-#~ msgid "Bus"
-#~ msgstr "Siin"
-
-#~ msgid "Location on the bus"
-#~ msgstr "Asukoht siinil"
-
-#~ msgid "Remove a network interface"
-#~ msgstr "Eemalda võrguliides"
-
-#~ msgid ""
-#~ "An error occurred while deleting the \"%s\" network interface:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Võrguliidese \"%s\" kustutamisel tekkis viga:\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Congratulations, the \"%s\" network interface has been successfully "
-#~ "deleted"
-#~ msgstr "Õnnitlused: võrguliides \"%s\" on edukalt kustutatud"
-
-#~ msgid "Disconnect..."
-#~ msgstr "Lahuta..."
-
-#~ msgid "Connect..."
-#~ msgstr "Ühenda..."
-
-#~ msgid "Internet connection configuration"
-#~ msgstr "Internetiühenduse seadistamine"
-
-#~ msgid "Host name (optional)"
-#~ msgstr "Masina nimi (pole kohustuslik)"
-
-#~ msgid "Third DNS server (optional)"
-#~ msgstr "Kolmas nimeserver (pole kohustuslik)"
-
-#~ msgid "Internet Connection Configuration"
-#~ msgstr "Internetiühenduse seadistamine"
-
-#~ msgid "Internet access"
-#~ msgstr "Internetiühendus"
-
-#~ msgid "Status:"
-#~ msgstr "Olek:"
-
-#~ msgid "Parameters"
-#~ msgstr "Parameetrid"
