@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: drakx-net\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-05-03 15:42+0200\n"
-"PO-Revision-Date: 2011-06-28 21:12+0100\n"
+"PO-Revision-Date: 2011-06-28 21:50+0100\n"
 "Last-Translator: Zé <ze@mageia.org>\n"
-"Language-Team: Portuguese <kde-i18n-doc@kde.org>\n"
+"Language-Team: Portuguese <mageia-i18n@mageia.org>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,12 +54,12 @@ msgstr "Estado"
 #: ../bin/drakconnect-old:79
 #, c-format
 msgid "Hostname: "
-msgstr "Nome da máquina: "
+msgstr "Nome do hospedeiro: "
 
 #: ../bin/drakconnect-old:81
 #, c-format
 msgid "Configure hostname..."
-msgstr "Configurar nome da máquina..."
+msgstr "Configurar nome do hospediro..."
 
 #: ../bin/drakconnect-old:95 ../bin/drakconnect-old:171
 #, c-format
@@ -446,7 +446,7 @@ msgstr "Correio do administrador"
 #: ../bin/drakgw:276
 #, c-format
 msgid "Visible hostname"
-msgstr "Nome visível da máquina"
+msgstr "Nome visível do hospedeiro"
 
 #: ../bin/drakgw:277
 #, c-format
@@ -535,7 +535,7 @@ msgstr "A configurar 'firewall'..."
 #: ../bin/drakhosts:100
 #, c-format
 msgid "Please add an host to be able to modify it."
-msgstr "Por favor adicione uma máquina para a poder modificar."
+msgstr "Por favor adicione um hospedeiro para o poder modificar."
 
 #: ../bin/drakhosts:110
 #, c-format
@@ -560,12 +560,12 @@ msgstr "Endereço IP:"
 #: ../bin/drakhosts:117
 #, c-format
 msgid "Host name:"
-msgstr "Nome da Máquina:"
+msgstr "Nome do hospedeiro:"
 
 #: ../bin/drakhosts:118
 #, c-format
 msgid "Host Aliases:"
-msgstr "Alias da Máquina:"
+msgstr "Alias do Hospedeiro:"
 
 #: ../bin/drakhosts:122 ../bin/draknfs:116 ../bin/draksambashare:230
 #: ../bin/draksambashare:253 ../bin/draksambashare:397
@@ -582,17 +582,17 @@ msgstr "Por favor indique um endereço IP válido."
 #: ../bin/drakhosts:187 ../lib/network/connection/ethernet.pm:225
 #, c-format
 msgid "Host name"
-msgstr "Nome da Máquina"
+msgstr "Nome do hospedeiro"
 
 #: ../bin/drakhosts:187
 #, c-format
 msgid "Host Aliases"
-msgstr "Alias da Máquina"
+msgstr "Alias do Hospedeiro"
 
 #: ../bin/drakhosts:197 ../bin/drakhosts:227
 #, c-format
 msgid "Manage hosts definitions"
-msgstr "Gerir definições das máquinas"
+msgstr "Gerir definições dos hospedeiros"
 
 #: ../bin/drakhosts:213 ../bin/drakhosts:240 ../bin/draknfs:369
 #, c-format
@@ -613,7 +613,7 @@ msgstr "Adicionar entrada"
 #: ../bin/drakhosts:236
 #, c-format
 msgid "Failed to add host."
-msgstr "Falha ao adicionar a máquina."
+msgstr "Falha ao adicionar o hospedeiro."
 
 #: ../bin/drakhosts:239 ../bin/draknfs:608 ../bin/draksambashare:1305
 #: ../bin/draksambashare:1350 ../bin/draksambashare:1381
@@ -625,7 +625,7 @@ msgstr "Modificar"
 #: ../bin/drakhosts:243
 #, c-format
 msgid "Failed to Modify host."
-msgstr "Falha ao modificar a máquina."
+msgstr "Falha ao modificar o hospedeiro."
 
 #: ../bin/drakhosts:246 ../bin/drakids:95 ../bin/drakids:104
 #: ../bin/draknfs:615 ../bin/draksambashare:1306 ../bin/draksambashare:1358
@@ -637,7 +637,7 @@ msgstr "Remover"
 #: ../bin/drakhosts:250
 #, c-format
 msgid "Failed to remove host."
-msgstr "Falha ao remover a máquina."
+msgstr "Falha ao remover o hospedeiro."
 
 #: ../bin/drakhosts:253 ../bin/drakinvictus:141 ../bin/draknetprofile:219
 #: ../bin/net_applet:221 ../lib/network/drakroam.pm:93
@@ -736,7 +736,7 @@ msgstr "Data"
 #: ../bin/drakids:257
 #, c-format
 msgid "Remote host"
-msgstr "Máquina remota"
+msgstr "Hospedeiro remoto"
 
 #: ../bin/drakids:258 ../lib/network/vpn/openvpn.pm:117
 #, c-format
@@ -1081,22 +1081,19 @@ msgstr ""
 "\n"
 "\n"
 "<span foreground=\"royalblue3\">Grupos de rede:</span> os grupos de rede NIS "
-"podem "
-"ser indicados pelo formato @grupo.\n"
+"podem ser indicados pelo formato @grupo.\n"
 "\n"
 "\n"
 "<span foreground=\"royalblue3\">Asteriscos (wildcards):</span> os nomes das "
-"máquinas "
-"podem conter os caracteres * e ?. Por exemplo: *.cs.foo.edu corresponde a "
+"máquinas podem conter os caracteres * e ?. Por exemplo: *.cs.foo.edu "
+"corresponde a "
 "todas as máquinas do domínio cs.foo.edu.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">Redes IP:</span> pode também expirtar "
-"directórios para "
-"todas as máquinas de um IP de uma (sub) rede em simultãneo, junta uma máscara "
-"no final "
-"do endereço da (sub) rede. Exemplos: `192.168.1.0/255.255.255.0' ou `192.168."
-"1.0/24'\n"
+"<span foreground=\"royalblue3\">Redes IP:</span> pode também exportar "
+"directórios para todas as máquinas de um IP de uma (sub) rede em simultãneo, "
+"junta uma máscara no final do endereço da (sub) rede. "
+"Exemplos: `192.168.1.0/255.255.255.0' ou `192.168.1.0/24'\n"
 
 #: ../bin/draknfs:161
 #, c-format
@@ -1250,7 +1247,7 @@ msgstr "Directório:"
 #: ../bin/draknfs:381
 #, c-format
 msgid "Host access"
-msgstr "Acesso à máquina"
+msgstr "Acesso ao hospedeiro"
 
 #: ../bin/draknfs:382
 #, c-format
@@ -1290,7 +1287,7 @@ msgstr "Não é possível criar este directório."
 #: ../bin/draknfs:434
 #, c-format
 msgid "You must specify hosts access."
-msgstr "Precisa indicar o acesso da máquina."
+msgstr "Precisa especificar o acesso do hospedeiro."
 
 #: ../bin/draknfs:514
 #, c-format
@@ -2769,8 +2766,8 @@ msgstr "Domínio de pesquisa"
 #, c-format
 msgid "By default search domain will be set from the fully-qualified host name"
 msgstr ""
-"Por predefinição o domínio de procura será definido a partir do nome da "
-"máquina plenamente qualificado"
+"Por predefinição o domínio de pesquisa será definido a partir do nome "
+"do hospedeiro totalmente qualificado (FQDN)"
 
 #: ../lib/network/connection/ethernet.pm:160
 #, c-format
@@ -2790,7 +2787,7 @@ msgstr "Obter servidores NTPD por DHCP"
 #: ../lib/network/connection/ethernet.pm:163
 #, c-format
 msgid "DHCP host name"
-msgstr "Nome da máquina DHCP"
+msgstr "Nome do hospedeiro DHCP"
 
 #: ../lib/network/connection/ethernet.pm:165
 #, c-format
@@ -2828,7 +2825,7 @@ msgstr ""
 #, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
 msgstr ""
-"Atribuir o nome da máquina a partir do servidor DHCP (ou gerar um único)"
+"Atribuir nome do hospedeiro a partir do servidor DHCP (ou gerar um único)"
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
@@ -2837,8 +2834,8 @@ msgid ""
 "server does not provides a valid host name, it will be generated "
 "automatically."
 msgstr ""
-"Isto irá permitir ao servidor atribuir um nome a esta máquina. Se o servidor "
-"não fornecer um nome de endereço válido, será gerado um automaticamente."
+"Isto permitirá ao servidor atribuir um nome a esta máquina. Se o servidor não "
+"fornecer um nome de hospedeiro válido, será gerado um automaticamente."
 
 #: ../lib/network/connection/ethernet.pm:226
 #, c-format
@@ -2847,9 +2844,10 @@ msgid ""
 "Note that this hostname will be shared among all network connections.  If "
 "left blank, 'localhost.localdomain' will be used."
 msgstr ""
-"Deve definir um nome de endereço para esta máquina, irá identificar este PC. "
-"Note que este nome de endereço será partilhado por todas as outras conexões "
-"da rede. Se deixar em branco, será usado 'localhost.localdomain'."
+"Deve definir um nome de hospedeiro para esta máquina, que identificará este "
+"PC. "
+"Note que este nome de hospedeiro será partilhado por todas conexões da rede. "
+"Se deixar este campo em branco, será usado 'localhost.localdomain'."
 
 #: ../lib/network/connection/ethernet.pm:244
 #, c-format
@@ -4322,7 +4320,7 @@ msgid ""
 msgstr ""
 "Aqui, pode configurar alguns parâmetros extra da rede sem-fio tais como:\n"
 "ap, channel, commit, enc, power, retry, sens, txpower (a alcunha já está\n"
-"definida como o nome da máquina).\n"
+"definida como o nome de hospedeiro).\n"
 "\n"
 "Veja a página do manual iwconfig(8) para mais informações."
 
@@ -4790,7 +4788,7 @@ msgstr "Conectar"
 #: ../lib/network/connection_manager.pm:447
 #, c-format
 msgid "Hostname changed to \"%s\""
-msgstr "Nome da máquina modificado para \"%s\""
+msgstr "Nome do hospedeiro modificado para \"%s\""
 
 #: ../lib/network/drakfirewall.pm:14
 #, c-format
@@ -5601,7 +5599,7 @@ msgstr "Segundo servidor DNS (opcional)"
 #: ../lib/network/netconnect.pm:653
 #, c-format
 msgid "Set hostname from IP"
-msgstr "Definir nome da máquina a partir do IP"
+msgstr "Definir nome do hospedeiro a partir do IP"
 
 #: ../lib/network/netconnect.pm:666
 #, c-format
@@ -5709,7 +5707,7 @@ msgid ""
 "avoid any hostname-related problems."
 msgstr ""
 "Após ter terminado, recomendamos que reinicie o seu ambiente X para evitar "
-"qualquer problema relacionado com o nome da máquina."
+"qualquer problema relacionado com o nome do hospedeiro."
 
 #: ../lib/network/netconnect.pm:790
 #, c-format
@@ -5780,7 +5778,7 @@ msgstr "Configuração da Rede"
 #: ../lib/network/netconnect.pm:806
 #, c-format
 msgid "Zeroconf hostname resolution"
-msgstr "Resolução Zeroconf do nome da máquina"
+msgstr "Resolução Zeroconf do nome do hospedeiro"
 
 #: ../lib/network/netconnect.pm:807
 #, c-format
@@ -5790,20 +5788,20 @@ msgid ""
 "its shared resources that are not managed by the network.\n"
 "It is not necessary on most networks."
 msgstr ""
-"Se desejado, indique um nome de máquina Zeroconf.\n"
+"Se desejado, indique um nome de hospedeiro Zeroconf.\n"
 "Este é o nome que a sua máquina irá usar para advertir qualquer\n"
-"dos seus recursos partilhados que não são geridos pela rede.\n"
-"Não é necessário na maioria das redes."
+"um dos seus recursos partilhados que não são geridos pela rede.\n"
+"Na maioria das redes não é necessário ."
 
 #: ../lib/network/netconnect.pm:811
 #, c-format
 msgid "Zeroconf Host name"
-msgstr "Nome da Máquina Zeroconf"
+msgstr "Nome de Hospedeiro Zeroconf"
 
 #: ../lib/network/netconnect.pm:812
 #, c-format
 msgid "Zeroconf host name must not contain a ."
-msgstr "O nome da máquina Zeroconf não deve conter um ."
+msgstr "O nome de hospedeiro Zeroconf não deve conter um ."
 
 #: ../lib/network/netconnect.pm:813
 #, c-format
@@ -5890,10 +5888,10 @@ msgid ""
 "such as ``mybox.mylab.myco.com''.\n"
 "You may also enter the IP address of the gateway if you have one."
 msgstr ""
-"Por favor indique o nome da sua máquina.\n"
-"O nome da sua máquina deve ser um nome plenamente qualificado,\n"
+"Por favor indique o seu nome de hospedeiro.\n"
+"O seu nome de hospedeiro deve ser um nome totalmente qualificado,\n"
 "tal como ``mybox.mylab.myco.com''.\n"
-"Pode também introduzir o endereço IP do gateway se tiver algum."
+"Pode também indicar o endereço IP do 'gateway' se tiver algum."
 
 #: ../lib/network/netconnect.pm:830
 #, c-format
@@ -5935,7 +5933,7 @@ msgid ""
 "Here you can configure advanced network settings. Please note that you have "
 "to reboot the machine for changes to take effect."
 msgstr ""
-"Aqui pode configurar as definições de rede avançadas. Por favor note que tem "
+"Aqui pode configurar as definições avançadas da rede. Por favor note que tem "
 "que reiniciar a máquina para que as alterações tenham efeito."
 
 #: ../lib/network/network.pm:526
