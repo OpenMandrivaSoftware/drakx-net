@@ -10,15 +10,14 @@
 # Jose Jorge <jjorge@free.fr>, 2003, 2004, 2005.
 # Jose Carlos D. S. Saraiva <jose.d.s.saraiva@clix.pt>, 2004.
 # Zé <ze@mandriva.org>, 2004, 2005, 2006, 2007, 2008, 2010, 2011.
-
 msgid ""
 msgstr ""
 "Project-Id-Version: pt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-01-30 09:23-0200\n"
-"PO-Revision-Date: 2011-06-28 21:50+0100\n"
-"Last-Translator: Zé <ze@mandriva.org>\n"
-"Language-Team: Portuguese <cooker-i18n@mandrivalinux.org>\n"
+"PO-Revision-Date: 2011-07-21 15:52+0100\n"
+"Last-Translator: Zé <ze@mageia.org>\n"
+"Language-Team: Portuguese <>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2429,12 +2428,12 @@ msgstr "A conectar à internet"
 #: ../bin/net_monitor:254
 #, c-format
 msgid "Disconnection from Internet failed."
-msgstr "Desconexão da Internet falhada."
+msgstr "Falha ao desconectar da Internet."
 
 #: ../bin/net_monitor:255
 #, c-format
 msgid "Disconnection from Internet complete."
-msgstr "Desconexão da Internet completa."
+msgstr "Desconexão completa."
 
 #: ../bin/net_monitor:257
 #, c-format
@@ -2447,7 +2446,7 @@ msgid ""
 "Connection failed.\n"
 "Verify your configuration in the Mandriva Linux Control Center."
 msgstr ""
-"Conexão falhada.\n"
+"Falha ao conectar.\n"
 "Verifique a sua configuração no Centro de Controlo Mandriva Linux."
 
 #: ../bin/net_monitor:360
@@ -2587,7 +2586,7 @@ msgstr "Ligação detectada no interface %s"
 #: ../lib/network/connection.pm:328 ../lib/network/connection/ethernet.pm:305
 #, c-format
 msgid "Link beat lost on interface %s"
-msgstr "Cadência de ligação perdida no interface %s"
+msgstr "Sinal de linha perdido no interface %s"
 
 #: ../lib/network/connection/cable.pm:10
 #, c-format
@@ -2684,7 +2683,7 @@ msgstr "Satélite (DVB)"
 #: ../lib/network/connection/dvb.pm:53
 #, c-format
 msgid "Adapter card"
-msgstr "Placa de adaptador"
+msgstr "Placa do adaptador"
 
 #: ../lib/network/connection/dvb.pm:54
 #, c-format
@@ -2871,12 +2870,12 @@ msgstr "Activar passagem IPv6 para IPv4"
 #: ../lib/network/connection/ethernet.pm:304
 #, c-format
 msgid "Link beat detected on interface %s"
-msgstr "Detecção de ligação falhada no interface %s"
+msgstr "Sinal de linha detectado no interface %s"
 
 #: ../lib/network/connection/ethernet.pm:307
 #, c-format
 msgid "Requesting a network address on interface %s (%s protocol)..."
-msgstr "A pedir um endereço de rede no interface %s (protocolo %s)..."
+msgstr "A requerer endereço de rede no interface %s (protocolo %s)..."
 
 #: ../lib/network/connection/ethernet.pm:308
 #, c-format
@@ -2886,8 +2885,7 @@ msgstr "Endereço de rede obtido no interface %s (protocolo %s)"
 #: ../lib/network/connection/ethernet.pm:309
 #, c-format
 msgid "Failed to get a network address on interface %s (%s protocol)"
-msgstr ""
-"Não foi possível obter um endereço de rede no interface %s (protocolo %s)"
+msgstr "Falha ao obter endereço de rede no interface %s (protocolo %s)"
 
 #: ../lib/network/connection/isdn.pm:8
 #, c-format
@@ -4185,12 +4183,12 @@ msgstr "Esconder senha"
 #: ../lib/network/connection/wireless.pm:477
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
-msgstr "Forçar o uso desta chave como texto ASCII (p.ex. para o Livebox)"
+msgstr "Forçar uso desta chave como texto ASCII (p.ex. para o Livebox)"
 
 #: ../lib/network/connection/wireless.pm:484
 #, c-format
 msgid "EAP Login/Username"
-msgstr "Nome de utilizador/Autenticação EAP"
+msgstr "Autenticação/Nome de utilizador EAP"
 
 #: ../lib/network/connection/wireless.pm:486
 #, c-format
@@ -4199,8 +4197,8 @@ msgid ""
 "need to specify domain then try the untested syntax\n"
 "  DOMAIN\\username"
 msgstr ""
-"O nome de utilizador ou autenticação. O formato é texto simples.\n"
-"Se precisar de indicar o domínio então tente a sintaxe experimental\n"
+"Autenticação ou nome de utilizador. O formato é texto simples.\n"
+"Se precisar indicar o domínio então tente a sintaxe experimental\n"
 "  DOMÍNIO\\nome_de_utilizador"
 
 #: ../lib/network/connection/wireless.pm:489
@@ -4232,14 +4230,14 @@ msgstr ""
 "INFORMAÇÃO ADICIONAL:\n"
 "Na Página Avançada, pode seleccionar que modo EAP é\n"
 "usado para autenticação. Para a definição do modo eap\n"
-"   Auto Detecção: implica que se tentam todos os modos possíveis.\n"
+"   Auto Detecção: implica que tenta todos os modos possíveis.\n"
 "\n"
 "Se a Auto Detecção falhar, tente o combinado PEAP TTLS antes dos outros\n"
 "Nota:\n"
 "\tAs definições MD5, MSCHAPV2, OTP e GTC implicam automaticamente\n"
 "os modos PEAP e TTLS.\n"
 "  O modo TLS é completamente baseado no certificado e pode ignorar\n"
-"os valores do nome de utilizador e senha indicados aqui."
+"os valores do nome de utilizador e senha específicados aqui."
 
 #: ../lib/network/connection/wireless.pm:506
 #, c-format
@@ -5057,7 +5055,8 @@ msgstr "Não é possível inicializar o tipo de conexão %s!"
 #: ../lib/network/drakvpn.pm:60
 #, c-format
 msgid "Please select an existing VPN connection or enter a new name."
-msgstr "Por favor escolha uma conexão VPN existente ou indique um novo nome."
+msgstr ""
+"Por favor seleccione uma conexão VPN existente ou indique um novo nome."
 
 #: ../lib/network/drakvpn.pm:64
 #, c-format
@@ -5072,12 +5071,12 @@ msgstr "Novo nome"
 #: ../lib/network/drakvpn.pm:70
 #, c-format
 msgid "You must select an existing connection or enter a new name."
-msgstr "Precisa escolher uma conexão existente ou indicar um novo nome."
+msgstr "Precisa seleccionar uma conexão existente ou indicar um novo nome."
 
 #: ../lib/network/drakvpn.pm:81
 #, c-format
 msgid "Please enter the required key(s)"
-msgstr "Por favor indique a(s) chave(s) pedida(s)"
+msgstr "Por favor indique a(s) chave(s) requerida(s)"
 
 #: ../lib/network/drakvpn.pm:86
 #, c-format
@@ -5099,7 +5098,7 @@ msgid ""
 "It can be done by reconfiguring the network connection and selecting this "
 "VPN connection.\n"
 msgstr ""
-"A conexão VPN está agora configurada.\n"
+"A conexão VPN agora está configurada.\n"
 "\n"
 "Esta conexão VPN pode ser iniciada automaticamente em conjunto com uma "
 "conexão da rede.\n"
@@ -5109,7 +5108,7 @@ msgstr ""
 #: ../lib/network/ifw.pm:132
 #, c-format
 msgid "Port scanning"
-msgstr "Varredura de portas"
+msgstr "Detecção de portas"
 
 #: ../lib/network/ifw.pm:133
 #, c-format
@@ -5346,7 +5345,7 @@ msgstr "Configuração de Material"
 #: ../lib/network/netconnect.pm:201
 #, c-format
 msgid "Please select your provider:"
-msgstr "Por favor escolha o seu fornecedor de Internet:"
+msgstr "Por favor seleccione o seu fornecedor de Internet:"
 
 #: ../lib/network/netconnect.pm:248
 #, c-format
@@ -5545,7 +5544,7 @@ msgstr "Modem"
 #: ../lib/network/netconnect.pm:556
 #, c-format
 msgid "Please choose which serial port your modem is connected to."
-msgstr "Por favor escolha a porta série onde o seu modem está ligado."
+msgstr "Por favor escolha em que porta série o seu modem será ligado."
 
 #: ../lib/network/netconnect.pm:585
 #, c-format
@@ -6311,7 +6310,7 @@ msgstr "Por favor insira o seu 'token'"
 #: ../lib/network/vpn/openvpn.pm:393
 #, c-format
 msgid "PIN number"
-msgstr "Número PIN"
+msgstr "Número do PIN"
 
 #: ../lib/network/vpn/vpnc.pm:9
 #, c-format
