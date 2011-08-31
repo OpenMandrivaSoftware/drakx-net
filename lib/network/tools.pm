@@ -265,7 +265,16 @@ sub get_routes() {
     my %routes;
     foreach (cat_("/proc/net/route")) {
 	if (/^(\S+)\s+([0-9A-F]+)\s+([0-9A-F]+)\s+[0-9A-F]+\s+\d+\s+\d+\s+(\d+)\s+([0-9A-F]+)/) {
-	    if (defined $3) { $routes{$1}{gateway} = hex($3) ? host_hex_to_dotted($3) : $routes{$1}{network} }
+	    next if (defined $routes{$1}{has_gateway});
+
+	    if (defined $3) { 
+		if (hex($3)) {
+		    $routes{$1}{gateway} = host_hex_to_dotted($3);
+		    $routes{$1}{has_gateway} = "yes";
+		} else {
+		    $routes{$1}{gateway} = $routes{$1}{network};
+		}
+	    }
 	    if (defined $2) { $routes{$1}{network} = host_hex_to_dotted($2) }
 	    if (defined $4) { $routes{$1}{metric} = $4 }
 	}
