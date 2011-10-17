@@ -225,6 +225,7 @@ my @thirdparty_settings = (
         name => 'b43',
         description => 'Broadcom B43 wireless chips',
         firmware => {
+            package => 'b43-openfwwf',
             url => 'http://www.ing-unibs.it/~openfwwf/',
             test_file => 'b43-open/ucode5.fw',
         },
