@@ -221,6 +221,15 @@ my @thirdparty_settings = (
         },
     },
 
+    {
+        name => 'b43',
+        description => 'Broadcom B43 wireless chips',
+        firmware => {
+            url => 'http://www.ing-unibs.it/~openfwwf/',
+            test_file => 'b43-open/ucode5.fw',
+        },
+    },
+
     (map {
       +{
         name => $_,
@@ -242,7 +251,7 @@ my @thirdparty_settings = (
             },
         },
       };
-    } qw(b43 b43legacy)),
+    } qw(b43legacy)),
 
     {
         name => 'broadcom-wl',
