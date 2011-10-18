@@ -1,5 +1,5 @@
 NAME = drakx-net
-VERSION = 0.98
+VERSION = 0.99
 
 DESTDIR=
 libdir=/usr/lib
@@ -41,8 +41,7 @@ install:
 cleandist:
 	rm -rf $(NAME)-$(VERSION) ../$(NAME)-$(VERSION).tar*
 
-dis: cleandist
-	rm -rf $(NAME)-$(VERSION) ../$(NAME)-$(VERSION).tar*
+dist: cleandist
 	svn export -q -rBASE . $(NAME)-$(VERSION)
 	tar cfj ../$(NAME)-$(VERSION).tar.bz2 $(NAME)-$(VERSION)
 	rm -rf $(NAME)-$(VERSION)
