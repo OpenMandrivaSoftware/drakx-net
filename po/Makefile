@@ -4,7 +4,7 @@ localedir = $(DESTDIR)/usr/share/locale
 PGOAL = drakx-net
 
 # perl files to search translatable strings in
-PL_FILES:= ../bin/* ../lib/network/*.pm ../lib/network/vpn/*.pm ../lib/network/connection/*.pm ../lib/network/connection/providers/*.pm ../lib/network/connection/isdn/*.pm
+PL_FILES:= ../bin/* ../lib/network/*.pm ../lib/network/*/*.pm ../lib/network/*/*/*.pm
 
 POFILES = $(shell ls *.po)
 MOFILES = $(POFILES:%.po=%.mo)
