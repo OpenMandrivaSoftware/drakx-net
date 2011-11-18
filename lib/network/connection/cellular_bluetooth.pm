@@ -2,7 +2,7 @@ package network::connection::cellular_bluetooth;
 
 use base qw(network::connection::cellular);
 
-use strict;
+
 use common;
 
 my $rfcomm_dev_prefix = "/dev/rfcomm";

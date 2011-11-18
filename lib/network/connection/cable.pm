@@ -2,7 +2,7 @@ package network::connection::cable;
 
 use base qw(network::connection::ethernet);
 
-use strict;
+
 use common;
 use modules;
 use detect_devices;

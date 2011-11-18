@@ -2,7 +2,7 @@ package network::connection::isdn;
 
 use base qw(network::connection);
 
-use strict;
+
 use common;
 
 sub get_type_name { N("ISDN") }

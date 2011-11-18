@@ -6,7 +6,7 @@ network::vpn - VPN connection abstract class
 
 =cut
 
-use strict;
+
 use common;
 
 my $vpn_d = "/etc/sysconfig/network-scripts/vpn.d";
