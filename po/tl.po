@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-tl\n"
-"POT-Creation-Date: 2011-05-03 15:42+0200\n"
+"POT-Creation-Date: 2011-11-18 13:57+0100\n"
 "PO-Revision-Date: 2004-09-15 13:35+0200\n"
 "Last-Translator: Arys P. Deloso <arys@deloso.org>\n"
 "Language-Team: Filipino <salinpinoy@comitus.net>\n"
@@ -27,14 +27,16 @@ msgid "Interface"
 msgstr "Interface"
 
 #: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:187
-#: ../lib/network/connection/ethernet.pm:141 ../lib/network/netconnect.pm:633
+#: ../lib/network/connection/ethernet.pm:141
+#: ../lib/network/drakconnect/edit.pm:151 ../lib/network/netconnect.pm:633
 #: ../lib/network/vpn/openvpn.pm:223
 #, c-format
 msgid "IP address"
 msgstr "IP address"
 
 #: ../bin/drakconnect-old:64 ../bin/drakids:261
-#: ../lib/network/netconnect.pm:477
+#: ../lib/network/drakconnect/edit.pm:135
+#: ../lib/network/drakconnect/edit.pm:393 ../lib/network/netconnect.pm:477
 #, c-format
 msgid "Protocol"
 msgstr "Protocol"
@@ -70,23 +72,27 @@ msgid "Configure Local Area Network..."
 msgstr "I-configure ang Local Area Network (LAN)..."
 
 #: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:217
+#: ../lib/network/drakconnect/edit.pm:71
 #, c-format
 msgid "Help"
 msgstr "Tulong"
 
 #: ../bin/drakconnect-old:108 ../bin/drakinvictus:140
+#: ../lib/network/drakconnect/edit.pm:72 ../lib/network/drakconnect/edit.pm:76
 #, c-format
 msgid "Apply"
 msgstr "I-apply"
 
 #: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
 #: ../bin/draknetprofile:159 ../bin/net_monitor:388
+#: ../lib/network/drakconnect/global.pm:88
 #, c-format
 msgid "Cancel"
 msgstr "Cancel"
 
 #: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
 #: ../bin/drakconnect-old:265 ../bin/draknetprofile:161 ../bin/net_monitor:389
+#: ../lib/network/drakconnect/global.pm:89
 #, c-format
 msgid "Ok"
 msgstr "Ok"
@@ -96,7 +102,8 @@ msgstr "Ok"
 #: ../lib/network/connection_manager.pm:89
 #: ../lib/network/connection_manager.pm:206
 #: ../lib/network/connection_manager.pm:235
-#: ../lib/network/connection_manager.pm:353 ../lib/network/drakvpn.pm:49
+#: ../lib/network/connection_manager.pm:353
+#: ../lib/network/drakconnect/edit.pm:466 ../lib/network/drakvpn.pm:49
 #: ../lib/network/netcenter.pm:150 ../lib/network/netconnect.pm:186
 #: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
 #: ../lib/network/netconnect.pm:733 ../lib/network/thirdparty.pm:352
@@ -105,7 +112,7 @@ msgstr "Ok"
 msgid "Please wait"
 msgstr "Maghintay lamang"
 
-#: ../bin/drakconnect-old:115
+#: ../bin/drakconnect-old:115 ../lib/network/drakconnect/edit.pm:468
 #, c-format
 msgid "Please Wait... Applying the configuration"
 msgstr "Maghintay Lamang... Ina-apply ang configuration"
@@ -141,6 +148,7 @@ msgstr "Adapter %s: %s"
 
 #: ../bin/drakconnect-old:209 ../bin/drakgw:181
 #: ../lib/network/connection/ethernet.pm:148
+#: ../lib/network/drakconnect/edit.pm:156
 #, c-format
 msgid "Netmask"
 msgstr "Netmask"
@@ -156,6 +164,7 @@ msgid "Started on boot"
 msgstr "Sinimulan sa boot"
 
 #: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:159
+#: ../lib/network/drakconnect/edit.pm:199
 #, c-format
 msgid "DHCP client"
 msgstr "DHCP client"
@@ -171,17 +180,19 @@ msgstr ""
 "Control Center"
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:105
+#: ../lib/network/drakconnect/global.pm:36
 #, fuzzy, c-format
 msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
 msgstr "Mag-alis ng network interface"
 
 #: ../bin/drakconnect-old:273 ../bin/drakconnect-old:305
-#: ../lib/network/drakconnect.pm:16
+#: ../lib/network/drakconnect.pm:16 ../lib/network/drakconnect/edit.pm:515
 #, c-format
 msgid "No IP"
 msgstr "Walang IP"
 
 #: ../bin/drakconnect-old:306 ../lib/network/drakconnect.pm:17
+#: ../lib/network/drakconnect/edit.pm:516
 #, c-format
 msgid "No Mask"
 msgstr "Walang Mask"
@@ -252,12 +263,12 @@ msgstr ""
 "\n"
 "Ano ang gusto ninyong gawin?"
 
-#: ../bin/drakgw:101
+#: ../bin/drakgw:101 ../lib/network/drakconnect/edit.pm:373
 #, c-format
 msgid "Disable"
 msgstr "I-disable"
 
-#: ../bin/drakgw:101
+#: ../bin/drakgw:101 ../lib/network/drakconnect/edit.pm:373
 #, c-format
 msgid "Enable"
 msgstr "Paganahin"
@@ -272,8 +283,8 @@ msgstr "Muling i-configure"
 msgid "Please select the network interface directly connected to the internet."
 msgstr ""
 
-#: ../bin/drakgw:123 ../lib/network/netconnect.pm:379
-#: ../lib/network/netconnect.pm:414
+#: ../bin/drakgw:123 ../lib/network/drakconnect/delete.pm:26
+#: ../lib/network/netconnect.pm:379 ../lib/network/netconnect.pm:414
 #, c-format
 msgid "Net Device"
 msgstr "Net Device"
@@ -341,7 +352,11 @@ msgstr "Ang internal domain name"
 #: ../lib/network/connection_manager.pm:177
 #: ../lib/network/connection_manager.pm:181
 #: ../lib/network/connection_manager.pm:223
-#: ../lib/network/connection_manager.pm:481 ../lib/network/drakvpn.pm:45
+#: ../lib/network/connection_manager.pm:481
+#: ../lib/network/drakconnect/delete.pm:12
+#: ../lib/network/drakconnect/edit.pm:506
+#: ../lib/network/drakconnect/edit.pm:510
+#: ../lib/network/drakconnect/edit.pm:519 ../lib/network/drakvpn.pm:45
 #: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
 #: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:135
@@ -636,13 +651,14 @@ msgstr "Payagan lahat ng mga \"user\""
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
 #: ../bin/net_applet:145 ../bin/net_applet:353
 #: ../lib/network/drakfirewall.pm:309 ../lib/network/drakfirewall.pm:313
+#: ../lib/network/net_applet/ifw.pm:61 ../lib/network/net_applet/ifw.pm:89
 #, fuzzy, c-format
 msgid "Interactive Firewall"
 msgstr "Firewall"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:353
+#: ../bin/net_applet:353 ../lib/network/net_applet/ifw.pm:61
 #, fuzzy, c-format
 msgid "Unable to contact daemon"
 msgstr "Hindi nakayang makipag-alam sa mirror na %s"
@@ -652,12 +668,12 @@ msgstr "Hindi nakayang makipag-alam sa mirror na %s"
 msgid "Log"
 msgstr ""
 
-#: ../bin/drakids:86 ../bin/drakids:105
+#: ../bin/drakids:86 ../bin/drakids:105 ../lib/network/net_applet/ifw.pm:219
 #, fuzzy, c-format
 msgid "Allow"
 msgstr "Lahat"
 
-#: ../bin/drakids:87 ../bin/drakids:96
+#: ../bin/drakids:87 ../bin/drakids:96 ../lib/network/net_applet/ifw.pm:220
 #, c-format
 msgid "Block"
 msgstr ""
@@ -684,12 +700,12 @@ msgstr "I-backup ang mga user file"
 msgid "Clear logs"
 msgstr "Liwanagin lahat"
 
-#: ../bin/drakids:115 ../bin/drakids:120
+#: ../bin/drakids:115 ../bin/drakids:120 ../lib/network/net_applet/ifw.pm:158
 #, c-format
 msgid "Blacklist"
 msgstr ""
 
-#: ../bin/drakids:116 ../bin/drakids:133
+#: ../bin/drakids:116 ../bin/drakids:133 ../lib/network/net_applet/ifw.pm:163
 #, c-format
 msgid "Whitelist"
 msgstr ""
@@ -837,7 +853,7 @@ msgstr "Mode"
 msgid "Enabled"
 msgstr "Paganahin"
 
-#: ../bin/draknetprofile:68
+#: ../bin/draknetprofile:68 ../lib/network/drakconnect/edit.pm:423
 #, c-format
 msgid "Description"
 msgstr "Paglalarawan"
@@ -879,9 +895,9 @@ msgid ""
 "profile."
 msgstr ""
 
-#: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
-#: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
-#: ../lib/network/netconnect.pm:500
+#: ../bin/draknetprofile:183 ../lib/network/drakconnect/global.pm:34
+#: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
+#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:500
 #, c-format
 msgid "Warning"
 msgstr "Babala"
@@ -2351,12 +2367,12 @@ msgstr ""
 "Babala, may natiktikang ibang Internet connection, maaaring ginagamit ang "
 "inyong network"
 
-#: ../bin/net_monitor:516
+#: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
 msgid "Connected"
 msgstr "Nakakonekta"
 
-#: ../bin/net_monitor:516
+#: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
 msgid "Not connected"
 msgstr "Hindi nakakonekta"
@@ -2421,7 +2437,7 @@ msgstr ""
 msgid "Allow interface to be controlled by Network Manager"
 msgstr ""
 
-#: ../lib/network/connection.pm:251
+#: ../lib/network/connection.pm:251 ../lib/network/drakconnect/edit.pm:292
 #, fuzzy, c-format
 msgid "Metric"
 msgstr "i-restrict"
@@ -2461,19 +2477,22 @@ msgstr "Modelo ng Card:"
 msgid "Use BPALogin (needed for Telstra)"
 msgstr ""
 
-#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:616
+#: ../lib/network/connection/cable.pm:45
+#: ../lib/network/drakconnect/edit.pm:312 ../lib/network/netconnect.pm:616
 #, c-format
 msgid "Authentication"
 msgstr "Authentication"
 
 #: ../lib/network/connection/cable.pm:47 ../lib/network/connection/ppp.pm:22
-#: ../lib/network/netconnect.pm:355 ../lib/network/vpn/openvpn.pm:395
+#: ../lib/network/drakconnect/edit.pm:322 ../lib/network/netconnect.pm:355
+#: ../lib/network/vpn/openvpn.pm:395
 #, c-format
 msgid "Account Login (user name)"
 msgstr "Account Login (user name)"
 
 #: ../lib/network/connection/cable.pm:49 ../lib/network/connection/ppp.pm:23
-#: ../lib/network/netconnect.pm:356 ../lib/network/vpn/openvpn.pm:396
+#: ../lib/network/drakconnect/edit.pm:323 ../lib/network/netconnect.pm:356
+#: ../lib/network/vpn/openvpn.pm:396
 #, c-format
 msgid "Account Password"
 msgstr "Password ng Account"
@@ -2598,13 +2617,15 @@ msgstr ""
 "Bawat isang item ay dapat maipasok bilang IP address sa dotted-decimal\n"
 "na notation (halimbawa, 1.2.3.4)."
 
-#: ../lib/network/connection/ethernet.pm:149 ../lib/network/netconnect.pm:665
+#: ../lib/network/connection/ethernet.pm:149
+#: ../lib/network/drakconnect/edit.pm:162 ../lib/network/netconnect.pm:665
 #: ../lib/network/vpn/openvpn.pm:214 ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
 msgstr "Gateway"
 
 #: ../lib/network/connection/ethernet.pm:152
+#: ../lib/network/drakconnect/edit.pm:212
 #, fuzzy, c-format
 msgid "Get DNS servers from DHCP"
 msgstr "Ang DNS Server IP"
@@ -2632,21 +2653,25 @@ msgstr ""
 "host name"
 
 #: ../lib/network/connection/ethernet.pm:160
+#: ../lib/network/drakconnect/edit.pm:209
 #, fuzzy, c-format
 msgid "DHCP timeout (in seconds)"
 msgstr "Timeout ng koneksyon (segundo)"
 
 #: ../lib/network/connection/ethernet.pm:161
+#: ../lib/network/drakconnect/edit.pm:213
 #, c-format
 msgid "Get YP servers from DHCP"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:162
+#: ../lib/network/drakconnect/edit.pm:214
 #, c-format
 msgid "Get NTPD servers from DHCP"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:163
+#: ../lib/network/drakconnect/edit.pm:205
 #, c-format
 msgid "DHCP host name"
 msgstr "DHCP host name"
@@ -2657,11 +2682,13 @@ msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:176
+#: ../lib/network/drakconnect/edit.pm:506
 #, c-format
 msgid "IP address should be in format 1.2.3.4"
 msgstr "ang IP address ay dapat nasa format na 1.2.3.4"
 
 #: ../lib/network/connection/ethernet.pm:181
+#: ../lib/network/drakconnect/edit.pm:510
 #, fuzzy, c-format
 msgid "Netmask should be in format 255.255.224.0"
 msgstr "Ang Gateway address ay dapat naka-format na 1.2.3.4"
@@ -2680,6 +2707,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:222
+#: ../lib/network/drakconnect/edit.pm:203
 #, fuzzy, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
 msgstr "Itakda ang host name mula sa DHCP address"
@@ -2701,6 +2729,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:244
+#: ../lib/network/drakconnect/edit.pm:270
 #, c-format
 msgid "Network Hotplugging"
 msgstr "Network Hotplugging"
@@ -2769,27 +2798,32 @@ msgstr ""
 msgid "Analog telephone modem (POTS)"
 msgstr ""
 
-#: ../lib/network/connection/ppp.pm:9 ../lib/network/netconnect.pm:78
+#: ../lib/network/connection/ppp.pm:9 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:78
 #, c-format
 msgid "Script-based"
 msgstr "Script-based"
 
-#: ../lib/network/connection/ppp.pm:10 ../lib/network/netconnect.pm:79
+#: ../lib/network/connection/ppp.pm:10 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:79
 #, c-format
 msgid "PAP"
 msgstr "PAP"
 
-#: ../lib/network/connection/ppp.pm:11 ../lib/network/netconnect.pm:80
+#: ../lib/network/connection/ppp.pm:11 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:80
 #, c-format
 msgid "Terminal-based"
 msgstr "Terminal-based"
 
-#: ../lib/network/connection/ppp.pm:12 ../lib/network/netconnect.pm:81
+#: ../lib/network/connection/ppp.pm:12 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:81
 #, c-format
 msgid "CHAP"
 msgstr "CHAP"
 
-#: ../lib/network/connection/ppp.pm:13 ../lib/network/netconnect.pm:82
+#: ../lib/network/connection/ppp.pm:13 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:82
 #, c-format
 msgid "PAP/CHAP"
 msgstr "PAP/CHAP"
@@ -3967,6 +4001,7 @@ msgstr "Wireless na koneksyon"
 
 #: ../lib/network/connection/wireless.pm:464
 #: ../lib/network/connection_manager.pm:280
+#: ../lib/network/drakconnect/edit.pm:236
 #, c-format
 msgid "Operating Mode"
 msgstr "Mode ng Operasyon"
@@ -4002,6 +4037,7 @@ msgid "Auto"
 msgstr "Auto"
 
 #: ../lib/network/connection/wireless.pm:468
+#: ../lib/network/drakconnect/edit.pm:237
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "Pangalan ng Network (ESSID)"
@@ -4012,6 +4048,7 @@ msgid "Encryption mode"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/drakconnect/edit.pm:251
 #, c-format
 msgid "Encryption key"
 msgstr "\"Encryption key\""
@@ -4078,26 +4115,31 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/drakconnect/edit.pm:238
 #, c-format
 msgid "Network ID"
 msgstr "ID ng Network"
 
 #: ../lib/network/connection/wireless.pm:513
+#: ../lib/network/drakconnect/edit.pm:239
 #, c-format
 msgid "Operating frequency"
 msgstr "Operating frequency"
 
 #: ../lib/network/connection/wireless.pm:514
+#: ../lib/network/drakconnect/edit.pm:240
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "Sensitivity threshold"
 
 #: ../lib/network/connection/wireless.pm:515
+#: ../lib/network/drakconnect/edit.pm:241
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "Bitrate (sa b/s)"
 
 #: ../lib/network/connection/wireless.pm:516
+#: ../lib/network/drakconnect/edit.pm:252
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
@@ -4130,11 +4172,13 @@ msgstr ""
 "sa auto, fixed, o off."
 
 #: ../lib/network/connection/wireless.pm:524
+#: ../lib/network/drakconnect/edit.pm:253
 #, c-format
 msgid "Fragmentation"
 msgstr "Fragmentation"
 
 #: ../lib/network/connection/wireless.pm:525
+#: ../lib/network/drakconnect/edit.pm:254
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "Mga extrang argument ng iwconfig na command"
@@ -4156,6 +4200,7 @@ msgstr ""
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
 #: ../lib/network/connection/wireless.pm:533
+#: ../lib/network/drakconnect/edit.pm:255
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "Mga extrang argument ng iwspy na command"
@@ -4181,6 +4226,7 @@ msgstr ""
 "Tingnan ang man page ng iwpspy(8) para sa karagdagang inpormasyon."
 
 #: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/drakconnect/edit.pm:256
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "Mga extrang argument ng iwpriv na command"
@@ -4582,6 +4628,288 @@ msgstr ""
 msgid "Hostname changed to \"%s\""
 msgstr ""
 
+#: ../lib/network/drakconnect/delete.pm:12
+#, c-format
+msgid ""
+"No ethernet network adapter has been detected on your system. Please run the "
+"hardware configuration tool."
+msgstr ""
+"Walang natiktikang ethernet network adapter sa inyong sistema. Patakbuhin "
+"ang hardware configuration tool."
+
+#: ../lib/network/drakconnect/delete.pm:21
+#, c-format
+msgid "Remove a network interface"
+msgstr "Mag-alis ng network interface"
+
+#: ../lib/network/drakconnect/delete.pm:25
+#, fuzzy, c-format
+msgid "Select the network interface to remove:"
+msgstr "Piliin ang network interface na iko-configure:"
+
+#: ../lib/network/drakconnect/delete.pm:58
+#, c-format
+msgid ""
+"An error occurred while deleting the \"%s\" network interface:\n"
+"\n"
+"%s"
+msgstr ""
+"May nangyaring error habang inaalis ang \"%s\" na network interface:\n"
+"\n"
+"%s"
+
+#: ../lib/network/drakconnect/delete.pm:59
+#, c-format
+msgid ""
+"Congratulations, the \"%s\" network interface has been successfully deleted"
+msgstr ""
+"Maligayang bati, ang \"%s\" na network interface ay matagumpay na naalis"
+
+#: ../lib/network/drakconnect/edit.pm:23
+#, c-format
+msgid "Manage connections"
+msgstr "Pangasiwaan ang mga koneksyon"
+
+#: ../lib/network/drakconnect/edit.pm:50 ../lib/network/drakroam.pm:85
+#, c-format
+msgid "Device: "
+msgstr "Device: "
+
+#: ../lib/network/drakconnect/edit.pm:132
+#, c-format
+msgid "IP configuration"
+msgstr "Configuration ng IP"
+
+#: ../lib/network/drakconnect/edit.pm:167
+#, c-format
+msgid "DNS servers"
+msgstr "Mga DNS server"
+
+#: ../lib/network/drakconnect/edit.pm:173
+#, c-format
+msgid "Search Domain"
+msgstr "Search Domain"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "none"
+msgstr "wala"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "static"
+msgstr "static"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "DHCP"
+msgstr "DHCP"
+
+#: ../lib/network/drakconnect/edit.pm:264
+#, c-format
+msgid "Start at boot"
+msgstr "Simulan sa boot"
+
+#: ../lib/network/drakconnect/edit.pm:276 ../lib/network/netconnect.pm:352
+#, c-format
+msgid "Dialing mode"
+msgstr "Dialing mode"
+
+#: ../lib/network/drakconnect/edit.pm:281
+#: ../lib/network/drakconnect/edit.pm:348 ../lib/network/netconnect.pm:353
+#, c-format
+msgid "Connection speed"
+msgstr "Tulin ng koneksyon"
+
+#: ../lib/network/drakconnect/edit.pm:286 ../lib/network/netconnect.pm:354
+#, c-format
+msgid "Connection timeout (in sec)"
+msgstr "Timeout ng koneksyon (segundo)"
+
+#: ../lib/network/drakconnect/edit.pm:324 ../lib/network/netconnect.pm:349
+#, c-format
+msgid "Provider phone number"
+msgstr "Numero ng telepono ng provider"
+
+#: ../lib/network/drakconnect/edit.pm:346
+#, c-format
+msgid "Flow control"
+msgstr "Flow control"
+
+#: ../lib/network/drakconnect/edit.pm:347
+#, c-format
+msgid "Line termination"
+msgstr "Line termination"
+
+#: ../lib/network/drakconnect/edit.pm:358
+#, c-format
+msgid "Modem timeout"
+msgstr "Modem timeout"
+
+#: ../lib/network/drakconnect/edit.pm:362
+#, c-format
+msgid "Use lock file"
+msgstr "Gumamit ng lock file"
+
+#: ../lib/network/drakconnect/edit.pm:364
+#, c-format
+msgid "Wait for dialup tone before dialing"
+msgstr "Maghintay ng dialup tone bago mag-dial"
+
+#: ../lib/network/drakconnect/edit.pm:367
+#, c-format
+msgid "Busy wait"
+msgstr "Busy wait"
+
+#: ../lib/network/drakconnect/edit.pm:372
+#, c-format
+msgid "Modem sound"
+msgstr "Tunog ng modem"
+
+#: ../lib/network/drakconnect/edit.pm:385 ../lib/network/netconnect.pm:357
+#, c-format
+msgid "Card IRQ"
+msgstr "Card IRQ"
+
+#: ../lib/network/drakconnect/edit.pm:386 ../lib/network/netconnect.pm:358
+#, c-format
+msgid "Card mem (DMA)"
+msgstr "Card mem (DMA)"
+
+#: ../lib/network/drakconnect/edit.pm:387 ../lib/network/netconnect.pm:359
+#, c-format
+msgid "Card IO"
+msgstr "Card IO"
+
+#: ../lib/network/drakconnect/edit.pm:388 ../lib/network/netconnect.pm:360
+#, c-format
+msgid "Card IO_0"
+msgstr "Card IO_0"
+
+#: ../lib/network/drakconnect/edit.pm:394 ../lib/network/netconnect.pm:71
+#, c-format
+msgid "European protocol (EDSS1)"
+msgstr "European protocol (EDSS1)"
+
+#: ../lib/network/drakconnect/edit.pm:395 ../lib/network/netconnect.pm:72
+#, c-format
+msgid ""
+"Protocol for the rest of the world\n"
+"No D-Channel (leased lines)"
+msgstr ""
+"Protocol para sa labi ng mundo\n"
+"Walang D-Channel (leased line)"
+
+#: ../lib/network/drakconnect/edit.pm:422
+#, c-format
+msgid "Vendor"
+msgstr "Vendor"
+
+#: ../lib/network/drakconnect/edit.pm:424
+#, c-format
+msgid "Media class"
+msgstr "Media class"
+
+#: ../lib/network/drakconnect/edit.pm:425
+#, c-format
+msgid "Module name"
+msgstr "Pangalan ng module"
+
+#: ../lib/network/drakconnect/edit.pm:426
+#, c-format
+msgid "Mac Address"
+msgstr "Mac Address"
+
+#: ../lib/network/drakconnect/edit.pm:427
+#, c-format
+msgid "Bus"
+msgstr "Bus"
+
+#: ../lib/network/drakconnect/edit.pm:428
+#, c-format
+msgid "Location on the bus"
+msgstr "Kinaroroonan sa bus"
+
+#: ../lib/network/drakconnect/edit.pm:519 ../lib/network/netconnect.pm:832
+#, c-format
+msgid "Gateway address should be in format 1.2.3.4"
+msgstr "Ang Gateway address ay dapat naka-format na 1.2.3.4"
+
+#: ../lib/network/drakconnect/global.pm:27
+#, c-format
+msgid "Gateway:"
+msgstr "Gateway:"
+
+#: ../lib/network/drakconnect/global.pm:27
+#, c-format
+msgid "Interface:"
+msgstr "Interface:"
+
+#: ../lib/network/drakconnect/global.pm:30
+#, c-format
+msgid "Internet connection configuration"
+msgstr "Internet connection configuration"
+
+#: ../lib/network/drakconnect/global.pm:35
+#, fuzzy, c-format
+msgid ""
+"You do not have any configured Internet connection.\n"
+"Run the \"%s\" assistant from the Mageia Control Center"
+msgstr ""
+"Ang interface na ito ay hindi pa na-configure.\n"
+"Patakbuhin ang \"%s\" na assistant mula sa Mageia Control Center"
+
+#: ../lib/network/drakconnect/global.pm:50
+#, c-format
+msgid "Host name (optional)"
+msgstr "Host name (hindi obligado)"
+
+#: ../lib/network/drakconnect/global.pm:51 ../lib/network/netconnect.pm:651
+#, c-format
+msgid "First DNS Server (optional)"
+msgstr "Unang DNS Server (hindi obligado)"
+
+#: ../lib/network/drakconnect/global.pm:52 ../lib/network/netconnect.pm:652
+#, c-format
+msgid "Second DNS Server (optional)"
+msgstr "Pangalawang DNS Server (hindi obligado)"
+
+#: ../lib/network/drakconnect/global.pm:53
+#, c-format
+msgid "Third DNS server (optional)"
+msgstr "Pangatlong DNS Server (hindi obligado)"
+
+#: ../lib/network/drakconnect/global.pm:75
+#, c-format
+msgid "Internet Connection Configuration"
+msgstr "Internet Connection Configuration"
+
+#: ../lib/network/drakconnect/global.pm:76
+#, c-format
+msgid "Internet access"
+msgstr "Internet access"
+
+#: ../lib/network/drakconnect/global.pm:78
+#, c-format
+msgid "Connection type: "
+msgstr "Uri ng connection: "
+
+#: ../lib/network/drakconnect/global.pm:81
+#, c-format
+msgid "Status:"
+msgstr "Status:"
+
+#: ../lib/network/drakconnect/global.pm:82 ../lib/network/netconnect.pm:305
+#: ../lib/network/netconnect.pm:733
+#, c-format
+msgid "Testing your connection..."
+msgstr "Sinusubukan ang inyong koneksyon..."
+
+#: ../lib/network/drakconnect/global.pm:86
+#, c-format
+msgid "Parameters"
+msgstr "Mga parameter"
+
 #: ../lib/network/drakfirewall.pm:14
 #, c-format
 msgid "Web Server"
@@ -4784,11 +5112,6 @@ msgstr ""
 #, c-format
 msgid "No device found"
 msgstr "Walang nahanap na device"
-
-#: ../lib/network/drakroam.pm:85
-#, c-format
-msgid "Device: "
-msgstr "Device: "
 
 #: ../lib/network/drakroam.pm:89 ../lib/network/netcenter.pm:66
 #, c-format
@@ -5012,6 +5335,103 @@ msgstr "Pangloob na mail server"
 msgid "Select a device:"
 msgstr ""
 
+#. -PO: "Process" is a verb
+#: ../lib/network/net_applet/ifw.pm:100
+#, fuzzy, c-format
+msgid "Process attack"
+msgstr "Tagapangasiwa ng Service"
+
+#: ../lib/network/net_applet/ifw.pm:113
+#, fuzzy, c-format
+msgid "Interactive Firewall: intrusion detected"
+msgstr "Natiktikan ang configuration ng firewall!"
+
+#: ../lib/network/net_applet/ifw.pm:130
+#, fuzzy, c-format
+msgid "What do you want to do with this attacker?"
+msgstr "Gusto ninyong gamitin ang katangian na ito?"
+
+#: ../lib/network/net_applet/ifw.pm:133
+#, fuzzy, c-format
+msgid "Attack details"
+msgstr "Walang detalye"
+
+#: ../lib/network/net_applet/ifw.pm:137
+#, fuzzy, c-format
+msgid "Attack time: %s"
+msgstr "uri: %s"
+
+#: ../lib/network/net_applet/ifw.pm:138
+#, fuzzy, c-format
+msgid "Network interface: %s"
+msgstr "Mga Network interface"
+
+#: ../lib/network/net_applet/ifw.pm:139
+#, fuzzy, c-format
+msgid "Attack type: %s"
+msgstr "uri: %s"
+
+#: ../lib/network/net_applet/ifw.pm:140
+#, fuzzy, c-format
+msgid "Protocol: %s"
+msgstr "Mga Protocol"
+
+#: ../lib/network/net_applet/ifw.pm:141
+#, fuzzy, c-format
+msgid "Attacker IP address: %s"
+msgstr "IP address ng computer:"
+
+#: ../lib/network/net_applet/ifw.pm:142
+#, fuzzy, c-format
+msgid "Attacker hostname: %s"
+msgstr "Sine-set ang hostname na %s: "
+
+#: ../lib/network/net_applet/ifw.pm:145
+#, fuzzy, c-format
+msgid "Service attacked: %s"
+msgstr "Tagapangasiwa ng Service"
+
+#: ../lib/network/net_applet/ifw.pm:146
+#, fuzzy, c-format
+msgid "Port attacked: %s"
+msgstr "Port: %s"
+
+#: ../lib/network/net_applet/ifw.pm:148
+#, fuzzy, c-format
+msgid "Type of ICMP attack: %s"
+msgstr "Port: %s"
+
+#: ../lib/network/net_applet/ifw.pm:153
+#, c-format
+msgid "Always blacklist (do not ask again)"
+msgstr ""
+
+#: ../lib/network/net_applet/ifw.pm:168
+#, c-format
+msgid "Ignore"
+msgstr "Di-pansinin"
+
+#: ../lib/network/net_applet/ifw.pm:186 ../lib/network/net_applet/ifw.pm:204
+#, fuzzy, c-format
+msgid "Interactive Firewall: new service"
+msgstr "Natiktikan ang configuration ng firewall!"
+
+#. -PO: "Process" is a verb
+#: ../lib/network/net_applet/ifw.pm:192
+#, fuzzy, c-format
+msgid "Process connection"
+msgstr "Wireless na koneksyon"
+
+#: ../lib/network/net_applet/ifw.pm:214
+#, fuzzy, c-format
+msgid "Do you want to open this service?"
+msgstr "Gusto ninyo bang subukan ang configuration?"
+
+#: ../lib/network/net_applet/ifw.pm:217
+#, fuzzy, c-format
+msgid "Remember this answer"
+msgstr "Tandaan ang password na ito"
+
 #: ../lib/network/netcenter.pm:55 ../lib/network/netconnect.pm:211
 #, c-format
 msgid "Please select your network:"
@@ -5054,20 +5474,6 @@ msgstr "Internal ISDN card"
 #, c-format
 msgid "Protocol for the rest of the world"
 msgstr "Protocol para sa labi ng mundo"
-
-#: ../lib/network/netconnect.pm:71
-#, c-format
-msgid "European protocol (EDSS1)"
-msgstr "European protocol (EDSS1)"
-
-#: ../lib/network/netconnect.pm:72
-#, c-format
-msgid ""
-"Protocol for the rest of the world\n"
-"No D-Channel (leased lines)"
-msgstr ""
-"Protocol para sa labi ng mundo\n"
-"Walang D-Channel (leased line)"
 
 #: ../lib/network/netconnect.pm:122
 #, c-format
@@ -5117,11 +5523,6 @@ msgstr ""
 msgid "Connection control"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:733
-#, c-format
-msgid "Testing your connection..."
-msgstr "Sinusubukan ang inyong koneksyon..."
-
 #: ../lib/network/netconnect.pm:344
 #, c-format
 msgid "Connection Configuration"
@@ -5142,11 +5543,6 @@ msgstr "Ang inyong personal na numero ng telepono"
 msgid "Provider name (ex provider.net)"
 msgstr "Pangalan ng provider (e.g. provider.net)"
 
-#: ../lib/network/netconnect.pm:349
-#, c-format
-msgid "Provider phone number"
-msgstr "Numero ng telepono ng provider"
-
 #: ../lib/network/netconnect.pm:350
 #, c-format
 msgid "Provider DNS 1 (optional)"
@@ -5156,41 +5552,6 @@ msgstr "Provider DNS 1 (hindi obligado)"
 #, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "Provider DNS 2 (hindi obligado)"
-
-#: ../lib/network/netconnect.pm:352
-#, c-format
-msgid "Dialing mode"
-msgstr "Dialing mode"
-
-#: ../lib/network/netconnect.pm:353
-#, c-format
-msgid "Connection speed"
-msgstr "Tulin ng koneksyon"
-
-#: ../lib/network/netconnect.pm:354
-#, c-format
-msgid "Connection timeout (in sec)"
-msgstr "Timeout ng koneksyon (segundo)"
-
-#: ../lib/network/netconnect.pm:357
-#, c-format
-msgid "Card IRQ"
-msgstr "Card IRQ"
-
-#: ../lib/network/netconnect.pm:358
-#, c-format
-msgid "Card mem (DMA)"
-msgstr "Card mem (DMA)"
-
-#: ../lib/network/netconnect.pm:359
-#, c-format
-msgid "Card IO"
-msgstr "Card IO"
-
-#: ../lib/network/netconnect.pm:360
-#, c-format
-msgid "Card IO_0"
-msgstr "Card IO_0"
 
 #: ../lib/network/netconnect.pm:361
 #, c-format
@@ -5355,16 +5716,6 @@ msgstr "DNS"
 #, c-format
 msgid "Domain name"
 msgstr "Domain name"
-
-#: ../lib/network/netconnect.pm:651
-#, c-format
-msgid "First DNS Server (optional)"
-msgstr "Unang DNS Server (hindi obligado)"
-
-#: ../lib/network/netconnect.pm:652
-#, c-format
-msgid "Second DNS Server (optional)"
-msgstr "Pangalawang DNS Server (hindi obligado)"
 
 #: ../lib/network/netconnect.pm:653
 #, c-format
@@ -5675,11 +6026,6 @@ msgstr ""
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
 msgstr "Ang DNS server address ay dapat naka-format na 1.2.3.4"
-
-#: ../lib/network/netconnect.pm:832
-#, c-format
-msgid "Gateway address should be in format 1.2.3.4"
-msgstr "Ang Gateway address ay dapat naka-format na 1.2.3.4"
 
 #: ../lib/network/netconnect.pm:833
 #, c-format
@@ -6127,16 +6473,6 @@ msgstr ""
 #~ "%s\n"
 #~ "\n"
 #~ "Ise-setup ko ang inyong Local Area Network gamit ang adapter na iyon."
-
-#~ msgid ""
-#~ "No ethernet network adapter has been detected on your system. Please run "
-#~ "the hardware configuration tool."
-#~ msgstr ""
-#~ "Walang natiktikang ethernet network adapter sa inyong sistema. Patakbuhin "
-#~ "ang hardware configuration tool."
-
-#~ msgid "Connection type: "
-#~ msgstr "Uri ng connection: "
 
 #~ msgid "%s already in use\n"
 #~ msgstr "%s ay gamit na\n"
@@ -7134,9 +7470,6 @@ msgstr ""
 #~ msgid "discard"
 #~ msgstr "i-discard"
 
-#~ msgid "none"
-#~ msgstr "wala"
-
 #~ msgid "tunnel"
 #~ msgstr "tunnel"
 
@@ -7166,179 +7499,11 @@ msgstr ""
 #~ "Kailangan ninyong mag-logout at login ulit para magkabisa ang mga "
 #~ "pagbabago"
 
-#, fuzzy
-#~ msgid "Process attack"
-#~ msgstr "Tagapangasiwa ng Service"
-
-#, fuzzy
-#~ msgid "Interactive Firewall: intrusion detected"
-#~ msgstr "Natiktikan ang configuration ng firewall!"
-
-#, fuzzy
-#~ msgid "What do you want to do with this attacker?"
-#~ msgstr "Gusto ninyong gamitin ang katangian na ito?"
-
-#, fuzzy
-#~ msgid "Attack details"
-#~ msgstr "Walang detalye"
-
-#, fuzzy
-#~ msgid "Network interface: %s"
-#~ msgstr "Mga Network interface"
-
-#, fuzzy
-#~ msgid "Attack type: %s"
-#~ msgstr "uri: %s"
-
-#, fuzzy
-#~ msgid "Protocol: %s"
-#~ msgstr "Mga Protocol"
-
-#, fuzzy
-#~ msgid "Attacker IP address: %s"
-#~ msgstr "IP address ng computer:"
-
-#, fuzzy
-#~ msgid "Attacker hostname: %s"
-#~ msgstr "Sine-set ang hostname na %s: "
-
-#, fuzzy
-#~ msgid "Service attacked: %s"
-#~ msgstr "Tagapangasiwa ng Service"
-
-#, fuzzy
-#~ msgid "Port attacked: %s"
-#~ msgstr "Port: %s"
-
-#~ msgid "Ignore"
-#~ msgstr "Di-pansinin"
-
-#, fuzzy
-#~ msgid "Interactive Firewall: new service"
-#~ msgstr "Natiktikan ang configuration ng firewall!"
-
-#, fuzzy
-#~ msgid "Process connection"
-#~ msgstr "Wireless na koneksyon"
-
-#, fuzzy
-#~ msgid "Do you want to open this service?"
-#~ msgstr "Gusto ninyo bang subukan ang configuration?"
-
-#, fuzzy
-#~ msgid "Remember this answer"
-#~ msgstr "Tandaan ang password na ito"
-
-#~ msgid "Gateway:"
-#~ msgstr "Gateway:"
-
-#~ msgid "Interface:"
-#~ msgstr "Interface:"
-
-#~ msgid "Manage connections"
-#~ msgstr "Pangasiwaan ang mga koneksyon"
-
-#~ msgid "IP configuration"
-#~ msgstr "Configuration ng IP"
-
-#~ msgid "DNS servers"
-#~ msgstr "Mga DNS server"
-
-#~ msgid "Search Domain"
-#~ msgstr "Search Domain"
-
-#~ msgid "static"
-#~ msgstr "static"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Start at boot"
-#~ msgstr "Simulan sa boot"
-
-#~ msgid "Flow control"
-#~ msgstr "Flow control"
-
-#~ msgid "Line termination"
-#~ msgstr "Line termination"
-
-#~ msgid "Modem timeout"
-#~ msgstr "Modem timeout"
-
-#~ msgid "Use lock file"
-#~ msgstr "Gumamit ng lock file"
-
-#~ msgid "Wait for dialup tone before dialing"
-#~ msgstr "Maghintay ng dialup tone bago mag-dial"
-
-#~ msgid "Busy wait"
-#~ msgstr "Busy wait"
-
-#~ msgid "Modem sound"
-#~ msgstr "Tunog ng modem"
-
-#~ msgid "Vendor"
-#~ msgstr "Vendor"
-
-#~ msgid "Media class"
-#~ msgstr "Media class"
-
-#~ msgid "Module name"
-#~ msgstr "Pangalan ng module"
-
-#~ msgid "Mac Address"
-#~ msgstr "Mac Address"
-
-#~ msgid "Bus"
-#~ msgstr "Bus"
-
-#~ msgid "Location on the bus"
-#~ msgstr "Kinaroroonan sa bus"
-
-#~ msgid "Remove a network interface"
-#~ msgstr "Mag-alis ng network interface"
-
-#~ msgid ""
-#~ "An error occurred while deleting the \"%s\" network interface:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "May nangyaring error habang inaalis ang \"%s\" na network interface:\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Congratulations, the \"%s\" network interface has been successfully "
-#~ "deleted"
-#~ msgstr ""
-#~ "Maligayang bati, ang \"%s\" na network interface ay matagumpay na naalis"
-
 #~ msgid "Disconnect..."
 #~ msgstr "I-disconnect..."
 
 #~ msgid "Connect..."
 #~ msgstr "I-connect..."
-
-#~ msgid "Internet connection configuration"
-#~ msgstr "Internet connection configuration"
-
-#~ msgid "Host name (optional)"
-#~ msgstr "Host name (hindi obligado)"
-
-#~ msgid "Third DNS server (optional)"
-#~ msgstr "Pangatlong DNS Server (hindi obligado)"
-
-#~ msgid "Internet Connection Configuration"
-#~ msgstr "Internet Connection Configuration"
-
-#~ msgid "Internet access"
-#~ msgstr "Internet access"
-
-#~ msgid "Status:"
-#~ msgstr "Status:"
-
-#~ msgid "Parameters"
-#~ msgstr "Mga parameter"
 
 #, fuzzy
 #~ msgid "Attacker"

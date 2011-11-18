@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net 1.0\n"
-"POT-Creation-Date: 2011-05-03 15:42+0200\n"
+"POT-Creation-Date: 2011-11-18 13:57+0100\n"
 "PO-Revision-Date: 2002-09-06 00:35+0800\n"
 "Last-Translator: prabu anand <prabu_anand2000@yahoo.com>\n"
 "Language-Team: Tamil <tamilinix@yahoogroups.com>\n"
@@ -29,14 +29,16 @@ msgid "Interface"
 msgstr "அட்ைட"
 
 #: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:187
-#: ../lib/network/connection/ethernet.pm:141 ../lib/network/netconnect.pm:633
+#: ../lib/network/connection/ethernet.pm:141
+#: ../lib/network/drakconnect/edit.pm:151 ../lib/network/netconnect.pm:633
 #: ../lib/network/vpn/openvpn.pm:223
 #, c-format
 msgid "IP address"
 msgstr ""
 
 #: ../bin/drakconnect-old:64 ../bin/drakids:261
-#: ../lib/network/netconnect.pm:477
+#: ../lib/network/drakconnect/edit.pm:135
+#: ../lib/network/drakconnect/edit.pm:393 ../lib/network/netconnect.pm:477
 #, c-format
 msgid "Protocol"
 msgstr "வரைமுறை"
@@ -72,23 +74,27 @@ msgid "Configure Local Area Network..."
 msgstr "LAN-ஐ  வடிவமைக்கவும்..."
 
 #: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:217
+#: ../lib/network/drakconnect/edit.pm:71
 #, c-format
 msgid "Help"
 msgstr "உதவி"
 
 #: ../bin/drakconnect-old:108 ../bin/drakinvictus:140
+#: ../lib/network/drakconnect/edit.pm:72 ../lib/network/drakconnect/edit.pm:76
 #, c-format
 msgid "Apply"
 msgstr "செயல்படுத்து"
 
 #: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
 #: ../bin/draknetprofile:159 ../bin/net_monitor:388
+#: ../lib/network/drakconnect/global.pm:88
 #, c-format
 msgid "Cancel"
 msgstr "தவிர்"
 
 #: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
 #: ../bin/drakconnect-old:265 ../bin/draknetprofile:161 ../bin/net_monitor:389
+#: ../lib/network/drakconnect/global.pm:89
 #, c-format
 msgid "Ok"
 msgstr "சரி"
@@ -98,7 +104,8 @@ msgstr "சரி"
 #: ../lib/network/connection_manager.pm:89
 #: ../lib/network/connection_manager.pm:206
 #: ../lib/network/connection_manager.pm:235
-#: ../lib/network/connection_manager.pm:353 ../lib/network/drakvpn.pm:49
+#: ../lib/network/connection_manager.pm:353
+#: ../lib/network/drakconnect/edit.pm:466 ../lib/network/drakvpn.pm:49
 #: ../lib/network/netcenter.pm:150 ../lib/network/netconnect.pm:186
 #: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
 #: ../lib/network/netconnect.pm:733 ../lib/network/thirdparty.pm:352
@@ -107,7 +114,7 @@ msgstr "சரி"
 msgid "Please wait"
 msgstr "தயவுசெய்து காத்திருக்கவும்.."
 
-#: ../bin/drakconnect-old:115
+#: ../bin/drakconnect-old:115 ../lib/network/drakconnect/edit.pm:468
 #, c-format
 msgid "Please Wait... Applying the configuration"
 msgstr "தயவுசெய்து காத்திருக்கவும்...செயல்படுத்தப்படுகிறது"
@@ -143,6 +150,7 @@ msgstr "வலையமைப்பு அட்ைட %s: %s"
 
 #: ../bin/drakconnect-old:209 ../bin/drakgw:181
 #: ../lib/network/connection/ethernet.pm:148
+#: ../lib/network/drakconnect/edit.pm:156
 #, c-format
 msgid "Netmask"
 msgstr "வளைமுகமூடி"
@@ -158,6 +166,7 @@ msgid "Started on boot"
 msgstr "தொடங்கும்போதே துவக்கிவிடு"
 
 #: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:159
+#: ../lib/network/drakconnect/edit.pm:199
 #, c-format
 msgid "DHCP client"
 msgstr "DHCP வேண்டி"
@@ -172,17 +181,19 @@ msgstr ""
 "இதற்க்கான மாயாவியைத் துவக்கு"
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:105
+#: ../lib/network/drakconnect/global.pm:36
 #, fuzzy, c-format
 msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
 msgstr "வலையமைப்பு அட்ைடயை தேர்வுச் செய்"
 
 #: ../bin/drakconnect-old:273 ../bin/drakconnect-old:305
-#: ../lib/network/drakconnect.pm:16
+#: ../lib/network/drakconnect.pm:16 ../lib/network/drakconnect/edit.pm:515
 #, c-format
 msgid "No IP"
 msgstr ""
 
 #: ../bin/drakconnect-old:306 ../lib/network/drakconnect.pm:17
+#: ../lib/network/drakconnect/edit.pm:516
 #, fuzzy, c-format
 msgid "No Mask"
 msgstr "தவறான பொதி"
@@ -247,12 +258,12 @@ msgstr ""
 "\n"
 "என்ன செய்ய வேண்டும்?"
 
-#: ../bin/drakgw:101
+#: ../bin/drakgw:101 ../lib/network/drakconnect/edit.pm:373
 #, c-format
 msgid "Disable"
 msgstr "செயல் நீக்கு"
 
-#: ../bin/drakgw:101
+#: ../bin/drakgw:101 ../lib/network/drakconnect/edit.pm:373
 #, c-format
 msgid "Enable"
 msgstr "செயல்படுத்து"
@@ -267,8 +278,8 @@ msgstr "மறுவடிவமை"
 msgid "Please select the network interface directly connected to the internet."
 msgstr ""
 
-#: ../bin/drakgw:123 ../lib/network/netconnect.pm:379
-#: ../lib/network/netconnect.pm:414
+#: ../bin/drakgw:123 ../lib/network/drakconnect/delete.pm:26
+#: ../lib/network/netconnect.pm:379 ../lib/network/netconnect.pm:414
 #, fuzzy, c-format
 msgid "Net Device"
 msgstr "துவக்கச்சேவைகள்"
@@ -334,7 +345,11 @@ msgstr "புதிய அச்சுப்ெபறியின் பெய�
 #: ../lib/network/connection_manager.pm:177
 #: ../lib/network/connection_manager.pm:181
 #: ../lib/network/connection_manager.pm:223
-#: ../lib/network/connection_manager.pm:481 ../lib/network/drakvpn.pm:45
+#: ../lib/network/connection_manager.pm:481
+#: ../lib/network/drakconnect/delete.pm:12
+#: ../lib/network/drakconnect/edit.pm:506
+#: ../lib/network/drakconnect/edit.pm:510
+#: ../lib/network/drakconnect/edit.pm:519 ../lib/network/drakvpn.pm:45
 #: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
 #: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:135
@@ -618,13 +633,14 @@ msgstr "அனைத்து பயனரையும் அனுமதி"
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
 #: ../bin/net_applet:145 ../bin/net_applet:353
 #: ../lib/network/drakfirewall.pm:309 ../lib/network/drakfirewall.pm:313
+#: ../lib/network/net_applet/ifw.pm:61 ../lib/network/net_applet/ifw.pm:89
 #, fuzzy, c-format
 msgid "Interactive Firewall"
 msgstr "நெருப்புச்சுவர்"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:353
+#: ../bin/net_applet:353 ../lib/network/net_applet/ifw.pm:61
 #, fuzzy, c-format
 msgid "Unable to contact daemon"
 msgstr "கேபிள் இணைப்பு"
@@ -634,12 +650,12 @@ msgstr "கேபிள் இணைப்பு"
 msgid "Log"
 msgstr "உள்நுழை"
 
-#: ../bin/drakids:86 ../bin/drakids:105
+#: ../bin/drakids:86 ../bin/drakids:105 ../lib/network/net_applet/ifw.pm:219
 #, fuzzy, c-format
 msgid "Allow"
 msgstr "அனைத்து"
 
-#: ../bin/drakids:87 ../bin/drakids:96
+#: ../bin/drakids:87 ../bin/drakids:96 ../lib/network/net_applet/ifw.pm:220
 #, c-format
 msgid "Block"
 msgstr ""
@@ -666,12 +682,12 @@ msgstr "துவக்கச்சேவைகள்"
 msgid "Clear logs"
 msgstr "அனைத்ைதயும் மாற்றியமை"
 
-#: ../bin/drakids:115 ../bin/drakids:120
+#: ../bin/drakids:115 ../bin/drakids:120 ../lib/network/net_applet/ifw.pm:158
 #, c-format
 msgid "Blacklist"
 msgstr ""
 
-#: ../bin/drakids:116 ../bin/drakids:133
+#: ../bin/drakids:116 ../bin/drakids:133 ../lib/network/net_applet/ifw.pm:163
 #, c-format
 msgid "Whitelist"
 msgstr ""
@@ -819,7 +835,7 @@ msgstr "முறை"
 msgid "Enabled"
 msgstr "செயல்படுத்து"
 
-#: ../bin/draknetprofile:68
+#: ../bin/draknetprofile:68 ../lib/network/drakconnect/edit.pm:423
 #, c-format
 msgid "Description"
 msgstr "குறிப்பு"
@@ -861,9 +877,9 @@ msgid ""
 "profile."
 msgstr ""
 
-#: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
-#: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
-#: ../lib/network/netconnect.pm:500
+#: ../bin/draknetprofile:183 ../lib/network/drakconnect/global.pm:34
+#: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
+#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:500
 #, c-format
 msgid "Warning"
 msgstr "எச்சரிக்ைக"
@@ -2325,12 +2341,12 @@ msgstr ""
 "எச்சரிக்ைக, மற்றுமொறு இணையத்ெதாடர்பு கண்டுபிடிக்கப்பட்டுள்ளது. இது அநேகமாக உங்கள் "
 "வலையமைப்பாக்கத்ைத பயன்படுத்தலாம்"
 
-#: ../bin/net_monitor:516
+#: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
 msgid "Connected"
 msgstr "இணைக்கப்பட்டள்ளது"
 
-#: ../bin/net_monitor:516
+#: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
 msgid "Not connected"
 msgstr "இணைக்கப்படவில்ைல"
@@ -2395,7 +2411,7 @@ msgstr ""
 msgid "Allow interface to be controlled by Network Manager"
 msgstr ""
 
-#: ../lib/network/connection.pm:251
+#: ../lib/network/connection.pm:251 ../lib/network/drakconnect/edit.pm:292
 #, fuzzy, c-format
 msgid "Metric"
 msgstr "கட்டுபடுத்து"
@@ -2435,19 +2451,22 @@ msgstr "அட்ைட மாதிரி:"
 msgid "Use BPALogin (needed for Telstra)"
 msgstr ""
 
-#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:616
+#: ../lib/network/connection/cable.pm:45
+#: ../lib/network/drakconnect/edit.pm:312 ../lib/network/netconnect.pm:616
 #, c-format
 msgid "Authentication"
 msgstr "நல்குாிமை"
 
 #: ../lib/network/connection/cable.pm:47 ../lib/network/connection/ppp.pm:22
-#: ../lib/network/netconnect.pm:355 ../lib/network/vpn/openvpn.pm:395
+#: ../lib/network/drakconnect/edit.pm:322 ../lib/network/netconnect.pm:355
+#: ../lib/network/vpn/openvpn.pm:395
 #, c-format
 msgid "Account Login (user name)"
 msgstr "பயனர் பெயர்"
 
 #: ../lib/network/connection/cable.pm:49 ../lib/network/connection/ppp.pm:23
-#: ../lib/network/netconnect.pm:356 ../lib/network/vpn/openvpn.pm:396
+#: ../lib/network/drakconnect/edit.pm:323 ../lib/network/netconnect.pm:356
+#: ../lib/network/vpn/openvpn.pm:396
 #, c-format
 msgid "Account Password"
 msgstr "பயனரின் கடவுச்ெசால்"
@@ -2567,13 +2586,15 @@ msgid ""
 "notation (for example, 1.2.3.4)."
 msgstr ""
 
-#: ../lib/network/connection/ethernet.pm:149 ../lib/network/netconnect.pm:665
+#: ../lib/network/connection/ethernet.pm:149
+#: ../lib/network/drakconnect/edit.pm:162 ../lib/network/netconnect.pm:665
 #: ../lib/network/vpn/openvpn.pm:214 ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
 msgstr "நுழைவாயில்"
 
 #: ../lib/network/connection/ethernet.pm:152
+#: ../lib/network/drakconnect/edit.pm:212
 #, fuzzy, c-format
 msgid "Get DNS servers from DHCP"
 msgstr "DHCP பரிமாறியின்    IP"
@@ -2599,21 +2620,25 @@ msgid "By default search domain will be set from the fully-qualified host name"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:160
+#: ../lib/network/drakconnect/edit.pm:209
 #, fuzzy, c-format
 msgid "DHCP timeout (in seconds)"
 msgstr "தொடர்பு வெளியேற்ற நேரம்(விநாடிகளில்): "
 
 #: ../lib/network/connection/ethernet.pm:161
+#: ../lib/network/drakconnect/edit.pm:213
 #, c-format
 msgid "Get YP servers from DHCP"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:162
+#: ../lib/network/drakconnect/edit.pm:214
 #, c-format
 msgid "Get NTPD servers from DHCP"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:163
+#: ../lib/network/drakconnect/edit.pm:205
 #, fuzzy, c-format
 msgid "DHCP host name"
 msgstr "கணினிப்ெபயர்: "
@@ -2624,11 +2649,13 @@ msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:176
+#: ../lib/network/drakconnect/edit.pm:506
 #, c-format
 msgid "IP address should be in format 1.2.3.4"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:181
+#: ../lib/network/drakconnect/edit.pm:510
 #, c-format
 msgid "Netmask should be in format 255.255.224.0"
 msgstr ""
@@ -2647,6 +2674,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:222
+#: ../lib/network/drakconnect/edit.pm:203
 #, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
 msgstr ""
@@ -2668,6 +2696,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:244
+#: ../lib/network/drakconnect/edit.pm:270
 #, fuzzy, c-format
 msgid "Network Hotplugging"
 msgstr "வலையமைப்பாக்க  வடிவமைப்பு "
@@ -2736,27 +2765,32 @@ msgstr ""
 msgid "Analog telephone modem (POTS)"
 msgstr ""
 
-#: ../lib/network/connection/ppp.pm:9 ../lib/network/netconnect.pm:78
+#: ../lib/network/connection/ppp.pm:9 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:78
 #, c-format
 msgid "Script-based"
 msgstr "கட்டளைத்ெதாடர் வழியாக"
 
-#: ../lib/network/connection/ppp.pm:10 ../lib/network/netconnect.pm:79
+#: ../lib/network/connection/ppp.pm:10 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:79
 #, c-format
 msgid "PAP"
 msgstr "PAP-பொதுவாக நம்நாட்டில் இதுதான் உள்ளது"
 
-#: ../lib/network/connection/ppp.pm:11 ../lib/network/netconnect.pm:80
+#: ../lib/network/connection/ppp.pm:11 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:80
 #, c-format
 msgid "Terminal-based"
 msgstr "முனையம் வழியாக"
 
-#: ../lib/network/connection/ppp.pm:12 ../lib/network/netconnect.pm:81
+#: ../lib/network/connection/ppp.pm:12 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:81
 #, c-format
 msgid "CHAP"
 msgstr "CHAP"
 
-#: ../lib/network/connection/ppp.pm:13 ../lib/network/netconnect.pm:82
+#: ../lib/network/connection/ppp.pm:13 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:82
 #, c-format
 msgid "PAP/CHAP"
 msgstr "PAP/CHAP"
@@ -3934,6 +3968,7 @@ msgstr "கேபிள் இணைப்பு"
 
 #: ../lib/network/connection/wireless.pm:464
 #: ../lib/network/connection_manager.pm:280
+#: ../lib/network/drakconnect/edit.pm:236
 #, fuzzy, c-format
 msgid "Operating Mode"
 msgstr "அறிஞர் முறைமை"
@@ -3969,6 +4004,7 @@ msgid "Auto"
 msgstr "தானியங்கி"
 
 #: ../lib/network/connection/wireless.pm:468
+#: ../lib/network/drakconnect/edit.pm:237
 #, c-format
 msgid "Network name (ESSID)"
 msgstr ""
@@ -3979,6 +4015,7 @@ msgid "Encryption mode"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/drakconnect/edit.pm:251
 #, c-format
 msgid "Encryption key"
 msgstr "மறைக்குறியீட்டுச் சாவி"
@@ -4045,26 +4082,31 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/drakconnect/edit.pm:238
 #, fuzzy, c-format
 msgid "Network ID"
 msgstr "வலையமைப்பு"
 
 #: ../lib/network/connection/wireless.pm:513
+#: ../lib/network/drakconnect/edit.pm:239
 #, c-format
 msgid "Operating frequency"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:514
+#: ../lib/network/drakconnect/edit.pm:240
 #, c-format
 msgid "Sensitivity threshold"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:515
+#: ../lib/network/drakconnect/edit.pm:241
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:516
+#: ../lib/network/drakconnect/edit.pm:252
 #, c-format
 msgid "RTS/CTS"
 msgstr ""
@@ -4084,11 +4126,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:524
+#: ../lib/network/drakconnect/edit.pm:253
 #, fuzzy, c-format
 msgid "Fragmentation"
 msgstr "விளையாட்டுகள்"
 
 #: ../lib/network/connection/wireless.pm:525
+#: ../lib/network/drakconnect/edit.pm:254
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr ""
@@ -4105,6 +4149,7 @@ msgstr ""
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
 #: ../lib/network/connection/wireless.pm:533
+#: ../lib/network/drakconnect/edit.pm:255
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr ""
@@ -4122,6 +4167,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/drakconnect/edit.pm:256
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr ""
@@ -4504,6 +4550,289 @@ msgstr "இணை "
 msgid "Hostname changed to \"%s\""
 msgstr ""
 
+#: ../lib/network/drakconnect/delete.pm:12
+#, c-format
+msgid ""
+"No ethernet network adapter has been detected on your system. Please run the "
+"hardware configuration tool."
+msgstr ""
+"வலையமைப்பு அட்ைட எதுவும் காணப்படவில்ைல. மீண்டும் வன்ெபாருள் வடிவமைப்புக் கருவியை இயக்கவும்"
+
+#: ../lib/network/drakconnect/delete.pm:21
+#, fuzzy, c-format
+msgid "Remove a network interface"
+msgstr "வலையமைப்பு அட்ைடயை தேர்வுச் செய்"
+
+#: ../lib/network/drakconnect/delete.pm:25
+#, fuzzy, c-format
+msgid "Select the network interface to remove:"
+msgstr "வலையமைப்பு அட்ைடயை தேர்வுச் செய்"
+
+#: ../lib/network/drakconnect/delete.pm:58
+#, fuzzy, c-format
+msgid ""
+"An error occurred while deleting the \"%s\" network interface:\n"
+"\n"
+"%s"
+msgstr ""
+"வலையகமைப்புச் சேவைகள் மறுதொடங்கும்போது பிழை நேர்ந்துள்ளது \n"
+"\n"
+"%s"
+
+#: ../lib/network/drakconnect/delete.pm:59
+#, fuzzy, c-format
+msgid ""
+"Congratulations, the \"%s\" network interface has been successfully deleted"
+msgstr ""
+"வாழ்த்துக்கள், உங்கள் வலையகமைப்பு மற்றும் இணையத் தொடர்பு\n"
+"வெற்றிகரமாக முடிந்தது. இந்த வடிவமைப்புகள் பயன்படுத்தப்படும்\n"
+"\n"
+
+#: ../lib/network/drakconnect/edit.pm:23
+#, c-format
+msgid "Manage connections"
+msgstr "இணைப்புகளை மேலான்மைசெய்"
+
+#: ../lib/network/drakconnect/edit.pm:50 ../lib/network/drakroam.pm:85
+#, c-format
+msgid "Device: "
+msgstr "சாதனம்: "
+
+#: ../lib/network/drakconnect/edit.pm:132
+#, fuzzy, c-format
+msgid "IP configuration"
+msgstr "CUPS  வடிவமைப்பு"
+
+#: ../lib/network/drakconnect/edit.pm:167
+#, fuzzy, c-format
+msgid "DNS servers"
+msgstr "DNS சேவையகம்"
+
+#: ../lib/network/drakconnect/edit.pm:173
+#, c-format
+msgid "Search Domain"
+msgstr "தேடல் களம்"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "none"
+msgstr "ஒன்றுமில்ைல"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "static"
+msgstr "நிலையான"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "DHCP"
+msgstr ""
+
+#: ../lib/network/drakconnect/edit.pm:264
+#, c-format
+msgid "Start at boot"
+msgstr "தொடங்கலில்  துவக்கிவிடு "
+
+#: ../lib/network/drakconnect/edit.pm:276 ../lib/network/netconnect.pm:352
+#, c-format
+msgid "Dialing mode"
+msgstr "அழைக்கும் முறை"
+
+#: ../lib/network/drakconnect/edit.pm:281
+#: ../lib/network/drakconnect/edit.pm:348 ../lib/network/netconnect.pm:353
+#, c-format
+msgid "Connection speed"
+msgstr "தொடர்பு வேகம்: "
+
+#: ../lib/network/drakconnect/edit.pm:286 ../lib/network/netconnect.pm:354
+#, c-format
+msgid "Connection timeout (in sec)"
+msgstr "தொடர்பு வெளியேற்ற நேரம்(விநாடிகளில்): "
+
+#: ../lib/network/drakconnect/edit.pm:324 ../lib/network/netconnect.pm:349
+#, c-format
+msgid "Provider phone number"
+msgstr "சேவையாளரின் தொலைபேசி எண்"
+
+#: ../lib/network/drakconnect/edit.pm:346
+#, c-format
+msgid "Flow control"
+msgstr "வீழ்ச்சியின் கட்டுப்பாடு"
+
+#: ../lib/network/drakconnect/edit.pm:347
+#, fuzzy, c-format
+msgid "Line termination"
+msgstr "இணையக் கணினி"
+
+#: ../lib/network/drakconnect/edit.pm:358
+#, fuzzy, c-format
+msgid "Modem timeout"
+msgstr "கரு தொடங்கல் வெளியேற்ற நேரம்"
+
+#: ../lib/network/drakconnect/edit.pm:362
+#, fuzzy, c-format
+msgid "Use lock file"
+msgstr "கோப்ேபா தேர்வுச் செய்"
+
+#: ../lib/network/drakconnect/edit.pm:364
+#, c-format
+msgid "Wait for dialup tone before dialing"
+msgstr ""
+
+#: ../lib/network/drakconnect/edit.pm:367
+#, fuzzy, c-format
+msgid "Busy wait"
+msgstr "குவைத்"
+
+#: ../lib/network/drakconnect/edit.pm:372
+#, fuzzy, c-format
+msgid "Modem sound"
+msgstr "ேமாடம்"
+
+#: ../lib/network/drakconnect/edit.pm:385 ../lib/network/netconnect.pm:357
+#, c-format
+msgid "Card IRQ"
+msgstr "அட்ைடயின் IRQ"
+
+#: ../lib/network/drakconnect/edit.pm:386 ../lib/network/netconnect.pm:358
+#, c-format
+msgid "Card mem (DMA)"
+msgstr ""
+
+#: ../lib/network/drakconnect/edit.pm:387 ../lib/network/netconnect.pm:359
+#, c-format
+msgid "Card IO"
+msgstr "அட்ைடயின் உள்/வெளி IO"
+
+#: ../lib/network/drakconnect/edit.pm:388 ../lib/network/netconnect.pm:360
+#, c-format
+msgid "Card IO_0"
+msgstr "அட்ைடயின் உள்/வெளி IO_0"
+
+#: ../lib/network/drakconnect/edit.pm:394 ../lib/network/netconnect.pm:71
+#, c-format
+msgid "European protocol (EDSS1)"
+msgstr "ஐரோப்பிய வரைமுறை(EDSS1)"
+
+#: ../lib/network/drakconnect/edit.pm:395 ../lib/network/netconnect.pm:72
+#, c-format
+msgid ""
+"Protocol for the rest of the world\n"
+"No D-Channel (leased lines)"
+msgstr ""
+"ஏனைய பகுதிகளில் பயன்படுத்தப்படும் வரைமுறை\n"
+"No D-Channel (குத்தகை இணைப்புகள்)"
+
+#: ../lib/network/drakconnect/edit.pm:422
+#, c-format
+msgid "Vendor"
+msgstr "விற்பவர்"
+
+#: ../lib/network/drakconnect/edit.pm:424
+#, c-format
+msgid "Media class"
+msgstr "ஊடக வகை"
+
+#: ../lib/network/drakconnect/edit.pm:425
+#, c-format
+msgid "Module name"
+msgstr "கூற்றின் பெயர்"
+
+#: ../lib/network/drakconnect/edit.pm:426
+#, fuzzy, c-format
+msgid "Mac Address"
+msgstr "IP முகவரி:"
+
+#: ../lib/network/drakconnect/edit.pm:427
+#, c-format
+msgid "Bus"
+msgstr "பாட்ைட"
+
+#: ../lib/network/drakconnect/edit.pm:428
+#, c-format
+msgid "Location on the bus"
+msgstr "பாட்ைடயின் இடம்"
+
+#: ../lib/network/drakconnect/edit.pm:519 ../lib/network/netconnect.pm:832
+#, c-format
+msgid "Gateway address should be in format 1.2.3.4"
+msgstr ""
+
+#: ../lib/network/drakconnect/global.pm:27
+#, c-format
+msgid "Gateway:"
+msgstr "நுழைவாயில்:"
+
+#: ../lib/network/drakconnect/global.pm:27
+#, c-format
+msgid "Interface:"
+msgstr "அட்ைட:"
+
+#: ../lib/network/drakconnect/global.pm:30
+#, c-format
+msgid "Internet connection configuration"
+msgstr "இணையத்ெதாடர்பு  வடிவமைக்கப்பாளன்"
+
+#: ../lib/network/drakconnect/global.pm:35
+#, fuzzy, c-format
+msgid ""
+"You do not have any configured Internet connection.\n"
+"Run the \"%s\" assistant from the Mageia Control Center"
+msgstr ""
+"இந்த வலையமைப்பு அட்ைட இன்னும் வடிவமைக்கப்படவில்ைல\n"
+"இதற்க்கான மாயாவியைத் துவக்கு"
+
+#: ../lib/network/drakconnect/global.pm:50
+#, fuzzy, c-format
+msgid "Host name (optional)"
+msgstr "இயக்க வடிவமைப்பு "
+
+#: ../lib/network/drakconnect/global.pm:51 ../lib/network/netconnect.pm:651
+#, c-format
+msgid "First DNS Server (optional)"
+msgstr "முதல் DNS சேவையகத்தின் பெயர்"
+
+#: ../lib/network/drakconnect/global.pm:52 ../lib/network/netconnect.pm:652
+#, c-format
+msgid "Second DNS Server (optional)"
+msgstr "2வது DNS சேவையகத்தின் பெயர்"
+
+#: ../lib/network/drakconnect/global.pm:53
+#, fuzzy, c-format
+msgid "Third DNS server (optional)"
+msgstr "முதல் DNS சேவையகத்தின் பெயர்"
+
+#: ../lib/network/drakconnect/global.pm:75
+#, c-format
+msgid "Internet Connection Configuration"
+msgstr "இணையத்ெதாடர்பு  வடிவமைக்கப்பாளன்"
+
+#: ../lib/network/drakconnect/global.pm:76
+#, c-format
+msgid "Internet access"
+msgstr "இணையத்ெதாடர்பு"
+
+#: ../lib/network/drakconnect/global.pm:78
+#, c-format
+msgid "Connection type: "
+msgstr "தொடர்பு வகை: "
+
+#: ../lib/network/drakconnect/global.pm:81
+#, c-format
+msgid "Status:"
+msgstr "நிலை:"
+
+#: ../lib/network/drakconnect/global.pm:82 ../lib/network/netconnect.pm:305
+#: ../lib/network/netconnect.pm:733
+#, c-format
+msgid "Testing your connection..."
+msgstr "இணைப்பு சோதித்து பார்க்கப்படுகிறது"
+
+#: ../lib/network/drakconnect/global.pm:86
+#, c-format
+msgid "Parameters"
+msgstr "வரைமுறை"
+
 #: ../lib/network/drakfirewall.pm:14
 #, c-format
 msgid "Web Server"
@@ -4704,11 +5033,6 @@ msgstr ""
 #, c-format
 msgid "No device found"
 msgstr "சாதனம் எதுவும் கிடைக்கவில்லை"
-
-#: ../lib/network/drakroam.pm:85
-#, c-format
-msgid "Device: "
-msgstr "சாதனம்: "
 
 #: ../lib/network/drakroam.pm:89 ../lib/network/netcenter.pm:66
 #, c-format
@@ -4932,6 +5256,103 @@ msgstr "இயக்கத்ைத நிறுவுங்கள்"
 msgid "Select a device:"
 msgstr ""
 
+#. -PO: "Process" is a verb
+#: ../lib/network/net_applet/ifw.pm:100
+#, fuzzy, c-format
+msgid "Process attack"
+msgstr "(_t)சேவை வகை:"
+
+#: ../lib/network/net_applet/ifw.pm:113
+#, fuzzy, c-format
+msgid "Interactive Firewall: intrusion detected"
+msgstr "நெருப்புச்சுவர் வடிவமைப்பு காணப்பட்டுள்ளது"
+
+#: ../lib/network/net_applet/ifw.pm:130
+#, fuzzy, c-format
+msgid "What do you want to do with this attacker?"
+msgstr "ஆட்டத்தை நிறுத்த வேண்டுமா ?"
+
+#: ../lib/network/net_applet/ifw.pm:133
+#, fuzzy, c-format
+msgid "Attack details"
+msgstr "விவரங்கள்"
+
+#: ../lib/network/net_applet/ifw.pm:137
+#, fuzzy, c-format
+msgid "Attack time: %s"
+msgstr "செயல்: %s"
+
+#: ../lib/network/net_applet/ifw.pm:138
+#, fuzzy, c-format
+msgid "Network interface: %s"
+msgstr "வலை முகப்புக்கள்"
+
+#: ../lib/network/net_applet/ifw.pm:139
+#, fuzzy, c-format
+msgid "Attack type: %s"
+msgstr "வகை: "
+
+#: ../lib/network/net_applet/ifw.pm:140
+#, fuzzy, c-format
+msgid "Protocol: %s"
+msgstr "ஒப்புநெறிகள்"
+
+#: ../lib/network/net_applet/ifw.pm:141
+#, fuzzy, c-format
+msgid "Attacker IP address: %s"
+msgstr "(_R)தொலை IP முகவரி:"
+
+#: ../lib/network/net_applet/ifw.pm:142
+#, fuzzy, c-format
+msgid "Attacker hostname: %s"
+msgstr "புரவலன் பெயரை பெறுவதில் தோல்வி: %s\n"
+
+#: ../lib/network/net_applet/ifw.pm:145
+#, fuzzy, c-format
+msgid "Service attacked: %s"
+msgstr "(_t)சேவை வகை:"
+
+#: ../lib/network/net_applet/ifw.pm:146
+#, fuzzy, c-format
+msgid "Port attacked: %s"
+msgstr "துறை: %s"
+
+#: ../lib/network/net_applet/ifw.pm:148
+#, fuzzy, c-format
+msgid "Type of ICMP attack: %s"
+msgstr "துறை: %s"
+
+#: ../lib/network/net_applet/ifw.pm:153
+#, c-format
+msgid "Always blacklist (do not ask again)"
+msgstr ""
+
+#: ../lib/network/net_applet/ifw.pm:168
+#, c-format
+msgid "Ignore"
+msgstr "புறக்கணி"
+
+#: ../lib/network/net_applet/ifw.pm:186 ../lib/network/net_applet/ifw.pm:204
+#, fuzzy, c-format
+msgid "Interactive Firewall: new service"
+msgstr "நெருப்புச்சுவர் வடிவமைப்பு காணப்பட்டுள்ளது"
+
+#. -PO: "Process" is a verb
+#: ../lib/network/net_applet/ifw.pm:192
+#, fuzzy, c-format
+msgid "Process connection"
+msgstr "கேபிள் இணைப்பு"
+
+#: ../lib/network/net_applet/ifw.pm:214
+#, fuzzy, c-format
+msgid "Do you want to open this service?"
+msgstr "உங்கள் வடிவமைப்ைப சோதித்து பார்க்க வேண்டுமா? [சோதித்து பார்ப்பது முக்கியம்]"
+
+#: ../lib/network/net_applet/ifw.pm:217
+#, c-format
+msgid "Remember this answer"
+msgstr ""
+
 #: ../lib/network/netcenter.pm:55 ../lib/network/netconnect.pm:211
 #, c-format
 msgid "Please select your network:"
@@ -4974,20 +5395,6 @@ msgstr "உள்ளமை ISDN ேமாடம்"
 #, c-format
 msgid "Protocol for the rest of the world"
 msgstr "ஏனைய பகுதிகளில் பயன்படுத்தப்படும் வரைமுறை"
-
-#: ../lib/network/netconnect.pm:71
-#, c-format
-msgid "European protocol (EDSS1)"
-msgstr "ஐரோப்பிய வரைமுறை(EDSS1)"
-
-#: ../lib/network/netconnect.pm:72
-#, c-format
-msgid ""
-"Protocol for the rest of the world\n"
-"No D-Channel (leased lines)"
-msgstr ""
-"ஏனைய பகுதிகளில் பயன்படுத்தப்படும் வரைமுறை\n"
-"No D-Channel (குத்தகை இணைப்புகள்)"
 
 #: ../lib/network/netconnect.pm:122
 #, fuzzy, c-format
@@ -5037,11 +5444,6 @@ msgstr ""
 msgid "Connection control"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:733
-#, c-format
-msgid "Testing your connection..."
-msgstr "இணைப்பு சோதித்து பார்க்கப்படுகிறது"
-
 #: ../lib/network/netconnect.pm:344
 #, c-format
 msgid "Connection Configuration"
@@ -5062,11 +5464,6 @@ msgstr "உங்கள் தொலைபேசி எண்"
 msgid "Provider name (ex provider.net)"
 msgstr "சேவையாளரின் பெயர்"
 
-#: ../lib/network/netconnect.pm:349
-#, c-format
-msgid "Provider phone number"
-msgstr "சேவையாளரின் தொலைபேசி எண்"
-
 #: ../lib/network/netconnect.pm:350
 #, fuzzy, c-format
 msgid "Provider DNS 1 (optional)"
@@ -5076,41 +5473,6 @@ msgstr "சேவையாளரின் dns1 சேவையகம்"
 #, fuzzy, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "சேவையாளரின் dns2 சேவையகம்"
-
-#: ../lib/network/netconnect.pm:352
-#, c-format
-msgid "Dialing mode"
-msgstr "அழைக்கும் முறை"
-
-#: ../lib/network/netconnect.pm:353
-#, c-format
-msgid "Connection speed"
-msgstr "தொடர்பு வேகம்: "
-
-#: ../lib/network/netconnect.pm:354
-#, c-format
-msgid "Connection timeout (in sec)"
-msgstr "தொடர்பு வெளியேற்ற நேரம்(விநாடிகளில்): "
-
-#: ../lib/network/netconnect.pm:357
-#, c-format
-msgid "Card IRQ"
-msgstr "அட்ைடயின் IRQ"
-
-#: ../lib/network/netconnect.pm:358
-#, c-format
-msgid "Card mem (DMA)"
-msgstr ""
-
-#: ../lib/network/netconnect.pm:359
-#, c-format
-msgid "Card IO"
-msgstr "அட்ைடயின் உள்/வெளி IO"
-
-#: ../lib/network/netconnect.pm:360
-#, c-format
-msgid "Card IO_0"
-msgstr "அட்ைடயின் உள்/வெளி IO_0"
 
 #: ../lib/network/netconnect.pm:361
 #, c-format
@@ -5272,16 +5634,6 @@ msgstr "DNS"
 #, c-format
 msgid "Domain name"
 msgstr "களத்தின் பெயர்"
-
-#: ../lib/network/netconnect.pm:651
-#, c-format
-msgid "First DNS Server (optional)"
-msgstr "முதல் DNS சேவையகத்தின் பெயர்"
-
-#: ../lib/network/netconnect.pm:652
-#, c-format
-msgid "Second DNS Server (optional)"
-msgstr "2வது DNS சேவையகத்தின் பெயர்"
 
 #: ../lib/network/netconnect.pm:653
 #, fuzzy, c-format
@@ -5577,11 +5929,6 @@ msgstr ""
 #: ../lib/network/netconnect.pm:831
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
-msgstr ""
-
-#: ../lib/network/netconnect.pm:832
-#, c-format
-msgid "Gateway address should be in format 1.2.3.4"
 msgstr ""
 
 #: ../lib/network/netconnect.pm:833
@@ -6020,16 +6367,6 @@ msgstr ""
 #~ "\n"
 #~ "இதை வைத்து உங்கள் வலையமைப்பாக்கத்ைத அமைக்கட்டுமா"
 
-#~ msgid ""
-#~ "No ethernet network adapter has been detected on your system. Please run "
-#~ "the hardware configuration tool."
-#~ msgstr ""
-#~ "வலையமைப்பு அட்ைட எதுவும் காணப்படவில்ைல. மீண்டும் வன்ெபாருள் வடிவமைப்புக் கருவியை "
-#~ "இயக்கவும்"
-
-#~ msgid "Connection type: "
-#~ msgstr "தொடர்பு வகை: "
-
 #~ msgid "Edit"
 #~ msgstr "மாற்றியமை"
 
@@ -6050,181 +6387,14 @@ msgstr ""
 #~ msgid "Flag"
 #~ msgstr "குறி"
 
-#~ msgid "none"
-#~ msgstr "ஒன்றுமில்ைல"
-
 #~ msgid "Level"
 #~ msgstr "நிலை"
-
-#, fuzzy
-#~ msgid "Process attack"
-#~ msgstr "(_t)சேவை வகை:"
-
-#, fuzzy
-#~ msgid "Interactive Firewall: intrusion detected"
-#~ msgstr "நெருப்புச்சுவர் வடிவமைப்பு காணப்பட்டுள்ளது"
-
-#, fuzzy
-#~ msgid "What do you want to do with this attacker?"
-#~ msgstr "ஆட்டத்தை நிறுத்த வேண்டுமா ?"
-
-#, fuzzy
-#~ msgid "Attack details"
-#~ msgstr "விவரங்கள்"
-
-#, fuzzy
-#~ msgid "Attack time: %s"
-#~ msgstr "செயல்: %s"
-
-#, fuzzy
-#~ msgid "Network interface: %s"
-#~ msgstr "வலை முகப்புக்கள்"
-
-#, fuzzy
-#~ msgid "Attack type: %s"
-#~ msgstr "வகை: "
-
-#, fuzzy
-#~ msgid "Protocol: %s"
-#~ msgstr "ஒப்புநெறிகள்"
-
-#, fuzzy
-#~ msgid "Attacker IP address: %s"
-#~ msgstr "(_R)தொலை IP முகவரி:"
-
-#, fuzzy
-#~ msgid "Attacker hostname: %s"
-#~ msgstr "புரவலன் பெயரை பெறுவதில் தோல்வி: %s\n"
-
-#, fuzzy
-#~ msgid "Service attacked: %s"
-#~ msgstr "(_t)சேவை வகை:"
-
-#, fuzzy
-#~ msgid "Port attacked: %s"
-#~ msgstr "துறை: %s"
-
-#~ msgid "Ignore"
-#~ msgstr "புறக்கணி"
-
-#, fuzzy
-#~ msgid "Interactive Firewall: new service"
-#~ msgstr "நெருப்புச்சுவர் வடிவமைப்பு காணப்பட்டுள்ளது"
-
-#, fuzzy
-#~ msgid "Process connection"
-#~ msgstr "கேபிள் இணைப்பு"
-
-#, fuzzy
-#~ msgid "Do you want to open this service?"
-#~ msgstr "உங்கள் வடிவமைப்ைப சோதித்து பார்க்க வேண்டுமா? [சோதித்து பார்ப்பது முக்கியம்]"
-
-#~ msgid "Gateway:"
-#~ msgstr "நுழைவாயில்:"
-
-#~ msgid "Interface:"
-#~ msgstr "அட்ைட:"
-
-#~ msgid "Manage connections"
-#~ msgstr "இணைப்புகளை மேலான்மைசெய்"
-
-#, fuzzy
-#~ msgid "IP configuration"
-#~ msgstr "CUPS  வடிவமைப்பு"
-
-#, fuzzy
-#~ msgid "DNS servers"
-#~ msgstr "DNS சேவையகம்"
-
-#~ msgid "Search Domain"
-#~ msgstr "தேடல் களம்"
-
-#~ msgid "static"
-#~ msgstr "நிலையான"
-
-#~ msgid "Start at boot"
-#~ msgstr "தொடங்கலில்  துவக்கிவிடு "
-
-#~ msgid "Flow control"
-#~ msgstr "வீழ்ச்சியின் கட்டுப்பாடு"
-
-#, fuzzy
-#~ msgid "Line termination"
-#~ msgstr "இணையக் கணினி"
-
-#, fuzzy
-#~ msgid "Modem timeout"
-#~ msgstr "கரு தொடங்கல் வெளியேற்ற நேரம்"
-
-#, fuzzy
-#~ msgid "Use lock file"
-#~ msgstr "கோப்ேபா தேர்வுச் செய்"
-
-#, fuzzy
-#~ msgid "Busy wait"
-#~ msgstr "குவைத்"
-
-#, fuzzy
-#~ msgid "Modem sound"
-#~ msgstr "ேமாடம்"
-
-#~ msgid "Vendor"
-#~ msgstr "விற்பவர்"
-
-#~ msgid "Media class"
-#~ msgstr "ஊடக வகை"
-
-#~ msgid "Module name"
-#~ msgstr "கூற்றின் பெயர்"
-
-#~ msgid "Bus"
-#~ msgstr "பாட்ைட"
-
-#~ msgid "Location on the bus"
-#~ msgstr "பாட்ைடயின் இடம்"
-
-#, fuzzy
-#~ msgid "Remove a network interface"
-#~ msgstr "வலையமைப்பு அட்ைடயை தேர்வுச் செய்"
-
-#, fuzzy
-#~ msgid ""
-#~ "An error occurred while deleting the \"%s\" network interface:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "வலையகமைப்புச் சேவைகள் மறுதொடங்கும்போது பிழை நேர்ந்துள்ளது \n"
-#~ "\n"
-#~ "%s"
 
 #~ msgid "Disconnect..."
 #~ msgstr "இணைப்பிலிருந்து விடுபடு"
 
 #~ msgid "Connect..."
 #~ msgstr "இணை..."
-
-#~ msgid "Internet connection configuration"
-#~ msgstr "இணையத்ெதாடர்பு  வடிவமைக்கப்பாளன்"
-
-#, fuzzy
-#~ msgid "Host name (optional)"
-#~ msgstr "இயக்க வடிவமைப்பு "
-
-#, fuzzy
-#~ msgid "Third DNS server (optional)"
-#~ msgstr "முதல் DNS சேவையகத்தின் பெயர்"
-
-#~ msgid "Internet Connection Configuration"
-#~ msgstr "இணையத்ெதாடர்பு  வடிவமைக்கப்பாளன்"
-
-#~ msgid "Internet access"
-#~ msgstr "இணையத்ெதாடர்பு"
-
-#~ msgid "Status:"
-#~ msgstr "நிலை:"
-
-#~ msgid "Parameters"
-#~ msgstr "வரைமுறை"
 
 #, fuzzy
 #~ msgid "Attacker"

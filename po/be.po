@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net VERSION\n"
-"POT-Creation-Date: 2011-05-03 15:42+0200\n"
+"POT-Creation-Date: 2011-11-18 13:57+0100\n"
 "PO-Revision-Date: 2000-09-24 12:30 +0100\n"
 "Last-Translator: Alexander Bokovoy <ab@avilink.net>\n"
 "Language-Team: be\n"
@@ -25,14 +25,16 @@ msgid "Interface"
 msgstr "Інтэрфэйс"
 
 #: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:187
-#: ../lib/network/connection/ethernet.pm:141 ../lib/network/netconnect.pm:633
+#: ../lib/network/connection/ethernet.pm:141
+#: ../lib/network/drakconnect/edit.pm:151 ../lib/network/netconnect.pm:633
 #: ../lib/network/vpn/openvpn.pm:223
 #, c-format
 msgid "IP address"
 msgstr "IP адрас"
 
 #: ../bin/drakconnect-old:64 ../bin/drakids:261
-#: ../lib/network/netconnect.pm:477
+#: ../lib/network/drakconnect/edit.pm:135
+#: ../lib/network/drakconnect/edit.pm:393 ../lib/network/netconnect.pm:477
 #, c-format
 msgid "Protocol"
 msgstr "Пратакол"
@@ -68,23 +70,27 @@ msgid "Configure Local Area Network..."
 msgstr "Настройка сеткі"
 
 #: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:217
+#: ../lib/network/drakconnect/edit.pm:71
 #, c-format
 msgid "Help"
 msgstr "Дапамога"
 
 #: ../bin/drakconnect-old:108 ../bin/drakinvictus:140
+#: ../lib/network/drakconnect/edit.pm:72 ../lib/network/drakconnect/edit.pm:76
 #, c-format
 msgid "Apply"
 msgstr "Применить"
 
 #: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
 #: ../bin/draknetprofile:159 ../bin/net_monitor:388
+#: ../lib/network/drakconnect/global.pm:88
 #, c-format
 msgid "Cancel"
 msgstr "Адмена"
 
 #: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
 #: ../bin/drakconnect-old:265 ../bin/draknetprofile:161 ../bin/net_monitor:389
+#: ../lib/network/drakconnect/global.pm:89
 #, c-format
 msgid "Ok"
 msgstr "Ок"
@@ -94,7 +100,8 @@ msgstr "Ок"
 #: ../lib/network/connection_manager.pm:89
 #: ../lib/network/connection_manager.pm:206
 #: ../lib/network/connection_manager.pm:235
-#: ../lib/network/connection_manager.pm:353 ../lib/network/drakvpn.pm:49
+#: ../lib/network/connection_manager.pm:353
+#: ../lib/network/drakconnect/edit.pm:466 ../lib/network/drakvpn.pm:49
 #: ../lib/network/netcenter.pm:150 ../lib/network/netconnect.pm:186
 #: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
 #: ../lib/network/netconnect.pm:733 ../lib/network/thirdparty.pm:352
@@ -103,7 +110,7 @@ msgstr "Ок"
 msgid "Please wait"
 msgstr "Калі ласка, пачакайце"
 
-#: ../bin/drakconnect-old:115
+#: ../bin/drakconnect-old:115 ../lib/network/drakconnect/edit.pm:468
 #, fuzzy, c-format
 msgid "Please Wait... Applying the configuration"
 msgstr "Праверка параметраў настройкі"
@@ -137,6 +144,7 @@ msgstr ""
 
 #: ../bin/drakconnect-old:209 ../bin/drakgw:181
 #: ../lib/network/connection/ethernet.pm:148
+#: ../lib/network/drakconnect/edit.pm:156
 #, c-format
 msgid "Netmask"
 msgstr "Маска сеткі"
@@ -152,6 +160,7 @@ msgid "Started on boot"
 msgstr ""
 
 #: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:159
+#: ../lib/network/drakconnect/edit.pm:199
 #, c-format
 msgid "DHCP client"
 msgstr ""
@@ -164,17 +173,19 @@ msgid ""
 msgstr ""
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:105
+#: ../lib/network/drakconnect/global.pm:36
 #, fuzzy, c-format
 msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
 msgstr "Пазначце сеткавы інтэрфейс"
 
 #: ../bin/drakconnect-old:273 ../bin/drakconnect-old:305
-#: ../lib/network/drakconnect.pm:16
+#: ../lib/network/drakconnect.pm:16 ../lib/network/drakconnect/edit.pm:515
 #, c-format
 msgid "No IP"
 msgstr ""
 
 #: ../bin/drakconnect-old:306 ../lib/network/drakconnect.pm:17
+#: ../lib/network/drakconnect/edit.pm:516
 #, c-format
 msgid "No Mask"
 msgstr ""
@@ -227,12 +238,12 @@ msgid ""
 "What would you like to do?"
 msgstr ""
 
-#: ../bin/drakgw:101
+#: ../bin/drakgw:101 ../lib/network/drakconnect/edit.pm:373
 #, c-format
 msgid "Disable"
 msgstr "Выключыць"
 
-#: ../bin/drakgw:101
+#: ../bin/drakgw:101 ../lib/network/drakconnect/edit.pm:373
 #, c-format
 msgid "Enable"
 msgstr "Уключыць"
@@ -247,8 +258,8 @@ msgstr "Настроіць панэль"
 msgid "Please select the network interface directly connected to the internet."
 msgstr ""
 
-#: ../bin/drakgw:123 ../lib/network/netconnect.pm:379
-#: ../lib/network/netconnect.pm:414
+#: ../bin/drakgw:123 ../lib/network/drakconnect/delete.pm:26
+#: ../lib/network/netconnect.pm:379 ../lib/network/netconnect.pm:414
 #, fuzzy, c-format
 msgid "Net Device"
 msgstr "Прылада"
@@ -316,7 +327,11 @@ msgstr ""
 #: ../lib/network/connection_manager.pm:177
 #: ../lib/network/connection_manager.pm:181
 #: ../lib/network/connection_manager.pm:223
-#: ../lib/network/connection_manager.pm:481 ../lib/network/drakvpn.pm:45
+#: ../lib/network/connection_manager.pm:481
+#: ../lib/network/drakconnect/delete.pm:12
+#: ../lib/network/drakconnect/edit.pm:506
+#: ../lib/network/drakconnect/edit.pm:510
+#: ../lib/network/drakconnect/edit.pm:519 ../lib/network/drakvpn.pm:45
 #: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
 #: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:135
@@ -600,13 +615,14 @@ msgstr "Дадаць карыстальніка"
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
 #: ../bin/net_applet:145 ../bin/net_applet:353
 #: ../lib/network/drakfirewall.pm:309 ../lib/network/drakfirewall.pm:313
+#: ../lib/network/net_applet/ifw.pm:61 ../lib/network/net_applet/ifw.pm:89
 #, fuzzy, c-format
 msgid "Interactive Firewall"
 msgstr "Знойдзена сістэма сеткавай бяспекі (firewall)!"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:353
+#: ../bin/net_applet:353 ../lib/network/net_applet/ifw.pm:61
 #, fuzzy, c-format
 msgid "Unable to contact daemon"
 msgstr "Немагчыма адчыніць файл %s\n"
@@ -616,12 +632,12 @@ msgstr "Немагчыма адчыніць файл %s\n"
 msgid "Log"
 msgstr "Рэгістрацыя"
 
-#: ../bin/drakids:86 ../bin/drakids:105
+#: ../bin/drakids:86 ../bin/drakids:105 ../lib/network/net_applet/ifw.pm:219
 #, fuzzy, c-format
 msgid "Allow"
 msgstr "Усё"
 
-#: ../bin/drakids:87 ../bin/drakids:96
+#: ../bin/drakids:87 ../bin/drakids:96 ../lib/network/net_applet/ifw.pm:220
 #, fuzzy, c-format
 msgid "Block"
 msgstr "Заблякавана"
@@ -648,12 +664,12 @@ msgstr "Дрэнны файл рэзервовай копіі"
 msgid "Clear logs"
 msgstr "Ачысціць усё"
 
-#: ../bin/drakids:115 ../bin/drakids:120
+#: ../bin/drakids:115 ../bin/drakids:120 ../lib/network/net_applet/ifw.pm:158
 #, c-format
 msgid "Blacklist"
 msgstr ""
 
-#: ../bin/drakids:116 ../bin/drakids:133
+#: ../bin/drakids:116 ../bin/drakids:133 ../lib/network/net_applet/ifw.pm:163
 #, c-format
 msgid "Whitelist"
 msgstr ""
@@ -801,7 +817,7 @@ msgstr "Рэжым"
 msgid "Enabled"
 msgstr "Уключыць"
 
-#: ../bin/draknetprofile:68
+#: ../bin/draknetprofile:68 ../lib/network/drakconnect/edit.pm:423
 #, c-format
 msgid "Description"
 msgstr "Апісанне"
@@ -843,9 +859,9 @@ msgid ""
 "profile."
 msgstr ""
 
-#: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
-#: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
-#: ../lib/network/netconnect.pm:500
+#: ../bin/draknetprofile:183 ../lib/network/drakconnect/global.pm:34
+#: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
+#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:500
 #, c-format
 msgid "Warning"
 msgstr "Увага!"
@@ -2303,12 +2319,12 @@ msgid ""
 "network"
 msgstr ""
 
-#: ../bin/net_monitor:516
+#: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
 msgid "Connected"
 msgstr "Далучаны"
 
-#: ../bin/net_monitor:516
+#: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
 msgid "Not connected"
 msgstr "Адлучаны"
@@ -2373,7 +2389,7 @@ msgstr ""
 msgid "Allow interface to be controlled by Network Manager"
 msgstr ""
 
-#: ../lib/network/connection.pm:251
+#: ../lib/network/connection.pm:251 ../lib/network/drakconnect/edit.pm:292
 #, fuzzy, c-format
 msgid "Metric"
 msgstr "абмежаванне"
@@ -2413,19 +2429,22 @@ msgstr "Рэжым прайгравання"
 msgid "Use BPALogin (needed for Telstra)"
 msgstr ""
 
-#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:616
+#: ../lib/network/connection/cable.pm:45
+#: ../lib/network/drakconnect/edit.pm:312 ../lib/network/netconnect.pm:616
 #, c-format
 msgid "Authentication"
 msgstr "Аўтэнтыфікацыя"
 
 #: ../lib/network/connection/cable.pm:47 ../lib/network/connection/ppp.pm:22
-#: ../lib/network/netconnect.pm:355 ../lib/network/vpn/openvpn.pm:395
+#: ../lib/network/drakconnect/edit.pm:322 ../lib/network/netconnect.pm:355
+#: ../lib/network/vpn/openvpn.pm:395
 #, c-format
 msgid "Account Login (user name)"
 msgstr "Імя для ўваходу (імя карыстальніку)"
 
 #: ../lib/network/connection/cable.pm:49 ../lib/network/connection/ppp.pm:23
-#: ../lib/network/netconnect.pm:356 ../lib/network/vpn/openvpn.pm:396
+#: ../lib/network/drakconnect/edit.pm:323 ../lib/network/netconnect.pm:356
+#: ../lib/network/vpn/openvpn.pm:396
 #, c-format
 msgid "Account Password"
 msgstr "Пароль для ўваходу"
@@ -2548,13 +2567,15 @@ msgstr ""
 "Кожны пункт павінен быць запоўнены як IP адрас ў дзесяткова-кропкавай \n"
 "натацыі (напрыклад, 1.2.3.4)."
 
-#: ../lib/network/connection/ethernet.pm:149 ../lib/network/netconnect.pm:665
+#: ../lib/network/connection/ethernet.pm:149
+#: ../lib/network/drakconnect/edit.pm:162 ../lib/network/netconnect.pm:665
 #: ../lib/network/vpn/openvpn.pm:214 ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
 msgstr "Шлюз"
 
 #: ../lib/network/connection/ethernet.pm:152
+#: ../lib/network/drakconnect/edit.pm:212
 #, fuzzy, c-format
 msgid "Get DNS servers from DHCP"
 msgstr "IP сэервера SMB"
@@ -2580,21 +2601,25 @@ msgid "By default search domain will be set from the fully-qualified host name"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:160
+#: ../lib/network/drakconnect/edit.pm:209
 #, fuzzy, c-format
 msgid "DHCP timeout (in seconds)"
 msgstr "Настройка далучэння да Інтэрнэту"
 
 #: ../lib/network/connection/ethernet.pm:161
+#: ../lib/network/drakconnect/edit.pm:213
 #, c-format
 msgid "Get YP servers from DHCP"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:162
+#: ../lib/network/drakconnect/edit.pm:214
 #, c-format
 msgid "Get NTPD servers from DHCP"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:163
+#: ../lib/network/drakconnect/edit.pm:205
 #, fuzzy, c-format
 msgid "DHCP host name"
 msgstr "Імя машыны"
@@ -2605,11 +2630,13 @@ msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:176
+#: ../lib/network/drakconnect/edit.pm:506
 #, c-format
 msgid "IP address should be in format 1.2.3.4"
 msgstr "IP адрас павінен быць у фармаце 1.2.3.4"
 
 #: ../lib/network/connection/ethernet.pm:181
+#: ../lib/network/drakconnect/edit.pm:510
 #, fuzzy, c-format
 msgid "Netmask should be in format 255.255.224.0"
 msgstr "IP адрас павінен быць у фармаце 1.2.3.4"
@@ -2628,6 +2655,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:222
+#: ../lib/network/drakconnect/edit.pm:203
 #, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
 msgstr ""
@@ -2649,6 +2677,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:244
+#: ../lib/network/drakconnect/edit.pm:270
 #, fuzzy, c-format
 msgid "Network Hotplugging"
 msgstr "Сетка"
@@ -2717,27 +2746,32 @@ msgstr ""
 msgid "Analog telephone modem (POTS)"
 msgstr ""
 
-#: ../lib/network/connection/ppp.pm:9 ../lib/network/netconnect.pm:78
+#: ../lib/network/connection/ppp.pm:9 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:78
 #, c-format
 msgid "Script-based"
 msgstr "на аснове скрыпту"
 
-#: ../lib/network/connection/ppp.pm:10 ../lib/network/netconnect.pm:79
+#: ../lib/network/connection/ppp.pm:10 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:79
 #, c-format
 msgid "PAP"
 msgstr "PAP"
 
-#: ../lib/network/connection/ppp.pm:11 ../lib/network/netconnect.pm:80
+#: ../lib/network/connection/ppp.pm:11 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:80
 #, c-format
 msgid "Terminal-based"
 msgstr "на аснове тэрміналу"
 
-#: ../lib/network/connection/ppp.pm:12 ../lib/network/netconnect.pm:81
+#: ../lib/network/connection/ppp.pm:12 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:81
 #, c-format
 msgid "CHAP"
 msgstr "CHAP"
 
-#: ../lib/network/connection/ppp.pm:13 ../lib/network/netconnect.pm:82
+#: ../lib/network/connection/ppp.pm:13 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:82
 #, fuzzy, c-format
 msgid "PAP/CHAP"
 msgstr "CHAP"
@@ -3915,6 +3949,7 @@ msgstr "Канфігурацыя"
 
 #: ../lib/network/connection/wireless.pm:464
 #: ../lib/network/connection_manager.pm:280
+#: ../lib/network/drakconnect/edit.pm:236
 #, fuzzy, c-format
 msgid "Operating Mode"
 msgstr "Рэжым злучэння"
@@ -3950,6 +3985,7 @@ msgid "Auto"
 msgstr "Аўтаматычна"
 
 #: ../lib/network/connection/wireless.pm:468
+#: ../lib/network/drakconnect/edit.pm:237
 #, c-format
 msgid "Network name (ESSID)"
 msgstr ""
@@ -3960,6 +3996,7 @@ msgid "Encryption mode"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/drakconnect/edit.pm:251
 #, c-format
 msgid "Encryption key"
 msgstr ""
@@ -4026,26 +4063,31 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/drakconnect/edit.pm:238
 #, fuzzy, c-format
 msgid "Network ID"
 msgstr "Сетка"
 
 #: ../lib/network/connection/wireless.pm:513
+#: ../lib/network/drakconnect/edit.pm:239
 #, c-format
 msgid "Operating frequency"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:514
+#: ../lib/network/drakconnect/edit.pm:240
 #, c-format
 msgid "Sensitivity threshold"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:515
+#: ../lib/network/drakconnect/edit.pm:241
 #, fuzzy, c-format
 msgid "Bitrate (in b/s)"
 msgstr "Бітрэйт: %d kb/s"
 
 #: ../lib/network/connection/wireless.pm:516
+#: ../lib/network/drakconnect/edit.pm:252
 #, c-format
 msgid "RTS/CTS"
 msgstr ""
@@ -4065,11 +4107,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:524
+#: ../lib/network/drakconnect/edit.pm:253
 #, fuzzy, c-format
 msgid "Fragmentation"
 msgstr "Аўтэнтыфікацыя"
 
 #: ../lib/network/connection/wireless.pm:525
+#: ../lib/network/drakconnect/edit.pm:254
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr ""
@@ -4086,6 +4130,7 @@ msgstr ""
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
 #: ../lib/network/connection/wireless.pm:533
+#: ../lib/network/drakconnect/edit.pm:255
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr ""
@@ -4103,6 +4148,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/drakconnect/edit.pm:256
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr ""
@@ -4485,6 +4531,280 @@ msgstr "Далучэньне"
 msgid "Hostname changed to \"%s\""
 msgstr ""
 
+#: ../lib/network/drakconnect/delete.pm:12
+#, c-format
+msgid ""
+"No ethernet network adapter has been detected on your system. Please run the "
+"hardware configuration tool."
+msgstr ""
+"Ні водны ethernet сеткавы адаптар у вашай сістэме не вызначаны. Калі ласка, "
+"скарыстайце канфігурацыйны інструмэнт."
+
+#: ../lib/network/drakconnect/delete.pm:21
+#, fuzzy, c-format
+msgid "Remove a network interface"
+msgstr "Пазначце сеткавы інтэрфейс"
+
+#: ../lib/network/drakconnect/delete.pm:25
+#, fuzzy, c-format
+msgid "Select the network interface to remove:"
+msgstr "Пазначце сеткавы інтэрфейс"
+
+#: ../lib/network/drakconnect/delete.pm:58
+#, c-format
+msgid ""
+"An error occurred while deleting the \"%s\" network interface:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../lib/network/drakconnect/delete.pm:59
+#, c-format
+msgid ""
+"Congratulations, the \"%s\" network interface has been successfully deleted"
+msgstr ""
+
+#: ../lib/network/drakconnect/edit.pm:23
+#, fuzzy, c-format
+msgid "Manage connections"
+msgstr "Размеркаванне"
+
+#: ../lib/network/drakconnect/edit.pm:50 ../lib/network/drakroam.pm:85
+#, c-format
+msgid "Device: "
+msgstr "Прылада:"
+
+#: ../lib/network/drakconnect/edit.pm:132
+#, fuzzy, c-format
+msgid "IP configuration"
+msgstr "Канфігурацыя"
+
+#: ../lib/network/drakconnect/edit.pm:167
+#, fuzzy, c-format
+msgid "DNS servers"
+msgstr "CDDB сервакі"
+
+#: ../lib/network/drakconnect/edit.pm:173
+#, fuzzy, c-format
+msgid "Search Domain"
+msgstr "NIS Domain"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "none"
+msgstr "няма"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, fuzzy, c-format
+msgid "static"
+msgstr "Антарктыка"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "DHCP"
+msgstr ""
+
+#: ../lib/network/drakconnect/edit.pm:264
+#, fuzzy, c-format
+msgid "Start at boot"
+msgstr "Аўтаматычны"
+
+#: ../lib/network/drakconnect/edit.pm:276 ../lib/network/netconnect.pm:352
+#, c-format
+msgid "Dialing mode"
+msgstr "Рэжым злучэння"
+
+#: ../lib/network/drakconnect/edit.pm:281
+#: ../lib/network/drakconnect/edit.pm:348 ../lib/network/netconnect.pm:353
+#, fuzzy, c-format
+msgid "Connection speed"
+msgstr "Імя злучэння"
+
+#: ../lib/network/drakconnect/edit.pm:286 ../lib/network/netconnect.pm:354
+#, fuzzy, c-format
+msgid "Connection timeout (in sec)"
+msgstr "Настройка далучэння да Інтэрнэту"
+
+#: ../lib/network/drakconnect/edit.pm:324 ../lib/network/netconnect.pm:349
+#, c-format
+msgid "Provider phone number"
+msgstr "Нумар тэлефону правайдара"
+
+#: ../lib/network/drakconnect/edit.pm:346
+#, fuzzy, c-format
+msgid "Flow control"
+msgstr "Кантроль гуку"
+
+#: ../lib/network/drakconnect/edit.pm:347
+#, fuzzy, c-format
+msgid "Line termination"
+msgstr "Памеры і арыентацыя"
+
+#: ../lib/network/drakconnect/edit.pm:358
+#, fuzzy, c-format
+msgid "Modem timeout"
+msgstr "Запісаць гукавы кліп"
+
+#: ../lib/network/drakconnect/edit.pm:362
+#, fuzzy, c-format
+msgid "Use lock file"
+msgstr "Абярыце файл"
+
+#: ../lib/network/drakconnect/edit.pm:364
+#, c-format
+msgid "Wait for dialup tone before dialing"
+msgstr ""
+
+#: ../lib/network/drakconnect/edit.pm:367
+#, fuzzy, c-format
+msgid "Busy wait"
+msgstr "Калі ласка, пачакайце"
+
+#: ../lib/network/drakconnect/edit.pm:372
+#, fuzzy, c-format
+msgid "Modem sound"
+msgstr "Запісаць гукавы кліп"
+
+#: ../lib/network/drakconnect/edit.pm:385 ../lib/network/netconnect.pm:357
+#, c-format
+msgid "Card IRQ"
+msgstr "IRQ карты"
+
+#: ../lib/network/drakconnect/edit.pm:386 ../lib/network/netconnect.pm:358
+#, c-format
+msgid "Card mem (DMA)"
+msgstr "Адрасы памяці карты (DMA)"
+
+#: ../lib/network/drakconnect/edit.pm:387 ../lib/network/netconnect.pm:359
+#, c-format
+msgid "Card IO"
+msgstr "IO карты"
+
+#: ../lib/network/drakconnect/edit.pm:388 ../lib/network/netconnect.pm:360
+#, c-format
+msgid "Card IO_0"
+msgstr "IO_0 карты"
+
+#: ../lib/network/drakconnect/edit.pm:394 ../lib/network/netconnect.pm:71
+#, c-format
+msgid "European protocol (EDSS1)"
+msgstr ""
+
+#: ../lib/network/drakconnect/edit.pm:395 ../lib/network/netconnect.pm:72
+#, c-format
+msgid ""
+"Protocol for the rest of the world\n"
+"No D-Channel (leased lines)"
+msgstr ""
+
+#: ../lib/network/drakconnect/edit.pm:422
+#, fuzzy, c-format
+msgid "Vendor"
+msgstr "Рэдактары"
+
+#: ../lib/network/drakconnect/edit.pm:424
+#, c-format
+msgid "Media class"
+msgstr ""
+
+#: ../lib/network/drakconnect/edit.pm:425
+#, fuzzy, c-format
+msgid "Module name"
+msgstr "Назва файла"
+
+#: ../lib/network/drakconnect/edit.pm:426
+#, fuzzy, c-format
+msgid "Mac Address"
+msgstr "Адрасная кніга"
+
+#: ../lib/network/drakconnect/edit.pm:427
+#, c-format
+msgid "Bus"
+msgstr "Прац."
+
+#: ../lib/network/drakconnect/edit.pm:428
+#, c-format
+msgid "Location on the bus"
+msgstr ""
+
+#: ../lib/network/drakconnect/edit.pm:519 ../lib/network/netconnect.pm:832
+#, fuzzy, c-format
+msgid "Gateway address should be in format 1.2.3.4"
+msgstr "IP адрас павінен быць у фармаце 1.2.3.4"
+
+#: ../lib/network/drakconnect/global.pm:27
+#, c-format
+msgid "Gateway:"
+msgstr "Шлюз:"
+
+#: ../lib/network/drakconnect/global.pm:27
+#, c-format
+msgid "Interface:"
+msgstr "Інтэрфэйс:"
+
+#: ../lib/network/drakconnect/global.pm:30
+#, fuzzy, c-format
+msgid "Internet connection configuration"
+msgstr "Настройка далучэння да Інтэрнэту"
+
+#: ../lib/network/drakconnect/global.pm:35
+#, c-format
+msgid ""
+"You do not have any configured Internet connection.\n"
+"Run the \"%s\" assistant from the Mageia Control Center"
+msgstr ""
+
+#: ../lib/network/drakconnect/global.pm:50
+#, fuzzy, c-format
+msgid "Host name (optional)"
+msgstr "Імя машыны"
+
+#: ../lib/network/drakconnect/global.pm:51 ../lib/network/netconnect.pm:651
+#, c-format
+msgid "First DNS Server (optional)"
+msgstr ""
+
+#: ../lib/network/drakconnect/global.pm:52 ../lib/network/netconnect.pm:652
+#, fuzzy, c-format
+msgid "Second DNS Server (optional)"
+msgstr "Канфігурацыя сістэмных сэрвісаў"
+
+#: ../lib/network/drakconnect/global.pm:53
+#, fuzzy, c-format
+msgid "Third DNS server (optional)"
+msgstr "Канфігурацыя сістэмных сэрвісаў"
+
+#: ../lib/network/drakconnect/global.pm:75
+#, fuzzy, c-format
+msgid "Internet Connection Configuration"
+msgstr "Настройка далучэння да Інтэрнэту"
+
+#: ../lib/network/drakconnect/global.pm:76
+#, fuzzy, c-format
+msgid "Internet access"
+msgstr "Інтэрфэйс"
+
+#: ../lib/network/drakconnect/global.pm:78
+#, fuzzy, c-format
+msgid "Connection type: "
+msgstr "Імя злучэння"
+
+#: ../lib/network/drakconnect/global.pm:81
+#, c-format
+msgid "Status:"
+msgstr "Стан:"
+
+#: ../lib/network/drakconnect/global.pm:82 ../lib/network/netconnect.pm:305
+#: ../lib/network/netconnect.pm:733
+#, c-format
+msgid "Testing your connection..."
+msgstr ""
+
+#: ../lib/network/drakconnect/global.pm:86
+#, c-format
+msgid "Parameters"
+msgstr "Парамэтры"
+
 #: ../lib/network/drakfirewall.pm:14
 #, fuzzy, c-format
 msgid "Web Server"
@@ -4675,11 +4995,6 @@ msgstr ""
 #, fuzzy, c-format
 msgid "No device found"
 msgstr "Няма значкі"
-
-#: ../lib/network/drakroam.pm:85
-#, c-format
-msgid "Device: "
-msgstr "Прылада:"
 
 #: ../lib/network/drakroam.pm:89 ../lib/network/netcenter.pm:66
 #, c-format
@@ -4903,6 +5218,103 @@ msgstr "Усталяванне сістэмы"
 msgid "Select a device:"
 msgstr ""
 
+#. -PO: "Process" is a verb
+#: ../lib/network/net_applet/ifw.pm:100
+#, fuzzy, c-format
+msgid "Process attack"
+msgstr "Кіраваньне сэрвісамі"
+
+#: ../lib/network/net_applet/ifw.pm:113
+#, fuzzy, c-format
+msgid "Interactive Firewall: intrusion detected"
+msgstr "Знойдзена сістэма сеткавай бяспекі (firewall)!"
+
+#: ../lib/network/net_applet/ifw.pm:130
+#, fuzzy, c-format
+msgid "What do you want to do with this attacker?"
+msgstr "Вы жадаеце скончыць гульню?"
+
+#: ../lib/network/net_applet/ifw.pm:133
+#, fuzzy, c-format
+msgid "Attack details"
+msgstr "Падрабязнасці"
+
+#: ../lib/network/net_applet/ifw.pm:137
+#, fuzzy, c-format
+msgid "Attack time: %s"
+msgstr "Укласьці файл(ы)"
+
+#: ../lib/network/net_applet/ifw.pm:138
+#, c-format
+msgid "Network interface: %s"
+msgstr "Сеткавы інтэрфейс: %s"
+
+#: ../lib/network/net_applet/ifw.pm:139
+#, fuzzy, c-format
+msgid "Attack type: %s"
+msgstr "Тып: "
+
+#: ../lib/network/net_applet/ifw.pm:140
+#, c-format
+msgid "Protocol: %s"
+msgstr "Пратакол: %s"
+
+#: ../lib/network/net_applet/ifw.pm:141
+#, fuzzy, c-format
+msgid "Attacker IP address: %s"
+msgstr "IP адрас"
+
+#: ../lib/network/net_applet/ifw.pm:142
+#, fuzzy, c-format
+msgid "Attacker hostname: %s"
+msgstr "Адбыўся збой пад час атрыманьня назвы вузла: %s\n"
+
+#: ../lib/network/net_applet/ifw.pm:145
+#, fuzzy, c-format
+msgid "Service attacked: %s"
+msgstr "Кіраваньне сэрвісамі"
+
+#: ../lib/network/net_applet/ifw.pm:146
+#, fuzzy, c-format
+msgid "Port attacked: %s"
+msgstr "Порт:"
+
+#: ../lib/network/net_applet/ifw.pm:148
+#, fuzzy, c-format
+msgid "Type of ICMP attack: %s"
+msgstr "Порт:"
+
+#: ../lib/network/net_applet/ifw.pm:153
+#, c-format
+msgid "Always blacklist (do not ask again)"
+msgstr ""
+
+#: ../lib/network/net_applet/ifw.pm:168
+#, c-format
+msgid "Ignore"
+msgstr "Ігнараваць"
+
+#: ../lib/network/net_applet/ifw.pm:186 ../lib/network/net_applet/ifw.pm:204
+#, fuzzy, c-format
+msgid "Interactive Firewall: new service"
+msgstr "Знойдзена сістэма сеткавай бяспекі (firewall)!"
+
+#. -PO: "Process" is a verb
+#: ../lib/network/net_applet/ifw.pm:192
+#, fuzzy, c-format
+msgid "Process connection"
+msgstr "Канфігурацыя"
+
+#: ../lib/network/net_applet/ifw.pm:214
+#, fuzzy, c-format
+msgid "Do you want to open this service?"
+msgstr "Ці жадаеце пратэсціраваць настройкі?"
+
+#: ../lib/network/net_applet/ifw.pm:217
+#, fuzzy, c-format
+msgid "Remember this answer"
+msgstr "Запомніць гэты пароль"
+
 #: ../lib/network/netcenter.pm:55 ../lib/network/netconnect.pm:211
 #, c-format
 msgid "Please select your network:"
@@ -4944,18 +5356,6 @@ msgstr "Унутраная ISDN карта"
 #: ../lib/network/netconnect.pm:69
 #, c-format
 msgid "Protocol for the rest of the world"
-msgstr ""
-
-#: ../lib/network/netconnect.pm:71
-#, c-format
-msgid "European protocol (EDSS1)"
-msgstr ""
-
-#: ../lib/network/netconnect.pm:72
-#, c-format
-msgid ""
-"Protocol for the rest of the world\n"
-"No D-Channel (leased lines)"
 msgstr ""
 
 #: ../lib/network/netconnect.pm:122
@@ -5006,11 +5406,6 @@ msgstr ""
 msgid "Connection control"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:733
-#, c-format
-msgid "Testing your connection..."
-msgstr ""
-
 #: ../lib/network/netconnect.pm:344
 #, c-format
 msgid "Connection Configuration"
@@ -5031,11 +5426,6 @@ msgstr "Ваш асабісты тэлефонны нумар"
 msgid "Provider name (ex provider.net)"
 msgstr "Імя правайдару, напрыклад правайдар.net"
 
-#: ../lib/network/netconnect.pm:349
-#, c-format
-msgid "Provider phone number"
-msgstr "Нумар тэлефону правайдара"
-
 #: ../lib/network/netconnect.pm:350
 #, fuzzy, c-format
 msgid "Provider DNS 1 (optional)"
@@ -5045,41 +5435,6 @@ msgstr "Опцыі прынтэру"
 #, fuzzy, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "Опцыі прынтэру"
-
-#: ../lib/network/netconnect.pm:352
-#, c-format
-msgid "Dialing mode"
-msgstr "Рэжым злучэння"
-
-#: ../lib/network/netconnect.pm:353
-#, fuzzy, c-format
-msgid "Connection speed"
-msgstr "Імя злучэння"
-
-#: ../lib/network/netconnect.pm:354
-#, fuzzy, c-format
-msgid "Connection timeout (in sec)"
-msgstr "Настройка далучэння да Інтэрнэту"
-
-#: ../lib/network/netconnect.pm:357
-#, c-format
-msgid "Card IRQ"
-msgstr "IRQ карты"
-
-#: ../lib/network/netconnect.pm:358
-#, c-format
-msgid "Card mem (DMA)"
-msgstr "Адрасы памяці карты (DMA)"
-
-#: ../lib/network/netconnect.pm:359
-#, c-format
-msgid "Card IO"
-msgstr "IO карты"
-
-#: ../lib/network/netconnect.pm:360
-#, c-format
-msgid "Card IO_0"
-msgstr "IO_0 карты"
 
 #: ../lib/network/netconnect.pm:361
 #, c-format
@@ -5241,16 +5596,6 @@ msgstr ""
 #, c-format
 msgid "Domain name"
 msgstr "Імя дамену"
-
-#: ../lib/network/netconnect.pm:651
-#, c-format
-msgid "First DNS Server (optional)"
-msgstr ""
-
-#: ../lib/network/netconnect.pm:652
-#, fuzzy, c-format
-msgid "Second DNS Server (optional)"
-msgstr "Канфігурацыя сістэмных сэрвісаў"
 
 #: ../lib/network/netconnect.pm:653
 #, c-format
@@ -5526,11 +5871,6 @@ msgstr ""
 #: ../lib/network/netconnect.pm:831
 #, fuzzy, c-format
 msgid "DNS server address should be in format 1.2.3.4"
-msgstr "IP адрас павінен быць у фармаце 1.2.3.4"
-
-#: ../lib/network/netconnect.pm:832
-#, fuzzy, c-format
-msgid "Gateway address should be in format 1.2.3.4"
 msgstr "IP адрас павінен быць у фармаце 1.2.3.4"
 
 #: ../lib/network/netconnect.pm:833
@@ -5939,17 +6279,6 @@ msgstr ""
 #~ msgid "Clone"
 #~ msgstr "Клянаваньне"
 
-#~ msgid ""
-#~ "No ethernet network adapter has been detected on your system. Please run "
-#~ "the hardware configuration tool."
-#~ msgstr ""
-#~ "Ні водны ethernet сеткавы адаптар у вашай сістэме не вызначаны. Калі "
-#~ "ласка, скарыстайце канфігурацыйны інструмэнт."
-
-#, fuzzy
-#~ msgid "Connection type: "
-#~ msgstr "Імя злучэння"
-
 #, fuzzy
 #~ msgid "%s already in use\n"
 #~ msgstr "%s ужо знойдзены "
@@ -5982,9 +6311,6 @@ msgstr ""
 #~ msgid "Direction"
 #~ msgstr "Накірунак"
 
-#~ msgid "none"
-#~ msgstr "няма"
-
 #~ msgid "Level"
 #~ msgstr "Узровень"
 
@@ -5992,152 +6318,8 @@ msgstr ""
 #~ msgstr "Па дамаўленню"
 
 #, fuzzy
-#~ msgid "Process attack"
-#~ msgstr "Кіраваньне сэрвісамі"
-
-#, fuzzy
-#~ msgid "Interactive Firewall: intrusion detected"
-#~ msgstr "Знойдзена сістэма сеткавай бяспекі (firewall)!"
-
-#, fuzzy
-#~ msgid "What do you want to do with this attacker?"
-#~ msgstr "Вы жадаеце скончыць гульню?"
-
-#, fuzzy
-#~ msgid "Attack details"
-#~ msgstr "Падрабязнасці"
-
-#, fuzzy
-#~ msgid "Attack time: %s"
-#~ msgstr "Укласьці файл(ы)"
-
-#~ msgid "Network interface: %s"
-#~ msgstr "Сеткавы інтэрфейс: %s"
-
-#, fuzzy
-#~ msgid "Attack type: %s"
-#~ msgstr "Тып: "
-
-#~ msgid "Protocol: %s"
-#~ msgstr "Пратакол: %s"
-
-#, fuzzy
-#~ msgid "Attacker IP address: %s"
-#~ msgstr "IP адрас"
-
-#, fuzzy
-#~ msgid "Attacker hostname: %s"
-#~ msgstr "Адбыўся збой пад час атрыманьня назвы вузла: %s\n"
-
-#, fuzzy
-#~ msgid "Service attacked: %s"
-#~ msgstr "Кіраваньне сэрвісамі"
-
-#, fuzzy
-#~ msgid "Port attacked: %s"
-#~ msgstr "Порт:"
-
-#~ msgid "Ignore"
-#~ msgstr "Ігнараваць"
-
-#, fuzzy
-#~ msgid "Interactive Firewall: new service"
-#~ msgstr "Знойдзена сістэма сеткавай бяспекі (firewall)!"
-
-#, fuzzy
-#~ msgid "Process connection"
-#~ msgstr "Канфігурацыя"
-
-#, fuzzy
-#~ msgid "Do you want to open this service?"
-#~ msgstr "Ці жадаеце пратэсціраваць настройкі?"
-
-#, fuzzy
-#~ msgid "Remember this answer"
-#~ msgstr "Запомніць гэты пароль"
-
-#~ msgid "Gateway:"
-#~ msgstr "Шлюз:"
-
-#~ msgid "Interface:"
-#~ msgstr "Інтэрфэйс:"
-
-#, fuzzy
-#~ msgid "IP configuration"
-#~ msgstr "Канфігурацыя"
-
-#, fuzzy
-#~ msgid "DNS servers"
-#~ msgstr "CDDB сервакі"
-
-#, fuzzy
-#~ msgid "Search Domain"
-#~ msgstr "NIS Domain"
-
-#, fuzzy
-#~ msgid "static"
-#~ msgstr "Антарктыка"
-
-#, fuzzy
-#~ msgid "Flow control"
-#~ msgstr "Кантроль гуку"
-
-#, fuzzy
-#~ msgid "Line termination"
-#~ msgstr "Памеры і арыентацыя"
-
-#, fuzzy
-#~ msgid "Use lock file"
-#~ msgstr "Абярыце файл"
-
-#, fuzzy
-#~ msgid "Busy wait"
-#~ msgstr "Калі ласка, пачакайце"
-
-#, fuzzy
-#~ msgid "Modem sound"
-#~ msgstr "Запісаць гукавы кліп"
-
-#, fuzzy
-#~ msgid "Vendor"
-#~ msgstr "Рэдактары"
-
-#, fuzzy
-#~ msgid "Module name"
-#~ msgstr "Назва файла"
-
-#, fuzzy
-#~ msgid "Mac Address"
-#~ msgstr "Адрасная кніга"
-
-#~ msgid "Bus"
-#~ msgstr "Прац."
-
-#, fuzzy
-#~ msgid "Remove a network interface"
-#~ msgstr "Пазначце сеткавы інтэрфейс"
-
-#, fuzzy
 #~ msgid "Connect..."
 #~ msgstr "Настройка IDE"
-
-#, fuzzy
-#~ msgid "Internet connection configuration"
-#~ msgstr "Настройка далучэння да Інтэрнэту"
-
-#, fuzzy
-#~ msgid "Host name (optional)"
-#~ msgstr "Імя машыны"
-
-#, fuzzy
-#~ msgid "Internet Connection Configuration"
-#~ msgstr "Настройка далучэння да Інтэрнэту"
-
-#~ msgid "Status:"
-#~ msgstr "Стан:"
-
-#~ msgid "Parameters"
-#~ msgstr "Парамэтры"
 
 #, fuzzy
 #~ msgid "Attacker"

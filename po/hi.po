@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-hi\n"
-"POT-Creation-Date: 2011-05-03 15:42+0200\n"
+"POT-Creation-Date: 2011-11-18 13:57+0100\n"
 "PO-Revision-Date: 2004-04-04 21:54+0530\n"
 "Last-Translator: धनञ्जय शर्मा (Dhananjaya Sharma) <dysxhi@yahoo.co.in>\n"
 "Language-Team: हिन्दी (Hindi) <dysxhi@yahoo.co.in>\n"
@@ -26,14 +26,16 @@ msgid "Interface"
 msgstr "इन्टरफ़ेस"
 
 #: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:187
-#: ../lib/network/connection/ethernet.pm:141 ../lib/network/netconnect.pm:633
+#: ../lib/network/connection/ethernet.pm:141
+#: ../lib/network/drakconnect/edit.pm:151 ../lib/network/netconnect.pm:633
 #: ../lib/network/vpn/openvpn.pm:223
 #, c-format
 msgid "IP address"
 msgstr "आईपी पता"
 
 #: ../bin/drakconnect-old:64 ../bin/drakids:261
-#: ../lib/network/netconnect.pm:477
+#: ../lib/network/drakconnect/edit.pm:135
+#: ../lib/network/drakconnect/edit.pm:393 ../lib/network/netconnect.pm:477
 #, c-format
 msgid "Protocol"
 msgstr "प्रोटोकॉल"
@@ -69,23 +71,27 @@ msgid "Configure Local Area Network..."
 msgstr "स्थानीय नेटवर्क क्षेत्र को संरचित किया जा रहा है..."
 
 #: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:217
+#: ../lib/network/drakconnect/edit.pm:71
 #, c-format
 msgid "Help"
 msgstr "सहायता"
 
 #: ../bin/drakconnect-old:108 ../bin/drakinvictus:140
+#: ../lib/network/drakconnect/edit.pm:72 ../lib/network/drakconnect/edit.pm:76
 #, c-format
 msgid "Apply"
 msgstr "प्रयोग करें"
 
 #: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
 #: ../bin/draknetprofile:159 ../bin/net_monitor:388
+#: ../lib/network/drakconnect/global.pm:88
 #, c-format
 msgid "Cancel"
 msgstr "निरस्त"
 
 #: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
 #: ../bin/drakconnect-old:265 ../bin/draknetprofile:161 ../bin/net_monitor:389
+#: ../lib/network/drakconnect/global.pm:89
 #, c-format
 msgid "Ok"
 msgstr "ठीक"
@@ -95,7 +101,8 @@ msgstr "ठीक"
 #: ../lib/network/connection_manager.pm:89
 #: ../lib/network/connection_manager.pm:206
 #: ../lib/network/connection_manager.pm:235
-#: ../lib/network/connection_manager.pm:353 ../lib/network/drakvpn.pm:49
+#: ../lib/network/connection_manager.pm:353
+#: ../lib/network/drakconnect/edit.pm:466 ../lib/network/drakvpn.pm:49
 #: ../lib/network/netcenter.pm:150 ../lib/network/netconnect.pm:186
 #: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
 #: ../lib/network/netconnect.pm:733 ../lib/network/thirdparty.pm:352
@@ -104,7 +111,7 @@ msgstr "ठीक"
 msgid "Please wait"
 msgstr "कृपया प्रतीक्षा करें"
 
-#: ../bin/drakconnect-old:115
+#: ../bin/drakconnect-old:115 ../lib/network/drakconnect/edit.pm:468
 #, c-format
 msgid "Please Wait... Applying the configuration"
 msgstr "कृपया प्रतीक्षा करें... संरचना को लागू करें"
@@ -140,6 +147,7 @@ msgstr "ऐडाप्टर %s: %s"
 
 #: ../bin/drakconnect-old:209 ../bin/drakgw:181
 #: ../lib/network/connection/ethernet.pm:148
+#: ../lib/network/drakconnect/edit.pm:156
 #, c-format
 msgid "Netmask"
 msgstr "नेटमास्क"
@@ -155,6 +163,7 @@ msgid "Started on boot"
 msgstr "बूट के समय आरम्भ"
 
 #: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:159
+#: ../lib/network/drakconnect/edit.pm:199
 #, c-format
 msgid "DHCP client"
 msgstr "डी०एच०सी०पी० ग्राहक"
@@ -169,17 +178,19 @@ msgstr ""
 "मैनड्रिव नियंत्रण केन्द्र से \"एक इन्टरफ़ेस को जोड़े\" सहायक को चलायें"
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:105
+#: ../lib/network/drakconnect/global.pm:36
 #, c-format
 msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
 msgstr "एक नये नेटवर्क इन्टरफ़ेस को स्थापित करें (लैन, आईएसडीएन, ऐडीएसएल, ...)"
 
 #: ../bin/drakconnect-old:273 ../bin/drakconnect-old:305
-#: ../lib/network/drakconnect.pm:16
+#: ../lib/network/drakconnect.pm:16 ../lib/network/drakconnect/edit.pm:515
 #, c-format
 msgid "No IP"
 msgstr "कोई एलपी नहीं"
 
 #: ../bin/drakconnect-old:306 ../lib/network/drakconnect.pm:17
+#: ../lib/network/drakconnect/edit.pm:516
 #, c-format
 msgid "No Mask"
 msgstr "कोई मास्क नहीं"
@@ -240,12 +251,12 @@ msgstr ""
 "\n"
 "आप क्या करना चाहते है?"
 
-#: ../bin/drakgw:101
+#: ../bin/drakgw:101 ../lib/network/drakconnect/edit.pm:373
 #, c-format
 msgid "Disable"
 msgstr "निष्क्रियता"
 
-#: ../bin/drakgw:101
+#: ../bin/drakgw:101 ../lib/network/drakconnect/edit.pm:373
 #, c-format
 msgid "Enable"
 msgstr "सक्रियता"
@@ -260,8 +271,8 @@ msgstr "पुनःसंरचना"
 msgid "Please select the network interface directly connected to the internet."
 msgstr ""
 
-#: ../bin/drakgw:123 ../lib/network/netconnect.pm:379
-#: ../lib/network/netconnect.pm:414
+#: ../bin/drakgw:123 ../lib/network/drakconnect/delete.pm:26
+#: ../lib/network/netconnect.pm:379 ../lib/network/netconnect.pm:414
 #, c-format
 msgid "Net Device"
 msgstr "नेट उपकरण"
@@ -327,7 +338,11 @@ msgstr "आंतरिक डोमेन का नाम"
 #: ../lib/network/connection_manager.pm:177
 #: ../lib/network/connection_manager.pm:181
 #: ../lib/network/connection_manager.pm:223
-#: ../lib/network/connection_manager.pm:481 ../lib/network/drakvpn.pm:45
+#: ../lib/network/connection_manager.pm:481
+#: ../lib/network/drakconnect/delete.pm:12
+#: ../lib/network/drakconnect/edit.pm:506
+#: ../lib/network/drakconnect/edit.pm:510
+#: ../lib/network/drakconnect/edit.pm:519 ../lib/network/drakvpn.pm:45
 #: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
 #: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:135
@@ -621,13 +636,14 @@ msgstr "सभी उपयोगकर्ताओं को अनुमति
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
 #: ../bin/net_applet:145 ../bin/net_applet:353
 #: ../lib/network/drakfirewall.pm:309 ../lib/network/drakfirewall.pm:313
+#: ../lib/network/net_applet/ifw.pm:61 ../lib/network/net_applet/ifw.pm:89
 #, fuzzy, c-format
 msgid "Interactive Firewall"
 msgstr "अग्नि-भीतिका"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:353
+#: ../bin/net_applet:353 ../lib/network/net_applet/ifw.pm:61
 #, fuzzy, c-format
 msgid "Unable to contact daemon"
 msgstr "%s मिरर प्रणाली से संबंध स्थापित करने में असमर्थ"
@@ -637,12 +653,12 @@ msgstr "%s मिरर प्रणाली से संबंध स्थ�
 msgid "Log"
 msgstr "लॉग"
 
-#: ../bin/drakids:86 ../bin/drakids:105
+#: ../bin/drakids:86 ../bin/drakids:105 ../lib/network/net_applet/ifw.pm:219
 #, fuzzy, c-format
 msgid "Allow"
 msgstr "सभी"
 
-#: ../bin/drakids:87 ../bin/drakids:96
+#: ../bin/drakids:87 ../bin/drakids:96 ../lib/network/net_applet/ifw.pm:220
 #, c-format
 msgid "Block"
 msgstr ""
@@ -669,12 +685,12 @@ msgstr "बैक-अप उपयोगकर्ता संचिकाये
 msgid "Clear logs"
 msgstr "सभी को साफ़"
 
-#: ../bin/drakids:115 ../bin/drakids:120
+#: ../bin/drakids:115 ../bin/drakids:120 ../lib/network/net_applet/ifw.pm:158
 #, c-format
 msgid "Blacklist"
 msgstr ""
 
-#: ../bin/drakids:116 ../bin/drakids:133
+#: ../bin/drakids:116 ../bin/drakids:133 ../lib/network/net_applet/ifw.pm:163
 #, c-format
 msgid "Whitelist"
 msgstr ""
@@ -822,7 +838,7 @@ msgstr "मोड"
 msgid "Enabled"
 msgstr "सक्रियता"
 
-#: ../bin/draknetprofile:68
+#: ../bin/draknetprofile:68 ../lib/network/drakconnect/edit.pm:423
 #, c-format
 msgid "Description"
 msgstr "विवरण"
@@ -864,9 +880,9 @@ msgid ""
 "profile."
 msgstr ""
 
-#: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
-#: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
-#: ../lib/network/netconnect.pm:500
+#: ../bin/draknetprofile:183 ../lib/network/drakconnect/global.pm:34
+#: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
+#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:500
 #, c-format
 msgid "Warning"
 msgstr "चेतावनी"
@@ -2335,12 +2351,12 @@ msgid ""
 msgstr ""
 "चेतावनी, एक अन्य इन्टरनेट संबंध को खोजा गया है, सम्भव है कि आपका नेटवर्क उपयोग कर रहा हो"
 
-#: ../bin/net_monitor:516
+#: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
 msgid "Connected"
 msgstr "जुड़ा हुआ"
 
-#: ../bin/net_monitor:516
+#: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
 msgid "Not connected"
 msgstr "संबंध-विच्छेद है"
@@ -2405,7 +2421,7 @@ msgstr ""
 msgid "Allow interface to be controlled by Network Manager"
 msgstr ""
 
-#: ../lib/network/connection.pm:251
+#: ../lib/network/connection.pm:251 ../lib/network/drakconnect/edit.pm:292
 #, c-format
 msgid "Metric"
 msgstr "मेट्रिक"
@@ -2445,19 +2461,22 @@ msgstr "कार्ड का मॉडल:"
 msgid "Use BPALogin (needed for Telstra)"
 msgstr ""
 
-#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:616
+#: ../lib/network/connection/cable.pm:45
+#: ../lib/network/drakconnect/edit.pm:312 ../lib/network/netconnect.pm:616
 #, c-format
 msgid "Authentication"
 msgstr "प्रमाणीकरण"
 
 #: ../lib/network/connection/cable.pm:47 ../lib/network/connection/ppp.pm:22
-#: ../lib/network/netconnect.pm:355 ../lib/network/vpn/openvpn.pm:395
+#: ../lib/network/drakconnect/edit.pm:322 ../lib/network/netconnect.pm:355
+#: ../lib/network/vpn/openvpn.pm:395
 #, c-format
 msgid "Account Login (user name)"
 msgstr "खाता संत्र-आरम्भ (उपयोगकर्ता का नाम)"
 
 #: ../lib/network/connection/cable.pm:49 ../lib/network/connection/ppp.pm:23
-#: ../lib/network/netconnect.pm:356 ../lib/network/vpn/openvpn.pm:396
+#: ../lib/network/drakconnect/edit.pm:323 ../lib/network/netconnect.pm:356
+#: ../lib/network/vpn/openvpn.pm:396
 #, c-format
 msgid "Account Password"
 msgstr "खाते का कूट-शब्द"
@@ -2582,13 +2601,15 @@ msgstr ""
 "प्रत्येक प्रविष्टी को एक आईपी पते की भांति डाटेड-अंकीय \n"
 "प्रारूप में बताना चाहिए (उदाहरण हेतु, १.२.३.४) । "
 
-#: ../lib/network/connection/ethernet.pm:149 ../lib/network/netconnect.pm:665
+#: ../lib/network/connection/ethernet.pm:149
+#: ../lib/network/drakconnect/edit.pm:162 ../lib/network/netconnect.pm:665
 #: ../lib/network/vpn/openvpn.pm:214 ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
 msgstr "गेटवे"
 
 #: ../lib/network/connection/ethernet.pm:152
+#: ../lib/network/drakconnect/edit.pm:212
 #, fuzzy, c-format
 msgid "Get DNS servers from DHCP"
 msgstr "डीएनएस सर्वर आईपी"
@@ -2615,21 +2636,25 @@ msgstr ""
 "डिफ़ाल्ट के तौर पर खोज-डोमेन को एक पूर्ण-योग्यवान होस्ट नाम से स्थापित किया जायेगा"
 
 #: ../lib/network/connection/ethernet.pm:160
+#: ../lib/network/drakconnect/edit.pm:209
 #, fuzzy, c-format
 msgid "DHCP timeout (in seconds)"
 msgstr "संबंध समय- सीमा समाप्ति (पलों में)"
 
 #: ../lib/network/connection/ethernet.pm:161
+#: ../lib/network/drakconnect/edit.pm:213
 #, c-format
 msgid "Get YP servers from DHCP"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:162
+#: ../lib/network/drakconnect/edit.pm:214
 #, c-format
 msgid "Get NTPD servers from DHCP"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:163
+#: ../lib/network/drakconnect/edit.pm:205
 #, c-format
 msgid "DHCP host name"
 msgstr "डी०एच०सी०पी० होस्ट का नाम"
@@ -2640,11 +2665,13 @@ msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:176
+#: ../lib/network/drakconnect/edit.pm:506
 #, c-format
 msgid "IP address should be in format 1.2.3.4"
 msgstr "आई०पी० पते का प्रारूप १.२.३.४ जैसा होना चाहिए"
 
 #: ../lib/network/connection/ethernet.pm:181
+#: ../lib/network/drakconnect/edit.pm:510
 #, fuzzy, c-format
 msgid "Netmask should be in format 255.255.224.0"
 msgstr "गेटवे पता का प्रारूप १.२.३.४ की भांति होना चाहिए"
@@ -2663,6 +2690,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:222
+#: ../lib/network/drakconnect/edit.pm:203
 #, fuzzy, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
 msgstr "डीएचसीपी पते से होस्ट के नाम का निर्धारण"
@@ -2684,6 +2712,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:244
+#: ../lib/network/drakconnect/edit.pm:270
 #, c-format
 msgid "Network Hotplugging"
 msgstr "नेटवर्क हॉटप्लगिंग"
@@ -2752,27 +2781,32 @@ msgstr ""
 msgid "Analog telephone modem (POTS)"
 msgstr ""
 
-#: ../lib/network/connection/ppp.pm:9 ../lib/network/netconnect.pm:78
+#: ../lib/network/connection/ppp.pm:9 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:78
 #, c-format
 msgid "Script-based"
 msgstr "स्क्रिप्ट-पर-आधारित"
 
-#: ../lib/network/connection/ppp.pm:10 ../lib/network/netconnect.pm:79
+#: ../lib/network/connection/ppp.pm:10 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:79
 #, c-format
 msgid "PAP"
 msgstr "पीऐपी"
 
-#: ../lib/network/connection/ppp.pm:11 ../lib/network/netconnect.pm:80
+#: ../lib/network/connection/ppp.pm:11 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:80
 #, c-format
 msgid "Terminal-based"
 msgstr "टर्मिनल-पर-आधारित"
 
-#: ../lib/network/connection/ppp.pm:12 ../lib/network/netconnect.pm:81
+#: ../lib/network/connection/ppp.pm:12 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:81
 #, c-format
 msgid "CHAP"
 msgstr "सी०एच०ऐ०पी०"
 
-#: ../lib/network/connection/ppp.pm:13 ../lib/network/netconnect.pm:82
+#: ../lib/network/connection/ppp.pm:13 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:82
 #, c-format
 msgid "PAP/CHAP"
 msgstr "पी०ऐ०पी०/सी०एच०ऐ०पी०"
@@ -3950,6 +3984,7 @@ msgstr "बेतार सम्बंध"
 
 #: ../lib/network/connection/wireless.pm:464
 #: ../lib/network/connection_manager.pm:280
+#: ../lib/network/drakconnect/edit.pm:236
 #, c-format
 msgid "Operating Mode"
 msgstr "चालन विधा"
@@ -3985,6 +4020,7 @@ msgid "Auto"
 msgstr "स्वचालित"
 
 #: ../lib/network/connection/wireless.pm:468
+#: ../lib/network/drakconnect/edit.pm:237
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "नेटवर्क नाम (ईएसएसआईडी)"
@@ -3995,6 +4031,7 @@ msgid "Encryption mode"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/drakconnect/edit.pm:251
 #, c-format
 msgid "Encryption key"
 msgstr "सांकेतिक कुँजी"
@@ -4061,26 +4098,31 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/drakconnect/edit.pm:238
 #, c-format
 msgid "Network ID"
 msgstr "नेटवर्क पहचान-संख्या"
 
 #: ../lib/network/connection/wireless.pm:513
+#: ../lib/network/drakconnect/edit.pm:239
 #, c-format
 msgid "Operating frequency"
 msgstr "संचालन आवृति"
 
 #: ../lib/network/connection/wireless.pm:514
+#: ../lib/network/drakconnect/edit.pm:240
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "सूक्ष्म-ग्राहिता (सेन्सटीविटी) प्रवेश-मार्ग"
 
 #: ../lib/network/connection/wireless.pm:515
+#: ../lib/network/drakconnect/edit.pm:241
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "बिट दर (बी/एस में)"
 
 #: ../lib/network/connection/wireless.pm:516
+#: ../lib/network/drakconnect/edit.pm:252
 #, c-format
 msgid "RTS/CTS"
 msgstr "आरटीएस/सीटीएस"
@@ -4108,11 +4150,13 @@ msgstr ""
 "या ऑफ़ पर स्थापित कर सकते है।"
 
 #: ../lib/network/connection/wireless.pm:524
+#: ../lib/network/drakconnect/edit.pm:253
 #, c-format
 msgid "Fragmentation"
 msgstr "विखंडीकरण"
 
 #: ../lib/network/connection/wireless.pm:525
+#: ../lib/network/drakconnect/edit.pm:254
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "एलडब्लूकॉन्फ़िग कॉमाण्ड के अतिरिक्त प्राचर (आरगूमेन्ट)"
@@ -4134,6 +4178,7 @@ msgstr ""
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
 #: ../lib/network/connection/wireless.pm:533
+#: ../lib/network/drakconnect/edit.pm:255
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "एलडब्लूस्पाई कॉमाण्ड के अतिरिक्त प्राचर"
@@ -4158,6 +4203,7 @@ msgstr ""
 "iwpspy(8) मैन पृष्ट को और अधिक सूचना के लिए देखें ।"
 
 #: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/drakconnect/edit.pm:256
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "एलडब्लूप्रिव कॉमाण्ड के अतिरिक्त प्राचर"
@@ -4561,6 +4607,287 @@ msgstr "कनेक्ट"
 msgid "Hostname changed to \"%s\""
 msgstr ""
 
+#: ../lib/network/drakconnect/delete.pm:12
+#, c-format
+msgid ""
+"No ethernet network adapter has been detected on your system. Please run the "
+"hardware configuration tool."
+msgstr ""
+"आपके तंत्र पर कोई ईथरनेट ऐडाप्टर नहीं पहचाना जा सका । कृपया हार्डवेयर संरचना टूल को "
+"चलायें ।"
+
+#: ../lib/network/drakconnect/delete.pm:21
+#, c-format
+msgid "Remove a network interface"
+msgstr "एक नेटवर्क इन्टरफ़ेस को हटायें"
+
+#: ../lib/network/drakconnect/delete.pm:25
+#, fuzzy, c-format
+msgid "Select the network interface to remove:"
+msgstr "संरचित करने हेतु नेटवर्क इन्टरफ़ेस का चयन करें:"
+
+#: ../lib/network/drakconnect/delete.pm:58
+#, c-format
+msgid ""
+"An error occurred while deleting the \"%s\" network interface:\n"
+"\n"
+"%s"
+msgstr ""
+"\"%s\" नेटवर्क इन्टरफ़ेस को हटाने के दौरान एक त्रुटि उत्पन्न हो गई है: \n"
+"\n"
+"%s"
+
+#: ../lib/network/drakconnect/delete.pm:59
+#, c-format
+msgid ""
+"Congratulations, the \"%s\" network interface has been successfully deleted"
+msgstr "बधाई, \"%s\" नेटवर्क इन्टरफ़ेस को सफ़लतापूर्वक हटाया गया"
+
+#: ../lib/network/drakconnect/edit.pm:23
+#, c-format
+msgid "Manage connections"
+msgstr "कनेक्शनों का प्रबंधन"
+
+#: ../lib/network/drakconnect/edit.pm:50 ../lib/network/drakroam.pm:85
+#, c-format
+msgid "Device: "
+msgstr "उपकरण:"
+
+#: ../lib/network/drakconnect/edit.pm:132
+#, fuzzy, c-format
+msgid "IP configuration"
+msgstr "कप्स संरचना"
+
+#: ../lib/network/drakconnect/edit.pm:167
+#, c-format
+msgid "DNS servers"
+msgstr "डीएनएस के सर्वर"
+
+#: ../lib/network/drakconnect/edit.pm:173
+#, c-format
+msgid "Search Domain"
+msgstr "डोमेन जिसमें खोज़ की जाने वाली है"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "none"
+msgstr "कुछ भी नहीं"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "static"
+msgstr "स्थिर"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "DHCP"
+msgstr ""
+
+#: ../lib/network/drakconnect/edit.pm:264
+#, c-format
+msgid "Start at boot"
+msgstr "बूट के समय आरम्भ"
+
+#: ../lib/network/drakconnect/edit.pm:276 ../lib/network/netconnect.pm:352
+#, c-format
+msgid "Dialing mode"
+msgstr "दूरभाष नम्बर मिलाने की विधा"
+
+#: ../lib/network/drakconnect/edit.pm:281
+#: ../lib/network/drakconnect/edit.pm:348 ../lib/network/netconnect.pm:353
+#, c-format
+msgid "Connection speed"
+msgstr "संबंध गति"
+
+#: ../lib/network/drakconnect/edit.pm:286 ../lib/network/netconnect.pm:354
+#, c-format
+msgid "Connection timeout (in sec)"
+msgstr "संबंध समय- सीमा समाप्ति (पलों में)"
+
+#: ../lib/network/drakconnect/edit.pm:324 ../lib/network/netconnect.pm:349
+#, c-format
+msgid "Provider phone number"
+msgstr "प्रदानकर्ता की दूरभाष संख्या"
+
+#: ../lib/network/drakconnect/edit.pm:346
+#, c-format
+msgid "Flow control"
+msgstr "बहाव नियंत्रण"
+
+#: ../lib/network/drakconnect/edit.pm:347
+#, c-format
+msgid "Line termination"
+msgstr "लाइन का खात्मा"
+
+#: ../lib/network/drakconnect/edit.pm:358
+#, c-format
+msgid "Modem timeout"
+msgstr "मॉडम की समय-सीमा समाप्त"
+
+#: ../lib/network/drakconnect/edit.pm:362
+#, c-format
+msgid "Use lock file"
+msgstr "लॉक संचिका का उपयोग"
+
+#: ../lib/network/drakconnect/edit.pm:364
+#, c-format
+msgid "Wait for dialup tone before dialing"
+msgstr "डायल करने के पूर्व डायल-अप टोन की प्रतीक्षा करना"
+
+#: ../lib/network/drakconnect/edit.pm:367
+#, c-format
+msgid "Busy wait"
+msgstr "व्यस्ता प्रतीक्षा"
+
+#: ../lib/network/drakconnect/edit.pm:372
+#, c-format
+msgid "Modem sound"
+msgstr "मॉडम की ध्वनि"
+
+#: ../lib/network/drakconnect/edit.pm:385 ../lib/network/netconnect.pm:357
+#, c-format
+msgid "Card IRQ"
+msgstr "कार्ड आई०आर०क्यू०"
+
+#: ../lib/network/drakconnect/edit.pm:386 ../lib/network/netconnect.pm:358
+#, c-format
+msgid "Card mem (DMA)"
+msgstr "कार्ड मेम्म (डी०एम०ऐ०)"
+
+#: ../lib/network/drakconnect/edit.pm:387 ../lib/network/netconnect.pm:359
+#, c-format
+msgid "Card IO"
+msgstr "कार्ड आई०ओ०"
+
+#: ../lib/network/drakconnect/edit.pm:388 ../lib/network/netconnect.pm:360
+#, c-format
+msgid "Card IO_0"
+msgstr "कार्ड IO_0"
+
+#: ../lib/network/drakconnect/edit.pm:394 ../lib/network/netconnect.pm:71
+#, c-format
+msgid "European protocol (EDSS1)"
+msgstr "यूरोपियन प्रोटोकॉल (ई०डी०एस०एस०-१)"
+
+#: ../lib/network/drakconnect/edit.pm:395 ../lib/network/netconnect.pm:72
+#, c-format
+msgid ""
+"Protocol for the rest of the world\n"
+"No D-Channel (leased lines)"
+msgstr ""
+"बचे हुए संसार के लिए प्रोटोकॉल\n"
+"कोई डी-चैनल (लीस्ड लाइनें)"
+
+#: ../lib/network/drakconnect/edit.pm:422
+#, c-format
+msgid "Vendor"
+msgstr "विक्रेता"
+
+#: ../lib/network/drakconnect/edit.pm:424
+#, c-format
+msgid "Media class"
+msgstr "माध्यम का वर्ग"
+
+#: ../lib/network/drakconnect/edit.pm:425
+#, c-format
+msgid "Module name"
+msgstr "मॉडूयल का नाम"
+
+#: ../lib/network/drakconnect/edit.pm:426
+#, c-format
+msgid "Mac Address"
+msgstr "मैक पता"
+
+#: ../lib/network/drakconnect/edit.pm:427
+#, c-format
+msgid "Bus"
+msgstr "बस"
+
+#: ../lib/network/drakconnect/edit.pm:428
+#, c-format
+msgid "Location on the bus"
+msgstr "बस पर स्थान"
+
+#: ../lib/network/drakconnect/edit.pm:519 ../lib/network/netconnect.pm:832
+#, c-format
+msgid "Gateway address should be in format 1.2.3.4"
+msgstr "गेटवे पता का प्रारूप १.२.३.४ की भांति होना चाहिए"
+
+#: ../lib/network/drakconnect/global.pm:27
+#, c-format
+msgid "Gateway:"
+msgstr "गेटवे:"
+
+#: ../lib/network/drakconnect/global.pm:27
+#, c-format
+msgid "Interface:"
+msgstr "इन्टरफ़ेस:"
+
+#: ../lib/network/drakconnect/global.pm:30
+#, c-format
+msgid "Internet connection configuration"
+msgstr "इन्टरनेट संबंध संरचना"
+
+#: ../lib/network/drakconnect/global.pm:35
+#, fuzzy, c-format
+msgid ""
+"You do not have any configured Internet connection.\n"
+"Run the \"%s\" assistant from the Mageia Control Center"
+msgstr ""
+"इस इन्टरफ़ेस को अभी तक संरचित नहीं किया गया है ।\n"
+"मैनड्रिव नियंत्रण केन्द्र से \"%s\" सहायक को चलायें"
+
+#: ../lib/network/drakconnect/global.pm:50
+#, c-format
+msgid "Host name (optional)"
+msgstr "होस्ट का नाम (वैकल्पिक)"
+
+#: ../lib/network/drakconnect/global.pm:51 ../lib/network/netconnect.pm:651
+#, c-format
+msgid "First DNS Server (optional)"
+msgstr "प्रथम डीएनएस सर्वर (वैकल्पिक)"
+
+#: ../lib/network/drakconnect/global.pm:52 ../lib/network/netconnect.pm:652
+#, c-format
+msgid "Second DNS Server (optional)"
+msgstr "द्वितीय डी०एन०एस० सर्वर (वैकल्पिक)"
+
+#: ../lib/network/drakconnect/global.pm:53
+#, c-format
+msgid "Third DNS server (optional)"
+msgstr "तॄतीय डीएनएस सर्वर (वैकल्पिक)"
+
+#: ../lib/network/drakconnect/global.pm:75
+#, c-format
+msgid "Internet Connection Configuration"
+msgstr "इन्टरनेट संबंध संरचना"
+
+#: ../lib/network/drakconnect/global.pm:76
+#, c-format
+msgid "Internet access"
+msgstr "इन्टरनेट पहुँच"
+
+#: ../lib/network/drakconnect/global.pm:78
+#, c-format
+msgid "Connection type: "
+msgstr "संबंध प्रकार: "
+
+#: ../lib/network/drakconnect/global.pm:81
+#, c-format
+msgid "Status:"
+msgstr "अवस्था:"
+
+#: ../lib/network/drakconnect/global.pm:82 ../lib/network/netconnect.pm:305
+#: ../lib/network/netconnect.pm:733
+#, c-format
+msgid "Testing your connection..."
+msgstr "आपके संबंध का परीक्षण किया जा रहा है..."
+
+#: ../lib/network/drakconnect/global.pm:86
+#, c-format
+msgid "Parameters"
+msgstr "पैरामीटर"
+
 #: ../lib/network/drakfirewall.pm:14
 #, c-format
 msgid "Web Server"
@@ -4762,11 +5089,6 @@ msgstr ""
 #, c-format
 msgid "No device found"
 msgstr "कोई उपकरण नहीं मिला"
-
-#: ../lib/network/drakroam.pm:85
-#, c-format
-msgid "Device: "
-msgstr "उपकरण:"
 
 #: ../lib/network/drakroam.pm:89 ../lib/network/netcenter.pm:66
 #, c-format
@@ -4990,6 +5312,103 @@ msgstr "आंतरिक विपत्र सर्वर"
 msgid "Select a device:"
 msgstr ""
 
+#. -PO: "Process" is a verb
+#: ../lib/network/net_applet/ifw.pm:100
+#, fuzzy, c-format
+msgid "Process attack"
+msgstr "सेवा प्रबंधक"
+
+#: ../lib/network/net_applet/ifw.pm:113
+#, fuzzy, c-format
+msgid "Interactive Firewall: intrusion detected"
+msgstr "अग्नि-भीतिका संरचना खोजी गयी है !"
+
+#: ../lib/network/net_applet/ifw.pm:130
+#, fuzzy, c-format
+msgid "What do you want to do with this attacker?"
+msgstr "कया आप खेल समाप्त करना चाहेंगे ?"
+
+#: ../lib/network/net_applet/ifw.pm:133
+#, fuzzy, c-format
+msgid "Attack details"
+msgstr "कोई विवरण नहीं"
+
+#: ../lib/network/net_applet/ifw.pm:137
+#, fuzzy, c-format
+msgid "Attack time: %s"
+msgstr "क्रिया: %s"
+
+#: ../lib/network/net_applet/ifw.pm:138
+#, fuzzy, c-format
+msgid "Network interface: %s"
+msgstr "नेटवर्क इन्टरेफ़ेसेस्स"
+
+#: ../lib/network/net_applet/ifw.pm:139
+#, fuzzy, c-format
+msgid "Attack type: %s"
+msgstr "एक्सेस (पहुंचने) का तरीका : %s \n"
+
+#: ../lib/network/net_applet/ifw.pm:140
+#, fuzzy, c-format
+msgid "Protocol: %s"
+msgstr "प्रोटोकॉल्स"
+
+#: ../lib/network/net_applet/ifw.pm:141
+#, fuzzy, c-format
+msgid "Attacker IP address: %s"
+msgstr "कम्प्यूटर का आईपी पता:"
+
+#: ../lib/network/net_applet/ifw.pm:142
+#, fuzzy, c-format
+msgid "Attacker hostname: %s"
+msgstr "%s होस्ट नाम की की स्थापना की जा रही है: "
+
+#: ../lib/network/net_applet/ifw.pm:145
+#, fuzzy, c-format
+msgid "Service attacked: %s"
+msgstr "सेवा प्रबंधक"
+
+#: ../lib/network/net_applet/ifw.pm:146
+#, fuzzy, c-format
+msgid "Port attacked: %s"
+msgstr "पोर्ट: %s"
+
+#: ../lib/network/net_applet/ifw.pm:148
+#, fuzzy, c-format
+msgid "Type of ICMP attack: %s"
+msgstr "पोर्ट: %s"
+
+#: ../lib/network/net_applet/ifw.pm:153
+#, c-format
+msgid "Always blacklist (do not ask again)"
+msgstr ""
+
+#: ../lib/network/net_applet/ifw.pm:168
+#, c-format
+msgid "Ignore"
+msgstr "ध्यान ना दें"
+
+#: ../lib/network/net_applet/ifw.pm:186 ../lib/network/net_applet/ifw.pm:204
+#, fuzzy, c-format
+msgid "Interactive Firewall: new service"
+msgstr "अग्नि-भीतिका संरचना खोजी गयी है !"
+
+#. -PO: "Process" is a verb
+#: ../lib/network/net_applet/ifw.pm:192
+#, fuzzy, c-format
+msgid "Process connection"
+msgstr "बेतार सम्बंध"
+
+#: ../lib/network/net_applet/ifw.pm:214
+#, fuzzy, c-format
+msgid "Do you want to open this service?"
+msgstr "क्या आप इस संरचना का परीक्षण करना चाहते है?"
+
+#: ../lib/network/net_applet/ifw.pm:217
+#, fuzzy, c-format
+msgid "Remember this answer"
+msgstr "इस कूट-शब्द को याद रखें"
+
 #: ../lib/network/netcenter.pm:55 ../lib/network/netconnect.pm:211
 #, c-format
 msgid "Please select your network:"
@@ -5032,20 +5451,6 @@ msgstr "आंतरिक आईएसडीएन कार्ड"
 #, c-format
 msgid "Protocol for the rest of the world"
 msgstr "बाकी संसार के लिए प्रोटोकॉल"
-
-#: ../lib/network/netconnect.pm:71
-#, c-format
-msgid "European protocol (EDSS1)"
-msgstr "यूरोपियन प्रोटोकॉल (ई०डी०एस०एस०-१)"
-
-#: ../lib/network/netconnect.pm:72
-#, c-format
-msgid ""
-"Protocol for the rest of the world\n"
-"No D-Channel (leased lines)"
-msgstr ""
-"बचे हुए संसार के लिए प्रोटोकॉल\n"
-"कोई डी-चैनल (लीस्ड लाइनें)"
 
 #: ../lib/network/netconnect.pm:122
 #, c-format
@@ -5095,11 +5500,6 @@ msgstr ""
 msgid "Connection control"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:733
-#, c-format
-msgid "Testing your connection..."
-msgstr "आपके संबंध का परीक्षण किया जा रहा है..."
-
 #: ../lib/network/netconnect.pm:344
 #, c-format
 msgid "Connection Configuration"
@@ -5120,11 +5520,6 @@ msgstr "आपकी व्यक्तिगत दूरभाष संख्
 msgid "Provider name (ex provider.net)"
 msgstr "प्रदानकर्ता का नाम (उदाहरण हेतु प्रोवाइडर.नेट) "
 
-#: ../lib/network/netconnect.pm:349
-#, c-format
-msgid "Provider phone number"
-msgstr "प्रदानकर्ता की दूरभाष संख्या"
-
 #: ../lib/network/netconnect.pm:350
 #, c-format
 msgid "Provider DNS 1 (optional)"
@@ -5134,41 +5529,6 @@ msgstr "प्रदाता डीएनएस १ (वैकल्पिक)"
 #, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "प्रदाता डीएनएस २ (वैकल्पिक)"
-
-#: ../lib/network/netconnect.pm:352
-#, c-format
-msgid "Dialing mode"
-msgstr "दूरभाष नम्बर मिलाने की विधा"
-
-#: ../lib/network/netconnect.pm:353
-#, c-format
-msgid "Connection speed"
-msgstr "संबंध गति"
-
-#: ../lib/network/netconnect.pm:354
-#, c-format
-msgid "Connection timeout (in sec)"
-msgstr "संबंध समय- सीमा समाप्ति (पलों में)"
-
-#: ../lib/network/netconnect.pm:357
-#, c-format
-msgid "Card IRQ"
-msgstr "कार्ड आई०आर०क्यू०"
-
-#: ../lib/network/netconnect.pm:358
-#, c-format
-msgid "Card mem (DMA)"
-msgstr "कार्ड मेम्म (डी०एम०ऐ०)"
-
-#: ../lib/network/netconnect.pm:359
-#, c-format
-msgid "Card IO"
-msgstr "कार्ड आई०ओ०"
-
-#: ../lib/network/netconnect.pm:360
-#, c-format
-msgid "Card IO_0"
-msgstr "कार्ड IO_0"
 
 #: ../lib/network/netconnect.pm:361
 #, c-format
@@ -5333,16 +5693,6 @@ msgstr "डीएनएस"
 #, c-format
 msgid "Domain name"
 msgstr "डोमेन का नाम"
-
-#: ../lib/network/netconnect.pm:651
-#, c-format
-msgid "First DNS Server (optional)"
-msgstr "प्रथम डीएनएस सर्वर (वैकल्पिक)"
-
-#: ../lib/network/netconnect.pm:652
-#, c-format
-msgid "Second DNS Server (optional)"
-msgstr "द्वितीय डी०एन०एस० सर्वर (वैकल्पिक)"
 
 #: ../lib/network/netconnect.pm:653
 #, c-format
@@ -5646,11 +5996,6 @@ msgstr "अंत में कम-से-कम आप अपने डीए�
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
 msgstr "डी०एन०एस० सर्वर के पते का प्रारूप १.२.३.४ की भांति होना चाहिए"
-
-#: ../lib/network/netconnect.pm:832
-#, c-format
-msgid "Gateway address should be in format 1.2.3.4"
-msgstr "गेटवे पता का प्रारूप १.२.३.४ की भांति होना चाहिए"
 
 #: ../lib/network/netconnect.pm:833
 #, c-format
@@ -6097,16 +6442,6 @@ msgstr ""
 #~ "\n"
 #~ "इस ऐडाप्टर के साथ, मै आपके स्थानीय नेटवर्क क्षेत्र को स्थापित करने जा रहा हूँ ।"
 
-#~ msgid ""
-#~ "No ethernet network adapter has been detected on your system. Please run "
-#~ "the hardware configuration tool."
-#~ msgstr ""
-#~ "आपके तंत्र पर कोई ईथरनेट ऐडाप्टर नहीं पहचाना जा सका । कृपया हार्डवेयर संरचना टूल को "
-#~ "चलायें ।"
-
-#~ msgid "Connection type: "
-#~ msgstr "संबंध प्रकार: "
-
 #~ msgid "%s already in use\n"
 #~ msgstr "%s पहिले से ही उपयोग में है\n"
 
@@ -6504,9 +6839,6 @@ msgstr ""
 #~ msgid "discard"
 #~ msgstr "डिस्कार्ड"
 
-#~ msgid "none"
-#~ msgstr "कुछ भी नहीं"
-
 #~ msgid "tunnel"
 #~ msgstr "टनल"
 
@@ -6535,180 +6867,11 @@ msgstr ""
 #~ msgstr ""
 #~ "परिवर्तनों को प्रभाव में लाने के लिए, आपको संत्र-समाप्त करके पुन: संत्र-आरम्भ करना होगा"
 
-#, fuzzy
-#~ msgid "Process attack"
-#~ msgstr "सेवा प्रबंधक"
-
-#, fuzzy
-#~ msgid "Interactive Firewall: intrusion detected"
-#~ msgstr "अग्नि-भीतिका संरचना खोजी गयी है !"
-
-#, fuzzy
-#~ msgid "What do you want to do with this attacker?"
-#~ msgstr "कया आप खेल समाप्त करना चाहेंगे ?"
-
-#, fuzzy
-#~ msgid "Attack details"
-#~ msgstr "कोई विवरण नहीं"
-
-#, fuzzy
-#~ msgid "Attack time: %s"
-#~ msgstr "क्रिया: %s"
-
-#, fuzzy
-#~ msgid "Network interface: %s"
-#~ msgstr "नेटवर्क इन्टरेफ़ेसेस्स"
-
-#, fuzzy
-#~ msgid "Attack type: %s"
-#~ msgstr "एक्सेस (पहुंचने) का तरीका : %s \n"
-
-#, fuzzy
-#~ msgid "Protocol: %s"
-#~ msgstr "प्रोटोकॉल्स"
-
-#, fuzzy
-#~ msgid "Attacker IP address: %s"
-#~ msgstr "कम्प्यूटर का आईपी पता:"
-
-#, fuzzy
-#~ msgid "Attacker hostname: %s"
-#~ msgstr "%s होस्ट नाम की की स्थापना की जा रही है: "
-
-#, fuzzy
-#~ msgid "Service attacked: %s"
-#~ msgstr "सेवा प्रबंधक"
-
-#, fuzzy
-#~ msgid "Port attacked: %s"
-#~ msgstr "पोर्ट: %s"
-
-#~ msgid "Ignore"
-#~ msgstr "ध्यान ना दें"
-
-#, fuzzy
-#~ msgid "Interactive Firewall: new service"
-#~ msgstr "अग्नि-भीतिका संरचना खोजी गयी है !"
-
-#, fuzzy
-#~ msgid "Process connection"
-#~ msgstr "बेतार सम्बंध"
-
-#, fuzzy
-#~ msgid "Do you want to open this service?"
-#~ msgstr "क्या आप इस संरचना का परीक्षण करना चाहते है?"
-
-#, fuzzy
-#~ msgid "Remember this answer"
-#~ msgstr "इस कूट-शब्द को याद रखें"
-
-#~ msgid "Gateway:"
-#~ msgstr "गेटवे:"
-
-#~ msgid "Interface:"
-#~ msgstr "इन्टरफ़ेस:"
-
-#~ msgid "Manage connections"
-#~ msgstr "कनेक्शनों का प्रबंधन"
-
-#, fuzzy
-#~ msgid "IP configuration"
-#~ msgstr "कप्स संरचना"
-
-#~ msgid "DNS servers"
-#~ msgstr "डीएनएस के सर्वर"
-
-#~ msgid "Search Domain"
-#~ msgstr "डोमेन जिसमें खोज़ की जाने वाली है"
-
-#~ msgid "static"
-#~ msgstr "स्थिर"
-
-#~ msgid "Start at boot"
-#~ msgstr "बूट के समय आरम्भ"
-
-#~ msgid "Flow control"
-#~ msgstr "बहाव नियंत्रण"
-
-#~ msgid "Line termination"
-#~ msgstr "लाइन का खात्मा"
-
-#~ msgid "Modem timeout"
-#~ msgstr "मॉडम की समय-सीमा समाप्त"
-
-#~ msgid "Use lock file"
-#~ msgstr "लॉक संचिका का उपयोग"
-
-#~ msgid "Wait for dialup tone before dialing"
-#~ msgstr "डायल करने के पूर्व डायल-अप टोन की प्रतीक्षा करना"
-
-#~ msgid "Busy wait"
-#~ msgstr "व्यस्ता प्रतीक्षा"
-
-#~ msgid "Modem sound"
-#~ msgstr "मॉडम की ध्वनि"
-
-#~ msgid "Vendor"
-#~ msgstr "विक्रेता"
-
-#~ msgid "Media class"
-#~ msgstr "माध्यम का वर्ग"
-
-#~ msgid "Module name"
-#~ msgstr "मॉडूयल का नाम"
-
-#~ msgid "Mac Address"
-#~ msgstr "मैक पता"
-
-#~ msgid "Bus"
-#~ msgstr "बस"
-
-#~ msgid "Location on the bus"
-#~ msgstr "बस पर स्थान"
-
-#~ msgid "Remove a network interface"
-#~ msgstr "एक नेटवर्क इन्टरफ़ेस को हटायें"
-
-#~ msgid ""
-#~ "An error occurred while deleting the \"%s\" network interface:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "\"%s\" नेटवर्क इन्टरफ़ेस को हटाने के दौरान एक त्रुटि उत्पन्न हो गई है: \n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Congratulations, the \"%s\" network interface has been successfully "
-#~ "deleted"
-#~ msgstr "बधाई, \"%s\" नेटवर्क इन्टरफ़ेस को सफ़लतापूर्वक हटाया गया"
-
 #~ msgid "Disconnect..."
 #~ msgstr "संबध-विच्छेद..."
 
 #~ msgid "Connect..."
 #~ msgstr "संबंध..."
-
-#~ msgid "Internet connection configuration"
-#~ msgstr "इन्टरनेट संबंध संरचना"
-
-#~ msgid "Host name (optional)"
-#~ msgstr "होस्ट का नाम (वैकल्पिक)"
-
-#~ msgid "Third DNS server (optional)"
-#~ msgstr "तॄतीय डीएनएस सर्वर (वैकल्पिक)"
-
-#~ msgid "Internet Connection Configuration"
-#~ msgstr "इन्टरनेट संबंध संरचना"
-
-#~ msgid "Internet access"
-#~ msgstr "इन्टरनेट पहुँच"
-
-#~ msgid "Status:"
-#~ msgstr "अवस्था:"
-
-#~ msgid "Parameters"
-#~ msgstr "पैरामीटर"
 
 #, fuzzy
 #~ msgid "Attacker"

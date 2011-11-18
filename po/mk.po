@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net-mk\n"
-"POT-Creation-Date: 2011-05-03 15:42+0200\n"
+"POT-Creation-Date: 2011-11-18 13:57+0100\n"
 "PO-Revision-Date: 2004-11-03 18:47+0100\n"
 "Last-Translator: Зоран Димовски <decata@mt.net.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -32,14 +32,16 @@ msgid "Interface"
 msgstr "Интерфејс"
 
 #: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:187
-#: ../lib/network/connection/ethernet.pm:141 ../lib/network/netconnect.pm:633
+#: ../lib/network/connection/ethernet.pm:141
+#: ../lib/network/drakconnect/edit.pm:151 ../lib/network/netconnect.pm:633
 #: ../lib/network/vpn/openvpn.pm:223
 #, c-format
 msgid "IP address"
 msgstr "IP адреса"
 
 #: ../bin/drakconnect-old:64 ../bin/drakids:261
-#: ../lib/network/netconnect.pm:477
+#: ../lib/network/drakconnect/edit.pm:135
+#: ../lib/network/drakconnect/edit.pm:393 ../lib/network/netconnect.pm:477
 #, c-format
 msgid "Protocol"
 msgstr "Протокол"
@@ -75,23 +77,27 @@ msgid "Configure Local Area Network..."
 msgstr "Конфигурирај Локален Мрежа."
 
 #: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:217
+#: ../lib/network/drakconnect/edit.pm:71
 #, c-format
 msgid "Help"
 msgstr "Помош"
 
 #: ../bin/drakconnect-old:108 ../bin/drakinvictus:140
+#: ../lib/network/drakconnect/edit.pm:72 ../lib/network/drakconnect/edit.pm:76
 #, c-format
 msgid "Apply"
 msgstr "Примени"
 
 #: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
 #: ../bin/draknetprofile:159 ../bin/net_monitor:388
+#: ../lib/network/drakconnect/global.pm:88
 #, c-format
 msgid "Cancel"
 msgstr "Откажи"
 
 #: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
 #: ../bin/drakconnect-old:265 ../bin/draknetprofile:161 ../bin/net_monitor:389
+#: ../lib/network/drakconnect/global.pm:89
 #, c-format
 msgid "Ok"
 msgstr "Во ред"
@@ -101,7 +107,8 @@ msgstr "Во ред"
 #: ../lib/network/connection_manager.pm:89
 #: ../lib/network/connection_manager.pm:206
 #: ../lib/network/connection_manager.pm:235
-#: ../lib/network/connection_manager.pm:353 ../lib/network/drakvpn.pm:49
+#: ../lib/network/connection_manager.pm:353
+#: ../lib/network/drakconnect/edit.pm:466 ../lib/network/drakvpn.pm:49
 #: ../lib/network/netcenter.pm:150 ../lib/network/netconnect.pm:186
 #: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
 #: ../lib/network/netconnect.pm:733 ../lib/network/thirdparty.pm:352
@@ -110,7 +117,7 @@ msgstr "Во ред"
 msgid "Please wait"
 msgstr "Ве молиме почекајте"
 
-#: ../bin/drakconnect-old:115
+#: ../bin/drakconnect-old:115 ../lib/network/drakconnect/edit.pm:468
 #, c-format
 msgid "Please Wait... Applying the configuration"
 msgstr "Почекајте... Примена на конфигурацијата"
@@ -146,6 +153,7 @@ msgstr "Адаптер %s: %s"
 
 #: ../bin/drakconnect-old:209 ../bin/drakgw:181
 #: ../lib/network/connection/ethernet.pm:148
+#: ../lib/network/drakconnect/edit.pm:156
 #, c-format
 msgid "Netmask"
 msgstr "Мрежна маска"
@@ -161,6 +169,7 @@ msgid "Started on boot"
 msgstr "Покренато при стартување"
 
 #: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:159
+#: ../lib/network/drakconnect/edit.pm:199
 #, c-format
 msgid "DHCP client"
 msgstr "DHCP клиент"
@@ -175,17 +184,19 @@ msgstr ""
 " Стартувај го волшебникот за конфгурација."
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:105
+#: ../lib/network/drakconnect/global.pm:36
 #, c-format
 msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
 msgstr "Постави нов мрежен интерфејс (LAN, ISDN, ADSL, ...)"
 
 #: ../bin/drakconnect-old:273 ../bin/drakconnect-old:305
-#: ../lib/network/drakconnect.pm:16
+#: ../lib/network/drakconnect.pm:16 ../lib/network/drakconnect/edit.pm:515
 #, c-format
 msgid "No IP"
 msgstr ""
 
 #: ../bin/drakconnect-old:306 ../lib/network/drakconnect.pm:17
+#: ../lib/network/drakconnect/edit.pm:516
 #, c-format
 msgid "No Mask"
 msgstr "Без маска"
@@ -252,12 +263,12 @@ msgstr ""
 "\n"
 " на?"
 
-#: ../bin/drakgw:101
+#: ../bin/drakgw:101 ../lib/network/drakconnect/edit.pm:373
 #, c-format
 msgid "Disable"
 msgstr "Оневозможи"
 
-#: ../bin/drakgw:101
+#: ../bin/drakgw:101 ../lib/network/drakconnect/edit.pm:373
 #, c-format
 msgid "Enable"
 msgstr "Овозможи"
@@ -272,8 +283,8 @@ msgstr "Реконфигурирај"
 msgid "Please select the network interface directly connected to the internet."
 msgstr ""
 
-#: ../bin/drakgw:123 ../lib/network/netconnect.pm:379
-#: ../lib/network/netconnect.pm:414
+#: ../bin/drakgw:123 ../lib/network/drakconnect/delete.pm:26
+#: ../lib/network/netconnect.pm:379 ../lib/network/netconnect.pm:414
 #, c-format
 msgid "Net Device"
 msgstr "Мрежен уред"
@@ -341,7 +352,11 @@ msgstr "Внатрешно име на домен"
 #: ../lib/network/connection_manager.pm:177
 #: ../lib/network/connection_manager.pm:181
 #: ../lib/network/connection_manager.pm:223
-#: ../lib/network/connection_manager.pm:481 ../lib/network/drakvpn.pm:45
+#: ../lib/network/connection_manager.pm:481
+#: ../lib/network/drakconnect/delete.pm:12
+#: ../lib/network/drakconnect/edit.pm:506
+#: ../lib/network/drakconnect/edit.pm:510
+#: ../lib/network/drakconnect/edit.pm:519 ../lib/network/drakvpn.pm:45
 #: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
 #: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:135
@@ -637,13 +652,14 @@ msgstr "Дозволи на сите корисници"
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
 #: ../bin/net_applet:145 ../bin/net_applet:353
 #: ../lib/network/drakfirewall.pm:309 ../lib/network/drakfirewall.pm:313
+#: ../lib/network/net_applet/ifw.pm:61 ../lib/network/net_applet/ifw.pm:89
 #, fuzzy, c-format
 msgid "Interactive Firewall"
 msgstr "Firewall"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:353
+#: ../bin/net_applet:353 ../lib/network/net_applet/ifw.pm:61
 #, fuzzy, c-format
 msgid "Unable to contact daemon"
 msgstr "Не можеше да контактира со другиот %s"
@@ -653,12 +669,12 @@ msgstr "Не можеше да контактира со другиот %s"
 msgid "Log"
 msgstr "Дневник"
 
-#: ../bin/drakids:86 ../bin/drakids:105
+#: ../bin/drakids:86 ../bin/drakids:105 ../lib/network/net_applet/ifw.pm:219
 #, fuzzy, c-format
 msgid "Allow"
 msgstr "Сите"
 
-#: ../bin/drakids:87 ../bin/drakids:96
+#: ../bin/drakids:87 ../bin/drakids:96 ../lib/network/net_applet/ifw.pm:220
 #, c-format
 msgid "Block"
 msgstr ""
@@ -685,12 +701,12 @@ msgstr "Сигурносна копија"
 msgid "Clear logs"
 msgstr "Исчисти се"
 
-#: ../bin/drakids:115 ../bin/drakids:120
+#: ../bin/drakids:115 ../bin/drakids:120 ../lib/network/net_applet/ifw.pm:158
 #, c-format
 msgid "Blacklist"
 msgstr ""
 
-#: ../bin/drakids:116 ../bin/drakids:133
+#: ../bin/drakids:116 ../bin/drakids:133 ../lib/network/net_applet/ifw.pm:163
 #, c-format
 msgid "Whitelist"
 msgstr ""
@@ -838,7 +854,7 @@ msgstr "Помести"
 msgid "Enabled"
 msgstr "Овозможи"
 
-#: ../bin/draknetprofile:68
+#: ../bin/draknetprofile:68 ../lib/network/drakconnect/edit.pm:423
 #, c-format
 msgid "Description"
 msgstr "Опис"
@@ -880,9 +896,9 @@ msgid ""
 "profile."
 msgstr ""
 
-#: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
-#: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
-#: ../lib/network/netconnect.pm:500
+#: ../bin/draknetprofile:183 ../lib/network/drakconnect/global.pm:34
+#: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
+#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:500
 #, c-format
 msgid "Warning"
 msgstr "Внимание"
@@ -2352,12 +2368,12 @@ msgstr ""
 "Предупредување, откриена е друга интернет врска, што можеби ја користи "
 "твојата мрежа"
 
-#: ../bin/net_monitor:516
+#: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
 msgid "Connected"
 msgstr "Приклучен"
 
-#: ../bin/net_monitor:516
+#: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
 msgid "Not connected"
 msgstr "Не е поврзан"
@@ -2422,7 +2438,7 @@ msgstr ""
 msgid "Allow interface to be controlled by Network Manager"
 msgstr ""
 
-#: ../lib/network/connection.pm:251
+#: ../lib/network/connection.pm:251 ../lib/network/drakconnect/edit.pm:292
 #, c-format
 msgid "Metric"
 msgstr "Метрички"
@@ -2462,19 +2478,22 @@ msgstr "Модел на картичка:"
 msgid "Use BPALogin (needed for Telstra)"
 msgstr ""
 
-#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:616
+#: ../lib/network/connection/cable.pm:45
+#: ../lib/network/drakconnect/edit.pm:312 ../lib/network/netconnect.pm:616
 #, c-format
 msgid "Authentication"
 msgstr "Автентикација"
 
 #: ../lib/network/connection/cable.pm:47 ../lib/network/connection/ppp.pm:22
-#: ../lib/network/netconnect.pm:355 ../lib/network/vpn/openvpn.pm:395
+#: ../lib/network/drakconnect/edit.pm:322 ../lib/network/netconnect.pm:355
+#: ../lib/network/vpn/openvpn.pm:395
 #, c-format
 msgid "Account Login (user name)"
 msgstr "Најава на сметка (корисничко име)"
 
 #: ../lib/network/connection/cable.pm:49 ../lib/network/connection/ppp.pm:23
-#: ../lib/network/netconnect.pm:356 ../lib/network/vpn/openvpn.pm:396
+#: ../lib/network/drakconnect/edit.pm:323 ../lib/network/netconnect.pm:356
+#: ../lib/network/vpn/openvpn.pm:396
 #, c-format
 msgid "Account Password"
 msgstr "Лозинка на сметката"
@@ -2599,13 +2618,15 @@ msgstr ""
 "Секој елемент треба да е внесен како IP адреса во точкасто-децимално\n"
 "означување (на пример, 1.2.3.4)."
 
-#: ../lib/network/connection/ethernet.pm:149 ../lib/network/netconnect.pm:665
+#: ../lib/network/connection/ethernet.pm:149
+#: ../lib/network/drakconnect/edit.pm:162 ../lib/network/netconnect.pm:665
 #: ../lib/network/vpn/openvpn.pm:214 ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
 msgstr "Gateway"
 
 #: ../lib/network/connection/ethernet.pm:152
+#: ../lib/network/drakconnect/edit.pm:212
 #, fuzzy, c-format
 msgid "Get DNS servers from DHCP"
 msgstr "DNS Сервер IP"
@@ -2631,21 +2652,25 @@ msgid "By default search domain will be set from the fully-qualified host name"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:160
+#: ../lib/network/drakconnect/edit.pm:209
 #, fuzzy, c-format
 msgid "DHCP timeout (in seconds)"
 msgstr "Пауза на врската (во секунди)"
 
 #: ../lib/network/connection/ethernet.pm:161
+#: ../lib/network/drakconnect/edit.pm:213
 #, c-format
 msgid "Get YP servers from DHCP"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:162
+#: ../lib/network/drakconnect/edit.pm:214
 #, c-format
 msgid "Get NTPD servers from DHCP"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:163
+#: ../lib/network/drakconnect/edit.pm:205
 #, c-format
 msgid "DHCP host name"
 msgstr "DHCP име на компјутерот"
@@ -2656,11 +2681,13 @@ msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:176
+#: ../lib/network/drakconnect/edit.pm:506
 #, c-format
 msgid "IP address should be in format 1.2.3.4"
 msgstr "IP адресата треба да биде во следната форма 1.2.3.4"
 
 #: ../lib/network/connection/ethernet.pm:181
+#: ../lib/network/drakconnect/edit.pm:510
 #, fuzzy, c-format
 msgid "Netmask should be in format 255.255.224.0"
 msgstr "Gateway адресата треба да биде во следната форма 1.2.3.4"
@@ -2679,6 +2706,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:222
+#: ../lib/network/drakconnect/edit.pm:203
 #, fuzzy, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
 msgstr "Додели име на хостот преку DHCP адреса"
@@ -2700,6 +2728,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:244
+#: ../lib/network/drakconnect/edit.pm:270
 #, c-format
 msgid "Network Hotplugging"
 msgstr "Мрежен Hotplugging"
@@ -2768,27 +2797,32 @@ msgstr ""
 msgid "Analog telephone modem (POTS)"
 msgstr ""
 
-#: ../lib/network/connection/ppp.pm:9 ../lib/network/netconnect.pm:78
+#: ../lib/network/connection/ppp.pm:9 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:78
 #, c-format
 msgid "Script-based"
 msgstr "Со скрипта"
 
-#: ../lib/network/connection/ppp.pm:10 ../lib/network/netconnect.pm:79
+#: ../lib/network/connection/ppp.pm:10 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:79
 #, c-format
 msgid "PAP"
 msgstr "PAP"
 
-#: ../lib/network/connection/ppp.pm:11 ../lib/network/netconnect.pm:80
+#: ../lib/network/connection/ppp.pm:11 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:80
 #, c-format
 msgid "Terminal-based"
 msgstr "Со терминал"
 
-#: ../lib/network/connection/ppp.pm:12 ../lib/network/netconnect.pm:81
+#: ../lib/network/connection/ppp.pm:12 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:81
 #, c-format
 msgid "CHAP"
 msgstr "CHAP"
 
-#: ../lib/network/connection/ppp.pm:13 ../lib/network/netconnect.pm:82
+#: ../lib/network/connection/ppp.pm:13 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:82
 #, c-format
 msgid "PAP/CHAP"
 msgstr "PAP/CHAP"
@@ -3966,6 +4000,7 @@ msgstr "Безжична конекција"
 
 #: ../lib/network/connection/wireless.pm:464
 #: ../lib/network/connection_manager.pm:280
+#: ../lib/network/drakconnect/edit.pm:236
 #, c-format
 msgid "Operating Mode"
 msgstr "Режим на работа"
@@ -4001,6 +4036,7 @@ msgid "Auto"
 msgstr "Автоматски"
 
 #: ../lib/network/connection/wireless.pm:468
+#: ../lib/network/drakconnect/edit.pm:237
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "Име на мрежата (ESSID)"
@@ -4011,6 +4047,7 @@ msgid "Encryption mode"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/drakconnect/edit.pm:251
 #, c-format
 msgid "Encryption key"
 msgstr "Криптирачки клуч"
@@ -4077,26 +4114,31 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/drakconnect/edit.pm:238
 #, c-format
 msgid "Network ID"
 msgstr "ID на мрежата"
 
 #: ../lib/network/connection/wireless.pm:513
+#: ../lib/network/drakconnect/edit.pm:239
 #, c-format
 msgid "Operating frequency"
 msgstr "Работна фрекфенција"
 
 #: ../lib/network/connection/wireless.pm:514
+#: ../lib/network/drakconnect/edit.pm:240
 #, c-format
 msgid "Sensitivity threshold"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:515
+#: ../lib/network/drakconnect/edit.pm:241
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:516
+#: ../lib/network/drakconnect/edit.pm:252
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
@@ -4116,11 +4158,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:524
+#: ../lib/network/drakconnect/edit.pm:253
 #, c-format
 msgid "Fragmentation"
 msgstr "Фрагментација"
 
 #: ../lib/network/connection/wireless.pm:525
+#: ../lib/network/drakconnect/edit.pm:254
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr ""
@@ -4137,6 +4181,7 @@ msgstr ""
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
 #: ../lib/network/connection/wireless.pm:533
+#: ../lib/network/drakconnect/edit.pm:255
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr ""
@@ -4154,6 +4199,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/drakconnect/edit.pm:256
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr ""
@@ -4542,6 +4588,289 @@ msgstr "Поврзи се"
 msgid "Hostname changed to \"%s\""
 msgstr ""
 
+#: ../lib/network/drakconnect/delete.pm:12
+#, fuzzy, c-format
+msgid ""
+"No ethernet network adapter has been detected on your system. Please run the "
+"hardware configuration tool."
+msgstr ""
+"Не Вклучено.Нема детектирано ethernet мрежен адаптер на Вашиот систем. Ве "
+"молиме стартувајте ја алатката за конфигурација на хардвер."
+
+#: ../lib/network/drakconnect/delete.pm:21
+#, fuzzy, c-format
+msgid "Remove a network interface"
+msgstr "Изберете го мрежниот интерфејс"
+
+#: ../lib/network/drakconnect/delete.pm:25
+#, fuzzy, c-format
+msgid "Select the network interface to remove:"
+msgstr "Изберете мрежен интерфејс за конфигурација:"
+
+#: ../lib/network/drakconnect/delete.pm:58
+#, fuzzy, c-format
+msgid ""
+"An error occurred while deleting the \"%s\" network interface:\n"
+"\n"
+"%s"
+msgstr ""
+"Се случи проблем при рестартирање на мрежата: \n"
+"\n"
+"%s"
+
+#: ../lib/network/drakconnect/delete.pm:59
+#, fuzzy, c-format
+msgid ""
+"Congratulations, the \"%s\" network interface has been successfully deleted"
+msgstr ""
+"Честитки, конфигурацијата на мрежната и интернет е завршена.\n"
+"\n"
+
+#: ../lib/network/drakconnect/edit.pm:23
+#, c-format
+msgid "Manage connections"
+msgstr "Одржување на конекции"
+
+#: ../lib/network/drakconnect/edit.pm:50 ../lib/network/drakroam.pm:85
+#, c-format
+msgid "Device: "
+msgstr "Уред: "
+
+#: ../lib/network/drakconnect/edit.pm:132
+#, fuzzy, c-format
+msgid "IP configuration"
+msgstr "CUPS конфигурација"
+
+#: ../lib/network/drakconnect/edit.pm:167
+#, fuzzy, c-format
+msgid "DNS servers"
+msgstr "DNS сервер"
+
+#: ../lib/network/drakconnect/edit.pm:173
+#, fuzzy, c-format
+msgid "Search Domain"
+msgstr "NIS Домен"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "none"
+msgstr "ниту еден"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, fuzzy, c-format
+msgid "static"
+msgstr "Автоматска IP"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "DHCP"
+msgstr "DHCP"
+
+#: ../lib/network/drakconnect/edit.pm:264
+#, c-format
+msgid "Start at boot"
+msgstr "Стартувај при подигање"
+
+#: ../lib/network/drakconnect/edit.pm:276 ../lib/network/netconnect.pm:352
+#, c-format
+msgid "Dialing mode"
+msgstr "Режим на бирање"
+
+#: ../lib/network/drakconnect/edit.pm:281
+#: ../lib/network/drakconnect/edit.pm:348 ../lib/network/netconnect.pm:353
+#, c-format
+msgid "Connection speed"
+msgstr "Брзина на поврзување"
+
+#: ../lib/network/drakconnect/edit.pm:286 ../lib/network/netconnect.pm:354
+#, c-format
+msgid "Connection timeout (in sec)"
+msgstr "Пауза на врската (во секунди)"
+
+#: ../lib/network/drakconnect/edit.pm:324 ../lib/network/netconnect.pm:349
+#, c-format
+msgid "Provider phone number"
+msgstr "Телефонски број на Провајдерот"
+
+#: ../lib/network/drakconnect/edit.pm:346
+#, c-format
+msgid "Flow control"
+msgstr "Контрола на протокот"
+
+#: ../lib/network/drakconnect/edit.pm:347
+#, fuzzy, c-format
+msgid "Line termination"
+msgstr "Интернет"
+
+#: ../lib/network/drakconnect/edit.pm:358
+#, fuzzy, c-format
+msgid "Modem timeout"
+msgstr "Пауза пред подигање на кернел"
+
+#: ../lib/network/drakconnect/edit.pm:362
+#, fuzzy, c-format
+msgid "Use lock file"
+msgstr "Избор на датотека"
+
+#: ../lib/network/drakconnect/edit.pm:364
+#, c-format
+msgid "Wait for dialup tone before dialing"
+msgstr ""
+
+#: ../lib/network/drakconnect/edit.pm:367
+#, fuzzy, c-format
+msgid "Busy wait"
+msgstr "Кувајт"
+
+#: ../lib/network/drakconnect/edit.pm:372
+#, fuzzy, c-format
+msgid "Modem sound"
+msgstr "Модем"
+
+#: ../lib/network/drakconnect/edit.pm:385 ../lib/network/netconnect.pm:357
+#, c-format
+msgid "Card IRQ"
+msgstr "IRQ картичка"
+
+#: ../lib/network/drakconnect/edit.pm:386 ../lib/network/netconnect.pm:358
+#, c-format
+msgid "Card mem (DMA)"
+msgstr "Мемориска картичка (DMA)"
+
+#: ../lib/network/drakconnect/edit.pm:387 ../lib/network/netconnect.pm:359
+#, c-format
+msgid "Card IO"
+msgstr "Велзно/Озлезна (IO) картичка"
+
+#: ../lib/network/drakconnect/edit.pm:388 ../lib/network/netconnect.pm:360
+#, c-format
+msgid "Card IO_0"
+msgstr "Картичка IO_0"
+
+#: ../lib/network/drakconnect/edit.pm:394 ../lib/network/netconnect.pm:71
+#, c-format
+msgid "European protocol (EDSS1)"
+msgstr "Европски протокол (EDSS1)"
+
+#: ../lib/network/drakconnect/edit.pm:395 ../lib/network/netconnect.pm:72
+#, c-format
+msgid ""
+"Protocol for the rest of the world\n"
+"No D-Channel (leased lines)"
+msgstr ""
+"Протокол за остатокот на Светот\n"
+"Без D-канал (закупени линии)"
+
+#: ../lib/network/drakconnect/edit.pm:422
+#, c-format
+msgid "Vendor"
+msgstr "Производител"
+
+#: ../lib/network/drakconnect/edit.pm:424
+#, c-format
+msgid "Media class"
+msgstr "Класа на медиумот"
+
+#: ../lib/network/drakconnect/edit.pm:425
+#, c-format
+msgid "Module name"
+msgstr "Име на Модулот"
+
+#: ../lib/network/drakconnect/edit.pm:426
+#, fuzzy, c-format
+msgid "Mac Address"
+msgstr "Пренеси Адреса:"
+
+#: ../lib/network/drakconnect/edit.pm:427
+#, c-format
+msgid "Bus"
+msgstr "Магистрала"
+
+#: ../lib/network/drakconnect/edit.pm:428
+#, c-format
+msgid "Location on the bus"
+msgstr "Локација на магистралата"
+
+#: ../lib/network/drakconnect/edit.pm:519 ../lib/network/netconnect.pm:832
+#, fuzzy, c-format
+msgid "Gateway address should be in format 1.2.3.4"
+msgstr "Gateway адресата треба да биде во следната форма 1.2.3.4"
+
+#: ../lib/network/drakconnect/global.pm:27
+#, fuzzy, c-format
+msgid "Gateway:"
+msgstr "Gateway:"
+
+#: ../lib/network/drakconnect/global.pm:27
+#, c-format
+msgid "Interface:"
+msgstr "Интерфејс:"
+
+#: ../lib/network/drakconnect/global.pm:30
+#, c-format
+msgid "Internet connection configuration"
+msgstr "Конфигурација на Интернет конекција"
+
+#: ../lib/network/drakconnect/global.pm:35
+#, fuzzy, c-format
+msgid ""
+"You do not have any configured Internet connection.\n"
+"Run the \"%s\" assistant from the Mageia Control Center"
+msgstr ""
+"овој интерфејс не е конфигуриран.\n"
+" Стартувај го волшебникот за конфгурација."
+
+#: ../lib/network/drakconnect/global.pm:50
+#, c-format
+msgid "Host name (optional)"
+msgstr "Име на компјутерот (опционо)"
+
+#: ../lib/network/drakconnect/global.pm:51 ../lib/network/netconnect.pm:651
+#, c-format
+msgid "First DNS Server (optional)"
+msgstr "Прв DNS Сервер (опционо)"
+
+#: ../lib/network/drakconnect/global.pm:52 ../lib/network/netconnect.pm:652
+#, c-format
+msgid "Second DNS Server (optional)"
+msgstr "Втор DNS Сервер (опционо)"
+
+#: ../lib/network/drakconnect/global.pm:53
+#, fuzzy, c-format
+msgid "Third DNS server (optional)"
+msgstr "Прв DNS Сервер (ако треба)"
+
+#: ../lib/network/drakconnect/global.pm:75
+#, fuzzy, c-format
+msgid "Internet Connection Configuration"
+msgstr "Конфигурација на Интернет Конекција"
+
+#: ../lib/network/drakconnect/global.pm:76
+#, c-format
+msgid "Internet access"
+msgstr "Интернет пристап"
+
+#: ../lib/network/drakconnect/global.pm:78
+#, c-format
+msgid "Connection type: "
+msgstr "Тип на Врска: "
+
+#: ../lib/network/drakconnect/global.pm:81
+#, c-format
+msgid "Status:"
+msgstr "Статус:"
+
+#: ../lib/network/drakconnect/global.pm:82 ../lib/network/netconnect.pm:305
+#: ../lib/network/netconnect.pm:733
+#, c-format
+msgid "Testing your connection..."
+msgstr "Тестирање на вашата конеција."
+
+#: ../lib/network/drakconnect/global.pm:86
+#, c-format
+msgid "Parameters"
+msgstr "Параметри"
+
 #: ../lib/network/drakfirewall.pm:14
 #, c-format
 msgid "Web Server"
@@ -4744,11 +5073,6 @@ msgstr ""
 #, c-format
 msgid "No device found"
 msgstr "Не е пронајден уред"
-
-#: ../lib/network/drakroam.pm:85
-#, c-format
-msgid "Device: "
-msgstr "Уред: "
 
 #: ../lib/network/drakroam.pm:89 ../lib/network/netcenter.pm:66
 #, c-format
@@ -4972,6 +5296,103 @@ msgstr "Рачно вчитај драјвер"
 msgid "Select a device:"
 msgstr ""
 
+#. -PO: "Process" is a verb
+#: ../lib/network/net_applet/ifw.pm:100
+#, fuzzy, c-format
+msgid "Process attack"
+msgstr "Тип на _сервис:"
+
+#: ../lib/network/net_applet/ifw.pm:113
+#, fuzzy, c-format
+msgid "Interactive Firewall: intrusion detected"
+msgstr "Детектирана е конфигурација на огнен ѕид"
+
+#: ../lib/network/net_applet/ifw.pm:130
+#, fuzzy, c-format
+msgid "What do you want to do with this attacker?"
+msgstr "Дали сакате да ја завршите играта?"
+
+#: ../lib/network/net_applet/ifw.pm:133
+#, fuzzy, c-format
+msgid "Attack details"
+msgstr "Без Детали"
+
+#: ../lib/network/net_applet/ifw.pm:137
+#, fuzzy, c-format
+msgid "Attack time: %s"
+msgstr "Активирај %s"
+
+#: ../lib/network/net_applet/ifw.pm:138
+#, fuzzy, c-format
+msgid "Network interface: %s"
+msgstr "Мрежни интерфејси"
+
+#: ../lib/network/net_applet/ifw.pm:139
+#, fuzzy, c-format
+msgid "Attack type: %s"
+msgstr "тип: %s"
+
+#: ../lib/network/net_applet/ifw.pm:140
+#, fuzzy, c-format
+msgid "Protocol: %s"
+msgstr "Протоколи"
+
+#: ../lib/network/net_applet/ifw.pm:141
+#, fuzzy, c-format
+msgid "Attacker IP address: %s"
+msgstr "Статична IP адреса"
+
+#: ../lib/network/net_applet/ifw.pm:142
+#, fuzzy, c-format
+msgid "Attacker hostname: %s"
+msgstr "Не успеав да добијам име на хост: %s\n"
+
+#: ../lib/network/net_applet/ifw.pm:145
+#, fuzzy, c-format
+msgid "Service attacked: %s"
+msgstr "Тип на _сервис:"
+
+#: ../lib/network/net_applet/ifw.pm:146
+#, fuzzy, c-format
+msgid "Port attacked: %s"
+msgstr "Порта: %s"
+
+#: ../lib/network/net_applet/ifw.pm:148
+#, fuzzy, c-format
+msgid "Type of ICMP attack: %s"
+msgstr "Порта: %s"
+
+#: ../lib/network/net_applet/ifw.pm:153
+#, c-format
+msgid "Always blacklist (do not ask again)"
+msgstr ""
+
+#: ../lib/network/net_applet/ifw.pm:168
+#, c-format
+msgid "Ignore"
+msgstr "Игнорирај"
+
+#: ../lib/network/net_applet/ifw.pm:186 ../lib/network/net_applet/ifw.pm:204
+#, fuzzy, c-format
+msgid "Interactive Firewall: new service"
+msgstr "Детектирана е конфигурација на огнен ѕид"
+
+#. -PO: "Process" is a verb
+#: ../lib/network/net_applet/ifw.pm:192
+#, fuzzy, c-format
+msgid "Process connection"
+msgstr "Безжична конекција"
+
+#: ../lib/network/net_applet/ifw.pm:214
+#, fuzzy, c-format
+msgid "Do you want to open this service?"
+msgstr "Дали сакате да ја тестирате конфигурацијата?"
+
+#: ../lib/network/net_applet/ifw.pm:217
+#, fuzzy, c-format
+msgid "Remember this answer"
+msgstr "Запамти ја лозинката"
+
 #: ../lib/network/netcenter.pm:55 ../lib/network/netconnect.pm:211
 #, c-format
 msgid "Please select your network:"
@@ -5014,20 +5435,6 @@ msgstr "Интерна ISDN картичка"
 #, c-format
 msgid "Protocol for the rest of the world"
 msgstr "Протокол за остатокот на Светот"
-
-#: ../lib/network/netconnect.pm:71
-#, c-format
-msgid "European protocol (EDSS1)"
-msgstr "Европски протокол (EDSS1)"
-
-#: ../lib/network/netconnect.pm:72
-#, c-format
-msgid ""
-"Protocol for the rest of the world\n"
-"No D-Channel (leased lines)"
-msgstr ""
-"Протокол за остатокот на Светот\n"
-"Без D-канал (закупени линии)"
 
 #: ../lib/network/netconnect.pm:122
 #, c-format
@@ -5077,11 +5484,6 @@ msgstr ""
 msgid "Connection control"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:733
-#, c-format
-msgid "Testing your connection..."
-msgstr "Тестирање на вашата конеција."
-
 #: ../lib/network/netconnect.pm:344
 #, c-format
 msgid "Connection Configuration"
@@ -5102,11 +5504,6 @@ msgstr "Вашиот телефонски број"
 msgid "Provider name (ex provider.net)"
 msgstr "Име на провајдерот (пр. provajder.net)"
 
-#: ../lib/network/netconnect.pm:349
-#, c-format
-msgid "Provider phone number"
-msgstr "Телефонски број на Провајдерот"
-
 #: ../lib/network/netconnect.pm:350
 #, c-format
 msgid "Provider DNS 1 (optional)"
@@ -5116,41 +5513,6 @@ msgstr "DNS 1 на провајдерот (опционо)"
 #, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "DNS 2 на провајдерот (опционо)"
-
-#: ../lib/network/netconnect.pm:352
-#, c-format
-msgid "Dialing mode"
-msgstr "Режим на бирање"
-
-#: ../lib/network/netconnect.pm:353
-#, c-format
-msgid "Connection speed"
-msgstr "Брзина на поврзување"
-
-#: ../lib/network/netconnect.pm:354
-#, c-format
-msgid "Connection timeout (in sec)"
-msgstr "Пауза на врската (во секунди)"
-
-#: ../lib/network/netconnect.pm:357
-#, c-format
-msgid "Card IRQ"
-msgstr "IRQ картичка"
-
-#: ../lib/network/netconnect.pm:358
-#, c-format
-msgid "Card mem (DMA)"
-msgstr "Мемориска картичка (DMA)"
-
-#: ../lib/network/netconnect.pm:359
-#, c-format
-msgid "Card IO"
-msgstr "Велзно/Озлезна (IO) картичка"
-
-#: ../lib/network/netconnect.pm:360
-#, c-format
-msgid "Card IO_0"
-msgstr "Картичка IO_0"
 
 #: ../lib/network/netconnect.pm:361
 #, c-format
@@ -5318,16 +5680,6 @@ msgstr "DNS"
 #, c-format
 msgid "Domain name"
 msgstr "Име на домен"
-
-#: ../lib/network/netconnect.pm:651
-#, c-format
-msgid "First DNS Server (optional)"
-msgstr "Прв DNS Сервер (опционо)"
-
-#: ../lib/network/netconnect.pm:652
-#, c-format
-msgid "Second DNS Server (optional)"
-msgstr "Втор DNS Сервер (опционо)"
 
 #: ../lib/network/netconnect.pm:653
 #, c-format
@@ -5631,11 +5983,6 @@ msgstr ""
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
 msgstr "Адресата на DNS серверот треба да биде во облик 1.2.3.4"
-
-#: ../lib/network/netconnect.pm:832
-#, fuzzy, c-format
-msgid "Gateway address should be in format 1.2.3.4"
-msgstr "Gateway адресата треба да биде во следната форма 1.2.3.4"
 
 #: ../lib/network/netconnect.pm:833
 #, c-format
@@ -6077,17 +6424,6 @@ msgstr ""
 #~ "\n"
 #~ "Ќе ја подесам вашата Локална Мрежа со тој адаптер."
 
-#, fuzzy
-#~ msgid ""
-#~ "No ethernet network adapter has been detected on your system. Please run "
-#~ "the hardware configuration tool."
-#~ msgstr ""
-#~ "Не Вклучено.Нема детектирано ethernet мрежен адаптер на Вашиот систем. Ве "
-#~ "молиме стартувајте ја алатката за конфигурација на хардвер."
-
-#~ msgid "Connection type: "
-#~ msgstr "Тип на Врска: "
-
 #~ msgid "%s already in use\n"
 #~ msgstr "%s веќе се користи\n"
 
@@ -6115,195 +6451,14 @@ msgstr ""
 #~ msgid "Command"
 #~ msgstr "Команда"
 
-#~ msgid "none"
-#~ msgstr "ниту еден"
-
 #~ msgid "Level"
 #~ msgstr "Ниво"
-
-#, fuzzy
-#~ msgid "Process attack"
-#~ msgstr "Тип на _сервис:"
-
-#, fuzzy
-#~ msgid "Interactive Firewall: intrusion detected"
-#~ msgstr "Детектирана е конфигурација на огнен ѕид"
-
-#, fuzzy
-#~ msgid "What do you want to do with this attacker?"
-#~ msgstr "Дали сакате да ја завршите играта?"
-
-#, fuzzy
-#~ msgid "Attack details"
-#~ msgstr "Без Детали"
-
-#, fuzzy
-#~ msgid "Attack time: %s"
-#~ msgstr "Активирај %s"
-
-#, fuzzy
-#~ msgid "Network interface: %s"
-#~ msgstr "Мрежни интерфејси"
-
-#, fuzzy
-#~ msgid "Attack type: %s"
-#~ msgstr "тип: %s"
-
-#, fuzzy
-#~ msgid "Protocol: %s"
-#~ msgstr "Протоколи"
-
-#, fuzzy
-#~ msgid "Attacker IP address: %s"
-#~ msgstr "Статична IP адреса"
-
-#, fuzzy
-#~ msgid "Attacker hostname: %s"
-#~ msgstr "Не успеав да добијам име на хост: %s\n"
-
-#, fuzzy
-#~ msgid "Service attacked: %s"
-#~ msgstr "Тип на _сервис:"
-
-#, fuzzy
-#~ msgid "Port attacked: %s"
-#~ msgstr "Порта: %s"
-
-#~ msgid "Ignore"
-#~ msgstr "Игнорирај"
-
-#, fuzzy
-#~ msgid "Interactive Firewall: new service"
-#~ msgstr "Детектирана е конфигурација на огнен ѕид"
-
-#, fuzzy
-#~ msgid "Process connection"
-#~ msgstr "Безжична конекција"
-
-#, fuzzy
-#~ msgid "Do you want to open this service?"
-#~ msgstr "Дали сакате да ја тестирате конфигурацијата?"
-
-#, fuzzy
-#~ msgid "Remember this answer"
-#~ msgstr "Запамти ја лозинката"
-
-#, fuzzy
-#~ msgid "Gateway:"
-#~ msgstr "Gateway:"
-
-#~ msgid "Interface:"
-#~ msgstr "Интерфејс:"
-
-#~ msgid "Manage connections"
-#~ msgstr "Одржување на конекции"
-
-#, fuzzy
-#~ msgid "IP configuration"
-#~ msgstr "CUPS конфигурација"
-
-#, fuzzy
-#~ msgid "DNS servers"
-#~ msgstr "DNS сервер"
-
-#, fuzzy
-#~ msgid "Search Domain"
-#~ msgstr "NIS Домен"
-
-#, fuzzy
-#~ msgid "static"
-#~ msgstr "Автоматска IP"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Start at boot"
-#~ msgstr "Стартувај при подигање"
-
-#~ msgid "Flow control"
-#~ msgstr "Контрола на протокот"
-
-#, fuzzy
-#~ msgid "Line termination"
-#~ msgstr "Интернет"
-
-#, fuzzy
-#~ msgid "Modem timeout"
-#~ msgstr "Пауза пред подигање на кернел"
-
-#, fuzzy
-#~ msgid "Use lock file"
-#~ msgstr "Избор на датотека"
-
-#, fuzzy
-#~ msgid "Busy wait"
-#~ msgstr "Кувајт"
-
-#, fuzzy
-#~ msgid "Modem sound"
-#~ msgstr "Модем"
-
-#~ msgid "Vendor"
-#~ msgstr "Производител"
-
-#~ msgid "Media class"
-#~ msgstr "Класа на медиумот"
-
-#~ msgid "Module name"
-#~ msgstr "Име на Модулот"
-
-#, fuzzy
-#~ msgid "Mac Address"
-#~ msgstr "Пренеси Адреса:"
-
-#~ msgid "Bus"
-#~ msgstr "Магистрала"
-
-#~ msgid "Location on the bus"
-#~ msgstr "Локација на магистралата"
-
-#, fuzzy
-#~ msgid "Remove a network interface"
-#~ msgstr "Изберете го мрежниот интерфејс"
-
-#, fuzzy
-#~ msgid ""
-#~ "An error occurred while deleting the \"%s\" network interface:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Се случи проблем при рестартирање на мрежата: \n"
-#~ "\n"
-#~ "%s"
 
 #~ msgid "Disconnect..."
 #~ msgstr "Откачи..."
 
 #~ msgid "Connect..."
 #~ msgstr "Поврзан..."
-
-#~ msgid "Internet connection configuration"
-#~ msgstr "Конфигурација на Интернет конекција"
-
-#~ msgid "Host name (optional)"
-#~ msgstr "Име на компјутерот (опционо)"
-
-#, fuzzy
-#~ msgid "Third DNS server (optional)"
-#~ msgstr "Прв DNS Сервер (ако треба)"
-
-#, fuzzy
-#~ msgid "Internet Connection Configuration"
-#~ msgstr "Конфигурација на Интернет Конекција"
-
-#~ msgid "Internet access"
-#~ msgstr "Интернет пристап"
-
-#~ msgid "Status:"
-#~ msgstr "Статус:"
-
-#~ msgid "Parameters"
-#~ msgstr "Параметри"
 
 #, fuzzy
 #~ msgid "Attacker"

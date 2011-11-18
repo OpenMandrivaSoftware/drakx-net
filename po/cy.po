@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mageia drakx-net.cy\n"
-"POT-Creation-Date: 2011-05-03 15:42+0200\n"
+"POT-Creation-Date: 2011-11-18 13:57+0100\n"
 "PO-Revision-Date: 2009-10-01 20:10-0000\n"
 "Last-Translator: Rhoslyn Prys <rprys@yahoo.com>\n"
 "Language-Team: Cymraeg <post@meddal.com>\n"
@@ -28,14 +28,16 @@ msgid "Interface"
 msgstr "Rhyngwyneb"
 
 #: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:187
-#: ../lib/network/connection/ethernet.pm:141 ../lib/network/netconnect.pm:633
+#: ../lib/network/connection/ethernet.pm:141
+#: ../lib/network/drakconnect/edit.pm:151 ../lib/network/netconnect.pm:633
 #: ../lib/network/vpn/openvpn.pm:223
 #, c-format
 msgid "IP address"
 msgstr "Cyfeiriad IP"
 
 #: ../bin/drakconnect-old:64 ../bin/drakids:261
-#: ../lib/network/netconnect.pm:477
+#: ../lib/network/drakconnect/edit.pm:135
+#: ../lib/network/drakconnect/edit.pm:393 ../lib/network/netconnect.pm:477
 #, c-format
 msgid "Protocol"
 msgstr "Protocol"
@@ -71,23 +73,27 @@ msgid "Configure Local Area Network..."
 msgstr "Ffurfweddu'r Rhwydwaith Lleol..."
 
 #: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:217
+#: ../lib/network/drakconnect/edit.pm:71
 #, c-format
 msgid "Help"
 msgstr "Cymorth"
 
 #: ../bin/drakconnect-old:108 ../bin/drakinvictus:140
+#: ../lib/network/drakconnect/edit.pm:72 ../lib/network/drakconnect/edit.pm:76
 #, c-format
 msgid "Apply"
 msgstr "Gosod"
 
 #: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
 #: ../bin/draknetprofile:159 ../bin/net_monitor:388
+#: ../lib/network/drakconnect/global.pm:88
 #, c-format
 msgid "Cancel"
 msgstr "Diddymu"
 
 #: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
 #: ../bin/drakconnect-old:265 ../bin/draknetprofile:161 ../bin/net_monitor:389
+#: ../lib/network/drakconnect/global.pm:89
 #, c-format
 msgid "Ok"
 msgstr "Iawn"
@@ -97,7 +103,8 @@ msgstr "Iawn"
 #: ../lib/network/connection_manager.pm:89
 #: ../lib/network/connection_manager.pm:206
 #: ../lib/network/connection_manager.pm:235
-#: ../lib/network/connection_manager.pm:353 ../lib/network/drakvpn.pm:49
+#: ../lib/network/connection_manager.pm:353
+#: ../lib/network/drakconnect/edit.pm:466 ../lib/network/drakvpn.pm:49
 #: ../lib/network/netcenter.pm:150 ../lib/network/netconnect.pm:186
 #: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
 #: ../lib/network/netconnect.pm:733 ../lib/network/thirdparty.pm:352
@@ -106,7 +113,7 @@ msgstr "Iawn"
 msgid "Please wait"
 msgstr "Arhoswch"
 
-#: ../bin/drakconnect-old:115
+#: ../bin/drakconnect-old:115 ../lib/network/drakconnect/edit.pm:468
 #, c-format
 msgid "Please Wait... Applying the configuration"
 msgstr "Arhoswch...Gosod y ffurfweddiad"
@@ -143,6 +150,7 @@ msgstr "Addasydd %s: %s"
 
 #: ../bin/drakconnect-old:209 ../bin/drakgw:181
 #: ../lib/network/connection/ethernet.pm:148
+#: ../lib/network/drakconnect/edit.pm:156
 #, c-format
 msgid "Netmask"
 msgstr "Netmask"
@@ -158,6 +166,7 @@ msgid "Started on boot"
 msgstr "Cychwyn y peiriant"
 
 #: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:159
+#: ../lib/network/drakconnect/edit.pm:199
 #, c-format
 msgid "DHCP client"
 msgstr "Cleient DHCP"
@@ -172,17 +181,19 @@ msgstr ""
 "Cychwynnwch y cynorthwyydd \"%s\" o Ganolfan Rheoli Mageia"
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:105
+#: ../lib/network/drakconnect/global.pm:36
 #, c-format
 msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
 msgstr "Gosod rhygnwyneb rhwydwaith newydd (LAN, ISDN, ADSL, ...)"
 
 #: ../bin/drakconnect-old:273 ../bin/drakconnect-old:305
-#: ../lib/network/drakconnect.pm:16
+#: ../lib/network/drakconnect.pm:16 ../lib/network/drakconnect/edit.pm:515
 #, c-format
 msgid "No IP"
 msgstr "Dim IP"
 
 #: ../bin/drakconnect-old:306 ../lib/network/drakconnect.pm:17
+#: ../lib/network/drakconnect/edit.pm:516
 #, c-format
 msgid "No Mask"
 msgstr "Dim Mask"
@@ -253,12 +264,12 @@ msgstr ""
 "\n"
 "Beth hoffech ei wneud?"
 
-#: ../bin/drakgw:101
+#: ../bin/drakgw:101 ../lib/network/drakconnect/edit.pm:373
 #, c-format
 msgid "Disable"
 msgstr "Analluogi"
 
-#: ../bin/drakgw:101
+#: ../bin/drakgw:101 ../lib/network/drakconnect/edit.pm:373
 #, c-format
 msgid "Enable"
 msgstr "Galluogi"
@@ -275,8 +286,8 @@ msgstr ""
 "Dewiswch y rhyngwyneb rhwydwaith sydd wedi ei gysylltu'n uniongyrchol â'r "
 "rhyngrwyd."
 
-#: ../bin/drakgw:123 ../lib/network/netconnect.pm:379
-#: ../lib/network/netconnect.pm:414
+#: ../bin/drakgw:123 ../lib/network/drakconnect/delete.pm:26
+#: ../lib/network/netconnect.pm:379 ../lib/network/netconnect.pm:414
 #, c-format
 msgid "Net Device"
 msgstr "Dyfais Rhyngrwyd"
@@ -355,7 +366,11 @@ msgstr "Enw'r parth mewnol"
 #: ../lib/network/connection_manager.pm:177
 #: ../lib/network/connection_manager.pm:181
 #: ../lib/network/connection_manager.pm:223
-#: ../lib/network/connection_manager.pm:481 ../lib/network/drakvpn.pm:45
+#: ../lib/network/connection_manager.pm:481
+#: ../lib/network/drakconnect/delete.pm:12
+#: ../lib/network/drakconnect/edit.pm:506
+#: ../lib/network/drakconnect/edit.pm:510
+#: ../lib/network/drakconnect/edit.pm:519 ../lib/network/drakvpn.pm:45
 #: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
 #: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:135
@@ -654,13 +669,14 @@ msgstr "Cyfeiriadau caniatawyd"
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
 #: ../bin/net_applet:145 ../bin/net_applet:353
 #: ../lib/network/drakfirewall.pm:309 ../lib/network/drakfirewall.pm:313
+#: ../lib/network/net_applet/ifw.pm:61 ../lib/network/net_applet/ifw.pm:89
 #, c-format
 msgid "Interactive Firewall"
 msgstr "Mur Cadarn Rhyngweithiol"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:353
+#: ../bin/net_applet:353 ../lib/network/net_applet/ifw.pm:61
 #, c-format
 msgid "Unable to contact daemon"
 msgstr "Methu cysylltu â daemon"
@@ -670,12 +686,12 @@ msgstr "Methu cysylltu â daemon"
 msgid "Log"
 msgstr "Cofnodion"
 
-#: ../bin/drakids:86 ../bin/drakids:105
+#: ../bin/drakids:86 ../bin/drakids:105 ../lib/network/net_applet/ifw.pm:219
 #, c-format
 msgid "Allow"
 msgstr "Caniatáu"
 
-#: ../bin/drakids:87 ../bin/drakids:96
+#: ../bin/drakids:87 ../bin/drakids:96 ../lib/network/net_applet/ifw.pm:220
 #, c-format
 msgid "Block"
 msgstr "Rhwystro"
@@ -702,12 +718,12 @@ msgstr "Gwasanaethau rhwystrwyd"
 msgid "Clear logs"
 msgstr "Clirio cofnodion"
 
-#: ../bin/drakids:115 ../bin/drakids:120
+#: ../bin/drakids:115 ../bin/drakids:120 ../lib/network/net_applet/ifw.pm:158
 #, c-format
 msgid "Blacklist"
 msgstr "Rhestr Atal"
 
-#: ../bin/drakids:116 ../bin/drakids:133
+#: ../bin/drakids:116 ../bin/drakids:133 ../lib/network/net_applet/ifw.pm:163
 #, c-format
 msgid "Whitelist"
 msgstr "Rhestr Caniatáu"
@@ -859,7 +875,7 @@ msgstr "Modiwl"
 msgid "Enabled"
 msgstr "Galluogi"
 
-#: ../bin/draknetprofile:68
+#: ../bin/draknetprofile:68 ../lib/network/drakconnect/edit.pm:423
 #, c-format
 msgid "Description"
 msgstr "Disgrifiad"
@@ -908,9 +924,9 @@ msgstr ""
 "ôl yr arfer a bydd eich gosodiadau rhwydwaith yn cael eu cadw i'r proffil "
 "hwn o hyn ymlaen."
 
-#: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
-#: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
-#: ../lib/network/netconnect.pm:500
+#: ../bin/draknetprofile:183 ../lib/network/drakconnect/global.pm:34
+#: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
+#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:500
 #, c-format
 msgid "Warning"
 msgstr "Rhybudd"
@@ -2463,12 +2479,12 @@ msgstr ""
 "Rhybudd, mae cysylltiad arall gyda'r rhyngrwyd wedi ei ganfod, efallai'n "
 "defnyddio eich rhwydwaith."
 
-#: ../bin/net_monitor:516
+#: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
 msgid "Connected"
 msgstr "Wedi cysylltu"
 
-#: ../bin/net_monitor:516
+#: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
 msgid "Not connected"
 msgstr "Heb gysylltu"
@@ -2533,7 +2549,7 @@ msgstr "Caniatau cyfrifo defnydd"
 msgid "Allow interface to be controlled by Network Manager"
 msgstr ""
 
-#: ../lib/network/connection.pm:251
+#: ../lib/network/connection.pm:251 ../lib/network/drakconnect/edit.pm:292
 #, c-format
 msgid "Metric"
 msgstr "Metrig"
@@ -2573,19 +2589,22 @@ msgstr "Modem cebl"
 msgid "Use BPALogin (needed for Telstra)"
 msgstr "Defnyddiwch BPALogin (ar gyfer Telstra)"
 
-#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:616
+#: ../lib/network/connection/cable.pm:45
+#: ../lib/network/drakconnect/edit.pm:312 ../lib/network/netconnect.pm:616
 #, c-format
 msgid "Authentication"
 msgstr "Dilysu"
 
 #: ../lib/network/connection/cable.pm:47 ../lib/network/connection/ppp.pm:22
-#: ../lib/network/netconnect.pm:355 ../lib/network/vpn/openvpn.pm:395
+#: ../lib/network/drakconnect/edit.pm:322 ../lib/network/netconnect.pm:355
+#: ../lib/network/vpn/openvpn.pm:395
 #, c-format
 msgid "Account Login (user name)"
 msgstr "Mewngofnod Cyfrif (enw defnyddiwr)"
 
 #: ../lib/network/connection/cable.pm:49 ../lib/network/connection/ppp.pm:23
-#: ../lib/network/netconnect.pm:356 ../lib/network/vpn/openvpn.pm:396
+#: ../lib/network/drakconnect/edit.pm:323 ../lib/network/netconnect.pm:356
+#: ../lib/network/vpn/openvpn.pm:396
 #, c-format
 msgid "Account Password"
 msgstr "Cyfrinair y Cyfrif"
@@ -2712,13 +2731,15 @@ msgstr ""
 "Dylai pob eitem ei roi fel cyfeiriad IP nodiant collnod degymol\n"
 "(e.e.1.2.3.4)."
 
-#: ../lib/network/connection/ethernet.pm:149 ../lib/network/netconnect.pm:665
+#: ../lib/network/connection/ethernet.pm:149
+#: ../lib/network/drakconnect/edit.pm:162 ../lib/network/netconnect.pm:665
 #: ../lib/network/vpn/openvpn.pm:214 ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
 msgstr "Mynedfa"
 
 #: ../lib/network/connection/ethernet.pm:152
+#: ../lib/network/drakconnect/edit.pm:212
 #, c-format
 msgid "Get DNS servers from DHCP"
 msgstr "Estyn gweinyddion DNS o DHCP"
@@ -2745,21 +2766,25 @@ msgstr ""
 "Drwy ragosodiad bydd y parch chwilio'n cae ei osod o enw gwesteiwr cymwys"
 
 #: ../lib/network/connection/ethernet.pm:160
+#: ../lib/network/drakconnect/edit.pm:209
 #, c-format
 msgid "DHCP timeout (in seconds)"
 msgstr "Amser allan DHCP (mewn eiliadau)"
 
 #: ../lib/network/connection/ethernet.pm:161
+#: ../lib/network/drakconnect/edit.pm:213
 #, c-format
 msgid "Get YP servers from DHCP"
 msgstr "Estyn gweinyddion YP o DHCP"
 
 #: ../lib/network/connection/ethernet.pm:162
+#: ../lib/network/drakconnect/edit.pm:214
 #, c-format
 msgid "Get NTPD servers from DHCP"
 msgstr "Estyn gwenyddion NTPD o DHCP"
 
 #: ../lib/network/connection/ethernet.pm:163
+#: ../lib/network/drakconnect/edit.pm:205
 #, c-format
 msgid "DHCP host name"
 msgstr "Enw gwesteiwr DHCP"
@@ -2770,11 +2795,13 @@ msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
 msgstr "Peidiwch dychwelyd i Zeroconf (rhwydwaith 169.254.0.0)"
 
 #: ../lib/network/connection/ethernet.pm:176
+#: ../lib/network/drakconnect/edit.pm:506
 #, c-format
 msgid "IP address should be in format 1.2.3.4"
 msgstr "dylai cyfeiriad IP fod mewn fformat  1.2.3.4"
 
 #: ../lib/network/connection/ethernet.pm:181
+#: ../lib/network/drakconnect/edit.pm:510
 #, c-format
 msgid "Netmask should be in format 255.255.224.0"
 msgstr "Dylai Netmask fod ar fformat 255.255.224.0"
@@ -2797,6 +2824,7 @@ msgstr ""
 "cychwyn wrth i'r cyfrifiadur gychwyn."
 
 #: ../lib/network/connection/ethernet.pm:222
+#: ../lib/network/drakconnect/edit.pm:203
 #, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
 msgstr "Rhowch enw'r gwesteiwr o'r cyfeiriad DHCP (neu gynhyrchu un unigryw)"
@@ -2824,6 +2852,7 @@ msgstr ""
 "localdomain' yn cael ei ddefnyddio."
 
 #: ../lib/network/connection/ethernet.pm:244
+#: ../lib/network/drakconnect/edit.pm:270
 #, c-format
 msgid "Network Hotplugging"
 msgstr "Plygio byw'r Rhwydwaith"
@@ -2892,27 +2921,32 @@ msgstr "POTS"
 msgid "Analog telephone modem (POTS)"
 msgstr "Modem teleffon analog (POTS)"
 
-#: ../lib/network/connection/ppp.pm:9 ../lib/network/netconnect.pm:78
+#: ../lib/network/connection/ppp.pm:9 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:78
 #, c-format
 msgid "Script-based"
 msgstr "Seiliedig ar sgript"
 
-#: ../lib/network/connection/ppp.pm:10 ../lib/network/netconnect.pm:79
+#: ../lib/network/connection/ppp.pm:10 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:79
 #, c-format
 msgid "PAP"
 msgstr "PAP"
 
-#: ../lib/network/connection/ppp.pm:11 ../lib/network/netconnect.pm:80
+#: ../lib/network/connection/ppp.pm:11 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:80
 #, c-format
 msgid "Terminal-based"
 msgstr "Seiliedig ar derfynell"
 
-#: ../lib/network/connection/ppp.pm:12 ../lib/network/netconnect.pm:81
+#: ../lib/network/connection/ppp.pm:12 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:81
 #, c-format
 msgid "CHAP"
 msgstr "CHAP"
 
-#: ../lib/network/connection/ppp.pm:13 ../lib/network/netconnect.pm:82
+#: ../lib/network/connection/ppp.pm:13 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:82
 #, c-format
 msgid "PAP/CHAP"
 msgstr "PAP/CHAP"
@@ -4092,6 +4126,7 @@ msgstr "Gosodiadau diwyfr"
 
 #: ../lib/network/connection/wireless.pm:464
 #: ../lib/network/connection_manager.pm:280
+#: ../lib/network/drakconnect/edit.pm:236
 #, c-format
 msgid "Operating Mode"
 msgstr "Modd Gweithredu"
@@ -4127,6 +4162,7 @@ msgid "Auto"
 msgstr "Awtomatig"
 
 #: ../lib/network/connection/wireless.pm:468
+#: ../lib/network/drakconnect/edit.pm:237
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "Enw'r rhwydwaith (ESSID)"
@@ -4137,6 +4173,7 @@ msgid "Encryption mode"
 msgstr "Modd Amgryptiedig"
 
 #: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/drakconnect/edit.pm:251
 #, c-format
 msgid "Encryption key"
 msgstr "Allwedd amgryptio"
@@ -4224,26 +4261,31 @@ msgstr ""
 "Sylwer: mae gosodiadau eraill i'w gweld ar dudalen Uwch"
 
 #: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/drakconnect/edit.pm:238
 #, c-format
 msgid "Network ID"
 msgstr "Enw Rhwydwaith"
 
 #: ../lib/network/connection/wireless.pm:513
+#: ../lib/network/drakconnect/edit.pm:239
 #, c-format
 msgid "Operating frequency"
 msgstr "Amledd gweithredu"
 
 #: ../lib/network/connection/wireless.pm:514
+#: ../lib/network/drakconnect/edit.pm:240
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "Trothwy sensitifrwydd"
 
 #: ../lib/network/connection/wireless.pm:515
+#: ../lib/network/drakconnect/edit.pm:241
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "Didradd (mewn b/s)"
 
 #: ../lib/network/connection/wireless.pm:516
+#: ../lib/network/drakconnect/edit.pm:252
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
@@ -4272,11 +4314,13 @@ msgstr ""
 "gosodedig  neu ddiffodd"
 
 #: ../lib/network/connection/wireless.pm:524
+#: ../lib/network/drakconnect/edit.pm:253
 #, c-format
 msgid "Fragmentation"
 msgstr "Darniad"
 
 #: ../lib/network/connection/wireless.pm:525
+#: ../lib/network/drakconnect/edit.pm:254
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "ymresymiadau ychwanegol gorchymyn iwconfig"
@@ -4298,6 +4342,7 @@ msgstr ""
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
 #: ../lib/network/connection/wireless.pm:533
+#: ../lib/network/drakconnect/edit.pm:255
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "ymresymiadau ychwanegol gorchymyn lwspy"
@@ -4322,6 +4367,7 @@ msgstr ""
 "Gw. tudalennau man iwpspy(8) am ragor o wybodaeth. "
 
 #: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/drakconnect/edit.pm:256
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "ymresymiadau ychwanegol gorchymyn iwpriv"
@@ -4757,6 +4803,287 @@ msgstr "Cysylltu"
 msgid "Hostname changed to \"%s\""
 msgstr "Newidiodd enw'r gwestai i \"%s\""
 
+#: ../lib/network/drakconnect/delete.pm:12
+#, c-format
+msgid ""
+"No ethernet network adapter has been detected on your system. Please run the "
+"hardware configuration tool."
+msgstr ""
+"Nid oes addasydd rhwydwaith ethernet wedi ei ganfod ar eich system. Rhedwch "
+"yr offeryn ffurfweddu caledwedd."
+
+#: ../lib/network/drakconnect/delete.pm:21
+#, c-format
+msgid "Remove a network interface"
+msgstr "Tynnu rhyngwyneb rhwydwaith"
+
+#: ../lib/network/drakconnect/delete.pm:25
+#, fuzzy, c-format
+msgid "Select the network interface to remove:"
+msgstr "Dewis y rhyngwyneb rhwydwaith i'w ffurfweddu:"
+
+#: ../lib/network/drakconnect/delete.pm:58
+#, c-format
+msgid ""
+"An error occurred while deleting the \"%s\" network interface:\n"
+"\n"
+"%s"
+msgstr ""
+"Digwyddodd gwall wrth ddileu rhyngwyneb rhwydwaith \"%s\":\n"
+"\n"
+"%s"
+
+#: ../lib/network/drakconnect/delete.pm:59
+#, c-format
+msgid ""
+"Congratulations, the \"%s\" network interface has been successfully deleted"
+msgstr "Llongyfarchiadau, dilëwyd rhyngwyneb \"%s\" yn llwyddiannus"
+
+#: ../lib/network/drakconnect/edit.pm:23
+#, c-format
+msgid "Manage connections"
+msgstr "Rheoli cysylltiadau"
+
+#: ../lib/network/drakconnect/edit.pm:50 ../lib/network/drakroam.pm:85
+#, c-format
+msgid "Device: "
+msgstr "Dyfais: "
+
+#: ../lib/network/drakconnect/edit.pm:132
+#, c-format
+msgid "IP configuration"
+msgstr "Ffurfweddiad IP"
+
+#: ../lib/network/drakconnect/edit.pm:167
+#, c-format
+msgid "DNS servers"
+msgstr "Gweinydd DNS"
+
+#: ../lib/network/drakconnect/edit.pm:173
+#, c-format
+msgid "Search Domain"
+msgstr "Chwilio Parth"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "none"
+msgstr "dim"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "static"
+msgstr "statig"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "DHCP"
+msgstr "DHCP"
+
+#: ../lib/network/drakconnect/edit.pm:264
+#, c-format
+msgid "Start at boot"
+msgstr "Cychwyn y peiriant"
+
+#: ../lib/network/drakconnect/edit.pm:276 ../lib/network/netconnect.pm:352
+#, c-format
+msgid "Dialing mode"
+msgstr "Modd deialu"
+
+#: ../lib/network/drakconnect/edit.pm:281
+#: ../lib/network/drakconnect/edit.pm:348 ../lib/network/netconnect.pm:353
+#, c-format
+msgid "Connection speed"
+msgstr "Cyflymder y cysylltiad"
+
+#: ../lib/network/drakconnect/edit.pm:286 ../lib/network/netconnect.pm:354
+#, c-format
+msgid "Connection timeout (in sec)"
+msgstr "Oediad yn y cysylltiad (mewn eiliadau)"
+
+#: ../lib/network/drakconnect/edit.pm:324 ../lib/network/netconnect.pm:349
+#, c-format
+msgid "Provider phone number"
+msgstr "Rhif ffôn y darparwr"
+
+#: ../lib/network/drakconnect/edit.pm:346
+#, c-format
+msgid "Flow control"
+msgstr "Rheolwr llif"
+
+#: ../lib/network/drakconnect/edit.pm:347
+#, c-format
+msgid "Line termination"
+msgstr "Terfyn llinell"
+
+#: ../lib/network/drakconnect/edit.pm:358
+#, c-format
+msgid "Modem timeout"
+msgstr "Goramser modem"
+
+#: ../lib/network/drakconnect/edit.pm:362
+#, c-format
+msgid "Use lock file"
+msgstr "Dewiswch ffeil clo"
+
+#: ../lib/network/drakconnect/edit.pm:364
+#, c-format
+msgid "Wait for dialup tone before dialing"
+msgstr "Arhoswch am y tôn deialu cyn deialu"
+
+#: ../lib/network/drakconnect/edit.pm:367
+#, c-format
+msgid "Busy wait"
+msgstr "Prysur arhoswch"
+
+#: ../lib/network/drakconnect/edit.pm:372
+#, c-format
+msgid "Modem sound"
+msgstr "Sain modem"
+
+#: ../lib/network/drakconnect/edit.pm:385 ../lib/network/netconnect.pm:357
+#, c-format
+msgid "Card IRQ"
+msgstr "IRQ y cerdyn"
+
+#: ../lib/network/drakconnect/edit.pm:386 ../lib/network/netconnect.pm:358
+#, c-format
+msgid "Card mem (DMA)"
+msgstr "Cof Cerdyn (DMA)"
+
+#: ../lib/network/drakconnect/edit.pm:387 ../lib/network/netconnect.pm:359
+#, c-format
+msgid "Card IO"
+msgstr "IO'r Cerdyn"
+
+#: ../lib/network/drakconnect/edit.pm:388 ../lib/network/netconnect.pm:360
+#, c-format
+msgid "Card IO_0"
+msgstr "IO_O y cerdyn"
+
+#: ../lib/network/drakconnect/edit.pm:394 ../lib/network/netconnect.pm:71
+#, c-format
+msgid "European protocol (EDSS1)"
+msgstr "Protocol Ewropeaidd (EDSSI)"
+
+#: ../lib/network/drakconnect/edit.pm:395 ../lib/network/netconnect.pm:72
+#, c-format
+msgid ""
+"Protocol for the rest of the world\n"
+"No D-Channel (leased lines)"
+msgstr ""
+"Protocol ar gyfer gweddill y byd\n"
+" dim D-Channel (llinell les)"
+
+#: ../lib/network/drakconnect/edit.pm:422
+#, c-format
+msgid "Vendor"
+msgstr "Gwerthwr"
+
+#: ../lib/network/drakconnect/edit.pm:424
+#, c-format
+msgid "Media class"
+msgstr "Dosbarth y cyfrwng"
+
+#: ../lib/network/drakconnect/edit.pm:425
+#, c-format
+msgid "Module name"
+msgstr "Enw'r modiwl"
+
+#: ../lib/network/drakconnect/edit.pm:426
+#, c-format
+msgid "Mac Address"
+msgstr "Cyfeiriad Mac"
+
+#: ../lib/network/drakconnect/edit.pm:427
+#, c-format
+msgid "Bus"
+msgstr "Bws"
+
+#: ../lib/network/drakconnect/edit.pm:428
+#, c-format
+msgid "Location on the bus"
+msgstr "Lleoliad ar y bws"
+
+#: ../lib/network/drakconnect/edit.pm:519 ../lib/network/netconnect.pm:832
+#, c-format
+msgid "Gateway address should be in format 1.2.3.4"
+msgstr "Dylai cyfeiriad mynedfa fod mewn fformat  1.2.3.4"
+
+#: ../lib/network/drakconnect/global.pm:27
+#, c-format
+msgid "Gateway:"
+msgstr "Mynedfa:"
+
+#: ../lib/network/drakconnect/global.pm:27
+#, c-format
+msgid "Interface:"
+msgstr "Rhyngwyneb:"
+
+#: ../lib/network/drakconnect/global.pm:30
+#, c-format
+msgid "Internet connection configuration"
+msgstr "Ffurfweddiad cysylltiad â'r Rhyngrwyd"
+
+#: ../lib/network/drakconnect/global.pm:35
+#, fuzzy, c-format
+msgid ""
+"You do not have any configured Internet connection.\n"
+"Run the \"%s\" assistant from the Mageia Control Center"
+msgstr ""
+"Nid oes gennych gyswllt wedi ei ffurfweddu â'r Rhyngrwyd.\n"
+"Cychwynnwch gynorthwy-ydd \"%s\" o Ganolfan Rheoli Mageia"
+
+#: ../lib/network/drakconnect/global.pm:50
+#, c-format
+msgid "Host name (optional)"
+msgstr "Enw gwesteiwr (dewisol)"
+
+#: ../lib/network/drakconnect/global.pm:51 ../lib/network/netconnect.pm:651
+#, c-format
+msgid "First DNS Server (optional)"
+msgstr "Gweinydd DNS Cyntaf (dewisol)"
+
+#: ../lib/network/drakconnect/global.pm:52 ../lib/network/netconnect.pm:652
+#, c-format
+msgid "Second DNS Server (optional)"
+msgstr "Ail Wasanaethwr DNS (dewisol)"
+
+#: ../lib/network/drakconnect/global.pm:53
+#, c-format
+msgid "Third DNS server (optional)"
+msgstr "Trydydd gweinydd DNS (dewisol)"
+
+#: ../lib/network/drakconnect/global.pm:75
+#, c-format
+msgid "Internet Connection Configuration"
+msgstr "Ffurfweddu Cysylltiad â'r Rhyngrwyd"
+
+#: ../lib/network/drakconnect/global.pm:76
+#, c-format
+msgid "Internet access"
+msgstr "Mynediad i'r Rhyngrwyd"
+
+#: ../lib/network/drakconnect/global.pm:78
+#, c-format
+msgid "Connection type: "
+msgstr "Math o gyswllt:"
+
+#: ../lib/network/drakconnect/global.pm:81
+#, c-format
+msgid "Status:"
+msgstr "Statws:"
+
+#: ../lib/network/drakconnect/global.pm:82 ../lib/network/netconnect.pm:305
+#: ../lib/network/netconnect.pm:733
+#, c-format
+msgid "Testing your connection..."
+msgstr "Profi eich cysylltiad..."
+
+#: ../lib/network/drakconnect/global.pm:86
+#, c-format
+msgid "Parameters"
+msgstr "Paramedrau"
+
 #: ../lib/network/drakfirewall.pm:14
 #, c-format
 msgid "Web Server"
@@ -4963,11 +5290,6 @@ msgstr "Defnyddio Mur Cadarn Rhyngweithiol"
 #, c-format
 msgid "No device found"
 msgstr "Heb ganfod dyfais"
-
-#: ../lib/network/drakroam.pm:85
-#, c-format
-msgid "Device: "
-msgstr "Dyfais: "
 
 #: ../lib/network/drakroam.pm:89 ../lib/network/netcenter.pm:66
 #, c-format
@@ -5202,6 +5524,103 @@ msgstr "Gosod gyrrwr newydd"
 msgid "Select a device:"
 msgstr "Dewis dyfais:"
 
+#. -PO: "Process" is a verb
+#: ../lib/network/net_applet/ifw.pm:100
+#, c-format
+msgid "Process attack"
+msgstr "Ymosodiad proses"
+
+#: ../lib/network/net_applet/ifw.pm:113
+#, c-format
+msgid "Interactive Firewall: intrusion detected"
+msgstr "Mur Cadarn Rhyngweithiol: canfod ymwthiad"
+
+#: ../lib/network/net_applet/ifw.pm:130
+#, c-format
+msgid "What do you want to do with this attacker?"
+msgstr "Beth hoffech wneud gyda'r ymosodwr?"
+
+#: ../lib/network/net_applet/ifw.pm:133
+#, c-format
+msgid "Attack details"
+msgstr "Manylion yr ymosodiad"
+
+#: ../lib/network/net_applet/ifw.pm:137
+#, c-format
+msgid "Attack time: %s"
+msgstr "Amser yr ymosodiad: %s"
+
+#: ../lib/network/net_applet/ifw.pm:138
+#, c-format
+msgid "Network interface: %s"
+msgstr "Rhyngwynebau rhwydwaith: %s"
+
+#: ../lib/network/net_applet/ifw.pm:139
+#, c-format
+msgid "Attack type: %s"
+msgstr "Math o ymosodiad:  %s"
+
+#: ../lib/network/net_applet/ifw.pm:140
+#, c-format
+msgid "Protocol: %s"
+msgstr "Protocol: %s"
+
+#: ../lib/network/net_applet/ifw.pm:141
+#, c-format
+msgid "Attacker IP address: %s"
+msgstr "Cyfeiriad IP yr ymosodwr: %s"
+
+#: ../lib/network/net_applet/ifw.pm:142
+#, c-format
+msgid "Attacker hostname: %s"
+msgstr "Enw gwesteiwr yr ymosodwr: %s"
+
+#: ../lib/network/net_applet/ifw.pm:145
+#, c-format
+msgid "Service attacked: %s"
+msgstr "Ymosodwyd ar wasanaeth: %s"
+
+#: ../lib/network/net_applet/ifw.pm:146
+#, c-format
+msgid "Port attacked: %s"
+msgstr "Ymosodwyd ar borth: %s"
+
+#: ../lib/network/net_applet/ifw.pm:148
+#, c-format
+msgid "Type of ICMP attack: %s"
+msgstr "Math o ymosodiad ICMP: %s"
+
+#: ../lib/network/net_applet/ifw.pm:153
+#, c-format
+msgid "Always blacklist (do not ask again)"
+msgstr "Rhestr gwahardd (peidiwch gofyn eto)"
+
+#: ../lib/network/net_applet/ifw.pm:168
+#, c-format
+msgid "Ignore"
+msgstr "Anwybyddu"
+
+#: ../lib/network/net_applet/ifw.pm:186 ../lib/network/net_applet/ifw.pm:204
+#, c-format
+msgid "Interactive Firewall: new service"
+msgstr "Mur Cadarn Rhyngweithiol: gwasanaeth newydd"
+
+#. -PO: "Process" is a verb
+#: ../lib/network/net_applet/ifw.pm:192
+#, c-format
+msgid "Process connection"
+msgstr "Cysylltiad proses"
+
+#: ../lib/network/net_applet/ifw.pm:214
+#, c-format
+msgid "Do you want to open this service?"
+msgstr "Hoffech chi agor y gwasanaeth"
+
+#: ../lib/network/net_applet/ifw.pm:217
+#, c-format
+msgid "Remember this answer"
+msgstr "Cofiwch yr ateb"
+
 #: ../lib/network/netcenter.pm:55 ../lib/network/netconnect.pm:211
 #, c-format
 msgid "Please select your network:"
@@ -5244,20 +5663,6 @@ msgstr "Cerdyn ISDN mewnol"
 #, c-format
 msgid "Protocol for the rest of the world"
 msgstr "Protocol ar gyfer gweddill y byd"
-
-#: ../lib/network/netconnect.pm:71
-#, c-format
-msgid "European protocol (EDSS1)"
-msgstr "Protocol Ewropeaidd (EDSSI)"
-
-#: ../lib/network/netconnect.pm:72
-#, c-format
-msgid ""
-"Protocol for the rest of the world\n"
-"No D-Channel (leased lines)"
-msgstr ""
-"Protocol ar gyfer gweddill y byd\n"
-" dim D-Channel (llinell les)"
 
 #: ../lib/network/netconnect.pm:122
 #, c-format
@@ -5309,11 +5714,6 @@ msgstr ""
 msgid "Connection control"
 msgstr "Rheolydd cysylltu"
 
-#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:733
-#, c-format
-msgid "Testing your connection..."
-msgstr "Profi eich cysylltiad..."
-
 #: ../lib/network/netconnect.pm:344
 #, c-format
 msgid "Connection Configuration"
@@ -5334,11 +5734,6 @@ msgstr "Eich rhif ffôn personol"
 msgid "Provider name (ex provider.net)"
 msgstr "Enw darparwr (eng. darparwr.net)"
 
-#: ../lib/network/netconnect.pm:349
-#, c-format
-msgid "Provider phone number"
-msgstr "Rhif ffôn y darparwr"
-
 #: ../lib/network/netconnect.pm:350
 #, c-format
 msgid "Provider DNS 1 (optional)"
@@ -5348,41 +5743,6 @@ msgstr "Darparwr DNS 1 (dewisol)"
 #, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "Darparwr DNS 2 (dewisol)"
-
-#: ../lib/network/netconnect.pm:352
-#, c-format
-msgid "Dialing mode"
-msgstr "Modd deialu"
-
-#: ../lib/network/netconnect.pm:353
-#, c-format
-msgid "Connection speed"
-msgstr "Cyflymder y cysylltiad"
-
-#: ../lib/network/netconnect.pm:354
-#, c-format
-msgid "Connection timeout (in sec)"
-msgstr "Oediad yn y cysylltiad (mewn eiliadau)"
-
-#: ../lib/network/netconnect.pm:357
-#, c-format
-msgid "Card IRQ"
-msgstr "IRQ y cerdyn"
-
-#: ../lib/network/netconnect.pm:358
-#, c-format
-msgid "Card mem (DMA)"
-msgstr "Cof Cerdyn (DMA)"
-
-#: ../lib/network/netconnect.pm:359
-#, c-format
-msgid "Card IO"
-msgstr "IO'r Cerdyn"
-
-#: ../lib/network/netconnect.pm:360
-#, c-format
-msgid "Card IO_0"
-msgstr "IO_O y cerdyn"
 
 #: ../lib/network/netconnect.pm:361
 #, c-format
@@ -5550,16 +5910,6 @@ msgstr "DNS"
 #, c-format
 msgid "Domain name"
 msgstr "Enw parth"
-
-#: ../lib/network/netconnect.pm:651
-#, c-format
-msgid "First DNS Server (optional)"
-msgstr "Gweinydd DNS Cyntaf (dewisol)"
-
-#: ../lib/network/netconnect.pm:652
-#, c-format
-msgid "Second DNS Server (optional)"
-msgstr "Ail Wasanaethwr DNS (dewisol)"
 
 #: ../lib/network/netconnect.pm:653
 #, c-format
@@ -5871,11 +6221,6 @@ msgstr "Yn olaf mae modd i chi deipio cyfeiriadau IP eich gweinydd DNS."
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
 msgstr "Dylai cyfeiriad DNS fod mewn fformat  1.2.3.4"
-
-#: ../lib/network/netconnect.pm:832
-#, c-format
-msgid "Gateway address should be in format 1.2.3.4"
-msgstr "Dylai cyfeiriad mynedfa fod mewn fformat  1.2.3.4"
 
 #: ../lib/network/netconnect.pm:833
 #, c-format
@@ -6358,16 +6703,6 @@ msgstr "Defnyddio porth UDP penodol"
 #~ "%s\n"
 #~ "\n"
 #~ "Rwyf ar fin gosod eich Rhwydwaith Lleol gyda'r addasydd hwnnw.."
-
-#~ msgid ""
-#~ "No ethernet network adapter has been detected on your system. Please run "
-#~ "the hardware configuration tool."
-#~ msgstr ""
-#~ "Nid oes addasydd rhwydwaith ethernet wedi ei ganfod ar eich system. "
-#~ "Rhedwch yr offeryn ffurfweddu caledwedd."
-
-#~ msgid "Connection type: "
-#~ msgstr "Math o gyswllt:"
 
 #~ msgid "%s already in use\n"
 #~ msgstr "%s yn cael ei ddefnyddio eisoes\n"
@@ -7362,9 +7697,6 @@ msgstr "Defnyddio porth UDP penodol"
 #~ msgid "discard"
 #~ msgstr "dileu"
 
-#~ msgid "none"
-#~ msgstr "dim"
-
 #~ msgid "tunnel"
 #~ msgstr "twnel"
 
@@ -7392,175 +7724,14 @@ msgstr "Defnyddio porth UDP penodol"
 #~ msgid "You need to log out and back in again for changes to take effect"
 #~ msgstr "Rhaid allgofnodi ac i mewn eto i newidiadau ddigwydd."
 
-#~ msgid "Process attack"
-#~ msgstr "Ymosodiad proses"
-
-#~ msgid "Interactive Firewall: intrusion detected"
-#~ msgstr "Mur Cadarn Rhyngweithiol: canfod ymwthiad"
-
-#~ msgid "What do you want to do with this attacker?"
-#~ msgstr "Beth hoffech wneud gyda'r ymosodwr?"
-
-#~ msgid "Attack details"
-#~ msgstr "Manylion yr ymosodiad"
-
-#~ msgid "Attack time: %s"
-#~ msgstr "Amser yr ymosodiad: %s"
-
-#~ msgid "Network interface: %s"
-#~ msgstr "Rhyngwynebau rhwydwaith: %s"
-
-#~ msgid "Attack type: %s"
-#~ msgstr "Math o ymosodiad:  %s"
-
-#~ msgid "Protocol: %s"
-#~ msgstr "Protocol: %s"
-
-#~ msgid "Attacker IP address: %s"
-#~ msgstr "Cyfeiriad IP yr ymosodwr: %s"
-
-#~ msgid "Attacker hostname: %s"
-#~ msgstr "Enw gwesteiwr yr ymosodwr: %s"
-
-#~ msgid "Service attacked: %s"
-#~ msgstr "Ymosodwyd ar wasanaeth: %s"
-
-#~ msgid "Port attacked: %s"
-#~ msgstr "Ymosodwyd ar borth: %s"
-
-#~ msgid "Type of ICMP attack: %s"
-#~ msgstr "Math o ymosodiad ICMP: %s"
-
-#~ msgid "Always blacklist (do not ask again)"
-#~ msgstr "Rhestr gwahardd (peidiwch gofyn eto)"
-
-#~ msgid "Ignore"
-#~ msgstr "Anwybyddu"
-
-#~ msgid "Interactive Firewall: new service"
-#~ msgstr "Mur Cadarn Rhyngweithiol: gwasanaeth newydd"
-
-#~ msgid "Process connection"
-#~ msgstr "Cysylltiad proses"
-
-#~ msgid "Do you want to open this service?"
-#~ msgstr "Hoffech chi agor y gwasanaeth"
-
-#~ msgid "Remember this answer"
-#~ msgstr "Cofiwch yr ateb"
-
 #~ msgid "Use Cisco-UDP encapsulation"
 #~ msgstr "Defnyddio mewngapsiwleiddio Cisco-UDP"
-
-#~ msgid "Gateway:"
-#~ msgstr "Mynedfa:"
-
-#~ msgid "Interface:"
-#~ msgstr "Rhyngwyneb:"
-
-#~ msgid "Manage connections"
-#~ msgstr "Rheoli cysylltiadau"
-
-#~ msgid "IP configuration"
-#~ msgstr "Ffurfweddiad IP"
-
-#~ msgid "DNS servers"
-#~ msgstr "Gweinydd DNS"
-
-#~ msgid "Search Domain"
-#~ msgstr "Chwilio Parth"
-
-#~ msgid "static"
-#~ msgstr "statig"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Start at boot"
-#~ msgstr "Cychwyn y peiriant"
-
-#~ msgid "Flow control"
-#~ msgstr "Rheolwr llif"
-
-#~ msgid "Line termination"
-#~ msgstr "Terfyn llinell"
-
-#~ msgid "Modem timeout"
-#~ msgstr "Goramser modem"
-
-#~ msgid "Use lock file"
-#~ msgstr "Dewiswch ffeil clo"
-
-#~ msgid "Wait for dialup tone before dialing"
-#~ msgstr "Arhoswch am y tôn deialu cyn deialu"
-
-#~ msgid "Busy wait"
-#~ msgstr "Prysur arhoswch"
-
-#~ msgid "Modem sound"
-#~ msgstr "Sain modem"
-
-#~ msgid "Vendor"
-#~ msgstr "Gwerthwr"
-
-#~ msgid "Media class"
-#~ msgstr "Dosbarth y cyfrwng"
-
-#~ msgid "Module name"
-#~ msgstr "Enw'r modiwl"
-
-#~ msgid "Mac Address"
-#~ msgstr "Cyfeiriad Mac"
-
-#~ msgid "Bus"
-#~ msgstr "Bws"
-
-#~ msgid "Location on the bus"
-#~ msgstr "Lleoliad ar y bws"
-
-#~ msgid "Remove a network interface"
-#~ msgstr "Tynnu rhyngwyneb rhwydwaith"
-
-#~ msgid ""
-#~ "An error occurred while deleting the \"%s\" network interface:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Digwyddodd gwall wrth ddileu rhyngwyneb rhwydwaith \"%s\":\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Congratulations, the \"%s\" network interface has been successfully "
-#~ "deleted"
-#~ msgstr "Llongyfarchiadau, dilëwyd rhyngwyneb \"%s\" yn llwyddiannus"
 
 #~ msgid "Disconnect..."
 #~ msgstr "Datgysylltu..."
 
 #~ msgid "Connect..."
 #~ msgstr "Cysylltu..."
-
-#~ msgid "Internet connection configuration"
-#~ msgstr "Ffurfweddiad cysylltiad â'r Rhyngrwyd"
-
-#~ msgid "Host name (optional)"
-#~ msgstr "Enw gwesteiwr (dewisol)"
-
-#~ msgid "Third DNS server (optional)"
-#~ msgstr "Trydydd gweinydd DNS (dewisol)"
-
-#~ msgid "Internet Connection Configuration"
-#~ msgstr "Ffurfweddu Cysylltiad â'r Rhyngrwyd"
-
-#~ msgid "Internet access"
-#~ msgstr "Mynediad i'r Rhyngrwyd"
-
-#~ msgid "Status:"
-#~ msgstr "Statws:"
-
-#~ msgid "Parameters"
-#~ msgstr "Paramedrau"
 
 #~ msgid "Attacker"
 #~ msgstr "Ymosodwr"

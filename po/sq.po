@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net for MDK 9.2\n"
-"POT-Creation-Date: 2011-05-03 15:42+0200\n"
+"POT-Creation-Date: 2011-11-18 13:57+0100\n"
 "PO-Revision-Date: 2004-09-15 13:33+0200\n"
 "Last-Translator: Naim Daka <naim70@freesurf.ch>\n"
 "Language-Team: Albanian <LL@li.org>\n"
@@ -26,14 +26,16 @@ msgid "Interface"
 msgstr "Interfaci"
 
 #: ../bin/drakconnect-old:64 ../bin/drakconnect-old:208 ../bin/drakhosts:187
-#: ../lib/network/connection/ethernet.pm:141 ../lib/network/netconnect.pm:633
+#: ../lib/network/connection/ethernet.pm:141
+#: ../lib/network/drakconnect/edit.pm:151 ../lib/network/netconnect.pm:633
 #: ../lib/network/vpn/openvpn.pm:223
 #, c-format
 msgid "IP address"
 msgstr "Adresa IP"
 
 #: ../bin/drakconnect-old:64 ../bin/drakids:261
-#: ../lib/network/netconnect.pm:477
+#: ../lib/network/drakconnect/edit.pm:135
+#: ../lib/network/drakconnect/edit.pm:393 ../lib/network/netconnect.pm:477
 #, c-format
 msgid "Protocol"
 msgstr "Protokoli"
@@ -69,23 +71,27 @@ msgid "Configure Local Area Network..."
 msgstr "Konfiguroni Rrjetin Lokal..."
 
 #: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:217
+#: ../lib/network/drakconnect/edit.pm:71
 #, c-format
 msgid "Help"
 msgstr "Ndihmë"
 
 #: ../bin/drakconnect-old:108 ../bin/drakinvictus:140
+#: ../lib/network/drakconnect/edit.pm:72 ../lib/network/drakconnect/edit.pm:76
 #, c-format
 msgid "Apply"
 msgstr "Aplikoje"
 
 #: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
 #: ../bin/draknetprofile:159 ../bin/net_monitor:388
+#: ../lib/network/drakconnect/global.pm:88
 #, c-format
 msgid "Cancel"
 msgstr "Anulo"
 
 #: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
 #: ../bin/drakconnect-old:265 ../bin/draknetprofile:161 ../bin/net_monitor:389
+#: ../lib/network/drakconnect/global.pm:89
 #, c-format
 msgid "Ok"
 msgstr "Ok"
@@ -95,7 +101,8 @@ msgstr "Ok"
 #: ../lib/network/connection_manager.pm:89
 #: ../lib/network/connection_manager.pm:206
 #: ../lib/network/connection_manager.pm:235
-#: ../lib/network/connection_manager.pm:353 ../lib/network/drakvpn.pm:49
+#: ../lib/network/connection_manager.pm:353
+#: ../lib/network/drakconnect/edit.pm:466 ../lib/network/drakvpn.pm:49
 #: ../lib/network/netcenter.pm:150 ../lib/network/netconnect.pm:186
 #: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
 #: ../lib/network/netconnect.pm:733 ../lib/network/thirdparty.pm:352
@@ -104,7 +111,7 @@ msgstr "Ok"
 msgid "Please wait"
 msgstr "Një moment ju lutemi"
 
-#: ../bin/drakconnect-old:115
+#: ../bin/drakconnect-old:115 ../lib/network/drakconnect/edit.pm:468
 #, c-format
 msgid "Please Wait... Applying the configuration"
 msgstr "Një moment ju lutemi... Përshtatja e konfigurimit"
@@ -140,6 +147,7 @@ msgstr "Përshtate %s: %s"
 
 #: ../bin/drakconnect-old:209 ../bin/drakgw:181
 #: ../lib/network/connection/ethernet.pm:148
+#: ../lib/network/drakconnect/edit.pm:156
 #, c-format
 msgid "Netmask"
 msgstr "Maskë ndër rrjet"
@@ -155,6 +163,7 @@ msgid "Started on boot"
 msgstr "Nise në Nisje të Udhëzuar"
 
 #: ../bin/drakconnect-old:212 ../lib/network/connection/ethernet.pm:159
+#: ../lib/network/drakconnect/edit.pm:199
 #, c-format
 msgid "DHCP client"
 msgstr "Klienti DHCP"
@@ -169,17 +178,19 @@ msgstr ""
 "Nise asistentin konfigurues në dritaren kryesore"
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:105
+#: ../lib/network/drakconnect/global.pm:36
 #, fuzzy, c-format
 msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
 msgstr "Zgjedheni kartelën e rrjetit"
 
 #: ../bin/drakconnect-old:273 ../bin/drakconnect-old:305
-#: ../lib/network/drakconnect.pm:16
+#: ../lib/network/drakconnect.pm:16 ../lib/network/drakconnect/edit.pm:515
 #, c-format
 msgid "No IP"
 msgstr "Asnjë IP"
 
 #: ../bin/drakconnect-old:306 ../lib/network/drakconnect.pm:17
+#: ../lib/network/drakconnect/edit.pm:516
 #, c-format
 msgid "No Mask"
 msgstr "Asnjë Maskë"
@@ -250,12 +261,12 @@ msgstr ""
 "\n"
 "Çfarë dëshironi të bëni?"
 
-#: ../bin/drakgw:101
+#: ../bin/drakgw:101 ../lib/network/drakconnect/edit.pm:373
 #, c-format
 msgid "Disable"
 msgstr "Ç'aktivo"
 
-#: ../bin/drakgw:101
+#: ../bin/drakgw:101 ../lib/network/drakconnect/edit.pm:373
 #, c-format
 msgid "Enable"
 msgstr "Aktivo"
@@ -270,8 +281,8 @@ msgstr "Rikonfiguro"
 msgid "Please select the network interface directly connected to the internet."
 msgstr ""
 
-#: ../bin/drakgw:123 ../lib/network/netconnect.pm:379
-#: ../lib/network/netconnect.pm:414
+#: ../bin/drakgw:123 ../lib/network/drakconnect/delete.pm:26
+#: ../lib/network/netconnect.pm:379 ../lib/network/netconnect.pm:414
 #, c-format
 msgid "Net Device"
 msgstr "Mjeti Net"
@@ -339,7 +350,11 @@ msgstr "Emri i pronës së mbredshme"
 #: ../lib/network/connection_manager.pm:177
 #: ../lib/network/connection_manager.pm:181
 #: ../lib/network/connection_manager.pm:223
-#: ../lib/network/connection_manager.pm:481 ../lib/network/drakvpn.pm:45
+#: ../lib/network/connection_manager.pm:481
+#: ../lib/network/drakconnect/delete.pm:12
+#: ../lib/network/drakconnect/edit.pm:506
+#: ../lib/network/drakconnect/edit.pm:510
+#: ../lib/network/drakconnect/edit.pm:519 ../lib/network/drakvpn.pm:45
 #: ../lib/network/drakvpn.pm:52 ../lib/network/ndiswrapper.pm:30
 #: ../lib/network/ndiswrapper.pm:45 ../lib/network/ndiswrapper.pm:118
 #: ../lib/network/ndiswrapper.pm:124 ../lib/network/netconnect.pm:135
@@ -636,13 +651,14 @@ msgstr "Autorizoi të gjithë përdoruesit"
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
 #: ../bin/net_applet:145 ../bin/net_applet:353
 #: ../lib/network/drakfirewall.pm:309 ../lib/network/drakfirewall.pm:313
+#: ../lib/network/net_applet/ifw.pm:61 ../lib/network/net_applet/ifw.pm:89
 #, fuzzy, c-format
 msgid "Interactive Firewall"
 msgstr "Mur i Zjarrt"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
-#: ../bin/net_applet:353
+#: ../bin/net_applet:353 ../lib/network/net_applet/ifw.pm:61
 #, fuzzy, c-format
 msgid "Unable to contact daemon"
 msgstr "Nuk mundur të kontaktohet pasqyrja %s"
@@ -652,12 +668,12 @@ msgstr "Nuk mundur të kontaktohet pasqyrja %s"
 msgid "Log"
 msgstr "Log"
 
-#: ../bin/drakids:86 ../bin/drakids:105
+#: ../bin/drakids:86 ../bin/drakids:105 ../lib/network/net_applet/ifw.pm:219
 #, fuzzy, c-format
 msgid "Allow"
 msgstr "Gjitha"
 
-#: ../bin/drakids:87 ../bin/drakids:96
+#: ../bin/drakids:87 ../bin/drakids:96 ../lib/network/net_applet/ifw.pm:220
 #, c-format
 msgid "Block"
 msgstr ""
@@ -684,12 +700,12 @@ msgstr "Regjistrimi i skedareve për përdorues"
 msgid "Clear logs"
 msgstr "Zhduki të gjitha ndarjet"
 
-#: ../bin/drakids:115 ../bin/drakids:120
+#: ../bin/drakids:115 ../bin/drakids:120 ../lib/network/net_applet/ifw.pm:158
 #, c-format
 msgid "Blacklist"
 msgstr ""
 
-#: ../bin/drakids:116 ../bin/drakids:133
+#: ../bin/drakids:116 ../bin/drakids:133 ../lib/network/net_applet/ifw.pm:163
 #, c-format
 msgid "Whitelist"
 msgstr ""
@@ -837,7 +853,7 @@ msgstr "Modaliteti"
 msgid "Enabled"
 msgstr "Aktivo"
 
-#: ../bin/draknetprofile:68
+#: ../bin/draknetprofile:68 ../lib/network/drakconnect/edit.pm:423
 #, c-format
 msgid "Description"
 msgstr "Përshkrimi"
@@ -879,9 +895,9 @@ msgid ""
 "profile."
 msgstr ""
 
-#: ../bin/draknetprofile:183 ../lib/network/drakvpn.pm:70
-#: ../lib/network/drakvpn.pm:100 ../lib/network/ndiswrapper.pm:103
-#: ../lib/network/netconnect.pm:500
+#: ../bin/draknetprofile:183 ../lib/network/drakconnect/global.pm:34
+#: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
+#: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:500
 #, c-format
 msgid "Warning"
 msgstr "Kujdes"
@@ -2345,12 +2361,12 @@ msgstr ""
 "KujDES, një lidhje tjetër internet është zbuluar, ndoshta përdorimi i "
 "rrjetit tuaj"
 
-#: ../bin/net_monitor:516
+#: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
 msgid "Connected"
 msgstr "Lidhur"
 
-#: ../bin/net_monitor:516
+#: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
 msgid "Not connected"
 msgstr "Nuk është lidhur"
@@ -2415,7 +2431,7 @@ msgstr ""
 msgid "Allow interface to be controlled by Network Manager"
 msgstr ""
 
-#: ../lib/network/connection.pm:251
+#: ../lib/network/connection.pm:251 ../lib/network/drakconnect/edit.pm:292
 #, c-format
 msgid "Metric"
 msgstr "Metrik"
@@ -2455,19 +2471,22 @@ msgstr "Model i kartelës:"
 msgid "Use BPALogin (needed for Telstra)"
 msgstr ""
 
-#: ../lib/network/connection/cable.pm:45 ../lib/network/netconnect.pm:616
+#: ../lib/network/connection/cable.pm:45
+#: ../lib/network/drakconnect/edit.pm:312 ../lib/network/netconnect.pm:616
 #, c-format
 msgid "Authentication"
 msgstr "Vërtetësimi"
 
 #: ../lib/network/connection/cable.pm:47 ../lib/network/connection/ppp.pm:22
-#: ../lib/network/netconnect.pm:355 ../lib/network/vpn/openvpn.pm:395
+#: ../lib/network/drakconnect/edit.pm:322 ../lib/network/netconnect.pm:355
+#: ../lib/network/vpn/openvpn.pm:395
 #, c-format
 msgid "Account Login (user name)"
 msgstr "Emri i përdoruesit të kontos"
 
 #: ../lib/network/connection/cable.pm:49 ../lib/network/connection/ppp.pm:23
-#: ../lib/network/netconnect.pm:356 ../lib/network/vpn/openvpn.pm:396
+#: ../lib/network/drakconnect/edit.pm:323 ../lib/network/netconnect.pm:356
+#: ../lib/network/vpn/openvpn.pm:396
 #, c-format
 msgid "Account Password"
 msgstr "Parulla a kontos"
@@ -2592,13 +2611,15 @@ msgstr ""
 "Secila zonë duhet të jetë e kompletuar me një adresë IP në shënim\n"
 "decimal shenjues (për shembull: 1.2.3.4)."
 
-#: ../lib/network/connection/ethernet.pm:149 ../lib/network/netconnect.pm:665
+#: ../lib/network/connection/ethernet.pm:149
+#: ../lib/network/drakconnect/edit.pm:162 ../lib/network/netconnect.pm:665
 #: ../lib/network/vpn/openvpn.pm:214 ../lib/network/vpn/vpnc.pm:39
 #, c-format
 msgid "Gateway"
 msgstr "Portë hyrëse"
 
 #: ../lib/network/connection/ethernet.pm:152
+#: ../lib/network/drakconnect/edit.pm:212
 #, fuzzy, c-format
 msgid "Get DNS servers from DHCP"
 msgstr "Adresa IP për Serverin DNS"
@@ -2624,21 +2645,25 @@ msgid "By default search domain will be set from the fully-qualified host name"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:160
+#: ../lib/network/drakconnect/edit.pm:209
 #, fuzzy, c-format
 msgid "DHCP timeout (in seconds)"
 msgstr "Koha maksimale për tu lidhur (në sekonda)"
 
 #: ../lib/network/connection/ethernet.pm:161
+#: ../lib/network/drakconnect/edit.pm:213
 #, c-format
 msgid "Get YP servers from DHCP"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:162
+#: ../lib/network/drakconnect/edit.pm:214
 #, c-format
 msgid "Get NTPD servers from DHCP"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:163
+#: ../lib/network/drakconnect/edit.pm:205
 #, c-format
 msgid "DHCP host name"
 msgstr "Emri i ftuesit DHCP"
@@ -2649,11 +2674,13 @@ msgid "Do not fallback to Zeroconf (169.254.0.0 network)"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:176
+#: ../lib/network/drakconnect/edit.pm:506
 #, c-format
 msgid "IP address should be in format 1.2.3.4"
 msgstr "Adresa IP duhet të jetë në formën 1.2.3.4"
 
 #: ../lib/network/connection/ethernet.pm:181
+#: ../lib/network/drakconnect/edit.pm:510
 #, fuzzy, c-format
 msgid "Netmask should be in format 255.255.224.0"
 msgstr "Adresa e Portës hyrëse Gateway duhe të jetë sikur 1.2.3.4"
@@ -2672,6 +2699,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:222
+#: ../lib/network/drakconnect/edit.pm:203
 #, fuzzy, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
 msgstr "Ju lutemi futne emrin nga adresa DHCP."
@@ -2693,6 +2721,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:244
+#: ../lib/network/drakconnect/edit.pm:270
 #, c-format
 msgid "Network Hotplugging"
 msgstr "Rrjet (Network) i Prizuar"
@@ -2761,27 +2790,32 @@ msgstr ""
 msgid "Analog telephone modem (POTS)"
 msgstr ""
 
-#: ../lib/network/connection/ppp.pm:9 ../lib/network/netconnect.pm:78
+#: ../lib/network/connection/ppp.pm:9 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:78
 #, c-format
 msgid "Script-based"
 msgstr "Bazuar me një skript"
 
-#: ../lib/network/connection/ppp.pm:10 ../lib/network/netconnect.pm:79
+#: ../lib/network/connection/ppp.pm:10 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:79
 #, c-format
 msgid "PAP"
 msgstr "PAP"
 
-#: ../lib/network/connection/ppp.pm:11 ../lib/network/netconnect.pm:80
+#: ../lib/network/connection/ppp.pm:11 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:80
 #, c-format
 msgid "Terminal-based"
 msgstr "Doracak nga terminali"
 
-#: ../lib/network/connection/ppp.pm:12 ../lib/network/netconnect.pm:81
+#: ../lib/network/connection/ppp.pm:12 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:81
 #, c-format
 msgid "CHAP"
 msgstr "CHAP"
 
-#: ../lib/network/connection/ppp.pm:13 ../lib/network/netconnect.pm:82
+#: ../lib/network/connection/ppp.pm:13 ../lib/network/drakconnect/edit.pm:329
+#: ../lib/network/netconnect.pm:82
 #, fuzzy, c-format
 msgid "PAP/CHAP"
 msgstr "CHAP"
@@ -3959,6 +3993,7 @@ msgstr "Lidhje wireless"
 
 #: ../lib/network/connection/wireless.pm:464
 #: ../lib/network/connection_manager.pm:280
+#: ../lib/network/drakconnect/edit.pm:236
 #, fuzzy, c-format
 msgid "Operating Mode"
 msgstr "Modë Ekspert"
@@ -3994,6 +4029,7 @@ msgid "Auto"
 msgstr "Automatike"
 
 #: ../lib/network/connection/wireless.pm:468
+#: ../lib/network/drakconnect/edit.pm:237
 #, c-format
 msgid "Network name (ESSID)"
 msgstr ""
@@ -4004,6 +4040,7 @@ msgid "Encryption mode"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/drakconnect/edit.pm:251
 #, c-format
 msgid "Encryption key"
 msgstr "Çelës kriptues"
@@ -4070,26 +4107,31 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/drakconnect/edit.pm:238
 #, fuzzy, c-format
 msgid "Network ID"
 msgstr "Rrjeti"
 
 #: ../lib/network/connection/wireless.pm:513
+#: ../lib/network/drakconnect/edit.pm:239
 #, c-format
 msgid "Operating frequency"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:514
+#: ../lib/network/drakconnect/edit.pm:240
 #, c-format
 msgid "Sensitivity threshold"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:515
+#: ../lib/network/drakconnect/edit.pm:241
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:516
+#: ../lib/network/drakconnect/edit.pm:252
 #, c-format
 msgid "RTS/CTS"
 msgstr ""
@@ -4109,11 +4151,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:524
+#: ../lib/network/drakconnect/edit.pm:253
 #, fuzzy, c-format
 msgid "Fragmentation"
 msgstr "Stacion Lojërash"
 
 #: ../lib/network/connection/wireless.pm:525
+#: ../lib/network/drakconnect/edit.pm:254
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr ""
@@ -4130,6 +4174,7 @@ msgstr ""
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
 #: ../lib/network/connection/wireless.pm:533
+#: ../lib/network/drakconnect/edit.pm:255
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr ""
@@ -4147,6 +4192,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:542
+#: ../lib/network/drakconnect/edit.pm:256
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr ""
@@ -4533,6 +4579,289 @@ msgstr "Lidhe..."
 msgid "Hostname changed to \"%s\""
 msgstr ""
 
+#: ../lib/network/drakconnect/delete.pm:12
+#, c-format
+msgid ""
+"No ethernet network adapter has been detected on your system. Please run the "
+"hardware configuration tool."
+msgstr ""
+"Asnjë përshtatës i rrjetit ethernet s'është zbuluar në sistemin tuaj. Ju "
+"lutemi niseni mjetin me veglën konfiguruese."
+
+#: ../lib/network/drakconnect/delete.pm:21
+#, fuzzy, c-format
+msgid "Remove a network interface"
+msgstr "Zgjedheni kartelën e rrjetit"
+
+#: ../lib/network/drakconnect/delete.pm:25
+#, fuzzy, c-format
+msgid "Select the network interface to remove:"
+msgstr "Zgjedheni kartelën e rrjetit"
+
+#: ../lib/network/drakconnect/delete.pm:58
+#, fuzzy, c-format
+msgid ""
+"An error occurred while deleting the \"%s\" network interface:\n"
+"\n"
+"%s"
+msgstr ""
+"Një problem është paraqituar gjatë nisjes së rrjetit (network): \n"
+"\n"
+"%s"
+
+#: ../lib/network/drakconnect/delete.pm:59
+#, fuzzy, c-format
+msgid ""
+"Congratulations, the \"%s\" network interface has been successfully deleted"
+msgstr ""
+"Urime, konfigurimi i rrjetit dhe i internetit mori fund.\n"
+"\n"
+
+#: ../lib/network/drakconnect/edit.pm:23
+#, fuzzy, c-format
+msgid "Manage connections"
+msgstr "Lidhja kabëll"
+
+#: ../lib/network/drakconnect/edit.pm:50 ../lib/network/drakroam.pm:85
+#, c-format
+msgid "Device: "
+msgstr "Periferik: "
+
+#: ../lib/network/drakconnect/edit.pm:132
+#, fuzzy, c-format
+msgid "IP configuration"
+msgstr "Konfigurimi CUPS"
+
+#: ../lib/network/drakconnect/edit.pm:167
+#, fuzzy, c-format
+msgid "DNS servers"
+msgstr "Server DNS"
+
+#: ../lib/network/drakconnect/edit.pm:173
+#, fuzzy, c-format
+msgid "Search Domain"
+msgstr "Pronë NIS"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "none"
+msgstr "asnjë"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, fuzzy, c-format
+msgid "static"
+msgstr "Shpërndarja automatike e adresës IP"
+
+#: ../lib/network/drakconnect/edit.pm:181
+#, c-format
+msgid "DHCP"
+msgstr "DHCP"
+
+#: ../lib/network/drakconnect/edit.pm:264
+#, c-format
+msgid "Start at boot"
+msgstr "Nise në nisje të sistemit"
+
+#: ../lib/network/drakconnect/edit.pm:276 ../lib/network/netconnect.pm:352
+#, c-format
+msgid "Dialing mode"
+msgstr "Modë Numërimi"
+
+#: ../lib/network/drakconnect/edit.pm:281
+#: ../lib/network/drakconnect/edit.pm:348 ../lib/network/netconnect.pm:353
+#, c-format
+msgid "Connection speed"
+msgstr "Shpejtësia e lidhjes"
+
+#: ../lib/network/drakconnect/edit.pm:286 ../lib/network/netconnect.pm:354
+#, c-format
+msgid "Connection timeout (in sec)"
+msgstr "Koha maksimale për tu lidhur (në sekonda)"
+
+#: ../lib/network/drakconnect/edit.pm:324 ../lib/network/netconnect.pm:349
+#, c-format
+msgid "Provider phone number"
+msgstr "Numri i telefonit të furnizuesit"
+
+#: ../lib/network/drakconnect/edit.pm:346
+#, fuzzy, c-format
+msgid "Flow control"
+msgstr "<control>S"
+
+#: ../lib/network/drakconnect/edit.pm:347
+#, fuzzy, c-format
+msgid "Line termination"
+msgstr "Stacion Interneti"
+
+#: ../lib/network/drakconnect/edit.pm:358
+#, fuzzy, c-format
+msgid "Modem timeout"
+msgstr "Kohë zgjatja e Shell"
+
+#: ../lib/network/drakconnect/edit.pm:362
+#, fuzzy, c-format
+msgid "Use lock file"
+msgstr "Zgjedhe një skedare"
+
+#: ../lib/network/drakconnect/edit.pm:364
+#, c-format
+msgid "Wait for dialup tone before dialing"
+msgstr ""
+
+#: ../lib/network/drakconnect/edit.pm:367
+#, fuzzy, c-format
+msgid "Busy wait"
+msgstr "Kuvajti"
+
+#: ../lib/network/drakconnect/edit.pm:372
+#, fuzzy, c-format
+msgid "Modem sound"
+msgstr "Modemi"
+
+#: ../lib/network/drakconnect/edit.pm:385 ../lib/network/netconnect.pm:357
+#, c-format
+msgid "Card IRQ"
+msgstr "Kartela IRQ"
+
+#: ../lib/network/drakconnect/edit.pm:386 ../lib/network/netconnect.pm:358
+#, c-format
+msgid "Card mem (DMA)"
+msgstr "Kartela e memorisë (DMA)"
+
+#: ../lib/network/drakconnect/edit.pm:387 ../lib/network/netconnect.pm:359
+#, c-format
+msgid "Card IO"
+msgstr "Kartela IO"
+
+#: ../lib/network/drakconnect/edit.pm:388 ../lib/network/netconnect.pm:360
+#, c-format
+msgid "Card IO_0"
+msgstr "Kartela IO_0"
+
+#: ../lib/network/drakconnect/edit.pm:394 ../lib/network/netconnect.pm:71
+#, c-format
+msgid "European protocol (EDSS1)"
+msgstr "Protokol evrope (EDSS1)"
+
+#: ../lib/network/drakconnect/edit.pm:395 ../lib/network/netconnect.pm:72
+#, c-format
+msgid ""
+"Protocol for the rest of the world\n"
+"No D-Channel (leased lines)"
+msgstr ""
+"Protokol për pjesën tjetër të botës\n"
+"Pa D-Kanal (vija të huazuara)"
+
+#: ../lib/network/drakconnect/edit.pm:422
+#, c-format
+msgid "Vendor"
+msgstr "Shitës"
+
+#: ../lib/network/drakconnect/edit.pm:424
+#, c-format
+msgid "Media class"
+msgstr "Klasë e medias"
+
+#: ../lib/network/drakconnect/edit.pm:425
+#, c-format
+msgid "Module name"
+msgstr "Emri i Modulit"
+
+#: ../lib/network/drakconnect/edit.pm:426
+#, fuzzy, c-format
+msgid "Mac Address"
+msgstr "Adresa Transmetuese:"
+
+#: ../lib/network/drakconnect/edit.pm:427
+#, c-format
+msgid "Bus"
+msgstr "Bus"
+
+#: ../lib/network/drakconnect/edit.pm:428
+#, c-format
+msgid "Location on the bus"
+msgstr "Pozita në bus"
+
+#: ../lib/network/drakconnect/edit.pm:519 ../lib/network/netconnect.pm:832
+#, c-format
+msgid "Gateway address should be in format 1.2.3.4"
+msgstr "Adresa e Portës hyrëse Gateway duhe të jetë sikur 1.2.3.4"
+
+#: ../lib/network/drakconnect/global.pm:27
+#, c-format
+msgid "Gateway:"
+msgstr "Portë hyrëse:"
+
+#: ../lib/network/drakconnect/global.pm:27
+#, c-format
+msgid "Interface:"
+msgstr "Interfaci:"
+
+#: ../lib/network/drakconnect/global.pm:30
+#, c-format
+msgid "Internet connection configuration"
+msgstr "Konfigurimi i lidhjes internet"
+
+#: ../lib/network/drakconnect/global.pm:35
+#, fuzzy, c-format
+msgid ""
+"You do not have any configured Internet connection.\n"
+"Run the \"%s\" assistant from the Mageia Control Center"
+msgstr ""
+"Ky interfac nuk është i konfiguruar ende.\n"
+"Nise asistentin konfigurues në dritaren kryesore"
+
+#: ../lib/network/drakconnect/global.pm:50
+#, fuzzy, c-format
+msgid "Host name (optional)"
+msgstr "Konfigurimi i emrit ftues"
+
+#: ../lib/network/drakconnect/global.pm:51 ../lib/network/netconnect.pm:651
+#, c-format
+msgid "First DNS Server (optional)"
+msgstr "Server DNS Kryesor (opcional)"
+
+#: ../lib/network/drakconnect/global.pm:52 ../lib/network/netconnect.pm:652
+#, c-format
+msgid "Second DNS Server (optional)"
+msgstr "Server DNS i Dyti (opcional)"
+
+#: ../lib/network/drakconnect/global.pm:53
+#, fuzzy, c-format
+msgid "Third DNS server (optional)"
+msgstr "Server DNS Kryesor (opcional)"
+
+#: ../lib/network/drakconnect/global.pm:75
+#, c-format
+msgid "Internet Connection Configuration"
+msgstr "Konfigurimi i Lidhjes Internet"
+
+#: ../lib/network/drakconnect/global.pm:76
+#, c-format
+msgid "Internet access"
+msgstr "Hyrjet në internet"
+
+#: ../lib/network/drakconnect/global.pm:78
+#, c-format
+msgid "Connection type: "
+msgstr "Tip lidhës:"
+
+#: ../lib/network/drakconnect/global.pm:81
+#, c-format
+msgid "Status:"
+msgstr "Statuti:"
+
+#: ../lib/network/drakconnect/global.pm:82 ../lib/network/netconnect.pm:305
+#: ../lib/network/netconnect.pm:733
+#, c-format
+msgid "Testing your connection..."
+msgstr "Testimi i lidhjes suaj..."
+
+#: ../lib/network/drakconnect/global.pm:86
+#, c-format
+msgid "Parameters"
+msgstr "Parametrat"
+
 #: ../lib/network/drakfirewall.pm:14
 #, c-format
 msgid "Web Server"
@@ -4733,11 +5062,6 @@ msgstr ""
 #, c-format
 msgid "No device found"
 msgstr "Asnjë mjet i gjetur"
-
-#: ../lib/network/drakroam.pm:85
-#, c-format
-msgid "Device: "
-msgstr "Periferik: "
 
 #: ../lib/network/drakroam.pm:89 ../lib/network/netcenter.pm:66
 #, c-format
@@ -4961,6 +5285,103 @@ msgstr "Instalim sistemin"
 msgid "Select a device:"
 msgstr ""
 
+#. -PO: "Process" is a verb
+#: ../lib/network/net_applet/ifw.pm:100
+#, fuzzy, c-format
+msgid "Process attack"
+msgstr "Lloji i shërbimi_t:"
+
+#: ../lib/network/net_applet/ifw.pm:113
+#, fuzzy, c-format
+msgid "Interactive Firewall: intrusion detected"
+msgstr "Zbulimi i Konfigurimi të Murit të Zjarrtë"
+
+#: ../lib/network/net_applet/ifw.pm:130
+#, fuzzy, c-format
+msgid "What do you want to do with this attacker?"
+msgstr "Dëshironi ta mbyllni lojën?"
+
+#: ../lib/network/net_applet/ifw.pm:133
+#, fuzzy, c-format
+msgid "Attack details"
+msgstr "Asnjë detaj"
+
+#: ../lib/network/net_applet/ifw.pm:137
+#, fuzzy, c-format
+msgid "Attack time: %s"
+msgstr "Veprimi:%s"
+
+#: ../lib/network/net_applet/ifw.pm:138
+#, c-format
+msgid "Network interface: %s"
+msgstr "Interfac rrjeti: %s"
+
+#: ../lib/network/net_applet/ifw.pm:139
+#, fuzzy, c-format
+msgid "Attack type: %s"
+msgstr "tipi: %s"
+
+#: ../lib/network/net_applet/ifw.pm:140
+#, c-format
+msgid "Protocol: %s"
+msgstr "Protokoli: %s"
+
+#: ../lib/network/net_applet/ifw.pm:141
+#, fuzzy, c-format
+msgid "Attacker IP address: %s"
+msgstr "Adresa statike IP"
+
+#: ../lib/network/net_applet/ifw.pm:142
+#, fuzzy, c-format
+msgid "Attacker hostname: %s"
+msgstr "Gabim gjatë marrjes së emrit të host: %s\n"
+
+#: ../lib/network/net_applet/ifw.pm:145
+#, fuzzy, c-format
+msgid "Service attacked: %s"
+msgstr "Lloji i shërbimi_t:"
+
+#: ../lib/network/net_applet/ifw.pm:146
+#, fuzzy, c-format
+msgid "Port attacked: %s"
+msgstr "Porta: %s"
+
+#: ../lib/network/net_applet/ifw.pm:148
+#, fuzzy, c-format
+msgid "Type of ICMP attack: %s"
+msgstr "Porta: %s"
+
+#: ../lib/network/net_applet/ifw.pm:153
+#, c-format
+msgid "Always blacklist (do not ask again)"
+msgstr ""
+
+#: ../lib/network/net_applet/ifw.pm:168
+#, c-format
+msgid "Ignore"
+msgstr "Injoroje"
+
+#: ../lib/network/net_applet/ifw.pm:186 ../lib/network/net_applet/ifw.pm:204
+#, fuzzy, c-format
+msgid "Interactive Firewall: new service"
+msgstr "Zbulimi i Konfigurimi të Murit të Zjarrtë"
+
+#. -PO: "Process" is a verb
+#: ../lib/network/net_applet/ifw.pm:192
+#, fuzzy, c-format
+msgid "Process connection"
+msgstr "Lidhje wireless"
+
+#: ../lib/network/net_applet/ifw.pm:214
+#, fuzzy, c-format
+msgid "Do you want to open this service?"
+msgstr "A dëshironi ta testoni konfigurimin?"
+
+#: ../lib/network/net_applet/ifw.pm:217
+#, fuzzy, c-format
+msgid "Remember this answer"
+msgstr "Kujtoje këtë parullë"
+
 #: ../lib/network/netcenter.pm:55 ../lib/network/netconnect.pm:211
 #, c-format
 msgid "Please select your network:"
@@ -5003,20 +5424,6 @@ msgstr "Modemi i mbrendshëm ISDN"
 #, c-format
 msgid "Protocol for the rest of the world"
 msgstr "Protokol për pjesën tjetër të botës"
-
-#: ../lib/network/netconnect.pm:71
-#, c-format
-msgid "European protocol (EDSS1)"
-msgstr "Protokol evrope (EDSS1)"
-
-#: ../lib/network/netconnect.pm:72
-#, c-format
-msgid ""
-"Protocol for the rest of the world\n"
-"No D-Channel (leased lines)"
-msgstr ""
-"Protokol për pjesën tjetër të botës\n"
-"Pa D-Kanal (vija të huazuara)"
 
 #: ../lib/network/netconnect.pm:122
 #, c-format
@@ -5066,11 +5473,6 @@ msgstr ""
 msgid "Connection control"
 msgstr ""
 
-#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:733
-#, c-format
-msgid "Testing your connection..."
-msgstr "Testimi i lidhjes suaj..."
-
 #: ../lib/network/netconnect.pm:344
 #, c-format
 msgid "Connection Configuration"
@@ -5091,11 +5493,6 @@ msgstr "Numri i juaj personal i telefonit"
 msgid "Provider name (ex provider.net)"
 msgstr "Emri i furnizuesit (p.sh. provider.net)"
 
-#: ../lib/network/netconnect.pm:349
-#, c-format
-msgid "Provider phone number"
-msgstr "Numri i telefonit të furnizuesit"
-
 #: ../lib/network/netconnect.pm:350
 #, fuzzy, c-format
 msgid "Provider DNS 1 (optional)"
@@ -5105,41 +5502,6 @@ msgstr "DNS i parë furnizues (opcional)"
 #, fuzzy, c-format
 msgid "Provider DNS 2 (optional)"
 msgstr "DNS i dytë furnizues (opcional)"
-
-#: ../lib/network/netconnect.pm:352
-#, c-format
-msgid "Dialing mode"
-msgstr "Modë Numërimi"
-
-#: ../lib/network/netconnect.pm:353
-#, c-format
-msgid "Connection speed"
-msgstr "Shpejtësia e lidhjes"
-
-#: ../lib/network/netconnect.pm:354
-#, c-format
-msgid "Connection timeout (in sec)"
-msgstr "Koha maksimale për tu lidhur (në sekonda)"
-
-#: ../lib/network/netconnect.pm:357
-#, c-format
-msgid "Card IRQ"
-msgstr "Kartela IRQ"
-
-#: ../lib/network/netconnect.pm:358
-#, c-format
-msgid "Card mem (DMA)"
-msgstr "Kartela e memorisë (DMA)"
-
-#: ../lib/network/netconnect.pm:359
-#, c-format
-msgid "Card IO"
-msgstr "Kartela IO"
-
-#: ../lib/network/netconnect.pm:360
-#, c-format
-msgid "Card IO_0"
-msgstr "Kartela IO_0"
 
 #: ../lib/network/netconnect.pm:361
 #, c-format
@@ -5304,16 +5666,6 @@ msgstr "DNS"
 #, c-format
 msgid "Domain name"
 msgstr "Emri i pronës"
-
-#: ../lib/network/netconnect.pm:651
-#, c-format
-msgid "First DNS Server (optional)"
-msgstr "Server DNS Kryesor (opcional)"
-
-#: ../lib/network/netconnect.pm:652
-#, c-format
-msgid "Second DNS Server (optional)"
-msgstr "Server DNS i Dyti (opcional)"
 
 #: ../lib/network/netconnect.pm:653
 #, fuzzy, c-format
@@ -5619,11 +5971,6 @@ msgstr ""
 #, c-format
 msgid "DNS server address should be in format 1.2.3.4"
 msgstr "Adresa i portës hyrëse DNS duhet të jetë sikur 1.2.3.4"
-
-#: ../lib/network/netconnect.pm:832
-#, c-format
-msgid "Gateway address should be in format 1.2.3.4"
-msgstr "Adresa e Portës hyrëse Gateway duhe të jetë sikur 1.2.3.4"
 
 #: ../lib/network/netconnect.pm:833
 #, c-format
@@ -6063,16 +6410,6 @@ msgstr ""
 #~ "Do ta konfiguroj kartelën tuaj të Zonës së Rrjetit Lokal me këtë "
 #~ "përshtatës."
 
-#~ msgid ""
-#~ "No ethernet network adapter has been detected on your system. Please run "
-#~ "the hardware configuration tool."
-#~ msgstr ""
-#~ "Asnjë përshtatës i rrjetit ethernet s'është zbuluar në sistemin tuaj. Ju "
-#~ "lutemi niseni mjetin me veglën konfiguruese."
-
-#~ msgid "Connection type: "
-#~ msgstr "Tip lidhës:"
-
 #~ msgid "%s already in use\n"
 #~ msgstr "%s është në përdorim e sipër\n"
 
@@ -6099,9 +6436,6 @@ msgstr ""
 #~ msgid "Command"
 #~ msgstr "Urdhër"
 
-#~ msgid "none"
-#~ msgstr "asnjë"
-
 #~ msgid "Level"
 #~ msgstr "Niveli"
 
@@ -6110,188 +6444,11 @@ msgstr ""
 #~ "Ju duhet të lidheni jashtë tij dhe të hyni prapë për ndryshimet bëra më "
 #~ "parë"
 
-#, fuzzy
-#~ msgid "Process attack"
-#~ msgstr "Lloji i shërbimi_t:"
-
-#, fuzzy
-#~ msgid "Interactive Firewall: intrusion detected"
-#~ msgstr "Zbulimi i Konfigurimi të Murit të Zjarrtë"
-
-#, fuzzy
-#~ msgid "What do you want to do with this attacker?"
-#~ msgstr "Dëshironi ta mbyllni lojën?"
-
-#, fuzzy
-#~ msgid "Attack details"
-#~ msgstr "Asnjë detaj"
-
-#, fuzzy
-#~ msgid "Attack time: %s"
-#~ msgstr "Veprimi:%s"
-
-#~ msgid "Network interface: %s"
-#~ msgstr "Interfac rrjeti: %s"
-
-#, fuzzy
-#~ msgid "Attack type: %s"
-#~ msgstr "tipi: %s"
-
-#~ msgid "Protocol: %s"
-#~ msgstr "Protokoli: %s"
-
-#, fuzzy
-#~ msgid "Attacker IP address: %s"
-#~ msgstr "Adresa statike IP"
-
-#, fuzzy
-#~ msgid "Attacker hostname: %s"
-#~ msgstr "Gabim gjatë marrjes së emrit të host: %s\n"
-
-#, fuzzy
-#~ msgid "Service attacked: %s"
-#~ msgstr "Lloji i shërbimi_t:"
-
-#, fuzzy
-#~ msgid "Port attacked: %s"
-#~ msgstr "Porta: %s"
-
-#~ msgid "Ignore"
-#~ msgstr "Injoroje"
-
-#, fuzzy
-#~ msgid "Interactive Firewall: new service"
-#~ msgstr "Zbulimi i Konfigurimi të Murit të Zjarrtë"
-
-#, fuzzy
-#~ msgid "Process connection"
-#~ msgstr "Lidhje wireless"
-
-#, fuzzy
-#~ msgid "Do you want to open this service?"
-#~ msgstr "A dëshironi ta testoni konfigurimin?"
-
-#, fuzzy
-#~ msgid "Remember this answer"
-#~ msgstr "Kujtoje këtë parullë"
-
-#~ msgid "Gateway:"
-#~ msgstr "Portë hyrëse:"
-
-#~ msgid "Interface:"
-#~ msgstr "Interfaci:"
-
-#, fuzzy
-#~ msgid "Manage connections"
-#~ msgstr "Lidhja kabëll"
-
-#, fuzzy
-#~ msgid "IP configuration"
-#~ msgstr "Konfigurimi CUPS"
-
-#, fuzzy
-#~ msgid "DNS servers"
-#~ msgstr "Server DNS"
-
-#, fuzzy
-#~ msgid "Search Domain"
-#~ msgstr "Pronë NIS"
-
-#, fuzzy
-#~ msgid "static"
-#~ msgstr "Shpërndarja automatike e adresës IP"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Start at boot"
-#~ msgstr "Nise në nisje të sistemit"
-
-#, fuzzy
-#~ msgid "Flow control"
-#~ msgstr "<control>S"
-
-#, fuzzy
-#~ msgid "Line termination"
-#~ msgstr "Stacion Interneti"
-
-#, fuzzy
-#~ msgid "Modem timeout"
-#~ msgstr "Kohë zgjatja e Shell"
-
-#, fuzzy
-#~ msgid "Use lock file"
-#~ msgstr "Zgjedhe një skedare"
-
-#, fuzzy
-#~ msgid "Busy wait"
-#~ msgstr "Kuvajti"
-
-#, fuzzy
-#~ msgid "Modem sound"
-#~ msgstr "Modemi"
-
-#~ msgid "Vendor"
-#~ msgstr "Shitës"
-
-#~ msgid "Media class"
-#~ msgstr "Klasë e medias"
-
-#~ msgid "Module name"
-#~ msgstr "Emri i Modulit"
-
-#, fuzzy
-#~ msgid "Mac Address"
-#~ msgstr "Adresa Transmetuese:"
-
-#~ msgid "Bus"
-#~ msgstr "Bus"
-
-#~ msgid "Location on the bus"
-#~ msgstr "Pozita në bus"
-
-#, fuzzy
-#~ msgid "Remove a network interface"
-#~ msgstr "Zgjedheni kartelën e rrjetit"
-
-#, fuzzy
-#~ msgid ""
-#~ "An error occurred while deleting the \"%s\" network interface:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Një problem është paraqituar gjatë nisjes së rrjetit (network): \n"
-#~ "\n"
-#~ "%s"
-
 #~ msgid "Disconnect..."
 #~ msgstr "Shkëpute..."
 
 #~ msgid "Connect..."
 #~ msgstr "Lidhe..."
-
-#~ msgid "Internet connection configuration"
-#~ msgstr "Konfigurimi i lidhjes internet"
-
-#, fuzzy
-#~ msgid "Host name (optional)"
-#~ msgstr "Konfigurimi i emrit ftues"
-
-#, fuzzy
-#~ msgid "Third DNS server (optional)"
-#~ msgstr "Server DNS Kryesor (opcional)"
-
-#~ msgid "Internet Connection Configuration"
-#~ msgstr "Konfigurimi i Lidhjes Internet"
-
-#~ msgid "Internet access"
-#~ msgstr "Hyrjet në internet"
-
-#~ msgid "Status:"
-#~ msgstr "Statuti:"
-
-#~ msgid "Parameters"
-#~ msgstr "Parametrat"
 
 #, fuzzy
 #~ msgid "Attacker"
