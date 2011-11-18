@@ -1,7 +1,7 @@
 package network::drakfirewall; # $Id: drakfirewall.pm 268043 2010-04-30 13:29:37Z blino $
 
-
-
+use strict;
+use diagnostics;
 
 use network::shorewall;
 use common;

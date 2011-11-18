@@ -1,6 +1,6 @@
 package network::tools; # $Id: tools.pm 253976 2009-03-13 10:57:55Z eugeni $
 
-
+use strict;
 use common;
 use run_program;
 use c;

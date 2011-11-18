@@ -2,7 +2,7 @@ package network::vpn::openvpn;
 
 use base qw(network::vpn);
 
-
+use strict;
 use common;
 
 sub get_type { 'openvpn' }

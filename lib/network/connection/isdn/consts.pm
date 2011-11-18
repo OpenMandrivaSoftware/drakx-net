@@ -1,5 +1,5 @@
 package network::connection::isdn::consts; # $Id: consts.pm 54070 2006-08-07 17:34:38Z blino $
-
+use vars qw(@ISA @EXPORT);
 @ISA = qw(Exporter);
 @EXPORT = qw(@isdndata @isdn_capi);
 

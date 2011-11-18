@@ -4,14 +4,14 @@ package network::network; # $Id: network.pm 268044 2010-04-30 13:31:34Z blino $w
 #- misc imports
 #-######################################################################################
 
-
+use strict;
 
 use lang;
 use Socket;
 use common;
 use run_program;
 use network::tools;
-
+use vars qw(@ISA @EXPORT);
 use log;
 
 our $network_file = "/etc/sysconfig/network";
