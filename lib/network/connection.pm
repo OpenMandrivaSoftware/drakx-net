@@ -149,8 +149,8 @@ sub load_interface_settings {
     $self->{control}{userctl} = $self->get_ifcfg_bool('USERCTL');
     $self->{control}{metric} = $self->{ifcfg}{METRIC};
     $self->{control}{mtu} = $self->{ifcfg}{MTU};
-    $self->{control}{accounting} = $self->{ifcfg}{ACCOUNTING};
-    $self->{control}{nm_controlled} = $self->{ifcfg}{NM_CONTROLLED};
+    $self->{control}{accounting} = $self->get_ifcfg_bool('ACCOUNTING');
+    $self->{control}{nm_controlled} = $self->get_ifcfg_bool('NM_CONTROLLED');
     $self->{control}{uuid} = $self->{ifcfg}{UUID};
     $self->{control}{name} = $self->{ifcfg}{NAME};
     $self->{control}{last_connect} = $self->{ifcfg}{LAST_CONNECT};
