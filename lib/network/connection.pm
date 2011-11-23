@@ -68,7 +68,6 @@ sub new {
     my ($class, $device) = @_;
     bless {
         device => $device,
-        settings => {},
         networks => {},
     }, $class;
 }
