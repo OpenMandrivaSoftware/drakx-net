@@ -22,8 +22,10 @@ sub set_config_file {
 
     my $done;
     substInFile {
-	if (!$done && (/^#LAST LINE/ || eof)) {
-	    $_ = join('', map { join("\t", @$_) . "\n" } @l) . $_;
+	my $last_line = /^#LAST LINE/ && $_;
+	if (!$done && ($last_line || eof)) {
+	    $_ = join('', map { join("\t", @$_) . "\n" } @l);
+	    $_ .= $last_line if $last_line;
 	    $done = 1;
 	} else {
 	    $_ = '' if /^[^#]/;
@@ -40,9 +42,11 @@ sub set_in_file {
     my ($file, $enabled, @list) = @_;
     my $done;
     substInFile {
+	my $last_line = /^#LAST LINE/ && $_;
 	foreach my $l (@list) { s|^$l\n|| }
-	if (!$done && $enabled && (/^#LAST LINE/ || eof)) {
-	    $_ = join('', map { "$_\n" } @list) . $_;
+	if (!$done && $enabled && ($last_line || eof)) {
+	    $_ = join('', map { "$_\n" } @list);
+	    $_ .= $last_line if $last_line;
 	    $done = 1;
 	}
     } "$::prefix/etc/shorewall/$file";
