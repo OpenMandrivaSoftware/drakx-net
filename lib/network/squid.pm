@@ -64,7 +64,7 @@ icp_access allow all
 visible_hostname $squid_conf->{visible_hostname}[0]
 append_domain .$internal_domain_name
 err_html_text $squid_conf->{admin_mail}[0]
-deny_info ERR_CUSTOM_ACCESS_DENIED all
+deny_info ERR_CACHE_ACCESS_DENIED all
 memory_pools off
 coredump_dir /var/spool/squid
 ie_refresh on
