@@ -28,7 +28,8 @@ sub set_config_file {
 	    $_ .= $last_line if $last_line;
 	    $done = 1;
 	} else {
-	    $_ = '' if /^[^#]/;
+	    $_ = '' unless
+	      /^#/ or $file eq 'rules' && /^SECTION/;
 	}
     } "$::prefix${shorewall_root}/$file";
 }
@@ -155,7 +156,7 @@ sub write {
     my $ports_by_proto = ports_by_proto($conf->{ports});
     my $has_loc_zone = to_bool(@{$conf->{loc_zone} || []});
 
-    my ($include_drakx, $other_rules) = partition { $_ eq "INCLUDE\trules.drakx\n" } grep { !/^#/ } cat_("$::prefix${shorewall_root}/rules");
+    my ($include_drakx, $other_rules) = partition { $_ eq "INCLUDE\trules.drakx\n" } grep { !/^(#|SECTION)/ } cat_("$::prefix${shorewall_root}/rules");
     #- warn if the config is already in rules.drakx and additionnal rules are configured
     if (!is_empty_array_ref($include_drakx) && !is_empty_array_ref($other_rules)) {
         my %actions = (
