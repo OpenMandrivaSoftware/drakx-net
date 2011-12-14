@@ -26,8 +26,8 @@ sub list_wireless {
     } if $monitor;
     #- try wpa_cli if we're root
     if (!$has_roaming && !$>) {
-        $results = `/usr/sbin/wpa_cli scan_results 2>/dev/null`;
-        $list = `/usr/sbin/wpa_cli list_networks 2>/dev/null`;
+        $results = `$::prefix/usr/sbin/wpa_cli scan_results 2>/dev/null`;
+        $list = `$::prefix/usr/sbin/wpa_cli list_networks 2>/dev/null`;
         $_ =~ s/^Selected interface (.*)\n//g foreach $results, $list;
     }
     if ($results && $list) {
@@ -63,10 +63,10 @@ sub list_wireless {
         #- else use iwlist
         require network::connection::wireless;
         my ($current_essid, $current_ap) = network::connection::wireless::get_access_point($o_intf);
-        if ($o_intf && !$> && !`/sbin/ip link show $o_intf up`) {
-            system("/sbin/ip link set $o_intf up");
+        if ($o_intf && !$> && !`$::prefix/sbin/ip link show $o_intf up`) {
+            system("$::prefix/sbin/ip link set $o_intf up");
         }
-        my @list = `/sbin/iwlist $o_intf scanning 2>/dev/null`;
+        my @list = `$::prefix/sbin/iwlist $o_intf scanning 2>/dev/null`;
         my $net = {};
         my $quality_match = qr/Quality[:=](\S*)/;
         my $eval_quality = sub {
@@ -103,7 +103,7 @@ sub list_wireless {
             $_->{signal_strength} = $level if $incorrect_quality;
         }
         if ($current_ap && exists $networks{$current_ap}) {
-            foreach (`/sbin/iwconfig $o_intf 2>/dev/null`) {
+            foreach (`$::prefix/sbin/iwconfig $o_intf 2>/dev/null`) {
                 my $quality = $_ =~ $quality_match && $eval_quality->($1);
                 $networks{$current_ap}{signal_strength} = $quality if $quality;
             }
