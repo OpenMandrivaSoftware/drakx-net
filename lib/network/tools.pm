@@ -263,7 +263,10 @@ sub host_hex_to_dotted {
 
 sub get_routes() {
     my %routes;
-    foreach (cat_("/proc/net/route")) {
+    my @routes = cat_("/proc/net/route");
+    require bootloader;
+    @routes = reverse(@routes) if bootloader::cmp_kernel_versions(c::kernel_version(), "2.6.39") >= 0;
+    foreach (@routes) {
 	if (/^(\S+)\s+([0-9A-F]+)\s+([0-9A-F]+)\s+[0-9A-F]+\s+\d+\s+\d+\s+(\d+)\s+([0-9A-F]+)/) {
 	    next if (defined $routes{$1}{has_gateway});
 
