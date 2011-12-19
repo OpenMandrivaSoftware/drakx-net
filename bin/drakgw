@@ -79,7 +79,10 @@ Make sure you have configured your Network/Internet access using drakconnect bef
 
 Note: you need a dedicated Network Adapter to set up a Local Area Network (LAN). Please disable Mandriva Firewall for the network adapter connected to your LAN connection before proceeding."),
 	      post => sub {
-		  $gw_enabled = !$shorewall->{disabled} && grep { !/^#/ } cat_($masq_file);
+		  #- see #63998
+		  #- do not start configuration if shorewall disabled
+		  if ($shorewall->{disabled}) {return "end_fw_disabled";}
+		  $gw_enabled = grep { !/^#/ } cat_($masq_file);
 		  return $gw_enabled ? "ask_reconfigure" : "choose_net_interface";
 	      },
 	     },
@@ -320,6 +323,12 @@ Please run the hardware configuration tool to configure it, and ensure that the 
 	     end_disabled =>
 	     {
 	      name => N("Internet Connection Sharing is now disabled."),
+	      end => 1,
+	     },
+
+	     end_fw_disabled =>
+	     {
+	      name => N("Firewall is disabled. Please enable firewall before configure Internet Connection Sharing."),
 	      end => 1,
 	     },
 
