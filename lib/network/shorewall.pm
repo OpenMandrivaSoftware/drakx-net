@@ -226,8 +226,16 @@ What do you want to do?"),
     if ($conf->{disabled}) {
         services::disable('shorewall', $::isInstall);
         run_program::rooted($::prefix, '/sbin/shorewall', 'clear') unless $::isInstall;
+    #- for systemd implimentation we need use shorewall.service for disable
+	run_program::rooted($::prefix, '/bin/systemctl', 'stop', 'shorewall.service') unless $::isInstall;
+	run_program::rooted($::prefix, '/bin/systemctl', 'disable', 'shorewall.service') unless $::isInstall;
+	run_program::rooted($::prefix, '/bin/systemcil', '--system', 'daemon-reload') unless $::isInstall;
     } else {
+    #- for systemd implimentation we need use shorewall.service for enable
         services::enable('shorewall', $::isInstall);
+	run_program::rooted($::prefix, '/bin/systemctl', 'enable', 'shorewall.service') unless $::isInstall;
+	run_program::rooted($::prefix, '/bin/systemcil', '--system', 'daemon-reload') unless $::isInstall;
+	run_program::rooted($::prefix, '/bin/systemctl', 'start', 'shorewall.service') unless $::isInstall;
     }
 }
 
