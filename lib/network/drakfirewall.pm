@@ -281,7 +281,7 @@ sub set_ifw {
 
         my $ports_by_proto = network::shorewall::ports_by_proto($ports);
         output_with_perm("$::prefix/etc/ifw/rules", 0644,
-            (map { "source /etc/ifw/rules.d/$_\n" } @$rules),
+            (map { ". /etc/ifw/rules.d/$_\n" } @$rules),
             map {
                 my $proto = $_;
                 map {
