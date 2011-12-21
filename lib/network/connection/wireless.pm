@@ -252,7 +252,7 @@ my @thirdparty_settings = (
             },
         },
       };
-    } qw(b43legacy))
+    } qw(b43legacy)),
 
     {
         name => 'broadcom-wl',
