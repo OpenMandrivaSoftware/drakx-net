@@ -1,22 +1,19 @@
-# translation of ca.po to Catalan
-# translation of drakx-net.po to Catalan
-# Copyright (C) 2000-2004, 2005 Free Software Foundation, Inc.
-# Softcatala, softcatala.org, 2000-2003
-# Albert Astals Cid <astals11@terra.es>, 2003-2004, 2005.
-#
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: ca\n"
+"Project-Id-Version: drakx-net\n"
 "POT-Creation-Date: 2011-11-18 13:57+0100\n"
-"PO-Revision-Date: 2005-09-13 23:24+0200\n"
-"Last-Translator: Albert Astals Cid <astals11@terra.es>\n"
-"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
-"Language: ca\n"
+"PO-Revision-Date: 2012-03-08 23:49+0000\n"
+"Last-Translator: Francesc Pinyol Margalef <francesc.pinyol.m@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../bin/drakconnect-old:45
 #, c-format
@@ -73,7 +70,6 @@ msgstr "Configuració de la LAN"
 msgid "Configure Local Area Network..."
 msgstr "Configura la xarxa d'àrea local..."
 
-#
 #: ../bin/drakconnect-old:106 ../bin/draknfs:192 ../bin/net_applet:217
 #: ../lib/network/drakconnect/edit.pm:71
 #, c-format
@@ -107,10 +103,10 @@ msgstr "D'acord"
 #: ../lib/network/connection_manager.pm:235
 #: ../lib/network/connection_manager.pm:353
 #: ../lib/network/drakconnect/edit.pm:466 ../lib/network/drakvpn.pm:49
-#: ../lib/network/netcenter.pm:150 ../lib/network/netconnect.pm:186
-#: ../lib/network/netconnect.pm:208 ../lib/network/netconnect.pm:305
-#: ../lib/network/netconnect.pm:733 ../lib/network/thirdparty.pm:352
-#: ../lib/network/thirdparty.pm:367
+#: ../lib/network/netcenter.pm:150 ../lib/network/netcenter.pm:150
+#: ../lib/network/netconnect.pm:186 ../lib/network/netconnect.pm:208
+#: ../lib/network/netconnect.pm:305 ../lib/network/netconnect.pm:733
+#: ../lib/network/thirdparty.pm:352 ../lib/network/thirdparty.pm:367
 #, c-format
 msgid "Please wait"
 msgstr "Espereu si us plau"
@@ -173,14 +169,13 @@ msgid "DHCP client"
 msgstr "Client DHCP"
 
 #: ../bin/drakconnect-old:247
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This interface has not been configured yet.\n"
 "Run the \"%s\" assistant from the Mageia Linux Control Center"
 msgstr ""
 "Aquesta interfície encara no s'ha configurat.\n"
-"Executeu l'auxiliar \"Afegeix una interfície\" del Centre de Control de "
-"Mageia"
+"Executeu l'assistent \"%s\" del Centre de Control Mageia"
 
 #: ../bin/drakconnect-old:247 ../bin/net_applet:105
 #: ../lib/network/drakconnect/global.pm:36
@@ -216,28 +211,21 @@ msgid "Internet Connection Sharing"
 msgstr "Connexió a Internet compartida"
 
 #: ../bin/drakgw:75
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
-"With that feature, other computers on your local network will be able to use "
-"this computer's Internet connection.\n"
+"With that feature, other computers on your local network will be able to use this computer's Internet connection.\n"
 "\n"
-"Make sure you have configured your Network/Internet access using drakconnect "
-"before going any further.\n"
+"Make sure you have configured your Network/Internet access using drakconnect before going any further.\n"
 "\n"
-"Note: you need a dedicated Network Adapter to set up a Local Area Network "
-"(LAN). Please disable Mageia Firewall for the network adapter connected to "
-"your LAN connection before proceeding."
+"Note: you need a dedicated Network Adapter to set up a Local Area Network (LAN). Please disable Mageia Firewall for the network adapter connected to your LAN connection before proceeding."
 msgstr ""
-"Ara es configurarà l'ordinador per tal que comparteixi la connexió a "
-"Internet.\n"
-"Amb aquesta característica, altres ordinadors de la vostra xarxa local\n"
-"podran utilitzar la connexió a Internet d'aquest ordinador.\n"
+"Esteu a punt de configurar l'ordinador per a compartit la seva connexió a Internet.\n"
+"Amb aquesta funció, altres ordinadors de la vostra xarxa local podran utilitzar la connexió a Internet d'aquest ordinador.\n"
 "\n"
-"Assegureu-vos d'haver configurat l'accés a Internet i a la xarxa local amb "
-"el drakconnect abans de continuar.\n"
-"Nota: per configurar una xarxa d'àrea local (LAN), us cal un adaptador de "
-"xarxa dedicat."
+"Assegureu-vos que heu configurat la vostra xarxa / accés a Internet amb drakconnect aband de continuar.\n"
+"\n"
+"Nota: necessiteu un adaptador de xarxa dedicat per a configurar una xarxa d'àrea local (LAN). Abans de continuar, desactiveu el tallafoc de Mageia associat al vostre adaptador de xarxa connectat."
 
 #: ../bin/drakgw:91
 #, c-format
@@ -283,7 +271,7 @@ msgstr "Torna a configurar"
 #: ../bin/drakgw:122
 #, c-format
 msgid "Please select the network interface directly connected to the internet."
-msgstr ""
+msgstr "Seleccioneu la interfície de xarxa connectada directament a Internet."
 
 #: ../bin/drakgw:123 ../lib/network/drakconnect/delete.pm:26
 #: ../lib/network/netconnect.pm:379 ../lib/network/netconnect.pm:414
@@ -294,8 +282,7 @@ msgstr "Dispositiu de xarxa"
 #: ../bin/drakgw:141
 #, c-format
 msgid ""
-"There is only one network adapter on your system configured for LAN "
-"connections:\n"
+"There is only one network adapter on your system configured for LAN connections:\n"
 "\n"
 "%s\n"
 "\n"
@@ -305,15 +292,20 @@ msgid ""
 "disable the firewall protection on it using drakfirewall before\n"
 "configuring Internet Connection sharing."
 msgstr ""
+"A l'ordinador només hi ha un adaptador de xarxa configurat per a connexions LAN:\n"
+"\n"
+"%s\n"
+"\n"
+"La configuració de la xarxa l'àrea local es farà amb aquest adaptador.\n"
+"\n"
+"Si teniu algun altre adaptador de xarxa connectat a la xarxa d'àrea local,\n"
+"desactiveu-ne la protecció tallafoc fent servir drakfirewall abans\n"
+"de configurar la compartició de la connexió a Internet."
 
 #: ../bin/drakgw:156
 #, c-format
-msgid ""
-"Please choose what network adapter will be connected to your Local Area "
-"Network."
-msgstr ""
-"Si us plau, escolliu l'adaptador de xarxa que es connectarà a la vostra "
-"xarxa d'àrea local."
+msgid "Please choose what network adapter will be connected to your Local Area Network."
+msgstr "Escolliu l'adaptador de xarxa que es connectarà a la vostra xarxa d'àrea local."
 
 #: ../bin/drakgw:177
 #, c-format
@@ -374,9 +366,7 @@ msgstr "Error"
 #: ../bin/drakgw:188
 #, c-format
 msgid "Potential LAN address conflict found in current config of %s!\n"
-msgstr ""
-"S'ha trobat un conflicte potencial d'adreça LAN en la configuració actual de "
-"%s!\n"
+msgstr "S'ha trobat un conflicte potencial d'adreça LAN en la configuració actual de %s!\n"
 
 #: ../bin/drakgw:204
 #, c-format
@@ -403,8 +393,7 @@ msgid ""
 msgstr ""
 "Configuració del servidor DHCP.\n"
 "\n"
-"Aquí podreu seleccionar diverses opcions per a la configuració del servidor "
-"DHCP.\n"
+"Aquí podreu seleccionar diverses opcions per a la configuració del servidor DHCP.\n"
 "Si no sabeu el significat d'una opció, deixeu-la com està."
 
 #: ../bin/drakgw:243
@@ -435,23 +424,22 @@ msgstr "Lísing màxim (en segons)"
 #: ../bin/drakgw:270
 #, c-format
 msgid "Proxy caching server (SQUID)"
-msgstr ""
+msgstr "Servidor intermediari (SQUID)"
 
 #: ../bin/drakgw:274
 #, c-format
 msgid "Use this gateway as proxy caching server"
-msgstr ""
+msgstr "Utiliza aquesta passarel·la com a servidor intermediari"
 
 #: ../bin/drakgw:275
 #, c-format
 msgid "Admin mail"
-msgstr ""
+msgstr "Adreça electrònica de l'administrador"
 
-#
 #: ../bin/drakgw:276
-#, fuzzy, c-format
+#, c-format
 msgid "Visible hostname"
-msgstr "Nom de l'ordinador remot"
+msgstr "Nom de l'ordinador visible"
 
 #: ../bin/drakgw:277
 #, c-format
@@ -466,18 +454,18 @@ msgstr "Mida de la memòria cau (MB)"
 #: ../bin/drakgw:297
 #, c-format
 msgid "Broadcast printer information"
-msgstr ""
+msgstr "Fes una difusió de la informació de la impressora"
 
 #: ../bin/drakgw:308
 #, c-format
 msgid ""
-"No ethernet network adapter configured for LAN has been detected on your "
-"system.\n"
+"No ethernet network adapter configured for LAN has been detected on your system.\n"
 "\n"
-"Please run the hardware configuration tool to configure it, and ensure that "
-"the Mageia firewall is not enabled for network adapter connected to your LAN "
-"network."
+"Please run the hardware configuration tool to configure it, and ensure that the Mageia firewall is not enabled for network adapter connected to your LAN network."
 msgstr ""
+"En aquest ordinador no s'ha detectat cap adaptador de xarxa configurat per a LAN.\n"
+"\n"
+"Executeu l'eina de configuració de maquinari per a configurar-lo, i assegureu-vos que el tallafoc Mageia està deshabilitat per a l'adaptador de xarxa connectat a la LAN."
 
 #: ../bin/drakgw:316
 #, c-format
@@ -493,14 +481,11 @@ msgstr "Ara, la compartició de la connexió a Internet està inhabilitada."
 #, c-format
 msgid ""
 "Everything has been configured.\n"
-"You may now share Internet connection with other computers on your Local "
-"Area Network, using automatic network configuration (DHCP) and\n"
+"You may now share Internet connection with other computers on your Local Area Network, using automatic network configuration (DHCP) and\n"
 " a Transparent Proxy Cache server (SQUID)."
 msgstr ""
 "Ja està tot configurat.\n"
-"Ara podeu compartir la connexió a Internet amb altres ordinadors de la "
-"vostra xarxa d'àrea local utilitzant la configuració automàtica de xarxa "
-"(DHCP) i\n"
+"Ara podeu compartir la connexió a Internet amb altres ordinadors de la vostra xarxa d'àrea local utilitzant la configuració automàtica de xarxa (DHCP) i\n"
 "un servidor intermediari transparent (SQUID)."
 
 #: ../bin/drakgw:351
@@ -515,12 +500,8 @@ msgstr "S'ha detectat la configuració del tallafoc!"
 
 #: ../bin/drakgw:366
 #, c-format
-msgid ""
-"Warning! An existing firewalling configuration has been detected. You may "
-"need some manual fixes after installation."
-msgstr ""
-"Atenció! S'ha detectat una configuració existent del tallafoc. Potser us "
-"caldrà fer algun ajustament manual després de la instal·lació."
+msgid "Warning! An existing firewalling configuration has been detected. You may need some manual fixes after installation."
+msgstr "Atenció! S'ha detectat una configuració existent del tallafoc. Potser us caldrà fer algun ajustament manual després de la instal·lació."
 
 #: ../bin/drakgw:371
 #, c-format
@@ -535,25 +516,22 @@ msgstr "S'està configurant el tallafocs..."
 #: ../bin/drakhosts:100
 #, c-format
 msgid "Please add an host to be able to modify it."
-msgstr ""
+msgstr "Afegiu un ordinador per a poder-lo modificar."
 
-#
 #: ../bin/drakhosts:110
-#, fuzzy, c-format
+#, c-format
 msgid "Please modify information"
-msgstr "Informació detallada"
+msgstr "Modifiqueu la informació"
 
-#
 #: ../bin/drakhosts:111
-#, fuzzy, c-format
+#, c-format
 msgid "Please delete information"
-msgstr "Informació detallada"
+msgstr "Esborreu la informació"
 
-#
 #: ../bin/drakhosts:112
-#, fuzzy, c-format
+#, c-format
 msgid "Please add information"
-msgstr "Informació detallada"
+msgstr "Afegiu la informació"
 
 #: ../bin/drakhosts:116
 #, c-format
@@ -563,12 +541,12 @@ msgstr "Adreça IP:"
 #: ../bin/drakhosts:117
 #, c-format
 msgid "Host name:"
-msgstr "Nom de la màquina:"
+msgstr "Nom de l'ordinador:"
 
 #: ../bin/drakhosts:118
-#, fuzzy, c-format
+#, c-format
 msgid "Host Aliases:"
-msgstr "Nom de l'ordinador"
+msgstr "Àlies de l'ordinador:"
 
 #: ../bin/drakhosts:122 ../bin/draknfs:116 ../bin/draksambashare:230
 #: ../bin/draksambashare:253 ../bin/draksambashare:397
@@ -580,7 +558,7 @@ msgstr "S'ha produït un error!"
 #: ../bin/drakhosts:122
 #, c-format
 msgid "Please enter a valid IP address."
-msgstr "Si us plau introduïu una adreça IP vàlida."
+msgstr "Introduïu una adreça IP vàlida."
 
 #: ../bin/drakhosts:187 ../lib/network/connection/ethernet.pm:225
 #, c-format
@@ -588,19 +566,19 @@ msgid "Host name"
 msgstr "Nom de l'ordinador"
 
 #: ../bin/drakhosts:187
-#, fuzzy, c-format
+#, c-format
 msgid "Host Aliases"
-msgstr "Nom de l'ordinador"
+msgstr "Àlies de l'ordinador"
 
 #: ../bin/drakhosts:197 ../bin/drakhosts:227
 #, c-format
 msgid "Manage hosts definitions"
-msgstr "Gestiona les definicions d'hostes"
+msgstr "Gestiona les definicions dels ordinadors"
 
 #: ../bin/drakhosts:213 ../bin/drakhosts:240 ../bin/draknfs:369
 #, c-format
 msgid "Modify entry"
-msgstr ""
+msgstr "Modifica l'entrada"
 
 #: ../bin/drakhosts:232 ../bin/draknfs:601 ../bin/draksambashare:1348
 #: ../bin/draksambashare:1379 ../bin/draksambashare:1410
@@ -609,16 +587,15 @@ msgid "Add"
 msgstr "Afegeix"
 
 #: ../bin/drakhosts:233
-#, fuzzy, c-format
+#, c-format
 msgid "Add entry"
-msgstr "Afegeix impressora"
+msgstr "Afegeix entrada"
 
 #: ../bin/drakhosts:236
 #, c-format
 msgid "Failed to add host."
-msgstr ""
+msgstr "No s'ha pogut afegir l'ordinador"
 
-#
 #: ../bin/drakhosts:239 ../bin/draknfs:608 ../bin/draksambashare:1305
 #: ../bin/draksambashare:1350 ../bin/draksambashare:1381
 #: ../bin/draksambashare:1418
@@ -629,9 +606,8 @@ msgstr "Modifica"
 #: ../bin/drakhosts:243
 #, c-format
 msgid "Failed to Modify host."
-msgstr ""
+msgstr "No s'ha pogut modificar l'ordinador"
 
-#
 #: ../bin/drakhosts:246 ../bin/drakids:95 ../bin/drakids:104
 #: ../bin/draknfs:615 ../bin/draksambashare:1306 ../bin/draksambashare:1358
 #: ../bin/draksambashare:1389 ../bin/draksambashare:1426
@@ -642,7 +618,7 @@ msgstr "Elimina"
 #: ../bin/drakhosts:250
 #, c-format
 msgid "Failed to remove host."
-msgstr ""
+msgstr "No s'ha pogut esborrar l'ordinador"
 
 #: ../bin/drakhosts:253 ../bin/drakinvictus:141 ../bin/draknetprofile:219
 #: ../bin/net_applet:221 ../lib/network/drakroam.pm:93
@@ -663,29 +639,29 @@ msgstr "Adreces permeses"
 #: ../lib/network/net_applet/ifw.pm:61 ../lib/network/net_applet/ifw.pm:89
 #, c-format
 msgid "Interactive Firewall"
-msgstr "Tallafocs interactiu"
+msgstr "Tallafoc interactiu"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
 #: ../bin/net_applet:353 ../lib/network/net_applet/ifw.pm:61
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to contact daemon"
-msgstr "No es pot contactar amb la rèplica: %s"
+msgstr "No s'ha pogut contactar amb el dimoni"
 
 #: ../bin/drakids:82 ../bin/drakids:110
 #, c-format
 msgid "Log"
-msgstr "Bitàcola"
+msgstr "Registre"
 
 #: ../bin/drakids:86 ../bin/drakids:105 ../lib/network/net_applet/ifw.pm:219
-#, fuzzy, c-format
+#, c-format
 msgid "Allow"
-msgstr "Tots"
+msgstr "Permet"
 
 #: ../bin/drakids:87 ../bin/drakids:96 ../lib/network/net_applet/ifw.pm:220
 #, c-format
 msgid "Block"
-msgstr ""
+msgstr "Bloca"
 
 #: ../bin/drakids:88 ../bin/drakids:97 ../bin/drakids:106 ../bin/drakids:117
 #: ../bin/drakids:130 ../bin/drakids:138 ../bin/draknfs:197
@@ -694,22 +670,20 @@ msgstr ""
 msgid "Close"
 msgstr "Tanca"
 
-#
 #: ../bin/drakids:91
-#, fuzzy, c-format
+#, c-format
 msgid "Allowed services"
-msgstr "Adreces permeses"
+msgstr "Serveis permesos"
 
-#
 #: ../bin/drakids:100
-#, fuzzy, c-format
+#, c-format
 msgid "Blocked services"
-msgstr "Còpia de seguretat dels fitxers d'usuari"
+msgstr "Serveis blocats"
 
 #: ../bin/drakids:114
-#, fuzzy, c-format
+#, c-format
 msgid "Clear logs"
-msgstr "Buida-ho tot"
+msgstr "Buida els fitxers de registre"
 
 #: ../bin/drakids:115 ../bin/drakids:120 ../lib/network/net_applet/ifw.pm:158
 #, c-format
@@ -742,9 +716,9 @@ msgid "Date"
 msgstr "Data"
 
 #: ../bin/drakids:257
-#, fuzzy, c-format
+#, c-format
 msgid "Remote host"
-msgstr "Remot"
+msgstr "Esborra l'ordinador"
 
 #: ../bin/drakids:258 ../lib/network/vpn/openvpn.pm:117
 #, c-format
@@ -772,56 +746,54 @@ msgid "Status"
 msgstr "Estat"
 
 #: ../bin/drakids:295
-#, fuzzy, c-format
+#, c-format
 msgid "Allowed"
-msgstr "Tots"
+msgstr "Permès"
 
 #: ../bin/drakids:296
 #, c-format
 msgid "Blocked"
-msgstr ""
+msgstr "Blocat"
 
 #: ../bin/drakinvictus:36
-#, fuzzy, c-format
+#, c-format
 msgid "Invictus Firewall"
-msgstr "Tallafocs"
+msgstr "Tallafoc Invictus"
 
 #: ../bin/drakinvictus:53
-#, fuzzy, c-format
+#, c-format
 msgid "Start as master"
-msgstr "Iniciat en l'arrencada"
+msgstr "Inicia com a màster"
 
 #: ../bin/drakinvictus:72
-#, fuzzy, c-format
+#, c-format
 msgid "A password is required."
-msgstr "La contrasenya és necessària"
+msgstr "Cal una contrasenya"
 
 #: ../bin/drakinvictus:100
 #, c-format
-msgid ""
-"This tool allows to set up network interfaces failover and firewall "
-"replication."
-msgstr ""
+msgid "This tool allows to set up network interfaces failover and firewall replication."
+msgstr "Aquesta eina permet la configuració d'interfícies de xarxa de reserva i rèplica de tallafoc."
 
 #: ../bin/drakinvictus:102
 #, c-format
 msgid "Network redundancy (leave empty if interface is not used)"
-msgstr ""
+msgstr "Redundància de xarxa (deixeu-ho buit si la interfície no es fa servir)"
 
 #: ../bin/drakinvictus:105
-#, fuzzy, c-format
+#, c-format
 msgid "Real address"
-msgstr "Adreça IP local"
+msgstr "Adreça real"
 
 #: ../bin/drakinvictus:105
 #, c-format
 msgid "Virtual shared address"
-msgstr ""
+msgstr "Adreça virtual compartida"
 
 #: ../bin/drakinvictus:105
 #, c-format
 msgid "Virtual ID"
-msgstr ""
+msgstr "ID virtual"
 
 #: ../bin/drakinvictus:110 ../lib/network/netconnect.pm:615
 #: ../lib/network/vpn/vpnc.pm:56
@@ -830,40 +802,39 @@ msgid "Password"
 msgstr "Contrasenya"
 
 #: ../bin/drakinvictus:114
-#, fuzzy, c-format
+#, c-format
 msgid "Firewall replication"
-msgstr "Resolució definitiva"
+msgstr "Rèplica de tallafoc"
 
 #: ../bin/drakinvictus:116
 #, c-format
 msgid "Synchronize firewall conntrack tables"
-msgstr ""
+msgstr "Sincronitza les taules conntrack del tallafoc"
 
 #: ../bin/drakinvictus:123
-#, fuzzy, c-format
+#, c-format
 msgid "Synchronization network interface"
-msgstr "Eina de sincronització"
+msgstr "Interfíci de sincronització de xarxa"
 
 #: ../bin/drakinvictus:132
-#, fuzzy, c-format
+#, c-format
 msgid "Connection mark bit"
-msgstr "Connexió"
+msgstr "Bit de marca de connexió"
 
-#
 #: ../bin/draknetprofile:37
-#, fuzzy, c-format
+#, c-format
 msgid "Network profiles"
-msgstr "Opcions de xarxa"
+msgstr "Perfils de xarxa"
 
 #: ../bin/draknetprofile:66
-#, fuzzy, c-format
+#, c-format
 msgid "Module"
-msgstr "Mode"
+msgstr "Mòdul"
 
 #: ../bin/draknetprofile:67
-#, fuzzy, c-format
+#, c-format
 msgid "Enabled"
-msgstr "Habilita"
+msgstr "Habilitat"
 
 #: ../bin/draknetprofile:68 ../lib/network/drakconnect/edit.pm:423
 #, c-format
@@ -871,9 +842,9 @@ msgid "Description"
 msgstr "Descripció"
 
 #: ../bin/draknetprofile:84
-#, fuzzy, c-format
+#, c-format
 msgid "Profile"
-msgstr "Perfils"
+msgstr "Perfil"
 
 #: ../bin/draknetprofile:152
 #, c-format
@@ -882,12 +853,8 @@ msgstr "Nou perfil..."
 
 #: ../bin/draknetprofile:155
 #, c-format
-msgid ""
-"Please specify the name of the new network profile to be created (e.g., "
-"work, home, roaming, ..). This new profile will be created based on current "
-"settings, and you'll be able to configure your system configuration as usual "
-"afterwards."
-msgstr ""
+msgid "Please specify the name of the new network profile to be created (e.g., work, home, roaming, ..). This new profile will be created based on current settings, and you'll be able to configure your system configuration as usual afterwards."
+msgstr "Especifiqueu el nom del nou perfil de xarxa que cal crear (per exemple, feina, casa, itinerant...). Aquest nou perfil es crearà basat en els paràmetres actuals, i després podreu configurar el vostre ordinador com ho feu sempre."
 
 #: ../bin/draknetprofile:166
 #, c-format
@@ -895,57 +862,51 @@ msgid "The \"%s\" profile already exists!"
 msgstr "El perfil \"%s\" ja existeix!"
 
 #: ../bin/draknetprofile:172
-#, fuzzy, c-format
+#, c-format
 msgid "New profile created"
-msgstr "Nou perfil..."
+msgstr "S'ha creat un nou perfil"
 
 #: ../bin/draknetprofile:172
 #, c-format
-msgid ""
-"You are now using network profile %s. You can configure your system as "
-"usual, and all your network settings from now on will be saved into this "
-"profile."
-msgstr ""
+msgid "You are now using network profile %s. You can configure your system as usual, and all your network settings from now on will be saved into this profile."
+msgstr "Ara esteu fent servir el perfil de xarxa %s. Podeu configurar el vostre ordinador com ho feu sempre, i a partir d'ara les preferències de xarxa es desaran en aquest perfil."
 
 #: ../bin/draknetprofile:183 ../lib/network/drakconnect/global.pm:34
 #: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
 #: ../lib/network/ndiswrapper.pm:103 ../lib/network/netconnect.pm:500
 #, c-format
 msgid "Warning"
-msgstr "Advertència"
+msgstr "Avís"
 
 #: ../bin/draknetprofile:183
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr "No podeu esborrar el perfil actual"
+msgstr "Esteu segurs de voler esborrar el perfil per omissió?"
 
 #: ../bin/draknetprofile:186
-#, fuzzy, c-format
-msgid ""
-"You can not delete the current profile. Please switch to a different profile "
-"first."
-msgstr "No podeu esborrar el perfil actual"
+#, c-format
+msgid "You can not delete the current profile. Please switch to a different profile first."
+msgstr "No podeu esborrar el perfil actual. Abans heu d'escollir-ne un altre."
 
 #: ../bin/draknetprofile:194 ../bin/draknfs:356
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced"
-msgstr "Opcions avançades"
+msgstr "Avançat"
 
 #: ../bin/draknetprofile:198
-#, fuzzy, c-format
+#, c-format
 msgid "Select the netprofile modules:"
-msgstr "Escolliu la interfície de xarxa a esborrar:"
+msgstr "Seleccioneu els mòduls del perfil de xarxa:"
 
 #: ../bin/draknetprofile:211
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "Aquesta eina us permet controlar els perfils de xarxa."
 
-#
 #: ../bin/draknetprofile:212
-#, fuzzy, c-format
+#, c-format
 msgid "Select a network profile:"
-msgstr "Seleccioneu el vostre proveïdor:"
+msgstr "Seleccioneu un perfil de xarxa:"
 
 #: ../bin/draknetprofile:216
 #, c-format
@@ -965,22 +926,22 @@ msgstr "Suprimeix"
 #: ../bin/draknfs:49
 #, c-format
 msgid "map root user as anonymous"
-msgstr ""
+msgstr "mapa l'usuari primari com a usuari anònim"
 
 #: ../bin/draknfs:50
 #, c-format
 msgid "map all users to anonymous user"
-msgstr ""
+msgstr "mapa tots els usuaris com a usuari anònim"
 
 #: ../bin/draknfs:51
 #, c-format
 msgid "No user UID mapping"
-msgstr ""
+msgstr "Sense mapatge d'UID d'usuari"
 
 #: ../bin/draknfs:52
 #, c-format
 msgid "allow real remote root access"
-msgstr ""
+msgstr "permet accés remot real com a usuari primari"
 
 #: ../bin/draknfs:66 ../bin/draknfs:67 ../bin/draknfs:68
 #: ../bin/draksambashare:175 ../bin/draksambashare:176
@@ -992,7 +953,7 @@ msgstr "/_Fitxer"
 #: ../bin/draknfs:67 ../bin/draksambashare:176
 #, c-format
 msgid "/_Write conf"
-msgstr ""
+msgstr "/_Escriu conf"
 
 #: ../bin/draknfs:68 ../bin/draksambashare:177
 #, c-format
@@ -1005,19 +966,19 @@ msgid "<control>Q"
 msgstr "<control>Q"
 
 #: ../bin/draknfs:71 ../bin/draknfs:72 ../bin/draknfs:73
-#, fuzzy, c-format
+#, c-format
 msgid "/_NFS Server"
-msgstr "Servidors DNS"
+msgstr "Servidor /_NFS"
 
 #: ../bin/draknfs:72 ../bin/draksambashare:181
 #, c-format
 msgid "/_Restart"
-msgstr ""
+msgstr "/_Reinicia"
 
 #: ../bin/draknfs:73 ../bin/draksambashare:182
 #, c-format
 msgid "/R_eload"
-msgstr ""
+msgstr "/Recarre_ga"
 
 #: ../bin/draknfs:92
 #, c-format
@@ -1027,17 +988,17 @@ msgstr "Servidor NFS"
 #: ../bin/draknfs:92
 #, c-format
 msgid "Restarting/Reloading NFS server..."
-msgstr ""
+msgstr "S'està reiniciant/recarregant el servidor NFS..."
 
 #: ../bin/draknfs:93
 #, c-format
 msgid "Error Restarting/Reloading NFS server"
-msgstr ""
+msgstr "S'ha produït un error en reiniciar/recarregar el servidor NFS"
 
 #: ../bin/draknfs:109 ../bin/draksambashare:246
-#, fuzzy, c-format
+#, c-format
 msgid "Directory selection"
-msgstr "Direcció"
+msgstr "Selecció del directori"
 
 #: ../bin/draknfs:116 ../bin/draksambashare:253
 #, c-format
@@ -1047,28 +1008,19 @@ msgstr "Ha de ser un directori."
 #: ../bin/draknfs:146
 #, c-format
 msgid ""
-"<span weight=\"bold\">NFS clients</span> may be specified in a number of "
-"ways:\n"
+"<span weight=\"bold\">NFS clients</span> may be specified in a number of ways:\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">single host:</span> a host either by an "
-"abbreviated name recognized be the resolver, fully qualified domain name, or "
-"an IP address\n"
+"<span foreground=\"royalblue3\">single host:</span> a host either by an abbreviated name recognized be the resolver, fully qualified domain name, or an IP address\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">netgroups:</span> NIS netgroups may be given "
-"as @group.\n"
+"<span foreground=\"royalblue3\">netgroups:</span> NIS netgroups may be given as @group.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">wildcards:</span> machine names may contain "
-"the wildcard characters * and ?. For instance: *.cs.foo.edu  matches all  "
-"hosts  in the domain cs.foo.edu.\n"
+"<span foreground=\"royalblue3\">wildcards:</span> machine names may contain the wildcard characters * and ?. For instance: *.cs.foo.edu  matches all  hosts  in the domain cs.foo.edu.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">IP networks:</span> you can also export "
-"directories to all hosts on an IP (sub-)network simultaneously. for example, "
-"either `/255.255.252.0' or  `/22'  appended to the network base address "
-"result.\n"
+"<span foreground=\"royalblue3\">IP networks:</span> you can also export directories to all hosts on an IP (sub-)network simultaneously. for example, either `/255.255.252.0' or  `/22'  appended to the network base address result.\n"
 msgstr ""
 
 #: ../bin/draknfs:161
@@ -1077,24 +1029,16 @@ msgid ""
 "<span weight=\"bold\">User ID options</span>\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">map root user as anonymous:</span> map "
-"requests from uid/gid 0 to the anonymous uid/gid (root_squash).\n"
+"<span foreground=\"royalblue3\">map root user as anonymous:</span> map requests from uid/gid 0 to the anonymous uid/gid (root_squash).\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">allow real remote root access:</span> turn "
-"off root squashing. This option is mainly useful for diskless clients "
-"(no_root_squash).\n"
+"<span foreground=\"royalblue3\">allow real remote root access:</span> turn off root squashing. This option is mainly useful for diskless clients (no_root_squash).\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">map all users to anonymous user:</span> map "
-"all uids and gids to the anonymous  user (all_squash). Useful for NFS-"
-"exported public FTP directories, news spool directories, etc. The opposite "
-"option is no user UID mapping (no_all_squash), which is the default "
-"setting.\n"
+"<span foreground=\"royalblue3\">map all users to anonymous user:</span> map all uids and gids to the anonymous  user (all_squash). Useful for NFS-exported public FTP directories, news spool directories, etc. The opposite option is no user UID mapping (no_all_squash), which is the default setting.\n"
 "\n"
 "\n"
-"<span foreground=\"royalblue3\">anonuid and anongid:</span> explicitly set "
-"the uid and gid of the anonymous account.\n"
+"<span foreground=\"royalblue3\">anonuid and anongid:</span> explicitly set the uid and gid of the anonymous account.\n"
 msgstr ""
 
 #: ../bin/draknfs:177
@@ -1102,21 +1046,20 @@ msgstr ""
 msgid "Synchronous access:"
 msgstr "Accés síncron:"
 
-#
 #: ../bin/draknfs:178
-#, fuzzy, c-format
+#, c-format
 msgid "Secured Connection:"
-msgstr "Connexió a Internet"
+msgstr "Connexió segura:"
 
 #: ../bin/draknfs:179
 #, c-format
 msgid "Read-Only share:"
-msgstr ""
+msgstr "Compartició de només lectura:"
 
 #: ../bin/draknfs:180
 #, c-format
 msgid "Subtree checking:"
-msgstr ""
+msgstr "Comprovació de subdirectoris:"
 
 #: ../bin/draknfs:182
 #, c-format
@@ -1125,35 +1068,22 @@ msgstr "Opcions avançades"
 
 #: ../bin/draknfs:183
 #, c-format
-msgid ""
-"<span foreground=\"royalblue3\">%s</span> this option requires that requests "
-"originate on an internet port less than IPPORT_RESERVED (1024). This option "
-"is on by default."
+msgid "<span foreground=\"royalblue3\">%s</span> this option requires that requests originate on an internet port less than IPPORT_RESERVED (1024). This option is on by default."
 msgstr ""
 
 #: ../bin/draknfs:184
 #, c-format
-msgid ""
-"<span foreground=\"royalblue3\">%s</span> allow either only read or both "
-"read and write requests on this NFS volume. The default is to disallow any "
-"request which changes the filesystem. This can also be made explicit by "
-"using this option."
+msgid "<span foreground=\"royalblue3\">%s</span> allow either only read or both read and write requests on this NFS volume. The default is to disallow any request which changes the filesystem. This can also be made explicit by using this option."
 msgstr ""
 
 #: ../bin/draknfs:185
 #, c-format
-msgid ""
-"<span foreground=\"royalblue3\">%s</span> disallows the NFS server to "
-"violate the NFS protocol and to reply to requests before any changes made by "
-"these requests have been committed to stable storage (e.g. disc drive)."
+msgid "<span foreground=\"royalblue3\">%s</span> disallows the NFS server to violate the NFS protocol and to reply to requests before any changes made by these requests have been committed to stable storage (e.g. disc drive)."
 msgstr ""
 
 #: ../bin/draknfs:186
 #, c-format
-msgid ""
-"<span foreground=\"royalblue3\">%s</span> enable subtree checking which can "
-"help improve security in some cases, but can decrease reliability. See "
-"exports(5) man page for more details."
+msgid "<span foreground=\"royalblue3\">%s</span> enable subtree checking which can help improve security in some cases, but can decrease reliability. See exports(5) man page for more details."
 msgstr ""
 
 #: ../bin/draknfs:191 ../bin/draksambashare:623 ../bin/draksambashare:789
@@ -1183,9 +1113,9 @@ msgid "Directory:"
 msgstr "Directori:"
 
 #: ../bin/draknfs:381
-#, fuzzy, c-format
+#, c-format
 msgid "Host access"
-msgstr "Nom de l'ordinador"
+msgstr "Accés a l'ordinador"
 
 #: ../bin/draknfs:382
 #, c-format
@@ -1195,7 +1125,7 @@ msgstr "Accés:"
 #: ../bin/draknfs:383
 #, c-format
 msgid "User ID Mapping"
-msgstr ""
+msgstr "Mapatge d'ID d'usuaris"
 
 #: ../bin/draknfs:384
 #, c-format
@@ -1205,17 +1135,17 @@ msgstr "ID d'usuari:"
 #: ../bin/draknfs:385
 #, c-format
 msgid "Anonymous user ID:"
-msgstr ""
+msgstr "ID de l'usuari anònim:"
 
 #: ../bin/draknfs:386
 #, c-format
 msgid "Anonymous Group ID:"
-msgstr ""
+msgstr "ID del grup de l'usuari anònim:"
 
 #: ../bin/draknfs:429
-#, fuzzy, c-format
+#, c-format
 msgid "Please specify a directory to share."
-msgstr "Si us plau introduïu un directori a compartir."
+msgstr "Especifiqueu el directori que es compartirà."
 
 #: ../bin/draknfs:431
 #, c-format
@@ -1225,7 +1155,7 @@ msgstr "No s'ha pogut crear aquest directori."
 #: ../bin/draknfs:434
 #, c-format
 msgid "You must specify hosts access."
-msgstr ""
+msgstr "Cal especificar l'accés als ordinadors."
 
 #: ../bin/draknfs:514
 #, c-format
@@ -1235,7 +1165,7 @@ msgstr "Comparteix el directori"
 #: ../bin/draknfs:514
 #, c-format
 msgid "Hosts Wildcard"
-msgstr ""
+msgstr "Comodí per als ordinadors"
 
 #: ../bin/draknfs:514
 #, c-format
@@ -1251,12 +1181,12 @@ msgstr "Opcions a mida"
 #: ../bin/draksambashare:791
 #, c-format
 msgid "Please enter a directory to share."
-msgstr "Si us plau introduïu un directori a compartir."
+msgstr "Introduïu un directori a compartir."
 
 #: ../bin/draknfs:533
 #, c-format
 msgid "Please use the modify button to set right access."
-msgstr ""
+msgstr "Feu servir el botó de modificació per a establir el dret d'accés."
 
 #: ../bin/draknfs:548
 #, c-format
@@ -1266,27 +1196,27 @@ msgstr "Gestiona compartits NFS"
 #: ../bin/draknfs:584
 #, c-format
 msgid "Starting the NFS-server"
-msgstr ""
+msgstr "S'està iniciant el servidor NFS"
 
 #: ../bin/draknfs:596
 #, c-format
 msgid "DrakNFS manage NFS shares"
-msgstr ""
+msgstr "DrakNFS gestiona les comparticions NFS"
 
 #: ../bin/draknfs:605
 #, c-format
 msgid "Failed to add NFS share."
-msgstr ""
+msgstr "No s'ha pogut afegir la compartició NFS."
 
 #: ../bin/draknfs:612
 #, c-format
 msgid "Failed to Modify NFS share."
-msgstr ""
+msgstr "No s'ha pogut modificar la compartició NFS."
 
 #: ../bin/draknfs:619
 #, c-format
 msgid "Failed to remove an NFS share."
-msgstr ""
+msgstr "No s'ha pogut esborrar la compartició NFS."
 
 #: ../bin/draksambashare:65
 #, c-format
@@ -1299,9 +1229,9 @@ msgid "Share name"
 msgstr "Nom de compartició"
 
 #: ../bin/draksambashare:73 ../bin/draksambashare:101
-#, fuzzy, c-format
+#, c-format
 msgid "Share directory"
-msgstr "No és un directori"
+msgstr "Comparteix el directori"
 
 #: ../bin/draksambashare:74 ../bin/draksambashare:102
 #: ../bin/draksambashare:119
@@ -1312,7 +1242,7 @@ msgstr "Comentari"
 #: ../bin/draksambashare:75 ../bin/draksambashare:120
 #, c-format
 msgid "Browseable"
-msgstr "Accedible"
+msgstr "Explorable"
 
 #: ../bin/draksambashare:76
 #, c-format
@@ -1325,48 +1255,46 @@ msgid "Writable"
 msgstr "Escrivible"
 
 #: ../bin/draksambashare:78 ../bin/draksambashare:166
-#, fuzzy, c-format
+#, c-format
 msgid "Create mask"
-msgstr "Crea"
+msgstr "Crea una màscara"
 
 #: ../bin/draksambashare:79 ../bin/draksambashare:167
-#, fuzzy, c-format
+#, c-format
 msgid "Directory mask"
-msgstr "Directori"
+msgstr "Màscara de directori"
 
 #: ../bin/draksambashare:80
-#, fuzzy, c-format
+#, c-format
 msgid "Read list"
-msgstr "Lectura"
+msgstr "Llista de lectura"
 
 #: ../bin/draksambashare:81 ../bin/draksambashare:126
 #: ../bin/draksambashare:602
-#, fuzzy, c-format
+#, c-format
 msgid "Write list"
-msgstr "Escriptura"
+msgstr "Llista d'escriptura"
 
 #: ../bin/draksambashare:82 ../bin/draksambashare:158
-#, fuzzy, c-format
+#, c-format
 msgid "Admin users"
-msgstr "Afegeix un usuari"
+msgstr "Usuaris administradors"
 
 #: ../bin/draksambashare:83 ../bin/draksambashare:159
-#, fuzzy, c-format
+#, c-format
 msgid "Valid users"
-msgstr "Afegeix un usuari"
+msgstr "Usuaris vàlids"
 
 #: ../bin/draksambashare:84
-#, fuzzy, c-format
+#, c-format
 msgid "Inherit Permissions"
-msgstr "Permisos"
+msgstr "Hereta els permisos"
 
-#
 #: ../bin/draksambashare:85 ../bin/draksambashare:160
-#, fuzzy, c-format
+#, c-format
 msgid "Hide dot files"
-msgstr "Fitxers ocults"
+msgstr "Oculta els fitxers que comencen amb un punt"
 
-#
 #: ../bin/draksambashare:86 ../bin/draksambashare:161
 #, c-format
 msgid "Hide files"
@@ -1375,29 +1303,27 @@ msgstr "Fitxers ocults"
 #: ../bin/draksambashare:87 ../bin/draksambashare:165
 #, c-format
 msgid "Preserve case"
-msgstr "Caixa de manteniment"
+msgstr "Preserva les majúscules i minúscules"
 
-#
 #: ../bin/draksambashare:88
-#, fuzzy, c-format
+#, c-format
 msgid "Force create mode"
-msgstr "El model de la vostra impressora"
+msgstr "Força el mode de creació"
 
 #: ../bin/draksambashare:89
-#, fuzzy, c-format
+#, c-format
 msgid "Force group"
-msgstr "Grup de treball"
+msgstr "Força el grup"
 
-#
 #: ../bin/draksambashare:90 ../bin/draksambashare:164
-#, fuzzy, c-format
+#, c-format
 msgid "Default case"
-msgstr "Usuari predeterminat"
+msgstr "Majúscules o minúscules per omissió"
 
 #: ../bin/draksambashare:117
 #, c-format
 msgid "Printer name"
-msgstr "Nom d'impressora:"
+msgstr "Nom de la impressora:"
 
 #: ../bin/draksambashare:118
 #, c-format
@@ -1410,73 +1336,71 @@ msgid "Printable"
 msgstr "Imprimible"
 
 #: ../bin/draksambashare:122
-#, fuzzy, c-format
+#, c-format
 msgid "Print Command"
-msgstr "Ordre"
+msgstr "Commanda d'impressió"
 
 #: ../bin/draksambashare:123
-#, fuzzy, c-format
+#, c-format
 msgid "LPQ command"
-msgstr "Ordre"
+msgstr "Comanda LPQ"
 
 #: ../bin/draksambashare:124
 #, c-format
 msgid "Guest ok"
-msgstr ""
+msgstr "Es permet el convidat"
 
 #: ../bin/draksambashare:127 ../bin/draksambashare:168
 #: ../bin/draksambashare:603
-#, fuzzy, c-format
+#, c-format
 msgid "Inherit permissions"
-msgstr "Permisos"
+msgstr "Hereta els permisos"
 
-#
 #: ../bin/draksambashare:128
 #, c-format
 msgid "Printing"
 msgstr "Impressió"
 
 #: ../bin/draksambashare:129
-#, fuzzy, c-format
+#, c-format
 msgid "Create mode"
-msgstr "Model de la targeta:"
+msgstr "Mode de creació"
 
 #: ../bin/draksambashare:130
-#, fuzzy, c-format
+#, c-format
 msgid "Use client driver"
-msgstr "Servidor telnet"
+msgstr "Fes servir el controlador del client"
 
-#
 #: ../bin/draksambashare:156
-#, fuzzy, c-format
+#, c-format
 msgid "Read List"
-msgstr "Esborra la llista"
+msgstr "Llista de lectura"
 
 #: ../bin/draksambashare:157
-#, fuzzy, c-format
+#, c-format
 msgid "Write List"
-msgstr "Escriptura"
+msgstr "Llista d'escriptura"
 
 #: ../bin/draksambashare:162
-#, fuzzy, c-format
+#, c-format
 msgid "Force Group"
-msgstr "Grup"
+msgstr "Força el grup"
 
 #: ../bin/draksambashare:163
 #, c-format
 msgid "Force create group"
-msgstr ""
+msgstr "Força la creació del grup"
 
 #: ../bin/draksambashare:179 ../bin/draksambashare:180
 #: ../bin/draksambashare:181 ../bin/draksambashare:182
-#, fuzzy, c-format
+#, c-format
 msgid "/_Samba Server"
-msgstr "Servidor Web"
+msgstr "Servidor /_Samba"
 
 #: ../bin/draksambashare:180
-#, fuzzy, c-format
+#, c-format
 msgid "/_Configure"
-msgstr "Configura"
+msgstr "/_Configura"
 
 #: ../bin/draksambashare:184
 #, c-format
@@ -1484,9 +1408,9 @@ msgid "/_Help"
 msgstr "/_Ajuda"
 
 #: ../bin/draksambashare:184
-#, fuzzy, c-format
+#, c-format
 msgid "/_Samba Documentation"
-msgstr "Fragmentació"
+msgstr "Documentació /_Samba"
 
 #: ../bin/draksambashare:190 ../bin/draksambashare:191
 #, c-format
@@ -1504,40 +1428,43 @@ msgid "/_About..."
 msgstr "/_Quant a..."
 
 #: ../bin/draksambashare:194
-#, fuzzy, c-format
+#, c-format
 msgid "Draksambashare"
-msgstr "Servidor Samba"
+msgstr "Draksambashare"
 
 #: ../bin/draksambashare:196
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Copyright (C) %s per Mandriva"
 
 #: ../bin/draksambashare:198
 #, c-format
 msgid "This is a simple tool to easily manage Samba configuration."
-msgstr ""
+msgstr "Aquesta és una eina simple per a gestionar fàcilment la configuració Samba."
 
 #: ../bin/draksambashare:200
 #, c-format
 msgid "Mageia"
 msgstr "Mageia"
 
-#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
+#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith
+#. <jsmith@nowhere.com>")
 #: ../bin/draksambashare:205
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
-msgstr "Albert Astals Cid <astals11@terra.es>\n"
+msgstr ""
+"Albert Astals Cid <astals11@terra.es>\n"
+"Francesc Pinyol Margalef <francesc.pinyol.m@gmail.com>\n"
 
 #: ../bin/draksambashare:229
 #, c-format
 msgid "Restarting/Reloading Samba server..."
-msgstr ""
+msgstr "S'està reiniciant/recarregant el servidor..."
 
 #: ../bin/draksambashare:230
 #, c-format
 msgid "Error Restarting/Reloading Samba server"
-msgstr ""
+msgstr "S'ha produït un error en el reinici/recàrrega del servidor Samba"
 
 #: ../bin/draksambashare:370 ../bin/draksambashare:567
 #: ../bin/draksambashare:687
@@ -1546,19 +1473,19 @@ msgid "Open"
 msgstr "Obertura de temes"
 
 #: ../bin/draksambashare:373
-#, fuzzy, c-format
+#, c-format
 msgid "DrakSamba add entry"
-msgstr "Servidor Samba"
+msgstr "Afegeix una entrada DrakSamba"
 
 #: ../bin/draksambashare:377
-#, fuzzy, c-format
+#, c-format
 msgid "Add a share"
-msgstr "Servidor Samba"
+msgstr "Afegeix una compartició"
 
 #: ../bin/draksambashare:380
 #, c-format
 msgid "Name of the share:"
-msgstr "Nom de la compartició :"
+msgstr "Nom de la compartició:"
 
 #: ../bin/draksambashare:381 ../bin/draksambashare:587
 #: ../bin/draksambashare:767
@@ -1568,52 +1495,49 @@ msgstr "Comentari:"
 
 #: ../bin/draksambashare:393
 #, c-format
-msgid ""
-"Share with the same name already exist or share name empty, please choose "
-"another name."
-msgstr ""
+msgid "Share with the same name already exist or share name empty, please choose another name."
+msgstr "Ja existeix una compartició amb aquest nom o el nom és buit. Escolliu un altre nom."
 
 #: ../bin/draksambashare:400
 #, c-format
 msgid "Can't create the directory, please enter a correct path."
-msgstr ""
+msgstr "No s'ha pogut crear el directori. Introduïu un camí correcte."
 
 #: ../bin/draksambashare:403 ../bin/draksambashare:623
 #: ../bin/draksambashare:789
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter a Comment for this share."
-msgstr "Si us plau introduïu els paràmetres per aquesta targeta sense fils:"
+msgstr "Introduïu un comentari per a aquesta compartició."
 
 #: ../bin/draksambashare:440
 #, c-format
 msgid "pdf-gen - a PDF generator"
-msgstr ""
+msgstr "pdf-gen - un generador PDF"
 
 #: ../bin/draksambashare:441
 #, c-format
 msgid "printers - all printers available"
-msgstr ""
+msgstr "impressores - totes les impressores disponibles"
 
 #: ../bin/draksambashare:445
 #, c-format
 msgid "Add Special Printer share"
-msgstr ""
+msgstr "Afegeix una compartició d'impressora especial"
 
 #: ../bin/draksambashare:448
 #, c-format
-msgid ""
-"Goal of this wizard is to easily create a new special printer Samba share."
-msgstr ""
+msgid "Goal of this wizard is to easily create a new special printer Samba share."
+msgstr "L'objecitu d'aquest auxiliar és la creació fàcil d'una compartició Samba d'impressora especial."
 
 #: ../bin/draksambashare:455
-#, fuzzy, c-format
+#, c-format
 msgid "A PDF generator already exists."
-msgstr "El perfil \"%s\" ja existeix!"
+msgstr "Ja existeix un generador PDF."
 
 #: ../bin/draksambashare:479
-#, fuzzy, c-format
+#, c-format
 msgid "Printers and print$ already exist."
-msgstr "El perfil \"%s\" ja existeix!"
+msgstr "Ja existeixen les impressores i print$"
 
 #: ../bin/draksambashare:529 ../bin/draksambashare:1198
 #, c-format
@@ -1623,37 +1547,37 @@ msgstr "Felicitats"
 #: ../bin/draksambashare:530
 #, c-format
 msgid "The wizard successfully added the printer Samba share"
-msgstr ""
+msgstr "L'auxiliar ha afegit amb èxit la compartició Samba de la impressora"
 
 #: ../bin/draksambashare:552
 #, c-format
 msgid "Please add or select a Samba printer share to be able to modify it."
-msgstr ""
+msgstr "Afegiu o seleccioneu una compartició d'impressora Samba per a poder-la modificar."
 
 #: ../bin/draksambashare:570
 #, c-format
 msgid "DrakSamba Printers entry"
-msgstr ""
+msgstr "Entrada d'impressores DrakSamba"
 
 #: ../bin/draksambashare:583
 #, c-format
 msgid "Printer share"
-msgstr ""
+msgstr "Compartició d'impressora"
 
 #: ../bin/draksambashare:586
 #, c-format
 msgid "Printer name:"
-msgstr "Nom d'impressora:"
+msgstr "Nom de la impressora:"
 
 #: ../bin/draksambashare:592 ../bin/draksambashare:772
 #, c-format
 msgid "Writable:"
-msgstr "Escrivible :"
+msgstr "Escrivible:"
 
 #: ../bin/draksambashare:593 ../bin/draksambashare:773
 #, c-format
 msgid "Browseable:"
-msgstr "Accedible :"
+msgstr "Explorable:"
 
 #: ../bin/draksambashare:598
 #, c-format
@@ -1661,34 +1585,34 @@ msgid "Advanced options"
 msgstr "Opcions avançades"
 
 #: ../bin/draksambashare:600
-#, fuzzy, c-format
+#, c-format
 msgid "Printer access"
-msgstr "Accés a Internet"
+msgstr "Accés a la impressora"
 
 #: ../bin/draksambashare:604
 #, c-format
 msgid "Guest ok:"
-msgstr ""
+msgstr "Es permet el convidat:"
 
 #: ../bin/draksambashare:605
-#, fuzzy, c-format
+#, c-format
 msgid "Create mode:"
-msgstr "Model de la targeta:"
+msgstr "Mode de creació:"
 
 #: ../bin/draksambashare:609
 #, c-format
 msgid "Printer command"
-msgstr ""
+msgstr "Ordre de la impressora"
 
 #: ../bin/draksambashare:611
 #, c-format
 msgid "Print command:"
-msgstr "Ordre d'impressió:"
+msgstr "Ordre de la impressió:"
 
 #: ../bin/draksambashare:612
-#, fuzzy, c-format
+#, c-format
 msgid "LPQ command:"
-msgstr "Ordre"
+msgstr "Ordre LPQ"
 
 #: ../bin/draksambashare:613
 #, c-format
@@ -1698,27 +1622,27 @@ msgstr "Impressió:"
 #: ../bin/draksambashare:629
 #, c-format
 msgid "create mode should be numeric. ie: 0755."
-msgstr ""
+msgstr "el mode de creació ha de ser numèric. Per exemple: 0755."
 
 #: ../bin/draksambashare:690
 #, c-format
 msgid "DrakSamba entry"
-msgstr ""
+msgstr "Entrada DrakSamba"
 
 #: ../bin/draksambashare:695
 #, c-format
 msgid "Please add or select a Samba share to be able to modify it."
-msgstr ""
+msgstr "Afegiu o seleccioneu una compartició Samba per a poder-la modificar."
 
 #: ../bin/draksambashare:718
-#, fuzzy, c-format
+#, c-format
 msgid "Samba user access"
-msgstr "Servidor Samba"
+msgstr "Accés de l'usuari Samba"
 
 #: ../bin/draksambashare:726
-#, fuzzy, c-format
+#, c-format
 msgid "Mask options"
-msgstr "Opcions bàsiques"
+msgstr "Opcions de màscara"
 
 #: ../bin/draksambashare:740
 #, c-format
@@ -1726,35 +1650,34 @@ msgid "Display options"
 msgstr "Opcions de visualització:"
 
 #: ../bin/draksambashare:762
-#, fuzzy, c-format
+#, c-format
 msgid "Samba share directory"
-msgstr "No és un directori"
+msgstr "Directori de la compartició Samba"
 
 #: ../bin/draksambashare:765
 #, c-format
 msgid "Share name:"
-msgstr "Nom de compartició :"
+msgstr "Nom de compartició:"
 
 #: ../bin/draksambashare:771
 #, c-format
 msgid "Public:"
-msgstr "Públic :"
+msgstr "Públic:"
 
 #: ../bin/draksambashare:795
 #, c-format
-msgid ""
-"Create mask, create mode and directory mask should be numeric. ie: 0755."
-msgstr ""
+msgid "Create mask, create mode and directory mask should be numeric. ie: 0755."
+msgstr "La màscara de creació, el mode de creació i la màscara de directori han de ser numèrics. Per exemple: 0755."
 
 #: ../bin/draksambashare:803
 #, c-format
 msgid "Please create this Samba user: %s"
-msgstr ""
+msgstr "Creeu aquest usuari Samba: %s"
 
 #: ../bin/draksambashare:915
 #, c-format
 msgid "Add Samba user"
-msgstr ""
+msgstr "Afegeix l'usuari Samba"
 
 #: ../bin/draksambashare:930
 #, c-format
@@ -1774,228 +1697,202 @@ msgstr "Contrasenya:"
 #: ../bin/draksambashare:1047
 #, c-format
 msgid "PDC - primary domain controller"
-msgstr ""
+msgstr "PDC - controlador de domini primari"
 
 #: ../bin/draksambashare:1048
 #, c-format
 msgid "Standalone - standalone server"
-msgstr ""
+msgstr "Independent - servidor independent"
 
 #: ../bin/draksambashare:1054
-#, fuzzy, c-format
+#, c-format
 msgid "Samba Wizard"
-msgstr "Usuaris Samba"
-
-#: ../bin/draksambashare:1057
-#, fuzzy, c-format
-msgid "Samba server configuration Wizard"
-msgstr "Gestiona la configuració de Samba"
+msgstr "Auxiliar Samba"
 
 #: ../bin/draksambashare:1057
 #, c-format
-msgid ""
-"Samba allows your server to behave as a file and print server for "
-"workstations running non-Linux systems."
-msgstr ""
+msgid "Samba server configuration Wizard"
+msgstr "Auxiliar de configuració del servidor Samba"
+
+#: ../bin/draksambashare:1057
+#, c-format
+msgid "Samba allows your server to behave as a file and print server for workstations running non-Linux systems."
+msgstr "Samba permet que el vostre ordinador es comporti com un servidor de fitxers i d'impressió, per a estacions de treball que no funcionen amb Linux."
 
 #: ../bin/draksambashare:1073
 #, c-format
 msgid "PDC server: primary domain controller"
-msgstr ""
+msgstr "Servidor PDC: controlador de domini primari"
 
 #: ../bin/draksambashare:1073
 #, c-format
-msgid ""
-"Server configured as a PDC is responsible for Windows authentication "
-"throughout the domain."
-msgstr ""
+msgid "Server configured as a PDC is responsible for Windows authentication throughout the domain."
+msgstr "El servidor configurat com a PDC és el responsable de l'autenticació Windows en el domini."
 
 #: ../bin/draksambashare:1073
 #, c-format
-msgid ""
-"Single server installations may use smbpasswd or tdbsam password backends"
-msgstr ""
+msgid "Single server installations may use smbpasswd or tdbsam password backends"
+msgstr "Les instal·lacions d'un sol servidor poden fer servir smbpasswd o bé tdbsam com a gestió de contrasenyes"
 
 #: ../bin/draksambashare:1073
 #, c-format
-msgid ""
-"Domain master = yes, causes the server to register the NetBIOS name <pdc "
-"name>. This name will be recognized by other servers."
-msgstr ""
+msgid "Domain master = yes, causes the server to register the NetBIOS name <pdc name>. This name will be recognized by other servers."
+msgstr "Domain master = yes, fa que el servidor registri el nom NetBIOS <pdc name>. Aquest nom serà reconegut per altres servidors."
 
 #: ../bin/draksambashare:1090
 #, c-format
 msgid "Wins support:"
-msgstr ""
+msgstr "Suport Wins:"
 
 #: ../bin/draksambashare:1091
-#, fuzzy, c-format
+#, c-format
 msgid "admin users:"
-msgstr "Afegeix un usuari"
+msgstr "usuaris administradors:"
 
 #: ../bin/draksambashare:1091
 #, c-format
 msgid "root @adm"
-msgstr ""
+msgstr "root @adm"
 
 #: ../bin/draksambashare:1092
 #, c-format
 msgid "Os level:"
-msgstr ""
+msgstr "Nivell de sistema operatiu:"
 
 #: ../bin/draksambashare:1092
 #, c-format
-msgid ""
-"The global os level option dictates the operating system level at which "
-"Samba will masquerade during a browser election. If you wish to have Samba "
-"win an election and become the master browser, you can set the level above "
-"that of the operating system on your network with the highest current value. "
-"ie: os level = 34"
+msgid "The global os level option dictates the operating system level at which Samba will masquerade during a browser election. If you wish to have Samba win an election and become the master browser, you can set the level above that of the operating system on your network with the highest current value. ie: os level = 34"
 msgstr ""
 
 #: ../bin/draksambashare:1096
 #, c-format
 msgid "The domain is wrong."
-msgstr ""
+msgstr "El domini és incorrecte."
 
 #: ../bin/draksambashare:1103
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup"
 msgstr "Grup de treball"
 
 #: ../bin/draksambashare:1103
 #, c-format
 msgid "Samba needs to know the Windows Workgroup it will serve."
-msgstr ""
+msgstr "Samba necessita saber el grup de treball de Windows que servirà."
 
 #: ../bin/draksambashare:1110 ../bin/draksambashare:1177
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup:"
-msgstr "Grup de treball"
+msgstr "Grup de treball:"
 
 #: ../bin/draksambashare:1111
-#, fuzzy, c-format
+#, c-format
 msgid "Netbios name:"
-msgstr "Nom de la màquina:"
+msgstr "Nom Netbios:"
 
 #: ../bin/draksambashare:1115
 #, c-format
 msgid "The Workgroup is wrong."
-msgstr ""
+msgstr "El grup de treball és incorrecte."
 
-#
 #: ../bin/draksambashare:1122 ../bin/draksambashare:1132
-#, fuzzy, c-format
+#, c-format
 msgid "Security mode"
-msgstr "Polítiques de seguretat"
+msgstr "Mode de seguretat"
 
 #: ../bin/draksambashare:1122
 #, c-format
-msgid ""
-"User level: the client sends a session setup request directly following "
-"protocol negotiation. This request provides a username and password."
-msgstr ""
+msgid "User level: the client sends a session setup request directly following protocol negotiation. This request provides a username and password."
+msgstr "Nivell d'usuari: el client envia una petició de configuració directament segons el protocol de negociació. Aquesta petició subministra un nom d'usuari i una contrasenya."
 
 #: ../bin/draksambashare:1122
 #, c-format
 msgid "Share level: the client authenticates itself separately for each share"
-msgstr ""
+msgstr "Nivell de compartició: el client s'autentica separadament per a cada compartició"
 
 #: ../bin/draksambashare:1122
 #, c-format
-msgid ""
-"Domain level: provides a mechanism for storing all user and group accounts "
-"in a central, shared, account repository. The centralized account repository "
-"is shared between domain (security) controllers."
-msgstr ""
+msgid "Domain level: provides a mechanism for storing all user and group accounts in a central, shared, account repository. The centralized account repository is shared between domain (security) controllers."
+msgstr "Nivell de domini: subministra un mecanisme per a emmagatzemar tots els comptes d'usuari i grups en un dipòsit de comptes central i compartit. El dipòsit centralitzat és compartit entre els controladors de domini (seguretat)."
 
 #: ../bin/draksambashare:1133
-#, fuzzy, c-format
+#, c-format
 msgid "Hosts allow"
-msgstr "Nom de l'ordinador"
+msgstr ""
 
 #: ../bin/draksambashare:1138
 #, c-format
 msgid "Server Banner."
-msgstr ""
+msgstr "Bàner del servidor."
 
 #: ../bin/draksambashare:1138
 #, c-format
-msgid ""
-"The banner is the way this server will be described in the Windows "
-"workstations."
-msgstr ""
+msgid "The banner is the way this server will be described in the Windows workstations."
+msgstr "El bàner especifica com es descriurà aquest servidor en les estacions de treball Windows."
 
 #: ../bin/draksambashare:1143
 #, c-format
 msgid "Banner:"
-msgstr ""
+msgstr "Bàner:"
 
 #: ../bin/draksambashare:1147
 #, c-format
 msgid "The Server Banner is incorrect."
-msgstr ""
-
-#: ../bin/draksambashare:1154
-#, fuzzy, c-format
-msgid "Samba Log"
-msgstr "Usuaris Samba"
+msgstr "El bàner del servidor és incorrecte."
 
 #: ../bin/draksambashare:1154
 #, c-format
-msgid ""
-"Log file: use file.%m to use a separate log file for each machine that "
-"connects"
-msgstr ""
+msgid "Samba Log"
+msgstr "Registre de Samba"
+
+#: ../bin/draksambashare:1154
+#, c-format
+msgid "Log file: use file.%m to use a separate log file for each machine that connects"
+msgstr "Fitxer de registre: feu servir fitxer.%m per a un registre separat per a cada ordinador que es connecta."
 
 #: ../bin/draksambashare:1154
 #, c-format
 msgid "Log level: set the log (verbosity) level (0 <= log level <= 10)"
-msgstr ""
+msgstr "Nivell de registre: estableix el nivell de detall del registre (0 <= log level <= 10)"
 
 #: ../bin/draksambashare:1154
 #, c-format
 msgid "Max Log size: put a capping on the size of the log files (in Kb)."
-msgstr ""
+msgstr "Mida màxima del registre: estableix un màxim en la mida dels fitxers de registre (en kB)."
 
 #: ../bin/draksambashare:1161 ../bin/draksambashare:1179
-#, fuzzy, c-format
+#, c-format
 msgid "Log file:"
-msgstr "Perfils"
+msgstr "Fitxer de registre:"
 
 #: ../bin/draksambashare:1162
 #, c-format
 msgid "Max log size:"
-msgstr ""
+msgstr "Mida màxima del registre:"
 
 #: ../bin/draksambashare:1163
-#, fuzzy, c-format
+#, c-format
 msgid "Log level:"
-msgstr "Nivell"
+msgstr "Nivell del registre:"
 
 #: ../bin/draksambashare:1168
 #, c-format
 msgid "The wizard collected the following parameters to configure Samba."
-msgstr ""
+msgstr "L'auxiliar ha recollit els següents paràmetres de configuració de Samba."
 
 #: ../bin/draksambashare:1168
 #, c-format
-msgid ""
-"To accept these values, and configure your server, click the Next button or "
-"use the Back button to correct them."
-msgstr ""
+msgid "To accept these values, and configure your server, click the Next button or use the Back button to correct them."
+msgstr "Per a acceptar aquests valors i configurar el servidor, feu clic al botó Següent, o feu clic al botó Enrere per a corregir-los."
 
 #: ../bin/draksambashare:1168
 #, c-format
-msgid ""
-"If you have previously create some shares, they will appear in this "
-"configuration. Run 'drakwizard sambashare' to manage your shares."
+msgid "If you have previously create some shares, they will appear in this configuration. Run 'drakwizard sambashare' to manage your shares."
 msgstr ""
 
 #: ../bin/draksambashare:1176
-#, fuzzy, c-format
+#, c-format
 msgid "Samba type:"
-msgstr "Usuaris Samba"
+msgstr ""
 
 #: ../bin/draksambashare:1178
 #, c-format
@@ -2093,9 +1990,9 @@ msgid "Samba Users"
 msgstr "Usuaris Samba"
 
 #: ../bin/draksambashare:1456
-#, fuzzy, c-format
+#, c-format
 msgid "Please configure your Samba server"
-msgstr "No s'ha pogut canviar la contrasenya."
+msgstr ""
 
 #: ../bin/draksambashare:1456
 #, c-format
@@ -2110,25 +2007,24 @@ msgid "DrakSamba manage Samba shares"
 msgstr ""
 
 #: ../bin/net_applet:96
-#, fuzzy, c-format
+#, c-format
 msgid "Network is up on interface %s."
-msgstr "La xarxa està activa a la interfície %s"
+msgstr ""
 
 #: ../bin/net_applet:97
-#, fuzzy, c-format
+#, c-format
 msgid "IP address: %s"
-msgstr "Adreça IP:"
+msgstr ""
 
 #: ../bin/net_applet:98
-#, fuzzy, c-format
+#, c-format
 msgid "Gateway: %s"
-msgstr "Passarel·la:"
+msgstr ""
 
-#
 #: ../bin/net_applet:99
-#, fuzzy, c-format
+#, c-format
 msgid "DNS: %s"
-msgstr "DNS"
+msgstr ""
 
 #: ../bin/net_applet:100
 #, c-format
@@ -2136,23 +2032,21 @@ msgid "Connected to %s (link level: %d %%)"
 msgstr ""
 
 #: ../bin/net_applet:102
-#, fuzzy, c-format
+#, c-format
 msgid "Network is down on interface %s."
-msgstr "La xarxa està activa a la interfície %s"
+msgstr ""
 
 #: ../bin/net_applet:104
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You do not have any configured Internet connection.\n"
 "Run the \"%s\" assistant from the Mageia Linux Control Center"
 msgstr ""
-"Aquesta interfície encara no s'ha configurat.\n"
-"Executeu l'auxiliar \"%s\" del Centre de Control de Mageia"
 
 #: ../bin/net_applet:107 ../lib/network/connection_manager.pm:206
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting..."
-msgstr "Connecta..."
+msgstr ""
 
 #: ../bin/net_applet:133 ../bin/net_monitor:519
 #, c-format
@@ -2175,9 +2069,9 @@ msgid "Manage wireless networks"
 msgstr ""
 
 #: ../bin/net_applet:153
-#, fuzzy, c-format
+#, c-format
 msgid "Manage VPN connections"
-msgstr "Gestiona connexions"
+msgstr ""
 
 #: ../bin/net_applet:157
 #, c-format
@@ -2189,7 +2083,6 @@ msgstr "Configura la xarxa"
 msgid "Watched interface"
 msgstr ""
 
-#
 #: ../bin/net_applet:162 ../bin/net_applet:165 ../bin/net_applet:168
 #, c-format
 msgid "Auto-detect"
@@ -2208,15 +2101,14 @@ msgstr "Perfils"
 #: ../bin/net_applet:203 ../lib/network/connection.pm:233
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:367
 #: ../lib/network/vpn/openvpn.pm:381 ../lib/network/vpn/openvpn.pm:392
-#, fuzzy, c-format
+#, c-format
 msgid "VPN connection"
-msgstr "Connexió LAN"
+msgstr ""
 
-#
 #: ../bin/net_applet:434
-#, fuzzy, c-format
+#, c-format
 msgid "Network connection"
-msgstr "Opcions de xarxa"
+msgstr ""
 
 #: ../bin/net_applet:521
 #, c-format
@@ -2234,9 +2126,9 @@ msgid "Always launch on startup"
 msgstr "Executa sempre al inici"
 
 #: ../bin/net_applet:558
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless networks"
-msgstr "Connexió sense fils"
+msgstr ""
 
 #: ../bin/net_applet:565 ../bin/net_monitor:96
 #, c-format
@@ -2249,9 +2141,9 @@ msgid "Network Monitoring"
 msgstr "Monitorització de la xarxa"
 
 #: ../bin/net_monitor:99
-#, fuzzy, c-format
+#, c-format
 msgid "Default connection: "
-msgstr "Connexió per cable"
+msgstr ""
 
 #: ../bin/net_monitor:101
 #, c-format
@@ -2297,11 +2189,9 @@ msgstr ""
 "de recepció:"
 
 #: ../bin/net_monitor:113
-#, fuzzy, c-format
+#, c-format
 msgid "Connection time: "
 msgstr ""
-"Temps de\n"
-"connexió: "
 
 #: ../bin/net_monitor:120
 #, c-format
@@ -2339,19 +2229,18 @@ msgid "Connection complete."
 msgstr "Connexió completa."
 
 #: ../bin/net_monitor:258
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Connection failed.\n"
 "Verify your configuration in the Mageia Linux Control Center."
 msgstr ""
 "La connexió ha fallat.\n"
-"Comproveu la vostra configuració al Centre de control de Mageia."
+"Comproveu la configuració al Centre de Control de Mageia Linux."
 
-#
 #: ../bin/net_monitor:360
-#, fuzzy, c-format
+#, c-format
 msgid "%s (%s)"
-msgstr "DNS"
+msgstr ""
 
 #: ../bin/net_monitor:385
 #, c-format
@@ -2385,12 +2274,8 @@ msgstr "Mesura local"
 
 #: ../bin/net_monitor:512
 #, c-format
-msgid ""
-"Warning, another internet connection has been detected, maybe using your "
-"network"
-msgstr ""
-"Avís: s'ha detectat una altra connexió a Internet, potser utilitzant la "
-"vostra xarxa"
+msgid "Warning, another internet connection has been detected, maybe using your network"
+msgstr "Avís: s'ha detectat una altra connexió a Internet, potser utilitzant la vostra xarxa"
 
 #: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
@@ -2478,9 +2363,9 @@ msgid "Maximum size of network message (MTU). If unsure, left blank."
 msgstr ""
 
 #: ../lib/network/connection.pm:333
-#, fuzzy, c-format
+#, c-format
 msgid "Link detected on interface %s"
-msgstr "(detectat al port %s)"
+msgstr ""
 
 #: ../lib/network/connection.pm:334 ../lib/network/connection/ethernet.pm:305
 #, c-format
@@ -2493,9 +2378,9 @@ msgid "Cable"
 msgstr ""
 
 #: ../lib/network/connection/cable.pm:11
-#, fuzzy, c-format
+#, c-format
 msgid "Cable modem"
-msgstr "Model de la targeta:"
+msgstr ""
 
 #: ../lib/network/connection/cable.pm:42
 #, c-format
@@ -2528,9 +2413,9 @@ msgid "Access Point Name"
 msgstr ""
 
 #: ../lib/network/connection/cellular_bluetooth.pm:10
-#, fuzzy, c-format
+#, c-format
 msgid "Bluetooth"
-msgstr "Dispositius Bluetooth"
+msgstr ""
 
 #: ../lib/network/connection/cellular_bluetooth.pm:11
 #, c-format
@@ -2553,16 +2438,14 @@ msgid "PIN number (4 digits). Leave empty if PIN is not required."
 msgstr ""
 
 #: ../lib/network/connection/cellular_card.pm:216
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to open device %s"
-msgstr "No es pot bifurcar: %s"
+msgstr ""
 
 #: ../lib/network/connection/cellular_card.pm:248
-#, fuzzy, c-format
+#, c-format
 msgid "Please check that your SIM card is inserted."
 msgstr ""
-"\n"
-"Si us plau, marqueu totes les opcions que us calguin.\n"
 
 #: ../lib/network/connection/cellular_card.pm:259
 #, c-format
@@ -2607,16 +2490,15 @@ msgid "Wired (Ethernet)"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:30
-#, fuzzy, c-format
+#, c-format
 msgid "Virtual interface"
-msgstr "Interfície de la xarxa"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:60
 #, c-format
 msgid "Unable to find network interface for selected device (using %s driver)."
 msgstr ""
 
-#
 #: ../lib/network/connection/ethernet.pm:70 ../lib/network/vpn/openvpn.pm:209
 #, c-format
 msgid "Manual configuration"
@@ -2627,11 +2509,10 @@ msgstr "Configuració manual"
 msgid "Automatic IP (BOOTP/DHCP)"
 msgstr "IP automàtica (BOOTP/DHCP)"
 
-#
 #: ../lib/network/connection/ethernet.pm:132
-#, fuzzy, c-format
+#, c-format
 msgid "IP settings"
-msgstr "Configuració del PLL:"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:145
 #, c-format
@@ -2651,7 +2532,6 @@ msgstr ""
 msgid "Gateway"
 msgstr "Passarel·la"
 
-#
 #: ../lib/network/connection/ethernet.pm:152
 #: ../lib/network/drakconnect/edit.pm:212
 #, c-format
@@ -2680,9 +2560,9 @@ msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:160
 #: ../lib/network/drakconnect/edit.pm:209
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP timeout (in seconds)"
-msgstr "Temps màxim per connectar (en seg)"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:161
 #: ../lib/network/drakconnect/edit.pm:213
@@ -2726,33 +2606,23 @@ msgstr "Atenció: l'adreça IP %s està reservada, normalment!"
 
 #: ../lib/network/connection/ethernet.pm:195
 #, c-format
-msgid ""
-"%s is already used by a connection that starts on boot (%s). To use this "
-"address with this connection, first disable all other devices which use it, "
-"or configure them not to start at boot"
+msgid "%s is already used by a connection that starts on boot (%s). To use this address with this connection, first disable all other devices which use it, or configure them not to start at boot"
 msgstr ""
 
-#
 #: ../lib/network/connection/ethernet.pm:222
 #: ../lib/network/drakconnect/edit.pm:203
-#, fuzzy, c-format
+#, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
-msgstr "Assigna un nom d'ordinador a partir de l'adreça DHCP"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:223
 #, c-format
-msgid ""
-"This will allow the server to attribute a name for this machine. If the "
-"server does not provides a valid host name, it will be generated "
-"automatically."
+msgid "This will allow the server to attribute a name for this machine. If the server does not provides a valid host name, it will be generated automatically."
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:226
 #, c-format
-msgid ""
-"You should define a hostname for this machine, which will identify this PC. "
-"Note that this hostname will be shared among all network connections.  If "
-"left blank, 'localhost.localdomain' will be used."
+msgid "You should define a hostname for this machine, which will identify this PC. Note that this hostname will be shared among all network connections.  If left blank, 'localhost.localdomain' will be used."
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:244
@@ -2965,7 +2835,6 @@ msgstr "França"
 msgid "Germany"
 msgstr "Alemanya"
 
-#
 #: ../lib/network/connection/providers/cellular.pm:137
 #: ../lib/network/connection/providers/cellular.pm:142
 #: ../lib/network/connection/providers/cellular.pm:147
@@ -3077,7 +2946,6 @@ msgstr "Angola"
 msgid "Argentina"
 msgstr "Argentina"
 
-#
 #: ../lib/network/connection/providers/cellular_extra.pm:51
 #: ../lib/network/connection/providers/cellular_extra.pm:57
 #: ../lib/network/connection/providers/cellular_extra.pm:63
@@ -3142,7 +3010,6 @@ msgstr "Bangladesh"
 msgid "Barbados"
 msgstr "Barbados"
 
-#
 #: ../lib/network/connection/providers/cellular_extra.pm:200
 #: ../lib/network/connection/providers/cellular_extra.pm:207
 #: ../lib/network/connection/providers/cellular_extra.pm:210
@@ -3370,7 +3237,6 @@ msgstr "Geòrgia"
 msgid "Ghana"
 msgstr "Ghana"
 
-#
 #: ../lib/network/connection/providers/cellular_extra.pm:899
 #: ../lib/network/connection/providers/cellular_extra.pm:903
 #: ../lib/network/connection/providers/cellular_extra.pm:909
@@ -3439,7 +3305,6 @@ msgstr "Hongria"
 msgid "Indonesia"
 msgstr "Indonèsia"
 
-#
 #: ../lib/network/connection/providers/cellular_extra.pm:1066
 #: ../lib/network/connection/providers/cellular_extra.pm:1073
 #: ../lib/network/connection/providers/cellular_extra.pm:1080
@@ -3602,9 +3467,9 @@ msgstr "Moldàvia"
 #: ../lib/network/connection/providers/cellular_extra.pm:1419
 #: ../lib/network/connection/providers/cellular_extra.pm:1425
 #: ../lib/network/connection/providers/cellular_extra.pm:1431
-#, fuzzy, c-format
+#, c-format
 msgid "Montenegro"
-msgstr "Sèrbia i Montenegro"
+msgstr ""
 
 #: ../lib/network/connection/providers/cellular_extra.pm:1437
 #, c-format
@@ -3690,7 +3555,6 @@ msgstr "Nicaragua"
 msgid "Netherlands"
 msgstr "Països Baixos"
 
-#
 #: ../lib/network/connection/providers/cellular_extra.pm:1587
 #: ../lib/network/connection/providers/cellular_extra.pm:1594
 #: ../lib/network/connection/providers/cellular_extra.pm:1599
@@ -3785,9 +3649,9 @@ msgstr "Romania"
 #: ../lib/network/connection/providers/cellular_extra.pm:1805
 #: ../lib/network/connection/providers/cellular_extra.pm:1811
 #: ../lib/network/connection/providers/cellular_extra.pm:1817
-#, fuzzy, c-format
+#, c-format
 msgid "Serbia"
-msgstr "Servei"
+msgstr ""
 
 #: ../lib/network/connection/providers/cellular_extra.pm:1823
 #: ../lib/network/connection/providers/cellular_extra.pm:1830
@@ -3820,7 +3684,6 @@ msgstr "Rússia"
 msgid "Saudi Arabia"
 msgstr "Aràbia Saudita"
 
-#
 #: ../lib/network/connection/providers/cellular_extra.pm:1946
 #: ../lib/network/connection/providers/cellular_extra.pm:1949
 #: ../lib/network/connection/providers/cellular_extra.pm:1952
@@ -3987,9 +3850,9 @@ msgid "Wireless"
 msgstr "Wireless"
 
 #: ../lib/network/connection/wireless.pm:14
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless (Wi-Fi)"
-msgstr "Wireless"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:30
 #, c-format
@@ -4023,15 +3886,13 @@ msgstr ""
 
 #: ../lib/network/connection/wireless.pm:369
 #, c-format
-msgid ""
-"Your wireless card is disabled, please enable the wireless switch (RF kill "
-"switch) first."
+msgid "Your wireless card is disabled, please enable the wireless switch (RF kill switch) first."
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:459
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless settings"
-msgstr "Connexió sense fils"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:464
 #: ../lib/network/connection_manager.pm:280
@@ -4055,7 +3916,6 @@ msgstr "Gestionat"
 msgid "Master"
 msgstr "Mestre"
 
-#
 #: ../lib/network/connection/wireless.pm:465
 #, c-format
 msgid "Repeater"
@@ -4089,9 +3949,9 @@ msgid "Encryption key"
 msgstr "Clau de xifratge"
 
 #: ../lib/network/connection/wireless.pm:475
-#, fuzzy, c-format
+#, c-format
 msgid "Hide password"
-msgstr "Contrasenya"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:477
 #, c-format
@@ -4099,9 +3959,9 @@ msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:484
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Login/Username"
-msgstr "Entrada del compte (nom d'usuari)"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:486
 #, c-format
@@ -4112,9 +3972,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:489
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Password"
-msgstr "Contrasenya"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:492
 #, c-format
@@ -4136,9 +3996,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:506
-#, fuzzy, c-format
+#, c-format
 msgid "EAP client certificate"
-msgstr "Nom del certificat"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:508
 #, c-format
@@ -4149,7 +4009,6 @@ msgid ""
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
 
-#
 #: ../lib/network/connection/wireless.pm:512
 #: ../lib/network/drakconnect/edit.pm:238
 #, c-format
@@ -4183,14 +4042,11 @@ msgstr "RTS/CTS"
 #: ../lib/network/connection/wireless.pm:517
 #, c-format
 msgid ""
-"RTS/CTS adds a handshake before each packet transmission to make sure that "
-"the\n"
-"channel is clear. This adds overhead, but increase performance in case of "
-"hidden\n"
+"RTS/CTS adds a handshake before each packet transmission to make sure that the\n"
+"channel is clear. This adds overhead, but increase performance in case of hidden\n"
 "nodes or large number of active nodes. This parameter sets the size of the\n"
 "smallest packet for which the node sends RTS, a value equal to the maximum\n"
-"packet size disable the scheme. You may also set this parameter to auto, "
-"fixed\n"
+"packet size disable the scheme. You may also set this parameter to auto, fixed\n"
 "or off."
 msgstr ""
 
@@ -4210,13 +4066,13 @@ msgstr "Arguments extra per a lwconfig"
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
-"ap, channel, commit, enc, power, retry, sens, txpower (nick is already set "
-"as the hostname).\n"
+"ap, channel, commit, enc, power, retry, sens, txpower (nick is already set as the hostname).\n"
 "\n"
 "See iwconfig(8) man page for further information."
 msgstr ""
 
-#. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
+#. -PO: split the "xyz command extra argument" translated string into two
+#. lines if it's bigger than the english one
 #: ../lib/network/connection/wireless.pm:533
 #: ../lib/network/drakconnect/edit.pm:255
 #, c-format
@@ -4244,32 +4100,28 @@ msgstr "Arguments extra per a lwpriv"
 #: ../lib/network/connection/wireless.pm:544
 #, c-format
 msgid ""
-"iwpriv enable to set up optionals (private) parameters of a wireless "
-"network\n"
+"iwpriv enable to set up optionals (private) parameters of a wireless network\n"
 "interface.\n"
 "\n"
-"iwpriv deals with parameters and setting specific to each driver (as opposed "
-"to\n"
+"iwpriv deals with parameters and setting specific to each driver (as opposed to\n"
 "iwconfig which deals with generic ones).\n"
 "\n"
-"In theory, the documentation of each device driver should indicate how to "
-"use\n"
+"In theory, the documentation of each device driver should indicate how to use\n"
 "those interface specific commands and their effect.\n"
 "\n"
 "See iwpriv(8) man page for further information."
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:555
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Protocol"
-msgstr "Protocol"
+msgstr ""
 
-#
 #: ../lib/network/connection/wireless.pm:556
 #: ../lib/network/connection/wireless.pm:561
-#, fuzzy, c-format
+#, c-format
 msgid "Auto Detect"
-msgstr "Detecció automàtica"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:556
 #, c-format
@@ -4277,9 +4129,9 @@ msgid "WPA2"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:556
-#, fuzzy, c-format
+#, c-format
 msgid "WPA"
-msgstr "PAP"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:558
 #, c-format
@@ -4289,14 +4141,14 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:560
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Mode"
-msgstr "Mode"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:561
-#, fuzzy, c-format
+#, c-format
 msgid "PEAP"
-msgstr "PAP"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:561
 #, c-format
@@ -4309,9 +4161,9 @@ msgid "TLS"
 msgstr "TLS"
 
 #: ../lib/network/connection/wireless.pm:561
-#, fuzzy, c-format
+#, c-format
 msgid "MSCHAPV2"
-msgstr "CHAP"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:561
 #, c-format
@@ -4383,9 +4235,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:578
-#, fuzzy, c-format
+#, c-format
 msgid "EAP CA certificate"
-msgstr "Nom del certificat"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:580
 #, c-format
@@ -4442,35 +4294,23 @@ msgstr ""
 
 #: ../lib/network/connection/wireless.pm:620
 #, c-format
-msgid ""
-"The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
-"hexadecimal characters."
+msgid "The pre-shared key should have between 8 and 63 ASCII characters, or 64 hexadecimal characters."
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:626
 #, c-format
-msgid ""
-"The WEP key should have at most %d ASCII characters or %d hexadecimal "
-"characters."
+msgid "The WEP key should have at most %d ASCII characters or %d hexadecimal characters."
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:633
 #, c-format
-msgid ""
-"Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
-"frequency), or add enough '0' (zeroes)."
-msgstr ""
-"La freqüència ha de tenir el sufix k, M o G (per exemple, \"2,46G\" per a la "
-"freqüència de 2,46 GHz), or afegir prou '0' (zeros)."
+msgid "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz frequency), or add enough '0' (zeroes)."
+msgstr "La freqüència ha de tenir el sufix k, M o G (per exemple, \"2,46G\" per a la freqüència de 2,46 GHz), or afegir prou '0' (zeros)."
 
 #: ../lib/network/connection/wireless.pm:639
 #, c-format
-msgid ""
-"Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
-"enough '0' (zeroes)."
-msgstr ""
-"La velocitat ha de tenir el sufix k, M o G (per exemple, \"11M\" per a 11M), "
-"o afegir prou '0' (zeros)."
+msgid "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add enough '0' (zeroes)."
+msgstr "La velocitat ha de tenir el sufix k, M o G (per exemple, \"11M\" per a 11M), o afegir prou '0' (zeros)."
 
 #: ../lib/network/connection/wireless.pm:651
 #, c-format
@@ -4488,9 +4328,9 @@ msgid "Lost association to wireless network on interface %s"
 msgstr ""
 
 #: ../lib/network/connection/xdsl.pm:8
-#, fuzzy, c-format
+#, c-format
 msgid "DSL"
-msgstr "SSL"
+msgstr ""
 
 #: ../lib/network/connection/xdsl.pm:97 ../lib/network/netconnect.pm:789
 #, c-format
@@ -4500,21 +4340,17 @@ msgstr "Mòdem Alcatel Speedtouch USB"
 #: ../lib/network/connection/xdsl.pm:125
 #, c-format
 msgid ""
-"The ECI Hi-Focus modem cannot be supported due to binary driver distribution "
-"problem.\n"
+"The ECI Hi-Focus modem cannot be supported due to binary driver distribution problem.\n"
 "\n"
 "You can find a driver on http://eciadsl.flashtux.org/"
 msgstr ""
-"El mòdem ECI Hi-Focus no està suportat a causa de problemes amb la "
-"distribució de binaris del controlador.\n"
+"El mòdem ECI Hi-Focus no està suportat a causa de problemes amb la distribució de binaris del controlador.\n"
 "\n"
 "Podeu trobar un controlador a http://eciadsl.flashtux.org/"
 
 #: ../lib/network/connection/xdsl.pm:185
 #, c-format
-msgid ""
-"Modems using Conexant AccessRunner chipsets cannot be supported due to "
-"binary firmware distribution problem."
+msgid "Modems using Conexant AccessRunner chipsets cannot be supported due to binary firmware distribution problem."
 msgstr ""
 
 #: ../lib/network/connection/xdsl.pm:205
@@ -4527,7 +4363,6 @@ msgstr ""
 msgid "Dynamic Host Configuration Protocol (DHCP)"
 msgstr "Protocol de configuració d'ordinadors dinàmic (DHCP)"
 
-#
 #: ../lib/network/connection/xdsl.pm:209
 #, c-format
 msgid "Manual TCP/IP configuration"
@@ -4567,32 +4402,32 @@ msgstr "No s'han pogut instal·lar els paquets (%s)!"
 
 #: ../lib/network/connection_manager.pm:74
 #: ../lib/network/connection_manager.pm:89 ../lib/network/netconnect.pm:186
-#, fuzzy, c-format
+#, c-format
 msgid "Configuring device..."
-msgstr "S'està configurant..."
+msgstr ""
 
 #: ../lib/network/connection_manager.pm:79
 #: ../lib/network/connection_manager.pm:144
-#, fuzzy, c-format
+#, c-format
 msgid "Network settings"
-msgstr "Paràmetres de la xarxa local"
+msgstr ""
 
 #: ../lib/network/connection_manager.pm:80
 #: ../lib/network/connection_manager.pm:145
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter settings for network"
-msgstr "Si us plau introduïu un directori a compartir."
+msgstr ""
 
 #: ../lib/network/connection_manager.pm:223
 #: ../lib/network/connection_manager.pm:481 ../lib/network/drakvpn.pm:100
-#, fuzzy, c-format
+#, c-format
 msgid "Connection failed."
-msgstr "Nom de la connexió"
+msgstr ""
 
 #: ../lib/network/connection_manager.pm:235
-#, fuzzy, c-format
+#, c-format
 msgid "Disconnecting..."
-msgstr "Desconnecta..."
+msgstr ""
 
 #: ../lib/network/connection_manager.pm:277
 #, c-format
@@ -4609,11 +4444,10 @@ msgstr "Potència del senyal:"
 msgid "Encryption"
 msgstr "Xifrat"
 
-#
 #: ../lib/network/connection_manager.pm:353 ../lib/network/netconnect.pm:208
-#, fuzzy, c-format
+#, c-format
 msgid "Scanning for networks..."
-msgstr "S'està escanejant la xarxa..."
+msgstr ""
 
 #: ../lib/network/connection_manager.pm:402 ../lib/network/drakroam.pm:91
 #, c-format
@@ -4632,22 +4466,18 @@ msgstr ""
 
 #: ../lib/network/drakconnect/delete.pm:12
 #, c-format
-msgid ""
-"No ethernet network adapter has been detected on your system. Please run the "
-"hardware configuration tool."
+msgid "No ethernet network adapter has been detected on your system. Please run the hardware configuration tool."
 msgstr ""
-"No s'ha detectat cap adaptador de xarxa ethernet al sistema. Si us plau, "
-"executeu l'eina de configuració de maquinari."
 
 #: ../lib/network/drakconnect/delete.pm:21
 #, c-format
 msgid "Remove a network interface"
-msgstr "Esborra una interfície de xarxa"
+msgstr "Suprimeix una interfície de xarxa"
 
 #: ../lib/network/drakconnect/delete.pm:25
-#, fuzzy, c-format
+#, c-format
 msgid "Select the network interface to remove:"
-msgstr "Escolliu la interfície de xarxa a configurar:"
+msgstr "Seleccioneu la interfície de xarxa per a suprimir:"
 
 #: ../lib/network/drakconnect/delete.pm:58
 #, c-format
@@ -4656,20 +4486,16 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"S'ha produït un problema en esborrar la interfície de xarxa \"%s\":\n"
-"\n"
-"%s"
 
 #: ../lib/network/drakconnect/delete.pm:59
 #, c-format
-msgid ""
-"Congratulations, the \"%s\" network interface has been successfully deleted"
-msgstr "Felicitats, la interfície de xarxa \"%s\" s'ha esborrat amb èxit"
+msgid "Congratulations, the \"%s\" network interface has been successfully deleted"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:23
 #, c-format
 msgid "Manage connections"
-msgstr "Gestiona connexions"
+msgstr "Gestiona les connexions"
 
 #: ../lib/network/drakconnect/edit.pm:50 ../lib/network/drakroam.pm:85
 #, c-format
@@ -4689,7 +4515,7 @@ msgstr "Servidors DNS"
 #: ../lib/network/drakconnect/edit.pm:173
 #, c-format
 msgid "Search Domain"
-msgstr "Domini de cerca"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:181
 #, c-format
@@ -4699,25 +4525,23 @@ msgstr "cap"
 #: ../lib/network/drakconnect/edit.pm:181
 #, c-format
 msgid "static"
-msgstr "estàtica"
+msgstr "estàtic"
 
 #: ../lib/network/drakconnect/edit.pm:181
 #, c-format
 msgid "DHCP"
 msgstr "DHCP"
 
-#
 #: ../lib/network/drakconnect/edit.pm:264
 #, c-format
 msgid "Start at boot"
-msgstr "Inicia en l'arrencada"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:276 ../lib/network/netconnect.pm:352
 #, c-format
 msgid "Dialing mode"
 msgstr "Mode de marcatge"
 
-#
 #: ../lib/network/drakconnect/edit.pm:281
 #: ../lib/network/drakconnect/edit.pm:348 ../lib/network/netconnect.pm:353
 #, c-format
@@ -4737,7 +4561,7 @@ msgstr "Número de telèfon del proveïdor"
 #: ../lib/network/drakconnect/edit.pm:346
 #, c-format
 msgid "Flow control"
-msgstr "Control de fluxe"
+msgstr "Control de flux"
 
 #: ../lib/network/drakconnect/edit.pm:347
 #, c-format
@@ -4747,22 +4571,22 @@ msgstr "Terminació de línia"
 #: ../lib/network/drakconnect/edit.pm:358
 #, c-format
 msgid "Modem timeout"
-msgstr "Temps màxim d'espera per al mòdem"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:362
 #, c-format
 msgid "Use lock file"
-msgstr "Usa fitxer de bloqueig"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:364
 #, c-format
 msgid "Wait for dialup tone before dialing"
-msgstr "Espera el to abans de marcar"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:367
 #, c-format
 msgid "Busy wait"
-msgstr "Espera activa"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:372
 #, c-format
@@ -4789,13 +4613,11 @@ msgstr "E/S de la Targeta"
 msgid "Card IO_0"
 msgstr "E/S_0 de la Targeta"
 
-#
 #: ../lib/network/drakconnect/edit.pm:394 ../lib/network/netconnect.pm:71
 #, c-format
 msgid "European protocol (EDSS1)"
 msgstr "Protocol europeu (EDSS1)"
 
-#
 #: ../lib/network/drakconnect/edit.pm:395 ../lib/network/netconnect.pm:72
 #, c-format
 msgid ""
@@ -4808,12 +4630,12 @@ msgstr ""
 #: ../lib/network/drakconnect/edit.pm:422
 #, c-format
 msgid "Vendor"
-msgstr "Venedor"
+msgstr "Fabricant"
 
 #: ../lib/network/drakconnect/edit.pm:424
 #, c-format
 msgid "Media class"
-msgstr "Tipus de mitjà"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:425
 #, c-format
@@ -4823,7 +4645,7 @@ msgstr "Nom del mòdul"
 #: ../lib/network/drakconnect/edit.pm:426
 #, c-format
 msgid "Mac Address"
-msgstr "Adreça Mac"
+msgstr "Adreça MAC"
 
 #: ../lib/network/drakconnect/edit.pm:427
 #, c-format
@@ -4833,7 +4655,7 @@ msgstr "Bus"
 #: ../lib/network/drakconnect/edit.pm:428
 #, c-format
 msgid "Location on the bus"
-msgstr "Ubicació en el bus"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:519 ../lib/network/netconnect.pm:832
 #, c-format
@@ -4843,12 +4665,12 @@ msgstr "L'adreça de la passarel·la ha d'estar en format 1.2.3.4"
 #: ../lib/network/drakconnect/global.pm:27
 #, c-format
 msgid "Gateway:"
-msgstr "Passarel·la:"
+msgstr ""
 
 #: ../lib/network/drakconnect/global.pm:27
 #, c-format
 msgid "Interface:"
-msgstr "Intefície:"
+msgstr "Interfície:"
 
 #: ../lib/network/drakconnect/global.pm:30
 #, c-format
@@ -4856,18 +4678,16 @@ msgid "Internet connection configuration"
 msgstr "Configuració de la connexió a Internet"
 
 #: ../lib/network/drakconnect/global.pm:35
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You do not have any configured Internet connection.\n"
 "Run the \"%s\" assistant from the Mageia Control Center"
 msgstr ""
-"Aquesta interfície encara no s'ha configurat.\n"
-"Executeu l'auxiliar \"%s\" del Centre de Control de Mageia"
 
 #: ../lib/network/drakconnect/global.pm:50
 #, c-format
 msgid "Host name (optional)"
-msgstr "Nom de l'ordinador (opcional)"
+msgstr ""
 
 #: ../lib/network/drakconnect/global.pm:51 ../lib/network/netconnect.pm:651
 #, c-format
@@ -4882,12 +4702,12 @@ msgstr "Segon servidor DNS (opcional)"
 #: ../lib/network/drakconnect/global.pm:53
 #, c-format
 msgid "Third DNS server (optional)"
-msgstr "Tercer servidor DNS (opcional)"
+msgstr ""
 
 #: ../lib/network/drakconnect/global.pm:75
 #, c-format
 msgid "Internet Connection Configuration"
-msgstr "Configuració de la connexió a Internet"
+msgstr ""
 
 #: ../lib/network/drakconnect/global.pm:76
 #, c-format
@@ -4930,24 +4750,21 @@ msgstr "Servidor de Noms de Domini (DNS)"
 msgid "SSH server"
 msgstr "Servidor SSH"
 
-#
 #: ../lib/network/drakfirewall.pm:29
 #, c-format
 msgid "FTP server"
 msgstr "Servidor FTP"
 
 #: ../lib/network/drakfirewall.pm:34
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP Server"
-msgstr "Servidor CUPS"
+msgstr ""
 
-#
 #: ../lib/network/drakfirewall.pm:40
 #, c-format
 msgid "Mail Server"
 msgstr "Servidor de correu"
 
-#
 #: ../lib/network/drakfirewall.pm:45
 #, c-format
 msgid "POP and IMAP Server"
@@ -4959,9 +4776,9 @@ msgid "Telnet server"
 msgstr "Servidor telnet"
 
 #: ../lib/network/drakfirewall.pm:56
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "Servidors DNS"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:64
 #, c-format
@@ -4974,9 +4791,9 @@ msgid "Bacula backup"
 msgstr ""
 
 #: ../lib/network/drakfirewall.pm:76
-#, fuzzy, c-format
+#, c-format
 msgid "Syslog network logging"
-msgstr "\"Hotplugging\" de xarxa"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:82
 #, c-format
@@ -4984,14 +4801,14 @@ msgid "CUPS server"
 msgstr "Servidor CUPS"
 
 #: ../lib/network/drakfirewall.pm:88
-#, fuzzy, c-format
+#, c-format
 msgid "MySQL server"
-msgstr "Servidor NFS"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:94
-#, fuzzy, c-format
+#, c-format
 msgid "PostgreSQL server"
-msgstr "Servidor CUPS"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:100
 #, c-format
@@ -5018,12 +4835,11 @@ msgstr ""
 msgid "Port scan detection"
 msgstr ""
 
-#
 #: ../lib/network/drakfirewall.pm:224 ../lib/network/drakfirewall.pm:228
 #: ../lib/network/shorewall.pm:75
-#, fuzzy, c-format
+#, c-format
 msgid "Firewall configuration"
-msgstr "Configuració manual"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:224
 #, c-format
@@ -5107,8 +4923,7 @@ msgstr ""
 #: ../lib/network/drakfirewall.pm:311
 #, c-format
 msgid ""
-"You can be warned when someone accesses to a service or tries to intrude "
-"into your computer.\n"
+"You can be warned when someone accesses to a service or tries to intrude into your computer.\n"
 "Please select which network activities should be watched."
 msgstr ""
 
@@ -5117,7 +4932,6 @@ msgstr ""
 msgid "Use Interactive Firewall"
 msgstr ""
 
-#
 #: ../lib/network/drakroam.pm:22
 #, c-format
 msgid "No device found"
@@ -5139,14 +4953,14 @@ msgid "Wireless connection"
 msgstr "Connexió sense fils"
 
 #: ../lib/network/drakvpn.pm:30
-#, fuzzy, c-format
+#, c-format
 msgid "VPN configuration"
-msgstr "Configuració DVB"
+msgstr ""
 
 #: ../lib/network/drakvpn.pm:34
-#, fuzzy, c-format
+#, c-format
 msgid "Choose the VPN type"
-msgstr "Escolliu la nova mida"
+msgstr ""
 
 #: ../lib/network/drakvpn.pm:49
 #, c-format
@@ -5154,9 +4968,9 @@ msgid "Initializing tools and detecting devices for %s..."
 msgstr ""
 
 #: ../lib/network/drakvpn.pm:52
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize %s connection type!"
-msgstr "El tipus de connexió és desconegut"
+msgstr ""
 
 #: ../lib/network/drakvpn.pm:60
 #, c-format
@@ -5164,30 +4978,29 @@ msgid "Please select an existing VPN connection or enter a new name."
 msgstr ""
 
 #: ../lib/network/drakvpn.pm:64
-#, fuzzy, c-format
+#, c-format
 msgid "Configure a new connection..."
-msgstr "S'està comprovant la vostra connexió..."
+msgstr ""
 
 #: ../lib/network/drakvpn.pm:66
-#, fuzzy, c-format
+#, c-format
 msgid "New name"
-msgstr "Nom real"
+msgstr ""
 
 #: ../lib/network/drakvpn.pm:70
 #, c-format
 msgid "You must select an existing connection or enter a new name."
 msgstr ""
 
-#
 #: ../lib/network/drakvpn.pm:81
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter the required key(s)"
-msgstr "Si us plau introduïu l'URL del servidor WebDAV"
+msgstr ""
 
 #: ../lib/network/drakvpn.pm:86
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter the settings of your VPN connection"
-msgstr "No es pot contactar amb la rèplica: %s"
+msgstr ""
 
 #: ../lib/network/drakvpn.pm:94 ../lib/network/netconnect.pm:298
 #, c-format
@@ -5199,13 +5012,10 @@ msgstr ""
 msgid ""
 "The VPN connection is now configured.\n"
 "\n"
-"This VPN connection can be automatically started together with a network "
-"connection.\n"
-"It can be done by reconfiguring the network connection and selecting this "
-"VPN connection.\n"
+"This VPN connection can be automatically started together with a network connection.\n"
+"It can be done by reconfiguring the network connection and selecting this VPN connection.\n"
 msgstr ""
 
-#
 #: ../lib/network/ifw.pm:132
 #, c-format
 msgid "Port scanning"
@@ -5247,28 +5057,26 @@ msgid "A password cracking attack has been attempted by %s."
 msgstr ""
 
 #: ../lib/network/ifw.pm:141
-#, fuzzy, c-format
+#, c-format
 msgid "%s is connecting on the %s service."
-msgstr "S'està desconnectant d'Internet "
+msgstr ""
 
 #: ../lib/network/ifw.pm:142
-#, fuzzy, c-format
+#, c-format
 msgid "A \"%s\" attack has been attempted by %s"
-msgstr "El servei %s ha estat atacat per %s."
+msgstr ""
 
 #: ../lib/network/ifw.pm:151
 #, c-format
-msgid ""
-"The \"%s\" application is trying to make a service (%s) available to the "
-"network."
+msgid "The \"%s\" application is trying to make a service (%s) available to the network."
 msgstr ""
 
-#
-#. -PO: this should be kept lowercase since the expression is meant to be used between brackets
+#. -PO: this should be kept lowercase since the expression is meant to be used
+#. between brackets
 #: ../lib/network/ifw.pm:155
-#, fuzzy, c-format
+#, c-format
 msgid "port %d"
-msgstr "Informa"
+msgstr ""
 
 #: ../lib/network/modem.pm:42 ../lib/network/modem.pm:43
 #: ../lib/network/modem.pm:44 ../lib/network/netconnect.pm:632
@@ -5294,16 +5102,13 @@ msgid "No device supporting the %s ndiswrapper driver is present!"
 msgstr ""
 
 #: ../lib/network/ndiswrapper.pm:36
-#, fuzzy, c-format
+#, c-format
 msgid "Please select the correct driver"
-msgstr "Si us plau escolliu el controlador de Windows (fitxer .inf)"
+msgstr ""
 
 #: ../lib/network/ndiswrapper.pm:36
 #, c-format
-msgid ""
-"Please select the Windows driver description (.inf) file, or corresponding "
-"driver file (.dll or .o files). Note that only drivers up to Windows XP are "
-"supported."
+msgid "Please select the Windows driver description (.inf) file, or corresponding driver file (.dll or .o files). Note that only drivers up to Windows XP are supported."
 msgstr ""
 
 #: ../lib/network/ndiswrapper.pm:45
@@ -5350,19 +5155,19 @@ msgstr "Escolliu un dispositiu:"
 
 #. -PO: "Process" is a verb
 #: ../lib/network/net_applet/ifw.pm:100
-#, fuzzy, c-format
+#, c-format
 msgid "Process attack"
-msgstr "Atac a un servei"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:113
 #, c-format
 msgid "Interactive Firewall: intrusion detected"
-msgstr "Tallafocs actiu: intrusió detectada"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:130
-#, fuzzy, c-format
+#, c-format
 msgid "What do you want to do with this attacker?"
-msgstr "Voleu finalitzar el joc?"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:133
 #, c-format
@@ -5370,14 +5175,14 @@ msgid "Attack details"
 msgstr "Detalls de l'atac"
 
 #: ../lib/network/net_applet/ifw.pm:137
-#, fuzzy, c-format
+#, c-format
 msgid "Attack time: %s"
-msgstr "Tipus d'atac: %s"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:138
 #, c-format
 msgid "Network interface: %s"
-msgstr "Interfície de la xarxa: %s"
+msgstr "Interfície de xarxa: %s"
 
 #: ../lib/network/net_applet/ifw.pm:139
 #, c-format
@@ -5392,12 +5197,12 @@ msgstr "Protocol: %s"
 #: ../lib/network/net_applet/ifw.pm:141
 #, c-format
 msgid "Attacker IP address: %s"
-msgstr "Adreça IP de l'atacant: %s"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:142
 #, c-format
 msgid "Attacker hostname: %s"
-msgstr "Nom d'equip de l'atacant: %s"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:145
 #, c-format
@@ -5412,7 +5217,7 @@ msgstr "Port atacat: %s"
 #: ../lib/network/net_applet/ifw.pm:148
 #, c-format
 msgid "Type of ICMP attack: %s"
-msgstr "Tipus d'atac ICMP: %s"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:153
 #, c-format
@@ -5425,26 +5230,25 @@ msgid "Ignore"
 msgstr "Ignora"
 
 #: ../lib/network/net_applet/ifw.pm:186 ../lib/network/net_applet/ifw.pm:204
-#, fuzzy, c-format
+#, c-format
 msgid "Interactive Firewall: new service"
-msgstr "Tallafocs actiu: intrusió detectada"
+msgstr "Tallafoc interactiu: nou servei"
 
 #. -PO: "Process" is a verb
 #: ../lib/network/net_applet/ifw.pm:192
-#, fuzzy, c-format
+#, c-format
 msgid "Process connection"
-msgstr "Connexió sense fils"
+msgstr "Processa la connexió"
 
 #: ../lib/network/net_applet/ifw.pm:214
-#, fuzzy, c-format
+#, c-format
 msgid "Do you want to open this service?"
-msgstr "Voleu configurar-ho ara?"
+msgstr "Voleu obrir el servei?"
 
-#
 #: ../lib/network/net_applet/ifw.pm:217
-#, fuzzy, c-format
+#, c-format
 msgid "Remember this answer"
-msgstr "Recorda aquesta contrasenya"
+msgstr "Recorda aquesta resposta"
 
 #: ../lib/network/netcenter.pm:55 ../lib/network/netconnect.pm:211
 #, c-format
@@ -5452,16 +5256,16 @@ msgid "Please select your network:"
 msgstr ""
 
 #: ../lib/network/netcenter.pm:62
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "_: This is a verb\n"
 "Monitor"
-msgstr "Monitoritza la xarxa"
+msgstr ""
 
 #: ../lib/network/netcenter.pm:152
-#, fuzzy, c-format
+#, c-format
 msgid "Network Center"
-msgstr "Xarxa i Internet"
+msgstr ""
 
 #: ../lib/network/netcenter.pm:171
 #, c-format
@@ -5469,9 +5273,9 @@ msgid "You are currently using the network profile <b>%s</b>"
 msgstr ""
 
 #: ../lib/network/netcenter.pm:177
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced settings"
-msgstr "Opcions avançades"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:60 ../lib/network/netconnect.pm:522
 #: ../lib/network/netconnect.pm:536
@@ -5484,7 +5288,6 @@ msgstr "Selecció manual"
 msgid "Internal ISDN card"
 msgstr "Targeta XDSI interna"
 
-#
 #: ../lib/network/netconnect.pm:69
 #, c-format
 msgid "Protocol for the rest of the world"
@@ -5495,7 +5298,6 @@ msgstr "Protocol per a la resta del món"
 msgid "Network & Internet Configuration"
 msgstr "Configuració de xarxa i internet"
 
-#
 #: ../lib/network/netconnect.pm:127
 #, c-format
 msgid "Choose the connection you want to configure"
@@ -5507,11 +5309,10 @@ msgstr "Escolliu la connexió que voleu configurar"
 msgid "Select the network interface to configure:"
 msgstr "Escolliu la interfície de xarxa a configurar:"
 
-#
 #: ../lib/network/netconnect.pm:151
-#, fuzzy, c-format
+#, c-format
 msgid "%s: %s"
-msgstr "DNS"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:168
 #, c-format
@@ -5519,9 +5320,9 @@ msgid "No device can be found for this connection type."
 msgstr ""
 
 #: ../lib/network/netconnect.pm:177
-#, fuzzy, c-format
+#, c-format
 msgid "Hardware Configuration"
-msgstr "Configuració de xarxa"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:201
 #, c-format
@@ -5580,7 +5381,6 @@ msgstr "E/S_1 de la Targeta"
 msgid "External ISDN modem"
 msgstr "Mòdem XDSI extern"
 
-#
 #: ../lib/network/netconnect.pm:413
 #, c-format
 msgid "Select a device!"
@@ -5604,12 +5404,10 @@ msgid ""
 "\n"
 "If you have an ISA card, the values on the next screen should be right.\n"
 "\n"
-"If you have a PCMCIA card, you have to know the \"irq\" and \"io\" of your "
-"card.\n"
+"If you have a PCMCIA card, you have to know the \"irq\" and \"io\" of your card.\n"
 msgstr ""
 "\n"
-"Si teniu una targeta ISA, els valors de la pantalla següent haurien de ser "
-"correctes.\n"
+"Si teniu una targeta ISA, els valors de la pantalla següent haurien de ser correctes.\n"
 "\n"
 "Si teniu una targeta PCMCIA, cal que en sapigueu l'\"irq\" i l'\"io\".\n"
 
@@ -5630,10 +5428,7 @@ msgstr "Quina d'aquestes targetes XDSI teniu?"
 
 #: ../lib/network/netconnect.pm:461
 #, c-format
-msgid ""
-"A CAPI driver is available for this modem. This CAPI driver can offer more "
-"capabilities than the free driver (like sending faxes). Which driver do you "
-"want to use?"
+msgid "A CAPI driver is available for this modem. This CAPI driver can offer more capabilities than the free driver (like sending faxes). Which driver do you want to use?"
 msgstr ""
 
 #: ../lib/network/netconnect.pm:475
@@ -5677,10 +5472,8 @@ msgstr "Mòdem"
 #: ../lib/network/netconnect.pm:556
 #, c-format
 msgid "Please choose which serial port your modem is connected to."
-msgstr ""
-"Si us plau, seleccioneu el port sèrie al qual teniu connectat el mòdem."
+msgstr "Si us plau, seleccioneu el port sèrie al qual teniu connectat el mòdem."
 
-#
 #: ../lib/network/netconnect.pm:585
 #, c-format
 msgid "Select your provider:"
@@ -5726,7 +5519,6 @@ msgstr "Màscara de la subxarxa"
 msgid "Dialup: DNS parameters"
 msgstr "Marcatge: Paràmetres DNS"
 
-#
 #: ../lib/network/netconnect.pm:649
 #, c-format
 msgid "DNS"
@@ -5737,7 +5529,6 @@ msgstr "DNS"
 msgid "Domain name"
 msgstr "Nom de domini"
 
-#
 #: ../lib/network/netconnect.pm:653
 #, c-format
 msgid "Set hostname from IP"
@@ -5748,7 +5539,6 @@ msgstr "Estableix el nom de la màquina a partir de la IP"
 msgid "Gateway IP address"
 msgstr "Adreça IP de la passarel·la"
 
-#
 #: ../lib/network/netconnect.pm:699
 #, c-format
 msgid "Automatically at boot"
@@ -5794,59 +5584,43 @@ msgstr ""
 "Intenteu tornar a configurar la connexió."
 
 #: ../lib/network/netconnect.pm:770
-#, fuzzy, c-format
+#, c-format
 msgid "Problems occurred during the network connectivity test."
-msgstr ""
-"S'ha produït un problema en reiniciar la xarxa: \n"
-"\n"
-"%s"
+msgstr "S'han produït problemes durant la prova de connectivitat de la xarxa."
 
 #: ../lib/network/netconnect.pm:771
 #, c-format
-msgid ""
-"This can be caused by invalid network configuration, or problems with your "
-"modem or router."
+msgid "This can be caused by invalid network configuration, or problems with your modem or router."
 msgstr ""
 
 #: ../lib/network/netconnect.pm:772
 #, c-format
-msgid ""
-"You might want to relaunch the configuration to verify the connection "
-"settings."
+msgid "You might want to relaunch the configuration to verify the connection settings."
 msgstr ""
 
 #: ../lib/network/netconnect.pm:775
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network configuration is finished."
-msgstr "Felicitats, la configuració de xarxa i d'Internet ha finalitzat.\n"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:775
 #, c-format
-msgid ""
-"However, the Internet connectivity test failed. You should test your "
-"connection manually, and verify your Internet modem or router."
+msgid "However, the Internet connectivity test failed. You should test your connection manually, and verify your Internet modem or router."
 msgstr ""
 
 #: ../lib/network/netconnect.pm:776
-#, fuzzy, c-format
-msgid ""
-"If your connection does not work, you might want to relaunch the "
-"configuration."
+#, c-format
+msgid "If your connection does not work, you might want to relaunch the configuration."
 msgstr ""
-"Hi ha hagut problemes durant la configuració.\n"
-"Proveu la connexió via net_monitor o mcc. Si la connexió no funciona "
-"correctament, torneu a executar la configuració."
 
 #: ../lib/network/netconnect.pm:778
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
-msgstr "Felicitats, la configuració de xarxa i d'Internet ha finalitzat.\n"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:779
 #, c-format
-msgid ""
-"After this is done, we recommend that you restart your X environment to "
-"avoid any hostname-related problems."
+msgid "After this is done, we recommend that you restart your X environment to avoid any hostname-related problems."
 msgstr ""
 "Després d'això, és recomanable que reinicieu l'entorn X per\n"
 "evitar problemes deguts al canvi de nom de l'ordinador."
@@ -5871,7 +5645,6 @@ msgstr "Mòdem ECI Hi-Focus"
 msgid "LAN connection"
 msgstr "Connexió LAN"
 
-#
 #: ../lib/network/netconnect.pm:796
 #, c-format
 msgid "ADSL connection"
@@ -5945,15 +5718,11 @@ msgstr "El nom de l'ordinador del Zeroconf no ha de contenir cap ."
 #: ../lib/network/netconnect.pm:813
 #, c-format
 msgid ""
-"Because you are doing a network installation, your network is already "
-"configured.\n"
-"Click on Ok to keep your configuration, or cancel to reconfigure your "
-"Internet & Network connection.\n"
+"Because you are doing a network installation, your network is already configured.\n"
+"Click on Ok to keep your configuration, or cancel to reconfigure your Internet & Network connection.\n"
 msgstr ""
-"Atès que esteu realitzant una instal·lació des de xarxa, ja teniu la xarxa "
-"configurada.\n"
-"Feu clic a 'D'acord' per conservar la configuració, o a 'Cancel·la' per "
-"tornar a configurar la connexió a Internet i a la xarxa local.\n"
+"Atès que esteu realitzant una instal·lació des de xarxa, ja teniu la xarxa configurada.\n"
+"Feu clic a 'D'acord' per conservar la configuració, o a 'Cancel·la' per tornar a configurar la connexió a Internet i a la xarxa local.\n"
 
 #: ../lib/network/netconnect.pm:816
 #, c-format
@@ -6000,7 +5769,6 @@ msgstr ""
 "Escolliu la que voleu utilitzar.\n"
 "\n"
 
-#
 #: ../lib/network/netconnect.pm:821
 #, c-format
 msgid "Internet connection"
@@ -6013,12 +5781,8 @@ msgstr "S'està configurant el dispositiu de xarxa %s (controlador %s)"
 
 #: ../lib/network/netconnect.pm:824
 #, c-format
-msgid ""
-"The following protocols can be used to configure a LAN connection. Please "
-"choose the one you want to use."
-msgstr ""
-"Es poden usar els següents protocols per configurar una connexió LAN. Si us "
-"plau escolliu el que voleu usar."
+msgid "The following protocols can be used to configure a LAN connection. Please choose the one you want to use."
+msgstr "Es poden usar els següents protocols per configurar una connexió LAN. Si us plau escolliu el que voleu usar."
 
 #: ../lib/network/netconnect.pm:825
 #, c-format
@@ -6035,9 +5799,7 @@ msgstr ""
 #: ../lib/network/netconnect.pm:830
 #, c-format
 msgid "Last but not least you can also type in your DNS server IP addresses."
-msgstr ""
-"Finalment però no menys important podeu introduir les adreces IP dels "
-"vostres servidors DNS."
+msgstr "Finalment però no menys important podeu introduir les adreces IP dels vostres servidors DNS."
 
 #: ../lib/network/netconnect.pm:831
 #, c-format
@@ -6059,32 +5821,29 @@ msgstr ""
 "%s"
 
 #: ../lib/network/network.pm:523
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced network settings"
-msgstr "Paràmetres de la xarxa local"
+msgstr ""
 
 #: ../lib/network/network.pm:524
 #, c-format
-msgid ""
-"Here you can configure advanced network settings. Please note that you have "
-"to reboot the machine for changes to take effect."
+msgid "Here you can configure advanced network settings. Please note that you have to reboot the machine for changes to take effect."
 msgstr ""
 
 #: ../lib/network/network.pm:526
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless regulatory domain"
-msgstr "Connexió sense fils"
+msgstr ""
 
-#
 #: ../lib/network/network.pm:527
-#, fuzzy, c-format
+#, c-format
 msgid "TCP/IP settings"
-msgstr "Configuració del PLL:"
+msgstr ""
 
 #: ../lib/network/network.pm:528
-#, fuzzy, c-format
+#, c-format
 msgid "Disable IPv6"
-msgstr "Inhabilita"
+msgstr ""
 
 #: ../lib/network/network.pm:529
 #, c-format
@@ -6114,7 +5873,7 @@ msgstr ""
 #: ../lib/network/network.pm:534
 #, c-format
 msgid "Disable invalid ICMP error responses"
-msgstr ""
+msgstr "Deshabilita les respostes d'error ICMP no vàlides"
 
 #: ../lib/network/network.pm:535
 #, c-format
@@ -6128,9 +5887,7 @@ msgstr "Configuració dels servidors intermediaris (proxies)"
 
 #: ../lib/network/network.pm:549
 #, c-format
-msgid ""
-"Here you can set up your proxies configuration (eg: http://"
-"my_caching_server:8080)"
+msgid "Here you can set up your proxies configuration (eg: http://my_caching_server:8080)"
 msgstr ""
 
 #: ../lib/network/network.pm:550
@@ -6141,12 +5898,12 @@ msgstr "Intermediari per a HTTP"
 #: ../lib/network/network.pm:551
 #, c-format
 msgid "Use HTTP proxy for HTTPS connections"
-msgstr ""
+msgstr "Utilitza el servidor intermediari HTTP per a connexions HTTPS"
 
 #: ../lib/network/network.pm:552
 #, c-format
 msgid "HTTPS proxy"
-msgstr ""
+msgstr "Servidor intermediari HTTPS"
 
 #: ../lib/network/network.pm:553
 #, c-format
@@ -6154,9 +5911,9 @@ msgid "FTP proxy"
 msgstr "Intermediari per a FTP"
 
 #: ../lib/network/network.pm:554
-#, fuzzy, c-format
+#, c-format
 msgid "No proxy for (comma separated list):"
-msgstr "%d cadenes separades per coma"
+msgstr "No hi ha servidor intermediari per a (llista separada per comes):"
 
 #: ../lib/network/network.pm:559
 #, c-format
@@ -6164,11 +5921,10 @@ msgid "Proxy should be http://..."
 msgstr "El servidor intermediari ha de ser http://..."
 
 #: ../lib/network/network.pm:560
-#, fuzzy, c-format
+#, c-format
 msgid "Proxy should be http://... or https://..."
-msgstr "El servidor intermediari ha de ser http://..."
+msgstr "El servidor intermediari ha de ser http://... o bé https://..."
 
-#
 #: ../lib/network/network.pm:561
 #, c-format
 msgid "URL should begin with 'ftp:' or 'http:'"
@@ -6191,12 +5947,12 @@ msgstr ""
 #: ../lib/network/shorewall.pm:158
 #, c-format
 msgid "Keep custom rules"
-msgstr ""
+msgstr "Mantingues les regles de client"
 
 #: ../lib/network/shorewall.pm:159
 #, c-format
 msgid "Drop custom rules"
-msgstr ""
+msgstr "Suprimeix les regles de client"
 
 #: ../lib/network/shorewall.pm:164
 #, c-format
@@ -6219,17 +5975,14 @@ msgstr "Calen alguns paquets (%s) però no estan disponibles."
 #. -PO: first argument is a list of Mageia distributions
 #. -PO: second argument is a package media name
 #: ../lib/network/thirdparty.pm:150
-#, fuzzy, c-format
-msgid ""
-"These packages can be found in %s, or in the official %s package repository."
-msgstr ""
-"Aquests paquets es poden trobar al Mageia Club o a les versions comercials "
-"de Mageia."
+#, c-format
+msgid "These packages can be found in %s, or in the official %s package repository."
+msgstr "No s'han trobat els paquets en %s, ni en la rèplica oficial %s de paquets."
 
 #: ../lib/network/thirdparty.pm:152
 #, c-format
 msgid "The following component is missing: %s"
-msgstr ""
+msgstr "No es troba el component: %s"
 
 #: ../lib/network/thirdparty.pm:154
 #, c-format
@@ -6243,7 +5996,7 @@ msgstr ""
 #: ../lib/network/thirdparty.pm:190
 #, c-format
 msgid "Firmware files are required for this device."
-msgstr ""
+msgstr "Cal fitxers de firmware per a aquest dispositiu."
 
 #: ../lib/network/thirdparty.pm:193 ../lib/network/thirdparty.pm:198
 #, c-format
@@ -6261,11 +6014,10 @@ msgid "Select file"
 msgstr "Seleccioneu el fitxer"
 
 #: ../lib/network/thirdparty.pm:206
-#, fuzzy, c-format
+#, c-format
 msgid "Please select the firmware file (for example: %s)"
-msgstr "Si us plau escolliu el controlador de Windows (fitxer .inf)"
+msgstr "Seleccioneu el fitxer del firmware (per exemple: %s)"
 
-#
 #: ../lib/network/thirdparty.pm:230
 #, c-format
 msgid "Unable to find \"%s\" on your Windows system!"
@@ -6283,12 +6035,8 @@ msgstr "Inseriu un disquet"
 
 #: ../lib/network/thirdparty.pm:243
 #, c-format
-msgid ""
-"Insert a FAT formatted floppy in drive %s with %s in root directory and "
-"press %s"
-msgstr ""
-"Inseriu un disquet formatat amb FAT a la unitat %s amb %s a el directori "
-"arrel i premeu %s"
+msgid "Insert a FAT formatted floppy in drive %s with %s in root directory and press %s"
+msgstr "Inseriu un disquet formatat amb FAT a la unitat %s amb %s a el directori arrel i premeu %s"
 
 #: ../lib/network/thirdparty.pm:243
 #, c-format
@@ -6303,33 +6051,33 @@ msgstr "Error d'accés al disquet, no s'ha pogut muntar el dispositiu %s"
 #: ../lib/network/thirdparty.pm:352
 #, c-format
 msgid "Looking for required software and drivers..."
-msgstr ""
+msgstr "S'està cercant el programari i els controladors necessaris..."
 
 #: ../lib/network/thirdparty.pm:367
-#, fuzzy, c-format
+#, c-format
 msgid "Please wait, running device configuration commands..."
-msgstr "Espereu si us plau, s'està detectant i configurant els dispositius..."
+msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:109
 #, c-format
 msgid "X509 Public Key Infrastructure"
-msgstr ""
+msgstr "Infraestructura de clau pública X509"
 
 #: ../lib/network/vpn/openvpn.pm:110
 #, c-format
 msgid "Static Key"
-msgstr ""
+msgstr "Clau estàtica"
 
 #. -PO: please don't translate the CA acronym
 #: ../lib/network/vpn/openvpn.pm:144
 #, c-format
 msgid "Certificate Authority (CA)"
-msgstr ""
+msgstr "Autoritat de certificació (CA)"
 
 #: ../lib/network/vpn/openvpn.pm:150
 #, c-format
 msgid "Certificate"
-msgstr ""
+msgstr "Certificat"
 
 #: ../lib/network/vpn/openvpn.pm:156
 #, c-format
@@ -6337,9 +6085,9 @@ msgid "Key"
 msgstr "Clau"
 
 #: ../lib/network/vpn/openvpn.pm:162
-#, fuzzy, c-format
+#, c-format
 msgid "TLS control channel key"
-msgstr "Tecla de control esquerra"
+msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:169
 #, c-format
@@ -6347,21 +6095,19 @@ msgid "Key direction"
 msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:177
-#, fuzzy, c-format
+#, c-format
 msgid "Authenticate using username and password"
-msgstr ""
-"No es pot entrar amb el nom d'usuari %s (potser la contrasenya és "
-"incorrecta?)"
+msgstr "Autenticació mitjançant nom d'usuari i contrasenya"
 
 #: ../lib/network/vpn/openvpn.pm:183
 #, c-format
 msgid "Check server certificate"
-msgstr ""
+msgstr "Comprova el certificat del servidor"
 
 #: ../lib/network/vpn/openvpn.pm:189
-#, fuzzy, c-format
+#, c-format
 msgid "Cipher algorithm"
-msgstr "Algoritme de xifrat"
+msgstr "Algorisme de xifratge"
 
 #: ../lib/network/vpn/openvpn.pm:193
 #, c-format
@@ -6371,27 +6117,27 @@ msgstr "Predeterminat"
 #: ../lib/network/vpn/openvpn.pm:197
 #, c-format
 msgid "Size of cipher key"
-msgstr ""
+msgstr "Mida de la clau de xifratge"
 
 #: ../lib/network/vpn/openvpn.pm:208
-#, fuzzy, c-format
+#, c-format
 msgid "Get from server"
-msgstr "Servidor telnet"
+msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:218
-#, fuzzy, c-format
+#, c-format
 msgid "Gateway port"
-msgstr "Passarel·la"
+msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:234
-#, fuzzy, c-format
+#, c-format
 msgid "Remote IP address"
-msgstr "Adreça IP de la passarel·la"
+msgstr "Adreça IP remota"
 
 #: ../lib/network/vpn/openvpn.pm:239
-#, fuzzy, c-format
+#, c-format
 msgid "Use TCP protocol"
-msgstr "Protocol"
+msgstr "Utilitza el protocol TCP"
 
 #: ../lib/network/vpn/openvpn.pm:245
 #, c-format
@@ -6406,7 +6152,7 @@ msgstr ""
 #: ../lib/network/vpn/openvpn.pm:367
 #, c-format
 msgid "Starting connection.."
-msgstr ""
+msgstr "S'està iniciant la connexió..."
 
 #: ../lib/network/vpn/openvpn.pm:382
 #, c-format
@@ -6416,7 +6162,7 @@ msgstr ""
 #: ../lib/network/vpn/openvpn.pm:393
 #, c-format
 msgid "PIN number"
-msgstr ""
+msgstr "Nombre PIN"
 
 #: ../lib/network/vpn/vpnc.pm:9
 #, c-format
@@ -6424,9 +6170,9 @@ msgid "Cisco VPN Concentrator"
 msgstr ""
 
 #: ../lib/network/vpn/vpnc.pm:43
-#, fuzzy, c-format
+#, c-format
 msgid "Group name"
-msgstr "ID de grup"
+msgstr "Nom de grup"
 
 #: ../lib/network/vpn/vpnc.pm:47
 #, c-format
@@ -6439,251 +6185,11 @@ msgid "Username"
 msgstr "Nom d'usuari"
 
 #: ../lib/network/vpn/vpnc.pm:61
-#, fuzzy, c-format
+#, c-format
 msgid "NAT Mode"
-msgstr "Mode"
+msgstr "Mode NAT"
 
 #: ../lib/network/vpn/vpnc.pm:67
 #, c-format
 msgid "Use specific UDP port"
 msgstr ""
-
-#, fuzzy
-#~ msgid "Same IP is already in %s file."
-#~ msgstr "%s ja és en ús\n"
-
-#~ msgid ""
-#~ "drakfirewall configurator\n"
-#~ "\n"
-#~ "This configures a personal firewall for this Mageia machine.\n"
-#~ "For a powerful and dedicated firewall solution, please look to the\n"
-#~ "specialized Mageia Security Firewall distribution."
-#~ msgstr ""
-#~ "Configuració del drakfirewall\n"
-#~ "\n"
-#~ "Aquí es configura un tallafocs personal per a aquest ordinador Mageia "
-#~ "Linux.\n"
-#~ "Per a una potent solució de tallafocs dedicada, consulteu si us plau la \n"
-#~ "distribució especialitzada Mageia Security Firewall."
-
-#, fuzzy
-#~ msgid "Connecting.."
-#~ msgstr "Connecta..."
-
-#, fuzzy
-#~ msgid "Account network traffic"
-#~ msgstr "Eina de sincronització"
-
-#~ msgid ""
-#~ "Name of the profile to create (the new profile is created as a copy of "
-#~ "the current one):"
-#~ msgstr ""
-#~ "Nom del perfil a crear (el nou perfil es crea com una còpia de l'actual):"
-
-#, fuzzy
-#~ msgid "Clone"
-#~ msgstr "Connecta"
-
-#~ msgid ""
-#~ "There is only one configured network adapter on your system:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "I am about to setup your Local Area Network with that adapter."
-#~ msgstr ""
-#~ "Només teniu un adaptador de xarxa configurat al sistema:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Ara es configurarà la vostra xarxa d'àrea local amb aquest adaptador."
-
-#~ msgid "%s already in use\n"
-#~ msgstr "%s ja és en ús\n"
-
-#~ msgid "DrakVPN"
-#~ msgstr "DrakVPN"
-
-#~ msgid "The VPN connection is enabled."
-#~ msgstr "La connexió VPN està habilitada."
-
-#~ msgid ""
-#~ "The setup of a VPN connection has already been done.\n"
-#~ "\n"
-#~ "It's currently enabled.\n"
-#~ "\n"
-#~ "What would you like to do?"
-#~ msgstr ""
-#~ "La configuració de l'una connexió VPN ja s'ha dut a terme.\n"
-#~ "\n"
-#~ "Ara està habilitada.\n"
-#~ "\n"
-#~ "Què voleu fer?"
-
-#~ msgid "disable"
-#~ msgstr "inhabilita"
-
-#~ msgid "reconfigure"
-#~ msgstr "torna a configurar"
-
-#~ msgid "dismiss"
-#~ msgstr "deixa-ho córrer"
-
-#~ msgid "Disabling VPN..."
-#~ msgstr "S'està inhabilitant VPN..."
-
-#~ msgid "The VPN connection is now disabled."
-#~ msgstr "La connexió VPN està inhabilitada."
-
-#~ msgid "VPN connection currently disabled"
-#~ msgstr "La connexió VPN està desactivada en aquests moments"
-
-#~ msgid ""
-#~ "The setup of a VPN connection has already been done.\n"
-#~ "\n"
-#~ "It's currently disabled.\n"
-#~ "\n"
-#~ "What would you like to do?"
-#~ msgstr ""
-#~ "La configuració de l'una connexió VPN ja s'ha dut a terme.\n"
-#~ "\n"
-#~ "Ara està inhabilitada.\n"
-#~ "\n"
-#~ "Què voleu fer?"
-
-#~ msgid "enable"
-#~ msgstr "habilita"
-
-#~ msgid "Enabling VPN..."
-#~ msgstr "S'està habilitant VPN..."
-
-#~ msgid "The VPN connection is now enabled."
-#~ msgstr "La connexió VPN està activada en aquests moments."
-
-#~ msgid "Simple VPN setup."
-#~ msgstr "Configuració de VPN simple."
-
-#~ msgid "Problems installing package %s"
-#~ msgstr "Hi ha hagut problemes en instal·lar el paquet %s"
-
-#
-#~ msgid "Security Policies"
-#~ msgstr "Polítiques de seguretat"
-
-#
-#~ msgid "Configuration file"
-#~ msgstr "Fitxer de configuració"
-
-#~ msgid "%s entries"
-#~ msgstr "%s entrades"
-
-#~ msgid ""
-#~ "_:display here is a verb\n"
-#~ "Display"
-#~ msgstr "Visualització"
-
-#
-#~ msgid "Edit"
-#~ msgstr "Edita"
-
-#~ msgid "Commit"
-#~ msgstr "Entrega"
-
-#~ msgid ""
-#~ "_:display here is a verb\n"
-#~ "Display configuration"
-#~ msgstr "Mostra la configuració"
-
-#~ msgid "Edit section"
-#~ msgstr "Edita secció"
-
-#~ msgid "Section names"
-#~ msgstr "Noms de secció"
-
-#
-#~ msgid "Remove section"
-#~ msgstr "Elimina secció"
-
-#~ msgid "path"
-#~ msgstr "camí"
-
-#~ msgid "remote"
-#~ msgstr "remot"
-
-#~ msgid "real file"
-#~ msgstr "fitxer real"
-
-#~ msgid "Congratulations!"
-#~ msgstr "Felicitats!"
-
-#~ msgid "Encryption algorithm"
-#~ msgstr "Algoritme de xifrat"
-
-#~ msgid "Authentication algorithm"
-#~ msgstr "Algoritme d'autenticació"
-
-#~ msgid "Compression algorithm"
-#~ msgstr "Algoritme de compresió"
-
-#~ msgid "Remote"
-#~ msgstr "Remot"
-
-#~ msgid "off"
-#~ msgstr "No"
-
-#~ msgid "on"
-#~ msgstr "Si"
-
-#~ msgid "Passive"
-#~ msgstr "Passiu"
-
-#~ msgid "Name of the certificate"
-#~ msgstr "Nom del certificat"
-
-#~ msgid "Name of the private key"
-#~ msgstr "Nom de la clau privada"
-
-#~ msgid "Authentication method"
-#~ msgstr "Mètode d'autenticació"
-
-#~ msgid "DH group"
-#~ msgstr "Grup DH"
-
-#~ msgid "Command"
-#~ msgstr "Ordre"
-
-#~ msgid "Flag"
-#~ msgstr "Bandera"
-
-#~ msgid "Direction"
-#~ msgstr "Direcció"
-
-#~ msgid "ipsec"
-#~ msgstr "ipsec"
-
-#~ msgid "Source/destination"
-#~ msgstr "Font/destí"
-
-#~ msgid "Level"
-#~ msgstr "Nivell"
-
-#~ msgid "default"
-#~ msgstr "predeterminat"
-
-#~ msgid "You need to log out and back in again for changes to take effect"
-#~ msgstr ""
-#~ "Heu de sortir i tornar a entrar per tal que els canvis tinguin efecte"
-
-#~ msgid "Disconnect..."
-#~ msgstr "Desconnecta..."
-
-#~ msgid "Connect..."
-#~ msgstr "Connecta..."
-
-#~ msgid "Attacker"
-#~ msgstr "Atacant"
-
-#~ msgid "Attack type"
-#~ msgstr "Tipus d'atac"
-
-#~ msgid "Get Online Help"
-#~ msgstr "Obtenir ajuda en línia"
