@@ -264,8 +264,7 @@ sub host_hex_to_dotted {
 sub get_routes() {
     my %routes;
     my @routes = cat_("/proc/net/route");
-    require any;
-    @routes = reverse(@routes) if any::cmp_kernel_versions(c::kernel_version(), "2.6.39") >= 0;
+    @routes = reverse(@routes) if common::cmp_kernel_versions(c::kernel_version(), "2.6.39") >= 0;
     foreach (@routes) {
 	if (/^(\S+)\s+([0-9A-F]+)\s+([0-9A-F]+)\s+[0-9A-F]+\s+\d+\s+\d+\s+(\d+)\s+([0-9A-F]+)/) {
 	    if (defined $3) { $routes{$1}{gateway} = hex($3) ? host_hex_to_dotted($3) : $routes{$1}{network} }
