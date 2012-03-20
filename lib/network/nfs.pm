@@ -77,7 +77,7 @@ sub write_nfs_ports {
     $lockd_options .= " nlm_tcpport=$ports->{lockd_tcp_port}" if $ports->{lockd_tcp_port};
     $lockd_options .= " nlm_udpport=$ports->{lockd_udp_port}" if $ports->{lockd_udp_port};
     if ($lockd_options ne "") {
-        output("$::prefix/etc/modprobe.d/lockd.drakx", "options lockd $lockd_options\n");
+        output("$::prefix/etc/modprobe.d/lockd.drakx.conf", "options lockd $lockd_options\n");
     }
     # nfs-server
     substInFile {
