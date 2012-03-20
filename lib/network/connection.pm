@@ -181,6 +181,7 @@ sub set_provider {
     if ($self->{provider_name} ne N("Unlisted - edit manually")) {
         my @providers_data = $self->get_providers;
         $self->{provider} = $providers_data[0]{$self->{provider_name}};
+        # FIXME: undeclared variable:
         $self->apply_provider_settings($net);
     }
 }
