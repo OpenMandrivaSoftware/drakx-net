@@ -183,7 +183,7 @@ sub get_items() {
 
 		 [ N("/_Help") . N("/_Samba Documentation"), undef, sub {
 		     $in->do_pkgs->ensure_is_installed('samba-doc', '/usr/share/doc/samba-doc');
-		     system("/usr/bin/www-browser /usr/share/doc/samba-doc/htmldocs/index.html &");
+		     run_program::raw({ detach => 1 }, 'www-browser', '/usr/share/doc/samba-doc/htmldocs/index.html');
 		     },
 		   1, '<Item>', ],
 
@@ -899,7 +899,7 @@ sub remove_entry {
 
 sub remove_user {
   my ($user) = @_;
-  system("smbpasswd -x $user");
+  system('smbpasswd', '-x', $user);
 }
 
 sub get_user() {
@@ -942,7 +942,7 @@ sub modify_user_info {
 				   if (any { /^$user_selected:/ } cat_("/etc/samba/smbpasswd")) {
 				     err_dialog(N("Error"), ("Samba User already exist")) and return;
 				   }
-				   system("smbpasswd -a $user_selected -n");
+				   system('smbpasswd', '-a', $user_selected, '-n');
 				   push @{$user_list->{data}}, [
 								$pixbuf_user,
 								$user_selected,
@@ -1265,7 +1265,7 @@ sub global_special_options() {
   my $conf = "/etc/group";
   my @groups = map { if_(m/^([^#:]+):[^:]+:([^:]+):/ and $2 > 499, $1) } cat_($conf);
   foreach (@groups) {
-      system("net groupmap add unixgroup=$_ ntgroup=$_");
+      system(qw(net groupmap add), "unixgroup=$_", "ntgroup=$_");
   }
 }
 
