@@ -388,7 +388,7 @@ sub load_interface_settings {
     $self->{hide_passwords} = 1;
     # override ifcfg with network-specific settings if available
     my $network = $self->get_selected_network;
-    $self->{ifcfg}= $network ?
+    $self->{ifcfg} = $network ?
       get_network_ifcfg($network->{ap}) || get_network_ifcfg($network->{essid}) :
       $self->{ifcfg};
 
@@ -970,7 +970,7 @@ sub wpa_supplicant_read_conf() {
         if ($network) {
             #- in a "network = {}" block
             # value is either the string with "quotes" - or a full-length string
-            if (/^\s*(\w+)=\s*(?|([^"].*)|("[^"]*")).*$/) {
+            if (/^\s*(\w+)=\s*(?|([^"].*)|("[^"]*"))/) {
                 $network->{$1} = $2;
             } elsif (/^\}/) {
                 #- end of network block

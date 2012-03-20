@@ -5,15 +5,6 @@ use common;
 
 use base qw(network::connection);
 
-my %authentication_methods = (
-    script => N_("Script-based"),
-    pap => N_("PAP"),
-    terminal_ => N_("Terminal-based"),
-    chap => N_("CHAP"),
-    pap_chap => N_("PAP/CHAP"),
-);
-
-my @kppp_authentication_methods = qw(script pap terminal chap pap_chap);
 my @secrets_files = qw(pap-secrets chap-secrets);
 
 sub get_access_settings {

@@ -465,10 +465,7 @@ sub read_ipsec_conf {
 	my ($ipsec_conf) = @_;
 	my %conf;
 	my $nb = 0; #total number
-	my $i = 0; #nb within a connexion
 	my $in_a_conn = "n";
-	my $line = "";
-	my @line1;
 	local $_;
 		my @mylist;
 		my $myline = "";

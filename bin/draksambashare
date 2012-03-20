@@ -183,7 +183,7 @@ sub get_items() {
 
 		 [ N("/_Help") . N("/_Samba Documentation"), undef, sub {
 		     $in->do_pkgs->ensure_is_installed('samba-doc', '/usr/share/doc/samba-doc');
-		     system("/usr/bin/www-browser /usr/share/doc/samba-doc/htmldocs/index.html &")
+		     system("/usr/bin/www-browser /usr/share/doc/samba-doc/htmldocs/index.html &");
 		     },
 		   1, '<Item>', ],
 
@@ -255,7 +255,7 @@ sub show_file_dialog {
     }
     $file_dlg->hide;
     $file_dlg->destroy;
-};
+}
 
 sub get_samba_share() {
   undef @listshare;
@@ -368,7 +368,7 @@ sub add_entry() {
     my ($addshare_name, $addshare_comment, $addshare_dir);
     $_ = Gtk2::Entry->new foreach $addshare_name, $addshare_comment, $addshare_dir;
     my $button = Gtk2::Button->new(N("Open"));
-    $button->signal_connect(clicked => sub { show_file_dialog($addshare_dir); });
+    $button->signal_connect(clicked => sub { show_file_dialog($addshare_dir) });
 
     my $dialog = _create_dialog(N("DrakSamba add entry"), { transient_for => $::main_window, modal => 1 });
     local $::main_window = $dialog;
@@ -565,7 +565,7 @@ sub modify_printers_entry {
   $use_client_driver->set_text($printer_list->{data}[$selected][14]);
 
   my $button = Gtk2::Button->new(N("Open"));
-  $button->signal_connect(clicked => sub { show_file_dialog($dir); });
+  $button->signal_connect(clicked => sub { show_file_dialog($dir) });
 
   my $dialog = _create_dialog(N("DrakSamba Printers entry"), { transient_for => $::main_window, modal => 1 });
 
@@ -685,7 +685,7 @@ sub modify_entry {
   $_->set_popdown_strings(@yesno) foreach $browseable, $public, $writable, $hide_dot_files, $preserve_case, $inherit_permissions;
 
   my $button = Gtk2::Button->new(N("Open"));
-  $button->signal_connect(clicked => sub { show_file_dialog($dir); });
+  $button->signal_connect(clicked => sub { show_file_dialog($dir) });
 
   my $w = ugtk2->new(N("DrakSamba entry"));
   $w->{window}->set_modal(1);
@@ -1151,7 +1151,7 @@ sub configure_samba {
 						     next => 'ask_log',
 						    },
 				      ask_log => {
-						  name => N("Samba Log") . "\n" . N("Log file: use file.%m to use a separate log file for each machine that connects") . "\n" . N("Log level: set the log (verbosity) level (0 <= log level <= 10)") . "\n" . N("Max Log size: put a capping on the size of the log files (in Kb)."),
+						  name => N("Samba Log") . "\n" . N("Log file: use %s to use a separate log file for each machine that connects", "file.%m") . "\n" . N("Log level: set the log (verbosity) level (0 <= log level <= 10)") . "\n" . N("Max Log size: put a capping on the size of the log files (in Kb)."),
 						  pre => sub {
 						    $o->{var}{wiz_log_file} ||= $samba->{global}{'log file'};
 						    $o->{var}{wiz_log_level} ||= $samba->{global}{'log level'};
@@ -1180,11 +1180,15 @@ sub configure_samba {
 							   { text => N(" "), advanced => 1 },
                                                            { label => N("Unix Charset:"), val => \$o->{var}{wiz_unixcharset}, help => "Unix Charset pecifies the charset the unix machine Samba runs on uses.", advanced => 1 },
                                                            { label => N("Dos Charset:"), val => \$o->{var}{wiz_doscharset}, help => "Dos Charset specifies which charset Samba should talk to DOS clients.", advanced => 1 },
-                                                           { label => N("Display Charset:"), val => \$o->{var}{wiz_displaycharset}, help=> "Display Charset specifies the charset that samba will use to print messages to stdout and stderr. The default value is 'LOCALE', which means automatically set, depending on the current locale.", advanced => 1 },
+                                                           { label => N("Display Charset:"), val => \$o->{var}{wiz_displaycharset}, help => "Display Charset specifies the charset that samba will use to print messages to stdout and stderr. The default value is 'LOCALE', which means automatically set, depending on the current locale.", advanced => 1 },
 							  ],
 						  post => sub {
 							   $samba->{global}{workgroup} = $o->{var}{wiz_workgroup};
-							   $o->{var}{wiz_netbios_name} ? $samba->{global}{"netbios name"} = $o->{var}{wiz_netbios_name} : delete $samba->{global}{"netbios name"};
+							   if ($o->{var}{wiz_netbios_name}) {
+                                                               $samba->{global}{"netbios name"} = $o->{var}{wiz_netbios_name};
+                                                           } else {
+                                                               delete $samba->{global}{"netbios name"};
+                                                           }
 							   $samba->{global}{'server string'} = $o->{var}{wiz_banner};
 							   $o->{var}{wiz_log_file} and $samba->{global}{'log file'} = $o->{var}{wiz_log_file};
 							   $o->{var}{wiz_log_level} and $samba->{global}{'log level'} = $o->{var}{wiz_log_level};
@@ -1207,14 +1211,34 @@ sub configure_samba {
  
 sub global_special_options() {
   # set charset
-  $o->{var}{wiz_doscharset} ? $samba->{global}{'dos charset'} = $o->{var}{wiz_doscharset} : delete $samba->{global}{'dos charset'};
-  $o->{var}{wiz_unixcharset} ? $samba->{global}{'unix charset'} = $o->{var}{wiz_unixcharset} : delete $samba->{global}{'unix charset'};
-  $o->{var}{wiz_displaycharset} ? $samba->{global}{'display charset'} = $o->{var}{wiz_displaycharset} : delete $samba->{global}{'display charset'};
-  $o->{var}{wiz_security} ? $samba->{global}{security} = $o->{var}{wiz_security} : delete $samba->{global}{security};
-  $o->{var}{hosts_allow} ? $samba->{global}{'hosts allow'} = $o->{var}{hosts_allow} : delete $samba->{global}{'hosts allow'};
+  if ($o->{var}{wiz_doscharset}) {
+      $samba->{global}{'dos charset'} = $o->{var}{wiz_doscharset};
+  } else {
+      delete $samba->{global}{'dos charset'};
+  }
+  if ($o->{var}{wiz_unixcharset}) {
+      $samba->{global}{'unix charset'} = $o->{var}{wiz_unixcharset};
+  } else {
+      delete $samba->{global}{'unix charset'};
+  }
+  if ($o->{var}{wiz_displaycharset}) {
+      $samba->{global}{'display charset'} = $o->{var}{wiz_displaycharset};
+  } else {
+      delete $samba->{global}{'display charset'};
+  }
+  if ($o->{var}{wiz_security}) {
+      $samba->{global}{security} = $o->{var}{wiz_security};
+  } else {
+      delete $samba->{global}{security};
+  }
+  if ($o->{var}{hosts_allow}) {
+      $samba->{global}{'hosts allow'} = $o->{var}{hosts_allow};
+  } else {
+      delete $samba->{global}{'hosts allow'};
+  }
 #  $samba->{global}{security} = $o->{var}{wiz_security};
   # detect Samba type 3 is standalone
-  if ($o->{var}{wiz_type} == "3") {
+  if ($o->{var}{wiz_type} eq "3") {
     exists $samba->{global}{domain_master} and delete $samba->{global}{domain_master};
     exists $samba->{global}{'domain logons'} and delete $samba->{global}{'domain logons'};
     exists $samba->{global}{'wins support'} and delete $samba->{global}{'wins support'};
@@ -1237,10 +1261,7 @@ sub global_special_options() {
     
   }
   my $conf = "/etc/group";
-  my @groups;
-  foreach (cat_($conf)) {
-    push @groups, $1 if m/^([^#:]+):[^:]+:([^:]+):/ and $2 > 499;
-  }
+  my @groups = map { if_(m/^([^#:]+):[^:]+:([^:]+):/ and $2 > 499, $1) } cat_($conf);
   foreach (@groups) {
       system("net groupmap add unixgroup=$_ ntgroup=$_");
   }

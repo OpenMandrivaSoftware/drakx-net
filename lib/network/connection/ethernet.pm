@@ -188,7 +188,7 @@ sub check_address_settings {
             return 0;
         }
         #- test if IP address is already used
-        if (my $conflict = find { text2bool($_->{ONBOOT}) && $_->{DEVICE} ne $self->get_interface && $_->{IPADDR} eq $self->{address}{ip_address} } values %{$net->{ifcfg}} ) {
+        if (my $conflict = find { text2bool($_->{ONBOOT}) && $_->{DEVICE} ne $self->get_interface && $_->{IPADDR} eq $self->{address}{ip_address} } values %{$net->{ifcfg}}) {
             # find out what connection we are conflicting with
             my $conflict_device = $conflict->{DEVICE};
 
@@ -216,14 +216,14 @@ sub get_hostname_settings {
     my ($self) = @_;
     my $auto_hostname = sub { $self->{protocol} eq 'dhcp' && $self->{address}{needhostname} };
     # configure the default hostname so the hostname setting should be more obvious to the users
-    $self->{address}{hostname} = 'localhost.localdomain' unless $self->{address}{hostname};
+    $self->{address}{hostname} ||= 'localhost.localdomain';
     [
         if_($self->{protocol} eq 'dhcp',
             { text => N("Assign host name from DHCP server (or generate a unique one)"), val => \$self->{address}{needhostname}, type => "bool",
-            help => N("This will allow the server to attribute a name for this machine. If the server does not provides a valid host name, it will be generated automatically.")},
+            help => N("This will allow the server to attribute a name for this machine. If the server does not provides a valid host name, it will be generated automatically.") },
         ),
         { label => N("Host name"), val => \$self->{address}{hostname}, disabled => $auto_hostname,
-        help => N("You should define a hostname for this machine, which will identify this PC. Note that this hostname will be shared among all network connections.  If left blank, 'localhost.localdomain' will be used.")},
+        help => N("You should define a hostname for this machine, which will identify this PC. Note that this hostname will be shared among all network connections.  If left blank, 'localhost.localdomain' will be used.") },
     ];
 }
 
@@ -508,7 +508,6 @@ sub update_iftab() {
 }
 
 sub update_udev_net_config() {
-    my $lib = arch() =~ /x86_64/ ? "lib64" : "lib";
     my $net_name_helper = "/lib/udev/write_net_rules";
     my $udev_net_config = "$::prefix/etc/udev/rules.d/70-persistent-net.rules";
     my @old_config = cat_($udev_net_config);

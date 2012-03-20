@@ -29,7 +29,7 @@ sub set_config_file {
 	    $done = 1;
 	} else {
 	    $_ = '' unless
-	      /^#/ or $file eq 'rules' && /^SECTION/;
+	      /^#/ || $file eq 'rules' && /^SECTION/;
 	}
     } "$::prefix${shorewall_root}/$file";
 }
@@ -206,7 +206,7 @@ What do you want to do?"),
         if_($use_pptp, [ 'ACCEPT', 'fw', 'loc:10.0.0.138', 'gre' ]),
         (map_each { [ 'ACCEPT', 'net', 'fw', $::a, join(',', @$::b), '-' ] } %$ports_by_proto),
         (map_each {
-            if_($::b, map { [ 'ACCEPT+', 'fw', 'net', 'tcp', $::a, '-', '-', '-', $_ ] } @{$::b});
+            if_($::b, map { [ 'ACCEPT+', 'fw', 'net', 'tcp', $::a, '-', '-', '-', $_ ] } @$::b);
         } %{$conf->{accept_local_users}}),
         (map {
             my $proto = $_;

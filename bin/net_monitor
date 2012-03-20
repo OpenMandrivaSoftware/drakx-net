@@ -183,17 +183,17 @@ sub main_quit() {
     ugtk2->exit(0);
 }
 
-sub getcurrentintf {
+sub getcurrentintf() {
     my $currp = $notebook->get_current_page;
     foreach (@interfaces) {
         my $intf = $_;
-        return $intf if ($monitor->{$intf}{page} == $currp)
+        return $intf if $monitor->{$intf}{page} == $currp;
     }
 }
 
-sub intf_reset {
+sub intf_reset() {
     # resets counters for currently selected tab
-    my $intf = getcurrentintf;
+    my $intf = getcurrentintf();
     if (defined $intf) {
         $monitor->{$intf}{totalt} = 0;
         $monitor->{$intf}{totalr} = 0;
@@ -276,7 +276,7 @@ sub connection() {
 
     gtkflush();
 
-    print ("Action on " . getcurrentintf() . "\n");
+    print "Action on " . getcurrentintf() . "\n";
 
     $tool_pid =
     $wasconnected == 1
@@ -300,17 +300,17 @@ sub rescan() {
         # prevent for case 32 bits or 64 bits unsigned value of /proc (if rotate to zero)
         if ($diffr < 0) { 
             if ($refr < 2**32) { # transition (2^32 - 1) to 0
-                $diffr += 2**32 
+                $diffr += 2**32;
             } else { $diffr += 2**64 } # transition (2^64 - 1) to 0
             # { $diffr = 0; $monitor->{$intf}{totalr} = 0 } # Alternatively, if bug for very big number in perl
-        }; 
+        }
         # prevent for case 32 bits or 64 bits unsigned value of /proc (if rotate to zero)
         if ($difft < 0) { 
             if ($reft < 2**32) { # transition (2^32 - 1) to 0
-                $difft += 2**32 
+                $difft += 2**32;
             } else { $difft += 2**64 } # transition (2^64 - 1) to 0
             # { $difft = 0; $monitor->{$intf}{totalt} = 0 } # Alternatively, if bug for very big number in perl
-        }; 
+        }
 
         $monitor->{$intf}{totalr} += $diffr;
         $monitor->{$intf}{totalt} += $difft;
@@ -448,7 +448,7 @@ sub update() {
                                 gtknew('HBox', spacing => 5, border_width => 5, children_tight => [
                                     color_button($gca, $colora),
                                     N("average") ]),
-                                gtknew('Button', text => N("Reset counters"), sensitive => 1, clicked => sub { intf_reset })
+                                gtknew('Button', text => N("Reset counters"), sensitive => 1, clicked => sub { intf_reset() })
                                 ]),
                             0, gtknew('VBox', border_width => 5, children_tight => [
                                 gtknew('Frame', text => N("Local measure"), shadow_type => 'etched_out', child => 

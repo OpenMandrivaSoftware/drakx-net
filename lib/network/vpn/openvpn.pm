@@ -294,7 +294,7 @@ sub cache_pkcs11_tokens {
             }
         }
     }
-    foreach $slot_id (keys %{$pkcs11_tokens->{slots}}) {
+    foreach my $slot_id (keys %{$pkcs11_tokens->{slots}}) {
         my ($type, $label);
         my @stdout; #- do rooted_get_stdout manually because pkcs11-tool may exit with non-zero code with proprietary modules
         run_program::rooted($::prefix, '/usr/bin/pkcs11-tool', '>', \@stdout, '--module', $openvpn_default_pkcs11_provider, '-O', '--slot', $slot_id);

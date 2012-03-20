@@ -118,7 +118,7 @@ sub show_file_dialog {
     }
     $file_dlg->hide;
     $file_dlg->destroy;
-};
+}
 
 sub get_nfs_data() {
 # /home/nis *(async,rw,no_root_squash)
@@ -269,7 +269,7 @@ sub add_modify_entry {
   $lsubtree_check->set_popdown_strings(@yesno);
 
   my $button = gtknew('Button', text => N("Directory"));
-  $button->signal_connect(clicked => sub { show_file_dialog($dir); });
+  $button->signal_connect(clicked => sub { show_file_dialog($dir) });
 
 # test if modify or add a nfs share
 
@@ -324,8 +324,8 @@ sub add_modify_entry {
        		else { $lsubtree_check->set_text("yes") }
       } else { next }
     }
-    foreach ($lsecure, $lsync) { if ($_->get_text =~ //) { $_->set_text("yes") } };
-    foreach ($lr, $lsubtree_check) { if ($_->get_text =~ //) { $_->set_text("no") } };
+    foreach ($lsecure, $lsync) { if ($_->get_text =~ //) { $_->set_text("yes") } }
+    foreach ($lr, $lsubtree_check) { if ($_->get_text =~ //) { $_->set_text("no") } }
   }
 
   $luserid->signal_connect(changed => sub {
@@ -370,7 +370,7 @@ sub add_modify_entry {
   $w->{window}->set_modal(1);
   $w->{window}->set_position('center');
 
-  $expender->signal_connect(activate => sub { $w->shrink_topwindow; });
+  $expender->signal_connect(activate => sub { $w->shrink_topwindow });
 
   gtkadd($w->{window},
          gtknew('VBox', spacing => 0, children_loose => [

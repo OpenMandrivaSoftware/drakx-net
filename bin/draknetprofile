@@ -104,15 +104,15 @@ sub load_netprofile_modules() {
 
 sub get_selected_profile() {
     my ($index) = $profiles_list->get_selected_indices;
-    if (not $index ) {
+    if (!$index) {
         my $pc = @{$profiles_list->{data}};
         my $index = 0;
         for (my $i = 0; $i < $pc; $i++) {
-            if ( $profiles_list->{data}[$i][0] == 1 ) {
+            if ($profiles_list->{data}[$i][0] == 1) {
                 $index = $i;
             }
         }
-    };
+    }
     defined $index && $profiles_list->{data}[$index][1];
 }
 
@@ -148,7 +148,7 @@ sub set_profile {
 }
 
 sub clone_profile() {
-    my $source_profile = get_selected_profile();
+    #my $source_profile = get_selected_profile();
     my $dialog = _create_dialog(N("New profile..."));
     my $entry_dialog = Gtk2::Entry->new;
     gtkpack($dialog->vbox,
@@ -181,7 +181,7 @@ sub delete_selected_profile() {
     my $profile = get_selected_profile();
     if ($profile eq $default_profile) {
         my $ret = warn_dialog(N("Warning"), N("Are you sure you want to delete the default profile?"));
-        return if not $ret;
+        return if !$ret;
     } elsif ($profile eq $net->{PROFILE}) {
         err_dialog(N("Error"), N("You can not delete the current profile. Please switch to a different profile first."));
         return;
