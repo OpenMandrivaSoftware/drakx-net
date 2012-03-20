@@ -291,7 +291,7 @@ sub set_ifw {
     }
 
     substInFile {
-            undef $_ if member($_, "INCLUDE /etc/ifw/rules", "iptables -I INPUT 2 -j Ifw");
+            undef $_ if m!^INCLUDE /etc/ifw/rules|^iptables -I INPUT 2 -j Ifw!;
     } "$::prefix/etc/shorewall/start";
     network::shorewall::set_in_file('start', $enabled, "INCLUDE /etc/ifw/start", "INCLUDE /etc/ifw/rules", "iptables -I INPUT 1 -j Ifw");
     network::shorewall::set_in_file('stop', $enabled, "iptables -D INPUT -j Ifw", "INCLUDE /etc/ifw/stop");
