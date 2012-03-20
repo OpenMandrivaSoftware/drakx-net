@@ -105,7 +105,7 @@ sub load_settings {
     $cmanager->{connection}->guess_network_access_settings if $cmanager->{connection}->can('guess_network_access_settings');
     if ($cmanager->{connection}->can('get_providers')) {
         $cmanager->{connection}->guess_provider_settings;
-        $cmanager->{connection}->set_provider;
+        $cmanager->{connection}->set_provider($cmanager->{net});
     }
     $cmanager->{connection}->guess_protocol($cmanager->{net}) if $cmanager->{connection}->can('guess_protocol');
     $cmanager->{connection}->guess_access_settings if $cmanager->{connection}->can('guess_access_settings');

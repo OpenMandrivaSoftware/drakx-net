@@ -195,7 +195,7 @@ sub real_main {
 
                    select_provider => {
                        pre => sub {
-                           $provider_settings = $connection->get_provider_settings;
+                           $provider_settings = $connection->get_provider_settings($net);
                            $connection->guess_provider_settings;
                        },
                        name => sub { $net->{type}->get_type_name . "\n\n" . N("Please select your provider:") },
