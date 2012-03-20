@@ -32,7 +32,7 @@ sub read_nfs_ports() {
         rpc_rquotad_port => $rpc_rquotad_port,
     };
     if (defined $statd_outgoing_port) {
-        $ports->{statd_outgoing_port} => $statd_outgoing_port,
+        $ports->{statd_outgoing_port} = $statd_outgoing_port;
     }
     $ports;
 }
