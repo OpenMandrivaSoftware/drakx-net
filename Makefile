@@ -43,7 +43,7 @@ cleandist:
 
 dist: cleandist
 	svn export -q -rBASE . $(NAME)-$(VERSION)
-	tar cfj ../$(NAME)-$(VERSION).tar.bz2 $(NAME)-$(VERSION)
+	tar cfa ../$(NAME)-$(VERSION).tar.xz $(NAME)-$(VERSION)
 	rm -rf $(NAME)-$(VERSION)
 
 gitdist: cleandist
