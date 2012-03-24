@@ -41,7 +41,18 @@ install:
 cleandist:
 	rm -rf $(NAME)-$(VERSION) ../$(NAME)-$(VERSION).tar*
 
-dist: cleandist git-svn
+dist: cleandist
+	rm -rf ../$(NAME)-$(VERSION).tar*
+	@if [ -e ".svn" ]; then \
+		$(MAKE) dist-svn; \
+	elif [ -e ".git" ]; then \
+		$(MAKE) dist-git; \
+	else \
+		echo "Unknown SCM (not SVN nor GIT)";\
+		exit 1; \
+	fi;
+	$(info $(NAME)-$(VERSION).tar.xz is ready)
+
 
 git-svn:
 	svn export -q -rBASE . $(NAME)-$(VERSION)
