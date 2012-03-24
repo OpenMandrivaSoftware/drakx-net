@@ -46,7 +46,7 @@ dist: cleandist
 	tar cfa ../$(NAME)-$(VERSION).tar.xz $(NAME)-$(VERSION)
 	rm -rf $(NAME)-$(VERSION)
 
-gitdist: cleandist
+dist-git: cleandist
 	git archive --prefix $(NAME)-$(VERSION)/ HEAD | bzip2 -9 > ../$(NAME)-$(VERSION).tar.bz2
 	rm -rf $(NAME)-$(VERSION)
 
