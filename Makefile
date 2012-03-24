@@ -41,7 +41,9 @@ install:
 cleandist:
 	rm -rf $(NAME)-$(VERSION) ../$(NAME)-$(VERSION).tar*
 
-dist: cleandist
+dist: cleandist git-svn
+
+git-svn:
 	svn export -q -rBASE . $(NAME)-$(VERSION)
 	tar cfa ../$(NAME)-$(VERSION).tar.xz $(NAME)-$(VERSION)
 	rm -rf $(NAME)-$(VERSION)
