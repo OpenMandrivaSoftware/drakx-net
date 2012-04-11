@@ -54,7 +54,7 @@ dist: cleandist
 	$(info $(NAME)-$(VERSION).tar.xz is ready)
 
 
-git-svn:
+dist-svn:
 	svn export -q -rBASE . $(NAME)-$(VERSION)
 	tar cfa ../$(NAME)-$(VERSION).tar.xz $(NAME)-$(VERSION)
 	rm -rf $(NAME)-$(VERSION)
