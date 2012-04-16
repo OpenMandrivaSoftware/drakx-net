@@ -227,7 +227,7 @@ my @thirdparty_settings = (
         firmware => {
             package => 'b43-openfwwf',
             url => 'http://www.ing-unibs.it/~openfwwf/',
-            test_file => 'b43-open/ucode5.fw',
+            test_file => 'b43/ucode5.fw',
         },
     },
 
