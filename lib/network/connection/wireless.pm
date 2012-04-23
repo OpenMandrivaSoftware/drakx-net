@@ -294,38 +294,21 @@ my @thirdparty_settings = (
         no_module_reload => 1,
     },
 
-    {
-        name => 'rt61',
-        matching => 'rt61pci',
-        description => 'Ralink RT61 802.11abg WLAN',
-        firmware => {
-            url => 'http://rt2x00.serialmonkey.com/',
-            test_file => 'rt2661.bin',
-        },
-    },
-
-    {
-        name => 'rt73',
-        matching => 'rt73usb',
-        description => 'Ralink RT73 802.11abg WLAN',
-        firmware => {
-            url => 'http://rt2x00.serialmonkey.com/',
-            test_file => 'rt73.bin',
-        },
-    },
-
     (map {
+      my ($version, $suffix) = @$_;
+      $suffix ||= $version;
       +{
-        name => "rt${_}",
-        matching => qr/^rt${_}(sta|)$/,
-        description => 'Ralink RT${_} WiFi',
+        name => "rt${version}",
+        matching => qr/^rt${version}(|pci|usb)$/,
+        description => "Ralink RT${version} WiFi",
         kernel_module => 1,
         firmware => {
+            package => 'ralink-firmware',
             url => 'http://www.ralinktech.com/',
-            test_file => "rt${_}.bin",
+            test_file => "rt${suffix}.bin",
         },
       };
-    } (2860, 2870, 3090)),
+    } ([ 61, 2661 ], [ 73 ], [ 2860 ], [ 2870 ], [ 3090 ])),
 
     {
         name => 'rtl8187se',
