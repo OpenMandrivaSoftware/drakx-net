@@ -41,7 +41,9 @@ sub ask_driver {
         require run_program;
         -d $::prefix . "$ndiswrapper_root/$driver" and run_program::rooted($::prefix, 'ndiswrapper', '-e', $driver);
 
-        unless (run_program::rooted($::prefix, 'ndiswrapper', '-i', $inf_file)) {
+        my $rooted_path = $inf_file;
+        $rooted_path =~ s!^$::prefix!!;
+        unless (run_program::rooted($::prefix, 'ndiswrapper', '-i', $rooted_path)) {
             $in->ask_warn(N("Error"), N("Unable to install the %s ndiswrapper driver!", $driver));
             return undef;
         }
