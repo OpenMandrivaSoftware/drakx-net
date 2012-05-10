@@ -47,7 +47,15 @@ sub stop_net_interface {
     stop_interface($net->{net_interface}, $detach);
 }
 
-sub connected() { gethostbyname("www.mageia.org") ? 1 : 0 }
+sub connected() {
+    if ($::isInstall) {
+        # gethostbyname() only reads /etc/resolv.conf once so if resolv.conf is
+        # not present when the test begins, writing it later is not going to help:
+        symlink "$::prefix/etc/resolv.conf", "/etc/resolv.conf" if ! -e "/etc/resolv.conf";
+        return scalar grep { /1 received/ } `$::prefix/bin/ping -qc1 www.mageia.org`;
+    }
+    gethostbyname("www.mageia.org") ? 1 : 0;
+}
 
 # request a ref on a bg_connect and a ref on a scalar
 sub connected_bg__raw {
