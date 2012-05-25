@@ -2,7 +2,7 @@ package network::connection::dvb;
 
 use base qw(network::connection::ethernet);
 
-use strict;
+
 use common;
 use modules;
 

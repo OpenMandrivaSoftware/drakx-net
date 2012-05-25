@@ -2,7 +2,7 @@ package network::vpn::vpnc;
 
 use base qw(network::vpn);
 
-use strict;
+
 use common;
 
 sub get_type { 'vpnc' }

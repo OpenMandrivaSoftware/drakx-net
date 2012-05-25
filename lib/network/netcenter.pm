@@ -4,7 +4,7 @@
 
 package network::netcenter;
 
-use strict;
+
 use common;
 use mygtk2;
 use ugtk2 qw(:create :helpers :wrappers);

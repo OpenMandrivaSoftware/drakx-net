@@ -1,6 +1,6 @@
 package network::connection_manager;
 
-use strict;
+
 
 use common;
 use run_program;

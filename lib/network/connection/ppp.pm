@@ -1,6 +1,6 @@
 package network::connection::ppp;
 
-use strict;
+
 use common;
 
 use base qw(network::connection);

@@ -1,6 +1,6 @@
 package network::test;          # $Id$
 
-use strict;
+
 use common;
 use run_program;
 use Socket;
