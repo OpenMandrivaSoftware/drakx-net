@@ -319,6 +319,17 @@ my @thirdparty_settings = (
         },
       };
     } ([ 61, 2661 ], [ 73 ], [ 2860 ], [ 2870 ], [ 3090 ])),
+
+    {
+        name => 'rtl8192',
+        matching => [ qw(rtl8192ce rtl8192cu rtl8192de rtl8192se) ],
+        description => 'Realtek RTL8192 WiFi',
+        url => 'http://www.ralinktech.com/',
+        firmware => {
+            package => 'rtlwifi-firmware',
+            test_file => 'rtlwifi/rtl8192sefw.bin',
+        },
+    },
 );
 
 sub get_packages { 'wireless-tools' }
