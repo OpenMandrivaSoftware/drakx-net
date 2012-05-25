@@ -319,13 +319,6 @@ my @thirdparty_settings = (
         },
       };
     } ([ 61, 2661 ], [ 73 ], [ 2860 ], [ 2870 ], [ 3090 ])),
-
-    {
-        name => 'rtl8187se',
-        matching => 'r8180',
-        description => 'Realtek RTL8180 / RTL8185 WiFi',
-        kernel_module => 1,
-    },
 );
 
 sub get_packages { 'wireless-tools' }
