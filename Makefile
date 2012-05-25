@@ -49,7 +49,7 @@ git-svn:
 	rm -rf $(NAME)-$(VERSION)
 
 dist-git: cleandist
-	git archive --prefix $(NAME)-$(VERSION)/ HEAD | bzip2 -9 > ../$(NAME)-$(VERSION).tar.bz2
+	git archive --prefix $(NAME)-$(VERSION)/ HEAD | xz -9 > ../$(NAME)-$(VERSION).tar.xz
 	rm -rf $(NAME)-$(VERSION)
 
 clean:
