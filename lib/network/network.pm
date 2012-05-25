@@ -108,7 +108,7 @@ sub write_network_conf {
     $net->{network}{NETWORKING} = 'yes';
 
     setVarsInSh($::prefix . $network_file, $net->{network}, qw(HOSTNAME NETWORKING GATEWAY GATEWAYDEV NISDOMAIN FORWARD_IPV4 NETWORKING_IPV6 IPV6_DEFAULTDEV CRDA_DOMAIN));
-    output($::prefix . $hostname_file, $net->{network}{HOSTNAME} || "localhost");
+    output($::prefix . $hostname_file, ($net->{network}{HOSTNAME} || "localhost") . "\n");
 }
 
 sub write_zeroconf {
