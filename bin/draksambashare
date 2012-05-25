@@ -244,6 +244,7 @@ my $label_and_widgets = sub {
 sub show_file_dialog {
     my ($data) = @_;
     my $file_dlg = gtknew('FileChooserDialog', title => N("Directory selection"), action => 'select_folder',
+                          # FIXME: undeclared variable:
         modal => 1, transient_for => $dlg);
     $file_dlg->set_filename($data->get_text);
     $file_dlg->show;
@@ -1050,6 +1051,7 @@ sub configure_samba {
     my @yesorno = qw(yes no); push @yesorno, "";
     my @loglevel = qw(0 1 2 3 4 5 6 7 8 9);
     my @security_list = qw(share user domain);
+    # FIXME: undeclared $o variable:
     my $wiz = wizards->new({
 			    name => N("Samba Wizard"),
 			    pages => {
