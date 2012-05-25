@@ -57,7 +57,7 @@ my @all_servers =
    pkg => 'nfs-utils nfs-utils-clients',
    ports => '111/tcp 111/udp 2049/tcp 2049/udp ' . network::nfs::list_nfs_ports(),
    hide => 1,
-   prepare => sub { network::nfs::write_nfs_ports(network::nfs::read_nfs_ports()); },
+   prepare => sub { network::nfs::write_nfs_ports(network::nfs::read_nfs_ports()) },
    restart => 'nfs-common nfs-server',
   },
   {

@@ -81,7 +81,7 @@ sub setup_connection {
             auto_window_size => 1,
         }, $cmanager->{connection}->get_hardware_settings) or return;
         if ($cmanager->{connection}->can("check_hardware_settings") && !$cmanager->{connection}->check_hardware_settings) {
-            $cmanager->{in}->ask_warn(N("Error"), $cmanager->{connection}->{hardware}{error});
+            $cmanager->{in}->ask_warn(N("Error"), $cmanager->{connection}{hardware}{error});
             return;
         }
     }
@@ -225,7 +225,7 @@ sub start_connection {
 			       }
 			       undef;
 			   });
-    };
+    }
 }
 
 sub stop_connection {
@@ -293,31 +293,31 @@ sub create_networks_list {
     });
     $cmanager->{gui}{networks_list}->set_has_tooltip(1);
     $cmanager->{gui}{networks_list}->get_column(1)->set_sort_column_id(1);
-    $cmanager->{gui}{networks_list}->get_model->set_sort_func (1, sub {
+    $cmanager->{gui}{networks_list}->get_model->set_sort_func(1, sub {
         my ($sortable, $iter_left, $iter_right) = @_;
         my $s1 = $sortable->get($iter_left, 2);
         my $s2 = $sortable->get($iter_right, 2);
         return $s1 cmp $s2;
     });
     $cmanager->{gui}{networks_list}->get_column(2)->set_sort_column_id(2);
-    $cmanager->{gui}{networks_list}->get_model->set_sort_func (2, sub {
+    $cmanager->{gui}{networks_list}->get_model->set_sort_func(2, sub {
         my ($sortable, $iter_left, $iter_right) = @_;
-        my $s1 = $cmanager->{connection}{networks}{$sortable->get($iter_left, 0)}->{signal_strength};
-        my $s2 = $cmanager->{connection}{networks}{$sortable->get($iter_right, 0)}->{signal_strength};
+        my $s1 = $cmanager->{connection}{networks}{$sortable->get($iter_left, 0)}{signal_strength};
+        my $s2 = $cmanager->{connection}{networks}{$sortable->get($iter_right, 0)}{signal_strength};
         return $s1 <=> $s2;
     });
     $cmanager->{gui}{networks_list}->get_column(3)->set_sort_column_id(3);
-    $cmanager->{gui}{networks_list}->get_model->set_sort_func (3, sub {
+    $cmanager->{gui}{networks_list}->get_model->set_sort_func(3, sub {
         my ($sortable, $iter_left, $iter_right) = @_;
-        my $s1 = $cmanager->{connection}{networks}{$sortable->get($iter_left, 0)}->{flags};
-        my $s2 = $cmanager->{connection}{networks}{$sortable->get($iter_right, 0)}->{flags};
+        my $s1 = $cmanager->{connection}{networks}{$sortable->get($iter_left, 0)}{flags};
+        my $s2 = $cmanager->{connection}{networks}{$sortable->get($iter_right, 0)}{flags};
 	#FIXME Should define an explicit order OPEN < WEP < WPA
         return $s1 cmp $s2;
     });
     $cmanager->{gui}{networks_list}->set_enable_search(1);
     $cmanager->{gui}{networks_list}->set_search_column(1);
     $cmanager->{gui}{networks_list}->set_search_equal_func(sub {
-                    my ($model, $column, $key, $iter, $data) = @_;
+                    my ($model, $_column, $key, $iter) = @_;
                         return $model->get($iter, 2) !~ /^\Q$key/i;
                     });
     # Sort by signal level by default

@@ -79,7 +79,7 @@ sub find_matching_devices {
 
     #- add original driver
     push @devices, { interface => undef, drivers => [ $device->{driver} ] }
-        if !$is_driver_listed->($device->{driver}) && any { $_ eq $device->{driver} } modules::loaded_modules();
+        if !$is_driver_listed->($device->{driver}) && member($device->{driver}, modules::loaded_modules());
 
     @devices;
 }
@@ -101,7 +101,7 @@ sub setup_device {
     my @conflicts = find_conflicting_devices($device);
     if (@conflicts) {
         $in->ask_yesorno(N("Warning"), N("The selected device has already been configured with the %s driver.
-Do you really want to use a ndiswrapper driver?", $conflicts[0]->{drivers}[0])) or return;
+Do you really want to use a ndiswrapper driver?", $conflicts[0]{drivers}[0])) or return;
         #- stop old interfaces
         network::tools::stop_interface($_->{interface}, 0) foreach grep { defined $_->{interface} } @conflicts;
         #- unload old modules before trying to load ndiswrapper

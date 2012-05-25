@@ -16,7 +16,7 @@ sub get_providers {
     # filtering out CDMA-only providers which we do not support for now
     my %providers = (
         %network::connection::providers::cellular::data,
-        grep_each{!$::b->{cdma} } %network::connection::providers::cellular_extra::data
+        grep_each { !$::b->{cdma} } %network::connection::providers::cellular_extra::data
     );
     (\%providers, '|');
 }
@@ -48,7 +48,7 @@ sub write_cellular_settings {
 sub guess_apn_from_chat {
     my ($self) = @_;
     my $chat = cat_($::prefix . $self->get_chat_file);
-    my $chat_apn = $chat =~ /\bAT\+CGDCONT=\d+,"IP","([^"]+)"/ && $1;
+    $chat =~ /\bAT\+CGDCONT=\d+,"IP","([^"]+)"/ && $1;
 }
 
 sub guess_provider_settings {

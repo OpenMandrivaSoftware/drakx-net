@@ -17,8 +17,6 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
 # 02111-1307, USA.
 
-my $version = "0.1";
-
 # i18n: IMPORTANT: to get correct namespace (drakhosts instead of libDrakX)
 BEGIN { unshift @::textdomains, 'drakhosts' }
 
@@ -80,7 +78,7 @@ sub add_modify_entry {
   my $model = $treeview->get_model;
   my $selection = $treeview->get_selection;
   my $iter;
-  my ($i, $ip, $hostname, $alias, $oldip);
+  my ($i, $ip, $hostname, $alias);
   undef $i;
   undef $iter;
 
@@ -103,7 +101,6 @@ sub add_modify_entry {
     $ip->set_text($listhosts[$i]{ip});
     $hostname->set_text($listhosts[$i]{hostname});
     $alias->set_text($listhosts[$i]{alias});
-    $oldip = $listhosts[$i]{ip};
   }
 
   my $text;
@@ -178,7 +175,6 @@ sub create_model() {
 # add colum to model
 sub add_columns {
   my $treeview = shift;
-  my $model = $treeview->get_model;
   each_index {
     my $renderer = Gtk2::CellRendererText->new;
     $renderer->set(editable => 0);

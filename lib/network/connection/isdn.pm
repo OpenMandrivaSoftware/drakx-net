@@ -23,6 +23,7 @@ use run_program;
 use log;
 use network::tools;
 use services;
+use network::connection::isdn::consts; # for @isdndata
 
 sub apply_config {
     my ($in, $isdn) = @_;

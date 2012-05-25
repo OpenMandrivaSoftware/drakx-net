@@ -124,7 +124,7 @@ sub real_main {
                    welcome => {
                     pre => sub { undef $net->{type} },
                     if_(!$::isInstall, no_back => 1),
-                    name => N("Choose the connection you want to configure") .  if_($net->{PROFILE} && network::network::netprofile_count() > 0, "\n".N("Those settings will be saved for the network profile <b>%s</b>", $net->{PROFILE}) ),
+                    name => N("Choose the connection you want to configure") . if_($net->{PROFILE} && network::network::netprofile_count() > 0, "\n" . N("Those settings will be saved for the network profile <b>%s</b>", $net->{PROFILE})),
                     if_(!$::isInstall, interactive_help_id => 'configureNetwork'),
                     data => [ { list => [ network::connection::get_types ],
                                 type => 'list', val => \$net->{type}, format => sub { $_[0] && $_[0]->get_type_description },
@@ -148,7 +148,7 @@ sub real_main {
                    select_connection => {
                        name => sub { $net->{type}->get_type_name . "\n\n" . N("Select the network interface to configure:") },
                        data => [ { val => \$connection, type => 'list', list => \@connections_list,
-                                   format => sub { $_[0] && N("%s: %s", $_[0]->get_interface, $_[0]->get_description) }, allow_empty_list => !text2bool($global_settings{AUTOMATIC_IFACE_CHOICE})} ],
+                                   format => sub { $_[0] && N("%s: %s", $_[0]->get_interface, $_[0]->get_description) }, allow_empty_list => !text2bool($global_settings{AUTOMATIC_IFACE_CHOICE}) } ],
                        complete => sub {
                            $connection->setup_thirdparty($in) or return 1;
                            $connection->prepare_device;
@@ -322,7 +322,7 @@ If you do not know it, keep the preselected protocol.") },
                                        sleep 1;
                                    }
                                }
-                               $success = $connection->get_status();
+                               $success = $connection->get_status;
                                # try to resolve the network address for some time
                                my $timeout = 3;
                                while ($timeout--) {

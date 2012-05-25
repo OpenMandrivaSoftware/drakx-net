@@ -113,7 +113,7 @@ sub resolve_address {
     eval {
         local $SIG{ALRM} = sub { die "ALARM" };
         alarm 2;
-        $hostname = gethostbyaddr(inet_aton($ip_addr), AF_INET);
+        $hostname = gethostbyaddr(inet_aton($ip_addr), Socket::AF_INET);
         alarm 0;
     };
     $hostname || $ip_addr;

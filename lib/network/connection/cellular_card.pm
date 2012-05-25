@@ -68,11 +68,11 @@ sub get_tty_device {
     my %udev_env = map { if_(/^([^=]*)=(.*)$/, $1 => $2) } chomp_(run_program::get_stdout("udevadm info --query=property --path=$self->{device}{sysfs_device}"));
 
     if ($udev_env{USB_MODEM_INTERFACE}) {
-        my $dev_sys_path = $self->{device}->{sysfs_device};
+        my $dev_sys_path = $self->{device}{sysfs_device};
         my $cfg = chomp_(cat_($dev_sys_path . "/bConfigurationValue"));
         my $tty_usb = basename(glob_("$dev_sys_path/" .
-            $self->{device}->{pci_bus} . "-" .
-            ($self->{device}->{usb_port} + 1) . ":$cfg." .
+            $self->{device}{pci_bus} . "-" .
+            ($self->{device}{usb_port} + 1) . ":$cfg." .
             $udev_env{USB_MODEM_INTERFACE} . "/ttyUSB*"));
         if ($tty_usb) {
             $tty_usb =~ s/ttyUSB//;
@@ -81,8 +81,8 @@ sub get_tty_device {
     } else {
         # if no usb interface for tty port given, use first one
         my @intfs = glob_("$self->{device}->{sysfs_device}/" .
-                     $self->{device}->{pci_bus} . "-" .
-                     ($self->{device}->{usb_port} + 1) . ":*");
+                     $self->{device}{pci_bus} . "-" .
+                     ($self->{device}{usb_port} + 1) . ":*");
         foreach (@intfs) {
             my $tty_usb = basename(glob_("$_/tty*"));
             if ($tty_usb) {
@@ -108,7 +108,7 @@ sub get_control_device {
     my ($self) = @_;
     my $tty_device = $self->get_tty_device;
     if ($tty_device eq "/dev/ttyUSB0") {
-        for my $id (2, 1) {
+        foreach my $id (2, 1) {
             my $usb_control_device = "/dev/ttyUSB" . $id;
             return $usb_control_device if -e $usb_control_device;
         }

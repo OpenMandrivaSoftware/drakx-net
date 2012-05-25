@@ -3,25 +3,25 @@ package network::nfs;
 use strict;
 use common;
 
-sub read_nfs_ports {
+sub read_nfs_ports() {
     my $statd_port = 4001;
-    my $statd_outgoing_port = undef;
+    my $statd_outgoing_port;
     my $lockd_tcp_port = 4002;
     my $lockd_udp_port = 4002;
     my $rpc_mountd_port = 4003;
     my $rpc_rquotad_port = 4004;
     if (-f "$::prefix/etc/sysconfig/nfs-common") {
             foreach (cat_("$::prefix/etc/sysconfig/nfs-common")) {
-            $_ =~ /^STATD_OPTIONS=.*(--port|-p) (\d+).*$/ and $statd_port = $2;
-            $_ =~ /^STATD_OPTIONS=.*(--outgoing-port|-o) (\d+).*$/ and $statd_outgoing_port = $2;
-            $_ =~ /^LOCKD_TCPPORT=(\d+)/ and $lockd_tcp_port = $1;
-            $_ =~ /^LOCKD_UDPPORT=(\d+)/ and $lockd_udp_port = $1;
+                /^STATD_OPTIONS=.*(--port|-p) (\d+)/ and $statd_port = $2;
+                /^STATD_OPTIONS=.*(--outgoing-port|-o) (\d+)/ and $statd_outgoing_port = $2;
+                /^LOCKD_TCPPORT=(\d+)/ and $lockd_tcp_port = $1;
+                /^LOCKD_UDPPORT=(\d+)/ and $lockd_udp_port = $1;
         }
     }
     if (-f "$::prefix/etc/sysconfig/nfs-server") {
         foreach (cat_("$::prefix/etc/sysconfig/nfs-server")) {
-            $_ =~ /^RPCMOUNTD_OPTIONS=.*(--port|-p) (\d+).*$/ and $rpc_mountd_port = $2;
-            $_ =~ /^RPCRQUOTAD_OPTIONS=.*(--port|-p) (\d+).*$/ and $rpc_rquotad_port = $2;
+            /^RPCMOUNTD_OPTIONS=.*(--port|-p) (\d+)/ and $rpc_mountd_port = $2;
+            /^RPCRQUOTAD_OPTIONS=.*(--port|-p) (\d+)/ and $rpc_rquotad_port = $2;
         }
     }
 
@@ -37,11 +37,11 @@ sub read_nfs_ports {
     $ports;
 }
 
-sub list_nfs_ports {
+sub list_nfs_ports() {
     my $ports = read_nfs_ports();
 
-    my $portlist = $ports->{lockd_tcp_port}. "/tcp " . $ports->{lockd_udp_port} . "/udp";
-    if (defined $ports->{statd_outgoing_port} and $ports->{statd_outgoing_port} ne $ports->{statd_port}) {
+    my $portlist = $ports->{lockd_tcp_port} . "/tcp " . $ports->{lockd_udp_port} . "/udp";
+    if (defined $ports->{statd_outgoing_port} && $ports->{statd_outgoing_port} ne $ports->{statd_port}) {
         $portlist .= " " . $ports->{statd_outgoing_port} . "/tcp " . $ports->{statd_outgoing_port} . "/udp";
     }
     foreach (qw(statd_port rpc_mountd_port rpc_rquotad_port)) {

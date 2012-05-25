@@ -41,7 +41,7 @@ sub select_connection {
     my ($droam) = @_;
 
     $droam->set_connection(get_connection($droam));
-    $droam->check_setup || $droam->setup_connection if $droam->{connection};
+    $droam->check_setup or $droam->setup_connection if $droam->{connection};
     update_on_connection_change($droam);
 }
 
@@ -54,7 +54,7 @@ sub update_on_connection_change {
 }
 
 sub create_drakroam_gui {
-    my ($droam, $dbus, $title, $icon) = @_;
+    my ($droam, $_dbus, $title, $icon) = @_;
 
     $droam->{gui}{model} = Gtk2::ListStore->new('Gtk2::Gdk::Pixbuf', 'Glib::String');
     $droam->{gui}{connections_combo} = Gtk2::ComboBox->new($droam->{gui}{model});
@@ -77,7 +77,7 @@ sub create_drakroam_gui {
         Glib::Timeout->add(20000, sub { $status_bar->remove($status_bar_cid, $m_id); 0 });
     };
 
-    (undef, my $rootwin_height) = gtkroot()->get_size();
+    (undef, my $rootwin_height) = gtkroot()->get_size;
     my $scrolled_height = $rootwin_height > 480 ? 300 : 225;
     gtkadd($droam->{gui}{w}{window},
            gtknew('VBox', spacing => 5, children => [
