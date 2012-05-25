@@ -5,7 +5,7 @@ package network::drakroam;
 # Olivier Blin, 2005-2006 <oblin@mandriva.com>
 # Licensed under the GPL
 
-
+use strict;
 
 use common;
 use interactive;

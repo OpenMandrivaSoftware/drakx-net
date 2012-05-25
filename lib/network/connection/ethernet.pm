@@ -2,7 +2,7 @@ package network::connection::ethernet; # $Id: ethernet.pm 147431 2007-03-21 17:0
 
 use base qw(network::connection);
 
-
+use strict;
 use common;
 use network::tools;
 

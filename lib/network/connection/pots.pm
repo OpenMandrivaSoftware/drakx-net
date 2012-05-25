@@ -2,7 +2,7 @@ package network::connection::pots;
 
 use base qw(network::connection::ppp);
 
-
+use strict;
 use common;
 
 sub get_type_name {

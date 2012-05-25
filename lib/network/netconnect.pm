@@ -1,6 +1,6 @@
 package network::netconnect; # $Id$
 
-
+use strict;
 use common;
 use log;
 use detect_devices;

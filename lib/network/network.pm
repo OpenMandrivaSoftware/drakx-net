@@ -4,14 +4,14 @@ package network::network; # $Id$wir
 #- misc imports
 #-######################################################################################
 
-
+use strict;
 
 use lang;
 use Socket;
 use common;
 use run_program;
 use network::tools;
-
+use vars qw(@ISA @EXPORT);
 use log;
 
 our $network_file = "/etc/sysconfig/network";

@@ -1,6 +1,6 @@
 package network::modem;	# $Id$
 
-
+use strict;
 use common;
 use any;
 use modules;

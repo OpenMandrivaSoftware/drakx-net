@@ -1,6 +1,6 @@
 package network::tools; # $Id$
 
-
+use strict;
 use common;
 use run_program;
 use c;

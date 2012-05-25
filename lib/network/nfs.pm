@@ -1,6 +1,6 @@
 package network::nfs;
 
-
+use strict;
 use common;
 
 sub read_nfs_ports {

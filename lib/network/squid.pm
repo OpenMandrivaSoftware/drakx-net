@@ -1,6 +1,6 @@
 package network::squid;
 
-
+use strict;
 use common;
 
 our $squid_conf_file = "$::prefix/etc/squid/squid.conf";

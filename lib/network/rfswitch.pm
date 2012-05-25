@@ -1,6 +1,6 @@
 package network::rfswitch;
 
-
+use strict;
 use MDK::Common;
 use detect_devices;
 

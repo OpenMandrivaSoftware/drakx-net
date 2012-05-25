@@ -14,7 +14,7 @@ network::drakvpn - Interactive VPN configuration
 
 =cut
 
-
+use strict;
 use common;
 
 use network::vpn;

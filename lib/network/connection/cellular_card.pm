@@ -2,7 +2,7 @@ package network::connection::cellular_card;
 
 use base qw(network::connection::cellular);
 
-
+use strict;
 use common;
 
 my $wrong_pin_error = N_("Wrong PIN number format: it should be 4 digits.");

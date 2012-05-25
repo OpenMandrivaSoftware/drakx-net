@@ -1,6 +1,6 @@
 package network::ndiswrapper;
 
-
+use strict;
 use common;
 use modules;
 use detect_devices;

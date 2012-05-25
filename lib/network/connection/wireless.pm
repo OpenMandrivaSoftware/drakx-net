@@ -2,7 +2,7 @@ package network::connection::wireless;
 
 use base qw(network::connection::ethernet);
 
-
+use strict;
 use common;
 use log;
 use network::network;
