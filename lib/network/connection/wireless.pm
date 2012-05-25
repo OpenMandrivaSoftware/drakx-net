@@ -322,7 +322,7 @@ my @thirdparty_settings = (
 
     {
         name => 'rtl8192',
-        matching => [ qw(rtl8192ce rtl8192cu rtl8192de rtl8192se) ],
+        matching => qr/^rtl8192/,
         description => 'Realtek RTL8192 WiFi',
         url => 'http://www.ralinktech.com/',
         firmware => {
