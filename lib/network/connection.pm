@@ -246,7 +246,7 @@ sub get_control_settings {
         { text => N("Allow users to manage the connection"), val => \$self->{control}{userctl}, type => "bool" },
         { text => N("Start the connection at boot"), val => \$self->{control}{onboot}, type => "bool" },
         { text => N("Enable traffic accounting"), val => \$self->{control}{accounting}, type => "bool" },
-        { text => N("Allow interface to be controlled by Network Manager"), val => \$self->{control}{nm_controlled}, type => "bool" },
+        { text => N("Allow interface to be controlled by NetworkManager"), val => \$self->{control}{nm_controlled}, type => "bool" },
         { label => N("Metric"), val => \$self->{control}{metric}, advanced => 1 },
         { label => N("MTU"), val => \$self->{control}{mtu}, advanced => 1,
           help => N("Maximum size of network message (MTU). If unsure, left blank.") },
