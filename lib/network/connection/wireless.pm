@@ -123,19 +123,20 @@ my @thirdparty_settings = (
     },
 
     (map {
-        my ($version, $ucode_api, $ucode_version) = @$_;
+        my ($version, $ucode_api, $ucode_version, $package) = @$_;
         $ucode_version ||= $version;
+        $package ||= $version;
         {
             name => "iwl${version}",
-            description => "Intel(R) PRO/Wireless ${version}",
+            description => "Intel(R) PRO/Wireless ${package}",
             url => "http://intellinuxwireless.org/",
             firmware => {
-                package => "iwlwifi-${version}-ucode",
+                package => "iwlwifi-${package}-ucode",
                 test_file => "iwlwifi-${ucode_version}${ucode_api}.ucode",
             },
             sleep => 1,
         };
-    } ([ 3945, '-2' ], [ 4965, '-2' ], [ 'agn', '-5', 5000 ])),
+    } ([ 3945, '-2' ], [ 4965, '-2' ], [ 'wifi', '-5', 5000, 'agn' ])),
 
     {
         name => 'p54pci',
