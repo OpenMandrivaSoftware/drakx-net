@@ -723,7 +723,7 @@ sub detect_crda_domain() {
     if (!$crda) {
         my $locale = lang::read($>);
         my $country = $locale->{country};
-        if (grep($country, @crda_domains)) {
+        if (member($country, @crda_domains)) {
             $crda = $country;
         } else {
             $crda = "US";
