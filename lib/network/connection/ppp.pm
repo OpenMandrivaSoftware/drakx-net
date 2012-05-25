@@ -61,7 +61,7 @@ sub get_up_timeout { 20 }
 sub build_ifcfg_settings {
     my ($self) = @_;
     my $modemport = $self->get_tty_device;
-    my $settings = put_in_hash($self->{settings}, {
+    my $settings = {
         if_($modemport, MODEMPORT => $modemport),
         LINESPEED => "115200",
         PERSIST => "yes",
@@ -69,7 +69,7 @@ sub build_ifcfg_settings {
         #- FIXME: move in network::connection::cellular or network::connection::cellular_card
         if_($self->get_interface !~ /^hso/, DEBUG => "yes"),
         if_($self->{access}{cid}, CELLULAR_CID => $self->{access}{cid}),
-    });
+    };
     $self->SUPER::build_ifcfg_settings($settings);
 }
 
