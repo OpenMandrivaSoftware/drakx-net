@@ -48,12 +48,7 @@ sub stop_net_interface {
 }
 
 sub connected() {
-    if ($::isInstall) {
-        # gethostbyname() only reads /etc/resolv.conf once so if resolv.conf is
-        # not present when the test begins, writing it later is not going to help:
-        symlink "$::prefix/etc/resolv.conf", "/etc/resolv.conf" if ! -e "/etc/resolv.conf";
-        return scalar grep { /1 received/ } `$::prefix/bin/ping -qc1 www.mageia.org`;
-    }
+    c::res_init(); # reinit the resolver so DNS changes take affect
     gethostbyname("www.mandriva.com") ? 1 : 0;
 }
 

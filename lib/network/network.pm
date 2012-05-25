@@ -6,6 +6,7 @@ package network::network; # $Id$wir
 
 use strict;
 
+use c;
 use lang;
 use Socket;
 use common;
@@ -167,7 +168,7 @@ sub write_resolv_conf {
 	};
 	output_with_perm($file, 0644, @search, @nameserver, (map { "# $_\n" } @unknown), "\n# ppp temp entry\n");
 
-	#-res_init();		# reinit the resolver so DNS changes take affect
+	c::res_init(); # reinit the resolver so DNS changes take affect
 	1;
     } else {
 	log::explanations("neither domain name nor dns server are configured");
