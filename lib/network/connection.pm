@@ -177,11 +177,10 @@ sub guess_provider_settings {
 }
 
 sub set_provider {
-    my ($self) = @_;
+    my ($self, $net) = @_;
     if ($self->{provider_name} ne N("Unlisted - edit manually")) {
         my @providers_data = $self->get_providers;
         $self->{provider} = $providers_data[0]{$self->{provider_name}};
-        # FIXME: undeclared variable:
         $self->apply_provider_settings($net);
     }
 }
@@ -194,13 +193,13 @@ sub apply_provider_settings {
 
 #- check that $self->can('get_providers') first
 sub get_provider_settings {
-    my ($self) = @_;
+    my ($self, $net) = @_;
     my @providers_data = $self->get_providers;
     [
         {
             type => "list", val => \$self->{provider_name}, separator => $providers_data[1],
             list => [ N("Unlisted - edit manually"), sort(keys %{$providers_data[0]}) ], sort => 0,
-            changed => sub { $self->set_provider },
+            changed => sub { $self->set_provider($net) },
         },
     ];
 }
