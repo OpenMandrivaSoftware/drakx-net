@@ -15,6 +15,7 @@ use vars qw(@ISA @EXPORT);
 use log;
 
 our $network_file = "/etc/sysconfig/network";
+my $hostname_file = "/etc/hostname";
 my $resolv_file = "/etc/resolv.conf";
 my $tmdns_file = "/etc/tmdns.conf";
 our $wireless_d = "/etc/sysconfig/network-scripts/wireless.d";
@@ -107,6 +108,7 @@ sub write_network_conf {
     $net->{network}{NETWORKING} = 'yes';
 
     setVarsInSh($::prefix . $network_file, $net->{network}, qw(HOSTNAME NETWORKING GATEWAY GATEWAYDEV NISDOMAIN FORWARD_IPV4 NETWORKING_IPV6 IPV6_DEFAULTDEV CRDA_DOMAIN));
+    output($::prefix . $hostname_file, $net->{network}{HOSTNAME} || "localhost");
 }
 
 sub write_zeroconf {
@@ -290,6 +292,7 @@ sub write_hostname {
     my ($hostname) = @_;
 
     addVarsInSh($::prefix . $network_file, { HOSTNAME => $hostname }, qw(HOSTNAME));
+    output($::prefix . $hostname_file, $hostname || "localhost");
 
     add2hosts("localhost", "127.0.0.1");
     add2hosts($hostname, "127.0.0.1") if $hostname;
