@@ -6,7 +6,7 @@ use strict;
 use common;
 use network::tools;
 
-our @dhcp_clients = qw(dhclient dhcpcd pump dhcpxd);
+our @dhcp_clients = qw(dhcpcd dhclient pump dhcpxd);
 
 sub get_type_name() { N("Ethernet") }
 sub get_type_description() { N("Wired (Ethernet)") }
