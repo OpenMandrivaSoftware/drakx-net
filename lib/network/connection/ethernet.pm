@@ -319,6 +319,7 @@ use run_program;
 sub install_dhcp_client {
     my ($in, $client) = @_;
     my %packages = (
+        "dhcpcd" => "dhcpcd",
         "dhclient" => "dhcp-client",
     );
     #- use default dhcp client if none is provided
