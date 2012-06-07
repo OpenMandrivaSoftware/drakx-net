@@ -238,6 +238,7 @@ sub get_network_control_settings {
 sub guess_control_settings {
     my ($self) = @_;
     $self->{control}{metric} ||= $self->get_metric;
+    $self->{control}{nm_controlled} = 1 if !defined $self->{control}{nm_controlled};
 }
 
 sub get_control_settings {
