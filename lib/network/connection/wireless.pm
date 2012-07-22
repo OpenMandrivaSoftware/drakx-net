@@ -309,7 +309,7 @@ my @thirdparty_settings = (
             test_file => "rt${suffix}.bin",
         },
       };
-    } ([ 61, 2661 ], [ 73 ], [ 2860 ], [ 2870 ], [ 3090 ])),
+    } ([ 2800, 2860 ], [ 61, 2661 ], [ 73 ])),
 
     {
         name => 'rtlwifi',
