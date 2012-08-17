@@ -322,12 +322,11 @@ my @thirdparty_settings = (
     } ([ 61, 2661 ], [ 73 ], [ 2860 ], [ 2870 ], [ 3090 ])),
 
     {
-        name => 'rtl8192',
-        matching => qr/^rtl8192/,
-        description => 'Realtek RTL8192 WiFi',
-        url => 'http://www.ralinktech.com/',
+        name => 'rtlwifi',
+        matching => qr/^(rtl8192|r8712u$)/,
+        description => 'Realtek WiFi',
+        url => 'http://www.realtek.com.tw/',
         firmware => {
-            package => 'rtlwifi-firmware',
             test_file => 'rtlwifi/rtl8192sefw.bin',
         },
     },
