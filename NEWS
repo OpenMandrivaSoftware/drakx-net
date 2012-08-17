@@ -1,8 +1,8 @@
 Version 0.99 - 17 August 2012, by Per Øyvind Karlsen
 
 - fix installing ralink firmware for 2860 and 2870 chipsets
-  (also drop 3090 checks, the driver has been merged in othe
-- install rtlwifi-firmware for r8712u driver (#6064)
+  (also drop 3090 checks, the driver has been merged in others mga#5072)
+- install rtlwifi-firmware for r8712u driver (mga#6064)
 
 Version 0.98 -  7 June 2012, by Per Øyvind Karlsen
 
@@ -11,7 +11,7 @@ Version 0.98 -  7 June 2012, by Per Øyvind Karlsen
 
 0.97
 - fix connectivity test during install (and possibly standalone) by 
-  calling res_init before hostname resolution (#5772)
+  calling res_init before hostname resolution (mga#5772)
 - fix testing network connectivy test after resolv.conf changes
   (Derek Jennings, mga#5772)
 - another fix for iwlagn firmware installation since reported module
@@ -23,10 +23,10 @@ Version 0.98 -  7 June 2012, by Per Øyvind Karlsen
 - ndiswrapper: do not try to access the full chroot path when running
   in chroot (mga#56052)
 - install ralink-firmware for rt61/73/2860/2870/3090 drivers
-- fix iwlagn firmware package installation (#5549) and make
+- fix iwlagn firmware package installation (mga#5549) and make
   iwl3945/4965 check faster by fixing test file
-- change path to b43 firmware according to kernel changes (#5419)
-- ensure /etc/hostname has a newline as per upstream specs (#4672)
+- change path to b43 firmware according to kernel changes (mga#5419)
+- ensure /etc/hostname has a newline as per upstream specs (mga#4672)
 - nfs: add .conf suffix to lockd.drakx file in /etc/modprobe.d
 - drakfirewall:
   o fix listing NFS ports
@@ -35,9 +35,9 @@ Version 0.98 -  7 June 2012, by Per Øyvind Karlsen
   (might help #1015 & the like)
 - drakfirewall: list SSL flavor of POP3/IMAP/SMTP ports
 - hostname: update the /etc/hostname (new x-distro standard) file on hostname
-  change (#2983)
-- wireless scan: use programs from prefix, not installer root (#1452)
-- make sure all strings ended in translation catalogs (#3371)
+  change (mga#2983)
+- wireless scan: use programs from prefix, not installer root (mga#1452)
+- make sure all strings ended in translation catalogs (mga#3371)
 - install b43-openfwwf for b43 chips instead of requiring external firmware files
 - Follow drakxtools API changes
 
