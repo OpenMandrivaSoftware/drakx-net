@@ -16,7 +16,7 @@ sub get_devices() {
     #require list_modules;
     #- FIXME: try to use list_modules::ethernet_categories() (but remove wireless stuff)
     require detect_devices;
-    my @devices = detect_devices::probe_category('network/main|gigabit|pcmcia|tokenring|usb|firewire');
+    my @devices = detect_devices::probe_category('network/main|gigabit|pcmcia|usb|firewire');
     my @lan = grep { detect_devices::is_lan_interface($_) && !detect_devices::is_wireless_interface($_) } detect_devices::get_all_net_devices();
     @devices, get_unlisted_devices(\@lan, \@devices);
 }
