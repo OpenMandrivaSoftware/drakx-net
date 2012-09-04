@@ -48,6 +48,10 @@ sub stop_net_interface {
 }
 
 sub connected() {
+    # if no resolv.conf from stage1, use the one we wrote in chroot:
+    if ($::isInstall && ! -e "/etc/resolv.conf") {
+        symlink "$::prefix/etc/resolv.conf", "/etc/resolv.conf";
+    }
     c::res_init(); # reinit the resolver so DNS changes take affect
     gethostbyname("www.mandriva.com") ? 1 : 0;
 }
