@@ -96,7 +96,7 @@ sub update_ct_sync_state() {
 
 gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children_tight => [
-           $::isEmbedded ? () : Gtk2::Banner->new('invictus-52', $title),
+           $::isEmbedded ? () : Gtk2::Banner->new('invictus-32', $title),
            gtknew('WrappedLabel', text => N("This tool allows to set up network interfaces failover and firewall replication.")),
            gtknew('Frame', border_width => 5,
                   text => N("Network redundancy (leave empty if interface is not used)"),
