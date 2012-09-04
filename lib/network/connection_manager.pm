@@ -125,6 +125,7 @@ sub write_settings {
 
 sub configure_connection {
     my ($cmanager) = @_;
+    return if !ref($cmanager->{connection});
 
     if (!$cmanager->check_setup) {
         $cmanager->setup_connection or return;
