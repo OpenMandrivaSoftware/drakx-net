@@ -314,13 +314,12 @@ If you do not know it, keep the preselected protocol.") },
                                #- or start interface synchronously
                                if (!$::isInstall) {
                                    services::start('network-up');
-                               } else {
-                                   my $timeout = $connection->get_up_timeout;
-                                   while ($timeout--) {
-                                       my $status = $connection->get_status;
-                                       last if $status;
-                                       sleep 1;
-                                   }
+                               }
+                               my $timeout = $connection->get_up_timeout;
+                               while ($timeout--) {
+                                   my $status = $connection->get_status;
+                                   last if $status;
+                                   sleep 1;
                                }
                                $success = $connection->get_status;
                                # try to resolve the network address for some time
