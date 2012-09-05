@@ -802,7 +802,7 @@ sub easy_dhcp {
 sub reload_net_applet() {
     #- make net_applet reload the configuration
     my $pid = chomp_(`pidof -x net_applet`);
-    $pid and kill 1, $pid;
+    $pid and eval { kill 1, $pid };
 }
 
 sub configure_network {
