@@ -98,7 +98,7 @@ sub get_tty_device {
     $self->get_driver eq "nozomi" ?
       "/dev/noz" . $tty_interface :
     $self->get_driver eq "cdc_acm" ?
-      "/dev/ttyACM" . $tty_interface :
+      "/dev/ttyACM0" . $tty_interface :
     $self->get_driver eq "hso" ?
       "/dev/ttyHS" . $tty_interface :
       "/dev/ttyUSB" . $tty_interface;
