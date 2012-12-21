@@ -1,8 +1,5 @@
 package network::drakfirewall; # $Id$
 
-use strict;
-use diagnostics;
-
 use network::shorewall;
 use common;
 use network::nfs;
@@ -54,7 +51,7 @@ my @all_servers =
   },
   {
    name => N_("NFS Server"),
-   pkg => 'nfs-utils nfs-utils-clients',
+   pkg => 'nfs-utils',
    ports => '111/tcp 111/udp 2049/tcp 2049/udp ' . network::nfs::list_nfs_ports(),
    hide => 1,
    prepare => sub { network::nfs::write_nfs_ports(network::nfs::read_nfs_ports()) },
@@ -110,26 +107,20 @@ my @all_servers =
    name => N_("BitTorrent"),
    ports => '6881:6999/tcp',
    hide => 1,
-   pkg => 'bittorrent deluge ktorrent transmission vuze rtorrent ctorrent',
-  },
-  {
-   name => N_("Windows Mobile device synchronization"),
-   pkg => 'synce-hal',
-   ports => '990/tcp 999/tcp 5678/tcp 5679/udp 26675/tcp',
-   hide => 1,
+   pkg => 'bittorrent deluge ktorrent transmission vuze rtorrent ctorrent qbittorrent',
   },
 );
 
-my @ifw_rules = (
-    {
-        name => N_("Port scan detection"),
-        ifw_rule => 'psd',
-    },
-);
+#my @ifw_rules = (
+#    {
+#        name => N_("Port scan detection"),
+#        ifw_rule => 'psd',
+#    },
+#);
 
 # global network configuration
-my $net = {};
-network::network::read_net_conf($net);
+#my $net = {};
+#network::network::read_net_conf($net);
 
 sub port2server {
     my ($port) = @_;
@@ -193,7 +184,7 @@ sub get_ports() {
 
 sub set_ports {
     my ($do_pkgs, $disabled, $ports, $log_net_drop, $o_in) = @_;
-
+	
     if (!$disabled || -x "$::prefix/sbin/shorewall") {
 	$do_pkgs->ensure_binary_is_installed('shorewall', 'shorewall', $::isInstall) or return;
 	my $shorewall = network::shorewall::read(!$disabled && $o_in);
@@ -231,7 +222,7 @@ specialized Mandriva Security Firewall distribution."), 1) or return;
 
 Make sure you have configured your Network/Internet access with
 drakconnect before going any further."), 1) or return;
-
+	
 	$disabled, $possible_servers, '';
     }
 }
@@ -264,7 +255,7 @@ You can also give a range of ports (eg: 24300:24350/udp)", $invalid_port));
 		   } },
 		  [
 		   { label => N("Which services would you like to allow the Internet to connect to?"), title => 1 },
-		   if_($net->{PROFILE} && network::network::netprofile_count() > 0, { label => N("Those settings will be saved for the network profile <b>%s</b>", $net->{PROFILE}) }),
+#		   if_($net->{PROFILE} && network::network::netprofile_count() > 0, { label => N("Those settings will be saved for the network profile <b>%s</b>", $net->{PROFILE}) }),
 		   { text => N("Everything (no firewall)"), val => \$disabled, type => 'bool' },
 		   (map { { text => translate($_->{name}), val => \$_->{on}, type => 'bool', disabled => sub { $disabled } } } @l),
 		   { label => N("Other ports"), val => \$unlisted, advanced => 1, disabled => sub { $disabled } },
@@ -274,74 +265,74 @@ You can also give a range of ports (eg: 24300:24350/udp)", $invalid_port));
     $disabled, [ grep { $_->{on} } @l ], $unlisted, $log_net_drop;
 }
 
-sub set_ifw {
-    my ($do_pkgs, $enabled, $rules, $ports) = @_;
-    if ($enabled) {
-        $do_pkgs->ensure_is_installed('mandi-ifw', '/etc/ifw/start', $::isInstall) or return;
+#sub set_ifw {
+#    my ($do_pkgs, $enabled, $rules, $ports) = @_;
+#    if ($enabled) {
+#        $do_pkgs->ensure_is_installed('mandi-ifw', '/etc/ifw/start', $::isInstall) or return;
+#
+#        my $ports_by_proto = network::shorewall::ports_by_proto($ports);
+#        output_with_perm("$::prefix/etc/ifw/rules", 0644,
+#            (map { ". /etc/ifw/rules.d/$_\n" } @$rules),
+#            map {
+#                my $proto = $_;
+#                map {
+#                    my $multiport = /:/ && " -m multiport";
+#                    "iptables -A Ifw -m state --state NEW -p $proto$multiport --dport $_ -j IFWLOG --log-prefix NEW\n";
+#                } @{$ports_by_proto->{$proto}};
+#            } intersection([ qw(tcp udp) ], [ keys %$ports_by_proto ]),
+#        );
+#    }
+#
+#    substInFile {
+#            undef $_ if m!^INCLUDE /etc/ifw/rules|^iptables -I INPUT 2 -j Ifw!;
+#    } "$::prefix/etc/shorewall/start";
+#    network::shorewall::set_in_file('start', $enabled, "INCLUDE /etc/ifw/start", "INCLUDE /etc/ifw/rules", "iptables -I INPUT 1 -j Ifw");
+#    network::shorewall::set_in_file('stop', $enabled, "iptables -D INPUT -j Ifw", "INCLUDE /etc/ifw/stop");
+#}
 
-        my $ports_by_proto = network::shorewall::ports_by_proto($ports);
-        output_with_perm("$::prefix/etc/ifw/rules", 0644,
-            (map { ". /etc/ifw/rules.d/$_\n" } @$rules),
-            map {
-                my $proto = $_;
-                map {
-                    my $multiport = /:/ && " -m multiport";
-                    "iptables -A Ifw -m state --state NEW -p $proto$multiport --dport $_ -j IFWLOG --log-prefix NEW\n";
-                } @{$ports_by_proto->{$proto}};
-            } intersection([ qw(tcp udp) ], [ keys %$ports_by_proto ]),
-        );
-    }
-
-    substInFile {
-            undef $_ if m!^INCLUDE /etc/ifw/rules|^iptables -I INPUT 2 -j Ifw!;
-    } "$::prefix/etc/shorewall/start";
-    network::shorewall::set_in_file('start', $enabled, "INCLUDE /etc/ifw/start", "INCLUDE /etc/ifw/rules", "iptables -I INPUT 1 -j Ifw");
-    network::shorewall::set_in_file('stop', $enabled, "iptables -D INPUT -j Ifw", "INCLUDE /etc/ifw/stop");
-}
-
-sub choose_watched_services {
-    my ($in, $servers, $unlisted) = @_;
-
-    my @l = (@ifw_rules, @$servers, map { { ports => $_ } } split(' ', $unlisted));
-    my $enabled = 1;
-    $_->{ifw} = 1 foreach @l;
-
-    $in->ask_from_({
-        icon => $network::shorewall::firewall_icon,
-        if_(!$::isEmbedded, banner_title => N("Interactive Firewall")),
-        messages =>
-          N("You can be warned when someone accesses to a service or tries to intrude into your computer.
-Please select which network activities should be watched."),
-        title => N("Interactive Firewall"),
-    },
-                   [
-                       { text => N("Use Interactive Firewall"), val => \$enabled, type => 'bool' },
-                       map { {
-                           text => (exists $_->{name} ? translate($_->{name}) : $_->{ports}),
-                           val => \$_->{ifw},
-                           type => 'bool', disabled => sub { !$enabled },
-                       } } @l,
-                   ]) or return;
-    my ($rules, $ports) = partition { exists $_->{ifw_rule} } grep { $_->{ifw} } @l;
-    set_ifw($in->do_pkgs, $enabled, [ map { $_->{ifw_rule} } @$rules ], to_ports($ports));
-
-    # return something to say that we are done ok
-    $rules, $ports;
-}
+#sub choose_watched_services {
+#    my ($in, $servers, $unlisted) = @_;
+#
+#    my @l = (@ifw_rules, @$servers, map { { ports => $_ } } split(' ', $unlisted));
+#    my $enabled = 1;
+#    $_->{ifw} = 1 foreach @l;
+#
+#    $in->ask_from_({
+#        icon => $network::shorewall::firewall_icon,
+#        if_(!$::isEmbedded, banner_title => N("Interactive Firewall")),
+#        messages =>
+#          N("You can be warned when someone accesses to a service or tries to intrude into your computer.
+#Please select which network activities should be watched."),
+#        title => N("Interactive Firewall"),
+#    },
+#                   [
+#                       { text => N("Use Interactive Firewall"), val => \$enabled, type => 'bool' },
+#                       map { {
+#                           text => (exists $_->{name} ? translate($_->{name}) : $_->{ports}),
+#                           val => \$_->{ifw},
+#                           type => 'bool', disabled => sub { !$enabled },
+#                       } } @l,
+#                   ]) or return;
+#    my ($rules, $ports) = partition { exists $_->{ifw_rule} } grep { $_->{ifw} } @l;
+#    set_ifw($in->do_pkgs, $enabled, [ map { $_->{ifw_rule} } @$rules ], to_ports($ports));
+#
+#    # return something to say that we are done ok
+#    $rules, $ports;
+#}
 
 sub main {
     my ($in, $disabled) = @_;
-
+    
     ($disabled, my $servers, my $unlisted, my $log_net_drop) = get_conf($in, $disabled) or return;
 
     ($disabled, $servers, $unlisted, $log_net_drop) = choose_allowed_services($in, $disabled, $servers, $unlisted, $log_net_drop) or return;
 
-    my $system_file = '/etc/sysconfig/drakx-net';
-    my %global_settings = getVarsFromSh($system_file);
+#    my $system_file = '/etc/sysconfig/drakx-net';
+#    my %global_settings = getVarsFromSh($system_file);
 
-    if (!$disabled && (!defined($global_settings{IFW}) || text2bool($global_settings{IFW}))) {
-        choose_watched_services($in, $servers, $unlisted) or return;
-    }
+#    if (!$disabled && (!defined($global_settings{IFW}) || text2bool($global_settings{IFW}))) {
+#        choose_watched_services($in, $servers, $unlisted) or return;
+#    }
 
     # preparing services when required
     foreach (@$servers) {
@@ -353,8 +344,8 @@ sub main {
     set_ports($in->do_pkgs, $disabled, $ports, $log_net_drop, $in) or return;
 
     # restart mandi
-    require services;
-    services::is_service_running("mandi") and services::restart("mandi");
+#    require services;
+#    services::is_service_running("mandi") and services::restart("mandi");
 
     # restarting services if needed
     foreach my $service (@$servers) {
@@ -364,7 +355,7 @@ sub main {
     }
 
     # clearing pending ifw notifications in net_applet
-    system('killall -s SIGUSR1 net_applet');
+#    system('killall -s SIGUSR1 net_applet');
 
     ($disabled, $ports);
 }
