@@ -1,5 +1,5 @@
 NAME = drakx-net
-VERSION = 1.16
+VERSION = 1.17
 
 DESTDIR=
 libdir=/usr/lib
