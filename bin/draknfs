@@ -472,7 +472,7 @@ sub remove_entry {
     if ($iter) {
       my $path = $model->get_path($iter);
       my $i = ($path->get_indices)[0];
-      ask_okcancel("Remove entry ?", "Remove $listshare[$i]{dir}") or return;
+      ask_okcancel(N("Remove entry?"), N("Remove %s", $listshare[$i]{dir})) or return;
       $model->remove($iter);
       splice @listshare, $i, 1;
     }
