@@ -714,7 +714,7 @@ sub modify_entry {
   $force_group->set_text($share_list->{data}[$selected][18]);
   $default_case->set_text($share_list->{data}[$selected][19]);
 
-  my $expander_user = Gtk2::Expander->new('User options (user access, mask option, force mode)');
+  my $expander_user = Gtk2::Expander->new(N("User options (user access, mask option, force mode)"));
   $expander_user->add(gtkpack_(Gtk2::HBox->new,
 			       0, gtkadd(Gtk2::Frame->new(N("Samba user access")),
 					 gtkpack_(gtkset_border_width(Gtk2::VBox->new, 1),
@@ -736,7 +736,7 @@ sub modify_entry {
 			       ),
 		      );
   
-  my $expander_file = Gtk2::Expander->new('File options (hide files, case)');
+  my $expander_file = Gtk2::Expander->new(N("File options (hide files, case)"));
   $expander_file->add(gtkpack_(Gtk2::VBox->new,
 			       0, gtkadd(Gtk2::Frame->new(N("Display options")),
 					 gtkpack_(gtkset_border_width(Gtk2::HBox->new, 1),
@@ -775,7 +775,7 @@ sub modify_entry {
 										    ),
 									 ),
 								),
-							 gtkadd(Gtk2::Frame->new("Advanced options"),
+							 gtkadd(Gtk2::Frame->new(N("Advanced options")),
 								gtkpack_(gtkset_border_width(Gtk2::VBox->new, 1),
 									 0, $expander_user,
 									 0, Gtk2::HSeparator->new,
@@ -1153,7 +1153,7 @@ sub configure_samba {
 						     next => 'ask_log',
 						    },
 				      ask_log => {
-						  name => N("Samba Log") . "\n" . N("Log file: use %s to use a separate log file for each machine that connects", "file.%m") . "\n" . N("Log level: set the log (verbosity) level (0 <= log level <= 10)") . "\n" . N("Max Log size: put a capping on the size of the log files (in Kb)."),
+						  name => N("Samba Log") . "\n" . N("Log file: use %s to use a separate log file for each machine that connects", N("file.%m")) . "\n" . N("Log level: set the log (verbosity) level (0 <= log level <= 10)") . "\n" . N("Max Log size: put a capping on the size of the log files (in Kb)."),
 						  pre => sub {
 						    $o->{var}{wiz_log_file} ||= $samba->{global}{'log file'};
 						    $o->{var}{wiz_log_level} ||= $samba->{global}{'log level'};
