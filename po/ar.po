@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2013-01-19 17:32+0100\n"
+"POT-Creation-Date: 2013-01-20 13:26+0100\n"
 "PO-Revision-Date: 2011-05-19 13:18+0000\n"
 "Last-Translator: salim salim <almusalimalmusalimah@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -84,14 +84,14 @@ msgid "Apply"
 msgstr "تطبيق"
 
 #: ../bin/drakconnect-old:110 ../bin/drakconnect-old:263
-#: ../bin/draknetprofile:160 ../bin/net_monitor:388
+#: ../bin/draknetprofile:164 ../bin/net_monitor:388
 #: ../lib/network/drakconnect/global.pm:88
 #, c-format
 msgid "Cancel"
 msgstr "إلغاء"
 
 #: ../bin/drakconnect-old:111 ../bin/drakconnect-old:178
-#: ../bin/drakconnect-old:265 ../bin/draknetprofile:162 ../bin/net_monitor:389
+#: ../bin/drakconnect-old:265 ../bin/draknetprofile:166 ../bin/net_monitor:389
 #: ../lib/network/drakconnect/global.pm:89
 #, c-format
 msgid "Ok"
@@ -334,7 +334,7 @@ msgstr "اسم النطاق الداخلي"
 
 #: ../bin/drakgw:188 ../bin/drakhosts:98 ../bin/drakhosts:232
 #: ../bin/drakhosts:239 ../bin/drakhosts:246 ../bin/drakinvictus:72
-#: ../bin/draknetprofile:167 ../bin/draknetprofile:187 ../bin/draknfs:93
+#: ../bin/draknetprofile:171 ../bin/draknetprofile:191 ../bin/draknfs:93
 #: ../bin/draknfs:283 ../bin/draknfs:430 ../bin/draknfs:432 ../bin/draknfs:435
 #: ../bin/draknfs:527 ../bin/draknfs:534 ../bin/draknfs:606 ../bin/draknfs:613
 #: ../bin/draknfs:620 ../bin/draksambashare:394 ../bin/draksambashare:401
@@ -641,7 +641,7 @@ msgstr "حذف"
 msgid "Failed to remove host."
 msgstr "فشل في حذف مضيف"
 
-#: ../bin/drakhosts:249 ../bin/drakinvictus:141 ../bin/draknetprofile:220
+#: ../bin/drakhosts:249 ../bin/drakinvictus:141 ../bin/draknetprofile:224
 #: ../bin/net_applet:221 ../lib/network/drakroam.pm:93
 #: ../lib/network/netcenter.pm:178
 #, c-format
@@ -871,12 +871,47 @@ msgstr "الوصف"
 msgid "Profile"
 msgstr "حساب"
 
-#: ../bin/draknetprofile:153
+#: ../bin/draknetprofile:96
+#, c-format
+msgid "Save and restore the active services"
+msgstr ""
+
+#: ../bin/draknetprofile:97
+#, fuzzy, c-format
+msgid "Network connection settings"
+msgstr "اتصال شبكة"
+
+#: ../bin/draknetprofile:97
+#, fuzzy, c-format
+msgid "Firewall settings"
+msgstr "إعدادات اللاسلكي"
+
+#: ../bin/draknetprofile:97
+#, fuzzy, c-format
+msgid "Firewall settings (IPv6)"
+msgstr "إعدادات اللاسلكي"
+
+#: ../bin/draknetprofile:98
+#, fuzzy, c-format
+msgid "Proxy settings"
+msgstr "إعدادات  IP"
+
+#: ../bin/draknetprofile:98
+#, fuzzy, c-format
+msgid "Urpmi settings"
+msgstr "إعدادات  IP"
+
+#: ../bin/draknetprofile:98
+#, fuzzy, c-format
+msgid "Networkmanager connection settings"
+msgstr "اتصال شبكة"
+
+#: ../bin/draknetprofile:157
 #, c-format
 msgid "New profile..."
 msgstr "سجل شخصي جديد..."
 
-#: ../bin/draknetprofile:156
+#: ../bin/draknetprofile:160
 #, c-format
 msgid ""
 "Please specify the name of the new network profile to be created (e.g., "
@@ -888,17 +923,17 @@ msgstr ""
 "العمل ... ). سيتم إنشاء هذا الحسلاب الجديد بناء على اﻹعدادات الحالية, و "
 "ستكون قادرا بعدئذ من على تهيئة نظامك كالمعتاد سابقا."
 
-#: ../bin/draknetprofile:167
+#: ../bin/draknetprofile:171
 #, c-format
 msgid "The \"%s\" profile already exists!"
 msgstr "السجل الشخصي \"%s\" موجود !"
 
-#: ../bin/draknetprofile:173
+#: ../bin/draknetprofile:177
 #, c-format
 msgid "New profile created"
 msgstr "أُنشئ حساب شخصي جديد..."
 
-#: ../bin/draknetprofile:173
+#: ../bin/draknetprofile:177
 #, c-format
 msgid ""
 "You are now using network profile %s. You can configure your system as "
@@ -908,56 +943,56 @@ msgstr ""
 "أنت اﻵن تستخدم حساب الشبكة %s. باستطاعتك تهيئة نظامك كالمعتاد, من اﻵن فصاعدا "
 "سيتم حفظ إعداداتك الخاصة بالشبكةفي هذا الحساب."
 
-#: ../bin/draknetprofile:184 ../lib/network/drakconnect/global.pm:34
+#: ../bin/draknetprofile:188 ../lib/network/drakconnect/global.pm:34
 #: ../lib/network/drakvpn.pm:70 ../lib/network/drakvpn.pm:100
 #: ../lib/network/ndiswrapper.pm:105 ../lib/network/netconnect.pm:499
 #, c-format
 msgid "Warning"
 msgstr "تحذير"
 
-#: ../bin/draknetprofile:184
+#: ../bin/draknetprofile:188
 #, c-format
 msgid "Are you sure you want to delete the default profile?"
 msgstr "هل تريد تأكيد حذف الحساب اﻹفتراضي؟"
 
-#: ../bin/draknetprofile:187
+#: ../bin/draknetprofile:191
 #, c-format
 msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
 msgstr "لا يمكنك حذف الحساب الحالي . رجاء حوّل لحساب أخر أولا"
 
-#: ../bin/draknetprofile:195 ../bin/draknfs:357
+#: ../bin/draknetprofile:199 ../bin/draknfs:357
 #, c-format
 msgid "Advanced"
 msgstr "متقدم"
 
-#: ../bin/draknetprofile:199
+#: ../bin/draknetprofile:203
 #, c-format
 msgid "Select the netprofile modules:"
 msgstr "اختر وحدة حساب اﻹنترنت:"
 
-#: ../bin/draknetprofile:212
+#: ../bin/draknetprofile:216
 #, c-format
 msgid "This tool allows you to control network profiles."
 msgstr "هذه اﻷداة تسمح لك بالتحكم في حساب الشبكة"
 
-#: ../bin/draknetprofile:213
+#: ../bin/draknetprofile:217
 #, c-format
 msgid "Select a network profile:"
 msgstr "اختر حساب الشبكة:"
 
-#: ../bin/draknetprofile:217
+#: ../bin/draknetprofile:221
 #, c-format
 msgid "Activate"
 msgstr "تفعيل"
 
-#: ../bin/draknetprofile:218
+#: ../bin/draknetprofile:222
 #, c-format
 msgid "New"
 msgstr "جديد"
 
-#: ../bin/draknetprofile:219
+#: ../bin/draknetprofile:223
 #, c-format
 msgid "Delete"
 msgstr "حذف"
