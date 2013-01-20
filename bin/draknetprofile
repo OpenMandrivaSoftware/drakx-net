@@ -93,11 +93,15 @@ $profiles_list->get_selection->signal_connect('changed' => sub {
 
 sub load_netprofile_modules() {
     my @modules = network::network::netprofile_modules();
+    my %descriptions = map { $_ => translate($_) } N_("Save and restore the active services"),
+      N_("Network connection settings"), N_("Firewall settings"), N_("Firewall settings (IPv6)"),
+	N_("Proxy settings"), N_("Urpmi settings"), N_("Networkmanager connection settings");
+
     foreach (@modules) {
         push @{$modules_list->{data}}, [
             $_->{module},
             $_->{enabled},
-            $_->{description},
+            $descriptions{$_->{description}} || $_->{description},
             ];
     }
 }
