@@ -256,14 +256,6 @@ my @thirdparty_settings = (
     } qw(b43legacy)),
 
     {
-        name => 'broadcom-wl',
-        matching => 'wl',
-        description => 'Broadcom Hybrid',
-        url => 'http://www.broadcom.com/support/802.11/linux_sta.php',
-        kernel_module => 1,
-    },
-
-    {
         name => 'acx100',
         matching => [ qw(acx_pci acx_usb) ],
         description => 'ACX100/ACX111/TNETW1450',
