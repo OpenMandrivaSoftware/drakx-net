@@ -32,7 +32,7 @@ sub list_wireless {
     }
     if ($results && $list) {
         #- bssid / frequency / signal level / flags / ssid
-        while ($results =~ /^((?:[0-9a-f]{2}:){5}[0-9a-f]{2})\t(\d+)\t(\d+)\t(.*?)\t(.*)$/mg) {
+        while ($results =~ /^((?:[0-9a-f]{2}:){5}[0-9a-f]{2})\t(\d+)\t(-?\d+)\t(.*?)\t(.*)$/mg) {
             my ($ap, $frequency, $signal_strength, $flags, $essid) = ($1, $2, $3, $4, $5);
             $networks{$ap}{ap} ||= $ap;
             #- wpa_supplicant may list the network two times, use ||=
@@ -48,7 +48,18 @@ sub list_wireless {
             #- this should be standardized at some point
             $_->{signal_strength} = int($_->{signal_strength}/3.5)
               foreach values %networks;
+        } 
+# TODO - Check if all drivers now report signal	strength in dBm
+	if (any { $_->{signal_strength} < 0 } values %networks) {
+	    #- wpa_supplicant now reports signal in dBm
+            #- convert to % scale assuming -45 =100% -98 = 1%
+	    foreach (values %networks) {
+            	$_->{signal_strength} = int(100*(98+$_->{signal_strength})/53);
+                $_->{signal_strength} = 100 if $_->{signal_strength} > 100;
+                $_->{signal_strength} = 1 if $_->{signal_strength} < 1;
+	    }
         }
+
 
         #- network id / ssid / bssid / flags
         while ($list =~ /^(\d+)\t(.*?)\t(.*?)\t(.*)$/mg) {
