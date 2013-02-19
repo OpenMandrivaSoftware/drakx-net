@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-tools\n"
-"POT-Creation-Date: 2013-01-20 13:26+0100\n"
+"POT-Creation-Date: 2013-02-19 20:47+0100\n"
 "PO-Revision-Date: 2009-04-09 01:56+0000\n"
 "Last-Translator: Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
 "Language-Team: Icelandic <kde-isl@molar.is>\n"
@@ -4106,12 +4106,12 @@ msgstr "WPA/WPA2 for-valinn lykill"
 msgid "WPA/WPA2 Enterprise"
 msgstr "WPA/WPA2 Enterprise"
 
-#: ../lib/network/connection/wireless.pm:292
+#: ../lib/network/connection/wireless.pm:284
 #, c-format
 msgid "Windows driver"
 msgstr "Windows rekill"
 
-#: ../lib/network/connection/wireless.pm:366
+#: ../lib/network/connection/wireless.pm:358
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
@@ -4120,82 +4120,82 @@ msgstr ""
 "Þráðlausa netkortið þitt er ekki virkt, vinsamlega virkjaðu nettækið (RF "
 "kill switch) fyrst."
 
-#: ../lib/network/connection/wireless.pm:456
+#: ../lib/network/connection/wireless.pm:448
 #, c-format
 msgid "Wireless settings"
 msgstr "Stillingar Þráðlausrar tengingar"
 
-#: ../lib/network/connection/wireless.pm:461
+#: ../lib/network/connection/wireless.pm:453
 #: ../lib/network/connection_manager.pm:281
 #: ../lib/network/drakconnect/edit.pm:236
 #, c-format
 msgid "Operating Mode"
 msgstr "Vinnsluhamur"
 
-#: ../lib/network/connection/wireless.pm:462
+#: ../lib/network/connection/wireless.pm:454
 #, c-format
 msgid "Ad-hoc"
 msgstr "Beintengt"
 
-#: ../lib/network/connection/wireless.pm:462
+#: ../lib/network/connection/wireless.pm:454
 #, c-format
 msgid "Managed"
 msgstr "Netgátt"
 
-#: ../lib/network/connection/wireless.pm:462
+#: ../lib/network/connection/wireless.pm:454
 #, c-format
 msgid "Master"
 msgstr "Stjórnandi"
 
-#: ../lib/network/connection/wireless.pm:462
+#: ../lib/network/connection/wireless.pm:454
 #, c-format
 msgid "Repeater"
 msgstr "Endurvaki"
 
-#: ../lib/network/connection/wireless.pm:462
+#: ../lib/network/connection/wireless.pm:454
 #, c-format
 msgid "Secondary"
 msgstr "Aukalegur"
 
-#: ../lib/network/connection/wireless.pm:462
+#: ../lib/network/connection/wireless.pm:454
 #, c-format
 msgid "Auto"
 msgstr "Sjálfvirkt"
 
-#: ../lib/network/connection/wireless.pm:465
+#: ../lib/network/connection/wireless.pm:457
 #: ../lib/network/drakconnect/edit.pm:237
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "Netnafn (ESSID)"
 
-#: ../lib/network/connection/wireless.pm:467
+#: ../lib/network/connection/wireless.pm:459
 #, c-format
 msgid "Encryption mode"
 msgstr "Dulritunar-máti"
 
-#: ../lib/network/connection/wireless.pm:469
+#: ../lib/network/connection/wireless.pm:461
 #: ../lib/network/drakconnect/edit.pm:251
 #, c-format
 msgid "Encryption key"
 msgstr "Dulritunar-lykill"
 
-#: ../lib/network/connection/wireless.pm:472
+#: ../lib/network/connection/wireless.pm:464
 #, fuzzy, c-format
 msgid "Hide password"
 msgstr "Lykilorð"
 
-#: ../lib/network/connection/wireless.pm:474
+#: ../lib/network/connection/wireless.pm:466
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr ""
 "Þvinga notkun á þessum lykli sem texta streng (ASCII) (t.d. fyrir Livebox)"
 
-#: ../lib/network/connection/wireless.pm:481
+#: ../lib/network/connection/wireless.pm:473
 #, c-format
 msgid "EAP Login/Username"
 msgstr "EAP auðkenni/notandanafn"
 
-#: ../lib/network/connection/wireless.pm:483
+#: ../lib/network/connection/wireless.pm:475
 #, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
@@ -4206,12 +4206,12 @@ msgstr ""
 "Ef þú þarft að tilgreina lén, reyndu þá að nota\n"
 "  LÉN\\notandi"
 
-#: ../lib/network/connection/wireless.pm:486
+#: ../lib/network/connection/wireless.pm:478
 #, c-format
 msgid "EAP Password"
 msgstr "EAP Lykilorð"
 
-#: ../lib/network/connection/wireless.pm:489
+#: ../lib/network/connection/wireless.pm:481
 #, c-format
 msgid ""
 " Password: A string.\n"
@@ -4230,12 +4230,12 @@ msgid ""
 "the username and password values specified here."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:503
+#: ../lib/network/connection/wireless.pm:495
 #, c-format
 msgid "EAP client certificate"
 msgstr "EAP skírteini biðlara"
 
-#: ../lib/network/connection/wireless.pm:505
+#: ../lib/network/connection/wireless.pm:497
 #, c-format
 msgid ""
 "The complete path and filename of client certificate. This is\n"
@@ -4244,37 +4244,65 @@ msgid ""
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
 
+#: ../lib/network/connection/wireless.pm:501
+#, fuzzy, c-format
+msgid "EAP client private key"
+msgstr "EAP skírteini biðlara"
+
+#: ../lib/network/connection/wireless.pm:503
+#, c-format
+msgid ""
+"The complete path and filename of client private key. This is\n"
+"only used for EAP certificate based authentication. It could be\n"
+"considered as the alternative to username/password combo.\n"
+" Note: other related settings are shown on the Advanced page."
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:507
+#, fuzzy, c-format
+msgid "EAP client private key password"
+msgstr "EAP skírteini biðlara"
+
 #: ../lib/network/connection/wireless.pm:509
+#, c-format
+msgid ""
+"The complete password for the client private key. This is\n"
+"only used for EAP certificate based authentication. This password \n"
+"is used for protected client private keys only. It can be optional.\n"
+" Note: other related settings are shown on the Advanced page."
+msgstr ""
+
+#: ../lib/network/connection/wireless.pm:513
 #: ../lib/network/drakconnect/edit.pm:238
 #, c-format
 msgid "Network ID"
 msgstr "Netauðkenni"
 
-#: ../lib/network/connection/wireless.pm:510
+#: ../lib/network/connection/wireless.pm:514
 #: ../lib/network/drakconnect/edit.pm:239
 #, c-format
 msgid "Operating frequency"
 msgstr "Vinnslutíðni"
 
-#: ../lib/network/connection/wireless.pm:511
+#: ../lib/network/connection/wireless.pm:515
 #: ../lib/network/drakconnect/edit.pm:240
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "Næmniþröskuldur"
 
-#: ../lib/network/connection/wireless.pm:512
+#: ../lib/network/connection/wireless.pm:516
 #: ../lib/network/drakconnect/edit.pm:241
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "Bitahraði (í b/s)"
 
-#: ../lib/network/connection/wireless.pm:513
+#: ../lib/network/connection/wireless.pm:517
 #: ../lib/network/drakconnect/edit.pm:252
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../lib/network/connection/wireless.pm:514
+#: ../lib/network/connection/wireless.pm:518
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -4294,19 +4322,19 @@ msgstr ""
 "Ef gildið er jafn stórt hámarks-pakkastærð er könnunin óvirk.\n"
 "Þú getur einnig valið gildin auto, fixed, eða off."
 
-#: ../lib/network/connection/wireless.pm:521
+#: ../lib/network/connection/wireless.pm:525
 #: ../lib/network/drakconnect/edit.pm:253
 #, c-format
 msgid "Fragmentation"
 msgstr "Slitnir-pakkar"
 
-#: ../lib/network/connection/wireless.pm:522
+#: ../lib/network/connection/wireless.pm:526
 #: ../lib/network/drakconnect/edit.pm:254
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "Aukaviðföng fyrir iwconfig"
 
-#: ../lib/network/connection/wireless.pm:523
+#: ../lib/network/connection/wireless.pm:527
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -4323,13 +4351,13 @@ msgstr ""
 "sjá nánar á man-síðunni iwconfig(8)."
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:530
+#: ../lib/network/connection/wireless.pm:534
 #: ../lib/network/drakconnect/edit.pm:255
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "Auka viðföng fyrir iwspy"
 
-#: ../lib/network/connection/wireless.pm:531
+#: ../lib/network/connection/wireless.pm:535
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -4348,13 +4376,13 @@ msgstr ""
 "\n"
 "Sjá nánari upplýsingar á iwpspy(8) man síðu."
 
-#: ../lib/network/connection/wireless.pm:539
+#: ../lib/network/connection/wireless.pm:543
 #: ../lib/network/drakconnect/edit.pm:256
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "Auka viðföng fyrir iwpriv"
 
-#: ../lib/network/connection/wireless.pm:541
+#: ../lib/network/connection/wireless.pm:545
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -4381,28 +4409,28 @@ msgstr ""
 "\n"
 "sjá nánar á man-síðunni fyrir iwpriv(8)."
 
-#: ../lib/network/connection/wireless.pm:552
+#: ../lib/network/connection/wireless.pm:556
 #, c-format
 msgid "EAP Protocol"
 msgstr "EAP Samskiptaregla"
 
-#: ../lib/network/connection/wireless.pm:553
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:557
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid "Auto Detect"
 msgstr "Finna sjálfkrafa"
 
-#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:557
 #, c-format
 msgid "WPA2"
 msgstr "WPA2"
 
-#: ../lib/network/connection/wireless.pm:553
+#: ../lib/network/connection/wireless.pm:557
 #, c-format
 msgid "WPA"
 msgstr "WPA"
 
-#: ../lib/network/connection/wireless.pm:555
+#: ../lib/network/connection/wireless.pm:559
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
@@ -4411,67 +4439,67 @@ msgstr ""
 "Mælt er með að nota \"Finna sjálfkrafa\" Því það reynir fyrst WPA útgáfu 2 "
 "og til vara WPA útgáfu 1"
 
-#: ../lib/network/connection/wireless.pm:557
+#: ../lib/network/connection/wireless.pm:561
 #, c-format
 msgid "EAP Mode"
 msgstr "EAP Hamur"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid "PEAP"
 msgstr "PEAP"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid "TTLS"
 msgstr "TTLS"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid "TLS"
 msgstr "TLS"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid "MSCHAPV2"
 msgstr "MSCHAPV2"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid "MD5"
 msgstr "MD5"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid "OTP"
 msgstr "OTP"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid "GTC"
 msgstr "GTC"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid "LEAP"
 msgstr "LEAP"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid "PEAP TTLS"
 msgstr "PEAP TTLS"
 
-#: ../lib/network/connection/wireless.pm:558
+#: ../lib/network/connection/wireless.pm:562
 #, c-format
 msgid "TTLS TLS"
 msgstr "TTLS TLS"
 
-#: ../lib/network/connection/wireless.pm:560
+#: ../lib/network/connection/wireless.pm:564
 #, c-format
 msgid "EAP key_mgmt"
 msgstr "EAP key_mgmt"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:566
 #, c-format
 msgid ""
 "list of accepted authenticated key management protocols.\n"
@@ -4480,12 +4508,12 @@ msgstr ""
 "listi af samþykktum auðkenningar-samskiptaferlum.\n"
 "möguleg gildi eru WPA-EAP, IEEE8021X, NONE"
 
-#: ../lib/network/connection/wireless.pm:564
+#: ../lib/network/connection/wireless.pm:568
 #, c-format
 msgid "EAP outer identity"
 msgstr "EAP ytra auðkenni"
 
-#: ../lib/network/connection/wireless.pm:566
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid ""
 "Anonymous identity string for EAP: to be used as the\n"
@@ -4493,12 +4521,12 @@ msgid ""
 "tunnelled identity, e.g., TTLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:569
+#: ../lib/network/connection/wireless.pm:573
 #, c-format
 msgid "EAP phase2"
 msgstr "EAP þrep2"
 
-#: ../lib/network/connection/wireless.pm:571
+#: ../lib/network/connection/wireless.pm:575
 #, c-format
 msgid ""
 "Inner authentication with TLS tunnel parameters.\n"
@@ -4507,12 +4535,12 @@ msgid ""
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:575
+#: ../lib/network/connection/wireless.pm:579
 #, c-format
 msgid "EAP CA certificate"
 msgstr "EAP CA skírteini"
 
-#: ../lib/network/connection/wireless.pm:577
+#: ../lib/network/connection/wireless.pm:581
 #, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
@@ -4522,12 +4550,12 @@ msgid ""
 "when using TLS or TTLS or PEAP."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:582
+#: ../lib/network/connection/wireless.pm:586
 #, c-format
 msgid "EAP certificate subject match"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:584
+#: ../lib/network/connection/wireless.pm:588
 #, c-format
 msgid ""
 " Substring to be matched against the subject of\n"
@@ -4537,12 +4565,12 @@ msgid ""
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:589
+#: ../lib/network/connection/wireless.pm:593
 #, fuzzy, c-format
 msgid "Extra directives"
 msgstr "EAP auka viðföng"
 
-#: ../lib/network/connection/wireless.pm:590
+#: ../lib/network/connection/wireless.pm:594
 #, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
@@ -4560,12 +4588,12 @@ msgid ""
 "\tspecial settings different from the U.I settings."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:610
+#: ../lib/network/connection/wireless.pm:614
 #, c-format
 msgid "An encryption key is required."
 msgstr "Þarf að fá dulritunarlykil."
 
-#: ../lib/network/connection/wireless.pm:617
+#: ../lib/network/connection/wireless.pm:621
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
@@ -4574,7 +4602,7 @@ msgstr ""
 "Forvaldir lyklar ættu að vera á milli 8 og 63 ASCII stafir (enskt stafróf), "
 "eða 64 sextándakerfis stafir."
 
-#: ../lib/network/connection/wireless.pm:623
+#: ../lib/network/connection/wireless.pm:627
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
@@ -4582,7 +4610,7 @@ msgid ""
 msgstr ""
 "WEP lykillinn ætti að hafa mest %d ASCII stafi eða %d sextándakerfis-stafi."
 
-#: ../lib/network/connection/wireless.pm:630
+#: ../lib/network/connection/wireless.pm:634
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -4591,7 +4619,7 @@ msgstr ""
 "Tíðni ætti að hafa viðskeyti k, M eða G (t.d. \"2.46G\" fyrir 2.46 GHz "
 "tíðni), eða bæta við nógu mörgum núllum."
 
-#: ../lib/network/connection/wireless.pm:636
+#: ../lib/network/connection/wireless.pm:640
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
@@ -4600,17 +4628,17 @@ msgstr ""
 "Hraði ætti að hafa viðskeyti k, M eða G (t.d. \"11M\" fyrir 11M) eða bæta "
 "við nógu mörgum núllum."
 
-#: ../lib/network/connection/wireless.pm:648
+#: ../lib/network/connection/wireless.pm:652
 #, c-format
 msgid "Allow access point roaming"
 msgstr "Leyfa flakk milli aðgangspunkta"
 
-#: ../lib/network/connection/wireless.pm:773
+#: ../lib/network/connection/wireless.pm:777
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "Tengdur þráðlausu neti \"%s\" á nettengi %s"
 
-#: ../lib/network/connection/wireless.pm:774
+#: ../lib/network/connection/wireless.pm:778
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "Missti tengingu við þráðlaust net á nettengi %s"
