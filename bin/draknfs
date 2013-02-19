@@ -84,7 +84,7 @@ sub restart_dialog() {
 }
 
 sub reload_dialog() {
-  wait_action("service nfs-server reload");
+  wait_action("exportfs -ra");
 }
 
 sub wait_action {
@@ -577,7 +577,7 @@ my $menu = $factory->get_widget('<main>');
 my $okcancel = create_okcancel({
 				cancel_clicked => sub { ugtk2->exit },
 				ok_clicked => sub { &write_conf;
-						    run_program::raw({ detach => 1 }, "service nfs-server reload");
+						    run_program::raw({ detach => 1 }, "exportfs -ra");
 						    ugtk2->exit },
 			       },
 			      );
