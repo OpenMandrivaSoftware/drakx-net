@@ -508,6 +508,18 @@ the username and password values specified here.") },
 only used for EAP certificate based authentication. It could be
 considered as the alternative to username/password combo.
  Note: other related settings are shown on the Advanced page.")  },
+	{ label => N("EAP client private key"), val => \$self->{access}{network}{eap_private_key},
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
+          help => N("The complete path and filename of client private key. This is
+only used for EAP certificate based authentication. It could be
+considered as the alternative to username/password combo.
+ Note: other related settings are shown on the Advanced page.")  },
+	{ label => N("EAP client private key password"), val => \$self->{access}{network}{eap_private_key_passwd},
+          disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
+          help => N("The complete password for the client private key. This is
+only used for EAP certificate based authentication. This password 
+is used for protected client private keys only. It can be optional.
+ Note: other related settings are shown on the Advanced page.")  },
         { label => N("Network ID"), val => \$self->{ifcfg}{WIRELESS_NWID}, advanced => 1 },
         { label => N("Operating frequency"), val => \$self->{ifcfg}{WIRELESS_FREQ}, advanced => 1 },
         { label => N("Sensitivity threshold"), val => \$self->{ifcfg}{WIRELESS_SENS}, advanced => 1 },
