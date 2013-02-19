@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2013-02-19 20:47+0100\n"
+"POT-Creation-Date: 2013-02-19 21:10+0100\n"
 "PO-Revision-Date: 2002-09-27 17:45+0200\n"
 "Last-Translator: Raivo Saars <spaiks@inbox.lv>\n"
 "Language-Team: Latvian <ll10nt@listes.murds.lv>\n"
@@ -2235,7 +2235,7 @@ msgstr ""
 msgid "Profiles"
 msgstr "Profili"
 
-#: ../bin/net_applet:203 ../lib/network/connection.pm:232
+#: ../bin/net_applet:203 ../lib/network/connection.pm:235
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:367
 #: ../lib/network/vpn/openvpn.pm:381 ../lib/network/vpn/openvpn.pm:392
 #, fuzzy, c-format
@@ -2430,22 +2430,22 @@ msgstr "Interneta savienojuma konfigurācija"
 msgid "Unknown connection type"
 msgstr "Nezināms konekcijas tips"
 
-#: ../lib/network/connection.pm:165
+#: ../lib/network/connection.pm:168
 #, c-format
 msgid "Network access settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:166
+#: ../lib/network/connection.pm:169
 #, c-format
 msgid "Access settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:167
+#: ../lib/network/connection.pm:170
 #, c-format
 msgid "Address settings"
 msgstr ""
 
-#: ../lib/network/connection.pm:181 ../lib/network/connection.pm:201
+#: ../lib/network/connection.pm:184 ../lib/network/connection.pm:204
 #: ../lib/network/connection/isdn.pm:156 ../lib/network/netconnect.pm:217
 #: ../lib/network/netconnect.pm:491 ../lib/network/netconnect.pm:587
 #: ../lib/network/netconnect.pm:590
@@ -2453,54 +2453,84 @@ msgstr ""
 msgid "Unlisted - edit manually"
 msgstr ""
 
-#: ../lib/network/connection.pm:234 ../lib/network/connection/cable.pm:41
+#: ../lib/network/connection.pm:237 ../lib/network/connection/cable.pm:41
 #: ../lib/network/connection/wireless.pm:46 ../lib/network/vpn/openvpn.pm:129
 #: ../lib/network/vpn/openvpn.pm:173 ../lib/network/vpn/openvpn.pm:341
 #, c-format
 msgid "None"
 msgstr "Nekas"
 
-#: ../lib/network/connection.pm:246
+#: ../lib/network/connection.pm:249
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr ""
 
-#: ../lib/network/connection.pm:247
+#: ../lib/network/connection.pm:250
 #, c-format
 msgid "Start the connection at boot"
 msgstr ""
 
-#: ../lib/network/connection.pm:248
+#: ../lib/network/connection.pm:251
 #, c-format
 msgid "Enable traffic accounting"
 msgstr ""
 
-#: ../lib/network/connection.pm:249
+#: ../lib/network/connection.pm:252
 #, c-format
 msgid "Allow interface to be controlled by Network Manager"
 msgstr ""
 
-#: ../lib/network/connection.pm:250 ../lib/network/drakconnect/edit.pm:292
+#: ../lib/network/connection.pm:253 ../lib/network/drakconnect/edit.pm:292
 #, fuzzy, c-format
 msgid "Metric"
 msgstr "ierobežot"
 
-#: ../lib/network/connection.pm:251
+#: ../lib/network/connection.pm:254
 #, c-format
 msgid "MTU"
 msgstr ""
 
-#: ../lib/network/connection.pm:252
+#: ../lib/network/connection.pm:255
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
 msgstr ""
 
-#: ../lib/network/connection.pm:332
+#: ../lib/network/connection.pm:256
+#, c-format
+msgid "MACADDR"
+msgstr ""
+
+#: ../lib/network/connection.pm:257
+#, c-format
+msgid "Use a fake MAC address. If unset, uses HWADDR or default."
+msgstr ""
+
+#: ../lib/network/connection.pm:258
+#, c-format
+msgid "HWADDR"
+msgstr ""
+
+#: ../lib/network/connection.pm:259
+#, c-format
+msgid "Set the MAC address. If unset, uses default."
+msgstr ""
+
+#: ../lib/network/connection.pm:260
+#, c-format
+msgid "ETHTOOL_OPTS"
+msgstr ""
+
+#: ../lib/network/connection.pm:261
+#, c-format
+msgid "Use ethtool to pass options to the NIC. eg. \"autoneg off wol g\""
+msgstr ""
+
+#: ../lib/network/connection.pm:344
 #, fuzzy, c-format
 msgid "Link detected on interface %s"
 msgstr "atklāts uz porta %s"
 
-#: ../lib/network/connection.pm:333 ../lib/network/connection/ethernet.pm:305
+#: ../lib/network/connection.pm:345 ../lib/network/connection/ethernet.pm:305
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr ""

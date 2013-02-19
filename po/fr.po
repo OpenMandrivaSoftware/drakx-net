@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2013-02-19 20:47+0100\n"
+"POT-Creation-Date: 2013-02-19 21:10+0100\n"
 "PO-Revision-Date: 2013-01-20 13:13+0100\n"
 "Last-Translator: Rémi Verschelde <remi@verschelde.fr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2383,7 +2383,7 @@ msgstr "Interfaces actives"
 msgid "Profiles"
 msgstr "Profils"
 
-#: ../bin/net_applet:203 ../lib/network/connection.pm:232
+#: ../bin/net_applet:203 ../lib/network/connection.pm:235
 #: ../lib/network/drakvpn.pm:62 ../lib/network/vpn/openvpn.pm:367
 #: ../lib/network/vpn/openvpn.pm:381 ../lib/network/vpn/openvpn.pm:392
 #, c-format
@@ -2586,22 +2586,22 @@ msgstr "Aucune connexion Internet n'est configurée"
 msgid "Unknown connection type"
 msgstr "Type de connexion inconnu"
 
-#: ../lib/network/connection.pm:165
+#: ../lib/network/connection.pm:168
 #, c-format
 msgid "Network access settings"
 msgstr "Paramètres de l'accès réseau"
 
-#: ../lib/network/connection.pm:166
+#: ../lib/network/connection.pm:169
 #, c-format
 msgid "Access settings"
 msgstr "Paramètres d'accès"
 
-#: ../lib/network/connection.pm:167
+#: ../lib/network/connection.pm:170
 #, c-format
 msgid "Address settings"
 msgstr "Paramètres de l'adresse"
 
-#: ../lib/network/connection.pm:181 ../lib/network/connection.pm:201
+#: ../lib/network/connection.pm:184 ../lib/network/connection.pm:204
 #: ../lib/network/connection/isdn.pm:156 ../lib/network/netconnect.pm:217
 #: ../lib/network/netconnect.pm:491 ../lib/network/netconnect.pm:587
 #: ../lib/network/netconnect.pm:590
@@ -2609,55 +2609,85 @@ msgstr "Paramètres de l'adresse"
 msgid "Unlisted - edit manually"
 msgstr "Non listé - éditer manuellement"
 
-#: ../lib/network/connection.pm:234 ../lib/network/connection/cable.pm:41
+#: ../lib/network/connection.pm:237 ../lib/network/connection/cable.pm:41
 #: ../lib/network/connection/wireless.pm:46 ../lib/network/vpn/openvpn.pm:129
 #: ../lib/network/vpn/openvpn.pm:173 ../lib/network/vpn/openvpn.pm:341
 #, c-format
 msgid "None"
 msgstr "Aucun"
 
-#: ../lib/network/connection.pm:246
+#: ../lib/network/connection.pm:249
 #, c-format
 msgid "Allow users to manage the connection"
 msgstr "Autoriser les utilisateurs à gérer la connexion"
 
-#: ../lib/network/connection.pm:247
+#: ../lib/network/connection.pm:250
 #, c-format
 msgid "Start the connection at boot"
 msgstr "Lancer la connexion au démarrage"
 
-#: ../lib/network/connection.pm:248
+#: ../lib/network/connection.pm:251
 #, c-format
 msgid "Enable traffic accounting"
 msgstr "Activer les statistiques réseau"
 
-#: ../lib/network/connection.pm:249
+#: ../lib/network/connection.pm:252
 #, c-format
 msgid "Allow interface to be controlled by Network Manager"
 msgstr "Permettre le contrôle de l'interface par Network Manager"
 
-#: ../lib/network/connection.pm:250 ../lib/network/drakconnect/edit.pm:292
+#: ../lib/network/connection.pm:253 ../lib/network/drakconnect/edit.pm:292
 #, c-format
 msgid "Metric"
 msgstr "Métrique"
 
-#: ../lib/network/connection.pm:251
+#: ../lib/network/connection.pm:254
 #, c-format
 msgid "MTU"
 msgstr "MTU"
 
-#: ../lib/network/connection.pm:252
+#: ../lib/network/connection.pm:255
 #, c-format
 msgid "Maximum size of network message (MTU). If unsure, left blank."
 msgstr ""
 "Taille maximale des messages réseau (MTU). En cas de doute, laissez vide."
 
-#: ../lib/network/connection.pm:332
+#: ../lib/network/connection.pm:256
+#, c-format
+msgid "MACADDR"
+msgstr ""
+
+#: ../lib/network/connection.pm:257
+#, c-format
+msgid "Use a fake MAC address. If unset, uses HWADDR or default."
+msgstr ""
+
+#: ../lib/network/connection.pm:258
+#, c-format
+msgid "HWADDR"
+msgstr ""
+
+#: ../lib/network/connection.pm:259
+#, c-format
+msgid "Set the MAC address. If unset, uses default."
+msgstr ""
+
+#: ../lib/network/connection.pm:260
+#, c-format
+msgid "ETHTOOL_OPTS"
+msgstr ""
+
+#: ../lib/network/connection.pm:261
+#, c-format
+msgid "Use ethtool to pass options to the NIC. eg. \"autoneg off wol g\""
+msgstr ""
+
+#: ../lib/network/connection.pm:344
 #, c-format
 msgid "Link detected on interface %s"
 msgstr "Liaison détectée sur l'interface %s"
 
-#: ../lib/network/connection.pm:333 ../lib/network/connection/ethernet.pm:305
+#: ../lib/network/connection.pm:345 ../lib/network/connection/ethernet.pm:305
 #, c-format
 msgid "Link beat lost on interface %s"
 msgstr "Liaison perdue sur l'interface %s"
