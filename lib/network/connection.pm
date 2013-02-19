@@ -148,6 +148,9 @@ sub load_interface_settings {
     $self->{control}{userctl} = $self->get_ifcfg_bool('USERCTL');
     $self->{control}{metric} = $self->{ifcfg}{METRIC};
     $self->{control}{mtu} = $self->{ifcfg}{MTU};
+    $self->{control}{macaddr} = $self->{ifcfg}{MACADDR};
+    $self->{control}{hwaddr} = $self->{ifcfg}{HWADDR};
+    $self->{control}{ethtool_opts} = $self->{ifcfg}{ETHTOOL_OPTS};
     $self->{control}{accounting} = $self->get_ifcfg_bool('ACCOUNTING');
     $self->{control}{nm_controlled} = $self->get_ifcfg_bool('NM_CONTROLLED');
     $self->{control}{uuid} = $self->{ifcfg}{UUID};
@@ -251,6 +254,12 @@ sub get_control_settings {
         { label => N("Metric"), val => \$self->{control}{metric}, advanced => 1 },
         { label => N("MTU"), val => \$self->{control}{mtu}, advanced => 1,
           help => N("Maximum size of network message (MTU). If unsure, left blank.") },
+        { label => N("MACADDR"), val => \$self->{control}{macaddr}, advanced => 1,
+          help => N("Use a fake MAC address. If unset, uses HWADDR or default.") },
+        { label => N("HWADDR"), val => \$self->{control}{hwaddr}, advanced => 1,
+          help => N("Set the MAC address. If unset, uses default.") },
+        { label => N("ETHTOOL_OPTS"), val => \$self->{control}{ethtool_opts}, advanced => 1,
+          help => N("Use ethtool to pass options to the NIC. eg. \"autoneg off wol g\"") },
     ];
 }
 
@@ -264,6 +273,9 @@ sub build_ifcfg_settings {
         USERCTL => bool2yesno($self->{control}{userctl}),
         METRIC => $self->{control}{metric},
         MTU => $self->{control}{mtu},
+        MACADDR => $self->{control}{macaddr},
+        HWADDR => $self->{control}{hwaddr},
+        ETHTOOL_OPTS => $self->{control}{ethtool_opts},
         UUID => $self->{control}{uuid},
         NAME => $self->{control}{name},
         LAST_CONNECT => $self->{control}{last_connect},
