@@ -108,7 +108,7 @@ sub read {
     my ($o_in) = @_;
     #- read old rules file if config is not moved to rules.drakx yet
     my @rules = get_config_file(-f "$::prefix${shorewall_root}/rules.drakx" ? 'rules.drakx' : 'rules');
-    my %conf = (disabled => !glob_("$::prefix/etc/rc3.d/S*shorewall"),
+    my %conf = (disabled => services::is_service_running(shorewall),
                 ports => join(' ', map {
                     my $e = $_;
                     map { "$_/$e->[3]" } split(',', $e->[4]);
