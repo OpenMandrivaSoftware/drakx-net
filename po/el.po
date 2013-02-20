@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
 "POT-Creation-Date: 2013-02-19 21:10+0100\n"
-"PO-Revision-Date: 2013-01-20 14:25+0100\n"
+"PO-Revision-Date: 2013-02-20 07:00+0100\n"
 "Last-Translator: Dimitrios Glentadakis <dglent@gmail.com>\n"
 "Language-Team: Greek <i18n-el@ml.mageia.org>\n"
 "Language: el\n"
@@ -2674,32 +2674,37 @@ msgstr ""
 #: ../lib/network/connection.pm:256
 #, c-format
 msgid "MACADDR"
-msgstr ""
+msgstr "MACADDR"
 
 #: ../lib/network/connection.pm:257
 #, c-format
 msgid "Use a fake MAC address. If unset, uses HWADDR or default."
 msgstr ""
+"Χρήση μιας πλαστής διεύθυνσης MAC. Αν αναιρεθεί, χρησιμοποιείται η HWADDR ή η "
+"προκαθορισμένη."
 
 #: ../lib/network/connection.pm:258
 #, c-format
 msgid "HWADDR"
-msgstr ""
+msgstr "HWADDR"
 
 #: ../lib/network/connection.pm:259
 #, c-format
 msgid "Set the MAC address. If unset, uses default."
 msgstr ""
+"Καθορισμός της διεύθυνσης MAC. Αν αναιρεθεί, χρησιμοποιείται η προκαθορισμένη."
 
 #: ../lib/network/connection.pm:260
 #, c-format
 msgid "ETHTOOL_OPTS"
-msgstr ""
+msgstr "ETHTOOL_OPTS"
 
 #: ../lib/network/connection.pm:261
 #, c-format
 msgid "Use ethtool to pass options to the NIC. eg. \"autoneg off wol g\""
 msgstr ""
+"Χρήση της ethtool για το πέρασμα παραμέτρων στη διεπαφή δικτύου (NIC), πχ "
+"«autoneg off wol g»"
 
 #: ../lib/network/connection.pm:344
 #, c-format
@@ -4377,43 +4382,44 @@ msgstr ""
 "ρυθμίσεις."
 
 #: ../lib/network/connection/wireless.pm:501
-#, fuzzy, c-format
+#, c-format
 msgid "EAP client private key"
-msgstr "Πιστοποιητικό πελάτη EAP"
+msgstr "Ιδιωτικό κλειδί πελάτη EAP"
 
 #: ../lib/network/connection/wireless.pm:503
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The complete path and filename of client private key. This is\n"
 "only used for EAP certificate based authentication. It could be\n"
 "considered as the alternative to username/password combo.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
-"Η πλήρης διαδρομή και το όνομα αρχείου του πιστοποιητικού πελάτη. Αυτό\n"
+"Η πλήρης διαδρομή και το όνομα αρχείου του ιδιωτικού κλειδιού πελάτη. Αυτό\n"
 "χρησιμοποιείται μόνο για την ταυτοποίηση βασισμένη σε ένα πιστοποιητικό\n"
-"EAP. Είναι ένας εναλλακτικός συνδυασμός του ζευγαριού χρήστη/κωδικού "
+"EAP. Μπορεί να θεωρηθεί ως ένας εναλλακτικός συνδυασμός του ζευγαριού "
+"χρήστη/κωδικού "
 "πρόσβασης.\n"
-" Σημείωση: οι άλλες σχετικές ρυθμίσεις βρίσκονται στην σελίδα Προχωρημένες "
+" Σημείωση: άλλες σχετικές ρυθμίσεις βρίσκονται στη σελίδα Προχωρημένες "
 "ρυθμίσεις."
 
 #: ../lib/network/connection/wireless.pm:507
-#, fuzzy, c-format
+#, c-format
 msgid "EAP client private key password"
-msgstr "Πιστοποιητικό πελάτη EAP"
+msgstr "Κωδικός πρόσβασης ιδιωτικού κλειδιού πελάτη EAP"
 
 #: ../lib/network/connection/wireless.pm:509
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The complete password for the client private key. This is\n"
 "only used for EAP certificate based authentication. This password \n"
 "is used for protected client private keys only. It can be optional.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
-"Η πλήρης διαδρομή και το όνομα αρχείου του πιστοποιητικού πελάτη. Αυτό\n"
+"Ο πλήρης κωδικός για το ιδιωτικό κλειδί του πελάτη. Αυτό\n"
 "χρησιμοποιείται μόνο για την ταυτοποίηση βασισμένη σε ένα πιστοποιητικό\n"
-"EAP. Είναι ένας εναλλακτικός συνδυασμός του ζευγαριού χρήστη/κωδικού "
-"πρόσβασης.\n"
-" Σημείωση: οι άλλες σχετικές ρυθμίσεις βρίσκονται στην σελίδα Προχωρημένες "
+"EAP. Αυτός ο κωδικός χρησιμοποιείται μόνο για τα προστατευμένα ιδιωτικά "
+"κλειδιά του πελάτη. Μπορεί να είναι προαιρετικό.\n"
+" Σημείωση: άλλες σχετικές ρυθμίσεις βρίσκονται στη σελίδα Προχωρημένες "
 "ρυθμίσεις."
 
 #: ../lib/network/connection/wireless.pm:513
@@ -6845,3 +6851,4 @@ msgstr "Κατάσταση λειτουργίας NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Χρήση συγκεκριμένης θύρας UDP"
+
