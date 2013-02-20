@@ -415,10 +415,10 @@ sub netprofile_modules() {
     foreach my $module (@m) {
         my @params = split('\t', $module);
         my $vals = {
-                module => @params[0],
+                module => $params[0],
                 enabled => $params[1] eq '+' ? 1 : 0,
-                name => @params[2],
-                description => @params[3],
+                name => $params[2],
+                description => $params[3],
             };
         push(@modules, $vals);
     }
