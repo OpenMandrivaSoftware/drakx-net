@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
 "POT-Creation-Date: 2013-02-19 21:10+0100\n"
-"PO-Revision-Date: 2013-01-20 14:37+0200\n"
+"PO-Revision-Date: 2013-02-20 22:39+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -2654,32 +2654,36 @@ msgstr ""
 #: ../lib/network/connection.pm:256
 #, c-format
 msgid "MACADDR"
-msgstr ""
+msgstr "MACАДРЕСА"
 
 #: ../lib/network/connection.pm:257
 #, c-format
 msgid "Use a fake MAC address. If unset, uses HWADDR or default."
 msgstr ""
+"Використовувати фальшиву MAC-адресу. Якщо не встановлено, буде використано "
+"значення АПАДРЕСА або типове значення."
 
 #: ../lib/network/connection.pm:258
 #, c-format
 msgid "HWADDR"
-msgstr ""
+msgstr "АПАДРЕСА"
 
 #: ../lib/network/connection.pm:259
 #, c-format
 msgid "Set the MAC address. If unset, uses default."
-msgstr ""
+msgstr "Встановити MAC-адресу. Якщо не встановлено, використовувати типову."
 
 #: ../lib/network/connection.pm:260
 #, c-format
 msgid "ETHTOOL_OPTS"
-msgstr ""
+msgstr "ПАРАМЕТРИ_ETHTOOL"
 
 #: ../lib/network/connection.pm:261
 #, c-format
 msgid "Use ethtool to pass options to the NIC. eg. \"autoneg off wol g\""
 msgstr ""
+"Скористатися ethtool для передавання параметрів NIC. Приклад: \"autoneg off "
+"wol g\""
 
 #: ../lib/network/connection.pm:344
 #, c-format
@@ -4355,40 +4359,41 @@ msgstr ""
 "на сторінці додаткових параметрів."
 
 #: ../lib/network/connection/wireless.pm:501
-#, fuzzy, c-format
+#, c-format
 msgid "EAP client private key"
-msgstr "Клієнтський сертифікат EAP"
+msgstr "Клієнтський закритий ключ EAP"
 
 #: ../lib/network/connection/wireless.pm:503
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The complete path and filename of client private key. This is\n"
 "only used for EAP certificate based authentication. It could be\n"
 "considered as the alternative to username/password combo.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
-"Повний шлях і назва файла клієнтського сертифіката. Це значення\n"
-"буде використано лише за розпізнавання на основі EAP. Його можна\n"
-"розглядати як альтернативу до комбінацій користувач/пароль.\n"
+"Повний шлях до файла і його назва для клієнтського закритого ключа.\n"
+"Це значення буде використано лише за розпізнавання на основі EAP.\n"
+"Його можна розглядати як альтернативу до комбінацій користувач/пароль.\n"
 " Зауваження: інші параметри такого розпізнавання можна знайти\n"
 "на сторінці додаткових параметрів."
 
 #: ../lib/network/connection/wireless.pm:507
-#, fuzzy, c-format
+#, c-format
 msgid "EAP client private key password"
-msgstr "Клієнтський сертифікат EAP"
+msgstr "Пароль до клієнтського закритого ключа EAP"
 
 #: ../lib/network/connection/wireless.pm:509
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The complete password for the client private key. This is\n"
 "only used for EAP certificate based authentication. This password \n"
 "is used for protected client private keys only. It can be optional.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
-"Повний шлях і назва файла клієнтського сертифіката. Це значення\n"
-"буде використано лише за розпізнавання на основі EAP. Його можна\n"
-"розглядати як альтернативу до комбінацій користувач/пароль.\n"
+"Повний пароль до клієнтського закритого ключа. Це значення\n"
+"буде використано лише за розпізнавання на основі EAP. Пароль\n"
+"використовується лише для захищених клієнтських закритих\n"
+"ключів. Він не є обов’язковим.\n"
 " Зауваження: інші параметри такого розпізнавання можна знайти\n"
 "на сторінці додаткових параметрів."
 
@@ -4396,7 +4401,7 @@ msgstr ""
 #: ../lib/network/drakconnect/edit.pm:238
 #, c-format
 msgid "Network ID"
-msgstr "ID мережі"
+msgstr "Ід. мережі"
 
 #: ../lib/network/connection/wireless.pm:514
 #: ../lib/network/drakconnect/edit.pm:239
@@ -6799,3 +6804,4 @@ msgstr "Режим NAT"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Використовувати вказаний порт UDP"
+
