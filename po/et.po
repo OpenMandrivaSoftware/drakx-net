@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
 "POT-Creation-Date: 2013-02-19 21:10+0100\n"
-"PO-Revision-Date: 2013-01-21 16:01+0000\n"
+"PO-Revision-Date: 2013-03-01 06:31+0000\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: et\n"
@@ -2521,7 +2521,7 @@ msgid ""
 "Warning, another internet connection has been detected, maybe using your "
 "network"
 msgstr ""
-"Hoiatus, leiti veel üks internetiühendus, mis võib-olla kasutab Teie võrku"
+"Hoiatus: leiti veel üks internetiühendus, mis võib-olla kasutab Teie võrku"
 
 #: ../bin/net_monitor:516 ../lib/network/drakconnect/global.pm:18
 #, c-format
@@ -2611,32 +2611,32 @@ msgstr "Maksimaalne edastusüksus (MTU). Kui te pole kindel, jätke tühjaks."
 #: ../lib/network/connection.pm:256
 #, c-format
 msgid "MACADDR"
-msgstr ""
+msgstr "MACADDR"
 
 #: ../lib/network/connection.pm:257
 #, c-format
 msgid "Use a fake MAC address. If unset, uses HWADDR or default."
-msgstr ""
+msgstr "Võlts-MAC-aadressi kasutamine. Kui on määramata, kasutatakse HWADDR või vaikeväärtust."
 
 #: ../lib/network/connection.pm:258
 #, c-format
 msgid "HWADDR"
-msgstr ""
+msgstr "HWADDR"
 
 #: ../lib/network/connection.pm:259
 #, c-format
 msgid "Set the MAC address. If unset, uses default."
-msgstr ""
+msgstr "MAC-aadressi määramine. Kui on määramata, kasutatakse vaikeväärtust."
 
 #: ../lib/network/connection.pm:260
 #, c-format
 msgid "ETHTOOL_OPTS"
-msgstr ""
+msgstr "ETHTOOL_OPTS"
 
 #: ../lib/network/connection.pm:261
 #, c-format
 msgid "Use ethtool to pass options to the NIC. eg. \"autoneg off wol g\""
-msgstr ""
+msgstr "Ethtooli kasutamine võtmete edastamiseks võrguliidesele, nt. \"autoneg off wol g\""
 
 #: ../lib/network/connection.pm:344
 #, c-format
@@ -4303,40 +4303,40 @@ msgstr ""
 " Märkus: täiendavad seadistused leiab muude valikute leheküljel."
 
 #: ../lib/network/connection/wireless.pm:501
-#, fuzzy, c-format
+#, c-format
 msgid "EAP client private key"
-msgstr "EAP kliendi sertifikaat"
+msgstr "EAP kliendi privaatvõti"
 
 #: ../lib/network/connection/wireless.pm:503
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The complete path and filename of client private key. This is\n"
 "only used for EAP certificate based authentication. It could be\n"
 "considered as the alternative to username/password combo.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
-"Kliendi sertifikaadi täielik asukoht ja failinimi. Seda kasutatakse\n"
+"Kliendi privaatvõtme täielik asukoht ja failinimi. Seda kasutatakse\n"
 "ainult EAP sertifikaadipõhisel autentimisel. Seda võib pidada\n"
 "kasutajanime ja parooli kasutamise alternatiiviks.\n"
 " Märkus: täiendavad seadistused leiab muude valikute leheküljel."
 
 #: ../lib/network/connection/wireless.pm:507
-#, fuzzy, c-format
+#, c-format
 msgid "EAP client private key password"
-msgstr "EAP kliendi sertifikaat"
+msgstr "EAP kliendi privaatvõtme parool"
 
 #: ../lib/network/connection/wireless.pm:509
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The complete password for the client private key. This is\n"
 "only used for EAP certificate based authentication. This password \n"
 "is used for protected client private keys only. It can be optional.\n"
 " Note: other related settings are shown on the Advanced page."
 msgstr ""
-"Kliendi sertifikaadi täielik asukoht ja failinimi. Seda kasutatakse\n"
-"ainult EAP sertifikaadipõhisel autentimisel. Seda võib pidada\n"
-"kasutajanime ja parooli kasutamise alternatiiviks.\n"
-" Märkus: täiendavad seadistused leiab muude valikute leheküljel."
+"Kliendi privaatvõtme täielik parool. Seda kasutatakse \n"
+"ainult EAP sertifikaadipõhisel autentimisel. Seda parooli tarvitatakse\n"
+"ainult kaitstud kliendi privaatvõtmete jaoks. Selle kasutamine pole \n"
+"kohustuslik. Märkus: täiendavad seadistused leiab muude valikute leheküljel."
 
 #: ../lib/network/connection/wireless.pm:513
 #: ../lib/network/drakconnect/edit.pm:238
@@ -6328,7 +6328,7 @@ msgid ""
 "An unexpected error has happened:\n"
 "%s"
 msgstr ""
-"Tekkis ootamatu viga:\n"
+"Tekkis ootamatu tõrge:\n"
 "%s"
 
 #: ../lib/network/network.pm:526
