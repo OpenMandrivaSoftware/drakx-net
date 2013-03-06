@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net\n"
-"POT-Creation-Date: 2013-02-19 21:10+0100\n"
+"POT-Creation-Date: 2013-03-06 06:25+0100\n"
 "PO-Revision-Date: 2012-01-16 15:46+0000\n"
 "Last-Translator: Atilla ÖNTAŞ <tarakbumba@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1631,8 +1631,7 @@ msgstr ""
 "<tuncayyeniay@mynet.com> , 2002.Nazmi Savga <nsavga@doruk.net.tr> , 2001."
 "Durmuş Celep <durmusc_tr@yahoo.com> , 2002.Erçin EKER <erc.caldera@gmx."
 "net> , 2003.Taha Özket <taha.ozket@obss.net> , 2007Atilla ÖNTAŞ "
-"<atilla_ontas@hotmail.com> , 2008 , 2013 Fırat KUTLU <firatkutlu@gmail."
-"com\n"
+"<atilla_ontas@hotmail.com> , 2008 , 2013 Fırat KUTLU <firatkutlu@gmail.com\n"
 
 #: ../bin/draksambashare:229
 #, c-format
@@ -1821,7 +1820,8 @@ msgstr "Lütfen bir Samba paylaşımı ekleyin veya seçin."
 #: ../bin/draksambashare:717
 #, c-format
 msgid "User options (user access, mask option, force mode)"
-msgstr "Kullanıcı seçenekleri (kullanıcı erişimi, maske seçeneği, zorlama modu)"
+msgstr ""
+"Kullanıcı seçenekleri (kullanıcı erişimi, maske seçeneği, zorlama modu)"
 
 #: ../bin/draksambashare:719
 #, c-format
@@ -2627,35 +2627,39 @@ msgstr "Ağ iletisinin en fazla boyutu (MTU). Emin değilseniz boş bırakın."
 
 #: ../lib/network/connection.pm:256
 #, c-format
-msgid "MACADDR"
-msgstr "MACADDR"
+msgid "Fake make address (MACADDR)"
+msgstr ""
 
 #: ../lib/network/connection.pm:257
 #, c-format
 msgid "Use a fake MAC address. If unset, uses HWADDR or default."
-msgstr "Sahte bir MAC adresi kullanın. Eğer yapılandırılmamışsa, "
-"öntanımlı veya HWADDR kullanır"
+msgstr ""
+"Sahte bir MAC adresi kullanın. Eğer yapılandırılmamışsa, öntanımlı veya "
+"HWADDR kullanır"
 
 #: ../lib/network/connection.pm:258
 #, c-format
-msgid "HWADDR"
-msgstr "HWADDR"
+msgid "MAC address (HWADDR)"
+msgstr ""
 
 #: ../lib/network/connection.pm:259
-#, c-format
-msgid "Set the MAC address. If unset, uses default."
-msgstr "MAC adresini ayarlayın. Eğer yapılandırılmamışsa, "
-"öntanımlı kullanılır. "
+#, fuzzy, c-format
+msgid ""
+"Make sure to bind the interface to the network card with that MAC address. "
+"If unset, uses default."
+msgstr ""
+"MAC adresini ayarlayın. Eğer yapılandırılmamışsa, öntanımlı kullanılır. "
 
 #: ../lib/network/connection.pm:260
-#, c-format
-msgid "ETHTOOL_OPTS"
-msgstr "ETHTOOL_OPTS"
+#, fuzzy, c-format
+msgid "Ethtool options"
+msgstr "Özel Seçenekler"
 
 #: ../lib/network/connection.pm:261
 #, c-format
 msgid "Use ethtool to pass options to the NIC. eg. \"autoneg off wol g\""
-msgstr "NIC'e geçiş seçenekleri için ethtool kullanın. örn. \"autoneg off wol g\""
+msgstr ""
+"NIC'e geçiş seçenekleri için ethtool kullanın. örn. \"autoneg off wol g\""
 
 #: ../lib/network/connection.pm:344
 #, c-format
@@ -4167,12 +4171,12 @@ msgstr "WPA/WPA2 Önceden Paylaşılmış Anahtar"
 msgid "WPA/WPA2 Enterprise"
 msgstr "WPA/WPA2 Kurumsal"
 
-#: ../lib/network/connection/wireless.pm:284
+#: ../lib/network/connection/wireless.pm:292
 #, c-format
 msgid "Windows driver"
 msgstr "Windows sürücüsü"
 
-#: ../lib/network/connection/wireless.pm:358
+#: ../lib/network/connection/wireless.pm:366
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
@@ -4181,83 +4185,83 @@ msgstr ""
 "Kablosuz kartınız devre dışı, lütfen öncelikle kablosuz anahtarını (RF "
 "öldürme anahtarı) etkinleştirin."
 
-#: ../lib/network/connection/wireless.pm:448
+#: ../lib/network/connection/wireless.pm:456
 #, c-format
 msgid "Wireless settings"
 msgstr "Kablosuz ayarları"
 
-#: ../lib/network/connection/wireless.pm:453
+#: ../lib/network/connection/wireless.pm:461
 #: ../lib/network/connection_manager.pm:281
 #: ../lib/network/drakconnect/edit.pm:236
 #, c-format
 msgid "Operating Mode"
 msgstr "İşletim Kipi"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Ad-hoc"
 msgstr "Ad-hoc"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Managed"
 msgstr "Yönet"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Master"
 msgstr "Ana"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Repeater"
 msgstr "Tekrarlayıcı"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Secondary"
 msgstr "İkincil"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Auto"
 msgstr "Otomatik"
 
-#: ../lib/network/connection/wireless.pm:457
+#: ../lib/network/connection/wireless.pm:465
 #: ../lib/network/drakconnect/edit.pm:237
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "Ağ adı (ESSID)"
 
-#: ../lib/network/connection/wireless.pm:459
+#: ../lib/network/connection/wireless.pm:467
 #, c-format
 msgid "Encryption mode"
 msgstr "Şifreleme kipi"
 
-#: ../lib/network/connection/wireless.pm:461
+#: ../lib/network/connection/wireless.pm:469
 #: ../lib/network/drakconnect/edit.pm:251
 #, c-format
 msgid "Encryption key"
 msgstr "Şifreleme anahtarı"
 
-#: ../lib/network/connection/wireless.pm:464
+#: ../lib/network/connection/wireless.pm:472
 #, c-format
 msgid "Hide password"
 msgstr "Şifreyi gizle"
 
-#: ../lib/network/connection/wireless.pm:466
+#: ../lib/network/connection/wireless.pm:474
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr ""
 "Bu anahtarın kullanımını ASCII söz dizisi olarak kullanmaya zorla (örn. "
 "Livebox için)"
 
-#: ../lib/network/connection/wireless.pm:473
+#: ../lib/network/connection/wireless.pm:481
 #, c-format
 msgid "EAP Login/Username"
 msgstr "EAP Kullanıcı İsmi/Girişi"
 
-#: ../lib/network/connection/wireless.pm:475
+#: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
@@ -4268,12 +4272,12 @@ msgstr ""
 "belirtmek durumundaysanız denenmemiş bir söz dizimi kullanın\n"
 " ALAN\\kullanıcı adı"
 
-#: ../lib/network/connection/wireless.pm:478
+#: ../lib/network/connection/wireless.pm:486
 #, c-format
 msgid "EAP Password"
 msgstr "EAP Parolası"
 
-#: ../lib/network/connection/wireless.pm:481
+#: ../lib/network/connection/wireless.pm:489
 #, c-format
 msgid ""
 " Password: A string.\n"
@@ -4307,12 +4311,12 @@ msgstr ""
 " TLS kipi tamamen sertifika temellidir ve burada belirtilen kullanıcı adı\n"
 "ve parola değerlerini yok sayabilir."
 
-#: ../lib/network/connection/wireless.pm:495
+#: ../lib/network/connection/wireless.pm:503
 #, c-format
 msgid "EAP client certificate"
 msgstr "EAP araç sertifikası"
 
-#: ../lib/network/connection/wireless.pm:497
+#: ../lib/network/connection/wireless.pm:505
 #, c-format
 msgid ""
 "The complete path and filename of client certificate. This is\n"
@@ -4325,12 +4329,12 @@ msgstr ""
 "bileşeninin alternatifi olarak düşünülebilir.\n"
 "Not: ilgili diğer ayarlar Gelişmiş sayfasında gösterilmiştir."
 
-#: ../lib/network/connection/wireless.pm:501
+#: ../lib/network/connection/wireless.pm:509
 #, c-format
 msgid "EAP client private key"
 msgstr "EAP istemci özel anahtarı"
 
-#: ../lib/network/connection/wireless.pm:503
+#: ../lib/network/connection/wireless.pm:511
 #, c-format
 msgid ""
 "The complete path and filename of client private key. This is\n"
@@ -4343,12 +4347,12 @@ msgstr ""
 "bileşeninin alternatifi olarak düşünülebilir.\n"
 "Not: ilgili diğer ayarlar Gelişmiş sayfasında gösterilmiştir."
 
-#: ../lib/network/connection/wireless.pm:507
+#: ../lib/network/connection/wireless.pm:515
 #, c-format
 msgid "EAP client private key password"
 msgstr "EAP istemci özel anahtar parolası"
 
-#: ../lib/network/connection/wireless.pm:509
+#: ../lib/network/connection/wireless.pm:517
 #, c-format
 msgid ""
 "The complete password for the client private key. This is\n"
@@ -4361,37 +4365,37 @@ msgstr ""
 "korumalı istemci özel anahtarları için kullanılır.\n"
 "Not: ilgili diğer ayarlar Gelişmiş sayfasında gösterilmiştir."
 
-#: ../lib/network/connection/wireless.pm:513
+#: ../lib/network/connection/wireless.pm:521
 #: ../lib/network/drakconnect/edit.pm:238
 #, c-format
 msgid "Network ID"
 msgstr "Ağ ID"
 
-#: ../lib/network/connection/wireless.pm:514
+#: ../lib/network/connection/wireless.pm:522
 #: ../lib/network/drakconnect/edit.pm:239
 #, c-format
 msgid "Operating frequency"
 msgstr "İşleme sıklığı"
 
-#: ../lib/network/connection/wireless.pm:515
+#: ../lib/network/connection/wireless.pm:523
 #: ../lib/network/drakconnect/edit.pm:240
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "Duyarlılık eşik değeri"
 
-#: ../lib/network/connection/wireless.pm:516
+#: ../lib/network/connection/wireless.pm:524
 #: ../lib/network/drakconnect/edit.pm:241
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "Bitrate (b/s bazında)"
 
-#: ../lib/network/connection/wireless.pm:517
+#: ../lib/network/connection/wireless.pm:525
 #: ../lib/network/drakconnect/edit.pm:252
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../lib/network/connection/wireless.pm:518
+#: ../lib/network/connection/wireless.pm:526
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -4416,19 +4420,19 @@ msgstr ""
 "kapalı olarak\n"
 "da ayarlayabilirsiniz."
 
-#: ../lib/network/connection/wireless.pm:525
+#: ../lib/network/connection/wireless.pm:533
 #: ../lib/network/drakconnect/edit.pm:253
 #, c-format
 msgid "Fragmentation"
 msgstr "Parçalanma"
 
-#: ../lib/network/connection/wireless.pm:526
+#: ../lib/network/connection/wireless.pm:534
 #: ../lib/network/drakconnect/edit.pm:254
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "iwconfig komutu ek argümanları"
 
-#: ../lib/network/connection/wireless.pm:527
+#: ../lib/network/connection/wireless.pm:535
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -4444,13 +4448,13 @@ msgstr ""
 "Daha fazla bilgi için iwconfig(8) el kitabına bakın."
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:534
+#: ../lib/network/connection/wireless.pm:542
 #: ../lib/network/drakconnect/edit.pm:255
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "iwspy komutu ek argümanları"
 
-#: ../lib/network/connection/wireless.pm:535
+#: ../lib/network/connection/wireless.pm:543
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -4469,13 +4473,13 @@ msgstr ""
 "\n"
 "Daha fazla bilgi için iwspy(8) el kitabına bakın."
 
-#: ../lib/network/connection/wireless.pm:543
+#: ../lib/network/connection/wireless.pm:551
 #: ../lib/network/drakconnect/edit.pm:256
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "iwpriv komutu ek argümanları"
 
-#: ../lib/network/connection/wireless.pm:545
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -4506,28 +4510,28 @@ msgstr ""
 "\n"
 "Daha fazla bilgi için iwpriv(8) el kitabına bakın."
 
-#: ../lib/network/connection/wireless.pm:556
+#: ../lib/network/connection/wireless.pm:564
 #, c-format
 msgid "EAP Protocol"
 msgstr "EAP Protokolü"
 
-#: ../lib/network/connection/wireless.pm:557
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:565
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "Auto Detect"
 msgstr "Otomatik Algıla"
 
-#: ../lib/network/connection/wireless.pm:557
+#: ../lib/network/connection/wireless.pm:565
 #, c-format
 msgid "WPA2"
 msgstr "WPA2"
 
-#: ../lib/network/connection/wireless.pm:557
+#: ../lib/network/connection/wireless.pm:565
 #, c-format
 msgid "WPA"
 msgstr "WPA"
 
-#: ../lib/network/connection/wireless.pm:559
+#: ../lib/network/connection/wireless.pm:567
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
@@ -4536,67 +4540,67 @@ msgstr ""
 "Otomatik Algılama önerilir. Çünkü ilk önce WPA sürüm 2 kullanılır ve\n"
 "WPA sürüm 1' e geri dönülebilir."
 
-#: ../lib/network/connection/wireless.pm:561
+#: ../lib/network/connection/wireless.pm:569
 #, c-format
 msgid "EAP Mode"
 msgstr "EAP Kipi"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "PEAP"
 msgstr "PEAP"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "TTLS"
 msgstr "TTLS"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "TLS"
 msgstr "TLS"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "MSCHAPV2"
 msgstr "MSCHAPV2"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "MD5"
 msgstr "MD5"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "OTP"
 msgstr "OTP"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "GTC"
 msgstr "GTC"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "LEAP"
 msgstr "LEAP"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "PEAP TTLS"
 msgstr "PEAP TTLS"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "TTLS TLS"
 msgstr "TTLS TLS"
 
-#: ../lib/network/connection/wireless.pm:564
+#: ../lib/network/connection/wireless.pm:572
 #, c-format
 msgid "EAP key_mgmt"
 msgstr "EAP key_mgmt"
 
-#: ../lib/network/connection/wireless.pm:566
+#: ../lib/network/connection/wireless.pm:574
 #, c-format
 msgid ""
 "list of accepted authenticated key management protocols.\n"
@@ -4605,12 +4609,12 @@ msgstr ""
 "Kabul edilen yetkilendirilmiş anahtar yönetim protokollerinin listesi.\n"
 "Muhtemel değerler: WPA-EAP, IEEE8021X, NONE"
 
-#: ../lib/network/connection/wireless.pm:568
+#: ../lib/network/connection/wireless.pm:576
 #, c-format
 msgid "EAP outer identity"
 msgstr "EAP dışsal kimliği"
 
-#: ../lib/network/connection/wireless.pm:570
+#: ../lib/network/connection/wireless.pm:578
 #, c-format
 msgid ""
 "Anonymous identity string for EAP: to be used as the\n"
@@ -4621,12 +4625,12 @@ msgstr ""
 "(örn. TTLS) destekleyen EAP türleri için şifrelenmemiş kimlik\n"
 "olarak kullanılır."
 
-#: ../lib/network/connection/wireless.pm:573
+#: ../lib/network/connection/wireless.pm:581
 #, c-format
 msgid "EAP phase2"
 msgstr "EAP phase2"
 
-#: ../lib/network/connection/wireless.pm:575
+#: ../lib/network/connection/wireless.pm:583
 #, c-format
 msgid ""
 "Inner authentication with TLS tunnel parameters.\n"
@@ -4639,12 +4643,12 @@ msgstr ""
 "auth=MSCHAPV2 for PEAP or\n"
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 
-#: ../lib/network/connection/wireless.pm:579
+#: ../lib/network/connection/wireless.pm:587
 #, c-format
 msgid "EAP CA certificate"
 msgstr "EAP CA sertifikası"
 
-#: ../lib/network/connection/wireless.pm:581
+#: ../lib/network/connection/wireless.pm:589
 #, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
@@ -4660,12 +4664,12 @@ msgstr ""
 "PEAP kullanılırken güvenilir bir CA sertifikası her zaman\n"
 "yapılandırılmalıdır."
 
-#: ../lib/network/connection/wireless.pm:586
+#: ../lib/network/connection/wireless.pm:594
 #, c-format
 msgid "EAP certificate subject match"
 msgstr "EAP sertifikası özne eşleşmesi"
 
-#: ../lib/network/connection/wireless.pm:588
+#: ../lib/network/connection/wireless.pm:596
 #, c-format
 msgid ""
 " Substring to be matched against the subject of\n"
@@ -4675,12 +4679,12 @@ msgid ""
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr " "
 
-#: ../lib/network/connection/wireless.pm:593
+#: ../lib/network/connection/wireless.pm:601
 #, c-format
 msgid "Extra directives"
 msgstr "Ek yönergeler"
 
-#: ../lib/network/connection/wireless.pm:594
+#: ../lib/network/connection/wireless.pm:602
 #, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
@@ -4711,12 +4715,12 @@ msgstr ""
 "\tOthers such as key_mgmt, eap maybe used to force\n"
 "\tspecial settings different from the U.I settings."
 
-#: ../lib/network/connection/wireless.pm:614
+#: ../lib/network/connection/wireless.pm:622
 #, c-format
 msgid "An encryption key is required."
 msgstr "Bir şifreleme anahtarı gerekli."
 
-#: ../lib/network/connection/wireless.pm:621
+#: ../lib/network/connection/wireless.pm:629
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
@@ -4725,7 +4729,7 @@ msgstr ""
 "Önceden paylaşılmış anahtar, 8 ile 63 ASCII karakter arasında veya 64 "
 "onaltılık karakter uzunluğunda olmalıdır."
 
-#: ../lib/network/connection/wireless.pm:627
+#: ../lib/network/connection/wireless.pm:635
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
@@ -4734,7 +4738,7 @@ msgstr ""
 "WEP anahtarı en fazla %d ASCII karakter veya %d onaltılık karakter "
 "uzunluğunda olmalıdır."
 
-#: ../lib/network/connection/wireless.pm:634
+#: ../lib/network/connection/wireless.pm:642
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -4743,7 +4747,7 @@ msgstr ""
 "Frekans k, M veya G son ekine sahip olmalıdır. (örneğin: 2.46 GHz frekans "
 "için \"2.46G\") veya yeterince '0' (sıfır) eklenmelidir."
 
-#: ../lib/network/connection/wireless.pm:640
+#: ../lib/network/connection/wireless.pm:648
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
@@ -4752,17 +4756,17 @@ msgstr ""
 "Oran k, M veya G son ekine sahip olmalıdır. (örneğin: 11Ms için \"11M\") "
 "veya yeterince '0' (sıfır) eklenmelidir."
 
-#: ../lib/network/connection/wireless.pm:652
+#: ../lib/network/connection/wireless.pm:660
 #, c-format
 msgid "Allow access point roaming"
 msgstr "Erişim noktası dolaşımına izin ver"
 
-#: ../lib/network/connection/wireless.pm:777
+#: ../lib/network/connection/wireless.pm:785
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr " \"%s\" kablosuz ağı %s ara birimi üzerinde bağlandı"
 
-#: ../lib/network/connection/wireless.pm:778
+#: ../lib/network/connection/wireless.pm:786
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "%s ara birimindeki kablosuz ağ bağlantısı kaybedildi."
@@ -5347,7 +5351,7 @@ msgstr ""
 " drakconnect tarafından yapılandırıldığından emin olun."
 
 #: ../lib/network/drakfirewall.pm:245 ../lib/network/drakfirewall.pm:247
-#: ../lib/network/shorewall.pm:172
+#: ../lib/network/shorewall.pm:173
 #, c-format
 msgid "Firewall"
 msgstr "Güvenlik Duvarı"
@@ -6506,17 +6510,17 @@ msgstr ""
 "\n"
 "Hangi ara birimler korunsun?\n"
 
-#: ../lib/network/shorewall.pm:163
+#: ../lib/network/shorewall.pm:164
 #, c-format
 msgid "Keep custom rules"
 msgstr "Kişisel kuralları koru"
 
-#: ../lib/network/shorewall.pm:164
+#: ../lib/network/shorewall.pm:165
 #, c-format
 msgid "Drop custom rules"
 msgstr "Kişisel kuralları sil"
 
-#: ../lib/network/shorewall.pm:169
+#: ../lib/network/shorewall.pm:170
 #, c-format
 msgid ""
 "Your firewall configuration has been manually edited and contains\n"
@@ -6763,3 +6767,12 @@ msgstr "NAT Kipi"
 #, c-format
 msgid "Use specific UDP port"
 msgstr "Belirli UDP portu kullan"
+
+#~ msgid "MACADDR"
+#~ msgstr "MACADDR"
+
+#~ msgid "HWADDR"
+#~ msgstr "HWADDR"
+
+#~ msgid "ETHTOOL_OPTS"
+#~ msgstr "ETHTOOL_OPTS"

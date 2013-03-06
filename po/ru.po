@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
-"POT-Creation-Date: 2013-02-19 21:10+0100\n"
+"POT-Creation-Date: 2013-03-06 06:25+0100\n"
 "PO-Revision-Date: 2009-10-20 22:30+0500\n"
 "Last-Translator: akdengi <kazancas@mandriva.ru>\n"
 "Language-Team: Russian <gnu@mx.ru>\n"
@@ -2642,7 +2642,7 @@ msgstr ""
 
 #: ../lib/network/connection.pm:256
 #, c-format
-msgid "MACADDR"
+msgid "Fake make address (MACADDR)"
 msgstr ""
 
 #: ../lib/network/connection.pm:257
@@ -2652,18 +2652,20 @@ msgstr ""
 
 #: ../lib/network/connection.pm:258
 #, c-format
-msgid "HWADDR"
+msgid "MAC address (HWADDR)"
 msgstr ""
 
 #: ../lib/network/connection.pm:259
 #, c-format
-msgid "Set the MAC address. If unset, uses default."
+msgid ""
+"Make sure to bind the interface to the network card with that MAC address. "
+"If unset, uses default."
 msgstr ""
 
 #: ../lib/network/connection.pm:260
-#, c-format
-msgid "ETHTOOL_OPTS"
-msgstr ""
+#, fuzzy, c-format
+msgid "Ethtool options"
+msgstr "Дополнительные параметры"
 
 #: ../lib/network/connection.pm:261
 #, c-format
@@ -4181,12 +4183,12 @@ msgstr "Ключ WPA/WPA2"
 msgid "WPA/WPA2 Enterprise"
 msgstr "WPA/WPA2 Enterprise"
 
-#: ../lib/network/connection/wireless.pm:284
+#: ../lib/network/connection/wireless.pm:292
 #, c-format
 msgid "Windows driver"
 msgstr "Драйвер Windows"
 
-#: ../lib/network/connection/wireless.pm:358
+#: ../lib/network/connection/wireless.pm:366
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
@@ -4195,83 +4197,83 @@ msgstr ""
 "Ваша карта беспроводной связи отключена. Включите её сначала (переключатель "
 "RF)."
 
-#: ../lib/network/connection/wireless.pm:448
+#: ../lib/network/connection/wireless.pm:456
 #, c-format
 msgid "Wireless settings"
 msgstr "Параметры беспроводного соединения"
 
-#: ../lib/network/connection/wireless.pm:453
+#: ../lib/network/connection/wireless.pm:461
 #: ../lib/network/connection_manager.pm:281
 #: ../lib/network/drakconnect/edit.pm:236
 #, c-format
 msgid "Operating Mode"
 msgstr "Режим управления"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Ad-hoc"
 msgstr "Ad-hoc"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Managed"
 msgstr "Управляемый"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Master"
 msgstr "Мастер"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Repeater"
 msgstr "Повторитель"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Secondary"
 msgstr "Вторичный"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Auto"
 msgstr "Авто"
 
-#: ../lib/network/connection/wireless.pm:457
+#: ../lib/network/connection/wireless.pm:465
 #: ../lib/network/drakconnect/edit.pm:237
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "Сетевое имя (ESSID)"
 
-#: ../lib/network/connection/wireless.pm:459
+#: ../lib/network/connection/wireless.pm:467
 #, c-format
 msgid "Encryption mode"
 msgstr "Режим шифрования"
 
-#: ../lib/network/connection/wireless.pm:461
+#: ../lib/network/connection/wireless.pm:469
 #: ../lib/network/drakconnect/edit.pm:251
 #, c-format
 msgid "Encryption key"
 msgstr "Ключ шифрования"
 
-#: ../lib/network/connection/wireless.pm:464
+#: ../lib/network/connection/wireless.pm:472
 #, c-format
 msgid "Hide password"
 msgstr "Скрыть пароль"
 
-#: ../lib/network/connection/wireless.pm:466
+#: ../lib/network/connection/wireless.pm:474
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr ""
 "Принудительно использовать этот ключ в качестве ASCII-строки (например для "
 "Livebox)"
 
-#: ../lib/network/connection/wireless.pm:473
+#: ../lib/network/connection/wireless.pm:481
 #, c-format
 msgid "EAP Login/Username"
 msgstr "Логин EAP (имя пользователя)"
 
-#: ../lib/network/connection/wireless.pm:475
+#: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
@@ -4283,12 +4285,12 @@ msgstr ""
 "ещё непроверенным синтаксисом\n"
 "  ДОМЕН\\имя_пользователя"
 
-#: ../lib/network/connection/wireless.pm:478
+#: ../lib/network/connection/wireless.pm:486
 #, c-format
 msgid "EAP Password"
 msgstr "Пароль EAP"
 
-#: ../lib/network/connection/wireless.pm:481
+#: ../lib/network/connection/wireless.pm:489
 #, c-format
 msgid ""
 " Password: A string.\n"
@@ -4324,12 +4326,12 @@ msgstr ""
 "него могут игнорироваться указанные здесь имя пользователя\n"
 "и пароль."
 
-#: ../lib/network/connection/wireless.pm:495
+#: ../lib/network/connection/wireless.pm:503
 #, c-format
 msgid "EAP client certificate"
 msgstr "Сертификат клиента EAP"
 
-#: ../lib/network/connection/wireless.pm:497
+#: ../lib/network/connection/wireless.pm:505
 #, c-format
 msgid ""
 "The complete path and filename of client certificate. This is\n"
@@ -4344,12 +4346,12 @@ msgstr ""
 "Замечание: на странице дополнительной настройки доступны\n"
 "другие параметры."
 
-#: ../lib/network/connection/wireless.pm:501
+#: ../lib/network/connection/wireless.pm:509
 #, fuzzy, c-format
 msgid "EAP client private key"
 msgstr "Сертификат клиента EAP"
 
-#: ../lib/network/connection/wireless.pm:503
+#: ../lib/network/connection/wireless.pm:511
 #, fuzzy, c-format
 msgid ""
 "The complete path and filename of client private key. This is\n"
@@ -4364,12 +4366,12 @@ msgstr ""
 "Замечание: на странице дополнительной настройки доступны\n"
 "другие параметры."
 
-#: ../lib/network/connection/wireless.pm:507
+#: ../lib/network/connection/wireless.pm:515
 #, fuzzy, c-format
 msgid "EAP client private key password"
 msgstr "Сертификат клиента EAP"
 
-#: ../lib/network/connection/wireless.pm:509
+#: ../lib/network/connection/wireless.pm:517
 #, fuzzy, c-format
 msgid ""
 "The complete password for the client private key. This is\n"
@@ -4384,37 +4386,37 @@ msgstr ""
 "Замечание: на странице дополнительной настройки доступны\n"
 "другие параметры."
 
-#: ../lib/network/connection/wireless.pm:513
+#: ../lib/network/connection/wireless.pm:521
 #: ../lib/network/drakconnect/edit.pm:238
 #, c-format
 msgid "Network ID"
 msgstr "Сетевой ID"
 
-#: ../lib/network/connection/wireless.pm:514
+#: ../lib/network/connection/wireless.pm:522
 #: ../lib/network/drakconnect/edit.pm:239
 #, c-format
 msgid "Operating frequency"
 msgstr "Рабочая частота"
 
-#: ../lib/network/connection/wireless.pm:515
+#: ../lib/network/connection/wireless.pm:523
 #: ../lib/network/drakconnect/edit.pm:240
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "Порог чувствительности"
 
-#: ../lib/network/connection/wireless.pm:516
+#: ../lib/network/connection/wireless.pm:524
 #: ../lib/network/drakconnect/edit.pm:241
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "Bitrate (in b/s)"
 
-#: ../lib/network/connection/wireless.pm:517
+#: ../lib/network/connection/wireless.pm:525
 #: ../lib/network/drakconnect/edit.pm:252
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../lib/network/connection/wireless.pm:518
+#: ../lib/network/connection/wireless.pm:526
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -4435,19 +4437,19 @@ msgstr ""
 "посылает RTS, значение равное максимальному размеру пакета отключает схему.\n"
 " Вы также можете установить значение этого параметра в auto, fixed или off."
 
-#: ../lib/network/connection/wireless.pm:525
+#: ../lib/network/connection/wireless.pm:533
 #: ../lib/network/drakconnect/edit.pm:253
 #, c-format
 msgid "Fragmentation"
 msgstr "Фрагментация"
 
-#: ../lib/network/connection/wireless.pm:526
+#: ../lib/network/connection/wireless.pm:534
 #: ../lib/network/drakconnect/edit.pm:254
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "Дополнительные аргументы команды iwconfig"
 
-#: ../lib/network/connection/wireless.pm:527
+#: ../lib/network/connection/wireless.pm:535
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -4463,13 +4465,13 @@ msgstr ""
 "Читайте iwconfig(8) man страницу для получения подробной информации."
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:534
+#: ../lib/network/connection/wireless.pm:542
 #: ../lib/network/drakconnect/edit.pm:255
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "Дополнительные аргументы команды iwspy"
 
-#: ../lib/network/connection/wireless.pm:535
+#: ../lib/network/connection/wireless.pm:543
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -4489,13 +4491,13 @@ msgstr ""
 "\n"
 "Читайте iwpspy(8) man страницу для получения подробной информации."
 
-#: ../lib/network/connection/wireless.pm:543
+#: ../lib/network/connection/wireless.pm:551
 #: ../lib/network/drakconnect/edit.pm:256
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "Дополнительные аргументы команды iwpriv"
 
-#: ../lib/network/connection/wireless.pm:545
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -4526,28 +4528,28 @@ msgstr ""
 "\n"
 "Читайте iwpriv(8) man страницу для получения подробной информации."
 
-#: ../lib/network/connection/wireless.pm:556
+#: ../lib/network/connection/wireless.pm:564
 #, c-format
 msgid "EAP Protocol"
 msgstr "Протокол EAP"
 
-#: ../lib/network/connection/wireless.pm:557
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:565
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "Auto Detect"
 msgstr "Автоопределение"
 
-#: ../lib/network/connection/wireless.pm:557
+#: ../lib/network/connection/wireless.pm:565
 #, c-format
 msgid "WPA2"
 msgstr "WPA2"
 
-#: ../lib/network/connection/wireless.pm:557
+#: ../lib/network/connection/wireless.pm:565
 #, c-format
 msgid "WPA"
 msgstr "WPA"
 
-#: ../lib/network/connection/wireless.pm:559
+#: ../lib/network/connection/wireless.pm:567
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
@@ -4557,67 +4559,67 @@ msgstr ""
 "сначала выполняется попытка задействовать WPA версии 2,\n"
 "а затем WPA версии 1."
 
-#: ../lib/network/connection/wireless.pm:561
+#: ../lib/network/connection/wireless.pm:569
 #, c-format
 msgid "EAP Mode"
 msgstr "Режим EAP"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "PEAP"
 msgstr "PEAP"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "TTLS"
 msgstr "TTLS"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "TLS"
 msgstr "TLS"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "MSCHAPV2"
 msgstr "MSCHAPV2"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "MD5"
 msgstr "MD5"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "OTP"
 msgstr "OTP"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "GTC"
 msgstr "GTC"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "LEAP"
 msgstr "LEAP"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "PEAP TTLS"
 msgstr "PEAP TTLS"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "TTLS TLS"
 msgstr "TTLS TLS"
 
-#: ../lib/network/connection/wireless.pm:564
+#: ../lib/network/connection/wireless.pm:572
 #, c-format
 msgid "EAP key_mgmt"
 msgstr "Управление ключами EAP"
 
-#: ../lib/network/connection/wireless.pm:566
+#: ../lib/network/connection/wireless.pm:574
 #, c-format
 msgid ""
 "list of accepted authenticated key management protocols.\n"
@@ -4627,12 +4629,12 @@ msgstr ""
 "аутентификации.\n"
 "Возможные значения: WPA-EAP, IEEE8021X, NONE"
 
-#: ../lib/network/connection/wireless.pm:568
+#: ../lib/network/connection/wireless.pm:576
 #, c-format
 msgid "EAP outer identity"
 msgstr "Внешний идентификатор EAP"
 
-#: ../lib/network/connection/wireless.pm:570
+#: ../lib/network/connection/wireless.pm:578
 #, c-format
 msgid ""
 "Anonymous identity string for EAP: to be used as the\n"
@@ -4644,12 +4646,12 @@ msgstr ""
 "вместе с типами EAP, которые поддерживают различные\n"
 "виды туннелирования, например, TTLS"
 
-#: ../lib/network/connection/wireless.pm:573
+#: ../lib/network/connection/wireless.pm:581
 #, c-format
 msgid "EAP phase2"
 msgstr "Вторая фаза EAP"
 
-#: ../lib/network/connection/wireless.pm:575
+#: ../lib/network/connection/wireless.pm:583
 #, c-format
 msgid ""
 "Inner authentication with TLS tunnel parameters.\n"
@@ -4663,12 +4665,12 @@ msgstr ""
 "auth=MSCHAPV2 для PEAP или\n"
 "autheap=MSCHAPV2 autheap=MD5 для TTLS"
 
-#: ../lib/network/connection/wireless.pm:579
+#: ../lib/network/connection/wireless.pm:587
 #, c-format
 msgid "EAP CA certificate"
 msgstr "Центр сертификации EAP"
 
-#: ../lib/network/connection/wireless.pm:581
+#: ../lib/network/connection/wireless.pm:589
 #, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
@@ -4684,12 +4686,12 @@ msgstr ""
 "доверенный сертификат всегда нужно настраивать при\n"
 "использовании вместе с TLS or TTLS или PEAP."
 
-#: ../lib/network/connection/wireless.pm:586
+#: ../lib/network/connection/wireless.pm:594
 #, c-format
 msgid "EAP certificate subject match"
 msgstr "Соответствие описания сертификата EAP"
 
-#: ../lib/network/connection/wireless.pm:588
+#: ../lib/network/connection/wireless.pm:596
 #, c-format
 msgid ""
 " Substring to be matched against the subject of\n"
@@ -4705,12 +4707,12 @@ msgstr ""
 "Строка описания имеет следующий формат:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 
-#: ../lib/network/connection/wireless.pm:593
+#: ../lib/network/connection/wireless.pm:601
 #, c-format
 msgid "Extra directives"
 msgstr "Дополнительные директивы"
 
-#: ../lib/network/connection/wireless.pm:594
+#: ../lib/network/connection/wireless.pm:602
 #, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
@@ -4745,12 +4747,12 @@ msgstr ""
 "значений параметров, отличных от тех, что указываются \n"
 "в графическом инерфейсе."
 
-#: ../lib/network/connection/wireless.pm:614
+#: ../lib/network/connection/wireless.pm:622
 #, c-format
 msgid "An encryption key is required."
 msgstr "Требуется ключ шифрования."
 
-#: ../lib/network/connection/wireless.pm:621
+#: ../lib/network/connection/wireless.pm:629
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
@@ -4759,7 +4761,7 @@ msgstr ""
 "Ключ должен быть длиной от 8 до 63 ASCII-символов, или 64 шестнадцатиричных "
 "символа."
 
-#: ../lib/network/connection/wireless.pm:627
+#: ../lib/network/connection/wireless.pm:635
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
@@ -4768,7 +4770,7 @@ msgstr ""
 "WEP-ключ должен быть диной не более %d ASCII-символов или %d "
 "шестнадцатиричных символов."
 
-#: ../lib/network/connection/wireless.pm:634
+#: ../lib/network/connection/wireless.pm:642
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -4777,7 +4779,7 @@ msgstr ""
 "Freq (частота) должна иметь суффикс k, M или G (например, \"2.46G\" для "
 "частоты 2.46 ГГц), или добавьте нужное количество '0' (нулей)."
 
-#: ../lib/network/connection/wireless.pm:640
+#: ../lib/network/connection/wireless.pm:648
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
@@ -4786,17 +4788,17 @@ msgstr ""
 "Rate должна иметь суффикс k, M или G (например, \"11M\" для 11M), или "
 "добавьте нужное количество '0' (нулей)."
 
-#: ../lib/network/connection/wireless.pm:652
+#: ../lib/network/connection/wireless.pm:660
 #, c-format
 msgid "Allow access point roaming"
 msgstr "Разрешить роуминг точки доступа"
 
-#: ../lib/network/connection/wireless.pm:777
+#: ../lib/network/connection/wireless.pm:785
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "Установлена связь с беспроводной сетью \"%s\" на интерфейсе %s"
 
-#: ../lib/network/connection/wireless.pm:778
+#: ../lib/network/connection/wireless.pm:786
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "Потеряна связь с беспроводной сетью на интерфейсе %s"
@@ -5376,7 +5378,7 @@ msgstr ""
 "Интернету/локальной сети при помощи drakconnect."
 
 #: ../lib/network/drakfirewall.pm:245 ../lib/network/drakfirewall.pm:247
-#: ../lib/network/shorewall.pm:172
+#: ../lib/network/shorewall.pm:173
 #, c-format
 msgid "Firewall"
 msgstr "Файервол"
@@ -6535,17 +6537,17 @@ msgstr ""
 "\n"
 "Какие интерфейсы следует защитить?\n"
 
-#: ../lib/network/shorewall.pm:163
+#: ../lib/network/shorewall.pm:164
 #, c-format
 msgid "Keep custom rules"
 msgstr "Сохранить свои правила"
 
-#: ../lib/network/shorewall.pm:164
+#: ../lib/network/shorewall.pm:165
 #, c-format
 msgid "Drop custom rules"
 msgstr "Сбросить свои правила"
 
-#: ../lib/network/shorewall.pm:169
+#: ../lib/network/shorewall.pm:170
 #, c-format
 msgid ""
 "Your firewall configuration has been manually edited and contains\n"

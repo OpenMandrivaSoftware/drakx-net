@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: drakx-net 2007\n"
-"POT-Creation-Date: 2013-02-19 21:10+0100\n"
+"POT-Creation-Date: 2013-03-06 06:25+0100\n"
 "PO-Revision-Date: 2009-04-09 13:03+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: Mageia i18n Team <mageia-i18n@mandrivalinux.org>\n"
@@ -2566,7 +2566,7 @@ msgstr "网络消息的最大大小(MTU)。如果不确定的话，请留空。"
 
 #: ../lib/network/connection.pm:256
 #, c-format
-msgid "MACADDR"
+msgid "Fake make address (MACADDR)"
 msgstr ""
 
 #: ../lib/network/connection.pm:257
@@ -2576,18 +2576,20 @@ msgstr ""
 
 #: ../lib/network/connection.pm:258
 #, c-format
-msgid "HWADDR"
+msgid "MAC address (HWADDR)"
 msgstr ""
 
 #: ../lib/network/connection.pm:259
 #, c-format
-msgid "Set the MAC address. If unset, uses default."
+msgid ""
+"Make sure to bind the interface to the network card with that MAC address. "
+"If unset, uses default."
 msgstr ""
 
 #: ../lib/network/connection.pm:260
-#, c-format
-msgid "ETHTOOL_OPTS"
-msgstr ""
+#, fuzzy, c-format
+msgid "Ethtool options"
+msgstr "自定义选项"
 
 #: ../lib/network/connection.pm:261
 #, c-format
@@ -4098,93 +4100,93 @@ msgstr "WPA/WPA2 预共享密钥"
 msgid "WPA/WPA2 Enterprise"
 msgstr "WPA/WPA2 企业"
 
-#: ../lib/network/connection/wireless.pm:284
+#: ../lib/network/connection/wireless.pm:292
 #, c-format
 msgid "Windows driver"
 msgstr "Window 驱动程序"
 
-#: ../lib/network/connection/wireless.pm:358
+#: ../lib/network/connection/wireless.pm:366
 #, c-format
 msgid ""
 "Your wireless card is disabled, please enable the wireless switch (RF kill "
 "switch) first."
 msgstr "您的无线网卡已经禁用，请先启用无线开关。"
 
-#: ../lib/network/connection/wireless.pm:448
+#: ../lib/network/connection/wireless.pm:456
 #, c-format
 msgid "Wireless settings"
 msgstr "无线设置"
 
-#: ../lib/network/connection/wireless.pm:453
+#: ../lib/network/connection/wireless.pm:461
 #: ../lib/network/connection_manager.pm:281
 #: ../lib/network/drakconnect/edit.pm:236
 #, c-format
 msgid "Operating Mode"
 msgstr "操作模式"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Ad-hoc"
 msgstr "Ad-hoc"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Managed"
 msgstr "受控的"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Master"
 msgstr "主要的"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Repeater"
 msgstr "转发器"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Secondary"
 msgstr "次要的"
 
-#: ../lib/network/connection/wireless.pm:454
+#: ../lib/network/connection/wireless.pm:462
 #, c-format
 msgid "Auto"
 msgstr "自动"
 
-#: ../lib/network/connection/wireless.pm:457
+#: ../lib/network/connection/wireless.pm:465
 #: ../lib/network/drakconnect/edit.pm:237
 #, c-format
 msgid "Network name (ESSID)"
 msgstr "网络名称(ESSID)"
 
-#: ../lib/network/connection/wireless.pm:459
+#: ../lib/network/connection/wireless.pm:467
 #, c-format
 msgid "Encryption mode"
 msgstr "加密模式"
 
-#: ../lib/network/connection/wireless.pm:461
+#: ../lib/network/connection/wireless.pm:469
 #: ../lib/network/drakconnect/edit.pm:251
 #, c-format
 msgid "Encryption key"
 msgstr "加密密钥"
 
-#: ../lib/network/connection/wireless.pm:464
+#: ../lib/network/connection/wireless.pm:472
 #, c-format
 msgid "Hide password"
 msgstr "隐藏密码"
 
-#: ../lib/network/connection/wireless.pm:466
+#: ../lib/network/connection/wireless.pm:474
 #, c-format
 msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr "将此密钥强制使用为 ASCII 字符串(如 Livebox)"
 
-#: ../lib/network/connection/wireless.pm:473
+#: ../lib/network/connection/wireless.pm:481
 #, c-format
 msgid "EAP Login/Username"
 msgstr "EAP 登录/用户名"
 
-#: ../lib/network/connection/wireless.pm:475
+#: ../lib/network/connection/wireless.pm:483
 #, c-format
 msgid ""
 "The login or username. Format is plain text. If you\n"
@@ -4195,12 +4197,12 @@ msgstr ""
 "用以下格式\n"
 "  域\\用户名"
 
-#: ../lib/network/connection/wireless.pm:478
+#: ../lib/network/connection/wireless.pm:486
 #, c-format
 msgid "EAP Password"
 msgstr "EAP 密码"
 
-#: ../lib/network/connection/wireless.pm:481
+#: ../lib/network/connection/wireless.pm:489
 #, c-format
 msgid ""
 " Password: A string.\n"
@@ -4232,12 +4234,12 @@ msgstr ""
 "模式。\n"
 "  TLS 模式完全基于证书，可能在此指定的用户名和密码无效。"
 
-#: ../lib/network/connection/wireless.pm:495
+#: ../lib/network/connection/wireless.pm:503
 #, c-format
 msgid "EAP client certificate"
 msgstr "EAP 客户证书"
 
-#: ../lib/network/connection/wireless.pm:497
+#: ../lib/network/connection/wireless.pm:505
 #, c-format
 msgid ""
 "The complete path and filename of client certificate. This is\n"
@@ -4249,12 +4251,12 @@ msgstr ""
 "证书可视为用户名/密码组合的代替品。\n"
 " 注意: 其它相关设置显示于高级页面中。"
 
-#: ../lib/network/connection/wireless.pm:501
+#: ../lib/network/connection/wireless.pm:509
 #, fuzzy, c-format
 msgid "EAP client private key"
 msgstr "EAP 客户证书"
 
-#: ../lib/network/connection/wireless.pm:503
+#: ../lib/network/connection/wireless.pm:511
 #, fuzzy, c-format
 msgid ""
 "The complete path and filename of client private key. This is\n"
@@ -4266,12 +4268,12 @@ msgstr ""
 "证书可视为用户名/密码组合的代替品。\n"
 " 注意: 其它相关设置显示于高级页面中。"
 
-#: ../lib/network/connection/wireless.pm:507
+#: ../lib/network/connection/wireless.pm:515
 #, fuzzy, c-format
 msgid "EAP client private key password"
 msgstr "EAP 客户证书"
 
-#: ../lib/network/connection/wireless.pm:509
+#: ../lib/network/connection/wireless.pm:517
 #, fuzzy, c-format
 msgid ""
 "The complete password for the client private key. This is\n"
@@ -4283,37 +4285,37 @@ msgstr ""
 "证书可视为用户名/密码组合的代替品。\n"
 " 注意: 其它相关设置显示于高级页面中。"
 
-#: ../lib/network/connection/wireless.pm:513
+#: ../lib/network/connection/wireless.pm:521
 #: ../lib/network/drakconnect/edit.pm:238
 #, c-format
 msgid "Network ID"
 msgstr "网络 ID"
 
-#: ../lib/network/connection/wireless.pm:514
+#: ../lib/network/connection/wireless.pm:522
 #: ../lib/network/drakconnect/edit.pm:239
 #, c-format
 msgid "Operating frequency"
 msgstr "运行频率"
 
-#: ../lib/network/connection/wireless.pm:515
+#: ../lib/network/connection/wireless.pm:523
 #: ../lib/network/drakconnect/edit.pm:240
 #, c-format
 msgid "Sensitivity threshold"
 msgstr "灵敏度阀值"
 
-#: ../lib/network/connection/wireless.pm:516
+#: ../lib/network/connection/wireless.pm:524
 #: ../lib/network/drakconnect/edit.pm:241
 #, c-format
 msgid "Bitrate (in b/s)"
 msgstr "比特率(每秒比特数, b/s)"
 
-#: ../lib/network/connection/wireless.pm:517
+#: ../lib/network/connection/wireless.pm:525
 #: ../lib/network/drakconnect/edit.pm:252
 #, c-format
 msgid "RTS/CTS"
 msgstr "RTS/CTS"
 
-#: ../lib/network/connection/wireless.pm:518
+#: ../lib/network/connection/wireless.pm:526
 #, c-format
 msgid ""
 "RTS/CTS adds a handshake before each packet transmission to make sure that "
@@ -4332,19 +4334,19 @@ msgstr ""
 "包\n"
 "的大小, 一个等于中止计划的值的大小。您也可以设置这个值为自动、固定或者关闭。"
 
-#: ../lib/network/connection/wireless.pm:525
+#: ../lib/network/connection/wireless.pm:533
 #: ../lib/network/drakconnect/edit.pm:253
 #, c-format
 msgid "Fragmentation"
 msgstr "块"
 
-#: ../lib/network/connection/wireless.pm:526
+#: ../lib/network/connection/wireless.pm:534
 #: ../lib/network/drakconnect/edit.pm:254
 #, c-format
 msgid "iwconfig command extra arguments"
 msgstr "iwconfig 命令的额外参数"
 
-#: ../lib/network/connection/wireless.pm:527
+#: ../lib/network/connection/wireless.pm:535
 #, c-format
 msgid ""
 "Here, one can configure some extra wireless parameters such as:\n"
@@ -4360,13 +4362,13 @@ msgstr ""
 "请参看 iwconfig(8) man page 中的更多信息。"
 
 #. -PO: split the "xyz command extra argument" translated string into two lines if it's bigger than the english one
-#: ../lib/network/connection/wireless.pm:534
+#: ../lib/network/connection/wireless.pm:542
 #: ../lib/network/drakconnect/edit.pm:255
 #, c-format
 msgid "iwspy command extra arguments"
 msgstr "iwspy 命令的额外参数"
 
-#: ../lib/network/connection/wireless.pm:535
+#: ../lib/network/connection/wireless.pm:543
 #, c-format
 msgid ""
 "iwspy is used to set a list of addresses in a wireless network\n"
@@ -4384,13 +4386,13 @@ msgstr ""
 "\n"
 "请参看 iwpspy(8) man page 中的更多信息。"
 
-#: ../lib/network/connection/wireless.pm:543
+#: ../lib/network/connection/wireless.pm:551
 #: ../lib/network/drakconnect/edit.pm:256
 #, c-format
 msgid "iwpriv command extra arguments"
 msgstr "iwpriv 命令的额外参数"
 
-#: ../lib/network/connection/wireless.pm:545
+#: ../lib/network/connection/wireless.pm:553
 #, c-format
 msgid ""
 "iwpriv enable to set up optionals (private) parameters of a wireless "
@@ -4419,95 +4421,95 @@ msgstr ""
 "\n"
 "请参看 iwpriv(8) man page 中的更多信息。"
 
-#: ../lib/network/connection/wireless.pm:556
+#: ../lib/network/connection/wireless.pm:564
 #, c-format
 msgid "EAP Protocol"
 msgstr "EAP 协议"
 
-#: ../lib/network/connection/wireless.pm:557
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:565
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "Auto Detect"
 msgstr "自动检测"
 
-#: ../lib/network/connection/wireless.pm:557
+#: ../lib/network/connection/wireless.pm:565
 #, c-format
 msgid "WPA2"
 msgstr "WPA2"
 
-#: ../lib/network/connection/wireless.pm:557
+#: ../lib/network/connection/wireless.pm:565
 #, c-format
 msgid "WPA"
 msgstr "WPA"
 
-#: ../lib/network/connection/wireless.pm:559
+#: ../lib/network/connection/wireless.pm:567
 #, c-format
 msgid ""
 "Auto Detect is recommended as it first tries WPA version 2 with\n"
 "a fallback to WPA version 1"
 msgstr "推荐使用自动检测，因为它首先尝试 WPA 第2版，失败后再尝试 WPA 第1版"
 
-#: ../lib/network/connection/wireless.pm:561
+#: ../lib/network/connection/wireless.pm:569
 #, c-format
 msgid "EAP Mode"
 msgstr "EAP 模式"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "PEAP"
 msgstr "PEAP"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "TTLS"
 msgstr "TTLS"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "TLS"
 msgstr "TLS"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "MSCHAPV2"
 msgstr "MSCHAPV2"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "MD5"
 msgstr "MD5"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "OTP"
 msgstr "OTP"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "GTC"
 msgstr "GTC"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "LEAP"
 msgstr "LEAP"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "PEAP TTLS"
 msgstr "PEAP TTLS"
 
-#: ../lib/network/connection/wireless.pm:562
+#: ../lib/network/connection/wireless.pm:570
 #, c-format
 msgid "TTLS TLS"
 msgstr "TTLS TLS"
 
-#: ../lib/network/connection/wireless.pm:564
+#: ../lib/network/connection/wireless.pm:572
 #, c-format
 msgid "EAP key_mgmt"
 msgstr "EAP key_mgmt"
 
-#: ../lib/network/connection/wireless.pm:566
+#: ../lib/network/connection/wireless.pm:574
 #, c-format
 msgid ""
 "list of accepted authenticated key management protocols.\n"
@@ -4517,12 +4519,12 @@ msgstr ""
 "可能的值包括 WPA-EAP、\n"
 "IEEE8021X、无"
 
-#: ../lib/network/connection/wireless.pm:568
+#: ../lib/network/connection/wireless.pm:576
 #, c-format
 msgid "EAP outer identity"
 msgstr "EAP 外部身份"
 
-#: ../lib/network/connection/wireless.pm:570
+#: ../lib/network/connection/wireless.pm:578
 #, c-format
 msgid ""
 "Anonymous identity string for EAP: to be used as the\n"
@@ -4532,12 +4534,12 @@ msgstr ""
 "EAP 的匿名身份字符串: 用于支持不同的隧道身份的 EAP 不\n"
 "加密身份类型，如 TTLS"
 
-#: ../lib/network/connection/wireless.pm:573
+#: ../lib/network/connection/wireless.pm:581
 #, c-format
 msgid "EAP phase2"
 msgstr "EAP phase2"
 
-#: ../lib/network/connection/wireless.pm:575
+#: ../lib/network/connection/wireless.pm:583
 #, c-format
 msgid ""
 "Inner authentication with TLS tunnel parameters.\n"
@@ -4546,12 +4548,12 @@ msgid ""
 "autheap=MSCHAPV2 autheap=MD5 for TTLS"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:579
+#: ../lib/network/connection/wireless.pm:587
 #, c-format
 msgid "EAP CA certificate"
 msgstr "EAP CA 证书"
 
-#: ../lib/network/connection/wireless.pm:581
+#: ../lib/network/connection/wireless.pm:589
 #, c-format
 msgid ""
 "Full file path to CA certificate file (PEM/DER). This file\n"
@@ -4565,12 +4567,12 @@ msgstr ""
 "如果可能的话，当使用 TLS 或 TTLS 或 PEAP 时总是应该配置可信的\n"
 "CA 证书。"
 
-#: ../lib/network/connection/wireless.pm:586
+#: ../lib/network/connection/wireless.pm:594
 #, c-format
 msgid "EAP certificate subject match"
 msgstr "EAP 证书主题匹配"
 
-#: ../lib/network/connection/wireless.pm:588
+#: ../lib/network/connection/wireless.pm:596
 #, c-format
 msgid ""
 " Substring to be matched against the subject of\n"
@@ -4580,12 +4582,12 @@ msgid ""
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:593
+#: ../lib/network/connection/wireless.pm:601
 #, c-format
 msgid "Extra directives"
 msgstr "额外指令"
 
-#: ../lib/network/connection/wireless.pm:594
+#: ../lib/network/connection/wireless.pm:602
 #, c-format
 msgid ""
 "Here one can pass extra settings to wpa_supplicant\n"
@@ -4603,26 +4605,26 @@ msgid ""
 "\tspecial settings different from the U.I settings."
 msgstr ""
 
-#: ../lib/network/connection/wireless.pm:614
+#: ../lib/network/connection/wireless.pm:622
 #, c-format
 msgid "An encryption key is required."
 msgstr "需要加密密钥。"
 
-#: ../lib/network/connection/wireless.pm:621
+#: ../lib/network/connection/wireless.pm:629
 #, c-format
 msgid ""
 "The pre-shared key should have between 8 and 63 ASCII characters, or 64 "
 "hexadecimal characters."
 msgstr "预共享密钥应该由 8 到 63 位 ASCII 字符或者 64 位十六进制字符组成。"
 
-#: ../lib/network/connection/wireless.pm:627
+#: ../lib/network/connection/wireless.pm:635
 #, c-format
 msgid ""
 "The WEP key should have at most %d ASCII characters or %d hexadecimal "
 "characters."
 msgstr "WEP 密钥应该至少由 %d 位 ASCII 字符或 %d 位十六进制字符组成。"
 
-#: ../lib/network/connection/wireless.pm:634
+#: ../lib/network/connection/wireless.pm:642
 #, c-format
 msgid ""
 "Freq should have the suffix k, M or G (for example, \"2.46G\" for 2.46 GHz "
@@ -4631,24 +4633,24 @@ msgstr ""
 "频率应该有后缀 k, M 或 G(如“2.46G”代表 2.46 GHz 频率), 或者后带足够"
 "的“0”(零)。"
 
-#: ../lib/network/connection/wireless.pm:640
+#: ../lib/network/connection/wireless.pm:648
 #, c-format
 msgid ""
 "Rate should have the suffix k, M or G (for example, \"11M\" for 11M), or add "
 "enough '0' (zeroes)."
 msgstr "速度应该有后缀 k, M 或 G(如“11M”代表 11M), 或者后带足够的“0”(零)。"
 
-#: ../lib/network/connection/wireless.pm:652
+#: ../lib/network/connection/wireless.pm:660
 #, c-format
 msgid "Allow access point roaming"
 msgstr "允许访问点漫游"
 
-#: ../lib/network/connection/wireless.pm:777
+#: ../lib/network/connection/wireless.pm:785
 #, c-format
 msgid "Associated to wireless network \"%s\" on interface %s"
 msgstr "将无线网络“%s”关联到网卡 %s 上"
 
-#: ../lib/network/connection/wireless.pm:778
+#: ../lib/network/connection/wireless.pm:786
 #, c-format
 msgid "Lost association to wireless network on interface %s"
 msgstr "网卡 %s 丢失了到无线网络的关联"
@@ -5225,7 +5227,7 @@ msgstr ""
 "请确定您在继续任何操作前已经用“Drak 连接”配置了您的局域网/Internet 访问。"
 
 #: ../lib/network/drakfirewall.pm:245 ../lib/network/drakfirewall.pm:247
-#: ../lib/network/shorewall.pm:172
+#: ../lib/network/shorewall.pm:173
 #, c-format
 msgid "Firewall"
 msgstr "防火墙"
@@ -6360,17 +6362,17 @@ msgstr ""
 "\n"
 "应该保护哪个接口?\n"
 
-#: ../lib/network/shorewall.pm:163
+#: ../lib/network/shorewall.pm:164
 #, c-format
 msgid "Keep custom rules"
 msgstr "保留自定义规则"
 
-#: ../lib/network/shorewall.pm:164
+#: ../lib/network/shorewall.pm:165
 #, c-format
 msgid "Drop custom rules"
 msgstr "删除自定义规则"
 
-#: ../lib/network/shorewall.pm:169
+#: ../lib/network/shorewall.pm:170
 #, c-format
 msgid ""
 "Your firewall configuration has been manually edited and contains\n"
