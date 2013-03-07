@@ -253,7 +253,7 @@ sub get_control_settings {
         { label => N("Metric"), val => \$self->{control}{metric}, advanced => 1 },
         { label => N("MTU"), val => \$self->{control}{mtu}, advanced => 1,
           help => N("Maximum size of network message (MTU). If unsure, left blank.") },
-        { label => N("Fake make address (MACADDR)"), val => \$self->{control}{macaddr}, advanced => 1,
+        { label => N("Fake MAC address (MACADDR)"), val => \$self->{control}{macaddr}, advanced => 1,
           help => N("Use a fake MAC address. If unset, uses HWADDR or default.") },
         { label => N("MAC address (HWADDR)"), val => \$self->{control}{hwaddr}, advanced => 1,
           help => N("Make sure to bind the interface to the network card with that MAC address. If unset, uses default.") },
