@@ -184,8 +184,8 @@ What do you want to do?"),
     };
 
     set_config_file("zones",
-                    [ 'net', 'ipv4' ],
                     if_($has_loc_zone, [ 'loc', 'ipv4' ]),
+                    [ 'net', 'ipv4' ],
                     [ 'fw', 'firewall' ],
                 );
     set_config_file('interfaces',

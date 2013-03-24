@@ -1,6 +1,11 @@
 - improve MAC adress help
 - drakfirewall:
   o fix detecting if shorewall is enabled (mga#8699)
+  o list loc zone before net zone in /etc/shorewall/zones;
+    this is useful to apply local rules before net rules for a
+    "one-armed" router, e.g. one interface with both a public IP
+    address and a local private address, with such an entry in
+    /etc/shorewall/hosts: "loc eth0:192.168.0.0/24"
 
 1.19.2:
 - re-add broadcom-wl reference
