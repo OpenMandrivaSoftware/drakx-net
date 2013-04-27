@@ -195,7 +195,7 @@ sub set_ports {
     my ($do_pkgs, $disabled, $ports, $log_net_drop, $o_in) = @_;
 
     if (!$disabled || -x "$::prefix/sbin/shorewall") {
-	$do_pkgs->ensure_binary_is_installed('shorewall', 'shorewall', $::isInstall) or return;
+	$do_pkgs->ensure_files_are_installed([ [ qw(shorewall shorewall) ], [ qw(shorewall-ipv6 shorewall6) ] ], $::isInstall) or return;
 	my $shorewall = network::shorewall::read(!$disabled && $o_in);
 	if (!$shorewall) {
 	    log::l("unable to read shorewall configuration, skipping installation");
