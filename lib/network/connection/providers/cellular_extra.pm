@@ -1,5 +1,6 @@
 package network::connection::providers::cellular_extra;
 
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use utf8;
 

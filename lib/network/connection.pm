@@ -1,5 +1,6 @@
 package network::connection;
 
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use network::vpn;
 

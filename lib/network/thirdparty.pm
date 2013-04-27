@@ -1,6 +1,7 @@
 package network::thirdparty;
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use detect_devices;
 use run_program;

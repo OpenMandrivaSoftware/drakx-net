@@ -1,7 +1,7 @@
 package network::ipsec;
 
 
-
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use detect_devices;
 use run_program;
 use common;

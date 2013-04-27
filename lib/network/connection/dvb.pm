@@ -3,6 +3,7 @@ package network::connection::dvb;
 use base qw(network::connection::ethernet);
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use modules;
 

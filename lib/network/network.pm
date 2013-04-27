@@ -6,6 +6,7 @@ package network::network; # $Id: network.pm 268044 2010-04-30 13:31:34Z blino $w
 
 use strict;
 
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use c;
 use lang;
 use Socket;

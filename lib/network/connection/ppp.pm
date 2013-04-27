@@ -1,6 +1,7 @@
 package network::connection::ppp;
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 
 use base qw(network::connection);

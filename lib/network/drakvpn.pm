@@ -15,6 +15,7 @@ network::drakvpn - Interactive VPN configuration
 =cut
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 
 use network::vpn;

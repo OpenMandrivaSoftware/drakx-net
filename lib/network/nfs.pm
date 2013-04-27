@@ -1,6 +1,7 @@
 package network::nfs;
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 
 sub read_nfs_ports() {

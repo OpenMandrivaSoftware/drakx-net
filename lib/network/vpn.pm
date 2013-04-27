@@ -7,6 +7,7 @@ network::vpn - VPN connection abstract class
 =cut
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 
 my $vpn_d = "/etc/sysconfig/network-scripts/vpn.d";

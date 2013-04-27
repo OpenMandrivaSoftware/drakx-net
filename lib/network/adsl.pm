@@ -1,5 +1,6 @@
 package network::adsl; # $Id: adsl.pm 219797 2007-05-25 15:39:46Z blino $
 
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use run_program;
 use network::tools;

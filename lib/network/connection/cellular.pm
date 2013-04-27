@@ -3,6 +3,7 @@ package network::connection::cellular;
 use base qw(network::connection::ppp);
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 
 my $cellular_d = "/etc/sysconfig/network-scripts/cellular.d";

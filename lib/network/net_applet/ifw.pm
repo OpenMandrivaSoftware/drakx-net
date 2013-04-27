@@ -1,5 +1,6 @@
 package network::net_applet::ifw;
 
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use network::ifw;
 use ugtk2 qw(:create :helpers :wrappers :dialogs);

@@ -1,6 +1,7 @@
 package network::netconnect; # $Id: netconnect.pm 259351 2009-08-17 15:15:51Z tv $
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use log;
 use detect_devices;

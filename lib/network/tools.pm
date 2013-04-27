@@ -1,6 +1,7 @@
 package network::tools; # $Id: tools.pm 253976 2009-03-13 10:57:55Z eugeni $
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use run_program;
 use c;

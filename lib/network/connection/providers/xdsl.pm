@@ -3,6 +3,7 @@ package network::connection::providers::xdsl; # $Id: xdsl.pm 59309 2006-09-01 12
 
 # This should probably be splitted out into ldetect-lst as some provider db
 
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use utf8;
 

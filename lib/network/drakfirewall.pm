@@ -2,7 +2,7 @@ package network::drakfirewall; # $Id: drakfirewall.pm 268043 2010-04-30 13:29:37
 
 use strict;
 use diagnostics;
-
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use network::shorewall;
 use common;
 use network::nfs;

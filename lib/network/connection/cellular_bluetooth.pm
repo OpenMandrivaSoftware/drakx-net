@@ -3,6 +3,7 @@ package network::connection::cellular_bluetooth;
 use base qw(network::connection::cellular);
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 
 my $rfcomm_dev_prefix = "/dev/rfcomm";

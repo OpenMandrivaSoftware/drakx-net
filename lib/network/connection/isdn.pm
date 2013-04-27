@@ -3,6 +3,7 @@ package network::connection::isdn;
 use base qw(network::connection);
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 
 sub get_type_name { N("ISDN") }

@@ -1,5 +1,6 @@
 package network::signal_strength;
 
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use ugtk2;
 
