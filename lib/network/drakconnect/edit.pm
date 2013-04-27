@@ -1,5 +1,6 @@
 package network::drakconnect::edit;
 
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use ugtk2 qw(:create :dialogs :helpers :wrappers);
 use mygtk2 qw(gtknew);
 use common;

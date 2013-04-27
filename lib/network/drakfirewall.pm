@@ -1,5 +1,6 @@
 package network::drakfirewall; # $Id$
 
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use network::shorewall;
 use common;
 use network::nfs;

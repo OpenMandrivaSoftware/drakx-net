@@ -1,6 +1,7 @@
 package network::test;          # $Id$
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use run_program;
 use Socket;

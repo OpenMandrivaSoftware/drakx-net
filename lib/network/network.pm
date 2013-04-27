@@ -6,6 +6,7 @@ package network::network; # $Id$wir
 
 use strict;
 
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use c;
 use lang;
 use Socket;

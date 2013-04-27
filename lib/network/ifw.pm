@@ -1,6 +1,7 @@
 package network::ifw;
 
 use Socket;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 
 our @ISA = qw(dbus_object);

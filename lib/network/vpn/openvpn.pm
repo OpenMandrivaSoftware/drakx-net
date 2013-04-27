@@ -3,6 +3,7 @@ package network::vpn::openvpn;
 use base qw(network::vpn);
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 
 sub get_type { 'openvpn' }

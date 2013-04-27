@@ -1,5 +1,6 @@
 package network::pxe;
 
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use network::tools;
 use Xconfig::resolution_and_depth;

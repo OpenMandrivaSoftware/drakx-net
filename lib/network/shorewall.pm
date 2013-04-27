@@ -1,5 +1,6 @@
 package network::shorewall; # $Id$
 
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use detect_devices;
 use network::network;
 use run_program;

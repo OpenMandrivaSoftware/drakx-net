@@ -2,6 +2,7 @@ package network::connection_manager;
 
 use strict;
 
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use run_program;
 use detect_devices;

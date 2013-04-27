@@ -1,5 +1,6 @@
 package network::monitor;
 
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use dbus_object;
 

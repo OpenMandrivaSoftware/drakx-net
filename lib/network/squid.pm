@@ -1,6 +1,7 @@
 package network::squid;
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 
 our $squid_conf_file = "$::prefix/etc/squid/squid.conf";

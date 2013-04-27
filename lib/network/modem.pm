@@ -1,6 +1,7 @@
 package network::modem;	# $Id$
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use any;
 use modules;

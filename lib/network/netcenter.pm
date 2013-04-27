@@ -5,6 +5,7 @@
 package network::netcenter;
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use mygtk2;
 use ugtk2 qw(:create :helpers :wrappers);

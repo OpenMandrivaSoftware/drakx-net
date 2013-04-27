@@ -1,6 +1,7 @@
 package network::ndiswrapper;
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use modules;
 use detect_devices;

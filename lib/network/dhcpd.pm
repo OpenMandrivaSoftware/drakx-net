@@ -1,6 +1,7 @@
 package network::dhcpd;
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 
 my $sysconf_dhcpd = "$::prefix/etc/sysconfig/dhcpd";

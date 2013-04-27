@@ -3,6 +3,7 @@ package network::connection::cellular_card;
 use base qw(network::connection::cellular);
 
 use strict;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 
 my $wrong_pin_error = N_("Wrong PIN number format: it should be 4 digits.");

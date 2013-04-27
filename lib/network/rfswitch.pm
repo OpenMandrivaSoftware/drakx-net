@@ -2,6 +2,7 @@ package network::rfswitch;
 
 use strict;
 use MDK::Common;
+use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use detect_devices;
 
 my $conf_file = "/etc/modprobe.d/rfswitch.conf";
