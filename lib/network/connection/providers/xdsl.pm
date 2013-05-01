@@ -490,6 +490,18 @@ our %data = (
                    method => 'pppoe',
                   },
 
+                  N("France") . "|French Data Network" =>
+                  {
+                   #provider_id => 'FR??',
+                   vpi => 8,
+                   vci => 35,
+                   Encapsulation => 1,
+                   CMVep => 'FR',
+                   dnsServers => [ qw(80.67.169.12 80.67.169.40) ],
+                   method => 'dhcp',
+                   DOMAINNAME2 => 'fdn.fr',
+                  },
+
                   N("France") . "|Free non dégroupé 512/128 & 1024/128" =>
                   {
                    provider_id => 'FR01',
