@@ -60,7 +60,7 @@ dist-svn:
 	rm -rf $(NAME)-$(VERSION)
 
 dist-git: cleandist
-	git archive --prefix $(NAME)-$(VERSION)/ HEAD | xz -9 > ../$(NAME)-$(VERSION).tar.xz
+	git archive --prefix $(NAME)-$(VERSION)/ HEAD | xz -v > $(NAME)-$(VERSION).tar.xz
 
 clean:
 	make -C po clean
