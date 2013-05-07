@@ -109,8 +109,7 @@ sub main {
     #- so that transient_for is defined, for wait messages and popups to be centered
     $::main_window = $w->{real_window};
 
-    my $pixbufs = network::connection_manager::gtk::create_pixbufs();
-    my $droam = network::connection_manager::gtk->new($in, $net, $w, $pixbufs);
+    my $droam = network::connection_manager::gtk->new($in, $net, $w);
     $droam->create_networks_list;
     create_drakroam_gui($droam, $dbus, $title, $icon);
 

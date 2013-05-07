@@ -16,9 +16,9 @@ use network::network;
 use run_program;
 
 sub build_cmanager {
-    my ($in, $net, $w, $pixbufs, $connection) = @_;
+    my ($in, $net, $w, $connection) = @_;
 
-    my $cmanager = network::connection_manager::gtk->new($in, $net, $w, $pixbufs);
+    my $cmanager = network::connection_manager::gtk->new($in, $net, $w);
     $cmanager->set_connection($connection);
     $cmanager->{gui}{show_unique_network} = $cmanager->{connection}->has_unique_network;
 
@@ -160,8 +160,7 @@ sub main {
 
     my @connections = get_connections();
 
-    my $pixbufs = network::connection_manager::gtk::create_pixbufs();
-    my @cmanagers = map { build_cmanager($in, $net, $w, $pixbufs, $_) } @connections;
+    my @cmanagers = map { build_cmanager($in, $net, $w, $_) } @connections;
 
     (undef, my $rootwin_height) = gtkroot()->get_size;
     my $scrolled_height = $rootwin_height > 480 ? 400 : 295;
@@ -192,7 +191,7 @@ sub main {
                         detect_devices::probeall_update_cache();
                         my $connection = find { $_->get_interface eq $interface } get_connections()
                           or return;
-                        $cmanager = build_cmanager($in, $net, $w, $pixbufs, $connection);
+                        $cmanager = build_cmanager($in, $net, $w, $connection);
                         push @connections, $connection;
                         push @cmanagers, $cmanager;
                         my $box = build_cmanager_box($cmanager, @connections == 0);
