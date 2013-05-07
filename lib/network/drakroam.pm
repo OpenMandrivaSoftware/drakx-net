@@ -13,7 +13,7 @@ use interactive;
 use mygtk2;
 use ugtk2 qw(:create :helpers :wrappers);
 use network::connection;
-use network::connection_manager;
+use network::connection_manager::gtk;
 use network::connection::wireless;
 use network::connection::cellular_card;
 
@@ -109,8 +109,8 @@ sub main {
     #- so that transient_for is defined, for wait messages and popups to be centered
     $::main_window = $w->{real_window};
 
-    my $pixbufs = network::connection_manager::create_pixbufs();
-    my $droam = network::connection_manager->new($in, $net, $w, $pixbufs);
+    my $pixbufs = network::connection_manager::gtk::create_pixbufs();
+    my $droam = network::connection_manager::gtk->new($in, $net, $w, $pixbufs);
     $droam->create_networks_list;
     create_drakroam_gui($droam, $dbus, $title, $icon);
 
@@ -124,7 +124,7 @@ sub main {
     update_connections_list($droam);
     update_on_connection_change($droam);
 
-    network::connection_manager::setup_dbus_handlers([ $droam ], $droam->{all_connections}, $droam->{on_network_event}, $dbus) if $dbus;
+    network::connection_manager::gtk::setup_dbus_handlers([ $droam ], $droam->{all_connections}, $droam->{on_network_event}, $dbus) if $dbus;
 
     if ($o_ap && $droam->{connection}) {
         $droam->{connection}{network} = $o_ap;

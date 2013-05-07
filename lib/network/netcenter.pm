@@ -10,7 +10,7 @@ use common;
 use mygtk2;
 use ugtk2 qw(:create :helpers :wrappers);
 use network::connection;
-use network::connection_manager;
+use network::connection_manager::gtk;
 use network::tools;
 use network::network;
 use run_program;
@@ -18,7 +18,7 @@ use run_program;
 sub build_cmanager {
     my ($in, $net, $w, $pixbufs, $connection) = @_;
 
-    my $cmanager = network::connection_manager->new($in, $net, $w, $pixbufs);
+    my $cmanager = network::connection_manager::gtk->new($in, $net, $w, $pixbufs);
     $cmanager->set_connection($connection);
     $cmanager->{gui}{show_unique_network} = $cmanager->{connection}->has_unique_network;
 
@@ -160,7 +160,7 @@ sub main {
 
     my @connections = get_connections();
 
-    my $pixbufs = network::connection_manager::create_pixbufs();
+    my $pixbufs = network::connection_manager::gtk::create_pixbufs();
     my @cmanagers = map { build_cmanager($in, $net, $w, $pixbufs, $_) } @connections;
 
     (undef, my $rootwin_height) = gtkroot()->get_size;
@@ -206,7 +206,7 @@ sub main {
                 }
             }
         });
-        network::connection_manager::setup_dbus_handlers(\@cmanagers, \@connections, undef, $dbus);
+        network::connection_manager::gtk::setup_dbus_handlers(\@cmanagers, \@connections, undef, $dbus);
     }
 
     undef $wait;
