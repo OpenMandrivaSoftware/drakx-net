@@ -242,20 +242,8 @@ sub toggle_connection {
     }
 }
 
-sub select_network {
-    my ($cmanager) = @_;
-
-    if ($cmanager->{connection}) {
-        my ($selected) = $cmanager->{gui}{networks_list}->get_selected_indices;
-        $cmanager->{connection}{network} = defined $selected && $cmanager->{gui}{networks_list}{data}[$selected][0];
-    }
-    $cmanager->update_on_status_change;
-}
-
 sub update_networks {
     my ($cmanager) = @_;
-
-    @{$cmanager->{gui}{networks_list}{data}} = ();
 
     if ($cmanager->{connection}) {
         $cmanager->check_setup || $cmanager->setup_connection or return;

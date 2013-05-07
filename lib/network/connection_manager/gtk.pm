@@ -37,6 +37,16 @@ sub stop_connection {
     gtkset_mousecursor_normal($cmanager->{gui}{w}{window}->window);
 }
 
+sub select_network {
+    my ($cmanager) = @_;
+
+    if ($cmanager->{connection}) {
+        my ($selected) = $cmanager->{gui}{networks_list}->get_selected_indices;
+        $cmanager->{connection}{network} = defined $selected && $cmanager->{gui}{networks_list}{data}[$selected][0];
+    }
+    $cmanager->update_on_status_change;
+}
+
 sub create_networks_list {
     my ($cmanager) = @_;
 
@@ -149,6 +159,12 @@ sub filter_networks {
     sort {
         $b->{current} <=> $a->{current} || $b->{configured} <=> $a->{configured} || $b->{signal_strength} <=> $a->{signal_strength} || $a->{name} cmp $b->{name};
     } values %{$connection->{networks}};
+}
+
+sub update_networks {
+    my ($cmanager) = @_;
+    @{$cmanager->{gui}{networks_list}{data}} = ();
+    $cmanager->SUPER::update_networks;
 }
 
 sub update_networks_list {
