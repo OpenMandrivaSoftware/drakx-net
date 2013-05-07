@@ -45,12 +45,7 @@ our %wireless_networks;
 
 our %pixbufs =
   (
-      firewall => gtknew('Pixbuf', file => 'drakfirewall'),
-      firewall_icon => gtknew('Pixbuf', file => 'drakfirewall')->scale_simple(24, 24, 'hyper'),
       state => { map { $_ => gtknew('Pixbuf', file => $_) } qw(connected disconnected unconfigured connecting) },
-      link_level => { map {
-          $_ => gtknew('Pixbuf', file => 'wifi-' . sprintf('%03d', $_))->scale_simple(24, 24, 'hyper');
-      } qw(20 40 60 80 100) },
       encryption => { map {
           $_ => gtknew('Pixbuf', file => "encryption-$_-24");
       } qw(open weak strong) },

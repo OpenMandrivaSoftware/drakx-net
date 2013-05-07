@@ -13,9 +13,6 @@ use locale; # for cmp
 
 our %pixbufs = (
     state => { map { $_ => gtkcreate_pixbuf($_) } qw(connected disconnected refresh) },
-    link_level => { map {
-        $_ => gtkcreate_pixbuf('wifi-' . sprintf('%03d', $_))->scale_simple(24, 24, 'hyper');
-    } qw(20 40 60 80 100) },
     encryption => { map {
         $_ => gtkcreate_pixbuf("encryption-$_-24");
     } qw(open weak strong) },
