@@ -11,16 +11,21 @@ use Gtk2::SimpleList;
 use network::signal_strength;
 use locale; # for cmp
 
-sub create_pixbufs() {
-    {
-        state => { map { $_ => gtkcreate_pixbuf($_) } qw(connected disconnected refresh) },
-        link_level => { map {
-            $_ => gtkcreate_pixbuf('wifi-' . sprintf('%03d', $_))->scale_simple(24, 24, 'hyper');
-        } qw(20 40 60 80 100) },
-        encryption => { map {
-            $_ => gtkcreate_pixbuf("encryption-$_-24");
-        } qw(open weak strong) },
-    };
+our %pixbufs = (
+    state => { map { $_ => gtkcreate_pixbuf($_) } qw(connected disconnected refresh) },
+    link_level => { map {
+        $_ => gtkcreate_pixbuf('wifi-' . sprintf('%03d', $_))->scale_simple(24, 24, 'hyper');
+    } qw(20 40 60 80 100) },
+    encryption => { map {
+        $_ => gtkcreate_pixbuf("encryption-$_-24");
+    } qw(open weak strong) },
+);
+
+sub new {
+    my ($class, $in, $net, $w) = @_;
+    bless {
+        in => $in, net => $net, gui => { w => $w },
+    }, $class;
 }
 
 sub start_connection {
@@ -177,7 +182,7 @@ sub update_networks_list {
     my @networks = filter_networks($cmanager->{connection});
     foreach my $network (@networks) {
         my $ap = $network->{ap};
-        my $connected_pixbuf = $network->{current} ? $connected ? $cmanager->{gui}{pixbufs}{state}{connected} : $cmanager->{gui}{pixbufs}{state}{refresh} : undef;
+        my $connected_pixbuf = $network->{current} ? $connected ? $pixbufs{state}{connected} : $pixbufs{state}{refresh} : undef;
         my $network_name = !$network->{essid} && exists $cmanager->{net}{wireless}{$ap} && $cmanager->{net}{wireless}{$ap}{WIRELESS_ESSID} || $network->{name};
         my $strength_pixbuf = network::signal_strength::get_strength_icon($network);
 
@@ -193,7 +198,7 @@ sub update_networks_list {
                 $connected_pixbuf,
                 $network_name,
                 $strength_pixbuf,
-                $cmanager->{gui}{pixbufs}{encryption}{$network->{flags} =~ /WPA/i ? 'strong' : $network->{flags} =~ /WEP/i ? 'weak' : 'open'},
+                $pixbufs{encryption}{$network->{flags} =~ /WPA/i ? 'strong' : $network->{flags} =~ /WEP/i ? 'weak' : 'open'},
                 $network->{mode},
             ];
         }

@@ -13,9 +13,9 @@ use network::connection;
 use modules;
 
 sub new {
-    my ($class, $in, $net, $w, $pixbufs) = @_;
+    my ($class, $in, $net) = @_;
     bless {
-        in => $in, net => $net, gui => { w => $w, pixbufs => $pixbufs },
+        in => $in, net => $net,
     }, $class;
 }
 
