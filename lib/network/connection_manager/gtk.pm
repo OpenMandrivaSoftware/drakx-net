@@ -26,14 +26,14 @@ sub create_pixbufs() {
 sub start_connection {
     my ($cmanager) = @_;
     gtkset_mousecursor_wait($cmanager->{gui}{w}{window}->window);
-    $cmanager->SUPER::start_connection($cmanager);
+    $cmanager->SUPER::start_connection;
     gtkset_mousecursor_normal($cmanager->{gui}{w}{window}->window);
 }
 
 sub stop_connection {
     my ($cmanager) = @_;
     gtkset_mousecursor_wait($cmanager->{gui}{w}{window}->window);
-    $cmanager->SUPER::stop_connection($cmanager);
+    $cmanager->SUPER::stop_connection;
     gtkset_mousecursor_normal($cmanager->{gui}{w}{window}->window);
 }
 
