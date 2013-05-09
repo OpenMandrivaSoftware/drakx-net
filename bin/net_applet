@@ -345,7 +345,7 @@ sub generate_wireless_menuitem {
     $menuitem->{activate} = $menuitem->{widget}->signal_connect('activate' => sub {
         if ($net->{monitor} && exists $wnet->{id}) {
             eval { $net->{monitor}->select_network($wnet->{id}) };
-            $@ and err_dialog(N("Interactive Firewall"), N("Unable to contact daemon"));
+            $@ and err_dialog(N("Wireless networks"), N("Unable to contact daemon"));
         } else {
             run_drakroam($wnet->{ap});
         }
