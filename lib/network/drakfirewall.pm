@@ -284,7 +284,7 @@ sub set_ifw {
                 my $proto = $_;
                 map {
                     my $multiport = /:/ && " -m multiport";
-                    "iptables -A Ifw -m state --state NEW -p $proto$multiport --dport $_ -j IFWLOG --log-prefix NEW\n";
+                    "iptables -A Ifw -m conntrack --ctstate NEW -p $proto$multiport --dport $_ -j IFWLOG --log-prefix NEW\n";
                 } @{$ports_by_proto->{$proto}};
             } intersection([ qw(tcp udp) ], [ keys %$ports_by_proto ]),
         );
