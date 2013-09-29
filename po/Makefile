@@ -29,8 +29,14 @@ clean:
 %.mo: %.po
 	msgfmt -o $@ $<
 
-$(POTFILE): $(PL_FILES)
-	perl_checker -q --generate-pot $@ $(PL_FILES)
+$(POTFILE): $(PL_FILES) POTFILES.in
+	intltool-update --gettext-package non-perl --pot
+	perl_checker -q --generate-pot .$@ $(PL_FILES)
+	msgcat -w 2048 --use-first .$@ non-perl.pot > $@
+	rm -f non-perl.pot ..$@ .$@
+
+POTFILES.in:
+	(cd .. ; /bin/ls -1 polkit/policy/*.policy.in; ) > POTFILES.in
 
 update_n_merge: $(POTFILE) merge
 

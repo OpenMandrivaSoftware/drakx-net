@@ -33,6 +33,8 @@ use Gtk2::SimpleList;
 use ugtk2 qw(:create :helpers :wrappers :dialogs :ask);
 use POSIX ();
 
+require_root_capability();
+
 $ugtk2::wm_icon = 'draknetprofile-16';
 my $title = N("Network profiles");
 my $w = ugtk2->new($title);

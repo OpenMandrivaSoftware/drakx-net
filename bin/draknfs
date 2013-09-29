@@ -27,12 +27,15 @@ use common;
 use network::network;
 use interactive;
 use services;
+
+require_root_capability();
+
 my $nfsicon = "/usr/share/mcc/themes/default/draknfs.png";
 $ugtk2::wm_icon = $nfsicon;
 use mygtk2 qw(gtknew gtkset);
 use ugtk2 qw(:ask :wrappers :create :dialogs);
 
-my $in = 'interactive'->vnew('su');
+my $in = 'interactive'->vnew;
 $in->do_pkgs->ensure_is_installed('nfs-utils', '/usr/sbin/rpc.nfsd') or exit(1);
 if (!$in->do_pkgs->is_installed("portmap")) {
     $in->do_pkgs->ensure_is_installed('rpcbind') or exit(1);

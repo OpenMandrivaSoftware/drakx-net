@@ -5,6 +5,7 @@ DESTDIR=
 libdir=/usr/lib
 bindir=/usr/bin
 sbindir=/usr/sbin
+libexecdir=/usr/libexec
 desktopdir=/usr/share/applications
 autostartdir=/etc/xdg/autostart
 iconsdir=/usr/lib/libDrakX/icons
@@ -12,12 +13,13 @@ pixmapsdir=/usr/share/libDrakX/pixmaps
 pamdir=/etc/pam.d
 consoleappsdir=/etc/security/console.apps
 
-BIN_TOOLS= net_applet
-SBIN_TOOLS=drakconnect drakfirewall drakgw drakhosts drakids drakinvictus draknetprofile draknfs drakproxy drakroam draksambashare drakvpn draknetcenter
+USER_TOOLS=net_applet
+ROOT_TOOLS=drakconnect drakfirewall drakgw drakhosts drakids drakinvictus draknetprofile draknfs drakproxy drakroam draksambashare drakvpn draknetcenter
 
 all:
 	(find lib -name '*.pm'; find bin -type f) | xargs perl -pi -e 's/\s*use\s+(diagnostics|vars|strict).*//g'
 	make -C po
+	make -C polkit/policy
 	make -C data
 
 check:
@@ -25,18 +27,21 @@ check:
 	@for p in bin/*; do perl -cw $$p || exit 1; done
 
 install:
-	install -d $(DESTDIR){$(libdir),$(bindir),$(sbindir),$(desktopdir),$(autostartdir),$(iconsdir),$(pixmapsdir),$(pamdir),$(consoleappsdir)}
+	install -d $(DESTDIR){$(libdir),$(bindir),$(libexecdir),$(desktopdir),$(autostartdir),$(iconsdir),$(pixmapsdir),$(pamdir),$(consoleappsdir)}
 	cp -a lib/* $(DESTDIR)$(libdir)/libDrakX/
 	find $(DESTDIR) -name .perl_checker -exec rm {} \;
-	(cd bin; \
-	  install -m755 $(BIN_TOOLS) $(DESTDIR)$(bindir); \
-	  install -m755 $(SBIN_TOOLS) $(DESTDIR)$(sbindir); \
+	(cd bin && \
+	  install -m755 $(USER_TOOLS) $(DESTDIR)$(bindir) && \
+	  install -m755 $(ROOT_TOOLS) $(DESTDIR)$(libexecdir) && \
+	  cd ../polkit/wrappers && \
+	  install -m755 $(ROOT_TOOLS) $(DESTDIR)$(bindir) \
 	)
 	install -m644 $(wildcard data/*.desktop) $(DESTDIR)$(desktopdir)
 	install -m644 $(wildcard data/icons/*.png) $(DESTDIR)$(iconsdir)
 	install -m644 $(wildcard data/pixmaps/*.png) $(DESTDIR)$(pixmapsdir)
 	perl -pe 's/\s+--force//g' $(DESTDIR)$(desktopdir)/net_applet.desktop > $(DESTDIR)$(autostartdir)/net_applet.desktop
 	make -C po install
+	make -C polkit/policy install
 
 cleandist:
 	rm -rf $(NAME)-$(VERSION) ../$(NAME)-$(VERSION).tar*

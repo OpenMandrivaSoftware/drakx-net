@@ -45,7 +45,9 @@ my $sysconf_network = "/etc/sysconfig/network";
 my $masq_file = "$::prefix/etc/shorewall/masq";
 my $cups_conf = "$::prefix/etc/cups/cupsd.conf";
 
-my $in = 'interactive'->vnew('su');
+require_root_capability();
+
+my $in = 'interactive'->vnew;
 
 my $net = {};
 network::network::read_net_conf($net);

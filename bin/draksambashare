@@ -37,7 +37,9 @@ use run_program;
 use Libconf::Templates;
 use Libconf::Glueconf::Samba::Smb_conf;
 
-my $in = 'interactive'->vnew('su');
+require_root_capability();
+
+my $in = 'interactive'->vnew;
 $in->do_pkgs->ensure_is_installed('samba-server', '/usr/sbin/smbd') or exit(1);
 
 #if (!-f "/etc/sysconfig/wizard_samba") {

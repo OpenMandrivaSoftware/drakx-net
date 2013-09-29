@@ -31,8 +31,10 @@ use common;
 use network::network;
 use modules;
 
+require_root_capability();
+
 $ugtk2::wm_icon = "drakconnect";
-my $in = 'interactive'->vnew('su');
+my $in = 'interactive'->vnew;
 
 my $net = {};
 network::network::read_net_conf($net);

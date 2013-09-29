@@ -28,9 +28,11 @@ use network::network;
 use any;
 use common;
 
+require_root_capability();
+
 $ugtk2::wm_icon = "/usr/share/mcc/themes/default/drakproxy-mdk.png";
 my $u = { getVarsFromSh('/etc/profile.d/proxy.sh') };
-my $in = 'interactive'->vnew('su');
+my $in = 'interactive'->vnew;
 if (network::network::miscellaneous_choose($in, $u)) {
     network::network::proxy_configure($u);
     any::ask_for_X_restart($in);

@@ -9,7 +9,9 @@ network::drakvpn - Interactive VPN configuration
  use interactive;
  use network::drakvpn;
 
- my $in = 'interactive'->vnew('su');
+ require_root_capability();
+
+ my $in = 'interactive'->vnew;
  network::drakvpn::create_connection($in);
 
 =cut

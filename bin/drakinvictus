@@ -32,6 +32,8 @@ use detect_devices;
 use mygtk2 qw(gtknew);
 use ugtk2 qw(:create :helpers :wrappers :dialogs);
 
+require_root_capability();
+
 $ugtk2::wm_icon = 'invictus-16';
 my $title = N("Invictus Firewall");
 my $w = ugtk2->new($title);

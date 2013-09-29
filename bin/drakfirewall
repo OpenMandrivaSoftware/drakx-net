@@ -27,7 +27,9 @@ use network::drakfirewall;
 
 $ugtk2::wm_icon = "/usr/share/mcc/themes/default/firewall-mdk.png";
 
-my $in = 'interactive'->vnew('su');
+require_root_capability();
+
+my $in = 'interactive'->vnew;
 
 network::drakfirewall::main($in, undef);
 
