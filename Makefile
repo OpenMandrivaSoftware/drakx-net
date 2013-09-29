@@ -43,24 +43,9 @@ cleandist:
 
 dist: cleandist
 	rm -rf ../$(NAME)-$(VERSION).tar*
-	@if [ -e ".svn" ]; then \
-		$(MAKE) dist-svn; \
-	elif [ -e ".git" ]; then \
-		$(MAKE) dist-git; \
-	else \
-		echo "Unknown SCM (not SVN nor GIT)";\
-		exit 1; \
-	fi;
+	git archive --prefix $(NAME)-$(VERSION)/ HEAD | xz -9 > ../$(NAME)-$(VERSION).tar.xz
 	$(info $(NAME)-$(VERSION).tar.xz is ready)
 
-
-dist-svn:
-	svn export -q -rBASE . $(NAME)-$(VERSION)
-	tar cfa ../$(NAME)-$(VERSION).tar.xz $(NAME)-$(VERSION)
-	rm -rf $(NAME)-$(VERSION)
-
-dist-git: cleandist
-	git archive --prefix $(NAME)-$(VERSION)/ HEAD | xz -9 > ../$(NAME)-$(VERSION).tar.xz
 
 clean:
 	make -C po clean
