@@ -21,13 +21,12 @@ use lib qw(/usr/lib/libDrakX);
 # i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
 BEGIN { unshift @::textdomains, 'drakx-net' }
 use standalone;     #- warning, standalone must be loaded very first, for 'explanations'
-
 use interactive;
 use network::drakfirewall;
 
 $ugtk2::wm_icon = "/usr/share/mcc/themes/default/firewall-mdk.png";
 
-require_root_capability();
+common::require_root_capability();
 
 my $in = 'interactive'->vnew;
 

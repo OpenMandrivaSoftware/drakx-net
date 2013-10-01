@@ -13,7 +13,7 @@ use standalone;
 use interactive;
 use network::drakvpn;
 
-require_root_capability();
+common::require_root_capability();
 
 my $in = 'interactive'->vnew;
 network::drakvpn::create_connection($in);
