@@ -40,7 +40,7 @@ POTFILES.in:
 
 update_n_merge: $(POTFILE) merge
 
-merge:
+merge: $(POTFILE)
 	@for n in $(POFILES); do \
 		echo "Merging $$n"; \
 		msgmerge -C "$$n" "$$n" $(PGOAL).pot > "$$n"t; \
