@@ -24,7 +24,7 @@ install: all
 	done
 
 clean:
-	rm -f *~ *.[oas] *.mo $(POTFILE) $(MOFILES) TAGS
+	rm -f *~ *.[oas] *.mo $(POTFILE) POTFILES.in $(MOFILES) TAGS
 
 %.mo: %.po
 	msgfmt -o $@ $<
