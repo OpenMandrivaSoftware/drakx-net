@@ -36,7 +36,7 @@ $(POTFILE): $(PL_FILES) POTFILES.in
 	rm -f non-perl.pot ..$@ .$@
 
 POTFILES.in:
-	(cd .. ; /bin/ls -1 polkit/policy/*.policy.in; ) > POTFILES.in
+	(cd .. ; /bin/ls -1 polkit/*.policy.in; ) > POTFILES.in
 
 update_n_merge: $(POTFILE) merge
 
