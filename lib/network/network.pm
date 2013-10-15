@@ -291,13 +291,11 @@ sub addDefaultRoute {
 }
 
 sub write_hostname {
+    #- ovitters: adding 127.0.0.1 to /etc/hosts is obsolete as nss-myhostname handles it
     my ($hostname) = @_;
 
     addVarsInSh($::prefix . $network_file, { HOSTNAME => $hostname }, qw(HOSTNAME));
     output($::prefix . $hostname_file, $hostname || "localhost");
-
-    add2hosts("localhost", "127.0.0.1");
-    add2hosts($hostname, "127.0.0.1") if $hostname;
 
     unless ($::isInstall) {
         my $rc = syscall_("sethostname", $hostname, length $hostname);
