@@ -28,14 +28,14 @@ BEGIN { unshift @::textdomains, 'drakx-net' }
 use standalone;     #- warning, standalone must be loaded very first, for 'explanations'
 use common;
 use interactive;
-use ugtk2 qw(:create :dialogs :helpers :wrappers);
-use mygtk2 qw(gtknew);
+use ugtk3 qw(:create :dialogs :helpers :wrappers);
+use mygtk3 qw(gtknew);
 use network::netconnect;
 use network::connection::ethernet;
 
 require_root_capability();
 
-$ugtk2::wm_icon = "drakconnect";
+$ugtk3::wm_icon = "drakconnect";
 my $in = 'interactive'->vnew;
 
 my $net = {};
@@ -44,8 +44,8 @@ my $modules_conf = modules::any_conf->read;
 
 my @all_cards;
 
-my $window1 = ugtk2->new(N("Network configuration (%d adapters)", scalar @all_cards));
-$window1->{rwindow}->signal_connect(delete_event => sub { ugtk2->exit(0) });
+my $window1 = ugtk3->new(N("Network configuration (%d adapters)", scalar @all_cards));
+$window1->{rwindow}->signal_connect(delete_event => sub { ugtk3->exit(0) });
 unless ($::isEmbedded) {
     $window1->{rwindow}->set_position('center');
     $window1->{rwindow}->set_size_request(-1, -1);
@@ -57,11 +57,11 @@ my $button_apply;
 
 my $hostname = chomp_(`hostname`);
 
-my $tree_model = Gtk2::TreeStore->new("Gtk2::Gdk::Pixbuf", map { "Glib::String" } 2..6);
-my $list = Gtk2::TreeView->new_with_model($tree_model);
-$list->append_column(Gtk2::TreeViewColumn->new_with_attributes(undef, Gtk2::CellRendererPixbuf->new, 'pixbuf' => 0));
+my $tree_model = Gtk3::TreeStore->new("Gtk3::Gdk::Pixbuf", map { "Glib::String" } 2..6);
+my $list = Gtk3::TreeView->new_with_model($tree_model);
+$list->append_column(Gtk3::TreeViewColumn->new_with_attributes(undef, Gtk3::CellRendererPixbuf->new, 'pixbuf' => 0));
 each_index {
-    $list->append_column(my $col = Gtk2::TreeViewColumn->new_with_attributes($_, Gtk2::CellRendererText->new, 'text' => $::i + 1));
+    $list->append_column(my $col = Gtk3::TreeViewColumn->new_with_attributes($_, Gtk3::CellRendererText->new, 'text' => $::i + 1));
     $col->set_sort_column_id($::i);
 } (N("Interface"), N("IP address"), N("Protocol"), N("Driver"), N("State"));
 
@@ -76,11 +76,11 @@ update_list($modules_conf);
 
 my $label_host;
 $window1->{window}->add(
-                        gtkpack__(Gtk2::VBox->new(0,10),
-                                  gtkpack(Gtk2::HBox->new,
-                                            Gtk2::Label->new(N("Hostname: ")),
-                                            $label_host = Gtk2::Label->new($hostname),
-                                            gtksignal_connect(Gtk2::Button->new(N("Configure hostname...")),
+                        gtkpack__(Gtk3::VBox->new(0,10),
+                                  gtkpack(Gtk3::HBox->new,
+                                            Gtk3::Label->new(N("Hostname: ")),
+                                            $label_host = Gtk3::Label->new($hostname),
+                                            gtksignal_connect(Gtk3::Button->new(N("Configure hostname...")),
                                                               clicked => sub {
                                                                   local ($::isWizard, $::Wizard_finished) = (1, 1);
                                                                   eval { # For wizcancel
@@ -95,26 +95,26 @@ $window1->{window}->add(
                                                              ),
                                            ),
                                   gtkadd(gtkcreate_frame(N("LAN configuration")),
-                                           gtkpack_(gtkset_border_width(Gtk2::VBox->new(0,0), 5),
+                                           gtkpack_(gtkset_border_width(Gtk3::VBox->new(0,0), 5),
                                                     0, $list,
-                                                    0, Gtk2::HBox->new(0,0),
-                                                    0, gtkpack_(Gtk2::HBox->new(0, 0),
-                                                                0, gtksignal_connect(Gtk2::Button->new(N("Configure Local Area Network...")),
+                                                    0, Gtk3::HBox->new(0,0),
+                                                    0, gtkpack_(Gtk3::HBox->new(0, 0),
+                                                                0, gtksignal_connect(Gtk3::Button->new(N("Configure Local Area Network...")),
                                                                                      clicked => \&configure_lan),
                                                                ),
                                                    )
                                           ),
-                                 gtkpack(Gtk2::HButtonBox->new,
-                                            gtksignal_connect(Gtk2::Button->new(N("Help")), clicked => sub {
+                                 gtkpack(Gtk3::HButtonBox->new,
+                                            gtksignal_connect(Gtk3::Button->new(N("Help")), clicked => sub {
                                                                   run_program::raw({ detach => 1 }, 'drakhelp', '--id', 'internet-connection') }),
-                                            $button_apply = gtksignal_connect(gtkset_sensitive(Gtk2::Button->new(N("Apply")), 0),
+                                            $button_apply = gtksignal_connect(gtkset_sensitive(Gtk3::Button->new(N("Apply")), 0),
                                                                               clicked => \&apply),
-                                            gtksignal_connect(Gtk2::Button->new(N("Cancel")), clicked => \&quit_global),
-                                            gtksignal_connect(Gtk2::Button->new(N("Ok")), clicked => sub {
+                                            gtksignal_connect(Gtk3::Button->new(N("Cancel")), clicked => \&quit_global),
+                                            gtksignal_connect(Gtk3::Button->new(N("Ok")), clicked => sub {
                                                                   if ($button_apply->get('sensitive')) {
                                                                       my $dialog = _create_dialog(N("Please wait"));
                                                                       gtkpack($dialog->vbox,
-                                                                              Gtk2::Label->new(N("Please Wait... Applying the configuration")));
+                                                                              Gtk3::Label->new(N("Please Wait... Applying the configuration")));
                                                                       $dialog->show_all;
                                                                       gtkflush();
                                                                       apply();
@@ -132,10 +132,10 @@ $window1->{window}->add(
 $window1->{rwindow}->show_all;
 gtkflush();
 $window1->main;
-ugtk2->exit(0);
+ugtk3->exit(0);
 
 sub quit_global() {
-    ugtk2->exit(0);
+    ugtk3->exit(0);
 }
 
 sub get_intf_status {
@@ -174,11 +174,11 @@ sub configure_lan() {
     my @card_tab;
 
     if (@all_cards < 1) {
-	$window->vbox->add(Gtk2::Label->new(N("You do not have any configured interface.
+	$window->vbox->add(Gtk3::Label->new(N("You do not have any configured interface.
 Configure them first by clicking on 'Configure'")));
 	gtkpack(gtkset_layout($window->action_area, 'end'),
-             gtksignal_connect(Gtk2::Button->new(N("Ok")),
-                               clicked => sub { Gtk2->main_quit })
+             gtksignal_connect(Gtk3::Button->new(N("Ok")),
+                               clicked => sub { Gtk3->main_quit })
             );
 	$window->show_all;
 	$window->run;
@@ -188,8 +188,8 @@ Configure them first by clicking on 'Configure'")));
 
     $window->set_border_width(10);
     gtkpack($window->vbox,
-            Gtk2::Label->new(N("LAN Configuration")),
-            my $notebook = Gtk2::Notebook->new,
+            Gtk3::Label->new(N("LAN Configuration")),
+            my $notebook = Gtk3::Notebook->new,
            );
 
     foreach (0..$#all_cards) {
@@ -198,9 +198,9 @@ Configure them first by clicking on 'Configure'")));
 	$card_tab[2*$_] = \@infos;
 	$card_tab[2*$_+1] = \@conf_data;
 
-	my $vbox_local = Gtk2::VBox->new(0,0);
+	my $vbox_local = Gtk3::VBox->new(0,0);
 	$vbox_local->set_border_width(10);
-	$vbox_local->pack_start(Gtk2::Label->new(N("Adapter %s: %s", $_+1 , $all_cards[$_][0])),1,1,0);
+	$vbox_local->pack_start(Gtk3::Label->new(N("Adapter %s: %s", $_+1 , $all_cards[$_][0])),1,1,0);
 	#	Eth${_}Hostname = $netc->{HOSTNAME}
 	#       Eth${_}HostAlias = " . do { $netc->{HOSTNAME} =~ /([^\.]*)\./; $1 } . "
 	#	Eth${_}Driver = $all_cards[$_]->[1]
@@ -214,22 +214,22 @@ Configure them first by clicking on 'Configure'")));
 		      [ N("DHCP client"), \$net->{ifcfg}{$interface}{DHCP_CLIENT} ]
 		     );
 	my $i = 0;
-	my $size_group = Gtk2::SizeGroup->new('horizontal');
+	my $size_group = Gtk3::SizeGroup->new('horizontal');
 
 	foreach my $j (@conf_data) {
-	    my $l = Gtk2::Label->new($j->[0]);
+	    my $l = Gtk3::Label->new($j->[0]);
 	    $l->set_justify('left');
-	    $infos[2*$i] = gtkpack_(Gtk2::HBox->new,
+	    $infos[2*$i] = gtkpack_(Gtk3::HBox->new,
 				    1, $l);
 	    $vbox_local->pack_start($infos[2*$i], 1, 1, 0);
 	    my $c;
 	    if (defined $j->[2]) {
-		$c = Gtk2::ComboBox->new_text;
+		$c = Gtk3::ComboBox->new_text;
 		$c->set_popdown_strings(@{$j->[2]});
 		$infos[2*$i+1] = $c->entry;
 		$infos[2*$i]->pack_start($c,0,0,0);
 	    } else {
-		$infos[2*$i+1] = ($c = Gtk2::Entry->new);
+		$infos[2*$i+1] = ($c = Gtk3::Entry->new);
 		$infos[2*$i]->pack_start($infos[2*$i+1],0,0,0);
 	    }
 	    $size_group->add_widget($c);
@@ -239,7 +239,7 @@ Configure them first by clicking on 'Configure'")));
 
 	my $widget_temp;
 	if (-e "/etc/sysconfig/network-scripts/ifcfg-$interface") {
-         $widget_temp = gtksignal_connect(Gtk2::Button->new(get_intf_status($interface)),
+         $widget_temp = gtksignal_connect(Gtk3::Button->new(get_intf_status($interface)),
                                           clicked => sub {
                                               system("/sbin/if" . (ethisup($interface) ? "down" : "up") . " $interface");
                                               $_[0]->set_label(get_intf_status($interface));
@@ -248,23 +248,23 @@ Configure them first by clicking on 'Configure'")));
 	} else {
 	    $widget_temp = N("This interface has not been configured yet.\nRun the \"%s\" assistant from the Mageia Linux Control Center", N("Set up a new network interface (LAN, ISDN, ADSL, ...)"));
 	}
-	$vbox_local->pack_start(gtkpack__(Gtk2::HBox->new(0,0),
+	$vbox_local->pack_start(gtkpack__(Gtk3::HBox->new(0,0),
 					  $widget_temp
 					 ),0,0,0);
 	#	$list->append($_+1, $interface, $intf->{$interface}{IPADDR}, $intf->{$interface}{BOOTPROTO}, $all_cards[$_]->[1]);
 	#	$list->set_selectable($_, 0);
-	$notebook->append_page($vbox_local, Gtk2::Label->new($interface));
+	$notebook->append_page($vbox_local, Gtk3::Label->new($interface));
     }
 
     my $exit_dialogsub = sub {
         $window->destroy;
-        Gtk2->main_quit;
+        Gtk3->main_quit;
     };
 
     gtkpack($window->action_area,
-            gtksignal_connect(Gtk2::Button->new(N("Cancel")),
+            gtksignal_connect(Gtk3::Button->new(N("Cancel")),
                               clicked => $exit_dialogsub),
-            gtksignal_connect(Gtk2::Button->new(N("Ok")), clicked => sub {
+            gtksignal_connect(Gtk3::Button->new(N("Ok")), clicked => sub {
                                   foreach (0..$#all_cards) {
                                       my @infos = @{$card_tab[2*$_]};
                                       each_index { ${$_->[1]} = $infos[2*$::i+1]->get_text } @{$card_tab[2*$_+1]};

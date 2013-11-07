@@ -28,16 +28,16 @@ use standalone;
 
 use common;
 use network::network;
-use mygtk2;
-use Gtk2::SimpleList;
-use ugtk2 qw(:create :helpers :wrappers :dialogs :ask);
+use mygtk3;
+use Gtk3::SimpleList;
+use ugtk3 qw(:create :helpers :wrappers :dialogs :ask);
 use POSIX ();
 
 require_root_capability();
 
-$ugtk2::wm_icon = 'draknetprofile-16';
+$ugtk3::wm_icon = 'draknetprofile-16';
 my $title = N("Network profiles");
-my $w = ugtk2->new($title);
+my $w = ugtk3->new($title);
 $::main_window = $w->{real_window}; #- so that transient_for is defined for wait messages and dialogs
 
 my $net = {};
@@ -45,10 +45,10 @@ my @profiles;
 my $default_profile = "default";
 my %buttons;
 
-package Gtk2::CellRendererRadio;
+package Gtk3::CellRendererRadio;
 
 sub new {
-    my $renderer = Gtk2::CellRendererToggle->new;
+    my $renderer = Gtk3::CellRendererToggle->new;
     $renderer->set_radio(1);
     $renderer;
 }
@@ -57,14 +57,14 @@ sub new {
 
 package main;
 
-Gtk2::SimpleList->add_column_type(
+Gtk3::SimpleList->add_column_type(
     'radio',
     type     => 'Glib::Boolean',
-    renderer => 'Gtk2::CellRendererRadio',
+    renderer => 'Gtk3::CellRendererRadio',
     attr     => 'active',
 );
 
-my $modules_list = Gtk2::SimpleList->new(
+my $modules_list = Gtk3::SimpleList->new(
     N("Module") => 'hidden',
     N("Enabled") => 'bool',
     N("Description") => 'text',
@@ -81,7 +81,7 @@ $r[0]->signal_connect('toggled' => sub {
                       });
 
 
-my $profiles_list = Gtk2::SimpleList->new(
+my $profiles_list = Gtk3::SimpleList->new(
     "" => 'hidden',
     N("Profile") => 'text',
 );
@@ -157,15 +157,15 @@ sub set_profile {
 sub clone_profile() {
     #my $source_profile = get_selected_profile();
     my $dialog = _create_dialog(N("New profile..."));
-    my $entry_dialog = Gtk2::Entry->new;
+    my $entry_dialog = Gtk3::Entry->new;
     gtkpack($dialog->vbox,
-            Gtk2::WrappedLabel->new(N("Please specify the name of the new network profile to be created (e.g., work, home, roaming, ..). This new profile will be created based on current settings, and you'll be able to configure your system configuration as usual afterwards.")),
+            Gtk3::WrappedLabel->new(N("Please specify the name of the new network profile to be created (e.g., work, home, roaming, ..). This new profile will be created based on current settings, and you'll be able to configure your system configuration as usual afterwards.")),
             $entry_dialog,
         );
     gtkpack($dialog->action_area,
-            gtksignal_connect(Gtk2::Button->new(N("Cancel")),
+            gtksignal_connect(Gtk3::Button->new(N("Cancel")),
                               clicked => sub { $dialog->destroy }),
-            gtksignal_connect(my $bok = Gtk2::Button->new(N("Ok")), clicked => sub {
+            gtksignal_connect(my $bok = Gtk3::Button->new(N("Ok")), clicked => sub {
                                   my $dest_profile = $entry_dialog->get_text;
                                   # netprofile does not like spaces in profile names...
                                   $dest_profile =~ s/ /_/g;
@@ -198,10 +198,10 @@ sub delete_selected_profile() {
 }
 
 # create advanced view to configure modules
-my $expander = Gtk2::Expander->new(N("Advanced"));
-$expander->add(gtkpack_(Gtk2::VBox->new,
-        0, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 1),
-            1, gtkpack_(gtkset_border_width(Gtk2::VBox->new, 0),
+my $expander = Gtk3::Expander->new(N("Advanced"));
+$expander->add(gtkpack_(Gtk3::VBox->new,
+        0, gtkpack_(gtkset_border_width(Gtk3::HBox->new, 1),
+            1, gtkpack_(gtkset_border_width(Gtk3::VBox->new, 0),
                0, gtknew('WrappedLabel', text => N("Select the netprofile modules:")),
                0, gtknew('ScrolledWindow', width => 300, height => 150, child => $modules_list),
            ),
@@ -214,7 +214,7 @@ $expander->show_all;
 
 gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
-           $::isEmbedded ? () : (0, Gtk2::Banner->new('draknetprofile', $title)),
+           $::isEmbedded ? () : (0, Gtk3::Banner->new('draknetprofile', $title)),
            0, gtknew('WrappedLabel', text => N("This tool allows you to control network profiles.")),
            0, gtknew('WrappedLabel', text => N("Select a network profile:")),
            1, gtknew('ScrolledWindow', width => 300, height => 150, child => $profiles_list),
@@ -223,7 +223,7 @@ gtkadd($w->{window},
                $buttons{activate} = gtknew('Button', text => N("Activate"), clicked => \&set_selected_profile, sensitive => 0),
                $buttons{clone} = gtknew('Button', text => N("New"), clicked => \&clone_profile, sensitive => 0),
                $buttons{delete} = gtknew('Button', text => N("Delete"), clicked => \&delete_selected_profile, sensitive => 0),
-               gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit }),
+               gtknew('Button', text => N("Quit"), clicked => sub { Gtk3->main_quit }),
            ]),
        ]),
    );

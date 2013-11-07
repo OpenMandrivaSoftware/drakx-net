@@ -1,8 +1,8 @@
 package network::drakconnect::edit;
 
 use lib qw(/usr/lib/libDrakX);   # helps perl_checker
-use ugtk2 qw(:create :dialogs :helpers :wrappers);
-use mygtk2 qw(gtknew);
+use ugtk3 qw(:create :dialogs :helpers :wrappers);
+use mygtk3 qw(gtknew);
 use common;
 use detect_devices;
 use run_program;
@@ -18,13 +18,13 @@ sub manage {
 
     my $p = {};
     my ($interface_menu, $selected, $apply_button);
-    my $window = ugtk2->new('Manage Connection');
+    my $window = ugtk3->new('Manage Connection');
     unless ($::isEmbedded) {
         $window->{rwindow}->set_position('center');
         $window->{rwindow}->set_title(N("Manage connections")); # translation availlable in mcc domain => we need merging
     }
 
-    my $notebook = Gtk2::Notebook->new;
+    my $notebook = Gtk3::Notebook->new;
     $notebook->set_property('show-tabs', 0);
     $notebook->set_property('show-border', 0);
 
@@ -46,10 +46,10 @@ sub manage {
                                  };
     }
 
-    $window->{rwindow}->add(gtkpack_(Gtk2::VBox->new,
-				     0, gtkpack__(Gtk2::HBox->new,
+    $window->{rwindow}->add(gtkpack_(Gtk3::VBox->new,
+				     0, gtkpack__(Gtk3::HBox->new,
                                                   gtknew('Label', text => N("Device: "), alignment => [ 0, 0 ]),
-                                                  $interface_menu = gtksignal_connect(Gtk2::ComboBox->new_text,
+                                                  $interface_menu = gtksignal_connect(Gtk3::ComboBox->new_text,
                                                                     changed => sub {
                                                                         $selected = $interface_menu->get_text;
                                                                         $notebook->set_current_page($p->{$selected}{gui}{index});
@@ -59,13 +59,13 @@ sub manage {
 				     1, $notebook,
 				     0, create_okcancel(my $oc =
                                                         {
-                                                         cancel_clicked => sub { $window->destroy; Gtk2->main_quit },
+                                                         cancel_clicked => sub { $window->destroy; Gtk3->main_quit },
                                                          ok_clicked => sub {
                                                              if ($apply_button->get_property('sensitive')) {
                                                                  save($in, $net, $modules_conf, $p, $apply_button);
                                                              }
                                                              $window->destroy;
-                                                             Gtk2->main_quit;
+                                                             Gtk3->main_quit;
                                                          },
                                                         },
                                                         undef, undef, '',
@@ -82,7 +82,7 @@ sub manage {
 	$p->{$name}{intf} ||= { DEVICE => $interface };
 	build_tree($in, $net, $p->{$name}{intf}, $name);
 	build_notebook($net, \@all_cards, $p->{$name}{intf}, $p->{$name}{gui}, $apply_button, $name, $interface);
-	$notebook->append_page(gtkpack(Gtk2::VBox->new(0,0), $p->{$name}{gui}{notebook}));
+	$notebook->append_page(gtkpack(Gtk3::VBox->new(0,0), $p->{$name}{gui}{notebook}));
     } (sort keys %$p);
 
     $interface_menu->set_popdown_strings(sort keys %$p);
@@ -126,15 +126,15 @@ sub build_notebook {
     my $apply = sub { $apply_button->set_sensitive(1) };
     my $is_ethernet = detect_devices::is_lan_interface($interface);
 
-	my $size_group = Gtk2::SizeGroup->new('horizontal');
+	my $size_group = Gtk3::SizeGroup->new('horizontal');
 
     if ($intf->{pages}{'TCP/IP'}) {
-	gtkpack__($gui->{sheet}{'TCP/IP'} = gtkset_border_width(Gtk2::VBox->new(0,10), 5),
+	gtkpack__($gui->{sheet}{'TCP/IP'} = gtkset_border_width(Gtk3::VBox->new(0,10), 5),
              gtknew('Title2', label => N("IP configuration")),
                                 if_($is_ethernet,
-                                    gtkpack(Gtk2::HBox->new(1,0),
+                                    gtkpack(Gtk3::HBox->new(1,0),
                                                  gtknew('Label_Left', text => N("Protocol")),
-                                                 $gui->{intf}{BOOTPROTO} = gtksignal_connect(Gtk2::ComboBox->new_text, changed => sub {
+                                                 $gui->{intf}{BOOTPROTO} = gtksignal_connect(Gtk3::ComboBox->new_text, changed => sub {
                                                      return if !$_[0]->realized;
                                                      my $proto = $gui->{intf}{BOOTPROTO};
                                                      my $protocol = $intf->{BOOTPROTO} = { reverse %{$proto->{protocols}} }->{$proto->get_text};
@@ -148,20 +148,20 @@ sub build_notebook {
                                                                                          ),
                                              ),
                                 ),
-                                gtkpack(Gtk2::HBox->new(1,0),
+                                gtkpack(Gtk3::HBox->new(1,0),
                                            gtknew('Label_Left', text => N("IP address")),
-                                           gtksignal_connect($gui->{intf}{IPADDR} = Gtk2::Entry->new,
+                                           gtksignal_connect($gui->{intf}{IPADDR} = Gtk3::Entry->new,
                                                                                         key_press_event => $apply),
                                        ),
-                                gtkpack(Gtk2::HBox->new(1,0),
+                                gtkpack(Gtk3::HBox->new(1,0),
                                            gtknew('Label_Left', text => N("Netmask")),
-                                           gtksignal_connect($gui->{intf}{NETMASK} = Gtk2::Entry->new,
+                                           gtksignal_connect($gui->{intf}{NETMASK} = Gtk3::Entry->new,
                                                                                         key_press_event => $apply),
                                        ),
                                 if_($is_ethernet,
-                                    gtkpack(Gtk2::HBox->new(1,0),
+                                    gtkpack(Gtk3::HBox->new(1,0),
                                                gtknew('Label_Left', text => N("Gateway")),
-                                               gtksignal_connect($gui->{network}{GATEWAY} = Gtk2::Entry->new,
+                                               gtksignal_connect($gui->{network}{GATEWAY} = Gtk3::Entry->new,
                                                                                             key_press_event => $apply),
                                            ),
                                 ),
@@ -170,7 +170,7 @@ sub build_notebook {
                                                  $intf->{dns2} || $net->{resolv}{dnsServer2},
                                                  $intf->{dns3} || $net->{resolv}{dnsServer3}),
                   ),
-                                gtkpack(Gtk2::HBox->new(1,0),
+                                gtkpack(Gtk3::HBox->new(1,0),
                                              gtknew('Label_Left', text => N("Search Domain")),
                                                     my $w2 = gtknew('Label_Left', text => $intf->{domain} || $net->{resolv}{DOMAINNAME} || 'none'),
                         ),
@@ -194,25 +194,25 @@ sub build_notebook {
     }
 
     if ($intf->{pages}{DHCP}) {
-	gtkpack(gtkset_border_width($gui->{sheet}{DHCP} = Gtk2::HBox->new(0,10), 5),
-                gtkpack__(gtkset_border_width(Gtk2::VBox->new(0,10), 5),
-                          gtkpack__(Gtk2::HBox->new(1,0),
+	gtkpack(gtkset_border_width($gui->{sheet}{DHCP} = Gtk3::HBox->new(0,10), 5),
+                gtkpack__(gtkset_border_width(Gtk3::VBox->new(0,10), 5),
+                          gtkpack__(Gtk3::HBox->new(1,0),
                                   gtknew('Label_Left', text => N("DHCP client")),
-                                  gtksignal_connect($gui->{intf}{DHCP_CLIENT} = Gtk2::ComboBox->new_with_strings(\@network::connection::ethernet::dhcp_clients,
+                                  gtksignal_connect($gui->{intf}{DHCP_CLIENT} = Gtk3::ComboBox->new_with_strings(\@network::connection::ethernet::dhcp_clients,
                                                                                                                  $intf->{DHCP_CLIENT} || $network::connection::ethernet::dhcp_clients[0]),
                                                     changed => $apply)),
-                          gtksignal_connect($gui->{intf_bool}{NEEDHOSTNAME} = Gtk2::CheckButton->new(N("Assign host name from DHCP server (or generate a unique one)")), toggled => $apply),
-                          gtkpack__(Gtk2::HBox->new(1,0),
+                          gtksignal_connect($gui->{intf_bool}{NEEDHOSTNAME} = Gtk3::CheckButton->new(N("Assign host name from DHCP server (or generate a unique one)")), toggled => $apply),
+                          gtkpack__(Gtk3::HBox->new(1,0),
                                     gtknew('Label_Left', text => N("DHCP host name")),
-                                    gtksignal_connect($gui->{intf}{DHCP_HOSTNAME} = Gtk2::Entry->new,
+                                    gtksignal_connect($gui->{intf}{DHCP_HOSTNAME} = Gtk3::Entry->new,
                                                       key_press_event => $apply)),
-                          gtkpack__(Gtk2::HBox->new(1,0),
+                          gtkpack__(Gtk3::HBox->new(1,0),
                                     gtknew('Label_Left', text => N("DHCP timeout (in seconds)")),
-                                    gtksignal_connect($gui->{intf}{DHCP_TIMEOUT} = Gtk2::Entry->new,
+                                    gtksignal_connect($gui->{intf}{DHCP_TIMEOUT} = Gtk3::Entry->new,
                                                       key_press_event => $apply)),
-                          gtksignal_connect($gui->{intf_bool}{PEERDNS} = Gtk2::CheckButton->new(N("Get DNS servers from DHCP")), toggled => $apply),
-                          gtksignal_connect($gui->{intf_bool}{PEERYP} = Gtk2::CheckButton->new(N("Get YP servers from DHCP")), toggled => $apply),
-                          gtksignal_connect($gui->{intf_bool}{PEERNTPD} = Gtk2::CheckButton->new(N("Get NTPD servers from DHCP")), toggled => $apply),
+                          gtksignal_connect($gui->{intf_bool}{PEERDNS} = Gtk3::CheckButton->new(N("Get DNS servers from DHCP")), toggled => $apply),
+                          gtksignal_connect($gui->{intf_bool}{PEERYP} = Gtk3::CheckButton->new(N("Get YP servers from DHCP")), toggled => $apply),
+                          gtksignal_connect($gui->{intf_bool}{PEERNTPD} = Gtk3::CheckButton->new(N("Get NTPD servers from DHCP")), toggled => $apply),
                       ),
             );
 	foreach (qw(NEEDHOSTNAME PEERDNS)) { #- default these settings to yes
@@ -223,15 +223,15 @@ sub build_notebook {
 	$gui->{intf}{DHCP_CLIENT}->set_text($intf->{DHCP_CLIENT});
 	$gui->{sheet}{DHCP}->set_sensitive($intf->{BOOTPROTO} eq 'dhcp');
     }
-    my $size_group2 = Gtk2::SizeGroup->new('horizontal');
+    my $size_group2 = Gtk3::SizeGroup->new('horizontal');
     $size_group2->add_widget($_) foreach $gui->{intf}{DHCP_HOSTNAME}, $gui->{intf}{DHCP_TIMEOUT}, $gui->{intf}{DHCP_CLIENT};
 
     if ($intf->{pages}{Wireless}) {
-	gtkpack(gtkset_border_width($gui->{sheet}{Wireless} = Gtk2::HBox->new(0,10), 5),
-		gtkpack_(Gtk2::VBox->new(0,0),
-			 map { (0, gtkpack_(Gtk2::VBox->new(0,0),
-					    1, Gtk2::Label->new($_->[0]),
-					    0, gtksignal_connect($gui->{intf}{$_->[1]} = Gtk2::Entry->new,
+	gtkpack(gtkset_border_width($gui->{sheet}{Wireless} = Gtk3::HBox->new(0,10), 5),
+		gtkpack_(Gtk3::VBox->new(0,0),
+			 map { (0, gtkpack_(Gtk3::VBox->new(0,0),
+					    1, Gtk3::Label->new($_->[0]),
+					    0, gtksignal_connect($gui->{intf}{$_->[1]} = Gtk3::Entry->new,
 								 key_press_event => $apply),
 					   ));
 			   } ([ N("Operating Mode"), "WIRELESS_MODE" ],
@@ -242,11 +242,11 @@ sub build_notebook {
 			      [ N("Bitrate (in b/s)"), "WIRELESS_RATE" ]
 			     ),
 			),
-		Gtk2::VSeparator->new,
-		gtkpack_(Gtk2::VBox->new(0,0),
-			 map { (0, gtkpack_(Gtk2::VBox->new(0,0),
-					    1, Gtk2::Label->new($_->[0]),
-					    0, gtksignal_connect($gui->{intf}{$_->[1]} = Gtk2::Entry->new,
+		Gtk3::VSeparator->new,
+		gtkpack_(Gtk3::VBox->new(0,0),
+			 map { (0, gtkpack_(Gtk3::VBox->new(0,0),
+					    1, Gtk3::Label->new($_->[0]),
+					    0, gtksignal_connect($gui->{intf}{$_->[1]} = Gtk3::Entry->new,
 								 key_press_event => $apply),
 					   ));
 			   } ([ N("Encryption key"), 'WIRELESS_ENC_KEY' ],
@@ -261,37 +261,37 @@ sub build_notebook {
     }
 
     if ($intf->{pages}{Options}) {
-	gtkpack__(gtkset_border_width($gui->{sheet}{Options} = Gtk2::VBox->new(0,10), 5),
-                  $gui->{intf_bool}{ONBOOT} = gtksignal_connect(Gtk2::CheckButton->new(N("Start at boot")),
+	gtkpack__(gtkset_border_width($gui->{sheet}{Options} = Gtk3::VBox->new(0,10), 5),
+                  $gui->{intf_bool}{ONBOOT} = gtksignal_connect(Gtk3::CheckButton->new(N("Start at boot")),
                                                                 toggled => $apply),
                   if_($is_ethernet,
-                      map { ($gui->{intf_bool}{$_->[0]} = gtksignal_connect(Gtk2::CheckButton->new($_->[1]),
+                      map { ($gui->{intf_bool}{$_->[0]} = gtksignal_connect(Gtk3::CheckButton->new($_->[1]),
                                                                             toggled => $apply));
                         } (
                            [ "MII_NOT_SUPPORTED", N("Network Hotplugging") ],
                           ),
                      ),
                   if_($interface eq 'isdn',
-                      gtkpack(Gtk2::HBox->new(0,0),
-                              gtkpack__(Gtk2::VBox->new(0,0),
-                                        Gtk2::Label->new(N("Dialing mode")),
+                      gtkpack(Gtk3::HBox->new(0,0),
+                              gtkpack__(Gtk3::VBox->new(0,0),
+                                        Gtk3::Label->new(N("Dialing mode")),
                                         my @dialing_mode_radio = gtkradio(("auto") x 2, "manual"),
                                        ),
-                              Gtk2::VSeparator->new,
-                              gtkpack__(Gtk2::VBox->new(0,0),
-                                        Gtk2::Label->new(N("Connection speed")),
+                              Gtk3::VSeparator->new,
+                              gtkpack__(Gtk3::VBox->new(0,0),
+                                        Gtk3::Label->new(N("Connection speed")),
                                         my @speed_radio = gtkradio(("64 Kb/s") x 2, "128 Kb/s"),
                                        ),
                              ),
-                      gtkpack__(Gtk2::HBox->new(0,5),
-                               Gtk2::Label->new(N("Connection timeout (in sec)")),
-                               gtksignal_connect($gui->{intf}{huptimeout} = Gtk2::Entry->new,
+                      gtkpack__(Gtk3::HBox->new(0,5),
+                               Gtk3::Label->new(N("Connection timeout (in sec)")),
+                               gtksignal_connect($gui->{intf}{huptimeout} = Gtk3::Entry->new,
                                                     key_press_event => $apply),
                               ),
                      ),
-                  gtkpack__(Gtk2::HBox->new(0,1),
+                  gtkpack__(Gtk3::HBox->new(0,1),
                             gtknew('Label_Left', text => N("Metric")),
-                            gtksignal_connect(gtkset_text($gui->{intf}{METRIC} = Gtk2::Entry->new, $intf->{METRIC}),
+                            gtksignal_connect(gtkset_text($gui->{intf}{METRIC} = Gtk3::Entry->new, $intf->{METRIC}),
                                               key_press_event => $apply)),
 
                  );
@@ -307,16 +307,16 @@ sub build_notebook {
 	if ($interface_name =~ /^speedtouch|sagem$/) {
 	    $gui->{description} = $interface_name eq 'speedtouch' ? 'Alcatel|USB ADSL Modem (Speed Touch)' : 'Analog Devices Inc.|USB ADSL modem';
 	}
-	gtkpack_(gtkset_border_width($gui->{sheet}{Account} = Gtk2::VBox->new(0,10), 5),
+	gtkpack_(gtkset_border_width($gui->{sheet}{Account} = Gtk3::VBox->new(0,10), 5),
 		 if_($interface eq 'modem',
-                      0, gtkpack(Gtk2::VBox->new(1,0),
-				 gtkpack__(Gtk2::HBox->new, Gtk2::Label->new(N("Authentication"))),
-				 gtkpack__(Gtk2::HBox->new, $gui->{intf}{auth} = gtksignal_connect(Gtk2::ComboBox->new_text,
+                      0, gtkpack(Gtk3::VBox->new(1,0),
+				 gtkpack__(Gtk3::HBox->new, Gtk3::Label->new(N("Authentication"))),
+				 gtkpack__(Gtk3::HBox->new, $gui->{intf}{auth} = gtksignal_connect(Gtk3::ComboBox->new_text,
                                                                                                    changed => $apply)),
 				)),
-		 map { (0, gtkpack(Gtk2::VBox->new(1,0),
-                                   gtkpack__(Gtk2::HBox->new, Gtk2::Label->new($_->[0])),
-                                   gtkpack__(Gtk2::HBox->new, $gui->{intf}{$_->[1]} = gtksignal_connect(Gtk2::Entry->new,
+		 map { (0, gtkpack(Gtk3::VBox->new(1,0),
+                                   gtkpack__(Gtk3::HBox->new, Gtk3::Label->new($_->[0])),
+                                   gtkpack__(Gtk3::HBox->new, $gui->{intf}{$_->[1]} = gtksignal_connect(Gtk3::Entry->new,
                                                                                                         key_press_event => $apply)),
                                   ),
 		       );
@@ -335,12 +335,12 @@ sub build_notebook {
     }
 
     if ($intf->{pages}{Modem}) {
-	gtkpack(gtkset_border_width($gui->{sheet}{Modem} = Gtk2::HBox->new(0,10), 5),
+	gtkpack(gtkset_border_width($gui->{sheet}{Modem} = Gtk3::HBox->new(0,10), 5),
 		if_($interface eq 'modem',
-                     gtkpack__(Gtk2::VBox->new(0,5),
-                               (map { (gtkpack(Gtk2::VBox->new(1,0),
-					       gtkpack__(Gtk2::HBox->new, Gtk2::Label->new($_->[0])),
-					       gtkpack__(Gtk2::HBox->new, $gui->{intf}{$_->[1]} = gtksignal_connect(Gtk2::ComboBox->new_text,
+                     gtkpack__(Gtk3::VBox->new(0,5),
+                               (map { (gtkpack(Gtk3::VBox->new(1,0),
+					       gtkpack__(Gtk3::HBox->new, Gtk3::Label->new($_->[0])),
+					       gtkpack__(Gtk3::HBox->new, $gui->{intf}{$_->[1]} = gtksignal_connect(Gtk3::ComboBox->new_text,
                                                                                                                     changed => $apply)),
 					      ),
                                    );
@@ -348,38 +348,38 @@ sub build_notebook {
                                      [ N("Line termination"), 'Enter' ],
                                      [ N("Connection speed"), 'Speed' ],
                                     )),
-                               # gtkpack(Gtk2::VBox->new(0,0), # no relative kppp option found :-(
-                               #          Gtk2::Label->new(N("Dialing mode")),
+                               # gtkpack(Gtk3::VBox->new(0,0), # no relative kppp option found :-(
+                               #          Gtk3::Label->new(N("Dialing mode")),
                                # 	 gtkradio('', N("Tone dialing"), N("Pulse dialing")),
                                #        ),
                               ),
-                     Gtk2::VSeparator->new,
-                     gtkpack__(Gtk2::VBox->new(0,10),
-                               gtkpack__(Gtk2::HBox->new(0,5),
-                                         Gtk2::Label->new(N("Modem timeout")),
-                                         $gui->{intf}{Timeout} = gtksignal_connect(Gtk2::SpinButton->new(Gtk2::Adjustment->new($intf->{Timeout}, 0, 120, 1, 5, 0), 0, 0),
+                     Gtk3::VSeparator->new,
+                     gtkpack__(Gtk3::VBox->new(0,10),
+                               gtkpack__(Gtk3::HBox->new(0,5),
+                                         Gtk3::Label->new(N("Modem timeout")),
+                                         $gui->{intf}{Timeout} = gtksignal_connect(Gtk3::SpinButton->new(Gtk3::Adjustment->new($intf->{Timeout}, 0, 120, 1, 5, 0), 0, 0),
                                                                                    value_changed => $apply),
                                         ),
-                               gtksignal_connect($gui->{intf_bool}{UseLockFile} = Gtk2::CheckButton->new(N("Use lock file")),
+                               gtksignal_connect($gui->{intf_bool}{UseLockFile} = Gtk3::CheckButton->new(N("Use lock file")),
                                                  toggled => $apply),
-                               gtkpack__(Gtk2::HBox->new, gtksignal_connect($gui->{intf_bool}{WaitForDialTone} = Gtk2::CheckButton->new(N("Wait for dialup tone before dialing")),
+                               gtkpack__(Gtk3::HBox->new, gtksignal_connect($gui->{intf_bool}{WaitForDialTone} = Gtk3::CheckButton->new(N("Wait for dialup tone before dialing")),
                                                                             toggled => $apply)),
-                               gtkpack__(Gtk2::HBox->new(0,5),
-                                         Gtk2::Label->new(N("Busy wait")),
-                                         $gui->{intf}{BusyWait} = gtksignal_connect(Gtk2::SpinButton->new(Gtk2::Adjustment->new($intf->{BusyWait}, 0, 120, 1, 5, 0), 0, 0),
+                               gtkpack__(Gtk3::HBox->new(0,5),
+                                         Gtk3::Label->new(N("Busy wait")),
+                                         $gui->{intf}{BusyWait} = gtksignal_connect(Gtk3::SpinButton->new(Gtk3::Adjustment->new($intf->{BusyWait}, 0, 120, 1, 5, 0), 0, 0),
                                                                                     value_changed => $apply),
                                         ),
-                               gtkpack__(Gtk2::HBox->new(0,5),
-                                         Gtk2::Label->new(N("Modem sound")),
-                                         gtkpack__(Gtk2::VBox->new(0,5), my @volume_radio = gtkradio('', N("Enable"), N("Disable"))),
+                               gtkpack__(Gtk3::HBox->new(0,5),
+                                         Gtk3::Label->new(N("Modem sound")),
+                                         gtkpack__(Gtk3::VBox->new(0,5), my @volume_radio = gtkradio('', N("Enable"), N("Disable"))),
                                         ),
                               ),
                     ),
 		if_($interface eq 'isdn',
-                     gtkpack_(Gtk2::VBox->new(0,0),
-                              map { (0, gtkpack(Gtk2::VBox->new(1,0),
-						gtkpack__(Gtk2::HBox->new, Gtk2::Label->new($_->[0])),
-						gtkpack__(Gtk2::HBox->new, $gui->{intf}{$_->[1]} = gtksignal_connect(Gtk2::Entry->new,
+                     gtkpack_(Gtk3::VBox->new(0,0),
+                              map { (0, gtkpack(Gtk3::VBox->new(1,0),
+						gtkpack__(Gtk3::HBox->new, Gtk3::Label->new($_->[0])),
+						gtkpack__(Gtk3::HBox->new, $gui->{intf}{$_->[1]} = gtksignal_connect(Gtk3::Entry->new,
                                                                                                    key_press_event => $apply)),
 					       ),
                                     );
@@ -389,9 +389,9 @@ sub build_notebook {
                                    [ N("Card IO_0"), 'io0' ],
                                   ),
                              ),
-                     Gtk2::VSeparator->new,
-                     gtkpack__(Gtk2::VBox->new(0,0),
-                               Gtk2::Label->new(N("Protocol")),
+                     Gtk3::VSeparator->new,
+                     gtkpack__(Gtk3::VBox->new(0,0),
+                               Gtk3::Label->new(N("Protocol")),
                                my @protocol_radio = gtkradio('', N("European protocol (EDSS1)"),
                                                              N("Protocol for the rest of the world\nNo D-Channel (leased lines)")),
                               ),
@@ -416,8 +416,8 @@ sub build_notebook {
 	    @cards == 1 and $info = $cards[0];
 	}
 
-	gtkpack(gtkset_border_width($gui->{sheet}{Information} = Gtk2::VBox->new(0,10), 5),
-		gtktext_insert(Gtk2::TextView->new,
+	gtkpack(gtkset_border_width($gui->{sheet}{Information} = Gtk3::VBox->new(0,10), 5),
+		gtktext_insert(Gtk3::TextView->new,
 			       join('',
 				    map { $_->[0] . ": \x{200e}" . $_->[1] . "\n" } (
 					 [ N("Vendor"), split('\|', $info->{description}) ],
@@ -434,7 +434,7 @@ sub build_notebook {
     }
 
     foreach (keys %{$gui->{intf}}) {
-        next if ref($gui->{intf}{$_}) !~ /Gtk2::(ComboBox|Entry)/;
+        next if ref($gui->{intf}{$_}) !~ /Gtk3::(ComboBox|Entry)/;
         # skip unset fields:
         next if !$intf->{$_};
         # special case b/c of translation:
@@ -449,7 +449,7 @@ sub build_notebook {
         }
     }
 
-    $gui->{notebook} = Gtk2::Notebook->new;
+    $gui->{notebook} = Gtk3::Notebook->new;
     populate_notebook($gui->{notebook}, $gui);
 }
 
@@ -457,7 +457,7 @@ sub populate_notebook {
     my ($notebook, $gui) = @_;
     foreach ('TCP/IP', 'DHCP', 'Account', 'Wireless', 'Modem', 'Options', 'Information') {
 	!$gui->{sheet}{$_} and next;
-	$notebook->append_page($gui->{sheet}{$_}, Gtk2::Label->new(translate($_)));
+	$notebook->append_page($gui->{sheet}{$_}, Gtk3::Label->new(translate($_)));
     }
 }
 
@@ -466,7 +466,7 @@ sub save {
 
     my $dialog = _create_dialog(N("Please wait"));
     gtkpack($dialog->vbox,
-            gtkshow(Gtk2::Label->new(N("Please Wait... Applying the configuration"))));
+            gtkshow(Gtk3::Label->new(N("Please Wait... Applying the configuration"))));
     $dialog->show_all;
     gtkset_mousecursor_wait();
 

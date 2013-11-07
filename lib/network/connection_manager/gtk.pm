@@ -5,9 +5,9 @@ use base qw(network::connection_manager);
 use strict;
 use common;
 
-use mygtk2;
-use ugtk2 qw(:create :helpers :wrappers);
-use Gtk2::SimpleList;
+use mygtk3;
+use ugtk3 qw(:create :helpers :wrappers);
+use Gtk3::SimpleList;
 use network::signal_strength;
 use locale; # for cmp
 
@@ -57,7 +57,7 @@ sub create_networks_list {
         return;
     }
 
-    $cmanager->{gui}{networks_list} = Gtk2::SimpleList->new(
+    $cmanager->{gui}{networks_list} = Gtk3::SimpleList->new(
         "AP" => "hidden",
         '' => "pixbuf",
         N("SSID") => "text",
@@ -150,7 +150,7 @@ sub update_on_status_change {
 
     if ($cmanager->{gui}{status_image} && $cmanager->{connection}) {
         my $icon = $cmanager->{connection}->get_status_icon;
-        ugtk2::_find_imgfile($icon) or $icon = $cmanager->{connection}->get_type_icon;
+        ugtk3::_find_imgfile($icon) or $icon = $cmanager->{connection}->get_type_icon;
         gtkset($cmanager->{gui}{status_image}, file => $icon);
     }
 }
@@ -186,7 +186,7 @@ sub update_networks_list {
         if ($cmanager->{gui}{show_unique_network}) {
             gtkset($cmanager->{gui}{networks_list}, children => [
                 1, $network_name,
-                0, Gtk2::Image->new_from_pixbuf($strength_pixbuf),
+                0, Gtk3::Image->new_from_pixbuf($strength_pixbuf),
             ]);
             $cmanager->{connection}{network} = $network_name;
         } else {
@@ -210,7 +210,7 @@ sub update_networks_list {
 sub setup_dbus_handlers {
     my ($cmanagers, $connections, $on_network_event, $dbus) = @_;
     network::connection_manager::setup_dbus_handlers($cmanagers, $connections, $on_network_event, $dbus);
-    dbus_object::set_gtk2_watch_helper($dbus);
+    dbus_object::set_gtk3_watch_helper($dbus);
 }
 
 1;

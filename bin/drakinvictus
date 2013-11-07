@@ -29,14 +29,14 @@ use common;
 use network::invictus;
 use network::network;
 use detect_devices;
-use mygtk2 qw(gtknew);
-use ugtk2 qw(:create :helpers :wrappers :dialogs);
+use mygtk3 qw(gtknew);
+use ugtk3 qw(:create :helpers :wrappers :dialogs);
 
 require_root_capability();
 
-$ugtk2::wm_icon = 'invictus-16';
+$ugtk3::wm_icon = 'invictus-16';
 my $title = N("Invictus Firewall");
-my $w = ugtk2->new($title);
+my $w = ugtk3->new($title);
 $::main_window = $w->{real_window}; #- so that transient_for is defined for wait messages and dialogs
 
 my $net = {};
@@ -98,7 +98,7 @@ sub update_ct_sync_state() {
 
 gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children_tight => [
-           $::isEmbedded ? () : Gtk2::Banner->new('invictus-32', $title),
+           $::isEmbedded ? () : Gtk3::Banner->new('invictus-32', $title),
            gtknew('WrappedLabel', text => N("This tool allows to set up network interfaces failover and firewall replication.")),
            gtknew('Frame', border_width => 5,
                   text => N("Network redundancy (leave empty if interface is not used)"),

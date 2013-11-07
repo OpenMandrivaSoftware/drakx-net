@@ -10,8 +10,8 @@ use strict;
 use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use interactive;
-use mygtk2;
-use ugtk2 qw(:create :helpers :wrappers);
+use mygtk3;
+use ugtk3 qw(:create :helpers :wrappers);
 use network::connection;
 use network::connection_manager::gtk;
 use network::connection::wireless;
@@ -57,20 +57,20 @@ sub update_on_connection_change {
 sub create_drakroam_gui {
     my ($droam, $_dbus, $title, $icon) = @_;
 
-    $droam->{gui}{model} = Gtk2::ListStore->new('Gtk2::Gdk::Pixbuf', 'Glib::String');
-    $droam->{gui}{connections_combo} = Gtk2::ComboBox->new($droam->{gui}{model});
-    my $pix_r = Gtk2::CellRendererPixbuf->new;
+    $droam->{gui}{model} = Gtk3::ListStore->new('Gtk3::Gdk::Pixbuf', 'Glib::String');
+    $droam->{gui}{connections_combo} = Gtk3::ComboBox->new($droam->{gui}{model});
+    my $pix_r = Gtk3::CellRendererPixbuf->new;
     $droam->{gui}{connections_combo}->pack_start($pix_r, 0,);
     $droam->{gui}{connections_combo}->add_attribute($pix_r, pixbuf => 0);
-    my $text_r = Gtk2::CellRendererText->new;
+    my $text_r = Gtk3::CellRendererText->new;
     $droam->{gui}{connections_combo}->pack_start($text_r, 1);
     $droam->{gui}{connections_combo}->add_attribute($text_r, text => 1);
 
     $droam->{gui}{pixbuf_size} = 32;
-    $droam->{gui}{empty_pixbuf} = Gtk2::Gdk::Pixbuf->new('rgb', 1, 8, $droam->{gui}{pixbuf_size}, $droam->{gui}{pixbuf_size});
+    $droam->{gui}{empty_pixbuf} = Gtk3::Gdk::Pixbuf->new('rgb', 1, 8, $droam->{gui}{pixbuf_size}, $droam->{gui}{pixbuf_size});
     $droam->{gui}{empty_pixbuf}->fill(0);
 
-    my $status_bar = Gtk2::Statusbar->new;
+    my $status_bar = Gtk3::Statusbar->new;
     my $status_bar_cid = $status_bar->get_context_id("Network event");
     $droam->{on_network_event} = sub {
         my ($message) = @_;
@@ -82,7 +82,7 @@ sub create_drakroam_gui {
     my $scrolled_height = $rootwin_height > 480 ? 300 : 225;
     gtkadd($droam->{gui}{w}{window},
            gtknew('VBox', spacing => 5, children => [
-               $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
+               $::isEmbedded ? () : (0, Gtk3::Banner->new($icon, $title)),
                0, gtknew('HBox', children_tight => [ gtknew('Label_Left', text => N("Device: "), alignment => [ 0.5, 0.5 ]),
                                                      gtksignal_connect($droam->{gui}{connections_combo}, changed => sub { select_connection($droam) }) ]),
                1, gtknew('ScrolledWindow', width => 500, height => $scrolled_height, child => $droam->{gui}{networks_list}),
@@ -91,7 +91,7 @@ sub create_drakroam_gui {
                    $droam->{gui}{buttons}{connect_start} = gtknew('Button', text => N("Connect"), relief => 'half', clicked => sub { $droam->start_connection }),
                    $droam->{gui}{buttons}{connect_stop} = gtknew('Button', text => N("Disconnect"), relief => 'half', clicked => sub { $droam->stop_connection }),
                    $droam->{gui}{buttons}{refresh} = gtknew('Button', text => N("Refresh"), clicked => sub { $droam->update_networks }),
-                   gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit })
+                   gtknew('Button', text => N("Quit"), clicked => sub { Gtk3->main_quit })
                ]),
                0, $status_bar,
            ]),
@@ -104,8 +104,8 @@ sub main {
     my $title = N("Wireless connection");
     my $icon = '/usr/share/mcc/themes/default/drakroam-mdk.png';
 
-    $ugtk2::wm_icon = $icon;
-    my $w = ugtk2->new($title);
+    $ugtk3::wm_icon = $icon;
+    my $w = ugtk3->new($title);
     #- so that transient_for is defined, for wait messages and popups to be centered
     $::main_window = $w->{real_window};
 

@@ -31,9 +31,9 @@ use services;
 require_root_capability();
 
 my $nfsicon = "/usr/share/mcc/themes/default/draknfs.png";
-$ugtk2::wm_icon = $nfsicon;
-use mygtk2 qw(gtknew gtkset);
-use ugtk2 qw(:ask :wrappers :create :dialogs);
+$ugtk3::wm_icon = $nfsicon;
+use mygtk3 qw(gtknew gtkset);
+use ugtk3 qw(:ask :wrappers :create :dialogs);
 
 my $in = 'interactive'->vnew;
 $in->do_pkgs->ensure_is_installed('nfs-utils', '/usr/sbin/rpc.nfsd') or exit(1);
@@ -79,7 +79,7 @@ sub get_items() {
 }
 
 sub quit_all() {
-  ugtk2->exit;
+  ugtk3->exit;
 }
 
 sub restart_dialog() {
@@ -97,7 +97,7 @@ sub wait_action {
     undef $w;
 }
 
-my %size_groups = map { $_ => Gtk2::SizeGroup->new('horizontal') } qw(label widget button);
+my %size_groups = map { $_ => Gtk3::SizeGroup->new('horizontal') } qw(label widget button);
 my $label_and_widgets = sub {
   my ($label, $widget, $button) = @_;
   gtknew('HBox', children => [
@@ -196,7 +196,7 @@ sub help_b {
 		      my $dialog = _create_dialog(N("Help"), { transient_for => $::main_window, modal => 1 });
 		      gtkpack_($dialog->vbox,
 			       1, gtknew('ScrolledWindow', width => 390, height => 300,
-                                child => gtknew('TextView', text => ugtk2::markup_to_TextView_format(formatAlaTeX($help_data)))
+                                child => gtknew('TextView', text => ugtk3::markup_to_TextView_format(formatAlaTeX($help_data)))
                             ),
 			       0, gtknew('Button', text => N("Close"), clicked => sub {
 				   $dialog->destroy;
@@ -256,9 +256,9 @@ sub add_modify_entry {
   undef $i; undef $iter;
 
   $_ = gtknew('Entry') foreach $dir, $options;
-  $_ = Gtk2::OptionMenu->new foreach $lr, $luserid, $lsecure, $lsync, $lsubtree_check;
+  $_ = Gtk3::OptionMenu->new foreach $lr, $luserid, $lsecure, $lsync, $lsubtree_check;
 
-  $access = Gtk2::Combo->new;
+  $access = Gtk3::Combo->new;
 #  $access = gtknew('ComboBox');
   my @access_list = get_access_list();
 #  foreach (@access_list) {
@@ -357,10 +357,10 @@ sub add_modify_entry {
     $_->set_sensitive(0) foreach $anongid, $anonuid;
   }
 
-  my $expender = Gtk2::Expander->new(N("Advanced"));
-  $expender->add(gtkpack_(Gtk2::HBox->new,
-			  0, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 1),
-				      0, gtkpack_(gtkset_border_width(Gtk2::VBox->new, 0),
+  my $expender = Gtk3::Expander->new(N("Advanced"));
+  $expender->add(gtkpack_(Gtk3::HBox->new,
+			  0, gtkpack_(gtkset_border_width(Gtk3::HBox->new, 1),
+				      0, gtkpack_(gtkset_border_width(Gtk3::VBox->new, 0),
 						  0, $label_and_widgets->($adv_options{sync}, $lsync, help_b($help_global)),
 						  0, $label_and_widgets->($adv_options{secured}, $lsecure, ""),
 						  0, $label_and_widgets->($adv_options{ro}, $lr, ""),
@@ -370,7 +370,7 @@ sub add_modify_entry {
 		 ),
       );
 
-  my $w = ugtk2->new(N("Modify entry"));
+  my $w = ugtk3->new(N("Modify entry"));
   $w->{window}->set_modal(1);
   $w->{window}->set_position('center');
 
@@ -378,8 +378,8 @@ sub add_modify_entry {
 
   gtkadd($w->{window},
          gtknew('VBox', spacing => 0, children_loose => [
-#		    gtkadd(Gtk2::Frame->new(("")),
-			   gtkpack_(gtkset_border_width(Gtk2::VBox->new, 1),
+#		    gtkadd(Gtk3::Frame->new(("")),
+			   gtkpack_(gtkset_border_width(Gtk3::VBox->new, 1),
 				    0, gtknew('Title2', label => N("NFS directory")),
 				    0, $label_and_widgets->(N("Directory:"), $dir, $button),
 				    0, gtknew('Title2', label => N("Host access")),
@@ -390,8 +390,8 @@ sub add_modify_entry {
 				    0, $label_and_widgets->(N("Anonymous Group ID:"), $anongid, ""),
 			   ),
 #		    ),
-#		    gtkadd(Gtk2::Frame->new(""),
-		    gtkpack_(gtkset_border_width(Gtk2::VBox->new, 1),
+#		    gtkadd(Gtk3::Frame->new(""),
+		    gtkpack_(gtkset_border_width(Gtk3::VBox->new, 1),
 				    0, $expender,
 			   ),
 #		    ),
@@ -484,7 +484,7 @@ sub remove_entry {
 
 sub create_model() {
   get_nfs_data();
-  my $model = Gtk2::ListStore->new("Glib::String", "Glib::String",  "Glib::String", "Glib::String");
+  my $model = Gtk3::ListStore->new("Glib::String", "Glib::String",  "Glib::String", "Glib::String");
   foreach my $a (@listshare) {
     my $iter = $model->append;
     $model->set($iter,
@@ -503,14 +503,14 @@ sub add_columns {
   my $model = $treeview->get_model;
 #  my @colsize = (120, 160, 120);
 #  each_index {
-#    my $renderer = Gtk2::TreeViewColumn->new_with_attributes($_, Gtk2::CellRendererText->new, 'text' => $::i);
+#    my $renderer = Gtk3::TreeViewColumn->new_with_attributes($_, Gtk3::CellRendererText->new, 'text' => $::i);
 #    $renderer->set_sort_column_id($::i);
 #    $renderer->set_min_width($colsize[$::i]);
 #    $treeview->append_column($renderer);
 #  } N("Share Directory"), N("Hosts Wildcard"), N("General Options"), N("Custom Options");
 
   each_index {
-    my $renderer = Gtk2::CellRendererText->new;
+    my $renderer = Gtk3::CellRendererText->new;
     $renderer->set(editable => 0);
     $renderer->signal_connect(edited => \&cell_edited, $model);
     $renderer->set_data(column => $::i);
@@ -520,7 +520,7 @@ sub add_columns {
 
 sub cell_edited {
   my ($cell, $path_string, $new_text, $model) = @_;
-  my $path = Gtk2::TreePath->new_from_string($path_string);
+  my $path = Gtk3::TreePath->new_from_string($path_string);
   my $column = $cell->get_data("column");
   my $iter = $model->get_iter($path);
 
@@ -549,14 +549,14 @@ sub cell_edited {
 # create model
 my $model = create_model();
 
-my $window = ugtk2->new(N("Manage NFS shares"));
+my $window = ugtk3->new(N("Manage NFS shares"));
 $::main_window = $window->{real_window};
 $window->{rwindow}->set_size_request(550, 400) unless $::isEmbedded;
 $window->{rwindow}->set_position('center') if !$::isEmbedded;
 my $W = $window->{window};
-$W->signal_connect(delete_event => sub { ugtk2->exit });
+$W->signal_connect(delete_event => sub { ugtk3->exit });
 
-my $treeview = Gtk2::TreeView->new_with_model($model);
+my $treeview = Gtk3::TreeView->new_with_model($model);
 $treeview->set_rules_hint(1);
 $treeview->get_selection->set_mode('single');
 add_columns($treeview);
@@ -573,15 +573,15 @@ $treeview->signal_connect(button_press_event => sub {
 
 # create menu
 my @items = get_items();
-my $factory = Gtk2::ItemFactory->new('Gtk2::MenuBar', '<main>', undef);
+my $factory = Gtk3::ItemFactory->new('Gtk3::MenuBar', '<main>', undef);
 $factory->create_items('menu', @items);
 my $menu = $factory->get_widget('<main>');
 
 my $okcancel = create_okcancel({
-				cancel_clicked => sub { ugtk2->exit },
+				cancel_clicked => sub { ugtk3->exit },
 				ok_clicked => sub { &write_conf;
 						    run_program::raw({ detach => 1 }, "exportfs -ra");
-						    ugtk2->exit },
+						    ugtk3->exit },
 			       },
 			      );
 
@@ -597,7 +597,7 @@ undef $wait;
 # main interface
 $W->add(gtknew('VBox', children => [
 		 0, $menu,
-		 0, Gtk2::Banner->new($nfsicon, N("DrakNFS manage NFS shares")),
+		 0, Gtk3::Banner->new($nfsicon, N("DrakNFS manage NFS shares")),
 		 #if_($::isEmbedded, 0, gtknew('Label', text => "Here you can add, remove and alter NFS shares.")),
 		 1, gtknew('HBox', border_width => 0, children => [
 			     1, gtknew('ScrolledWindow', child => $treeview),
@@ -630,4 +630,4 @@ $W->add(gtknew('VBox', children => [
 	);
 
 $W->show_all;
-Gtk2->main;
+Gtk3->main;

@@ -30,7 +30,7 @@ use common;
 
 require_root_capability();
 
-$ugtk2::wm_icon = "/usr/share/mcc/themes/default/drakproxy-mdk.png";
+$ugtk3::wm_icon = "/usr/share/mcc/themes/default/drakproxy-mdk.png";
 my $u = { getVarsFromSh('/etc/profile.d/proxy.sh') };
 my $in = 'interactive'->vnew;
 if (network::network::miscellaneous_choose($in, $u)) {
