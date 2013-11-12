@@ -162,7 +162,7 @@ sub main {
 
     my @cmanagers = map { build_cmanager($in, $net, $w, $_) } @connections;
 
-    (undef, my $rootwin_height) = gtkroot()->get_size;
+    (undef, my $rootwin_height) = mygtk3::root_window_size();
     my $scrolled_height = $rootwin_height > 480 ? 400 : 295;
     my $managers_box;
     gtkadd($w->{window},
