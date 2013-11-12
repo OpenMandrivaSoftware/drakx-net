@@ -222,7 +222,7 @@ sub stop_connection {
 sub monitor_connection {
     my ($cmanager) = @_;
     my $interface  = $cmanager->{connection} && $cmanager->{connection}->get_interface or return;
-    $cmanager->{in}->do_pkgs->install('net_monitor');
+    $cmanager->{in}->do_pkgs->ensure_binary_is_installed(qw(net_monitor net_monitor));
     run_program::raw({ detach => 1 }, '/usr/bin/net_monitor', '--defaultintf', $interface);
 }
 
