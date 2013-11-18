@@ -383,7 +383,7 @@ sub get_val() {
 sub change_color {
     my ($color) = @_;
     my $dialog = _create_dialog(N("Color configuration"));
-    $dialog->vbox->add(my $colorsel = Gtk3::ColorSelection->new);
+    $dialog->get_child->add(my $colorsel = Gtk3::ColorSelection->new);
     $colorsel->set_current_color($color);
     $dialog->add_button(N("Cancel"), 'cancel');
     $dialog->add_button(N("Ok"), 'ok');

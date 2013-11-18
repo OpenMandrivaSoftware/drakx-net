@@ -108,7 +108,7 @@ sub add_modify_entry {
   $text = N("Please delete information") if $wanted =~ /delete/;
   $text = N("Please add information") if $wanted =~ /add/;
   
-  gtkpack__($dialog->vbox,
+  gtkpack__($dialog->get_child,
             gtknew('Title2', label => $text),
             $label_and_widgets->(N("IP address:"), $ip),
             $label_and_widgets->(N("Host name:"), $hostname),

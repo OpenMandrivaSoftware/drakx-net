@@ -465,7 +465,7 @@ sub save {
     my ($in, $net, $modules_conf, $p, $apply_button) = @_;
 
     my $dialog = _create_dialog(N("Please wait"));
-    gtkpack($dialog->vbox,
+    gtkpack($dialog->get_child,
             gtkshow(Gtk3::Label->new(N("Please Wait... Applying the configuration"))));
     $dialog->show_all;
     gtkset_mousecursor_wait();

@@ -376,7 +376,7 @@ sub add_entry() {
     my $dialog = _create_dialog(N("DrakSamba add entry"), { transient_for => $::main_window, modal => 1 });
     local $::main_window = $dialog;
 
-    gtkpack_($dialog->vbox,
+    gtkpack_($dialog->get_child,
 	     0, gtkadd(Gtk3::Frame->new(N("Add a share")),
 		       gtkpack_(gtkset_border_width(Gtk3::VBox->new, 3),
 				0, gtkpack_(gtkset_border_width(Gtk3::VBox->new, 1),
@@ -582,7 +582,7 @@ sub modify_printers_entry {
                           $printing->set_sensitive(0);
 		     }
 
-  gtkpack_($dialog->vbox,
+  gtkpack_($dialog->get_child,
 	   0, gtkadd(Gtk3::Frame->new(N("Printer share")),
 		  gtkpack_(gtkset_border_width(Gtk3::HBox->new, 3),
 			   0, gtkpack_(gtkset_border_width(Gtk3::VBox->new, 1),
@@ -929,7 +929,7 @@ sub modify_user_info {
   $bpasswd = Gtk3::Entry->new;
   $bpasswd->set_visibility(0);
 
-  gtkpack_($dialog->vbox,
+  gtkpack_($dialog->get_child,
            0, gtkadd(Gtk3::Frame->new(N("User information")),
                      gtkpack_(gtkset_border_width(Gtk3::VBox->new, 5),
                               0, $label_and_widgets->(N("User name:"), $buser, ""),

@@ -194,7 +194,7 @@ sub help_b {
   my ($help_data) = @_;
   gtksignal_connect(gtknew('Button', text => N("Information")), clicked => sub {
 		      my $dialog = _create_dialog(N("Help"), { transient_for => $::main_window, modal => 1 });
-		      gtkpack_($dialog->vbox,
+		      gtkpack_($dialog->get_child,
 			       1, gtknew('ScrolledWindow', width => 390, height => 300,
                                 child => gtknew('TextView', text => ugtk3::markup_to_TextView_format(formatAlaTeX($help_data)))
                             ),
