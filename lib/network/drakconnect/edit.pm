@@ -135,7 +135,7 @@ sub build_notebook {
                                     gtkpack(Gtk3::HBox->new(1,0),
                                                  gtknew('Label_Left', text => N("Protocol")),
                                                  $gui->{intf}{BOOTPROTO} = gtksignal_connect(Gtk3::ComboBoxText->new, changed => sub {
-                                                     return if !$_[0]->realized;
+                                                     return if !$_[0]->get_realized;
                                                      my $proto = $gui->{intf}{BOOTPROTO};
                                                      my $protocol = $intf->{BOOTPROTO} = { reverse %{$proto->{protocols}} }->{$proto->get_text};
 
