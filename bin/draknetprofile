@@ -70,7 +70,7 @@ my $modules_list = Gtk3::SimpleList->new(
     N("Description") => 'text',
 );
 
-my @r = $modules_list->get_column(0)->get_cell_renderers;
+my @r = $modules_list->get_column(0)->get_cells;
 $r[0]->signal_connect('toggled' => sub {
                           my ($_renderer, $row, $_col) = @_;
                           if ($modules_list->{data}[$row][1]) {
