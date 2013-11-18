@@ -27,16 +27,16 @@ sub new {
 
 sub start_connection {
     my ($cmanager) = @_;
-    gtkset_mousecursor_wait($cmanager->{gui}{w}{window}->window);
+    gtkset_mousecursor_wait($cmanager->{gui}{w}{window}->get_window);
     $cmanager->SUPER::start_connection;
-    gtkset_mousecursor_normal($cmanager->{gui}{w}{window}->window);
+    gtkset_mousecursor_normal($cmanager->{gui}{w}{window}->get_window);
 }
 
 sub stop_connection {
     my ($cmanager) = @_;
-    gtkset_mousecursor_wait($cmanager->{gui}{w}{window}->window);
+    gtkset_mousecursor_wait($cmanager->{gui}{w}{window}->get_window);
     $cmanager->SUPER::stop_connection;
-    gtkset_mousecursor_normal($cmanager->{gui}{w}{window}->window);
+    gtkset_mousecursor_normal($cmanager->{gui}{w}{window}->get_window);
 }
 
 sub select_network {

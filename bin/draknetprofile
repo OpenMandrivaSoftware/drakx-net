@@ -137,7 +137,7 @@ sub set_selected_profile() {
 
 sub set_profile {
     my ($profile) = @_;
-    gtkset_mousecursor_wait($w->{window}->window);
+    gtkset_mousecursor_wait($w->{window}->get_window);
     $profiles_list->set_sensitive(0);
     $_->set_sensitive(0) foreach values %buttons;
     gtkflush();
@@ -147,7 +147,7 @@ sub set_profile {
     }
     $SIG{CHLD} = sub {
 	$SIG{CHLD} = 'IGNORE';
-	gtkset_mousecursor_normal($w->{window}->window);
+	gtkset_mousecursor_normal($w->{window}->get_window);
 	update_profiles();
 	$_->set_sensitive(1) foreach values %buttons;
     	$profiles_list->set_sensitive(1);
