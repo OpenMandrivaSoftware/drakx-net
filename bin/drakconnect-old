@@ -59,7 +59,7 @@ my $hostname = chomp_(`hostname`);
 
 my $tree_model = Gtk3::TreeStore->new("Gtk3::Gdk::Pixbuf", map { "Glib::String" } 2..6);
 my $list = Gtk3::TreeView->new_with_model($tree_model);
-$list->append_column(Gtk3::TreeViewColumn->new_with_attributes(undef, Gtk3::CellRendererPixbuf->new, 'pixbuf' => 0));
+$list->append_column(Gtk3::TreeViewColumn->new_with_attributes("", Gtk3::CellRendererPixbuf->new, 'pixbuf' => 0));
 each_index {
     $list->append_column(my $col = Gtk3::TreeViewColumn->new_with_attributes($_, Gtk3::CellRendererText->new, 'text' => $::i + 1));
     $col->set_sort_column_id($::i);
