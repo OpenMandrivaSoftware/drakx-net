@@ -290,7 +290,7 @@ sub add_modify_entry {
     if (!member($listshare[$i]{access}, @access_list)) {
       $access->entry->append_text($listshare[$i]{access});
     }
-#    $access->child->set_text($listshare[$i]{access});
+#    $access->get_child->set_text($listshare[$i]{access});
 #    $access->set_text($listshare[$i]{access});
     $access->entry->set_text($listshare[$i]{access});
 
@@ -433,7 +433,7 @@ sub add_modify_entry {
 				err_dialog(N("Error"), N("Please specify a directory to share.")) and return;
 			    }
 			    mkdir_p($test_dir) or err_dialog(N("Error"), N("Can't create this directory.")) and return;
-			    #my $test_access = $access->child->get_text;
+			    #my $test_access = $access->get_child->get_text;
 			    my $test_access = $access->entry->get_text;
 			    $test_access or err_dialog(N("Error"), N("You must specify hosts access.")) and return;
 			    if ($wanted =~ /add/) {
@@ -441,14 +441,14 @@ sub add_modify_entry {
 				$i = "-1";
 				push @listshare, {
 				dir => $dir->get_text,
-				#access => $access->child->get_text,
+				#access => $access->get_child->get_text,
 				access => $access->entry->get_text,
 				right => $all_right,
 				options => $options->get_text,
 			    };
 			    }
 			    $listshare[$i]{right} = $all_right;
-			    #$listshare[$i]{access} = $access->child->get_text;
+			    #$listshare[$i]{access} = $access->get_child->get_text;
 			    $listshare[$i]{access} = $access->entry->get_text;
 			    $listshare[$i]{dir} = $dir->get_text;
 			    $listshare[$i]{options} = $options->get_text;
