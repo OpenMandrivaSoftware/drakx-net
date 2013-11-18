@@ -179,7 +179,7 @@ sub clone_profile() {
                                   info_dialog(N("New profile created"), N("You are now using network profile %s. You can configure your system as usual, and all your network settings from now on will be saved into this profile.", $dest_profile));
                               }),
         );
-    $bok->can_default(1);
+    $bok->set_can_default(1);
     $bok->grab_default;
     $dialog->show_all;
 }
