@@ -472,7 +472,7 @@ sub update() {
             $pixmap->{$intf} = Gtk3::Gdk::Pixmap->new($darea->{$intf}->get_window, $width, $height, $darea->{$intf}->window->get_depth);
             $monitor->{$intf}{referencer} = $monitor->{$intf}{val}[0];
             $monitor->{$intf}{referencet} = $monitor->{$intf}{val}[8];
-            $pixmap->{$intf}->draw_rectangle($darea->{$intf}->style->black_gc, 1, 0, 0, $width, $height);
+            $pixmap->{$intf}->draw_rectangle($darea->{$intf}->get_style->black_gc, 1, 0, 0, $width, $height);
             $darea->{$intf}->signal_connect(motion_notify_event => sub { 
                     my (undef, $e) = @_;
                     my $x = $e->x - 50;
@@ -483,10 +483,10 @@ sub update() {
                 });
             $darea->{$intf}->signal_connect(draw => sub {
                     return if !$darea->{$intf}->get_window;
-                    $darea->{$intf}->get_window->draw_drawable($darea->{$intf}->style->bg_gc('normal'), $pixmap->{$intf}, 0, 0, 0, 0, $width, $height);
+                    $darea->{$intf}->get_window->draw_drawable($darea->{$intf}->get_style->bg_gc('normal'), $pixmap->{$intf}, 0, 0, 0, 0, $width, $height);
                 });
             $gc_lines->{$intf} = Gtk3::Gdk::GC->new($darea->{$intf}->get_window);
-            $gc_lines->{$intf}->set_foreground($darea->{$intf}->style->white);
+            $gc_lines->{$intf}->set_foreground($darea->{$intf}->get_style->white);
             $gc_lines->{$intf}->set_line_attributes(1, 'on-off-dash', 'not-last', 'round');
 
         }
@@ -537,10 +537,10 @@ sub draw_monitor {
     defined $darea->{$intf} or return;
     my $gcl = $gc_lines->{$intf};
     my $pixmap = $pixmap->{$intf};
-    my $gc = $darea->{$intf}->style->white_gc;
+    my $gc = $darea->{$intf}->get_style->white_gc;
     # fix race on ugtk3->exit that causes a crash (#33023)
     return 0 if !$gc;
-    $pixmap->draw_rectangle($darea->{$intf}->style->black_gc, 1, 0, 0, $width, $height);
+    $pixmap->draw_rectangle($darea->{$intf}->get_style->black_gc, 1, 0, 0, $width, $height);
     my $maxr = 0;
     foreach (@{$o->{stack_r}}) { $maxr = $_ if $_ > $maxr }
     my $maxt = 0;
