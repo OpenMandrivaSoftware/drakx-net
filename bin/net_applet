@@ -385,7 +385,7 @@ sub checkWireless() {
             my $is_valuable = exists $networks->{$wnet->{ap}};
             foreach (@{$wnet->{menuitems}}) {
                 update_wireless_item($_, $wnet) if $is_valuable;
-                $_->{widget}->visible($is_valuable);
+                $_->{widget}->get_visible($is_valuable);
             }
         }
     }
