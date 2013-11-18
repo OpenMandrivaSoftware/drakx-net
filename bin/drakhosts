@@ -86,7 +86,7 @@ sub add_modify_entry {
 
 # test if modify or add a host
 
-  my $dialog = _create_dialog();
+  my $dialog = _create_dialog('');
   $dialog->set_transient_for($::main_window);
   $dialog->set_title($title);
   $dialog->set_modal(1);
