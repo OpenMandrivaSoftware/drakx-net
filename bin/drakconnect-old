@@ -224,7 +224,7 @@ Configure them first by clicking on 'Configure'")));
 	    $vbox_local->pack_start($infos[2*$i], 1, 1, 0);
 	    my $c;
 	    if (defined $j->[2]) {
-		$c = Gtk3::ComboBox->new_text;
+		$c = Gtk3::ComboBoxText->new;
 		$c->set_popdown_strings(@{$j->[2]});
 		$infos[2*$i+1] = $c->entry;
 		$infos[2*$i]->pack_start($c,0,0,0);

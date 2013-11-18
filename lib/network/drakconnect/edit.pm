@@ -49,7 +49,7 @@ sub manage {
     $window->{rwindow}->add(gtkpack_(Gtk3::VBox->new,
 				     0, gtkpack__(Gtk3::HBox->new,
                                                   gtknew('Label', text => N("Device: "), alignment => [ 0, 0 ]),
-                                                  $interface_menu = gtksignal_connect(Gtk3::ComboBox->new_text,
+                                                  $interface_menu = gtksignal_connect(Gtk3::ComboBoxText->new,
                                                                     changed => sub {
                                                                         $selected = $interface_menu->get_text;
                                                                         $notebook->set_current_page($p->{$selected}{gui}{index});
@@ -134,7 +134,7 @@ sub build_notebook {
                                 if_($is_ethernet,
                                     gtkpack(Gtk3::HBox->new(1,0),
                                                  gtknew('Label_Left', text => N("Protocol")),
-                                                 $gui->{intf}{BOOTPROTO} = gtksignal_connect(Gtk3::ComboBox->new_text, changed => sub {
+                                                 $gui->{intf}{BOOTPROTO} = gtksignal_connect(Gtk3::ComboBoxText->new, changed => sub {
                                                      return if !$_[0]->realized;
                                                      my $proto = $gui->{intf}{BOOTPROTO};
                                                      my $protocol = $intf->{BOOTPROTO} = { reverse %{$proto->{protocols}} }->{$proto->get_text};
@@ -311,7 +311,7 @@ sub build_notebook {
 		 if_($interface eq 'modem',
                       0, gtkpack(Gtk3::VBox->new(1,0),
 				 gtkpack__(Gtk3::HBox->new, Gtk3::Label->new(N("Authentication"))),
-				 gtkpack__(Gtk3::HBox->new, $gui->{intf}{auth} = gtksignal_connect(Gtk3::ComboBox->new_text,
+				 gtkpack__(Gtk3::HBox->new, $gui->{intf}{auth} = gtksignal_connect(Gtk3::ComboBoxText->new,
                                                                                                    changed => $apply)),
 				)),
 		 map { (0, gtkpack(Gtk3::VBox->new(1,0),
@@ -340,7 +340,7 @@ sub build_notebook {
                      gtkpack__(Gtk3::VBox->new(0,5),
                                (map { (gtkpack(Gtk3::VBox->new(1,0),
 					       gtkpack__(Gtk3::HBox->new, Gtk3::Label->new($_->[0])),
-					       gtkpack__(Gtk3::HBox->new, $gui->{intf}{$_->[1]} = gtksignal_connect(Gtk3::ComboBox->new_text,
+					       gtkpack__(Gtk3::HBox->new, $gui->{intf}{$_->[1]} = gtksignal_connect(Gtk3::ComboBoxText->new,
                                                                                                                     changed => $apply)),
 					      ),
                                    );
