@@ -409,7 +409,7 @@ sub color_button {
             $_[0]->queue_draw;
         },
         child => gtksignal_connect(gtkshow(gtksize(gtkset(Gtk3::DrawingArea->new, width => 10, height => 10), 10, 10)),
-            expose_event => sub { $_[0]->get_window->draw_rectangle($gc, 1, 0, 0, 10, 10) })
+            draw => sub { $_[0]->get_window->draw_rectangle($gc, 1, 0, 0, 10, 10) })
     );
 }
 
@@ -481,7 +481,7 @@ sub update() {
                     gtkset($measure_r, text => formatXiB($received));
                     gtkset($measure_t, text => formatXiB($transmitted));
                 });
-            $darea->{$intf}->signal_connect(expose_event => sub {
+            $darea->{$intf}->signal_connect(draw => sub {
                     return if !$darea->{$intf}->get_window;
                     $darea->{$intf}->get_window->draw_drawable($darea->{$intf}->style->bg_gc('normal'), $pixmap->{$intf}, 0, 0, 0, 0, $width, $height);
                 });
