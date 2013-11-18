@@ -258,7 +258,7 @@ sub add_modify_entry {
   $_ = gtknew('Entry') foreach $dir, $options;
   $_ = Gtk3::OptionMenu->new foreach $lr, $luserid, $lsecure, $lsync, $lsubtree_check;
 
-  $access = Gtk3::Combo->new;
+  $access = Gtk3::ComboBox->new;
 #  $access = gtknew('ComboBox');
   my @access_list = get_access_list();
 #  foreach (@access_list) {

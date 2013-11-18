@@ -59,7 +59,7 @@ Run the \"%s\" assistant from the Mageia Control Center", N("Set up a new networ
                              map {
                                  my $c;
                                  if (defined $_->[2]) {
-                                     $c = Gtk3::Combo->new;
+                                     $c = Gtk3::ComboBox->new;
                                      $c->set_popdown_strings(@{$_->[2]});
                                      $infos[2*$i+1] = $c->entry;
                                  } else {
