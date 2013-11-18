@@ -433,7 +433,7 @@ sub update() {
             $monitor->{$intf}{totalr} = 0;
             $monitor->{$intf}{totalt} = 0;
             $darea->{$intf} = Gtk3::DrawingArea->new;
-            $darea->{$intf}->set_events(["pointer_motion_mask"]);
+            $darea->{$intf}->set_events(${ Gtk3::Gdk::EventMask->new("pointer_motion_mask") });
             $notebook->append_page(gtkshow(my $page = gtknew('VBox', children => [
                         0, gtknew('HBox', border_width => 5, children_tight => [
                             gtksize($darea->{$intf}, $width, $height) ]),
