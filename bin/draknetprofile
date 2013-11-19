@@ -87,7 +87,7 @@ my $profiles_list = Gtk3::SimpleList->new(
 );
 
 $profiles_list->get_selection->signal_connect('changed' => sub {
-                                                  if ($profiles_list->sensitive) {
+                                                  if ($profiles_list->get_sensitive) {
                                                       my ($index) = $profiles_list->get_selected_indices;
                                                       $_->set_sensitive(defined $index) foreach values %buttons;
                                                   }
