@@ -58,7 +58,7 @@ sub create_drakroam_gui {
     my ($droam, $_dbus, $title, $icon) = @_;
 
     $droam->{gui}{model} = Gtk3::ListStore->new('Gtk3::Gdk::Pixbuf', 'Glib::String');
-    $droam->{gui}{connections_combo} = Gtk3::ComboBox->new($droam->{gui}{model});
+    $droam->{gui}{connections_combo} = Gtk3::ComboBox->new_with_model($droam->{gui}{model});
     my $pix_r = Gtk3::CellRendererPixbuf->new;
     $droam->{gui}{connections_combo}->pack_start($pix_r, 0,);
     $droam->{gui}{connections_combo}->add_attribute($pix_r, pixbuf => 0);
