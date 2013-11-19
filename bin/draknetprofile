@@ -162,7 +162,7 @@ sub clone_profile() {
             Gtk3::WrappedLabel->new(N("Please specify the name of the new network profile to be created (e.g., work, home, roaming, ..). This new profile will be created based on current settings, and you'll be able to configure your system configuration as usual afterwards.")),
             $entry_dialog,
         );
-    gtkpack($dialog->action_area,
+    gtkpack($dialog->get_action_area,
             gtksignal_connect(Gtk3::Button->new(N("Cancel")),
                               clicked => sub { $dialog->destroy }),
             gtksignal_connect(my $bok = Gtk3::Button->new(N("Ok")), clicked => sub {

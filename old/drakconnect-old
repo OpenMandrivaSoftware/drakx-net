@@ -176,7 +176,7 @@ sub configure_lan() {
     if (@all_cards < 1) {
 	$window->get_child->add(Gtk3::Label->new(N("You do not have any configured interface.
 Configure them first by clicking on 'Configure'")));
-	gtkpack(gtkset_layout($window->action_area, 'end'),
+	gtkpack(gtkset_layout($window->get_action_area, 'end'),
              gtksignal_connect(Gtk3::Button->new(N("Ok")),
                                clicked => sub { Gtk3->main_quit })
             );
@@ -261,7 +261,7 @@ Configure them first by clicking on 'Configure'")));
         Gtk3->main_quit;
     };
 
-    gtkpack($window->action_area,
+    gtkpack($window->get_action_area,
             gtksignal_connect(Gtk3::Button->new(N("Cancel")),
                               clicked => $exit_dialogsub),
             gtksignal_connect(Gtk3::Button->new(N("Ok")), clicked => sub {
