@@ -78,7 +78,7 @@ sub create_drakroam_gui {
         Glib::Timeout->add(20000, sub { $status_bar->remove($status_bar_cid, $m_id); 0 });
     };
 
-    (undef, my $rootwin_height) = gtkroot()->get_size;
+    (undef, my $rootwin_height) = mygtk3::root_window_size();
     my $scrolled_height = $rootwin_height > 480 ? 300 : 225;
     gtkadd($droam->{gui}{w}{window},
            gtknew('VBox', spacing => 5, children => [
