@@ -192,7 +192,7 @@ my %actions = (
         launch => sub {
 	    require run_program;
 	    $net->{PROFILE} = $_[0];
-	    run_program::raw({ detach => 1 }, common::wrap_command_for_root('/sbin/set-netprofile', $net->{PROFILE}));
+	    run_program::raw({ detach => 1 }, (if_($>, '/usr/bin/pkexec'), '/usr/sbin/set-netprofile', $net->{PROFILE}));
         }
     },
     'chooseVPN' => {

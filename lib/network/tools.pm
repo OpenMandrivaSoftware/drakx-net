@@ -20,22 +20,22 @@ sub passwd_by_login {
 }
 
 sub run_interface_command {
-    my ($command, $intf, $detach) = @_;
+    my ($action, $intf, $detach) = @_;
     my @command =
       !$> || system("/usr/sbin/usernetctl $intf report") == 0 ?
-	($command, $intf, if_(!$::isInstall, "daemon")) :
-	common::wrap_command_for_root($command, $intf);
+	('/usr/sbin/if' . $action, $intf, if_(!$::isInstall, "daemon")) :
+	('/usr/bin/pkexec', '/usr/sbin/if' . $action, $intf);
     run_program::raw({ detach => $detach, root => $::prefix }, @command);
 }
 
 sub start_interface {
     my ($intf, $detach) = @_;
-    run_interface_command('/sbin/ifup', $intf, $detach);
+    run_interface_command('up', $intf, $detach);
 }
 
 sub stop_interface {
     my ($intf, $detach) = @_;
-    run_interface_command('/sbin/ifdown', $intf, $detach);
+    run_interface_command('down', $intf, $detach);
 }
 
 sub start_net_interface {

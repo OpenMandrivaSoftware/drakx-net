@@ -5,7 +5,8 @@ POLKITPOLICYDEST = $(DESTDIR)/usr/share/polkit-1/actions
 
 POLICY_IN := $(wildcard *.policy.in)
 POLICY = $(POLICY_IN:.policy.in=.policy)
-WRAPPERS = $(patsubst org.mageia.%.policy,%,$(POLICY))
+MGAPOLICY_IN := $(wildcard org.mageia.*.policy.in)
+WRAPPERS = $(patsubst org.mageia.%.policy.in,%,$(MGAPOLICY_IN))
 
 all: $(WRAPPERS) $(POLICY)
 
