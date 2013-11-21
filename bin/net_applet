@@ -147,11 +147,11 @@ my %actions = (
     },
     'drakvpn' => {
         name => N("Manage VPN connections"),
-	launch => sub { run_program::raw({ detach => 1 }, '/usr/sbin/drakvpn') },
+	launch => sub { run_program::raw({ detach => 1 }, 'drakvpn') },
     },
     'confNetwork' => {
 	name => N("Configure Network"),
-	launch => sub { system("/usr/sbin/drakconnect &") }
+	launch => sub { system("drakconnect &") }
     },
     'chooseInterface' => {
         name => N("Watched interface"),
@@ -320,21 +320,21 @@ sub run_net_monitor() {
     # stop reaping child processes or else gurpmi segfaults
     local $SIG{CHLD} = "DEFAULT";
     $in->do_pkgs->install('net_monitor');
-    run_program::raw({ detach => 1 }, '/usr/bin/net_monitor', '--defaultintf', $current_interface) unless is_running('net_monitor');
+    run_program::raw({ detach => 1 }, 'net_monitor', '--defaultintf', $current_interface) unless is_running('net_monitor');
 }
 sub run_netcenter() {
-    run_program::raw({ detach => 1 }, '/usr/bin/draknetcenter') unless is_running('draknetcenter', 'root');
+    run_program::raw({ detach => 1 }, 'draknetcenter') unless is_running('draknetcenter', 'root');
 }
 sub run_drakroam {
     my ($o_ap) = @_;
-    run_program::raw({ detach => 1 }, '/usr/sbin/drakroam', if_($o_ap, "--ap=$o_ap")) unless is_running('drakroam', 'root');
+    run_program::raw({ detach => 1 }, 'drakroam', if_($o_ap, "--ap=$o_ap")) unless is_running('drakroam', 'root');
 }
 sub run_drakids() {
     $ifw_alert = 0;
     if (is_running('drakids')) {
         eval { $ifw->send_manage_request };
     } else {
-        run_program::raw({ detach => 1 }, '/usr/sbin/drakids');
+        run_program::raw({ detach => 1 }, 'drakids');
     }
 }
 sub generate_wireless_menuitem {
