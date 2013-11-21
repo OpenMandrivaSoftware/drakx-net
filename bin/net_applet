@@ -151,7 +151,7 @@ my %actions = (
     },
     'confNetwork' => {
 	name => N("Configure Network"),
-	launch => sub { system("drakconnect &") }
+	launch => sub { run_program::raw({ detach => 1 }, 'drakconnect') }
     },
     'chooseInterface' => {
         name => N("Watched interface"),
@@ -211,7 +211,7 @@ my %actions = (
     },
     'help' => {
 	name => N("Help"),
-	launch => sub { system("drakhelp --id internet-connection &") }
+	launch => sub { run_program::raw({ detach => 1 }, 'drakhelp', '--id', 'internet-connection') }
     },
     'quit' => {
 	name => N("Quit"),
