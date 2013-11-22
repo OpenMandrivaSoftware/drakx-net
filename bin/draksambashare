@@ -656,6 +656,10 @@ sub modify_printers_entry {
 
 sub modify_entry {
   my ($selected) = @_;
+  if (!defined($selected)) {
+      info_dialog(N("Error"), N("Please add or select a Samba share to be able to modify it."));
+      return;
+  }
   my ($dir, $comment, $create_mask, $directory_mask, $read_list, $write_list, $admin_users, $valid_users, $force_group, $browseable, $public, $writable, $hide_files, $hide_dot_files, $force_create_mode, $preserve_case, $default_case, $inherit_permissions, $share_name);
 
   $share_name = Gtk3::Label->new;
