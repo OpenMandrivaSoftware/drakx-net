@@ -171,28 +171,6 @@ my %adv_options = (
 
 my $window;
 
-sub get_items() {
-    my @items = (
-		 [ N("/_File"), undef, undef, undef, '<Branch>', ],
-		 [ N("/_File") . N("/_Write conf"), undef, \&write_conf, 1, '<Item>', ],
-		 [ N("/_File") . N("/_Quit"), N("<control>Q"), \&quit_all, 1, '<Item>', ],
-
-		 [ N("/_Samba Server"), undef, undef, undef, '<Branch>', ],
-		 [ N("/_Samba Server") . N("/_Configure"), undef, \&launch_samba_wizard, 1, '<Item>', ],
-		 [ N("/_Samba Server") . N("/_Restart"), undef, \&restart_dialog, 1, '<Item>', ],
-		 [ N("/_Samba Server") . N("/R_eload"), undef, \&reload_dialog, 1, '<Item>', ],
-
-		 [ N("/_Help") . N("/_Samba Documentation"), undef, sub {
-		     $in->do_pkgs->ensure_is_installed('samba-doc', '/usr/share/doc/samba-doc');
-		     run_program::raw({ detach => 1 }, 'www-browser', '/usr/share/doc/samba-doc/htmldocs/index.html');
-		     },
-		   1, '<Item>', ],
-
-		 [ N("/_About") . N("/_Report Bug"), undef, sub { run_program::raw({ detach => 1 }, 'drakbug', '--report', 'draksambashare') }, 1, '<Item>', ],
-		 [ N("/_About") . N("/_About..."), undef, \&about_dialog, 1, '<Item>', ],
-		 );
-    return @items;
-}
 
 sub quit_all() {
   ugtk3->exit;
@@ -1357,10 +1335,45 @@ $display_share->signal_connect(key_press_event => sub {
 });
 
 # create menu
-my @items = get_items();
-my $factory = Gtk3::ItemFactory->new('Gtk3::MenuBar', '<main>', undef);
-$factory->create_items('menu', @items);
-my $menu = $factory->get_widget('<main>');
+my $ui = gtknew('UIManager', actions => [
+		    # [name, stock_id, value, label, accelerator, tooltip, callback]
+		    [ 'FileMenu',   undef, N("_File") ],
+		    [ 'Write_conf', undef, N("_Write conf"), undef, undef, \&write_conf ],
+		    [ 'Quit', undef, N("_Quit"), N("<control>Q"), undef, \&quit_all ],
+
+		    [ 'Samba_Menu', undef, N("_Samba Server") ],
+		    [ 'Configure', undef, N("_Configure"), undef, undef, \&launch_samba_wizard ],
+		    [ 'Restart', undef, N("_Restart"), undef, undef, \&restart_dialog ],
+		    [ 'Reload', undef,  N("R_eload"), undef, undef, \&reload_dialog ],
+
+		    [ 'Help_Menu',        undef, N("_Help") ],
+		    [ 'Documentation', undef, N("_Samba Documentation"), undef, undef, sub {
+			$in->do_pkgs->ensure_is_installed('samba-doc', '/usr/share/doc/samba-doc');
+			run_program::raw({ detach => 1 }, 'www-browser', '/usr/share/doc/samba-doc/htmldocs/index.html');
+		      } ],
+		 [ 'Report_Bug', undef, N("_Report Bug"), undef, undef, sub { run_program::raw({ detach => 1 }, 'drakbug', '--report', 'draksambashare') } ],
+		 [ 'About', undef, N("_About..."), undef, undef, \&about_dialog ],
+
+		],
+		string => qq(<ui>
+  <menubar name='MenuBar'>
+    <menu action='FileMenu'>
+      <menuitem action='Write_conf'/>
+      <menuitem action='Quit'/>
+    </menu>
+    <menu action='Samba_Menu'>
+      <menuitem action='Configure'/>
+      <menuitem action='Restart'/>
+      <menuitem action='Reload'/>
+    </menu>
+    <menu action='Help_Menu'>
+      <menuitem action='Documentation'/>
+      <menuitem action='Report_Bug'/>
+      <menuitem action='About'/>
+    </menu>
+  </menubar>
+</ui>));
+$window->{rwindow}->add_accel_group($ui->get_accel_group);
 
 my $okcancel = create_okcancel({
 				cancel_clicked => sub { ugtk3->exit },
@@ -1487,7 +1500,7 @@ sub check_first_launch() {
 
 # main interface
 $W->add(gtkpack_(Gtk3::VBox->new(0,0),
-		 0, $menu,
+		 0, $ui->get_widget('/MenuBar'),
 		 0, Gtk3::Banner->new($sambaicon, N("DrakSamba manage Samba shares")),
 		 #if_($::isEmbedded, 0, Gtk3::Label->new("Here you can add, remove and alter Samba shares.")),
 		 1, $nb,

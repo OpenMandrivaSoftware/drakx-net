@@ -64,20 +64,6 @@ my $userid_data = {
 
 my @yesno = qw(yes no);
 
-sub get_items() {
-    my @items = (
-		 [ N("/_File"), undef, undef, undef, '<Branch>', ],
-		 [ N("/_File") . N("/_Write conf"), undef, \&write_conf, 1, '<Item>', ],
-		 [ N("/_File") . N("/_Quit"), N("<control>Q"), \&quit_all, 1, '<Item>', ],
-
-
-		 [ N("/_NFS Server"), undef, undef, undef, '<Branch>', ],
-		 [ N("/_NFS Server") . N("/_Restart"), undef, \&restart_dialog, 1, '<Item>', ],
-		 [ N("/_NFS Server") . N("/R_eload"), undef, \&reload_dialog, 1, '<Item>', ],
-		 );
-    return @items;
-}
-
 sub quit_all() {
   ugtk3->exit;
 }
@@ -572,10 +558,32 @@ $treeview->signal_connect(button_press_event => sub {
 			  });
 
 # create menu
-my @items = get_items();
-my $factory = Gtk3::ItemFactory->new('Gtk3::MenuBar', '<main>', undef);
-$factory->create_items('menu', @items);
-my $menu = $factory->get_widget('<main>');
+my $ui = gtknew('UIManager', actions => [
+		    # [name, stock_id, value, label, accelerator, tooltip, callback]
+		    [ 'FileMenu',        undef, N("_File") ],
+		    [ 'Write_conf', undef, N("_Write conf"), undef, undef, \&write_conf ],
+		    [ 'Quit', undef, N("_Quit"), N("<control>Q"), undef, sub { ugtk3->exit(0) } ],
+		    [ 'NFSMenu',        undef, N("_NFS Server") ],
+		    [ 'Restart', undef, N("_Restart"), undef, undef, \&restart_dialog ],
+		    [ 'Reload', undef,  N("R_eload"), undef, undef, \&reload_dialog ],
+
+
+		],
+		string => qq(<ui>
+  <menubar name='MenuBar'>
+    <menu action='FileMenu'>
+      <menuitem action='Write_conf'/>
+      <menuitem action='Quit'/>
+    </menu>
+    <menu action='NFSMenu'>
+      <menuitem action='Restart'/>
+      <menuitem action='Reload'/>
+    </menu>
+  </menubar>
+</ui>));
+$window->{rwindow}->add_accel_group($ui->get_accel_group);
+
+my $menu = $ui->get_widget('/MenuBar');
 
 my $okcancel = create_okcancel({
 				cancel_clicked => sub { ugtk3->exit },
