@@ -526,7 +526,7 @@ sub modify_printers_entry {
 
   $share_name = Gtk3::Label->new;
   $_ = Gtk3::Entry->new foreach $dir, $comment, $print_command, $write_list, $printing, $lpq_command, $create_mode;
-  $_ = Gtk3::OptionMenu->new foreach $browseable, $printable, $guest_ok, $writable, $use_client_driver, $inherit_permissions;
+  $_ = Gtk3::ComboBoxText->new foreach $browseable, $printable, $guest_ok, $writable, $use_client_driver, $inherit_permissions;
   $_->set_popdown_strings(@yesno) foreach $browseable, $printable, $guest_ok, $writable, $use_client_driver, $inherit_permissions;
 
 
@@ -661,7 +661,7 @@ sub modify_entry {
   $share_name = Gtk3::Label->new;
   $_ = Gtk3::Entry->new foreach $dir, $comment, $create_mask, $directory_mask, $hide_files;
   $_ = Gtk3::Entry->new foreach $read_list, $write_list, $admin_users, $valid_users, $force_group, $force_create_mode;
-  $_ = Gtk3::OptionMenu->new foreach $browseable, $public, $writable, $default_case, $preserve_case, $hide_dot_files, $inherit_permissions;
+  $_ = Gtk3::ComboBoxText->new foreach $browseable, $public, $writable, $default_case, $preserve_case, $hide_dot_files, $inherit_permissions;
 
   $default_case->set_popdown_strings(@default_case);
   $_->set_popdown_strings(@yesno) foreach $browseable, $public, $writable, $hide_dot_files, $preserve_case, $inherit_permissions;
