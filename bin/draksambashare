@@ -1264,7 +1264,7 @@ sub global_special_options() {
     
   }
   my $conf = "/etc/group";
-  my @groups = map { if_(m/^([^#:]+):[^:]+:([^:]+):/ and $2 > 499, $1) } cat_($conf);
+  my @groups = map { if_(m/^([^#:]+):[^:]+:([^:]+):/ && $2 > 499, $1) } cat_($conf);
   foreach (@groups) {
       system(qw(net groupmap add), "unixgroup=$_", "ntgroup=$_");
   }
@@ -1493,6 +1493,6 @@ $W->add(gtkpack_(Gtk3::VBox->new(0,0),
 		 ),
 	);
 
-check_first_launch;
+check_first_launch();
 $W->show_all;
 Gtk3->main;
