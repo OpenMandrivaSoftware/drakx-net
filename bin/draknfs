@@ -253,10 +253,9 @@ sub add_modify_entry {
   $access->set_popdown_strings(@access_list);
 
   $luserid->set_popdown_strings(@listuserid_data);
-  $lr->set_popdown_strings(@yesno);
-  $lsync->set_popdown_strings(@yesno);
-  $lsecure->set_popdown_strings(@yesno);
-  $lsubtree_check->set_popdown_strings(@yesno);
+  foreach my $box ($lr, $lsync, $lsecure, $lsubtree_check) {
+      $box->set_popdown_strings(@yesno);
+  }
 
   my $button = gtknew('Button', text => N("Directory"));
   $button->signal_connect(clicked => sub { show_file_dialog($dir) });
