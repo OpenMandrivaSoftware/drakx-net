@@ -450,7 +450,7 @@ sub update_applet() {
     generate_menu();
 
     network::net_applet::update_tray_icon();
-    $icon->set_tooltip(get_state_message());
+    $icon->set_tooltip_text(get_state_message());
 }
 
 sub create_menu_choices {
