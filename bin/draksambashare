@@ -680,24 +680,20 @@ sub modify_entry {
   my $s = $share_list->{data}[$selected][1];
   $s or info_dialog(N("Error"), N("Please add or select a Samba share to be able to modify it.")) and return;
   $share_name->set_text($s);
-  $dir->set_text($share_list->{data}[$selected][2]);
-  $comment->set_text($share_list->{data}[$selected][3]);
-  $browseable->set_text($share_list->{data}[$selected][4]);
-  $public->set_text($share_list->{data}[$selected][5]);
-  $writable->set_text($share_list->{data}[$selected][6]);
-  $create_mask->set_text($share_list->{data}[$selected][7]);
-  $directory_mask->set_text($share_list->{data}[$selected][8]);
-  $read_list->set_text($share_list->{data}[$selected][9]);
-  $write_list->set_text($share_list->{data}[$selected][10]);
-  $admin_users->set_text($share_list->{data}[$selected][11]);
-  $valid_users->set_text($share_list->{data}[$selected][12]);
-  $inherit_permissions->set_text($share_list->{data}[$selected][13]);
-  $hide_dot_files->set_text($share_list->{data}[$selected][14]);
-  $hide_files->set_text($share_list->{data}[$selected][15]);
-  $preserve_case->set_text($share_list->{data}[$selected][16]);
-  $force_create_mode->set_text($share_list->{data}[$selected][17]);
-  $force_group->set_text($share_list->{data}[$selected][18]);
-  $default_case->set_text($share_list->{data}[$selected][19]);
+
+  # start with $share_list->{data}[$selected][2]:
+  my $i = 1;
+  foreach my $box ($dir, $comment, $browseable, $public, $writable,
+		   $create_mask, $directory_mask, $read_list,
+		   $write_list, $admin_users, $valid_users,
+		   $inherit_permissions, $hide_dot_files, $hide_files,
+		   $preserve_case, $force_create_mode, $force_group,
+		   $default_case) {
+      $i++;
+      my $value = $share_list->{data}[$selected][$i];
+      next if !$value;
+      $box->set_text($value);
+  }
 
   my $expander_user = Gtk3::Expander->new(N("User options (user access, mask option, force mode)"));
   $expander_user->add(gtkpack_(Gtk3::HBox->new,
