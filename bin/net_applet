@@ -472,7 +472,7 @@ sub create_menu_choices {
                      $get_icon ?
                        (0, gtknew('Image', file => $get_icon->($_))) :
                          (),
-                 ])), $selected->($choice)));
+                 ])), $selected->($choice) || 0));
         gtksignal_connect($w, activate => sub { $actions{$action}{launch}->($choice) });
         $w->set_draw_as_radio(!$actions{$action}{use_checkbox});
         $w;
