@@ -122,7 +122,7 @@ sub update_on_status_change {
             $cmanager->{connection} && (
                 !$cmanager->{connection}->can('get_networks') ||
                 $cmanager->{connection}->get_status || #- always allow to disconnect if connected
-                $cmanager->{connection}{network}
+                $cmanager->{connection}{network} || 0
             ));
     }
 
