@@ -126,7 +126,7 @@ sub update_on_status_change {
             ));
     }
 
-    $cmanager->{gui}{buttons}{connect_start}->set_sensitive($cmanager->{connection} && (!$cmanager->{connection}->get_status || $cmanager->{connection}{network}))
+    $cmanager->{gui}{buttons}{connect_start}->set_sensitive($cmanager->{connection} && (!$cmanager->{connection}->get_status || $cmanager->{connection}{network}) || 0)
       if $cmanager->{gui}{buttons}{connect_start};
     $cmanager->{gui}{buttons}{connect_stop}->set_sensitive($cmanager->{connection} && $cmanager->{connection}->get_status)
       if $cmanager->{gui}{buttons}{connect_stop};
