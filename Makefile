@@ -43,8 +43,8 @@ cleandist:
 	rm -rf $(NAME)-$(VERSION) ../$(NAME)-$(VERSION).tar*
 
 dist: cleandist
-	rm -rf ../$(NAME)-$(VERSION).tar*
-	git archive --prefix $(NAME)-$(VERSION)/ HEAD | xz -9 > ../$(NAME)-$(VERSION).tar.xz
+	rm -rf $(NAME)-$(VERSION).tar*
+	git archive --prefix $(NAME)-$(VERSION)/ HEAD | xz -9 > $(NAME)-$(VERSION).tar.xz
 	$(info $(NAME)-$(VERSION).tar.xz is ready)
 
 
