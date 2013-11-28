@@ -52,12 +52,3 @@ clean:
 	make -C po clean
 	make -C polkit clean
 
-.PHONY: ChangeLog log changelog
-
-log: ChangeLog
-
-changelog: ChangeLog
-
-ChangeLog:
-	svn2cl --accum --authors ../../soft/common/username.xml
-	rm -f *.bak
