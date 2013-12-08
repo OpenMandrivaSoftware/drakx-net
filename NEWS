@@ -1,3 +1,5 @@
+- avoid system() as this seems to segv perl when combined with threads (mga#11929)
+
 2.2
 - fix "undefined value for mandatory argument 'sensitive'" (mga#11799)
 

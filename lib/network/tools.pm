@@ -21,8 +21,14 @@ sub passwd_by_login {
 
 sub run_interface_command {
     my ($action, $intf, $detach) = @_;
+    my $have_perms = !$>;
+    if (!$have_perms) {
+        my $xxnet = {};
+        network::network::read_net_conf($xxnet);
+        $have_perms = text2bool($xxnet->{ifcfg}{$intf}{USERCTL});
+    }
     my @command =
-      !$> || system("/usr/sbin/usernetctl $intf report") == 0 ?
+      $have_perms ?
 	('/usr/sbin/if' . $action, $intf, if_(!$::isInstall, "daemon")) :
 	('/usr/bin/pkexec', '/usr/sbin/if' . $action, $intf);
     run_program::raw({ detach => $detach, root => $::prefix }, @command);
