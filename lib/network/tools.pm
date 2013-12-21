@@ -216,8 +216,20 @@ sub get_default_connection {
     return $gw_intf, get_interface_status($gw_intf), $net->{resolv}{dnsServer};
 }
 
+#- returns the gateway address
+#  advantage over get_default_connection() is that we don't fork,
+#  which prevent segfaulting when glib/gtk create threads behind us (mga#12041)
+sub get_gw_address() {
+    my $gateway;
+    foreach (cat_('/proc/net/route')) {
+	$gateway = $1 if /^\S+\s+00000000\s+([0-9A-F]+)/;
+    }
+    # Linux gives it as a hex number in network byte order:
+    $gateway ? join(".", unpack "CCCC", pack "L", hex $gateway) : undef;
+}
+
 sub has_network_connection() {
-    (undef, undef, my $gw_address) = get_default_connection({});
+    my $gw_address = get_gw_address();
     to_bool($gw_address);
 }
 
