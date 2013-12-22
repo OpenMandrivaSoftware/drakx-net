@@ -108,7 +108,7 @@ my @all_servers =
   },
   {
    name => N_("BitTorrent"),
-   ports => '6881:6999/tcp',
+   ports => '6881:6999/tcp 6881:6999/udp',
    hide => 1,
    pkg => 'bittorrent deluge ktorrent transmission vuze rtorrent ctorrent',
   },
