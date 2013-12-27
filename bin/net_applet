@@ -316,10 +316,9 @@ sub shouldStart() {
     return getAutoStart();
 }
 sub run_net_monitor() {
-    my $in = 'do_pkgs';
     # stop reaping child processes or else gurpmi segfaults
     local $SIG{CHLD} = "DEFAULT";
-    $in->do_pkgs->install('net_monitor');
+    do_pkgs->do_pkgs->install('net_monitor');
     run_program::raw({ detach => 1 }, 'net_monitor', '--defaultintf', $current_interface) unless is_running('net_monitor');
 }
 sub run_netcenter() {
