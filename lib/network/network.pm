@@ -470,7 +470,7 @@ sub netprofile_read {
 
 sub advanced_settings_read() {
     my $modprobe = "$::prefix/etc/modprobe.conf";
-    my $sysctl = "$::prefix/etc/sysctl.conf";
+    my $sysctl = "$::prefix/etc/sysctl.d/51-drakx.conf";
     my $msecconf = "$::prefix/etc/security/msec/security.conf";
 
     my $ipv6_disabled = find { /^options ipv6 disable=1$/ } cat_($modprobe);
@@ -518,7 +518,7 @@ sub advanced_settings_write {
             $_ .= "net.ipv4.icmp_echo_ignore_broadcasts=$disable_icmp_broadcasts\n";
             $_ .= "net.ipv4.icmp_ignore_bogus_error_responses=$disable_bogus_error_responses\n";
         }
-    } "$::prefix/etc/sysctl.conf";
+    } "$::prefix/etc/sysctl.d/51-drakx.conf";
 }
 
 sub advanced_choose {
