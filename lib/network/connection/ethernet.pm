@@ -294,8 +294,6 @@ sub write_settings {
         }
     }
     $self->SUPER::write_settings($o_net, $o_modules_conf);
-    # update udev configuration
-    update_udev_net_config();
 }
 
 sub get_status_message {
@@ -491,26 +489,6 @@ sub get_eth_card_mac_address {
     `$::prefix/sbin/ip -o link show $intf 2>/dev/null` =~ m|.*link/(\S+)\s((?:[0-9a-f]{2}:?)+)\s|;
 }
 
-sub update_udev_net_config() {
-    my $net_name_helper = "/lib/udev/write_net_rules";
-    my $udev_net_config = "$::prefix/etc/udev/rules.d/70-persistent-net.rules";
-    my @old_config = cat_($udev_net_config);
-    #- skip aliases and vlan interfaces
-    foreach my $intf (grep { network::tools::is_real_interface($_) } detect_devices::get_lan_interfaces()) {
-        (undef, my $mac_address) = get_eth_card_mac_address($intf) or next;
-        #- do not write zeroed MAC addresses
-        $mac_address =~ /^[0:]+$/ and next;
-        #- skip already configured addresses
-        any { !/^\s*#/ && /"$mac_address"/ } @old_config and next;
-        my $type = cat_("/sys/class/net/$intf/type") =~ /^\d+$/;
-        local $ENV{MATCHIFTYPE} = $type if $type;
-        local $ENV{INTERFACE} = $intf;
-        local $ENV{MATCHADDR} = $mac_address;
-        local $ENV{COMMENT} = "Drakx-net rule for $intf ($mac_address)";
-        run_program::rooted($::prefix, $net_name_helper, '>', '/dev/null', $mac_address);
-    }
-}
-
 # automatic net aliases configuration
 sub configure_eth_aliases {
     my ($modules_conf) = @_;
@@ -518,7 +496,6 @@ sub configure_eth_aliases {
         $modules_conf->set_alias($card->[0], $card->[1]);
     }
     $::isStandalone and $modules_conf->write;
-    update_udev_net_config();
 }
 
 sub get_link_detection_delay {
