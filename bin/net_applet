@@ -275,7 +275,7 @@ $SIG{USR1} = sub {
 };
 
 # do not create zombies (#20552)
-$SIG{CHLD} = \&harvester;
+Glib::Timeout->add_seconds(1, sub { $SIG{CHLD} = \&harvester; 0; });
 sub harvester {
     my $pid;
     do {
