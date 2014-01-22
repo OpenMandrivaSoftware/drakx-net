@@ -1,3 +1,5 @@
+- block CHLD signals on startup in order to prevent glib-threading segfaults
+
 2.9
 - delay setting SIG_CHLD handler
   (thus preventing potential segfault on startup (mga#10289))

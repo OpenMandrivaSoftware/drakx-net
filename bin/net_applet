@@ -2,7 +2,7 @@
 
 use strict;
 
-use POSIX ":sys_wait_h";
+use POSIX qw(:signal_h :sys_wait_h);
 use lib qw(/usr/lib/libDrakX);
 # i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
 BEGIN { unshift @::textdomains, 'drakx-net' }
@@ -21,6 +21,7 @@ use dbus_object;
 use network::monitor;
 use network::signal_strength;
 use detect_devices;
+BEGIN { POSIX::sigprocmask(SIG_BLOCK, POSIX::SigSet->new(SIGCHLD)); }
 use Gtk3::Notify -init, 'NetApplet';
 
 use ugtk3 qw(:create :helpers :wrappers :dialogs);
@@ -275,7 +276,11 @@ $SIG{USR1} = sub {
 };
 
 # do not create zombies (#20552)
-Glib::Timeout->add_seconds(1, sub { $SIG{CHLD} = \&harvester; 0; });
+Glib::Timeout->add_seconds(1, sub {
+			       POSIX::sigprocmask(SIG_UNBLOCK, POSIX::SigSet->new(SIGCHLD));
+			       $SIG{CHLD} = \&harvester;
+			       0;
+			   });
 sub harvester {
     my $pid;
     do {
