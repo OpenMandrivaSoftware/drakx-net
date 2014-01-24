@@ -269,7 +269,8 @@ sub build_ifcfg_settings {
         DEVICE => $self->get_interface,
         ONBOOT => bool2yesno($self->{control}{onboot}),
         ACCOUNTING => bool2yesno($self->{control}{accounting}),
-        NM_CONTROLLED => bool2yesno($self->{control}{nm_controlled}),
+        # Only write NM_CONTROLLED if we absolutely know it's value
+        if_(defined $self->{control}{nm_controlled}, NM_CONTROLLED => bool2yesno($self->{control}{nm_controlled})),
         USERCTL => bool2yesno($self->{control}{userctl}),
         METRIC => $self->{control}{metric},
         MTU => $self->{control}{mtu},
