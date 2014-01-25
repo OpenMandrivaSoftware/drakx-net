@@ -51,7 +51,7 @@ sub set_in_file {
 	    $_ .= $last_line if $last_line;
 	    $done = 1;
 	}
-    } "$::prefix/etc/shorewall/$file";
+    } "$::prefix${shorewall_root}/$file";
 }
 
 sub dev_to_shorewall {
