@@ -140,18 +140,6 @@ sub ports_by_proto {
     \%ports_by_proto;
 }
 
-sub upgrade_to_shorewall3() {
-    #- the 'FW' option has been removed from shorewall.conf as of shorewall 3.0
-    my $ipsecfile_ok;
-    substInFile {
-        undef $_ if /^\s*FW=/;
-        if ((/^\s*IPSECFILE=/ || eof) && !$ipsecfile_ok) {
-            $ipsecfile_ok = 1;
-            $_ = "IPSECFILE=zones\n";
-        }
-    } "$::prefix${shorewall_root}/shorewall.conf";
-}
-
 sub write {
     my ($conf, $o_in) = @_;
     my $use_pptp = any { /^ppp/ && cat_("$::prefix/etc/ppp/peers/$_") =~ /pptp/ } @{$conf->{net_zone}};
@@ -220,8 +208,6 @@ What do you want to do?"),
         } keys %{$conf->{redirects}}),
     ));
     set_config_file('masq', if_(exists $conf->{masq}, [ $conf->{masq}{net_interface}, $conf->{masq}{subnet} ]));
-
-    upgrade_to_shorewall3();
 
     require services;
     if ($conf->{disabled}) {
