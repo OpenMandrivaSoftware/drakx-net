@@ -19,7 +19,7 @@ sub check_iptables() {
 }
 
 sub set_config_file {
-    my ($file, @l) = @_;
+    my ($file, $ver, @l) = @_;
 
     my $done;
     substInFile {
@@ -32,14 +32,18 @@ sub set_config_file {
 	    $_ = '' unless
 	      /^#/ || $file eq 'rules' && /^SECTION/;
 	}
-    } "$::prefix${shorewall_root}/$file";
+    } "$::prefix${shorewall_root}${ver}/$file";
 }
 
 sub get_config_file {
-    my ($file) = @_;
-    map { [ split ' ' ] } grep { !/^#/ } cat_("$::prefix${shorewall_root}/$file");
+    my ($file, $o_ver) = @_;
+    my $ver = '';
+    $ver = $o_ver if $o_ver;
+    map { [ split ' ' ] } grep { !/^#/ } cat_("$::prefix${shorewall_root}${ver}/$file");
 }
 
+# Note: Called from drakguard and drakfirewall.pm...
+# Deliberately not adding shorewall6 support here for now
 sub set_in_file {
     my ($file, $enabled, @list) = @_;
     my $done;
@@ -62,21 +66,22 @@ sub dev_to_shorewall {
 }
 
 sub get_net_zone_interfaces {
-    my ($_net, $all_intf) = @_;
+    my ($interfacesfile, $_net, $all_intf) = @_;
     #- read shorewall configuration first
-    my @interfaces = map { $_->[1] } grep { $_->[0] eq 'net' } get_config_file('interfaces');
+    my @interfaces = map { $_->[1] } grep { $_->[0] eq 'net' } $interfacesfile;
     #- else try to find the best interface available
     @interfaces ? @interfaces : @{$all_intf || []};
 }
 
 sub get_zones {
     my ($conf, $o_in) = @_;
+    my $interfacesfile = get_config_file('interfaces', $conf->{version} || '');
     my $net = {};
     network::network::read_net_conf($net);
     #- find all interfaces but alias interfaces
     my @all_intf = grep { !/:/ } uniq(keys(%{$net->{ifcfg}}), detect_devices::get_net_interfaces());
     my %net_zone = map { $_ => undef } @all_intf;
-    $net_zone{$_} = 1 foreach get_net_zone_interfaces($net, \@all_intf);
+    $net_zone{$_} = 1 foreach get_net_zone_interfaces($interfacesfile, $net, \@all_intf);
     $o_in and $o_in->ask_from_({
         title => N("Firewall configuration"),
         icon => $firewall_icon,
@@ -106,11 +111,14 @@ sub add_interface_to_net_zone {
 }
 
 sub read {
-    my ($o_in) = @_;
+    my ($o_in, $o_ver) = @_;
+    my $ver = '';
+    $ver = $o_ver if $o_ver;
     #- read old rules file if config is not moved to rules.drakx yet
-    my @rules = get_config_file(-f "$::prefix${shorewall_root}/rules.drakx" ? 'rules.drakx' : 'rules');
+    my @rules = get_config_file(-f "$::prefix${shorewall_root}${ver}/rules.drakx" ? 'rules.drakx' : 'rules', $ver);
     require services;
-    my %conf = (disabled => !services::starts_on_boot("shorewall"),
+    my %conf = (disabled => !services::starts_on_boot("shorewall${ver}"),
+                version => $ver,
                 ports => join(' ', map {
                     my $e = $_;
                     map { "$_/$e->[3]" } split(',', $e->[4]);
@@ -119,15 +127,15 @@ sub read {
     push @{$conf{accept_local_users}{$_->[4]}}, $_->[8] foreach grep { $_->[0] eq 'ACCEPT+' } @rules;
     $conf{redirects}{$_->[3]}{$_->[4]} = $_->[2] foreach grep { $_->[0] eq 'REDIRECT' } @rules;
 
-    if (my ($e) = get_config_file('masq')) {
+    if (my ($e) = get_config_file('masq', $ver)) {
 	($conf{masq}{net_interface}, $conf{masq}{subnet}) = @$e;
     }
 
-    my @policy = get_config_file('policy');
+    my @policy = get_config_file('policy', $ver);
     $conf{log_net_drop} = @policy ? (any { $_->[0] eq 'net' && $_->[1] eq 'all' && $_->[2] eq 'DROP' && $_->[3] } @policy) : 1;
 
     get_zones(\%conf, $o_in);
-    get_config_file('zones') && \%conf;
+    get_config_file('zones', $ver) && \%conf;
 }
 
 sub ports_by_proto {
@@ -142,11 +150,12 @@ sub ports_by_proto {
 
 sub write {
     my ($conf, $o_in) = @_;
+    my $ver = $conf->{version} || '';
     my $use_pptp = any { /^ppp/ && cat_("$::prefix/etc/ppp/peers/$_") =~ /pptp/ } @{$conf->{net_zone}};
     my $ports_by_proto = ports_by_proto($conf->{ports});
     my $has_loc_zone = to_bool(@{$conf->{loc_zone} || []});
 
-    my ($include_drakx, $other_rules) = partition { $_ eq "INCLUDE\trules.drakx\n" } grep { !/^(#|SECTION)/ } cat_("$::prefix${shorewall_root}/rules");
+    my ($include_drakx, $other_rules) = partition { $_ eq "INCLUDE\trules.drakx\n" } grep { !/^(#|SECTION)/ } cat_("$::prefix${shorewall_root}${ver}/rules");
     #- warn if the config is already in rules.drakx and additionnal rules are configured
     if (!is_empty_array_ref($include_drakx) && !is_empty_array_ref($other_rules)) {
         my %actions = (
@@ -172,16 +181,16 @@ What do you want to do?"),
         [ $zone, $interface, 'detect', if_(detect_devices::is_bridge_interface($interface), 'routeback') ];
     };
 
-    set_config_file("zones",
+    set_config_file('zones', $ver,
                     if_($has_loc_zone, [ 'loc', 'ipv4' ]),
                     [ 'net', 'ipv4' ],
                     [ 'fw', 'firewall' ],
                 );
-    set_config_file('interfaces',
+    set_config_file('interfaces',  $ver,
                     (map { $interface_settings->('net', $_) } @{$conf->{net_zone}}),
                     (map { $interface_settings->('loc', $_) } @{$conf->{loc_zone} || []}),
                 );
-    set_config_file('policy',
+    set_config_file('policy', $ver,
                     if_($has_loc_zone, [ 'loc', 'net', 'ACCEPT' ], [ 'loc', 'fw', 'ACCEPT' ], [ 'fw', 'loc', 'ACCEPT' ]),
                     [ 'fw', 'net', 'ACCEPT' ],
                     [ 'net', 'all', 'DROP', if_($conf->{log_net_drop}, 'info') ],
@@ -189,9 +198,9 @@ What do you want to do?"),
                 );
     if (is_empty_array_ref($include_drakx)) {
         #- make sure the rules.drakx config is read, erasing user modifications
-        set_config_file('rules', [ 'INCLUDE', 'rules.drakx' ]);
+        set_config_file('rules', $ver, [ 'INCLUDE', 'rules.drakx' ]);
     }
-    output_with_perm("$::prefix${shorewall_root}/" . 'rules.drakx', 0600, map { join("\t", @$_) . "\n" } (
+    output_with_perm("$::prefix${shorewall_root}${ver}/" . 'rules.drakx', 0600, map { join("\t", @$_) . "\n" } (
         if_($use_pptp, [ 'ACCEPT', 'fw', 'loc:10.0.0.138', 'tcp', '1723' ]),
         if_($use_pptp, [ 'ACCEPT', 'fw', 'loc:10.0.0.138', 'gre' ]),
         (map_each { [ 'ACCEPT', 'net', 'fw', $::a, join(',', @$::b), '-' ] } %$ports_by_proto),
@@ -207,7 +216,7 @@ What do you want to do?"),
             } %{$conf->{redirects}{$proto}};
         } keys %{$conf->{redirects}}),
     ));
-    set_config_file('masq', if_(exists $conf->{masq}, [ $conf->{masq}{net_interface}, $conf->{masq}{subnet} ]));
+    set_config_file('masq', $ver, if_(exists $conf->{masq}, [ $conf->{masq}{net_interface}, $conf->{masq}{subnet} ]));
 
     require services;
     if ($conf->{disabled}) {
@@ -231,9 +240,14 @@ sub set_redirected_ports {
 
 sub update_interfaces_list {
     my ($o_intf) = @_;
-    $o_intf && member($o_intf, map { $_->[1] } get_config_file('interfaces')) and return;
-    my $shorewall = network::shorewall::read();
-    $shorewall && !$shorewall->{disabled} and network::shorewall::write($shorewall);
+    if (!$o_intf || !member($o_intf, map { $_->[1] } get_config_file('interfaces'))) {
+        my $shorewall = network::shorewall::read();
+        $shorewall && !$shorewall->{disabled} and network::shorewall::write($shorewall);
+    }
+    if (!$o_intf || !member($o_intf, map { $_->[1] } get_config_file('interfaces', 6))) {
+        my $shorewall6 = network::shorewall::read(undef, 6);
+        $shorewall6 && !$shorewall6->{disabled} and network::shorewall::write($shorewall6);
+    }
 }
 
 1;
