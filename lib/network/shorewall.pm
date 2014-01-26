@@ -178,7 +178,7 @@ What do you want to do?"),
 
     my $interface_settings = sub {
         my ($zone, $interface) = @_;
-        [ $zone, $interface, 'detect', if_(detect_devices::is_bridge_interface($interface), 'routeback') ];
+        [ $zone, $interface, 'detect', if_(detect_devices::is_bridge_interface($interface), 'bridge') ];
     };
 
     set_config_file('zones', $ver,
