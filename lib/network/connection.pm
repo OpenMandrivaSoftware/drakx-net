@@ -246,11 +246,19 @@ sub guess_control_settings {
 
 sub get_control_settings {
     my ($self) = @_;
+
+    my %nm_controlled_modes = (
+        undef => N_("Automatic"),
+        0 => N_("No"),
+        1 => N_("Yes"),
+    );
+
     [
         { text => N("Allow users to manage the connection"), val => \$self->{control}{userctl}, type => "bool" },
         { text => N("Start the connection at boot"), val => \$self->{control}{onboot}, type => "bool" },
         { text => N("Enable traffic accounting"), val => \$self->{control}{accounting}, type => "bool" },
-        { text => N("Allow interface to be controlled by Network Manager"), val => \$self->{control}{nm_controlled}, type => "bool" },
+        { label => N("Allow interface to be controlled by Network Manager"), val => \$self->{control}{nm_controlled}, list => [ keys %nm_controlled_modes ],
+          sort => 1, format => sub { translate($nm_controlled_modes{$_[0]}) } },
         { label => N("Metric"), val => \$self->{control}{metric}, advanced => 1 },
         { label => N("MTU"), val => \$self->{control}{mtu}, advanced => 1,
           help => N("Maximum size of network message (MTU). If unsure, left blank.") },
