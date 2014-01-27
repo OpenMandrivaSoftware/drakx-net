@@ -37,9 +37,7 @@ sub set_config_file {
 
 sub get_config_file {
     my ($file, $o_ver) = @_;
-    my $ver = '';
-    $ver = $o_ver if $o_ver;
-    map { [ split ' ' ] } grep { !/^#/ } cat_("$::prefix${shorewall_root}${ver}/$file");
+    map { [ split ' ' ] } grep { !/^#/ } cat_("$::prefix${shorewall_root}${o_ver}/$file");
 }
 
 # Note: Called from drakguard and drakfirewall.pm...
