@@ -278,7 +278,7 @@ sub build_ifcfg_settings {
         ONBOOT => bool2yesno($self->{control}{onboot}),
         ACCOUNTING => bool2yesno($self->{control}{accounting}),
         # Only write NM_CONTROLLED if we absolutely know it's value
-        if_(defined $self->{control}{nm_controlled}, NM_CONTROLLED => bool2yesno($self->{control}{nm_controlled})),
+        if_(defined $self->{control}{nm_controlled} && 'undef' ne $self->{control}{nm_controlled}, NM_CONTROLLED => bool2yesno($self->{control}{nm_controlled})),
         USERCTL => bool2yesno($self->{control}{userctl}),
         METRIC => $self->{control}{metric},
         MTU => $self->{control}{mtu},
