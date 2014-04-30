@@ -215,9 +215,9 @@ sub get_conf {
     } else {
 	$in->ask_okcancel(N("Firewall configuration"), N("drakfirewall configurator
 
-This configures a personal firewall for this Mandriva Linux machine.
+This configures a personal firewall for this OpenMandriva Lx machine.
 For a powerful and dedicated firewall solution, please look to the
-specialized Mandriva Security Firewall distribution."), 1) or return;
+firewall-config."), 1) or return;
 
 	$in->ask_okcancel(N("Firewall configuration"), N("drakfirewall configurator
 

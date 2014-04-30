@@ -54,7 +54,7 @@ sub connected() {
         symlink "$::prefix/etc/resolv.conf", "/etc/resolv.conf";
     }
     c::res_init(); # reinit the resolver so DNS changes take affect
-    gethostbyname("www.mandriva.com") ? 1 : 0;
+    gethostbyname("www.openmandriva.org") ? 1 : 0;
 }
 
 # request a ref on a bg_connect and a ref on a scalar
@@ -119,7 +119,7 @@ sub check_link_beat() {
                         } else {
                             $p = Net::Ping->new("icmp");
                         }
-                        print $p->ping("www.mandriva.com") ? 1 : 0;
+                        print $p->ping("www.openmandriva.org") ? 1 : 0;
                     });
 }
 

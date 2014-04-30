@@ -146,10 +146,10 @@ sub warn_not_found {
                           N("Some packages (%s) are required but aren't available.", join(', ', @packages))),
                        join("\n\n",
                             if_(!$opt{no_distro_package} && !$opt{no_package},
-                                #-PO: first argument is a list of Mandriva distributions
+                                #-PO: first argument is a list of OpenMandriva distributions
                                 #-PO: second argument is a package media name
                                 N("These packages can be found in %s, or in the official %s package repository.",
-                                  join(", ", "Mandriva Linux One", "Mandriva Linux Powerpack"),
+                                  join(", ", "OpenMandriva Lx", "OpenMandriva Lx Powerpack"),
                                   "non-free"),
                             ),
                             if_($checked, N("The following component is missing: %s", $checked)),

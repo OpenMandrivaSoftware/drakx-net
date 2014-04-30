@@ -34,7 +34,7 @@ sub configure_net {
         $in->ask_warn(
                     N("Warning"),
                     N("You do not have any configured Internet connection.
-Run the \"%s\" assistant from the Mandriva Linux Control Center", N("Set up a new network interface (LAN, ISDN, ADSL, ...)")));
+Run the \"%s\" assistant from the OpenMandriva Lx Control Center", N("Set up a new network interface (LAN, ISDN, ADSL, ...)")));
         return;
     }
     unless ($::isEmbedded) {

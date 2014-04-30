@@ -77,7 +77,7 @@ With that feature, other computers on your local network will be able to use thi
 
 Make sure you have configured your Network/Internet access using drakconnect before going any further.
 
-Note: you need a dedicated Network Adapter to set up a Local Area Network (LAN). Please disable Mandriva Firewall for the network adapter connected to your LAN connection before proceeding."),
+Note: you need a dedicated Network Adapter to set up a Local Area Network (LAN). Please disable Firewall for the network adapter connected to your LAN connection before proceeding."),
 	      post => sub {
 		  #- see #63998
 		  #- do not start configuration if shorewall disabled
@@ -310,7 +310,7 @@ If you do not know the meaning of an option, simply leave it as it is."),
 	     {
 	      name => N("No ethernet network adapter configured for LAN has been detected on your system.
 
-Please run the hardware configuration tool to configure it, and ensure that the Mandriva firewall is not enabled for network adapter connected to your LAN network."),
+Please run the hardware configuration tool to configure it, and ensure that the firewall is not enabled for network adapter connected to your LAN network."),
 	      end => 1,
 	     },
 

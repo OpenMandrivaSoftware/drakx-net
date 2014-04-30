@@ -9,7 +9,7 @@ use Socket;
 sub new {
     my ($class, $o_hostname) = @_;
     bless {
-           hostname => $o_hostname || "www.mandriva.com"
+           hostname => $o_hostname || "www.openmandriva.org"
           }, $class;
 }
 
@@ -112,7 +112,7 @@ sub update_status {
 
 =head2 Test synchronously
 
-resolve and get ping to hostname from command line if given, else to www.mandriva.com
+resolve and get ping to hostname from command line if given, else to www.openmandriva.org
 
  use lib qw(/usr/lib/libDrakX);
  use network::test;
@@ -133,7 +133,7 @@ resolve and get ping to hostname from command line if given, else to www.mandriv
 
 =head2 Test asynchronously
 
-resolve and get ping to hostname from command line if given, else to Mandriva
+resolve and get ping to hostname from command line if given, else to OpenMandriva
 
 prints a "." every 10 miliseconds during connection test
 
