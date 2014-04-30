@@ -785,7 +785,7 @@ sub easy_dhcp {
     modules::load_category($modules_conf, list_modules::ethernet_categories());
     my @all_dev = sort map { $_->[0] } network::connection::ethernet::get_eth_cards($modules_conf);
 
-    my @ether_dev = grep { /^eth[0-9]+$/ && `LC_ALL= LANG= $::prefix/sbin/ip -o link show $_ 2>/dev/null` =~ m|\slink/ether\s| } @all_dev;
+    my @ether_dev = grep { `LC_ALL= LANG= $::prefix/sbin/ip -o link show $_ 2>/dev/null` =~ m|\slink/ether\s| } @all_dev;
     foreach my $dhcp_intf (@ether_dev) {
         log::explanations("easy_dhcp: found $dhcp_intf");
         $net->{ifcfg}{$dhcp_intf} ||= {};
