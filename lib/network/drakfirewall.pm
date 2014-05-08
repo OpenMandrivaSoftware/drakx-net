@@ -39,7 +39,7 @@ my @all_servers =
   {
    name => N_("Mail Server"),
    pkg => 'sendmail postfix qmail exim',
-   ports => '25/tcp 465/tcp',
+   ports => '25/tcp 465/tcp 587/tcp',
   },
   {
    name => N_("POP and IMAP Server"),
