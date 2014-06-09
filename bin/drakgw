@@ -125,6 +125,8 @@ What would you like to do?"); #- FIXME : not used for now
 	      data => [ { label => N("Net Device"), val => \$shorewall->{masq}{net_interface}, list => [ sort keys %{$net->{ifcfg}} ], format => sub { network::tools::get_interface_description($net, $_[0]) } } ],
 	      post => sub {
 		  network::shorewall::add_interface_to_net_zone($shorewall, $shorewall->{masq}{net_interface});
+		  # if loc_zone is unconfigured and has no interfaces, have all interfaces be local (except the chosen net interface)
+		  $shorewall->{loc_zone} = [ sort grep {!/^$shorewall->{masq}{net_interface}$/} keys %{$net->{ifcfg}} ] if scalar(@{$shorewall->{loc_zone}}) == 0;
 		  my $locals = @{$shorewall->{loc_zone}};
 		  if ($locals == 0) {
 		      return "end_no_lan_interface";
