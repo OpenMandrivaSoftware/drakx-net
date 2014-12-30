@@ -21,6 +21,7 @@ sub write_squid_conf {
     my $prefix = network::network::netmask_to_vlsm($intf->{NETMASK});
     output($squid_conf_file, qq(
 http_port $squid_conf->{http_port}[0] intercept
+http_port $squid_conf->{http_port}[0]
 hierarchy_stoplist cgi-bin ?
 acl QUERY urlpath_regex cgi-bin \\?
 no_cache deny QUERY
