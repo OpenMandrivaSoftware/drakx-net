@@ -34,9 +34,6 @@ refresh_pattern ^ftp:           1440    20%     10080
 refresh_pattern ^gopher:        1440    0%      1440
 refresh_pattern .               0       20%     4320
 half_closed_clients off
-acl manager proto cache_object
-acl localhost src 127.0.0.0/8
-acl to_localhost dst 127.0.0.0/8
 acl localnet src 10.0.0.0/8     # RFC1918 possible internal network
 acl localnet src 172.16.0.0/12  # RFC1918 possible internal network
 acl localnet src 192.168.0.0/16 # RFC1918 possible internal network
