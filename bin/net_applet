@@ -47,7 +47,7 @@ our %wireless_networks;
 
 our %pixbufs =
   (
-      state => { map { $_ => gtknew('Pixbuf', file => $_) } qw(connected disconnected unconfigured connecting) },
+      state => { map { $_ => gtknew('Pixbuf', file => $_) } 'unconfigured', map { $_, $_ . "_big" } qw(connected disconnected connecting) },
       encryption => { map {
           $_ => gtknew('Pixbuf', file => "encryption-$_-24");
       } qw(open weak strong) },
@@ -57,11 +57,12 @@ sub get_current_network() {
     detect_devices::is_wireless_interface($current_interface) && find { $_->{current} } values %wireless_networks;
 }
 
-sub get_state_pixbuf() {
+sub get_state_pixbuf {
+    my ($o_big) = @_;
     my $wnet = $current_state eq 'connected' && get_current_network();
     $wnet ?
       network::signal_strength::get_strength_icon($wnet) :
-      $pixbufs{state}{$current_state};
+      $pixbufs{state}{$current_state . ($o_big ? '_big' : '')};
 }
 
 sub update_tray_icon() {
@@ -436,7 +437,7 @@ sub go2State {
         $current_state = $state_type;
         $notification_queue->add({
             title => $old_description || $current_description || N("Network connection"),
-            pixbuf => network::net_applet::get_state_pixbuf(),
+            pixbuf => network::net_applet::get_state_pixbuf(1) || network::net_applet::get_state_pixbuf(),
             message => get_state_message($old_interface || $current_interface),
         }) if $show;
         $need_update = 1;
