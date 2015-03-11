@@ -514,6 +514,7 @@ only used for EAP certificate based authentication. It could be
 considered as the alternative to username/password combo.
  Note: other related settings are shown on the Advanced page.")  },
 	{ label => N("EAP client private key password"), val => \$self->{access}{network}{eap_private_key_passwd},
+          hidden => sub { $self->{hide_passwords} },
           disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
           help => N("The complete password for the client private key. This is
 only used for EAP certificate based authentication. This password 
