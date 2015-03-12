@@ -47,7 +47,7 @@ our %wireless_networks;
 
 our %pixbufs =
   (
-      state => { map { $_ => gtknew('Pixbuf', file => $_) } 'unconfigured', map { $_, $_ . "_big" } qw(connected disconnected connecting) },
+      state => { map { $_ => gtknew('Pixbuf', file => $_) } map { $_, $_ . "_big" } qw(connected disconnected unconfigured connecting) },
       encryption => { map {
           $_ => gtknew('Pixbuf', file => "encryption-$_-24");
       } qw(open weak strong) },
