@@ -97,7 +97,9 @@ sub list_wireless {
                 $has_key = $has_wpa = $has_eap = undef;
             }
             /Address: (.*)/ and $net->{ap} = lc($1);
-            /ESSID:"(.*?)"/ and $net->{essid} = $1;
+            if (my ($essid) = /ESSID:"(.*?)"/) {
+                $essid !~ /^\\x00/ and $net->{essid} = $essid;
+            }
             /Mode:(\S*)/ and $net->{mode} = $1;
             $net->{mode} = 'Managed' if $net->{mode} eq 'Master';
             $_ =~ $quality_match and $net->{signal_strength} = $eval_quality->($1);
