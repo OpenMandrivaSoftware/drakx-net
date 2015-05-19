@@ -898,7 +898,7 @@ sub modify_user_info {
   $dialog->set_position('center');
   $dialog->set_resizable(0);
   if ($todo eq "add") {
-    $buser = Gtk3::ComboBox->new_with_strings([ get_user() ]);
+    $buser = Gtk3::ComboBoxText->new_with_strings([ get_user() ]);
     $buser->set_wrap_width(3);
   } else {
     $buser = Gtk3::Label->new;
