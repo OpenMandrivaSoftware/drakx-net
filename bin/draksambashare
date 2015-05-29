@@ -530,19 +530,24 @@ sub modify_printers_entry {
 
   my $s = $printer_list->{data}[$selected][1];
   $s or info_dialog(N("Error"), N("Please add or select a Samba printer share to be able to modify it.")) and return;  $share_name->set_text($s);
-  $dir->set_text($printer_list->{data}[$selected][2]);
-  $comment->set_text($printer_list->{data}[$selected][3]);
-  $browseable->set_text($printer_list->{data}[$selected][4]);
-  $printable->set_text($printer_list->{data}[$selected][5]);
-  $print_command->set_text($printer_list->{data}[$selected][6]);
-  $lpq_command->set_text($printer_list->{data}[$selected][7]);
-  $guest_ok->set_text($printer_list->{data}[$selected][8]);
-  $writable->set_text($printer_list->{data}[$selected][9]);
-  $write_list->set_text($printer_list->{data}[$selected][10]);
-  $inherit_permissions->set_text($printer_list->{data}[$selected][11]);
-  $printing->set_text($printer_list->{data}[$selected][12]);
-  $create_mode->set_text($printer_list->{data}[$selected][13]);
-  $use_client_driver->set_text($printer_list->{data}[$selected][14]);
+  my %h = (
+      2  => $dir,
+      3  => $comment,
+      4  => $browseable,
+      5  => $printable,
+      6  => $print_command,
+      7  => $lpq_command,
+      8  => $guest_ok,
+      9  => $writable,
+      10 => $write_list,
+      11 => $inherit_permissions,
+      12 => $printing,
+      13 => $create_mode,
+      14 => $use_client_driver,
+  );
+  foreach my $id (keys %h) {
+     $h{$id}->set_text($printer_list->{data}[$selected][$id] || '');
+  }
 
   my $button = Gtk3::Button->new(N("Open"));
   $button->signal_connect(clicked => sub { show_file_dialog($dir) });
