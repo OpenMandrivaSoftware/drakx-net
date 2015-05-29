@@ -104,6 +104,8 @@ sub show_file_dialog {
     if ($answer eq 'ok') {
         my $file = $file_dlg->get_filename;
         -d $file or err_dialog(N("Error!"), N("Should be a directory.")) and return;
+        # get_filename() returns UTF-8:
+        c::set_tagged_utf8($file);
         $data->set_text($file);
     }
     $file_dlg->hide;
