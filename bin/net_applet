@@ -39,7 +39,7 @@ use mygtk3 qw(gtknew gtkset);
 use common;
 
 our ($current_state, $current_interface);
-our ($icon, $notification_queue);
+our $icon;
 our $dbus;
 our ($interactive_cb, $ifw, $ifw_alert);
 
@@ -251,8 +251,6 @@ if ($dbus) {
     dbus_object::set_gtk3_watch_helper($dbus);
 }
 
-$notification_queue = Gtk3::Notify::Queue->new($icon);
-
 $icon->signal_connect(activate => sub {
         my ($_icon, $button, $time) = @_;
         if ($ifw_alert) {
@@ -438,14 +436,27 @@ sub go2State {
         $current_interface = $interface;
         $need_update = 1;
     }
+    my $show;
     if ($current_state ne $state_type) {
-        my $show = defined $current_state && $state_type ne 'connecting'; # don't show notification at applet startup and when establishing a connection
+        $show = defined $current_state && $state_type ne 'connecting'; # don't show notification at applet startup and when establishing a connection
         $current_state = $state_type;
-        $notification_queue->add({
-            title => $old_description || $current_description || N("Network connection"),
-            pixbuf => network::net_applet::get_state_pixbuf(1) || network::net_applet::get_state_pixbuf(),
-            message => get_state_message($old_interface || $current_interface),
-        }) if $show;
+    }
+    if ($show) {
+	my $msg;
+	my $ic = $icon; # fix stringification (WTF????)
+        my $bubble = Gtk3::Notify::Notification->new(
+		$old_description || $current_description || N("Network connection"),
+		get_state_message($old_interface || $current_interface),
+		$ic);
+        my $pixbuf = network::net_applet::get_state_pixbuf(1) || network::net_applet::get_state_pixbuf();
+        $bubble->set_icon_from_pixbuf($pixbuf) if $pixbuf;
+
+        my $timeout = 5000;
+        $bubble->set_timeout($timeout);
+        # both need to be in a eval block in case notification daemon isn't running:
+        Glib::Timeout->add($timeout, sub { eval { $bubble->close }; 0 });
+        eval { $bubble->show };
+        warn ">> ERR:$@" if $@;
         $need_update = 1;
     }
 
