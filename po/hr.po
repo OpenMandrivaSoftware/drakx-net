@@ -1,20 +1,22 @@
-# Translation of drakx-net to Croatian
-# Copyright (C) Croatian team
-# Translators: Danijel Studen <dstuden@vuka.hr>,Denis Lackovic <delacko@fly.srk.fer.hr>,Jerko Škifić <skific@riteh.hr>,Ljubomir Božić <ljubo108@vip.hr>,Nikola Planinac <>,Robert Vuković <robi@surfer.hr>,Sasa Poznanovic <sasa.poznanovic@vuka.hr>,Vedran Vyroubal <vedran.vyroubal@inet.hr>,Vinko Prelac <vinko@buka.hr>,Vlatko Kosturjak <kost@linux.hr>,Zoran Jankovic <zoran.jankovic@inet.hr>,
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+#
+# Translators:
+# Ivica  Kolić <ikoli@yahoo.com>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: drakx-net 0\n"
+"Project-Id-Version: Mageia\n"
 "POT-Creation-Date: 2014-11-19 20:45+0100\n"
-"PO-Revision-Date: 2005-01-04 21:25+CET\n"
-"Last-Translator: auto\n"
-"Language-Team: Croatian <lokalizacija@linux.hr>\n"
+"PO-Revision-Date: 2015-05-26 19:01+0000\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Croatian (http://www.transifex.com/projects/p/mageia/language/"
+"hr/)\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 :  n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;;\n"
-"X-Generator: TransDict server\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: ../bin/drakgw:73
 #, c-format
@@ -22,7 +24,7 @@ msgid "Internet Connection Sharing"
 msgstr "Dijeljenje Internet Veze"
 
 #: ../bin/drakgw:77
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You are about to configure your computer to share its Internet connection.\n"
 "With that feature, other computers on your local network will be able to use "
@@ -35,12 +37,6 @@ msgid ""
 "(LAN). Please disable Mageia Firewall for the network adapter connected to "
 "your LAN connection before proceeding."
 msgstr ""
-"Vaše računalo može biti konfigurirano da dijeli vlastitu Internet vezu.\n"
-"Sa tom značajkom, druga računala na vašoj lokalnoj mreži mogu koristiti "
-"Internet vezu ovog računala.\n"
-"\n"
-"Upozorenje: trebati ćete primjenjeni Mrežni Uređaj za postavljanje lokalne "
-"mreže (LAN)."
 
 #: ../bin/drakgw:93
 #, c-format
@@ -86,13 +82,13 @@ msgstr "Ponovno namještanje"
 #: ../bin/drakgw:124
 #, c-format
 msgid "Please select the network interface directly connected to the internet."
-msgstr ""
+msgstr "Molim odaberite mrežno sučelje koje je direktno spojeno na iternet."
 
 #: ../bin/drakgw:125 ../lib/network/drakconnect/delete.pm:27
 #: ../lib/network/netconnect.pm:379 ../lib/network/netconnect.pm:414
-#, fuzzy, c-format
+#, c-format
 msgid "Net Device"
-msgstr "Ispisni poslužitelj"
+msgstr "Mrežni uređaj"
 
 #: ../bin/drakgw:145
 #, c-format
@@ -118,14 +114,14 @@ msgstr ""
 "Molimo odaberite koji mrežni adapter će biti povezan na vašu lokalnu mrežu."
 
 #: ../bin/drakgw:181
-#, fuzzy, c-format
+#, c-format
 msgid "Local Area Network settings"
-msgstr "C-Class lokalna mreža"
+msgstr "Postavke lokalne mreže"
 
 #: ../bin/drakgw:184 ../lib/network/vpn/openvpn.pm:230
-#, fuzzy, c-format
+#, c-format
 msgid "Local IP address"
-msgstr "IP adresa"
+msgstr "Lokalna IP adresa"
 
 #: ../bin/drakgw:185 ../lib/network/connection/ethernet.pm:149
 #: ../lib/network/drakconnect/edit.pm:157
@@ -134,9 +130,9 @@ msgid "Netmask"
 msgstr "Mrežna maska"
 
 #: ../bin/drakgw:186
-#, fuzzy, c-format
+#, c-format
 msgid "The internal domain name"
-msgstr "Novo ime pisača"
+msgstr "Ime interne domene"
 
 #: ../bin/drakgw:192 ../bin/drakhosts:98 ../bin/drakhosts:232
 #: ../bin/drakhosts:239 ../bin/drakhosts:246 ../bin/drakinvictus:74
@@ -186,9 +182,9 @@ msgstr ""
 "Potencijalni LAN adresni konflikt je pronađen u trenutnoj konfiguraciji %s!\n"
 
 #: ../bin/drakgw:208
-#, fuzzy, c-format
+#, c-format
 msgid "Domain Name Server (DNS) configuration"
-msgstr "Prebaci postavke pisača"
+msgstr ""
 
 #: ../bin/drakgw:212
 #, c-format
@@ -196,9 +192,9 @@ msgid "Use this gateway as domain name server"
 msgstr ""
 
 #: ../bin/drakgw:213
-#, fuzzy, c-format
+#, c-format
 msgid "The DNS Server IP"
-msgstr "IP (ovog) DHCP poslužitelja"
+msgstr "IP DNS poslužitelja"
 
 #: ../bin/drakgw:240
 #, c-format
@@ -208,21 +204,25 @@ msgid ""
 "Here you can select different options for the DHCP server configuration.\n"
 "If you do not know the meaning of an option, simply leave it as it is."
 msgstr ""
+"Konfiguracija DHCP poslužitelja.\n"
+"\n"
+"Ovdje možete odabrati različite opcije za konfiguraciju DHCP poslužitelja.\n"
+"Ako ne znate značenje opcije, jednostavno ostavite kako je."
 
 #: ../bin/drakgw:247
-#, fuzzy, c-format
+#, c-format
 msgid "Use automatic configuration (DHCP)"
-msgstr "Automatska rekonfiguracija"
+msgstr "Koristi automatsku konfiguraciju (DHCP)"
 
 #: ../bin/drakgw:248
 #, c-format
 msgid "The DHCP start range"
-msgstr ""
+msgstr "DHCP početak raspona"
 
 #: ../bin/drakgw:249
 #, c-format
 msgid "The DHCP end range"
-msgstr ""
+msgstr "DHCP kraj raspona"
 
 #: ../bin/drakgw:250
 #, c-format
@@ -247,27 +247,27 @@ msgstr ""
 #: ../bin/drakgw:279
 #, c-format
 msgid "Admin mail"
-msgstr ""
+msgstr "Administratorska pošta"
 
 #: ../bin/drakgw:280
-#, fuzzy, c-format
+#, c-format
 msgid "Visible hostname"
-msgstr "Udaljeno ime računala"
+msgstr "Vidljivo ime računala"
 
 #: ../bin/drakgw:281
-#, fuzzy, c-format
+#, c-format
 msgid "Proxy port"
-msgstr "Svojstvo"
+msgstr "Proxy port"
 
 #: ../bin/drakgw:282
-#, fuzzy, c-format
+#, c-format
 msgid "Cache size (MB)"
-msgstr "chunk veličina"
+msgstr ""
 
 #: ../bin/drakgw:301
-#, fuzzy, c-format
+#, c-format
 msgid "Broadcast printer information"
-msgstr "Hard disk informacije"
+msgstr ""
 
 #: ../bin/drakgw:312
 #, c-format
@@ -279,6 +279,11 @@ msgid ""
 "the Mageia firewall is not enabled for network adapter connected to your LAN "
 "network."
 msgstr ""
+"NIjedan mrežni adapter konfiguriran za LAN nije otkriven u vašem sustavu.\n"
+"\n"
+"Molim pokrenite alat za konfiguraciju sklopovlja da biste ga konfigurirali, "
+"i budite sigurni da Mageia vatrozid nije omogućen za mrežni adapter spojen "
+"na vašu LAN mrežu."
 
 #: ../bin/drakgw:320
 #, c-format
@@ -291,16 +296,13 @@ msgid "Internet Connection Sharing is now disabled."
 msgstr "Dijeljenje veze prema Internetu je trenutno onemogućeno."
 
 #: ../bin/drakgw:332
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Everything has been configured.\n"
 "You may now share Internet connection with other computers on your Local "
 "Area Network, using automatic network configuration (DHCP) and\n"
 " a Transparent Proxy Cache server (SQUID)."
 msgstr ""
-"Sve je konfigurirano.\n"
-"Sada možete dijeliti vašu internet vezu sa drugim računalima na vašoj "
-"lokalnoj mreži, koristeći automatsku mrežnu konfiguraciju (DHCP)."
 
 #: ../bin/drakgw:355 ../bin/draknfs:595 ../bin/draksambashare:209
 #: ../lib/network/connection_manager.pm:58
@@ -344,7 +346,7 @@ msgstr "Podešavam..."
 #: ../bin/drakgw:376
 #, c-format
 msgid "Configuring firewall..."
-msgstr ""
+msgstr "Konfiguriram vatrozid..."
 
 #: ../bin/drakhosts:98
 #, c-format
@@ -352,19 +354,19 @@ msgid "Please add an host to be able to modify it."
 msgstr ""
 
 #: ../bin/drakhosts:107
-#, fuzzy, c-format
+#, c-format
 msgid "Please modify information"
-msgstr "Detaljne informacije"
+msgstr ""
 
 #: ../bin/drakhosts:108
-#, fuzzy, c-format
+#, c-format
 msgid "Please delete information"
-msgstr "Detaljne informacije"
+msgstr "Molim izbriši informaciju"
 
 #: ../bin/drakhosts:109
-#, fuzzy, c-format
+#, c-format
 msgid "Please add information"
-msgstr "Detaljne informacije"
+msgstr "Molim dodaj informaciju"
 
 #: ../bin/drakhosts:113
 #, c-format
@@ -377,9 +379,9 @@ msgid "Host name:"
 msgstr "Ime računala:"
 
 #: ../bin/drakhosts:115
-#, fuzzy, c-format
+#, c-format
 msgid "Host Aliases:"
-msgstr "Ime računala"
+msgstr ""
 
 #: ../bin/drakhosts:119 ../bin/draknfs:106 ../bin/draksambashare:210
 #: ../bin/draksambashare:234 ../bin/draksambashare:378
@@ -406,19 +408,19 @@ msgid "Host name"
 msgstr "Ime računala"
 
 #: ../bin/drakhosts:183
-#, fuzzy, c-format
+#, c-format
 msgid "Host Aliases"
-msgstr "Ime računala"
+msgstr ""
 
 #: ../bin/drakhosts:193 ../bin/drakhosts:223
-#, fuzzy, c-format
+#, c-format
 msgid "Manage hosts definitions"
-msgstr "Kablovska veza"
+msgstr ""
 
 #: ../bin/drakhosts:209 ../bin/drakhosts:236 ../bin/draknfs:358
 #, c-format
 msgid "Modify entry"
-msgstr ""
+msgstr "Izmjeni unos"
 
 #: ../bin/drakhosts:228 ../bin/draknfs:612 ../bin/draksambashare:1386
 #: ../bin/draksambashare:1417 ../bin/draksambashare:1448
@@ -427,9 +429,9 @@ msgid "Add"
 msgstr "Dodaj"
 
 #: ../bin/drakhosts:229
-#, fuzzy, c-format
+#, c-format
 msgid "Add entry"
-msgstr "Dodaj pisač"
+msgstr "Dodaj unos"
 
 #: ../bin/drakhosts:232
 #, c-format
@@ -468,25 +470,25 @@ msgid "Quit"
 msgstr "Izlaz"
 
 #: ../bin/drakids:28
-#, fuzzy, c-format
+#, c-format
 msgid "Allowed addresses"
-msgstr "Dozvoli svim korisnicima"
+msgstr "Dopuštene adrese"
 
 #: ../bin/drakids:40 ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199
 #: ../bin/drakids:224 ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
 #: ../bin/net_applet:142 ../lib/network/drakfirewall.pm:309
 #: ../lib/network/drakfirewall.pm:313 ../lib/network/net_applet/ifw.pm:62
 #: ../lib/network/net_applet/ifw.pm:90
-#, fuzzy, c-format
+#, c-format
 msgid "Interactive Firewall"
-msgstr "Vatrozid"
+msgstr "Interaktivni vatrozid"
 
 #: ../bin/drakids:71 ../bin/drakids:190 ../bin/drakids:199 ../bin/drakids:224
 #: ../bin/drakids:233 ../bin/drakids:243 ../bin/drakids:335
 #: ../bin/net_applet:357 ../lib/network/net_applet/ifw.pm:62
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to contact daemon"
-msgstr "Ne mogu napraviti fork: %s"
+msgstr ""
 
 #: ../bin/drakids:82 ../bin/drakids:110
 #, c-format
@@ -494,14 +496,14 @@ msgid "Log"
 msgstr "Dnevnik"
 
 #: ../bin/drakids:86 ../bin/drakids:105 ../lib/network/net_applet/ifw.pm:220
-#, fuzzy, c-format
+#, c-format
 msgid "Allow"
-msgstr "Sve"
+msgstr "Dopusti"
 
 #: ../bin/drakids:87 ../bin/drakids:96 ../lib/network/net_applet/ifw.pm:221
 #, c-format
 msgid "Block"
-msgstr ""
+msgstr "Blokiraj"
 
 #: ../bin/drakids:88 ../bin/drakids:97 ../bin/drakids:106 ../bin/drakids:117
 #: ../bin/drakids:130 ../bin/drakids:138 ../bin/draknfs:187
@@ -510,44 +512,44 @@ msgid "Close"
 msgstr "Zatvori"
 
 #: ../bin/drakids:91
-#, fuzzy, c-format
+#, c-format
 msgid "Allowed services"
-msgstr "Dozvoli svim korisnicima"
+msgstr "Dopušteni servisi"
 
 #: ../bin/drakids:100
-#, fuzzy, c-format
+#, c-format
 msgid "Blocked services"
-msgstr "Pohrani korisničke datoteke"
+msgstr "Blokirani servisi"
 
 #: ../bin/drakids:114
-#, fuzzy, c-format
+#, c-format
 msgid "Clear logs"
-msgstr "Očisti sve"
+msgstr ""
 
 #: ../bin/drakids:115 ../bin/drakids:120 ../lib/network/net_applet/ifw.pm:159
 #, c-format
 msgid "Blacklist"
-msgstr ""
+msgstr "Crna lista"
 
 #: ../bin/drakids:116 ../bin/drakids:133 ../lib/network/net_applet/ifw.pm:164
 #, c-format
 msgid "Whitelist"
-msgstr ""
+msgstr "Bijela lista"
 
 #: ../bin/drakids:124
-#, fuzzy, c-format
+#, c-format
 msgid "Remove from blacklist"
-msgstr "Ukloni sa LVM-a"
+msgstr "Ukloni sa crne liste"
 
 #: ../bin/drakids:125
 #, c-format
 msgid "Move to whitelist"
-msgstr ""
+msgstr "Premjesti na bijelu listu"
 
 #: ../bin/drakids:137
-#, fuzzy, c-format
+#, c-format
 msgid "Remove from whitelist"
-msgstr "Ukloni sa LVM-a"
+msgstr "Ukoni sa bijele liste"
 
 #: ../bin/drakids:256
 #, c-format
@@ -555,9 +557,9 @@ msgid "Date"
 msgstr "Datum"
 
 #: ../bin/drakids:257
-#, fuzzy, c-format
+#, c-format
 msgid "Remote host"
-msgstr "Udaljeno"
+msgstr ""
 
 #: ../bin/drakids:258 ../lib/network/vpn/openvpn.pm:118
 #, c-format
@@ -591,29 +593,29 @@ msgid "Status"
 msgstr "Status"
 
 #: ../bin/drakids:295
-#, fuzzy, c-format
+#, c-format
 msgid "Allowed"
-msgstr "Sve"
+msgstr "Dopušteno"
 
 #: ../bin/drakids:296
 #, c-format
 msgid "Blocked"
-msgstr ""
+msgstr "Blokirano"
 
 #: ../bin/drakinvictus:38
-#, fuzzy, c-format
+#, c-format
 msgid "Invictus Firewall"
-msgstr "Vatrozid"
+msgstr ""
 
 #: ../bin/drakinvictus:55
-#, fuzzy, c-format
+#, c-format
 msgid "Start as master"
-msgstr "Pokrenuto pri podizanju"
+msgstr ""
 
 #: ../bin/drakinvictus:74
-#, fuzzy, c-format
+#, c-format
 msgid "A password is required."
-msgstr "Potrebna je lozinka"
+msgstr "Zahtjeva se lozinka."
 
 #: ../bin/drakinvictus:102
 #, c-format
@@ -633,9 +635,9 @@ msgid "Interface"
 msgstr "Sučelje"
 
 #: ../bin/drakinvictus:107
-#, fuzzy, c-format
+#, c-format
 msgid "Real address"
-msgstr "IP adresa"
+msgstr "Prava adresa"
 
 #: ../bin/drakinvictus:107
 #, c-format
@@ -654,9 +656,9 @@ msgid "Password"
 msgstr "Lozinka"
 
 #: ../bin/drakinvictus:116
-#, fuzzy, c-format
+#, c-format
 msgid "Firewall replication"
-msgstr "Rezolucija"
+msgstr ""
 
 #: ../bin/drakinvictus:118
 #, c-format
@@ -664,14 +666,14 @@ msgid "Synchronize firewall conntrack tables"
 msgstr ""
 
 #: ../bin/drakinvictus:125
-#, fuzzy, c-format
+#, c-format
 msgid "Synchronization network interface"
-msgstr "Alat za sinkronizaciju"
+msgstr ""
 
 #: ../bin/drakinvictus:134
-#, fuzzy, c-format
+#, c-format
 msgid "Connection mark bit"
-msgstr "Veza"
+msgstr ""
 
 #: ../bin/drakinvictus:142 ../lib/network/drakconnect/edit.pm:73
 #: ../lib/network/drakconnect/edit.pm:77
@@ -680,9 +682,9 @@ msgid "Apply"
 msgstr "Primijeni"
 
 #: ../bin/draknetprofile:39
-#, fuzzy, c-format
+#, c-format
 msgid "Network profiles"
-msgstr "Još opcija"
+msgstr "Profili mreže"
 
 #: ../bin/draknetprofile:68
 #, c-format
@@ -690,9 +692,9 @@ msgid "Module"
 msgstr "Modul"
 
 #: ../bin/draknetprofile:69
-#, fuzzy, c-format
+#, c-format
 msgid "Enabled"
-msgstr "Omogući"
+msgstr "Aktivirano"
 
 #: ../bin/draknetprofile:70 ../lib/network/drakconnect/edit.pm:424
 #, c-format
@@ -700,9 +702,9 @@ msgid "Description"
 msgstr "Opis"
 
 #: ../bin/draknetprofile:86
-#, fuzzy, c-format
+#, c-format
 msgid "Profile"
-msgstr "Profili"
+msgstr "Profil"
 
 #: ../bin/draknetprofile:98
 #, c-format
@@ -710,34 +712,34 @@ msgid "Save and restore the active services"
 msgstr ""
 
 #: ../bin/draknetprofile:99
-#, fuzzy, c-format
+#, c-format
 msgid "Network connection settings"
-msgstr "Još opcija"
+msgstr "Postavke veza mreže"
 
 #: ../bin/draknetprofile:99
-#, fuzzy, c-format
+#, c-format
 msgid "Firewall settings"
-msgstr "Bežična veze"
+msgstr "Postavke vatrozida"
 
 #: ../bin/draknetprofile:99
-#, fuzzy, c-format
+#, c-format
 msgid "Firewall settings (IPv6)"
-msgstr "Bežična veze"
+msgstr "Postavke vatrozida (IPv6)"
 
 #: ../bin/draknetprofile:100
-#, fuzzy, c-format
+#, c-format
 msgid "Proxy settings"
-msgstr "Postavka opterećenja"
+msgstr "Proxy postavke"
 
 #: ../bin/draknetprofile:100
-#, fuzzy, c-format
+#, c-format
 msgid "Urpmi settings"
-msgstr "Postavka opterećenja"
+msgstr "Urpmi postavke"
 
 #: ../bin/draknetprofile:100
-#, fuzzy, c-format
+#, c-format
 msgid "Networkmanager connection settings"
-msgstr "Još opcija"
+msgstr ""
 
 #: ../bin/draknetprofile:159
 #, c-format
@@ -752,6 +754,10 @@ msgid ""
 "settings, and you'll be able to configure your system configuration as usual "
 "afterwards."
 msgstr ""
+"Molim odredite ime novog mrežnog profila koji će biti napravljen  (npr., "
+"posao, kuća, roaming, ..). Taj novi profil će biti napravljen baziran na "
+"vašim trenutnim postavkama, i moći ćete konfigurirati vaš sustav kao i "
+"obično."
 
 #: ../bin/draknetprofile:166 ../lib/network/drakconnect/global.pm:89
 #, c-format
@@ -769,9 +775,9 @@ msgid "The \"%s\" profile already exists!"
 msgstr "\"%s\" profil već postoji"
 
 #: ../bin/draknetprofile:179
-#, fuzzy, c-format
+#, c-format
 msgid "New profile created"
-msgstr "Novi profil..."
+msgstr "Napravljen je novi profil"
 
 #: ../bin/draknetprofile:179
 #, c-format
@@ -780,6 +786,8 @@ msgid ""
 "usual, and all your network settings from now on will be saved into this "
 "profile."
 msgstr ""
+"Sada koristite mrežni profil %s. Možete konfigurirati sustav kao i obično, i "
+"sve vaše mrežne postavke će biti spremljene u ovom profilu."
 
 #: ../bin/draknetprofile:190 ../lib/network/drakconnect/global.pm:35
 #: ../lib/network/drakvpn.pm:73 ../lib/network/drakvpn.pm:103
@@ -791,7 +799,7 @@ msgstr "Upozorenje"
 #: ../bin/draknetprofile:190
 #, c-format
 msgid "Are you sure you want to delete the default profile?"
-msgstr ""
+msgstr "Jeste li sigurni da želite izbrisati zadani profil?"
 
 #: ../bin/draknetprofile:193
 #, c-format
@@ -799,6 +807,7 @@ msgid ""
 "You can not delete the current profile. Please switch to a different profile "
 "first."
 msgstr ""
+"Ne možete izbrisati trenutni profil. Najprije se prebacite na drugi profil."
 
 #: ../bin/draknetprofile:201 ../bin/draknfs:345
 #, c-format
@@ -806,19 +815,19 @@ msgid "Advanced"
 msgstr "&Napredno"
 
 #: ../bin/draknetprofile:205
-#, fuzzy, c-format
+#, c-format
 msgid "Select the netprofile modules:"
-msgstr "Odaberite mrežni međusklop"
+msgstr ""
 
 #: ../bin/draknetprofile:218
 #, c-format
 msgid "This tool allows you to control network profiles."
-msgstr ""
+msgstr "Ovaj vam alat dopušta kontrolu mrežnih profila."
 
 #: ../bin/draknetprofile:219
-#, fuzzy, c-format
+#, c-format
 msgid "Select a network profile:"
-msgstr "Odaberite spooler pisača"
+msgstr "Odaberite profil mreže:"
 
 #: ../bin/draknetprofile:223
 #, c-format
@@ -856,9 +865,9 @@ msgid "allow real remote root access"
 msgstr ""
 
 #: ../bin/draknfs:81
-#, fuzzy, c-format
+#, c-format
 msgid "NFS server"
-msgstr "DNS poslužitelj"
+msgstr "NFS poslužitelj"
 
 #: ../bin/draknfs:81
 #, c-format
@@ -871,9 +880,9 @@ msgid "Error Restarting/Reloading NFS server"
 msgstr ""
 
 #: ../bin/draknfs:98 ../bin/draksambashare:226
-#, fuzzy, c-format
+#, c-format
 msgid "Directory selection"
-msgstr "Smjer"
+msgstr "Odabir direktorija"
 
 #: ../bin/draknfs:106 ../bin/draksambashare:234
 #, c-format
@@ -939,9 +948,9 @@ msgid "Synchronous access:"
 msgstr ""
 
 #: ../bin/draknfs:168
-#, fuzzy, c-format
+#, c-format
 msgid "Secured Connection:"
-msgstr "Internet veza"
+msgstr "Osigurana veza:"
 
 #: ../bin/draknfs:169
 #, c-format
@@ -956,7 +965,7 @@ msgstr ""
 #: ../bin/draknfs:172
 #, c-format
 msgid "Advanced Options"
-msgstr ""
+msgstr "Napredne opcije"
 
 #: ../bin/draknfs:173
 #, c-format
@@ -1015,7 +1024,7 @@ msgstr ""
 #: ../bin/draknfs:368
 #, c-format
 msgid "NFS directory"
-msgstr ""
+msgstr "NFS direktorij"
 
 #: ../bin/draknfs:369 ../bin/draksambashare:363 ../bin/draksambashare:569
 #: ../bin/draksambashare:747
@@ -1024,14 +1033,14 @@ msgid "Directory:"
 msgstr "Di&rektorij:"
 
 #: ../bin/draknfs:370
-#, fuzzy, c-format
+#, c-format
 msgid "Host access"
-msgstr "Ime računala"
+msgstr ""
 
 #: ../bin/draknfs:371
 #, c-format
 msgid "Access:"
-msgstr ""
+msgstr "Pristup:"
 
 #: ../bin/draknfs:372
 #, c-format
@@ -1054,14 +1063,14 @@ msgid "Anonymous Group ID:"
 msgstr ""
 
 #: ../bin/draknfs:418
-#, fuzzy, c-format
+#, c-format
 msgid "Please specify a directory to share."
-msgstr "Upišite ime hosta ili IP."
+msgstr ""
 
 #: ../bin/draknfs:420
 #, c-format
 msgid "Can't create this directory."
-msgstr ""
+msgstr "Ne mogu napraviti ovaj direktorij"
 
 #: ../bin/draknfs:423
 #, c-format
@@ -1069,19 +1078,19 @@ msgid "You must specify hosts access."
 msgstr ""
 
 #: ../bin/draknfs:463
-#, fuzzy, c-format
+#, c-format
 msgid "Remove entry?"
-msgstr "Ukloni"
+msgstr "Ukloniti unos?"
 
 #: ../bin/draknfs:463
-#, fuzzy, c-format
+#, c-format
 msgid "Remove %s"
-msgstr "Ukloni"
+msgstr "Ukloni %s"
 
 #: ../bin/draknfs:503
 #, c-format
 msgid "Share Directory"
-msgstr ""
+msgstr "Dijeli direktorij"
 
 #: ../bin/draknfs:503
 #, c-format
@@ -1096,7 +1105,7 @@ msgstr "Općenite postavke"
 #: ../bin/draknfs:503
 #, c-format
 msgid "Custom Options"
-msgstr ""
+msgstr "Prilagođene opcije"
 
 #: ../bin/draknfs:515 ../bin/draksambashare:378 ../bin/draksambashare:606
 #: ../bin/draksambashare:772
@@ -1112,7 +1121,7 @@ msgstr ""
 #: ../bin/draknfs:537
 #, c-format
 msgid "Manage NFS shares"
-msgstr ""
+msgstr "Upravljajte NFS dijeljenjima"
 
 #: ../bin/draknfs:562 ../bin/draksambashare:1339
 #, c-format
@@ -1135,19 +1144,19 @@ msgid "<control>Q"
 msgstr "<control>Q"
 
 #: ../bin/draknfs:565
-#, fuzzy, c-format
+#, c-format
 msgid "_NFS Server"
-msgstr "DNS poslužitelj"
+msgstr "_NFS poslužitelj"
 
 #: ../bin/draknfs:566 ../bin/draksambashare:1345
 #, c-format
 msgid "_Restart"
-msgstr ""
+msgstr "_Ponovno pokreni"
 
 #: ../bin/draknfs:567 ../bin/draksambashare:1346
 #, c-format
 msgid "R_eload"
-msgstr ""
+msgstr "U_čitaj"
 
 #: ../bin/draknfs:595
 #, c-format
@@ -1185,9 +1194,9 @@ msgid "Share name"
 msgstr "Ime sharea"
 
 #: ../bin/draksambashare:74 ../bin/draksambashare:102
-#, fuzzy, c-format
+#, c-format
 msgid "Share directory"
-msgstr "Nije mapa"
+msgstr "Dijeli direktorij"
 
 #: ../bin/draksambashare:75 ../bin/draksambashare:103
 #: ../bin/draksambashare:120
@@ -1196,9 +1205,9 @@ msgid "Comment"
 msgstr "Komentar"
 
 #: ../bin/draksambashare:76 ../bin/draksambashare:121
-#, fuzzy, c-format
+#, c-format
 msgid "Browseable"
-msgstr "Potraži"
+msgstr ""
 
 #: ../bin/draksambashare:77
 #, c-format
@@ -1206,50 +1215,50 @@ msgid "Public"
 msgstr "Javno"
 
 #: ../bin/draksambashare:78 ../bin/draksambashare:126
-#, fuzzy, c-format
+#, c-format
 msgid "Writable"
-msgstr "Zapisivanje"
+msgstr ""
 
 #: ../bin/draksambashare:79 ../bin/draksambashare:167
-#, fuzzy, c-format
+#, c-format
 msgid "Create mask"
-msgstr "Stvori"
+msgstr ""
 
 #: ../bin/draksambashare:80 ../bin/draksambashare:168
-#, fuzzy, c-format
+#, c-format
 msgid "Directory mask"
-msgstr "Povrati sve pohrane"
+msgstr ""
 
 #: ../bin/draksambashare:81
-#, fuzzy, c-format
+#, c-format
 msgid "Read list"
-msgstr "Čitaj"
+msgstr ""
 
 #: ../bin/draksambashare:82 ../bin/draksambashare:127
 #: ../bin/draksambashare:583
-#, fuzzy, c-format
+#, c-format
 msgid "Write list"
-msgstr "Zapisivanje"
+msgstr ""
 
 #: ../bin/draksambashare:83 ../bin/draksambashare:159
-#, fuzzy, c-format
+#, c-format
 msgid "Admin users"
-msgstr "Dodaj korisnika"
+msgstr ""
 
 #: ../bin/draksambashare:84 ../bin/draksambashare:160
-#, fuzzy, c-format
+#, c-format
 msgid "Valid users"
-msgstr "Dodaj korisnika"
+msgstr "Valjani korisnici"
 
 #: ../bin/draksambashare:85
-#, fuzzy, c-format
+#, c-format
 msgid "Inherit Permissions"
-msgstr "Privilegije"
+msgstr ""
 
 #: ../bin/draksambashare:86 ../bin/draksambashare:161
-#, fuzzy, c-format
+#, c-format
 msgid "Hide dot files"
-msgstr "Sakrij datoteku"
+msgstr ""
 
 #: ../bin/draksambashare:87 ../bin/draksambashare:162
 #, c-format
@@ -1257,24 +1266,24 @@ msgid "Hide files"
 msgstr "Sakrij datoteku"
 
 #: ../bin/draksambashare:88 ../bin/draksambashare:166
-#, fuzzy, c-format
+#, c-format
 msgid "Preserve case"
-msgstr "Podešenja"
+msgstr " "
 
 #: ../bin/draksambashare:89
-#, fuzzy, c-format
+#, c-format
 msgid "Force create mode"
-msgstr "Model vašeg pisača"
+msgstr ""
 
 #: ../bin/draksambashare:90
-#, fuzzy, c-format
+#, c-format
 msgid "Force group"
-msgstr "Radna grupa"
+msgstr ""
 
 #: ../bin/draksambashare:91 ../bin/draksambashare:165
-#, fuzzy, c-format
+#, c-format
 msgid "Default case"
-msgstr "Podrazumijevani pisač"
+msgstr ""
 
 #: ../bin/draksambashare:118
 #, c-format
@@ -1292,14 +1301,14 @@ msgid "Printable"
 msgstr "Dozvoljena štampa"
 
 #: ../bin/draksambashare:123
-#, fuzzy, c-format
+#, c-format
 msgid "Print Command"
-msgstr "Naredba"
+msgstr "Naredba ispisa"
 
 #: ../bin/draksambashare:124
-#, fuzzy, c-format
+#, c-format
 msgid "LPQ command"
-msgstr "Naredba"
+msgstr "LPQ naredba"
 
 #: ../bin/draksambashare:125
 #, c-format
@@ -1308,9 +1317,9 @@ msgstr ""
 
 #: ../bin/draksambashare:128 ../bin/draksambashare:169
 #: ../bin/draksambashare:584
-#, fuzzy, c-format
+#, c-format
 msgid "Inherit permissions"
-msgstr "Privilegije"
+msgstr ""
 
 #: ../bin/draksambashare:129
 #, c-format
@@ -1318,29 +1327,29 @@ msgid "Printing"
 msgstr "Ispisivanje"
 
 #: ../bin/draksambashare:130
-#, fuzzy, c-format
+#, c-format
 msgid "Create mode"
-msgstr "Memorija kartice (DMA)"
+msgstr ""
 
 #: ../bin/draksambashare:131
-#, fuzzy, c-format
+#, c-format
 msgid "Use client driver"
-msgstr "X poslužitelj"
+msgstr ""
 
 #: ../bin/draksambashare:157
-#, fuzzy, c-format
+#, c-format
 msgid "Read List"
-msgstr "Popis za uklanjanje"
+msgstr ""
 
 #: ../bin/draksambashare:158
-#, fuzzy, c-format
+#, c-format
 msgid "Write List"
-msgstr "Zapisivanje"
+msgstr ""
 
 #: ../bin/draksambashare:163
-#, fuzzy, c-format
+#, c-format
 msgid "Force Group"
-msgstr "Grupa"
+msgstr ""
 
 #: ../bin/draksambashare:164
 #, c-format
@@ -1360,7 +1369,7 @@ msgstr ""
 #: ../bin/draksambashare:186
 #, c-format
 msgid "This is a simple tool to easily manage Samba configuration."
-msgstr ""
+msgstr "Ovo je jednostavan alat za lako upravljanje Samba konfiguracijom."
 
 #: ../bin/draksambashare:188
 #, c-format
@@ -1395,14 +1404,14 @@ msgid "DrakSamba add entry"
 msgstr ""
 
 #: ../bin/draksambashare:358
-#, fuzzy, c-format
+#, c-format
 msgid "Add a share"
-msgstr "Dodaj modul"
+msgstr ""
 
 #: ../bin/draksambashare:361
-#, fuzzy, c-format
+#, c-format
 msgid "Name of the share:"
-msgstr "Ime pisača"
+msgstr ""
 
 #: ../bin/draksambashare:362 ../bin/draksambashare:568
 #: ../bin/draksambashare:748
@@ -1424,9 +1433,9 @@ msgstr ""
 
 #: ../bin/draksambashare:384 ../bin/draksambashare:604
 #: ../bin/draksambashare:770
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter a Comment for this share."
-msgstr "Upišite ime hosta ili IP."
+msgstr ""
 
 #: ../bin/draksambashare:421
 #, c-format
@@ -1450,14 +1459,14 @@ msgid ""
 msgstr ""
 
 #: ../bin/draksambashare:436
-#, fuzzy, c-format
+#, c-format
 msgid "A PDF generator already exists."
-msgstr "\"%s\" profil već postoji"
+msgstr ""
 
 #: ../bin/draksambashare:460
-#, fuzzy, c-format
+#, c-format
 msgid "Printers and print$ already exist."
-msgstr "\"%s\" profil već postoji"
+msgstr ""
 
 #: ../bin/draksambashare:510 ../bin/draksambashare:1184
 #, c-format
@@ -1490,14 +1499,14 @@ msgid "Printer name:"
 msgstr "Ime pisača:"
 
 #: ../bin/draksambashare:573 ../bin/draksambashare:753
-#, fuzzy, c-format
+#, c-format
 msgid "Writable:"
-msgstr "Zapisivanje"
+msgstr ""
 
 #: ../bin/draksambashare:574 ../bin/draksambashare:754
-#, fuzzy, c-format
+#, c-format
 msgid "Browseable:"
-msgstr "Potraži"
+msgstr ""
 
 #: ../bin/draksambashare:579 ../bin/draksambashare:758
 #, c-format
@@ -1505,9 +1514,9 @@ msgid "Advanced options"
 msgstr "Napredne mogućnosti"
 
 #: ../bin/draksambashare:581
-#, fuzzy, c-format
+#, c-format
 msgid "Printer access"
-msgstr "Internet pristup"
+msgstr ""
 
 #: ../bin/draksambashare:585
 #, c-format
@@ -1515,9 +1524,9 @@ msgid "Guest ok:"
 msgstr ""
 
 #: ../bin/draksambashare:586
-#, fuzzy, c-format
+#, c-format
 msgid "Create mode:"
-msgstr "Memorija kartice (DMA)"
+msgstr ""
 
 #: ../bin/draksambashare:590
 #, c-format
@@ -1530,14 +1539,14 @@ msgid "Print command:"
 msgstr ""
 
 #: ../bin/draksambashare:593
-#, fuzzy, c-format
+#, c-format
 msgid "LPQ command:"
-msgstr "Naredba"
+msgstr ""
 
 #: ../bin/draksambashare:594
-#, fuzzy, c-format
+#, c-format
 msgid "Printing:"
-msgstr "Upozorenje"
+msgstr ""
 
 #: ../bin/draksambashare:610
 #, c-format
@@ -1560,14 +1569,14 @@ msgid "User options (user access, mask option, force mode)"
 msgstr ""
 
 #: ../bin/draksambashare:699
-#, fuzzy, c-format
+#, c-format
 msgid "Samba user access"
-msgstr "NIS Poslužitelj"
+msgstr ""
 
 #: ../bin/draksambashare:707
-#, fuzzy, c-format
+#, c-format
 msgid "Mask options"
-msgstr "Opcije"
+msgstr ""
 
 #: ../bin/draksambashare:719
 #, c-format
@@ -1575,19 +1584,19 @@ msgid "File options (hide files, case)"
 msgstr ""
 
 #: ../bin/draksambashare:721
-#, fuzzy, c-format
+#, c-format
 msgid "Display options"
-msgstr "Odredi postavke"
+msgstr ""
 
 #: ../bin/draksambashare:743
-#, fuzzy, c-format
+#, c-format
 msgid "Samba share directory"
-msgstr "Nije mapa"
+msgstr ""
 
 #: ../bin/draksambashare:746
-#, fuzzy, c-format
+#, c-format
 msgid "Share name:"
-msgstr "Ime sharea"
+msgstr ""
 
 #: ../bin/draksambashare:752
 #, c-format
@@ -1641,9 +1650,9 @@ msgid "Samba Wizard"
 msgstr ""
 
 #: ../bin/draksambashare:1039
-#, fuzzy, c-format
+#, c-format
 msgid "Samba server configuration Wizard"
-msgstr "Postava upozorenja na poštu/SMS"
+msgstr ""
 
 #: ../bin/draksambashare:1039
 #, c-format
@@ -1683,9 +1692,9 @@ msgid "Wins support:"
 msgstr ""
 
 #: ../bin/draksambashare:1073
-#, fuzzy, c-format
+#, c-format
 msgid "admin users:"
-msgstr "Dodaj korisnika"
+msgstr ""
 
 #: ../bin/draksambashare:1073
 #, c-format
@@ -1713,9 +1722,9 @@ msgid "The domain is wrong."
 msgstr ""
 
 #: ../bin/draksambashare:1085
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup"
-msgstr "Radna grupa"
+msgstr ""
 
 #: ../bin/draksambashare:1085
 #, c-format
@@ -1723,14 +1732,14 @@ msgid "Samba needs to know the Windows Workgroup it will serve."
 msgstr ""
 
 #: ../bin/draksambashare:1092 ../bin/draksambashare:1159
-#, fuzzy, c-format
+#, c-format
 msgid "Workgroup:"
-msgstr "Radna grupa"
+msgstr ""
 
 #: ../bin/draksambashare:1093
-#, fuzzy, c-format
+#, c-format
 msgid "Netbios name:"
-msgstr "Ime računala:"
+msgstr ""
 
 #: ../bin/draksambashare:1097
 #, c-format
@@ -1738,9 +1747,9 @@ msgid "The Workgroup is wrong."
 msgstr ""
 
 #: ../bin/draksambashare:1104 ../bin/draksambashare:1114
-#, fuzzy, c-format
+#, c-format
 msgid "Security mode"
-msgstr "Model vašeg pisača"
+msgstr ""
 
 #: ../bin/draksambashare:1104
 #, c-format
@@ -1763,9 +1772,9 @@ msgid ""
 msgstr ""
 
 #: ../bin/draksambashare:1115
-#, fuzzy, c-format
+#, c-format
 msgid "Hosts allow"
-msgstr "Ime računala"
+msgstr ""
 
 #: ../bin/draksambashare:1120
 #, c-format
@@ -1816,9 +1825,9 @@ msgid "Max Log size: put a capping on the size of the log files (in Kb)."
 msgstr ""
 
 #: ../bin/draksambashare:1143 ../bin/draksambashare:1161
-#, fuzzy, c-format
+#, c-format
 msgid "Log file:"
-msgstr "Profili"
+msgstr ""
 
 #: ../bin/draksambashare:1144
 #, c-format
@@ -1826,9 +1835,9 @@ msgid "Max log size:"
 msgstr ""
 
 #: ../bin/draksambashare:1145
-#, fuzzy, c-format
+#, c-format
 msgid "Log level:"
-msgstr "Razina"
+msgstr ""
 
 #: ../bin/draksambashare:1150
 #, c-format
@@ -1841,6 +1850,8 @@ msgid ""
 "To accept these values, and configure your server, click the Next button or "
 "use the Back button to correct them."
 msgstr ""
+"Da prihvatite ove vrijednosti i konfigurirate vaš poslužitelj, kliknite "
+"Dalje ili upotrijebite dugme Nazad da popravite unos."
 
 #: ../bin/draksambashare:1150
 #, c-format
@@ -1862,7 +1873,7 @@ msgstr ""
 #: ../bin/draksambashare:1162
 #, c-format
 msgid " "
-msgstr ""
+msgstr " "
 
 #: ../bin/draksambashare:1163
 #, c-format
@@ -1890,19 +1901,19 @@ msgid "The Samba wizard has unexpectedly failed:"
 msgstr ""
 
 #: ../bin/draksambashare:1270
-#, fuzzy, c-format
+#, c-format
 msgid "Manage Samba configuration"
-msgstr "Postava upozorenja na poštu/SMS"
+msgstr ""
 
 #: ../bin/draksambashare:1343
-#, fuzzy, c-format
+#, c-format
 msgid "_Samba Server"
-msgstr "Posljužitelj weba"
+msgstr "_Samba poslužitelj"
 
 #: ../bin/draksambashare:1344
-#, fuzzy, c-format
+#, c-format
 msgid "_Configure"
-msgstr "Podešavanje"
+msgstr "_Konfiguriraj"
 
 #: ../bin/draksambashare:1348
 #, c-format
@@ -1910,9 +1921,9 @@ msgid "_Help"
 msgstr "_Pomoć"
 
 #: ../bin/draksambashare:1349
-#, fuzzy, c-format
+#, c-format
 msgid "_Samba Documentation"
-msgstr "Igračka radna stanica"
+msgstr "_Samba dokumentacija"
 
 #: ../bin/draksambashare:1353
 #, c-format
@@ -1997,24 +2008,24 @@ msgid "DrakSamba manage Samba shares"
 msgstr ""
 
 #: ../bin/net_applet:93
-#, fuzzy, c-format
+#, c-format
 msgid "Network is up on interface %s."
-msgstr "Mrežni međusklop"
+msgstr ""
 
 #: ../bin/net_applet:94
-#, fuzzy, c-format
+#, c-format
 msgid "IP address: %s"
-msgstr "IP adresa:"
+msgstr ""
 
 #: ../bin/net_applet:95
-#, fuzzy, c-format
+#, c-format
 msgid "Gateway: %s"
-msgstr "Pristupnik:"
+msgstr ""
 
 #: ../bin/net_applet:96
-#, fuzzy, c-format
+#, c-format
 msgid "DNS: %s"
-msgstr "DNS"
+msgstr ""
 
 #: ../bin/net_applet:97
 #, c-format
@@ -2022,43 +2033,41 @@ msgid "Connected to %s (link level: %d %%)"
 msgstr ""
 
 #: ../bin/net_applet:99
-#, fuzzy, c-format
+#, c-format
 msgid "Network is down on interface %s."
-msgstr "Mrežni međusklop"
+msgstr ""
 
 #: ../bin/net_applet:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You do not have any configured Internet connection.\n"
 "Run the \"%s\" assistant from the Mageia Linux Control Center"
 msgstr ""
-"Ovo sučelje još nije podešeno.\n"
-"Pokrenite čarobnjak za postavu u glavnom prozoru"
 
 #: ../bin/net_applet:102 ../lib/network/drakconnect/global.pm:37
-#, fuzzy, c-format
+#, c-format
 msgid "Set up a new network interface (LAN, ISDN, ADSL, ...)"
-msgstr "Odaberite mrežni međusklop"
+msgstr "Postavi novo mrežno sučelje "
 
 #: ../bin/net_applet:104 ../lib/network/connection_manager.pm:190
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting..."
-msgstr "Poveži..."
+msgstr ""
 
 #: ../bin/net_applet:130
-#, fuzzy, c-format
+#, c-format
 msgid "Connect %s"
-msgstr "Poveži"
+msgstr ""
 
 #: ../bin/net_applet:134
-#, fuzzy, c-format
+#, c-format
 msgid "Disconnect %s"
-msgstr "Odspoji"
+msgstr ""
 
 #: ../bin/net_applet:138
-#, fuzzy, c-format
+#, c-format
 msgid "Monitor Network"
-msgstr "Povrati korisnike"
+msgstr ""
 
 #: ../bin/net_applet:146
 #, c-format
@@ -2066,9 +2075,9 @@ msgid "Manage wireless networks"
 msgstr ""
 
 #: ../bin/net_applet:150
-#, fuzzy, c-format
+#, c-format
 msgid "Manage VPN connections"
-msgstr "Kablovska veza"
+msgstr ""
 
 #: ../bin/net_applet:154
 #, c-format
@@ -2076,9 +2085,9 @@ msgid "Configure Network"
 msgstr "Podesi mrežu"
 
 #: ../bin/net_applet:158
-#, fuzzy, c-format
+#, c-format
 msgid "Watched interface"
-msgstr "Međusklop"
+msgstr ""
 
 #: ../bin/net_applet:159 ../bin/net_applet:162 ../bin/net_applet:165
 #, c-format
@@ -2098,19 +2107,19 @@ msgstr "Profili"
 #: ../bin/net_applet:200 ../lib/network/connection.pm:236
 #: ../lib/network/drakvpn.pm:65 ../lib/network/vpn/openvpn.pm:368
 #: ../lib/network/vpn/openvpn.pm:382 ../lib/network/vpn/openvpn.pm:393
-#, fuzzy, c-format
+#, c-format
 msgid "VPN connection"
-msgstr "LAN veza"
+msgstr ""
 
 #: ../bin/net_applet:357 ../bin/net_applet:562
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless networks"
-msgstr "Bežična veze"
+msgstr ""
 
 #: ../bin/net_applet:438
-#, fuzzy, c-format
+#, c-format
 msgid "Network connection"
-msgstr "Još opcija"
+msgstr ""
 
 #: ../bin/net_applet:525
 #, c-format
@@ -2145,7 +2154,7 @@ msgstr ""
 #: ../lib/network/connection.pm:170
 #, c-format
 msgid "Access settings"
-msgstr ""
+msgstr "Postavke pristupa"
 
 #: ../lib/network/connection.pm:171
 #, c-format
@@ -2209,14 +2218,14 @@ msgid "Allow interface to be controlled by Network Manager"
 msgstr ""
 
 #: ../lib/network/connection.pm:262 ../lib/network/drakconnect/edit.pm:293
-#, fuzzy, c-format
+#, c-format
 msgid "Metric"
-msgstr "ograniči"
+msgstr ""
 
 #: ../lib/network/connection.pm:263
 #, c-format
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: ../lib/network/connection.pm:264
 #, c-format
@@ -2246,9 +2255,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection.pm:269
-#, fuzzy, c-format
+#, c-format
 msgid "Ethtool options"
-msgstr "Odredi postavke"
+msgstr ""
 
 #: ../lib/network/connection.pm:270
 #, c-format
@@ -2256,9 +2265,9 @@ msgid "Use ethtool to pass options to the NIC. eg. \"autoneg off wol g\""
 msgstr ""
 
 #: ../lib/network/connection.pm:354
-#, fuzzy, c-format
+#, c-format
 msgid "Link detected on interface %s"
-msgstr "detektiran na portu %s"
+msgstr ""
 
 #: ../lib/network/connection.pm:355 ../lib/network/connection/ethernet.pm:304
 #, c-format
@@ -2271,9 +2280,9 @@ msgid "Cable"
 msgstr ""
 
 #: ../lib/network/connection/cable.pm:12
-#, fuzzy, c-format
+#, c-format
 msgid "Cable modem"
-msgstr "Memorija kartice (DMA)"
+msgstr ""
 
 #: ../lib/network/connection/cable.pm:43
 #, c-format
@@ -2303,12 +2312,12 @@ msgstr "Korisnička Lozinka"
 #: ../lib/network/connection/cellular.pm:76
 #, c-format
 msgid "Access Point Name"
-msgstr ""
+msgstr "Ime pristupne točke"
 
 #: ../lib/network/connection/cellular_bluetooth.pm:11
 #, c-format
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: ../lib/network/connection/cellular_bluetooth.pm:12
 #, c-format
@@ -2331,16 +2340,14 @@ msgid "PIN number (4 digits). Leave empty if PIN is not required."
 msgstr ""
 
 #: ../lib/network/connection/cellular_card.pm:217
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to open device %s"
-msgstr "Ne mogu napraviti fork: %s"
+msgstr ""
 
 #: ../lib/network/connection/cellular_card.pm:249
-#, fuzzy, c-format
+#, c-format
 msgid "Please check that your SIM card is inserted."
 msgstr ""
-"\n"
-"Provjerite sve opcije koje trebate.\n"
 
 #: ../lib/network/connection/cellular_card.pm:260
 #, c-format
@@ -2352,7 +2359,7 @@ msgstr ""
 #: ../lib/network/connection/dvb.pm:10
 #, c-format
 msgid "DVB"
-msgstr ""
+msgstr "DVB"
 
 #: ../lib/network/connection/dvb.pm:11
 #, c-format
@@ -2385,9 +2392,9 @@ msgid "Wired (Ethernet)"
 msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:31
-#, fuzzy, c-format
+#, c-format
 msgid "Virtual interface"
-msgstr "Mrežni međusklop"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:61
 #, c-format
@@ -2400,14 +2407,14 @@ msgid "Manual configuration"
 msgstr "Ručno namještanje"
 
 #: ../lib/network/connection/ethernet.pm:72
-#, fuzzy, c-format
+#, c-format
 msgid "Automatic IP (BOOTP/DHCP)"
-msgstr "Automatski IP"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:133
-#, fuzzy, c-format
+#, c-format
 msgid "IP settings"
-msgstr "Postavka opterećenja"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:146
 #, c-format
@@ -2429,24 +2436,24 @@ msgstr "Gateway"
 
 #: ../lib/network/connection/ethernet.pm:153
 #: ../lib/network/drakconnect/edit.pm:213
-#, fuzzy, c-format
+#, c-format
 msgid "Get DNS servers from DHCP"
-msgstr "IP (ovog) DHCP poslužitelja"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:155
-#, fuzzy, c-format
+#, c-format
 msgid "DNS server 1"
-msgstr "DNS poslužitelj"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:156
-#, fuzzy, c-format
+#, c-format
 msgid "DNS server 2"
-msgstr "DNS poslužitelj"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:157
-#, fuzzy, c-format
+#, c-format
 msgid "Search domain"
-msgstr "NIS domena"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:158
 #, c-format
@@ -2461,9 +2468,9 @@ msgstr "DHCP klijent"
 
 #: ../lib/network/connection/ethernet.pm:161
 #: ../lib/network/drakconnect/edit.pm:210
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP timeout (in seconds)"
-msgstr "Vrijeme čekanja veze (u sek)"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:162
 #: ../lib/network/drakconnect/edit.pm:214
@@ -2479,9 +2486,9 @@ msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:164
 #: ../lib/network/drakconnect/edit.pm:206
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP host name"
-msgstr "Ime računala"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:166
 #, c-format
@@ -2496,9 +2503,9 @@ msgstr "IP adresa treba biti oblika 1.2.3.4"
 
 #: ../lib/network/connection/ethernet.pm:182
 #: ../lib/network/drakconnect/edit.pm:511
-#, fuzzy, c-format
+#, c-format
 msgid "Netmask should be in format 255.255.224.0"
-msgstr "IP adresa treba biti oblika 1.2.3.4"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:187
 #, c-format
@@ -2515,9 +2522,9 @@ msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:223
 #: ../lib/network/drakconnect/edit.pm:204
-#, fuzzy, c-format
+#, c-format
 msgid "Assign host name from DHCP server (or generate a unique one)"
-msgstr "Upišite ime hosta ili IP."
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:224
 #, c-format
@@ -2537,9 +2544,9 @@ msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:245
 #: ../lib/network/drakconnect/edit.pm:271
-#, fuzzy, c-format
+#, c-format
 msgid "Network Hotplugging"
-msgstr "Mrežne postavke"
+msgstr ""
 
 #: ../lib/network/connection/ethernet.pm:249
 #, c-format
@@ -3348,9 +3355,9 @@ msgstr "Moldavija"
 #: ../lib/network/connection/providers/cellular_extra.pm:1420
 #: ../lib/network/connection/providers/cellular_extra.pm:1426
 #: ../lib/network/connection/providers/cellular_extra.pm:1432
-#, fuzzy, c-format
+#, c-format
 msgid "Montenegro"
-msgstr "Srbija i Crna Gora"
+msgstr ""
 
 #: ../lib/network/connection/providers/cellular_extra.pm:1438
 #, c-format
@@ -3530,9 +3537,9 @@ msgstr "Rumunjska"
 #: ../lib/network/connection/providers/cellular_extra.pm:1806
 #: ../lib/network/connection/providers/cellular_extra.pm:1812
 #: ../lib/network/connection/providers/cellular_extra.pm:1818
-#, fuzzy, c-format
+#, c-format
 msgid "Serbia"
-msgstr "Servis"
+msgstr ""
 
 #: ../lib/network/connection/providers/cellular_extra.pm:1824
 #: ../lib/network/connection/providers/cellular_extra.pm:1831
@@ -3711,9 +3718,9 @@ msgstr "Alžir"
 #: ../lib/network/connection/providers/xdsl.pm:681
 #: ../lib/network/connection/providers/xdsl.pm:800
 #: ../lib/network/connection/providers/xdsl.pm:1271
-#, fuzzy, c-format
+#, c-format
 msgid "Any"
-msgstr "bilo kakav"
+msgstr ""
 
 #: ../lib/network/connection/providers/xdsl.pm:1044
 #, c-format
@@ -3731,9 +3738,9 @@ msgid "Wireless"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:15
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless (Wi-Fi)"
-msgstr "Bežična veze"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:31
 #, c-format
@@ -3773,16 +3780,16 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:457
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless settings"
-msgstr "Bežična veze"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:462
 #: ../lib/network/connection_manager/gtk.pm:66
 #: ../lib/network/drakconnect/edit.pm:237
-#, fuzzy, c-format
+#, c-format
 msgid "Operating Mode"
-msgstr "Ekspertni mod"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
@@ -3790,9 +3797,9 @@ msgid "Ad-hoc"
 msgstr "Ad-hoc"
 
 #: ../lib/network/connection/wireless.pm:463
-#, fuzzy, c-format
+#, c-format
 msgid "Managed"
-msgstr "Odaberite jezik"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:463
 #, c-format
@@ -3832,9 +3839,9 @@ msgid "Encryption key"
 msgstr "Enkripcijski ključ"
 
 #: ../lib/network/connection/wireless.pm:473
-#, fuzzy, c-format
+#, c-format
 msgid "Hide password"
-msgstr "Lozinka"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:475
 #, c-format
@@ -3842,9 +3849,9 @@ msgid "Force using this key as ASCII string (e.g. for Livebox)"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:482
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Login/Username"
-msgstr "Korisničko ime"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:484
 #, c-format
@@ -3855,9 +3862,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:487
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Password"
-msgstr "Lozinka"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:490
 #, c-format
@@ -3893,9 +3900,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:510
-#, fuzzy, c-format
+#, c-format
 msgid "EAP client private key"
-msgstr "X poslužitelj"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:512
 #, c-format
@@ -3922,9 +3929,9 @@ msgstr ""
 
 #: ../lib/network/connection/wireless.pm:522
 #: ../lib/network/drakconnect/edit.pm:239
-#, fuzzy, c-format
+#, c-format
 msgid "Network ID"
-msgstr "Mreža"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:523
 #: ../lib/network/drakconnect/edit.pm:240
@@ -3966,9 +3973,9 @@ msgstr ""
 
 #: ../lib/network/connection/wireless.pm:534
 #: ../lib/network/drakconnect/edit.pm:254
-#, fuzzy, c-format
+#, c-format
 msgid "Fragmentation"
-msgstr "Igračka radna stanica"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:535
 #: ../lib/network/drakconnect/edit.pm:255
@@ -4030,15 +4037,15 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:565
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Protocol"
-msgstr "Protokol"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:566
 #: ../lib/network/connection/wireless.pm:571
-#, fuzzy, c-format
+#, c-format
 msgid "Auto Detect"
-msgstr "Koristi auto detekciju"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:566
 #, c-format
@@ -4046,9 +4053,9 @@ msgid "WPA2"
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:566
-#, fuzzy, c-format
+#, c-format
 msgid "WPA"
-msgstr "PAP"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:568
 #, c-format
@@ -4058,14 +4065,14 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:570
-#, fuzzy, c-format
+#, c-format
 msgid "EAP Mode"
-msgstr "Način rada"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:571
-#, fuzzy, c-format
+#, c-format
 msgid "PEAP"
-msgstr "PAP"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:571
 #, c-format
@@ -4078,9 +4085,9 @@ msgid "TLS"
 msgstr "TLS"
 
 #: ../lib/network/connection/wireless.pm:571
-#, fuzzy, c-format
+#, c-format
 msgid "MSCHAPV2"
-msgstr "CHAP"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:571
 #, c-format
@@ -4152,9 +4159,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/connection/wireless.pm:588
-#, fuzzy, c-format
+#, c-format
 msgid "EAP CA certificate"
-msgstr "Tip certifikata"
+msgstr ""
 
 #: ../lib/network/connection/wireless.pm:590
 #, c-format
@@ -4179,7 +4186,7 @@ msgid ""
 "the server certificate is only accepted if it contains this\n"
 "string in the subject.  The subject string is in following format:\n"
 "/C=US/ST=CA/L=San Francisco/CN=Test AS/emailAddress=as@example.com"
-msgstr ""
+msgstr " "
 
 #: ../lib/network/connection/wireless.pm:602
 #, c-format
@@ -4253,14 +4260,14 @@ msgid "Lost association to wireless network on interface %s"
 msgstr ""
 
 #: ../lib/network/connection/xdsl.pm:9
-#, fuzzy, c-format
+#, c-format
 msgid "DSL"
-msgstr "SSL"
+msgstr ""
 
 #: ../lib/network/connection/xdsl.pm:98 ../lib/network/netconnect.pm:789
-#, fuzzy, c-format
+#, c-format
 msgid "Alcatel speedtouch USB modem"
-msgstr "Alcatel speedtouch usb"
+msgstr ""
 
 #: ../lib/network/connection/xdsl.pm:126
 #, c-format
@@ -4289,19 +4296,19 @@ msgid "Dynamic Host Configuration Protocol (DHCP)"
 msgstr "Dynamic Host Configuration Protocol (DHCP)"
 
 #: ../lib/network/connection/xdsl.pm:210
-#, fuzzy, c-format
+#, c-format
 msgid "Manual TCP/IP configuration"
-msgstr "Ručno namještanje"
+msgstr "Ručna TCP/IP konfiguracija"
 
 #: ../lib/network/connection/xdsl.pm:211
 #, c-format
 msgid "Point to Point Tunneling Protocol (PPTP)"
-msgstr ""
+msgstr "Point to Point Tunneling Protocol (PPTP)"
 
 #: ../lib/network/connection/xdsl.pm:212
 #, c-format
 msgid "PPP over Ethernet (PPPoE)"
-msgstr ""
+msgstr "PPP over Ethernet (PPPoE)"
 
 #: ../lib/network/connection/xdsl.pm:213
 #, c-format
@@ -4321,43 +4328,43 @@ msgstr ""
 #: ../lib/network/connection/xdsl.pm:362
 #: ../lib/network/connection_manager.pm:46 ../lib/network/drakvpn.pm:48
 #: ../lib/network/netconnect.pm:136 ../lib/network/thirdparty.pm:124
-#, fuzzy, c-format
+#, c-format
 msgid "Could not install the packages (%s)!"
-msgstr "Instaliram paket %s"
+msgstr ""
 
 #: ../lib/network/connection_manager.pm:58
 #: ../lib/network/connection_manager.pm:73 ../lib/network/netconnect.pm:187
-#, fuzzy, c-format
+#, c-format
 msgid "Configuring device..."
-msgstr "Podešavam..."
+msgstr ""
 
 #: ../lib/network/connection_manager.pm:63
 #: ../lib/network/connection_manager.pm:129
-#, fuzzy, c-format
+#, c-format
 msgid "Network settings"
-msgstr "C-Class lokalna mreža"
+msgstr ""
 
 #: ../lib/network/connection_manager.pm:64
 #: ../lib/network/connection_manager.pm:130
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter settings for network"
-msgstr "Detaljne informacije"
+msgstr ""
 
 #: ../lib/network/connection_manager.pm:207
 #: ../lib/network/connection_manager.pm:306 ../lib/network/drakvpn.pm:103
-#, fuzzy, c-format
+#, c-format
 msgid "Connection failed."
-msgstr "Ime veze"
+msgstr ""
 
 #: ../lib/network/connection_manager.pm:217
-#, fuzzy, c-format
+#, c-format
 msgid "Disconnecting..."
-msgstr "Odspoji..."
+msgstr ""
 
 #: ../lib/network/connection_manager.pm:253 ../lib/network/netconnect.pm:209
-#, fuzzy, c-format
+#, c-format
 msgid "Scanning for networks..."
-msgstr "Pokrećem mrežu ..."
+msgstr ""
 
 #: ../lib/network/connection_manager.pm:272
 #, c-format
@@ -4392,12 +4399,12 @@ msgstr "Spoji"
 #: ../lib/network/drakconnect.pm:17 ../lib/network/drakconnect/edit.pm:516
 #, c-format
 msgid "No IP"
-msgstr ""
+msgstr "Nema IP"
 
 #: ../lib/network/drakconnect.pm:18 ../lib/network/drakconnect/edit.pm:517
-#, fuzzy, c-format
+#, c-format
 msgid "No Mask"
-msgstr "Loš paket"
+msgstr "Nema maske"
 
 #: ../lib/network/drakconnect.pm:19
 #, c-format
@@ -4419,25 +4426,22 @@ msgstr ""
 "hardware-ski konfiguracijski alat."
 
 #: ../lib/network/drakconnect/delete.pm:22
-#, fuzzy, c-format
+#, c-format
 msgid "Remove a network interface"
-msgstr "Odaberite mrežni međusklop"
+msgstr ""
 
 #: ../lib/network/drakconnect/delete.pm:26
-#, fuzzy, c-format
+#, c-format
 msgid "Select the network interface to remove:"
-msgstr "Odaberite mrežni međusklop"
+msgstr ""
 
 #: ../lib/network/drakconnect/delete.pm:59
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "An error occurred while deleting the \"%s\" network interface:\n"
 "\n"
 "%s"
 msgstr ""
-"Problem se pojavio prilikom ponovnog pokretanja mreže: \n"
-"\n"
-"%s"
 
 #: ../lib/network/drakconnect/delete.pm:60
 #, c-format
@@ -4446,9 +4450,9 @@ msgid ""
 msgstr "Čestitamo, \"%s\" mrežno sučelje je uspješno obrisano"
 
 #: ../lib/network/drakconnect/edit.pm:24
-#, fuzzy, c-format
+#, c-format
 msgid "Manage connections"
-msgstr "Kablovska veza"
+msgstr "Upravljajte vezama"
 
 #: ../lib/network/drakconnect/edit.pm:51 ../lib/network/drakroam.pm:86
 #, c-format
@@ -4456,19 +4460,19 @@ msgid "Device: "
 msgstr "Uređaj: "
 
 #: ../lib/network/drakconnect/edit.pm:133
-#, fuzzy, c-format
+#, c-format
 msgid "IP configuration"
-msgstr "CUPS postavke"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:168
-#, fuzzy, c-format
+#, c-format
 msgid "DNS servers"
-msgstr "DNS poslužitelj"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:174
-#, fuzzy, c-format
+#, c-format
 msgid "Search Domain"
-msgstr "NIS domena"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:182
 #, c-format
@@ -4542,14 +4546,14 @@ msgid "Flow control"
 msgstr "Kontrola toka"
 
 #: ../lib/network/drakconnect/edit.pm:348
-#, fuzzy, c-format
+#, c-format
 msgid "Line termination"
-msgstr "Internet stanica"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:359
-#, fuzzy, c-format
+#, c-format
 msgid "Modem timeout"
-msgstr "Vrijeme čekanja podizanja kernela"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:363
 #, c-format
@@ -4562,14 +4566,14 @@ msgid "Wait for dialup tone before dialing"
 msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:368
-#, fuzzy, c-format
+#, c-format
 msgid "Busy wait"
-msgstr "Kuvajt"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:373
-#, fuzzy, c-format
+#, c-format
 msgid "Modem sound"
-msgstr "Miš"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:386 ../lib/network/netconnect.pm:357
 #, c-format
@@ -4621,9 +4625,9 @@ msgid "Module name"
 msgstr "Ime modula"
 
 #: ../lib/network/drakconnect/edit.pm:427
-#, fuzzy, c-format
+#, c-format
 msgid "Mac Address"
-msgstr "IP adresa"
+msgstr ""
 
 #: ../lib/network/drakconnect/edit.pm:428
 #, c-format
@@ -4641,9 +4645,9 @@ msgid "Please Wait... Applying the configuration"
 msgstr "Molimo pričekajte... Primjenjujem konfiguraciju"
 
 #: ../lib/network/drakconnect/edit.pm:520 ../lib/network/netconnect.pm:832
-#, fuzzy, c-format
+#, c-format
 msgid "Gateway address should be in format 1.2.3.4"
-msgstr "IP adresa treba biti oblika 1.2.3.4"
+msgstr ""
 
 #: ../lib/network/drakconnect/global.pm:19
 #, c-format
@@ -4671,18 +4675,16 @@ msgid "Internet connection configuration"
 msgstr "Postava Internet veze"
 
 #: ../lib/network/drakconnect/global.pm:36
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You do not have any configured Internet connection.\n"
 "Run the \"%s\" assistant from the Mageia Control Center"
 msgstr ""
-"Ovo sučelje još nije podešeno.\n"
-"Pokrenite čarobnjak za postavu u glavnom prozoru"
 
 #: ../lib/network/drakconnect/global.pm:51
-#, fuzzy, c-format
+#, c-format
 msgid "Host name (optional)"
-msgstr "postava upozoravanja"
+msgstr ""
 
 #: ../lib/network/drakconnect/global.pm:52 ../lib/network/netconnect.pm:651
 #, c-format
@@ -4695,9 +4697,9 @@ msgid "Second DNS Server (optional)"
 msgstr "Drugi DNS poslužitelj (opciono)"
 
 #: ../lib/network/drakconnect/global.pm:54
-#, fuzzy, c-format
+#, c-format
 msgid "Third DNS server (optional)"
-msgstr "Prvi DNS poslužitelj (opciono)"
+msgstr ""
 
 #: ../lib/network/drakconnect/global.pm:76
 #, c-format
@@ -4736,14 +4738,14 @@ msgid "Web Server"
 msgstr "Posljužitelj weba"
 
 #: ../lib/network/drakfirewall.pm:19
-#, fuzzy, c-format
+#, c-format
 msgid "Domain Name Server"
-msgstr "Ime domene"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:24
-#, fuzzy, c-format
+#, c-format
 msgid "SSH server"
-msgstr "NIS Poslužitelj"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:29
 #, c-format
@@ -4751,9 +4753,9 @@ msgid "FTP server"
 msgstr "FTP poslužitelj"
 
 #: ../lib/network/drakfirewall.pm:34
-#, fuzzy, c-format
+#, c-format
 msgid "DHCP Server"
-msgstr "CUPS poslužitelj"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:40
 #, c-format
@@ -4761,19 +4763,19 @@ msgid "Mail Server"
 msgstr "Posljužitelj e-pošte"
 
 #: ../lib/network/drakfirewall.pm:45
-#, fuzzy, c-format
+#, c-format
 msgid "POP and IMAP Server"
-msgstr "LDAP Poslužitelj"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:50
-#, fuzzy, c-format
+#, c-format
 msgid "Telnet server"
-msgstr "X poslužitelj"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:56
-#, fuzzy, c-format
+#, c-format
 msgid "NFS Server"
-msgstr "DNS poslužitelj"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:64
 #, c-format
@@ -4786,9 +4788,9 @@ msgid "Bacula backup"
 msgstr ""
 
 #: ../lib/network/drakfirewall.pm:76
-#, fuzzy, c-format
+#, c-format
 msgid "Syslog network logging"
-msgstr "Mrežne postavke"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:82
 #, c-format
@@ -4796,14 +4798,14 @@ msgid "CUPS server"
 msgstr "CUPS poslužitelj"
 
 #: ../lib/network/drakfirewall.pm:88
-#, fuzzy, c-format
+#, c-format
 msgid "MySQL server"
-msgstr "DNS poslužitelj"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:94
-#, fuzzy, c-format
+#, c-format
 msgid "PostgreSQL server"
-msgstr "CUPS poslužitelj"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:100
 #, c-format
@@ -4832,9 +4834,9 @@ msgstr ""
 
 #: ../lib/network/drakfirewall.pm:224 ../lib/network/drakfirewall.pm:228
 #: ../lib/network/shorewall.pm:84
-#, fuzzy, c-format
+#, c-format
 msgid "Firewall configuration"
-msgstr "Ručno namještanje"
+msgstr ""
 
 #: ../lib/network/drakfirewall.pm:224
 #, c-format
@@ -4941,14 +4943,14 @@ msgid "Wireless connection"
 msgstr "Bežična veze"
 
 #: ../lib/network/drakvpn.pm:33
-#, fuzzy, c-format
+#, c-format
 msgid "VPN configuration"
-msgstr "CUPS postavke"
+msgstr ""
 
 #: ../lib/network/drakvpn.pm:37
-#, fuzzy, c-format
+#, c-format
 msgid "Choose the VPN type"
-msgstr "Odaberite novu veličinu"
+msgstr ""
 
 #: ../lib/network/drakvpn.pm:52
 #, c-format
@@ -4956,9 +4958,9 @@ msgid "Initializing tools and detecting devices for %s..."
 msgstr ""
 
 #: ../lib/network/drakvpn.pm:55
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize %s connection type!"
-msgstr "Nepoznat tip veze"
+msgstr ""
 
 #: ../lib/network/drakvpn.pm:63
 #, c-format
@@ -4966,14 +4968,14 @@ msgid "Please select an existing VPN connection or enter a new name."
 msgstr ""
 
 #: ../lib/network/drakvpn.pm:67
-#, fuzzy, c-format
+#, c-format
 msgid "Configure a new connection..."
-msgstr "Testiram vašu vezu..."
+msgstr ""
 
 #: ../lib/network/drakvpn.pm:69
-#, fuzzy, c-format
+#, c-format
 msgid "New name"
-msgstr "Puno ime"
+msgstr ""
 
 #: ../lib/network/drakvpn.pm:73
 #, c-format
@@ -4981,14 +4983,14 @@ msgid "You must select an existing connection or enter a new name."
 msgstr ""
 
 #: ../lib/network/drakvpn.pm:84
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter the required key(s)"
-msgstr "Upišite brzinu cd snimača"
+msgstr ""
 
 #: ../lib/network/drakvpn.pm:89
-#, fuzzy, c-format
+#, c-format
 msgid "Please enter the settings of your VPN connection"
-msgstr "Ne mogu napraviti fork: %s"
+msgstr ""
 
 #: ../lib/network/drakvpn.pm:97 ../lib/network/netconnect.pm:299
 #, c-format
@@ -5007,24 +5009,24 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/ifw.pm:133
-#, fuzzy, c-format
+#, c-format
 msgid "Port scanning"
-msgstr "Nema dijeljenja"
+msgstr ""
 
 #: ../lib/network/ifw.pm:134
-#, fuzzy, c-format
+#, c-format
 msgid "Service attack"
-msgstr "\tIme servera: %s\n"
+msgstr ""
 
 #: ../lib/network/ifw.pm:135
-#, fuzzy, c-format
+#, c-format
 msgid "Password cracking"
-msgstr "Lozinka (provjera)"
+msgstr ""
 
 #: ../lib/network/ifw.pm:136
-#, fuzzy, c-format
+#, c-format
 msgid "New connection"
-msgstr "Veza"
+msgstr "Nova veza"
 
 #: ../lib/network/ifw.pm:137
 #, c-format
@@ -5037,9 +5039,9 @@ msgid "A port scanning attack has been attempted by %s."
 msgstr ""
 
 #: ../lib/network/ifw.pm:140
-#, fuzzy, c-format
+#, c-format
 msgid "The %s service has been attacked by %s."
-msgstr "Ovaj događaj je mijenjan."
+msgstr ""
 
 #: ../lib/network/ifw.pm:141
 #, c-format
@@ -5047,14 +5049,14 @@ msgid "A password cracking attack has been attempted by %s."
 msgstr ""
 
 #: ../lib/network/ifw.pm:142
-#, fuzzy, c-format
+#, c-format
 msgid "%s is connecting on the %s service."
-msgstr "Spoji se na Internet"
+msgstr ""
 
 #: ../lib/network/ifw.pm:143
-#, fuzzy, c-format
+#, c-format
 msgid "A \"%s\" attack has been attempted by %s"
-msgstr "Ovaj događaj je mijenjan."
+msgstr ""
 
 #: ../lib/network/ifw.pm:152
 #, c-format
@@ -5065,9 +5067,9 @@ msgstr ""
 
 #. -PO: this should be kept lowercase since the expression is meant to be used between brackets
 #: ../lib/network/ifw.pm:156
-#, fuzzy, c-format
+#, c-format
 msgid "port %d"
-msgstr "Izvještaj"
+msgstr ""
 
 #: ../lib/network/modem.pm:43 ../lib/network/modem.pm:44
 #: ../lib/network/modem.pm:45 ../lib/network/netconnect.pm:632
@@ -5117,9 +5119,9 @@ msgid "Unable to find the ndiswrapper interface!"
 msgstr ""
 
 #: ../lib/network/ndiswrapper.pm:140
-#, fuzzy, c-format
+#, c-format
 msgid "Choose an ndiswrapper driver"
-msgstr "Odaberite nametnuti upravljački program"
+msgstr ""
 
 #: ../lib/network/ndiswrapper.pm:143
 #, c-format
@@ -5127,9 +5129,9 @@ msgid "Use the ndiswrapper driver %s"
 msgstr ""
 
 #: ../lib/network/ndiswrapper.pm:143
-#, fuzzy, c-format
+#, c-format
 msgid "Install a new driver"
-msgstr "Instaliraj sustav"
+msgstr ""
 
 #: ../lib/network/ndiswrapper.pm:154
 #, c-format
@@ -5138,29 +5140,29 @@ msgstr ""
 
 #. -PO: "Process" is a verb
 #: ../lib/network/net_applet/ifw.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid "Process attack"
-msgstr "\tIme servera: %s\n"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:114
-#, fuzzy, c-format
+#, c-format
 msgid "Interactive Firewall: intrusion detected"
-msgstr "Detektirana je vatrozidna konfiguracija!"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:131
-#, fuzzy, c-format
+#, c-format
 msgid "What do you want to do with this attacker?"
-msgstr "Želite li uključiti ljepljive tipke?"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:134
-#, fuzzy, c-format
+#, c-format
 msgid "Attack details"
-msgstr "Detalji"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:138
-#, fuzzy, c-format
+#, c-format
 msgid "Attack time: %s"
-msgstr "Priloži datoteku(e)"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:139
 #, c-format
@@ -5168,9 +5170,9 @@ msgid "Network interface: %s"
 msgstr "Mrežni međusklop: %s"
 
 #: ../lib/network/net_applet/ifw.pm:140
-#, fuzzy, c-format
+#, c-format
 msgid "Attack type: %s"
-msgstr "Tip pristupa: %s\n"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:141
 #, c-format
@@ -5178,29 +5180,29 @@ msgid "Protocol: %s"
 msgstr "Protokol: %s"
 
 #: ../lib/network/net_applet/ifw.pm:142
-#, fuzzy, c-format
+#, c-format
 msgid "Attacker IP address: %s"
-msgstr "IP adresa:\t%s\n"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:143
-#, fuzzy, c-format
+#, c-format
 msgid "Attacker hostname: %s"
-msgstr "Postavljam ime računala %s: "
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:146
-#, fuzzy, c-format
+#, c-format
 msgid "Service attacked: %s"
-msgstr "\tIme servera: %s\n"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:147
-#, fuzzy, c-format
+#, c-format
 msgid "Port attacked: %s"
-msgstr "Port: %s"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:149
-#, fuzzy, c-format
+#, c-format
 msgid "Type of ICMP attack: %s"
-msgstr "Port: %s"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:154
 #, c-format
@@ -5213,25 +5215,25 @@ msgid "Ignore"
 msgstr "Zanemari"
 
 #: ../lib/network/net_applet/ifw.pm:187 ../lib/network/net_applet/ifw.pm:205
-#, fuzzy, c-format
+#, c-format
 msgid "Interactive Firewall: new service"
-msgstr "Detektirana je vatrozidna konfiguracija!"
+msgstr ""
 
 #. -PO: "Process" is a verb
 #: ../lib/network/net_applet/ifw.pm:193
-#, fuzzy, c-format
+#, c-format
 msgid "Process connection"
-msgstr "Bežična veze"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:215
-#, fuzzy, c-format
+#, c-format
 msgid "Do you want to open this service?"
-msgstr "Da li želite iskušati postavu ?"
+msgstr ""
 
 #: ../lib/network/net_applet/ifw.pm:218
-#, fuzzy, c-format
+#, c-format
 msgid "Remember this answer"
-msgstr "Zapamti ovu lozinku"
+msgstr ""
 
 #: ../lib/network/netcenter.pm:56 ../lib/network/netconnect.pm:212
 #, c-format
@@ -5239,16 +5241,16 @@ msgid "Please select your network:"
 msgstr ""
 
 #: ../lib/network/netcenter.pm:63
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "_: This is a verb\n"
 "Monitor"
-msgstr "Povrati korisnike"
+msgstr ""
 
 #: ../lib/network/netcenter.pm:153
-#, fuzzy, c-format
+#, c-format
 msgid "Network Center"
-msgstr "Mreža i Internet"
+msgstr "Mrežni centar"
 
 #: ../lib/network/netcenter.pm:171
 #, c-format
@@ -5256,15 +5258,15 @@ msgid "You are currently using the network profile <b>%s</b>"
 msgstr ""
 
 #: ../lib/network/netcenter.pm:177
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced settings"
-msgstr "Napredne mogućnosti"
+msgstr "Napredne postavke"
 
 #: ../lib/network/netconnect.pm:61 ../lib/network/netconnect.pm:522
 #: ../lib/network/netconnect.pm:536
-#, fuzzy, c-format
+#, c-format
 msgid "Manual choice"
-msgstr "Myanmar"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:61
 #, c-format
@@ -5277,9 +5279,9 @@ msgid "Protocol for the rest of the world"
 msgstr "Protokol za ostatak svijeta"
 
 #: ../lib/network/netconnect.pm:123
-#, fuzzy, c-format
+#, c-format
 msgid "Network & Internet Configuration"
-msgstr "Mrežne postavke"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:128
 #, c-format
@@ -5288,14 +5290,14 @@ msgstr "Izaberite vezu koju želite podesiti"
 
 #: ../lib/network/netconnect.pm:150 ../lib/network/netconnect.pm:377
 #: ../lib/network/netconnect.pm:822
-#, fuzzy, c-format
+#, c-format
 msgid "Select the network interface to configure:"
-msgstr "Odaberite mrežni međusklop"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:152
-#, fuzzy, c-format
+#, c-format
 msgid "%s: %s"
-msgstr "DNS"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:169
 #, c-format
@@ -5303,9 +5305,9 @@ msgid "No device can be found for this connection type."
 msgstr ""
 
 #: ../lib/network/netconnect.pm:178
-#, fuzzy, c-format
+#, c-format
 msgid "Hardware Configuration"
-msgstr "Mrežne postavke"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:202
 #, c-format
@@ -5345,14 +5347,14 @@ msgid "Provider name (ex provider.net)"
 msgstr "Ime ISP pružatelja (npr. provider.hr)"
 
 #: ../lib/network/netconnect.pm:350
-#, fuzzy, c-format
+#, c-format
 msgid "Provider DNS 1 (optional)"
-msgstr "Pružateljev DNS 1 (opciono)"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:351
-#, fuzzy, c-format
+#, c-format
 msgid "Provider DNS 2 (optional)"
-msgstr "Pružateljev DNS 2 (opciono)"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:361
 #, c-format
@@ -5365,9 +5367,9 @@ msgid "External ISDN modem"
 msgstr "Vanjski ISDN modem"
 
 #: ../lib/network/netconnect.pm:413
-#, fuzzy, c-format
+#, c-format
 msgid "Select a device!"
-msgstr "Odaberite skener"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:422 ../lib/network/netconnect.pm:432
 #: ../lib/network/netconnect.pm:442 ../lib/network/netconnect.pm:475
@@ -5407,9 +5409,9 @@ msgid "Abort"
 msgstr "Odustani"
 
 #: ../lib/network/netconnect.pm:443
-#, fuzzy, c-format
+#, c-format
 msgid "Which of the following is your ISDN card?"
-msgstr "Kakvu ISDN karticu imate?"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:461
 #, c-format
@@ -5439,9 +5441,9 @@ msgstr ""
 " Ako nije na popisu odaberite Drugi"
 
 #: ../lib/network/netconnect.pm:491 ../lib/network/netconnect.pm:587
-#, fuzzy, c-format
+#, c-format
 msgid "Provider:"
-msgstr "Profil: "
+msgstr ""
 
 #: ../lib/network/netconnect.pm:500
 #, c-format
@@ -5451,9 +5453,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/netconnect.pm:519
-#, fuzzy, c-format
+#, c-format
 msgid "Select the modem to configure:"
-msgstr "Odaberite mrežni međusklop"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:521
 #, c-format
@@ -5466,14 +5468,14 @@ msgid "Please choose which serial port your modem is connected to."
 msgstr "Izaberite serijski port na kojemu se nalazi modem."
 
 #: ../lib/network/netconnect.pm:585
-#, fuzzy, c-format
+#, c-format
 msgid "Select your provider:"
-msgstr "Odaberite spooler pisača"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:609
-#, fuzzy, c-format
+#, c-format
 msgid "Dialup: account options"
-msgstr "Podesi dialup"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:612
 #, c-format
@@ -5491,19 +5493,19 @@ msgid "Login ID"
 msgstr "Prijavno ime"
 
 #: ../lib/network/netconnect.pm:629 ../lib/network/netconnect.pm:662
-#, fuzzy, c-format
+#, c-format
 msgid "Dialup: IP parameters"
-msgstr "Parametri"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:632
-#, fuzzy, c-format
+#, c-format
 msgid "IP parameters"
-msgstr "Parametri"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:634
-#, fuzzy, c-format
+#, c-format
 msgid "Subnet mask"
-msgstr "Netmaska"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:646
 #, c-format
@@ -5521,19 +5523,19 @@ msgid "Domain name"
 msgstr "Ime domene"
 
 #: ../lib/network/netconnect.pm:653
-#, fuzzy, c-format
+#, c-format
 msgid "Set hostname from IP"
-msgstr "Ime računala od pisača"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:666
-#, fuzzy, c-format
+#, c-format
 msgid "Gateway IP address"
-msgstr "IP adresa"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:699
-#, fuzzy, c-format
+#, c-format
 msgid "Automatically at boot"
-msgstr "Pokrenuto pri podizanju"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:701
 #, c-format
@@ -5546,9 +5548,9 @@ msgid "Manually (the interface would still be activated at boot)"
 msgstr ""
 
 #: ../lib/network/netconnect.pm:712
-#, fuzzy, c-format
+#, c-format
 msgid "How do you want to dial this connection?"
-msgstr "Da li želite pokreniti vašu vezu kod svakog podizanja (boot) sustava ?"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:725
 #, c-format
@@ -5556,31 +5558,26 @@ msgid "Do you want to try to connect to the Internet now?"
 msgstr "Da li želite pokušati spajanje na Internet ?"
 
 #: ../lib/network/netconnect.pm:752
-#, fuzzy, c-format
+#, c-format
 msgid "The system is now connected to the Internet."
-msgstr "Sustav je sada spojen na Internet."
+msgstr ""
 
 #: ../lib/network/netconnect.pm:753
-#, fuzzy, c-format
+#, c-format
 msgid "For security reasons, it will be disconnected now."
-msgstr "Zbog sigurnosnih razloga, biti će sada odspojen."
+msgstr ""
 
 #: ../lib/network/netconnect.pm:754
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The system does not seem to be connected to the Internet.\n"
 "Try to reconfigure your connection."
 msgstr ""
-"Čini se kako sustav nije spojen na internet.\n"
-"Probajte ponovno podesiti vašu vezu."
 
 #: ../lib/network/netconnect.pm:770
-#, fuzzy, c-format
+#, c-format
 msgid "Problems occurred during the network connectivity test."
 msgstr ""
-"Problem se pojavio prilikom ponovnog pokretanja mreže: \n"
-"\n"
-"%s"
 
 #: ../lib/network/netconnect.pm:771
 #, c-format
@@ -5597,12 +5594,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/netconnect.pm:775
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network configuration is finished."
 msgstr ""
-"Čestitam, mrežna i internet konfiguracija je završena.\n"
-"\n"
-"Konfiguracija će sada biti primjenjena na vašem sustavu.\n"
 
 #: ../lib/network/netconnect.pm:775
 #, c-format
@@ -5612,23 +5606,16 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/netconnect.pm:776
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "If your connection does not work, you might want to relaunch the "
 "configuration."
 msgstr ""
-"Došlo je do problema tijekom namještanja. Provjerite vezu putem "
-"net_monitora\n"
-"ili mcca. Ako vaša veza ne radi, možda ćete morati ponovno pokrenuti\n"
-"konfiguraciju"
 
 #: ../lib/network/netconnect.pm:778
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations, the network and Internet configuration are finished."
 msgstr ""
-"Čestitam, mrežna i internet konfiguracija je završena.\n"
-"\n"
-"Konfiguracija će sada biti primjenjena na vašem sustavu.\n"
 
 #: ../lib/network/netconnect.pm:779
 #, c-format
@@ -5640,9 +5627,9 @@ msgstr ""
 "okružje kako bi izbjegli probleme prilikom promjene imena računala."
 
 #: ../lib/network/netconnect.pm:790
-#, fuzzy, c-format
+#, c-format
 msgid "Sagem USB modem"
-msgstr "Sistemski mod"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:791 ../lib/network/netconnect.pm:792
 #, c-format
@@ -5675,9 +5662,9 @@ msgid "ISDN connection"
 msgstr "ISDN veza"
 
 #: ../lib/network/netconnect.pm:799
-#, fuzzy, c-format
+#, c-format
 msgid "Modem connection"
-msgstr "Normalna modemska veza"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:800
 #, c-format
@@ -5685,20 +5672,20 @@ msgid "DVB connection"
 msgstr ""
 
 #: ../lib/network/netconnect.pm:802
-#, fuzzy, c-format
+#, c-format
 msgid "(detected on port %s)"
-msgstr "detektiran na portu %s"
+msgstr ""
 
 #. -PO: here, "(detected)" string will be appended to eg "ADSL connection"
 #: ../lib/network/netconnect.pm:804
-#, fuzzy, c-format
+#, c-format
 msgid "(detected %s)"
-msgstr "detektirano %s"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:804
-#, fuzzy, c-format
+#, c-format
 msgid "(detected)"
-msgstr "detektirano %s"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:805
 #, c-format
@@ -5706,9 +5693,9 @@ msgid "Network Configuration"
 msgstr "Mrežne postavke"
 
 #: ../lib/network/netconnect.pm:806
-#, fuzzy, c-format
+#, c-format
 msgid "Zeroconf hostname resolution"
-msgstr "Ime računala"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:807
 #, c-format
@@ -5720,9 +5707,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/netconnect.pm:811
-#, fuzzy, c-format
+#, c-format
 msgid "Zeroconf Host name"
-msgstr "Ime računala"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:812
 #, c-format
@@ -5742,9 +5729,9 @@ msgstr ""
 "konfiguriranje vaše mrežne/Internet veze.\n"
 
 #: ../lib/network/netconnect.pm:816
-#, fuzzy, c-format
+#, c-format
 msgid "The network needs to be restarted. Do you want to restart it?"
-msgstr "Paket %s treba instalirati. Da li ga želite instalirati?"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:817
 #, c-format
@@ -5758,25 +5745,18 @@ msgstr ""
 "%s"
 
 #: ../lib/network/netconnect.pm:818
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "We are now going to configure the %s connection.\n"
 "\n"
 "\n"
 "Press \"%s\" to continue."
 msgstr ""
-"\n"
-"\n"
-"\n"
-"Sada ćemo podesiti %s vezu.\n"
-"\n"
-"\n"
-"Pritisnite U redu za nastavak."
 
 #: ../lib/network/netconnect.pm:819
-#, fuzzy, c-format
+#, c-format
 msgid "Configuration is complete, do you want to apply settings?"
-msgstr "Koju konfiguraciju Xorg-a želite imati?"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:820
 #, c-format
@@ -5795,9 +5775,9 @@ msgid "Internet connection"
 msgstr "Internet veza"
 
 #: ../lib/network/netconnect.pm:823
-#, fuzzy, c-format
+#, c-format
 msgid "Configuring network device %s (driver %s)"
-msgstr "Podešavam mrežni uređaj %s"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:824
 #, c-format
@@ -5825,9 +5805,9 @@ msgid "Last but not least you can also type in your DNS server IP addresses."
 msgstr ""
 
 #: ../lib/network/netconnect.pm:831
-#, fuzzy, c-format
+#, c-format
 msgid "DNS server address should be in format 1.2.3.4"
-msgstr "IP adresa treba biti oblika 1.2.3.4"
+msgstr ""
 
 #: ../lib/network/netconnect.pm:833
 #, c-format
@@ -5844,9 +5824,9 @@ msgstr ""
 "%s"
 
 #: ../lib/network/network.pm:525
-#, fuzzy, c-format
+#, c-format
 msgid "Advanced network settings"
-msgstr "C-Class lokalna mreža"
+msgstr ""
 
 #: ../lib/network/network.pm:526
 #, c-format
@@ -5856,19 +5836,19 @@ msgid ""
 msgstr ""
 
 #: ../lib/network/network.pm:528
-#, fuzzy, c-format
+#, c-format
 msgid "Wireless regulatory domain"
-msgstr "Bežična veze"
+msgstr ""
 
 #: ../lib/network/network.pm:529
-#, fuzzy, c-format
+#, c-format
 msgid "TCP/IP settings"
-msgstr "Postavka opterećenja"
+msgstr ""
 
 #: ../lib/network/network.pm:530
-#, fuzzy, c-format
+#, c-format
 msgid "Disable IPv6"
-msgstr "Onemogući"
+msgstr ""
 
 #: ../lib/network/network.pm:531
 #, c-format
@@ -5938,9 +5918,9 @@ msgid "FTP proxy"
 msgstr "FTP proxy"
 
 #: ../lib/network/network.pm:556
-#, fuzzy, c-format
+#, c-format
 msgid "No proxy for (comma separated list):"
-msgstr "%d stringovi odijeljeni zarezom"
+msgstr ""
 
 #: ../lib/network/network.pm:561
 #, c-format
@@ -5948,14 +5928,14 @@ msgid "Proxy should be http://..."
 msgstr "Proxy treba biti http://..."
 
 #: ../lib/network/network.pm:562
-#, fuzzy, c-format
+#, c-format
 msgid "Proxy should be http://... or https://..."
-msgstr "Proxy treba biti http://..."
+msgstr ""
 
 #: ../lib/network/network.pm:563
-#, fuzzy, c-format
+#, c-format
 msgid "URL should begin with 'ftp:' or 'http:'"
-msgstr "Url treba početi sa 'http:'"
+msgstr ""
 
 #: ../lib/network/shorewall.pm:86
 #, c-format
@@ -6025,14 +6005,14 @@ msgid "Firmware files are required for this device."
 msgstr ""
 
 #: ../lib/network/thirdparty.pm:194 ../lib/network/thirdparty.pm:199
-#, fuzzy, c-format
+#, c-format
 msgid "Use a floppy"
-msgstr "Spremi na disketu"
+msgstr ""
 
 #: ../lib/network/thirdparty.pm:195 ../lib/network/thirdparty.pm:202
-#, fuzzy, c-format
+#, c-format
 msgid "Use my Windows partition"
-msgstr "Izračunavam granice Windows datotečnog sustava"
+msgstr ""
 
 #: ../lib/network/thirdparty.pm:196
 #, c-format
@@ -6045,9 +6025,9 @@ msgid "Please select the firmware file (for example: %s)"
 msgstr ""
 
 #: ../lib/network/thirdparty.pm:231
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to find \"%s\" on your Windows system!"
-msgstr "Ukloni fontove s vašeg sustava"
+msgstr ""
 
 #: ../lib/network/thirdparty.pm:233
 #, c-format
@@ -6055,16 +6035,16 @@ msgid "No Windows system has been detected!"
 msgstr ""
 
 #: ../lib/network/thirdparty.pm:243
-#, fuzzy, c-format
+#, c-format
 msgid "Insert floppy"
-msgstr "Umetnite disketu u pogon %s"
+msgstr ""
 
 #: ../lib/network/thirdparty.pm:244
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Insert a FAT formatted floppy in drive %s with %s in root directory and "
 "press %s"
-msgstr "Umetnite FAT formatiranu disketu u pogon %s"
+msgstr ""
 
 #: ../lib/network/thirdparty.pm:244
 #, c-format
@@ -6072,9 +6052,9 @@ msgid "Next"
 msgstr "Dalje"
 
 #: ../lib/network/thirdparty.pm:254
-#, fuzzy, c-format
+#, c-format
 msgid "Floppy access error, unable to mount device %s"
-msgstr "Gdje želite montirati uređaj %s?"
+msgstr ""
 
 #: ../lib/network/thirdparty.pm:353
 #, c-format
@@ -6082,9 +6062,9 @@ msgid "Looking for required software and drivers..."
 msgstr ""
 
 #: ../lib/network/thirdparty.pm:368
-#, fuzzy, c-format
+#, c-format
 msgid "Please wait, running device configuration commands..."
-msgstr "Podešavam sigurnosni nivo"
+msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:110
 #, c-format
@@ -6108,14 +6088,14 @@ msgid "Certificate"
 msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:157
-#, fuzzy, c-format
+#, c-format
 msgid "Key"
-msgstr "Kenija"
+msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:163
-#, fuzzy, c-format
+#, c-format
 msgid "TLS control channel key"
-msgstr "Udaljeni pisač"
+msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:170
 #, c-format
@@ -6133,9 +6113,9 @@ msgid "Check server certificate"
 msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:190
-#, fuzzy, c-format
+#, c-format
 msgid "Cipher algorithm"
-msgstr "Provjera autentičnosti"
+msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:194
 #, c-format
@@ -6148,24 +6128,24 @@ msgid "Size of cipher key"
 msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:209
-#, fuzzy, c-format
+#, c-format
 msgid "Get from server"
-msgstr "X poslužitelj"
+msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:219
-#, fuzzy, c-format
+#, c-format
 msgid "Gateway port"
-msgstr "Gateway"
+msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:235
-#, fuzzy, c-format
+#, c-format
 msgid "Remote IP address"
-msgstr "IP adresa"
+msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:240
-#, fuzzy, c-format
+#, c-format
 msgid "Use TCP protocol"
-msgstr "Protokol"
+msgstr ""
 
 #: ../lib/network/vpn/openvpn.pm:246
 #, c-format
@@ -6198,9 +6178,9 @@ msgid "Cisco VPN Concentrator"
 msgstr ""
 
 #: ../lib/network/vpn/vpnc.pm:44
-#, fuzzy, c-format
+#, c-format
 msgid "Group name"
-msgstr "ID grupe"
+msgstr "Ime grupe"
 
 #: ../lib/network/vpn/vpnc.pm:48
 #, c-format
@@ -6213,9 +6193,9 @@ msgid "Username"
 msgstr "Korisničko ime"
 
 #: ../lib/network/vpn/vpnc.pm:62
-#, fuzzy, c-format
+#, c-format
 msgid "NAT Mode"
-msgstr "Način rada"
+msgstr ""
 
 #: ../lib/network/vpn/vpnc.pm:68
 #, c-format
@@ -6223,59 +6203,50 @@ msgid "Use specific UDP port"
 msgstr ""
 
 #: ../polkit/com.redhat.initscripts.ifdown.policy.in.h:1
-#, fuzzy
 msgid "Take Network Interface Down"
-msgstr "Mrežni međusklop"
+msgstr ""
 
 #: ../polkit/com.redhat.initscripts.ifdown.policy.in.h:2
-#, fuzzy
 msgid "Authentication is required to take down a network interface"
-msgstr "Postava Internet veze"
+msgstr ""
 
 #: ../polkit/com.redhat.initscripts.ifup.policy.in.h:1
-#, fuzzy
 msgid "Bring Network Interface Up"
-msgstr "Mrežni međusklop"
+msgstr ""
 
 #: ../polkit/com.redhat.initscripts.ifup.policy.in.h:2
-#, fuzzy
 msgid "Authentication is required to bring up a network interface"
-msgstr "Postava Internet veze"
+msgstr ""
 
 #: ../polkit/com.redhat.initscripts.vpn-start.policy.in.h:1
 msgid "Start Virtual Private Network"
 msgstr ""
 
 #: ../polkit/com.redhat.initscripts.vpn-start.policy.in.h:2
-#, fuzzy
 msgid "Authentication is required start the Virtual Private Network"
-msgstr "Postava Internet veze"
+msgstr ""
 
 #: ../polkit/com.redhat.initscripts.vpn-stop.policy.in.h:1
 msgid "Stop Virtual Private Network"
 msgstr ""
 
 #: ../polkit/com.redhat.initscripts.vpn-stop.policy.in.h:2
-#, fuzzy
 msgid "Authentication is required stop the Virtual Private Network"
-msgstr "Postava Internet veze"
+msgstr ""
 
 #: ../polkit/org.mageia.drakconnect.policy.in.h:1
-#, fuzzy
 msgid "Run Mageia Network Connection Configuration"
-msgstr "Postava Internet veze"
+msgstr ""
 
 #: ../polkit/org.mageia.drakconnect.policy.in.h:2
-#, fuzzy
 msgid ""
 "Authentication is required to run Mageia Network Connection Configuration"
-msgstr "Postava Internet veze"
+msgstr ""
 
 #: ../polkit/org.mageia.drakfirewall.policy.in.h:1
 #: ../polkit/org.mageia.drakinvictus.policy.in.h:1
-#, fuzzy
 msgid "Run Mageia Firewall Configuration"
-msgstr "Ručno namještanje"
+msgstr ""
 
 #: ../polkit/org.mageia.drakfirewall.policy.in.h:2
 #: ../polkit/org.mageia.drakinvictus.policy.in.h:2
@@ -6283,9 +6254,8 @@ msgid "Authentication is required to run Mageia Firewall Configuration"
 msgstr ""
 
 #: ../polkit/org.mageia.drakgw.policy.in.h:1
-#, fuzzy
 msgid "Run Mageia Internet Sharing Configuration"
-msgstr "Postava Internet veze"
+msgstr ""
 
 #: ../polkit/org.mageia.drakgw.policy.in.h:2
 msgid "Authentication is required to run Mageia Internet Sharing Configuration"
@@ -6300,384 +6270,73 @@ msgid "Authentication is required to run Mageia Local Host Names Configuration"
 msgstr ""
 
 #: ../polkit/org.mageia.drakids.policy.in.h:1
-#, fuzzy
 msgid "Run Mageia IDS Configuration"
-msgstr "Postava upozorenja na poštu/SMS"
+msgstr ""
 
 #: ../polkit/org.mageia.drakids.policy.in.h:2
 msgid "Authentication is required to run Mageia IDS Configuration"
 msgstr ""
 
 #: ../polkit/org.mageia.draknetcenter.policy.in.h:1
-#, fuzzy
 msgid "Run Mageia Network Center"
-msgstr "Mreža i Internet"
+msgstr ""
 
 #: ../polkit/org.mageia.draknetcenter.policy.in.h:2
 msgid "Authentication is required to run Mageia Network Center"
 msgstr ""
 
 #: ../polkit/org.mageia.draknetprofile.policy.in.h:1
-#, fuzzy
 msgid "Run Mageia Network Profile Configuration"
-msgstr "Mrežne postavke"
+msgstr ""
 
 #: ../polkit/org.mageia.draknetprofile.policy.in.h:2
 msgid "Authentication is required to run Mageia Network Profile Configuration"
 msgstr ""
 
 #: ../polkit/org.mageia.draknfs.policy.in.h:1
-#, fuzzy
 msgid "Run Mageia NFS Shares Configuration"
-msgstr "Postava upozorenja na poštu/SMS"
+msgstr ""
 
 #: ../polkit/org.mageia.draknfs.policy.in.h:2
 msgid "Authentication is required to run Mageia NFS Shares Configuration"
 msgstr ""
 
 #: ../polkit/org.mageia.drakproxy.policy.in.h:1
-#, fuzzy
 msgid "Run Mageia Proxy Configuration"
-msgstr "Postava Veze"
+msgstr ""
 
 #: ../polkit/org.mageia.drakproxy.policy.in.h:2
 msgid "Authentication is required to run Mageia Proxy Configuration"
 msgstr ""
 
 #: ../polkit/org.mageia.drakroam.policy.in.h:1
-#, fuzzy
 msgid "Run Mageia WiFi Configuration"
-msgstr "Postava upozorenja na poštu/SMS"
+msgstr ""
 
 #: ../polkit/org.mageia.drakroam.policy.in.h:2
 msgid "Authentication is required to run Mageia WiFi Configuration"
 msgstr ""
 
 #: ../polkit/org.mageia.draksambashare.policy.in.h:1
-#, fuzzy
 msgid "Run Mageia Samba Shares Configuration"
-msgstr "Postava upozorenja na poštu/SMS"
+msgstr ""
 
 #: ../polkit/org.mageia.draksambashare.policy.in.h:2
 msgid "Authentication is required to run Mageia Samba Shares Configuration"
 msgstr ""
 
 #: ../polkit/org.mageia.drakvpn.policy.in.h:1
-#, fuzzy
 msgid "Run Mageia VPN Configuration"
-msgstr "CUPS postavke"
+msgstr ""
 
 #: ../polkit/org.mageia.drakvpn.policy.in.h:2
 msgid "Authentication is required to run Mageia VPN Configuration"
 msgstr ""
 
 #: ../polkit/org.mageia-x.set-netprofile.policy.in.h:1
-#, fuzzy
 msgid "Set Network Profile"
-msgstr "Još opcija"
+msgstr ""
 
 #: ../polkit/org.mageia-x.set-netprofile.policy.in.h:2
-#, fuzzy
 msgid "Authentication is required to set the network profile"
-msgstr "Postava Internet veze"
-
-#~ msgid "Network configuration (%d adapters)"
-#~ msgstr "Mrežne postavke (%d adaptera)"
-
-#~ msgid "State"
-#~ msgstr "Država"
-
-#~ msgid "Hostname: "
-#~ msgstr "Ime računala: "
-
-#, fuzzy
-#~ msgid "Configure hostname..."
-#~ msgstr "Podesi miš"
-
-#~ msgid "LAN configuration"
-#~ msgstr "LAN postavke"
-
-#~ msgid "Configure Local Area Network..."
-#~ msgstr "Podesi lokalnu mrežu..."
-
-#, fuzzy
-#~ msgid "Deactivate now"
-#~ msgstr "Deaktiviraj sada"
-
-#, fuzzy
-#~ msgid "Activate now"
-#~ msgstr "Aktiviraj sada"
-
-#~ msgid ""
-#~ "You do not have any configured interface.\n"
-#~ "Configure them first by clicking on 'Configure'"
-#~ msgstr ""
-#~ "Nemate niti jedan konfigurirani međusklop.\n"
-#~ "Konfigurirajte ga prvo klikanjem na 'Postavljanje'"
-
-#~ msgid "LAN Configuration"
-#~ msgstr "LAN postavke"
-
-#~ msgid "Adapter %s: %s"
-#~ msgstr "Adapter %s: %s"
-
-#~ msgid "Boot Protocol"
-#~ msgstr "Boot protokol"
-
-#~ msgid "Started on boot"
-#~ msgstr "Pokrenuto pri podizanju"
-
-#, fuzzy
-#~ msgid ""
-#~ "This interface has not been configured yet.\n"
-#~ "Run the \"%s\" assistant from the Mageia Linux Control Center"
-#~ msgstr ""
-#~ "Ovo sučelje još nije podešeno.\n"
-#~ "Pokrenite čarobnjak za postavu u glavnom prozoru"
-
-#~ msgid "_About"
-#~ msgstr "_O..."
-
-#, fuzzy
-#~ msgid "Network Monitoring"
-#~ msgstr "Mrežne postavke"
-
-#, fuzzy
-#~ msgid "Default connection: "
-#~ msgstr "Kablovska veza"
-
-#~ msgid "Wait please"
-#~ msgstr "Molim sačekajte"
-
-#~ msgid "Global statistics"
-#~ msgstr "Globalna statistika"
-
-#~ msgid "Average"
-#~ msgstr "Prosjek"
-
-#, fuzzy
-#~ msgid ""
-#~ "Sending\n"
-#~ "speed:"
-#~ msgstr "Šaljem datoteke..."
-
-#~ msgid "unknown"
-#~ msgstr "nepoznato"
-
-#, fuzzy
-#~ msgid ""
-#~ "Receiving\n"
-#~ "speed:"
-#~ msgstr "Šaljem datoteke..."
-
-#, fuzzy
-#~ msgid "Connection time: "
-#~ msgstr "Tip veze: "
-
-#, fuzzy
-#~ msgid "Wait please, testing your connection..."
-#~ msgstr "Testiram vašu vezu..."
-
-#, fuzzy
-#~ msgid "Disconnecting from Internet "
-#~ msgstr "Spoji se na Internet"
-
-#, fuzzy
-#~ msgid "Connecting to Internet "
-#~ msgstr "Spoji se na Internet"
-
-#, fuzzy
-#~ msgid "Disconnection from Internet failed."
-#~ msgstr "Spoji se na Internet"
-
-#, fuzzy
-#~ msgid "Disconnection from Internet complete."
-#~ msgstr "Spoji se na Internet"
-
-#~ msgid "Connection complete."
-#~ msgstr "Veza uspostavljena."
-
-#, fuzzy
-#~ msgid ""
-#~ "Connection failed.\n"
-#~ "Verify your configuration in the Mageia Linux Control Center."
-#~ msgstr ""
-#~ "Spajanje nije uspjelo.\n"
-#~ "Provjerite konfiguraciju u Mageia kontrolnom centru."
-
-#, fuzzy
-#~ msgid "%s (%s)"
-#~ msgstr "DNS"
-
-#, fuzzy
-#~ msgid "Color configuration"
-#~ msgstr "postava upozoravanja"
-
-#~ msgid "average"
-#~ msgstr "prosjek"
-
-#, fuzzy
-#~ msgid "Local measure"
-#~ msgstr "Lokalne datoteke"
-
-#, fuzzy
-#~ msgid ""
-#~ "Warning, another internet connection has been detected, maybe using your "
-#~ "network"
-#~ msgstr ""
-#~ "Upozorenje, otkrivena je još jedna Internet veza, koja možda koristivašu "
-#~ "mrežu"
-
-#, fuzzy
-#~ msgid "No internet connection configured"
-#~ msgstr "Postava Internet veze"
-
-#, fuzzy
-#~ msgid ""
-#~ "drakfirewall configurator\n"
-#~ "\n"
-#~ "This configures a personal firewall for this Mageia machine.\n"
-#~ "For a powerful and dedicated firewall solution, please look to the\n"
-#~ "specialized Mageia Security Firewall distribution."
-#~ msgstr ""
-#~ "tinyfirewall podešavanje\n"
-#~ "\n"
-#~ "Ovo podešava osobni vatrozid za ovo Mageia računalo.\n"
-#~ "Za snažno primjenjena vatrozidna rješenja, molimo pogledajte\n"
-#~ "specijaliziranu Mageia Security Firewall distribuciju."
-
-#, fuzzy
-#~ msgid "Connecting.."
-#~ msgstr "Poveži..."
-
-#, fuzzy
-#~ msgid "Account network traffic"
-#~ msgstr "Alat za sinkronizaciju"
-
-#~ msgid ""
-#~ "Name of the profile to create (the new profile is created as a copy of "
-#~ "the current one):"
-#~ msgstr ""
-#~ "Ime profila koji želite kreirati (novi profil je kreiran kao kopija "
-#~ "trenutnoga):"
-
-#, fuzzy
-#~ msgid "Clone"
-#~ msgstr "Spoji"
-
-#~ msgid ""
-#~ "There is only one configured network adapter on your system:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "I am about to setup your Local Area Network with that adapter."
-#~ msgstr ""
-#~ "Postoji samo jedan konfigurirani mrežni adapter na vašem sustavu:\n"
-#~ "\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Postaviti ću lokalnu mrežu (LAN) sa tim adapterom."
-
-#~ msgid "disable"
-#~ msgstr "onemogući"
-
-#~ msgid "reconfigure"
-#~ msgstr "ponovno postavi"
-
-#~ msgid "dismiss"
-#~ msgstr "odustani"
-
-#~ msgid "enable"
-#~ msgstr "omogući"
-
-#~ msgid "Problems installing package %s"
-#~ msgstr "Problem prilikom instaliranja paketa %s"
-
-#~ msgid "Configuration file"
-#~ msgstr "Datoteka s postavkama:"
-
-#~ msgid "Edit"
-#~ msgstr "Uređivanje"
-
-#~ msgid "Commit"
-#~ msgstr "Pošalji"
-
-#~ msgid "path"
-#~ msgstr "putanja"
-
-#~ msgid "remote"
-#~ msgstr "udaljen"
-
-#~ msgid "Congratulations!"
-#~ msgstr "Čestitke!"
-
-#~ msgid ""
-#~ "define the group of Diffie-Hellman exponentiations.\n"
-#~ "If you do not require PFS then you can omit this directive.\n"
-#~ "Any proposal will be accepted if you do not specify one.\n"
-#~ "group is one of the following: modp768, modp1024, modp1536.\n"
-#~ "Or you can define 1, 2, or 5 as the DH group number."
-#~ msgstr ""
-#~ "definiranje grupe Diffie-Hellman eksponencijacija.\n"
-#~ "Ako vam PFS nije potreban, možete ispustiti ovu direktivu.\n"
-#~ "Svaki prijedlog će biti prihvaćen ukoliko nijedan nije specificiran.\n"
-#~ "grupa je jedna od slijedećih: modp768, modp1024, modp1536.\n"
-#~ "Ili možete definirati 1, 2, ili 5 kao DH broj grupe."
-
-#, fuzzy
-#~ msgid "Encryption algorithm"
-#~ msgstr "Provjera autentičnosti"
-
-#~ msgid "Compression algorithm"
-#~ msgstr "Algoritam sažimanja"
-
-#~ msgid "Remote"
-#~ msgstr "Udaljeno"
-
-#~ msgid "off"
-#~ msgstr "isključeno"
-
-#~ msgid "on"
-#~ msgstr "uključeno"
-
-#~ msgid "Certificate type"
-#~ msgstr "Tip certifikata"
-
-#, fuzzy
-#~ msgid "Authentication method"
-#~ msgstr "Provjera autentičnosti"
-
-#~ msgid "Command"
-#~ msgstr "Naredba"
-
-#~ msgid "any"
-#~ msgstr "bilo kakav"
-
-#~ msgid "Flag"
-#~ msgstr "Zastava"
-
-#~ msgid "Direction"
-#~ msgstr "Smjer"
-
-#~ msgid "Level"
-#~ msgstr "Razina"
-
-#~ msgid "default"
-#~ msgstr "uobičajeno"
-
-#~ msgid "Disconnect..."
-#~ msgstr "Odspoji..."
-
-#~ msgid "Connect..."
-#~ msgstr "Poveži..."
-
-#, fuzzy
-#~ msgid "Attacker"
-#~ msgstr "Detalji"
-
-#, fuzzy
-#~ msgid "Attack type"
-#~ msgstr "Tip pristupa: %s\n"
-
-#~ msgid "Get Online Help"
-#~ msgstr "Dobij Online pomoć"
+msgstr ""
