@@ -978,7 +978,7 @@ sub wpa_supplicant_read_conf() {
                 push @conf, $network;
                 undef $network;
             }
-        } elsif (/^\s*network={/) {
+        } elsif (/^\s*network=\{/) {
             #- beginning of a new network block
             $network = {};
         }
@@ -1028,7 +1028,7 @@ sub wpa_supplicant_write_conf {
                 push @{$network->{entries}}, { comment => $_ };
             }
         } else {
-            if (/^\s*network={/) {
+            if (/^\s*network=\{/) {
                 #- beginning of a new network block
                 $network = {};
             } else {
