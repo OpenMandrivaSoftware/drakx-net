@@ -273,7 +273,7 @@ sub get_routes() {
     my %routes;
     my @routes = cat_("/proc/net/route");
     require any;
-    @routes = reverse(@routes) if common::cmp_kernel_versions(c::kernel_version(), "2.6.39") >= 0;
+    @routes = reverse(@routes) if common::cmp_kernel_versions(c::kernel_version(), "2.6.39") < 0;
     foreach (@routes) {
 	if (/^(\S+)\s+([0-9A-F]+)\s+([0-9A-F]+)\s+[0-9A-F]+\s+\d+\s+\d+\s+(\d+)\s+([0-9A-F]+)/) {
 	    next if (defined $routes{$1}{has_gateway});
