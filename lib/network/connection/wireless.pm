@@ -77,9 +77,9 @@ my %eap_vars = (
 	eapol_flags => 0,
 	proactive_key_caching => 0,
 	peerkey => 0,
-	ca_path => 0,
-	private_key => 0,
-	private_key_passwd => 0,
+	ca_path => 2,
+	private_key => 2,
+	private_key_passwd => 2,
 	dh_file => 0,
 	altsubject_match => 0,
 	phase1 => 0,
@@ -221,16 +221,6 @@ my @thirdparty_settings = (
                 },
             },
         },
-    },
-
- {
-	name => 'b43',
-	description => 'Broadcom B43 wireless chips',
-	firmware => {
-	    package => 'b43-openfwwf',
-	    url => 'http://www.ing-unibs.it/~openfwwf/',
-	    test_file => 'b43-open/ucode5.fw',
-	},
     },
 
     {
@@ -524,6 +514,7 @@ only used for EAP certificate based authentication. It could be
 considered as the alternative to username/password combo.
  Note: other related settings are shown on the Advanced page.")  },
 	{ label => N("EAP client private key password"), val => \$self->{access}{network}{eap_private_key_passwd},
+          hidden => sub { $self->{hide_passwords} },
           disabled => sub { $self->{access}{network}{encryption} ne 'wpa-eap' },
           help => N("The complete password for the client private key. This is
 only used for EAP certificate based authentication. This password 
@@ -987,7 +978,7 @@ sub wpa_supplicant_read_conf() {
                 push @conf, $network;
                 undef $network;
             }
-        } elsif (/^\s*network={/) {
+        } elsif (/^\s*network=\{/) {
             #- beginning of a new network block
             $network = {};
         }
@@ -1037,7 +1028,7 @@ sub wpa_supplicant_write_conf {
                 push @{$network->{entries}}, { comment => $_ };
             }
         } else {
-            if (/^\s*network={/) {
+            if (/^\s*network=\{/) {
                 #- beginning of a new network block
                 $network = {};
             } else {

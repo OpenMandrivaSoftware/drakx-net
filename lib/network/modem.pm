@@ -1,4 +1,4 @@
-package network::modem;	# $Id$
+package network::modem;	# $Id: modem.pm 243081 2008-06-25 15:44:25Z blino $
 
 use strict;
 use lib qw(/usr/lib/libDrakX);   # helps perl_checker

@@ -7,8 +7,8 @@ package network::netcenter;
 use strict;
 use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
-use mygtk2;
-use ugtk2 qw(:create :helpers :wrappers);
+use mygtk3;
+use ugtk3 qw(:create :helpers :wrappers);
 use network::connection;
 use network::connection_manager::gtk;
 use network::tools;
@@ -97,14 +97,14 @@ sub build_cmanager_box {
         $on_expand->(!$was_expanded);
     };
     $expander->signal_connect(activate => $toggle_expand);
-    my $eventbox = gtksignal_connect(Gtk2::EventBox->new, button_press_event => sub {
+    my $eventbox = gtksignal_connect(Gtk3::EventBox->new, button_press_event => sub {
                                          $_[1]->button == 1 or return;
                                          $toggle_expand->();
                                          my $was_expanded = $expander->get_expanded;
                                          $expander->set_expanded(!$was_expanded);
                                      });
     my $box = gtknew('VBox', spacing => 5, children_tight => [
-        (!$is_first ? Gtk2::HSeparator->new : ()),
+        (!$is_first ? Gtk3::HSeparator->new : ()),
         gtknew('HBox', children => [
             0, $expander,
             1, gtkadd($eventbox, $head),
@@ -153,8 +153,8 @@ sub main {
     my $title = N("Network Center");
     my $icon = '/usr/share/mcc/themes/default/drakroam-mdk.png';
 
-    $ugtk2::wm_icon = $icon;
-    my $w = ugtk2->new($title);
+    $ugtk3::wm_icon = $icon;
+    my $w = ugtk3->new($title);
     #- so that transient_for is defined, for wait messages and popups to be centered
     $::main_window = $w->{real_window};
 
@@ -162,12 +162,12 @@ sub main {
 
     my @cmanagers = map { build_cmanager($in, $net, $w, $_) } @connections;
 
-    (undef, my $rootwin_height) = gtkroot()->get_size;
+    (undef, my $rootwin_height) = mygtk3::root_window_size();
     my $scrolled_height = $rootwin_height > 480 ? 400 : 295;
     my $managers_box;
     gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children => [
-           $::isEmbedded ? () : (0, Gtk2::Banner->new($icon, $title)),
+           $::isEmbedded ? () : (0, Gtk3::Banner->new($icon, $title)),
            if_($net->{PROFILE} && network::network::netprofile_count() > 0, 0, gtknew('Label', text_markup => N("You are currently using the network profile <b>%s</b>", $net->{PROFILE}))),
            1, gtknew('ScrolledWindow', width => 600, height => $scrolled_height, shadow_type => 'none',
                      child => $managers_box = gtknew('VBox', spacing => 5, children_tight => [
@@ -175,7 +175,7 @@ sub main {
            ])),
            0, gtknew('HButtonBox', spacing => 6, layout => 'end', children_loose => [
                gtknew('Button', text => N("Advanced settings"), clicked => sub { advanced_settings($in, $net) }),
-               gtknew('Button', text => N("Quit"), clicked => sub { Gtk2->main_quit }),
+               gtknew('Button', text => N("Quit"), clicked => sub { Gtk3->main_quit }),
            ]),
        ]),
     );
@@ -183,7 +183,7 @@ sub main {
     if ($dbus) {
         $dbus->{connection}->add_filter(sub {
             my ($_con, $msg) = @_;
-            if ($msg->get_interface eq 'com.mandriva.network' && $msg->get_member eq 'status') {
+            if ($msg->get_interface eq 'org.openmandriva.network' && $msg->get_member eq 'status') {
                 my ($status, $interface) = $msg->get_args_list;
                 my $cmanager = find { $_->{connection}->get_interface eq $interface } @cmanagers;
                 if ($status eq "add") {

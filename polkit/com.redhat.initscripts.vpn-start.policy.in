@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC
+"-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+"http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
+<policyconfig>
+
+ <vendor>Mageia</vendor>
+ <vendor_url>http://www.mageia.org/</vendor_url>
+
+ <action id="com.redhat.initscripts.vpn-start.pkexec.run">
+    <_description>Start Virtual Private Network</_description>
+    <_message>Authentication is required start the Virtual Private Network</_message>
+    <icon_name>drakconf</icon_name>
+    <defaults>
+     <allow_any>no</allow_any>
+     <allow_inactive>no</allow_inactive>
+     <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/sbin/vpn-start</annotate>
+ </action>
+</policyconfig>

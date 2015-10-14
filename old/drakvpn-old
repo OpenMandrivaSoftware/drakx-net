@@ -39,11 +39,12 @@ use Data::Dumper;
 
 $::isInstall and die "Not supported during install.\n";
 
+require_root_capability();
 
 local $_ = join '', @ARGV;
 
 $::Wizard_pix_up = "drakvpn";
-$ugtk2::wm_icon = "drakvpn";
+$ugtk3::wm_icon = "drakvpn";
 
 my $direct = /-direct/;
 
@@ -52,7 +53,7 @@ my $ipsec_conf = "";
 my $racoon_conf = "/etc/racoon/racoon.conf";
 my $ipsec_package = "";
 
-my $in = interactive->vnew('su');
+my $in = interactive->vnew;
 my $shorewall = network::shorewall::read($in);
 my @section_names;
 

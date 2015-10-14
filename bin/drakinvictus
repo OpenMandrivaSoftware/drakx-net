@@ -29,12 +29,14 @@ use common;
 use network::invictus;
 use network::network;
 use detect_devices;
-use mygtk2 qw(gtknew);
-use ugtk2 qw(:create :helpers :wrappers :dialogs);
+use mygtk3 qw(gtknew);
+use ugtk3 qw(:create :helpers :wrappers :dialogs);
 
-$ugtk2::wm_icon = 'invictus-16';
+require_root_capability();
+
+$ugtk3::wm_icon = 'invictus-16';
 my $title = N("Invictus Firewall");
-my $w = ugtk2->new($title);
+my $w = ugtk3->new($title);
 $::main_window = $w->{real_window}; #- so that transient_for is defined for wait messages and dialogs
 
 my $net = {};
@@ -45,18 +47,18 @@ my $invictus = {};
 network::invictus::read_config($invictus);
 
 my %interface_addresses = map { $_ => {
-    real_address => gtknew('Entry', text => $invictus->{ucarp}{$_}{SRCIP}),
-    virtual_address => gtknew('Entry', text => $invictus->{ucarp}{$_}{VIRTIP}),
-    vid => do { my $w = gtknew('Entry', text => $invictus->{ucarp}{$_}{VHID}); $w->set_width_chars(5); $w },
+    real_address => gtknew('Entry', text => $invictus->{ucarp}{$_}{SRCIP} || ''),
+    virtual_address => gtknew('Entry', text => $invictus->{ucarp}{$_}{VIRTIP} || ''),
+    vid => do { my $w = gtknew('Entry', text => $invictus->{ucarp}{$_}{VHID} || ''); $w->set_width_chars(5); $w },
 } } @interfaces;
 
 my $master_checkbutton = gtknew('CheckButton', text => N("Start as master"), active => do {
     my $m = find { $_->{TAKEOVER} } values %{$invictus->{ucarp}};
-    $m && text2bool($m->{TAKEOVER});
+    $m ? text2bool($m->{TAKEOVER}) : 0;
 });
 my $password_entry = gtknew('Entry', text => do {
     my $p = find { $_->{PASSWORD} } values %{$invictus->{ucarp}};
-    $p && $p->{PASSWORD};
+    $p ? $p->{PASSWORD} : '';
 });
 $password_entry->set_visibility(0);
 my $ct_sync_interface_list;
@@ -96,7 +98,7 @@ sub update_ct_sync_state() {
 
 gtkadd($w->{window},
        gtknew('VBox', spacing => 5, children_tight => [
-           $::isEmbedded ? () : Gtk2::Banner->new('invictus-32', $title),
+           $::isEmbedded ? () : Gtk3::Banner->new('invictus-32', $title),
            gtknew('WrappedLabel', text => N("This tool allows to set up network interfaces failover and firewall replication.")),
            gtknew('Frame', border_width => 5,
                   text => N("Network redundancy (leave empty if interface is not used)"),

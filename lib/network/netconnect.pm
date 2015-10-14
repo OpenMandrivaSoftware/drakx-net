@@ -1,4 +1,4 @@
-package network::netconnect; # $Id$
+package network::netconnect; # $Id: netconnect.pm 259351 2009-08-17 15:15:51Z tv $
 
 use strict;
 use lib qw(/usr/lib/libDrakX);   # helps perl_checker
@@ -767,7 +767,7 @@ Try to reconfigure your connection.");
                    {
                     name => sub {
                         if (!$success) {
-                            return join("\n\n", N("Problems occured during the network connectivity test."),
+                            return join("\n\n", N("Problems occurred during the network connectivity test."),
                                 N("This can be caused by invalid network configuration, or problems with your modem or router."),
                                 N("You might want to relaunch the configuration to verify the connection settings."));
                         }

@@ -3,8 +3,8 @@ package network::net_applet::ifw;
 use lib qw(/usr/lib/libDrakX);   # helps perl_checker
 use common;
 use network::ifw;
-use ugtk2 qw(:create :helpers :wrappers :dialogs);
-use mygtk2 qw(gtknew gtkset);
+use ugtk3 qw(:create :helpers :wrappers :dialogs);
+use mygtk3 qw(gtknew gtkset);
 
 sub init() {
     network::ifw::init($network::net_applet::dbus, sub {
@@ -111,7 +111,7 @@ sub handle_ifw_message {
 sub ask_attack_verdict {
     my ($attack) = @_;
 
-    my $w = ugtk2->new(N("Interactive Firewall: intrusion detected"),
+    my $w = ugtk3->new(N("Interactive Firewall: intrusion detected"),
                        icon => "drakfirewall");
     my ($blacklist, $whitelist, $ignore, $auto);
 
@@ -124,14 +124,14 @@ sub ask_attack_verdict {
     gtkadd($w->{window},
            gtknew('VBox', spacing => 5, children_loose => [
                gtknew('HBox', children => [
-                   0, Gtk2::Image->new_from_stock('gtk-dialog-warning', 'dialog'),
+                   0, Gtk3::Image->new_from_stock('gtk-dialog-warning', 'dialog'),
                    0, gtknew('Label', text => "   "),
                    1, gtknew('VBox', children => [
                        0, $attack->{msg},
                        0, N("What do you want to do with this attacker?")
                    ])
                ]),
-               gtksignal_connect(gtkadd(Gtk2::Expander->new(N("Attack details")),
+               gtksignal_connect(gtkadd(Gtk3::Expander->new(N("Attack details")),
                                         gtknew('HBox', children => [
                                             0, gtknew('Label', text => "     "),
                                             1, gtknew('VBox', children_loose => [
@@ -202,14 +202,14 @@ sub handle_ifw_listen {
 sub ask_listen_verdict {
     my ($listen) = @_;
 
-    my $w = ugtk2->new(N("Interactive Firewall: new service"), icon => "drakfirewall");
+    my $w = ugtk3->new(N("Interactive Firewall: new service"), icon => "drakfirewall");
     my $set_verdict = sub {
         $network::net_applet::notification_queue->process_next;
     };
     gtkadd($w->{window},
            gtknew('VBox', spacing => 5, children_loose => [
                gtknew('HBox', children => [
-                   0, Gtk2::Image->new_from_stock('gtk-dialog-warning', 'dialog'),
+                   0, Gtk3::Image->new_from_stock('gtk-dialog-warning', 'dialog'),
                    1, gtknew('VBox', children => [
                        0, $listen->{message},
                        0, N("Do you want to open this service?"),

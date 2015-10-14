@@ -1,4 +1,4 @@
-package network::tools; # $Id$
+package network::tools; # $Id: tools.pm 253976 2009-03-13 10:57:55Z eugeni $
 
 use strict;
 use lib qw(/usr/lib/libDrakX);   # helps perl_checker
@@ -20,22 +20,28 @@ sub passwd_by_login {
 }
 
 sub run_interface_command {
-    my ($command, $intf, $detach) = @_;
+    my ($action, $intf, $detach) = @_;
+    my $have_perms = !$>;
+    if (!$have_perms) {
+        my $xxnet = {};
+        network::network::read_net_conf($xxnet);
+        $have_perms = text2bool($xxnet->{ifcfg}{$intf}{USERCTL});
+    }
     my @command =
-      !$> || system("/usr/sbin/usernetctl $intf report") == 0 ?
-	($command, $intf, if_(!$::isInstall, "daemon")) :
-	common::wrap_command_for_root($command, $intf);
+      $have_perms ?
+	('/usr/sbin/if' . $action, $intf, if_(!$::isInstall, "daemon")) :
+	('/usr/bin/pkexec', '/usr/sbin/if' . $action, $intf);
     run_program::raw({ detach => $detach, root => $::prefix }, @command);
 }
 
 sub start_interface {
     my ($intf, $detach) = @_;
-    run_interface_command('/sbin/ifup', $intf, $detach);
+    run_interface_command('up', $intf, $detach);
 }
 
 sub stop_interface {
     my ($intf, $detach) = @_;
-    run_interface_command('/sbin/ifdown', $intf, $detach);
+    run_interface_command('down', $intf, $detach);
 }
 
 sub start_net_interface {
@@ -210,8 +216,20 @@ sub get_default_connection {
     return $gw_intf, get_interface_status($gw_intf), $net->{resolv}{dnsServer};
 }
 
+#- returns the gateway address
+#  advantage over get_default_connection() is that we don't fork,
+#  which prevent segfaulting when glib/gtk create threads behind us (mga#12041)
+sub get_gw_address() {
+    my $gateway;
+    foreach (cat_('/proc/net/route')) {
+	$gateway = $1 if /^\S+\s+00000000\s+([0-9A-F]+)/;
+    }
+    # Linux gives it as a hex number in network byte order:
+    $gateway ? join(".", unpack "CCCC", pack "L", hex $gateway) : undef;
+}
+
 sub has_network_connection() {
-    (undef, undef, my $gw_address) = get_default_connection({});
+    my $gw_address = get_gw_address();
     to_bool($gw_address);
 }
 
@@ -272,20 +290,10 @@ sub host_hex_to_dotted {
 sub get_routes() {
     my %routes;
     my @routes = cat_("/proc/net/route");
-    require any;
-    @routes = reverse(@routes) if common::cmp_kernel_versions(c::kernel_version(), "2.6.39") < 0;
+    @routes = reverse(@routes) if common::cmp_kernel_versions(c::kernel_version(), "2.6.39") >= 0;
     foreach (@routes) {
 	if (/^(\S+)\s+([0-9A-F]+)\s+([0-9A-F]+)\s+[0-9A-F]+\s+\d+\s+\d+\s+(\d+)\s+([0-9A-F]+)/) {
-	    next if (defined $routes{$1}{has_gateway});
-
-	    if (defined $3) { 
-		if (hex($3)) {
-		    $routes{$1}{gateway} = host_hex_to_dotted($3);
-		    $routes{$1}{has_gateway} = "yes";
-		} else {
-		    $routes{$1}{gateway} = $routes{$1}{network};
-		}
-	    }
+	    if (defined $3) { $routes{$1}{gateway} = hex($3) ? host_hex_to_dotted($3) : $routes{$1}{network} }
 	    if (defined $2) { $routes{$1}{network} = host_hex_to_dotted($2) }
 	    if (defined $4) { $routes{$1}{metric} = $4 }
 	}

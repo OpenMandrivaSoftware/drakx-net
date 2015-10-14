@@ -4,7 +4,7 @@ localedir = $(DESTDIR)/usr/share/locale
 PGOAL = drakx-net
 
 # perl files to search translatable strings in
-PL_FILES:= ../bin/* ../lib/network/*.pm ../lib/network/vpn/*.pm ../lib/network/connection/*.pm ../lib/network/connection/providers/*.pm ../lib/network/connection/isdn/*.pm
+PL_FILES:= ../bin/* ../lib/network/*.pm ../lib/network/*/*.pm ../lib/network/*/*/*.pm
 
 POFILES = $(shell ls *.po)
 MOFILES = $(POFILES:%.po=%.mo)
@@ -24,17 +24,23 @@ install: all
 	done
 
 clean:
-	rm -f *~ *.[oas] *.mo $(POTFILE) $(MOFILES) TAGS
+	rm -f *~ *.[oas] *.mo $(POTFILE) POTFILES.in $(MOFILES) TAGS
 
 %.mo: %.po
 	msgfmt -o $@ $<
 
-$(POTFILE): $(PL_FILES)
-	perl_checker -q --generate-pot $@ $(PL_FILES)
+$(POTFILE): $(PL_FILES) POTFILES.in
+	intltool-update --gettext-package non-perl --pot
+	perl_checker -q --generate-pot .$@ $(PL_FILES)
+	msgcat -w 2048 --use-first .$@ non-perl.pot > $@
+	rm -f non-perl.pot ..$@ .$@
+
+POTFILES.in:
+	(cd .. ; /bin/ls -1 polkit/*.policy.in; ) > POTFILES.in
 
 update_n_merge: $(POTFILE) merge
 
-merge:
+merge: $(POTFILE)
 	@for n in $(POFILES); do \
 		echo "Merging $$n"; \
 		msgmerge -C "$$n" "$$n" $(PGOAL).pot > "$$n"t; \

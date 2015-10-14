@@ -222,6 +222,7 @@ sub stop_connection {
 sub monitor_connection {
     my ($cmanager) = @_;
     my $interface  = $cmanager->{connection} && $cmanager->{connection}->get_interface or return;
+    $cmanager->{in}->do_pkgs->ensure_binary_is_installed(qw(net_monitor net_monitor));
     run_program::raw({ detach => 1 }, '/usr/bin/net_monitor', '--defaultintf', $interface);
 }
 
@@ -282,7 +283,7 @@ sub setup_dbus_handlers {
     $dbus->{connection}->add_filter(
         sub {
             my ($_con, $msg) = @_;
-            if ($msg->get_interface eq 'com.mandriva.network') {
+            if ($msg->get_interface eq 'org.openmandriva.network') {
                 my $member = $msg->get_member;
                 my $message = _get_network_event_message($connections, $member, $msg->get_args_list);
                 $on_network_event->($message) if $on_network_event && $message;
@@ -307,7 +308,7 @@ sub setup_dbus_handlers {
                     }
                 }
             }
-            if ($msg->get_interface eq 'com.mandriva.monitoring.wireless' && $msg->get_member eq 'Event') {
+            if ($msg->get_interface eq 'org.openmandriva.monitoring.wireless' && $msg->get_member eq 'Event') {
                 my ($event, $interface) = $msg->get_args_list;
                 print "got wireless event: $event $interface\n";
                 # eugeni: wpa_supplicant seems to issue 'Authentication..timed out messages' even if they
@@ -322,8 +323,8 @@ sub setup_dbus_handlers {
 #                }
             }
         });
-    $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
-    $dbus->{connection}->add_match("type='signal',interface='com.mandriva.monitoring.wireless'");
+    $dbus->{connection}->add_match("type='signal',interface='org.openmandriva.network'");
+    $dbus->{connection}->add_match("type='signal',interface='org.openmandriva.monitoring.wireless'");
 }
 
 1;

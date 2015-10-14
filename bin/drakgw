@@ -45,7 +45,9 @@ my $sysconf_network = "/etc/sysconfig/network";
 my $masq_file = "$::prefix/etc/shorewall/masq";
 my $cups_conf = "$::prefix/etc/cups/cupsd.conf";
 
-my $in = 'interactive'->vnew('su');
+require_root_capability();
+
+my $in = 'interactive'->vnew;
 
 my $net = {};
 network::network::read_net_conf($net);
@@ -77,12 +79,9 @@ With that feature, other computers on your local network will be able to use thi
 
 Make sure you have configured your Network/Internet access using drakconnect before going any further.
 
-Note: you need a dedicated Network Adapter to set up a Local Area Network (LAN). Please disable Firewall for the network adapter connected to your LAN connection before proceeding."),
+Note: you need a dedicated Network Adapter to set up a Local Area Network (LAN). Please disable OpenMandriva Lx Firewall for the network adapter connected to your LAN connection before proceeding."),
 	      post => sub {
-		  #- see #63998
-		  #- do not start configuration if shorewall disabled
-		  if ($shorewall->{disabled}) {return "end_fw_disabled";}
-		  $gw_enabled = grep { !/^#/ } cat_($masq_file);
+		  $gw_enabled = !$shorewall->{disabled} && grep { !/^#/ } cat_($masq_file);
 		  return $gw_enabled ? "ask_reconfigure" : "choose_net_interface";
 	      },
 	     },
@@ -126,6 +125,10 @@ What would you like to do?"); #- FIXME : not used for now
 	      data => [ { label => N("Net Device"), val => \$shorewall->{masq}{net_interface}, list => [ sort keys %{$net->{ifcfg}} ], format => sub { network::tools::get_interface_description($net, $_[0]) } } ],
 	      post => sub {
 		  network::shorewall::add_interface_to_net_zone($shorewall, $shorewall->{masq}{net_interface});
+		  # filter out the chosen net interface from loc_zone
+		  $shorewall->{loc_zone} = [ grep {!/^$shorewall->{masq}{net_interface}$/} @{$shorewall->{loc_zone}} ];
+		  # if loc_zone is unconfigured and has no interfaces, have all interfaces be local (except the chosen net interface)
+		  $shorewall->{loc_zone} = [ sort grep {!/^$shorewall->{masq}{net_interface}$/} keys %{$net->{ifcfg}} ] if scalar(@{$shorewall->{loc_zone}}) == 0;
 		  my $locals = @{$shorewall->{loc_zone}};
 		  if ($locals == 0) {
 		      return "end_no_lan_interface";
@@ -169,6 +172,10 @@ configuring Internet Connection sharing.", format_interfaces($lan_interface_name
 	     lan_configure =>
 	     {
 	      pre => sub {
+		  # filter out loc_zone interfaces from net_zone
+		  for my $loc_if (@{$shorewall->{loc_zone}}) {
+		      $shorewall->{net_zone} = [ grep {!/^$loc_if$/} @{$shorewall->{net_zone}} ];
+		  }
 		  $lan_intf = $net->{ifcfg}{$lan_interface_name} ||= {};
 		  $lan_intf->{DEVICE} = $lan_interface_name;
 		  $lan_intf->{ONBOOT} = 'yes';
@@ -310,7 +317,7 @@ If you do not know the meaning of an option, simply leave it as it is."),
 	     {
 	      name => N("No ethernet network adapter configured for LAN has been detected on your system.
 
-Please run the hardware configuration tool to configure it, and ensure that the firewall is not enabled for network adapter connected to your LAN network."),
+Please run the hardware configuration tool to configure it, and ensure that the OpenMandriva Lx firewall is not enabled for network adapter connected to your LAN network."),
 	      end => 1,
 	     },
 
@@ -323,12 +330,6 @@ Please run the hardware configuration tool to configure it, and ensure that the 
 	     end_disabled =>
 	     {
 	      name => N("Internet Connection Sharing is now disabled."),
-	      end => 1,
-	     },
-
-	     end_fw_disabled =>
-	     {
-	      name => N("Firewall is disabled. Please enable firewall before configure Internet Connection Sharing."),
 	      end => 1,
 	     },
 

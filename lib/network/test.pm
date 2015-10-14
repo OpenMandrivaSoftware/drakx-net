@@ -1,4 +1,4 @@
-package network::test;          # $Id$
+package network::test;          # $Id: test.pm 219797 2007-05-25 15:39:46Z blino $
 
 use strict;
 use lib qw(/usr/lib/libDrakX);   # helps perl_checker

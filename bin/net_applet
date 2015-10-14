@@ -2,7 +2,7 @@
 
 use strict;
 
-use POSIX ":sys_wait_h";
+use POSIX qw(:signal_h :sys_wait_h);
 use lib qw(/usr/lib/libDrakX);
 # i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
 BEGIN { unshift @::textdomains, 'drakx-net' }
@@ -15,32 +15,34 @@ use network::connection;
 use network::connection::ethernet;
 use network::vpn;
 use run_program;
-use mygtk2 qw(gtknew gtkset);
+use do_pkgs;
+use mygtk3 qw(gtknew gtkset);
 use dbus_object;
 use network::monitor;
 use network::signal_strength;
 use detect_devices;
-use Gtk2::Notify -init, 'NetApplet';
+BEGIN { POSIX::sigprocmask(SIG_BLOCK, POSIX::SigSet->new(SIGCHLD)); }
+use Gtk3::Notify -init, 'NetApplet';
 
-use ugtk2 qw(:create :helpers :wrappers :dialogs);
+use ugtk3 qw(:create :helpers :wrappers :dialogs);
 
 my $onstartupfile = "$ENV{HOME}/.net_applet";
 my $system_file = '/etc/sysconfig/drakx-net';
 shouldStart() or die "$onstartupfile should be set to TRUE or use net_applet --force\n";
 
 #Check for NM
-	foreach (all("$::prefix/etc/sysconfig/network-scripts")) {
-	my ($device) = /^ifcfg-([A-Za-z0-9.:_-]+)$/;
-	next if $device =~ /.rpmnew$|.rpmsave$/;
-	if ($device && $device ne 'lo') {
-		my $file = network::network::get_ifcfg_file($device);
-		my $NM_control = { getVarsFromSh($file) }->{NM_CONTROLLED};
-		if ( $NM_control eq 'yes') 
-			{
-				print "Found NM-controlled interface";
-				exit;
-			}
-	}
+       foreach (all("$::prefix/etc/sysconfig/network-scripts")) {
+       my ($device) = /^ifcfg-([A-Za-z0-9.:_-]+)$/;
+       next if $device =~ /.rpmnew$|.rpmsave$/;
+       if ($device && $device ne 'lo') {
+               my $file = network::network::get_ifcfg_file($device);
+               my $NM_control = { getVarsFromSh($file) }->{NM_CONTROLLED};
+               if ( $NM_control eq 'yes')
+                       {
+                               print "Found NM-controlled interface";
+                               exit;
+                       }
+       }
     }
 
 #- Allow multiple instances, but only one per user:
@@ -48,11 +50,11 @@ is_running('net_applet') and die "net_applet already running\n";
 
 package network::net_applet;
 
-use mygtk2 qw(gtknew gtkset);
+use mygtk3 qw(gtknew gtkset);
 use common;
 
 our ($current_state, $current_interface);
-our ($icon, $notification_queue);
+our $icon;
 our $dbus;
 our ($interactive_cb, $ifw, $ifw_alert);
 
@@ -60,7 +62,7 @@ our %wireless_networks;
 
 our %pixbufs =
   (
-      state => { map { $_ => gtknew('Pixbuf', file => $_) } qw(connected disconnected unconfigured connecting) },
+      state => { map { $_ => gtknew('Pixbuf', file => $_) } map { $_, $_ . "_big" } qw(connected disconnected unconfigured connecting) },
       encryption => { map {
           $_ => gtknew('Pixbuf', file => "encryption-$_-24");
       } qw(open weak strong) },
@@ -70,11 +72,12 @@ sub get_current_network() {
     detect_devices::is_wireless_interface($current_interface) && find { $_->{current} } values %wireless_networks;
 }
 
-sub get_state_pixbuf() {
+sub get_state_pixbuf {
+    my ($o_big) = @_;
     my $wnet = $current_state eq 'connected' && get_current_network();
     $wnet ?
       network::signal_strength::get_strength_icon($wnet) :
-      $pixbufs{state}{$current_state};
+      $pixbufs{state}{$current_state . ($o_big ? '_big' : '')};
 }
 
 sub update_tray_icon() {
@@ -161,11 +164,11 @@ my %actions = (
     },
     'drakvpn' => {
         name => N("Manage VPN connections"),
-	launch => sub { run_program::raw({ detach => 1 }, '/usr/sbin/drakvpn') },
+	launch => sub { run_program::raw({ detach => 1 }, 'drakvpn') },
     },
     'confNetwork' => {
 	name => N("Configure Network"),
-	launch => sub { system("/usr/sbin/drakconnect &") }
+	launch => sub { run_program::raw({ detach => 1 }, 'drakconnect') }
     },
     'chooseInterface' => {
         name => N("Watched interface"),
@@ -206,7 +209,7 @@ my %actions = (
         launch => sub {
 	    require run_program;
 	    $net->{PROFILE} = $_[0];
-	    run_program::raw({ detach => 1 }, common::wrap_command_for_root('/sbin/set-netprofile', $net->{PROFILE}));
+	    run_program::raw({ detach => 1 }, (if_($>, '/usr/bin/pkexec'), '/usr/sbin/set-netprofile', $net->{PROFILE}));
         }
     },
     'chooseVPN' => {
@@ -225,7 +228,7 @@ my %actions = (
     },
     'help' => {
 	name => N("Help"),
-	launch => sub { system("drakhelp --id internet-connection &") }
+	launch => sub { run_program::raw({ detach => 1 }, 'drakhelp', '--id', 'internet-connection') }
     },
     'quit' => {
 	name => N("Quit"),
@@ -234,10 +237,16 @@ my %actions = (
 );
 
 
-$icon = Gtk2::StatusIcon->new;
+$icon = Gtk3::StatusIcon->new;
 
 eval { $dbus = dbus_object::system_bus() } if !defined($global_settings{NET_APPLET_DBUS}) || text2bool($global_settings{NET_APPLET_DBUS});
+if (my $err = $@) {
+	log::explanations("failed to acquire DBus: $err");
+}
 eval { $net->{monitor} = network::monitor->new($dbus) } if $dbus;
+if (my $err = $@) {
+	log::explanations("failed to acquire monitor on DBus: $err (is mandi started?)");
+}
 if ($dbus) {
     require network::net_applet::ifw;
     network::net_applet::ifw::init();
@@ -245,7 +254,7 @@ if ($dbus) {
 if ($dbus) {
     $dbus->{connection}->add_filter(sub {
         my ($_con, $msg) = @_;
-            if ($msg->get_interface eq 'com.mandriva.network' && $msg->get_member eq 'status') {
+            if ($msg->get_interface eq 'org.openmandriva.network' && $msg->get_member eq 'status') {
                 my ($status, $interface) = $msg->get_args_list;
                 print "got connection status event: $status $interface\n";
                 if ($status eq "add") {
@@ -253,11 +262,9 @@ if ($dbus) {
                 }
             }
     });
-    $dbus->{connection}->add_match("type='signal',interface='com.mandriva.network'");
-    dbus_object::set_gtk2_watch_helper($dbus);
+    $dbus->{connection}->add_match("type='signal',interface='org.openmandriva.network'");
+    dbus_object::set_gtk3_watch_helper($dbus);
 }
-
-$notification_queue = Gtk2::Notify::Queue->new($icon);
 
 $icon->signal_connect(activate => sub {
         my ($_icon, $button, $time) = @_;
@@ -289,7 +296,11 @@ $SIG{USR1} = sub {
 };
 
 # do not create zombies (#20552)
-$SIG{CHLD} = \&harvester;
+Glib::Timeout->add_seconds(1, sub {
+			       POSIX::sigprocmask(SIG_UNBLOCK, POSIX::SigSet->new(SIGCHLD));
+			       $SIG{CHLD} = \&harvester;
+			       0;
+			   });
 sub harvester {
     my $pid;
     do {
@@ -298,9 +309,9 @@ sub harvester {
     } while $pid > 0;
 }
 
-Gtk2->main;
+Gtk3->main;
 
-ugtk2::exit(0);
+ugtk3::exit(0);
 
 sub is_running {
     my ($name, $o_user) = @_;
@@ -330,32 +341,35 @@ sub shouldStart() {
     return getAutoStart();
 }
 sub run_net_monitor() {
-    run_program::raw({ detach => 1 }, '/usr/bin/net_monitor', '--defaultintf', $current_interface) unless is_running('net_monitor');
+    # stop reaping child processes or else gurpmi segfaults
+    local $SIG{CHLD} = "DEFAULT";
+    do_pkgs->do_pkgs->install('net_monitor');
+    run_program::raw({ detach => 1 }, 'net_monitor', '--defaultintf', $current_interface) unless is_running('net_monitor');
 }
 sub run_netcenter() {
-    run_program::raw({ detach => 1 }, '/usr/bin/draknetcenter') unless is_running('draknetcenter', 'root');
+    run_program::raw({ detach => 1 }, 'draknetcenter') unless is_running('draknetcenter', 'root');
 }
 sub run_drakroam {
     my ($o_ap) = @_;
-    run_program::raw({ detach => 1 }, '/usr/sbin/drakroam', if_($o_ap, "--ap=$o_ap")) unless is_running('drakroam', 'root');
+    run_program::raw({ detach => 1 }, 'drakroam', if_($o_ap, "--ap=$o_ap")) unless is_running('drakroam', 'root');
 }
 sub run_drakids() {
     $ifw_alert = 0;
     if (is_running('drakids')) {
         eval { $ifw->send_manage_request };
     } else {
-        run_program::raw({ detach => 1 }, '/usr/sbin/drakids');
+        run_program::raw({ detach => 1 }, 'drakids');
     }
 }
 sub generate_wireless_menuitem {
     my ($wnet) = @_;
     my $menuitem = {};
-    $menuitem->{widget} = Gtk2::CheckMenuItem->new;
+    $menuitem->{widget} = Gtk3::CheckMenuItem->new;
     $menuitem->{widget}->set_draw_as_radio(1);
     $menuitem->{widget}->add(gtkpack_(gtkshow(gtknew('HBox')),
                                             1, gtkset_alignment($menuitem->{label} = gtknew('Label'), 0, 0.5),
-                                            0, $menuitem->{strength} = Gtk2::Image->new,
-                                            0, $menuitem->{security} = Gtk2::Image->new,
+                                            0, $menuitem->{strength} = Gtk3::Image->new,
+                                            0, $menuitem->{security} = Gtk3::Image->new,
                                 ));
     $menuitem->{activate} = $menuitem->{widget}->signal_connect('activate' => sub {
         if ($net->{monitor} && exists $wnet->{id}) {
@@ -395,7 +409,7 @@ sub checkWireless() {
             my $is_valuable = exists $networks->{$wnet->{ap}};
             foreach (@{$wnet->{menuitems}}) {
                 update_wireless_item($_, $wnet) if $is_valuable;
-                $_->{widget}->visible($is_valuable);
+                $_->{widget}->set_visible($is_valuable);
             }
         }
     }
@@ -437,14 +451,27 @@ sub go2State {
         $current_interface = $interface;
         $need_update = 1;
     }
+    my $show;
     if ($current_state ne $state_type) {
-        my $show = defined $current_state && $state_type ne 'connecting'; # don't show notification at applet startup and when establishing a connection
+        $show = defined $current_state && $state_type ne 'connecting'; # don't show notification at applet startup and when establishing a connection
         $current_state = $state_type;
-        $notification_queue->add({
-            title => $old_description || $current_description || N("Network connection"),
-            pixbuf => network::net_applet::get_state_pixbuf(),
-            message => get_state_message($old_interface || $current_interface),
-        }) if $show;
+    }
+    if ($show) {
+	my $msg;
+	my $ic = $icon; # fix stringification (WTF????)
+        my $bubble = Gtk3::Notify::Notification->new(
+		$old_description || $current_description || N("Network connection"),
+		get_state_message($old_interface || $current_interface),
+		$ic);
+        my $pixbuf = network::net_applet::get_state_pixbuf(1) || network::net_applet::get_state_pixbuf();
+        $bubble->set_icon_from_pixbuf($pixbuf) if $pixbuf;
+
+        my $timeout = 5000;
+        $bubble->set_timeout($timeout);
+        # both need to be in a eval block in case notification daemon isn't running:
+        Glib::Timeout->add($timeout, sub { eval { $bubble->close }; 0 });
+        eval { $bubble->show };
+        warn ">> ERR:$@" if $@;
         $need_update = 1;
     }
 
@@ -460,7 +487,7 @@ sub update_applet() {
     generate_menu();
 
     network::net_applet::update_tray_icon();
-    $icon->set_tooltip(get_state_message());
+    $icon->set_tooltip_text(get_state_message());
 }
 
 sub create_menu_choices {
@@ -476,13 +503,13 @@ sub create_menu_choices {
         my $choice = $_;
         my $label = $format ? $format->($choice) : $choice;
         my $w = gtkshow(gtkset_active(gtkadd(
-            Gtk2::CheckMenuItem->new,
+            Gtk3::CheckMenuItem->new,
             gtknew('HBox', children => [
                      1, gtkset_alignment(gtknew('Label', text => $label), 0, 0.5),
                      $get_icon ?
                        (0, gtknew('Image', file => $get_icon->($_))) :
                          (),
-                 ])), $selected->($choice)));
+                 ])), $selected->($choice) || 0));
         gtksignal_connect($w, activate => sub { $actions{$action}{launch}->($choice) });
         $w->set_draw_as_radio(!$actions{$action}{use_checkbox});
         $w;
@@ -498,12 +525,12 @@ sub create_action_item {
         gtkshow(create_menu($name,
                             $actions{$action}{header} ? (
                                 create_action_item($actions{$action}{header}),
-                                gtkshow(Gtk2::SeparatorMenuItem->new),
+                                gtkshow(Gtk3::SeparatorMenuItem->new),
                             ) : (),
                             @menu,
                         ));
     } else {
-        gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label($name)), activate => sub { $actions{$action}{launch}->($current_interface) });
+        gtksignal_connect(gtkshow(Gtk3::MenuItem->new_with_label($name)), activate => sub { $actions{$action}{launch}->($current_interface) });
     }
 }
 
@@ -511,7 +538,7 @@ sub empty_menu {
     my ($menu) = @_;
     delete $_->{menuitems} foreach values %wireless_networks;
     $menu->destroy if $menu;
-    Gtk2::Menu->new;
+    Gtk3::Menu->new;
 }
 
 sub get_wireless_networks_sorted() {
@@ -529,7 +556,7 @@ sub generate_simple_menu() {
         gtkappend($simple_menu,
                   (map { generate_wireless_menuitem($_) } @valuable_networks),
                   (@networks ? create_menu(N("More networks"), map { generate_wireless_menuitem($_) } @networks) : ()),
-                  Gtk2::SeparatorMenuItem->new,
+                  Gtk3::SeparatorMenuItem->new,
               );
     }
     gtkappend($simple_menu, create_menu_choices('setInterface', 'allow_single_choice'));
@@ -555,25 +582,25 @@ sub generate_menu() {
 
     push @settings, create_action_item('chooseProfile');
     if (defined $interactive) {
-        $interactive_cb = gtkshow(gtksignal_connect(gtkset_active(Gtk2::CheckMenuItem->new_with_label(N("Interactive Firewall automatic mode")),
+        $interactive_cb = gtkshow(gtksignal_connect(gtkset_active(Gtk3::CheckMenuItem->new_with_label(N("Interactive Firewall automatic mode")),
                                                                   !$interactive),
                                                     toggled => sub { eval { $ifw->set_interactive(to_bool(!$_[0]->get_active)) } }));
         push @settings, $interactive_cb;
     }
-    push @settings, gtkshow(gtksignal_connect(gtkset_active(Gtk2::CheckMenuItem->new_with_label(N("Always launch on startup")), getAutoStart()),
+    push @settings, gtkshow(gtksignal_connect(gtkset_active(Gtk3::CheckMenuItem->new_with_label(N("Always launch on startup")), getAutoStart()),
                                               toggled => sub { setAutoStart(uc(bool2text($_[0]->get_active))) }));
 
-    $menu->append(gtkshow(Gtk2::SeparatorMenuItem->new));
+    $menu->append(gtkshow(Gtk3::SeparatorMenuItem->new));
     if ($current_state ne 'unconfigured' && $wireless_device) {
         $menu->append(gtkshow(create_menu(N("Wireless networks"),
                                           create_action_item('wireless'),
-                                          gtkshow(Gtk2::SeparatorMenuItem->new),
+                                          gtkshow(Gtk3::SeparatorMenuItem->new),
                                           map { generate_wireless_menuitem($_) } get_wireless_networks_sorted())));
     }
     if (my $vpn = create_action_item('chooseVPN')) { $menu->append($vpn) }
     if (my $set = $current_state ne 'unconfigured' && create_action_item('setInterface')) { $menu->append($set) }
     $menu->append(gtkshow(create_menu(N("Settings"), @settings)));
-    $menu->append(gtkshow(Gtk2::SeparatorMenuItem->new));
+    $menu->append(gtkshow(Gtk3::SeparatorMenuItem->new));
     $menu->append(create_action_item('help'));
     $menu->append(create_action_item('quit'));
     $menu;
@@ -581,7 +608,7 @@ sub generate_menu() {
 sub mainQuit() {
      Glib::Source->remove($timeout) if $timeout;
      Glib::Source->remove($update_timeout) if $update_timeout;
-     Gtk2->main_quit;
+     Gtk3->main_quit;
 }
 sub getAutoStart() {
     my %p = getVarsFromSh($onstartupfile);

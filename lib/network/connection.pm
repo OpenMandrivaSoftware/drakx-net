@@ -242,20 +242,27 @@ sub get_network_control_settings {
 sub guess_control_settings {
     my ($self) = @_;
     $self->{control}{metric} ||= $self->get_metric;
-    $self->{control}{nm_controlled} = 1 if !defined $self->{control}{nm_controlled};
 }
 
 sub get_control_settings {
     my ($self) = @_;
+
+    my %nm_controlled_modes = (
+        undef => N_("Automatic"),
+        0 => N_("No"),
+        1 => N_("Yes"),
+    );
+
     [
         { text => N("Allow users to manage the connection"), val => \$self->{control}{userctl}, type => "bool" },
         { text => N("Start the connection at boot"), val => \$self->{control}{onboot}, type => "bool" },
         { text => N("Enable traffic accounting"), val => \$self->{control}{accounting}, type => "bool" },
-        { text => N("Allow interface to be controlled by NetworkManager"), val => \$self->{control}{nm_controlled}, type => "bool" },
+        { label => N("Allow interface to be controlled by Network Manager"), val => \$self->{control}{nm_controlled}, list => [ keys %nm_controlled_modes ],
+          sort => 1, format => sub { translate($nm_controlled_modes{$_[0]}) } },
         { label => N("Metric"), val => \$self->{control}{metric}, advanced => 1 },
         { label => N("MTU"), val => \$self->{control}{mtu}, advanced => 1,
           help => N("Maximum size of network message (MTU). If unsure, left blank.") },
-        { label => N("Fake make address (MACADDR)"), val => \$self->{control}{macaddr}, advanced => 1,
+        { label => N("Fake MAC address (MACADDR)"), val => \$self->{control}{macaddr}, advanced => 1,
           help => N("Use a fake MAC address. If unset, uses HWADDR or default.") },
         { label => N("MAC address (HWADDR)"), val => \$self->{control}{hwaddr}, advanced => 1,
           help => N("Make sure to bind the interface to the network card with that MAC address. If unset, uses default.") },
@@ -270,7 +277,8 @@ sub build_ifcfg_settings {
         DEVICE => $self->get_interface,
         ONBOOT => bool2yesno($self->{control}{onboot}),
         ACCOUNTING => bool2yesno($self->{control}{accounting}),
-        NM_CONTROLLED => bool2yesno($self->{control}{nm_controlled}),
+        # Only write NM_CONTROLLED if we absolutely know it's value
+        if_(defined $self->{control}{nm_controlled} && 'undef' ne $self->{control}{nm_controlled}, NM_CONTROLLED => bool2yesno($self->{control}{nm_controlled})),
         USERCTL => bool2yesno($self->{control}{userctl}),
         METRIC => $self->{control}{metric},
         MTU => $self->{control}{mtu},

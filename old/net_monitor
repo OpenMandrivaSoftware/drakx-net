@@ -1,0 +1,642 @@
+#!/usr/bin/perl
+
+# NetMonitor
+
+# Copyright (C) 1999-2006 Mandriva
+# Damien "Dam's" Krotkine
+# Thierry Vignaud <thierry.vignaud@gmail.com>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2, or (at your option)
+# any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+use lib qw(/usr/lib/libDrakX);
+
+use strict;
+# i18n: IMPORTANT: to get correct namespace (drakx-net instead of libDrakX)
+BEGIN { unshift @::textdomains, 'drakx-net' }
+use standalone;     #- warning, standalone must be loaded very first, for 'explanations'
+
+use c;
+use interactive;
+use mygtk3 qw(gtknew gtkset);
+use ugtk3 qw(:create :helpers :wrappers);
+use common;
+use network::network;
+use network::tools;
+use POSIX;
+
+$ugtk3::wm_icon = "/usr/share/mcc/themes/default/net_monitor-mdk.png";
+
+if ("@ARGV" =~ /--status/) { print network::tools::connected(); exit(0) }
+my $force = "@ARGV" =~ /--force/;
+my $quiet = "@ARGV" =~ /--quiet/;
+my $connect = "@ARGV" =~ /--connect/;
+my $disconnect = "@ARGV" =~ /--disconnect/;
+my ($default_intf) = "@ARGV" =~ /--defaultintf (\w+)/;
+
+my $net = {};
+network::network::read_net_conf($net);
+$default_intf ||= $net->{net_interface};
+
+if ($force) {
+    $connect and network::tools::start_interface($default_intf, 1);
+    $disconnect and network::tools::stop_interface($default_intf, 1);
+    $connect = $disconnect = 0;
+}
+$quiet and exit(0);
+
+
+my $window1 = ugtk3->new(N("Network Monitoring"));
+$window1->{window}->signal_connect(delete_event => \&main_quit);
+
+unless ($::isEmbedded) {
+    $window1->{window}->set_position('center');
+    $window1->{window}->set_title(N("Network Monitoring"));
+    $window1->{window}->set_border_width(5);
+}
+#$::isEmbedded or $window1->{window}->set_size_request(580, 320);
+
+my $colorr = gtkcolor(50400, 655, 20000);
+my $colort = gtkcolor(55400, 55400, 655);
+my $colora = gtkcolor(655, 50400, 655);
+my $isconnected = -1;
+my @interfaces;
+my $monitor = {};
+my $c_time = 0;
+my $ct_tag;
+
+my ($pixmap, $darea, $gc_lines);
+my ($width, $height) = (300, 150);
+
+my $left_border = 50;
+my $grid_interval = 30;
+my $arrow_space = 6;
+my $arrow_size = 5;
+
+my $cfg_file = $< ? "$ENV{HOME}/.net_monitorrc" : "/etc/sysconfig/net_monitorrc";
+my %config = getVarsFromSh($cfg_file);
+my $use_same_scale = text2bool($config{use_same_scale});
+
+gtkadd($window1->{window},
+    gtknew('VBox', spacing => 5, children => [
+        1, gtknew('HBox', spacing => 5, children => [
+            0, my $notebook = gtknew('Notebook'),
+            1, gtknew('VBox', spacing => 5, children => [
+                0, gtknew('Frame', text => N("Settings"), shadow_type => 'etched_out', child => 
+                    gtknew('VBox', border_width => 5, children_tight => [
+                        gtknew('HBox', border_width => 5, children_tight => [
+                            N("Default connection: "),
+                            my $label_cnx_type = gtknew('Label', text => "") ]),
+                    my $button_connect = gtknew('Button', text => N("Wait please"), sensitive => 0, clicked => \&connection),
+                    ]),
+                ),
+                1, gtknew('Frame', text => N("Global statistics"), shadow_type => 'etched_out', child => 
+                    gtknew('VBox', border_width => 5, children_tight => [
+                        gtknew('Table', col_spacings => 1, row_spacings => 5, homogeneous => 1, children => [
+                            [ gtknew('Label', text => ""), gtknew('Label', text => N("Instantaneous")) , gtknew('Label', text => N("Average")) ],
+                            [ gtknew('WrappedLabel', text => N("Sending\nspeed:")),   my $label_st = gtknew('Label', text => ""), my $label_sta = gtknew('Label', text => N("unknown")) ],
+                            [ gtknew('WrappedLabel', text => N("Receiving\nspeed:")), my $label_sr = gtknew('Label', text => ""), my $label_sra = gtknew('Label', text => N("unknown")) ],
+                            ]),
+                        gtknew('HSeparator'),
+                        gtknew('HBox', border_width => 5, children_loose => [
+                            N("Connection time: "), 
+                            my $label_ct = gtknew('Label', text => N("unknown")),
+                            ]),
+                        ])
+                ),
+                ])
+            ]),
+        0, gtksignal_connect(gtkset_active(gtknew('CheckButton', text => N("Use same scale for received and transmitted")), $use_same_scale), clicked => sub { $use_same_scale = !$use_same_scale }),
+        0, gtknew('HButtonBox', layout => 'edge', children_loose => [
+            my $button_close = gtknew('Button', text => N("Close"), clicked => \&main_quit),
+            ]),
+        0, my $statusbar = Gtk3::Statusbar->new
+        ]),
+);
+
+$window1->{window}->show_all;
+$window1->{window}->realize;
+
+my $gct = Gtk3::Gdk::GC->new($window1->{window}->get_window);
+$gct->set_foreground($colort);
+my $gcr = Gtk3::Gdk::GC->new($window1->{window}->get_window);
+$gcr->set_foreground($colorr);
+my $gca = Gtk3::Gdk::GC->new($window1->{window}->get_window);
+$gca->set_foreground($colora);
+
+$statusbar->push(1, N("Wait please, testing your connection..."));
+$window1->{window}->show_all;
+
+# make sure widgets got realized before any event callback is called (#36537):
+gtkflush();
+
+my $time_tag1 = Glib::Timeout->add(1000, \&rescan);
+my $time_tag2 = Glib::Timeout->add(1000, \&update);
+
+update();
+rescan();
+
+gtkflush() while $isconnected == -2 || $isconnected == -1;
+
+Glib::Source->remove($time_tag2);
+$time_tag2 = Glib::Timeout->add(5000, \&update);
+
+connection() if $connect && !$isconnected || $disconnect && $isconnected;
+
+my $tool_pid;
+
+$SIG{CHLD} = sub {
+    my $child_pid;
+    do { 
+        $child_pid = waitpid(-1, POSIX::WNOHANG);
+        if ($tool_pid eq $child_pid) {
+            undef $tool_pid;
+            $button_close->set_sensitive(1);
+        }
+    } while $child_pid > 0;
+};
+
+
+$window1->main;
+main_quit();
+
+my $during_connection;
+my $first;
+
+sub main_quit() {
+    foreach my $timeout ($time_tag1, $time_tag2) {
+        Glib::Source->remove($timeout) if $timeout;
+    }
+    $config{use_same_scale} = bool2yesno($use_same_scale);
+    setVarsInSh($cfg_file, \%config);
+    ugtk3->exit(0);
+}
+
+sub getcurrentintf() {
+    my $currp = $notebook->get_current_page;
+    foreach (@interfaces) {
+        my $intf = $_;
+        return $intf if $monitor->{$intf}{page} == $currp;
+    }
+}
+
+sub intf_reset() {
+    # resets counters for currently selected tab
+    my $intf = getcurrentintf();
+    if (defined $intf) {
+        $monitor->{$intf}{totalt} = 0;
+        $monitor->{$intf}{totalr} = 0;
+    }
+}
+
+sub connection() {
+    $during_connection = 1;
+    my $wasconnected = $isconnected;
+
+    $button_connect->set_sensitive(0);
+    $button_close->set_sensitive(0);
+    $statusbar->pop(1);
+    $statusbar->push(1, $wasconnected ? N("Disconnecting from Internet ") : N("Connecting to Internet "));
+    if ($wasconnected == 0) {
+        $c_time = time();
+        $ct_tag = Glib::Timeout->add(1000, sub {
+                my ($sec, $min, $hour) = gmtime(time() - $c_time);
+                my $e = sprintf("%02d:%02d:%02d", $hour, $min, $sec);
+                gtkset($label_ct, text => $e); 1 });
+    }
+    my $nb_point = 1;
+    $first = 1;
+
+    my $_tag = Glib::Timeout->add(1000, sub {
+            $statusbar->pop(1);
+            $statusbar->push(1, ($wasconnected  == 1 ? N("Disconnecting from Internet ") : N("Connecting to Internet "))
+                . join('', map { "." } (1..$nb_point)));
+            $nb_point++;
+            if ($nb_point  < 4) { return 1 }
+            my $ret = 1;
+
+            my $isconnect = test_connected(0);
+
+            if ($nb_point < 20) {
+                if ($first == 1)  { # first time
+                    if ($isconnect == -2) { # wait for last test to finish
+                        test_connected(2); # not yet terminated, try to cancel it
+                        return 1;
+                    }
+                    test_connected(1);  # initiates new connection test
+                    $first = 0;
+                    return 1;
+                }
+                if ($isconnect == -2) { return 1 } # no result yet, wait.
+                if ($isconnect == $wasconnected) {
+                    # we got a test result; but the connection state did not change; retry.
+                    test_connected(1);
+                    return 1;
+                }
+            }
+            # either we got a result, or we timed out.
+            if ($isconnect != -2 || $nb_point > 20) {
+                $isconnected = $isconnect;
+                $ret = 0;
+                $statusbar->pop(1);
+                $statusbar->push(1, $wasconnected ? ($isconnected ?
+                        N("Disconnection from Internet failed.") :
+                        N("Disconnection from Internet complete.")) :
+                    ($isconnected ?
+                        N("Connection complete.") :
+                        N("Connection failed.\nVerify your configuration in the Mageia Linux Control Center."))
+                );
+                # remove the connection time timer if connection is down or failed
+                $isconnected or Glib::Source->remove($ct_tag);
+                my $delay = 1000;
+                # keep the message displayed longer if there is a problem.
+                if ($isconnected == $wasconnected) { $delay = 5000 }
+                my $_tag3 = Glib::Timeout->add($delay, sub {
+
+                        $button_connect->set_sensitive(1);
+                        $button_close->set_sensitive(1);
+                        undef $during_connection;
+                        update();
+                        return 0;
+                    });
+            }
+            return $ret;
+        });
+
+    gtkflush();
+
+    print "Action on " . getcurrentintf() . "\n";
+
+    $tool_pid =
+    $wasconnected == 1
+    ? network::tools::stop_interface(getcurrentintf(), 1)
+    : network::tools::start_interface(getcurrentintf(), 1);
+}
+
+sub graph_window_width() { $width - $left_border }
+
+sub rescan() {
+    get_val();
+    foreach (@interfaces) {
+        my $intf = $_;
+        my $recv = $monitor->{$intf}{val}[0];
+        my $transmit = $monitor->{$intf}{val}[8];
+        my $refr = $monitor->{$intf}{referencer};
+        my $reft = $monitor->{$intf}{referencet};
+        my $diffr = $recv - $refr;
+        my $difft = $transmit - $reft;
+
+        # prevent for case 32 bits or 64 bits unsigned value of /proc (if rotate to zero)
+        if ($diffr < 0) { 
+            if ($refr < 2**32) { # transition (2^32 - 1) to 0
+                $diffr += 2**32;
+            } else { $diffr += 2**64 } # transition (2^64 - 1) to 0
+            # { $diffr = 0; $monitor->{$intf}{totalr} = 0 } # Alternatively, if bug for very big number in perl
+        }
+        # prevent for case 32 bits or 64 bits unsigned value of /proc (if rotate to zero)
+        if ($difft < 0) { 
+            if ($reft < 2**32) { # transition (2^32 - 1) to 0
+                $difft += 2**32;
+            } else { $difft += 2**64 } # transition (2^64 - 1) to 0
+            # { $difft = 0; $monitor->{$intf}{totalt} = 0 } # Alternatively, if bug for very big number in perl
+        }
+
+        $monitor->{$intf}{totalr} += $diffr;
+        $monitor->{$intf}{totalt} += $difft;
+        $monitor->{sr} += $diffr;
+        $monitor->{st} += $difft;
+
+        $monitor->{$intf}{recva} += $diffr;
+        $monitor->{$intf}{recvan}++;
+        if ($monitor->{$intf}{recvan} > 9) {
+            push(@{$monitor->{$intf}{stack_ra}}, $monitor->{$intf}{recva}/10);
+            $monitor->{$intf}{recva} = $monitor->{$intf}{recvan} = 0;
+        } else { push(@{$monitor->{$intf}{stack_ra}}, -1) }
+        shift @{$monitor->{$intf}{stack_ra}} if @{$monitor->{$intf}{stack_ra}} > graph_window_width();
+
+        push(@{$monitor->{$intf}{stack_r}}, $diffr);
+        shift @{$monitor->{$intf}{stack_r}} if @{$monitor->{$intf}{stack_r}} > graph_window_width();
+        $monitor->{$intf}{labelr}->set_label(formatXiB($monitor->{$intf}{totalr}));
+        $monitor->{$intf}{referencer} = $recv;
+
+        $monitor->{$intf}{transmita} += $difft;
+        $monitor->{$intf}{transmitan}++;
+        if ($monitor->{$intf}{transmitan} > 9) {
+            push(@{$monitor->{$intf}{stack_ta}}, $monitor->{$intf}{transmita}/10);
+            $monitor->{$intf}{transmita} = $monitor->{$intf}{transmitan} = 0;
+        } else { push(@{$monitor->{$intf}{stack_ta}}, -1) }
+        shift @{$monitor->{$intf}{stack_ta}} if @{$monitor->{$intf}{stack_ta}} > graph_window_width();
+
+        push(@{$monitor->{$intf}{stack_t}}, $difft);
+        shift @{$monitor->{$intf}{stack_t}} if @{$monitor->{$intf}{stack_t}} > graph_window_width();
+        $monitor->{$intf}{labelt}->set_label(formatXiB($monitor->{$intf}{totalt}));
+        $monitor->{$intf}{referencet} = $transmit;
+
+        draw_monitor($monitor->{$intf}, $intf);
+    }
+    gtkset($label_sr, text => formatXiB($monitor->{sr}) . "/s");
+    gtkset($label_st, text => formatXiB($monitor->{st}) . "/s");
+    $monitor->{sra} += $monitor->{sr};
+    $monitor->{sta} += $monitor->{st};
+    $monitor->{nba}++;
+    if ($monitor->{nba} > 9) {
+        gtkset($label_sra, text => formatXiB($monitor->{sra}/10) . "/s");
+        gtkset($label_sta, text => formatXiB($monitor->{sta}/10) . "/s");
+        $monitor->{sra} = 0;
+        $monitor->{sta} = 0;
+        $monitor->{nba} = 0;
+    }
+    gtkset($label_cnx_type, text => N("%s (%s)", translate($net->{type}), $net->{net_interface}));
+    $monitor->{$_} = 0 foreach 'sr', 'st';
+    1;
+}
+
+sub get_val() {
+    my $a = cat_("/proc/net/dev");
+    $a =~ s/^.*?\n.*?\n//;
+    $a =~ s/^\s*lo:.*?\n//;
+    my @line = split(/\n/, $a);
+    require detect_devices;
+    my @net_devices = detect_devices::get_net_interfaces();
+    map {
+        s/\s*(\w*)://;
+        my $intf = $1;
+        if (member($intf, @net_devices)) {
+            $monitor->{$intf}{val} = [ split() ];
+            $monitor->{$intf}{intf} = $intf;
+            $intf;
+        } else { () }
+    } @line;
+}
+
+sub change_color {
+    my ($color) = @_;
+    my $dialog = _create_dialog(N("Color configuration"));
+    $dialog->get_child->add(my $colorsel = Gtk3::ColorSelection->new);
+    $colorsel->set_current_color($color);
+    $dialog->add_button(N("Cancel"), 'cancel');
+    $dialog->add_button(N("Ok"), 'ok');
+    $dialog->show_all;
+    if ($dialog->run eq 'ok') {
+        $color = $colorsel->get_current_color;
+    }
+    $dialog->destroy;
+    $color;
+}
+
+my ($scale_r, $scale_t);
+$scale_r = $scale_t = $height;
+
+sub scale_tranmistted($) { $_[0] * $scale_t }
+sub scale_received($) { $_[0] * $scale_r }
+
+sub color_button {
+    my ($gc, $color) = @_;
+    gtknew('Button', relief => 'none', clicked => sub {
+            $color = change_color($color);
+            $gc->set_rgb_fg_color($color);
+            $_[0]->queue_draw;
+        },
+        child => gtksignal_connect(gtkshow(gtksize(gtkset(Gtk3::DrawingArea->new, width => 10, height => 10), 10, 10)),
+            draw => sub { $_[0]->get_window->draw_rectangle($gc, 1, 0, 0, 10, 10) })
+    );
+}
+
+
+sub update() {
+    if (!$during_connection) {
+        my $isconnect = test_connected(0);
+        if ($isconnect != -2) {
+            $isconnected = $isconnect; # save current state
+            $isconnect = test_connected(1); # start new test
+        }
+    }
+
+    my @intfs = get_val(); # get values from /proc file system
+    foreach (@intfs) {
+        my $intf = $_;
+        if (!member($intf,@interfaces)) {
+            $default_intf ||= $intf;
+            $monitor->{$intf}{initialr} = $monitor->{$intf}{val}[0];
+            $monitor->{$intf}{initialt} = $monitor->{$intf}{val}[8];
+            $monitor->{$intf}{totalr} = 0;
+            $monitor->{$intf}{totalt} = 0;
+            $darea->{$intf} = Gtk3::DrawingArea->new;
+            $darea->{$intf}->set_events(${ Gtk3::Gdk::EventMask->new("pointer_motion_mask") });
+            $notebook->append_page(gtkshow(my $page = gtknew('VBox', children => [
+                        0, gtknew('HBox', border_width => 5, children_tight => [
+                            gtksize($darea->{$intf}, $width, $height) ]),
+                        0, gtknew('HBox', children => [
+                            1, gtknew('VBox', children_tight => [
+                                gtknew('HBox', spacing => 5, border_width => 5, children_tight => [
+                                    color_button($gct, $colort),
+                                    N("sent: "), $monitor->{$intf}{labelt} = gtknew('Label', text => "0") ]),
+                                gtknew('HBox', spacing => 5, border_width => 5, children_tight => [
+                                    color_button($gcr, $colorr),
+                                    N("received: "), $monitor->{$intf}{labelr} = gtknew('Label', text => "0") ]),
+                                gtknew('HBox', spacing => 5, border_width => 5, children_tight => [
+                                    color_button($gca, $colora),
+                                    N("average") ]),
+                                gtknew('Button', text => N("Reset counters"), sensitive => 1, clicked => sub { intf_reset() })
+                                ]),
+                            0, gtknew('VBox', border_width => 5, children_tight => [
+                                gtknew('Frame', text => N("Local measure"), shadow_type => 'etched_out', child => 
+                                    gtknew('VBox', border_width => 5, children_tight => [
+                                        gtknew('HBox', children_tight => [
+                                            N("sent: "),
+                                            my $measure_t = gtknew('Label', text => "0")
+                                            ]),
+                                        gtknew('HBox', children_tight => [
+                                            N("received: "),
+                                            my $measure_r = gtknew('Label', text => "0")
+                                            ])
+                                        ])
+                                )
+                                ])
+                            ])
+                        ])),
+                gtknew('Label', text => $intf));
+            $monitor->{$intf}{page} = $notebook->page_num($page);
+            $darea->{$intf}->realize;
+            $pixmap->{$intf} = Gtk3::Gdk::Pixmap->new($darea->{$intf}->get_window, $width, $height, $darea->{$intf}->get_window->get_depth);
+            $monitor->{$intf}{referencer} = $monitor->{$intf}{val}[0];
+            $monitor->{$intf}{referencet} = $monitor->{$intf}{val}[8];
+            $pixmap->{$intf}->draw_rectangle($darea->{$intf}->get_style->black_gc, 1, 0, 0, $width, $height);
+            $darea->{$intf}->signal_connect(motion_notify_event => sub { 
+                    my (undef, $e) = @_;
+                    my $x = $e->x - 50;
+                    my $received    = $x >= 0 ? $monitor->{$intf}{stack_r}[$x] : 0;
+                    my $transmitted = $x >= 0 ? $monitor->{$intf}{stack_t}[$x] : 0;
+                    gtkset($measure_r, text => formatXiB($received));
+                    gtkset($measure_t, text => formatXiB($transmitted));
+                });
+            $darea->{$intf}->signal_connect(draw => sub {
+                    return if !$darea->{$intf}->get_window;
+                    $darea->{$intf}->get_window->draw_drawable($darea->{$intf}->get_style->bg_gc('normal'), $pixmap->{$intf}, 0, 0, 0, 0, $width, $height);
+                });
+            $gc_lines->{$intf} = Gtk3::Gdk::GC->new($darea->{$intf}->get_window);
+            $gc_lines->{$intf}->set_foreground($darea->{$intf}->get_style->white);
+            $gc_lines->{$intf}->set_line_attributes(1, 'on-off-dash', 'not-last', 'round');
+
+        }
+    }
+    foreach (@interfaces) {
+        my $intf = $_;
+        $notebook->remove_page($monitor->{$intf}{page}) unless member($intf,@intfs);
+    }
+    if (@intfs && !@interfaces) {
+        #- select the default interface at start
+        for (my $num_p = 0; $num_p < $notebook->get_n_pages; $num_p++) {
+            if ($notebook->get_tab_label_text($notebook->get_nth_page($num_p)) eq $default_intf) {
+                $notebook->set_current_page($num_p);
+                last;
+            }
+        }
+    }
+    @interfaces = @intfs;
+    if ($isconnected != -2 && $isconnected != -1 && !$during_connection) {
+        if ($isconnected == 1 && !in_ifconfig($net->{net_interface})) {
+            $isconnected = 0;
+            $statusbar->pop(1);
+            $statusbar->push(1, N("Warning, another internet connection has been detected, maybe using your network"));
+        } else {
+            #- translators : $net->{type} is the type of network connection (modem, adsl...)
+            $statusbar->pop(1);
+            $statusbar->push(1, $isconnected == 1 ? N("Connected") : N("Not connected"));
+        }
+        $button_connect->set_sensitive(1);
+        $button_connect->set("label", $isconnected == 1 ? N("Disconnect %s", translate($net->{type})) : N("Connect %s", $net->{type}));
+    }
+    unless ($default_intf || @interfaces) {
+        $button_connect->set_sensitive(0);
+        $button_connect->set("label", N("No internet connection configured"));
+    }
+    1;
+}
+
+sub in_ifconfig {
+    my ($intf) = @_;
+    -x '/sbin/ifconfig' or return 1;
+    $intf eq '' and return 1;
+    `/sbin/ifconfig` =~ /$intf/;
+}
+
+sub draw_monitor {
+    my ($o, $intf) = @_;
+    defined $darea->{$intf} or return;
+    my $gcl = $gc_lines->{$intf};
+    my $pixmap = $pixmap->{$intf};
+    my $gc = $darea->{$intf}->get_style->white_gc;
+    # fix race on ugtk3->exit that causes a crash (#33023)
+    return 0 if !$gc;
+    $pixmap->draw_rectangle($darea->{$intf}->get_style->black_gc, 1, 0, 0, $width, $height);
+    my $maxr = 0;
+    foreach (@{$o->{stack_r}}) { $maxr = $_ if $_ > $maxr }
+    my $maxt = 0;
+    foreach (@{$o->{stack_t}}) { $maxt = $_ if $_ > $maxt }
+
+    my ($graph_maxr, $graph_maxt);
+    if ($use_same_scale) {
+        $graph_maxr = $graph_maxt = ($maxr + $maxt)/2;
+    } else {
+        $graph_maxr = $maxr;
+        $graph_maxt = $maxt;
+    }
+    $scale_r = ($height/2) / max($graph_maxr, 1);
+    $scale_t = ($height/2) / max($graph_maxt, 1);
+
+    my $step = $left_border - 1;
+    foreach (@{$o->{stack_t}}) {
+        $pixmap->draw_rectangle($gct, 1, $step, 0, 1, scale_tranmistted($_));
+        $step++;
+    }
+    $step = $left_border - 1;
+    my ($av1, $av2, $last_a);
+    foreach (@{$o->{stack_ta}}) {
+        if ($_ != -1) {
+            if (!defined $av1) { $av1 = $_ } else { defined $av2 or $av2 = $_ }
+            if ($av1 && $av2) {
+                $pixmap->draw_line($gca, $step-15, scale_tranmistted($av1), $step-5, scale_tranmistted($av2));
+                $av1 = $av2;
+                undef $av2;
+                $last_a = $step - $left_border + 1;
+            }
+        }
+        $step++;
+    }
+    $step = $left_border - 1;
+    foreach (@{$o->{stack_r}}) {
+        $pixmap->draw_rectangle($gcr, 1, $step, $height-scale_received($_), 1, scale_received($_));
+        $step++;
+    }
+    $step = $left_border - 1;
+    $av1 = $av2 = undef;
+    foreach (@{$o->{stack_ra}}) {
+        if ($_ != -1) {
+            if (!defined $av1) { $av1 = $_ } else { defined $av2 or $av2 = $_ }
+            if (defined $av1 && defined $av2) {
+                $pixmap->draw_line($gca, $step-15, $height-scale_received($av1), $step-5, $height-scale_received($av2));
+                $av1 = $av2;
+                undef $av2;
+            }
+        }
+        $step++;
+    }
+
+    my ($pix_maxr, $pix_maxt);
+    if ($last_a) {
+        $pix_maxr = $height - scale_received(@{$o->{stack_ra}}[$last_a]);
+        $pix_maxt = scale_tranmistted(@{$o->{stack_ta}}[$last_a]);
+    } else {
+        $pix_maxr = $height - scale_received(@{$o->{stack_r}}[@{$o->{stack_r}}-1]);
+        $pix_maxt = scale_tranmistted(@{$o->{stack_t}}[@{$o->{stack_t}}-1]);
+    }
+
+    my $x_l = $arrow_size + 1;
+    my $y_l;
+
+    #- "transmitted" arrow
+    $y_l = max($arrow_space, min($pix_maxt, $pix_maxr - 2*$arrow_size - $arrow_space));
+    $pixmap->draw_line($gct, $x_l, 0, $x_l, $y_l);
+    $pixmap->draw_line($gct, $x_l-1, 0, $x_l-1, $y_l);
+    $pixmap->draw_line($gct, $x_l+1, 0, $x_l+1, $y_l);
+    $pixmap->draw_polygon($gct, 1, $x_l-$arrow_size, $y_l, $x_l+$arrow_size, $y_l, $x_l, $y_l+$arrow_size);
+
+    #- "received" arrow
+    $y_l = min($height - $arrow_space, max($pix_maxr, $y_l + 2*$arrow_size + $arrow_space));
+    $pixmap->draw_line($gcr, $x_l, $height, $x_l, $y_l);
+    $pixmap->draw_line($gcr, $x_l-1, $height, $x_l-1, $y_l);
+    $pixmap->draw_line($gcr, $x_l+1, $height, $x_l+1, $y_l);
+    $pixmap->draw_polygon($gcr, 1, $x_l-$arrow_size, $y_l, $x_l+$arrow_size, $y_l, $x_l, $y_l-$arrow_size);
+
+    for (my $i = $grid_interval; $i <= $height - $grid_interval; $i += $grid_interval) {
+        $pixmap->draw_line($gcl, $left_border, $i, $width, $i);
+        my ($gc2, $text);
+        if ($i > max($grid_interval, $use_same_scale ? $pix_maxt : $height/2)) {
+            $text = formatXiB(($height-$i)/$scale_r);
+            $gc2 = $gcr;
+        } else {
+            $text = formatXiB($i/$scale_t);
+            $gc2 = $gct;
+        }
+        $pixmap->draw_layout($gc2, 45-string_width($darea->{$intf}, $text), $i-5, $darea->{$intf}->create_pango_layout($text));
+    }
+    $darea->{$intf}->queue_draw;
+}
+
+
+sub test_connected {
+    my ($arg) = @_;
+    $::testing || network::tools::test_connected($arg);
+}

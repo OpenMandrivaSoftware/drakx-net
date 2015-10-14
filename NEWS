@@ -1,4 +1,126 @@
+2.23
+- fix "unescaped left brace" warnings in perl-5.22+.
+- log dbus errors
+- stop using Gtk3::Notify::Queue as it's broken
+
+2.22
+- draknfs, draksambashare:
+  o fix handling UTF-8 directories (mga#13354)
+- draksambashare:
+  o fix undefined value for parameter (mga#13206)
+
+2.21
+- Fix double entry in menu for drakx-net (mga#15835)
+
+2.20
+- draksambashare:
+  o fix empty user list (mga#12530)
+
+2.19
+- translation updates
+
+2.18
+- fix displaying bogus ESSID for hidden network (mga13685)
+- use high res icons for notifications (mga#7434)
+
+2.17
+- fix not saving Private key, Private key password, or a CA cert in
+  /etc/wpa_supplicant.conf (Patrick Hibbs, mga#11136)
+- hide EAP client private key password (Patrick Hibbs, mga#11136)
+
+2.16
+- translation updates
+
+2.15
+- translation updates
+
+2.14
+- translation updates
+- drakgw: update squid configuration, so that it works for the new version
+  (mga#14904)
+- drakgw: make sure shorewall loc and net zones don't contain the same
+  interfaces (mga#14904)
+
+2.13
+- translation updates
+- drakfirewall: open submission port (587/tcp, RFC4409) when a mail
+  server is available
+
+2.12
+- do not write NM_CONTROLLED flag in configs if it's not been explicitly set.
+  This allows, e.g. NM to run on gnome live CD/DVDs. Drak tools will still
+  work fine when NM is not installed. mga#6675 mga#9261
+
+2.11
+- add minimal (i.e. installer) support for shorewall-ipv6 (mga#11928)
+- drop shorewall 2->3 upgrade support
+- correct path to shorewall config
+- do not exec pkexec but run it so it has a parent process to fix double fork
+  issues mga#11184 mga#12364
+
+2.10
+- block CHLD signals on startup in order to prevent glib-threading segfaults
+
+2.9
+- delay setting SIG_CHLD handler
+  (thus preventing potential segfault on startup (mga#10289))
+
+2.8
+- nuke the use of /etc/iftab (it's no longer useful) mga#11592
+- nuke the use of udev rules for network device names (persistent device names
+  make it no longer relevant) mga#11592
+- nuke an ethN regexp that prevents network coming up in installer mga#11592
+
+2.7
+- adapt to new /etc/sysctl.d
+- drakfirewall: add 6881:6999 UDP port range for Bittorrent
+  (this is used by rtorrent)
+
+2.6
+- prevent segfaulting on forking when glib/gtk create threads behind us
+  (mga#12041)
+
+2.5
+- fix mga web url (mga#11972)
+- do not request password for draknetcenter (mga#12017)
+
+2.4
+- fix draksambashare crashing when displaying about dialog (mga#11972)
+
+2.3.1
+- fix a warning in net_applet (Colin Guthrie)
+
+2.3
+- avoid system() as this seems to segv perl when combined with threads (mga#11929)
+
+2.2
+- fix "undefined value for mandatory argument 'sensitive'" (mga#11799)
+
+2.1
+- fix "undefined value for mandatory argument 'is_active'" (mga#11763)
+- fix "undefined value for mandatory argument 'sensitive'" (mga#11764)
+
+2.0
+- port to Gtk+3 (net_applet notification works again!)
+
+1.29
+- fix paths to some binaries which no longer live in /usr/sbin
+- polkit: fix support for several third party net management commands (mga#11286)
+- do not do costly urpmi check before forking net_monitor
+
+1.28
+- tidy up polkit support
+
+1.27
+- fix namespace problem on root user check (mga#11332)
+
+1.26:
+- use polkit for authorisation (mga#11125)
+
+1.25:
 - net_applet: fix error dialog title after selecting a wireless network
+- install net_monitor package on demand (mga#157)
+- drakfirewall: replace obsolete state module with conntrack (mga#8225)
 
 1.24:
 - connection manager: extract gtk2 specific code in separate module
@@ -6,16 +128,14 @@
 - net_applet/netcenter/drakroam: remove unused pixbufs creation
 - netcenter: update connection status after connection timeout (#3888)
 
-Version 1.23 -  6 May 2013, by Per Øyvind Karlsen
+1.23:
 - add FDN to ISP list (mga#6883)
 
-Version 1.22 -  6 May 2013, by Per Øyvind Karlsen
-
+1.22:
 - drakgw, drakfirewall: install shorewall-ipv6 too (mga#9401)
 
-Version 1.20.1 - 31 March 2013, by Per Øyvind Karlsen
-
-- add ports for Samba - 901 (swat) 40000:60000 - clients
+1.21:
+- translation updates
 
 1.20:
 - improve MAC adress help
@@ -71,68 +191,94 @@ Version 1.20.1 - 31 March 2013, by Per Øyvind Karlsen
 - wait for network to show up the same way as in the installer
   (Derek Jennings, mga#5830)
 
-Version 0.99 - 17 August 2012, by Per Øyvind Karlsen
+1.13:
+- install rtlwifi-firmware for r8712u driver (#6064)
+- fix installing ralink firmware for 2860 and 2870 chipsets (#5072)
+  (also drop 3090 checks, the driver has been merged in others)
 
-- fix installing ralink firmware for 2860 and 2870 chipsets
-  (also drop 3090 checks, the driver has been merged in others mga#5072)
-- install rtlwifi-firmware for r8712u driver (mga#6064)
-
-Version 0.98 -  7 June 2012, by Per Øyvind Karlsen
-
-- make interfaces controlled by NetworkManager by default
-- add dhcpcd as first alternative for dhcp clients
-
-0.97
+1.12
 - fix connectivity test during install (and possibly standalone) by 
-  calling res_init before hostname resolution (mga#5772)
+  calling res_init before hostname resolution (#5772)
+
+1.11
 - fix testing network connectivy test after resolv.conf changes
   (Derek Jennings, mga#5772)
-- another fix for iwlagn firmware installation since reported module
-  name is iwlwifi (#5549)
+
+1.10
 - install rtlwifi-firmware for rtl8192 drivers
 - remove rtl8187se thirdparty check, it has been in mainline for a
   long time already
+- another fix for iwlagn firmware installation since reported module
+  name is iwlwifi (#5549)
+
+1.9
 - further fix iwlagn firmware installation
+
+1.8
 - ndiswrapper: do not try to access the full chroot path when running
-  in chroot (mga#56052)
-- install ralink-firmware for rt61/73/2860/2870/3090 drivers
-- fix iwlagn firmware package installation (mga#5549) and make
+  in chroot (mdv#56052)
+- fix iwlagn firmware package installation (#5549) and make
   iwl3945/4965 check faster by fixing test file
-- change path to b43 firmware according to kernel changes (mga#5419)
-- ensure /etc/hostname has a newline as per upstream specs (mga#4672)
-- nfs: add .conf suffix to lockd.drakx file in /etc/modprobe.d
+- install ralink-firmware for rt61/73/2860/2870/3090 drivers
+
+1.7
+- change path to b43 firmware according to kernel changes (#5419)
+
+1.6:
+- ensure /etc/hostname has a newline as per upstream specs (#4672)
+
+1.5:
+- fix CRDA never set to 'US' when country not in CRDA domains
+  (might help #1015 & the like)
+- fix bogus messages about 3rd party drivers
 - drakfirewall:
   o fix listing NFS ports
   o fix cleaning old rules
-- fix CRDA never set to 'US' when country not in CRDA domains
-  (might help #1015 & the like)
+- nfs: add .conf suffix to lockd.drakx file in /etc/modprobe.d
+
+1.4:
+- adapt to drakxtools-13.92+ API change
+  (reduces net_applet resident memory)
 - drakfirewall: list SSL flavor of POP3/IMAP/SMTP ports
+
+1.3:
 - hostname: update the /etc/hostname (new x-distro standard) file on hostname
-  change (mga#2983)
-- wireless scan: use programs from prefix, not installer root (mga#1452)
-- make sure all strings ended in translation catalogs (mga#3371)
-- install b43-openfwwf for b43 chips instead of requiring external firmware files
-- Follow drakxtools API changes
+  change (#2983)
 
-0.96
-- fix name of the systemctl in shorewall.pm
+1.2:
+- wireless scan: use programs from prefix, not installer root (#1452)
 
-0.95
-- add missing comma in wireless.pm
+1.1:
+- drakfirewall: use . instead of source in /etc/ifw/rules
+- shorewall:
+  o do not write end line twice in config files if there is no
+    "LAST LINE" marker
+  o do not warn about incompatible SECTION commands in rules file
+    (source does not work in dash)
+- net_applet: use better libnotify app name
+- fix squid configuration when sharing internet connection (#1353)
 
-0.94
-- Update russian translation (patch from abarakin)
-- Add support for b43-openfwwf
-- Use right module in network connection check for kernel up 2.6.39+ (patch from kazancas
-- Drakgw: stop configuration if shorewall disabled (patch from abarakin)
-- Fix stop and start shorewall as systemd service (patch from kazancas)
-- Do not warn about incompatible SECTION for shorewall rules
-- Do not write end line twice in shorewall files
-- Fix parsing of ACCOUNTING and NM_CONTROLLED in ifcfg
-- Fix sourcing of /etc/ifw/rules under dash
-- Corrent libnotify name
-- Fix squid conf for connection sharing
-- Make get_routes() more robust when parsing /proc/net/route
+1.0:
+- fix parsing (and thus writing back) ACCOUNTING and NM_CONTROLLED in ifcfg
+- make sure all strings ended in translation catalogs (#3371)
+
+0.99:
+- Use b43-openfwwf for b43 module instead of asking for a windows driver
+
+0.98:
+- make network connectivity check work with kernel-2.6.39+ (#1266)
+
+0.97:
+- update encryption icons for Mageia (#1094)
+
+0.96:
+- redraw wifi status icons
+
+0.95:
+- update wifi status icons
+
+0.94:
+- translation updates
 
 0.93:
 - Make draknetcenter.desktop XDG compliant

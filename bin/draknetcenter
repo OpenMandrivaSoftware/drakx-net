@@ -18,7 +18,9 @@ use dbus_object;
 #- Allow multiple instances, but only one per user:
 is_running('draknetcenter') and die "draknetcenter already running\n";
 
-my $in = 'interactive'->vnew('su');
+require_root_capability();
+
+my $in = 'interactive'->vnew;
 my $net = {};
 network::network::read_net_conf($net);
 my $dbus;

@@ -20,7 +20,8 @@ sub write_squid_conf {
     renamef($squid_conf_file, "$squid_conf_file.old");
     my $prefix = network::network::netmask_to_vlsm($intf->{NETMASK});
     output($squid_conf_file, qq(
-http_port $squid_conf->{http_port}[0] transparent
+http_port $squid_conf->{http_port}[0] intercept
+http_port $squid_conf->{http_port}[0]
 hierarchy_stoplist cgi-bin ?
 acl QUERY urlpath_regex cgi-bin \\?
 no_cache deny QUERY
@@ -33,9 +34,6 @@ refresh_pattern ^ftp:           1440    20%     10080
 refresh_pattern ^gopher:        1440    0%      1440
 refresh_pattern .               0       20%     4320
 half_closed_clients off
-acl manager proto cache_object
-acl localhost src 127.0.0.0/8
-acl to_localhost dst 127.0.0.0/8
 acl localnet src 10.0.0.0/8     # RFC1918 possible internal network
 acl localnet src 172.16.0.0/12  # RFC1918 possible internal network
 acl localnet src 192.168.0.0/16 # RFC1918 possible internal network

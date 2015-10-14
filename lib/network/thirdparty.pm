@@ -148,9 +148,7 @@ sub warn_not_found {
                             if_(!$opt{no_distro_package} && !$opt{no_package},
                                 #-PO: first argument is a list of OpenMandriva distributions
                                 #-PO: second argument is a package media name
-                                N("These packages can be found in %s, or in the official %s package repository.",
-                                  join(", ", "OpenMandriva Lx", "OpenMandriva Lx Powerpack"),
-                                  "non-free"),
+                                N("These packages can be found in %s, or in the official %s package repository.", 'OpenMandriva', "non-free"),
                             ),
                             if_($checked, N("The following component is missing: %s", $checked)),
                             if_($opt{explanations}, translate($opt{explanations})),

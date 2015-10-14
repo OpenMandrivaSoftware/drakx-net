@@ -1,8 +1,8 @@
 package network::drakconnect::global;
 
 use lib qw(/usr/lib/libDrakX);   # helps perl_checker
-use ugtk2 qw(:create :dialogs :helpers :wrappers);
-use mygtk2 qw(gtknew);
+use ugtk3 qw(:create :dialogs :helpers :wrappers);
+use mygtk3 qw(gtknew);
 use common;
 use network::drakconnect;
 use network::test;
@@ -25,11 +25,11 @@ sub update_network_status {
 sub configure_net {
     my ($in, $net, $modules_conf) = @_;
     my $int_state;
-    my $int_label = Gtk2::WrappedLabel->new($net->{type} eq 'lan' ? N("Gateway:") : N("Interface:"));
-    my $int_name = Gtk2::Label->new($net->{type} eq 'lan' ? $net->{network}{GATEWAY} : $net->{net_interface});
+    my $int_label = Gtk3::WrappedLabel->new($net->{type} eq 'lan' ? N("Gateway:") : N("Interface:"));
+    my $int_name = Gtk3::Label->new($net->{type} eq 'lan' ? $net->{network}{GATEWAY} : $net->{net_interface});
 
-    my $dialog = ugtk2->new(N("Internet connection configuration"));
-    my $exit_dialogsub = sub { Gtk2->main_quit };
+    my $dialog = ugtk3->new(N("Internet connection configuration"));
+    my $exit_dialogsub = sub { Gtk3->main_quit };
     if (!$net->{type}) {
         $in->ask_warn(
                     N("Warning"),
@@ -44,7 +44,7 @@ Run the \"%s\" assistant from the OpenMandriva Lx Control Center", N("Set up a n
     }
     $dialog->{rwindow}->signal_connect(delete_event => $exit_dialogsub);
 
-    my $param_vbox = Gtk2::VBox->new(0,0);
+    my $param_vbox = Gtk3::VBox->new(0,0);
     my $i = 0;
 
     my @conf_data = (
@@ -59,35 +59,35 @@ Run the \"%s\" assistant from the OpenMandriva Lx Control Center", N("Set up a n
                              map {
                                  my $c;
                                  if (defined $_->[2]) {
-                                     $c = Gtk2::Combo->new;
+                                     $c = Gtk3::ComboBox->new;
                                      $c->set_popdown_strings(@{$_->[2]});
                                      $infos[2*$i+1] = $c->entry;
                                  } else {
-                                     $c = $infos[2*$i+1] = Gtk2::Entry->new;
+                                     $c = $infos[2*$i+1] = Gtk3::Entry->new;
                                  }
                                  $infos[2*$i+1]->set_text(${$_->[1]});
                                  $i++;
-                                 [ Gtk2::WrappedLabel->new($_->[0]), $c ];
+                                 [ Gtk3::WrappedLabel->new($_->[0]), $c ];
                              } @conf_data
                             )
            );
 
-    $dialog->{rwindow}->add(gtkpack_(Gtk2::VBox->new,
-                                     0, Gtk2::Label->new(N("Internet Connection Configuration")),
+    $dialog->{rwindow}->add(gtkpack_(Gtk3::VBox->new,
+                                     0, Gtk3::Label->new(N("Internet Connection Configuration")),
                                      1, gtkadd(gtkcreate_frame(N("Internet access")),
                                                gtkset_border_width(create_packtable({ col_spacings => 5, row_spacings => 5, homogenous => 1 },
-                                                                                    [ Gtk2::WrappedLabel->new(N("Connection type: ")),
-                                                                                      Gtk2::WrappedLabel->new(translate($net->{type})) ],
+                                                                                    [ Gtk3::WrappedLabel->new(N("Connection type: ")),
+                                                                                      Gtk3::WrappedLabel->new(translate($net->{type})) ],
                                                                                     [ $int_label, $int_name ],
-                                                                                    [ Gtk2::WrappedLabel->new(N("Status:")),
-                                                                                      $int_state = Gtk2::WrappedLabel->new(N("Testing your connection...")) ]
+                                                                                    [ Gtk3::WrappedLabel->new(N("Status:")),
+                                                                                      $int_state = Gtk3::WrappedLabel->new(N("Testing your connection...")) ]
                                                                                    ),
                                                                    5),
                                               ),
                                      1, gtkadd(gtkcreate_frame(N("Parameters")), gtkset_border_width($param_vbox, 5)),
                                      0, gtkpack(create_hbox('edge'),
-                                                gtksignal_connect(Gtk2::Button->new(N("Cancel")), clicked => $exit_dialogsub),
-                                                gtksignal_connect(Gtk2::Button->new(N("Ok")), clicked => sub {
+                                                gtksignal_connect(Gtk3::Button->new(N("Cancel")), clicked => $exit_dialogsub),
+                                                gtksignal_connect(Gtk3::Button->new(N("Ok")), clicked => sub {
                                                                           foreach my $i (0..$#conf_data) {
                                                                               ${$conf_data[$i][1]} = $infos[2*$i+1]->get_text;
                                                                           }

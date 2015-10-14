@@ -113,8 +113,7 @@ sub get_config_path {
 
 sub _run {
     my ($connection, $action, @args) = @_;
-    my @command = ('vpn-' . $action, $connection->get_type, $connection->get_name, @args);
-    @command = common::wrap_command_for_root(@command) if $>;
+    my @command = (if_($>, '/usr/bin/pkexec'), '/usr/sbin/vpn-' . $action, $connection->get_type, $connection->get_name, @args);
     require run_program;
     run_program::rooted($::prefix, , @command);
 }

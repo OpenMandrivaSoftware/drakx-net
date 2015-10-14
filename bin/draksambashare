@@ -27,23 +27,21 @@ use standalone;
 use common;
 use network::network;
 use interactive;
-use mygtk2 qw(gtknew);
-use ugtk2 qw(:ask :wrappers :create :dialogs);
-use Gtk2::SimpleList;
-use Gtk2::Gdk::Keysyms;
+use mygtk3 qw(gtknew);
+use ugtk3 qw(:ask :wrappers :create :dialogs);
+use Gtk3::SimpleList;
 use run_program;
 
 # use libconf
 use Libconf::Templates;
 use Libconf::Glueconf::Samba::Smb_conf;
 
-my $in = 'interactive'->vnew('su');
-$in->do_pkgs->ensure_is_installed('samba-server', '/usr/sbin/smbd') or exit(1);
+require_root_capability();
 
-#if (!-f "/etc/sysconfig/wizard_samba") {
-#    $in->do_pkgs->ensure_is_installed('drakwizard', '/usr/sbin/drakwizard');
-#    err_dialog(N("Error"), N("Please setup a samba server")) and return;    
-#}
+my $in = 'interactive'->vnew;
+if (!$::testing) {
+    $in->do_pkgs->ensure_is_installed('samba-server', '/usr/sbin/smbd') or exit(1);
+}
 
 my $draksambashare = "/etc/sysconfig/draksambashare_first";
 my $icon_path = "/usr/lib/libDrakX/icons";
@@ -51,9 +49,9 @@ my $sambaicon = "/usr/share/mcc/themes/default/diskdrake_samba.png";
 my $fileshare_icon = "$icon_path/IC-winacces2-16.png";
 my $printershare_icon = "$icon_path/IC-sambaprt-16.png";
 my $sambauser_icon = "$icon_path/ic82-users-16.png";
-my $pixbuf_file = Gtk2::Gdk::Pixbuf->new_from_file($fileshare_icon);
-my $pixbuf_printer = Gtk2::Gdk::Pixbuf->new_from_file($printershare_icon);
-my $pixbuf_user = Gtk2::Gdk::Pixbuf->new_from_file($sambauser_icon);
+my $pixbuf_file = Gtk3::Gdk::Pixbuf->new_from_file($fileshare_icon);
+my $pixbuf_printer = Gtk3::Gdk::Pixbuf->new_from_file($printershare_icon);
+my $pixbuf_user = Gtk3::Gdk::Pixbuf->new_from_file($sambauser_icon);
 
 my $printer_list = create_printer_list();
 my $share_list = create_share_list();
@@ -61,14 +59,14 @@ my $user_list = create_user_list();
 my $display_share = create_display_share(); 
 
 sub create_user_list() {
-  my $user_list = Gtk2::SimpleList->new('' => 'pixbuf',
+  my $user_list = Gtk3::SimpleList->new('' => 'pixbuf',
 					N("User name") => 'text',
 				       );
   $user_list;
 }
 
 sub create_share_list() {
-    my $share_list = Gtk2::SimpleList->new('' => 'pixbuf',
+    my $share_list = Gtk3::SimpleList->new('' => 'pixbuf',
 					 N("Share name") => 'text',
 					 N("Share directory") => 'text',
 					 N("Comment") => 'text',
@@ -96,7 +94,7 @@ sub create_share_list() {
   }
 
 sub create_display_share() {
-  my $display_share = Gtk2::SimpleList->new('' => 'pixbuf',
+  my $display_share = Gtk3::SimpleList->new('' => 'pixbuf',
 					    N("Share name") => 'text',
 					    N("Share directory") => 'text',
 					    N("Comment") => 'text',
@@ -113,7 +111,7 @@ sub create_display_share() {
 }
 
 sub create_printer_list() {
-   my $printer_list = Gtk2::SimpleList->new('' => 'pixbuf',
+   my $printer_list = Gtk3::SimpleList->new('' => 'pixbuf',
 					    N("Printer name") => 'text',
 					    N("Path") => 'text',
 					    N("Comment") => 'text',
@@ -170,50 +168,29 @@ my %adv_options = (
 
 my $window;
 
-sub get_items() {
-    my @items = (
-		 [ N("/_File"), undef, undef, undef, '<Branch>', ],
-		 [ N("/_File") . N("/_Write conf"), undef, \&write_conf, 1, '<Item>', ],
-		 [ N("/_File") . N("/_Quit"), N("<control>Q"), \&quit_all, 1, '<Item>', ],
-
-		 [ N("/_Samba Server"), undef, undef, undef, '<Branch>', ],
-		 [ N("/_Samba Server") . N("/_Configure"), undef, \&launch_samba_wizard, 1, '<Item>', ],
-		 [ N("/_Samba Server") . N("/_Restart"), undef, \&restart_dialog, 1, '<Item>', ],
-		 [ N("/_Samba Server") . N("/R_eload"), undef, \&reload_dialog, 1, '<Item>', ],
-
-		 [ N("/_Help") . N("/_Samba Documentation"), undef, sub {
-		     $in->do_pkgs->ensure_is_installed('samba-doc', '/usr/share/doc/samba-doc');
-		     run_program::raw({ detach => 1 }, 'www-browser', '/usr/share/doc/samba-doc/htmldocs/index.html');
-		     },
-		   1, '<Item>', ],
-
-		 [ N("/_About") . N("/_Report Bug"), undef, sub { run_program::raw({ detach => 1 }, 'drakbug', '--report', 'draksambashare') }, 1, '<Item>', ],
-		 [ N("/_About") . N("/_About..."), undef, sub {
-               my $license = formatAlaTeX(translate($::license));
-               $license =~ s/\n/\n\n/sg; # nicer formatting
-               my $w = gtknew('AboutDialog', name => N("Draksambashare"),
-                              version => '2008',
-                              copyright => N("Copyright (C) %s by Mandriva", '2001-2008'),
-                              license => $license, wrap_license => 1,
-                              comments => N("This is a simple tool to easily manage Samba configuration."),
-                              website => 'http://mandrivalinux.com',
-                              website_label => N("Mandriva Linux"),
-                              authors => 'Antoine Ginies <aginies@mandriva.com>',
-                              artists => 'Hélène Durosini <ln@mandriva.com>',
-                              translator_credits =>
-                                #-PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-                                N("_: Translator(s) name(s) & email(s)\n"),
-                              transient_for => $window->{real_window}, modal => 1, position_policy => 'center-on-parent',
-                          );
-               $w->show_all;
-               $w->run;
-		 }, 1, '<Item>', ],
-		 );
-    return @items;
-}
 
 sub quit_all() {
-  ugtk2->exit;
+  ugtk3->exit;
+}
+
+sub about_dialog() {
+    my $license = formatAlaTeX(translate($::license));
+    $license =~ s/\n/\n\n/sg; # nicer formatting
+    my $w = gtknew('AboutDialog', name => N("Draksambashare"),
+		   version => '2008',
+		   copyright => N("Copyright (C) %s by Mandriva", '2001-2008'),
+		   license => $license, wrap_license => 1,
+		   comments => N("This is a simple tool to easily manage Samba configuration."),
+		   website => 'http://www.openmandriva.org',
+		   website_label => N("OpenMandriva"),
+		   authors => [ 'Antoine Ginies <aginies@mandriva.com>' ],
+		   translator_credits =>
+		   #-PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
+		   N("_: Translator(s) name(s) & email(s)\n"),
+		   transient_for => $window->{real_window}, modal => 1, position_policy => 'center-on-parent',
+	);
+    $w->show_all;
+    $w->run;
 }
 
 sub restart_dialog() {
@@ -231,10 +208,10 @@ sub wait_action {
     undef $w;
 }
 
-my %size_groups = map { $_ => Gtk2::SizeGroup->new('horizontal') } qw(label widget button);
+my %size_groups = map { $_ => Gtk3::SizeGroup->new('horizontal') } qw(label widget button);
 my $label_and_widgets = sub {
   my ($label, $widget, $button) = @_;
-  gtkpack_(Gtk2::HBox->new(0,1),
+  gtkpack_(Gtk3::HBox->new(0,1),
            0, gtkadd_widget($size_groups{label}, $label),
            0, gtkadd_widget($size_groups{widget}, $widget),
 	   if_($button, 0, gtkadd_widget($size_groups{button}, $button)),
@@ -252,6 +229,8 @@ sub show_file_dialog {
     if ($answer eq 'ok') {
         my $file = $file_dlg->get_filename;
         -d $file or err_dialog(N("Error!"), N("Should be a directory.")) and return;
+        # get_filename() returns UTF-8:
+        c::set_tagged_utf8($file);
         $data->set_text($file);
     }
     $file_dlg->hide;
@@ -367,22 +346,22 @@ sub printers_section() {
 
 sub add_entry() {
     my ($addshare_name, $addshare_comment, $addshare_dir);
-    $_ = Gtk2::Entry->new foreach $addshare_name, $addshare_comment, $addshare_dir;
-    my $button = Gtk2::Button->new(N("Open"));
+    $_ = Gtk3::Entry->new foreach $addshare_name, $addshare_comment, $addshare_dir;
+    my $button = Gtk3::Button->new(N("Open"));
     $button->signal_connect(clicked => sub { show_file_dialog($addshare_dir) });
 
     my $dialog = _create_dialog(N("DrakSamba add entry"), { transient_for => $::main_window, modal => 1 });
     local $::main_window = $dialog;
 
-    gtkpack_($dialog->vbox,
-	     0, gtkadd(Gtk2::Frame->new(N("Add a share")),
-		       gtkpack_(gtkset_border_width(Gtk2::VBox->new, 3),
-				0, gtkpack_(gtkset_border_width(Gtk2::VBox->new, 1),
+    gtkpack_($dialog->get_child,
+	     0, gtkadd(Gtk3::Frame->new(N("Add a share")),
+		       gtkpack_(gtkset_border_width(Gtk3::VBox->new, 3),
+				0, gtkpack_(gtkset_border_width(Gtk3::VBox->new, 1),
 					    0, $label_and_widgets->(N("Name of the share:"), $addshare_name, ""),
 					    0, $label_and_widgets->(N("Comment:"), $addshare_comment, ""),
 					    0, $label_and_widgets->(N("Directory:"), $addshare_dir, $button),
 					    ),
-				0, gtkpack_(gtkset_border_width(Gtk2::VBox->new, 1),
+				0, gtkpack_(gtkset_border_width(Gtk3::VBox->new, 1),
 					    0, create_okcancel({
 						cancel_clicked => sub { $dialog->destroy },
 						ok_clicked => sub {
@@ -543,29 +522,34 @@ sub modify_printers_entry {
   my ($selected) = @_;
   my ($dir, $comment, $print_command, $guest_ok, $share_name, $browseable, $printable, $write_list, $printing, $lpq_command, $create_mode, $writable, $use_client_driver, $inherit_permissions);
 
-  $share_name = Gtk2::Label->new;
-  $_ = Gtk2::Entry->new foreach $dir, $comment, $print_command, $write_list, $printing, $lpq_command, $create_mode;
-  $_ = Gtk2::OptionMenu->new foreach $browseable, $printable, $guest_ok, $writable, $use_client_driver, $inherit_permissions;
+  $share_name = Gtk3::Label->new;
+  $_ = Gtk3::Entry->new foreach $dir, $comment, $print_command, $write_list, $printing, $lpq_command, $create_mode;
+  $_ = Gtk3::ComboBoxText->new foreach $browseable, $printable, $guest_ok, $writable, $use_client_driver, $inherit_permissions;
   $_->set_popdown_strings(@yesno) foreach $browseable, $printable, $guest_ok, $writable, $use_client_driver, $inherit_permissions;
 
 
   my $s = $printer_list->{data}[$selected][1];
   $s or info_dialog(N("Error"), N("Please add or select a Samba printer share to be able to modify it.")) and return;  $share_name->set_text($s);
-  $dir->set_text($printer_list->{data}[$selected][2]);
-  $comment->set_text($printer_list->{data}[$selected][3]);
-  $browseable->set_text($printer_list->{data}[$selected][4]);
-  $printable->set_text($printer_list->{data}[$selected][5]);
-  $print_command->set_text($printer_list->{data}[$selected][6]);
-  $lpq_command->set_text($printer_list->{data}[$selected][7]);
-  $guest_ok->set_text($printer_list->{data}[$selected][8]);
-  $writable->set_text($printer_list->{data}[$selected][9]);
-  $write_list->set_text($printer_list->{data}[$selected][10]);
-  $inherit_permissions->set_text($printer_list->{data}[$selected][11]);
-  $printing->set_text($printer_list->{data}[$selected][12]);
-  $create_mode->set_text($printer_list->{data}[$selected][13]);
-  $use_client_driver->set_text($printer_list->{data}[$selected][14]);
+  my %h = (
+      2  => $dir,
+      3  => $comment,
+      4  => $browseable,
+      5  => $printable,
+      6  => $print_command,
+      7  => $lpq_command,
+      8  => $guest_ok,
+      9  => $writable,
+      10 => $write_list,
+      11 => $inherit_permissions,
+      12 => $printing,
+      13 => $create_mode,
+      14 => $use_client_driver,
+  );
+  foreach my $id (keys %h) {
+     $h{$id}->set_text($printer_list->{data}[$selected][$id] || '');
+  }
 
-  my $button = Gtk2::Button->new(N("Open"));
+  my $button = Gtk3::Button->new(N("Open"));
   $button->signal_connect(clicked => sub { show_file_dialog($dir) });
 
   my $dialog = _create_dialog(N("DrakSamba Printers entry"), { transient_for => $::main_window, modal => 1 });
@@ -580,35 +564,35 @@ sub modify_printers_entry {
                           $printing->set_sensitive(0);
 		     }
 
-  gtkpack_($dialog->vbox,
-	   0, gtkadd(Gtk2::Frame->new(N("Printer share")),
-		  gtkpack_(gtkset_border_width(Gtk2::HBox->new, 3),
-			   0, gtkpack_(gtkset_border_width(Gtk2::VBox->new, 1),
+  gtkpack_($dialog->get_child,
+	   0, gtkadd(Gtk3::Frame->new(N("Printer share")),
+		  gtkpack_(gtkset_border_width(Gtk3::HBox->new, 3),
+			   0, gtkpack_(gtkset_border_width(Gtk3::VBox->new, 1),
 				       0, $label_and_widgets->(N("Printer name:"), $share_name, ""),
 				       0, $label_and_widgets->(N("Comment:"), $comment, ""),
 				       0, $label_and_widgets->(N("Directory:"), $dir, $button),
 				      ),
-			   0, Gtk2::VSeparator->new,
-			   0, gtkpack_(gtkset_border_width(Gtk2::VBox->new, 1),
+			   0, Gtk3::VSeparator->new,
+			   0, gtkpack_(gtkset_border_width(Gtk3::VBox->new, 1),
 				       0, $label_and_widgets->(N("Writable:"), $writable, ""),
 				       0, $label_and_widgets->(N("Browseable:"), $browseable, ""),
 				       0, $label_and_widgets->(N("Printable"), $printable, ""),
 				      ),
 			  ),
 		 ),
-	   0, gtkadd(Gtk2::Frame->new(N("Advanced options")),
-		     gtkpack_(gtkset_border_width(Gtk2::HBox->new, 3),
-			      0, gtkadd(Gtk2::Frame->new(N("Printer access")),
-					gtkpack_(gtkset_border_width(Gtk2::VBox->new, 1),
+	   0, gtkadd(Gtk3::Frame->new(N("Advanced options")),
+		     gtkpack_(gtkset_border_width(Gtk3::HBox->new, 3),
+			      0, gtkadd(Gtk3::Frame->new(N("Printer access")),
+					gtkpack_(gtkset_border_width(Gtk3::VBox->new, 1),
 						 0, $label_and_widgets->(N("Write list"), $write_list, ""),
 						 0, $label_and_widgets->(N("Inherit permissions"), $inherit_permissions, ""),
 						 0, $label_and_widgets->(N("Guest ok:"), $guest_ok, ""),
 						 0, $label_and_widgets->(N("Create mode:"), $create_mode, ""),
 						),
 				       ),
-			      0, Gtk2::VSeparator->new,
-			      0, gtkadd(Gtk2::Frame->new(N("Printer command")),
-					gtkpack_(gtkset_border_width(Gtk2::VBox->new, 1),
+			      0, Gtk3::VSeparator->new,
+			      0, gtkadd(Gtk3::Frame->new(N("Printer command")),
+					gtkpack_(gtkset_border_width(Gtk3::VBox->new, 1),
 						 0, $label_and_widgets->(N("Print command:"), $print_command, ""),
 						 0, $label_and_widgets->(N("LPQ command:"), $lpq_command, ""),
 						 0, $label_and_widgets->(N("Printing:"), $printing, ""),
@@ -675,57 +659,57 @@ sub modify_printers_entry {
 
 sub modify_entry {
   my ($selected) = @_;
+  if (!defined($selected)) {
+      info_dialog(N("Error"), N("Please add or select a Samba share to be able to modify it."));
+      return;
+  }
   my ($dir, $comment, $create_mask, $directory_mask, $read_list, $write_list, $admin_users, $valid_users, $force_group, $browseable, $public, $writable, $hide_files, $hide_dot_files, $force_create_mode, $preserve_case, $default_case, $inherit_permissions, $share_name);
 
-  $share_name = Gtk2::Label->new;
-  $_ = Gtk2::Entry->new foreach $dir, $comment, $create_mask, $directory_mask, $hide_files;
-  $_ = Gtk2::Entry->new foreach $read_list, $write_list, $admin_users, $valid_users, $force_group, $force_create_mode;
-  $_ = Gtk2::OptionMenu->new foreach $browseable, $public, $writable, $default_case, $preserve_case, $hide_dot_files, $inherit_permissions;
+  $share_name = Gtk3::Label->new;
+  $_ = Gtk3::Entry->new foreach $dir, $comment, $create_mask, $directory_mask, $hide_files;
+  $_ = Gtk3::Entry->new foreach $read_list, $write_list, $admin_users, $valid_users, $force_group, $force_create_mode;
+  $_ = Gtk3::ComboBoxText->new foreach $browseable, $public, $writable, $default_case, $preserve_case, $hide_dot_files, $inherit_permissions;
 
   $default_case->set_popdown_strings(@default_case);
   $_->set_popdown_strings(@yesno) foreach $browseable, $public, $writable, $hide_dot_files, $preserve_case, $inherit_permissions;
 
-  my $button = Gtk2::Button->new(N("Open"));
+  my $button = Gtk3::Button->new(N("Open"));
   $button->signal_connect(clicked => sub { show_file_dialog($dir) });
 
-  my $w = ugtk2->new(N("DrakSamba entry"));
+  my $w = ugtk3->new(N("DrakSamba entry"));
   $w->{window}->set_modal(1);
   $w->{window}->set_position('center');
 
   my $s = $share_list->{data}[$selected][1];
   $s or info_dialog(N("Error"), N("Please add or select a Samba share to be able to modify it.")) and return;
   $share_name->set_text($s);
-  $dir->set_text($share_list->{data}[$selected][2]);
-  $comment->set_text($share_list->{data}[$selected][3]);
-  $browseable->set_text($share_list->{data}[$selected][4]);
-  $public->set_text($share_list->{data}[$selected][5]);
-  $writable->set_text($share_list->{data}[$selected][6]);
-  $create_mask->set_text($share_list->{data}[$selected][7]);
-  $directory_mask->set_text($share_list->{data}[$selected][8]);
-  $read_list->set_text($share_list->{data}[$selected][9]);
-  $write_list->set_text($share_list->{data}[$selected][10]);
-  $admin_users->set_text($share_list->{data}[$selected][11]);
-  $valid_users->set_text($share_list->{data}[$selected][12]);
-  $inherit_permissions->set_text($share_list->{data}[$selected][13]);
-  $hide_dot_files->set_text($share_list->{data}[$selected][14]);
-  $hide_files->set_text($share_list->{data}[$selected][15]);
-  $preserve_case->set_text($share_list->{data}[$selected][16]);
-  $force_create_mode->set_text($share_list->{data}[$selected][17]);
-  $force_group->set_text($share_list->{data}[$selected][18]);
-  $default_case->set_text($share_list->{data}[$selected][19]);
 
-  my $expander_user = Gtk2::Expander->new(N("User options (user access, mask option, force mode)"));
-  $expander_user->add(gtkpack_(Gtk2::HBox->new,
-			       0, gtkadd(Gtk2::Frame->new(N("Samba user access")),
-					 gtkpack_(gtkset_border_width(Gtk2::VBox->new, 1),
+  # start with $share_list->{data}[$selected][2]:
+  my $i = 1;
+  foreach my $box ($dir, $comment, $browseable, $public, $writable,
+		   $create_mask, $directory_mask, $read_list,
+		   $write_list, $admin_users, $valid_users,
+		   $inherit_permissions, $hide_dot_files, $hide_files,
+		   $preserve_case, $force_create_mode, $force_group,
+		   $default_case) {
+      $i++;
+      my $value = $share_list->{data}[$selected][$i];
+      next if !$value;
+      $box->set_text($value);
+  }
+
+  my $expander_user = Gtk3::Expander->new(N("User options (user access, mask option, force mode)"));
+  $expander_user->add(gtkpack_(Gtk3::HBox->new,
+			       0, gtkadd(Gtk3::Frame->new(N("Samba user access")),
+					 gtkpack_(gtkset_border_width(Gtk3::VBox->new, 1),
 						  0, $label_and_widgets->($adv_options{read_list}, $read_list, ""),
 						  0, $label_and_widgets->($adv_options{write_list}, $write_list, ""),
 						  0, $label_and_widgets->($adv_options{admin_users}, $admin_users, ""),
 						  0, $label_and_widgets->($adv_options{valid_users}, $valid_users, ""),
 						  ),
 					 ),
-			       0, gtkadd(Gtk2::Frame->new(N("Mask options")),
-					 gtkpack_(gtkset_border_width(Gtk2::VBox->new, 1),
+			       0, gtkadd(Gtk3::Frame->new(N("Mask options")),
+					 gtkpack_(gtkset_border_width(Gtk3::VBox->new, 1),
 						  0, $label_and_widgets->($adv_options{create_mask}, $create_mask, ""),
 						  0, $label_and_widgets->($adv_options{directory_mask}, $directory_mask, ""),
 						  0, $label_and_widgets->($adv_options{force_group}, $force_group, ""),
@@ -736,16 +720,16 @@ sub modify_entry {
 			       ),
 		      );
   
-  my $expander_file = Gtk2::Expander->new(N("File options (hide files, case)"));
-  $expander_file->add(gtkpack_(Gtk2::VBox->new,
-			       0, gtkadd(Gtk2::Frame->new(N("Display options")),
-					 gtkpack_(gtkset_border_width(Gtk2::HBox->new, 1),
-						  0, gtkpack_(gtkset_border_width(Gtk2::VBox->new, 0),
+  my $expander_file = Gtk3::Expander->new(N("File options (hide files, case)"));
+  $expander_file->add(gtkpack_(Gtk3::VBox->new,
+			       0, gtkadd(Gtk3::Frame->new(N("Display options")),
+					 gtkpack_(gtkset_border_width(Gtk3::HBox->new, 1),
+						  0, gtkpack_(gtkset_border_width(Gtk3::VBox->new, 0),
 							      0, $label_and_widgets->($adv_options{hide_dot_files}, $hide_dot_files, ""),
 							      0, $label_and_widgets->($adv_options{hide_files}, $hide_files, ""),
 							      ),
-						  0, Gtk2::VSeparator->new,
-						  0, gtkpack_(gtkset_border_width(Gtk2::VBox->new, 0),
+						  0, Gtk3::VSeparator->new,
+						  0, gtkpack_(gtkset_border_width(Gtk3::VBox->new, 0),
 							      0, $label_and_widgets->($adv_options{default_case}, $default_case, ""),
 							      0, $label_and_widgets->($adv_options{preserve_case}, $preserve_case, ""),
 							      ),
@@ -760,25 +744,25 @@ sub modify_entry {
 
   gtkadd($w->{window},
 	 gtknew('VBox', spacing => 0, children_loose => [
-							 gtkadd(Gtk2::Frame->new(N("Samba share directory")),
-								gtkpack_(gtkset_border_width(Gtk2::HBox->new, 1),
-									 0, gtkpack_(gtkset_border_width(Gtk2::VBox->new, 0),
+							 gtkadd(Gtk3::Frame->new(N("Samba share directory")),
+								gtkpack_(gtkset_border_width(Gtk3::HBox->new, 1),
+									 0, gtkpack_(gtkset_border_width(Gtk3::VBox->new, 0),
 										     0, $label_and_widgets->(N("Share name:"), $share_name),
 										     0, $label_and_widgets->(N("Directory:"), $dir, $button),
 										     0, $label_and_widgets->(N("Comment:"), $comment, ""),
 										     ),
-									 0, Gtk2::VSeparator->new,
-									 0, gtkpack_(gtkset_border_width(Gtk2::VBox->new, 0),
+									 0, Gtk3::VSeparator->new,
+									 0, gtkpack_(gtkset_border_width(Gtk3::VBox->new, 0),
 										     0, $label_and_widgets->(N("Public:"), $public, ""),
 										     0, $label_and_widgets->(N("Writable:"), $writable, ""),
 										     0, $label_and_widgets->(N("Browseable:"), $browseable, ""),
 										    ),
 									 ),
 								),
-							 gtkadd(Gtk2::Frame->new(N("Advanced options")),
-								gtkpack_(gtkset_border_width(Gtk2::VBox->new, 1),
+							 gtkadd(Gtk3::Frame->new(N("Advanced options")),
+								gtkpack_(gtkset_border_width(Gtk3::VBox->new, 1),
 									 0, $expander_user,
-									 0, Gtk2::HSeparator->new,
+									 0, Gtk3::HSeparator->new,
 									 0, $expander_file,
 									 ),
 							       ),
@@ -912,24 +896,24 @@ sub get_user() {
 sub modify_user_info {
   my ($user, $_passwd, $todo) = @_;
   my ($buser, $bpasswd);
-  my $dialog = new Gtk2::Dialog();
+  my $dialog = new Gtk3::Dialog();
   $dialog->set_title(N("Add Samba user"));
   $dialog->set_modal(1);
   $dialog->set_position('center');
   $dialog->set_resizable(0);
   if ($todo eq "add") {
-    $buser = Gtk2::ComboBox->new_with_strings([ get_user() ]);
+    $buser = Gtk3::ComboBoxText->new_with_strings([ get_user() ]);
     $buser->set_wrap_width(3);
   } else {
-    $buser = Gtk2::Label->new;
+    $buser = Gtk3::Label->new;
     $buser->set_text($user);
   }
-  $bpasswd = Gtk2::Entry->new;
+  $bpasswd = Gtk3::Entry->new;
   $bpasswd->set_visibility(0);
 
-  gtkpack_($dialog->vbox,
-           0, gtkadd(Gtk2::Frame->new(N("User information")),
-                     gtkpack_(gtkset_border_width(Gtk2::VBox->new, 5),
+  gtkpack_($dialog->get_child,
+           0, gtkadd(Gtk3::Frame->new(N("User information")),
+                     gtkpack_(gtkset_border_width(Gtk3::VBox->new, 5),
                               0, $label_and_widgets->(N("User name:"), $buser, ""),
                               0, $label_and_widgets->(N("Password:"), $bpasswd, ""),
                              ),
@@ -1263,7 +1247,7 @@ sub global_special_options() {
     
   }
   my $conf = "/etc/group";
-  my @groups = map { if_(m/^([^#:]+):[^:]+:([^:]+):/ and $2 > 499, $1) } cat_($conf);
+  my @groups = map { if_(m/^([^#:]+):[^:]+:([^:]+):/ && $2 > 499, $1) } cat_($conf);
   foreach (@groups) {
       system(qw(net groupmap add), "unixgroup=$_", "ntgroup=$_");
   }
@@ -1286,13 +1270,13 @@ add_data_printer_list($printer_list);
 add_data_user_list($user_list);
 $_->set_rules_hint(1) foreach $display_share, $printer_list, $user_list;
 
-$ugtk2::wm_icon = $fileshare_icon;
-$window = ugtk2->new(N("Manage Samba configuration"));
+$ugtk3::wm_icon = $fileshare_icon;
+$window = ugtk3->new(N("Manage Samba configuration"));
 $::main_window = $window->{real_window};
 $window->{rwindow}->set_size_request(600, 410) unless $::isEmbedded;
 $window->{rwindow}->set_position('center') if !$::isEmbedded;
 my $W = $window->{window};
-$W->signal_connect(delete_event => sub { ugtk2->exit });
+$W->signal_connect(delete_event => sub { ugtk3->exit });
 
 # double clic and popup modify window
 $display_share->signal_connect(button_press_event => sub {
@@ -1324,9 +1308,9 @@ $user_list->signal_connect(button_press_event => sub {
 #} [ $share_list, $printer_list, $user_list ], [ modify_entry, modify_printers_entry, modify_user_info ];
 
 # create popup menu
-my $menupopup = Gtk2::Menu->new;
-my $menuitem1 = Gtk2::MenuItem->new(N("Modify"));
-my $menuitem2 = Gtk2::MenuItem->new(N("Remove"));
+my $menupopup = Gtk3::Menu->new;
+my $menuitem1 = Gtk3::MenuItem->new(N("Modify"));
+my $menuitem2 = Gtk3::MenuItem->new(N("Remove"));
 $menuitem1->signal_connect(activate => sub {
 			     my ($selected) = $display_share->get_selected_indices;
 			     modify_entry($selected);
@@ -1347,30 +1331,65 @@ $display_share->signal_connect('button-press-event' => sub {
 
 $display_share->signal_connect(key_press_event => sub {
     my (undef, $event) = @_;
-    return unless $event->keyval == $Gtk2::Gdk::Keysyms{Return};
+    return unless $event->keyval == $Gtk3::Gdk::Keysyms{Return};
     my ($selected) = $display_share->get_selected_indices;
     modify_entry($selected);
     return 1;
 });
 
 # create menu
-my @items = get_items();
-my $factory = Gtk2::ItemFactory->new('Gtk2::MenuBar', '<main>', undef);
-$factory->create_items('menu', @items);
-my $menu = $factory->get_widget('<main>');
+my $ui = gtknew('UIManager', actions => [
+		    # [name, stock_id, value, label, accelerator, tooltip, callback]
+		    [ 'FileMenu',   undef, N("_File") ],
+		    [ 'Write_conf', undef, N("_Write conf"), undef, undef, \&write_conf ],
+		    [ 'Quit', undef, N("_Quit"), N("<control>Q"), undef, \&quit_all ],
+
+		    [ 'Samba_Menu', undef, N("_Samba Server") ],
+		    [ 'Configure', undef, N("_Configure"), undef, undef, \&launch_samba_wizard ],
+		    [ 'Restart', undef, N("_Restart"), undef, undef, \&restart_dialog ],
+		    [ 'Reload', undef,  N("R_eload"), undef, undef, \&reload_dialog ],
+
+		    [ 'Help_Menu',        undef, N("_Help") ],
+		    [ 'Documentation', undef, N("_Samba Documentation"), undef, undef, sub {
+			$in->do_pkgs->ensure_is_installed('samba-doc', '/usr/share/doc/samba-doc');
+			run_program::raw({ detach => 1 }, 'www-browser', '/usr/share/doc/samba-doc/htmldocs/index.html');
+		      } ],
+		 [ 'Report_Bug', undef, N("_Report Bug"), undef, undef, sub { run_program::raw({ detach => 1 }, 'drakbug', '--report', 'draksambashare') } ],
+		 [ 'About', undef, N("_About..."), undef, undef, \&about_dialog ],
+
+		],
+		string => qq(<ui>
+  <menubar name='MenuBar'>
+    <menu action='FileMenu'>
+      <menuitem action='Write_conf'/>
+      <menuitem action='Quit'/>
+    </menu>
+    <menu action='Samba_Menu'>
+      <menuitem action='Configure'/>
+      <menuitem action='Restart'/>
+      <menuitem action='Reload'/>
+    </menu>
+    <menu action='Help_Menu'>
+      <menuitem action='Documentation'/>
+      <menuitem action='Report_Bug'/>
+      <menuitem action='About'/>
+    </menu>
+  </menubar>
+</ui>));
+$window->{rwindow}->add_accel_group($ui->get_accel_group);
 
 my $okcancel = create_okcancel({
-				cancel_clicked => sub { ugtk2->exit },
-				ok_clicked => sub { &write_conf; ugtk2->exit },
+				cancel_clicked => sub { ugtk3->exit },
+				ok_clicked => sub { &write_conf; ugtk3->exit },
 			       },
 			      );
 
-gtkappend_page(my $nb = Gtk2::Notebook->new, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 0),
+gtkappend_page(my $nb = Gtk3::Notebook->new, gtkpack_(gtkset_border_width(Gtk3::HBox->new, 0),
                                                       1, create_scrolled_window($display_share),
 						      0, gtkpack_(create_vbox('start'),
-								  0, gtksignal_connect(Gtk2::Button->new(N("Add")), clicked => \&add_entry),
-								  0, Gtk2::HSeparator->new,
-								  0, gtksignal_connect(Gtk2::Button->new(N("Modify")), clicked => sub {
+								  0, gtksignal_connect(Gtk3::Button->new(N("Add")), clicked => \&add_entry),
+								  0, Gtk3::HSeparator->new,
+								  0, gtksignal_connect(Gtk3::Button->new(N("Modify")), clicked => sub {
 											 my ($selected) = $display_share->get_selected_indices;
 											 eval { modify_entry($selected) };
 											 my $err = $@;
@@ -1378,7 +1397,7 @@ gtkappend_page(my $nb = Gtk2::Notebook->new, gtkpack_(gtkset_border_width(Gtk2::
 											   err_dialog(N("Error"), N("Failed to Modify Samba share.") . "\n\n" . $err);
 											 }
 										       }),
-								  0, gtksignal_connect(Gtk2::Button->new(N("Remove")), clicked => sub {
+								  0, gtksignal_connect(Gtk3::Button->new(N("Remove")), clicked => sub {
 											 my ($selected) = $display_share->get_selected_indices;
 											 ask_okcancel("Remove entry ?", "Remove $display_share->{data}[$selected][1]") or return;
 											 eval { remove_entry($selected, $display_share) };
@@ -1389,19 +1408,19 @@ gtkappend_page(my $nb = Gtk2::Notebook->new, gtkpack_(gtkset_border_width(Gtk2::
 										       }),
 								 ),
 						     ),
-               gtkshow(gtkpack_(Gtk2::HBox->new(0,0),
-				0, Gtk2::Image->new_from_file($fileshare_icon),
-				0, Gtk2::Label->new(N("File share")),
+               gtkshow(gtkpack_(Gtk3::HBox->new(0,0),
+				0, Gtk3::Image->new_from_file($fileshare_icon),
+				0, Gtk3::Label->new(N("File share")),
 			       ),
 		      ),
 	      );
 
-gtkappend_page($nb, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 0),
+gtkappend_page($nb, gtkpack_(gtkset_border_width(Gtk3::HBox->new, 0),
 			     1, create_scrolled_window($printer_list),
                              0, gtkpack_(create_vbox('start'),
-					 0, gtksignal_connect(Gtk2::Button->new(N("Add")), clicked => \&add_printers_entry),
-                                         0, Gtk2::HSeparator->new,
-                                         0, gtksignal_connect(Gtk2::Button->new(N("Modify")), clicked => sub {
+					 0, gtksignal_connect(Gtk3::Button->new(N("Add")), clicked => \&add_printers_entry),
+                                         0, Gtk3::HSeparator->new,
+                                         0, gtksignal_connect(Gtk3::Button->new(N("Modify")), clicked => sub {
 								my ($selected) = $printer_list->get_selected_indices;
                                                                 eval { modify_printers_entry($selected) };
                                                                 my $err = $@;
@@ -1409,7 +1428,7 @@ gtkappend_page($nb, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 0),
                                                                   err_dialog(N("Error"), N("Failed to Modify.") . "\n\n" . $err);
                                                                 }
                                                               }),
-                                         0, gtksignal_connect(Gtk2::Button->new(N("Remove")), clicked => sub {
+                                         0, gtksignal_connect(Gtk3::Button->new(N("Remove")), clicked => sub {
 								my ($selected) = $printer_list->get_selected_indices;
 								ask_okcancel("Remove entry ?", "Remove $printer_list->{data}[$selected][1]") or return;
                                                                 eval { remove_entry($selected, $printer_list) };
@@ -1420,25 +1439,25 @@ gtkappend_page($nb, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 0),
                                                               }),
 					),
 			    ),
-	       gtkshow(gtkpack_(Gtk2::HBox->new(0,0),
-				0, Gtk2::Image->new_from_file($printershare_icon),
-				0, Gtk2::Label->new(N("Printers")),
+	       gtkshow(gtkpack_(Gtk3::HBox->new(0,0),
+				0, Gtk3::Image->new_from_file($printershare_icon),
+				0, Gtk3::Label->new(N("Printers")),
 			       ),
 		      ),
 	      );
 
-gtkappend_page($nb, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 0),
+gtkappend_page($nb, gtkpack_(gtkset_border_width(Gtk3::HBox->new, 0),
 			     1, create_scrolled_window($user_list),
                              0, gtkpack_(create_vbox('start'),
-                                         0, gtksignal_connect(Gtk2::Button->new(N("Add")), clicked => sub {
+                                         0, gtksignal_connect(Gtk3::Button->new(N("Add")), clicked => sub {
                                                                 eval { modify_user_info("", "", "add") };
                                                                 my $err = $@;
                                                                 if ($err) {
                                                                   err_dialog(N("Error"), N("Failed to add user.") . "\n\n" . $err);
                                                                 }
                                                               }),
-                                         0, Gtk2::HSeparator->new,
-					 0, gtksignal_connect(Gtk2::Button->new(N("Modify")), clicked => sub {
+                                         0, Gtk3::HSeparator->new,
+					 0, gtksignal_connect(Gtk3::Button->new(N("Modify")), clicked => sub {
 								my ($selected) = $user_list->get_selected_indices;
                                                                 eval { modify_user_info($user_list->{data}[$selected][1], "", "change") };
                                                                 my $err = $@;
@@ -1446,7 +1465,7 @@ gtkappend_page($nb, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 0),
                                                                   err_dialog(N("Error"), N("Failed to change user password.") . "\n\n" . $err);
                                                                 }
                                                               }),
-					 0, gtksignal_connect(Gtk2::Button->new(N("Remove")), clicked => sub {
+					 0, gtksignal_connect(Gtk3::Button->new(N("Remove")), clicked => sub {
 								my ($selected) = $user_list->get_selected_indices;
 								ask_okcancel("Remove entry ?", "Remove $user_list->{data}[$selected][1]") or return;
                                                                 eval {
@@ -1458,17 +1477,17 @@ gtkappend_page($nb, gtkpack_(gtkset_border_width(Gtk2::HBox->new, 0),
                                                                   err_dialog(N("Error"), N("Failed to delete user.") . "\n\n" . $err);
                                                                 }
                                                               }),
-                                         0, Gtk2::HSeparator->new,
+                                         0, Gtk3::HSeparator->new,
 					 # FIXME: Why do we have both an "add" button and a "userdrake" one ???
-					 0, gtksignal_connect(Gtk2::Button->new(N("Userdrake")), clicked => sub {
+					 0, gtksignal_connect(Gtk3::Button->new(N("Userdrake")), clicked => sub {
 								run_program::raw({ detach => 1 }, 'userdrake');
 							      }
 							     ),
 					),
 			    ),
-               gtkshow(gtkpack_(Gtk2::HBox->new(0,0),
-				0, Gtk2::Image->new_from_file($sambauser_icon),
-				0, Gtk2::Label->new(N("Samba Users"))),
+               gtkshow(gtkpack_(Gtk3::HBox->new(0,0),
+				0, Gtk3::Image->new_from_file($sambauser_icon),
+				0, Gtk3::Label->new(N("Samba Users"))),
 		      ),
 	      );
 
@@ -1483,15 +1502,15 @@ sub check_first_launch() {
 }
 
 # main interface
-$W->add(gtkpack_(Gtk2::VBox->new(0,0),
-		 0, $menu,
-		 0, Gtk2::Banner->new($sambaicon, N("DrakSamba manage Samba shares")),
-		 #if_($::isEmbedded, 0, Gtk2::Label->new("Here you can add, remove and alter Samba shares.")),
+$W->add(gtkpack_(Gtk3::VBox->new(0,0),
+		 0, $ui->get_widget('/MenuBar'),
+		 0, Gtk3::Banner->new($sambaicon, N("DrakSamba manage Samba shares")),
+		 #if_($::isEmbedded, 0, Gtk3::Label->new("Here you can add, remove and alter Samba shares.")),
 		 1, $nb,
 		 0, $okcancel,
 		 ),
 	);
 
-check_first_launch;
+check_first_launch();
 $W->show_all;
-Gtk2->main;
+Gtk3->main;
