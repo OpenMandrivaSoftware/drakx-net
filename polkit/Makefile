@@ -5,15 +5,15 @@ POLKITPOLICYDEST = $(DESTDIR)/usr/share/polkit-1/actions
 
 POLICY_IN := $(wildcard *.policy.in)
 POLICY = $(POLICY_IN:.policy.in=.policy)
-MGAPOLICY_IN := $(wildcard org.mageia.*.policy.in)
-WRAPPERS = $(patsubst org.mageia.%.policy.in,%,$(MGAPOLICY_IN))
+MGAPOLICY_IN := $(wildcard org.openmandriva.*.policy.in)
+WRAPPERS = $(patsubst org.openmandriva.%.policy.in,%,$(MGAPOLICY_IN))
 
 all: $(WRAPPERS) $(POLICY)
 
 clean:
 	rm -f  $(WRAPPERS) $(POLICY)
 
-%: org.mageia.%.policy.in
+%: org.openmandriva.%.policy.in
 	@echo -e '#!/bin/sh\nif  [[ "$$UID" != "0" ]] ; then\n    $(BINDIR)/pkexec $(LIBEXECDIR)/$@ "$$''@"\n    exit $$''?\nfi\nexec $(LIBEXECDIR)/$@ "$$''@"\n' > $@
 
 %.policy: %.policy.in
